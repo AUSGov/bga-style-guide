@@ -1,0 +1,428 @@
+---
+
+layout: content-tagged
+title: Form elements
+description: Guidelines on form element styles
+breadcrumb1: Brand foundations
+url1: /brand-foundations.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+            link-1="Textbox input" link-id-1="#textbox-input"
+            link-2="Textbox with units" link-id-2="#textbox-with-units"
+            link-3="Textbox with button" link-id-3="#textbox-with-button"
+            link-4="Textarea" link-id-4="#textarea"
+            link-5="Design specifications" link-id-5="#design-specifications"
+        %}
+
+    </div>
+    
+    <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- TEXTBOX -->   
+        <h2 class="section-start" id="textbox-input">Textbox input</h2>
+       
+        {% include breakpoints-singlebp.html %}
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+                
+                <p>To view error state type 'error' into the text box and hit enter.</p>
+                <div class="row g-0">
+                    <form>
+                        <div class="col-12 mb-2 p-0 form-example">
+        
+                            <label for="text-input-example" class="form-label mb-3">Text box label</label>
+                            <div class="form-element-wrapper mb-3">    
+                            <input type="text" class="form-control mb-0" id="text-input-example" value="" required>
+                            </div>
+                            <p class="error-feedback mb-3">Descriptive error message</p>
+                            
+                        </div>
+                    </form>
+
+                </div>
+
+                </div>
+
+                <div class="element-state-wrapper p-4">
+                
+                    <div class="row ">
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Default state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input default mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Focus state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input focus mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Error state</p>
+                                <div class="form-element-wrapper mb-3 error">
+                                    <div class="bga-text-input error mb-0"></div>
+                                </div>
+                                <p class="error-feedback show mb-3">Descriptive error message</p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Error and focus state</p>
+                                <div class="form-element-wrapper mb-3 error">
+                                    <div class="bga-text-input error focus mb-0"></div>
+                                </div>
+                                <p class="error-feedback show mb-3">Descriptive error message</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Disabled state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input disabled mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+            </div>
+                    
+            </div>
+            
+        </div>
+       
+        
+
+        <!-- TEXTBOX WITH UNITS -->   
+        <h2 class="section-start" id="textbox-with-units">Textbox with units</h2>
+       
+    
+        {% include breakpoints-singlebp.html %}
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+                
+                <h3>Text box with units</h3>
+                 <p>To view error state type 'error' into the text box and hit enter.</p>
+                <div class="row">
+                    <form>
+                        <div class="col-12  col-sm-6 col-lg-5  mb-2 p-0 form-example">
+                            <label for="textbox-units-example" class="form-label mb-3">Text box label</label>
+                            
+                            <div class="textbox-units form-element-wrapper mb-3">
+                                <p class="units m-0">$AUD</p>
+                                <input type="text" class="form-control m-0" id="textbox-units-example" value="" required >
+                                <p class="decimals m-0">.00</p>
+                            </div>
+                            <p class="error-feedback mb-3">Descriptive error message</p>
+                            
+                        </div>
+                    </form>
+
+                </div>
+
+                </div>
+
+                <div class="element-state-wrapper p-4">
+                
+                    <div class="row">
+                        
+                        <div class="col-12 col-sm-6 col-lg-5">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Default state</p>
+                                
+                                <div class="textbox-units form-element-wrapper mb-3">
+                                    <p class="units m-0">$AUD</p>
+                                    <div class="bga-text-input default mb-0"></div>
+                                    <p class="decimals m-0">.00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6 col-lg-5">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Focus state</p>
+                                <div class="textbox-units form-element-wrapper mb-3">
+                                    <p class="units m-0">$AUD</p>
+                                    <div class="bga-text-input focus mb-0"></div>
+                                    <p class="decimals m-0">.00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6 col-lg-5">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Error state</p>
+                                <div class="textbox-units form-element-wrapper mb-3 error">
+                                     <p class="units m-0">$AUD</p>
+                                    <div class="bga-text-input error mb-0"></div>
+                                    <p class="decimals m-0">.00</p>
+                                </div>
+                                <p class="error-feedback show mb-3">Descriptive error message</p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6 col-lg-5">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Error and focus state</p>
+                                <div class="textbox-units form-element-wrapper mb-3 error">
+                                    <p class="units m-0">$AUD</p>
+                                    <div class="bga-text-input error focus mb-0"></div>
+                                    <p class="decimals m-0">.00</p>
+                                </div>
+                                <p class="error-feedback show mb-3">Descriptive error message</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-12 col-sm-6 col-lg-5">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Disabled state</p>
+                                <div class="textbox-units form-element-wrapper mb-3">
+                                    <p class="units m-0">$AUD</p>
+                                    <div class="bga-text-input disabled mb-0"></div>
+                                    <p class="decimals m-0">.00</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+            </div>
+                    
+            </div>
+            
+        </div>
+        
+        
+        
+         <!-- TEXTBOX WITH BUTTON -->   
+        <h2 class="section-start" id="textbox-with-button">Textbox with button</h2>
+       
+        {% include breakpoints-singlebp.html %}
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+                
+                <h3>Text box with button</h3>
+                <p>To view error state type 'error' into the text box and hit enter.</p>
+                <div class="row g-0">
+                    <form>
+                        <div class="col-12 mb-2 p-0 form-example">
+                           
+                            <label for="textbox-button-example" class="form-label mb-3">Text box label</label>
+                            
+                            <div class="textbox-button form-element-wrapper mb-3">
+                                <input type="text" class="form-control mb-0" id="textbox-button-example" value="" required >
+                                <button class="bga-btn bga-btn-primary">Add</button>
+                            </div>
+                            
+                            <p class="error-feedback mb-3">Descriptive error message</p>
+                            
+                        </div>
+                    </form>
+
+                </div>
+
+                </div>
+
+                <div class="element-state-wrapper p-4">
+                
+                    <div class="row ">
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Default state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input default mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Focus state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input focus mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Error state</p>
+                                <div class="form-element-wrapper mb-3 error">
+                                    <div class="bga-text-input error mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Error and focus state</p>
+                                <div class="form-element-wrapper mb-3 error">
+                                    <div class="bga-text-input error focus mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Disabled state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input disabled mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+            </div>
+                    
+            </div>
+            
+        </div>
+       
+        
+        
+        <!-- TEXTAREA -->   
+        <h2 class="section-start" id="textarea">Textarea</h2>
+        
+        {% include breakpoints-singlebp.html %}
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+                
+                <h3>Text area</h3>
+                
+                <div class="row g-0">
+                    <form>
+                        <div class="col-12 mb-2 p-0 form-example">
+                            
+                            <label for="textarea-example" class="form-label mb-3">Text area label</label>
+                            
+                            <div class="form-element-wrapper mb-3">
+                                <textarea type="text" class="form-control" id="textarea-example" value="" required ></textarea>
+                            </div>
+                            <p class="textarea-char-count under">0 of 100 characters used</p>
+                            <p class="error-feedback mb-3">Descriptive error message</p>
+                            
+                        </div>
+                    </form>
+
+                </div>
+
+                </div>
+
+                <div class="element-state-wrapper p-4">
+                
+                    <div class="row ">
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Default state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input default mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Focus state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input focus mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Error state</p>
+                                <div class="form-element-wrapper mb-3 error">
+                                    <div class="bga-text-input error mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Error and focus state</p>
+                                <div class="form-element-wrapper mb-3 error">
+                                    <div class="bga-text-input error focus mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Disabled state</p>
+                                <div class="form-element-wrapper mb-3">
+                                    <div class="bga-text-input disabled mb-0"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+            </div>
+                    
+            </div>
+            
+        </div>
+       
+
+        
+        <!-- Design specifications link -->
+        <h2 class="section-start" id="design-specifications">Design specifications</h2>
+        
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/0e05f78f-6e0e-452d-bc78-6997188bffbe/specs/'"
+            btn-text="View design specifications"
+            %}
+        
+        
+            
+        </div>
+    
+        
+    
+</div>
