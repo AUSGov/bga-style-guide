@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Form elements</title>
+    <title>Text inputs</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -27,6 +27,9 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+    <!-- Textarea highlight -->
+    <script src=/bga-style-guide/js/jquery.highlight-within-textarea.js ></script>
     
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
@@ -142,7 +145,7 @@
                     </li>
 
                     <li class="breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0 h-100">Form elements</p>
+                        <p class="breadcrumb-location m-0 p-0 h-100">Text inputs</p>
                     </li>
                 </ul>
 
@@ -159,8 +162,8 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Form elements</h1>
-                        <p class="header-intro">Guidelines on form element styles</p>
+                        <h1>Text inputs</h1>
+                        <p class="header-intro">Guidelines on text input styles</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
@@ -324,7 +327,7 @@
                  <p>To view error state type 'error' into the text box and hit enter.</p>
                 <div class="row">
                     <form>
-                        <div class="col-12  col-sm-6 col-lg-5  mb-2 p-0 form-example">
+                        <div class="col-12 col-sm-6 col-lg-5 mb-2 p-0 form-example">
                             <label for="textbox-units-example" class="form-label mb-3">Text box label</label>
                             
                             <div class="textbox-units form-element-wrapper mb-3">
@@ -435,13 +438,17 @@
                 <p>To view error state type 'error' into the text box and hit enter.</p>
                 <div class="row g-0">
                     <form>
-                        <div class="col-12 mb-2 p-0 form-example">
+                        <div class="col-12 col-sm-8 col-lg-7 mb-2 p-0 form-example">
                            
                             <label for="textbox-button-example" class="form-label mb-3">Text box label</label>
                             
                             <div class="textbox-button form-element-wrapper mb-3">
                                 <input type="text" class="form-control mb-0" id="textbox-button-example" value="" required >
-                                <button class="bga-btn bga-btn-primary">Add</button>
+                                <button class="bga-btn bga-secondary-btn combo-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                                        <path d="M6.285,15V9.106H0V5.893H6.285V0H9.715V5.893H16V9.106H9.715V15Z" />
+                                    </svg>
+                                    Add</button>
                             </div>
                             
                             <p class="error-feedback mb-3">Descriptive error message</p>
@@ -460,39 +467,103 @@
                         <div class="col-12 col-sm-6">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Default state</p>
-                                <div class="form-element-wrapper mb-3">
+                                <div class="form-element-wrapper textbox-button mb-3">
+                                    
                                     <div class="bga-text-input default mb-0"></div>
+                                    <div class="bga-btn-state bga-secondary-btn default combo-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                                        <path d="M6.285,15V9.106H0V5.893H6.285V0H9.715V5.893H16V9.106H9.715V15Z" />
+                                    </svg>
+                                    Add</div>
+
                                 </div>
                             </div>
                         </div>
 
-                        
                         <div class="col-12 col-sm-6">
                             <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Focus state</p>
-                                <div class="form-element-wrapper mb-3">
-                                    <div class="bga-text-input focus mb-0"></div>
+                                <p class="mb-3 label">Button hover state</p>
+                                <div class="form-element-wrapper textbox-button mb-3">
+                                    
+                                    <div class="bga-text-input default mb-0"></div>
+                                    <div class="bga-btn-state bga-secondary-btn hover combo-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                                        <path d="M6.285,15V9.106H0V5.893H6.285V0H9.715V5.893H16V9.106H9.715V15Z" />
+                                    </svg>
+                                    Add</div>
+                                    
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Input focus state</p>
+                                <div class="form-element-wrapper textbox-button mb-3">
+                                    
+                                    <div class="bga-text-input focus mb-0"></div>
+                                    <div class="bga-btn-state bga-secondary-btn default combo-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                                        <path d="M6.285,15V9.106H0V5.893H6.285V0H9.715V5.893H16V9.106H9.715V15Z" />
+                                    </svg>
+                                    Add</div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-12 col-sm-6">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Button focus state</p>
+                                <div class="form-element-wrapper textbox-button mb-3">
+                                    
+                                    <div class="bga-text-input default mb-0"></div>
+                                    <div class="bga-btn-state bga-secondary-btn focus combo-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                                        <path d="M6.285,15V9.106H0V5.893H6.285V0H9.715V5.893H16V9.106H9.715V15Z" />
+                                    </svg>
+                                    Add</div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
 
                         
                         <div class="col-12 col-sm-6">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Error state</p>
-                                <div class="form-element-wrapper mb-3 error">
+                                <div class="form-element-wrapper textbox-button mb-3 error">
+                                   
                                     <div class="bga-text-input error mb-0"></div>
+                                    <div class="bga-btn-state bga-secondary-btn default combo-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                                        <path d="M6.285,15V9.106H0V5.893H6.285V0H9.715V5.893H16V9.106H9.715V15Z" />
+                                    </svg>
+                                    Add</div>
+                                    
                                 </div>
+                                <p class="error-feedback show mb-3">Descriptive error message</p>
                             </div>
                         </div>
 
                         
                         <div class="col-12 col-sm-6">
                             <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error and focus state</p>
-                                <div class="form-element-wrapper mb-3 error">
-                                    <div class="bga-text-input error focus mb-0"></div>
+                                <p class="mb-3 label">Input error and focus state</p>
+                                <div class="form-element-wrapper textbox-button mb-3 error">
+                                    
+                                    <div class="bga-text-input focus error mb-0"></div>
+                                    <div class="bga-btn-state bga-secondary-btn default combo-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                                        <path d="M6.285,15V9.106H0V5.893H6.285V0H9.715V5.893H16V9.106H9.715V15Z" />
+                                    </svg>
+                                    Add</div>
+                                    
                                 </div>
+                                <p class="error-feedback show mb-3">Descriptive error message</p>        
+                    
                             </div>
                         </div>
                         
@@ -500,8 +571,15 @@
                         <div class="col-12 col-sm-6">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Disabled state</p>
-                                <div class="form-element-wrapper mb-3">
+                                <div class="form-element-wrapper textbox-button mb-3">
+                                    
                                     <div class="bga-text-input disabled mb-0"></div>
+                                    <div class="bga-btn-state bga-secondary-btn disabled combo-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                                        <path d="M6.285,15V9.106H0V5.893H6.285V0H9.715V5.893H16V9.106H9.715V15Z" />
+                                    </svg>
+                                    Add</div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -539,10 +617,17 @@
                             <label for="textarea-example" class="form-label mb-3">Text area label</label>
                             
                             <div class="form-element-wrapper mb-3">
-                                <textarea type="text" class="form-control" id="textarea-example" value="" required ></textarea>
+                                
+                                <div class="hwt-container">
+                                    <div class="hwt-backdrop">
+                                        <div class="hwt-highlights hwt-content"></div>
+                                    </div>
+                                    <textarea id="textarea-example" name="form-text-area" type="text" value="" maxlength="" placeholder="" class="example-form-element hwt-input hwt-content mb-0"></textarea>
+                                    
+                                </div>
+  
                             </div>
-                            <p class="textarea-char-count under">0 of 100 characters used</p>
-                            <p class="error-feedback mb-3">Descriptive error message</p>
+                            <p class="textarea-char-count mb-3 under">0 of 100 characters used</p>
                             
                         </div>
                     </form>
@@ -581,6 +666,8 @@
                                 <div class="form-element-wrapper mb-3 error">
                                     <div class="bga-text-input error mb-0"></div>
                                 </div>
+                                
+                                <p class="error-feedback show mb-3">Descriptive error message</p>   
                             </div>
                         </div>
 
@@ -591,6 +678,8 @@
                                 <div class="form-element-wrapper mb-3 error">
                                     <div class="bga-text-input error focus mb-0"></div>
                                 </div>
+                                
+                                <p class="error-feedback show mb-3">Descriptive error message</p>   
                             </div>
                         </div>
                         
