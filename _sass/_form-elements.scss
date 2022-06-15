@@ -100,6 +100,10 @@ input.form-control {
     box-shadow: none;
     display: flex;
     
+    &.no-flex {
+        display: block;
+    }
+    
     &.error {
         box-shadow: 0 0 0 8px $bga-red-fail-mid;
         background: $bga-red-fail-mid;
@@ -113,6 +117,10 @@ input.form-control {
                 border-color: $bga-blue-focus;
                 background-color: $bga-white !important;
             }
+        }
+        textarea {
+            border: solid 3px $bga-red-fail-dark;
+            border-radius: 4px;
         }
     }
 }
@@ -140,69 +148,99 @@ textarea {
         color: $bga-red-fail-dark;
     }
 }
-
 // CSS Styles from https://github.com/lonekorean/highlight-within-textarea
 //Thank you lone Korean!!!
-.hwt-container {
-    display: inline-block;
-    position: relative;
-    overflow: hidden !important;
-    -webkit-text-size-adjust: none !important;
-    width: 100%;
-    min-height: 200px;
-    height: 200px;
-    padding: 0px !important;
-    background: $bga-white;
-}
-.hwt-backdrop {
-    position: absolute !important;
-    top: 0px !important;
-    right: 0px !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: 100%;
-    padding: 0 !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    min-height: 200px;
-    height: 200px;
-}
-.hwt-highlights {
-    width: auto !important;
-    height: auto !important;
-    border-color: transparent !important;
-    white-space: pre-wrap !important;
-    word-wrap: break-word !important;
-    color: transparent !important;
-    overflow: hidden !important;
-}
-.hwt-input {
-    display: block !important;
-    position: relative !important;
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-    font: inherit;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-}
-.hwt-content {
-    background: none !important;
-    padding: 12px 16px !important;
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0;
-}
-.hwt-content mark {
-    padding: 0px !important;
-    background-color: $bga-red-fail-mid;
-    color: $bga-red-fail-mid;
+.form-example {
+    .hwt-container {
+        display: inline-block;
+        position: relative;
+        overflow: hidden !important;
+        -webkit-text-size-adjust: none !important;
+        width: 100%;
+        min-height: 200px;
+        height: 200px;
+        padding: 0px !important;
+        background: $bga-white;
+    }
+    .hwt-backdrop {
+        position: absolute !important;
+        top: 0px !important;
+        right: 0px !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100%;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        min-height: 200px;
+        height: 200px;
+    }
+    .hwt-highlights {
+        width: auto !important;
+        height: auto !important;
+        border-color: transparent !important;
+        white-space: pre-wrap !important;
+        word-wrap: break-word !important;
+        color: transparent !important;
+        overflow: hidden !important;
+    }
+    .hwt-input {
+        display: block !important;
+        position: relative !important;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        font: inherit;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+    .hwt-content {
+        background: none !important;
+        padding: 12px 16px !important;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+    .hwt-content mark {
+        padding: 0px !important;
+        background-color: $bga-red-fail-mid;
+        color: $bga-red-fail-mid;
 
-    &.hide-mark {
-        display: none !important;
+        &.hide-mark {
+            display: none !important;
+        }
     }
 }
 
+
+
+// Checkboxes
+.checkboxes {
+    
+    label {
+        font-weight: 400;
+    }
+    [type=checkbox] {
+        -webkit-appearance: none;
+        height: 28px;
+        width: 28px;
+        vertical-align: middle;
+        border-radius: 0;
+        border: solid 1px $bga-blue-black-dark;
+        background: $bga-white;
+        
+        &:checked {
+            background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
+            border: solid 3px $bga-blue-links;
+            
+            + label {
+                color: $bga-blue-links;
+                font-weight: 600;
+            }
+        }
+    }
+    
+}
 
 
 // BOOTSTRAP OVERRIDES
