@@ -343,6 +343,31 @@ $('.form-example input').on('change', function(){
 });
 
     
+// TEXTAREA COUNT
+	var max_length = 100;
+	$('#textarea-example').highlightWithinTextarea({
+		highlight: [max_length, 200000]
+	});
+
+	$('#textarea-example').on('input', function () {
+        
+        var textarea_text = $(this).val(),
+			textarea_count = textarea_text.length;
+        
+        $('.textarea-char-count span.count').text(textarea_count);
+
+		if (textarea_count <= max_length) {
+			$('.hwt-content mark').addClass('hide-mark');
+			$('.textarea-char-count').text(textarea_count + ' of ' + max_length + ' characters used').removeClass('excess-count');
+			$('.textarea-char-count').addClass('under');
+            $(this).parents('.form-element-wrapper').removeClass('error');
+		} else if (textarea_count > max_length) {
+			var excess_count = textarea_count - max_length;
+			$('.textarea-char-count').text('Character limited exceeded by ' + excess_count).addClass('excess-count');
+			$('.textarea-char-count').removeClass('under');
+            $(this).parents('.form-element-wrapper').addClass('error');
+		}
+	});
     
 }); //End doc ready
 

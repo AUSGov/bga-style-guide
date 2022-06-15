@@ -4,7 +4,7 @@ label {
 }
 
 // Inputs
-input.form-control, textarea.form-control {
+input.form-control {
     border: $bga-blue-black-dark solid 1px;
     border-radius: 0;
     padding: 12px 16px;
@@ -18,11 +18,6 @@ input.form-control, textarea.form-control {
         border-radius: 4px;
         background-color: $bga-white !important;
     } 
-}
-
-
-textarea.form-control {
-    min-height: 200px;
 }
 
 .textbox-units {
@@ -39,6 +34,22 @@ textarea.form-control {
         text-align: right;
     }
 }
+.textbox-button {
+    .combo-button {
+        display: inline-flex;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 11px 24px 11px 16px;
+        box-shadow: none;
+        
+        svg {
+            margin: 0 8px 0 0;
+            width: 16px;
+        }
+        
+    }
+}
+
 
 // Input state examples
 .bga-text-input {
@@ -69,6 +80,11 @@ textarea.form-control {
         background: $bga-blue-black-lightest;
     }
 }
+.textbox-button {
+    .bga-text-input {
+        height: 54px;
+    }
+}
 
 
 // Error states & messages
@@ -80,7 +96,6 @@ textarea.form-control {
         display: block;
     }
 }
-
 .form-element-wrapper {
     box-shadow: none;
     display: flex;
@@ -99,6 +114,92 @@ textarea.form-control {
                 background-color: $bga-white !important;
             }
         }
+    }
+}
+
+
+textarea {
+    width: 100% !important;
+    min-height: 200px;
+    height: 200px;
+    border: $bga-blue-black-dark solid 1px;
+    border-radius: 0;
+    padding: 12px 16px;
+    background: $bga-white;
+    font-size: 1rem;
+    background: $bga-white !important;
+    
+    &:focus {
+        box-shadow: none;
+        border: solid 3px $bga-blue-focus;
+        border-radius: 4px;
+    } 
+}
+.textarea-char-count {
+    &.excess-count {
+        color: $bga-red-fail-dark;
+    }
+}
+
+// CSS Styles from https://github.com/lonekorean/highlight-within-textarea
+//Thank you lone Korean!!!
+.hwt-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden !important;
+    -webkit-text-size-adjust: none !important;
+    width: 100%;
+    min-height: 200px;
+    height: 200px;
+    padding: 0px !important;
+    background: $bga-white;
+}
+.hwt-backdrop {
+    position: absolute !important;
+    top: 0px !important;
+    right: 0px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    min-height: 200px;
+    height: 200px;
+}
+.hwt-highlights {
+    width: auto !important;
+    height: auto !important;
+    border-color: transparent !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    color: transparent !important;
+    overflow: hidden !important;
+}
+.hwt-input {
+    display: block !important;
+    position: relative !important;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    font: inherit;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+.hwt-content {
+    background: none !important;
+    padding: 12px 16px !important;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.hwt-content mark {
+    padding: 0px !important;
+    background-color: $bga-red-fail-mid;
+    color: $bga-red-fail-mid;
+
+    &.hide-mark {
+        display: none !important;
     }
 }
 
