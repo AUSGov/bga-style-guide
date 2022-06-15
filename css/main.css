@@ -3216,11 +3216,15 @@ input.form-control:focus { box-shadow: none; border: solid 3px #2E6CB9; border-r
 
 .form-element-wrapper { box-shadow: none; display: flex; }
 
+.form-element-wrapper.no-flex { display: block; }
+
 .form-element-wrapper.error { box-shadow: 0 0 0 8px #F5B5B5; background: #F5B5B5; }
 
 .form-element-wrapper.error input { border: solid 3px #D2201E; border-radius: 4px; background-color: #ffffff !important; }
 
 .form-element-wrapper.error input:focus { border-color: #2E6CB9; background-color: #ffffff !important; }
+
+.form-element-wrapper.error textarea { border: solid 3px #D2201E; border-radius: 4px; }
 
 textarea { width: 100% !important; min-height: 200px; height: 200px; border: #2E3E5A solid 1px; border-radius: 0; padding: 12px 16px; background: #ffffff; font-size: 1rem; background: #ffffff !important; }
 
@@ -3228,19 +3232,27 @@ textarea:focus { box-shadow: none; border: solid 3px #2E6CB9; border-radius: 4px
 
 .textarea-char-count.excess-count { color: #D2201E; }
 
-.hwt-container { display: inline-block; position: relative; overflow: hidden !important; -webkit-text-size-adjust: none !important; width: 100%; min-height: 200px; height: 200px; padding: 0px !important; background: #ffffff; }
+.form-example .hwt-container { display: inline-block; position: relative; overflow: hidden !important; -webkit-text-size-adjust: none !important; width: 100%; min-height: 200px; height: 200px; padding: 0px !important; background: #ffffff; }
 
-.hwt-backdrop { position: absolute !important; top: 0px !important; right: 0px !important; bottom: 0 !important; left: 0 !important; width: 100%; padding: 0 !important; overflow-x: hidden !important; overflow-y: auto !important; min-height: 200px; height: 200px; }
+.form-example .hwt-backdrop { position: absolute !important; top: 0px !important; right: 0px !important; bottom: 0 !important; left: 0 !important; width: 100%; padding: 0 !important; overflow-x: hidden !important; overflow-y: auto !important; min-height: 200px; height: 200px; }
 
-.hwt-highlights { width: auto !important; height: auto !important; border-color: transparent !important; white-space: pre-wrap !important; word-wrap: break-word !important; color: transparent !important; overflow: hidden !important; }
+.form-example .hwt-highlights { width: auto !important; height: auto !important; border-color: transparent !important; white-space: pre-wrap !important; word-wrap: break-word !important; color: transparent !important; overflow: hidden !important; }
 
-.hwt-input { display: block !important; position: relative !important; margin: 0; padding: 0; border-radius: 0; font: inherit; overflow-x: hidden !important; overflow-y: auto !important; }
+.form-example .hwt-input { display: block !important; position: relative !important; margin: 0; padding: 0; border-radius: 0; font: inherit; overflow-x: hidden !important; overflow-y: auto !important; }
 
-.hwt-content { background: none !important; padding: 12px 16px !important; font-size: 1rem; font-weight: 400; letter-spacing: 0; }
+.form-example .hwt-content { background: none !important; padding: 12px 16px !important; font-size: 1rem; font-weight: 400; letter-spacing: 0; }
 
-.hwt-content mark, .hwt-content .mark { padding: 0px !important; background-color: #F5B5B5; color: #F5B5B5; }
+.form-example .hwt-content mark, .form-example .hwt-content .mark { padding: 0px !important; background-color: #F5B5B5; color: #F5B5B5; }
 
-.hwt-content mark.hide-mark, .hwt-content .hide-mark.mark { display: none !important; }
+.form-example .hwt-content mark.hide-mark, .form-example .hwt-content .hide-mark.mark { display: none !important; }
+
+.checkboxes label { font-weight: 400; }
+
+.checkboxes [type=checkbox] { -webkit-appearance: none; height: 28px; width: 28px; vertical-align: middle; border-radius: 0; border: solid 1px #2E3E5A; background: #ffffff; }
+
+.checkboxes [type=checkbox]:checked { background: #ffffff url(../assets/icon-tick-blue.svg) no-repeat center center; border: solid 3px #2157AA; }
+
+.checkboxes [type=checkbox]:checked + label { color: #2157AA; font-weight: 600; }
 
 input:-internal-autofill-selected { background: #ffffff !important; }
 
