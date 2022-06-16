@@ -332,25 +332,24 @@ $('.accordion-button').on('click', function(){
 
     
 // FORM EXAMPLES
+
 $('.form-example input').on('change', function(){
     if ( $(this).val() == 'error' ) {
         $(this).parents('.form-element-wrapper').addClass('error');
-        $(this).parents('.form-example').find('.error-feedback').addClass('show');
     } else {
         $(this).parents('.form-element-wrapper').removeClass('error');
-        $(this).parents('.form-example').find('.error-feedback').removeClass('show');
-    }
-});
-$('.error-checkbox').on('click', function(){
-    if ( $(this).is(":checked") ) {
-        $(this).parents('.form-element-wrapper').addClass('error');
-        $(this).parents('.form-example').find('.error-feedback').addClass('show');
-    } else {
-        $(this).parents('.form-element-wrapper').removeClass('error');
-        $(this).parents('.form-example').find('.error-feedback').removeClass('show');
     }
 });
 
+    
+$('.error-checkbox').on('click', function(){
+    if ( $(this).is(":checked") ) {   
+        $(this).parents('.form-element-wrapper').addClass('error');
+    } else {
+        $(this).parents('.form-element-wrapper').removeClass('error');
+    }
+});
+    
     
 // TEXTAREA COUNT 
 	var max_length = 100;
