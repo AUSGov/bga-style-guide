@@ -91,10 +91,6 @@ input.form-control {
 .error-feedback {
     color: $bga-red-fail-dark;
     display: none;
-    
-    &.show {
-        display: block;
-    }
 }
 .form-element-wrapper {
     box-shadow: none;
@@ -121,6 +117,9 @@ input.form-control {
         textarea {
             border: solid 3px $bga-red-fail-dark;
             border-radius: 4px;
+        }
+        + .error-feedback {
+            display: block;
         }
     }
 }
@@ -215,12 +214,31 @@ textarea {
 
 
 // Checkboxes
-.checkboxes {
+.checkboxes,
+.bga-checkbox {
+    position: relative;
+    display: block;
+    padding: 0 0 4px 0;
     
-    label {
-        font-weight: 400;
+    &:last-of-type {
+        padding: 0;
     }
-    [type=checkbox] {
+    
+    label,
+    .label {
+        font-weight: 400;
+        padding: 5px 5px 5px 44px;
+        border: solid 3px $white;
+        background: $white;
+        width: 100%;
+        min-height: 44px;
+        display: inline-block;
+    }
+    [type=checkbox],
+    .input {
+        position: absolute;
+        top: 8px;
+        left: 8px;
         -webkit-appearance: none;
         height: 28px;
         width: 28px;
@@ -229,9 +247,23 @@ textarea {
         border: solid 1px $bga-blue-black-dark;
         background: $bga-white;
         
+        &:focus {
+            border: solid 1px $bga-blue-black-dark;
+            outline: none;
+            
+            + label {
+                border: $bga-white solid 3px;
+                border-radius: 4px;
+            }
+        }
+        &:focus-visible + label {
+            border: $bga-blue-links solid 3px;
+            border-radius: 4px;
+        }
+        
         &:checked {
             background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
-            border: solid 3px $bga-blue-links;
+            border: solid 3px $bga-blue-links !important;
             
             + label {
                 color: $bga-blue-links;
@@ -240,6 +272,133 @@ textarea {
         }
     }
     
+}
+// Checkbox states
+.bga-checkbox {
+
+    &.error {
+        .input {
+
+            + .label {
+                border: $bga-red-fail-dark solid 3px;
+                border-radius: 4px;
+            }
+        }
+    }
+    &.focus {
+        .input {
+            background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
+            border: solid 3px $bga-blue-links !important;
+
+            + .label {
+                color: $bga-blue-links;
+                font-weight: 600;
+
+            }
+        }
+    }
+
+    &.keyboard .input {
+        + .label {
+            border: $bga-blue-links solid 3px;
+            border-radius: 4px;
+        }
+    }
+    
+    &.disabled {
+        opacity: .65;
+        .input {
+            background: $bga-blue-black-lightest;
+        }
+    }
+}
+.form-element-wrapper.error {
+    .checkboxes {
+        [type=checkbox] {
+            border: solid 1px $bga-blue-black-dark;
+            border-radius: 0;
+
+            &:focus,
+            &:focus-visible {
+                border: solid 1px $bga-blue-black-dark;
+                outline: none;
+
+                + label {
+                    border: $bga-blue-focus solid 3px;
+                    border-radius: 4px;
+                }
+            }
+        }
+        label {
+            border: solid 3px $bga-red-fail-dark;
+            border-radius: 4px;
+        } 
+    }
+    + .error-feedback {
+        display: block;
+    }
+}
+
+
+// Radio buttons
+.radio-button {
+    position: relative;
+    display: block;
+    padding: 0 0 4px 0;
+    
+    &:last-of-type {
+        padding: 0;
+    }
+    
+    label {
+        font-weight: 400;
+        padding: 7px 7px 7px 42px;
+        border: solid 1px $bga-blue-black-dark;
+        background: $white;
+        width: 100%;
+        min-height: 40px;
+        display: inline-block;
+    }
+    [type="radio"] {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        -webkit-appearance: none;
+        height: 24px;
+        width: 24px;
+        vertical-align: middle;
+        border-radius: 100px;
+        border: solid 2px $bga-blue-black-mid;
+        background: $bga-white;
+        outline: none !important;
+        
+        &:focus {
+            border: $bga-blue-links solid 2px;
+            outline: none !important;
+            box-shadow: none;
+            
+            + label {
+                padding: 7px 7px 7px 42px;
+                border: solid 1px $bga-blue-black-dark;
+            }
+        }
+        &:focus-visible + label {
+            padding: 5px 5px 5px 44px;
+            border: $bga-blue-links solid 3px;
+            border-radius: 4px;
+        }
+        &:checked {
+            background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
+            border: solid 2px $bga-blue-links !important;
+            outline: none !important;
+            
+            + label {
+                padding: 5px 5px 5px 40px;
+                color: $bga-blue-links;
+                font-weight: 600;
+            }
+        }
+    }
 }
 
 

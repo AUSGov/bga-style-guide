@@ -11,7 +11,6 @@ subsite-tag: true
 ---
 
 
-
 <div class="row">
     
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
@@ -38,26 +37,26 @@ subsite-tag: true
                 <p>To view error state select the 'error' checkbox.</p>
                 <div class="row g-0">
                     
-                        <div class="col-12 col-sm-6 col-lg-5 mb-2 p-0">
-                            <p class="mb-2"><strong>Checkboxes title</strong></p>
+                        <div class="col-12 col-sm-6 col-lg-5 mb-2 p-0 ">
+                            <p class="mb-3"><strong>Checkboxes title</strong></p>
                             <div class="form-element-wrapper no-flex mb-3">
                                 
-                                <div class="checkboxes py-2">
-                                    <input class="checkbox me-3" type="checkbox" value="" id="flexCheckDefault">
+                                <div class="checkboxes">
+                                    <input class="checkbox m-0" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Default checkbox
                                     </label>
                                 </div>
                                 
-                                <div class="checkboxes py-2">
-                                    <input class="checkbox me-3" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <div class="checkboxes">
+                                    <input class="checkbox m-0" type="checkbox" value="" id="flexCheckChecked" checked>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Checked checkbox
                                     </label>
                                 </div>
                                 
-                                <div class="checkboxes py-2">
-                                    <input class="checkbox error-checkbox me-3" type="checkbox" value="" id="errorChecked">
+                                <div class="checkboxes">
+                                    <input class="checkbox error-checkbox m-0" type="checkbox" value="" id="errorChecked">
                                     <label class="form-check-label" for="errorChecked">
                                         Error
                                     </label>
@@ -75,53 +74,63 @@ subsite-tag: true
                 
                     <div class="row ">
                         
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Default state</p>
-                                <div class="form-element-wrapper mb-3">
-                                    <div class="bga-checkbox default mb-0"><span></span><p>Checkbox</p></div>
+                                <div class="form-element-wrapper no-flex mb-3">
+                                    <div class="bga-checkbox default mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                             </div>
                         </div>
 
                         
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Focus state</p>
-                                <div class="form-element-wrapper mb-3">
-                                    <div class="bga-checkbox focus mb-0"><span></span><p>Checkbox</p></div>
+                                <p class="mb-3 label">Focus/selected state</p>
+                                <div class="form-element-wrapper no-flex mb-3">
+                                    <div class="bga-checkbox focus mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                             </div>
                         </div>
 
                         
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Keyboard focus state</p>
+                                <div class="form-element-wrapper no-flex mb-3">
+                                    <div class="bga-checkbox default keyboard mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Error state</p>
-                                <div class="form-element-wrapper mb-3 error">
-                                    <div class="bga-checkbox error mb-0"><span></span><p>Checkbox</p></div>
+                                <div class="form-element-wrapper no-flex mb-3 error">
+                                    <div class="bga-checkbox error mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                                 <p class="error-feedback show mb-3">Descriptive error message</p>
                             </div>
                         </div>
 
                         
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Error and focus state</p>
-                                <div class="form-element-wrapper mb-3 error">
-                                    <div class="bga-checkbox error focus mb-0"><span></span><p>Checkbox</p></div>
+                                <div class="form-element-wrapper no-flex mb-3 error">
+                                    <div class="bga-checkbox error keyboard mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                                 <p class="error-feedback show mb-3">Descriptive error message</p>
                             </div>
                         </div>
                         
                         
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Disabled state</p>
-                                <div class="form-element-wrapper mb-3">
-                                    <div class="bga-checkbox disabled mb-0"><span></span><p>Checkbox</p></div>
+                                <div class="form-element-wrapper no-flex mb-3">
+                                    <div class="bga-checkbox disabled mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                             </div>
                         </div>
@@ -145,22 +154,37 @@ subsite-tag: true
         <div class="component-example mb-5">
             <div class="component-wrapper remove-element-padding p-4">
                 
-                <h3>Text box with units</h3>
-                 <p>To view error state type 'error' into the text box and hit enter.</p>
-                <div class="row">
-                    <form>
-                        <div class="col-12 col-sm-6 col-lg-5 mb-2 p-0 form-example">
-                            <label for="textbox-units-example" class="form-label mb-3">Text box label</label>
-                            
-                            <div class="textbox-units form-element-wrapper mb-3">
-                                <p class="units m-0">$AUD</p>
-                                <input type="text" class="form-control m-0" id="textbox-units-example" value="" required >
-                                <p class="decimals m-0">.00</p>
+                <p>To view error state select the 'error' checkbox.</p>
+                <div class="row g-0">
+                    
+                        <div class="col-12 col-sm-6 col-lg-5 mb-2 p-0 ">
+                            <p class="mb-3"><strong>Radio buttons title</strong></p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                
+                                <div class="radio-button">
+                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Default radio
+                                    </label>
+                                </div>
+                                <div class="radio-button">
+                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Default checked radio
+                                    </label>
+                                </div> 
+                                
+                                <div class="radio-button ">
+                                    <input class="form-check-input error-checkbox m-0" type="radio" name="flexRadioDefault" id="flexRadioError">
+                                    <label class="form-check-label" for="flexRadioError">
+                                                Error
+                                            </label>
+                                </div>
+                                
                             </div>
                             <p class="error-feedback mb-3">Descriptive error message</p>
-                            
+
                         </div>
-                    </form>
 
                 </div>
 
@@ -168,66 +192,65 @@ subsite-tag: true
 
                 <div class="element-state-wrapper p-4">
                 
-                    <div class="row">
+                    <div class="row ">
                         
-                        <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Default state</p>
-                                
-                                <div class="textbox-units form-element-wrapper mb-3">
-                                    <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input default mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
+                                <div class="form-element-wrapper no-flex mb-3">
+                                    <div class="bga-radio default mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                             </div>
                         </div>
 
                         
-                        <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Focus state</p>
-                                <div class="textbox-units form-element-wrapper mb-3">
-                                    <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input focus mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
+                                <p class="mb-3 label">Focus/selected state</p>
+                                <div class="form-element-wrapper no-flex mb-3">
+                                    <div class="bga-radio focus mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                             </div>
                         </div>
 
                         
-                        <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="bga-input-state-example pb-2">
+                                <p class="mb-3 label">Keyboard focus state</p>
+                                <div class="form-element-wrapper no-flex mb-3">
+                                    <div class="bga-radio default keyboard mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Error state</p>
-                                <div class="textbox-units form-element-wrapper mb-3 error">
-                                     <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input error mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
+                                <div class="form-element-wrapper no-flex mb-3 error">
+                                    <div class="bga-radio error mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                                 <p class="error-feedback show mb-3">Descriptive error message</p>
                             </div>
                         </div>
 
                         
-                        <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Error and focus state</p>
-                                <div class="textbox-units form-element-wrapper mb-3 error">
-                                    <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input error focus mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
+                                <div class="form-element-wrapper no-flex mb-3 error">
+                                    <div class="bga-radio error keyboard mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                                 <p class="error-feedback show mb-3">Descriptive error message</p>
                             </div>
                         </div>
                         
                         
-                        <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="bga-input-state-example pb-2">
                                 <p class="mb-3 label">Disabled state</p>
-                                <div class="textbox-units form-element-wrapper mb-3">
-                                    <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input disabled mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
+                                <div class="form-element-wrapper no-flex mb-3">
+                                    <div class="bga-radio disabled mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
                                 </div>
                             </div>
                         </div>
@@ -239,110 +262,14 @@ subsite-tag: true
             </div>
             
         </div>
+       
+        
         
         
         
         {% include breakpoints-singlebp.html %}
 
-        <div class="component-example mb-5">
-            <div class="component-wrapper remove-element-padding p-4">
-                
-                <h3>Text box with units</h3>
-                 <p>To view error state type 'error' into the text box and hit enter.</p>
-                <div class="row">
-                    <form>
-                        <div class="col-12 col-sm-6 col-lg-5 mb-2 p-0 form-example">
-                            <label for="textbox-units-example" class="form-label mb-3">Text box label</label>
-                            
-                            <div class="textbox-units form-element-wrapper mb-3">
-                                <p class="units m-0">$AUD</p>
-                                <input type="text" class="form-control m-0" id="textbox-units-example" value="" required >
-                                <p class="decimals m-0">.00</p>
-                            </div>
-                            <p class="error-feedback mb-3">Descriptive error message</p>
-                            
-                        </div>
-                    </form>
-
-                </div>
-
-                </div>
-
-                <div class="element-state-wrapper p-4">
-                
-                    <div class="row">
-                        
-                        <div class="col-12 col-sm-6 col-lg-5">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Default state</p>
-                                
-                                <div class="textbox-units form-element-wrapper mb-3">
-                                    <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input default mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-lg-5">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Focus state</p>
-                                <div class="textbox-units form-element-wrapper mb-3">
-                                    <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input focus mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-lg-5">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error state</p>
-                                <div class="textbox-units form-element-wrapper mb-3 error">
-                                     <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input error mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-lg-5">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error and focus state</p>
-                                <div class="textbox-units form-element-wrapper mb-3 error">
-                                    <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input error focus mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-12 col-sm-6 col-lg-5">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Disabled state</p>
-                                <div class="textbox-units form-element-wrapper mb-3">
-                                    <p class="units m-0">$AUD</p>
-                                    <div class="bga-text-input disabled mb-0"></div>
-                                    <p class="decimals m-0">.00</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        
-            </div>
-                    
-            </div>
-            
-        </div>
-  
-        
+         
         
         <!-- Design specifications link -->
         <h2 class="section-start" id="design-specifications">Design specifications</h2>
