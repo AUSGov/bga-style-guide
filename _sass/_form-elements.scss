@@ -344,15 +344,10 @@ textarea {
 .radio-button {
     position: relative;
     display: block;
-    padding: 0 0 4px 0;
-    
-    &:last-of-type {
-        padding: 0;
-    }
     
     label {
         font-weight: 400;
-        padding: 7px 7px 7px 42px;
+        padding: 8px 8px 8px 40px;
         border: solid 1px $bga-blue-black-dark;
         background: $white;
         width: 100%;
@@ -361,7 +356,7 @@ textarea {
     }
     [type="radio"] {
         position: absolute;
-        top: 8px;
+        top: 9px;
         left: 8px;
         -webkit-appearance: none;
         height: 24px;
@@ -378,14 +373,16 @@ textarea {
             box-shadow: none;
             
             + label {
-                padding: 7px 7px 7px 42px;
                 border: solid 1px $bga-blue-black-dark;
             }
         }
-        &:focus-visible + label {
-            padding: 5px 5px 5px 44px;
-            border: $bga-blue-links solid 3px;
-            border-radius: 4px;
+        &:focus-visible {
+            top: 11px;
+            
+            + label {
+                border: $bga-blue-links solid 3px;
+                border-radius: 4px;
+            }
         }
         &:checked {
             background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
@@ -393,12 +390,162 @@ textarea {
             outline: none !important;
             
             + label {
-                padding: 5px 5px 5px 40px;
                 color: $bga-blue-links;
                 font-weight: 600;
             }
         }
     }
+    
+    &.alternate {
+        label {
+            border:solid 3px $bga-white;
+            padding: 5px 5px 5px 40px;
+        }
+        [type="radio"] {
+            top: 8px;
+            
+            &:focus {
+                + label {
+                    border:solid 3px $bga-white;
+                }
+            }
+            
+            &:focus-visible {
+                top: 8px;
+                
+                + label {
+                    border:solid 3px $bga-blue-focus;
+                }
+            }
+        }
+    }
+}
+.form-element-wrapper.error {
+    .radio-button {
+        label {
+            border: solid 3px $bga-red-fail-dark;
+            border-radius: 4px;
+        }
+        [type="radio"] {
+            top: 11px;
+            border-radius: 100px;
+            border: solid 2px $bga-blue-black-mid;
+            
+            &:focus,
+            &:focus-visible {
+                + label {
+                    border: $bga-blue-focus solid 3px;
+                    border-radius: 4px;
+                    outline: none;
+                }
+            }
+        }
+        &.alternate {
+            [type="radio"] {
+                top: 8px;
+            }
+        }
+    }
+}
+
+// Radio button states
+.bga-radio {
+    position: relative;
+
+    .label {
+        font-weight: 400;
+        padding: 8px 8px 8px 40px;
+        border: solid 1px $bga-blue-black-dark;
+        background: $white;
+        width: 100%;
+        min-height: 40px;
+        display: inline-block;
+    }
+
+    .input {
+        position: absolute;
+        top: 10px;
+        left: 8px;
+        -webkit-appearance: none;
+        height: 24px;
+        width: 24px;
+        vertical-align: middle;
+        border-radius: 100px;
+        border: solid 2px $bga-blue-black-mid;
+        background: $bga-white;
+        outline: none !important;
+    }
+
+    &.focus {
+        .input  {
+            border: $bga-blue-links solid 2px;
+            outline: none !important;
+            box-shadow: none;
+            background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
+
+            + .label {
+                border: solid 1px $bga-blue-black-dark;
+                color: $bga-blue-links;
+                font-weight: 600;
+            }
+        }
+    }
+    &.error {
+        .input {
+            top: 12px;
+        }
+        .label {
+            border: $bga-red-fail-dark solid 3px;
+            border-radius: 4px;
+        }
+    }
+
+    &.keyboard {
+        .input {
+            top: 12px;
+            border: $bga-blue-links solid 2px;
+            background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
+
+
+            + .label {
+                border: $bga-blue-links solid 3px;
+                border-radius: 4px;
+                color: $bga-blue-links;
+                font-weight: 600;
+            }
+        }
+    }
+    &.disabled {
+        opacity: .65;
+    }
+    
+    &.alternate {
+        .label {
+            border:solid 3px $bga-white;
+            padding: 5px 5px 5px 40px;
+        }
+        .input {
+            top: 8px;
+        }
+        &.focus .input {
+            + .label {
+                border:solid 3px $bga-white;
+            }
+        }
+        &.error .input {
+            + .label {
+                border:solid 3px $bga-red-fail-dark;
+            }
+        }
+        &.keyboard .input {
+            top: 8px;
+
+            + .label {
+                border:solid 3px $bga-blue-focus;
+            }
+        }
+    }
+
 }
 
 

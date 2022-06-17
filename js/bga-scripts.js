@@ -350,6 +350,17 @@ $('.error-checkbox').on('click', function(){
     }
 });
     
+$('.form-element-wrapper .radio-button input').on('change', function(){
+    var error_radio = $(this).parents('.form-element-wrapper').find('.error-radio');
+    
+    if (error_radio.is(":checked")) {
+        $(this).parents('.form-element-wrapper').addClass('error');
+    } else {
+        $(this).parents('.form-element-wrapper').removeClass('error');
+    }
+});
+    
+    
     
 // TEXTAREA COUNT 
 	var max_length = 100;
