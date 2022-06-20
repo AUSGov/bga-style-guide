@@ -97,9 +97,10 @@ subsite-tag: false
         <!-- Single column - full width -->
         <div class="layout-example full-border show single-col-fullwidth m-0 p-4">
             
-           {% include layout-singlebreakpoint.html 
-            allbp-img="'../assets/layout-images/1colfullwidth-allbp.png' | relative_url "
-            allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The content area has a 32px margin above and below.</p><p>The first element within the content area has zero margin and padding above (regardless of what element it is).</p>"
+           {% include layouts-accordion.html
+                singlelayout="true"
+                allbp-img="'../assets/layout-images/1colfullwidth-allbp.png' | relative_url "
+                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The content area has a 32px margin above and below.</p><p>The first element within the content area has zero margin and padding above (regardless of what element it is).</p>"
             %}
             
         </div>
@@ -123,7 +124,7 @@ subsite-tag: false
 
         <div class="layout-example full-border show single-col-twothirdswidth m-0 px-4 py-0">
             
-            {% include layout-breakpoints-accordion.html 
+            {% include layouts-accordion.html 
                 layout-name="onecol-twothirdsw"
             
                 min1200-visibility="true"
@@ -169,7 +170,7 @@ subsite-tag: false
         
         <div class="layout-example full-border show two-col-leftmenu m-0 px-4 py-0">
             
-            {% include layout-breakpoints-accordion.html 
+            {% include layouts-accordion.html 
                 layout-name="onecol-twothirdsw"
             
                 min1200-visibility="true"
@@ -210,7 +211,7 @@ subsite-tag: false
         
         <div class="layout-example full-border show two-col-rightsidebar m-0 px-4 py-0">
             
-            {% include layout-breakpoints-accordion.html 
+            {% include layouts-accordion.html 
                 layout-name="twocol-rightbar"
             
                 min1200-visibility="false"

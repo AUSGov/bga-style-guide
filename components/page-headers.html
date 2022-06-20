@@ -1,0 +1,169 @@
+---
+
+layout: content-tagged
+title: Page headers
+description: Every page on business.gov.au has a page header designed to help the user quickly understand what the page is about.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+       {% include breakpoints.html
+            element-string="hero-pathway"
+            md-visibility="true"
+            final-visibility="true"
+            breakpoint-final="768px"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+
+            <h3>Category pages</h3>
+                
+                {% include component-examples/page-header-example.html 
+                    description="The long description can be used to briefly describe the contents of the page."
+                    header-image="'../assets/planning.jpg' | relative_url " 
+                    header-classes="category blue"
+                    header-type="Category page header"
+                %}
+                
+                
+            <h3>Topic pages</h3>
+                {% include component-examples/page-header-example.html 
+                    header-classes="topic blue"
+                    header-type="Topic page header"
+                    description="The long description can be used to briefly describe the contents of the page."
+                %}
+
+                
+            <h3>Information page</h3>
+                {% include component-examples/page-header-example.html 
+                    header-classes="information blue"
+                    updated="Last updated: 21 June 2022"
+                    header-type="Information page header"
+                    description="The long description can be used to briefly describe the contents of the page."
+                %}
+                
+            <h3>Grants and program page</h3>
+                {% include component-examples/page-header-example.html 
+                    header-classes="grants blue"
+                    updated="Last updated: 21 June 2022"
+                    label="Grant or program name"
+                    header-type="Grants page header"
+                %}
+
+
+
+                <h3>Colour variations</h3>
+
+                <div class="colour-options-wrapper">
+                    {% include component-examples/hero-colours.html 
+                        hero-classes="border-blue"
+                        external-link="Blue"
+                    %} 
+
+                    {% include component-examples/hero-colours.html 
+                        hero-classes="border-teal"
+                        external-link="Teal"
+                    %} 
+
+                    {% include component-examples/hero-colours.html 
+                        hero-classes="border-green"
+                        external-link="Green"
+                    %} 
+
+            </div>
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/4f2f85d9-aeda-476f-a5cf-6af7e81f4383/'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Hero pathways can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column and two column pages</a>.</p>
+        
+        {% include layouts-dropdown.html 
+            layout-name="All layouts"
+            singlelayout="true"
+        %}
+        
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+        
+                singlelayout="true"
+            
+                allbp-img="'../assets/layout-images/1colfullwidth-allbp.png' | relative_url "
+            
+                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The content area has a 32px margin above and below.</p><p>The first element within the content area has zero margin and padding above (regardless of what element it is).</p>"
+                
+            %}
+            
+        </div>
+        
+        
+    
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose: </h3>
+        <p>A page header helps users understand what the content of the page is about and its relevance to them. It includes the primary H1 (page title), a label and a supporting page description.  </p>
+        <h4>Headers for grant landing pages </h4>
+        <p>These differ from all other headers. They use a plain English title as the H1, and the grant name is displayed in the label field &ndash; this is also the page title in this case. </p>
+        <h3>When to use this component: </h3>
+        <ul>
+            <li>Page headers are built into every page pattern and the component doesn’t need to be added manually. They vary in height and colour depending on page hierarchy in the IA.  </li>
+        </ul>
+        <h3>Content rules: </h3>
+        <ul>
+            <li>H1: Recommended 90 character limit </li>
+            <li>Description: Recommended 250 character limit  </li>
+            <li>Options for label display: </li>
+            <li>Parent page title (e.g. on some index pages and on grant recipient pages). 
+                <ul>
+                    <li>Content type (e.g. 101) </li>
+                    <li>Label override (e.g. on some business topic index pages) </li>
+                    <li>No label (e.g. on tertiary business topic pages)</li>
+                </ul>
+            </li>
+        </ul>
+
+            
+        </div>
+        

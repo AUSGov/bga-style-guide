@@ -1,5 +1,14 @@
 <div class="breakpoints typography m-0 p-4">
 
+    {% if include.singlebp == "true" %}
+    <div class="element-name">
+        <h3 class="p-0 m-0">{{include.element-name}}</h3>
+    </div>
+    <div class="breakpoint-wrapper">
+        <p class="pe-3 m-0">All breakpoints</p>   
+    </div>
+    
+    {% else %}
     <div class="element-name">
         <h3 class="p-0 m-0">{{include.element-name}}</h3>
     </div>
@@ -29,6 +38,7 @@
 
     <div class="smaller-screens remove-element-padding">
         <p>Mobile design</p>
-</div>
+    </div>
+    {% endif %}
 
 </div>

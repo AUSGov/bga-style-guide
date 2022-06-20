@@ -33,11 +33,8 @@ subsite-tag: true
         <!-- Breakpoint radio buttons -->
        {% include breakpoints.html
             element-string="hero-pathway"
-            xl-visibility="hide"
-            lg-visibility="show"
-            md-visibility="hide"
-            sm-visibility="hide"
-            final-visibility="show"
+            lg-visibility="true"
+            final-visibility="true"
             breakpoint-final="992px"
         %}
 
@@ -130,7 +127,7 @@ subsite-tag: true
         
         <p>Hero pathways can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column and two column pages</a>.</p>
         
-        {% include layouts.html 
+        {% include layouts-dropdown.html 
             single-col-fullwidth-visibility="true" 
             single-col-twothirds-visibility="true" 
             two-col-leftmenu-visibility="true" 
@@ -139,7 +136,7 @@ subsite-tag: true
         
         <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
             
-            {% include layout-breakpoints-accordion.html 
+            {% include layouts-accordion.html 
                 layout-name="onecol-fw"
             
                 min1200-visibility="false"
@@ -168,7 +165,7 @@ subsite-tag: true
         
         <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
             
-            {% include layout-breakpoints-accordion.html 
+            {% include layouts-accordion.html 
                 layout-name="onecol-twothirdsw"    
             
                 min1200-visibility="true"
@@ -199,7 +196,7 @@ subsite-tag: true
         
         <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
             
-            {% include layout-breakpoints-accordion.html 
+            {% include layouts-accordion.html 
                 layout-name="twocol-leftmenu"
                 
                 min1200-visibility="true"
@@ -231,7 +228,7 @@ subsite-tag: true
         
         <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
             
-            {% include layout-breakpoints-accordion.html 
+            {% include layouts-accordion.html 
                 layout-name="twocol-rightbar"
             
                 min1200-visibility="false"

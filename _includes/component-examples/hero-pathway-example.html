@@ -12,16 +12,21 @@
              <div class="arrow-icon">
                  <img src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
              </div>
+             
+             {% if include.external-link %}
              <div class="external-site pe-4 remove-element-padding">
                  <p>{{ include.external-link }}</p>
              </div>
+             {% endif %}
          </div>
 
          </div>
 
+    {% if include.hero-image %}
     <div class="component-image">
         <img src={{ include.hero-image }}  alt="" />
     </div>
+    {% endif %}
     
 
 </a>

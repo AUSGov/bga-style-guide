@@ -217,10 +217,6 @@ $('a').on('click', function(e){
     
     
 // COMPONENTS PAGE - BREAKPOINT RADIO BUTTONS
-$('.breakpoints .hide').each(function(){
-    $(this).remove();
-});
-
 $('.breakpoints .btn-group').each(function(){
     $(this).find('input').first().attr('checked', 'checked');
 });    
@@ -252,30 +248,22 @@ $(window).resize(function() {
     
     
 // COMPONENTS PAGE - LAYOUT EXAMPLES
-// remove unneeded options from layout select on pages that have select options
-$('.layouts-select option.false').each(function(){
-    $(this).remove();
-});
-
-// remove unneeded accordion items from select list
+    
+// Show first layout example (rest are set to display none by default)
 if ($('.layouts-select').length) {
     var visible_layout = $('.layouts-select').val();
     $('.layout-example.' + visible_layout).addClass('show');    
 } 
-$('.layout-accordion .accordion-item.false').each(function(){
-    $(this).remove();
-});
-
-
+    
 // Set first item on remaining accordions to be open by default
 $('.layout-accordion').each(function(){
     $(this).find('.accordion-item').first().addClass('first');   
 });
 $('.layout-accordion .accordion-item.first').find('button').attr("aria-expanded","true").removeClass('collapsed');
 $('.layout-accordion .accordion-item.first').find('.collapse').addClass('show');
+    
 
-
-// Hide all layout accordions by default. Show accordion that matches select layouts option on pages that have select options
+// On layouts dropdown change show accordion that matches dropdown selection
 if ($('.layouts-select').length) {
         $('.layouts-select').on('change', function(){
         $('.layout-example').each(function(){
@@ -329,7 +317,6 @@ $('.accordion-button').on('click', function(){
     }
 });
 
-
     
 // FORM EXAMPLES
 
@@ -340,7 +327,6 @@ $('.form-example input').on('change', function(){
         $(this).parents('.form-element-wrapper').removeClass('error');
     }
 });
-
     
 $('.error-checkbox').on('click', function(){
     if ( $(this).is(":checked") ) {   

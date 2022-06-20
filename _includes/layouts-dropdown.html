@@ -1,0 +1,35 @@
+<div class="layouts m-0 p-4">
+    
+    {% if include.singlelayout == "true" %}
+    <p class="pe-3 m-0">Layout: <strong>{{include.layout-name}}</strong></p>
+    
+    {% else %}
+    
+    
+    <p class="pe-3 m-0">Layout:</p>
+    
+    <select class="form-select layouts-select ps-3" aria-label="Layout examples">
+        
+        {% if include.single-col-fullwidth-visibility == "true" %}
+            <option value="single-col-fullwidth" class="{{include.single-col-fullwidth-visibility}}" selected>Single column - full width</option>
+        {% endif %}
+        
+        {% if include.single-col-fullwidth-visibility == "true" %}
+            <option value="single-col-twothirdswidth" class="{{include.single-col-twothirds-visibility}}">Single column - 3/4 width</option>
+        {% endif %}
+        
+        {% if include.single-col-fullwidth-visibility == "true" %}
+            <option value="two-col-leftmenu" class="{{include.two-col-leftmenu-visibility}}">Two column - left side menu</option>
+        {% endif %}
+        
+        {% if include.single-col-fullwidth-visibility == "true" %}
+            <option value="two-col-rightsidebar" class="{{include.two-col-rightsidebar-visibility}}">Two column - right sidebar</option>
+        {% endif %}
+        
+    </select>
+    
+    {% endif %}
+
+
+    
+</div>

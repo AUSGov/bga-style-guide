@@ -3,14 +3,31 @@
     <h5 class="mb-3">On this page</h5>
     
     <ul id="anchor-menu" class="p-0">
-        <li class="mb-3"><a tabindex="0" href="{{ include.link-id-1 }}">{{ include.link-1 }}</a></li>
-        <li class="mb-3"><a tabindex="0" href="{{ include.link-id-2 }}">{{ include.link-2 }}</a></li>
-        <li class="mb-3"><a tabindex="0" href="{{ include.link-id-3 }}">{{ include.link-3 }}</a></li>
-        <li class="mb-3"><a tabindex="0" href="{{ include.link-id-4 }}">{{ include.link-4 }}</a></li>
-        <li class="mb-3"><a tabindex="0" href="{{ include.link-id-5 }}">{{ include.link-5 }}</a></li>
-        <li class="mb-3"><a tabindex="0" href="{{ include.link-id-6 }}">{{ include.link-6 }}</a></li>
-        <li class="mb-3"><a tabindex="0" href="{{ include.link-id-7 }}">{{ include.link-7 }}</a></li>
-        <li class="mb-3"><a tabindex="0" href="{{ include.link-id-8 }}">{{ include.link-8 }}</a></li>
+        {% if include.link-1 %}
+            <li class="mb-3"><a tabindex="0" href="{{ include.link-id-1 }}">{{ include.link-1 }}</a></li>
+            {% endif %} 
+        {% if include.link-2 %}
+            <li class="mb-3"><a tabindex="0" href="{{ include.link-id-2 }}">{{ include.link-2 }}</a></li>
+            {% endif %} 
+        {% if include.link-3 %}
+            <li class="mb-3"><a tabindex="0" href="{{ include.link-id-3 }}">{{ include.link-3 }}</a></li>
+            {% endif %} 
+        {% if include.link-4 %}
+            <li class="mb-3"><a tabindex="0" href="{{ include.link-id-4 }}">{{ include.link-4 }}</a></li>
+            {% endif %} 
+        {% if include.link-5 %}
+            <li class="mb-3"><a tabindex="0" href="{{ include.link-id-5 }}">{{ include.link-5 }}</a></li>
+            {% endif %} 
+        {% if include.link-6 %}
+            <li class="mb-3"><a tabindex="0" href="{{ include.link-id-6 }}">{{ include.link-6 }}</a></li>
+            {% endif %} 
+        {% if include.link-7 %}
+            <li class="mb-3"><a tabindex="0" href="{{ include.link-id-7 }}">{{ include.link-7 }}</a></li>
+            {% endif %} 
+        {% if include.link-8 %}
+            <li class="mb-3"><a tabindex="0" href="{{ include.link-id-8 }}">{{ include.link-8 }}</a></li>
+            {% endif %} 
+        
     </ul>
 
 </div>

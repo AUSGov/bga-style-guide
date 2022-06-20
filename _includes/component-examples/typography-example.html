@@ -2,23 +2,54 @@
     
     <div class="foundation-rules">
         <ul>
+            {% if include.font %}
             <li><strong>Font</strong> - {{include.font}}</li>
+            {% endif %}
+            
+            {% if include.fontsize %}
             <li><strong>Font size</strong> - {{include.fontsize}}</li>
+            {% endif %}
+            
+            {% if include.colour %}
             <li><strong>Colour</strong> - {{include.colour}}</li>
+            {% endif %}
+            
+            {% if include.lineheight %}
             <li><strong>Line height</strong> -  {{include.lineheight}}</li>
+            {% endif %}
+            
+            {% if include.letterspacing %}
             <li><strong>Letter spacing</strong> - {{include.letterspacing}}</li>
+            {% endif %}
+            
         </ul>
     </div>
     
+    {% if include.mobilestyle %}
     <div class="foundation-rules mobile">
         <ul>
+            {% if include.mobilefont %}
             <li><strong>Font</strong> - {{include.mobilefont}}</li>
+            {% endif %}
+            
+            {% if include.mobilefontsize %}
             <li><strong>Font size</strong> - {{include.mobilefontsize}}</li>
+            {% endif %}
+            
+            {% if include.mobilecolour %}
             <li><strong>Colour</strong> - {{include.mobilecolour}}</li>
+            {% endif %}
+            
+            {% if include.mobilelineheight %}
             <li><strong>Line height</strong> -  {{include.mobilelineheight}}</li>
+            {% endif %}
+            
+            {% if include.mobileletterspacing %}
             <li><strong>Letter spacing</strong> - {{include.mobileletterspacing}}</li>
+            {% endif %}
         </ul>
     </div>
+    {% endif %}
     
     <div class="example ms-4">
         {{ include.text-example}}

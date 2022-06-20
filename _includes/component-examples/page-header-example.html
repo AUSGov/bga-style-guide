@@ -1,0 +1,35 @@
+<div class="page-header-wrapper mb-5">
+<div class="bga-component page-header px-5 {{ include.header-classes }}">
+
+    <div class="component-content px-5 pt-5 pb-6">
+
+        <div class="component-text">
+            {% if include.label %}
+                <p>{{ include.label }}</p>
+            {% endif %}
+
+            {% if include.header-type %}        
+                <h1 class="mb-4 pt-0">{{ include.header-type }}</h1>
+            {% endif %}
+            
+            {% if include.updated %}        
+                <p class="updated mb-4">{{ include.updated }}</p>
+            {% endif %}
+            
+            {% if include.description %}        
+                <p class="description mb-0">{{ include.description }}</p>
+            {% endif %}
+            
+            
+        </div>
+
+    </div>
+
+    {% if include.header-image %}   
+        <div class="component-image">     
+            <img src={{ include.header-image }} alt="" />
+        </div>
+    {% endif %}   
+    
+</div>
+</div>
