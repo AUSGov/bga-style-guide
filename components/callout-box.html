@@ -1,0 +1,196 @@
+---
+
+layout: content-tagged
+title: Call out boxes
+description: Highlight areas of text within the context of a page.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+        singlebp="true" 
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+            {% include component-examples/callout-box-example.html
+                h2title="H2 level title, lorem ipsum dolor sit amet."
+                text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><ul><li>Bullet points can be used in call out boxes.</li><li>Integer erat arcu, venenatis et nibh non.</li><li>Nullam aliquet nulla id arcu consectetur.</li></ul>"
+            %}
+
+            {% include component-examples/callout-box-example.html
+                h3title="H3 level title, lorem ipsum dolor sit amet."
+                text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p>"
+            %}
+            
+            </div>
+            
+        </div>
+        
+        
+            
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/737eb46e-3079-4c99-882c-7886a3999249/'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Call out boxes can be used on all page layouts except the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column - full width layout</a>.</p> 
+       
+       
+        {% include layouts-dropdown.html 
+            single-col-twothirds-visibility="true" 
+            two-col-leftmenu-visibility="true" 
+            two-col-rightsidebar-visibility="true" 
+        %}
+        
+        <div class="layout-example show single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/callout-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-1col2thirdswidth-min992.png' | relative_url "
+                min576-img="'../assets/layout-images/callout-1col2thirdswidth-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-1col2thirdswidth-finalbp.png' | relative_url "
+            
+                min1200-rules="<p>The content area is 7 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-leftmenu"
+                
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/callout-2col-leftmenu-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-2col-leftmenu-min992.png' | relative_url "
+                min576-img="'../assets/layout-images/callout-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-2col-leftmenu-finalbp.png' | relative_url "
+            
+    
+                min1200-rules="<p>The content area is 7 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+
+                min992-img="'../assets/layout-images/callout-2col-rightsidebar-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+        
+        
+    
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h4>Purpose: </h4>
+        <p>The call out box component is used to highlight specific information within a content page.</p>
+        <h4>When to use this component: </h4>
+        <ul>
+            <li>Used to highlight important information in the context of the page, such as key tax dates. </li>
+            <li>Used to notify users about updates or important information on other pages. </li>
+            <li>To provide additional help, such as sample calculations and scenarios. </li>
+        </ul>
+        <h4>Content rules: </h4>
+        <ul>
+            <li>Grant updates &ndash; high priority updates only.</li>
+            <li>[h2] Update &ndash; [date month year].</li>
+            <li>[h3] [Optional summary of change].</li>
+            <li>Body content has a recommended 300 character limit.</li>
+        </ul>
+            
+        </div>
+        
