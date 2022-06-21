@@ -1,35 +1,112 @@
+// Page header examples
 .page-header-wrapper {
     background: linear-gradient(0deg, #b8cde7 0%, #9cb6db 100%);
     margin: 0 -24px;
-    padding: 32px 24px 0;
+    padding: 32px 32px 0;
 
     .page-header {
         display: flex;
+    }
 
+    .component-content {
+        background: $bga-blue-background-light;
+        width: 100%;
+        padding: 32px 32px 48px;
+    }
+    .component-text {
+        width: 83%;
+    }
+    .description {
+        font-size: 1.125rem;
+        line-height: 1.77785;
+    }
+
+    .component-image {
+        margin: 0;
+        min-height: 300px;
+        width: 50%;
+
+        img {
+            object-position: center center;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .page-header.category {
         .component-content {
-            background: $bga-blue-background-light;
-            
-            p:empty {
-                display: none;
+            width: 50%;
+        }
+        .component-text {
+            width: 100%;
+        }
+    }
+}
+
+// Page header colours
+.header-colour-options-wrapper {
+    .page-header-wrapper {
+        padding: 32px 32px 0;
+        margin: 0;
+
+        &.yellow {
+            background: linear-gradient(180deg, rgba(250, 221, 130, 1) 0%, rgba(253, 235, 179, 1) 100%);
+
+            .component-content {
+                background: $bga-yellow-highlight-light;
             }
         }
+        &.teal {
+            background: linear-gradient(180deg, rgba(158,210,211,1) 0%, rgba(191,226,226,1) 100%);
 
-        .component-image {
-            margin: 0;
-            min-height: 300px;
-            width: 50%;
-            background: pink;
-
-            img {
-                object-position: center center;
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-            }
-            
-            &:empty {
-                display: none;
+            .component-content {
+                background: $bga-teal-highlight-light;
             }
         }
     }
+
+}
+
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-min576,
+.component-example.bp-mobile,
+.component-example.small-screen {
+    .page-header-wrapper {
+        .page-header.category {
+            .component-content {
+                width: 100%;
+            }
+            .component-image {
+                display: none;
+            }
+        }
+        .page-header {
+            .component-text {
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+.component-example.bp-mobile,
+.component-example.small-screen {
+    .page-header-wrapper {
+        background: $bga-blue-background-light;
+        padding: 0;
+
+        .component-content {
+            padding: 24px 24px 48px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.625;
+        }
+    }
+
 }

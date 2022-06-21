@@ -8,11 +8,25 @@
             <p class="tile-description mb-0">{{ include.tile-text }}</p>
             
             <div class="filter-tags mb-4">
+                {% if include.tile-tag1 %}
                 <span class="filter-tag px-3 py-1 mb-2 me-2">{{ include.tile-tag1 }}</span>
+                {% endif %}
+                
+                {% if include.tile-tag2 %}
                 <span class="filter-tag px-3 py-1 mb-2 me-2">{{ include.tile-tag2 }}</span>
+                {% endif %}
+                
+                {% if include.tile-tag3 %}
                 <span class="filter-tag px-3 py-1 mb-2 me-2">{{ include.tile-tag3 }}</span>
+                {% endif %}
+                
+                {% if include.tile-tag4 %}
                 <span class="filter-tag px-3 py-1 mb-2 me-2">{{ include.tile-tag4 }}</span>
+                {% endif %}
+                
+                {% if include.tile-tag5 %}
                 <span class="filter-tag px-3 py-1 mb-2 me-2">{{ include.tile-tag5 }}</span>
+                {% endif %}
             </div>
             
             <img src={{ include.tile-image | relative_url }} />  

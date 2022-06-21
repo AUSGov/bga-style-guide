@@ -70,7 +70,7 @@ $('.filter-item').on('click', function(){
     
     
 // SEARCH COMPONENTS BY NAME
-var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-call-out-link', 'bga-feature-boxes', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-tool-start-component', 'bga-search-result-information-tiles'];
+var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-call-out-link', 'bga-feature-boxes', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-more-information-sidebar', 'bga-tool-start-component', 'bga-search-result-information-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results'];
     
 $('#component_name').on('change', function(){
    
@@ -222,13 +222,31 @@ $('.breakpoints .btn-group').each(function(){
 });    
     
 $('.breakpoints input').on('click', function(){
-    if ( $(this).is(":checked") ) {
+
+    var breakpoint,
+    example_container = $(this).parents('.breakpoints').next('div.component-example');
+    
+    example_container.removeClass('bp-desktop bp-min1200 bp-min992 bp-min768 bp-min576 bp-mobile');
+    
+    if ($(this).is(":first-of-type")) {
+        console.log('first is best');
+        
+        breakpoint = 'bp-desktop';
+        example_container.addClass(breakpoint);
+    } else {
+        breakpoint = $(this).attr('data-breakpoint');
+        example_container.addClass(breakpoint);
+    }
+    
+    /*if ( $(this).is(":checked") ) {
         var breakpoint = $(this).attr('data-breakpoint'),
             example_container = $(this).parents('.breakpoints').next('div.component-example');
        
         example_container.removeClass('bp-min1200 bp-min992 bp-min768 bp-min576 bp-mobile');
         example_container.addClass(breakpoint);
-    }
+    }*/
+    
+    
 });
     
 // Display mobile design on smaller screens

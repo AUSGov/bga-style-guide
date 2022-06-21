@@ -34,8 +34,9 @@ subsite-tag: true
        {% include breakpoints.html
             element-string="hero-pathway"
             md-visibility="true"
+            sm-visibility="true"
             final-visibility="true"
-            breakpoint-final="768px"
+            breakpoint-final="576px"
         %}
 
         <!-- Component example -->
@@ -82,20 +83,20 @@ subsite-tag: true
 
                 <h3>Colour variations</h3>
 
-                <div class="colour-options-wrapper">
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-blue"
-                        external-link="Blue"
+                <div class="header-colour-options-wrapper">
+                    {% include component-examples/page-headers-colours.html 
+                        classes="blue"
+                        text="Blue - default colour"
                     %} 
 
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-teal"
-                        external-link="Teal"
+                   {% include component-examples/page-headers-colours.html 
+                        classes="yellow"
+                        text="Yellow - guide headers"
                     %} 
-
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-green"
-                        external-link="Green"
+                    
+                   {% include component-examples/page-headers-colours.html 
+                        classes="teal"
+                        text="Teal - tool headers"
                     %} 
 
             </div>
@@ -107,7 +108,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/4f2f85d9-aeda-476f-a5cf-6af7e81f4383/'"
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/fe6137db-86f0-4ca9-bd13-c177cd0e807a/'"
             btn-text="View design specifications"
             %}
 
@@ -115,22 +116,59 @@ subsite-tag: true
         <!-- LAYOUTS -->   
         <h2 class="section-start" id="layouts">Layouts</h2>
         
-        <p>Hero pathways can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column and two column pages</a>.</p>
+        <p>Page headers are used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >all page layouts</a>.</p> 
+       
         
+        
+        
+        
+        <h3>Default header grid layout</h3>
         {% include layouts-dropdown.html 
             layout-name="All layouts"
             singlelayout="true"
         %}
         
-        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+        {% include layouts-accordion.html 
+        
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/page-header-default-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/page-header-default-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
+            
+                min1200-rules="<p>The header content area is 8 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
+
+                min992-rules="<p>The header content area is 10 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+        <h3>Category page grid layout</h3>
+        {% include layouts-dropdown.html 
+            layout-name="All layouts"
+            singlelayout="true"
+        %}
+        
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
             
             {% include layouts-accordion.html 
         
                 singlelayout="true"
             
-                allbp-img="'../assets/layout-images/1colfullwidth-allbp.png' | relative_url "
+                allbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
             
-                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The content area has a 32px margin above and below.</p><p>The first element within the content area has zero margin and padding above (regardless of what element it is).</p>"
+                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
                 
             %}
             
@@ -148,20 +186,12 @@ subsite-tag: true
         <p>These differ from all other headers. They use a plain English title as the H1, and the grant name is displayed in the label field &ndash; this is also the page title in this case. </p>
         <h3>When to use this component: </h3>
         <ul>
-            <li>Page headers are built into every page pattern and the component doesn’t need to be added manually. They vary in height and colour depending on page hierarchy in the IA.  </li>
+            <li>Page headers are built into every page pattern and the component doesn’t need to be added manually.</li>
         </ul>
         <h3>Content rules: </h3>
         <ul>
             <li>H1: Recommended 90 character limit </li>
             <li>Description: Recommended 250 character limit  </li>
-            <li>Options for label display: </li>
-            <li>Parent page title (e.g. on some index pages and on grant recipient pages). 
-                <ul>
-                    <li>Content type (e.g. 101) </li>
-                    <li>Label override (e.g. on some business topic index pages) </li>
-                    <li>No label (e.g. on tertiary business topic pages)</li>
-                </ul>
-            </li>
         </ul>
 
             

@@ -1,9 +1,9 @@
 <div class="page-header-wrapper mb-5">
-<div class="bga-component page-header px-5 {{ include.header-classes }}">
+<div class="bga-component page-header {{ include.header-classes }}">
 
-    <div class="component-content px-5 pt-5 pb-6">
+    <div class="component-content">
 
-        <div class="component-text">
+        <div class="component-text remove-element-padding">
             {% if include.label %}
                 <p>{{ include.label }}</p>
             {% endif %}
@@ -13,11 +13,11 @@
             {% endif %}
             
             {% if include.updated %}        
-                <p class="updated mb-4">{{ include.updated }}</p>
+                <p class="updated">{{ include.updated }}</p>
             {% endif %}
             
             {% if include.description %}        
-                <p class="description mb-0">{{ include.description }}</p>
+                <p class="description">{{ include.description }}</p>
             {% endif %}
             
             
