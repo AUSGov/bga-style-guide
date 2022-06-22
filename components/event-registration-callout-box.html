@@ -1,8 +1,8 @@
 ---
 
 layout: content-tagged
-title: Contact call out boxes
-description: Highlight contact information within the context of a page.
+title: Event registration call out boxes
+description: Highlight registration information within the context of an events page.
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -43,32 +43,47 @@ subsite-tag: true
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
                 
-            <h3>Default contact call out box</h3>    
+            <h3>Single session events</h3>    
 
-            {% include component-examples/contact-callout-box-example.html
-                title="Contact information"
-                phone="1300 XXX XXX"
-                email="johnsmith@qwerty.com"
-                address="123 Smithson St, Lyneham, Australian Capital Territory"
-                website="webaddress.com"
+            {% include component-examples/event-callout-box-example.html
+                singlesession="true"
+                title="Registration for for this event is with the Australian Taxation Office"
+                cost="Free"
+                time="10:00 - 11:00 am AEST"
+                date="Thu 30 Jun 2022"
+                location="Online"   
             %}
                 
-            <h3>Adviser contact call out box</h3>    
+            <h3>Multiple session events with a single registration link</h3>    
 
-            {% include component-examples/contact-callout-box-example.html
-                twosections="true"
+            {% include component-examples/event-callout-box-example.html
+                example-name="multiple-one-link"
+                title="Registration for for this event is with the Australian Taxation Office"
                 cost="Free"
-                delivery-type="In person services, Phone services, Online services"
-                service-area="City of Melbourne"
-                title="Find out more"
-                phone="<span>03 9658 9658</span><span>1300 XXX XXX</span>"
-                email="johnsmith@qwerty.com"
-                address="123 Smithson St, Lyneham, Australian Capital Territory"
-                website="<span>webaddress.com</span><span>alternatesiteaddress.com</span>"
+                item1-label="<strong>Online: </strong>Thursday 13 Nov 2021"
+                item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                item2-label="<strong>Online: </strong>Wednesday 20 Jan 2022"
+                item2-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                
             %}
+                
+            <h3>Multiple session events with a multiple registration links</h3>    
 
-            
-            
+            {% include component-examples/event-callout-box-example.html
+                dropdown="true"
+                example-name="multiple-many-links"
+                title="Registration for for this event is with the Australian Taxation Office"
+                cost="Free"
+                item1-label="<strong>Shepparton, VIC: </strong>Thursday 13 Nov 2021"
+                item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                item1-address="<strong>Address: </strong>The Parklake Hotel, 481 Wyndham Street, Shepparton, VIC"
+                item2-label="<strong>Benalla, VIC: </strong>Wednesday 12 Nov 2021"
+                item2-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                item2-address="<strong>Address: </strong>The Parklake Hotel, 481 Wyndham Street, Shepparton, VIC"
+                
+            %}
+                
+  
             </div>
             
         </div>
