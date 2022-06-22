@@ -1,0 +1,210 @@
+---
+
+layout: content-tagged
+title: Contact call out boxes
+description: Highlight contact information within the context of a page.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+            element-string="contact-callout-box"
+            md-visibility="true"
+            final-visibility="true"
+            breakpoint-final="768px"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+                
+            <h3>Default contact call out box</h3>    
+
+            {% include component-examples/contact-callout-box-example.html
+                title="Contact information"
+                phone="1300 XXX XXX"
+                email="johnsmith@qwerty.com"
+                address="123 Smithson St, Lyneham, Australian Capital Territory"
+                website="webaddress.com"
+            %}
+                
+            <h3>Adviser contact call out box</h3>    
+
+            {% include component-examples/contact-callout-box-example.html
+                twosections="true"
+                cost="Free"
+                delivery-type="In person services, Phone services, Online services"
+                service-area="City of Melbourne"
+                title="Contact information"
+                phone="<span>03 9658 9658</span><span>1300 XXX XXX</span>"
+                email="johnsmith@qwerty.com"
+                address="123 Smithson St, Lyneham, Australian Capital Territory"
+                website="<span>webaddress.com</span><span>alternatesiteaddress.com</span>"
+            %}
+
+            
+            
+            </div>
+            
+        </div>
+        
+        
+            
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/19f12b55-b3f2-4ac0-91e9-9adc1a4e2b95/'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Call out boxes can be used on all page layouts except the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column - full width layout</a>.</p> 
+       
+       
+        {% include layouts-dropdown.html 
+            single-col-twothirds-visibility="true" 
+            two-col-leftmenu-visibility="true" 
+            two-col-rightsidebar-visibility="true" 
+        %}
+        
+        <div class="layout-example show single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/callout-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-1col2thirdswidth-min992.png' | relative_url "
+                min576-img="'../assets/layout-images/callout-1col2thirdswidth-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-1col2thirdswidth-finalbp.png' | relative_url "
+            
+                min1200-rules="<p>The content area is 7 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-leftmenu"
+                
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/callout-2col-leftmenu-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-2col-leftmenu-min992.png' | relative_url "
+                min576-img="'../assets/layout-images/callout-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-2col-leftmenu-finalbp.png' | relative_url "
+            
+    
+                min1200-rules="<p>The content area is 7 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+
+                min992-img="'../assets/layout-images/callout-2col-rightsidebar-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+        
+        
+    
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h4>Purpose:</h4>
+        <p>The Contact call out box component is used to display contact details for the Business .gov.au contact centre, or one of its programs. </p>
+        <h4>When to use this component:</h4>
+        <ul>
+            <li>On pages that may require customer to contact the department for additional help. Generally these will be the program pages.</li>
+        </ul>
+        <h4>Content rules:</h4>
+        <ul>
+            <li>There are pre-created fields on this component that should be used as per their determination (e.g. add phone number to the phone number field).</li>
+        </ul>
+            
+        </div>
+        

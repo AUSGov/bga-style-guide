@@ -9,6 +9,11 @@
     > *:last-child {
         padding-bottom: 0;
         margin-bottom: 0;
+        
+        li:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
     }
     > *:first-child {
         padding-top: 0;
@@ -65,7 +70,7 @@
     display: flex;
     
     a {
-        @include bga-font($font-family-sans-serif,$font-weight-semibold, normal);
+        font-weight: 600;
         font-size: 1.8rem;
         color: $bga-blue-black-dark;
         border-left: 1px $bga-blue-black-dark solid;     

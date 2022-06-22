@@ -1,0 +1,57 @@
+<div class="bga-component callout-box blue {{include.classes}} mt-0 mx-0 mb-5">
+
+    {% if include.twosections == "true" %}
+        <div class="p-4 header-section component-content">
+            <div class="component-text p-0 remove-element-padding">
+                <ul class="indented p-0">
+                    {% if include.cost %}
+                    <li><strong>Cost:</strong>{{ include.cost }}</li>
+                    {% endif %}
+
+                    {% if include.delivery-type %}
+                    <li><strong>Delivery type:</strong>{{ include.delivery-type }}</li>
+                    {% endif %}
+
+                    {% if include.service-area %}
+                    <li><strong>Service area:</strong>{{ include.service-area }}</li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+
+    {% endif %}
+    
+    
+    <div class="p-4 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+            {% if include.title %}
+                <h3>{{ include. title }}</h3>
+            {% endif %}
+            
+            <ul class="indented p-0">
+            {% if include.phone %}
+                <li><strong>Phone:</strong><a href="">{{ include.phone }}</a></li>
+            {% endif %}
+                
+            {% if include.email %}
+                <li><strong>Email:</strong><a href="">{{ include.email }}</a></li>
+            {% endif %}
+                
+            {% if include.address %}
+                <li><strong>Address:</strong>{{ include.address }}</li>
+            {% endif %}
+                
+            {% if include.website %}
+                <li><strong>Website:</strong><a href="">{{ include.website }}</a></li>
+            {% endif %}
+                
+            </ul>
+            
+        </div>
+    
+
+    </div>
+
+</div>

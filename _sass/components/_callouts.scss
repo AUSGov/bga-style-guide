@@ -1,4 +1,62 @@
 .callout-box {
     background: $bga-yellow-highlight-light;
     border-left: solid 8px $bga-yellow-highlight-dark;
+    
+    &.blue {
+        background: $bga-blue-background-extralight;
+        border-left: solid 8px $bga-blue-border;
+        
+        .header-section {
+            background: $bga-blue-background-light;
+        }
+    }
+    
+    ul.indented {
+        
+        li {
+            list-style-type: none;
+            text-indent: 0;
+            display: flex;
+            margin-bottom: 24px;
+            
+            &::before {
+                display: none;
+            }
+            
+            strong {
+                min-width: 120px;
+                display: block;
+            }
+            span {
+                display: block;
+                width: calc(100%-120px);
+                margin-bottom: 8px;
+                
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-mobile, .component-example.small-screen {
+    .callout-box {
+        ul.indented {
+            li {
+                display: block;
+            }
+            strong {
+                min-width: unset;
+                width: 100%;
+                margin-bottom: 8px;
+            }
+            span {
+                width: 100%;
+            }
+        }
+    }
+
 }
