@@ -2570,6 +2570,8 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + 6px); }
 
 .remove-element-padding > *:last-child { padding-bottom: 0; margin-bottom: 0; }
 
+.remove-element-padding > *:last-child li:last-child { padding-bottom: 0; margin-bottom: 0; }
+
 .remove-element-padding > *:first-child { padding-top: 0; margin-top: 0; }
 
 .remove-top-spaces > *:first-child { padding-top: 0; margin-top: 0; }
@@ -2592,7 +2594,7 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + 6px); }
 
 .site-name { display: flex; }
 
-.site-name a { font-family: "Open Sans", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; font-weight: 600; font-style: normal; font-size: 1.8rem; color: #2E3E5A; border-left: 1px #2E3E5A solid; display: block; text-decoration: none; line-height: 1.2; }
+.site-name a { font-weight: 600; font-size: 1.8rem; color: #2E3E5A; border-left: 1px #2E3E5A solid; display: block; text-decoration: none; line-height: 1.2; }
 
 .navbar { padding: 0 16px; font-weight: 600; margin-left: -8px; }
 
@@ -3509,5 +3511,25 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .component-example.bp-mobile .page-header-wrapper .description, .component-example.small-screen .page-header-wrapper .description { font-size: 1rem; line-height: 1.625; }
 
 .callout-box { background: #FFF3CD; border-left: solid 8px #FFD964; }
+
+.callout-box.blue { background: #E3ECF6; border-left: solid 8px #96B7DF; }
+
+.callout-box.blue .header-section { background: #C8D9EE; }
+
+.callout-box ul.indented li { list-style-type: none; text-indent: 0; display: flex; margin-bottom: 24px; }
+
+.callout-box ul.indented li::before { display: none; }
+
+.callout-box ul.indented li strong { min-width: 120px; display: block; }
+
+.callout-box ul.indented li span { display: block; width: calc(100%-120px); margin-bottom: 8px; }
+
+.callout-box ul.indented li span:last-of-type { margin-bottom: 0; }
+
+.component-example.bp-mobile .callout-box ul.indented li, .component-example.small-screen .callout-box ul.indented li { display: block; }
+
+.component-example.bp-mobile .callout-box ul.indented strong, .component-example.small-screen .callout-box ul.indented strong { min-width: unset; width: 100%; margin-bottom: 8px; }
+
+.component-example.bp-mobile .callout-box ul.indented span, .component-example.small-screen .callout-box ul.indented span { width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
