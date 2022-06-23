@@ -3248,9 +3248,9 @@ input.form-control:focus { box-shadow: none; border: 3px solid #2E6CB9; border-r
 
 .form-element-wrapper.error { box-shadow: 0 0 0 8px #F5B5B5; background: #F5B5B5; }
 
-.form-element-wrapper.error input { border: 3px solid #D2201E; border-radius: 4px; background-color: #ffffff !important; }
+.form-element-wrapper.error input, .form-element-wrapper.error .form-select { border: 3px solid #D2201E; border-radius: 4px; background-color: #ffffff !important; }
 
-.form-element-wrapper.error input:focus { border-color: #2E6CB9; background-color: #ffffff !important; }
+.form-element-wrapper.error input:focus, .form-element-wrapper.error .form-select:focus { border-color: #2E6CB9; background-color: #ffffff !important; }
 
 .form-element-wrapper.error textarea { border: solid 3px #D2201E; border-radius: 4px; }
 
@@ -3393,6 +3393,10 @@ textarea:focus { box-shadow: none; border: 3px solid #2E6CB9; border-radius: 4px
 .form-select.error.focus { border-color: #2E6CB9; }
 
 .form-select.disabled { opacity: .65; background: #E4E6EA; }
+
+.bga-text-input.select { background: #ffffff url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 16px center; }
+
+.bga-text-input.select.disabled { opacity: .65; background: #E4E6EA url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 16px center; }
 
 input:-internal-autofill-selected { background: #ffffff !important; }
 
@@ -3588,7 +3592,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-mobile .accordion.event-sessions .accordion-header .accordion-button p, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.625; padding-right: 8px; }
 
-.component-example.bp-mobile .accordion.event-sessions .accordion-body, .component-example.small-screen .accordion.event-sessions .accordion-body { padding: 0 32px 8px 8px; }
+.component-example.bp-mobile .accordion.event-sessions .accordion-body, .component-example.small-screen .accordion.event-sessions .accordion-body { padding: 0 32px 16px 8px; }
 
 .component-example.bp-mobile .registration-link-wrapper, .component-example.small-screen .registration-link-wrapper { display: block; }
 

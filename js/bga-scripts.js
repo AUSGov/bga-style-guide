@@ -346,6 +346,15 @@ $('.form-example input').on('change', function(){
     }
 });
     
+ $('.form-example select').on('change', function(){
+     console.log($(this));
+    if ( $(this).val() == 'error' ) {
+        $(this).parents('.form-element-wrapper').addClass('error');
+    } else {
+        $(this).parents('.form-element-wrapper').removeClass('error');
+    }
+});   
+    
 $('.error-checkbox').on('click', function(){
     if ( $(this).is(":checked") ) {   
         $(this).parents('.form-element-wrapper').addClass('error');
