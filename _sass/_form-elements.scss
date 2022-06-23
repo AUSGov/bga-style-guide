@@ -104,7 +104,7 @@ input.form-control {
         box-shadow: 0 0 0 8px $bga-red-fail-mid;
         background: $bga-red-fail-mid;
         
-        input {
+        input, .form-select {
             border: $bga-component-error-border;
             border-radius: $bga-focus-radius;
             background-color: $bga-white !important;
@@ -121,6 +121,7 @@ input.form-control {
         + .error-feedback {
             display: block;
         }
+
     }
 }
 
@@ -577,6 +578,17 @@ textarea {
         background: $bga-blue-black-lightest;
     }
 }
+.bga-text-input.select {
+    background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
+    background-position: right 16px center;
+    
+    &.disabled {
+        opacity: .65;
+        background: $bga-blue-black-lightest url(../assets/Chevron-down-black.svg) no-repeat;
+        background-position: right 16px center;
+    }
+}
+
 
 // BOOTSTRAP OVERRIDES
 input:-internal-autofill-selected {
