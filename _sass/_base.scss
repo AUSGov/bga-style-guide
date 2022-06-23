@@ -48,8 +48,8 @@
         font-weight: 400;
     }
     &:focus {
-        border: solid 3px $bga-blue-background-dark;
-        border-radius: 4px;
+        border: $bga-component-focus-border;
+        border-radius: $bga-focus-radius;
     }
     &:focus, &:hover {  
         .tile-title {
@@ -483,17 +483,33 @@
             width: 50%;
             max-width: 576px;
         }
+        
+        &.narrow {
+            .component-wrapper {
+                width: 60%;
+            }
+        }
     }
     &.bp-min576 {
         .component-wrapper {
             width: 65%;
             max-width: 767px;
         }
+        &.narrow {
+            .component-wrapper {
+                width: 75%;
+            }
+        }
     }
     &.bp-min768 {
         .component-wrapper {
             width: 80%;
             max-width: 990px;
+        }
+        &.narrow {
+            .component-wrapper {
+                width: 85%;
+            }
         }
     }
     &.bkg-dark {
@@ -521,10 +537,6 @@
     .form-select {
         width: auto;
         font-weight: 600;
-        border: solid 1px $bga-black;
-        border-radius: 0;
-        background-image: url(../assets/Chevron-down-black.svg) !important;
-        background-position: right 16px center;
         
         option.false {
             display: none;

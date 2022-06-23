@@ -14,8 +14,8 @@ input.form-control {
     
     &:focus {
         box-shadow: none;
-        border: solid 3px $bga-blue-focus;
-        border-radius: 4px;
+        border: $bga-component-focus-border;
+        border-radius: $bga-focus-radius;
         background-color: $bga-white !important;
     } 
 }
@@ -62,13 +62,13 @@ input.form-control {
     
     &.focus {
         box-shadow: none;
-        border: solid 3px $bga-blue-focus;
-        border-radius: 4px;
+        border: $bga-component-focus-border;
+        border-radius: $bga-focus-radius;
         background-color: $bga-white !important;
     }
     &.error {
-        border: solid 3px $bga-red-fail-dark;
-        border-radius: 4px;
+        border: $bga-component-error-border;
+        border-radius: $bga-focus-radius;
         background-color: $bga-white !important;
         
         &.focus {
@@ -105,8 +105,8 @@ input.form-control {
         background: $bga-red-fail-mid;
         
         input {
-            border: solid 3px $bga-red-fail-dark;
-            border-radius: 4px;
+            border: $bga-component-error-border;
+            border-radius: $bga-focus-radius;
             background-color: $bga-white !important;
             
             &:focus {
@@ -138,8 +138,8 @@ textarea {
     
     &:focus {
         box-shadow: none;
-        border: solid 3px $bga-blue-focus;
-        border-radius: 4px;
+        border: $bga-component-focus-border;
+        border-radius: $bga-focus-radius;
     } 
 }
 .textarea-char-count {
@@ -253,12 +253,12 @@ textarea {
             
             + label {
                 border: $bga-white solid 3px;
-                border-radius: 4px;
+                border-radius: $bga-focus-radius;
             }
         }
         &:focus-visible + label {
-            border: $bga-blue-links solid 3px;
-            border-radius: 4px;
+            border: $bga-component-focus-border;
+            border-radius: $bga-focus-radius;
         }
         
         &:checked {
@@ -280,8 +280,8 @@ textarea {
         .input {
 
             + .label {
-                border: $bga-red-fail-dark solid 3px;
-                border-radius: 4px;
+                border:  $bga-component-error-border;
+                border-radius: $bga-focus-radius;
             }
         }
     }
@@ -300,8 +300,8 @@ textarea {
 
     &.keyboard .input {
         + .label {
-            border: $bga-blue-links solid 3px;
-            border-radius: 4px;
+            border: $bga-component-focus-border;
+            border-radius: $bga-focus-radius;
         }
     }
     
@@ -324,13 +324,13 @@ textarea {
                 outline: none;
 
                 + label {
-                    border: $bga-blue-focus solid 3px;
-                    border-radius: 4px;
+                    border: $bga-component-focus-border;
+                    border-radius: $bga-focus-radius;
                 }
             }
         }
         label {
-            border: solid 3px $bga-red-fail-dark;
+            border:  $bga-component-error-border;
             border-radius: 4px;
         } 
     }
@@ -380,8 +380,8 @@ textarea {
             top: 11px;
             
             + label {
-                border: $bga-blue-links solid 3px;
-                border-radius: 4px;
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
             }
         }
         &:checked {
@@ -414,7 +414,7 @@ textarea {
                 top: 8px;
                 
                 + label {
-                    border:solid 3px $bga-blue-focus;
+                    border: $bga-component-focus-border;
                 }
             }
         }
@@ -423,8 +423,8 @@ textarea {
 .form-element-wrapper.error {
     .radio-button {
         label {
-            border: solid 3px $bga-red-fail-dark;
-            border-radius: 4px;
+            border:  $bga-component-error-border;
+            border-radius: $bga-focus-radius;
         }
         [type="radio"] {
             top: 11px;
@@ -434,8 +434,8 @@ textarea {
             &:focus,
             &:focus-visible {
                 + label {
-                    border: $bga-blue-focus solid 3px;
-                    border-radius: 4px;
+                    border: $bga-component-focus-border;
+                    border-radius: $bga-focus-radius;
                     outline: none;
                 }
             }
@@ -495,8 +495,8 @@ textarea {
             top: 12px;
         }
         .label {
-            border: $bga-red-fail-dark solid 3px;
-            border-radius: 4px;
+            border:  $bga-component-error-border;
+            border-radius: $bga-focus-radius;
         }
     }
 
@@ -508,8 +508,8 @@ textarea {
 
 
             + .label {
-                border: $bga-blue-links solid 3px;
-                border-radius: 4px;
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
                 color: $bga-blue-links;
                 font-weight: 600;
             }
@@ -534,7 +534,7 @@ textarea {
         }
         &.error .input {
             + .label {
-                border:solid 3px $bga-red-fail-dark;
+                border:  $bga-component-error-border;
             }
         }
         &.keyboard .input {
@@ -548,6 +548,35 @@ textarea {
 
 }
 
+
+// Select / dropdowns
+.form-select {
+    border: $bga-blue-black-dark solid 1px;
+    background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
+    background-position: right 16px center;
+    border-radius: 0;
+    padding: 12px 48px 12px 16px;
+    
+    &:focus {
+        box-shadow: none;
+        border: $bga-component-focus-border;
+        border-radius: $bga-focus-radius;
+        background-color: $bga-white !important;
+    }
+    &.error {
+        border: $bga-component-error-border;
+        border-radius: $bga-focus-radius;
+        background-color: $bga-white !important;
+        
+        &.focus {
+            border-color: $bga-blue-focus;
+        }
+    }
+    &.disabled {
+        opacity: .65;
+        background: $bga-blue-black-lightest;
+    }
+}
 
 // BOOTSTRAP OVERRIDES
 input:-internal-autofill-selected {

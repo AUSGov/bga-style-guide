@@ -41,6 +41,85 @@
     }
 }
 
+// Events callouts
+.accordion.event-sessions {
+    border-bottom: 1px solid $bga-blue-black-mid;
+    
+    .accordion-item {
+        border: none;
+        border-radius: 0;   
+        background: none;
+        
+        &:last-of-type {
+            border-bottom: none;
+            
+            .accordion-button {
+                border-radius: 0;
+            }
+        }
+        &:first-of-type {
+            .accordion-button {
+                border-radius: 0;
+            }
+        }
+    }
+    .accordion-header {
+        .accordion-button {
+            padding: 16px;
+            background: none;
+            border-top: 1px solid $bga-blue-black-mid;
+            
+            p {
+                padding-right: 16px;
+            }
+            
+            &::after {
+                background-image: url(../assets/Chevron-down-black.svg);
+                background-size: 16px 10px;
+                width: 16px;
+                height: 10px;  
+                padding-left: 16px;
+            }
+            &:not(.collapsed) {
+                background: $bga-white;
+                color: $bga-black;
+                box-shadow: none;
+            }
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+            &:focus-visible {
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
+                background: $bga-white;
+            }
+            
+            &:hover {
+                text-decoration: underline;
+                background: $bga-white;
+            }
+        }
+    }
+    .accordion-body {
+        padding: 0 16px 16px 16px;
+        background: $bga-white;
+        border: none;
+        
+        p {
+            margin-bottom: 16px;
+            
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.registration-link-wrapper {
+    display: flex;
+}
+
+
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-mobile, .component-example.small-screen {
     .callout-box {
@@ -51,12 +130,36 @@
             strong {
                 min-width: unset;
                 width: 100%;
-                margin-bottom: 8px;
+                margin-bottom: 0px;
             }
             span {
                 width: 100%;
+                margin-bottom: 0;
             }
         }
     }
 
+    .accordion.event-sessions {
+        .accordion-header {
+             .accordion-button {
+                padding: 16px 8px;
+                 p {
+                    font-size: 1rem;
+                    line-height: 1.625;
+                    padding-right: 8px;
+                }
+            }
+        }
+        .accordion-body {
+            padding: 0 32px 8px 8px;
+        }
+    }
+    
+    .registration-link-wrapper {
+        display: block;
+        
+        .form-select {
+            margin-bottom: 24px;
+        }
+    }
 }

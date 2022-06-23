@@ -34,11 +34,11 @@
                     <div class="accordion-item">
                             <h2 class="accordion-header pt-0" id="{{include.example-name}}-item1">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.example-name}}-collapseOne" aria-expanded="false" aria-controls="{{include.example-name}}-collapseOne">
-                                    <p>{{ include.item1-label}}</p>
+                                    <p class="m-0">{{ include.item1-label}}</p>
                                 </button>
                             </h2>
                             <div id="{{include.example-name}}-collapseOne" class="accordion-collapse collapse" aria-labelledby="{{include.example-name}}-item1" >
-                                <div class="accordion-body">
+                                <div class="accordion-body remove-element-padding">
                                     <p>{{ include.item1-content }}</p>
                                     
                                     {% if include.item1-address %}
@@ -52,11 +52,11 @@
                     <div class="accordion-item">
                             <h2 class="accordion-header pt-0" id="{{include.example-name}}-item2">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.example-name}}-collapseTwo" aria-expanded="false" aria-controls="{{include.example-name}}-collapseOne">
-                                    <p>{{ include.item2-label}}</p>
+                                    <p class="m-0">{{ include.item2-label}}</p>
                                 </button>
                             </h2>
                             <div id="{{include.example-name}}-collapseTwo" class="accordion-collapse collapse" aria-labelledby="{{include.example-name}}-item2" >
-                                <div class="accordion-body">
+                                <div class="accordion-body remove-element-padding">
                                     <p>{{ include.item2-content }}</p>
                                     
                                     {% if include.item2-address %}
@@ -82,24 +82,27 @@
         <div class="p-4 footer-section component-content">
             <div class="component-text p-0 remove-element-padding">
                 {% if include.title %}
-                    <h3>{{ include. title }}</h3>
-                {% endif %} 
-                
-                {% if include.dropdown == "true" %}
-                    <select class="form-select" aria-label="Default select example">
-                        <option >Shepparton, VIC: Thursday 13 Nov 2021</option>
-                        <option value="1">Benalla, VIC: Wednesday 12 Nov 2021</option>
-                    </select>    
+                <h3>{{ include. title }}</h3>
                 {% endif %}
-                
-                <div class="button-wrapper">
-                    <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Register
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <path d="M0,16V0H7V2H2V14H14V9h2v7ZM6.293,8.293,12.586,2H10V0h6V6H14V3.414L7.707,9.707ZM14,2h0Z" />
-                        </svg>
-                    </button>
+
+                <div class="registration-link-wrapper">
+                    {% if include.dropdown == "true" %}
+                    <select class="form-select me-3" aria-label="Default select example">
+                        <option value="" disabled selected>Select a session</option>
+                        <option>Shepparton, VIC: Thursday 13 Nov 2021</option>
+                        <option>Benalla, VIC: Wednesday 12 Nov 2021</option>
+                    </select>
+                    {% endif %}
+
+                    <div class="button-wrapper">
+                        <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Register
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M0,16V0H7V2H2V14H14V9h2v7ZM6.293,8.293,12.586,2H10V0h6V6H14V3.414L7.707,9.707ZM14,2h0Z" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                
+
 
             </div>
         </div>
