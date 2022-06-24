@@ -12,6 +12,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position:absolute;
+        left: 0;
         
         img {
             width: 16px;
@@ -20,21 +22,32 @@
     }
     
     .icon-wrapper {
-        background: $bga-blue-background-extralight;
+        display: block;
+        position: relative;
         border-radius: 50px;
         display: flex;
         align-items: center;
+        min-width: 48px;
+        min-height: 48px;
         
-        p {
-            padding: 4px 0 4px 8px;
+        .external-site {
+            background: $bga-blue-background-extralight;
+            min-height: 48px;
+            border-radius: 50px;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        p {  
+            padding-top: 4px;
+            padding-bottom: 4px;
             font-size: .88rem;
             line-height: 18px;
             font-weight: 600;
+            word-wrap: break-word;
+           
         }
-    }
-    
-    .external-site {
-        display: none;
     }
     
     &.border-purple {
@@ -59,7 +72,6 @@
         flex-wrap: wrap;
         align-content: space-between;
         border-left: 16px solid $bga-blue-border;
-        
     }
     
     .component-image {
@@ -74,17 +86,14 @@
         }
     }
     
-    &.external {
-        .external-site {
-            display: block;
-        }
-    }
     &:focus, &:hover {
         color: $bga-black;
         background: $bga-teal-tool-extra-light;
         
         .icon-wrapper {
-            background: $bga-white;
+            .external-site {
+                background: $bga-white;
+            }
         }
     }
     
@@ -123,6 +132,10 @@
     .hero-pathway {
         flex: 1 0 30%;
         margin: 0 16px 32px !important;
+        
+        .component-content {
+            width: 100%;
+        }
     }
 }
 

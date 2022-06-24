@@ -1,7 +1,6 @@
 .light-pathway {
     border: 1px solid $bga-blue-border;
     background: $bga-white;
-    max-width: 500px;
     display: block;
 
     &:focus,
@@ -13,7 +12,7 @@
        border: 1px solid $bga-blue-border !important; 
     }
 
-    .top-icon-wrapper {
+    .top-icon {
         background: $bga-blue-background-dark;
         width: 48px;
         height: 48px;
@@ -21,30 +20,107 @@
         align-items: center;
         justify-content: center;
         border-radius: 100px;
+        
+        img {
+            width: auto;
+            max-width: auto;
+        }
     }
     .component-content {
         border-left: 8px solid $bga-blue-border;
-
-        p {
-            font-weight: 400;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
     }
-
+    .top-wrapper {
+        flex-basis: 100%;
+    }
+    .component-text {
+        width: 100%;
+        display: block;
+    }
+    .tile-title {
+        font-size: $h4-font-size;
+        line-height: $headings-line-height;
+    }
     .arrow-icon {
         width: 32px;
         height: 32px;
-        display: flex;
         background: $bga-blue-background-light;
         border-radius: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
+        position:absolute;
+        top: center;
+        left: 0;
 
         img {
             width: 16px;
             height: auto;
         }
     }
+    .icon-wrapper {
+        display: block;
+        position: relative;
+        min-width: 32px;
+        min-height: 32px;
+    }
+    &.external {
+        .icon-wrapper {
+            display: block;
+            position: relative;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            min-width: 32px;
+            min-height: 32px;
+
+            
+            .external-site {
+                background: $bga-blue-background-extralight;
+                min-height: 32px;
+                border-radius: 50px;
+                padding: 0 0 0 40px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                word-break: break-word;
+            }
+            p {
+                padding-top: 4px;
+                padding-bottom: 4px;
+                font-size: .88rem;
+                line-height: 18px;
+                font-weight: 600;
+                word-break: break-word;
+            }
+        }
+    }
+    
+    &:hover {
+        .arrow-icon {
+            background: $bga-blue-border;
+        }
+        &.external {
+            .icon-wrapper {
+                .external-site {
+                    background: $bga-white;
+                }
+            }
+        }
+    }
+    
+    &.purple {
+        .top-icon {
+            background: $bga-purple-highlight-shadow;
+        }
+    }
+    &.teal {
+        .top-icon {
+            background: $bga-teal-highlight-shadow;
+        }
+    }
+    
 
 }
-    

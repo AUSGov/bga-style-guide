@@ -43,38 +43,44 @@ subsite-tag: true
                 
                 <h3>Light pathways with no icon</h3>
                
-                <div class="col-12 col-sm-6 col-md-4 h-100">
+                <div class="col-12 col-sm-6 col-md-4">
                 {% include component-examples/light-pathway-example.html  
-                    title="Light pathway with internal link"
+                    title="Light pathway"
                 %}
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4 h-100">
+                <div class="col-12 col-sm-6 col-md-4">
                 {% include component-examples/light-pathway-example.html
                     title="Light pathway with external link"
                     external-link="example.gov.au"
+                    classes="external"
                 %}
                 </div>
             </div>
 
-
-            <h3>Light pathways with icons</h3>
+             <div class="row">
+                 
+                <h3>Light pathways with icons</h3>
+                
+                <div class="col-12 col-sm-6 col-md-4">
                 {% include component-examples/light-pathway-example.html  
                     title="ACT"
-                    classes="teal"
-                    
+                    classes="teal external"
+                    external-link="act.gov.au"
+                    top-icon="'../assets/icon-act.svg'  | relative_url "                    
                 %}
+                 </div>
 
-
+                <div class="col-12 col-sm-6 col-md-4">
                 {% include component-examples/light-pathway-example.html
                     title="Browse our facebook community"
-                    external-link="muchlongerexample.gov.au"
-                    classes="purple"
-                    top-icon="'../assets/icon-facebook.svg'"
+                    external-link="longerexample.gov.au"
+                    classes="purple external"
+                    top-icon="'../assets/icon-facebook.svg'  | relative_url "
                 %}
-            
-
-
+                </div>
+                 
+            </div>
 
                 <h3>Icon background colour variations</h3>
 
@@ -258,12 +264,16 @@ subsite-tag: true
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose: </h3>
-        <p>Hero pathways enable the promotion of high-value internal content or services on the page.</p>
+        <p>Generally used as a lightweight option within index pages to link to a list of pages on the site. May be used to show linked page hierarchy alongside hero and standard pathways. </p>
         <h3>When to use this component: </h3>
         <ul>
-            <li>Used to promote or cross reference other high-value content or services on the website. </li>
-            <li>Commonly used on the home and index pages to link to a list of other pages. </li>
-            <li>They may also be used on content pages, but the link <strong>must</strong> be for a <a href="">priority 1 task.</a> </li>
+            <li>Light pathways are used primarily on the home, category and topic pages. </li>
+            <li>They may be used to show pathways that are lower in hierarchy than standard and hero pathways.</li>
+        </ul>
+        
+        <h3>Content rules: </h3>
+        <ul>
+            <li>All light pathway tiles  grouped together should have consistent top icon use. Tiles without a tip icon should not appear in the same group as tiles with a top icon.</li>
         </ul>
 
             

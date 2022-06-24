@@ -3,14 +3,16 @@
 
     <div class="p-4 component-content h-100">
 
+        <div class="top-wrapper">
         {% if include.top-icon %}
-            <div class="top-icon-wrapper">
-                {{ include.top-icon }}
+            <div class="top-icon mb-4">
+                <img src={{ include.top-icon }} alt="" />
             </div>
         {% endif %}
         
-        <div class="component-text p-0">
+        <div class="component-text mb-4">
             <h4 class="tile-title pt-0">{{ include.title }}</h4>
+        </div>
         </div>
 
         <div class="icon-wrapper">
@@ -19,8 +21,8 @@
              </div>
              
              {% if include.external-link %}
-             <div class="external-site pe-4 remove-element-padding">
-                 <p>{{ include.external-link }}</p>
+             <div class="external-site remove-element-padding">
+                 <p class="pe-3">{{ include.external-link }}</p>
              </div>
              {% endif %}
          </div>
