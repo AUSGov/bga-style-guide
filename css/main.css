@@ -2580,7 +2580,7 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + 6px); }
 
 .responsive-img { width: 100%; max-width: 100%; height: auto; }
 
-.bga-component { text-decoration: none; color: #333333; }
+.bga-component { text-decoration: none; color: #333333; height: 100%; }
 
 .bga-component .tile-title { color: #2157AA; font-size: 1.375rem; font-weight: 600; text-decoration: none; }
 
@@ -3454,13 +3454,17 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .hero-pathway:focus .icon-wrapper, .hero-pathway:hover .icon-wrapper { background: #ffffff; }
 
-.hero-pathway.small-hero { width: calc(50% - 16px); }
-
 .hero-pathway.small-hero .component-content { width: 100%; }
 
 .hero-pathway.small-hero .component-image { display: none; }
 
-.small-hero-wrapper { display: flex; justify-content: space-between; }
+.small-hero-wrapper { display: flex; gap: 32px; }
+
+.small-hero-wrapper .bga-component-wrapper { width: calc(50% - 16px); height: auto !important; }
+
+.hero-example-wrapper { display: flex; }
+
+.hero-example-wrapper .bga-component-wrapper { padding-bottom: 0 !important; }
 
 .colour-options-wrapper { display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 -16px; }
 
@@ -3472,11 +3476,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-mobile .hero-pathway.small-hero, .component-example.small-screen .hero-pathway.small-hero { width: 100%; }
 
+.component-example.bp-mobile .hero-pathway .tile-description, .component-example.small-screen .hero-pathway .tile-description { margin-bottom: 32px !important; }
+
 .component-example.bp-mobile .small-hero-wrapper, .component-example.small-screen .small-hero-wrapper { display: block; }
 
-.hero-examples-block .small-hero { width: 100%; }
+.component-example.bp-mobile .small-hero-wrapper .bga-component-wrapper, .component-example.small-screen .small-hero-wrapper .bga-component-wrapper { width: calc(100%); }
 
-@media (max-width: 991px) { .hero-examples-block .component-image { display: none; } .hero-examples-block .component-content { width: 100%; border-left-width: 8px !important; } }
+.hero-pathway-block .small-hero { width: 100%; }
+
+@media (max-width: 991px) { .hero-pathway-block .component-image { display: none; } .hero-pathway-block .component-content { width: 100%; border-left-width: 8px !important; } .hero-pathway-block .component-content .component-text { width: 100%; } }
 
 .standard-pathway { border: 1px solid #96B7DF; background: #ffffff; max-width: 500px; display: block; }
 
