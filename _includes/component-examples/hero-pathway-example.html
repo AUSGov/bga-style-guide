@@ -1,10 +1,12 @@
-<a href="" tabindex="0" class="bga-component hero-pathway mt-0 mx-0 mb-5 {{ include.hero-classes }}">
+<div class="bga-component-wrapper h-100 pb-5">
+<a href="" tabindex="0" class="bga-component hero-pathway mt-0 mx-0 mb-5 {{ include.classes }}">
 
+    
     <div class="p-4 component-content">
 
         <div class="component-text p-0">
-            <h3 class="tile-title pt-0">Hero pathway heading Lorem ipsum dolor sit amet</h3>
-            <p class="mb-5">Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem.</p>
+            <h3 class="tile-title pt-0">{{ include.title }}</h3>
+            <p class="tile-description mb-0"> {{ include.description }} </p>
         </div>
 
 
@@ -22,11 +24,12 @@
 
          </div>
 
-    {% if include.hero-image %}
+    {% if include.image %}
     <div class="component-image">
-        <img src={{ include.hero-image }}  alt="" />
+        <img src={{ include.image }}  alt="" />
     </div>
     {% endif %}
     
 
 </a>
+</div>

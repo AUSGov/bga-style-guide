@@ -45,33 +45,46 @@ subsite-tag: true
 
 
             <h3>Large hero pathway with internal link</h3>
+            
+            <div class="hero-example-wrapper">
                 {% include component-examples/hero-pathway-example.html 
-                    hero-image="'../assets/illustrations/person-shop.svg' | relative_url " 
-                    hero-classes="border-purple"
+                    image="'../assets/illustrations/person-shop.svg' | relative_url " 
+                    classes="border-purple"
+                    title="Hero pathway heading Lorem ipsum dolor sit amet"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
                 %}
+                </div>
 
 
             <h3>Large hero pathway with external link</h3>
+                
+                <div class="hero-example-wrapper">
                 {% include component-examples/hero-pathway-example.html 
-                    hero-image="'../assets/illustrations/computer-success.svg' | relative_url " 
-                    hero-classes="border-blue external"
+                    image="'../assets/illustrations/computer-success.svg' | relative_url " 
+                    classes="border-blue external"
                     external-link="Australian Taxation Office"
+                    title="Hero pathway heading"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. "
                 %}
+                </div>
 
 
             <h3>Small hero pathways</h3>
 
-            <div class="small-hero-wrapper">
+            <div class="small-hero-wrapper hero-example-wrapper">
                 {% include component-examples/hero-pathway-example.html 
-                    hero-image="'../assets/illustrations/computer-success.svg' | relative_url " 
-                    hero-classes="border-green small-hero"
+                    classes="border-green small-hero"
+                    title="Hero pathway heading Lorem ipsum dolor sit amet"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
                 %}  
 
                 {% include component-examples/hero-pathway-example.html 
-                    hero-image="'../assets/illustrations/computer-success.svg' | relative_url " 
-                    hero-classes="border-yellow small-hero external"
+                    classes="border-yellow small-hero external"
                     external-link="IP Australia"
+                    title="Lorem ipsum dolor sit amet"
+                    description="Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
                 %}
+                
             </div>
 
 
@@ -157,8 +170,12 @@ subsite-tag: true
                 min576-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning 6 grid-columns each.</p>"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning 12 grid-columns each.</p>"
+            
+                example-link="'../html-examples/single-col-full-width.html#hero-layout-example' | relative_url'"
+                example-link-text="View layout example"
                 
             %}
+            
             
         </div>
         
@@ -188,6 +205,9 @@ subsite-tag: true
                 min576-rules="<p>The content area is 9 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
+            
+                example-link="'../html-examples/single-col-two-thirds-width.html#hero-layout-example' | relative_url'"
+                example-link-text="View layout example"
                 
             %}
             
@@ -220,6 +240,9 @@ subsite-tag: true
                 min576-rules="<p>The content area is 9 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-left-side-menu.html#hero-layout-example' | relative_url'"
+                example-link-text="View layout example"
                 
             %}
             
@@ -244,9 +267,12 @@ subsite-tag: true
                 finalbp-img="'../assets/layout-images/hero-2col-rightsidebar-finalbp.png' | relative_url "
             
         
-                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-right-sidebar.html#hero-layout-example' | relative_url'"
+                example-link-text="View layout example"
                 
             %}
             

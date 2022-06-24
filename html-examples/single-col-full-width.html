@@ -1,7 +1,7 @@
 ---
 
 layout: html-examples
-title: Single column - full width layout example
+title: Two column - full width layout example
 description: Example breakpoints for this layout.
 breadcrumb1: Brand foundations
 url1: /brand-foundations.html
@@ -11,108 +11,63 @@ url2: /brand-foundations/grid-and-page-layouts.html
 ---
 
 
+
 <div class="container my-5">
 
 <div class="row">
 
     <div class="remove-top-spaces col-12">
           
-        <h2>First element has no padding or margin above.</h2>
+        <h2>First element in the content area has no padding or margin above.</h2>
         
-        <div class="hero-examples-block">
+        <div class="hero-pathway-block" id="hero-layout-example">
             
         <div class="row">    
         
-            <div class="col-12 col-sm-6 col-lg-8 mb-5">
-                <a href="" tabindex="0" class="bga-component hero-pathway m-0 border-purple h-100">
-
-                    <div class="p-4 component-content">
-
-                        <div class="component-text p-0">
-                            <h3 class="tile-title pt-0">Hero pathway heading Lorem ipsum dolor sit amet</h3>
-                            <p class="mb-5">Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem.</p>
-                        </div>
-
-
-                        <div class="icon-wrapper">
-                            <div class="arrow-icon">
-                                <img src="/bga-style-guide/assets/icon-arrow-right-black.svg" alt="">
-                            </div>
-                            <div class="external-site pe-4 remove-element-padding">
-                                <p></p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="component-image">
-                        <img src="../assets/illustrations/person-shop.svg" |="" relative_url="" alt="">
-                    </div>
-
-
-                </a>
+            <div class="col-12 col-sm-6 col-lg-8">
+                {% include component-examples/hero-pathway-example.html 
+                    image="'../assets/illustrations/person-shop.svg' | relative_url " 
+                    classes="border-purple"
+                    title="Hero pathway heading"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
+                %}    
             </div>
             
             
-             <div class="col-12 col-sm-6 col-lg-4 mb-5">
-                 <a href="" tabindex="0" class="bga-component hero-pathway m-0 border-green small-hero h-100">
+             <div class="col-12 col-sm-6 col-lg-4">
+                {% include component-examples/hero-pathway-example.html 
+                    classes="border-green small-hero"
+                    title="Hero pathway heading Lorem ipsum dolor sit amet"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                %}  
 
-                     <div class="p-4 component-content">
-
-                         <div class="component-text p-0">
-                             <h3 class="tile-title pt-0">Hero pathway heading Lorem ipsum dolor sit amet</h3>
-                             <p class="mb-5">Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem.</p>
-                         </div>
-
-
-                         <div class="icon-wrapper">
-                             <div class="arrow-icon">
-                                 <img src="/bga-style-guide/assets/icon-arrow-right-black.svg" alt="">
-                             </div>
-                             <div class="external-site pe-4 remove-element-padding">
-                                 <p></p>
-                             </div>
-                         </div>
-
-                     </div>
-
-                     <div class="component-image">
-                         <img src="../assets/illustrations/computer-success.svg" |="" relative_url="" alt="">
-                     </div>
-
-
-                 </a>
              </div>
             
             
-            <div class="col-12 col-sm-6 col-lg-4 mb-5">
-                 <a href="" tabindex="0" class="bga-component hero-pathway m-0 border-yellow small-hero external h-100">
-
-                     <div class="p-4 component-content">
-
-                         <div class="component-text p-0">
-                             <h3 class="tile-title pt-0">Hero pathway heading Lorem ipsum dolor sit amet</h3>
-                             <p class="mb-5">Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem.</p>
-                         </div>
-
-
-                         <div class="icon-wrapper">
-                             <div class="arrow-icon">
-                                 <img src="/bga-style-guide/assets/icon-arrow-right-black.svg" alt="">
-                             </div>
-                             <div class="external-site pe-4 remove-element-padding">
-                                 <p>IP Australia</p>
-                             </div>
-                         </div>
-
-                     </div>
-
-                     <div class="component-image">
-                         <img src="../assets/illustrations/computer-success.svg" |="" relative_url="" alt="">
-                     </div>
-
-
-                 </a>
+            <div class="col-12 col-sm-6 col-lg-4">
+                {% include component-examples/hero-pathway-example.html 
+                    classes="border-blue small-hero external"
+                    external-link="IP Australia"
+                    title="Lorem ipsum dolor sit amet"
+                    description="Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                %}
+             </div>
+            
+             <div class="col-12 col-sm-6 col-lg-4">
+                {% include component-examples/hero-pathway-example.html 
+                    classes="border-orange small-hero external"
+                    external-link="IP Australia"
+                    title="Lorem ipsum dolor sit amet"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                %}
+             </div>
+            
+             <div class="col-12 col-sm-6 col-lg-4">
+                {% include component-examples/hero-pathway-example.html 
+                    classes="border-teal small-hero"
+                    title="Lorem ipsum dolor"
+                    description="Proin mauris quam, rhoncus feugiat euismod nec."
+                %}
              </div>
                 
          
@@ -121,10 +76,158 @@ url2: /brand-foundations/grid-and-page-layouts.html
             
         </div>
         
+        
+        
+        
+        <div class="coloured-bkg-wrapper">
+            
+        <div class="row">
+            <h2>First element has standard margins and padding for that element.</h2>
+            
+            <div class="hero-pathway-block">
+                
+                <div class="row">
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-5">
+                    {% include component-examples/hero-pathway-example.html 
+                        classes="border-green small-hero"
+                        title="Hero pathway heading Lorem ipsum dolor sit amet"
+                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                    %} 
+                 </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 mb-5">
+                     {% include component-examples/hero-pathway-example.html 
+                        classes="border-blue small-hero external"
+                        title="Lorem ipsum dolor sit amet"
+                        description="Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                    %}
+                 </div>
+                    
+                </div>
+
+            </div>
+              
+            </div>
+            
+        </div>
+        
+
+        
+        <div class="standard-pathway-block" id="standard-layout-example">
+    
+        <div class="row">
+
+            <h2>First element doesn't have it's padding removed.</h2>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    {% include component-examples/standard-pathway-example.html 
+                    title="Standard pathway title"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                %}
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    {% include component-examples/standard-pathway-example.html 
+                    title="Standard pathway title Lorem ipsum dolor et"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                %}
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    {% include component-examples/standard-pathway-example.html 
+                    title="Standard pathway title Lorem ipsum dolor et"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem. Morbi sit amet nunc eget. This one is extra extra extra long."
+                %}
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    {% include component-examples/standard-pathway-example.html 
+                    title="Standard pathway title Lorem"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
+                %}
+                </div>
+                
+                <div class="col-12 col-sm-6 col-lg-4">
+                    {% include component-examples/standard-pathway-example.html 
+                    title="Standard pathway title Lorem"
+                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
+                %}
+                </div>
+
+
+            </div>
+
+
+        </div>
+        
+        
+        
+        <div class="coloured-bkg-wrapper">
+            
+        <div class="light-pathway-block">
+        <div class="row ">
+            
+            <h3>Heading for coloured background section.</h3>
+             
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                {% include component-examples/light-pathway-example.html  
+                    title="Light pathway with internal link"
+                %}
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                {% include component-examples/light-pathway-example.html
+                    title="Light pathway with external link"
+                    external-link="example.gov.au"
+                %}
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                {% include component-examples/light-pathway-example.html  
+                    title="Light pathway with internal link"
+                %}
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                {% include component-examples/light-pathway-example.html
+                    title="Light pathway with external link"
+                    external-link="example.gov.au"
+                %}
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                {% include component-examples/light-pathway-example.html  
+                    title="Light pathway with internal link"
+                %}
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                {% include component-examples/light-pathway-example.html
+                    title="Light pathway with external link"
+                    external-link="example.gov.au"
+                %}
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                {% include component-examples/light-pathway-example.html  
+                    title="Light pathway with internal link"
+                %}
+            </div>
+ 
+            
+            </div>
+           
+            </div>
+            
+        </div>
+        
+        
+      
+        
+        
         </div>
     
     
 </div>
     
 </div>
-

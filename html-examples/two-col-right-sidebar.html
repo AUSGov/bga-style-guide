@@ -15,19 +15,34 @@ url2: /brand-foundations/grid-and-page-layouts.html
 
 <div class="row">
 
-    <div class="remove-top-spaces col-12 col-lg-9">
+    <div class="remove-top-spaces col-12 col-lg-8">
           
         <h2>First element in the content section has no padding or margin above.</h2>
         <p>Checklist content area.</p>
         <p>These columns are wider than those used on information page layouts to accommodate the checklist numbers down the left side.</p>
+        
+        <div id="hero-layout-example" class="hero-pathway-block">
+                <div class="row g-0">
+                    
+                    <div class="col-12">
+                    {% include component-examples/hero-pathway-example.html 
+                        image="'../assets/illustrations/person-shop.svg' | relative_url " 
+                        classes="border-purple "
+                        title="Hero pathway heading"
+                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
+                    %}
+                    </div>
+ 
+                </div>
+                </div>
    
         </div>
     
     
-        <div class="sidebar-wrapper remove-top-spaces col-12 col-lg-3">
+        <div class="sidebar-wrapper remove-top-spaces col-12 col-lg-4">
             <div class="sidebar p-4">
                 <h4>Sidebar</h4>
-                <p>Used for features such as the checklist 'save your progress' functionality.</p>
+                <p>Used for features such as the checklist 'save your progress' functionality. May display as a sticky footer.</p>
                 </div>
         </div>
 
