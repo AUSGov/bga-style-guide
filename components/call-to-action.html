@@ -1,0 +1,216 @@
+---
+
+layout: content-tagged
+title: Call to action
+description: Promote a high-value call to action in an information page.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+        singlebp="true" 
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+            
+            <h3>Standard call to action</h3>  
+                
+            {% include component-examples/call-to-action-example.html
+                title="Standard call to action"
+                text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo. Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p><ul class='bullet-tick'><li>Suspendisse auctor libero a dui vehicula fermentum.</li><li>Suspendisse auctor ipsum dolor sit amet, consectetur adipiscing elit.</li></ul>"
+                button="Register for lorem"
+            %}
+                
+            <h3>Download call to action</h3>    
+            
+            {% include component-examples/call-to-action-example.html
+                download="true"
+                title="Download call to action"
+                text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo. Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p>"
+            %}
+
+  
+            </div>
+            
+        </div>
+        
+        
+            
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/737eb46e-3079-4c99-882c-7886a3999249/'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Call out boxes can be used on all page layouts except the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column - full width layout</a>.</p> 
+       
+       
+        {% include layouts-dropdown.html 
+            single-col-twothirds-visibility="true" 
+            two-col-leftmenu-visibility="true"  
+            two-col-rightsidebar-visibility="true" 
+        %}
+        
+        <div class="layout-example show single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/callout-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/callout-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-1col2thirdswidth-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/single-col-two-thirds-width.html#callout-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-leftmenu"
+                
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/callout-2col-leftmenu-min1200.png' | relative_url "
+                min576-img="'../assets/layout-images/callout-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-2col-leftmenu-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-left-side-menu.html#callout-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+
+                min992-img="'../assets/layout-images/callout-2col-rightsidebar-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-right-sidebar.html#callout-example' | relative_url'"
+                example-link-text="View layout example"
+
+            %}
+            
+        </div>
+        
+        
+        
+        
+    
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Standard call to action (CTA)</h3>
+        <h4>Purpose:</h4>
+        <p>The CTA component is used for the single main action on a page.  </p>
+        <p>It includes a summary of the action, an optional list of prerequisites and a button to complete the action. </p>
+        <h4>When to use this component: </h4>
+        <ul>
+            <li>The standard CTA component is typically used on transaction pages (e.g. for registrations) or internal program pages (to apply for a grant). </li>
+            <li>Use the standard CTA when the user must complete an important high priority task.</li>
+        </ul>
+        <h4>Content rules: </h4>
+        <ul>
+            <li>Only one per page. </li>
+            <li>Must include description text so users know what they need to do. </li>
+            <li>Can use bullet points or ticks for prerequisites, should limited to 3. </li>
+            <li>Button text is an action, e.g. “Register a trade mark” or “Apply now” (4 word maximum). </li>
+        </ul>
+        <h3>Download call to action </h3>
+        <h4>Purpose: </h4>
+        <p>The download call to action promotes important downloadable files in a call to action box. It allows for different versions of the same file (e.g. DOCX and PDF) as well as related files (such as a template and related guide). This component includes a text field to describe the resource.      </p>
+        <h4>When to use this component: </h4>
+        <ul>
+            <li>The download call to action is typically used when the file download is the single high value action on a content page (usually a high priority task).</li>
+        </ul>
+
+        </div>
+        
