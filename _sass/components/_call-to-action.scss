@@ -1,0 +1,47 @@
+.callout-box.call-to-action {
+    .download-link-wrapper {
+        a {
+            background: $bga-white;
+            display: flex;
+            flex-wrap: wrap;
+            text-decoration: none;
+            
+            p {
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .detail {
+                color: $bga-black;
+                text-transform: uppercase;
+            }
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            &:focus, &:hover {
+                background: $bga-blue-background-extralight;
+                outline: none;
+                border: none;
+                color: $bga-blue-links;
+                
+                .document-title {
+                    text-decoration: underline;
+                }
+            }
+            &:focus-within {
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
+                color: $bga-blue-links;
+            }
+            &:active {
+                background: $bga-blue-background-light;
+                border: none;
+                color: $bga-blue-links;
+            }
+        }
+        
+        
+    }
+} 
