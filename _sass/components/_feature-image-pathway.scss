@@ -1,0 +1,151 @@
+.feature-pathway {
+    display: flex;
+    background: $bga-blue-background-dark;
+    color: $bga-white;
+    
+    .tile-title {
+        color: $bga-white;
+        font-size: 1.875rem;
+    }
+    .tile-description {
+        font-size: 1.125rem;
+    }
+    .arrow-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        background: $bga-white;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position:absolute;
+        left: 0;
+        
+        img {
+            width: 16px;
+            height: auto;    
+        }
+    }
+    .icon-wrapper {
+        display: block;
+        position: relative;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        min-width: 48px;
+        min-height: 48px;
+    }
+    .component-content {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    
+    .component-image {
+        width: 50%;
+        flex-basis: auto;
+        flex-grow: 0;
+        display: block;
+        
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+    &:focus-visible {
+        background: $bga-blue-background-light;
+        color: $bga-black;
+        
+        .tile-title {
+            color: $bga-blue-links;
+        }
+    }
+    &:hover {
+        color: $bga-white;
+        background: $bga-blue-links;
+        
+        .tile-title {
+            color: $bga-white;
+        }
+    }
+    &:active {
+        background: $bga-blue-footer;
+        color: $bga-white;
+        
+        .tile-title {
+            color: $bga-white;
+        }
+    }
+}
+    
+.feature-example-wrapper {
+    display: flex;
+    
+    .bga-component-wrapper {
+        padding-bottom: 0 !important;
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-min768, .component-example.bp-mobile, .component-example.small-screen {
+    .feature-pathway {
+        .tile-title {
+            font-size: 1.625rem;
+        }
+        .tile-description {
+            font-size: 1rem;
+        }
+        .component-content {
+            padding: 24px !important;
+        }
+    }
+}
+
+.component-example.bp-mobile, .component-example.small-screen {
+    .feature-pathway {
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: column-reverse;
+
+        .component-content {
+            width: 100%;
+        }
+        .component-image {
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .feature-pathway {
+        .tile-title {
+            font-size: 1.625rem;
+        }
+        .tile-description {
+            font-size: 1rem;
+        }
+        .component-content {
+            padding: 24px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+   
+    .feature-pathway {
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column-reverse;
+        
+        .component-content {
+            width: 100%;
+        }
+        .component-image {
+            width: 100%;
+        }
+    }
+    
+}
