@@ -2586,7 +2586,7 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + 6px); }
 
 .bga-component p { font-weight: 400; }
 
-.bga-component:focus { border: 3px solid #2E6CB9; border-radius: 4px; }
+.bga-component:focus-visible { border: 3px solid #2E6CB9; border-radius: 4px; }
 
 .bga-component:focus .tile-title, .bga-component:hover .tile-title { text-decoration: underline; }
 
@@ -3482,8 +3482,6 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-mobile .hero-pathway.small-hero, .component-example.small-screen .hero-pathway.small-hero { width: 100%; }
 
-.component-example.bp-mobile .hero-pathway .tile-description, .component-example.small-screen .hero-pathway .tile-description { margin-bottom: 32px !important; }
-
 .component-example.bp-mobile .small-hero-wrapper, .component-example.small-screen .small-hero-wrapper { display: block; }
 
 .component-example.bp-mobile .small-hero-wrapper .bga-component-wrapper, .component-example.small-screen .small-hero-wrapper .bga-component-wrapper { width: calc(100%); }
@@ -3557,6 +3555,56 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .light-pathway.youtube-red .top-icon { background: #ff0000; }
 
 .light-pathway.linkedin-blue .top-icon { background: #2867b2; }
+
+.feature-pathway { display: flex; background: #2E6CB9; color: #ffffff; }
+
+.feature-pathway .tile-title { color: #ffffff; font-size: 1.875rem; }
+
+.feature-pathway .tile-description { font-size: 1.125rem; }
+
+.feature-pathway .arrow-icon { width: 48px; height: 48px; display: flex; background: #ffffff; border-radius: 50px; display: flex; align-items: center; justify-content: center; position: absolute; left: 0; }
+
+.feature-pathway .arrow-icon img { width: 16px; height: auto; }
+
+.feature-pathway .icon-wrapper { display: block; position: relative; border-radius: 50px; display: flex; align-items: center; min-width: 48px; min-height: 48px; }
+
+.feature-pathway .component-content { width: 50%; display: flex; flex-wrap: wrap; align-content: space-between; }
+
+.feature-pathway .component-image { width: 50%; flex-basis: auto; flex-grow: 0; display: block; }
+
+.feature-pathway .component-image img { object-fit: cover; height: 100%; }
+
+.feature-pathway:focus-visible { background: #C8D9EE; color: #333333; }
+
+.feature-pathway:focus-visible .tile-title { color: #2157AA; }
+
+.feature-pathway:hover { color: #ffffff; background: #2157AA; }
+
+.feature-pathway:hover .tile-title { color: #ffffff; }
+
+.feature-pathway:active { background: #113869; color: #ffffff; }
+
+.feature-pathway:active .tile-title { color: #ffffff; }
+
+.feature-example-wrapper { display: flex; }
+
+.feature-example-wrapper .bga-component-wrapper { padding-bottom: 0 !important; }
+
+.component-example.bp-min768 .feature-pathway .tile-title, .component-example.bp-mobile .feature-pathway .tile-title, .component-example.small-screen .feature-pathway .tile-title { font-size: 1.625rem; }
+
+.component-example.bp-min768 .feature-pathway .tile-description, .component-example.bp-mobile .feature-pathway .tile-description, .component-example.small-screen .feature-pathway .tile-description { font-size: 1rem; }
+
+.component-example.bp-min768 .feature-pathway .component-content, .component-example.bp-mobile .feature-pathway .component-content, .component-example.small-screen .feature-pathway .component-content { padding: 24px !important; }
+
+.component-example.bp-mobile .feature-pathway, .component-example.small-screen .feature-pathway { display: flex; flex-wrap: wrap; flex-flow: column-reverse; }
+
+.component-example.bp-mobile .feature-pathway .component-content, .component-example.small-screen .feature-pathway .component-content { width: 100%; }
+
+.component-example.bp-mobile .feature-pathway .component-image, .component-example.small-screen .feature-pathway .component-image { width: 100%; }
+
+@media (max-width: 1200px) { .feature-pathway .tile-title { font-size: 1.625rem; } .feature-pathway .tile-description { font-size: 1rem; } .feature-pathway .component-content { padding: 24px !important; } }
+
+@media (max-width: 768px) { .feature-pathway { display: flex; flex-wrap: wrap; flex-flow: column-reverse; } .feature-pathway .component-content { width: 100%; } .feature-pathway .component-image { width: 100%; } }
 
 .standard-pathway.image-pathway .component-image { height: 240px; }
 
