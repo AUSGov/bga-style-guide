@@ -43,12 +43,25 @@ subsite-tag: true
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
    
-            <div class="feature-example-wrapper">
-                {% include component-examples/feature-image-pathway-example.html 
-                    image="'../assets/potter-on-computer.jpg' | relative_url " 
-                    title="Feature image pathway heading Lorem ipsum dolor sit amet"
-                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
-                %}
+            <h3>Layout: Single column - full width</h3>
+            <div class="feature-example-wrapper full-width-layout mb-5">
+
+                     {% include component-examples/feature-image-pathway-example.html 
+                        image="'../assets/potter-on-computer.jpg' | relative_url " 
+                        title="Feature image pathway heading Lorem ipsum dolor sit amet"
+                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                    %} 
+               
+                </div>
+                
+                <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+                
+                <div class="feature-example-wrapper two-col-layout mb-5">
+                     {% include component-examples/feature-image-pathway-example.html 
+                        image="'../assets/potter-on-computer.jpg' | relative_url " 
+                        title="Feature image pathway heading Lorem ipsum dolor sit amet"
+                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                    %}
                 </div>
 
             </div>
@@ -58,7 +71,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/4f2f85d9-aeda-476f-a5cf-6af7e81f4383/'"
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/2b5975e4-4509-4e48-bdf6-bfa3328b5618/'"
             btn-text="View design specifications"
             %}
 
@@ -66,7 +79,7 @@ subsite-tag: true
         <!-- LAYOUTS -->   
         <h2 class="section-start" id="layouts">Layouts</h2>
         
-        <p>Hero pathways can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column and two column pages</a>.</p>
+        <p>Feature image pathways can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >all page layouts</a>.</p>
         
         {% include layouts-dropdown.html 
             single-col-fullwidth-visibility="true" 
@@ -80,26 +93,13 @@ subsite-tag: true
             {% include layouts-accordion.html 
                 layout-name="onecol-fw"
             
-                min1200-visibility="false"
-                min992-visibility="true"
-                min768-visibility="false"
-                min576-visibility="true"
-                finalbp-visibility="true"
+                singlelayout="true"
                 
-                finalbp="Breakpoint &lt; 576px"
+                allbp-img="'../assets/layout-images/featureimage-1colfullwidth-allbp.png' | relative_url "
             
-                min992-img="'../assets/layout-images/hero-1colfullwidth-min992.png' | relative_url "
-                min576-img="'../assets/layout-images/hero-1colfullwidth-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/hero-1colfullwidth-finalbp.png' | relative_url "
+                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Feature pathway tiles are full width spanning 12 grid-columns each.</p>"
             
-            
-                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>Large hero pathway tiles span 8 grid-columns. Small hero pathway tiles span 4 grid-columns</p>"
-            
-                min576-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning 6 grid-columns each.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning 12 grid-columns each.</p>"
-            
-                example-link="'../html-examples/single-col-full-width.html#hero-layout-example' | relative_url'"
+                example-link="'../html-examples/single-col-full-width.html#feature-example' | relative_url'"
                 example-link-text="View layout example"
                 
             %}
@@ -117,24 +117,24 @@ subsite-tag: true
                 min992-visibility="true"
                 min768-visibility="true"
                 min576-visibility="false"
-                finalbp-visibility="false"
+                finalbp-visibility="true"
                 
                 finalbp="Breakpoint &lt; 768px"
             
-                min1200-img="'../assets/layout-images/hero-1col2thirdswidth-min1200.png' | relative_url "
-                min992-img="'../assets/layout-images/hero-1col2thirdswidth-min992.png' | relative_url "
-                min768-img="'../assets/layout-images/hero-1col2thirdswidth-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/hero-1col2thirdswidth-finalbp.png' | relative_url "
+                min1200-img="'../assets/layout-images/featureimage-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/featureimage-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/featureimage-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/featureimage-1col2thirdswidth-finalbp.png' | relative_url "
                 
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"    
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
             
-                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
             
-                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
             
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
             
-                example-link="'../html-examples/single-col-two-thirds-width.html#hero-layout-example' | relative_url'"
+                example-link="'../html-examples/single-col-two-thirds-width.html#feature-example' | relative_url'"
                 example-link-text="View layout example"
                 
             %}
@@ -155,18 +155,17 @@ subsite-tag: true
                 
                 finalbp="Breakpoint &lt; 576px"
             
-                min1200-img="'../assets/layout-images/hero-2col-leftmenu-min1200.png' | relative_url "
-                min576-img="'../assets/layout-images/hero-2col-leftmenu-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/hero-2col-leftmenu-finalbp.png' | relative_url "
-            
-    
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
+                min1200-img="'../assets/layout-images/featureimage-2col-leftmenu-min1200.png' | relative_url "
+                min576-img="'../assets/layout-images/featureimage-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/featureimage-2col-leftmenu-finalbp.png' | relative_url "
                 
-                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
             
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
             
-                example-link="'../html-examples/two-col-left-side-menu.html#hero-layout-example' | relative_url'"
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-left-side-menu.html#feature-example' | relative_url'"
                 example-link-text="View layout example"
                 
             %}
@@ -188,20 +187,22 @@ subsite-tag: true
                 finalbp="Breakpoint &lt; 992px"
             
 
-                min992-img="'../assets/layout-images/hero-2col-rightsidebar-min992.png' | relative_url "
-                finalbp-img="'../assets/layout-images/hero-2col-rightsidebar-finalbp.png' | relative_url "
+                min992-img="'../assets/layout-images/featureimage-2col-rightsidebar-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/featureimage-2col-rightsidebar-finalbp.png' | relative_url "
             
         
-                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
             
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Feature image components span the full width of the content area.</p>"
             
-                example-link="'../html-examples/two-col-right-sidebar.html#hero-layout-example' | relative_url'"
+                example-link="'../html-examples/two-col-right-sidebar.html#feature-example' | relative_url'"
                 example-link-text="View layout example"
-                
+
             %}
             
         </div>
+        
+        
 
 
 
@@ -209,14 +210,16 @@ subsite-tag: true
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose: </h3>
-        <p>Hero pathways enable the promotion of high-value internal content or services on the page.</p>
+        <p>Feature image pathways are used to promote content (often on a temporary basis). They provide a high profile pathway (with an image) to another page on the website.   </p>
         <h3>When to use this component: </h3>
         <ul>
-            <li>Used to promote or cross reference other high-value content or services on the website. </li>
-            <li>Commonly used on the home and index pages to link to a list of other pages. </li>
-            <li>They may also be used on content pages, but the link <strong>must</strong> be for a <a href="">priority 1 task.</a> </li>
+            <li>Feature image pathways are most commonly used to promote particular news articles on the home page. </li>
         </ul>
-
-            
+        <h3>Content rules: </h3>
+        <ul>
+            <li>Display description. </li>
+            <li>Display content type label. </li>
+            <li>No alt text for pathway image.</li>
+        </ul>     
         </div>
         

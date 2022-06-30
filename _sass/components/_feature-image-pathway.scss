@@ -5,10 +5,10 @@
     
     .tile-title {
         color: $bga-white;
-        font-size: 1.875rem;
+        font-size: 1.625rem;
     }
     .tile-description {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
     .arrow-icon {
         width: 48px;
@@ -38,6 +38,7 @@
     }
     .component-content {
         width: 50%;
+        padding: 24px;
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
@@ -86,6 +87,20 @@
     .bga-component-wrapper {
         padding-bottom: 0 !important;
     }
+    
+    &.full-width-layout {
+        .feature-pathway {
+            .tile-title {
+                font-size: 1.875rem;
+            }
+            .tile-description {
+                font-size: 1.125rem;
+            }
+        }
+        .component-content {
+            padding: 32px;
+        }
+    }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
@@ -122,15 +137,16 @@
 @media (max-width: 1200px) {
     .feature-pathway {
         .tile-title {
-            font-size: 1.625rem;
+            font-size: 1.625rem !important;
         }
         .tile-description {
-            font-size: 1rem;
+            font-size: 1rem !important;
         }
         .component-content {
             padding: 24px !important;
         }
     }
+    
 }
 
 @media (max-width: 768px) {
@@ -147,5 +163,4 @@
             width: 100%;
         }
     }
-    
 }
