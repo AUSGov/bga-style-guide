@@ -1,0 +1,257 @@
+---
+
+layout: content-tagged
+title: Inline pathway list
+description: Promote pathways to internal and external content within the context of the page.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+            singlebp="true"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example narrow m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+                
+            {% include component-examples/inline-pathway-example.html
+                link1="Find out what you need to do when deregistering a company lorem ipsum dolor sit amet, consectetur"
+                page1="Internal page name"
+                icon1="'../assets/icon-arrow-right-blue.svg' | relative_url "
+                
+                link2="Find out lorem ipsum dolor sit amet, consectetur"
+                page2="Internal page name"
+                icon2="'../assets/icon-arrow-right-blue.svg' | relative_url "
+                
+                link3="Read more about this on external site"
+                page3="External site name"
+                icon3="'../assets/icon-external-blue.svg' | relative_url "  
+            %}
+                
+ 
+            </div>
+            
+        </div>
+        
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/2b99b99e-3683-484b-9225-97fafe3d148a/'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Inline pathway lists can be used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >all page layouts</a>.</p> 
+       
+       
+        {% include layouts-dropdown.html 
+            single-col-fullwidth-visibility="true"
+            single-col-twothirds-visibility="true" 
+            two-col-leftmenu-visibility="true" 
+            two-col-rightsidebar-visibility="true" 
+        %}
+        
+        
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-fw"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min992-img="'../assets/layout-images/hero-1colfullwidth-min992.png' | relative_url "
+                min576-img="'../assets/layout-images/hero-1colfullwidth-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/hero-1colfullwidth-finalbp.png' | relative_url "
+            
+            
+                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>Large hero pathway tiles span 8 grid-columns. Small hero pathway tiles span 4 grid-columns</p>"
+            
+                min576-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning 6 grid-columns each.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning 12 grid-columns each.</p>"
+            
+                example-link="'../html-examples/single-col-full-width.html#hero-layout-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+            
+        </div>
+        
+        
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/callout-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/callout-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-1col2thirdswidth-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/single-col-two-thirds-width.html#callout-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-leftmenu"
+                
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/callout-2col-leftmenu-min1200.png' | relative_url "
+                min576-img="'../assets/layout-images/callout-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-2col-leftmenu-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-left-side-menu.html#callout-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+
+                min992-img="'../assets/layout-images/callout-2col-rightsidebar-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-right-sidebar.html#callout-example' | relative_url'"
+                example-link-text="View layout example"
+
+            %}
+            
+        </div>
+        
+        
+        
+        
+    
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose: </h3>
+        <p>The inline pathway provides a way for internal and external links to stand out when the user needs to complete an important, but optional task.  </p>
+        <p>An inline pathway component can list one or more links. It is used within the context of written content if it is a medium value step in a process. It can also be used at the end of the page to provide links to explore the subject further. </p>
+        <h3>When to use this component: </h3>
+        <ul>
+            <li>It should be used directly under content where the user should read more about a topic to gain more information or go to the next logical page: 
+                <ul>
+                    <li>May list one or more links </li>
+                    <li>May be internal or external links </li>
+                </ul>
+            </li>
+            <li>It should be used in the “Read next” section at the bottom of the page in business information content: 
+                <ul>
+                    <li>No more than 3 inline pathway links </li>
+                    <li>Must be internal links </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Content rules</h3>
+        <h4>External links</h4>
+        <ul>
+            <li>Sentence must provide an action “Learn more/Read about …”. </li>
+            <li>Sentence must not include the name of the website. </li>
+            <li><strong>Label</strong> should state the agency or name of website. The agency should be spelt out in full (no abbreviations). </li>
+        </ul>
+        <h4>Internal links</h4>
+        <ul>
+            <li>Sentence must provide an action “Learn more about….” </li>
+            <li>Sentence must not have the name of the page in it unless it is a grant recipient pathway </li>
+            <li><strong>Label</strong> automatically pulls the name of the page. </li>
+        </ul>
+        
+        
+        
+            
+        </div>
+        
