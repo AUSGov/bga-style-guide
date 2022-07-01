@@ -532,8 +532,47 @@ table.table {
 
 .approved-icons {
     text-align: center;
-}
 
+    .copy-icon-example {
+        background: none;
+        border: 2px solid $bga-blue-links;
+        border-radius: $bga-focus-radius;
+        width: 100%;
+
+        .svg-icon-container {
+            img {
+                width: 24px;
+                height: auto;
+            }
+        }
+        .button-text {
+            background: $bga-blue-links;
+            color: $bga-white;
+            
+            svg.success {
+                display: none;
+                width: 12px;
+                height: 12px;
+                margin-right: 4xpx;
+            }
+        }
+
+        &.copied {
+            .button-text {
+                background: $bga-green-success-dark;
+                
+                .svg.success {
+                    display: block;
+                }
+            }
+        }
+    }
+    &.dark-bkg {
+        .svg-icon-container {
+             background: $bga-blue-background-dark;
+         }
+    }
+}
 .design-specs-link {
     border: 1px solid $bga-blue-border;
     background: $bga-blue-background-extralight;
@@ -816,4 +855,3 @@ table.table {
         width: 100%;
     }
 }
-

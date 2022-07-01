@@ -401,6 +401,40 @@ $('.form-element-wrapper .radio-button input').on('change', function(){
 		}
 	});
     
+    
+    
+// COPY ICON CODE
+$('.copy-icon-example').on('click', function(){ 
+    
+    // Get SVG
+    var svgSrc = $(this).find("img").attr('src');
+    
+    $.get(svgSrc, function (data) {
+        var svgNode = data.childNodes;
+        var svgCode = svgNode[0].outerHTML || new 
+        XMLSerializer().serializeToString(svgNode[0]);
+        
+        // Copy code
+        var $temp = $("<input>");
+			$("body").append($temp);
+			$temp.val(svgCode).select();
+			document.execCommand("copy");
+			$temp.remove();
+        
+        $(".example.copied").focus().blur();
+    });
+    
+    // Change text on copy buttons
+    $('.copy-icon-example').each(function(){
+        $(this).removeClass('copied').find('.button-text span').text('Copy code');
+    });
+    
+    if ( ! $(this).hasClass('copied') ) {
+        $(this).addClass('copied').find('.button-text span').text('Copied');
+        
+    } 
+});
+    
 }); //End doc ready
 
 
