@@ -1,0 +1,122 @@
+---
+
+layout: content-tagged
+title: business.gov.au site header
+description: Site header design for business.gov.au
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        element-string="hero-pathway"
+        md-visibility="true"
+        sm-visibility="true"
+        final-visibility="true"
+        breakpoint-final="576px"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+
+                {% include component-examples/bga-site-header-example.html %}
+
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/fe6137db-86f0-4ca9-bd13-c177cd0e807a/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>The site header is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all business.gov.au layouts</a>.</p>
+
+        
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+            {% include layouts-accordion.html
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/page-header-default-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/page-header-default-min992.png' | relative_url "
+            finalbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
+
+            min1200-rules="<p>The header content area is 8 grid-columns wide.</p>
+            <p>The coloured header container is 12 grid-columns wide.</p>
+            <p>The gradient background extends full width of the viewport.</p>"
+
+            min992-rules="<p>The header content area is 10 grid-columns wide.</p>
+            <p>The coloured header container is 12 grid-columns wide.</p>
+            <p>The gradient background extends full width of the viewport.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The coloured header container is 12 grid-columns wide.</p>
+            <p>The gradient background extends full width of the viewport.</p>"
+
+            %}
+
+        </div>
+
+
+
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <p>The header includes the site logo, main navigation and search. It is designed to make the site easy to
+            nagivate and establishes the site brand.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used across every page of the website to ensure a consistent user experience.</li>
+        </ul>
+
+
+    </div>
