@@ -97,7 +97,6 @@
 
         .submenu-wrapper {
             display: inline-block;
-            //position: relative
         }
 
         /* LEVEL 1 */
@@ -112,6 +111,10 @@
             margin: 0;
             letter-spacing: 0;
             text-decoration: none;
+
+            span {
+                white-space: nowrap;
+            }
 
             &:hover {
                 background-color: $bga-blue-background-light;
@@ -138,184 +141,42 @@
                 text-decoration: none;
             }
 
-            &.nav-dropdown.level-1 {
+            &.level-1 {
                 padding: 6px 28px 6px 8px;
                 background-image: url(../assets/Chevron-down-blue.svg);
                 background-repeat: no-repeat;
                 background-position: right 8px center;
                 position: relative;
-            }
-        }
 
-        li.open {
-            background-color: $bga-blue-background-light;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            border: none;
-
-            &.nav-dropdown.level-1 {
-                background-image: url(../assets/Chevron-up-blue.svg);
-
-                /* SHOW LEVEL 2 */
-                +ul {
-                    display: block;
-                    position: absolute;
-                    background: $bga-white;
-                    box-shadow: $bga-btn-boxshadow;
-                    min-width: 282px;
-                    z-index: 9000;
-                    top: 40px;
-                    left: 0px;
-                    padding: 0;
-                    border-left: solid 4px $bga-blue-links;
-
-                    li {
-                        background: $bga-blue-background-light;
-                        padding: 8px 44px 8px 16px;
-                        display: block;
-                        border-radius: 0;
-                        border-bottom: $bga-white solid 2px;
-
-                        &:focus {
-                            border: none;
-                            border-bottom: solid 2px $bga-white;
-                            outline: none;
-                            background: $bga-blue-links;
-
-                            a {
-                                color: $bga-white;
-                            }
-                        }
-
-                        &:hover {
-                            background: $bga-blue-links;
-                            border: none;
-                            border-bottom: $bga-white solid 2px;
-
-                            a {
-                                color: $bga-white;
-                            }
-                        }
-
-                        &:active {
-                            border: none;
-                            border-bottom: $bga-white solid 2px;
-                        }
-
-                        &:last-of-type {
-                            border-bottom: none;
-
-                            &:hover,
-                            &:active {
-                                border-bottom: none !important;
-                            }
-                        }
-
-
-                        &.nav-dropdown.level-2 {
-                            background: url(../assets/arrow-right-blue.svg) no-repeat $bga-blue-background-light;
-                            background-size: 12px 12px;
-                            background-position: right 16px center;
-                            position: relative;
-
-                            &:focus {
-                                border: none;
-                                border-bottom: solid 2px $bga-white;
-                                outline: none;
-                                background: $bga-blue-links url(../assets/arrow-right-white.svg) no-repeat;
-                                background-size: 12px 12px;
-                                background-position: right 16px center;
-
-                                a {
-                                    color: $bga-white;
-                                }
-                            }
-
-                            &:hover {
-                                background: $bga-blue-links url(../assets/arrow-right-white.svg) no-repeat;
-                                background-size: 12px 12px;
-                                background-position: right 16px center;
-                                border: none;
-                                border-bottom: solid 2px $bga-white;
-
-                                a {
-                                    color: $bga-white;
-                                }
-                            }
-
-                            ul {
-                                display: none;
-                            }
-
-                            &.open {
-                                background: $bga-blue-links url(../assets/arrow-right-white.svg) no-repeat;
-                                background-size: 12px 12px;
-                                background-position: right 16px center;
-                                border: none;
-                                border-bottom: $bga-white solid 2px;
-
-                                a {
-                                    color: $bga-white;
-                                }
-
-                                /* LEVEL 3 */
-                                +ul {
-                                    display: block;
-                                    position: absolute;
-                                    left: 100%;
-                                    margin-top: -44px;
-                                    box-shadow: $bga-btn-boxshadow;
-                                    padding-bottom: 0;
-
-                                    li.level-3 {
-                                        background: $bga-blue-links;
-                                        min-width: 282px;
-
-                                        a {
-                                            color: $bga-white;
-                                        }
-
-                                        &:focus {
-                                            border: none;
-                                            border-bottom: $bga-white solid 2px;
-                                            background: $bga-blue-footer;
-                                            outline: none;
-                                        }
-
-                                        &:hover {
-                                            background: $bga-blue-footer;
-                                            border: none;
-                                            border-bottom: $bga-white solid 2px;
-                                        }
-
-                                        &:active {
-                                            border: none;
-                                            border-bottom: $bga-white solid 2px;
-                                        }
-
-                                    }
-                                }
-                            }
-                        }
-
+                &.open {
+                    background-color: $bga-blue-background-light;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border: none;
+        
+                    &.nav-dropdown.level-1 {
+                        background-image: url(../assets/Chevron-up-blue.svg); 
                     }
                 }
             }
         }
-        //https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/
+
+        /* LEVEL 2 * 3 */
         .submenu {
+            display: none;
             position: absolute;
             background: $bga-blue-background-extralight;
             box-shadow: $bga-btn-boxshadow;
-            border-top: 4px solid $bga-blue-border;
+            border-top: 4px solid $bga-blue-background-light;
             width: 100%;
             left: 0;
             top: 38px;
             z-index: 8000;
             padding: 24px 24px 0 24px;
             margin: 0;
-            columns: 4 200px;
+            columns: 4 250px;
             column-gap: 32px;
+            column-fill: balance;
 
             .menu-group {
                 width: 150px;
@@ -352,7 +213,6 @@
                 }
 
                 &.level-2 {
-
                     a {
                         font-size: 1.125rem;
                         font-weight: 700;
@@ -365,6 +225,8 @@
                     a {
                         font-weight: 600;
                         text-decoration: none;
+                        font-size: .9375rem;
+                        line-height: 1.3355;
                     }
                 }
             }
@@ -373,4 +235,30 @@
 
 
 
+}
+
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-min768, .component-example.bp-mobile, .component-example.small-screen {
+    .bga-site-header {
+        .nav {
+            display: flex;
+
+            .submenu-wrapper {
+                flex-grow: 0;
+                flex-basis: 0;
+            }
+            li {
+                &.level-1 {
+                    height: 100%;
+                    background-position: right 8px top 16px;
+                }
+                span {
+                    display: block;
+                }
+                }
+            
+        }
+    }
 }

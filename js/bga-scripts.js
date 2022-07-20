@@ -434,6 +434,32 @@ $('.copy-icon-example').on('click', function(){
         
     } 
 });
+
+
+// SITE NAV EXAMPLE
+$(".bga-site-header .level-1").on('click', function(){
+    
+    $('.submenu').each(function(){
+        $(this).hide();
+    });
+    
+    if( $(this).hasClass('open')) {
+        $(".bga-site-header .level-1").each(function(){
+            $(this).removeClass('open');
+        });
+    } else {
+        $(".bga-site-header .level-1").each(function(){
+            $(this).removeClass('open');
+        });
+
+        $(this).addClass('open');
+
+        $(this).next('.submenu').slideDown();
+    }
+    
+    
+
+});
     
 }); //End doc ready
 
