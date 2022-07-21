@@ -32,12 +32,11 @@ subsite-tag: false
 
         <!-- Breakpoint radio buttons -->
         {% include breakpoints.html
-        element-string="hero-pathway"
+        element-string="bga-site-header"
         lg-visibility="true"
         md-visibility="true"
-        sm-visibility="true"
-        final-visibility="true"
-        breakpoint-final="576px"
+        xs-visibility="true"
+        breakpoint-final="350"
         %}
 
         <!-- Component example -->
@@ -74,31 +73,9 @@ subsite-tag: false
 
         <div class="layout-example show full-border mt-0 mb-5 p-4">
             {% include layouts-accordion.html
-
-            min1200-visibility="true"
-            min992-visibility="true"
-            min768-visibility="false"
-            min576-visibility="false"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 768px"
-
-            min1200-img="'../assets/layout-images/page-header-default-min1200.png' | relative_url "
-            min992-img="'../assets/layout-images/page-header-default-min992.png' | relative_url "
-            finalbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
-
-            min1200-rules="<p>The header content area is 8 grid-columns wide.</p>
-            <p>The coloured header container is 12 grid-columns wide.</p>
-            <p>The gradient background extends full width of the viewport.</p>"
-
-            min992-rules="<p>The header content area is 10 grid-columns wide.</p>
-            <p>The coloured header container is 12 grid-columns wide.</p>
-            <p>The gradient background extends full width of the viewport.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>The coloured header container is 12 grid-columns wide.</p>
-            <p>The gradient background extends full width of the viewport.</p>"
-
+                singlelayout="true"
+                allbp-img="'../assets/layout-images/bga-site-header-allbp.png' | relative_url "
+                allbp-rules="<p>The site header is 12 grid-columns wide.</p>"
             %}
 
         </div>

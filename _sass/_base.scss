@@ -484,38 +484,30 @@ table.table {
 .component-example {
     border: 1px solid $bga-blue-border;
     
-    &.bp-mobile {
+    &.bp-below350 {
         .component-wrapper {
-            width: 50%;
-            max-width: 576px;
-        }
-        
-        &.narrow {
-            .component-wrapper {
-                width: 60%;
-            }
+            max-width: 350px;
         }
     }
-    &.bp-min576 {
+    
+    &.bp-350, &.bp-below576 {
         .component-wrapper {
-            width: 65%;
-            max-width: 767px;
-        }
-        &.narrow {
-            .component-wrapper {
-                width: 75%;
-            }
+            max-width: 500px;
         }
     }
-    &.bp-min768 {
+    &.bp-576, &.bp-below768 {
         .component-wrapper {
-            width: 80%;
-            max-width: 990px;
+            max-width: 680px;
         }
-        &.narrow {
-            .component-wrapper {
-                width: 85%;
-            }
+    }
+    &.bp-768, &.bp-below992 {
+        .component-wrapper {
+            max-width: 800px;
+        }
+    }
+    &.bp-992, &.bp-below1200 {
+        .component-wrapper {
+            max-width: 1000px;
         }
     }
     &.bkg-dark {
