@@ -1,0 +1,272 @@
+---
+
+layout: content-tagged
+title: Feature box
+description: Feature boxes highlight certain information in the context of a page.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+            lg-visibility="true"
+            sm-visibility="true"
+            final-visibility="true"
+            breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+                
+            <h3>Layout: Single column - full width</h3>
+            
+            {% include component-examples/featurebox-example.html
+                link="Subscribe to stay up-to-date with Accelerating Commercialisation news and information."
+                icon="'../assets/icon-email-white.svg' | relative_url "
+                classes="full-width-layout"
+            %}
+
+            <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+            
+            {% include component-examples/featurebox-example.html
+                link="Subscribe to stay up-to-date with Accelerating Commercialisation news and information."
+                icon="'../assets/icon-email-white.svg' | relative_url "
+                classes="two-col-layout"
+            %}
+                
+            
+  
+            </div>
+
+        </div>
+        <div class="component-example">
+        <div class="component-wrapper remove-element-padding p-4">
+            <div class="row">
+
+                <h3>Approved icons</h3>
+
+                <div class="col-6 col-md-3">
+                {% include icon-example.html 
+                    src="'../assets/icon-email-white.svg' | relative_url "
+                    title="Email" 
+                    classes="dark-bkg"
+                %}
+                </div>
+                
+                <div class="col-6 col-md-3">
+                {% include icon-example.html 
+                    src="'../assets/icon-external-white.svg' | relative_url "
+                    title="External link" 
+                    classes="dark-bkg"
+                %}
+                </div>
+                
+                <div class="col-6 col-md-3">
+                {% include icon-example.html 
+                    src="'../assets/icon-arrow-right-white.svg' | relative_url "
+                    title="Internal link"
+                    classes="dark-bkg"
+                %}
+                </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/dec977ed-2d2f-4531-9ace-ed88cdd76b94/'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Call out links can be used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >all page layouts</a>.</p> 
+       
+       
+        {% include layouts-dropdown.html 
+            single-col-fullwidth-visibility="true"
+            single-col-twothirds-visibility="true" 
+            two-col-leftmenu-visibility="true" 
+            two-col-rightsidebar-visibility="true" 
+        %}
+        
+        
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-fw"
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+                min1200-img="'../assets/layout-images/callout-link-1colfullwidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-link-1colfullwidth-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-link-1colfullwidth-finalbp.png' | relative_url "
+            
+            
+                min1200-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span 8 grid-columns each.</p>"
+            
+                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span 9 grid-columns each.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span 12 grid-columns each.</p>"
+            
+                example-link="'../html-examples/single-col-full-width.html#callout-link-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+            
+        </div>
+        
+        
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/callout-link-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-link-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/callout-link-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-link-1col2thirdswidth-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/single-col-two-thirds-width.html#callout-link-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-leftmenu"
+                
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/callout-link-2col-leftmenu-min1200.png' | relative_url "
+                min576-img="'../assets/layout-images/callout-link-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-link-2col-leftmenu-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-left-side-menu.html#callout-link-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+
+                min992-img="'../assets/layout-images/callout-link-2col-rightsidebar-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/callout-link-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-right-sidebar.html#callout-link-example' | relative_url'"
+                example-link-text="View layout example"
+
+            %}
+            
+        </div>
+        
+
+        
+    
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>The call out link component highlights a single link in a call out box, with an icon to show the destination type (e.g. email subscription or web page).</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Call out links are generally used to promote subscription links for newsletters, updates and alerts.</li>
+            <li>They may be used on both index and content pages.</li>
+        </ul>
+
+        </div>
+        
