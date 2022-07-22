@@ -1,0 +1,259 @@
+---
+
+layout: content-tagged
+title: Mini list
+description: Feature boxes highlight certain information in the context of a page.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        sm-visibility="true"
+        final-visibility="true"
+        breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include component-examples/mini-list-example.html
+                    
+                    layout-name="mini-list"
+
+                    item1="true"
+                    item2="true"
+                    item3="true"
+
+                    title1="Know your decision for closing your business, such as financial or personal circumstances"
+                    title2="Get professional advice from an accountant or business adviser"
+                    title3="Set your date to officially close your business"
+
+                    content1="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus urna arcu, nec ullamcorper orci tristique eu. <a>In lobortis ornare ultricies.</a></p>"
+                    
+                    content2="<p>Praesent nec magna semper, pulvinar sapien sagittis, tempor urna. Praesent pretium finibus interdum.</p>"
+                    
+                    content3="<p>Phasellus venenatis nulla tempor quam egestas auctor.</p><p>Cras sed tortor a dolor dictum tincidunt ut nec enim. Fusce vitae quam suscipit, suscipit leo at, efficitur turpis.</p>"
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example">
+            <div class="component-wrapper remove-element-padding p-4">
+                <div class="row">
+                    <h3>Colour variations</h3>
+
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                        {% include component-examples/feature-box-colours.html
+                        classes="teal"
+                        colour="Teal"
+                        top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                        %}
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                        {% include component-examples/feature-box-colours.html
+                        classes="green"
+                        colour="Green"
+                        top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                        %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="component-example">
+            <div class="component-wrapper remove-element-padding p-4">
+                <div class="row">
+
+                    <h3>Approved icons</h3>
+
+                    <div class="col-6 col-md-4 mb-4">
+                        {% include icon-example.html
+                        src="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                        title="Tips"
+                        classes=""
+                        %}
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/5a67f721-73a0-4c46-a565-9f590522c081/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Call out links can be used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all
+                page layouts</a>.</p>
+
+
+        {% include layouts-dropdown.html
+            single-col-twothirds-visibility="true"
+            two-col-leftmenu-visibility="true"
+            two-col-rightsidebar-visibility="true"
+        %}
+
+
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/feature-box-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/feature-box-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/feature-box-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/feature-box-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#featurebox-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/feature-box-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/feature-box-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/feature-box-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#featurebox-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+
+            min992-img="'../assets/layout-images/feature-box-2col-rightsidebar-min992.png' | relative_url "
+            finalbp-img="'../assets/layout-images/feature-box-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min992-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Feature boxes span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar.html#featurebox-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>The mini-list component has expandable sections with nested content. It provides content details when opened
+            by users on a content page.</p>
+        <h3>When to use this component</h3>
+        <p>The mini-list highlights information at the top of tutorial or 101 pages that the user needs to know.
+            Generally it is used to draw the users attention to any tasks that need to be done before the rest content
+            on the page is considered.</p>
+        <h3>Content rules</h3>
+        <ul>
+            <li>No more than 5 items per mini-list.</li>
+            <li>One mini-list per page.</li>
+            <li>The mini-list only appears on information pages, not on category or topic pages.</li>
+            <li>Content in mini-list items should be short. They can contain links to further information.</li>
+        </ul>
+
+    </div>

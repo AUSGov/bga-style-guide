@@ -1,0 +1,65 @@
+<div class="bga-component-wrapper pb-5">
+<div class="bga-component mini-list {{include.classes}} m-0">
+   
+    <div class="accordion mini-list">
+
+        {% if include.item1 == "true" %}    
+            <div class="accordion-item">
+                <h2 class="accordion-header pt-0" id="mini-list-1">
+                    <button class="accordion-button collapsed remove-element-padding" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseOne" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseOne">
+                        <p><strong>{{ include.title1 }}</strong></p>
+                    </button>
+                </h2>
+                <div id="{{include.layout-name=}}-collapseOne" class="accordion-collapse collapse" aria-labelledby="mini-list-1" >
+                    <div class="accordion-body">
+                       
+                        {{ include.content1 }}
+
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        
+        {% if include.item2 == "true" %}    
+            <div class="accordion-item">
+                <h2 class="accordion-header pt-0" id="mini-list-2">
+                    <button class="accordion-button collapsed remove-element-padding" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseTwo" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseTwo">
+                        <p><strong>{{ include.title2 }}</strong></p>
+                    </button>
+                </h2>
+                <div id="{{include.layout-name=}}-collapseTwo" class="accordion-collapse collapse" aria-labelledby="mini-list-2" >
+                    <div class="accordion-body">
+                        
+                        {{ include.content2 }}
+                       
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+
+        {% if include.item3 == "true" %}   
+            <div class="accordion-item">
+                <h2 class="accordion-header pt-0" id="mini-list-3">
+                    <button class="accordion-button collapsed remove-element-padding" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseThree" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseThree">
+                        <p><strong>{{ include.title3 }}</strong></p>
+                    </button>
+                </h2>
+                <div id="{{include.layout-name=}}-collapseThree" class="accordion-collapse collapse" aria-labelledby="mini-list-3">
+                    <div class="accordion-body">
+                       
+                        {{ include.content3 }}
+                       
+                    </div>
+                </div>
+
+            </div>
+        {% endif %}
+
+
+</div>
+          
+            
+</div>
+</div>
