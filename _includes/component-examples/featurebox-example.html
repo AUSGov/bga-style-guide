@@ -1,10 +1,22 @@
 <div class="bga-component-wrapper pb-5">
 <div class="bga-component feature-box {{include.classes}} m-0">
-   
-           <a href="" class="p-4 mb-1 remove-element-padding">
-               <div class="icon-wrapper me-4"><img src={{ include.icon }} alt="" /></div>
-                <p class="link"><strong>{{ include.link }}</strong></p> 
-            </a>
+    
+    <div class="py-4 ps-4 pe-8 component-content h-100">
+        <div class="icon-wrapper me-3 mb-4"><img src={{ include.icon }} alt="" /></div>
+        
+        <div class="component-text remove-element-padding">
+        
+            {% if include.title %}
+                <h3>{{ include.title }}</h3>
+            {% endif %}
+
+            {% if include.content %}
+                {{ include.content }}
+            {% endif %}
+
+        </div>
+    </div>
+           
             
 </div>
 </div>
