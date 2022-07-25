@@ -308,31 +308,35 @@ $('.accordion-toggle').on('click', function(){
 
 // Check if all accordion items are opened or closed when one item is clicked.
 $('.accordion-button').on('click', function(){
+    
+    $(this).parents('.accordion-item').toggleClass('show');
+
     var open_items = 0,
         closed_items = 0,
-        total_items = $(this).parents('.layout-accordion').find('.accordion-item').length;
+        parent_accordion = $(this).parents('.accordion'),
+        total_items = parent_accordion.find('.accordion-item').length,
+        accordion_toggle = parent_accordion.prev('.accordion-toggle').find('span');
+        console.log(accordion_toggle);
 
-    $(this).parents('.layout-accordion').find('.accordion-item').each(function(){
+    parent_accordion.find('.accordion-item').each(function(){
         if ( $(this).find('.accordion-button').hasClass('collapsed') ) {
             closed_items = closed_items +1;
         } else {
             open_items = open_items + 1;
         }
     });
+    console.log('open ' + open_items);
+    console.log('closed ' + closed_items);
+    console.log(total_items);
 
    if ( open_items === total_items ) { 
-       $('.accordion-toggle span').text('Close all');
+       accordion_toggle.text('Close all');
 
     } else if ( closed_items === total_items ) {
-        $('.accordion-toggle span').text('Open all');
+        accordion_toggle.text('Open all');
     }
-});
 
-// COMPONENT EXAMPLES
-
-// Accordion example
-$('.bga-accordion .accordion-button').on('click', function(){
-    $(this).parents('.accordion-item').toggleClass('show');
+   
 });
     
 // FORM EXAMPLES
