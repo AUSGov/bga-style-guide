@@ -2802,7 +2802,7 @@ table.table { margin-bottom: 32px; }
 
 .layout-example.show { display: block; }
 
-.layout-example .accordion-toggle { border: none; background: #ffffff; text-decoration: underline; cursor: pointer; float: right; font-weight: 600; box-shadow: none; border-radius: none; }
+.layout-example .accordion-toggle { border: none; background: #ffffff; text-decoration: underline; float: right; font-weight: 600; box-shadow: none; border-radius: none; }
 
 .layout-example .accordion-item { border: none; border-bottom: solid 1px #96B7DF; }
 
@@ -4025,6 +4025,62 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 @media (max-width: 992px) { .feature-box.full-width-layout .component-content { border-left-width: 8px; padding-right: 64px !important; } .feature-box.full-width-layout .icon-wrapper { width: 56px; height: 56px; margin-right: 16px !important; } .feature-box.full-width-layout img { width: 40px; } }
 
 @media (max-width: 576px) { .feature-box .component-content, .feature-box.full-width-layout .component-content { flex-wrap: wrap; justify-content: center; padding-right: 24px !important; } .feature-box .icon-wrapper, .feature-box.full-width-layout .icon-wrapper { width: 44px; height: 44px; margin-right: 0 !important; } .feature-box img, .feature-box.full-width-layout img { width: 30px; } .feature-box.feature-box-colours .component-content, .feature-box.full-width-layout.feature-box-colours .component-content { justify-content: center; } .feature-box.feature-box-colours .component-text, .feature-box.full-width-layout.feature-box-colours .component-text { width: 100%; text-align: center; } .feature-box.feature-box-colours .icon-wrapper, .feature-box.full-width-layout.feature-box-colours .icon-wrapper { margin-bottom: 24px; } }
+
+.bga-default-accordion { background: none; text-align: right; }
+
+.bga-default-accordion .accordion-toggle { border: none; background: #ffffff; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; }
+
+.bga-default-accordion .accordion { text-align: left; border-top: #E4E6EA solid 2px; }
+
+.bga-default-accordion .accordion-item { border: none; background: #E4E6EA; border-bottom: #E4E6EA solid 2px; }
+
+.bga-default-accordion .accordion-item:last-of-type .accordion-button { border-radius: 0; }
+
+.bga-default-accordion .accordion-item:first-of-type .accordion-button { border-radius: 0; }
+
+.bga-default-accordion .accordion-item:focus-visible { outline: none; }
+
+.bga-default-accordion .accordion-item:hover { border-bottom: #FFCF3B solid 4px; }
+
+.bga-default-accordion .accordion-item.show { border-bottom: #FFCF3B solid 4px; }
+
+.bga-default-accordion .accordion-item .accordion-button { background: #ffffff; font-weight: 600; color: #2E3E5A; justify-content: space-between; }
+
+.bga-default-accordion .accordion-item .accordion-button::after { background-color: #FFD964; background-image: url(../assets/Chevron-down-black.svg); background-position: center center; background-size: 16px 10px; height: 48px; width: 48px; border-radius: 100px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); margin: auto 0; }
+
+.bga-default-accordion .accordion-item .accordion-button:focus { box-shadow: none; }
+
+.bga-default-accordion .accordion-item .accordion-button:focus-visible { border: 3px solid #2E6CB9; border-radius: 4px; }
+
+.bga-default-accordion .accordion-item .accordion-button:hover { background: #ffffff; text-decoration: underline; }
+
+.bga-default-accordion .accordion-item .accordion-button:hover::after { background-color: #FFCF3B; }
+
+.bga-default-accordion .accordion-item .accordion-button:not(.collapsed) { background-color: #E4E6EA; box-shadow: none; }
+
+.bga-default-accordion .accordion-item .accordion-button:not(.collapsed):hover { border-bottom: none; background: #E4E6EA; }
+
+.bga-default-accordion .accordion-item .accordion-button:not(.collapsed)::after { box-shadow: -2px -2px 3px 0px rgba(51, 51, 51, 0.2); background-color: #FFCF3B; }
+
+.bga-default-accordion .accordion-item .accordion-button p { display: block; width: 100%; }
+
+.bga-default-accordion .accordion-item .accordion-body { display: flex; flex-wrap: wrap; }
+
+.bga-default-accordion .accordion-item .accordion-body a { cursor: pointer; color: #2157AA; text-decoration: underline; }
+
+.bga-default-accordion .accordion-item .accordion-body a:focus-visible { border: 2px solid #2E6CB9; background: #ffffff; border-radius: 4px; outline: none; }
+
+.bga-default-accordion .accordion-item .accordion-body a:hover { background: #ffffff; }
+
+.component-example.bp-below576 .bga-default-accordion .accordion-item .accordion-button, .component-example.small-screen .bga-default-accordion .accordion-item .accordion-button { font-size: 1rem; padding: 16px !important; }
+
+.component-example.bp-below576 .bga-default-accordion .accordion-item .accordion-button p, .component-example.small-screen .bga-default-accordion .accordion-item .accordion-button p { padding-right: 16px !important; }
+
+.component-example.bp-below576 .bga-default-accordion .accordion-item .accordion-button::after, .component-example.small-screen .bga-default-accordion .accordion-item .accordion-button::after { height: 32px; width: 32px; }
+
+.component-example.bp-below576 .bga-default-accordion .accordion-item .accordion-body, .component-example.small-screen .bga-default-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; }
+
+@media (max-width: 576px) { .bga-default-accordion .accordion-item .accordion-button { font-size: 1rem; padding: 16px !important; } .bga-default-accordion .accordion-item .accordion-button p { padding-right: 16px !important; } .bga-default-accordion .accordion-item .accordion-button::after { height: 32px; width: 32px; } .bga-default-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } }
 
 .mini-list .accordion-item { border: none; background: #C8D9EE; }
 

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Feature box</title>
+    <title>Accordion</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -34,7 +34,7 @@
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/feature-box.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/accordion.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -145,7 +145,7 @@
                      
 
                     <li class="breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0 h-100">Feature box</p>
+                        <p class="breadcrumb-location m-0 p-0 h-100">Accordion</p>
                     </li>
                 </ul>
 
@@ -162,8 +162,8 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Feature box</h1>
-                        <p class="header-intro">Feature boxes highlight certain information in the context of a page.</p>
+                        <h1>Accordion</h1>
+                        <p class="header-intro">Hide and reveal less important content on the page.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
@@ -215,7 +215,7 @@
 
     </div>
 
-    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
 
 
         <!-- DESIGN -->
@@ -236,9 +236,6 @@
 
                 
                 
-                  
-                    <input type="radio" class="btn-check bp-lg true" name="-group" id="-bp-lg" autocomplete="off" data-breakpoint="bp-992">
-                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="-bp-lg">≥992px (lg)</label>
                 
 
                 
@@ -277,247 +274,99 @@
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Layout: Single column - full width</h3>
-
                 <div class="bga-component-wrapper pb-5">
-<div class="bga-component feature-box full-width-layout purple m-0">
+<div class="bga-component bga-default-accordion  m-0">
+   
+    <button class="accordion-toggle pt-4 pb-0 px-0 mb-4">
+        <span>Open all</span>
+        <svg class="ms-2" data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+        <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#333"/>
+        </svg>
+      </button>
     
-    <div class="py-4 ps-4 pe-8 component-content h-100">
-        <div class="icon-wrapper me-3 mb-4"><img src='../assets/icon-lightbulb-blueblack.svg' | relative_url  alt="" /></div>
-        
-        <div class="component-text remove-element-padding">
-        
-            
-                <h3>Tip - Assess your business needs</h3>
-            
+    <div class="accordion">
 
             
-                <p>Before you start, it’s a good idea to assess your business needs so you can choose the right
-                    person for your business. Think about: </p>
-                <ul>
-                    <li>the tasks you need the employee to do</li>
-                    <li>any skills and qualifications they’ll require</li>
-                    <li>how busy the job will be</li>
-                </ul>
-            
+            <div class="accordion-item" tabindex="-1">
+                <h5 class="accordion-header pt-0" id="accordion-1">
+                    <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapseOne" aria-expanded="false" aria-controls="accordion-collapseOne">
+                        <p class="pe-4"><strong>Accordion item title</strong></p>
+                    </button>
+                </h5>
+                <div id="accordion-collapseOne" class="accordion-collapse collapse" aria-labelledby="accordion-1" >
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                       
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo. Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum. Fusce tempor sagittis fringilla. Sed sed dapibus est. Mauris ac arcu et ligula aliquet aliquet ac ac risus. <a tabindex='0'>In lobortis ornare ultricies.</a></p>
 
-        </div>
-    </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            
+            <div class="accordion-item">
+                <h5 class="accordion-header pt-0" id="accordion-2">
+                    <button class="accordion-button collapsed remove-element-padding p-4" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapseTwo" aria-expanded="false" aria-controls="accordion-collapseTwo">
+                        <p class="pe-4"><strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</strong></p>
+                    </button>
+                </h5>
+                <div id="accordion-collapseTwo" class="accordion-collapse collapse" aria-labelledby="accordion-2" >
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                        
+                        <p>Praesent nec magna semper, pulvinar sapien sagittis, tempor urna. Praesent pretium finibus
+                    interdum:</p><ul><li>Quisque ut odio faucibus, iaculis augue vel, tempor nulla. </li><li> In rutrum risus id lectus consectetur volutpat. Donec a justo nec nunc consequat ultricies.</li></ul>
+                       
+                    </div>
+                </div>
+            </div>
+        
+
+
            
-            
-</div>
-</div>
+            <div class="accordion-item">
+                <h5 class="accordion-header pt-0" id="accordion-3">
+                    <button class="accordion-button collapsed remove-element-padding p-4" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapseThree" aria-expanded="false" aria-controls="accordion-collapseThree">
+                        <p class="pe-4"><strong>Set your date to officially close your business. This step has a much longer title than the other items in this accordion</strong></p>
+                    </button>
+                </h5>
+                <div id="accordion-collapseThree" class="accordion-collapse collapse" aria-labelledby="accordion-3">
+                    
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                       
+                        <p>Phasellus venenatis nulla tempor quam egestas auctor.</p>
+                <p>Cras sed tortor a dolor dictum tincidunt ut nec enim. Fusce vitae quam suscipit, suscipit leo at,
+                    efficitur turpis.</p>
+                       
+                    </div>
+                </div>
 
-                <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
-
-                <div class="bga-component-wrapper pb-5">
-<div class="bga-component feature-box two-col-layout green m-0">
-    
-    <div class="py-4 ps-4 pe-8 component-content h-100">
-        <div class="icon-wrapper me-3 mb-4"><img src='../assets/icon-casestudy-blueblack.svg' | relative_url  alt="" /></div>
+            </div>
         
-        <div class="component-text remove-element-padding">
-        
-            
 
-            
-                <p>Before you start, it’s a good idea to assess your business needs so you can choose the right
-                    person for your business. Think about: </p>
-                <ul>
-                    <li>the tasks you need the employee to do</li>
-                    <li>any skills and qualifications they’ll require</li>
-                    <li>how busy the job will be</li>
-                </ul>
-            
 
-        </div>
-    </div>
-           
+</div>
+          
             
 </div>
 </div>
 
             </div>
         </div>
-
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-                    <h3>Colour variations</h3>
-
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
-<div class="bga-component feature-box feature-box-colours teal">
-    
-    <div class="p-4 component-content h-100">
-         
-            
-                <div class="icon-wrapper mb-0 me-3">
-                    <img src='../assets/icon-lightbulb-blueblack.svg' | relative_url  alt="" />
-                </div>
-            
-
-            <div class="component-text">
-                <p class="p-0 m-0">Teal</p>
-            </div>
-            
-    </div>
-
-</div>
-</div>
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
-<div class="bga-component feature-box feature-box-colours green">
-    
-    <div class="p-4 component-content h-100">
-         
-            
-                <div class="icon-wrapper mb-0 me-3">
-                    <img src='../assets/icon-lightbulb-blueblack.svg' | relative_url  alt="" />
-                </div>
-            
-
-            <div class="component-text">
-                <p class="p-0 m-0">Green</p>
-            </div>
-            
-    </div>
-
-</div>
-</div>
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
-<div class="bga-component feature-box feature-box-colours purple">
-    
-    <div class="p-4 component-content h-100">
-         
-            
-                <div class="icon-wrapper mb-0 me-3">
-                    <img src='../assets/icon-lightbulb-blueblack.svg' | relative_url  alt="" />
-                </div>
-            
-
-            <div class="component-text">
-                <p class="p-0 m-0">Purple</p>
-            </div>
-            
-    </div>
-
-</div>
-</div>
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
-<div class="bga-component feature-box feature-box-colours orange">
-    
-    <div class="p-4 component-content h-100">
-         
-            
-                <div class="icon-wrapper mb-0 me-3">
-                    <img src='../assets/icon-lightbulb-blueblack.svg' | relative_url  alt="" />
-                </div>
-            
-
-            <div class="component-text">
-                <p class="p-0 m-0">Orange</p>
-            </div>
-            
-    </div>
-
-</div>
-</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-
-                    <h3>Approved icons</h3>
-
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
-	<p class="mb-3">Tips</p>
-	<button class="copy-icon-example p-0" tabindex="0">
-		<div class="svg-icon-container px-3 py-3">
-			<img src='../assets/icon-lightbulb-blueblack.svg' | relative_url  alt=Tips />
-		</div>
-		<div class="button-text p-3">
-			<svg class="success" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="96.473" height="76.319" viewBox="0 0 96.473 76.319">
-			    <path d="M0,44.7,11.44,33.057l20.18,20.226L84.934,0,96.473,11.466,31.62,76.319Z" fill="#ffffff" />
-			</svg>
-            <span>Copy code</span>
-			
-		</div>
-	</button>
-</div>
-                    </div>
-
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
-	<p class="mb-3">Case studies / examples</p>
-	<button class="copy-icon-example p-0" tabindex="0">
-		<div class="svg-icon-container px-3 py-3">
-			<img src='../assets/icon-casestudy-blueblack.svg' | relative_url  alt=Case studies / examples />
-		</div>
-		<div class="button-text p-3">
-			<svg class="success" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="96.473" height="76.319" viewBox="0 0 96.473 76.319">
-			    <path d="M0,44.7,11.44,33.057l20.18,20.226L84.934,0,96.473,11.466,31.62,76.319Z" fill="#ffffff" />
-			</svg>
-            <span>Copy code</span>
-			
-		</div>
-	</button>
-</div>
-                    </div>
-
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
-	<p class="mb-3">News</p>
-	<button class="copy-icon-example p-0" tabindex="0">
-		<div class="svg-icon-container px-3 py-3">
-			<img src='../assets/icon-news-blueblack.svg' | relative_url  alt=News />
-		</div>
-		<div class="button-text p-3">
-			<svg class="success" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="96.473" height="76.319" viewBox="0 0 96.473 76.319">
-			    <path d="M0,44.7,11.44,33.057l20.18,20.226L84.934,0,96.473,11.466,31.62,76.319Z" fill="#ffffff" />
-			</svg>
-            <span>Copy code</span>
-			
-		</div>
-	</button>
-</div>
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
-
-
-
 
 
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/5a67f721-73a0-4c46-a565-9f590522c081/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/d9e7436d-f593-44b5-a76a-03ba5a3ebc75' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Call out links can be used on <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>all
-                page layouts</a>.</p>
+        <p>Accordions can be used on all page layouts except the <a
+                href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>single column - full width layout</a>.</p>
 
 
         <div class="layouts m-0 p-4">
@@ -529,8 +378,6 @@
     
     <select class="form-select layouts-select ps-3" aria-label="Layout examples">
         
-        
-            <option value="single-col-fullwidth" class="true" selected>Single column - full width</option>
         
         
         
@@ -554,38 +401,6 @@
 </div>
 
 
-        <div class="layout-example show single-col-fullwidth mt-0 mb-5 px-4 py-0">
-
-            
-    
-    <div class="py-4">
-        
-        <h6>All breakpoints</h6>
-        
-        <div class="layouts-wrapper">
-        <div class="layout-image me-5">
-            <img src='../assets/layout-images/Feature-box-1colfullwidth-allbp.png' | relative_url  alt="" />
-        </div>
-        <div class="layout-rules">
-            <p>The content area is 12 grid-columns wide.</p><p>Feature boxes span the full width of the content area.</p>
-        </div>
-        </div>
-    </div>
-
-    
-
-
-
-
-    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-full-width.html#featurebox-example' | relative_url' role="button">View layout example</a>
-    </div>
-
-
-
-        </div>
-
-
         <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
 
             
@@ -602,13 +417,13 @@
                             <div id="onecol-twothirdsw-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/feature-box-1col2thirdswidth-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/accordion-1col2thirdswidth-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 8 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -626,12 +441,12 @@
                             <div id="onecol-twothirdsw-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/feature-box-1col2thirdswidth-min992.png' | relative_url  alt="" />
+                                     <img src='../assets/layout-images/accordion-1col2thirdswidth-min992.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 9 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -649,12 +464,12 @@
                             <div id="onecol-twothirdsw-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/feature-box-1col2thirdswidth-min768.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/accordion-1col2thirdswidth-min768.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 11 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -676,12 +491,12 @@
                             <div id="onecol-twothirdsw-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/feature-box-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/accordion-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                        <p>The content area is 12 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -697,7 +512,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#featurebox-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#accordion-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -721,13 +536,13 @@
                             <div id="twocol-leftmenu-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/feature-box-2col-leftmenu-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/accordion-2col-leftmenu-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 8 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -751,12 +566,12 @@
                             <div id="twocol-leftmenu-collapseFour" class="accordion-collapse collapse" aria-labelledby="layout-bp-min576" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/feature-box-2col-leftmenu-min576.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/accordion-2col-leftmenu-min576.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 9 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -774,12 +589,12 @@
                             <div id="twocol-leftmenu-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/feature-box-2col-leftmenu-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/accordion-2col-leftmenu-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                        <p>The content area is 12 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -795,7 +610,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#featurebox-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#accordion-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -822,12 +637,12 @@
                             <div id="twocol-rightbar-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/feature-box-2col-rightsidebar-min992.png' | relative_url  alt="" />
+                                     <img src='../assets/layout-images/accordion-2col-rightsidebar-min992.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 8 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -851,12 +666,12 @@
                             <div id="twocol-rightbar-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/feature-box-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/accordion-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                        <p>The content area is 12 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>
+            <p>Accordions span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -872,7 +687,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#featurebox-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#accordion-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -881,19 +696,25 @@
 
 
 
-
-
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        <h3>Purpose: </h3>
-        <p>Feature boxes highlight certain information in the context of a page.</p>
-        <h3>When to use this component: </h3>
-        <p>Used to highlight examples or latest news that may be of interest to the user. Typical uses can include:</p>
+        <h3>Purpose:</h3>
+        <p>An accordion is an expandable section with nested content. This component provides content details when
+            opened by users on a content page. It can help to streamline the user experience by keeping content relevant
+            to the user.</p>
+        <h3>When to use this component:</h3>
         <ul>
-            <li>Latest news</li>
-            <li>Examples and case studies</li>
-            <li>Tips</li>
+            <li>For optional content (e.g. frequently asked questions at the end of a transaction page).</li>
+            <li>For directory type content (e.g. state and territory links).</li>
+            <li>To streamline a transaction process.</li>
+        </ul>
+        <h3>Content rules:</h3>
+        <ul>
+            <li>Select &ldquo;open all&rdquo; accordion option if you have 2 or more accordion items.</li>
+            <li>Avoid single accordion items, although they are sometimes used on grant application pages to streamline
+                the application process.</li>
+            <li>Avoid using bold in accordion body content.</li>
         </ul>
 
     </div>
