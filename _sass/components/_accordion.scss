@@ -1,0 +1,161 @@
+.bga-default-accordion {
+    background: none;
+    text-align: right;
+
+    .accordion-toggle {
+        border: none;
+        background: $bga-white;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: 600;
+        box-shadow: none;
+    }
+    .accordion {
+        text-align: left;
+        border-top: $bga-blue-black-lightest solid 2px;
+    }
+    .accordion-item {
+        border: none;
+        background: $bga-blue-black-lightest;
+        border-bottom: $bga-blue-black-lightest solid 2px;
+        
+        &:last-of-type {
+            .accordion-button {
+                border-radius: 0;
+            }
+        }
+        &:first-of-type {
+            .accordion-button {
+                border-radius: 0;
+            }
+        }
+        &:focus-visible {
+            outline: none; 
+        }
+        &:hover {
+            border-bottom: $bga-yellow-links-background solid 4px;
+        }
+        &.show {
+            border-bottom: $bga-yellow-links-background solid 4px;
+        }
+
+        .accordion-button {
+            background: $bga-white;
+            font-weight: 600;
+            color: $bga-blue-black-dark;
+            justify-content: space-between;
+            
+            &::after {
+                background-color: $bga-yellow-highlight-dark;
+                background-image: url(../assets/Chevron-down-black.svg);
+                background-position: center center;
+                background-size: 16px 10px;
+                height: 48px;
+                width: 48px;
+                border-radius: 100px;
+                box-shadow: $bga-btn-boxshadow;
+                margin: auto 0;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            &:focus-visible {
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
+            }
+            &:hover {
+                background: $bga-white;
+                text-decoration: underline;
+                
+                &::after {
+                    background-color: $bga-yellow-links-background;
+                }
+            }
+            &:not(.collapsed) {
+                background-color: $bga-blue-black-lightest;
+                box-shadow: none;
+
+                &:hover {
+                    border-bottom: none;
+                    background: $bga-blue-black-lightest;
+                }
+                &::after {
+                    box-shadow: -2px -2px 3px 0px rgba(51, 51, 51, 0.2);
+                    background-color: $bga-yellow-links-background;
+                }
+            }
+    
+            p {
+                display: block;
+                width: 100%;
+            }
+        }
+        .accordion-body {
+            display: flex;
+            flex-wrap: wrap;
+
+            a {
+                cursor: pointer;
+                color: $bga-blue-links;
+                text-decoration: underline;
+
+                &:focus-visible {
+                    border: $bga-text-focus-border;
+                    background: $bga-white;
+                    border-radius: $bga-focus-radius;
+                    outline: none;
+                }
+                &:hover {
+                    background: $bga-white;
+                }
+            }
+        }
+    } 
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576,
+.component-example.small-screen {
+    .bga-default-accordion {
+        .accordion-item {
+            .accordion-button {
+                font-size: 1rem;
+                padding: 16px !important;
+
+                p {
+                    padding-right: 16px !important;
+                }
+                &::after {
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+            .accordion-body {
+                padding: 0 16px 16px 16px !important;
+            }
+        }
+    }
+}
+
+// Media queries for HTML example pages
+@media (max-width: 576px) {
+    .bga-default-accordion {
+        .accordion-item {
+            .accordion-button {
+                font-size: 1rem;
+                padding: 16px !important;
+
+                p {
+                    padding-right: 16px !important;
+                }
+                &::after {
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+            .accordion-body {
+                padding: 0 16px 16px 16px !important;
+            }
+        }
+    }
+}

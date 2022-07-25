@@ -5,7 +5,7 @@
 
         {% if include.item1 == "true" %}    
             <div class="accordion-item mb-1" tabindex="-1">
-                <h2 class="accordion-header pt-0" id="mini-list-1">
+                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-1">
                     <button tabindex="0" class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseOne" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseOne">
                         <div class="icon-wrapper me-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
@@ -14,8 +14,8 @@
                           </div>
                         <p class="pe-3"><strong>{{ include.title1 }}</strong></p>
                     </button>
-                </h2>
-                <div id="{{include.layout-name=}}-collapseOne" class="accordion-collapse collapse" aria-labelledby="mini-list-1" >
+                </h5>
+                <div id="{{include.layout-name}}-collapseOne" class="accordion-collapse collapse" aria-labelledby="{{include.layout-name=}}-1" >
                     <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
                        
                         {{ include.content1 }}
@@ -28,7 +28,7 @@
         
         {% if include.item2 == "true" %}    
             <div class="accordion-item mb-1">
-                <h2 class="accordion-header pt-0" id="mini-list-2">
+                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-2">
                     <button class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseTwo" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseTwo">
                         <div class="icon-wrapper me-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
@@ -37,8 +37,8 @@
                           </div>
                         <p class="pe-3"><strong>{{ include.title2 }}</strong></p>
                     </button>
-                </h2>
-                <div id="{{include.layout-name=}}-collapseTwo" class="accordion-collapse collapse" aria-labelledby="mini-list-2" >
+                </h5>
+                <div id="{{include.layout-name}}-collapseTwo" class="accordion-collapse collapse" aria-labelledby="{{include.layout-name=}}-2" >
                     <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
                         
                         {{ include.content2 }}
@@ -51,7 +51,7 @@
 
         {% if include.item3 == "true" %}   
             <div class="accordion-item">
-                <h2 class="accordion-header pt-0" id="mini-list-3">
+                <h5 class="accordion-header pt-0" id={{include.layout-name}}-3">
                     <button class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseThree" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseThree">
                         <div class="icon-wrapper me-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
@@ -60,8 +60,8 @@
                           </div>
                         <p class="pe-3"><strong>{{ include.title3 }}</strong></p>
                     </button>
-                </h2>
-                <div id="{{include.layout-name=}}-collapseThree" class="accordion-collapse collapse" aria-labelledby="mini-list-3">
+                </h5>
+                <div id="{{include.layout-name=}}-collapseThree" class="accordion-collapse collapse" aria-labelledby={{include.layout-name}}-3">
                     
                     <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
                        

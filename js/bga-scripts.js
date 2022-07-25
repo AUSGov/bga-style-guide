@@ -283,17 +283,22 @@ if ($('.layouts-select').length) {
 
 // Open/close all button
 $('.accordion-toggle').on('click', function(){
-    var button_state = $(this).text();
+    var button_state = $(this).find('span').text();
 
     if ( button_state === "Open all" ) {
-        $(this).text('Close all');
+        $(this).find('span').text('Close all');
+        $('.accordion-item').each(function(){
+            $(this).addClass('show');
+        });
         $(this).next('.accordion').find('.accordion-item').each(function(){
             $(this).find('.collapse').addClass('show');
             $(this).find('button').attr("aria-expanded","true").removeClass('collapsed');
-
         });
     } else {
-        $(this).text('Open all');   
+        $(this).find('span').text('Open all');
+        $('.accordion-item').each(function(){
+            $(this).removeClass('show');
+        });   
         $(this).next('.accordion').find('.accordion-item').each(function(){
             $(this).find('.collapse').removeClass('show');
             $(this).find('button').attr("aria-expanded","false").addClass('collapsed'); 
@@ -316,13 +321,19 @@ $('.accordion-button').on('click', function(){
     });
 
    if ( open_items === total_items ) { 
-       $('.accordion-toggle').text('Close all');
+       $('.accordion-toggle span').text('Close all');
 
     } else if ( closed_items === total_items ) {
-        $('.accordion-toggle').text('Open all');
+        $('.accordion-toggle span').text('Open all');
     }
 });
 
+// COMPONENT EXAMPLES
+
+// Accordion example
+$('.bga-accordion .accordion-button').on('click', function(){
+    $(this).parents('.accordion-item').toggleClass('show');
+});
     
 // FORM EXAMPLES
 
