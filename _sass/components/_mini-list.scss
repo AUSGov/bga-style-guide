@@ -1,0 +1,133 @@
+.mini-list {
+    .accordion-item {
+        border: none;
+        background: $bga-blue-background-light;
+        
+        &:last-of-type {
+            border-bottom: none;
+            
+            .accordion-button {
+                border-radius: 0;
+            }
+        }
+        &:first-of-type {
+            .accordion-button {
+                border-radius: 0;
+            }
+        }
+        &:focus-visible {
+            outline: none;
+            
+        }
+
+        .accordion-button {
+            background: $bga-blue-background-extralight;
+            font-weight: 600;
+            color: $bga-black;
+            align-items: flex-start;
+            justify-content: space-between;
+            
+            &:not(.collapsed) {
+                background-color: $bga-blue-background-light;
+                box-shadow: none;
+            }
+            &::after {
+                background-image: url(../assets/Chevron-down-black.svg);
+                background-position: center center;
+                margin: auto 0;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            &:focus-visible {
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
+            }
+            &:hover {
+                background-color: $bga-blue-background-light;
+                text-decoration: underline;
+            }
+    
+            p {
+                display: block;
+                width: 100%;
+            }
+            .icon-wrapper {
+                width: 32px;
+                height: 32px;
+                border-radius: 100px;
+                background: $bga-white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+        }
+        .accordion-body {
+            display: flex;
+            flex-wrap: wrap;
+
+            a {
+                cursor: pointer;
+                color: $bga-blue-links;
+                text-decoration: underline;
+
+                &:focus-visible {
+                    border: $bga-text-focus-border;
+                    background: $bga-white;
+                    border-radius: $bga-focus-radius;
+                    outline: none;
+                }
+                &:hover {
+                    background: $bga-white;
+                }
+            }
+        }
+    } 
+    &.yellow {
+        .accordion-item {
+            background: $bga-yellow-highlight-mid;
+            .accordion-button {
+                background-color: $bga-yellow-highlight-light;
+
+                &:hover {
+                    background-color: $bga-yellow-highlight-mid;
+                }
+                &:not(.collapsed) { 
+                    background: $bga-yellow-highlight-mid;
+                }
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576,
+.component-example.small-screen {
+    .mini-list {
+        .accordion-item {
+            .accordion-button {
+                font-size: 1rem;
+                padding: 16px 16px 16px 8px !important;
+
+                p {
+                    padding-right: 8px !important;
+                }
+                .icon-wrapper {
+                    margin-right: 8px !important;
+                    margin-top: 4px;
+                    height: 24px;
+                    width: 24px;
+
+                    svg {
+                        width: 12px;
+                        height: auto;
+                    }
+                }
+            }
+            .accordion-body {
+                padding: 0 24px 16px 40px !important;
+            }
+        }
+    }
+}
