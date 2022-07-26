@@ -1,0 +1,266 @@
+.bga-footer-example {
+    background: $bga-blue-links;
+    color: $bga-white;  
+    
+    .footer-wrapper {
+        display: flex;
+    }
+    .footer-links-wrapper {
+        display: flex;
+        flex-wrap: wrap;    
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: $bga-white 1px solid;
+
+    }
+    .footer-links {
+        margin: 0 0 16px 0;
+        width: 31%;
+        
+        h3 {
+            color: $bga-white;
+            padding-top: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            
+            li {
+                display: block;
+                color: $bga-white;
+                text-indent: 0;
+                margin: 0 0 24px 24px;
+                padding: 0;
+
+                &::before {
+                    display: none;
+                }
+                
+                a {
+                    background: url(../assets/Chevron-right-white.svg) no-repeat;
+                    background-position: left 0 top 5px;
+                    padding: 0 0 0 24px;
+                    text-indent: 0;
+                    margin-left: -24px;
+                    display: block;
+                    line-height: 26px;
+                    
+                    &:focus {
+                        border: 2px solid $bga-white;
+                        border-radius: 4px;
+                        outline: none;
+                        text-decoration: underline;
+                    }
+                    &:hover {
+                        border: none;
+                        text-decoration: underline !important;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    
+    .call-us-wrapper {
+        margin-bottom: 24px;
+        
+        a {
+            font-size: 24px;
+            font-weight: 600;
+            
+            &:focus {
+                border: 2px solid $bga-white;
+                border-radius: 4px;
+                outline: none;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 2px;
+            }
+            &:hover {
+                border: none;
+                text-decoration: underline !important;
+                cursor: pointer;
+                text-decoration-thickness: 1px !important;
+                text-underline-offset: 2px !important;
+            }
+        }
+    }
+    
+    .social-links-wrapper {
+        width: 100%;
+        
+        .footer-social {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            
+            li {
+                display: block;
+                width: 48px;
+                height: 48px;
+                background: $bga-blue-footer;
+                border: solid $bga-white 2px;
+                border-radius: 50%;
+                padding: 0;
+                margin: 0 32px 0 0;
+
+                &::before {
+                    display: none;
+                }
+                
+                svg {
+                    fill: $bga-white;
+                    width: 22px;
+                    height: 100%;
+                    margin: auto;
+                    display: block;
+                    
+                    &.linkedin {
+                        margin: -2px auto 0;
+                    }
+                }
+                
+                &:focus {
+                    border: 3px solid $bga-white;
+                    background: $bga-white;
+                    outline: none;
+                    
+                    svg {
+                        fill: $bga-blue-footer;
+                    }
+                }
+
+                &:hover {
+                    border: solid $bga-white 3px;
+                    cursor: pointer;
+                    background: $bga-white;
+                    
+                    svg {
+                        fill: $bga-blue-footer;
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+    
+    .subscribe-wrapper {
+        background: $bga-white;  
+        
+        p {
+            color: $bga-black;
+        }
+        .button-wrapper {
+            text-align: right;
+            
+            a {
+                color: $bga-blue-links;
+                margin-right: 16px;
+                font-size: 14px;
+                text-decoration: underline;
+                
+                &:focus {
+                    color: $bga-black;
+                    border: solid $bga-blue-focus 2px;
+                    text-decoration: underline;
+                    border-radius: 4px;
+                    outline: none;
+                }
+                &:hover {
+                    color: $bga-black;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.indigenous-footer {
+     background: $bga-blue-footer; 
+     color: $bga-white;
+    
+    p {
+        color: $bga-white;
+    }
+
+     svg {
+         width: 90%;
+         max-width: 300px;
+         height: auto;
+         margin-bottom: 32px;
+     } 
+}
+
+@media (max-width: 991px) {
+    footer {
+        .footer-links {
+            margin: 0 0 16px 0;
+            width: 31%;
+            
+            ul {
+                li {
+                    margin: 0 0 16px 24px;
+                }
+            }
+        }
+        .social-links-wrapper {
+            margin-bottom: 32px;
+        }
+    }
+    .subscribe-offset {
+        margin-top: -144px;
+    }
+}
+
+@media (max-width: 767px) {
+     .subscribe-offset {
+        margin-top: 0px;
+    }
+    footer {
+        padding-top: 32px;
+        
+        .footer-wrapper {
+            display: block;
+        }
+        .footer-links {
+            flex: 0 0 auto;
+            width: 100%;
+            margin: 0 0 16px 0;
+        }
+        .social-links-wrapper {
+            .footer-social {
+                display: block;
+                
+                li {
+                    display: inline-block;
+                    margin: 0 16px 0 0;
+                    height: 44px;
+                    width: 44px;
+                }
+            }
+        }
+
+    }
+    
+}
+
+@media (max-width: 350px) {
+    footer {
+        .subscribe-wrapper {
+            .button-wrapper {
+                text-align: right;
+                display: flex;
+                flex-wrap: wrap;   
+                text-align: left;
+                
+                a {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    button.primary-button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,100 @@
+---
+
+layout: content-tagged
+title: business.gov.au site footer
+description: Site footer design for business.gov.au
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        element-string="bga-site-header"
+        lg-visibility="true"
+        md-visibility="true"
+        xs-visibility="true"
+        breakpoint-final="350"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding py-0 px-0">
+
+
+                {% include component-examples/bga-site-footer-example.html %}
+
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/d2ae485e-b936-447d-85fe-172dd8829ffa/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>The site header is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all business.gov.au layouts</a>.</p>
+
+        
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+            {% include layouts-accordion.html
+                singlelayout="true"
+                allbp-img="'../assets/layout-images/bga-site-header-allbp.png' | relative_url "
+                allbp-rules="<p>The site header is 12 grid-columns wide.</p>"
+            %}
+
+        </div>
+
+
+
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <p>The header includes the site logo, main navigation and search. It is designed to make the site easy to
+            nagivate and establishes the site brand.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used across every page of the website to ensure a consistent user experience.</li>
+        </ul>
+
+
+    </div>
