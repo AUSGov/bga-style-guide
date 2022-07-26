@@ -1,0 +1,208 @@
+---
+
+layout: content-tagged
+title: Image
+description: Display an image with a caption underneath.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        singlebp="true"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Image component with caption</h3>
+
+                        {% include component-examples/image-example.html
+                        image="'../assets/woman_welding.jpg' | relative_url"
+                        alt-text="A woman in a workshop welding."
+                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
+                        quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                        %}
+
+
+                    <h3>Image component without caption</h3>
+
+                        {% include component-examples/image-example.html
+                        image="'../assets/potter-on-computer.jpg' | relative_url"
+                        alt-text="A female pooter in her workshop looking at a laptop computer"
+                        %}
+        </div>
+    </div>
+
+
+    <!-- Design specifications link -->
+
+    {% include design-specs-link.html
+    btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/ad6ce2fe-8fc8-4fc1-901e-58809602f954/'"
+    btn-text="View design specifications"
+    %}
+
+
+    <!-- LAYOUTS -->
+    <h2 class="section-start" id="layouts">Layouts</h2>
+
+    <p>Images can be used on all page layouts except the <a href={{ "brand-foundations/grid-and-page-layouts.html" |
+            relative_url }}>single column - full width layout</a>.</p>
+
+
+    {% include layouts-dropdown.html
+    single-col-twothirds-visibility="true"
+    two-col-leftmenu-visibility="true"
+    two-col-rightsidebar-visibility="true"
+    %}
+
+
+    <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+        {% include layouts-accordion.html
+        layout-name="onecol-twothirdsw"
+
+        min1200-visibility="true"
+        min992-visibility="true"
+        min768-visibility="true"
+        min576-visibility="false"
+        finalbp-visibility="true"
+
+        finalbp="Breakpoint &lt; 768px"
+
+        min1200-img="'../assets/layout-images/images-1col2thirdswidth-min1200.png' | relative_url "
+        min992-img="'../assets/layout-images/images-1col2thirdswidth-min992.png' | relative_url "
+        min768-img="'../assets/layout-images/images-1col2thirdswidth-min768.png' | relative_url "
+        finalbp-img="'../assets/layout-images/images-1col2thirdswidth-finalbp.png' | relative_url "
+
+        min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        min992-rules="<p>The content area is 9 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        min768-rules="<p>The content area is 11 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        example-link="'../html-examples/single-col-two-thirds-width.html#image-example' | relative_url'"
+        example-link-text="View layout example"
+
+        %}
+
+    </div>
+
+
+    <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+        {% include layouts-accordion.html
+        layout-name="twocol-leftmenu"
+
+        min1200-visibility="true"
+        min992-visibility="false"
+        min768-visibility="false"
+        min576-visibility="true"
+        finalbp-visibility="true"
+
+        finalbp="Breakpoint &lt; 576px"
+
+        min1200-img="'../assets/layout-images/images-2col-leftmenu-min1200.png' | relative_url "
+        min576-img="'../assets/layout-images/images-2col-leftmenu-min576.png' | relative_url "
+        finalbp-img="'../assets/layout-images/images-2col-leftmenu-finalbp.png' | relative_url "
+
+        min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        min576-rules="<p>The content area is 9 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        example-link="'../html-examples/two-col-left-side-menu.html#image-example' | relative_url'"
+        example-link-text="View layout example"
+
+        %}
+
+    </div>
+
+
+    <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+        {% include layouts-accordion.html
+        layout-name="twocol-rightbar"
+
+        min1200-visibility="false"
+        min992-visibility="true"
+        min768-visibility="false"
+        min576-visibility="false"
+        finalbp-visibility="true"
+
+        finalbp="Breakpoint &lt; 992px"
+
+
+        min992-img="'../assets/layout-images/images-2col-rightsidebar-min992.png' | relative_url "
+        finalbp-img="'../assets/layout-images/images-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+        min992-rules="<p>The content area is 8 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Images span the full width of the content area.</p>"
+
+        example-link="'../html-examples/two-col-right-sidebar.html#image-example' | relative_url'"
+        example-link-text="View layout example"
+
+        %}
+
+    </div>
+
+
+    <!-- GUIDELINES -->
+    <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+    <h3>Purpose:</h3>
+    <p>The image component displays a single image in a content page. This component includes a short optional
+        caption below the image. </p>
+    <h3>When to use this component:</h3>
+    <ul>
+        <li>Image components are mostly used on news articles and customer story pages.</li>
+        <li>Avoid unnecessary images, especially on high priority pages &ndash; use words rather than images for
+            accessibility reasons.</li>
+    </ul>
+    <h3>Content rules:</h3>
+    <ul>
+        <li>Don&rsquo;t use captions for stock photos e.g. in news articles.</li>
+        <li>Informative images should always have alt text in a content page.</li>
+        <li>Decorative images, for example stock photos in news or resource articles, must have null (empty) alt
+            text &ndash; don&rsquo;t insert a space [alt=&rdquo;&rdquo;].</li>
+    </ul>
+
+</div>
