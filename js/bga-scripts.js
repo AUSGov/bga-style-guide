@@ -262,12 +262,22 @@ if ($('.layouts-select').length) {
 } 
     
 // Set first item on remaining accordions to be open by default
-$('.layout-accordion').each(function(){
-    $(this).find('.accordion-item').first().addClass('first');   
-});
-$('.layout-accordion .accordion-item.first').find('button').attr("aria-expanded","true").removeClass('collapsed');
-$('.layout-accordion .accordion-item.first').find('.collapse').addClass('show');
-    
+var show_first_item = function(layout_accordion, accordion_item, accordion_parent){
+    // Hide all items
+    $(layout_accordion + ' ' + accordion_item).each(function(){
+        $(this).find('button').attr("aria-expanded","true").addClass('collapsed');
+        $(this).find('.collapse').removeClass('show');
+    });
+   
+    // Show first item
+    $(layout_accordion).each(function(){
+        $(this).find(accordion_item).first().addClass('first');   
+    });
+    $(layout_accordion + ' ' + accordion_item + '.first').find('button').attr("aria-expanded","true").removeClass('collapsed');
+    $(layout_accordion + ' ' + accordion_item + '.first').find('.collapse').addClass('show');
+};
+
+show_first_item('.layout-accordion', '.accordion-item', '.layout-example');
 
 // On layouts dropdown change show accordion that matches dropdown selection
 if ($('.layouts-select').length) {
@@ -276,8 +286,14 @@ if ($('.layouts-select').length) {
             $(this).removeClass('show');
         });
 
-        var new_layout = $(this).val();
-        $('.layout-example.' + new_layout).addClass('show');
+        var new_layout = '.layout-example.' + $(this).val();
+        $(new_layout).addClass('show');
+
+        show_first_item(new_layout, '.accordion-item', '.layout-example');
+
+        var accordion_toggle = $(new_layout).find('.accordion-toggle').find('span');
+        accordion_toggle.text('Open all');
+
     });
 }
 
@@ -286,6 +302,7 @@ $('.accordion-toggle').on('click', function(){
     var button_state = $(this).find('span').text();
 
     if ( button_state === "Open all" ) {
+        $(this).addClass('close');
         $(this).find('span').text('Close all');
         $('.accordion-item').each(function(){
             $(this).addClass('show');
@@ -295,6 +312,7 @@ $('.accordion-toggle').on('click', function(){
             $(this).find('button').attr("aria-expanded","true").removeClass('collapsed');
         });
     } else {
+        $(this).removeClass('close');
         $(this).find('span').text('Open all');
         $('.accordion-item').each(function(){
             $(this).removeClass('show');
@@ -316,7 +334,6 @@ $('.accordion-button').on('click', function(){
         parent_accordion = $(this).parents('.accordion'),
         total_items = parent_accordion.find('.accordion-item').length,
         accordion_toggle = parent_accordion.prev('.accordion-toggle').find('span');
-        console.log(accordion_toggle);
 
     parent_accordion.find('.accordion-item').each(function(){
         if ( $(this).find('.accordion-button').hasClass('collapsed') ) {
@@ -325,9 +342,6 @@ $('.accordion-button').on('click', function(){
             open_items = open_items + 1;
         }
     });
-    console.log('open ' + open_items);
-    console.log('closed ' + closed_items);
-    console.log(total_items);
 
    if ( open_items === total_items ) { 
        accordion_toggle.text('Close all');
