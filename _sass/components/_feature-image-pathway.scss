@@ -104,7 +104,7 @@
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-768, .component-example.bp-below768, .component-example.small-screen {
+.component-example.bp-768 {
     .feature-pathway {
         .tile-title {
             font-size: 1.625rem;
@@ -118,11 +118,12 @@
     }
 }
 
-.component-example.bp-768, .component-example.small-screen {
+.component-example.bp-below768, .component-example.small-screen {
+
     .feature-pathway {
-            display: flex;
-            flex-wrap: wrap;
-            flex-flow: column-reverse;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column-reverse;
 
         .component-content {
             width: 100%;

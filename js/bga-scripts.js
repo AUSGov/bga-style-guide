@@ -364,7 +364,7 @@ $('.form-example input').on('change', function(){
 });
     
  $('.form-example select').on('change', function(){
-     console.log($(this));
+    
     if ( $(this).val() == 'error' ) {
         $(this).parents('.form-element-wrapper').addClass('error');
     } else {
