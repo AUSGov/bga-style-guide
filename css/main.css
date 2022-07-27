@@ -3242,7 +3242,7 @@ input.form-control:focus { box-shadow: none; border: 3px solid #2E6CB9; border-r
 
 .textbox-units input { text-align: right; }
 
-.textbox-button .combo-button { display: inline-flex; border-top-left-radius: 0; border-bottom-left-radius: 0; padding: 11px 24px 11px 16px; box-shadow: none; }
+.textbox-button .combo-button { display: inline-flex; border-top-left-radius: 0; border-bottom-left-radius: 0; padding: 8px 24px 8px 16px; box-shadow: none; }
 
 .textbox-button .combo-button svg { margin: 0 8px 0 0; width: 16px; }
 
@@ -3614,29 +3614,29 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below350 #header-strap .header-search .mobile-buttons-wrapper { text-align: left; margin-top: 16px; }
 
-.bga-footer-example { background: #2157AA; color: #ffffff; }
+.bga-footer-example { background: #2157AA; color: #ffffff; display: flex; }
 
-.bga-footer-example .footer-wrapper { display: flex; }
+.bga-footer-example .footer-wrapper { display: flex; width: 66.66%; }
 
-.bga-footer-example .footer-links-wrapper { display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; border-bottom: #ffffff 1px solid; }
+.bga-footer-example .footer-links { width: 33.33%; }
 
-.bga-footer-example .footer-links { margin: 0 0 16px 0; width: 31%; }
-
-.bga-footer-example .footer-links h3, .bga-footer-example .footer-links .h3 { color: #ffffff; padding-top: 0; }
+.bga-footer-example .footer-links h3, .bga-footer-example .footer-links .h3 { color: #ffffff; }
 
 .bga-footer-example .footer-links ul { margin: 0; padding: 0; }
 
 .bga-footer-example .footer-links ul li { display: block; color: #ffffff; text-indent: 0; margin: 0 0 24px 24px; padding: 0; }
 
+.bga-footer-example .footer-links ul li:last-of-type { margin-bottom: 0 !important; }
+
 .bga-footer-example .footer-links ul li::before { display: none; }
 
-.bga-footer-example .footer-links ul li a { background: url(../assets/Chevron-right-white.svg) no-repeat; background-position: left 0 top 5px; padding: 0 0 0 24px; text-indent: 0; margin-left: -24px; display: block; line-height: 26px; }
+.bga-footer-example .footer-links ul li a { background: url(../assets/Chevron-right-white.svg) no-repeat; background-position: left 0 top 5px; padding: 0 0 0 24px; text-indent: 0; margin-left: -24px; display: block; line-height: 26px; font-weight: 400; }
 
 .bga-footer-example .footer-links ul li a:focus { border: 2px solid #ffffff; border-radius: 4px; outline: none; text-decoration: underline; }
 
 .bga-footer-example .footer-links ul li a:hover { border: none; text-decoration: underline !important; cursor: pointer; }
 
-.bga-footer-example .call-us-wrapper { margin-bottom: 24px; }
+.bga-footer-example .contact-social-wrapper { width: 33.33%; }
 
 .bga-footer-example .call-us-wrapper a { font-size: 24px; font-weight: 600; }
 
@@ -3648,7 +3648,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-footer-example .social-links-wrapper .footer-social { display: flex; margin: 0; padding: 0; }
 
-.bga-footer-example .social-links-wrapper .footer-social li { display: block; width: 48px; height: 48px; background: #113869; border: solid #ffffff 2px; border-radius: 50%; padding: 0; margin: 0 32px 0 0; }
+.bga-footer-example .social-links-wrapper .footer-social li { display: block; width: 48px; height: 48px; background: #113869; border: solid #ffffff 2px; border-radius: 50%; padding: 0; }
 
 .bga-footer-example .social-links-wrapper .footer-social li::before { display: none; }
 
@@ -3668,13 +3668,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-footer-example .subscribe-wrapper p { color: #333333; }
 
-.bga-footer-example .subscribe-wrapper .button-wrapper { text-align: right; }
+.bga-footer-example .subscribe-wrapper .subscribe-form { text-align: left; }
 
-.bga-footer-example .subscribe-wrapper .button-wrapper a { color: #2157AA; margin-right: 16px; font-size: 14px; text-decoration: underline; }
+.bga-footer-example .subscribe-wrapper .subscribe-form a { color: #2157AA !important; text-decoration: underline; white-space: nowrap; display: inline-block; }
 
-.bga-footer-example .subscribe-wrapper .button-wrapper a:focus { color: #333333; border: solid #2E6CB9 2px; text-decoration: underline; border-radius: 4px; outline: none; }
+.bga-footer-example .subscribe-wrapper .subscribe-form a:focus { color: #333333; border: solid #2E6CB9 2px; text-decoration: underline; border-radius: 4px; outline: none; }
 
-.bga-footer-example .subscribe-wrapper .button-wrapper a:hover { color: #333333; cursor: pointer; text-decoration: underline; }
+.bga-footer-example .subscribe-wrapper .subscribe-form a:hover { color: #333333; cursor: pointer; text-decoration: underline; }
 
 .indigenous-footer { background: #113869; color: #ffffff; }
 
@@ -3682,11 +3682,44 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .indigenous-footer svg { width: 90%; max-width: 300px; height: auto; margin-bottom: 32px; }
 
-@media (max-width: 991px) { footer .footer-links { margin: 0 0 16px 0; width: 31%; } footer .footer-links ul li { margin: 0 0 16px 24px; } footer .social-links-wrapper { margin-bottom: 32px; } .subscribe-offset { margin-top: -144px; } }
+/* @media (max-width: 991px) { footer { .footer-links { margin: 0 0 16px 0; width: 31%; ul { li { margin: 0 0 16px 24px; } } } .social-links-wrapper { margin-bottom: 32px; } } .subscribe-offset { margin-top: -144px; } } @media (max-width: 767px) { .subscribe-offset { margin-top: 0px; } footer { padding-top: 32px; .footer-wrapper { display: block; } .footer-links { flex: 0 0 auto; width: 100%; margin: 0 0 16px 0; } .social-links-wrapper { .footer-social { display: block; li { display: inline-block; margin: 0 16px 0 0; height: 44px; width: 44px; } } } } } @media (max-width: 350px) { footer { .subscribe-wrapper { .button-wrapper { text-align: right; display: flex; flex-wrap: wrap;    text-align: left; a { margin-bottom: 24px; } } } } button.primary-button { width: 100%; } } */
+.component-example.bp-768 .bga-footer-example, .component-example.bp-576 .bga-footer-example, .component-example.bp-350 .bga-footer-example, .component-example.bp-below350 .bga-footer-example, .component-example.small-screen .bga-footer-example { flex-wrap: wrap; }
 
-@media (max-width: 767px) { .subscribe-offset { margin-top: 0px; } footer { padding-top: 32px; } footer .footer-wrapper { display: block; } footer .footer-links { flex: 0 0 auto; width: 100%; margin: 0 0 16px 0; } footer .social-links-wrapper .footer-social { display: block; } footer .social-links-wrapper .footer-social li { display: inline-block; margin: 0 16px 0 0; height: 44px; width: 44px; } }
+.component-example.bp-768 .bga-footer-example .footer-wrapper, .component-example.bp-576 .bga-footer-example .footer-wrapper, .component-example.bp-350 .bga-footer-example .footer-wrapper, .component-example.bp-below350 .bga-footer-example .footer-wrapper, .component-example.small-screen .bga-footer-example .footer-wrapper { width: 100%; border-bottom: solid 1px #ffffff; margin-bottom: 32px !important; padding-bottom: 32px !important; }
 
-@media (max-width: 350px) { footer .subscribe-wrapper .button-wrapper { text-align: right; display: flex; flex-wrap: wrap; text-align: left; } footer .subscribe-wrapper .button-wrapper a { margin-bottom: 24px; } button.primary-button { width: 100%; } }
+.component-example.bp-768 .bga-footer-example .footer-links ul li, .component-example.bp-576 .bga-footer-example .footer-links ul li, .component-example.bp-350 .bga-footer-example .footer-links ul li, .component-example.bp-below350 .bga-footer-example .footer-links ul li, .component-example.small-screen .bga-footer-example .footer-links ul li { margin: 0 0 16px 24px; }
+
+.component-example.bp-768 .bga-footer-example .contact-social-wrapper, .component-example.bp-576 .bga-footer-example .contact-social-wrapper, .component-example.bp-350 .bga-footer-example .contact-social-wrapper, .component-example.bp-below350 .bga-footer-example .contact-social-wrapper, .component-example.small-screen .bga-footer-example .contact-social-wrapper { width: 100%; display: flex; }
+
+.component-example.bp-768 .bga-footer-example .contact-social-wrapper .contact-social, .component-example.bp-576 .bga-footer-example .contact-social-wrapper .contact-social, .component-example.bp-350 .bga-footer-example .contact-social-wrapper .contact-social, .component-example.bp-below350 .bga-footer-example .contact-social-wrapper .contact-social, .component-example.small-screen .bga-footer-example .contact-social-wrapper .contact-social { width: 50%; }
+
+.component-example.bp-768 .bga-footer-example .contact-social-wrapper .subscribe-wrapper, .component-example.bp-576 .bga-footer-example .contact-social-wrapper .subscribe-wrapper, .component-example.bp-350 .bga-footer-example .contact-social-wrapper .subscribe-wrapper, .component-example.bp-below350 .bga-footer-example .contact-social-wrapper .subscribe-wrapper, .component-example.small-screen .bga-footer-example .contact-social-wrapper .subscribe-wrapper { width: 50%; }
+
+.component-example.bp-576 .bga-footer-example .footer-wrapper, .component-example.bp-350 .bga-footer-example .footer-wrapper, .component-example.bp-below350 .bga-footer-example .footer-wrapper, .component-example.small-screen .bga-footer-example .footer-wrapper { display: block; }
+
+.component-example.bp-576 .bga-footer-example .footer-links, .component-example.bp-350 .bga-footer-example .footer-links, .component-example.bp-below350 .bga-footer-example .footer-links, .component-example.small-screen .bga-footer-example .footer-links { width: 100%; padding-bottom: 32px !important; }
+
+.component-example.bp-576 .bga-footer-example .footer-links:last-of-type, .component-example.bp-350 .bga-footer-example .footer-links:last-of-type, .component-example.bp-below350 .bga-footer-example .footer-links:last-of-type, .component-example.small-screen .bga-footer-example .footer-links:last-of-type { padding-bottom: 0 !important; }
+
+.component-example.bp-576 .bga-footer-example .contact-social-wrapper, .component-example.bp-350 .bga-footer-example .contact-social-wrapper, .component-example.bp-below350 .bga-footer-example .contact-social-wrapper, .component-example.small-screen .bga-footer-example .contact-social-wrapper { display: block; }
+
+.component-example.bp-576 .bga-footer-example .contact-social-wrapper .contact-social, .component-example.bp-350 .bga-footer-example .contact-social-wrapper .contact-social, .component-example.bp-below350 .bga-footer-example .contact-social-wrapper .contact-social, .component-example.small-screen .bga-footer-example .contact-social-wrapper .contact-social { width: 100%; }
+
+.component-example.bp-576 .bga-footer-example .contact-social-wrapper .subscribe-wrapper, .component-example.bp-350 .bga-footer-example .contact-social-wrapper .subscribe-wrapper, .component-example.bp-below350 .bga-footer-example .contact-social-wrapper .subscribe-wrapper, .component-example.small-screen .bga-footer-example .contact-social-wrapper .subscribe-wrapper { width: 100%; }
+
+.component-example.bp-350 .bga-footer-example .subscribe-wrapper button, .component-example.bp-below350 .bga-footer-example .subscribe-wrapper button, .component-example.small-screen .bga-footer-example .subscribe-wrapper button { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; }
+
+.component-example.bp-350 .bga-footer-example .subscribe-wrapper a, .component-example.bp-below350 .bga-footer-example .subscribe-wrapper a, .component-example.small-screen .bga-footer-example .subscribe-wrapper a { font-size: .875rem; line-height: 1.125rem; }
+
+.component-example.bp-below350 .bga-footer-example .subscribe-wrapper button { width: 100%; justify-content: center; }
+
+@media (max-width: 992px) { .bga-footer-example { flex-wrap: wrap; } .bga-footer-example .footer-wrapper { width: 100%; border-bottom: solid 1px #ffffff; margin-bottom: 32px !important; padding-bottom: 32px !important; } .bga-footer-example .footer-links ul li { margin: 0 0 16px 24px; } .bga-footer-example .contact-social-wrapper { width: 100%; display: flex; } .bga-footer-example .contact-social-wrapper .contact-social { width: 50%; } .bga-footer-example .contact-social-wrapper .subscribe-wrapper { width: 50%; } }
+
+@media (max-width: 768px) { .bga-footer-example .footer-wrapper { display: block; } .bga-footer-example .footer-links { width: 100%; padding-bottom: 32px !important; } .bga-footer-example .footer-links:last-of-type { padding-bottom: 0 !important; } .bga-footer-example .contact-social-wrapper { display: block; } .bga-footer-example .contact-social-wrapper .contact-social { width: 100%; } .bga-footer-example .contact-social-wrapper .subscribe-wrapper { width: 100%; } }
+
+@media (max-width: 576px) { .bga-footer-example .subscribe-wrapper button { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; } .bga-footer-example .subscribe-wrapper a { font-size: .875rem; line-height: 1.125rem; } }
+
+@media (max-width: 350px) { .bga-footer-example .subscribe-wrapper button { width: 100%; justify-content: center; } }
 
 .hero-pathway { border: 1px solid #96B7DF; display: flex; background: #ffffff; }
 
@@ -3878,17 +3911,17 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .feature-example-wrapper.full-width-layout .component-content { padding: 32px; }
 
-.component-example.bp-768 .feature-pathway .tile-title, .component-example.bp-below768 .feature-pathway .tile-title, .component-example.small-screen .feature-pathway .tile-title { font-size: 1.625rem; }
+.component-example.bp-768 .feature-pathway .tile-title { font-size: 1.625rem; }
 
-.component-example.bp-768 .feature-pathway .tile-description, .component-example.bp-below768 .feature-pathway .tile-description, .component-example.small-screen .feature-pathway .tile-description { font-size: 1rem; }
+.component-example.bp-768 .feature-pathway .tile-description { font-size: 1rem; }
 
-.component-example.bp-768 .feature-pathway .component-content, .component-example.bp-below768 .feature-pathway .component-content, .component-example.small-screen .feature-pathway .component-content { padding: 24px !important; }
+.component-example.bp-768 .feature-pathway .component-content { padding: 24px !important; }
 
-.component-example.bp-768 .feature-pathway, .component-example.small-screen .feature-pathway { display: flex; flex-wrap: wrap; flex-flow: column-reverse; }
+.component-example.bp-below768 .feature-pathway, .component-example.small-screen .feature-pathway { display: flex; flex-wrap: wrap; flex-flow: column-reverse; }
 
-.component-example.bp-768 .feature-pathway .component-content, .component-example.small-screen .feature-pathway .component-content { width: 100%; }
+.component-example.bp-below768 .feature-pathway .component-content, .component-example.small-screen .feature-pathway .component-content { width: 100%; }
 
-.component-example.bp-768 .feature-pathway .component-image, .component-example.small-screen .feature-pathway .component-image { width: 100%; }
+.component-example.bp-below768 .feature-pathway .component-image, .component-example.small-screen .feature-pathway .component-image { width: 100%; }
 
 @media (max-width: 1200px) { .feature-pathway .tile-title { font-size: 1.625rem !important; } .feature-pathway .tile-description { font-size: 1rem !important; } .feature-pathway .component-content { padding: 24px !important; } }
 
@@ -4022,21 +4055,23 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .registration-link-wrapper { display: flex; }
 
-.component-example.bp-mobile .callout-box ul.indented li, .component-example.small-screen .callout-box ul.indented li { display: block; }
+.component-example.bp-below768 .callout-box ul.indented li, .component-example.small-screen .callout-box ul.indented li { display: block; }
 
-.component-example.bp-mobile .callout-box ul.indented strong, .component-example.small-screen .callout-box ul.indented strong { min-width: unset; width: 100%; margin-bottom: 0px; }
+.component-example.bp-below768 .callout-box ul.indented strong, .component-example.small-screen .callout-box ul.indented strong { min-width: unset; width: 100%; margin-bottom: 0px; }
 
-.component-example.bp-mobile .callout-box ul.indented span, .component-example.small-screen .callout-box ul.indented span { width: 100%; margin-bottom: 0; }
+.component-example.bp-below768 .callout-box ul.indented span, .component-example.small-screen .callout-box ul.indented span { width: 100%; margin-bottom: 0; }
 
-.component-example.bp-mobile .accordion.event-sessions .accordion-header .accordion-button, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; }
+.component-example.bp-below768 .accordion.event-sessions .accordion-header .accordion-button, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; }
 
-.component-example.bp-mobile .accordion.event-sessions .accordion-header .accordion-button p, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.75; padding-right: 8px; }
+.component-example.bp-below768 .accordion.event-sessions .accordion-header .accordion-button p, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.75; padding-right: 8px; }
 
-.component-example.bp-mobile .accordion.event-sessions .accordion-body, .component-example.small-screen .accordion.event-sessions .accordion-body { padding: 0 32px 16px 8px; }
+.component-example.bp-below768 .accordion.event-sessions .accordion-body, .component-example.small-screen .accordion.event-sessions .accordion-body { padding: 0 32px 16px 8px; }
 
-.component-example.bp-mobile .registration-link-wrapper, .component-example.small-screen .registration-link-wrapper { display: block; }
+.component-example.bp-below768 .registration-link-wrapper, .component-example.small-screen .registration-link-wrapper { display: block; }
 
-.component-example.bp-mobile .registration-link-wrapper .form-select, .component-example.small-screen .registration-link-wrapper .form-select { margin-bottom: 24px; }
+.component-example.bp-below768 .registration-link-wrapper .form-select, .component-example.small-screen .registration-link-wrapper .form-select { margin-bottom: 24px; }
+
+@media (max-width: 768px) { .callout-box ul.indented li { display: block; } .callout-box ul.indented strong { min-width: unset; width: 100%; margin-bottom: 0px; } .callout-box ul.indented span { width: 100%; margin-bottom: 0; } .accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; } .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.75; padding-right: 8px; } .accordion.event-sessions .accordion-body { padding: 0 32px 16px 8px; } .registration-link-wrapper { display: block; } .registration-link-wrapper .form-select { margin-bottom: 24px; } }
 
 .callout-box.call-to-action .download-link-wrapper a { background: #ffffff; display: flex; flex-wrap: wrap; text-decoration: none; }
 
