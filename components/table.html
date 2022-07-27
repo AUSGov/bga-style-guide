@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mini list</title>
+    <title>Table</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -34,7 +34,7 @@
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/mini-list.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/table.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -145,7 +145,7 @@
                      
 
                     <li class="breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0 h-100">Mini list</p>
+                        <p class="breadcrumb-location m-0 p-0 h-100">Table</p>
                     </li>
                 </ul>
 
@@ -162,8 +162,8 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Mini list</h1>
-                        <p class="header-intro">The mini-list highlights information at the top of a page that the user needs to know before reading the page content.</p>
+                        <h1>Table</h1>
+                        <p class="header-intro">Display information in an easy to scan grid of rows and columns.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
@@ -215,7 +215,7 @@
 
     </div>
 
-    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
 
 
         <!-- DESIGN -->
@@ -236,20 +236,23 @@
 
                 
                 
-                
-
+                  
+                    <input type="radio" class="btn-check bp-lg true" name="-group" id="-bp-lg" autocomplete="off" data-breakpoint="bp-992">
+                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="-bp-lg">≥992px (lg)</label>
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-md true" name="-group" id="-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="-bp-md">≥768px (md)</label>
+                
+
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -274,209 +277,78 @@
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
 
+                <h3>Layout: Single column - full width</h3>
                 <div class="bga-component-wrapper pb-5">
-<div class="bga-component mini-list  m-0">
-   
-    <div class="accordion mini-list">
+    <div tabindex="0" class="bga-component table default m-0">
+    
+       <table>
+        <thead>
+            <tr>
+                <th>Recipient Organisation</th>
+                <th>Project Description</th>
+                <th>Grant (Exc GST)</th>
+                <th>Expected Total Investment (Exc GST)</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-title="Recipient Organisation" class="toggle-row" id="toggle-row-0">District Council Of Endor</td>
+                <td data-title="Project Description">Materials Development and Design for Electrification and Automation</td><td data-title="Grant (Exc GST)">$417,000</td><td data-title="Expected Total Investment (Exc GST)">$417,000</td><td data-title="State">Victoria</td>
+            </tr>
+            
+            <tr>
+                <td data-title="Recipient Organisation" class="toggle-row" id="toggle-row-1">Tattoine plantation</td>
+                <td data-title="Project Description">Cyber-Safe Connected Vehicles: Ensuring Secure, Trusted, and Robust Cooperative Automotive Systems</td><td data-title="Grant (Exc GST)">$494,900</td><td data-title="Expected Total Investment (Exc GST)">$494,900</td><td data-title="State">Victoria</td>
+
+            </tr>
 
             
-            <div class="accordion-item mb-1" tabindex="-1">
-                <h5 class="accordion-header pt-0" id="mini-list-1">
-                    <button tabindex="0" class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#mini-list-collapseOne" aria-expanded="false" aria-controls="mini-list-collapseOne">
-                        <div class="icon-wrapper me-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
-                            <path d="M0,6.654,1.873,4.921l3.3,3.011L13.907,0,15.8,1.707,5.178,11.361Z" fill="#333"/>
-                          </svg>
-                          </div>
-                        <p class="pe-3"><strong>Know your decision for closing your business, such as financial or personal circumstances</strong></p>
-                    </button>
-                </h5>
-                <div id="mini-list-collapseOne" class="accordion-collapse collapse" aria-labelledby="mini-list-1" >
-                    <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
-                       
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus urna arcu, nec ullamcorper orci tristique eu. <a tabindex='0'>In lobortis ornare ultricies.</a></p>
 
-                    </div>
-                </div>
-            </div>
-        
 
-        
+        </tbody>
+    </table>
+    
+    </div>
+    </div>
+
+                <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+                <div class="bga-component-wrapper pb-5">
+    <div tabindex="0" class="bga-component table narrow m-0">
+    
+       <table>
+        <thead>
+            <tr>
+                <th>Recipient Organisation</th>
+                <th>Project Description</th>
+                <th>Grant (Exc GST)</th>
+                <th>Expected Total Investment (Exc GST)</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-title="Recipient Organisation" class="toggle-row" id="toggle-row-0">District Council Of Endor</td>
+                <td data-title="Project Description">Materials Development and Design for Electrification and Automation</td><td data-title="Grant (Exc GST)">$417,000</td><td data-title="Expected Total Investment (Exc GST)">$417,000</td><td data-title="State">Victoria</td>
+            </tr>
             
-            <div class="accordion-item mb-1">
-                <h5 class="accordion-header pt-0" id="mini-list-2">
-                    <button class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#mini-list-collapseTwo" aria-expanded="false" aria-controls="mini-list-collapseTwo">
-                        <div class="icon-wrapper me-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
-                            <path d="M0,6.654,1.873,4.921l3.3,3.011L13.907,0,15.8,1.707,5.178,11.361Z" fill="#333"/>
-                          </svg>
-                          </div>
-                        <p class="pe-3"><strong>Get professional advice from an accountant or business adviser</strong></p>
-                    </button>
-                </h5>
-                <div id="mini-list-collapseTwo" class="accordion-collapse collapse" aria-labelledby="mini-list-2" >
-                    <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
-                        
-                        <p>Praesent nec magna semper, pulvinar sapien sagittis, tempor urna. Praesent pretium finibus interdum.</p>
-                       
-                    </div>
-                </div>
-            </div>
-        
+            <tr>
+                <td data-title="Recipient Organisation" class="toggle-row" id="toggle-row-1">Tattoine plantation</td>
+                <td data-title="Project Description">Cyber-Safe Connected Vehicles: Ensuring Secure, Trusted, and Robust Cooperative Automotive Systems</td><td data-title="Grant (Exc GST)">$494,900</td><td data-title="Expected Total Investment (Exc GST)">$494,900</td><td data-title="State">Victoria</td>
 
+            </tr>
 
-           
-            <div class="accordion-item">
-                <h5 class="accordion-header pt-0" id=mini-list-3">
-                    <button class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#mini-list-collapseThree" aria-expanded="false" aria-controls="mini-list-collapseThree">
-                        <div class="icon-wrapper me-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
-                            <path d="M0,6.654,1.873,4.921l3.3,3.011L13.907,0,15.8,1.707,5.178,11.361Z" fill="#333"/>
-                          </svg>
-                          </div>
-                        <p class="pe-3"><strong>Set your date to officially close your business</strong></p>
-                    </button>
-                </h5>
-                <div id="mini-list-collapseThree" class="accordion-collapse collapse" aria-labelledby=mini-list-3">
-                    
-                    <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
-                       
-                        <p>Phasellus venenatis nulla tempor quam egestas auctor.</p><p>Cras sed tortor a dolor dictum tincidunt ut nec enim. Fusce vitae quam suscipit, suscipit leo at, efficitur turpis.</p>
-                       
-                    </div>
-                </div>
-
-            </div>
-        
-
-
-</div>
-          
             
-</div>
-</div>
+
+
+        </tbody>
+    </table>
+    
+    </div>
+    </div>
 
             </div>
         </div>
-
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-                    <h3>Colour variations</h3>
-
-                    <div class="bga-component-wrapper pb-5">
-<div class="bga-component mini-list  m-0">
-   
-    <div class="accordion mini-list">
-
-            
-            <div class="accordion-item mb-1" tabindex="-1">
-                <h5 class="accordion-header pt-0" id="blue-mini-list-1">
-                    <button tabindex="0" class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#blue-mini-list-collapseOne" aria-expanded="false" aria-controls="blue-mini-list-collapseOne">
-                        <div class="icon-wrapper me-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
-                            <path d="M0,6.654,1.873,4.921l3.3,3.011L13.907,0,15.8,1.707,5.178,11.361Z" fill="#333"/>
-                          </svg>
-                          </div>
-                        <p class="pe-3"><strong>Blue (default)</strong></p>
-                    </button>
-                </h5>
-                <div id="blue-mini-list-collapseOne" class="accordion-collapse collapse" aria-labelledby="blue-mini-list-1" >
-                    <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
-                       
-                        <p>This is the default colour for the mini-list.</p>
-
-                    </div>
-                </div>
-            </div>
-        
-
-        
-        
-
-
-        
-
-
-</div>
-          
-            
-</div>
-</div>
-
-                    <div class="bga-component-wrapper pb-5">
-<div class="bga-component mini-list yellow m-0">
-   
-    <div class="accordion mini-list">
-
-            
-            <div class="accordion-item mb-1" tabindex="-1">
-                <h5 class="accordion-header pt-0" id="yellow-mini-list-1">
-                    <button tabindex="0" class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#yellow-mini-list-collapseOne" aria-expanded="false" aria-controls="yellow-mini-list-collapseOne">
-                        <div class="icon-wrapper me-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
-                            <path d="M0,6.654,1.873,4.921l3.3,3.011L13.907,0,15.8,1.707,5.178,11.361Z" fill="#333"/>
-                          </svg>
-                          </div>
-                        <p class="pe-3"><strong>Yellow (BGA guides)</strong></p>
-                    </button>
-                </h5>
-                <div id="yellow-mini-list-collapseOne" class="accordion-collapse collapse" aria-labelledby="yellow-mini-list-1" >
-                    <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
-                       
-                        <p>The yellow mini-list should only appear on BGA guide pages.</p>
-
-                    </div>
-                </div>
-            </div>
-        
-
-        
-        
-
-
-        
-
-
-</div>
-          
-            
-</div>
-</div>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-
-                    <h3>Approved icons</h3>
-
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
-	<p class="mb-3">Tick</p>
-	<button class="copy-icon-example p-0" tabindex="0">
-		<div class="svg-icon-container px-3 py-3">
-			<img src='../assets/icon-tick-black.svg' | relative_url  alt=Tick />
-		</div>
-		<div class="button-text p-3">
-			<svg class="success" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="96.473" height="76.319" viewBox="0 0 96.473 76.319">
-			    <path d="M0,44.7,11.44,33.057l20.18,20.226L84.934,0,96.473,11.466,31.62,76.319Z" fill="#ffffff" />
-			</svg>
-            <span>Copy code</span>
-			
-		</div>
-	</button>
-</div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-
 
 
 
@@ -484,14 +356,14 @@
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/c0076ff6-87ac-421b-aa7f-63068d5796b7/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/28db5e99-cf76-48ea-9beb-e7ab80016d65' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Mini-lists can be used on all page layouts except the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>single column - full width layout</a>.</p>
+        <p>Tables can be used on <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>all page layouts</a>.</p>
 
 
         <div class="layouts m-0 p-4">
@@ -503,6 +375,8 @@
     
     <select class="form-select layouts-select ps-3" aria-label="Layout examples">
         
+        
+            <option value="single-col-fullwidth" class="true" selected>Single column - full width</option>
         
         
         
@@ -525,7 +399,38 @@
     
 </div>
 
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
 
+            
+    
+    <div class="py-4">
+        
+        <h6>All breakpoints</h6>
+        
+        <div class="layouts-wrapper">
+        <div class="layout-image me-5">
+            <img src='../assets/layout-images/table-1colfullwidth-allbp.png' | relative_url  alt="" />
+        </div>
+        <div class="layout-rules">
+            <p>The content area is 12 grid-columns wide.</p><p>Tables span the full width of the content area.</p>
+        </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-full-width.html#table-example' | relative_url' role="button">View layout example</a>
+    </div>
+
+
+
+        </div>
+        
+        
         <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
 
             
@@ -542,13 +447,13 @@
                             <div id="onecol-twothirdsw-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/mini-list-1col2thirdswidth-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/table-1col2thirdswidth-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 8 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -566,12 +471,12 @@
                             <div id="onecol-twothirdsw-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/mini-list-1col2thirdswidth-min992.png' | relative_url  alt="" />
+                                     <img src='../assets/layout-images/table-1col2thirdswidth-min992.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 9 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -589,12 +494,12 @@
                             <div id="onecol-twothirdsw-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/mini-list-1col2thirdswidth-min768.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/table-1col2thirdswidth-min768.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 11 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -616,12 +521,12 @@
                             <div id="onecol-twothirdsw-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/mini-list-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/table-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                        <p>The content area is 12 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -637,7 +542,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#mini-list-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#table-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -661,13 +566,13 @@
                             <div id="twocol-leftmenu-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/mini-list-2col-leftmenu-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/table-2col-leftmenu-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 8 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -691,12 +596,12 @@
                             <div id="twocol-leftmenu-collapseFour" class="accordion-collapse collapse" aria-labelledby="layout-bp-min576" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/mini-list-2col-leftmenu-min576.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/table-2col-leftmenu-min576.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 9 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -714,12 +619,12 @@
                             <div id="twocol-leftmenu-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/mini-list-2col-leftmenu-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/table-2col-leftmenu-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                        <p>The content area is 12 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -735,7 +640,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#mini-list-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#table-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -762,12 +667,12 @@
                             <div id="twocol-rightbar-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/mini-list-2col-rightsidebar-min992.png' | relative_url  alt="" />
+                                     <img src='../assets/layout-images/table-2col-rightsidebar-min992.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 8 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -791,12 +696,12 @@
                             <div id="twocol-rightbar-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/mini-list-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/table-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                        <p>The content area is 12 grid-columns wide.</p>
-            <p>Mini-lists span the full width of the content area.</p>
+            <p>Tables span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -812,7 +717,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#mini-list-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#table-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -824,26 +729,12 @@
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        <h3>Purpose</h3>
-        <p>The mini-list component has expandable sections with nested content. It provides content details when opened
-            by users on a content page.</p>
-        <h3>When to use this component</h3>
-        <p>The mini-list highlights information at the top of tutorial or 101 pages that the user needs to know.
-            Generally it is used to draw the users attention to any tasks that need to be done before the rest content
-            on the page is considered.</p>
-
-        <h3>Content rules</h3>
+        <h3>Purpose:</h3>
+        <p>Tables display information in an easy to scan grid of rows and columns.</p>
+        <h3>When to use this component:</h3>
         <ul>
-            <li>No more than 5 items per mini-list.</li>
-            <li>One mini-list per page.</li>
-            <li>The mini-list only appears on information pages, not on category or topic pages.</li>
-            <li>Content in mini-list items should be short. They can contain links to further information.</li>
-        </ul>
-
-        <h3>Style rules</h3>
-        <ul>
-            <li>The default mini-list background colour is blue.</li>
-            <li>The yellow mini-list is for guide pages. It should not appear in any other BGA page pattern.</li>
+        <li>To help users look for patterns and insights between comparable content.</li>
+        <li>To present lists of content with the same headings (e.g. grant recipient details).</li>
         </ul>
 
     </div>
