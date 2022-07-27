@@ -1,0 +1,388 @@
+.bga-component.table {
+    table {
+        font-size: .875rem;
+    }
+    thead {
+        background: $bga-blue-black-lightest;
+        border-top: 4px solid $bga-blue-black-mid;
+    }
+    th {
+       padding: 16px;
+       vertical-align: bottom;
+       font-weight: 600;
+    }
+    tr {
+        border-bottom: $bga-blue-black-mid solid 1px;
+    }
+    td { 
+        padding: 16px;
+        vertical-align: top;
+    }
+}
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-768, .component-example.bp-below768, .component-example.small-screen {
+    .bga-component.table.narrow {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        td {
+            display: none;
+            position: relative;
+            white-space: normal;
+            text-align: left;
+            border-top: 0px;
+            padding-left: 45%;
+            font-size: 14px;
+            line-height: 1.4rem;
+
+            &::before {
+                width: 30%;
+            }
+
+            &:last-of-type {
+                padding-bottom: 10px;
+            }
+
+            &::before {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                text-align: left;
+                content: attr(data-title);
+                display: block;
+            }
+        }
+
+        tr {
+            display: table;
+            width: 100%;
+            //border-bottom: solid 1px $grey-light;
+
+            td:first-of-type {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+
+            td {
+                background: $bga-blue-black-lightest;
+
+                &:first-of-type {
+                    background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
+                    background-position: right 16px center;
+                    background-size: 16px 10px;
+                    font-weight: 600;
+                    padding-left: 16px;
+                    padding-right: 50px;
+                    display: block;
+
+                    &::before {
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        .showGroup {
+            display: block;
+            transition: all 0.4s;
+        }
+        .groupParent td {
+            &:first-of-type {
+                background: $bga-blue-black-lightest url(../assets/Chevron-up-black.svg) no-repeat;
+                background-position: right 16px center;
+                background-size: 16px 10px;
+            }
+        }
+    }
+
+}
+
+.component-example.bp-below768, .component-example.small-screen {
+    .bga-component.table.default {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none; for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        td {
+            display: none;
+            position: relative;
+            white-space: normal;
+            text-align: left;
+            border-top: 0px;
+            padding-left: 45%;
+            font-size: 14px;
+            line-height: 1.4rem;
+
+            &::before {
+                width: 30%;
+            }
+
+            &:last-of-type {
+                padding-bottom: 10px;
+            }
+
+            &::before {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                text-align: left;
+                content: attr(data-title);
+                display: block;
+            }
+        }
+
+        tr {
+            display: table;
+            width: 100%;
+            //border-bottom: solid 1px $grey-light;
+
+            td:first-of-type {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+
+            td {
+                background: $bga-blue-black-lightest;
+
+                &:first-of-type {
+                    background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
+                    background-position: right 16px center;
+                    background-size: 16px 10px;
+                    font-weight: 600;
+                    padding-left: 16px;
+                    padding-right: 50px;
+                    display: block;
+
+                    &::before {
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        .showGroup {
+            display: block;
+            transition: all 0.4s;
+        }
+        .groupParent td {
+            &:first-of-type {
+                background: $bga-blue-black-lightest url(../assets/Chevron-up-black.svg) no-repeat;
+                background-position: right 16px center;
+                background-size: 16px 10px;
+            }
+        }
+    }
+
+}
+
+// Media queries for HTML page examples
+@media (max-width: 992px) {
+    .bga-component.table.narrow {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        td {
+            display: none;
+            position: relative;
+            white-space: normal;
+            text-align: left;
+            border-top: 0px;
+            padding-left: 45%;
+            font-size: 14px;
+            line-height: 1.4rem;
+
+            &::before {
+                width: 30%;
+            }
+
+            &:last-of-type {
+                padding-bottom: 10px;
+            }
+
+            &::before {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                text-align: left;
+                content: attr(data-title);
+                display: block;
+            }
+        }
+
+        tr {
+            display: table;
+            width: 100%;
+            //border-bottom: solid 1px $grey-light;
+
+            td:first-of-type {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+
+            td {
+                background: $bga-blue-black-lightest;
+
+                &:first-of-type {
+                    background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
+                    background-position: right 16px center;
+                    background-size: 16px 10px;
+                    font-weight: 600;
+                    padding-left: 16px;
+                    padding-right: 50px;
+                    display: block;
+
+                    &::before {
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        .showGroup {
+            display: block;
+            transition: all 0.4s;
+        }
+        .groupParent td {
+            &:first-of-type {
+                background: $bga-blue-black-lightest url(../assets/Chevron-up-black.svg) no-repeat;
+                background-position: right 16px center;
+                background-size: 16px 10px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .bga-component.table.default {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none; for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        td {
+            display: none;
+            position: relative;
+            white-space: normal;
+            text-align: left;
+            border-top: 0px;
+            padding-left: 45%;
+            font-size: 14px;
+            line-height: 1.4rem;
+
+            &::before {
+                width: 30%;
+            }
+
+            &:last-of-type {
+                padding-bottom: 10px;
+            }
+
+            &::before {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                text-align: left;
+                content: attr(data-title);
+                display: block;
+            }
+        }
+
+        tr {
+            display: table;
+            width: 100%;
+            //border-bottom: solid 1px $grey-light;
+
+            td:first-of-type {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+
+            td {
+                background: $bga-blue-black-lightest;
+
+                &:first-of-type {
+                    background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
+                    background-position: right 16px center;
+                    background-size: 16px 10px;
+                    font-weight: 600;
+                    padding-left: 16px;
+                    padding-right: 50px;
+                    display: block;
+
+                    &::before {
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        .showGroup {
+            display: block;
+            transition: all 0.4s;
+        }
+        .groupParent td {
+            &:first-of-type {
+                background: $bga-blue-black-lightest url(../assets/Chevron-up-black.svg) no-repeat;
+                background-position: right 16px center;
+                background-size: 16px 10px;
+            }
+        }
+    }
+
+}
