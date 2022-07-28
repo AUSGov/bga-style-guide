@@ -601,10 +601,8 @@ $(window).resize(function(){
 // COMPONENT EXAMPLE: TABLES
 $('tr td:first-of-type').on('click', function () {
 
-    console.log('clicked');
     // toggle class to show / hide child <td>
     var parent = $(this).parent().get(0);
-    console.log(parent);
 
     $(parent).children('td').toggleClass('showGroup');
 
