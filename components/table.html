@@ -43,14 +43,26 @@ subsite-tag: true
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Layout: Single column - full width</h3>
+                <h3>Responsive tables</h3>
+
+                <h4>Layout: Single column - full width</h4>
                 {% include component-examples/table-example.html
                     classes="default"
+                    responsive="true"
                 %}
 
-                <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+                <h4>Layouts: Single column - 2/3 width layout and two column layouts</h4>
+                
                 {% include component-examples/table-example.html
                     classes="narrow"
+                    responsive="true"
+                %}
+
+                <h3>Unresponsive tables</h3>
+
+                {% include component-examples/table-example.html
+                    classes="narrow"
+                    responsive="false"
                 %}
 
             </div>
