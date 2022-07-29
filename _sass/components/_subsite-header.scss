@@ -3,9 +3,99 @@
     .bga-link-strap {
         background: $bga-blue-footer;
         color: $bga-white;
+        padding: 12px 32px;
+
+        ul {
+            li {
+                display: block;
+                text-indent: 0;
+                a {
+                    font-weight: 400;
+                }
+                strong {
+                    font-weight: 700;
+                }
+                
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .bga-header-link {
+            display: flex;
+            align-items: center;
+
+        }
+        .secondary-links {
+            text-align: right;
+        }
     }
 
     .main-header {
         background: $bga-blue-background-dark;
+
+        .subsite-logo {  
+            a {
+                display: flex;
+                text-decoration: none;
+                font-size: 1.375rem;
+                line-height: 1.5;
+                color: $bga-white;
+            }
+            svg {
+                height: 60px;   
+                width: auto;
+                border-right: 1px solid $bga-white;
+            }
+            span {
+                max-width: 200px;
+            }
+
+        }
+    }
+}
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576, .component-example.small-screen {
+    #subsite-header {
+        .main-header {
+            padding: 16px 32px !important;
+            .subsite-logo {
+                a {
+                    font-size: 1rem;
+                }
+                svg {
+                    height: 48px;
+                    padding-right: 8px !important;
+                }
+                span {
+                    max-width: 140px;
+                    padding-left: 8px !important;
+                }
+            }
+        }
+    }
+}
+
+// Media queries for HTML examples
+@media (max-width: 576px) {
+    #subsite-header {
+        .main-header {
+            padding: 16px 32px !important;
+            .subsite-logo {
+                a {
+                    font-size: 1rem;
+                }
+                svg {
+                    height: 48px;
+                    padding-right: 8px !important;
+                }
+                span {
+                    max-width: 140px;
+                    padding-left: 8px !important;
+                }
+            }
+        }
     }
 }
