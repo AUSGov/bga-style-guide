@@ -192,84 +192,8 @@
      } 
 }
 
-/*
-@media (max-width: 991px) {
-    footer {
-        .footer-links {
-            margin: 0 0 16px 0;
-            width: 31%;
-            
-            ul {
-                li {
-                    margin: 0 0 16px 24px;
-                }
-            }
-        }
-        .social-links-wrapper {
-            margin-bottom: 32px;
-        }
-    }
-    .subscribe-offset {
-        margin-top: -144px;
-    }
-}
-
-@media (max-width: 767px) {
-     .subscribe-offset {
-        margin-top: 0px;
-    }
-    footer {
-        padding-top: 32px;
-        
-        .footer-wrapper {
-            display: block;
-        }
-        .footer-links {
-            flex: 0 0 auto;
-            width: 100%;
-            margin: 0 0 16px 0;
-        }
-        .social-links-wrapper {
-            .footer-social {
-                display: block;
-                
-                li {
-                    display: inline-block;
-                    margin: 0 16px 0 0;
-                    height: 44px;
-                    width: 44px;
-                }
-            }
-        }
-
-    }
-    
-}
-
-@media (max-width: 350px) {
-    footer {
-        .subscribe-wrapper {
-            .button-wrapper {
-                text-align: right;
-                display: flex;
-                flex-wrap: wrap;   
-                text-align: left;
-                
-                a {
-                    margin-bottom: 24px;
-                }
-            }
-        }
-    }
-    button.primary-button {
-        width: 100%;
-    }
-}
-*/
-
-
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-768, .component-example.bp-576, .component-example.bp-350, .component-example.bp-below350, .component-example.small-screen {
+// Mixins for smaller screen sizes and media queries
+@mixin bga-site-footer-bp-768 () {
     .bga-footer-example {
         flex-wrap: wrap;
 
@@ -301,7 +225,7 @@
     }
 }
 
-.component-example.bp-576, .component-example.bp-350, .component-example.bp-below350, .component-example.small-screen {
+@mixin bga-site-footer-bp-576 () {
     .bga-footer-example {
        
         .footer-wrapper {
@@ -327,125 +251,69 @@
             }
         }
     }
+}
 
+@mixin bga-site-footer-bp-350 () {
+    .bga-footer-example {
+        .subscribe-wrapper {
+            button {
+                font-size: .875rem;
+                line-height: 1.125rem;
+                padding: 12px 24px;
+            }
+            a {
+                font-size: .875rem;
+                line-height: 1.125rem;
+            }
+        }
+        
+    }
+}
+
+@mixin bga-site-footer-below350 () {
+    .bga-footer-example {
+        .subscribe-wrapper {
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-768, .component-example.bp-576, .component-example.bp-350, .component-example.bp-below350, .component-example.small-screen {
+    @include bga-site-footer-bp-768();
+}
+
+.component-example.bp-576, .component-example.bp-350, .component-example.bp-below350, .component-example.small-screen {
+    @include bga-site-footer-bp-576();
 }
 
 .component-example.bp-350,
 .component-example.bp-below350,
 .component-example.small-screen {
-    .bga-footer-example {
-        .subscribe-wrapper {
-            button {
-                font-size: .875rem;
-                line-height: 1.125rem;
-                padding: 12px 24px;
-            }
-            a {
-                font-size: .875rem;
-                line-height: 1.125rem;
-            }
-        }
-        
-    }
+    @include bga-site-footer-bp-350();
 }
 
 .component-example.bp-below350 {
-    .bga-footer-example {
-        .subscribe-wrapper {
-            button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    }
+    @include bga-site-footer-below350();
 }
 
 //Media queries for HTML example pages
 @media (max-width: 992px)  {
-    .bga-footer-example {
-        flex-wrap: wrap;
-
-        .footer-wrapper {
-            width: 100%;
-            border-bottom: solid 1px $bga-white;
-            margin-bottom: 32px !important;
-            padding-bottom: 32px !important;
-        }
-        .footer-links {
-            ul {
-                li {
-                    margin: 0 0 16px 24px;
-                }
-            }
-        }
-        .contact-social-wrapper {
-            width: 100%;
-            display: flex;
-
-            .contact-social {
-                width: 50%
-            }
-            .subscribe-wrapper {
-                width: 50%;
-            }
-        }
-        
-    }
+    @include bga-site-footer-bp-768();
 }
 
 @media (max-width: 768px) {
-    .bga-footer-example {
-       
-        .footer-wrapper {
-            display: block; 
-        }
-        .footer-links {
-            width: 100%;
-            padding-bottom: 32px !important; 
-            
-            &:last-of-type {
-                padding-bottom: 0 !important;
-            }
-        }
-
-        .contact-social-wrapper {
-            display: block;
-
-            .contact-social {
-                width: 100%
-            }
-            .subscribe-wrapper {
-                width: 100%;
-            }
-        }
-    }
-
+    @include bga-site-footer-bp-576();
 }
 
 @media (max-width: 576px) {
-    .bga-footer-example {
-        .subscribe-wrapper {
-            button {
-                font-size: .875rem;
-                line-height: 1.125rem;
-                padding: 12px 24px;
-            }
-            a {
-                font-size: .875rem;
-                line-height: 1.125rem;
-            }
-        }
-        
-    }
+    @include bga-site-footer-bp-350();
 }
 
 @media (max-width: 350px) {
-    .bga-footer-example {
-        .subscribe-wrapper {
-            button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    }
+    @include bga-site-footer-below350();
 }

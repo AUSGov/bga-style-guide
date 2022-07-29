@@ -103,8 +103,8 @@
     }
 }
 
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-768 {
+// Mixins for smaller screen sizes and media queries
+@mixin feature-pathway-bp-768 {
     .feature-pathway {
         .tile-title {
             font-size: 1.625rem;
@@ -118,12 +118,15 @@
     }
 }
 
-.component-example.bp-below768, .component-example.small-screen {
-
+@mixin feature-pathway-below768 {
     .feature-pathway {
         display: flex;
         flex-wrap: wrap;
         flex-flow: column-reverse;
+
+        .tile-title {
+            font-size: 1.625rem;
+        }
 
         .component-content {
             width: 100%;
@@ -134,34 +137,20 @@
     }
 }
 
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-768 {
+    @include feature-pathway-bp-768();
+}
 
+.component-example.bp-below768, .component-example.small-screen {
+    @include feature-pathway-below768();
+}
+
+// media queries for HTML demo pages
 @media (max-width: 1200px) {
-    .feature-pathway {
-        .tile-title {
-            font-size: 1.625rem !important;
-        }
-        .tile-description {
-            font-size: 1rem !important;
-        }
-        .component-content {
-            padding: 24px !important;
-        }
-    }
-    
+    @include feature-pathway-bp-768();    
 }
 
 @media (max-width: 768px) {
-   
-    .feature-pathway {
-        display: flex;
-        flex-wrap: wrap;
-        flex-flow: column-reverse;
-        
-        .component-content {
-            width: 100%;
-        }
-        .component-image {
-            width: 100%;
-        }
-    }
+   @include feature-pathway-below768();
 }

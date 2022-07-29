@@ -83,8 +83,8 @@
     }
 }
 
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-576, .component-example.bp-below576 {
+// Mixins for smaller screen sizes and media queries
+@mixin featurebox-bp-576 (){
     .feature-box {
         max-width: 100%;
 
@@ -105,8 +105,7 @@
     }
 }
 
-.component-example.bp-below576,
-.component-example.small-screen {
+@mixin featurebox-below576 () {
     .feature-box {
         .component-content {
             flex-wrap: wrap;
@@ -137,52 +136,20 @@
     }
 }
 
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576, .component-example.bp-below576 {
+    @include featurebox-bp-576();
+}
+
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include featurebox-below576();
+}
+
 // Media queries for HTML example pages
 @media (max-width: 992px) {
-    .feature-box.full-width-layout {
-        .component-content {
-            border-left-width: 8px;
-            padding-right: 64px !important;
-        }
-
-        .icon-wrapper {
-            width: 56px;
-            height: 56px;
-            margin-right: 16px !important;
-        }
-
-        img {
-            width: 40px;
-        }
-    }
+    @include featurebox-bp-576();
 }
 @media (max-width: 576px) {
-    .feature-box, .feature-box.full-width-layout {
-        .component-content {
-            flex-wrap: wrap;
-            justify-content: center;
-            padding-right : 24px !important;
-        }
-        .icon-wrapper {
-            width: 44px;
-            height: 44px;
-            margin-right: 0 !important;
-        }
-        img {
-            width: 30px;
-        }
-        &.feature-box-colours {
-            .component-content {
-                justify-content: center;
-            }
-            .component-text {
-                width:100%;
-                text-align: center;
-            }
-            .icon-wrapper {
-                margin-bottom: 24px;
-            }
-        }
-
-    }
+    @include featurebox-below576();
 }

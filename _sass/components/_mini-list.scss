@@ -101,9 +101,8 @@
     }
 }
 
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576,
-.component-example.small-screen {
+// Mixins for smaller screen sizes and media queries
+@mixin mini-list-below576(){
     .mini-list {
         .accordion-item {
             .accordion-button {
@@ -132,32 +131,13 @@
     }
 }
 
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include mini-list-below576();
+}
+
 // Media queries for HTML example pages
 @media (max-width: 576px) {
-    .mini-list {
-        .accordion-item {
-            .accordion-button {
-                font-size: 1rem;
-                padding: 16px 16px 16px 8px !important;
-
-                p {
-                    padding-right: 8px !important;
-                }
-                .icon-wrapper {
-                    margin-right: 8px !important;
-                    margin-top: 4px;
-                    height: 24px;
-                    width: 24px;
-
-                    svg {
-                        width: 12px;
-                        height: auto;
-                    }   
-                }
-            }
-            .accordion-body {
-                padding: 0 24px 16px 40px !important;
-            }
-        }
-    }
+    @include mini-list-below576();
 }

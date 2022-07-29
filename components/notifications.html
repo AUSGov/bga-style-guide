@@ -1,0 +1,321 @@
+---
+
+layout: content-tagged
+title: Notifications
+description: Draw the users attention to specific information during a process.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        sm-visibility="true"
+        final-visibility="true"
+        breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example narrow m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Information notification</h3>
+
+                {% include component-examples/notification-example.html
+                icon="'../assets/icon-notification-info.svg' | relative_url "
+                title="Optional notification title"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                classes="information"
+                %}
+
+                {% include component-examples/notification-example.html
+                icon="'../assets/icon-notification-info.svg' | relative_url "
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                classes="information"
+                close="true"
+                %}
+
+                <h3>Success notification</h3>
+
+                {% include component-examples/notification-example.html
+                icon="'../assets/icon-notification-success.svg' | relative_url "
+                title="Success notification"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                classes="success"
+                %}
+
+                {% include component-examples/notification-example.html
+                icon="'../assets/icon-notification-success.svg' | relative_url "
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                classes="success"
+                close="true"
+                %}
+
+                <h3>Warning notification</h3>
+
+                {% include component-examples/notification-example.html
+                icon="'../assets/icon-notification-warning.svg' | relative_url "
+                title="Warning notification"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                classes="warning"
+                %}
+
+                {% include component-examples/notification-example.html
+                icon="'../assets/icon-notification-warning.svg' | relative_url "
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                classes="warning"
+                close="true"
+                %}
+
+
+            </div>
+
+        </div>
+
+
+        <div class="component-example">
+            <div class="component-wrapper remove-element-padding p-4">
+                <div class="row">
+
+                    <h3>Approved icons</h3>
+
+                    <p>Icon background colour MUST be matched with the notification box colour.</p>
+
+                    <div class="col-6 col-md-3">
+                        {% include icon-example.html
+                        src="'../assets/icon-notification-info.svg' | relative_url "
+                        title="Information"
+                        classes="dark-bkg"
+                        %}
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        {% include icon-example.html
+                        src="'../assets/icon-notification-success.svg' | relative_url "
+                        title="Success"
+                        classes="dark-bkg"
+                        %}
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        {% include icon-example.html
+                        src="'../assets/icon-notification-warning.svg' | relative_url "
+                        title="Warning"
+                        classes="dark-bkg"
+                        %}
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/8f3a87c4-5164-4366-95e8-341f975d4522/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Notifications can be used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all
+                page layouts</a>.</p>
+
+
+        {% include layouts-dropdown.html
+        single-col-fullwidth-visibility="true"
+        single-col-twothirds-visibility="true"
+        two-col-leftmenu-visibility="true"
+        two-col-rightsidebar-visibility="true"
+        %}
+
+
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-fw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+            min1200-img="'../assets/layout-images/notification-1colfullwidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/notification-1colfullwidth-min992.png' | relative_url "
+            finalbp-img="'../assets/layout-images/notification-1colfullwidth-finalbp.png' | relative_url "
+
+
+            min1200-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Inline pathway tiles span 8 grid-columns each.</p>"
+
+            min992-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Inline pathway tiles span 9 grid-columns each.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Inline pathway tiles span 12 grid-columns each.</p>"
+
+            example-link="'../html-examples/single-col-full-width.html#inline-pathway-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+
+        </div>
+
+
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/notification-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/notification-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/notification-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/notification-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Inline-pathway tiles span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Inline-pathway tiles span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Inline-pathway tiles span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Inline-pathway tiles span the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#inline-pathway-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/notification-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/notification-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/notification-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Inline pathway tiles span the full width of the content area.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Inline pathway tiles span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Inline pathway tiles span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#inline-pathway-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+
+            min992-img="'../assets/layout-images/notification-2col-rightsidebar-min992.png' | relative_url "
+            finalbp-img="'../assets/layout-images/notification-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min992-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Inline pathway tiles span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Inline pathway tiles span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar.html#inline-pathway-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Notifications draw the users attention to specific information on a page or during a process.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Often used in tools or forms to provide information or feedback in response to a user action.</li>
+        </ul>
+
+
+
+    </div>

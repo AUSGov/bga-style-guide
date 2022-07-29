@@ -17,11 +17,9 @@
     }
 }
 
-
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-768, .component-example.bp-below768, .component-example.small-screen {
-    .bga-component.table.narrow {
-        
+// Mixins for smaller screen sizes and media queries
+@mixin table-bp-768 () {
+    .bga-component.table.narrow {  
         .responsive {
 
             /* Hide table headers (but not display: none;, for accessibility) */
@@ -100,10 +98,9 @@
             }
         }
     }
-
 }
 
-.component-example.bp-below768, .component-example.small-screen {
+@mixin table-below768 {
     .bga-component.table.default {
 
         .responsive {
@@ -184,176 +181,22 @@
             }
         }
     }
+}
 
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-768, .component-example.bp-below768, .component-example.small-screen {
+    @include table-bp-768();
+}
+
+.component-example.bp-below768, .component-example.small-screen {
+    @include table-below768();
 }
 
 // Media queries for HTML page examples
 @media (max-width: 992px) {
-   
-    .bga-component.table.narrow {
-        
-        .responsive {
-
-            /* Hide table headers (but not display: none;, for accessibility) */
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            td {
-                display: none;
-                position: relative;
-                white-space: normal;
-                text-align: left;
-                border-top: 0px;
-                padding-left: 45%;
-
-                &::before {
-                    width: 30%;
-                }
-
-                &:last-of-type {
-                    padding-bottom: 10px;
-                }
-
-                &::before {
-                    position: absolute;
-                    top: 8px;
-                    left: 8px;
-                    text-align: left;
-                    content: attr(data-title);
-                    display: block;
-                }
-            }
-
-            tr {
-                display: table;
-                width: 100%;
-
-                td:first-of-type {
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-
-
-                td {
-                    background: $bga-blue-black-lightest;
-                    border-bottom: none;
-
-                    &:first-of-type {
-                        background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
-                        background-position: right 8px center;
-                        background-size: 16px 10px;
-                        font-weight: 600;
-                        padding-left: 8px;
-                        padding-right: 32px;
-                        display: block;
-
-                        &::before {
-                            content: "";
-                        }
-                    }
-                }
-            }
-
-            .showGroup {
-                display: block;
-                transition: all 0.4s;
-            }
-            .groupParent td {
-                &:first-of-type {
-                    background: $bga-blue-black-lightest url(../assets/Chevron-up-black.svg) no-repeat;
-                    background-position: right 8px center;
-                    background-size: 16px 10px;
-                }
-            }
-        }
-    }
-
+    @include table-bp-768();
 }
 
 @media (max-width: 768px) {
-   
-    .bga-component.table.default {
-
-        .responsive {
-
-            /* Hide table headers (but not display: none;, for accessibility) */
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            td {
-                display: none;
-                position: relative;
-                white-space: normal;
-                text-align: left;
-                border-top: 0px;
-                padding-left: 45%;
-
-                &::before {
-                    width: 30%;
-                }
-
-                &:last-of-type {
-                    padding-bottom: 10px;
-                }
-
-                &::before {
-                    position: absolute;
-                    top: 8px;
-                    left: 8px;
-                    text-align: left;
-                    content: attr(data-title);
-                    display: block;
-                }
-            }
-
-            tr {
-                display: table;
-                width: 100%;
-
-                td:first-of-type {
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-
-
-                td {
-                    background: $bga-blue-black-lightest;
-                    border-bottom: none;
-
-                    &:first-of-type {
-                        background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
-                        background-position: right 8px center;
-                        background-size: 16px 10px;
-                        font-weight: 600;
-                        padding-left: 8px;
-                        padding-right: 32px;
-                        display: block;
-
-                        &::before {
-                            content: "";
-                        }
-                    }
-                }
-            }
-
-            .showGroup {
-                display: block;
-                transition: all 0.4s;
-            }
-            .groupParent td {
-                &:first-of-type {
-                    background: $bga-blue-black-lightest url(../assets/Chevron-up-black.svg) no-repeat;
-                    background-position: right 8px center;
-                    background-size: 16px 10px;
-                }
-            }
-        }
-    }
-
+    @include table-below768();
 }

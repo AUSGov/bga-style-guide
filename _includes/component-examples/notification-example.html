@@ -1,0 +1,24 @@
+<div class="bga-component-wrapper pb-5">
+    <div class="bga-component notification {{include.classes}} m-0">
+
+        <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
+            {% if include.close == "true" %}
+            <button class="close m-0 p-0">Close</button>
+            {% endif %}
+
+            <div class="icon-wrapper me-4"><img src={{ include.icon }} alt="" />
+            </div>
+
+            <div class="component-content remove-element-padding">
+                {% if include.title %}
+                <h4>{{ include.title }}</h4>
+                {% endif %}
+
+                {% if include.content %}
+                <p>{{ include.content }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</div>

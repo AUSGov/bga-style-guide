@@ -55,9 +55,7 @@
     }
 }
 
-
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576, .component-example.small-screen {
+@mixin subsite-header-below576(){
     #subsite-header {
         .main-header {
             padding: 16px 32px !important;
@@ -78,24 +76,13 @@
     }
 }
 
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576, .component-example.small-screen {
+    @include subsite-header-below576();
+}
+
 // Media queries for HTML examples
 @media (max-width: 576px) {
-    #subsite-header {
-        .main-header {
-            padding: 16px 32px !important;
-            .subsite-logo {
-                a {
-                    font-size: 1rem;
-                }
-                svg {
-                    height: 48px;
-                    padding-right: 8px !important;
-                }
-                span {
-                    max-width: 140px;
-                    padding-left: 8px !important;
-                }
-            }
-        }
-    }
+   @include subsite-header-below576();
 }

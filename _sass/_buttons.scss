@@ -416,27 +416,6 @@
 
 
 
-// MOBILE display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576,
-.component-example.small-screen {
-    button,
-    .bga-btn-state {
-        font-size: .875rem;
-        line-height: 1.125rem;
-        padding: 12px 24px;
-    }
-    .button-example {
-        width: 100%;
-        
-        &:first-of-type {
-            margin-bottom: 24px;
-        }
-        
-    }
-
-}
-
-
 // Modify Bootstrap buttons when they are used
 .btn-primary {
     background: $bga-yellow-highlight-dark;
@@ -472,4 +451,34 @@
 .btn-primary.active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
     box-shadow: none;
+}
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin button-below576 {
+    button,
+    .bga-btn-state {
+        font-size: .875rem;
+        line-height: 1.125rem;
+        padding: 12px 24px;
+    }
+    .button-example {
+        width: 100%;
+        
+        &:first-of-type {
+            margin-bottom: 24px;
+        }
+        
+    }
+}
+
+// MOBILE display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include button-below576();
+}
+
+// Media queries for HTML demo pages
+@media (max-width: 576px) {
+    @include button-below576();
 }

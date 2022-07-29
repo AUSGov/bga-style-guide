@@ -1,0 +1,101 @@
+.notification {
+
+    background: $bga-blue-background-extralight;
+    border-left: solid 8px $bga-blue-border;
+    text-decoration: none;
+
+    .notification-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0 !important;
+    }
+
+    .icon-wrapper {
+        width: 32px;
+        height: 32px;
+        background: $bga-blue-background-dark;
+        border-radius: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .close {
+        background-image: url(../assets/icon-close-black.svg);
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+        background-position: center center;
+        text-indent: -9999px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
+    &.success {
+        background: $bga-green-success-light;
+        border-left: solid 8px $bga-green-success-mid;
+
+        .icon-wrapper {
+            background-color: $bga-green-success-dark;
+        }
+    }
+
+    &.warning {
+        background: $bga-red-fail-light;
+        border-left: solid 8px $bga-red-fail-mid;
+
+        .icon-wrapper {
+            background-color: $bga-red-fail-dark;
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
+
+// Mixins for smaller screen sizes
+@mixin notification-below576 () {
+    .notification {
+        .notification-wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .icon-wrapper {
+            margin-bottom: 24px;
+        }
+
+        &.warning {
+
+            .icon-wrapper {
+                background-color: $bga-red-fail-dark;
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+
+
+// Smaller screen examples
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include notification-below576();
+}
+
+// Media queries for HTML demo pages
+@media (max-width: 576px) {
+    @include notification-below576();
+}

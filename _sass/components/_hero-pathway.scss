@@ -139,8 +139,7 @@
     }
 }
 
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below992, .component-example.small-screen {
+@mixin hero-below992 (){
     .hero-pathway {
         .component-content {
             border-left-width: 8px;
@@ -163,24 +162,13 @@
     }
 }
 
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below992, .component-example.small-screen {
+    @include hero-below992();
+}
+
 
 // MEDIA Queries for HTML demo pages.
 .hero-pathway-block {
-    .small-hero {
-        width: 100%;
-    }
-    
-    @media (max-width: 991px) {
-        .component-image {
-            display: none;
-        }
-        .component-content {
-            width: 100%;
-            border-left-width: 8px !important;
-            
-            .component-text {
-                width: 100%;
-            }
-        }
-    }
+   @include hero-below992();
 }

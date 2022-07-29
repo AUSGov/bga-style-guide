@@ -67,10 +67,8 @@
 
 }
 
-// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-576,
-.component-example.bp-below576,
-.component-example.small-screen {
+// Mixins for smaller screen sizes and media queries
+@mixin page-header-bp-576 {
     .page-header-wrapper {
         .page-header.category {
             .component-content {
@@ -89,24 +87,14 @@
     }
 }
 
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576,
 .component-example.bp-below576,
 .component-example.small-screen {
-    .page-header-wrapper {
-        background: $bga-blue-background-light;
-        padding: 0;
+    @include page-header-bp-576();
+}
 
-        .component-content {
-            padding: 24px 24px 48px;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        .description {
-            font-size: 1rem;
-            line-height: 1.75;
-        }
-    }
-
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include page-header-bp-576();
 }

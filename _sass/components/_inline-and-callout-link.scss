@@ -62,8 +62,8 @@
     }
 }
 
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576, .component-example.small-screen {
+// Mixins for smaller screen sizes and media queries
+@mixin inline-callout-below576 (){
     .inline-pathway.callout-link {
         a {
             flex-wrap: wrap;
@@ -81,20 +81,11 @@
     }
 }
 
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576, .component-example.small-screen {
+    @include inline-callout-below576();
+}
+
 @media (max-width: 576px) {
-    .inline-pathway.callout-link {
-        a {
-            flex-wrap: wrap;
-            align-items: center;   
-            justify-content: center;
-        }
-        .icon-wrapper {
-            width: 44px;
-            height: 44px;
-            margin-bottom: 16px;
-        }
-        img {
-            width: 20px;
-        }
-    }
+    @include inline-callout-below576();
 }

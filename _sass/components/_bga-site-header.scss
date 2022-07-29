@@ -259,8 +259,10 @@
 
 
 
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-768, .component-example.bp-350, .component-example.bp-below350, .component-example.small-screen {
+
+
+// Mixins for smaller screen scizes and media queries
+@mixin bga-site-header-bp-768 {
     .bga-site-header {
         .nav {
             display: flex;
@@ -289,10 +291,7 @@
     }
 }
 
-
-.component-example.bp-350,
-.component-example.bp-below350,
-.component-example.small-screen {
+@mixin bga-site-header-bp-350 {
     .bga-site-header {
         
         #header-strap {
@@ -587,8 +586,7 @@
     }
 }
 
-
-.component-example.bp-below350 {
+@mixin bga-site-header-below350 {
     #header-strap {
         .bga-logo {
             width: 100% !important;
@@ -602,5 +600,21 @@
             }
         }
     }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-768, .component-example.bp-350, .component-example.bp-below350, .component-example.small-screen {
+    @include bga-site-header-bp-768();
+}
+
+.component-example.bp-350,
+.component-example.bp-below350,
+.component-example.small-screen {
+    @include bga-site-header-bp-350();
+}
+
+.component-example.bp-below350,
+.component-example.small-screen {
+    @include bga-site-header-below350();
 }
 

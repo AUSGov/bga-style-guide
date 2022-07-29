@@ -119,9 +119,8 @@
     display: flex;
 }
 
-
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below768, .component-example.small-screen {
+// Mixins for smaller screen sizes and media queries
+@mixin callout-below768 {
     .callout-box {
         ul.indented {
             li {
@@ -164,46 +163,12 @@
     }
 }
 
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768, .component-example.small-screen {
+    @include callout-below768();
+}
+
 // Media queries for HTML example pages.
 @media (max-width: 768px) {
-    .callout-box {
-        ul.indented {
-            li {
-                display: block;
-            }
-            strong {
-                min-width: unset;
-                width: 100%;
-                margin-bottom: 0px;
-            }
-            span {
-                width: 100%;
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    .accordion.event-sessions {
-        .accordion-header {
-             .accordion-button {
-                padding: 16px 8px;
-                 p {
-                    font-size: 1rem;
-                    line-height: 1.75;
-                    padding-right: 8px;
-                }
-            }
-        }
-        .accordion-body {
-            padding: 0 32px 16px 8px;
-        }
-    }
-    
-    .registration-link-wrapper {
-        display: block;
-        
-        .form-select {
-            margin-bottom: 24px;
-        }
-    }
+    @include callout-below768();
 }
