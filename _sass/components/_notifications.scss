@@ -15,8 +15,8 @@
     }
 
     .icon-wrapper {
-        width: 32px;
-        height: 32px;
+        width: 44px;
+        height: 44px;
         background: $bga-blue-background-dark;
         border-radius: 100px;
         display: flex;
@@ -65,7 +65,7 @@
     }
 }
 
-// Mixins for smaller screen sizes
+// Mixins for smaller screen sizes and media queries
 @mixin notification-below576 () {
     .notification {
         .notification-wrapper {
@@ -74,22 +74,21 @@
         }
 
         .icon-wrapper {
-            margin-bottom: 24px;
+            margin: 0 0 16px 0 !important;
         }
 
         &.warning {
 
             .icon-wrapper {
-                background-color: $bga-red-fail-dark;
-                width: 32px;
-                height: 32px;
+                width: 44px;
+                height: 44px;
             }
         }
     }
 }
 
 
-// Smaller screen examples
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-below576,
 .component-example.small-screen {
     @include notification-below576();
