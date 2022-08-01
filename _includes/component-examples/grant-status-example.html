@@ -1,0 +1,39 @@
+<div class="bga-component-wrapper pb-5">
+<div class="bga-component grant-status-indicator {{include.classes}} m-0">
+    
+    <div class="p-4 component-content">
+        <div class="status">
+            <div class="icon-wrapper py-3 px-4 me-4 mb-4">
+                <img class="pe-3" src={{ include.icon }} alt="" />
+                <p class="p-0 m-0"><strong>{{ include.status }}</strong></p></div>
+            <div class="status-detail"><p><strong>{{ include.status-detail }}</strong></p></div>
+        </div>
+
+        {% if include.open-date %}
+        <div class="open-date"><p><strong>Opening date:</strong> {{ include.open-date }}</p></div>
+        {% endif %}
+    
+        {% if include.close-date %}
+        <div class="close-date"><p><strong>Closing date:</strong> {{ include.open-date }}</p></div>
+        {% endif %}
+
+        {% if include.time-zone %}
+        <div class="timezone"><p>Change time zone: {{ include.time-zone }}</p></div>
+        {% endif %}
+
+        {% if include.application-detail %}
+        <div class="application-detail remove-element-padding"><p><strong>Application detail:</strong> {{ include.application-detail }}</p></div>
+        {% endif %}
+
+    </div>
+
+    <div class="grant-details">
+        <h3>What do you get?</h3>
+        <p>{{ include.what-get }}</p>
+        
+        <h3>Who is this for?</h3>
+        <p>{{ include.who-for }}</p>
+    </div>
+                    
+</div>
+</div>
