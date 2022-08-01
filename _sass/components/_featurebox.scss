@@ -2,8 +2,8 @@
     max-width: 840px;
 
     .component-content {
-        background: $bga-white;
-        border: $bga-component-border;
+        background: $bga-teal-highlight-light;
+        //border: $bga-component-border;
         border-left: solid 8px $bga-teal-highlight-dark;
         display: flex;
     }
@@ -11,7 +11,7 @@
     .icon-wrapper {
         width: 56px;
         height: 56px;
-        background: $bga-teal-highlight-light;
+        background: $bga-white;
         border-radius: 100px;
         display: flex;
         align-content: center;
@@ -29,33 +29,18 @@
 
     &.purple {
         .component-content {
-            border-left: solid 8px $bga-purple-highlight-dark;
-        }
-
-        .icon-wrapper {
             background: $bga-purple-highlight-light;
+            border-left: solid 8px $bga-purple-highlight-dark;
         }
     }
 
     &.orange {
         .component-content {
+            background: $bga-orange-highlight-light;
             border-left: solid 8px $bga-orange-highlight-dark;
         }
-
-        .icon-wrapper {
-            background: $bga-orange-highlight-light;
-        }
     }
 
-    &.green {
-        .component-content {
-            border-left: solid 8px $bga-green-highlight-dark;
-        }
-
-        .icon-wrapper {
-            background: $bga-green-highlight-light;
-        }
-    }
 
     &.full-width-layout {
         max-width: 100%;
@@ -107,7 +92,6 @@
 
 @mixin featurebox-below576 () {
     .feature-box {
-        background: pink;
         .component-content {
             flex-wrap: wrap;
             justify-content: center;
