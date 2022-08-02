@@ -1,7 +1,7 @@
 .grant-status-indicator {
     .component-content {
-        background: $bga-green-success-light;
-        border-left: solid 8px $bga-green-success-dark;
+        background: $bga-green-highlight-light;
+        border-left: solid 8px $bga-green-highlight-dark;
 
         .status {
             display: flex;
@@ -18,8 +18,113 @@
                     display: inline-block;
                 }
             }
-           
+            p {
+                font-size: 1.125rem;
+                line-height: 1.5;
+            }
         }
-        
+        .dates-times {
+            span {
+                display: none;
+
+                &.show {
+                    display: inline;
+                    background-color: $bga-green-highlight-light;
+                    transition: background-color 1s linear; 
+                   -moz-transition: background-color 1s linear;  
+                   -webkit-transition: background-color 1s linear; 
+                   -ms-transition: background-color 1s linear;
+                    
+                    &.highlight {
+                        background-color:$bga-green-highlight-dark;
+                        }
+                }
+            }
+        }
+        .time-zone {
+            label {
+                font-size: .825rem;
+                line-height: 1.5;
+                font-weight: 400;
+            }
+            select {
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                background: url(../assets/chevron-down-black.svg) no-repeat;
+                background-size: 16px 10px;
+                background-position: right 8px center;
+                font-size: .825rem;
+                font-weight: 400;
+                line-height: 1.5;
+                max-width: 100%;
+            }
+        }   
     }
+    &.coming-soon {
+        .component-content {
+            background: $bga-yellow-highlight-light;
+            border-left-color: $bga-yellow-highlight-dark;
+        }
+        .dates-times {
+            span {
+                &.show {
+                    background-color: $bga-yellow-highlight-light;
+
+                    &.highlight {
+                        background-color: $bga-yellow-highlight-dark;
+                    }
+                }
+            }
+        }
+    }
+    &.closed {
+        .component-content {
+            background: $bga-white;
+            border: none;
+            border-top: solid 3px $bga-blue-black-light;
+            border-bottom: solid 3px $bga-blue-black-light;
+            padding: 24px 0 !important;
+
+            .status {
+                .icon-wrapper {
+                    background: $bga-red-fail-light;
+                }
+            }
+            a {
+                color: $bga-blue-links;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Mixin for smaller screen examples and media queries
+@mixin grant-status-below576 {
+    .grant-status-indicator {
+        .component-content {
+            .status {
+                display: block;
+                margin-bottom: 16px !important;
+
+                .icon-wrapper {
+                    padding: 8px 16px !important;
+                    margin: 0 0 16px 0 !important;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576, .component-example.small-screen {
+    @include grant-status-below576();
+}
+
+
+// MEDIA Queries for HTML demo pages.
+@media(max-width: 576px) {
+    @include grant-status-below576();
 }

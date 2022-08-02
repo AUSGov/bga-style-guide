@@ -611,6 +611,21 @@ $('tr td:first-of-type').on('click', function () {
 
 });
 
+// COMPONENT EXAMPLE: GRANT STATUS INDICATOR
+ // Grant status indicator
+ $('.time-zone select').on('change', function(){
+    var new_timezone = $(this).val(),
+    dates_times = $(this).parents('.dates-times-wrapper');
+    
+    $(this).blur();
+    
+    dates_times.find('.dates-times .show').removeClass('show');     
+    dates_times.find('.' + new_timezone).addClass('show highlight');
+    
+    setTimeout(function(){ 
+        $('.highlight').removeClass('highlight');
+    }, 400);
+});
     
 }); //End doc ready
 

@@ -42,15 +42,45 @@ subsite-tag: false
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
 
+                <h3>Open status</h3>
+
                 {% include component-examples/grant-status-example.html
                 status="Open"
                 classes="open"
                 icon="'../assets/icon-tick-green.svg' | relative_url "
                 status-detail="Closing in 11 days"
-                open-date=" 02 Jan 2022, 6:00pm <span>AEST</span>"
-                close-date=" 02 Jan 2022, 6:00pm <span>AEST</span>"
-                time-zone="AEST"
+                close-date="true"
+                time-zone="true"
                 application-detail="You can submit an expression of interest ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar luctus ipsum, sed sagittis neque venenatis in."
+                what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
+                who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
+                %}
+
+
+                <h3>Coming soon status</h3>
+
+                {% include component-examples/grant-status-example.html
+                status="Coming soon"
+                classes="coming-soon"
+                icon="'../assets/icon-comingsoon-orange.svg' | relative_url "
+                status-detail="Open in 3 days"
+                open-date="true"
+                close-date="true"
+                time-zone="true"
+                application-detail="You can submit an expression of interest ipsum dolor sit amet."
+                what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
+                who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
+                %}
+
+
+                <h3>Closed status</h3>
+
+                {% include component-examples/grant-status-example.html
+                status="Closed"
+                classes="closed"
+                icon="'../assets/icon-closed-red.svg' | relative_url "
+                status-detail="Round X opens in 25 days"
+                application-detail="See <a>grant name - round X</a> for information on applying for the next round."
                 what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
                 who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
                 %}
@@ -59,10 +89,11 @@ subsite-tag: false
         </div>
 
 
+
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/5a67f721-73a0-4c46-a565-9f590522c081/'"
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/befe07b8-f5ad-4edc-bc74-7aedb178ccdf/'"
         btn-text="View design specifications"
         %}
 
@@ -92,24 +123,24 @@ subsite-tag: false
 
             finalbp="Breakpoint &lt; 768px"
 
-            min1200-img="'../assets/layout-images/feature-box-1col2thirdswidth-min1200.png' | relative_url "
-            min992-img="'../assets/layout-images/feature-box-1col2thirdswidth-min992.png' | relative_url "
-            min768-img="'../assets/layout-images/feature-box-1col2thirdswidth-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/feature-box-1col2thirdswidth-finalbp.png' | relative_url "
+            min1200-img="'../assets/layout-images/grant-status-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/grant-status-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/grant-status-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/grant-status-1col2thirdswidth-finalbp.png' | relative_url "
 
             min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>"
+            <p>Grant status components span the full width of the content area.</p>"
 
             min992-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>"
+            <p>Grant status components span the full width of the content area.</p>"
 
             min768-rules="<p>The content area is 11 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>"
+            <p>Grant status components span the full width of the content area.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>"
+            <p>Grant status components span the full width of the content area.</p>"
 
-            example-link="'../html-examples/single-col-two-thirds-width.html#featurebox-example' | relative_url'"
+            example-link="'../html-examples/single-col-two-thirds-width.html#grant-status-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
@@ -129,20 +160,20 @@ subsite-tag: false
 
             finalbp="Breakpoint &lt; 576px"
 
-            min1200-img="'../assets/layout-images/feature-box-2col-leftmenu-min1200.png' | relative_url "
-            min576-img="'../assets/layout-images/feature-box-2col-leftmenu-min576.png' | relative_url "
-            finalbp-img="'../assets/layout-images/feature-box-2col-leftmenu-finalbp.png' | relative_url "
+            min1200-img="'../assets/layout-images/grant-status-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/grant-status-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/grant-status-2col-leftmenu-finalbp.png' | relative_url "
 
             min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>"
+            <p>Grant status components span the full width of the content area.</p>"
 
             min576-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>"
+            <p>Grant status components span the full width of the content area.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Feature boxes span the full width of the content area.</p>"
+            <p>Grant status components span the full width of the content area.</p>"
 
-            example-link="'../html-examples/two-col-left-side-menu.html#featurebox-example' | relative_url'"
+            example-link="'../html-examples/two-col-left-side-menu.html#grant-status-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
