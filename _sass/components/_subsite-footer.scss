@@ -9,6 +9,7 @@
         text-decoration: none;
         cursor: pointer;
     }
+
     .links ul {
         text-indent: 0;
 
@@ -27,4 +28,45 @@
             }
         }
     }
+
+    .copyright {
+        p {
+            font-size: .875rem;
+            line-height: 1.715;
+        }
+    }
+}
+
+// Mixins for smaller screen sizes and media queries
+@mixin subsite-footer-below576 {
+    .subsite-footer {
+        .phone {
+            margin-bottom: 16px !important;
+        }
+
+        .links {
+            margin-bottom: 16px !important;
+
+            ul {
+                li {
+                    font-size: .875rem;
+                    line-height: 1.715;
+                    margin-right: 16px !important;
+                }
+            }
+        }
+
+        .copyright {
+            p {
+                font-size: 0.75rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include subsite-footer-below576();
 }
