@@ -1,0 +1,37 @@
+.download-list {
+    .title {
+        font-size: 1.125rem;
+        line-height: 1.5;
+    }
+    .download-links {
+        li {
+            display: inline-block;
+            list-style-type: none;
+            text-indent: 0;
+            margin-right: 32px;
+
+            a {
+                font-size: .75rem;
+                font-weight: 700;
+                color: $bga-blue-links;
+                text-decoration: underline;
+                cursor: pointer;
+
+                &:focus-visible {
+                    border: $bga-text-focus-border;
+                    border-radius: $bga-focus-radius;
+                    background: $bga-blue-background-light;
+                }
+                &:hover {
+                    background: $bga-blue-background-light;
+                    color: $bga-blue-links;
+                    text-decoration: underline;
+                }
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
