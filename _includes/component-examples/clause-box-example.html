@@ -1,0 +1,33 @@
+<div class="bga-component-wrapper pb-5">
+    <div class="bga-component clause-box {{include.classes}} m-0">
+
+        <div class="p-4 component-content h-100">
+
+            <div class="header mb-4">
+
+                <div class="title remove-element-padding me-4">
+                    <div class="icon-wrapper me-3"><img src={{ include.icon }} alt="" /></div>
+
+                    {% if include.title %}
+                    <p><strong>{{ include.title }}</strong></p>
+                    {% endif %}
+
+                </div>
+
+                {% if include.tag %}
+                <div class="tag py-2 px-3"><span>{{ include.tag }}</span></div>
+                {% endif %}
+            </div>
+
+            <div class="component-text remove-element-padding">
+
+                {% if include.content %}
+                {{ include.content }}
+                {% endif %}
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

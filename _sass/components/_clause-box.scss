@@ -1,0 +1,75 @@
+.clause-box {
+
+    .component-content {
+        background: $bga-blue-black-background-lightest;
+        border-left: solid 8px $bga-blue-black-light;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .title {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-wrapper {
+        width: 56px;
+        height: 56px;
+        background: $bga-white;
+        border-radius: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .tag {
+        background: $bga-blue-black-lightest;
+        border: 2px solid $bga-blue-black-light;
+        font-size: .75rem;
+        color: $bga-blue-black-dark;
+        font-weight: 700;
+
+        &.included {
+            background: $bga-green-success-background;
+            color: $bga-white;
+            border-color: $bga-green-success-background;
+        }
+    }
+
+    .component-text {
+        a {
+            color: $bga-blue-links;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:focus-visible {
+                border: $bga-text-focus-border;
+                border-radius: $bga-focus-radius;
+                background: $bga-white;
+            }
+            &:hover {
+                background: $bga-white;
+                color: $bga-blue-links;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &.teal {
+        .component-content {
+            background: $bga-teal-highlight-light;
+            border-left: solid 8px $bga-teal-highlight-dark;
+        }
+    }
+
+}

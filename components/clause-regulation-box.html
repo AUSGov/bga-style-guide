@@ -1,0 +1,178 @@
+---
+
+layout: content-tagged
+title: Clause / regulation box
+description: Highlight regulations or legal clauses with an accompanying icon.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+            sm-visibility="true"
+            final-visibility="true"
+            breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Default clause /regulation box</h3>
+                
+                {% include component-examples/clause-box-example.html
+                    icon="'../assets/icon-document-blueblack.svg' | relative_url "
+                    title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
+                    content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
+                %}
+
+                
+                {% include component-examples/clause-box-example.html
+                    icon="'../assets/icon-document-blueblack.svg' | relative_url "
+                    title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
+                    content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
+                    classes="teal"
+                %}
+
+                <h3> Clause /regulation box with mandatory include tag</h3>
+                {% include component-examples/clause-box-example.html
+                    icon="'../assets/icon-document-blueblack.svg' | relative_url "
+                    title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
+                    tag="Include"
+                    content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
+
+                %}
+
+
+               
+            </div>
+        </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/85eb9296-27d6-413b-9d29-7edffdadf7f2/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Download lists can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}> single column - two thirds width layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left side menu layout</a>.</p>
+
+        {% include layouts-dropdown.html
+        single-col-fullwidth-visibility="false"
+        single-col-twothirds-visibility="true"
+        two-col-leftmenu-visibility="true"
+        two-col-rightsidebar-visibility="false"
+        %}
+
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/download-list-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/download-list-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/download-list-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/download-list-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Download lists span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Download lists span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Download lists span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Download lists span the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#download-list-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/download-list-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/download-list-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/download-list-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Download lists span the full width of the content area.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Download lists span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Download lists span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#download-list-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Displays multiple formats for a single download as a list item of many files.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Use this to list tertiary download items (e.g. course documentation).</li>
+        </ul>
+
+    </div>
