@@ -1,14 +1,31 @@
 .clause-box {
 
+    form {
+        border-bottom: solid 1px $bga-blue-black-mid;
+        
+        label {
+            background: none;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+        }
+        .checkboxes [type=checkbox] {
+            top: 0px;
+            left: 0px;
+        }
+    }
     .component-content {
         background: $bga-blue-black-background-lightest;
         border-left: solid 8px $bga-blue-black-light;
     }
+
     .header {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     .title {
         display: flex;
         align-items: center;
@@ -32,17 +49,24 @@
         width: 100%;
         height: auto;
     }
+
     .tag {
         background: $bga-blue-black-lightest;
         border: 2px solid $bga-blue-black-light;
         font-size: .75rem;
         color: $bga-blue-black-dark;
         font-weight: 700;
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
 
         &.included {
             background: $bga-green-success-background;
             color: $bga-white;
             border-color: $bga-green-success-background;
+        }
+
+        svg {
+            display: none;
         }
     }
 
@@ -57,12 +81,51 @@
                 border-radius: $bga-focus-radius;
                 background: $bga-white;
             }
+
             &:hover {
                 background: $bga-white;
                 color: $bga-blue-links;
                 text-decoration: underline;
             }
         }
+    }
+
+    &.added {
+        .tag {
+            background: $bga-green-success-background;
+            border-color: $bga-green-success-background;
+            color: $bga-white;
+            transition: background-color 800ms linear;
+            -moz-transition: background-color 800ms linear;
+            -webkit-transition: background-color 800ms linear;
+            -ms-transition: background-color 800ms linear;
+        }
+
+        .component-text {
+            span {
+                font-weight: 600;
+                display: inline;
+                background-color: $bga-blue-black-background-lightest;
+                transition: background-color 800ms linear;
+                -moz-transition: background-color 800ms linear;
+                -webkit-transition: background-color 800ms linear;
+                -ms-transition: background-color 800ms linear;
+            }
+        }
+
+        &.highlight {
+            .tag {
+                svg {
+                    display: inline-block;
+                }
+            }
+            .component-text {
+                span {
+                    background-color: $bga-green-success-mid;
+                }
+            }
+        }
+
     }
 
     &.teal {

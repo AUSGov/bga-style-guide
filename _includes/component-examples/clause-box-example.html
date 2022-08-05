@@ -1,7 +1,28 @@
+{% if include.tag-type == "mandatory" %}
+<form>
+    <div class="col-12 mb-5 p-0 form-example clause-box-include">
+        <label for="{{include.id}}" class="form-label mb-3">What is the employee's position title?</label>
+        <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
+        <input type="text" class="form-control clause-box-input mb-0" id="{{include.id}}" value="" required>
+        
+    </div>
+</form>
+{% endif %}
+
+
 <div class="bga-component-wrapper pb-5">
-    <div class="bga-component clause-box {{include.classes}} m-0">
+    <div class="bga-component clause-box {{include.classes}} {{include.id}} m-0">
 
         <div class="p-4 component-content h-100">
+
+            {% if include.tag-type == "optional" %}
+            <form class="mb-4 pb-4">
+                <div class="col-12 p-0 form-example checkboxes clause-box-include">
+                    <input class="checkbox clause-box-input m-0" type="checkbox" value="" id="{{ include.id }}">
+                    <label for="{{ include.id }}" class="form-label mb-0 py-0">Include Probation period clause (optional)</label> 
+                </div>
+            </form>
+            {% endif%}
 
             <div class="header mb-4">
 
@@ -15,7 +36,11 @@
                 </div>
 
                 {% if include.tag %}
-                <div class="tag py-2 px-3"><span>{{ include.tag }}</span></div>
+                <div class="tag py-1 px-3"><span>{{ include.tag }}</span>
+                    <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="15" height="11.866" viewBox="0 0 15 11.866">
+                    <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z" fill="#fff"/>
+                  </svg>
+                  </div>
                 {% endif %}
             </div>
 
