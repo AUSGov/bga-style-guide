@@ -627,6 +627,56 @@ $('tr td:first-of-type').on('click', function () {
     }, 400);
 });
     
+// COMPONENT EXAMPLE: CLAUSE / REGULATION BOXES
+var clause_boxes = {}
+$('.clause-box-input').each(function(){
+    var clause=$(this).attr('id'),
+    original_text = $('.' + clause).find('.component-text span').text();
+    clause_boxes[clause] = original_text;
+});
+
+$('.clause-box-input').change(function(){
+
+    var clause = $(this).attr('id'),
+    original_text = clause_boxes[clause],
+    added_text;
+
+    // Text input
+    if ( $(this).attr('type') == "text" ) {
+       added_text = $(this).val();
+       
+       if (added_text != "") {
+        $('.' + clause).addClass('added highlight').find('.component-text span').text(added_text);
+        
+        setTimeout(function(){ 
+            $('.highlight').removeClass('highlight');
+        }, 800);
+
+    } else {
+        $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
+    }
+
+    // Checkbox
+    } else if ($(this).attr('type') == "checkbox") {
+    
+        if ($(this).is(":checked")) {
+            added_text = "3 month";
+            $('.' + clause).addClass('added highlight').find('.component-text span').text(added_text);
+        
+            setTimeout(function(){ 
+                $('.highlight').removeClass('highlight');
+            }, 800);
+        } else {
+            $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
+        }
+
+    }
+    
+    
+    
+});
+
+
 }); //End doc ready
 
 

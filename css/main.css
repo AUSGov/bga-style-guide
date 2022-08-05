@@ -2592,6 +2592,8 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + 6px); }
 
 .bga-component img { width: 100%; max-width: 100%; height: auto; }
 
+.help-text { font-size: .875rem; }
+
 table.table { margin-bottom: 32px; }
 
 .site-name { display: flex; }
@@ -4452,6 +4454,12 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .download-list .download-links li::before { display: none; }
 
+.clause-box form { border-bottom: solid 1px #788295; }
+
+.clause-box form label { background: none; border: none; display: inline-flex; align-items: center; min-height: 28px; }
+
+.clause-box form .checkboxes [type=checkbox] { top: 0px; left: 0px; }
+
 .clause-box .component-content { background: #EFF0F2; border-left: solid 8px #ABB1BD; }
 
 .clause-box .header { display: flex; align-items: center; justify-content: space-between; }
@@ -4462,15 +4470,25 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .clause-box img { width: 100%; height: auto; }
 
-.clause-box .tag { background: #E4E6EA; border: 2px solid #ABB1BD; font-size: .75rem; color: #2E3E5A; font-weight: 700; }
+.clause-box .tag { background: #E4E6EA; border: 2px solid #ABB1BD; font-size: .75rem; color: #2E3E5A; font-weight: 700; border-radius: 20px; border-bottom-left-radius: 0; }
 
 .clause-box .tag.included { background: #068905; color: #ffffff; border-color: #068905; }
+
+.clause-box .tag svg { display: none; }
 
 .clause-box .component-text a { color: #2157AA; text-decoration: underline; cursor: pointer; }
 
 .clause-box .component-text a:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; background: #ffffff; }
 
 .clause-box .component-text a:hover { background: #ffffff; color: #2157AA; text-decoration: underline; }
+
+.clause-box.added .tag { background: #068905; border-color: #068905; color: #ffffff; transition: background-color 800ms linear; -moz-transition: background-color 800ms linear; -webkit-transition: background-color 800ms linear; -ms-transition: background-color 800ms linear; }
+
+.clause-box.added .component-text span { font-weight: 600; display: inline; background-color: #EFF0F2; transition: background-color 800ms linear; -moz-transition: background-color 800ms linear; -webkit-transition: background-color 800ms linear; -ms-transition: background-color 800ms linear; }
+
+.clause-box.added.highlight .tag svg { display: inline-block; }
+
+.clause-box.added.highlight .component-text span { background-color: #A0D1A0; }
 
 .clause-box.teal .component-content { background: #CFEBEB; border-left: solid 8px #5AB3B3; }
 
