@@ -662,12 +662,14 @@ $('.clause-box-input').change(function(){
         if ($(this).is(":checked")) {
             added_text = "3 month";
             $('.' + clause).addClass('added highlight').find('.component-text span').text(added_text);
+            $('.' + clause).find('.tag span').text('Included');
         
             setTimeout(function(){ 
                 $('.highlight').removeClass('highlight');
             }, 800);
         } else {
             $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
+            $('.' + clause).find('.tag span').text('Optional to include');
         }
 
     }

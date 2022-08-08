@@ -5,14 +5,26 @@
         
         label {
             background: none;
-            border: none;
+            border: solid 3px $bga-blue-black-background-lightest;
             display: inline-flex;
             align-items: center;
             min-height: 28px;
+            height: 44px;
         }
         .checkboxes [type=checkbox] {
-            top: 0px;
-            left: 0px;
+            top: 8px;
+            left: 8px;
+
+            &:focus {
+                
+                + label {
+                    border:$bga-blue-black-background-lightest solid 3px;
+                }
+            }
+            &:focus-visible + label {
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
+            }
         }
     }
     .component-content {
@@ -58,6 +70,9 @@
         font-weight: 700;
         border-radius: 20px;
         border-bottom-left-radius: 0;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+        white-space: nowrap;
+        padding: 2px 8px;
 
         &.included {
             background: $bga-green-success-background;
@@ -135,4 +150,32 @@
         }
     }
 
+}
+
+// Mixins for media queries and smaller screen examples
+@mixin clausebox-below576 () {
+    .clause-box {
+        .icon-wrapper {
+            display: none;
+        }
+        .header {
+            flex-wrap: wrap;
+        }
+        .title {
+            display: block;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include clausebox-below576();
+}
+
+// Media queries for HTML example pages
+@media (max-width: 576px) {
+    @include clausebox-below576();
 }

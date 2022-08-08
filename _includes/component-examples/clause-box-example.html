@@ -16,10 +16,10 @@
         <div class="p-4 component-content h-100">
 
             {% if include.tag-type == "optional" %}
-            <form class="mb-4 pb-4">
+            <form class="mb-4">
                 <div class="col-12 p-0 form-example checkboxes clause-box-include">
                     <input class="checkbox clause-box-input m-0" type="checkbox" value="" id="{{ include.id }}">
-                    <label for="{{ include.id }}" class="form-label mb-0 py-0">Include Probation period clause (optional)</label> 
+                    <label for="{{ include.id }}" class="form-label mb-3">Include Probation period clause (optional)</label> 
                 </div>
             </form>
             {% endif%}
@@ -36,7 +36,7 @@
                 </div>
 
                 {% if include.tag %}
-                <div class="tag py-1 px-3"><span>{{ include.tag }}</span>
+                <div class="tag"><span>{{ include.tag }}</span>
                     <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="15" height="11.866" viewBox="0 0 15 11.866">
                     <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z" fill="#fff"/>
                   </svg>

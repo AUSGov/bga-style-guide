@@ -1,0 +1,171 @@
+.stepped-navigation-wrapper {
+    background: $bga-teal-highlight-light;
+
+    .mobile-stepped-nav {
+        display: none;
+    }
+}
+.stepped-navigation {
+    display: flex;
+    //text-align: center; 
+    position: relative;
+
+    .step {
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: center;
+        align-content: flex-start;
+        flex: 1 1 0;
+        width: 0;
+        z-index: 2000;
+        text-decoration: none;
+        font-weight: 400;
+        color: #666666;
+        position: relative;
+        border: solid 4px transparent;
+        padding: 4px 0;
+
+        &:focus-visible {
+            border: $bga-component-focus-border;
+            border-radius: $bga-focus-radius;
+            outline: none;
+        }
+       
+        &::after {
+            content: "";
+            width: 100%;
+            position: absolute;
+            border-bottom: 4px solid $bga-teal-highlight-mid;
+            z-index: 1000;
+            //left: 50%;
+            left: 27px;
+            top: 19px;
+        }
+        &:last-of-type::after {
+            display: none;
+        }
+        
+        .step-number {
+            width: 38px;
+            height: 38px;
+            border: solid 3px $bga-teal-highlight-mid;
+            background: $bga-teal-tool-extra-light;
+            display: flex;
+            justify-content: center;
+            border-radius: 50px;
+            align-items: center;
+            align-content: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+            z-index: 3000;
+ 
+        }
+        .step-name {
+            width: 100%;
+            display: block;
+            font-size: .875rem;
+        }
+
+        &.completed {
+            cursor: pointer;
+
+            &::after {
+                border-bottom-color: $bga-blue-links;
+            }
+            
+            .step-number {
+                text-indent: -9999px;
+                background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
+                background-position: center center;
+                background-size: 18px 14px;
+                border-color: $bga-blue-links;
+            }
+            .step-name {
+                color: $bga-blue-links;
+            }
+
+            &:hover {
+                text-decoration: underline;
+                text-decoration-color: $bga-blue-links;
+            }
+        
+        }
+        &.active {
+            .step-number {
+                background: $bga-white;
+                color: $bga-blue-links;
+                border-color: $bga-blue-links;
+            }
+            .step-name {
+                font-weight: 700;
+                color: $bga-blue-links;
+                text-decoration: underline;
+                text-decoration-color: $bga-blue-links;
+            }
+        }
+    }
+
+}
+
+
+// Mixins for media queries and smaller screen examples
+@mixin stepped-nav-below768 {
+    .stepped-navigation-wrapper {
+        padding: 16px 32px !important;
+        .step-title {
+            display: none;
+        }
+        .mobile-stepped-nav {
+            display: flex;
+            align-items: center;
+            
+            button {
+                background: transparent url(../assets/icon-menu-black.svg) no-repeat;
+                border: none;
+                height: 20px;
+                width: 20px;
+                text-indent: -9999px;
+            }
+            
+        }
+    }
+    .stepped-navigation {
+        display: none;
+        flex-wrap: wrap;
+        text-align: left;
+
+        .step {
+            width: 100%;
+            display: block;
+            flex: unset;
+            margin: 0 0 8px 0 !important;
+
+            .step-number {
+                display: inline-flex;
+            }
+            .step-name {
+                display: inline;
+            }
+
+            &::after {
+                width: 4px;
+                height: 100%;
+                border-left: 4px solid $bga-teal-highlight-mid;
+                border-bottom: none;
+                left: 17px;
+                top: 42px;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768,
+.component-example.small-screen {
+    @include stepped-nav-below768();
+}
+
+// Media queries for HTML example pages
+@media (max-width: 768px) {
+    @include stepped-nav-below768();
+}

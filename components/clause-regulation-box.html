@@ -82,7 +82,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/85eb9296-27d6-413b-9d29-7edffdadf7f2/'"
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/f2af4736-6a5b-44b4-85a0-9c2cc405e5bb/'"
         btn-text="View design specifications"
         %}
 
@@ -90,94 +90,118 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Clause /regulation boxes are used on information pages. Appropriate layouts are <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}> single column - two thirds width layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left side menu layout</a>.</p>
+        <p>Clause / regulation boxes can be used on all page layouts except the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column - full width layout</a>.</p> 
 
-        {% include layouts-dropdown.html
-        single-col-fullwidth-visibility="false"
-        single-col-twothirds-visibility="true"
-        two-col-leftmenu-visibility="true"
-        two-col-rightsidebar-visibility="false"
+        {% include layouts-dropdown.html 
+            single-col-twothirds-visibility="true" 
+            two-col-leftmenu-visibility="true"  
+            two-col-rightsidebar-visibility="true" 
         %}
-
+        
         <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
-
-            {% include layouts-accordion.html
-            layout-name="onecol-twothirdsw"
-
-            min1200-visibility="true"
-            min992-visibility="true"
-            min768-visibility="true"
-            min576-visibility="false"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 768px"
-
-            min1200-img="'../assets/layout-images/download-list-1col2thirdswidth-min1200.png' | relative_url "
-            min992-img="'../assets/layout-images/download-list-1col2thirdswidth-min992.png' | relative_url "
-            min768-img="'../assets/layout-images/download-list-1col2thirdswidth-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/download-list-1col2thirdswidth-finalbp.png' | relative_url "
-
-            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Download lists span the full width of the content area.</p>"
-
-            min992-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Download lists span the full width of the content area.</p>"
-
-            min768-rules="<p>The content area is 11 grid-columns wide.</p>
-            <p>Download lists span the full width of the content area.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Download lists span the full width of the content area.</p>"
-
-            example-link="'../html-examples/single-col-two-thirds-width.html#download-list-example' | relative_url'"
-            example-link-text="View layout example"
-
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/clausebox-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/clausebox-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/clausebox-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/clausebox-1col2thirdswidth-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/single-col-two-thirds-width.html#clausebox-example' | relative_url'"
+                example-link-text="View layout example"
+                
             %}
-
+            
         </div>
-
+        
+        
         <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-leftmenu"
+                
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/clausebox-2col-leftmenu-min1200.png' | relative_url "
+                min576-img="'../assets/layout-images/clausebox-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/clausebox-2col-leftmenu-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-left-side-menu.html#clausebox-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
 
-            {% include layouts-accordion.html
-            layout-name="twocol-leftmenu"
-
-            min1200-visibility="true"
-            min992-visibility="false"
-            min768-visibility="false"
-            min576-visibility="true"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 576px"
-
-            min1200-img="'../assets/layout-images/download-list-2col-leftmenu-min1200.png' | relative_url "
-            min576-img="'../assets/layout-images/download-list-2col-leftmenu-min576.png' | relative_url "
-            finalbp-img="'../assets/layout-images/download-list-2col-leftmenu-finalbp.png' | relative_url "
-
-            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Download lists span the full width of the content area.</p>"
-
-            min576-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Download lists span the full width of the content area.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Download lists span the full width of the content area.</p>"
-
-            example-link="'../html-examples/two-col-left-side-menu.html#download-list-example' | relative_url'"
-            example-link-text="View layout example"
+                min992-img="'../assets/layout-images/clausebox-2col-rightsidebar-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/clausebox-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-right-sidebar.html#clausebox-example' | relative_url'"
+                example-link-text="View layout example"
 
             %}
-
+            
         </div>
+        
 
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Displays multiple formats for a single download as a list item of many files.</p>
+        <p>Displays information about regulations or legal clauses. When used in tools clause / regulation boxes can incorporate an "included" tag to indicate that the user has included the clause in their process.</p>
         <h3>When to use this component:</h3>
         <ul>
-            <li>Use this to list tertiary download items (e.g. course documentation).</li>
+            <li>Primarily used in tools to highlight legal information.</li>
         </ul>
 
     </div>
