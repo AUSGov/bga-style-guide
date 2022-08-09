@@ -228,7 +228,7 @@
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="hero-pathway-group">
+        <fieldset id="stepped-navigation-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -239,8 +239,8 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-md true" name="hero-pathway-group" id="hero-pathway-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="hero-pathway-bp-md">≥768px (md)</label>
+                    <input type="radio" class="btn-check bp-md true" name="stepped-navigation-group" id="stepped-navigation-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="stepped-navigation-bp-md">≥768px (md)</label>
                 
 
                 
@@ -248,8 +248,8 @@
                 
 
                     
-                <input type="radio" class="btn-check true" name="hero-pathway-group" id="hero-pathway-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="hero-pathway-bp-final">&lt;768px</label>
+                <input type="radio" class="btn-check true" name="stepped-navigation-group" id="stepped-navigation-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="stepped-navigation-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -272,17 +272,22 @@
         <!-- Component example -->
 
         <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+            <div class="component-wrapper remove-element-padding py-4">
 
-                <div class="stepped-navigation-wrapper remove-element-padding p-5 mb-5">
+                <h3 class="ms-4">Stepped navigation within a tool header</h3>
+                
+                <div class="page-header-wrapper tool-stepped-nav teal">
+                <div class="stepped-navigation-wrapper remove-element-padding teal p-5 mb-5">
+    
     <h1 class="step-title">Active step name</h1>
+    
    
     <div class="mobile-stepped-nav remove-element-padding">
-        <button tabindex=0>Menu</button>
+        <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
         <p>Step 3 of 7: <strong>Active step name</strong></p>
     </div>
     
-    <div class="bga-component stepped-navigation ">
+    <div class="bga-component stepped-navigation teal">
 
         
         <a tabindex="1" class="step completed me-3">
@@ -329,6 +334,66 @@
     </div>
     
 </div>
+                </div>
+
+                <h3 class="ms-4">Stepped navigation in the context of a page.</h3>
+
+                <div class="stepped-navigation-wrapper remove-element-padding white p-5 mb-5">
+    
+   
+    <div class="mobile-stepped-nav remove-element-padding">
+        <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
+        <p>Step 3 of 7: <strong>Active step name</strong></p>
+    </div>
+    
+    <div class="bga-component stepped-navigation white">
+
+        
+        <a tabindex="1" class="step completed me-3">
+            <span class="step-number mb-2">1</span>
+            <span class="step-name">Completed step</span>
+        </a>
+        
+
+        
+        <a tabindex="1" class="step completed me-3">
+            <span class="step-number mb-2">2</span>
+            <span class="step-name">One more completed step</span>
+        </a>    
+        
+
+        
+        <a tabindex="1" class="step active me-3">
+            <span class="step-number mb-2">3</span>
+            <span class="step-name">Active step</span>
+        </a>
+        
+
+        
+        <a tabindex="1" class="step me-3">
+            <span class="step-number mb-2">4</span>
+            <span class="step-name">Unvisited step</span>
+        </a>
+        
+
+        
+        <a tabindex="1" class="step me-3">
+            <span class="step-number mb-2">5</span>
+            <span class="step-name">Ending employment</span>
+        </a>
+        
+
+        
+        <a tabindex="1" class="step me-3">
+            <span class="step-number mb-2">6</span>
+            <span class="step-name">Step six</span>
+        </a>
+        
+
+    </div>
+    
+</div>
+
 
             </div>
         </div>
