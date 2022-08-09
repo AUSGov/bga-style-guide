@@ -1,8 +1,10 @@
-<div class="stepped-navigation-wrapper remove-element-padding p-5 mb-5">
-    <h1 class="step-title">{{ include.step3 }} name</h1>
+<div class="stepped-navigation-wrapper remove-element-padding {{ include.classes }} p-5 mb-5">
+    {% if include.title %}
+    <h1 class="step-title">{{ include.title }}</h1>
+    {% endif %}
    
     <div class="mobile-stepped-nav remove-element-padding">
-        <button tabindex=0>Menu</button>
+        <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
         <p>Step 3 of 7: <strong>Active step name</strong></p>
     </div>
     

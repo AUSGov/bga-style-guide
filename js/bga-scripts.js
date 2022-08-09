@@ -673,11 +673,21 @@ $('.clause-box-input').change(function(){
         }
 
     }
-    
-    
-    
 });
 
+// COMPONENT EXAMPLE: STEPPED NAVIGATION
+$('.stepped-nav-toggle').on('click', function(){
+    $(this).toggleClass('open');
+    $(this).parents('.stepped-navigation-wrapper').find('.stepped-navigation').slideToggle();
+});
+$('#stepped-navigation-bp-md').on('click', function(){
+    $('.stepped-nav-toggle').removeClass('open');
+    $('.stepped-navigation-wrapper').find('.stepped-navigation').css('display', 'flex');
+});
+$('#stepped-navigation-bp-final').on('click', function(){
+    $('.stepped-nav-toggle').removeClass('open');
+    $('.stepped-navigation-wrapper').find('.stepped-navigation').css('display', 'none');
+});
 
 }); //End doc ready
 

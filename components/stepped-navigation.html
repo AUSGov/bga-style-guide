@@ -32,7 +32,7 @@ subsite-tag: true
 
         <!-- Breakpoint radio buttons -->
         {% include breakpoints.html
-        element-string="hero-pathway"
+        element-string="stepped-navigation"
         md-visibility="true"
         final-visibility="true"
         breakpoint-final="768"
@@ -41,7 +41,24 @@ subsite-tag: true
         <!-- Component example -->
 
         <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+            <div class="component-wrapper remove-element-padding py-4">
+
+                <h3 class="ms-4">Stepped navigation within a tool header</h3>
+                
+                <div class="page-header-wrapper tool-stepped-nav teal">
+                {% include component-examples/stepped-navigation-example.html
+                    title="Active step name"
+                    step1="Completed step"
+                    step2="One more completed step"
+                    step3="Active step"
+                    step4="Unvisited step"
+                    step5="Ending employment"
+                    step6="Step six"
+                    classes="teal"
+                %}
+                </div>
+
+                <h3 class="ms-4">Stepped navigation in the context of a page.</h3>
 
                 {% include component-examples/stepped-navigation-example.html
                     step1="Completed step"
@@ -50,7 +67,9 @@ subsite-tag: true
                     step4="Unvisited step"
                     step5="Ending employment"
                     step6="Step six"
+                    classes="white"
                 %}
+
 
             </div>
         </div>
