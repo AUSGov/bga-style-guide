@@ -1,4 +1,4 @@
-<div class="stepped-navigation-wrapper remove-element-padding {{ include.classes }} p-5 mb-5">
+<div class="stepped-navigation-wrapper remove-element-padding {{ include.classes }}">
     {% if include.title %}
     <h1 class="step-title">{{ include.title }}</h1>
     {% endif %}
@@ -8,7 +8,7 @@
         <p>Step 3 of 7: <strong>Active step name</strong></p>
     </div>
     
-    <div class="bga-component stepped-navigation {{ include.classes }}">
+    <div class="bga-component stepped-navigation">
 
         {% if include.step1 %}
         <a tabindex="1" class="step completed me-3">
@@ -49,6 +49,13 @@
         <a tabindex="1" class="step me-3">
             <span class="step-number mb-2">6</span>
             <span class="step-name">{{ include.step6 }}</span>
+        </a>
+        {% endif %}
+
+        {% if include.step7 %}
+        <a tabindex="1" class="step me-3">
+            <span class="step-number mb-2">6</span>
+            <span class="step-name">{{ include.step7 }}</span>
         </a>
         {% endif %}
 

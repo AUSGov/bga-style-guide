@@ -16,6 +16,7 @@
     padding: 11px 32px;
     box-shadow: $bga-btn-boxshadow;
     text-align: center;
+    text-decoration: none !important;
     
     svg {
         margin-left: 8px;
@@ -40,6 +41,7 @@
     &:focus {
         border-color: $bga-blue-focus;
         background: $bga-yellow-links-background;
+        color: $bga-black;
         outline: none;
 
         &.bga-secondary-btn {
@@ -68,6 +70,7 @@
     &:hover {
         border-color: $bga-yellow-links-background;
         background: $bga-yellow-links-background;
+        color: $bga-black;
 
         &.bga-secondary-btn {
             border-color: $bga-blue-background-dark;
@@ -456,6 +459,7 @@
 
 // Mixins for smaller screen sizes and media queries
 @mixin button-below576 {
+    .bga-btn,
     button,
     .bga-btn-state {
         font-size: .875rem;
