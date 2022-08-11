@@ -1,0 +1,199 @@
+---
+
+layout: content-tagged
+title: Tool start component
+description: An optional component for tool landing pages providing basic information about the tool and a start button.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        element-string="hero-pathway"
+        md-visibility="true"
+        sm-visibility="true"
+        final-visibility="true"
+        breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+
+                <h3>Start component within a tool header</h3>
+
+                {% include component-examples/start-component-example.html
+                    page-title="Grants and programs finder"
+                    title="How this tool can help you"
+                    description="<p>If you’re doing business in Australia, this guided search will help you find grants, funding and support programs from across government.</p><p>Answer a few questions about your business to find grants and programs you may be eligible for.</p>"
+                    time="Less than 5 minutes"
+                    classes="tool-header"
+                %}
+
+
+                <h3>Start component in page content</h3>
+                {% include component-examples/start-component-example.html
+                    title="Who can use this tool"
+                    description="<p>Use this tool if you are working on a development or major project. It will help you understand which Government approvals you need.</p>"
+                    time="Around 10 minutes"
+                    need="<h3>What you’ll need</h3><p>You don’t need any documentation up front to use this tool.</p>"
+                    get="<h3>What you'll get</h3><p>This tool can help you work out:</p><ul class='remove-element-padding pb-0'><li>the Australian Government approvals you need, and
+                    </li><li>the approvals process you must consider</li></ul>"
+                %}
+                
+
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/9e1bb3af-7006-4f4e-b443-dcc1f52d7246/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <h3>Start components within a tool header</h3>
+
+        <p>Start components within a tool header display the same on all page layouts.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+
+            {% include layouts-accordion.html
+
+            singlelayout="true"
+
+            allbp-img="'../assets/layout-images/start-component-header-allbp.png' | relative_url "
+
+            allbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The tool start component is 12 grid-columns wide.</p>
+            <p>The gradient background extends full width of the viewport.</p>"
+
+            %}
+
+        </div>
+
+
+        <h3>Start components within page content</h3>
+        
+        <p>Start components within page content can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column - two thirds width layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >two column - right sidebar layout</a>.</p> 
+       
+       
+        {% include layouts-dropdown.html 
+            single-col-twothirds-visibility="true" 
+            two-col-rightsidebar-visibility="true" 
+        %}
+        
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/start-component-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/start-component-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/start-component-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/start-component-1col2thirdswidth-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Tool start components span the full width of the content area.</p>"
+            
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Tool start components span the full width of the content area.</p>"
+            
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Tool start components span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool start components span the full width of the content area.</p>"
+  
+            %}
+            
+        </div>
+        
+
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+
+                min992-img="'../assets/layout-images/start-component-2col-rightsidebar-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/start-component-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Tool start components span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool start components span the full width of the content area.</p>"
+
+            %}
+            
+        </div>
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose: </h3>
+        <p>The start component is designed to highlight a tool start button while also providing a short description of the tool's purpoose</p>
+       
+        <h3>When to use this component: </h3>
+        <ul>
+            <li>Start components can be used on tool landing pages. They should only ever appear on the first page of a tool or process.</li>
+        </ul>
+        <h3>Content rules: </h3>
+        <ul>
+            <li>Descriptions should focus on what the user can use the tool for</li>
+            <li>Less important information can be displayed under the start button box.</li>
+            <li>When used placed in page (rather than the header) the tool start component should be the first item in the content.</li>
+        </ul>
+
+
+    </div>
