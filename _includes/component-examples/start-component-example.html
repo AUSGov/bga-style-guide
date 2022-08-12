@@ -1,0 +1,59 @@
+<div class="start-component-wrapper {{ include.classes}} p-4 mb-5">
+
+    {% if include.page-title %}
+    <h1>{{ include.page-title }}</h1>
+    {% endif %}
+    <div class="bga-component start-component mb-4">
+
+        <div class="component-content p-4">
+
+            <div class="component-text remove-element-padding">
+
+                {% if include.title %}
+                <h2>{{ include.title }}</h2>
+                {% endif %}
+
+                {% if include.description %}
+                {{ include.description }}
+                {% endif %}
+
+                <div class="button-example">
+                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Start now</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="additional-info p-4">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+                <g data-name="Group 19123" transform="translate(-2201.5 -2488.511)">
+                  <path data-name="Path 6410" d="M281.241,218.529a28,28,0,1,0,28,28A28.032,28.032,0,0,0,281.241,218.529Zm0,50.815a22.815,22.815,0,1,1,0-45.63h0a22.815,22.815,0,0,1,0,45.63Z" transform="translate(1948.26 2269.982)" fill="#2e3e5a"/>
+                  <path data-name="Path 6411" d="M282.74,236.029h-5v15.5h15.5v-5h-10.5Z" transform="translate(1949.533 2270.892)" fill="#2e3e5a"/>
+                </g>
+              </svg>
+
+              <h3>Time to complete</h3>
+
+              <p>{{ include.time }}</p>
+
+              <div class="button-example mb-0">
+                <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Start now</a>
+            </div>
+              
+
+        </div>
+
+    </div>
+
+    {% if include.need %}
+        {{ include.need }}
+        {% endif %}
+    
+    {% if include.get %}
+        {{ include.get }}
+        {% endif %}
+    
+</div>

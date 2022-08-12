@@ -1,0 +1,126 @@
+.start-component-wrapper {
+    
+    border: solid 4px $bga-blue-black-lightest;
+
+    .bga-component {
+        background: $bga-teal-tool-extra-light;
+        border-left: solid 8px $bga-teal-highlight-dark;
+        display: flex;
+
+        &.notification {
+            background: $bga-blue-background-extralight;
+            border-left: solid 8px $bga-blue-border;
+        }
+    }
+    .component-content {
+        width: 70%;
+
+        .notification {
+            background: $bga-white;
+            border-left: none;
+        }
+    }
+    .additional-info {
+        width: 30%;
+        background: $bga-teal-highlight-light;
+
+        .button-example {
+            display: none;
+        }
+    }
+
+    &.tool-header {
+        border: none;
+        background: linear-gradient(180deg, rgba(158,210,211,1) 0%, rgba(191,226,226,1) 100%);
+        padding: 32px !important;
+
+        .bga-component {
+            margin-bottom: 0 !important;
+            background: $bga-white;
+        }
+    }
+    
+}
+
+
+// Mixins for smaller screen examples and media queries
+@mixin start-component-bp576(){
+    .start-component-wrapper {
+        .bga-component {
+            display: block;
+            background: $bga-teal-highlight-light;
+        }
+        .component-content {
+            width: 100%;
+            padding-bottom: 0 !important;
+
+            .button-example {
+                display: none;
+            }
+        }
+        .additional-info {
+            width: 100%;
+            background: transparent;
+            padding-top: 0 !important;
+
+            svg {
+                display: none;
+            }
+
+            .button-example {
+                display: block;
+            }
+        }
+
+        &.tool-header {
+            .bga-component {
+                border: none;
+                background: $bga-white;
+            }
+        }
+    }
+}
+
+@mixin start-component-below576(){
+    .start-component-wrapper {
+        border: none;
+        padding: 0 !important;
+
+        h2 {
+            font-size: 1.75rem;
+            line-height: 1.5;
+        }
+
+        &.tool-header {
+            padding: 24px !important;
+            background: $bga-teal-highlight-light;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .additional-info {
+                background: transparent;
+            }
+        }
+    }
+}
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576, .component-example.bp-below576, .component-example.small-screen {
+    @include start-component-bp576()
+}
+
+.component-example.bp-below576, .component-example.small-screen {
+    @include start-component-below576()
+}
+
+// Media queries for HTML examples
+@media (max-width: 768px) {
+    @include start-component-bp576()
+}
+
+@media (max-width: 576px) {
+    @include start-component-below576()
+}
