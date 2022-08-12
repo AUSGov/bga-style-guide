@@ -699,6 +699,22 @@ $(window).resize(function(){
     }
 });
 
+// COMPONENT EXAMPLE: TOAST
+$('#toast-trigger').on('click', function(){
+    $('#inpage-toast').slideDown('slow');
+});
+$('#inpage-toast button').on('click', function(){
+    $('#inpage-toast').css('display', 'none');
+});
+
+$('#cta-toast-trigger').on('click', function(){
+    console.log('pop');
+    $('#inpage-cta-toast').slideDown('slow');
+});
+$('#inpage-cta-toast button').on('click', function(){
+    $('#inpage-cta-toast').css('display', 'none');
+});
+
 
 }); //End doc ready
 

@@ -3074,7 +3074,7 @@ strong { font-weight: 600; }
 
 .element-state-wrapper { border-top: solid 1px #96B7DF; }
 
-.bga-btn, .bga-btn-state { display: inline-flex; align-items: center; border: solid 3px #EDC95A; border-radius: 100px; background: #FFD964; color: #333333; font-weight: 600; font-size: 1rem; line-height: 1.75; padding: 11px 32px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); text-align: center; text-decoration: none !important; }
+.bga-btn, .bga-btn-state { display: inline-flex; align-items: center; border: solid 3px #EDC95A; border-radius: 100px; background: #FFD964; color: #333333; font-weight: 600; font-size: 1rem; line-height: 1.75; padding: 11px 32px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); justify-content: center; text-decoration: none !important; }
 
 .bga-btn svg, .bga-btn-state svg { margin-left: 8px; margin-bottom: 0; fill: #333333; }
 
@@ -3236,9 +3236,7 @@ strong { font-weight: 600; }
 
 .component-example.bp-below576 .button-example, .component-example.small-screen .button-example { width: 100%; }
 
-.component-example.bp-below576 .button-example:first-of-type, .component-example.small-screen .button-example:first-of-type { margin-bottom: 24px; }
-
-@media (max-width: 576px) { .bga-btn, button, .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; } .button-example { width: 100%; } .button-example:first-of-type { margin-bottom: 24px; } }
+@media (max-width: 576px) { .bga-btn, button, .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; } .button-example { width: 100%; } }
 
 label { font-weight: 600; }
 
@@ -3312,13 +3310,13 @@ textarea:focus { box-shadow: none; border: 3px solid #2E6CB9; border-radius: 4px
 
 .checkboxes:last-of-type, .bga-checkbox:last-of-type { padding: 0; }
 
-.checkboxes label, .checkboxes .label, .bga-checkbox label, .bga-checkbox .label { font-weight: 400; padding: 5px 5px 5px 44px; border: solid 3px #fff; background: #fff; width: 100%; min-height: 44px; display: inline-block; }
+.checkboxes label, .checkboxes .label, .bga-checkbox label, .bga-checkbox .label { font-weight: 400; padding: 5px 5px 5px 44px; border: solid 3px transparent; background: transparent; width: 100%; min-height: 44px; display: inline-block; }
 
-.checkboxes [type=checkbox], .checkboxes .input, .bga-checkbox [type=checkbox], .bga-checkbox .input { position: absolute; top: 8px; left: 8px; -webkit-appearance: none; height: 28px; width: 28px; vertical-align: middle; border-radius: 0; border: solid 1px #2E3E5A; background: #ffffff; }
+.checkboxes [type=checkbox], .checkboxes .input, .bga-checkbox [type=checkbox], .bga-checkbox .input { position: absolute; top: 8px; left: 8px; -webkit-appearance: none; height: 28px; width: 28px; vertical-align: middle; border-radius: 0; border: solid 1px #2E3E5A; background: #ffffff; cursor: pointer; }
 
 .checkboxes [type=checkbox]:focus, .checkboxes .input:focus, .bga-checkbox [type=checkbox]:focus, .bga-checkbox .input:focus { border: solid 1px #2E3E5A; outline: none; }
 
-.checkboxes [type=checkbox]:focus + label, .checkboxes .input:focus + label, .bga-checkbox [type=checkbox]:focus + label, .bga-checkbox .input:focus + label { border: #ffffff solid 3px; border-radius: 4px; }
+.checkboxes [type=checkbox]:focus + label, .checkboxes .input:focus + label, .bga-checkbox [type=checkbox]:focus + label, .bga-checkbox .input:focus + label { border: transparent solid 3px; border-radius: 4px; }
 
 .checkboxes [type=checkbox]:focus-visible + label, .checkboxes .input:focus-visible + label, .bga-checkbox [type=checkbox]:focus-visible + label, .bga-checkbox .input:focus-visible + label { border: 3px solid #2E6CB9; border-radius: 4px; }
 
@@ -4105,6 +4103,36 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .callout-box.call-to-action .download-link-wrapper a:focus-within { border: 3px solid #2E6CB9; border-radius: 4px; color: #2157AA; }
 
 .callout-box.call-to-action .download-link-wrapper a:active { background: #C8D9EE; border: none; color: #2157AA; }
+
+.component-example.bp-350 .callout-box .bga-btn.bga-secondary-btn, .component-example.bp-350 .callout-box .bga-btn.bga-primary-btn, .component-example.bp-350 .callout-box.call-to-action .bga-btn.bga-secondary-btn, .component-example.bp-350 .callout-box.call-to-action .bga-btn.bga-primary-btn, .component-example.bp-below350 .callout-box .bga-btn.bga-secondary-btn, .component-example.bp-below350 .callout-box .bga-btn.bga-primary-btn, .component-example.bp-below350 .callout-box.call-to-action .bga-btn.bga-secondary-btn, .component-example.bp-below350 .callout-box.call-to-action .bga-btn.bga-primary-btn { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; width: auto; }
+
+.component-example.bp-350 .callout-box h2, .component-example.bp-350 .callout-box .h2, .component-example.bp-350 .callout-box.call-to-action h2, .component-example.bp-below350 .callout-box h2, .component-example.bp-below350 .callout-box .h2, .component-example.bp-below350 .callout-box.call-to-action h2 { font-size: 1.75rem; }
+
+.component-example.bp-350 .callout-box ul, .component-example.bp-350 .callout-box.call-to-action ul, .component-example.bp-below350 .callout-box ul, .component-example.bp-below350 .callout-box.call-to-action ul { padding: 0 0 8px 24px; }
+
+.component-example.bp-350 .callout-box ul li, .component-example.bp-350 .callout-box.call-to-action ul li, .component-example.bp-below350 .callout-box ul li, .component-example.bp-below350 .callout-box.call-to-action ul li { text-indent: -12px; }
+
+.component-example.bp-350 .callout-box ul li::before, .component-example.bp-350 .callout-box.call-to-action ul li::before, .component-example.bp-below350 .callout-box ul li::before, .component-example.bp-below350 .callout-box.call-to-action ul li::before { padding: 0 10px 0 0; }
+
+.component-example.bp-350 .callout-box ul ul, .component-example.bp-350 .callout-box.call-to-action ul ul, .component-example.bp-below350 .callout-box ul ul, .component-example.bp-below350 .callout-box.call-to-action ul ul { padding: 0 0 0 24px; }
+
+.component-example.bp-350 .callout-box ul ul li::before, .component-example.bp-350 .callout-box.call-to-action ul ul li::before, .component-example.bp-below350 .callout-box ul ul li::before, .component-example.bp-below350 .callout-box.call-to-action ul ul li::before { padding: 0 8px 0 0; }
+
+.component-example.bp-350 .callout-box ul ul ul, .component-example.bp-350 .callout-box.call-to-action ul ul ul, .component-example.bp-below350 .callout-box ul ul ul, .component-example.bp-below350 .callout-box.call-to-action ul ul ul { padding: 0 0 0 24px; }
+
+.component-example.bp-350 .callout-box ul ul ul li::before, .component-example.bp-350 .callout-box.call-to-action ul ul ul li::before, .component-example.bp-below350 .callout-box ul ul ul li::before, .component-example.bp-below350 .callout-box.call-to-action ul ul ul li::before { padding: 0 10px 0 0; }
+
+.component-example.bp-below350 .callout-box .bga-btn.bga-secondary-btn, .component-example.bp-below350 .callout-box .bga-btn.bga-primary-btn, .component-example.bp-below350 .callout-box.call-to-action .bga-btn.bga-secondary-btn, .component-example.bp-below350 .callout-box.call-to-action .bga-btn.bga-primary-btn { width: 100%; }
+
+@media (max-width: 576px) { .callout-box .bga-btn.bga-secondary-btn, .callout-box .bga-btn.bga-primary-btn, .callout-box.call-to-action .bga-btn.bga-secondary-btn, .callout-box.call-to-action .bga-btn.bga-primary-btn { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; width: auto; } .callout-box h2, .callout-box .h2, .callout-box.call-to-action h2 { font-size: 1.75rem; } .callout-box ul, .callout-box.call-to-action ul { padding: 0 0 8px 24px; } .callout-box ul li, .callout-box.call-to-action ul li { text-indent: -12px; } .callout-box ul li::before, .callout-box.call-to-action ul li::before { padding: 0 10px 0 0; } .callout-box ul ul, .callout-box.call-to-action ul ul { padding: 0 0 0 24px; } .callout-box ul ul li::before, .callout-box.call-to-action ul ul li::before { padding: 0 8px 0 0; } .callout-box ul ul ul, .callout-box.call-to-action ul ul ul { padding: 0 0 0 24px; } .callout-box ul ul ul li::before, .callout-box.call-to-action ul ul ul li::before { padding: 0 10px 0 0; } }
+
+@media (max-width: 350px) { .callout-box .bga-btn.bga-secondary-btn, .callout-box .bga-btn.bga-primary-btn, .callout-box.call-to-action .bga-btn.bga-secondary-btn, .callout-box.call-to-action .bga-btn.bga-primary-btn { width: 100%; } }
+
+.callout-box.toast-example { border-left: none; background: #E4E6EA; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); max-width: 650px; }
+
+.callout-box.toast-example .close { background-image: url(../assets/icon-close-black.svg); background-repeat: no-repeat; height: 16px; width: 16px; background-position: center center; text-indent: -9999px; background-color: transparent; border: none; position: absolute; top: 16px; right: 16px; }
+
+#inpage-toast, #inpage-cta-toast { position: fixed; z-index: 5000; max-width: 650px; bottom: 0; left: calc(32px); display: none; }
 
 .feature-box { max-width: 840px; }
 

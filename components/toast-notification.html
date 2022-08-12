@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Contact call out boxes</title>
+    <title>Toast notification</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -34,7 +34,7 @@
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/contact-callout-box.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/toast-notification.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -145,7 +145,7 @@
                      
 
                     <li class="breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0 h-100">Contact call out boxes</p>
+                        <p class="breadcrumb-location m-0 p-0 h-100">Toast notification</p>
                     </li>
                 </ul>
 
@@ -162,8 +162,8 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Contact call out boxes</h1>
-                        <p class="header-intro">Highlight contact information within the context of a page.</p>
+                        <h1>Toast notification</h1>
+                        <p class="header-intro">Push notifications to users with an alert message that pops up from the bottom of the screen.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
@@ -186,7 +186,7 @@
         <section class="body-content my-5">
         
             <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         <div class="anchor-menu remove-element-padding mt-0 mb-2 p-0">
@@ -212,13 +212,13 @@
     </ul>
 
 </div>
-        
+
     </div>
-    
+
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
-   
-          
-        <!-- DESIGN -->   
+
+
+        <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
         <!-- Breakpoint radio buttons -->
@@ -228,7 +228,7 @@
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="contact-callout-box-group">
+        <fieldset id="-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -238,18 +238,21 @@
                 
                 
 
+                
+
                       
-                    <input type="radio" class="btn-check bp-md true" name="contact-callout-box-group" id="contact-callout-box-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="contact-callout-box-bp-md">≥768px (md)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
                 
 
-                
-
+                      
+                    <input type="radio" class="btn-check bp-xs true" name="-group" id="-bp-xs" autocomplete="off" data-breakpoint="bp-350">
+                    <label class="btn bp-xs btn-outline-primary py-2 px-3 true" for="-bp-xs">≥350px (xs)</label>
                 
 
                     
-                <input type="radio" class="btn-check true" name="contact-callout-box-group" id="contact-callout-box-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="contact-callout-box-bp-final">&lt;768px</label>
+                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below350">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;350px</label>
 
                 </div>
 
@@ -271,105 +274,33 @@
 
         <!-- Component example -->
 
-        <div class="component-example narrow m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-                
-            <h3>Default contact call out box</h3>    
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding px-4 py-4">
 
-            <div class="bga-component-wrapper pb-5">
-<div class="bga-component callout-box blue  m-0">
+                <h3>Default toast notification</h3>
+                <div class="bga-component-wrapper">
+<div class="bga-component callout-box toast-example ">
 
     
-    
-    
+            <button class="close m-0 p-0">Close</button>
+            
+
     <div class="p-4 component-content">
 
         <div class="component-text p-0 remove-element-padding">
             
-                <h3>Contact information</h3>
+                <h4>Important message for the user</h4>
             
             
-            <ul class="indented p-0">
+          
             
-                <li><strong>Phone:</strong><a href="">1300 XXX XXX</a></li>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>
             
-                
-            
-                <li><strong>Email:</strong><a href="">johnsmith@qwerty.com</a></li>
-            
-                
-            
-                <li><strong>Address:</strong>123 Smithson St, Lyneham, Australian Capital Territory</li>
-            
-                
-            
-                <li><strong>Website:</strong><a href="">webaddress.com</a></li>
-            
-                
-            </ul>
-            
-        </div>
-    
 
-    </div>
+            
+            
+            
 
-</div>
-</div>
-                
-            <h3>Adviser contact call out box</h3>    
-
-            <div class="bga-component-wrapper pb-5">
-<div class="bga-component callout-box blue  m-0">
-
-    
-        <div class="p-4 header-section component-content">
-            <div class="component-text p-0 remove-element-padding">
-                <ul class="indented p-0">
-                    
-                    <li><strong>Cost:</strong>Free</li>
-                    
-
-                    
-                    <li><strong>Delivery type:</strong>In person services, Phone services, Online services</li>
-                    
-
-                    
-                    <li><strong>Service area:</strong>City of Melbourne</li>
-                    
-
-                </ul>
-            </div>
-        </div>
-
-    
-    
-    
-    <div class="p-4 component-content">
-
-        <div class="component-text p-0 remove-element-padding">
-            
-                <h3>Find out more</h3>
-            
-            
-            <ul class="indented p-0">
-            
-                <li><strong>Phone:</strong><a href=""><span>03 9658 9658</span><span>1300 XXX XXX</span></a></li>
-            
-                
-            
-                <li><strong>Email:</strong><a href="">johnsmith@qwerty.com</a></li>
-            
-                
-            
-                <li><strong>Address:</strong>123 Smithson St, Lyneham, Australian Capital Territory</li>
-            
-                
-            
-                <li><strong>Website:</strong><a href=""><span>webaddress.com</span><span>alternatesiteaddress.com</span></a></li>
-            
-                
-            </ul>
-            
         </div>
     
 
@@ -378,30 +309,84 @@
 </div>
 </div>
 
+                <h4 class="mt-5">View the default toast in page</h4>
+                <div class="button-example mb-4">
+                    <button id="toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Trigger default toast</button>
+                </div>
+
+                <h3>Call to action toast notification</h3>
+                <div class="bga-component-wrapper">
+<div class="bga-component callout-box toast-example ">
+
+    
+
+    <div class="p-4 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+            
+                <h4>Would you like to continue?</h4>
             
             
+          
+            
+                <p>To protect your privacy, we will end your sessions after 3 hours of inactivity. Once your
+                    session ends you will need to restart your business plan.</p>
+                <p>Your session will end in <span>02 hrs 19 min 59 sec</span></p>
+                <p>To keep on working click ‘continue’</p>
+            
+
+            
+            <div class="checkboxes mb-4">
+                <input class="checkbox m-0" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Don't warn me again
+                </label>
             </div>
             
-        </div>
-        
-        
             
+            
+                 <div class="button-example">
+                     <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Continue  </button>
+                </div>
+            
+
+        </div>
+    
+
+    </div>
+
+</div>
+</div>
+
+                <h4 class="mt-5">View the call to action toast in page</h4>
+                <div class="button-example">
+                    <button id="cta-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Trigger call to action toast</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
 
 
 
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/19f12b55-b3f2-4ac0-91e9-9adc1a4e2b95/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/0de8291b-d75a-42c7-a123-67fafbbe2b84/' role="button">View design specifications</a>
 </div>
 
 
-        <!-- LAYOUTS -->   
+        <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
-        
-        <p>Call out boxes can be used on all page layouts except the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html >single column - full width layout</a>.</p> 
-       
-       
+
+        <p>Call to action components can be used on all page layouts except the <a
+                href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>single column - full width
+                layout</a>.</p>
+
+
         <div class="layouts m-0 p-4">
     
     
@@ -432,9 +417,9 @@
 
     
 </div>
-        
+
         <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
-            
+
             
         <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
         <div class="accordion layout-accordion">
@@ -449,12 +434,13 @@
                             <div id="onecol-twothirdsw-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/callout-1col2thirdswidth-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/calltoaction-1col2thirdswidth-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                        <p>The content area is 8 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -472,11 +458,12 @@
                             <div id="onecol-twothirdsw-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/callout-1col2thirdswidth-min992.png' | relative_url  alt="" />
+                                     <img src='../assets/layout-images/calltoaction-1col2thirdswidth-min992.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                        <p>The content area is 9 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -494,11 +481,12 @@
                             <div id="onecol-twothirdsw-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/callout-1col2thirdswidth-min768.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/calltoaction-1col2thirdswidth-min768.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 11 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                        <p>The content area is 11 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -520,11 +508,12 @@
                             <div id="onecol-twothirdsw-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/callout-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/calltoaction-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                       <p>The content area is 12 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -540,16 +529,16 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#callout-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#calltoaction-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
-            
+
         </div>
-        
-        
+
+
         <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-            
+
             
         <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
         <div class="accordion layout-accordion">
@@ -564,12 +553,13 @@
                             <div id="twocol-leftmenu-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/callout-2col-leftmenu-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/calltoaction-2col-leftmenu-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                        <p>The content area is 8 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -593,11 +583,12 @@
                             <div id="twocol-leftmenu-collapseFour" class="accordion-collapse collapse" aria-labelledby="layout-bp-min576" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/callout-2col-leftmenu-min576.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/calltoaction-2col-leftmenu-min576.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                        <p>The content area is 9 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -615,11 +606,12 @@
                             <div id="twocol-leftmenu-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/callout-2col-leftmenu-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/calltoaction-2col-leftmenu-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                       <p>The content area is 12 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -635,16 +627,16 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#callout-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#calltoaction-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
-            
+
         </div>
-        
-        
+
+
         <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
-            
+
             
         <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
         <div class="accordion layout-accordion">
@@ -662,11 +654,12 @@
                             <div id="twocol-rightbar-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/callout-2col-rightsidebar-min992.png' | relative_url  alt="" />
+                                     <img src='../assets/layout-images/calltoaction-2col-rightsidebar-min992.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                        <p>The content area is 8 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -690,11 +683,12 @@
                             <div id="twocol-rightbar-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/calltoaction-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>
+                                       <p>The content area is 12 grid-columns wide.</p>
+            <p>Call to action components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -710,34 +704,23 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#callout-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#calltoaction-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
-            
+
         </div>
-        
-        
-        
-        
-    
+
+
+
+
+
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        <h4>Purpose:</h4>
-        <p>The Contact call out box component is used to display contact details for the Business .gov.au contact centre, or one of its programs. </p>
-        <h4>When to use this component:</h4>
-        <ul>
-            <li>On pages that may require customer to contact the department for additional help. Generally these will be the program pages.</li>
-        </ul>
-        <h4>Content rules:</h4>
-        <ul>
-            <li>There are pre-created fields on this component that should be used as per their determination (e.g. add phone number to the phone number field).</li>
-        </ul>
-            
-        </div>
         
+    </div>
 
             
         </section> 
