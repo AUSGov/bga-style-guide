@@ -1,0 +1,29 @@
+.callout-box.toast-example {
+    border-left: none;
+    background: $bga-blue-black-lightest;
+    box-shadow: $bga-btn-boxshadow;
+    max-width: 650px;
+
+    .close {
+        background-image: url(../assets/icon-close-black.svg);
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+        background-position: center center;
+        text-indent: -9999px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+}
+#inpage-toast, 
+#inpage-cta-toast {
+    position: fixed;
+    z-index: 5000;
+    max-width: 650px;
+    bottom: 0;
+    left: calc(32px);
+    display: none;
+}

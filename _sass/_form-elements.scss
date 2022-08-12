@@ -237,8 +237,8 @@ textarea {
     .label {
         font-weight: 400;
         padding: 5px 5px 5px 44px;
-        border: solid 3px $white;
-        background: $white;
+        border: solid 3px transparent;
+        background: transparent;
         width: 100%;
         min-height: 44px;
         display: inline-block;
@@ -255,13 +255,14 @@ textarea {
         border-radius: 0;
         border: solid 1px $bga-blue-black-dark;
         background: $bga-white;
+        cursor: pointer;
         
         &:focus {
             border: solid 1px $bga-blue-black-dark;
             outline: none;
             
             + label {
-                border: $bga-white solid 3px;
+                border: transparent solid 3px;
                 border-radius: $bga-focus-radius;
             }
         }

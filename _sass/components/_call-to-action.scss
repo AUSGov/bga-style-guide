@@ -5,43 +5,137 @@
             display: flex;
             flex-wrap: wrap;
             text-decoration: none;
-            
+
             p {
                 width: 100%;
                 display: flex;
                 align-items: center;
             }
+
             .detail {
                 color: $bga-black;
                 text-transform: uppercase;
             }
+
             svg {
                 width: 16px;
                 height: 16px;
             }
-            
-            &:focus, &:hover {
+
+            &:focus,
+            &:hover {
                 background: $bga-blue-background-extralight;
                 outline: none;
                 border: none;
                 color: $bga-blue-links;
-                
+
                 .document-title {
                     text-decoration: underline;
                 }
             }
+
             &:focus-within {
                 border: $bga-component-focus-border;
                 border-radius: $bga-focus-radius;
                 color: $bga-blue-links;
             }
+
             &:active {
                 background: $bga-blue-background-light;
                 border: none;
                 color: $bga-blue-links;
             }
         }
-        
-        
+
+
     }
-} 
+}
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin cta-bp-350() {
+
+    .callout-box,
+    .callout-box.call-to-action {
+
+        .bga-btn.bga-secondary-btn,
+        .bga-btn.bga-primary-btn {
+            font-size: .875rem;
+            line-height: 1.125rem;
+            padding: 12px 24px;
+            width: auto;
+        }
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        ul {
+            padding: 0 0 8px 24px;
+    
+            li {
+                text-indent: -12px;
+    
+                &::before {
+                    padding: 0 10px 0 0;
+                }
+            }
+    
+            ul {
+                padding: 0 0 0 24px;
+    
+                li {
+                    &::before {
+                        padding: 0 8px 0 0;
+                    }
+                }
+    
+                ul {
+                    padding: 0 0 0 24px;
+    
+                    li {
+                        &::before {
+                            padding: 0 10px 0 0;
+                        }
+    
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+@mixin cta-below350() {
+
+    .callout-box,
+    .callout-box.call-to-action {
+        
+        .bga-btn.bga-secondary-btn,
+        .bga-btn.bga-primary-btn {
+            width: 100%;
+        }
+    }
+}
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-350,
+.component-example.bp-below350 {
+    @include cta-bp-350();
+}
+
+.component-example.bp-below350 {
+    @include cta-below350();
+}
+
+
+
+
+// Media queries for HTML example pages.
+@media (max-width: 576px) {
+    @include cta-bp-350();
+}
+
+@media (max-width: 350px) {
+    @include cta-below350();
+}

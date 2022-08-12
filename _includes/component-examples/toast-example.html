@@ -1,0 +1,41 @@
+<div class="bga-component-wrapper">
+<div class="bga-component callout-box toast-example {{include.classes}}">
+
+    {% if include.close == "true" %}
+            <button class="close m-0 p-0">Close</button>
+            {% endif %}
+
+    <div class="p-4 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+            {% if include.title %}
+                <h4>{{ include.title }}</h4>
+            {% endif %}
+            
+          
+            {% if include.text %}
+                {{ include.text }}
+            {% endif %}
+
+            {% if include.checkbox %}
+            <div class="checkboxes mb-4">
+                <input class="checkbox m-0" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Don't warn me again
+                </label>
+            </div>
+            {% endif %}
+            
+            {% if include.button %}
+                 <div class="button-example">
+                     <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">{{ include.button }}  </button>
+                </div>
+            {% endif %}
+
+        </div>
+    
+
+    </div>
+
+</div>
+</div>
