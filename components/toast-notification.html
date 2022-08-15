@@ -45,14 +45,17 @@ subsite-tag: true
 
                 <h3>Default toast notification</h3>
                 {% include component-examples/toast-example.html
-                    close="true"
-                    title="Important message for the user"
-                    text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
+                close="true"
+                title="Important message for the user"
+                text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum
+                    cursus.</p>"
+                classes="default"
                 %}
 
                 <h4 class="mt-5">View the default toast in page</h4>
                 <div class="button-example mb-4">
-                    <button id="toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Trigger default toast</button>
+                    <button id="toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                        role="button">Trigger default toast</button>
                 </div>
 
                 <h3>Call to action toast notification</h3>
@@ -64,11 +67,13 @@ subsite-tag: true
                 <p>To keep on working click ‘continue’</p>"
                 checkbox="true"
                 button="Continue"
+                classes="cta-toast"
                 %}
 
                 <h4 class="mt-5">View the call to action toast in page</h4>
                 <div class="button-example">
-                    <button id="cta-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Trigger call to action toast</button>
+                    <button id="cta-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                        role="button">Trigger call to action toast</button>
                 </div>
 
             </div>
@@ -83,7 +88,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/0de8291b-d75a-42c7-a123-67fafbbe2b84/'"
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/fb8aed08-66a1-4fdb-bb52-a23d13d4b3e9/'"
         btn-text="View design specifications"
         %}
 
@@ -91,127 +96,36 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Call to action components can be used on all page layouts except the <a
-                href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - full width
-                layout</a>.</p>
+        <p>Toast notifications can be used on all page layouts.</p>
 
 
         {% include layouts-dropdown.html
-        single-col-twothirds-visibility="true"
-        two-col-leftmenu-visibility="true"
-        two-col-rightsidebar-visibility="true"
+        layout-name="All layouts"
+        singlelayout="true"
         %}
 
-        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
-
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
             {% include layouts-accordion.html
-            layout-name="onecol-twothirdsw"
-
-            min1200-visibility="true"
-            min992-visibility="true"
-            min768-visibility="true"
-            min576-visibility="false"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 768px"
-
-            min1200-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min1200.png' | relative_url "
-            min992-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min992.png' | relative_url "
-            min768-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/calltoaction-1col2thirdswidth-finalbp.png' | relative_url "
-
-            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            min992-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            min768-rules="<p>The content area is 11 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            example-link="'../html-examples/single-col-two-thirds-width.html#calltoaction-example' | relative_url'"
-            example-link-text="View layout example"
-
+            singlelayout="true"
+            allbp-img="'../assets/layout-images/toast-allbp.png' | relative_url "
+            allbp-rules="<p>Toasts are placed at the bottom of the screen. They are aligned to the left or in the centre
+                of the screen.</p>
+            <p>They should not be placed on the right side of the screen where the chat button lives.</p>"
             %}
 
         </div>
-
-
-        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-
-            {% include layouts-accordion.html
-            layout-name="twocol-leftmenu"
-
-            min1200-visibility="true"
-            min992-visibility="false"
-            min768-visibility="false"
-            min576-visibility="true"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 576px"
-
-            min1200-img="'../assets/layout-images/calltoaction-2col-leftmenu-min1200.png' | relative_url "
-            min576-img="'../assets/layout-images/calltoaction-2col-leftmenu-min576.png' | relative_url "
-            finalbp-img="'../assets/layout-images/calltoaction-2col-leftmenu-finalbp.png' | relative_url "
-
-            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            min576-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            example-link="'../html-examples/two-col-left-side-menu.html#calltoaction-example' | relative_url'"
-            example-link-text="View layout example"
-
-            %}
-
-        </div>
-
-
-        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
-
-            {% include layouts-accordion.html
-            layout-name="twocol-rightbar"
-
-            min1200-visibility="false"
-            min992-visibility="true"
-            min768-visibility="false"
-            min576-visibility="false"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 992px"
-
-
-            min992-img="'../assets/layout-images/calltoaction-2col-rightsidebar-min992.png' | relative_url "
-            finalbp-img="'../assets/layout-images/calltoaction-2col-rightsidebar-finalbp.png' | relative_url "
-
-
-            min992-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Call to action components span the full width of the content area.</p>"
-
-            example-link="'../html-examples/two-col-right-sidebar.html#calltoaction-example' | relative_url'"
-            example-link-text="View layout example"
-
-            %}
-
-        </div>
-
-
-
-
 
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        
+        <h3>Purpose:</h3>
+        <p>Business.gov.au toasts are lightweight notifications that are fixed at the bottom of the screen.</p>
+        <p>Unlike modal notifications, toast notifications do not stop the user from viewing and using the page. They can be dismissed by the user with either a close or call to action button.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used to display messages the user needs to see with minimal disruption to the process.</li>
+        </ul>
+
+
     </div>

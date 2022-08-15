@@ -144,8 +144,13 @@
 @mixin hero-below992 (){
     .hero-pathway {
         .component-content {
-            border-left-width: 8px;
+            border-left-width: 8px !important;
             width: 100%;
+        }
+        .component-text {
+            width: 100%;
+            flex-shrink: 0;
+            margin-bottom: 0 !important;
         }  
         .component-image {
             display: none;
@@ -165,14 +170,12 @@
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below992, .component-example.small-screen {
+.component-example.bp-below992 {
     @include hero-below992();
 }
 
 
 // MEDIA Queries for HTML demo pages.
 @media(max-width: 992px) {
-    .hero-pathway-block {
     @include hero-below992();
-    }
 }

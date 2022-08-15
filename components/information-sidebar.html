@@ -1,11 +1,11 @@
 ---
 
 layout: content-tagged
-title: Call out boxes
-description: Highlight areas of text within the context of a page.
+title: Information sidebar
+description: Provide extra information on a tool section or task in an expandable sidebar.
 breadcrumb1: Components
 url1: /components.html
-bga-tag: true
+bga-tag: false
 subsite-tag: true
 
 ---
@@ -40,12 +40,8 @@ subsite-tag: true
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
 
-            {% include component-examples/callout-box-example.html
-                h2title="H2 level title, lorem ipsum dolor sit amet."
-                text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><ul><li>Bullet points can be used in call out boxes.</li><li>Integer erat arcu, venenatis et nibh non.</li><li>Nullam aliquet nulla id arcu consectetur.</li></ul>"
-            %}
 
-            {% include component-examples/callout-box-example.html
+            {% include component-examples/info-sidebar-example.html
                 h3title="H3 level title, lorem ipsum dolor sit amet."
                 text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p>"
             %}
@@ -150,19 +146,19 @@ subsite-tag: true
                 layout-name="twocol-rightbar"
             
                 min1200-visibility="false"
-                min992-visibility="false"
-                min768-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
                 min576-visibility="false"
                 finalbp-visibility="true"
                 
-                finalbp="Breakpoint &lt; 768px"
+                finalbp="Breakpoint &lt; 992px"
             
 
-                min768-img="'../assets/layout-images/callout-2col-rightsidebar-min768.png' | relative_url "
+                min992-img="'../assets/layout-images/callout-2col-rightsidebar-min992.png' | relative_url "
                 finalbp-img="'../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url "
             
         
-                min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
             
