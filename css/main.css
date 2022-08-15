@@ -3806,17 +3806,19 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .colour-options-wrapper .hero-pathway .component-content { width: 100%; }
 
-.component-example.bp-below992 .hero-pathway .component-content, .component-example.small-screen .hero-pathway .component-content { border-left-width: 8px; width: 100%; }
+.component-example.bp-below992 .hero-pathway .component-content { border-left-width: 8px !important; width: 100%; }
 
-.component-example.bp-below992 .hero-pathway .component-image, .component-example.small-screen .hero-pathway .component-image { display: none; }
+.component-example.bp-below992 .hero-pathway .component-text { width: 100%; flex-shrink: 0; margin-bottom: 0 !important; }
 
-.component-example.bp-below992 .hero-pathway.small-hero, .component-example.small-screen .hero-pathway.small-hero { width: 100%; }
+.component-example.bp-below992 .hero-pathway .component-image { display: none; }
 
-.component-example.bp-below992 .small-hero-wrapper, .component-example.small-screen .small-hero-wrapper { display: block; }
+.component-example.bp-below992 .hero-pathway.small-hero { width: 100%; }
 
-.component-example.bp-below992 .small-hero-wrapper .bga-component-wrapper, .component-example.small-screen .small-hero-wrapper .bga-component-wrapper { width: calc(100%); }
+.component-example.bp-below992 .small-hero-wrapper { display: block; }
 
-@media (max-width: 992px) { .hero-pathway-block .hero-pathway .component-content { border-left-width: 8px; width: 100%; } .hero-pathway-block .hero-pathway .component-image { display: none; } .hero-pathway-block .hero-pathway.small-hero { width: 100%; } .hero-pathway-block .small-hero-wrapper { display: block; } .hero-pathway-block .small-hero-wrapper .bga-component-wrapper { width: calc(100%); } }
+.component-example.bp-below992 .small-hero-wrapper .bga-component-wrapper { width: calc(100%); }
+
+@media (max-width: 992px) { .hero-pathway .component-content { border-left-width: 8px !important; width: 100%; } .hero-pathway .component-text { width: 100%; flex-shrink: 0; margin-bottom: 0 !important; } .hero-pathway .component-image { display: none; } .hero-pathway.small-hero { width: 100%; } .small-hero-wrapper { display: block; } .small-hero-wrapper .bga-component-wrapper { width: calc(100%); } }
 
 .standard-pathway { border: 1px solid #96B7DF; background: #ffffff; max-width: 500px; display: block; }
 
@@ -4128,11 +4130,21 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 350px) { .callout-box .bga-btn.bga-secondary-btn, .callout-box .bga-btn.bga-primary-btn, .callout-box.call-to-action .bga-btn.bga-secondary-btn, .callout-box.call-to-action .bga-btn.bga-primary-btn { width: 100%; } }
 
-.callout-box.toast-example { border-left: none; background: #E4E6EA; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); max-width: 650px; }
+.callout-box.toast-example { border-left: none; background: #E4E6EA; box-shadow: 2px -2px 3px 0px rgba(51, 51, 51, 0.2); max-width: 650px; position: relative; }
 
 .callout-box.toast-example .close { background-image: url(../assets/icon-close-black.svg); background-repeat: no-repeat; height: 16px; width: 16px; background-position: center center; text-indent: -9999px; background-color: transparent; border: none; position: absolute; top: 16px; right: 16px; }
 
-#inpage-toast, #inpage-cta-toast { position: fixed; z-index: 5000; max-width: 650px; bottom: 0; left: calc(32px); display: none; }
+.callout-box.toast-example.cta-toast .component-content { padding-right: 24px !important; }
+
+#inpage-toast, #inpage-cta-toast { position: fixed; z-index: 5000; max-width: 650px; bottom: 0; left: 32px; display: none; }
+
+.component-example.bp-350 .callout-box.toast-example, .component-example.bp-below350 .callout-box.toast-example { width: 100%; max-width: calc(100% - 16px); }
+
+.component-example.bp-350 .callout-box.toast-example.default .component-content, .component-example.bp-below350 .callout-box.toast-example.default .component-content { padding-right: 24px !important; padding-top: 40px !important; }
+
+.component-example.bp-350 #inpage-toast, .component-example.bp-350 #inpage-cta-toast, .component-example.bp-below350 #inpage-toast, .component-example.bp-below350 #inpage-cta-toast { left: 16px; }
+
+@media (max-width: 575px) { .callout-box.toast-example { width: 100%; max-width: calc(100% - 16px); } .callout-box.toast-example.default .component-content { padding-right: 24px !important; padding-top: 40px !important; } #inpage-toast, #inpage-cta-toast { left: 16px; } }
 
 .feature-box { max-width: 840px; }
 
