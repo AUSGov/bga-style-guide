@@ -1,11 +1,11 @@
-<div class="bga-component-wrapper pb-5">
-<div class="bga-component callout-box {{include.classes}} m-0">
+<div class="bga-component-wrapper sidebar-wrapper">
+<div class="bga-component sidebar information-sidebar {{include.classes}} m-0">
 
     <div class="p-4 component-content">
 
-        <div class="component-text p-0 remove-element-padding">
-            {% if include.h3title %}
-                <h3>{{ include.h3title }}</h3>
+        <div class="component-text pb-4 remove-element-padding">
+            {% if include.title %}
+                <h3>{{ include.title }}</h3>
             {% endif %}
             
             {% if include.text %}
@@ -13,6 +13,11 @@
             {% endif %}
             
         </div>
+
+        <button class="more-info-toggle hide m-0 p-0">
+            <svg class="me-2" data-name="Icon: Chevron right" xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16">
+            <path data-name="Chevron / Right" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" fill="#2e6cb9"/>
+              </svg><span>Read more</span></button>
     
 
     </div>

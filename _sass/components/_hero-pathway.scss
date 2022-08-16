@@ -150,7 +150,6 @@
         .component-text {
             width: 100%;
             flex-shrink: 0;
-            margin-bottom: 0 !important;
         }  
         .component-image {
             display: none;
@@ -178,4 +177,15 @@
 // MEDIA Queries for HTML demo pages.
 @media(max-width: 992px) {
     @include hero-below992();
+}
+@media(max-width: 576px) {
+    .hero-pathway-block .bga-component-wrapper {
+        height: auto !important;
+        padding-bottom: 0 !important;
+    }
+    .hero-pathway {
+        .component-content {
+            align-content: flex-start;
+        }
+    }
 }

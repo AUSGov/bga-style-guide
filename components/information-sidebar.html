@@ -13,166 +13,112 @@ subsite-tag: true
 
 
 <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include anchor-menu.html
-            link-1="Design" link-id-1="#design"
-            link-2="Layouts" link-id-2="#layouts" 
-            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
         %}
-        
+
     </div>
-    
+
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
-   
-          
-        <!-- DESIGN -->   
+
+
+        <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
         <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-        singlebp="true" 
+        {% include breakpoints.html
+        singlebp="true"
         %}
 
         <!-- Component example -->
 
         <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+            <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+                
+                {% include component-examples/info-sidebar-example.html
+                title="Lorem ipsum dolor sit amet."
+                text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue elit, a vehicula urna ornare quis.</p>"
+                classes="short"
+                %}
+    
+                {% include component-examples/info-sidebar-example.html
+                title="Lorem ipsum dolor sit amet."
+                text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue elit, a vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at posuere. Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis iaculis. Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa quis purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut mauris dictum tempor. </p>"
+                classes="long"
+                %}
 
-
-            {% include component-examples/info-sidebar-example.html
-                h3title="H3 level title, lorem ipsum dolor sit amet."
-                text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p>"
-            %}
-            
             </div>
-            
+
         </div>
-        
-        
-            
+
+
+
 
 
 
         <!-- Design specifications link -->
 
-        {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/737eb46e-3079-4c99-882c-7886a3999249/'"
-            btn-text="View design specifications"
-            %}
-
-
-        <!-- LAYOUTS -->   
-        <h2 class="section-start" id="layouts">Layouts</h2>
-        
-        <p>Call out boxes can be used on all page layouts except the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column - full width layout</a>.</p> 
-       
-       
-        {% include layouts-dropdown.html 
-            single-col-twothirds-visibility="true" 
-            two-col-leftmenu-visibility="true"  
-            two-col-rightsidebar-visibility="true" 
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/737eb46e-3079-4c99-882c-7886a3999249/'"
+        btn-text="View design specifications"
         %}
-        
-        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="onecol-twothirdsw"    
-            
-                min1200-visibility="true"
-                min992-visibility="true"
-                min768-visibility="true"
-                min576-visibility="false"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 768px"
-            
-                min1200-img="'../assets/layout-images/callout-1col2thirdswidth-min1200.png' | relative_url "
-                min992-img="'../assets/layout-images/callout-1col2thirdswidth-min992.png' | relative_url "
-                min768-img="'../assets/layout-images/callout-1col2thirdswidth-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/callout-1col2thirdswidth-finalbp.png' | relative_url "
-                
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                example-link="'../html-examples/single-col-two-thirds-width.html#callout-example' | relative_url'"
-                example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="twocol-leftmenu"
-                
-                min1200-visibility="true"
-                min992-visibility="false"
-                min768-visibility="false"
-                min576-visibility="true"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 576px"
-            
-                min1200-img="'../assets/layout-images/callout-2col-leftmenu-min1200.png' | relative_url "
-                min576-img="'../assets/layout-images/callout-2col-leftmenu-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/callout-2col-leftmenu-finalbp.png' | relative_url "
-                
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                example-link="'../html-examples/two-col-left-side-menu.html#callout-example' | relative_url'"
-                example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Call out boxes can be used on all page layouts except the <a
+                href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - full width
+                layout</a>.</p>
+
+
+        {% include layouts-dropdown.html
+        layout-name="Two column - right sidebar"
+        singlelayout="true"
+        %}
+
         <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="twocol-rightbar"
-            
-                min1200-visibility="false"
-                min992-visibility="true"
-                min768-visibility="false"
-                min576-visibility="false"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 992px"
-            
 
-                min992-img="'../assets/layout-images/callout-2col-rightsidebar-min992.png' | relative_url "
-                finalbp-img="'../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url "
-            
-        
-                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out boxes span the full width of the content area.</p>"
-            
-                example-link="'../html-examples/two-col-right-sidebar.html#callout-example' | relative_url'"
-                example-link-text="View layout example"
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+
+            min768-img="'../assets/layout-images/callout-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Call out boxes span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Call out boxes span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar.html#callout-example' | relative_url'"
+            example-link-text="View layout example"
 
             %}
-            
+
         </div>
-        
-        
-        
-        
-    
+
+
+
+
+
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
@@ -192,6 +138,5 @@ subsite-tag: true
             <li>[h3] [Optional summary of change].</li>
             <li>Body content has a recommended 300 character limit.</li>
         </ul>
-            
-        </div>
-        
+
+    </div>
