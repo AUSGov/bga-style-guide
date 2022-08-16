@@ -715,6 +715,24 @@ $('#inpage-cta-toast button').on('click', function(){
     $('#inpage-cta-toast').css('display', 'none');
 });
 
+// COMPONENT EXAMPLE: INFORMATION SIDEBAR
+$('.sidebar-wrapper').each(function(){
+    var sidebar_height = $(this).height(),
+    text_height = $(this).find('.component-text').height(),
+    new_text_height = sidebar_height - 96;
+
+    if (text_height > sidebar_height) {
+        $(this).find('.component-text').height(new_text_height).addClass('fixed-height');
+        $(this).find('.more-info-toggle').removeClass('hide');
+    }
+});
+
+$('.more-info-toggle').on('click', function(){
+    sidebar = $(this).parents('.sidebar-wrapper');
+    sidebar.toggleClass('extended');
+    $('.sidebar-example-container').toggleClass('extended');
+});
+
 
 }); //End doc ready
 
