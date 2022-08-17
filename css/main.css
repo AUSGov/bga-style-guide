@@ -4634,9 +4634,9 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .ecb-example-layout #page-header.teal .header-content { background: #CFEBEB; }
 
-.ecb-example-layout .sidebar { background: #CFEBEB; }
-
 .ecb-example-layout fieldset { border: solid 1px #2E3E5A; }
+
+.ecb-example-layout .max-width-med { max-width: 500px !important; }
 
 @media (max-width: 768px) { .ecb-example-layout #page-header.stepped-nav { background: #CFEBEB; } .ecb-example-layout #page-header.stepped-nav .inner-wrapper { padding: 0 !important; } .ecb-example-layout #page-header.stepped-nav .header-content { padding: 0 !important; } .ecb-example-layout #page-header.stepped-nav .stepped-navigation-wrapper { padding: 16px 0 !important; } }
 
@@ -4688,13 +4688,9 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 576px) { .start-component-wrapper { border: none; padding: 0 !important; } .start-component-wrapper h2, .start-component-wrapper .h2 { font-size: 1.75rem; line-height: 1.5; } .start-component-wrapper.tool-header { padding: 24px !important; background: #CFEBEB; } .start-component-wrapper.tool-header h1, .start-component-wrapper.tool-header .h1 { font-size: 2rem; } .start-component-wrapper.tool-header .additional-info { background: transparent; } }
 
-.sidebar-example-container { height: 470px; display: flex; justify-content: space-between; }
+.dummy-sidebar { background: #CFEBEB; }
 
-.sidebar-example-container.extended { height: 100% !important; }
-
-.sidebar-wrapper { height: 100%; width: calc(50% - 16px); justify-content: space-between; }
-
-.sidebar-wrapper.inpage { height: 100%; width: 100%; justify-content: space-between; }
+.sidebar-wrapper { height: 100%; width: 100%; justify-content: space-between; }
 
 .sidebar-wrapper .sidebar { background: #CFEBEB; height: 100%; }
 
@@ -4706,12 +4702,14 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .sidebar-wrapper .more-info-toggle.hide { display: none; }
 
-.sidebar-wrapper.extended .component-text { height: 100% !important; overflow: auto; }
+.sidebar-wrapper.extended .component-text { height: 100% !important; }
 
 .sidebar-wrapper.extended .component-text.fixed-height::after { display: none; }
 
 .sidebar-wrapper.extended .more-info-toggle svg { transform: rotate(-90deg); }
 
-@media (max-width: 768px) { .sidebar-wrapper { width: auto; max-width: 400px; } .sidebar-wrapper.short { display: none; } }
+.sidebar-wrapper.inpage { height: 100%; width: 100%; justify-content: space-between; }
+
+@media (max-width: 768px) { .sidebar-wrapper { margin: 32px 0 0 0 !important; } }
 
 /*# sourceMappingURL=main.css.map */
