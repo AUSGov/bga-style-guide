@@ -4694,6 +4694,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .sidebar-wrapper { height: 100%; width: calc(50% - 16px); justify-content: space-between; }
 
+.sidebar-wrapper.inpage { height: 100%; width: 100%; justify-content: space-between; }
+
 .sidebar-wrapper .sidebar { background: #CFEBEB; height: 100%; }
 
 .sidebar-wrapper .component-text { overflow: hidden; position: relative; }
@@ -4709,5 +4711,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .sidebar-wrapper.extended .component-text.fixed-height::after { display: none; }
 
 .sidebar-wrapper.extended .more-info-toggle svg { transform: rotate(-90deg); }
+
+@media (max-width: 768px) { .sidebar-wrapper { width: auto; max-width: 400px; } .sidebar-wrapper.short { display: none; } }
 
 /*# sourceMappingURL=main.css.map */
