@@ -38,21 +38,47 @@ subsite-tag: true
         <!-- Component example -->
 
         <div class="component-example m-0">
+            
             <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+
+                <div class="row">
                 
+                <div class="col-12 col-md-6 h-100">
+                <div class="question-section">
+
+                    <div class="bga-component sidebar dummy-sidebar m-0">
+
+                        <div class="p-4 component-content">
+
+                            <div class="component-text remove-element-padding">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                <p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                                <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent
+                                    tincidunt congue elit, a vehicula urna ornare quis.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 h-100">
                 {% include component-examples/info-sidebar-example.html
                 title="Lorem ipsum dolor sit amet."
                 text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
-                <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue elit, a vehicula urna ornare quis.</p>"
-                classes="short"
+                <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue elit, a
+                    vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at posuere.
+                    Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis iaculis.
+                    Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa quis
+                    purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut mauris
+                    dictum tempor. </p>"
+                classes=""
                 %}
-    
-                {% include component-examples/info-sidebar-example.html
-                title="Lorem ipsum dolor sit amet."
-                text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
-                <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue elit, a vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at posuere. Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis iaculis. Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa quis purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut mauris dictum tempor. </p>"
-                classes="long"
-                %}
+                </div>
+            
+            </div>
 
             </div>
 
@@ -74,42 +100,44 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The information sidebar can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >two column - right sidebar layouts</a>. It should not be used in other layouts.</p>
-        
-        {% include layouts-dropdown.html 
-            layout-name="Single column - full width"
-            singlelayout="true"
+        <p>The information sidebar can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" |
+                relative_url }}>two column - right sidebar layouts</a>. It should not be used in other layouts.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Single column - full width"
+        singlelayout="true"
         %}
-        
+
         <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
 
             {% include layouts-accordion.html
             layout-name="twocol-rightbar"
-    
+
             min1200-visibility="false"
             min992-visibility="false"
             min768-visibility="true"
             min576-visibility="false"
             finalbp-visibility="true"
-    
+
             finalbp="Breakpoint &lt; 768px"
-    
-    
+
+
             min768-img="'../assets/layout-images/info-sidebar-2col-rightsidebar-min768.png' | relative_url "
             finalbp-img="'../assets/layout-images/info-sidebar-2col-rightsidebar-finalbp.png' | relative_url "
-    
-    
+
+
             min768-rules="<p>The content area is 8 grid-columns wide.</p>
             <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>"
-    
+
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Sidebars span the full width of the content area. In general they stack below the right side content.</p>"
-    
+            <p>Sidebars span the full width of the content area. In general they stack below the right side content.</p>
+            "
+
             example-link="'../html-examples/ECB-content-page.html' | relative_url'"
             example-link-text="View layout example"
-    
+
             %}
-    
+
         </div>
 
 
@@ -125,7 +153,8 @@ subsite-tag: true
         </ul>
         <h4>Style rules: </h4>
         <ul>
-            <li>The height of the sidebar is equal to the height of the content on the right side of the section. When sidebar content extends past this height it is hidden and revealed with a "Read more" button.</li>
+            <li>The height of the sidebar is equal to the height of the content on the right side of the section. When
+                sidebar content extends past this height it is hidden and revealed with a "Read more" button.</li>
         </ul>
 
     </div>

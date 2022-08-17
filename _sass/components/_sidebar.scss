@@ -1,23 +1,10 @@
-.sidebar-example-container {
-    height: 470px;
-    display: flex;
-    justify-content: space-between;
-
-    &.extended {
-        height: 100% !important;
-    }
+.dummy-sidebar {
+    background: $bga-teal-highlight-light;
 }
-
 .sidebar-wrapper {
     height: 100%;
-    width: calc(50% - 16px);
+    width: 100%;
     justify-content: space-between;
-
-    &.inpage {
-        height: 100%;
-        width: 100%;
-        justify-content: space-between;
-    }
     
     .sidebar {
         background: $bga-teal-highlight-light;
@@ -56,8 +43,7 @@
     &.extended {
         .component-text {
             height: 100% !important;
-            overflow: auto;
-
+    
             &.fixed-height {
                 &::after {
                     display: none;
@@ -70,14 +56,16 @@
             }
         }
     }
+
+    &.inpage {  
+            height: 100%;
+            width: 100%;
+            justify-content: space-between;
+        }
 }
 
 @media (max-width: 768px) {
     .sidebar-wrapper {
-        width: auto;
-        max-width: 400px;
-        &.short {
-            display: none;
-        }
+        margin: 32px 0 0 0 !important;
     }
 }

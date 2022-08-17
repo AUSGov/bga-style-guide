@@ -13,8 +13,8 @@ stepped-nav: true
 
         <h2>Position title</h2>
     
-        <div class="remove-top-spaces col-12 col-md-8">
-            <div class="question-section">
+        <div class="col-12 col-md-8 col-xl-7">
+            <div class="question-section remove-element-padding">
             <form>
                 <div class="mb-5 p-0 form-example clause-box-include">
                     <label for="position-title" class="form-label mb-3">What is the employee's position title?</label>
@@ -24,7 +24,7 @@ stepped-nav: true
                 </div>
             </form>
 
-            <div class="bga-component-wrapper pb-5">
+            <div class="bga-component-wrapper">
                 <div class="bga-component clause-box position-title m-0">
             
                     <div class="p-4 component-content h-100">
@@ -58,7 +58,7 @@ stepped-nav: true
             
         </div>
 
-        <div class="h-100 mb-5 col-12 col-md-4">
+        <div class="h-100 col-12 col-md-4 offset-xl-1">
 
             {% include component-examples/info-sidebar-example.html
                 title="Tip"
@@ -70,16 +70,17 @@ stepped-nav: true
 
     </div>
 
-    <hr class="section-divider" />
+    <hr class="section-divider my-5" />
 
 
     <!-- EXAMPLE: RADIO BUTTONS -->
-    <div class="row">
+    <div class="row remove-element-padding">
 
         <h2>Duties</h2>
     
-        <div class="remove-top-spaces col-12 col-md-8">
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
 
+            <div class="question-section remove-element-padding">
             <p>You should provide your new employee with a description or outline of their duties and responsibilities so they understand what they're being employed to do.</p>
 
             <p>You may attach your employee's duties and responsibilities in a separate position description, or outline them here within the contract.</p>
@@ -107,7 +108,7 @@ stepped-nav: true
 
             </div>
 
-            <div class="bga-component-wrapper pb-5">
+            <div class="bga-component-wrapper">
                 <div class="bga-component clause-box duties m-0">
             
                     <div class="p-4 component-content h-100">
@@ -139,126 +140,121 @@ stepped-nav: true
                 </div>
             </div>
             
-            
+            </div>
             
         </div>
 
-        <div class="sidebar-wrapper mb-5 h-100 col-12 col-md-4">
-            <div class="sidebar remove-element-padding teal p-4">
-                <h3>Duties / Position description</h3>
-                    <p>If you provided a position (or job) description during your recruitment process, you can use this. If you don't have a position description yet, you can <a href="">download the job description</a> template from the <a href="">Fair Work Ombudsman website</a> and fill it in later.</p>
-            </div>
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+                title="Duties / Position description"
+                text=" <p>If you provided a position (or job) description during your recruitment process, you can use this. If you don't have a position description yet, you can <a href=''>download the job description</a> template from the <a href=''>Fair Work Ombudsman website</a> and fill it in later.</p>"
+                classes="inpage"
+                %}
         </div>
 
     </div>
 
-    <hr class="section-divider" />
+    <hr class="section-divider my-5" />
 
 
     <!-- EXAMPLE: DROPDOWN -->
-    <div class="row">
+    <div class="row remove-element-padding">
 
         <h2>Business structure</h2>
     
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-8 col-xl-7">
 
-            <form>
-                <div class="mb-5 p-0 form-example clause-box-include">
-                    <label for="position-title" class="form-label mb-3">What is your business structure?</label>
-                    <p class="mb-3">
-                        We need to know your business structure to determine the signature fields to include in your contract. This information is not shared with any other agency, for more information see our <a href="">Provacy page</a>.</p>   
+            <div class="question-section remove-element-padding">
+                <form>
+                    <div class="p-0 form-example clause-box-include">
+                        <label for="position-title" class="form-label mb-3">What is your business structure?</label>
+                        <p class="mb-3">
+                            We need to know your business structure to determine the signature fields to include in your contract. This information is not shared with any other agency, for more information see our <a href="">Privacy page</a>.</p>   
+                        
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="" disabled selected>Select an option</option>
+                            <option>Dropdown option one</option>
+                            <option>Dropdown option two is a fair bit longer</option>
+                            <option value="error">Error</option>
+                        </select>
                     
-                    <select class="form-select" aria-label="Default select example">
-                        <option value="" disabled selected>Select an option</option>
-                        <option>Dropdown option one</option>
-                        <option>Dropdown option two is a fair bit longer</option>
-                        <option value="error">Error</option>
-                    </select>
-                
-                    
-                </div>
-            </form>
+                        
+                    </div>
+                </form>
+            </div>
 
 
         </div>
 
-        <div class="sidebar-wrapper h-100 mb-5 col-12 col-md-4">
-            <div class="sidebar remove-element-padding teal p-4">
-                <h3>Unsure of your business structure?</h3>
-                    <p>If you're unsure of what your business structure is, search for your business on ABN Lookup. Your business structure is displayed against the 'Entity type' field.</p>
-                    <p>If none of the business structure options apply to your business, select 'other'.</p>
-            </div>
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+                title="Unsure of your business structure?"
+                text=" <p>If you're unsure of what your business structure is, search for your business on ABN Lookup. Your business structure is displayed against the 'Entity type' field.</p>
+                <p>If none of the business structure options apply to your business, select 'other'.</p>"
+                classes="inpage"
+                %}
         </div>
 
     </div>
 
-    <hr class="section-divider" />
+    <hr class="section-divider my-5" />
 
     <!-- EXAMPLE: FORM FIELD -->
-    <div class="row">
+    <div class="row remove-element-padding">
 
         <h2>Workplace</h2>
     
-        <div class="col-12 col-md-8">
-
-            <form>
-                <div class="mb-5 p-0 form-example clause-box-include">
-                    <label for="position-title" class="form-label mb-3">Where is the employees main place of work?
-                    </label>
-                    <p class="mb-3">You can ask the employee to work at other locations, if reasonable.</p>   
-                    
-                    <fieldset class="p-4 mb-5">
-                        <label for="address" class="form-label mb-3">Address</label>
-                        <input type="text" class="form-control mb-5" id="address" value="">
-
-                        <label for="city-suburb" class="form-label mb-3">City/Suburb</label>
-                        <input type="text" class="form-control mb-5" id="city-suburb" value="">
-
-                        <label for="state-territory" class="form-label mb-3">State/Territory</label>
+        <div class="col-12 col-md-8 col-xl-7">
+            <div class="question-section remove-element-padding">
+                <form>
+                    <div class="p-0 form-example clause-box-include">
+                        <label for="position-title" class="form-label mb-3">Where is the employees main place of work?
+                        </label>
+                        <p class="mb-3">You can ask the employee to work at other locations, if reasonable.</p>   
                         
-                        <select class="form-select mb-5" aria-label="" id="state-territory">
-                                <option class="default-option" disabled selected value="">Select a state or territory</option>
-                                <option value="Australian Capital Territory">Australian Capital Territory</option>
-                                <option value="New South Wales">New South Wales</option>
-                                <option value="Northern Territory">Northern Territory</option>
-                                <option value="South Australia">South Australia</option>
-                                <option value="Tasmania">Tasmania</option>
-                                <option value="Victoria">Victoria</option>
-                                <option value="Queensland">Queensland</option>
-                                <option value="Western Australia">Western Australia</option>
-                        </select>
+                        <fieldset class="p-4 mb-5">
+                            <label for="address" class="form-label mb-3">Address</label>
+                            <input type="text" class="form-control mb-5" id="address" value="">
 
-                        <label for="postcode" class="form-label mb-3">Postcode</label>
-                        <input type="text" class="form-control mb-5" id="postcode" value="">
+                            <label for="city-suburb" class="form-label mb-3">City/Suburb</label>
+                            <input type="text" class="form-control mb-5" id="city-suburb" value="">
+
+                            <label for="state-territory" class="form-label mb-3">State/Territory</label>
+                            
+                            <select class="form-select mb-5" aria-label="" id="state-territory">
+                                    <option class="default-option" disabled selected value="">Select a state or territory</option>
+                                    <option value="Australian Capital Territory">Australian Capital Territory</option>
+                                    <option value="New South Wales">New South Wales</option>
+                                    <option value="Northern Territory">Northern Territory</option>
+                                    <option value="South Australia">South Australia</option>
+                                    <option value="Tasmania">Tasmania</option>
+                                    <option value="Victoria">Victoria</option>
+                                    <option value="Queensland">Queensland</option>
+                                    <option value="Western Australia">Western Australia</option>
+                            </select>
+
+                            <label for="postcode" class="form-label mb-3">Postcode</label>
+                            <input type="text" class="form-control mb-5" id="postcode" value="">
+
+                            <div class="button-example"> 
+                                <a class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Include address</a>
+                            </div>
+
+                        </fieldset>
 
                         <div class="button-example"> 
-                            <a class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Include address</a>
+                            <a class="bga-link bga-tertiary-link plus-icon bkg-light" tabindex="0" href="" role="button">Add another workplace address</a>
                         </div>
-
-                    </fieldset>
-
-                    <div class="button-example mb-5"> 
-                        <a class="bga-link bga-tertiary-link plus-icon bkg-light" tabindex="0" href="" role="button">Add another workplace address</a>
-                    </div>
-                
                     
-                </div>
-            </form>
-
-
-        </div>
-
-        <div class="sidebar-wrapper h-100 mb-5 col-12 col-md-4">
-            <div class="sidebar remove-element-padding teal p-4">
-                <h3>Unsure of your business structure?</h3>
-                    <p>If you're unsure of what your business structure is, search for your business on ABN Lookup. Your business structure is displayed against the 'Entity type' field.</p>
-                    <p>If none of the business structure options apply to your business, select 'other'.</p>
+                        
+                    </div>
+                </form>
             </div>
         </div>
 
     </div>
 
-    <hr class="section-divider" />
+    <hr class="section-divider my-5" />
 
 
     <!-- BUTTON GROUP -->
