@@ -731,6 +731,14 @@ $('.more-info-toggle').on('click', function(){
     sidebar = $(this).parents('.sidebar-wrapper');
     sidebar.toggleClass('extended');
     $('.sidebar-example-container').toggleClass('extended');
+
+    if ($('.sidebar-example-container').hasClass('extended')) {
+        var new_wrapper_height = $('.long').height() + 'px';
+        $('.short').css('height', new_wrapper_height);
+    } else {
+        $('.short').css('height', '100%');
+    }
+
 });
 
 

@@ -14,7 +14,7 @@ stepped-nav: true
         <h2>Position title</h2>
     
         <div class="remove-top-spaces col-12 col-md-8">
-
+            <div class="question-section">
             <form>
                 <div class="mb-5 p-0 form-example clause-box-include">
                     <label for="position-title" class="form-label mb-3">What is the employee's position title?</label>
@@ -54,15 +54,18 @@ stepped-nav: true
             
                 </div>
             </div>
+            </div>
             
         </div>
 
-        <div class="sidebar-wrapper h-100 mb-5 col-12 col-md-4">
-            <div class="sidebar remove-element-padding teal p-4">
-                <h3>Tip</h3>
-                    <p>If you've already recruited someone, use the position title (or job title) you provided during your recruitment process.</p>
-                    <p> The position title should reflect the work your employee will do. You may also find examples of job titles under the applicable award in the classifications section.</p>
-            </div>
+        <div class="h-100 mb-5 col-12 col-md-4">
+
+            {% include component-examples/info-sidebar-example.html
+                title="Tip"
+                text="<p>If you've already recruited someone, use the position title (or job title) you provided during your recruitment process.</p><p>The position title should reflect the work your employee will do. You may also find examples of job titles under the applicable award in the classifications section.</p>"
+                classes="inpage"
+                %}
+
         </div>
 
     </div>

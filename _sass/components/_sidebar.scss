@@ -12,6 +12,12 @@
     height: 100%;
     width: calc(50% - 16px);
     justify-content: space-between;
+
+    &.inpage {
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+    }
     
     .sidebar {
         background: $bga-teal-highlight-light;
@@ -62,6 +68,16 @@
             svg {
                 transform:  rotate(-90deg);
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-wrapper {
+        width: auto;
+        max-width: 400px;
+        &.short {
+            display: none;
         }
     }
 }

@@ -66,7 +66,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/737eb46e-3079-4c99-882c-7886a3999249/'"
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/a09452a7-3c07-406b-9f14-c1106266a08e/'"
         btn-text="View design specifications"
         %}
 
@@ -74,69 +74,58 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Call out boxes can be used on all page layouts except the <a
-                href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - full width
-                layout</a>.</p>
-
-
-        {% include layouts-dropdown.html
-        layout-name="Two column - right sidebar"
-        singlelayout="true"
+        <p>The information sidebar can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >two column - right sidebar layouts</a>. It should not be used in other layouts.</p>
+        
+        {% include layouts-dropdown.html 
+            layout-name="Single column - full width"
+            singlelayout="true"
         %}
-
-        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+        
+        <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
 
             {% include layouts-accordion.html
             layout-name="twocol-rightbar"
-
+    
             min1200-visibility="false"
             min992-visibility="false"
             min768-visibility="true"
             min576-visibility="false"
             finalbp-visibility="true"
-
+    
             finalbp="Breakpoint &lt; 768px"
-
-
-            min768-img="'../assets/layout-images/callout-2col-rightsidebar-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/callout-2col-rightsidebar-finalbp.png' | relative_url "
-
-
+    
+    
+            min768-img="'../assets/layout-images/info-sidebar-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/info-sidebar-2col-rightsidebar-finalbp.png' | relative_url "
+    
+    
             min768-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Call out boxes span the full width of the content area.</p>"
-
+            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>"
+    
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Call out boxes span the full width of the content area.</p>"
-
-            example-link="'../html-examples/two-col-right-sidebar.html#callout-example' | relative_url'"
+            <p>Sidebars span the full width of the content area. In general they stack below the right side content.</p>"
+    
+            example-link="'../html-examples/ECB-content-page.html' | relative_url'"
             example-link-text="View layout example"
-
+    
             %}
-
+    
         </div>
-
-
-
 
 
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        <h4>Purpose: </h4>
-        <p>The call out box component is used to highlight specific information within a content page.</p>
-        <h4>When to use this component: </h4>
+        <h4>Purpose: </h4>
+        <p>The information sidebar is used to highlight useful information in the context of a process or step.</p>
+        <h4>When to use this component: </h4>
         <ul>
-            <li>Used to highlight important information in the context of the page, such as key tax dates. </li>
-            <li>Used to notify users about updates or important information on other pages. </li>
-            <li>To provide additional help, such as sample calculations and scenarios. </li>
+            <li>Used in tools for information the user may find useful but is not of high importance.</li>
         </ul>
-        <h4>Content rules: </h4>
+        <h4>Style rules: </h4>
         <ul>
-            <li>Grant updates &ndash; high priority updates only.</li>
-            <li>[h2] Update &ndash; [date month year].</li>
-            <li>[h3] [Optional summary of change].</li>
-            <li>Body content has a recommended 300 character limit.</li>
+            <li>The height of the sidebar is equal to the height of the content on the right side of the section. When sidebar content extends past this height it is hidden and revealed with a "Read more" button.</li>
         </ul>
 
     </div>
