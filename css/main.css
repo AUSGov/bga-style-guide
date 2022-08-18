@@ -4642,7 +4642,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 576px) { .ecb-example-layout #subsite-header .main-header { padding: 16px 0 !important; } .ecb-example-layout #subsite-header .strap-wrapper, .ecb-example-layout #subsite-header .main-header-wrapper { padding: 0 32px; margin: 0 -32px; } .ecb-example-layout #page-header.teal { background: #CFEBEB; } .ecb-example-layout #page-header.teal .inner-wrapper { padding: 0 !important; } .ecb-example-layout #page-header.teal .header-content { padding: 24px 0 !important; } .ecb-example-layout #page-header.teal.stepped-nav .header-content { padding: 0 !important; } }
 
-.start-component-wrapper { border: solid 4px #E4E6EA; }
+.start-component-wrapper { border: 1px solid #96B7DF; }
 
 .start-component-wrapper .bga-component { background: #E6F3F3; border-left: solid 8px #5AB3B3; display: flex; }
 
@@ -4694,6 +4694,10 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .sidebar-wrapper .sidebar { background: #CFEBEB; height: 100%; }
 
+.sidebar-wrapper .sidebar.yellow { background: #FFF3CD; }
+
+.sidebar-wrapper .sidebar.blue { background: #C8D9EE; }
+
 .sidebar-wrapper .component-text { overflow: hidden; position: relative; }
 
 .sidebar-wrapper .component-text.fixed-height::after { content: ""; width: 100%; height: 48px; background: linear-gradient(0deg, #cfebeb 30%, rgba(207, 235, 235, 0) 100%); bottom: 0; position: absolute; }
@@ -4708,8 +4712,42 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .sidebar-wrapper.extended .more-info-toggle svg { transform: rotate(-90deg); }
 
-.sidebar-wrapper.inpage { height: 100%; width: 100%; justify-content: space-between; }
+.sidebar-wrapper.colour-example.gradient .teal .component-text::after { content: ""; width: 100%; height: 24px; background: linear-gradient(0deg, #cfebeb 30%, rgba(207, 235, 235, 0) 100%); bottom: 0; position: absolute; }
 
-@media (max-width: 768px) { .sidebar-wrapper { margin: 32px 0 0 0 !important; } }
+.sidebar-wrapper.colour-example.gradient .yellow .component-text::after { content: ""; width: 100%; height: 24px; background: linear-gradient(0deg, #fff3cd 0%, rgba(255, 243, 205, 0) 100%); bottom: 0; position: absolute; }
+
+.sidebar-wrapper.colour-example.gradient .blue .component-text::after { content: ""; width: 100%; height: 24px; background: linear-gradient(0deg, #c8d9ee 0%, rgba(200, 217, 238, 0) 100%); bottom: 0; position: absolute; }
+
+@media (max-width: 768px) { .sidebar-wrapper { margin: 32px 0 0 0 !important; } .sidebar-wrapper.colour-example { margin: 0 !important; padding-bottom: 32px !important; } }
+
+.bga-default-accordion.results-accordion .accordion-item:hover { border-bottom: #ABB1BD solid 2px; }
+
+.bga-default-accordion.results-accordion .accordion-item.show { border-bottom: #ABB1BD solid 2px; }
+
+.bga-default-accordion.results-accordion .accordion-button .title-area p { font-size: 0.875rem; }
+
+.bga-default-accordion.results-accordion .accordion-button::after { width: 16px; height: 10px; box-shadow: none; background-color: transparent; border-radius: 0; }
+
+.bga-default-accordion.results-accordion .accordion-button:hover { background: #E4E6EA; text-decoration: none; }
+
+.bga-default-accordion.results-accordion .accordion-button:hover h4, .bga-default-accordion.results-accordion .accordion-button:hover .h4 { text-decoration: underline; }
+
+.bga-default-accordion.results-accordion .accordion-button:hover::after { background-color: transparent; }
+
+.bga-default-accordion.results-accordion .accordion-button:not(.collapsed):hover { border-bottom: none; background: #E4E6EA; }
+
+.bga-default-accordion.results-accordion .accordion-button:not(.collapsed)::after { box-shadow: none; background-color: transparent; }
+
+.bga-default-accordion.results-accordion .accordion-body p { width: 100%; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area, .component-example.small-screen .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p, .component-example.small-screen .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after, .component-example.small-screen .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body, .component-example.small-screen .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; }
+
+@media (max-width: 576px) { .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } }
 
 /*# sourceMappingURL=main.css.map */
