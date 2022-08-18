@@ -572,11 +572,6 @@ $(document).ready(function () {
             $('.submenu').each(function () {
                 $(this).slideUp();
             });
-
-            if ($(window).width() < 576) {
-                console.log('mobile');
-            }
-
         }
     });
 
@@ -716,7 +711,7 @@ $(document).ready(function () {
     });
 
     // COMPONENT EXAMPLE: INFORMATION SIDEBAR
-    
+    // Set height of sidebars
     function sidebar_fullheight() {
         
 
@@ -748,11 +743,15 @@ $(document).ready(function () {
     }
     sidebar_fullheight();
 
+    // Read more toggle function
     $('.more-info-toggle').on('click', function () {
         $(this).parents('.sidebar-wrapper').toggleClass('extended');
         
         if ($(this).parents('.sidebar-wrapper').hasClass('extended')) {
             $(this).parents('.sidebar-wrapper').css('height', '100%');
+            $(this).find('span').text('Read less');
+        } else {
+            $(this).find('span').text('Read more');
         }
     });
 

@@ -1,0 +1,76 @@
+<div class="bga-component-wrapper pb-5">
+<div class="bga-component bga-default-accordion results-accordion {{include.classes}} m-0">
+   
+    <button class="accordion-toggle mt-4 pb-0 px-0 mb-4">
+        <span>Open all</span>
+        <svg class="ms-2" data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+        <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#333"/>
+        </svg>
+      </button>
+    
+    <div class="accordion">
+
+        {% if include.item1 == "true" %}    
+            <div class="accordion-item" tabindex="-1">
+                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-1">
+                    <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseOne" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseOne">
+                        <div class="title-area remove-element-padding pe-4"><h4 class="mb-0">{{ include.title1 }}</h4>
+                        <p class="p-0 m-0">{{ include.subtitle1 }}</p></div>
+                    </button>
+                </h5>
+                <div id="{{include.layout-name}}-collapseOne" class="accordion-collapse collapse" aria-labelledby="{{include.layout-name}}-1" >
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                       
+                        {{ include.content1 }}
+
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        
+        {% if include.item2 == "true" %}    
+            <div class="accordion-item">
+                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-2">
+                    <button class="accordion-button collapsed remove-element-padding p-4" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseTwo" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseTwo">
+                        <div class="title-area remove-element-padding pe-4"><h4 class="mb-0">{{ include.title2 }}</h4>
+                        <p class="p-0 m-0">{{ include.subtitle2 }}</p></div>
+                    </button>
+                </h5>
+                <div id="{{include.layout-name}}-collapseTwo" class="accordion-collapse collapse" aria-labelledby="{{include.layout-name=}}-2" >
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                        
+                        {{ include.content2 }}
+                       
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+
+        {% if include.item3 == "true" %}   
+            <div class="accordion-item">
+                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-3">
+                    <button class="accordion-button collapsed remove-element-padding p-4" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseThree" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseThree">
+                        <div class="title-area remove-element-padding pe-4"><h4 class="mb-0">{{ include.title3 }}</h4>
+                        <p class="p-0 m-0">{{ include.subtitle3 }}</p></div>
+                    </button>
+                </h5>
+                <div id="{{include.layout-name}}-collapseThree" class="accordion-collapse collapse" aria-labelledby="{{include.layout-name}}-3">
+                    
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                       
+                        {{ include.content3 }}
+                       
+                    </div>
+                </div>
+
+            </div>
+        {% endif %}
+
+
+</div>
+          
+            
+</div>
+</div>

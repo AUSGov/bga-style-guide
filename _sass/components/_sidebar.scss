@@ -9,6 +9,13 @@
     .sidebar {
         background: $bga-teal-highlight-light;
         height: 100%;
+
+        &.yellow {
+            background: $bga-yellow-highlight-light;
+        }
+        &.blue {
+            background: $bga-blue-background-light;
+        }
     }
     .component-text {
         overflow: hidden;
@@ -57,15 +64,41 @@
         }
     }
 
-    &.inpage {  
-            height: 100%;
-            width: 100%;
-            justify-content: space-between;
+    &.colour-example.gradient {
+        .teal .component-text::after {
+            content: "";
+                width: 100%;
+                height: 24px;
+                background: linear-gradient(0deg, rgba(207,235,235,1) 30%, rgba(207,235,235,0) 100%);
+                bottom: 0;
+                position: absolute;
         }
+        .yellow .component-text::after {
+            content: "";
+                width: 100%;
+                height: 24px;
+                background: linear-gradient(0deg, rgba(255,243,205,1) 0%, rgba(255,243,205,0) 100%);
+                bottom: 0;
+                position: absolute;
+        }
+        .blue .component-text::after {
+            content: "";
+                width: 100%;
+                height: 24px;
+                background: linear-gradient(0deg, rgba(200,217,238,1) 0%, rgba(200,217,238,0) 100%);
+                bottom: 0;
+                position: absolute;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .sidebar-wrapper {
         margin: 32px 0 0 0 !important;
+
+        &.colour-example {
+            margin: 0 !important;
+            padding-bottom: 32px !important;
+        }
     }
 }

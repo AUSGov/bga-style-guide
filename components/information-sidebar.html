@@ -5,7 +5,7 @@ title: Information sidebar
 description: Provide extra information on a tool section or task in an expandable sidebar.
 breadcrumb1: Components
 url1: /components.html
-bga-tag: false
+bga-tag: true
 subsite-tag: true
 
 ---
@@ -38,47 +38,93 @@ subsite-tag: true
         <!-- Component example -->
 
         <div class="component-example m-0">
-            
+
             <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
 
                 <div class="row">
-                
-                <div class="col-12 col-md-6 h-100">
-                <div class="question-section">
+                    <p><strong>Note: At smaller breakpoints the sidebar is stacked under associated content and its
+                            height is limited to 230px.</strong></p>
 
-                    <div class="bga-component sidebar dummy-sidebar m-0">
+                    <div class="col-12 col-md-6 h-100">
+                        <div class="question-section">
 
-                        <div class="p-4 component-content">
+                            <div class="bga-component sidebar dummy-sidebar m-0">
 
-                            <div class="component-text remove-element-padding">
-                                <h3>Lorem ipsum dolor sit amet.</h3>
-                                <p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
-                                <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent
-                                    tincidunt congue elit, a vehicula urna ornare quis.</p>
+                                <div class="p-4 component-content">
+
+                                    <div class="component-text remove-element-padding">
+                                        <h3>Lorem ipsum dolor sit amet.</h3>
+                                        <p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                                        <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent
+                                            tincidunt congue elit, a vehicula urna ornare quis.</p>
+                                    </div>
+
+                                </div>
+
                             </div>
-
                         </div>
-
                     </div>
-                </div>
-                </div>
 
 
-                <div class="col-12 col-md-6 h-100">
-                {% include component-examples/info-sidebar-example.html
-                title="Lorem ipsum dolor sit amet."
-                text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
-                <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue elit, a
-                    vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at posuere.
-                    Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis iaculis.
-                    Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa quis
-                    purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut mauris
-                    dictum tempor. </p>"
-                classes=""
-                %}
+                    <div class="col-12 col-md-6 h-100">
+                        {% include component-examples/info-sidebar-example.html
+                        title="Lorem ipsum dolor sit amet."
+                        text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                        <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue
+                            elit, a
+                            vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at
+                            posuere.
+                            Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis
+                            iaculis.
+                            Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa
+                            quis
+                            purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut
+                            mauris
+                            dictum tempor. </p>"
+                        classes=""
+                        %}
+                    </div>
+
                 </div>
-            
+
             </div>
+
+        </div>
+        <div class="component-example m-0">
+
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <div class="row">
+
+                    <h3>Colour variations</h3>
+                    <div class="col-12 col-sm-4">
+                        {% include component-examples/sidebar-colour-example.html
+                        title="Teal"
+                        text="<p>Used in tool pages only.</p>"
+                        classes="teal colour-example"
+                        fade="true"
+                        %}
+                    </div>
+
+                    <div class="col-12 col-sm-4">
+                        {% include component-examples/sidebar-colour-example.html
+                        title="Yellow"
+                        text="<p>Can be used in site pages and tools.</p>"
+                        classes="yellow"
+                        fade="true"
+                        %}
+                    </div>
+
+                    <div class="col-12 col-sm-4">
+                        {% include component-examples/sidebar-colour-example.html
+                        title="Blue"
+                        text="<p>Can be used in site pages and tools.</p>"
+                        classes="blue"
+                        fade="true"
+                        %}
+                    </div>
+
+                </div>
 
             </div>
 

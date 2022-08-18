@@ -1,0 +1,88 @@
+.bga-default-accordion.results-accordion {
+    .accordion-item {
+        &:hover {
+            border-bottom: $bga-blue-black-light solid 2px;
+        }
+        &.show {
+            border-bottom: $bga-blue-black-light solid 2px;
+        }
+    }
+    .accordion-button {
+        .title-area {
+            p {
+                font-size: 0.875rem;
+            }
+        }
+        &::after {
+            width: 16px;
+            height: 10px;
+            box-shadow: none;
+            background-color: transparent;
+            border-radius: 0;
+        }
+        &:hover {
+            background: $bga-blue-black-lightest;
+            text-decoration: none;
+
+            h4 {
+                text-decoration: underline;
+            }
+            
+            &::after {
+                background-color: transparent;
+            }
+        }
+        &:not(.collapsed) {
+
+            &:hover {
+                border-bottom: none;
+                background: $bga-blue-black-lightest;
+            }
+            &::after {
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
+    }
+    .accordion-body {
+        p {
+            width: 100%;
+        }
+    }
+}
+
+
+// Mixins for smaller screen sizes
+@mixin results-below576 () {
+    .bga-default-accordion.bga-default-accordion.results-accordion {
+        .accordion-item {
+            .accordion-button {
+                .title-area {
+                    padding-right: 16px !important;
+                }
+
+                p {
+                    padding-right: 0 !important;
+                }
+                &::after {
+                    height: 10px;
+                    width: 16px;
+                }
+            }
+            .accordion-body {
+                padding: 0 16px 16px 16px !important;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include results-below576();
+}
+
+// Media queries for HTML example pages
+@media (max-width: 576px) {
+    @include results-below576();
+}
