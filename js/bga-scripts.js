@@ -760,6 +760,13 @@ $(document).ready(function () {
     });
 
 
+    // COMPONENT EXAMPLE: EDIT ANSWERS COMPONENT
+    $('.edit-answers-toggle').on('click', function(){
+        $(this).toggleClass('open');
+        $(this).parents('.edit-answers-component').find('.component-content').slideToggle();
+    });
+
+
 
 }); //End doc ready
 

@@ -51,6 +51,99 @@
     }
 }
 
+.edit-answers-component {
+    background: $bga-teal-highlight-light;
+
+    .component-content {
+        display: none;
+    }
+
+    .edit-answers-toggle {
+        background: $bga-teal-highlight-mid;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        svg {
+            flex-shrink: 0;
+            transition: transform 0.2s ease-in-out;
+        }
+        &.open {
+            svg {
+                transform: scaleY(-1);
+            }
+        }
+    }
+    .answers-section {
+        border-bottom: solid 4px $bga-teal-highlight-mid;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .title-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .answers {
+        p {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 16px 0 8px 0;
+            margin: 0;
+            border-bottom: $bga-teal-highlight-dark solid 1px;
+
+            span {
+                font-weight: 600;
+                margin-left: 16px;
+                text-align: right;
+            }
+        }  
+    }
+    .edit-btn {
+        font-size: 1.125rem;
+        color: $bga-blue-links;
+        font-weight: 600;
+        background: none;
+        border: none;
+        border-bottom: 1px solid $bga-blue-links;
+        flex-shrink: 0;
+
+        svg {
+            height: 18px;
+            width: 18px;
+        }
+    }
+}
+
+.results-edit-answers-component {
+    border: $bga-component-border;
+
+    .title-area {
+        background: $bga-teal-highlight-light;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .edit-btn {
+        font-size: 1.125rem;
+        color: $bga-blue-links;
+        font-weight: 600;
+        background: none;
+        border: none;
+        border-bottom: 1px solid $bga-blue-links;
+        flex-shrink: 0;
+
+        svg {
+            height: 18px;
+            width: 18px;
+        }
+    }
+
+}
+
 
 // Mixins for smaller screen sizes
 @mixin results-below576 () {
@@ -74,15 +167,77 @@
             }
         }
     }
+
+    .edit-answers-component {
+        .component-content {
+            padding: 16px !important;
+        }
+        .edit-answers-toggle {
+            padding: 16px !important;
+
+            h3 {
+                font-size: 1.125rem;
+            }
+        }
+        .answers-section {
+            padding-bottom: 48px !important;
+            margin-bottom: 16px !important;
+
+            &:last-of-type {
+                padding-bottom: 24px !important;
+                margin-bottom: 0 !important;
+            }
+        }
+        .title-area {
+            h3 {
+                font-size: 1.125rem;
+            }
+        }
+        .answers {
+            p {
+                flex-wrap: wrap;
+
+                span {
+                    margin: 8px 0 0 0 !important;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .results-edit-answers-component {
+        .edit-btn {
+            font-size: 1.125rem !important;
+        }
+        .title-area {
+            padding: 16px !important;
+        }
+        .component-content {
+            padding: 16px !important;
+        }
+    }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576,
-.component-example.small-screen {
+.component-example.bp-below576{
     @include results-below576();
 }
 
 // Media queries for HTML example pages
+@media (max-width: 768px) {
+    .edit-answers-component {
+        .edit-btn {
+            font-size: 1.125rem !important;
+        }
+    }
+    .results-edit-answers-component {
+        .edit-btn {
+            font-size: 1.125rem !important;
+        }
+    }
+}
+
 @media (max-width: 576px) {
     @include results-below576();
 }

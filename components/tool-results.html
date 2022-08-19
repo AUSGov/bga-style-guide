@@ -65,6 +65,29 @@ subsite-tag: true
                 <p>Relevant authority: <a tabindex='0' href=''>Department of Home Affairs</a></p>"
 
                 %}
+
+            <h3>Edit answers component</h3>
+            {% include component-examples/edit-answers-example.html
+                title1="Investment approvals"
+                content1="<p>Will your project involve foreign investors?<span>No</span></p><p>Will your project involve capital expenditure over AUD $500 million?<span>Yes</span></p>"
+
+                title2="Location"
+                content2="<p>Where will your project take place?<span>Both on land and at sea</span></p>"
+
+                title3="Import and export"
+                content3="<p>Will your project involve importing or exporting goods?<span>No</span></p>"
+
+            %}
+
+
+            <h3>Combined results and edit component</h3>
+                {% include component-examples/results-and-edit-example.html
+                    title="Our competitors"
+                    content="<h4>Competitor 1</h4><p>Lorem ipsum dolor sit amet, consetetur</p><h4>What they do well</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p><h4>What we do differently</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>"
+
+                  
+
+                %}
                 
            
   
@@ -77,7 +100,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/dec977ed-2d2f-4531-9ace-ed88cdd76b94/'"
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/ed01bf31-51cd-45a8-a5a1-7453bba6e632/'"
             btn-text="View design specifications"
             %}
 
@@ -85,51 +108,15 @@ subsite-tag: true
         <!-- LAYOUTS -->   
         <h2 class="section-start" id="layouts">Layouts</h2>
         
-        <p>Call out links can be used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >all page layouts</a>.</p> 
+        <p>Call out links can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column - two thirds width layout</a>.</p> 
        
        
-        {% include layouts-dropdown.html 
-            single-col-fullwidth-visibility="true"
-            single-col-twothirds-visibility="true" 
-            two-col-leftmenu-visibility="true" 
-            two-col-rightsidebar-visibility="true" 
-        %}
-        
-        
-        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="onecol-fw"
-            
-                min1200-visibility="true"
-                min992-visibility="true"
-                min768-visibility="false"
-                min576-visibility="false"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 992px"
-            
-                min1200-img="'../assets/layout-images/callout-link-1colfullwidth-min1200.png' | relative_url "
-                min992-img="'../assets/layout-images/callout-link-1colfullwidth-min992.png' | relative_url "
-                finalbp-img="'../assets/layout-images/callout-link-1colfullwidth-finalbp.png' | relative_url "
-            
-            
-                min1200-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span 8 grid-columns each.</p>"
-            
-                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span 9 grid-columns each.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span 12 grid-columns each.</p>"
-            
-                example-link="'../html-examples/single-col-full-width.html#callout-link-example' | relative_url'"
-                example-link-text="View layout example"
-                
+        {% include layouts-dropdown.html
+            layout-name="Single column - two thirds width"
+            singlelayout="true"
             %}
-            
-            
-        </div>
         
-        
-        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+        <div class="layout-example show single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
             
             {% include layouts-accordion.html 
                 layout-name="onecol-twothirdsw"    
@@ -142,100 +129,33 @@ subsite-tag: true
                 
                 finalbp="Breakpoint &lt; 768px"
             
-                min1200-img="'../assets/layout-images/callout-link-1col2thirdswidth-min1200.png' | relative_url "
-                min992-img="'../assets/layout-images/callout-link-1col2thirdswidth-min992.png' | relative_url "
-                min768-img="'../assets/layout-images/callout-link-1col2thirdswidth-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/callout-link-1col2thirdswidth-finalbp.png' | relative_url "
+                min1200-img="'../assets/layout-images/tool-results-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/tool-results-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/tool-results-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/tool-results-1col2thirdswidth-finalbp.png' | relative_url "
                 
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>"
             
-                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>"
             
-                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>"
             
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
-            
-                example-link="'../html-examples/single-col-two-thirds-width.html#callout-link-example' | relative_url'"
-                example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="twocol-leftmenu"
-                
-                min1200-visibility="true"
-                min992-visibility="false"
-                min768-visibility="false"
-                min576-visibility="true"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 576px"
-            
-                min1200-img="'../assets/layout-images/callout-link-2col-leftmenu-min1200.png' | relative_url "
-                min576-img="'../assets/layout-images/callout-link-2col-leftmenu-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/callout-link-2col-leftmenu-finalbp.png' | relative_url "
-                
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
-            
-                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
-            
-                example-link="'../html-examples/two-col-left-side-menu.html#callout-link-example' | relative_url'"
-                example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="twocol-rightbar"
-            
-                min1200-visibility="false"
-                min992-visibility="false"
-                min768-visibility="true"
-                min576-visibility="false"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 768px"
-            
-
-                min768-img="'../assets/layout-images/callout-link-2col-rightsidebar-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/callout-link-2col-rightsidebar-finalbp.png' | relative_url "
-            
-        
-                min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call out link components span the full width of the content area.</p>"
-            
-                example-link="'../html-examples/two-col-right-sidebar.html#callout-link-example' | relative_url'"
-                example-link-text="View layout example"
-
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>"
+                            
             %}
             
         </div>
         
 
-        
-    
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>The call out link component highlights a single link in a call out box, with an icon to show the destination type (e.g. email subscription or web page).</p>
-        <h3>When to use this component:</h3>
+        <p>Results components allow the user to review and edit results from a process or tool they have stepped through. Edit links return the user to the appropriate page in a tool so they can change their answer.</p>
+        <h3>When to use these components:</h3>
         <ul>
-            <li>Call out links are generally used to promote subscription links for newsletters, updates and alerts.</li>
-            <li>They may be used on both index and content pages.</li>
+            <li>Used at the end of business.gov.au tools</li>
         </ul>
 
         </div>
