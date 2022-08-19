@@ -3074,6 +3074,8 @@ strong { font-weight: 600; }
 
 .element-state-wrapper { border-top: solid 1px #96B7DF; }
 
+.bga-primary-btn, .bga-secondary-btn { min-width: 120px; }
+
 .bga-btn, .bga-btn-state { display: inline-flex; align-items: center; border: solid 3px #EDC95A; border-radius: 100px; background: #FFD964; color: #333333; font-weight: 600; font-size: 1rem; line-height: 1.75; padding: 11px 32px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); justify-content: center; text-decoration: none !important; }
 
 .bga-btn svg, .bga-btn-state svg { margin-left: 8px; margin-bottom: 0; fill: #333333; }
@@ -3232,11 +3234,13 @@ strong { font-weight: 600; }
 
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus { box-shadow: none; }
 
+.component-example.bp-below576 .bga-primary-btn, .component-example.bp-below576 .bga-secondary-btn, .component-example.small-screen .bga-primary-btn, .component-example.small-screen .bga-secondary-btn { min-width: 80px; }
+
 .component-example.bp-below576 .bga-btn, .component-example.bp-below576 button, .component-example.bp-below576 .bga-btn-state, .component-example.small-screen .bga-btn, .component-example.small-screen button, .component-example.small-screen .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; }
 
 .component-example.bp-below576 .button-example, .component-example.small-screen .button-example { width: 100%; }
 
-@media (max-width: 576px) { .bga-btn, button, .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; } .button-example { width: 100%; } }
+@media (max-width: 576px) { .bga-primary-btn, .bga-secondary-btn { min-width: 80px; } .bga-btn, button, .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; } .button-example { width: 100%; } }
 
 label { font-weight: 600; }
 
@@ -4637,6 +4641,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .ecb-example-layout fieldset { border: solid 1px #2E3E5A; }
 
 .ecb-example-layout .max-width-med { max-width: 500px !important; }
+
+.ecb-example-layout .ecb-button-group { display: flex; align-items: center; }
 
 @media (max-width: 768px) { .ecb-example-layout #page-header.stepped-nav { background: #CFEBEB; } .ecb-example-layout #page-header.stepped-nav .inner-wrapper { padding: 0 !important; } .ecb-example-layout #page-header.stepped-nav .header-content { padding: 0 !important; } .ecb-example-layout #page-header.stepped-nav .stepped-navigation-wrapper { padding: 16px 0 !important; } }
 
