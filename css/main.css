@@ -4198,7 +4198,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-default-accordion .accordion-toggle { border: none; background: #ffffff; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; }
 
-.bga-default-accordion .accordion-toggle.close svg { transform: rotate(180deg); }
+.bga-default-accordion .accordion-toggle.close svg { transform: scaleY(-1); }
 
 .bga-default-accordion .accordion { text-align: left; border-top: #E4E6EA solid 2px; }
 
@@ -4740,14 +4740,70 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-default-accordion.results-accordion .accordion-body p { width: 100%; }
 
-.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area, .component-example.small-screen .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; }
+.edit-answers-component { background: #CFEBEB; }
 
-.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p, .component-example.small-screen .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; }
+.edit-answers-component .component-content { display: none; }
 
-.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after, .component-example.small-screen .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; }
+.edit-answers-component .edit-answers-toggle { background: #8BCACA; display: flex; align-items: center; justify-content: space-between; }
 
-.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body, .component-example.small-screen .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; }
+.edit-answers-component .edit-answers-toggle svg { flex-shrink: 0; transition: transform 0.2s ease-in-out; }
 
-@media (max-width: 576px) { .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } }
+.edit-answers-component .edit-answers-toggle.open svg { transform: scaleY(-1); }
+
+.edit-answers-component .answers-section { border-bottom: solid 4px #8BCACA; }
+
+.edit-answers-component .answers-section:last-of-type { border-bottom: none; }
+
+.edit-answers-component .title-area { display: flex; align-items: center; justify-content: space-between; }
+
+.edit-answers-component .answers p { display: flex; align-items: flex-start; justify-content: space-between; padding: 16px 0 8px 0; margin: 0; border-bottom: #5AB3B3 solid 1px; }
+
+.edit-answers-component .answers p span { font-weight: 600; margin-left: 16px; text-align: right; }
+
+.edit-answers-component .edit-btn { font-size: 1.125rem; color: #2157AA; font-weight: 600; background: none; border: none; border-bottom: 1px solid #2157AA; flex-shrink: 0; }
+
+.edit-answers-component .edit-btn svg { height: 18px; width: 18px; }
+
+.results-edit-answers-component { border: 1px solid #96B7DF; }
+
+.results-edit-answers-component .title-area { background: #CFEBEB; display: flex; align-items: center; justify-content: space-between; }
+
+.results-edit-answers-component .edit-btn { font-size: 1.125rem; color: #2157AA; font-weight: 600; background: none; border: none; border-bottom: 1px solid #2157AA; flex-shrink: 0; }
+
+.results-edit-answers-component .edit-btn svg { height: 18px; width: 18px; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; }
+
+.component-example.bp-below576 .edit-answers-component .component-content { padding: 16px !important; }
+
+.component-example.bp-below576 .edit-answers-component .edit-answers-toggle { padding: 16px !important; }
+
+.component-example.bp-below576 .edit-answers-component .edit-answers-toggle h3, .component-example.bp-below576 .edit-answers-component .edit-answers-toggle .h3 { font-size: 1.125rem; }
+
+.component-example.bp-below576 .edit-answers-component .answers-section { padding-bottom: 48px !important; margin-bottom: 16px !important; }
+
+.component-example.bp-below576 .edit-answers-component .answers-section:last-of-type { padding-bottom: 24px !important; margin-bottom: 0 !important; }
+
+.component-example.bp-below576 .edit-answers-component .title-area h3, .component-example.bp-below576 .edit-answers-component .title-area .h3 { font-size: 1.125rem; }
+
+.component-example.bp-below576 .edit-answers-component .answers p { flex-wrap: wrap; }
+
+.component-example.bp-below576 .edit-answers-component .answers p span { margin: 8px 0 0 0 !important; width: 100%; text-align: left; }
+
+.component-example.bp-below576 .results-edit-answers-component .edit-btn { font-size: 1.125rem !important; }
+
+.component-example.bp-below576 .results-edit-answers-component .title-area { padding: 16px !important; }
+
+.component-example.bp-below576 .results-edit-answers-component .component-content { padding: 16px !important; }
+
+@media (max-width: 768px) { .edit-answers-component .edit-btn { font-size: 1.125rem !important; } .results-edit-answers-component .edit-btn { font-size: 1.125rem !important; } }
+
+@media (max-width: 576px) { .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } .edit-answers-component .component-content { padding: 16px !important; } .edit-answers-component .edit-answers-toggle { padding: 16px !important; } .edit-answers-component .edit-answers-toggle h3, .edit-answers-component .edit-answers-toggle .h3 { font-size: 1.125rem; } .edit-answers-component .answers-section { padding-bottom: 48px !important; margin-bottom: 16px !important; } .edit-answers-component .answers-section:last-of-type { padding-bottom: 24px !important; margin-bottom: 0 !important; } .edit-answers-component .title-area h3, .edit-answers-component .title-area .h3 { font-size: 1.125rem; } .edit-answers-component .answers p { flex-wrap: wrap; } .edit-answers-component .answers p span { margin: 8px 0 0 0 !important; width: 100%; text-align: left; } .results-edit-answers-component .edit-btn { font-size: 1.125rem !important; } .results-edit-answers-component .title-area { padding: 16px !important; } .results-edit-answers-component .component-content { padding: 16px !important; } }
 
 /*# sourceMappingURL=main.css.map */
