@@ -685,16 +685,63 @@
                 <div class="header-content p-5">
 
                     <div class="col-12 remove-element-padding">
-                        {% include component-examples/stepped-navigation-example.html
-                        title="Pay"
-                        step1="Position"
-                        step2="Hours"
-                        step3="Pay"
-                        step4="Leave"
-                        step5="Obligations"
-                        step6="Ending employment"
-                        step7="Review"
-                        %}
+
+                        <div class="stepped-navigation-wrapper remove-element-padding {{ include.classes }}">
+            
+                            <h1 class="step-title">{{ page.stepped-nav-step }}</h1>
+                           
+                            <div class="mobile-stepped-nav remove-element-padding">
+                                <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
+                                <p>Step 3 of 7: <strong>{{ page.stepped-nav-step }}</strong></p>
+                            </div>
+                            
+                            <div class="bga-component stepped-navigation">
+                        
+                              
+                                <a tabindex="1" class="step completed me-3">
+                                    <span class="step-number mb-2">1</span>
+                                    <span class="step-name">Position</span>
+                                </a>
+                               
+
+                                <a tabindex="1" class="step completed me-3">
+                                    <span class="step-number mb-2">2</span>
+                                    <span class="step-name">Hours</span>
+                                </a>    
+
+            
+                                <a tabindex="1" class="step active me-3">
+                                    <span class="step-number mb-2">3</span>
+                                    <span class="step-name">Pay</span>
+                                </a>
+
+
+                                <a tabindex="1" class="step me-3">
+                                    <span class="step-number mb-2">4</span>
+                                    <span class="step-name">Leave</span>
+                                </a>
+
+
+                                <a tabindex="1" class="step me-3">
+                                    <span class="step-number mb-2">5</span>
+                                    <span class="step-name">Obligations</span>
+                                </a>
+
+
+                                <a tabindex="1" class="step me-3">
+                                    <span class="step-number mb-2">6</span>
+                                    <span class="step-name">Ending employment</span>
+                                </a>
+
+
+                                <a tabindex="1" class="step me-3">
+                                    <span class="step-number mb-2">6</span>
+                                    <span class="step-name">Review</span>
+                                </a>
+                        
+                            </div>
+                            
+                        </div>
                     </div>
 
                 </div>
@@ -710,28 +757,36 @@
 
 
 
-    
-    <div class="subsite-footer px-5 py-6 mt-6 mb-0">
 
-        <div class="phone mb-4">
-            <a class="">Call us 13 28 46</a>
+    <div class="subsite-footer py-6 mt-6 mb-0">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class=" phone mb-4">
+                        <a class="">Call us 13 28 46</a>
+                    </div>
+
+                    <div class="links p-0 mb-5">
+                        <ul class="m-0 p-0">
+                            <li class="me-4 mb-3">Terms of use</li>
+                            <li class="me-4 mb-3">Privacy</li>
+                            <li class="me-4 mb-3">Accessibility</li>
+                            <li class="me-4 mb-3">Other languages</li>
+                            <li class="me-4 mb-3">Contact us</li>
+                            <li class="me-4 mb-3">Acknowledgement of country</li>
+                        </ul>
+                    </div>
+
+                    <div class="copyright remove-element-padding mb-0">
+                        <p>© Commonwealth of Australia.</p>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-
-        <div class="links p-0 mb-5">
-            <ul class="m-0 p-0">
-                <li class="me-4 mb-3">Terms of use</li>
-                <li class="me-4 mb-3">Privacy</li>
-                <li class="me-4 mb-3">Accessibility</li>
-                <li class="me-4 mb-3">Other languages</li>
-                <li class="me-4 mb-3">Contact us</li>
-                <li class="me-4 mb-3">Acknowledgement of country</li>
-            </ul>
-        </div>
-
-        <div class="copyright remove-element-padding mb-0">
-            <p>© Commonwealth of Australia.</p>
-        </div>
-
 
     </div>
 

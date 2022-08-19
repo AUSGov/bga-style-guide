@@ -2,6 +2,9 @@
     border-top: solid 1px $bga-blue-border;
 }
 
+.bga-primary-btn, .bga-secondary-btn {
+    min-width: 120px;
+}
 .bga-btn,
 .bga-btn-state {
     display: inline-flex;
@@ -459,6 +462,9 @@
 
 // Mixins for smaller screen sizes and media queries
 @mixin button-below576 {
+    .bga-primary-btn, .bga-secondary-btn {
+        min-width: 80px;
+    }
     .bga-btn,
     button,
     .bga-btn-state {
