@@ -4,13 +4,16 @@
     <div class="component-content">
 
         <div class="component-text remove-element-padding">
+           
             {% if include.label %}
                 <p>{{ include.label }}</p>
             {% endif %}
 
+            <div class="title-wrapper">
             {% if include.header-type %}        
                 <h1 class="mb-4 pt-0">{{ include.header-type }}</h1>
             {% endif %}
+            </div>
             
             {% if include.updated %}        
                 <p class="updated">{{ include.updated }}</p>

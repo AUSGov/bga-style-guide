@@ -69,7 +69,7 @@
 
 // Mixins for smaller screen sizes and media queries
 @mixin featurebox-bp-576 (){
-    .feature-box {
+    .feature-box, .feature-box.full-width-layout {
         max-width: 100%;
 
         .component-content {
@@ -90,7 +90,7 @@
 }
 
 @mixin featurebox-below576 () {
-    .feature-box {
+    .feature-box, .feature-box.full-width-layout {
         .component-content {
             flex-wrap: wrap;
             justify-content: center;
@@ -125,8 +125,7 @@
     @include featurebox-bp-576();
 }
 
-.component-example.bp-below576,
-.component-example.small-screen {
+.component-example.bp-below576 {
     @include featurebox-below576();
 }
 

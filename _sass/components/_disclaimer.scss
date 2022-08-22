@@ -1,0 +1,116 @@
+.disclaimer {
+    &.visible {
+        border-top: $bga-blue-black-light solid 1px;
+        border-bottom: $bga-blue-black-light solid 1px;
+    }
+
+    .component-content {
+        display: flex;
+        align-content: flex-start;
+    }
+
+    .icon-wrapper {
+        background: $bga-blue-background-dark;
+        border-radius: 40px;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    h4,
+    p,
+    li,
+    a {
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+        margin: 0 0 16px 0;
+    }
+
+    li {
+        margin: 0 0 8px 0;
+
+        &:last-of-type {
+            margin: 0 0 16px 0;
+        }
+    }
+
+    .accordion.disclaimer {
+        border-top: $bga-blue-black-light solid 1px;
+        border-bottom: $bga-blue-black-light solid 1px;
+
+        p {
+            display: block;
+            width: 100%;
+        }
+
+        .accordion-item {
+            border: none;
+            background: $bga-white;
+
+            &:last-of-type {
+                border-bottom: none;
+
+                .accordion-button {
+                    border-radius: 0;
+                }
+            }
+
+            &:first-of-type {
+                .accordion-button {
+                    border-radius: 0;
+                }
+            }
+
+            &:focus-visible {
+                outline: none;
+
+            }
+
+            .accordion-button {
+                background: $bga-white;
+                font-weight: 600;
+                color: $bga-black;
+                justify-content: space-between;
+
+                &:not(.collapsed) {
+                    background: $bga-white;
+                    box-shadow: none;
+                }
+
+                &::after {
+                    background-image: url(../assets/Chevron-down-black.svg);
+                    background-position: center center;
+                    margin: auto 0;
+                    background-size: 16px 10px;
+                    width: 16px;
+                    height: 10px;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &:focus-visible {
+                    border: $bga-component-focus-border;
+                    border-radius: $bga-focus-radius;
+                }
+
+                &:hover {
+                    background-color: $bga-white;
+                    text-decoration: underline;
+                }
+
+            }
+            .accordion-body {
+                padding-left: 28px;
+            }
+        }
+
+    }
+
+
+}

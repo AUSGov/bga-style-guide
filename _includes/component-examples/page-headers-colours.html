@@ -2,7 +2,43 @@
 <div class="bga-component page-header  mt-0 mx-0 mb-5 ">
    
     <div class="component-content">
-        <div class="component-text remove-element-padding"><h1>{{ include.text }}</h1></div>
+        <div class="component-text remove-element-padding">
+            
+            <div class="title-wrapper mb-4">
+
+            {% if include.icon == "success" %}
+            <div class="icon-wrapper success mt-2 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <g data-name="Group 19416" transform="translate(-242 -5372)">
+                  <rect data-name="Rectangle 5566" width="32" height="32" transform="translate(242 5372)" fill="none"/>
+                  <g data-name="Icon: Tick" transform="translate(244 5377)">
+                    <path id="Tick" d="M0,12.973,3.32,9.594l5.857,5.87L24.651,0,28,3.328,9.177,22.151Z" fill="#fff"/>
+                  </g>
+                </g>
+              </svg>
+              </div>
+              
+            {% endif %}
+
+            {% if include.icon == "fail" %}
+                <div class="icon-wrapper fail mt-2 me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32.5" viewBox="0 0 32 32.5">
+                        <g data-name="Group 19417" transform="translate(-321 -5371.5)">
+                          <rect data-name="Rectangle 5567" width="32" height="32" transform="translate(321 5372)" fill="none"/>
+                          <g data-name="Icon: warning" transform="translate(322 5372)">
+                            <path data-name="Exclusion 1" d="M1.666,25.722h0a1.68,1.68,0,0,1-1.441-.809,1.592,1.592,0,0,1,0-1.625L13.549.817A1.67,1.67,0,0,1,14.921,0l.067,0A1.691,1.691,0,0,1,16.44.817L29.779,23.288a1.592,1.592,0,0,1,0,1.625,1.681,1.681,0,0,1-1.443.808H1.666Zm13.252-6.081a1.452,1.452,0,1,0,1.552,1.45A1.506,1.506,0,0,0,14.918,19.641Zm-.006-14a2.148,2.148,0,0,0-1.625.766,2.084,2.084,0,0,0-.5,1.162,1.928,1.928,0,0,0,0,.346l.884,9.445a1.13,1.13,0,0,0,.361.723,1.3,1.3,0,0,0,.889.345h0a1.3,1.3,0,0,0,.815-.283,1.133,1.133,0,0,0,.433-.785l.884-9.445a1.992,1.992,0,0,0-.469-1.465,2.143,2.143,0,0,0-1.66-.809h-.011Z" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+                      
+                </div>
+              {% endif %}
+            
+
+            <h1 class="m-0">{{ include.text }}</h1></div>
+        
+        </div>
+
     </div>
     
     </div>

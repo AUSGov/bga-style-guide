@@ -1,0 +1,232 @@
+---
+
+layout: content-tagged
+title: Disclaimer alerts
+description: The disclaimer alert provides information that the user may want to know without highlighting it on the page. The information is often a warning that is legal in nature.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+        singlebp="true" 
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Visible disclaimer</h3>
+                {% include component-examples/disclaimer-example.html
+                    title="Disclaimer"
+                    content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><ul><li>Bullet points can be used in call out boxes.</li><li>Integer erat arcu, venenatis et nibh non.</li></ul><p>Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum.</p>"
+                    display="visible"
+                    classes="visible"
+            %}
+
+            <h3>Hidden disclaimer</h3>
+            {% include component-examples/disclaimer-example.html
+                title="Disclaimer"
+                content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p><p>Ut nisi risus, venenatis ac purus at, congue pharetra nisi. Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum. Aenean tempor, lacus ac finibus feugiat, lorem ligula placerat dolor, quis fringilla velit diam sed mi. Nullam nec libero vel nibh facilisis condimentum in in risus. Morbi egestas eget neque ac accumsan. In luctus purus odio, sed luctus sem eleifend ac. Nulla facilisi. Proin neque quam, consequat quis purus a, tempus commodo lacus. Vivamus cursus, turpis quis vestibulum dapibus, dolor arcu malesuada tellus, a congue lacus augue eget erat. Vestibulum laoreet erat malesuada, interdum ligula eu, scelerisque tellus. Praesent ultricies quis massa nec vulputate. Aliquam nibh enim, interdum eget sem vitae, gravida mattis nulla.</p>"
+                display="hidden"
+                layout-name="disclaimer"
+                classes="hidden"
+            %}
+            
+            </div>
+            
+        </div>
+        
+        
+            
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/05cfcd45-cf5e-41ea-a434-c5dfe5ad462a/'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Disclaimer alerts can be used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >all page layouts</a>.</p> 
+       
+       
+        {% include layouts-dropdown.html 
+            single-col-fullwidth-visibility="true"
+            single-col-twothirds-visibility="true" 
+            two-col-leftmenu-visibility="true" 
+            two-col-rightsidebar-visibility="true" 
+        %}
+        
+        
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-fw"
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+                min1200-img="'../assets/layout-images/disclaimer-1colfullwidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/disclaimer-1colfullwidth-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/disclaimer-1colfullwidth-finalbp.png' | relative_url "
+            
+            
+                min1200-rules="<p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span 8 grid-columns each.</p>"
+            
+                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span 9 grid-columns each.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span 12 grid-columns each.</p>"
+            
+                example-link="'../html-examples/single-col-full-width.html#disclaimer-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+            
+        </div>
+        
+        
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/disclaimer-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/disclaimer-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/disclaimer-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/disclaimer-1col2thirdswidth-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/single-col-two-thirds-width.html#disclaimer-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-leftmenu"
+                
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/disclaimer-2col-leftmenu-min1200.png' | relative_url "
+                min576-img="'../assets/layout-images/disclaimer-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/disclaimer-2col-leftmenu-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-left-side-menu.html#disclaimer-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="false"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+
+                min768-img="'../assets/layout-images/disclaimer-2col-rightsidebar-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/disclaimer-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-right-sidebar.html#disclaimer-example' | relative_url'"
+                example-link-text="View layout example"
+
+            %}
+            
+        </div>
+        
+        
+        
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>The disclaimer alert provides information that the user may want to know without highlighting it on the page. The information is often a warning that is legal in nature.</p>
+        <h3>When to use this component:</h3>
+        <p>Used to provide information the user may want to know, or that the department needs to disclose. Examples are content disclaimers or legal disclaimers.</p>
+        <p>The disclaimer alert should not be used for important information the user needs to know. Use the call out box or information notification instead.</p>
+            
+        </div>
+        
