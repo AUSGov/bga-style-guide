@@ -186,7 +186,7 @@
         <section class="body-content my-5">
         
             <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         <div class="anchor-menu remove-element-padding mt-0 mb-2 p-0">
@@ -195,13 +195,13 @@
     
     <ul id="anchor-menu" class="p-0">
         
-            <li class="mb-3"><a tabindex="0" href="#design">Design</a></li>
+            <li class="mb-3"><a tabindex="0" href="#default-form-field">Default form field</a></li>
              
         
-            <li class="mb-3"><a tabindex="0" href="#layouts">Layouts</a></li>
+            <li class="mb-3"><a tabindex="0" href="#tools-form-field">Tools form field</a></li>
              
         
-            <li class="mb-3"><a tabindex="0" href="#guidelines-for-use">Guidelines for use</a></li>
+            <li class="mb-3"><a tabindex="0" href="#design-specifications">Design specifications</a></li>
              
          
          
@@ -212,21 +212,171 @@
     </ul>
 
 </div>
-        
+
     </div>
-    
+
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
-   
-          
-        <!-- DESIGN -->   
-        <h2 class="section-start" id="design">Design</h2>
+
+
+        <!-- DESIGN -->
+        <h2>Style notes</h2>
+        <p>Default styling for form labels is the standard paragraph style. Lower level heading styles can also
+            be used for labels when appropriate.</p>
+        <p>Text elements in forms have a bottom margin of 16px instead of the 24px used elsewhere on
+            business.gov.au.</p>
+
+
+
+        <!-- DEFAULT -->
+        <h2 class="section-start" id="default-form-field">Default form field</h2>
 
         <!-- Breakpoint radio buttons -->
         <div class="breakpoints m-0 p-4">
 
     
-    <p class="pe-3 m-0">All breakpoints</p>
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="default-field-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="default-field-group" id="default-field-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="default-field-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="default-field-group" id="default-field-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="default-field-bp-final">&lt;576px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
     
+
+</div>
+
+
+        <!-- Component example -->
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Default form fields</h3>
+                <div class="fieldset-wrapper p-4 mb-5 remove-element-padding default">
+                    <h3>Section heading</h3>
+                    <fieldset class="">
+                        <label for="text1" class="form-label mb-3">Text box label</label>
+                        <input type="text" class="form-control mb-5" id="text1" value="">
+
+
+
+                        <label for="state-territory" class="form-label mb-3">Select label</label>
+
+                        <select class="form-select mb-5" aria-label="" id="state-territory">
+                            <option class="default-option" disabled selected value="">Select a state or territory
+                            </option>
+                            <option value="Australian Capital Territory">Australian Capital Territory</option>
+                            <option value="New South Wales">New South Wales</option>
+                            <option value="Northern Territory">Northern Territory</option>
+                            <option value="South Australia">South Australia</option>
+                            <option value="Tasmania">Tasmania</option>
+                            <option value="Victoria">Victoria</option>
+                            <option value="Queensland">Queensland</option>
+                            <option value="Western Australia">Western Australia</option>
+                        </select>
+
+
+                        <label for="text2" class="form-label mb-3">Text box label</label>
+                        <p class="bga-form-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+                            vero eos et accusam et justo duo dolores et ea rebum.</p>
+                        <input type="text" class="form-control mb-5" id="text2" value="">
+
+
+
+                        <div class="button-example">
+                            <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Include
+                                button</a>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <!-- TOOLS -->
+        <h2 class="section-start" id="tools-form-field">Tools form field</h2>
+
+        <!-- Breakpoint radio buttons -->
+        <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="tool-field-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="tool-field-group" id="tool-field-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="tool-field-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="tool-field-group" id="tool-field-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="tool-field-bp-final">&lt;576px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
     
 
 </div>
@@ -235,534 +385,59 @@
 
         <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4 mb-5">
 
-            <h3>Default form fields</h3>
-                <div class="bga-component form-field default mb-5">
-    <h3>Section heading</h3>
-    <fieldset class="p-4">
-        <label for="address" class="form-label mb-3">Address</label>
-        <input type="text" class="form-control mb-5" id="address" value="">
+                <h3>Tool form fields</h3>
+                <div class="fieldset-wrapper teal">
+                    <h3 class="field-header px-4 py-3 mb-0">Section heading</h3>
+                    <fieldset class="p-4 teal">
+                        <div class="row">
+                            <div class="col-12 col-sm-6"><label for="text3" class="form-label h4-style mb-3">Text box
+                                    label</label>
+                                <input type="text" class="form-control mb-5" id="text3" value="">
+                            </div>
 
-        <label for="city-suburb" class="form-label mb-3">City/Suburb</label>
-        <input type="text" class="form-control mb-5" id="city-suburb" value="">
+                            <div class="col-12 col-sm-6">
+                                <label for="text4" class="form-label h4-style mb-3">Text box label</label>
+                                <input type="text" class="form-control mb-5" id="text4" value="">
+                            </div>
 
-        <label for="state-territory" class="form-label mb-3">State/Territory</label>
-        
-        <select class="form-select mb-5" aria-label="" id="state-territory">
-                <option class="default-option" disabled selected value="">Select a state or territory</option>
-                <option value="Australian Capital Territory">Australian Capital Territory</option>
-                <option value="New South Wales">New South Wales</option>
-                <option value="Northern Territory">Northern Territory</option>
-                <option value="South Australia">South Australia</option>
-                <option value="Tasmania">Tasmania</option>
-                <option value="Victoria">Victoria</option>
-                <option value="Queensland">Queensland</option>
-                <option value="Western Australia">Western Australia</option>
-        </select>
+                            <div class="col-12 col-sm-6">
+                                <label for="text5" class="form-label h4-style mb-3">Text box label</label>
+                                <input type="text" class="form-control mb-5" id="text5" value="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="text6" class="form-label h4-style mb-3">Example of a longer text box title</label>
+                                <p class="bga-form-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                <p class="bga-form-text">At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                <textarea class="form-control mb-5" id="text6" value=""></textarea>
+                            </div>
 
-        <label for="postcode" class="form-label mb-3">Postcode</label>
-        <input type="text" class="form-control mb-5" id="postcode" value="">
-
-        <div class="button-example"> 
-            <a class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Include address</a>
-        </div>
-
-    </fieldset>
+                            <a href="">Remove section</a>
+                        </div>
 
 
-</div>
+                    </fieldset>
+                </div>
 
-            <h3>Tool form fields</h3>
-            <div class="bga-component form-field tool mb-5">
-    <h3>Section heading</h3>
-    <fieldset class="p-4">
-        <label for="address" class="form-label mb-3">Address</label>
-        <input type="text" class="form-control mb-5" id="address" value="">
-
-        <label for="city-suburb" class="form-label mb-3">City/Suburb</label>
-        <input type="text" class="form-control mb-5" id="city-suburb" value="">
-
-        <label for="state-territory" class="form-label mb-3">State/Territory</label>
-        
-        <select class="form-select mb-5" aria-label="" id="state-territory">
-                <option class="default-option" disabled selected value="">Select a state or territory</option>
-                <option value="Australian Capital Territory">Australian Capital Territory</option>
-                <option value="New South Wales">New South Wales</option>
-                <option value="Northern Territory">Northern Territory</option>
-                <option value="South Australia">South Australia</option>
-                <option value="Tasmania">Tasmania</option>
-                <option value="Victoria">Victoria</option>
-                <option value="Queensland">Queensland</option>
-                <option value="Western Australia">Western Australia</option>
-        </select>
-
-        <label for="postcode" class="form-label mb-3">Postcode</label>
-        <input type="text" class="form-control mb-5" id="postcode" value="">
-
-        <div class="button-example"> 
-            <a class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Include address</a>
-        </div>
-
-    </fieldset>
-
-
-</div>
-            
             </div>
-            
+
         </div>
-        
-        
-            
 
 
 
         <!-- Design specifications link -->
+        <h2 class="section-start" id="design-specifications">Design specifications</h2>
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/05cfcd45-cf5e-41ea-a434-c5dfe5ad462a/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/102fd2c1-12fc-400a-a7bf-e370be7785dc/' role="button">View design specifications</a>
 </div>
 
 
-        <!-- LAYOUTS -->   
-        <h2 class="section-start" id="layouts">Layouts</h2>
-        
-        <p>Disclaimer alerts can be used on <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html >all page layouts</a>.</p> 
-       
-       
-        <div class="layouts m-0 p-4">
-    
-    
-    
-    
-    <p class="pe-3 m-0">Layout:</p>
-    
-    <select class="form-select layouts-select ps-3" aria-label="Layout examples">
-        
-        
-            <option value="single-col-fullwidth" class="true" selected>Single column - full width</option>
-        
-        
-        
-            <option value="single-col-twothirdswidth" class="true">Single column - 2/3 width</option>
-        
-        
-        
-            <option value="two-col-leftmenu" class="true">Two column - left side menu</option>
-        
-        
-        
-            <option value="two-col-rightsidebar" class="true">Two column - right sidebar</option>
-        
-        
-    </select>
-    
-    
-
-
-    
-</div>
-        
-        
-        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
-            
-            
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min1200">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#onecol-fw-collapseOne" aria-expanded="true" aria-controls="onecol-fw-collapseOne">
-                                   Breakpoint ≥ 1200px
-                                </button>
-                            </h2>
-                            <div id="onecol-fw-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-1colfullwidth-min1200.png' | relative_url  alt="" />
-
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span 8 grid-columns each.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                         
-                        <div class="accordion-item true ">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onecol-fw-collapseTwo" aria-expanded="false" aria-controls="onecol-fw-collapseTwo">
-                                    Breakpoint ≥ 992px
-                                </button>
-                            </h2>
-                            <div id="onecol-fw-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/disclaimer-1colfullwidth-min992.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span 9 grid-columns each.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                    
-
-
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onecol-fw-collapseFive" aria-expanded="false" aria-controls="onecol-fw-collapseFive">
-                                    Breakpoint &lt; 992px
-                                </button>
-                            </h2>
-                            <div id="onecol-fw-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-1colfullwidth-finalbp.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span 12 grid-columns each.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-        </div>
-
-
-    
-
-
-
-
-    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-full-width.html#disclaimer-example' | relative_url' role="button">View layout example</a>
     </div>
-
-
-            
-            
-        </div>
-        
-        
-        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
-            
-            
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min1200">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#onecol-twothirdsw-collapseOne" aria-expanded="true" aria-controls="onecol-twothirdsw-collapseOne">
-                                   Breakpoint ≥ 1200px
-                                </button>
-                            </h2>
-                            <div id="onecol-twothirdsw-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-1col2thirdswidth-min1200.png' | relative_url  alt="" />
-
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                         
-                        <div class="accordion-item true ">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onecol-twothirdsw-collapseTwo" aria-expanded="false" aria-controls="onecol-twothirdsw-collapseTwo">
-                                    Breakpoint ≥ 992px
-                                </button>
-                            </h2>
-                            <div id="onecol-twothirdsw-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/disclaimer-1col2thirdswidth-min992.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 9 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                       
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onecol-twothirdsw-collapseThree" aria-expanded="false" aria-controls="onecol-twothirdsw-collapseThree">
-                                    Breakpoint ≥ 768px
-                                </button>
-                            </h2>
-                            <div id="onecol-twothirdsw-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-1col2thirdswidth-min768.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 11 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    
-
-
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#onecol-twothirdsw-collapseFive" aria-expanded="false" aria-controls="onecol-twothirdsw-collapseFive">
-                                    Breakpoint &lt; 768px
-                                </button>
-                            </h2>
-                            <div id="onecol-twothirdsw-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-        </div>
-
-
-    
-
-
-
-
-    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#disclaimer-example' | relative_url' role="button">View layout example</a>
-    </div>
-
-
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-            
-            
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min1200">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-leftmenu-collapseOne" aria-expanded="true" aria-controls="twocol-leftmenu-collapseOne">
-                                   Breakpoint ≥ 1200px
-                                </button>
-                            </h2>
-                            <div id="twocol-leftmenu-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-2col-leftmenu-min1200.png' | relative_url  alt="" />
-
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                     
-
-
-                    
-
-
-                         
-                         <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min576">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-leftmenu-collapseFour" aria-expanded="false" aria-controls="twocol-leftmenu-collapseFour">
-                                    Breakpoint ≥ 576px
-                                </button>
-                            </h2>
-                            <div id="twocol-leftmenu-collapseFour" class="accordion-collapse collapse" aria-labelledby="layout-bp-min576" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-2col-leftmenu-min576.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 9 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-leftmenu-collapseFive" aria-expanded="false" aria-controls="twocol-leftmenu-collapseFive">
-                                    Breakpoint &lt; 576px
-                                </button>
-                            </h2>
-                            <div id="twocol-leftmenu-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-2col-leftmenu-finalbp.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-        </div>
-
-
-    
-
-
-
-
-    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#disclaimer-example' | relative_url' role="button">View layout example</a>
-    </div>
-
-
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
-            
-            
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-
-
-                     
-
-
-                       
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-collapseThree" aria-expanded="false" aria-controls="twocol-rightbar-collapseThree">
-                                    Breakpoint ≥ 768px
-                                </button>
-                            </h2>
-                            <div id="twocol-rightbar-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-2col-rightsidebar-min768.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    
-
-
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-collapseFive" aria-expanded="false" aria-controls="twocol-rightbar-collapseFive">
-                                    Breakpoint &lt; 768px
-                                </button>
-                            </h2>
-                            <div id="twocol-rightbar-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/disclaimer-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Disclaimer alerts span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-        </div>
-
-
-    
-
-
-
-
-    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#disclaimer-example' | relative_url' role="button">View layout example</a>
-    </div>
-
-
-            
-        </div>
-        
-        
-        
-
-
-        <!-- GUIDELINES -->
-        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
-
-        <h3>Purpose:</h3>
-        <p>The disclaimer alert provides information that the user may want to know without highlighting it on the page. The information is often a warning that is legal in nature.</p>
-        <h3>When to use this component:</h3>
-        <p>Used to provide information the user may want to know, or that the department needs to disclose. Examples are content disclaimers or legal disclaimers.</p>
-        <p>The disclaimer alert should not be used for important information the user needs to know. Use the call out box or information notification instead.</p>
-            
-        </div>
-        
-
             
         </section> 
     </div>
