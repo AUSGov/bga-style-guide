@@ -1,3 +1,51 @@
-.form-field {
-    border: $bga-blue-black-mid solid 1px;
+.fieldset-wrapper {
+    border: solid 1px $bga-blue-black-dark;
+
+    .bga-form-text {
+        margin-bottom: 16px;
+    }
+    .h4-style {
+        color: $bga-blue-black-dark;
+        font-size: 1.1875rem;
+        line-height: 1.5;
+    }
+
+    &.teal {
+        border: none;
+        background: $bga-teal-highlight-light;
+
+        .field-header {
+            background: $bga-teal-highlight-mid;
+        }        
+    }
+
+}
+
+@mixin form-fields-below576 {
+    .fieldset-wrapper.default {
+        padding: 16px !important;
+    }
+    .fieldset-wrapper.teal {
+        .field-header {
+            padding: 16px !important;
+        }
+        fieldset {
+            padding: 16px !important;
+        }
+    }
+}
+
+// MOBILE display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include form-fields-below576();
+    .fieldset-wrapper {
+        .col-sm-6 {
+            width: 100% !important;
+        }
+    }
+}
+
+// Media queries for HTML demo pages
+@media (max-width: 576px) {
+    @include form-fields-below576();
 }
