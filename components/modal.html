@@ -1,0 +1,134 @@
+---
+
+layout: content-tagged
+title: Modal dialog
+description: Alert the user to information they need to know at that point in time with a pop-up window.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">   
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        md-visibility="true"
+        sm-visibility="true"
+        final-visibility="true"
+        breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper modal-component-wrapper d-flex remove-element-padding bkg-grey px-4 py-4">
+
+                <h3 class="w-100">Default modal</h3>
+                {% include component-examples/modal-example.html
+                title="Important message for the user"
+                text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p><p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad.</p>"
+                classes="default"
+                %}
+
+
+                <h3 class="w-100 mt-5">Modal with print button and scroll section</h3>
+                {% include component-examples/modal-scroll-example.html
+                title="Employment Contract Tool – Terms of Use"
+                text="<p>It’s important that you have all the information you need to apply. You can download the documents you may have missed now.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sapien imperdiet lectus vulputate hendrerit. Cras a cursus libero, at consequat nulla. Nullam commodo massa at nisl placerat ultricies. Sed nisi ex, volutpat sit amet augue id, lobortis rutrum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ultricies placerat lectus, eu egestas sapien porta non. Donec id finibus magna. Integer ac nulla diam. Vestibulum aliquam sapien tortor. Ut urna magna, malesuada vel feugiat et, convallis vulputate urna. Sed vitae commodo dolor.</p><p>Ut ullamcorper euismod euismod. Vivamus mi nunc, convallis sed massa in, bibendum pharetra nisl. Vestibulum mollis eros nec mi viverra.</p><p>Sed ac justo sollicitudin odio feugiat elementum. In hac habitasse platea dictumst. Donec consequat mollis leo vestibulum gravida. Nullam et lobortis eros. Nunc lectus diam, mollis quis ultrices convallis, pulvinar eget dui. Pellentesque sit amet metus vestibulum, viverra magna eu, egestas justo. Nulla ac orci tellus. Curabitur semper, nisi egestas ullamcorper bibendum, tortor magna ullamcorper orci, a sagittis metus felis vitae mauris. Aliquam rutrum, odio in tincidunt lacinia, quam dolor interdum mi, id efficitur enim ex et mi. Ut interdum nulla vitae turpis fringilla, vel dapibus est mattis. Integer urna mauris, commodo eget quam nec, bibendum ullamcorper turpis. Cras ut nulla et elit ornare finibus. Integer fermentum mauris diam, at gravida dui rutrum vitae. Aliquam erat volutpat.</p>"
+                button="Agree to terms of use"
+                classes="print-group"
+                %}
+
+
+                <h3 class="w-100 mt-5">Modals with email form</h3>
+                {% include component-examples/modal-grants-example.html
+                    title="Grants and programs shortlist"
+                    shortlist1="<h4><a href=''>Youth Jobs Path</a></h4><p>Assistance for businesses employing young people</p>"
+                    shortlist2="<h4><a href=''>Workforce Incentive Program (WIP) - practice stream</a></h4><p>Funding for general practices to employ health workers in areas of need</p>"
+                    shortlist3="<h4><a href=''>Employer Support Payment Scheme</a></h4><p>Payments for employers of Reservists</p>"
+                    shortlist4="<h4><a href=''>Textile, clothing and footwear corporatewear register</a></h4><p>Textile, Clothing and Footwear Corporatewear Register</p>"
+                    shortlist5="<h4><a href=''>Support Wage System</a></h4><p>Free productivity assessment for employers of people with a disability</p>"
+                    shortlist6="<h4><a href=''>Textile, clothing and footwear corporatewear register</a></h4><p>Textile, Clothing and Footwear Corporatewear Register</p>"
+                    form-title="Email your shortlist so you can review it later"
+                    form-description="We will send you a list of links to your shortlisted grants."
+                    button="Email"
+                    classes="modal-form modal-shortlist teal"
+                    %}
+                
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/fb8aed08-66a1-4fdb-bb52-a23d13d4b3e9/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Modal dialogs can be used on all page layouts.</p>
+
+
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+            {% include layouts-accordion.html
+            singlelayout="true"
+            allbp-img="'../assets/layout-images/modal-allbp.png' | relative_url "
+            allbp-rules="<p>Modals are placed in the center of the screen.</p>
+            <p>Modals have a maximum width of 640px.</p>"
+            %}
+
+        </div>
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Used to attract the users attention to important information during a process.</p>
+        <p>The modal dialog appears on top of the main content which is disabled until the modal is closed.</p>
+        <h3>When to use this component:</h3>
+        <p>Modal dialogs can disrupt to the user experience and should not be used often. Only use them to aid the user in completing a workflow or process.</p>
+        <p>Use modals to:</p>
+        <ul>
+        <li>Display important warnings or correct critical errors.</li>
+        <li>Allow the user to enter information for continuing a current process.</li>
+        <li>Break up a complex workflow into simpler steps.</li>
+        </ul>
+
+
+    </div>
