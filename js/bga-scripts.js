@@ -767,6 +767,95 @@ $(document).ready(function () {
     });
 
 
+    // COMPONENT EXAMPLE: MODALS
+    
+    // Function to detect if scrollable section is overflowing            
+    var detect_overflowing = function(parent_elem, scrollable_name){
+        var scroll_height = parent_elem.find(scrollable_name)[0].scrollHeight;
+        var container_height = parent_elem.find(scrollable_name)[0].offsetHeight;
+
+        if (container_height < scroll_height) {
+            parent_elem.removeClass('no-scroll');
+        } else {
+            parent_elem.addClass('no-scroll');
+        }
+    };
+
+    if ($('.modal-shortlist')) {      
+        $('.modal-shortlist').each(function(){
+            // Add shortlist item count to counter
+            var shortlist_count = $(this).find('.shortlist-item').length;
+            $(this).find('.counter').text(shortlist_count);
+
+            // Set class for scrollable appearance
+            detect_overflowing($(this), ".scrollable");
+        });
+       
+        // remove shortlist items on click
+        $('.modal-shortlist .remove-btn').on('click', function(){
+            $(this).parents('.shortlist-item').hide();
+            var counter = $(this).parents('.modal-shortlist').find('.counter'),
+            count =  $(this).parents('.modal-shortlist').find('.shortlist-item:visible').length;
+            counter.text(count);
+
+            if (counter.text() == "0") {
+                $(this).parents('.modal-shortlist').find('.no-shortlist').removeClass('hidden');
+            }
+
+            // Set class for scrollable appearance
+            detect_overflowing($(this).parents('.modal-shortlist'), ".scrollable");
+        });
+    }
+
+    // On scroll detect if content is at top or bottom of container and add classes accordingly.
+    $(".modal-example .scrollable").on("scroll", function() {
+            
+        var scroll_wrapper = $(this).parents('.scroll-wrapper'),
+            scroll_position = $(this).scrollTop(),
+            scroll_height = $(this)[0].scrollHeight,
+            container_height = $(this).innerHeight(),
+            scroll_done = scroll_height - container_height;
+
+        if (scroll_position === 0) {
+            scroll_wrapper.removeClass('scrolling');
+        } else if (scroll_position === scroll_done) {
+            scroll_wrapper.addClass("scroll-done");
+            scroll_wrapper.removeClass('scrolling');
+        } else {
+            scroll_wrapper.removeClass("scroll-done");
+            scroll_wrapper.addClass('scrolling');
+        }
+        
+    });
+
+    // On smaller screen sizes set modal scrollable height to fit with the form toggle.
+    var mobile_modal_display = function(){
+        if ($(window).width() < 768) {
+            $('.modal-form').each(function(){
+                var modal_height = $(this).outerHeight(),
+                top_section_height = $(this).find('.title-area').outerHeight() + 24, //bottom margin
+                toggle_height = $(this).find('.mobile-form-toggle').outerHeight(),
+                scrollable_height = modal_height- top_section_height - toggle_height - 32 - 24; //top and bottom padding 
+
+                $(this).find('.scrollable').css('max-height', scrollable_height+'px');
+            });  
+        } else if ($(window).width() >= 768){
+            $('.modal-form').each(function(){
+                $(this).find('.scrollable').css('max-height', '400px');
+            });
+        }
+    };
+    mobile_modal_display();
+    
+    $(window).resize(function () {
+       mobile_modal_display();
+    });
+
+    //Toggle modal form on mobile screens
+    $('.mobile-form-toggle').on('click', function(){
+        $(this).parents('.email-form').toggleClass('open').find('form').slideToggle();
+    });
+
 
 }); //End doc ready
 
