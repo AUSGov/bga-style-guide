@@ -1,82 +1,163 @@
-<div class="bga-component-wrapper">
-<div class="bga-component modal-example {{include.classes}}">
+<div class="bga-component-wrapper mb-5">
+    <div class="bga-component modal-example {{include.classes}}">
 
-    <button class="close m-0 p-0">Close</button>
+        <button class="close m-0 p-0">Close</button>
 
-    <div class="component-content d-flex">
+        <div class="component-content d-flex">
 
-        <div class="component-text remove-element-padding">
-            {% if include.title %}
-                <h3>{{ include.title }}</h3>
-            {% endif %}
-            
-            <div class="scroll-wrapper">
-                <span class="scroll-separator scroll-separator--top"></span>
-                
-                <div class="scrollable remove-element-padding">
-                <div class="shortlist"> 
-                    <div class="shortlist-item px-0 pb-3">
-                        {{ include.shortlist1 }}
-                    </div>
-
-                    <div class="shortlist-item px-0 py-3">
-                        {{ include.shortlist2 }}
-                    </div>
-                    <div class="shortlist-item px-0 py-3">
-                        {{ include.shortlist3 }}
-                    </div>
-                    <div class="shortlist-item px-0 py-3">
-                        {{ include.shortlist4 }}
-                    </div>
-                    <div class="shortlist-item px-0 py-3">
-                        {{ include.shortlist5 }}
-                    </div>
-                    <div class="shortlist-item px-0 py-3">
-                        {{ include.shortlist6 }}
-                    </div>
-
-                    <div class="no-shortlist hidden">
-                        <h4>You don't have any grants or programs shortlisted at the moment.</h4>
-                        <p>You can add items to the shortlist by clicking on the shortlist 'star' icon.</p>
-                    </div>
-                    
-                </div>  
-                     
-                </div>
-                <span class="scroll-separator scroll-separator--bottom"></span>
-                </div>
-
-
-        </div>
-
-        <div class="email-form">
-            <form class="remove-element-padding">
-                {% if include.form-title %}
-                    <h4>{{ include.form-title }}</h4>
+            <div class="component-text remove-element-padding">
+                {% if include.title %}
+                <div class="title-area">
+                <h3 class="mt-0"><span class="counter me-3"></span>{{ include.title }}</h3>
                 {% endif %}
+                </div>
 
-                <p>{{ include.form-description }}</p>
+                <div class="scroll-wrapper">
+                    <span class="scroll-separator scroll-separator--top"></span>
 
-                <label class="mb-3">Email</label>
-                <div class="form-element-wrapper mb-5">    
-                    <input type="text" class="form-control mb-0" value="" required>
+                    <div class="scrollable remove-element-padding">
+                        <div class="shortlist">
+                            {% if include.shortlist1 %}
+                            <div class="shortlist-item px-0 py-3">
+                                <button class="remove-btn p-0 me-3"><svg data-name="Icon / close"
+                                        xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142"
+                                        viewBox="0 0 14.142 14.142">
+                                        <path
+                                            d="M7.071,8.485,1.414,14.142,0,12.728,5.657,7.071,0,1.414,1.414,0,7.071,5.657,12.728,0l1.414,1.414L8.485,7.071l5.657,5.657-1.414,1.414Z"
+                                            fill="#333" />
+                                    </svg></button>
+                                <div class="item-content">
+                                    {{ include.shortlist1 }}
+                                </div>
+                            </div>
+                            {% endif %}
+
+                            {% if include.shortlist2 %}
+                            <div class="shortlist-item px-0 py-3">
+                                <button class="remove-btn p-0 me-3"><svg data-name="Icon / close"
+                                        xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142"
+                                        viewBox="0 0 14.142 14.142">
+                                        <path
+                                            d="M7.071,8.485,1.414,14.142,0,12.728,5.657,7.071,0,1.414,1.414,0,7.071,5.657,12.728,0l1.414,1.414L8.485,7.071l5.657,5.657-1.414,1.414Z"
+                                            fill="#333" />
+                                    </svg></button>
+                                    <div class="item-content">
+                                        {{ include.shortlist2 }}
+                                    </div>
+                            </div>
+                            {% endif %}
+
+                            {% if include.shortlist3 %}
+                            <div class="shortlist-item px-0 py-3">
+                                <button class="remove-btn p-0 me-3"><svg data-name="Icon / close"
+                                        xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142"
+                                        viewBox="0 0 14.142 14.142">
+                                        <path
+                                            d="M7.071,8.485,1.414,14.142,0,12.728,5.657,7.071,0,1.414,1.414,0,7.071,5.657,12.728,0l1.414,1.414L8.485,7.071l5.657,5.657-1.414,1.414Z"
+                                            fill="#333" />
+                                    </svg></button>
+                                    <div class="item-content">
+                                        {{ include.shortlist3 }}
+                                    </div>
+                            </div>
+                            {% endif %}
+
+                            {% if include.shortlist4 %}
+                            <div class="shortlist-item px-0 py-3">
+                                <button class="remove-btn p-0 me-3"><svg data-name="Icon / close"
+                                        xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142"
+                                        viewBox="0 0 14.142 14.142">
+                                        <path
+                                            d="M7.071,8.485,1.414,14.142,0,12.728,5.657,7.071,0,1.414,1.414,0,7.071,5.657,12.728,0l1.414,1.414L8.485,7.071l5.657,5.657-1.414,1.414Z"
+                                            fill="#333" />
+                                    </svg></button>
+                                    <div class="item-content">
+                                        {{ include.shortlist4 }}
+                                    </div>
+                            </div>
+                            {% endif %}
+
+                            {% if include.shortlist5 %}
+                            <div class="shortlist-item px-0 py-3">
+                                <button class="remove-btn p-0 me-3"><svg data-name="Icon / close"
+                                        xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142"
+                                        viewBox="0 0 14.142 14.142">
+                                        <path
+                                            d="M7.071,8.485,1.414,14.142,0,12.728,5.657,7.071,0,1.414,1.414,0,7.071,5.657,12.728,0l1.414,1.414L8.485,7.071l5.657,5.657-1.414,1.414Z"
+                                            fill="#333" />
+                                    </svg></button>
+                                    <div class="item-content">
+                                        {{ include.shortlist5 }}
+                                    </div>
+                            </div>
+                            {% endif %}
+
+                            {% if include.shortlist6 %}
+                            <div class="shortlist-item px-0 py-3">
+                                <button class="remove-btn p-0 me-3"><svg data-name="Icon / close"
+                                        xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142"
+                                        viewBox="0 0 14.142 14.142">
+                                        <path
+                                            d="M7.071,8.485,1.414,14.142,0,12.728,5.657,7.071,0,1.414,1.414,0,7.071,5.657,12.728,0l1.414,1.414L8.485,7.071l5.657,5.657-1.414,1.414Z"
+                                            fill="#333" />
+                                    </svg></button>
+                                    <div class="item-content">
+                                        {{ include.shortlist6 }}
+                                    </div>
+                            </div>
+                            {% endif %}
+
+                            <div class="no-shortlist remove-element-padding pt-3 hidden">
+                                <h4>You don't have any grants or programs shortlisted at the moment.</h4>
+                                <p>You can add items to the shortlist by clicking on the shortlist 'star' icon.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <span class="scroll-separator scroll-separator--bottom"></span>
+                </div>
+
+
+            </div>
+
+            <div class="email-form">
+                <button class="mobile-form-toggle">{{ include.toggle-text}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15">
+                        <path  data-name="Chevron / Up" d="M9.042,12,0,21.026,2.979,24,15,12,2.979,0,0,2.974Z" transform="translate(0 15) rotate(-90)" fill="#333"/>
+                      </svg>
+                      
+                      
+                </button>
+                <form class="remove-element-padding">
+                    {% if include.form-title %}
+                    <h4>{{ include.form-title }}</h4>
+                    {% endif %}
+
+                    <p>{{ include.form-description }}</p>
+
+                    <label class="mb-3">Email</label>
+                    <div class="form-element-wrapper mb-5">
+                        <input type="text" class="form-control mb-0" value="" required>
                     </div>
 
-                {% if include.button %}
-                <div class="button-example mb-4">
-                <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">{{ include.button }}
-                    <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="23.453" height="20.102" viewBox="0 0 23.453 20.102">
-                        <path d="M.011,20.1,23.453,10.051.011,0,0,7.818l16.752,2.234L0,12.285Z" fill="#333"/>
-                      </svg>  
-                </button>
-                </div>
-            {% endif %}
+                    {% if include.button %}
+                    <div class="button-example">
+                        <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">{{
+                            include.button }}
+                            <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="23.453"
+                                height="20.102" viewBox="0 0 23.453 20.102">
+                                <path d="M.011,20.1,23.453,10.051.011,0,0,7.818l16.752,2.234L0,12.285Z" fill="#333" />
+                            </svg>
+                        </button>
+                    </div>
+                    {% endif %}
 
-            </form>
+                </form>
+            </div>
+
+
         </div>
-    
 
     </div>
-
-</div>
 </div>
