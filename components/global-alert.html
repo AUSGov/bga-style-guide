@@ -1,0 +1,145 @@
+---
+
+layout: content-tagged
+title: Global alert
+description: Alert users to current issues on the site with a message at the top of every page.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+       {% include breakpoints.html
+            sm-visibility="true"
+            final-visibility="true"
+            breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding py-4">
+                
+                {% include component-examples/global-alert-example.html 
+                    message="<p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>"
+                %}
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/fe6137db-86f0-4ca9-bd13-c177cd0e807a/'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Page headers are used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >all page layouts</a>.</p> 
+       
+        
+        
+        
+        
+        <h3>Default header grid layout</h3>
+        {% include layouts-dropdown.html 
+            layout-name="All layouts"
+            singlelayout="true"
+        %}
+        
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+        {% include layouts-accordion.html 
+        
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/page-header-default-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/page-header-default-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
+            
+                min1200-rules="<p>The header content area is 8 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
+
+                min992-rules="<p>The header content area is 10 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+        <h3>Category page grid layout</h3>
+        {% include layouts-dropdown.html 
+            layout-name="All layouts"
+            singlelayout="true"
+        %}
+        
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+            
+            {% include layouts-accordion.html 
+        
+                singlelayout="true"
+            
+                allbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
+            
+                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
+                
+            %}
+            
+        </div>
+        
+        
+    
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose: </h3>
+        <p>A page header helps users understand what the content of the page is about and its relevance to them. It includes the primary H1 (page title), a label and a supporting page description.  </p>
+        <h4>Headers for grant landing pages </h4>
+        <p>These differ from all other headers. They use a plain English title as the H1, and the grant name is displayed in the label field &ndash; this is also the page title in this case. </p>
+        <h3>When to use this component: </h3>
+        <ul>
+            <li>Page headers are built into every page pattern and the component doesn’t need to be added manually.</li>
+        </ul>
+        <h3>Content rules: </h3>
+        <ul>
+            <li>H1: Recommended 90 character limit </li>
+            <li>Description: Recommended 250 character limit  </li>
+        </ul>
+
+            
+        </div>
+        
