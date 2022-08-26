@@ -1,0 +1,120 @@
+---
+
+layout: content-tagged
+title: Anchor menu
+description: Allow users to scan the contents of a page and navigate to key sections.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        singlebp="true"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include component-examples/anchor-menu-example.html
+                classes="example"
+                link-1="At a glance"
+                link-2="Who can apply"
+                link-3="Applications"
+                link-4="Contact"
+                link-5="Customer stories"
+                link-6="Key documents"
+                %}
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/921bf21b-cea1-49af-9589-42f0060f2503/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Anchor menus are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left side menu layout</a>.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Two column - left side menu"
+        singlelayout="true"
+        %}
+
+
+        <div class="layout-example show two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min576-img="'../assets/layout-images/anchor-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/anchor-2col-leftmenu-finalb.png' | relative_url "
+
+            min576-rules="<p>The anchor menu sits to the left of the content and is 3 grid-columns wide.</p><p>The anchor menu is persistent on the screen, as the user scrolls it is fixed to the top of the screen.</p>"
+
+            finalbp-rules="<p>The anchor menu is 12 grid-columns wide.</p><p>The anchor menu is not fixed to the top of the screen.</p>"
+
+            %}
+
+        </div>
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Used to define sections of a page and add a menu item to the left-hand side navigation &ndash; on the same
+            page.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Link names usually match the heading on page (this can be shortened if needed)</li>
+            <li>Page section headings are usually H2</li>
+        </ul>
+
+    </div>
