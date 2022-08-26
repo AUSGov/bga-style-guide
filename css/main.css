@@ -3240,9 +3240,9 @@ strong { font-weight: 600; }
 
 .component-example.bp-below576 .bga-btn, .component-example.bp-below576 button, .component-example.bp-below576 .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; }
 
-.component-example.bp-below576 .button-example { width: 100%; }
+@media (max-width: 576px) { .bga-primary-btn, .bga-secondary-btn { min-width: 80px; } .bga-btn, button, .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; } }
 
-@media (max-width: 576px) { .bga-primary-btn, .bga-secondary-btn { min-width: 80px; } .bga-btn, button, .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; } .button-example { width: 100%; } }
+@media (max-width: 350px) { .button-example { width: 100%; } }
 
 label { font-weight: 600; }
 
@@ -4003,6 +4003,26 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .component-example.bp-below576 .inline-pathway.callout-link img, .component-example.small-screen .inline-pathway.callout-link img { width: 20px; }
 
 @media (max-width: 576px) { .inline-pathway.callout-link a { flex-wrap: wrap; align-items: center; justify-content: center; } .inline-pathway.callout-link .icon-wrapper { width: 44px; height: 44px; margin: 0 0 16px 0 !important; } .inline-pathway.callout-link img { width: 20px; } }
+
+.callout-box.blue.subscribe { border-left-width: 16px; background: #C8D9EE; }
+
+.callout-box.blue.subscribe h2 span, .callout-box.blue.subscribe .h2 span { font-weight: 400; }
+
+.callout-box.blue.subscribe .button-group { align-items: center; }
+
+.component-example.bp-350 .callout-box.blue.subscribe, .component-example.bp-below350 .callout-box.blue.subscribe { border-left-width: 8px; }
+
+.component-example.bp-below350 .callout-box.blue.subscribe .button-group { flex-direction: column-reverse; flex-wrap: wrap; align-content: flex-start; }
+
+.component-example.bp-below350 .callout-box.blue.subscribe .button-group a { padding-bottom: 24px; margin: 0; text-align: left; width: 100%; text-indent: -8px; }
+
+.component-example.bp-below350 .callout-box.blue.subscribe .button-group .button-example { width: 100%; }
+
+.component-example.bp-below350 .callout-box.blue.subscribe .button-group button { width: 100%; }
+
+@media (max-width: 576px) { .callout-box.blue.subscribe { border-left-width: 8px; } }
+
+@media (max-width: 350px) { .callout-box.blue.subscribe .button-group { flex-direction: column-reverse; flex-wrap: wrap; align-content: flex-start; } .callout-box.blue.subscribe .button-group a { padding-bottom: 24px; margin: 0; text-align: left; width: 100%; text-indent: -8px; } .callout-box.blue.subscribe .button-group .button-example { width: 100%; } .callout-box.blue.subscribe .button-group button { width: 100%; } }
 
 .standard-pathway.image-pathway .component-image { height: 240px; }
 

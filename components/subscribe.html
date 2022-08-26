@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Inline pathway list</title>
+    <title>Subscribe component</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -34,7 +34,7 @@
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/inline-pathway.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/subscribe.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -145,7 +145,7 @@
                      
 
                     <li class="breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0 h-100">Inline pathway list</p>
+                        <p class="breadcrumb-location m-0 p-0 h-100">Subscribe component</p>
                     </li>
                 </ul>
 
@@ -162,8 +162,8 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Inline pathway list</h1>
-                        <p class="header-intro">Promote pathways to internal and external content within the context of the page.</p>
+                        <h1>Subscribe component</h1>
+                        <p class="header-intro">Highlight a subscribe link within the context of a page.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
@@ -215,18 +215,58 @@
         
     </div>
     
-    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
    
           
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
         <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+         <!-- Breakpoint radio buttons -->
+         <div class="breakpoints m-0 p-4">
 
     
-    <p class="pe-3 m-0">All breakpoints</p>
-    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                
+
+                      
+                    <input type="radio" class="btn-check bp-xs true" name="-group" id="-bp-xs" autocomplete="off" data-breakpoint="bp-350">
+                    <label class="btn bp-xs btn-outline-primary py-2 px-3 true" for="-bp-xs">≥350px (xs)</label>
+                
+
+                    
+                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below350">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;350px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
     
 
 </div>
@@ -235,62 +275,60 @@
 
         <!-- Component example -->
 
-        <div class="component-example narrow m-0">
+        <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
-                
+           
             <div class="bga-component-wrapper pb-5">
-<div class="bga-component inline-pathway  m-0">
-   
-            
-                <a href="" class="p-4 mb-1 remove-element-padding">
-                    <p class="link mb-3"><strong>Find out what you need to do when deregistering a company lorem ipsum dolor sit amet, consectetur</strong></p>
-                    <p class="page mini"> 
-                        <img class="me-2" src='../assets/icon-arrow-right-blue.svg' | relative_url  alt="" />
-                        <span>Internal page name</span></p> 
-                </a>
-            
-            
-            
-                <a href="" class="p-4 mb-1 remove-element-padding">
-                    <p class="link mb-3"><strong>Find out lorem ipsum dolor sit amet, consectetur</strong></p>
-                    <p class="page mini"> 
-                        <img class="me-2" src='../assets/icon-arrow-right-blue.svg' | relative_url  alt="" />
-                        <span>Internal page name</span></p>
-                </a>
-            
-            
-            
-                <a href="" class="p-4 mb-1 remove-element-padding">
-                    <p class="link mb-3"><strong>Read more about this on external site</strong></p>
-                    <p class="page mini"> 
-                       <img class="me-2" src='../assets/icon-external-blue.svg' | relative_url  alt="" />
-                        <span>External site name</span></p>
-                </a>
-            
-            
-            
+    <div class="bga-component callout-box blue subscribe  m-0">
 
-</div>
-</div>
+
+        <div class="p-4 component-content">
+
+            <div class="component-text p-0 remove-element-padding">
                 
- 
+                <h2>Stay up to date. <span>Subscribe to the newsletter.</span></h2>
+                
+
+                <p>Get the latest business news delivered straight to your inbox each month.</p>
+
+                <div class="button-group d-flex">
+
+                    <div class="button-example me-3">
+                        <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Subscribe
+                        </button>
+                    </div>
+
+                    <a class="" href="">Privacy policy</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
             </div>
             
         </div>
         
+        
+            
+
 
 
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/2b99b99e-3683-484b-9225-97fafe3d148a/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/04850b09-dfcf-4bd8-bd60-20ffbf58a03f/' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->   
         <h2 class="section-start" id="layouts">Layouts</h2>
         
-        <p>Inline pathway lists can be used on <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html >all page layouts</a>.</p> 
+        <p>Subscribe components can be used on all <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>page layouts</a>.</p> 
        
        
         <div class="layouts m-0 p-4">
@@ -325,8 +363,7 @@
 
     
 </div>
-        
-        
+
         <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
             
             
@@ -343,12 +380,12 @@
                             <div id="onecol-fw-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-1colfullwidth-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-1colfullwidth-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span 8 grid-columns each.</p>
+                                        <p>The content area is 12 grid-columns wide.</p><p>Subscribe components span 8 grid-columns each.</p>
                                     </div>
                                 </div>
                             </div>
@@ -366,11 +403,11 @@
                             <div id="onecol-fw-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/inlinepathway-1colfullwidth-min992.png' | relative_url  alt="" />
+                                     <img src='../assets/layout-images/subscribe-1colfullwidth-min992.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span 9 grid-columns each.</p>
+                                        <p>The content area is 12 grid-columns wide.</p><p>Subscribe components span 9 grid-columns each.</p>
                                     </div>
                                 </div>
                             </div>
@@ -394,11 +431,11 @@
                             <div id="onecol-fw-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-1colfullwidth-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-1colfullwidth-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span 12 grid-columns each.</p>
+                                       <p>The content area is 12 grid-columns wide.</p><p>Subscribe components span 12 grid-columns each.</p>
                                     </div>
                                 </div>
                             </div>
@@ -414,7 +451,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-full-width.html#inline-pathway-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-full-width.html#subscribe-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -439,12 +476,12 @@
                             <div id="onecol-twothirdsw-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-1col2thirdswidth-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-1col2thirdswidth-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                        <p>The content area is 8 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -462,11 +499,11 @@
                             <div id="onecol-twothirdsw-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/inlinepathway-1col2thirdswidth-min992.png' | relative_url  alt="" />
+                                     <img src='../assets/layout-images/subscribe-1col2thirdswidth-min992.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 9 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                        <p>The content area is 9 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -484,11 +521,11 @@
                             <div id="onecol-twothirdsw-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-1col2thirdswidth-min768.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-1col2thirdswidth-min768.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 11 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                        <p>The content area is 11 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -510,11 +547,11 @@
                             <div id="onecol-twothirdsw-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                       <p>The content area is 12 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -530,7 +567,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#inline-pathway-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html#subscribe-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -554,12 +591,12 @@
                             <div id="twocol-leftmenu-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-2col-leftmenu-min1200.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-2col-leftmenu-min1200.png' | relative_url  alt="" />
 
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                        <p>The content area is 8 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -583,11 +620,11 @@
                             <div id="twocol-leftmenu-collapseFour" class="accordion-collapse collapse" aria-labelledby="layout-bp-min576" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-2col-leftmenu-min576.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-2col-leftmenu-min576.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 9 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                        <p>The content area is 9 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -605,11 +642,11 @@
                             <div id="twocol-leftmenu-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-2col-leftmenu-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-2col-leftmenu-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                       <p>The content area is 12 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -625,7 +662,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#inline-pathway-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-side-menu.html#subscribe-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -655,11 +692,11 @@
                             <div id="twocol-rightbar-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-2col-rightsidebar-min768.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-2col-rightsidebar-min768.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                        <p>The content area is 8 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -681,11 +718,11 @@
                             <div id="twocol-rightbar-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/inlinepathway-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/subscribe-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>
+                                       <p>The content area is 12 grid-columns wide.</p><p>Subscribe components span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -701,12 +738,13 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#inline-pathway-example' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html#subscribe-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
             
         </div>
+
         
         
     
@@ -714,41 +752,17 @@
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        <h3>Purpose: </h3>
-        <p>The inline pathway provides a way for internal and external links to stand out when the user needs to complete an important, but optional task.  </p>
-        <p>An inline pathway component can list one or more links. It is used within the context of written content if it is a medium value step in a process. It can also be used at the end of the page to provide links to explore the subject further. </p>
-        <h3>When to use this component: </h3>
+       
+        <h3>Purpose:</h3>
+        <p>The subscribe component is used to provide the user with a pathway for subscribing to the business.gov.au newsletter.</p><p>This component should not be used for links to other subscription services. The <a href=/bga-style-guide/components/callout-link>call out link</a> should be used for non-business.gov.au subscribe links.</p>
+        
+        <h3>When to use this component:</h3>
         <ul>
-            <li>It should be used directly under content where the user should read more about a topic to gain more information or go to the next logical page: 
-                <ul>
-                    <li>May list one or more links </li>
-                    <li>May be internal or external links </li>
-                </ul>
-            </li>
-            <li>It should be used in the “Read next” section at the bottom of the page in business information content: 
-                <ul>
-                    <li>No more than 3 inline pathway links </li>
-                    <li>Must be internal links </li>
-                </ul>
-            </li>
-        </ul>
-        <h3>Content rules</h3>
-        <h4>External links</h4>
-        <ul>
-            <li>Sentence must provide an action “Learn more/Read about …”. </li>
-            <li>Sentence must not include the name of the website. </li>
-            <li><strong>Label</strong> should state the agency or name of website. The agency should be spelt out in full (no abbreviations). </li>
-        </ul>
-        <h4>Internal links</h4>
-        <ul>
-            <li>Sentence must provide an action “Learn more about….” </li>
-            <li>Sentence must not have the name of the page in it unless it is a grant recipient pathway </li>
-            <li><strong>Label</strong> automatically pulls the name of the page. </li>
+            <li>Typically used on pages where the user may be looking for a way to sign up to the business.gov.au newsletter such as the home page and the news page.</li>
+            <li>Subscribe components should not be the first element on the page.</li>
         </ul>
         
-        
-        
-            
+
         </div>
         
 
