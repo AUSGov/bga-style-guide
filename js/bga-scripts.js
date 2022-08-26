@@ -132,11 +132,11 @@ $(document).ready(function () {
 
     // ANCHOR MENU 
 
-    if ($('#anchor-menu').length) {
+    if ($('.in-page #anchor-menu').length) {
 
         //Create object containing 
         var sections = {};
-        $('#anchor-menu li a').each(function () {
+        $('.in-page #anchor-menu li a').each(function () {
 
             if ($(this).attr('href')) {
                 var anchor_link = $(this).attr('href');
@@ -149,11 +149,11 @@ $(document).ready(function () {
         var make_sticky = function () {
             var menu_position = Math.round($('.anchor-menu-wrapper').position().top);
             var menu_width = $('.anchor-menu-wrapper').width();
-            var menu_height = $('.anchor-menu').height();
+            var menu_height = $('.in-page.anchor-menu').height();
             var footer_height = $('#footer').height();
             var unfix = $(document).height() - footer_height - menu_height;
 
-            $('.anchor-menu').css('width', menu_width);
+            $('in-page.anchor-menu').css('width', menu_width);
 
             if ($(window).width() >= 992) {
 
@@ -161,14 +161,14 @@ $(document).ready(function () {
                     var scroll_position = $(window).scrollTop();
 
                     if (scroll_position >= menu_position && scroll_position < unfix) {
-                        $('.anchor-menu').addClass('fixed');
+                        $('.in-page.anchor-menu').addClass('fixed');
                     } else {
-                        $('.anchor-menu').removeClass('fixed');
+                        $('.in-page.anchor-menu').removeClass('fixed');
                     }
                 });
             } else if ($(window).width() < 992) {
                 $(window).scroll(function () {
-                    $('.anchor-menu').removeClass('fixed');
+                    $('.in-page.anchor-menu').removeClass('fixed');
                 });
             }
         };
@@ -178,7 +178,7 @@ $(document).ready(function () {
         $(window).resize(function () {
 
             if ($(window).width() < 992) {
-                $('.anchor-menu').removeClass('fixed');
+                $('.in-page.anchor-menu').removeClass('fixed');
             }
 
             make_sticky();
@@ -194,7 +194,7 @@ $(document).ready(function () {
                     current_section = key;
                 }
             }
-            $('#anchor-menu li a').each(function () {
+            $('.in-page #anchor-menu li a').each(function () {
                 $(this).removeClass('current');
 
                 if ($(this).attr('href') === current_section) {
@@ -854,6 +854,15 @@ $(document).ready(function () {
     //Toggle modal form on mobile screens
     $('.mobile-form-toggle').on('click', function(){
         $(this).parents('.email-form').toggleClass('open').find('form').slideToggle();
+    });
+
+
+    // COMPONENT EXAMPLE: ANCHOR MENU
+    $('.anchor-menu.example li a').on('click', function(){
+        $('.anchor-menu.example li a').each(function(){
+            $(this).removeClass('current');
+        });
+        $(this).addClass('current');
     });
 
 
