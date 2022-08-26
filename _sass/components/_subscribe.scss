@@ -1,0 +1,65 @@
+.callout-box.blue.subscribe {
+    border-left-width: 16px;
+    background: $bga-blue-background-light;
+
+    h2 {
+        span {
+            font-weight: 400;
+        }
+    }
+
+    .button-group {
+        align-items: center;
+    }
+}
+
+
+// Mixins for small screen examples and media queries
+@mixin subscribe-bp-350 {
+    .callout-box.blue.subscribe {
+        border-left-width: 8px;
+    }
+}
+
+@mixin subscribe-below350 {
+    .callout-box.blue.subscribe {
+        .button-group {
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+            a {
+                padding-bottom: 24px;
+                margin: 0;
+                text-align: left;
+                width: 100%;
+                text-indent: -8px;
+            }
+            .button-example {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-350,
+.component-example.bp-below350 {
+    @include subscribe-bp-350();
+}
+
+.component-example.bp-below350 {
+    @include subscribe-below350();
+}
+
+// Media queries for HTML example pages.
+@media (max-width: 576px) {
+    @include subscribe-bp-350();
+}
+
+@media (max-width: 350px) {
+    @include subscribe-below350();
+}

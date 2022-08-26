@@ -472,10 +472,8 @@
         line-height: 1.125rem;
         padding: 12px 24px;
     }
-    .button-example {
-        width: 100%; 
-    }
 }
+
 
 // MOBILE display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-below576 {
@@ -485,4 +483,10 @@
 // Media queries for HTML demo pages
 @media (max-width: 576px) {
     @include button-below576();
+}
+
+@media (max-width: 350px) {
+    .button-example {
+        width: 100%; 
+    }
 }
