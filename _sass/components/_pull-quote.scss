@@ -1,0 +1,61 @@
+.pull-quote {
+    .component-content {
+        border-left: 8px solid $bga-purple-highlight-dark;
+    }
+    svg {
+        fill: $bga-purple-highlight-mid;
+    }
+    blockquote {
+        font-size: 1.375rem;
+        font-style: italic;
+    }
+    .author {
+        font-size: .875rem;
+    }
+
+    &.teal {
+        .component-content {
+            border-left: 8px solid $bga-teal-highlight-dark;
+        }
+        svg {
+            fill: $bga-teal-highlight-mid;
+        }
+    }
+    &.green {
+        .component-content {
+            border-left: 8px solid $bga-green-highlight-dark;
+        }
+        svg {
+            fill: $bga-green-highlight-mid;
+        }
+    }
+    &.orange {
+        .component-content {
+            border-left: 8px solid $bga-orange-highlight-dark;
+        }
+        svg {
+            fill: $bga-orange-highlight-mid;
+        }
+    }
+}
+
+@mixin pull-quote-below576 {
+    .pull-quote {
+        padding: 24px 0 32px 0 !important;
+    
+        blockquote {
+            font-size: 1.125rem;
+            font-style: italic;
+        }
+    }
+}
+
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include pull-quote-below576();
+}
+
+//Media queries
+@media (max-width: 576px) {
+    @include pull-quote-below576();    
+}

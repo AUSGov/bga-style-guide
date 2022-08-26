@@ -1,0 +1,248 @@
+---
+
+layout: content-tagged
+title: Pull quote
+description: Display a stylised quote or important content.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include anchor-menu.html
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        sm-visibility="true"
+        final-visibility="true"
+        breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include component-examples/pull-quote-example.html
+                quote="The greatest glory in living lies not in never falling, but in rising every time we fall."
+                author="Nelson Mandela, Position title, Company name"
+                classes="purple"
+                %}
+
+                {% include component-examples/pull-quote-example.html
+                    quote="Now is the winter of our discontent<br/>Made glorious summer by this sun of York;<br/>And all the clouds that lour'd upon our house<br/>In the deep bosom of the ocean buried."
+                    author="William Shakespeare, Richard III"
+                    classes="teal"
+                    %}
+
+            </div>
+        </div>
+
+        <div class="component-example">
+            <div class="component-wrapper remove-element-padding p-4">
+                <div class="row">
+                    <h3>Colour variations</h3>
+
+                    <div class="col-6 col-lg-4">
+                        {% include component-examples/pull-quote-example.html
+                            quote="Purple"
+                            classes="purple"
+                            author="Default colour"
+                            %}
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        {% include component-examples/pull-quote-example.html
+                            quote="Teal"
+                            classes="teal"
+                            author="Alternative colour"
+                            %}
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        {% include component-examples/pull-quote-example.html
+                            quote="Green"
+                            classes="green"
+                            author="Alternative colour"
+                            %}
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        {% include component-examples/pull-quote-example.html
+                            quote="Orange"
+                            classes="orange"
+                            author="Alternative colour"
+                            %}
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/f657d592-7d0d-4809-adbc-4bc21722a79f/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Call out boxes can be used on all page layouts except the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - full width layout</a>.</p>
+
+
+        {% include layouts-dropdown.html
+        single-col-fullwidth-visibility="false"
+        single-col-twothirds-visibility="true"
+        two-col-leftmenu-visibility="true"
+        two-col-rightsidebar-visibility="true"
+        %}
+
+
+
+
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/pullquote-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/pullquote-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/pullquote-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/pullquote-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#pullquote-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/pullquote-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/pullquote-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/pullquote-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#pullquote-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+
+            min768-img="'../assets/layout-images/pullquote-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/pullquote-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min768x-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Pull quotes span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar.html#pullquote-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Used to display a stylised quote or important content.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>On pages that include content that is attributed to a specific person. Most often used as part of
+                Customer Story pages.</li>
+            <li>On business information content pages to highlight an example or key point.</li>
+        </ul>
+        <h3>Content rules</h3>
+        <ul>
+            <li>Include full name, position and name of company if relevant for direct quotes.</li>
+        </ul>
+
+    </div>
