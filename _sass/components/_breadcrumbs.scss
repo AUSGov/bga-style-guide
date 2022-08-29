@@ -1,0 +1,71 @@
+#breadcrumbs {
+    background: $bga-blue-background-dark;
+
+    .breadcrumbs {
+        padding: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .breadcrumb {
+        list-style-type: none;
+        display: block;   
+        margin-bottom: 0px;
+        text-indent: 0;
+        font-size: 0;
+        flex-shrink: 0;
+        
+        &::before {
+            content: none;
+        }
+    }
+    a, p {
+        font-size: 14px;
+        display: block;
+        color: $white;
+        border: solid 2px transparent;
+        border-radius: $bga-focus-radius;
+        
+    }
+    a {
+        font-weight: 600;
+        padding-right: 4px;
+
+        &:focus-visible {
+            border-color: $bga-white;
+        }
+    }
+    .mobile-breadcrumb {
+        display: none;
+    }
+    
+}
+
+// Mixins for smaller screen sizes and media queries
+@mixin breadcrumbs-below576 () {
+    #breadcrumbs {
+        .mobile-breadcrumb {
+            display: block;
+            padding: 12px 0;
+
+            a {
+                padding: 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .breadcrumbs {
+            display: none;
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include breadcrumbs-below576();
+}
+
+
+// MEDIA Queries for HTML demo pages.
+@media(max-width: 576px) {
+    @include breadcrumbs-below576();
+}

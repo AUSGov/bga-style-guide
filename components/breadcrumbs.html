@@ -1,8 +1,8 @@
 ---
 
 layout: content-tagged
-title: Global alert
-description: Alert users to current issues on the site with a message at the top of every page.
+title: Breadcrumbs
+description: Provide a list of links back to the homepage.
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -41,10 +41,10 @@ subsite-tag: true
         <!-- Component example -->
 
         <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding py-0">
+            <div class="component-wrapper remove-element-padding py-4">
 
-                {% include component-examples/global-alert-example.html
-                message="<p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>"
+                {% include component-examples/breadcrumbs-example.html
+                example="true"
                 %}
 
             </div>
@@ -53,7 +53,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/24dd06d9-1344-4688-b131-15eef32a96c6/'"
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/6b04eb28-6baa-421a-a883-bfe6162f6dcd/'"
         btn-text="View design specifications"
         %}
 
@@ -61,8 +61,8 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Global alerts are used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all page layouts</a>.</p>
-       
+        <p>Breadcrumbs are used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all page layouts</a>. They should appear on every business.gov.au page except the home page.</p>
+
         {% include layouts-dropdown.html
         layout-name="All layouts"
         singlelayout="true"
@@ -74,36 +74,27 @@ subsite-tag: true
 
             singlelayout="true"
 
-            allbp-img="'../assets/layout-images/global-alert-allbp.png' | relative_url "
+            allbp-img="'../assets/layout-images/breadcrumbs-allbp.png' | relative_url "
 
             allbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>The yellow background extends full width of the viewport.</p>
-            <p>The close button sits in the top right of the screen (outside the content area).</p>"
+            <p>The blue background extends full width of the viewport.</p>"
 
-            %}
+                %}
 
         </div>
-
-        {% include design-specs-link.html 
-            btn-link="'../html-examples/single-col-full-width.html' | relative_url"
-            btn-text="View layout example"
-            %}
-
-
 
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Global alerts warn users about current issues on the site with a message at the top of every page.</p>
-        <p>Global alerts can be dismissed by the user with a close button in the top right corner. Once the user has dismissed a global alert it should not reappear on other pages of the site.</p>
-        
+        <p>The breadcrumb menu is a set of navigation links that show the user where they are in the site structure. It
+            displays all links in the hierarchy between the current page and the home page.</p>
         <h3>When to use this component:</h3>
         <ul>
-            <li>Typically used for messages about scheduled site maintenance or releases.</li>
+            <li>Used across every page of the website (except the home page) to ensure a consistent user experience.</li>
         </ul>
-        
+
 
 
     </div>

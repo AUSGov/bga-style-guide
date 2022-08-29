@@ -1,0 +1,111 @@
+<div id="breadcrumbs">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+
+                {% if include.example == "true" %}
+                <div class="mobile-breadcrumb px-0">
+                    <a href="">
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="22" height="16.5"
+                            viewBox="0 0 22 16.5">
+                            <path
+                                d="M5.4,10.75l3.483,3.483L6.867,16.25-.1,9.375,6.775,2.5,8.792,4.517,5.4,8H21.9v2.75Zm13.75,0H21.9V19H19.15Zm-5.5,5.5h5.5V19h-5.5Z"
+                                transform="translate(0.1 -2.5)" fill="#fff" />
+                        </svg>
+                        Previous level link</a>
+                </div>
+
+                <ul class="m-0 breadcrumbs px-0">
+                    <li class="breadcrumb breadcrumb-link breadcrumb-home">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="" class="breadcrumb-link">Home
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb breadcrumb-link">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="" class="breadcrumb-link">
+                            Planning
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb breadcrumb-link">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="" class="breadcrumb-link">
+                            Business structures & types
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb breadcrumb-current">
+                        <p class="breadcrumb-location m-0 p-0">MMI Manufacturing Integration Stream Space round 2</p>
+                    </li>
+                </ul>
+
+                {% else if %}
+                <div class="mobile-breadcrumb px-0">
+                    <a href={{ "index.html" | relative_url }}>
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="22" height="16.5"
+                            viewBox="0 0 22 16.5">
+                            <path
+                                d="M5.4,10.75l3.483,3.483L6.867,16.25-.1,9.375,6.775,2.5,8.792,4.517,5.4,8H21.9v2.75Zm13.75,0H21.9V19H19.15Zm-5.5,5.5h5.5V19h-5.5Z"
+                                transform="translate(0.1 -2.5)" fill="#fff" />
+                        </svg>
+                        Home</a>
+                </div>
+
+                <ul class="m-0 breadcrumbs px-0">
+                    <li class="breadcrumb breadcrumb-link breadcrumb-home">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href={{ "index.html" | relative_url }}
+                            class="breadcrumb-link">Home
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    {% if page.url1 %}
+                    <li class="breadcrumb breadcrumb-link">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="{{ page.url1 | relative_url }}" class="breadcrumb-link">{{
+                            page.breadcrumb1 }}
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg></a>
+                    </li>
+                    {% endif %}
+
+                    {% if page.url2 %}
+                    <li class="breadcrumb breadcrumb-link">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="{{ page.url2 | relative_url }}" class="breadcrumb-link">{{
+                            page.breadcrumb2 }}
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg></a>
+                    </li>
+                    {% endif %}
+
+                    <li class="breadcrumb breadcrumb-current">
+                        <p class="breadcrumb-location m-0 p-0">{{ page.title }}</p>
+                    </li>
+                </ul>
+                {% endif %}
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
