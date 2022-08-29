@@ -2882,7 +2882,9 @@ p.header-intro { font-size: 1.125rem; line-height: 1.77785; }
 
 p.updated { font-size: .75rem; font-style: italic; line-height: 1.125rem; }
 
-a { font-weight: 600; }
+a, button { font-weight: 600; }
+
+a:focus, a:focus-visible, a:focus-within, button:focus, button:focus-visible, button:focus-within { outline: none; border: 2px solid #2E6CB9; border-radius: 4px; }
 
 strong { font-weight: 600; }
 
@@ -5020,8 +5022,20 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .global-alert { background: #FFD964; position: relative; }
 
-.global-alert .component-content { justify-content: space-between; align-items: flex-start; }
+.global-alert .component-content { justify-content: space-between; align-items: flex-start; text-align: center; }
 
-.global-alert .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; border: none; position: absolute; height: 16px; width: 16px; top: 16px; right: 16px; }
+.global-alert .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; background-position: center center; border: none; position: absolute; height: 16px; width: 16px; top: 20px; right: 16px; }
+
+.global-alert .close:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
+
+.global-alert a:focus-visible { background: #ffffff; }
+
+.global-alert a:hover { background: #ffffff; }
+
+.global-alert a:active { border: none; }
+
+.component-example.bp-below576 .global-alert .component-content { padding: 0 16px 0 0 !important; }
+
+@media (max-width: 576px) { .global-alert .component-content { padding: 0 16px 0 0 !important; } }
 
 /*# sourceMappingURL=main.css.map */
