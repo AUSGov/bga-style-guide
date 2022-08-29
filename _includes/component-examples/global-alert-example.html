@@ -1,12 +1,16 @@
-<div class="bga-component global-alert py-3 {{ include.classes }}">
+<div class="bga-component global-alert py-3 mb-5 {{ include.classes }}">
+    <button class="close p-0">Close</button>
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="component-content px-3 d-flex">
 
-    <div class="component-content d-flex">
+                <div class="component-text remove-element-padding">
+                    {{ include.message }}
+                </div>
+            </div>
 
-        <div class="component-text remove-element-padding">
-            {{ include.message }}
         </div>
-
-        <button class="close">Close</button>
-
     </div>
+</div>
 </div>

@@ -118,9 +118,18 @@ p {
         line-height: 1.125rem;
     }
 }
-a {
+a, button {
     font-weight: 600;
+
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+       outline: none;
+       border: $bga-text-focus-border;
+       border-radius: $bga-focus-radius ;
+    }
 }
+
 strong {
     font-weight: 600;
 }

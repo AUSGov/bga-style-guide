@@ -5,17 +5,60 @@
     .component-content {
         justify-content: space-between;
         align-items: flex-start;
+        text-align: center;
     }
 
     .close {
         text-indent: -9999px;
         background: transparent url(../assets/icon-close-black.svg) no-repeat;
         background-size: 16px 16px;
+        background-position: center center;
         border: none;
         position: absolute;
         height: 16px;
         width: 16px;
-        top: 16px;
+        top: 20px;
         right: 16px;
+
+        &:focus-visible {
+            border: $bga-text-focus-border;
+            border-radius: $bga-focus-radius;
+        }
     }
+
+    a {
+        &:focus-visible {
+            background: $bga-white;
+        }
+
+        &:hover {
+            background: $bga-white;
+        }
+
+        &:active {
+            border: none;
+        }
+
+    }
+}
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin global-alert-below576 () {
+    .global-alert {
+        .component-content {
+            padding: 0 16px 0 0 !important;
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include global-alert-below576();
+}
+
+
+// MEDIA Queries for HTML demo pages.
+@media(max-width: 576px) {
+    @include global-alert-below576();
 }
