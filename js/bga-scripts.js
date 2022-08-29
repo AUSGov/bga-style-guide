@@ -866,6 +866,41 @@ $(document).ready(function () {
     });
 
 
+    // COMPONENT EXAMPLE: PAGINATION
+
+    $
+    ('.pagination-links li').on('click', function(){
+        
+        var new_position = $(this).attr('data-position'),
+        current_position = parseInt($('.pagination-links li.current').attr('data-position'));
+        $('.pagination-links li.current').removeClass('current');
+
+        switch(new_position) {
+            case "first":
+                position = "1";
+                break;
+            case "previous":
+                new_position = (current_position - 1).toString();
+                break;
+            case "next":
+                new_position = (current_position + 1).toString();
+                break;
+            case "last":
+                new_position = "8";
+                break;
+            default:
+              new_position = new_position;
+          }
+          console.log("final: " + new_position);
+
+          $('li').data('data-position', new_position);
+
+          /*$('.pagination-links li').each(function(){
+            $(this).addClass('hidden');
+          });*/
+    });
+
+
 }); //End doc ready
 
 
