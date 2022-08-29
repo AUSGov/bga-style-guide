@@ -1,0 +1,125 @@
+.bga-pagination {
+
+    .pagination-links {
+        width: 100%;
+
+        ul {
+            border-bottom: solid 1px $bga-blue-black-dark;
+            justify-content: center;
+
+            li {
+                text-indent: 0;
+                display: block;
+                margin: 0 4px;
+
+                &.hidden {
+                    display: none;
+                }
+
+                &::before {
+                    display: none;
+                }
+
+                a {
+                    border-radius: $bga-focus-radius;
+                    display: flex;
+                    align-items: center;
+                    padding: 4px 12px;
+                    text-decoration: none;
+
+                    svg {
+                        fill: $bga-blue-links;
+                    }
+                    &:focus {
+                        border: none !important;
+                    }
+
+                    &:focus-visible {
+                        border: none !important;
+                        background: $bga-blue-links;
+                        color: $bga-white;
+
+                        svg {
+                            fill: $bga-white;
+                        }
+                    }
+
+                    &:hover {
+                        background: $bga-blue-background-dark;
+                        color: $bga-white;
+
+                        svg {
+                            fill: $bga-white;
+                        }
+                    }
+
+                    &:active {
+                        background: $bga-blue-background-light;
+                        color: $bga-black;
+
+                        svg {
+                            fill: $bga-black;
+                        }
+                    }
+                }
+                &.current {
+                    a {
+                        background: $bga-blue-background-light;
+                        color: $bga-black;
+
+                        svg {
+                            fill: $bga-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .below-pagination {
+        width: 100%;
+        justify-content: space-between;
+
+        .items-number {
+            select {
+                height: 32px;
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin paginaton-bp-576 {
+    .bga-pagination {
+        .pagination-links {
+            ul {
+                li {
+
+                    &.first,
+                    &.previous,
+                    &.next,
+                    &.last {
+                        text-indent: -9999px;
+                    }
+
+                    a {
+                        svg {
+                            margin: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576,
+.component-example.bp-350,
+.component-example.bp-below350 {
+    @include paginaton-bp-576();
+}
+
