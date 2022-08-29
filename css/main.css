@@ -2614,18 +2614,6 @@ table.table { margin-bottom: 32px; }
 
 .navbar .nav-item .nav-link.inactive { opacity: .5; cursor: default; }
 
-#breadcrumbs { background: #2E6CB9; min-height: 48px; }
-
-#breadcrumbs li { list-style-type: none; display: inline-block; margin-bottom: 0px; text-indent: 0; }
-
-#breadcrumbs li::before { content: none; }
-
-#breadcrumbs a, #breadcrumbs p { font-size: 14px; display: block; color: #fff; padding: 4px 16px 0 0; }
-
-#breadcrumbs a { font-weight: 600; background: url(../assets/Chevron-right-white.svg) no-repeat; background-position: right 0 top 12px; background-size: 5px 8px; }
-
-#breadcrumbs a:empty { display: none; width: 0; height: 0; }
-
 #page-header { background: linear-gradient(0deg, #b8cde7 0%, #9cb6db 100%); }
 
 #page-header .header-content { background: #C8D9EE; padding: 32px 32px 48px 32px; }
@@ -3074,7 +3062,7 @@ strong { font-weight: 600; }
 
 .bga-btn.bga-secondary-btn.bkg-dark, .bga-btn-state.bga-secondary-btn.bkg-dark { border-color: #96B7DF; color: #333333; }
 
-.bga-btn:focus { border-color: #2E6CB9; background: #FFCF3B; color: #333333; outline: none; }
+.bga-btn:focus { border-color: #2E6CB9; border-radius: 50px; background: #FFCF3B; color: #333333; outline: none; }
 
 .bga-btn.bga-secondary-btn:focus { border-color: #2157AA; background: #2157AA; color: #ffffff; }
 
@@ -3216,7 +3204,7 @@ strong { font-weight: 600; }
 
 .btn-primary { background: #FFD964; border: solid 3px #EDC95A; color: #333333; }
 
-.btn-primary:focus, .btn-primary:focus-visible { background: #FFCF3B; border-color: #2E6CB9; box-shadow: none; color: #333333; }
+.btn-primary:focus, .btn-primary:focus-visible { background: #FFCF3B; border-color: #2E6CB9; box-shadow: none; color: #333333; border-radius: 50px; border-width: 3px; }
 
 .btn-primary:hover { background: #FFCF3B; border-color: #FFCF3B; box-shadow: none; color: #333333; }
 
@@ -3765,6 +3753,30 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 @media (max-width: 576px) { .bga-footer-example .subscribe-wrapper button { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; } .bga-footer-example .subscribe-wrapper a { font-size: .875rem; line-height: 1.125rem; } }
 
 @media (max-width: 350px) { .bga-footer-example .subscribe-wrapper button { width: 100%; justify-content: center; } }
+
+#breadcrumbs { background: #2E6CB9; }
+
+#breadcrumbs .breadcrumbs { padding: 10px 0; display: flex; flex-wrap: wrap; }
+
+#breadcrumbs .breadcrumb { list-style-type: none; display: block; margin-bottom: 0px; text-indent: 0; font-size: 0; flex-shrink: 0; }
+
+#breadcrumbs .breadcrumb::before { content: none; }
+
+#breadcrumbs a, #breadcrumbs p { font-size: 14px; display: block; color: #fff; border: solid 2px transparent; border-radius: 4px; }
+
+#breadcrumbs a { font-weight: 600; padding-right: 4px; }
+
+#breadcrumbs a:focus-visible { border-color: #ffffff; }
+
+#breadcrumbs .mobile-breadcrumb { display: none; }
+
+.component-example.bp-below576 #breadcrumbs .mobile-breadcrumb { display: block; padding: 12px 0; }
+
+.component-example.bp-below576 #breadcrumbs .mobile-breadcrumb a { padding: 0; display: flex; align-items: center; }
+
+.component-example.bp-below576 #breadcrumbs .breadcrumbs { display: none; }
+
+@media (max-width: 576px) { #breadcrumbs .mobile-breadcrumb { display: block; padding: 12px 0; } #breadcrumbs .mobile-breadcrumb a { padding: 0; display: flex; align-items: center; } #breadcrumbs .breadcrumbs { display: none; } }
 
 .hero-pathway { border: 1px solid #96B7DF; display: flex; background: #ffffff; }
 
@@ -5027,6 +5039,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .global-alert .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; background-position: center center; border: none; position: absolute; height: 16px; width: 16px; top: 20px; right: 16px; }
 
 .global-alert .close:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
+
+.global-alert a { white-space: nowrap; }
 
 .global-alert a:focus-visible { background: #ffffff; }
 
