@@ -869,8 +869,8 @@ $(document).ready(function () {
     // COMPONENT EXAMPLE: PAGINATION
 
     $
-    ('.pagination-links li').on('click', function(){
-        
+    ('.pagination-links li.number').on('click', function(){
+        /*
         var new_position = $(this).attr('data-position'),
         current_position = parseInt($('.pagination-links li.current').attr('data-position'));
         $('.pagination-links li.current').removeClass('current');
@@ -893,11 +893,11 @@ $(document).ready(function () {
           }
           console.log("final: " + new_position);
 
-          $('li').data('data-position', new_position);
+          $('li').data('data-position', new_position);*/
+        
+          $('.pagination-links li.current').removeClass('current');
+          $(this).addClass('current');
 
-          /*$('.pagination-links li').each(function(){
-            $(this).addClass('hidden');
-          });*/
     });
 
 

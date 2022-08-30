@@ -5086,10 +5086,24 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-pagination .below-pagination { width: 100%; justify-content: space-between; }
 
-.bga-pagination .below-pagination .items-number select { height: 32px; margin-left: 8px; }
+.bga-pagination .below-pagination .items-number select { height: 28px; margin-left: 8px; border: none; border-bottom: 1px solid #333333; font-weight: 600; }
 
 .component-example.bp-576 .bga-pagination .pagination-links ul li.first, .component-example.bp-576 .bga-pagination .pagination-links ul li.previous, .component-example.bp-576 .bga-pagination .pagination-links ul li.next, .component-example.bp-576 .bga-pagination .pagination-links ul li.last, .component-example.bp-350 .bga-pagination .pagination-links ul li.first, .component-example.bp-350 .bga-pagination .pagination-links ul li.previous, .component-example.bp-350 .bga-pagination .pagination-links ul li.next, .component-example.bp-350 .bga-pagination .pagination-links ul li.last, .component-example.bp-below350 .bga-pagination .pagination-links ul li.first, .component-example.bp-below350 .bga-pagination .pagination-links ul li.previous, .component-example.bp-below350 .bga-pagination .pagination-links ul li.next, .component-example.bp-below350 .bga-pagination .pagination-links ul li.last { text-indent: -9999px; }
 
 .component-example.bp-576 .bga-pagination .pagination-links ul li a svg, .component-example.bp-350 .bga-pagination .pagination-links ul li a svg, .component-example.bp-below350 .bga-pagination .pagination-links ul li a svg { margin: 0 !important; }
+
+.component-example.bp-350 .bga-pagination .pagination-links li[data-position="1"], .component-example.bp-350 .bga-pagination .pagination-links li[data-position="5"], .component-example.bp-below350 .bga-pagination .pagination-links li[data-position="1"], .component-example.bp-below350 .bga-pagination .pagination-links li[data-position="5"] { display: none; }
+
+.component-example.bp-below350 .bga-pagination .below-pagination { flex-wrap: wrap; justify-content: center; }
+
+.component-example.bp-below350 .bga-pagination .below-pagination .page-number { width: 100%; text-align: center; margin-bottom: 8px; }
+
+.component-example.bp-below350 .bga-pagination .below-pagination .items-number { width: 100%; justify-content: center; }
+
+@media (max-width: 992px) { .bga-pagination .pagination-links ul li.first, .bga-pagination .pagination-links ul li.previous, .bga-pagination .pagination-links ul li.next, .bga-pagination .pagination-links ul li.last { text-indent: -9999px; } .bga-pagination .pagination-links ul li a svg { margin: 0 !important; } }
+
+@media (max-width: 576px) { .bga-pagination .pagination-links li[data-position="1"], .bga-pagination .pagination-links li[data-position="5"] { display: none; } }
+
+@media (max-width: 350px) { .bga-pagination .below-pagination { flex-wrap: wrap; justify-content: center; } .bga-pagination .below-pagination .page-number { width: 100%; text-align: center; margin-bottom: 8px; } .bga-pagination .below-pagination .items-number { width: 100%; justify-content: center; } }
 
 /*# sourceMappingURL=main.css.map */

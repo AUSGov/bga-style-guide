@@ -352,7 +352,7 @@
 
 
     <div class="below-pagination mt-2 d-flex">
-        <div class="page-number">
+        <div class="page-number remove-element-padding">
             <p>Page <span>2</span> of 8</p>
         </div>
         <div class="items-number d-flex">
@@ -383,13 +383,13 @@
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The site header is used on <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>all business.gov.au layouts</a>.</p>
+        <p>The site header is used on the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - left side menu layout</a>.</p>
 
         
         <div class="layouts m-0 p-4">
     
     
-    <p class="pe-3 m-0 all-layouts">Layout: <strong>All layouts</strong></p>
+    <p class="pe-3 m-0 all-layouts">Layout: <strong>Two column - left side menu layout</strong></p>
     
     
 
@@ -397,31 +397,103 @@
     
 </div>
 
-        <div class="layout-example show full-border mt-0 mb-5 p-4">
+        <div class="layout-example show two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
             
+        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
+        <div class="accordion layout-accordion">
+
+                    
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min1200">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-leftmenu-collapseOne" aria-expanded="true" aria-controls="twocol-leftmenu-collapseOne">
+                                   Breakpoint ≥ 1200px
+                                </button>
+                            </h2>
+                            <div id="twocol-leftmenu-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/pagination-2col-leftmenu-min1200.png' | relative_url  alt="" />
+
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 8 grid-columns wide.</p>
+            <p>Pagination spans the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+                     
+
+
+                    
+
+
+                         
+                         <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min576">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-leftmenu-collapseFour" aria-expanded="false" aria-controls="twocol-leftmenu-collapseFour">
+                                    Breakpoint ≥ 576px
+                                </button>
+                            </h2>
+                            <div id="twocol-leftmenu-collapseFour" class="accordion-collapse collapse" aria-labelledby="layout-bp-min576" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/pagination-2col-leftmenu-min576.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 9 grid-columns wide.</p>
+            <p>Pagination spans the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-leftmenu-collapseFive" aria-expanded="false" aria-controls="twocol-leftmenu-collapseFive">
+                                    Breakpoint &lt; 576px
+                                </button>
+                            </h2>
+                            <div id="twocol-leftmenu-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/pagination-2col-leftmenu-finalbp.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                       <p>The content area is 12 grid-columns wide.</p>
+            <p>Pagination spans the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+        </div>
+
+
     
-    <div class="py-4">
-        
-        <h6>All breakpoints</h6>
-        
-        <div class="layouts-wrapper">
-        <div class="layout-image me-5">
-            <img src='../assets/layout-images/bga-site-header-allbp.png' | relative_url  alt="" />
-        </div>
-        <div class="layout-rules">
-            <p>The site header is 12 grid-columns wide.</p>
-        </div>
-        </div>
+
+
+
+
+    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/search-layout.html#pagination-example' | relative_url' role="button">View layout example</a>
     </div>
 
-    
-
-
-
-
 
 
         </div>
+
 
 
 
@@ -432,11 +504,11 @@
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        <p>The header includes the site logo, main navigation and search. It is designed to make the site easy to
-            nagivate and establishes the site brand.</p>
+        <h3>Purpose</h3>
+        <p>Pagination provides links for navigating between a series of connected pages.</p>
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used across every page of the website to ensure a consistent user experience.</li>
+            <li>Typically used on search or tool result pages when a set of results would be too long to present on one page.</li>
         </ul>
 
 
