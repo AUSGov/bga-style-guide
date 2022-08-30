@@ -82,8 +82,11 @@
 
         .items-number {
             select {
-                height: 32px;
+                height: 28px;
                 margin-left: 8px;
+                border: none;
+                border-bottom: 1px solid $bga-black;   
+                font-weight: 600; 
             }
         }
     }
@@ -115,6 +118,35 @@
     }
 }
 
+@mixin pagination-bp-350 {
+    .bga-pagination {
+        .pagination-links {
+            li[data-position="1"], li[data-position="5"] {
+                display: none;
+            }
+        }
+    }
+}
+
+@mixin pagination-below350 {
+    .bga-pagination {
+        .below-pagination {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .page-number {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 8px;
+            }
+            .items-number {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}
+
 
 // SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-576,
@@ -123,3 +155,22 @@
     @include paginaton-bp-576();
 }
 
+.component-example.bp-350,
+.component-example.bp-below350 {
+    @include pagination-bp-350();
+}
+
+.component-example.bp-below350 {
+    @include pagination-below350();
+}
+
+// Media queries
+@media (max-width: 992px) {
+    @include paginaton-bp-576();
+}
+@media (max-width: 576px) {
+    @include pagination-bp-350();
+}
+@media (max-width: 350px) {
+    @include pagination-below350();
+}

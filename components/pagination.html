@@ -65,19 +65,43 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The site header is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all business.gov.au layouts</a>.</p>
+        <p>The site header is used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left side menu layout</a>.</p>
 
         
         {% include layouts-dropdown.html
-        layout-name="All layouts"
+        layout-name="Two column - left side menu layout"
         singlelayout="true"
         %}
 
-        <div class="layout-example show full-border mt-0 mb-5 p-4">
+        <div class="layout-example show two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
             {% include layouts-accordion.html
-                singlelayout="true"
-                allbp-img="'../assets/layout-images/bga-site-header-allbp.png' | relative_url "
-                allbp-rules="<p>The site header is 12 grid-columns wide.</p>"
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/pagination-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/pagination-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/pagination-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Pagination spans the full width of the content area.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Pagination spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Pagination spans the full width of the content area.</p>"
+
+            example-link="'../html-examples/search-layout.html#pagination-example' | relative_url'"
+            example-link-text="View layout example"
+
             %}
 
         </div>
@@ -88,14 +112,15 @@ subsite-tag: true
 
 
 
+
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        <p>The header includes the site logo, main navigation and search. It is designed to make the site easy to
-            nagivate and establishes the site brand.</p>
+        <h3>Purpose</h3>
+        <p>Pagination provides links for navigating between a series of connected pages.</p>
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used across every page of the website to ensure a consistent user experience.</li>
+            <li>Typically used on search or tool result pages when a set of results would be too long to present on one page.</li>
         </ul>
 
 
