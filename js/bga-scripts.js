@@ -868,8 +868,7 @@ $(document).ready(function () {
 
     // COMPONENT EXAMPLE: PAGINATION
 
-    $
-    ('.pagination-links li.number').on('click', function(){
+    $('.pagination-links li.number').on('click', function(){
         /*
         var new_position = $(this).attr('data-position'),
         current_position = parseInt($('.pagination-links li.current').attr('data-position'));
@@ -899,6 +898,15 @@ $(document).ready(function () {
           $(this).addClass('current');
 
     });
+
+
+    // COMPONENT EXAMPLE: GRANTS SEARCH TILE 
+        // COMPONENT EXAMPLE: GRANTS SEARCH TILE
+        $('.search-tile .apply-btn').on('click', function(){
+            $(this).parents('.apply-details').addClass('open').find('.apply-details-content').slideToggle();
+    
+        });
+    
 
 
 }); //End doc ready

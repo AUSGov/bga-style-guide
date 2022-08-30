@@ -1,0 +1,98 @@
+.search-tile {
+    border: $bga-component-border;
+    border-left: solid 4px $bga-blue-background-dark;
+
+    .label,
+    .tag p,
+    .timeframe {
+        font-size: .75rem;
+        line-height: 1.5;
+    }
+    .tile-title {
+        font-size: 1.125rem;
+
+        a {
+            text-decoration: underline;
+
+            &:focus-visible {
+                color: $bga-blue-links;
+                background: $bga-blue-background-light;
+                border: $bga-text-focus-border;
+                border-radius: $bga-focus-radius;
+            }
+            &:hover {
+                color: $bga-blue-links;
+                background: $bga-blue-background-light;
+            }
+        }
+    }
+    .description {
+        font-size: 0.875rem;
+    }
+
+    .tag {
+        padding: 10px 16px;
+        background: $bga-blue-background-extralight;
+        border-radius: 40px;
+
+        img {
+            height: 16px;
+            width: auto;
+            flex-shrink: 0;
+        }
+    }
+
+    &.open-grant {
+        .tag {
+            background: $bga-green-highlight-light;
+        }
+    }
+    &.soon-grant {
+        .tag {
+            background: $bga-yellow-highlight-light;
+        }
+    }
+    &.closed-grant {
+        .tag {
+            background: $bga-red-fail-light;
+        }
+    }
+    .apply-details {
+        background: $bga-blue-background-extralight;
+        
+        .apply-details-content {
+            display: none;
+        }
+        p {
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .apply-btn {
+        background: $bga-blue-background-extralight;
+        border: none;
+        width: 100%;
+        text-align: left;
+        font-size: 0.875rem;
+        line-height: 1.5;
+
+        &:focus-visible {
+            background: $bga-blue-background-light;
+            border: $bga-component-focus-border;
+            border-radius: $bga-focus-radius;
+        }
+        &:hover {
+            background: $bga-blue-background-light;
+        }
+    }
+    .apply-details.open {
+        .apply-btn {
+            background: $bga-blue-background-light;
+        }
+    }
+
+}

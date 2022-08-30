@@ -1,0 +1,43 @@
+<div class="search-tile {{ include.classes }} mb-5">
+
+    <div class="component-text p-4 remove-element-padding">
+
+        {% if include.label %}
+        <p class="label"><strong>{{ include.label }}</strong></p>
+
+        {% endif %}
+
+        {% if include.title %}
+        <h3 class="tile-title pt-0"><a href="">{{ include.title }}</a></h3>
+        {% endif %}
+
+        {% if include.description %}
+        <p class="description">{{ include.description }}</p>
+        {% endif %}
+
+        {% if include.tag %}
+        <div class="tag-wrapper align-items-center d-flex">
+            <div class="tag d-inline-flex align-items-center remove-element-padding me-3">
+                <div class="icon d-flex me-2">
+                    <img src={{ include.icon }} alt="" />
+                </div>
+                <p>{{ include.tag }}</p>
+            </div>
+            <div class="timeframe remove-element-padding">
+                <p><strong>{{ include.timeframe }}</strong></p>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+    {% if include.apply %}
+    <div class="apply-details">
+        <div class="apply-details-content p-4 remove-element-padding">
+            {{ include.apply }}
+        </div>
+        <button class="apply-btn p-4">Who can apply?</button>
+    </div>
+    {% endif %}
+
+</div>
