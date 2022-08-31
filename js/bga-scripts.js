@@ -70,7 +70,7 @@ $(document).ready(function () {
 
 
     // SEARCH COMPONENTS BY NAME
-    var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-out-box', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-search-result-information-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs'];
+    var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-out-box', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-global-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs'];
 
     $('#component_name').on('change', function () {
 
@@ -901,12 +901,40 @@ $(document).ready(function () {
 
 
     // COMPONENT EXAMPLE: GRANTS SEARCH TILE 
-        // COMPONENT EXAMPLE: GRANTS SEARCH TILE
-        $('.search-tile .apply-btn').on('click', function(){
-            $(this).parents('.apply-details').addClass('open').find('.apply-details-content').slideToggle();
-    
-        });
-    
+    $('.search-tile .apply-btn').on('click', function(){
+        $(this).parents('.apply-details').toggleClass('open').find('.apply-details-content').slideToggle();
+
+    });
+    $('.shortlist-btn').on('click', function(){
+        $(this).toggleClass('added');
+
+        if ($(this).hasClass('added')) {
+            $(this).text('Remove from shortlist');
+        } else {
+            $(this).text('Add to shortlist');
+        }
+    });
+
+    // COMPONENT EXAMPLE: EVENTS SEARCH TILE
+    $('.events-tile .read-more-btn').on('click', function(){
+        var parent_section = $(this).parents('.event-details');
+        if ( parent_section.hasClass('open') ) {
+            parent_section.removeClass('open');
+            parent_section.find('.read-more-content').slideUp();
+            $(this).find('span').text('Read more');
+        } else {
+            parent_section.addClass('open');
+            parent_section.find('.read-more-content').slideDown();
+            $(this).find('span').text('Read less');
+        }
+    });
+    $('.events-tile .close-btn').on('click', function(){
+        var parent_section = $(this).parents('.event-details');
+        parent_section.removeClass('open');
+        parent_section.find('.read-more-content').slideUp();
+        parent_section.find('span').text('Read more');
+    });
+
 
 
 }); //End doc ready
