@@ -1,0 +1,236 @@
+---
+
+layout: content-tagged
+title: Finder tool result tiles
+description: Present a collection of links within the context of a business.gov.au finder tool
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-0 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+         <!-- Breakpoint radio buttons -->
+         {% include breakpoints.html 
+            element-string="result-tile"
+            sm-visibility="true"
+            final-visibility="true"
+            breakpoint-final="576"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Grants and programs search tile</h3>
+                {% include component-examples/global-search-tile-example.html
+                label="Grant or program name"
+                title="Lorem ipsum dolor sit amet constetur"
+                description="Live Performance Support Program TAS
+                The Live Performance Support Program provides funding guarantees to arts organisations, festival
+                organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
+                and other venues throughout 2021."
+                tag="Open"
+                icon="'../assets/icon-tick-box-green.svg' | relative_url "
+                timeframe="Closing in 12 days"
+                apply="<p><strong>Who is this for?</strong></p>
+                    <p>Businesses who employ people registered with a Disability Service provider.</p>
+                    <p><strong>What you get?</strong></p>
+                    <p>Funding of up to $1650.</p>"
+                shortlist="true"
+                classes="open-grant grants-finder-tool"
+                %}
+                
+                <h3>Advisers search tile</h3>
+                {% include component-examples/global-search-tile-example.html
+                label="Federal government"
+                title="Fair Work Ombudsman Small Business Helpline"
+                description="The Small business helpline provides workplace advice on managing your employees and meeting your employer obligations."
+                services="Services offered over the phone and online."
+                cost="Free"
+                tag="<strong>Service area:</strong> Australia wide"
+                icon="'../assets/icon-pin-black.svg' | relative_url "
+                classes="adviser-finder-tool"
+                %}
+               
+
+                <h3>Events search tile - in person events</h3>
+                {% include component-examples/events-tile-example.html
+                    delivery-type="Workshop for ACT businesses"
+                    date="Monday 10 Aug 2022"
+                    time="11:00 AM - 12:30 PM AEST"
+                    cost="Free"
+                    location="Shepparton, VIC"
+        
+                    title="Lunch and learn: Designing your team culture"
+                    description="This workshop provides ACT businesses with tips and tools to help them build a strong team and healthy workplace culture."
+
+                    speaker="Bronwyn Brown"
+                    organiser="Canberra Innovation Network"
+                    address="Canberra Innovation Network, Level 5, 1 Moore Street, Canberra, ACT, 2601"
+                    read-more-info="<p>Vestibulum eget tincidunt ligula. Fusce vestibulum imperdiet mi, sed lobortis lectus sagittis vel. Donec ut neque at est sodales pretium. Suspendisse molestie orci nulla, quis sagittis mi ornare ut.</p><p>Nam rutrum vulputate dui, eu mattis lorem facilisis vitae. Praesent consequat quis nunc vitae blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nibh tortor, scelerisque at viverra eget, tincidunt eu elit. Etiam eu egestas components/download-list.htmlaugue. Donec viverra pharetra vulputate. Nulla eu vestibulum est, vel tempor tellus. Donec bibendum tortor rhoncus, vestibulum quam nec, pulvinar eros. Nullam ac dignissim tellus. Quisque ac ante quis elit mollis varius eu vitae eros. Donec aliquam finibus metus, quis dapibus dui sagittis id. Pellentesque tincidunt velit eget elit ultricies hendrerit.</p>"
+                    icon="'../assets/icon-events-in-person.svg' | relative_url "
+                    registration="Canberra Innovation Network"
+                    classes="events-finder-tool in-person-event"
+                %}
+
+
+                <h3>Events search tile - online events</h3>
+                {% include component-examples/events-tile-example.html
+                    delivery-type="Webinar for ACT businesses"
+                    date="Monday 10 Aug 2022"
+                    time="11:00 AM - 12:30 PM AEST"
+                    cost="Free"
+                    location="Online"
+        
+                    title="Creating a business newsletter from scratch"
+                    description="This webinar provides ACT small businesses with tips and tools to create a branded business newsletter."
+
+                    speaker="Sam Smith"
+                    organiser="Enterprise Plus"
+                    read-more-info="<p>Vestibulum eget tincidunt ligula. Fusce vestibulum imperdiet mi, sed lobortis lectus sagittis vel. Donec ut neque at est sodales pretium. Suspendisse molestie orci nulla, quis sagittis mi ornare ut.</p><p>Nam rutrum vulputate dui, eu mattis lorem facilisis vitae. Praesent consequat quis nunc vitae blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nibh tortor, scelerisque at viverra eget, tincidunt eu elit. Etiam eu egestas components/download-list.htmlaugue. Donec viverra pharetra vulputate. Nulla eu vestibulum est, vel tempor tellus. Donec bibendum tortor rhoncus, vestibulum quam nec, pulvinar eros. </p>"
+                    icon="'../assets/icon-events-online.svg' | relative_url "
+                    registration="Eventbrite"
+                    classes="events-finder-tool online-event"
+                %}
+
+
+            </div>
+        </div>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Tag and icon variations</h3>
+                <div class="row">
+
+                    <div class="col-12 col-md-6">
+                        {% include component-examples/global-search-tile-example.html
+                        description="<strong>Adviser tag</strong>"
+                        tag="<strong>Service area:</strong> Location, location, location is the key to this tag."
+                        icon="'../assets/icon-pin-black.svg' | relative_url "
+                        %}
+                    </div>  
+
+                    <div class="col-12 col-md-6">
+                        {% include component-examples/global-search-tile-example.html
+                        description="<strong>Open grants tag</strong>"
+                        tag="Open"
+                        icon="'../assets/icon-tick-box-green.svg' | relative_url "
+                        classes="open-grant"
+                        %}
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        {% include component-examples/global-search-tile-example.html
+                        description="<strong>Coming soon grants tag</strong>"
+                        tag="Coming soon"
+                        icon="'../assets/icon-events-yellow.svg' | relative_url "
+                        classes="soon-grant"
+                        %}
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        {% include component-examples/global-search-tile-example.html
+                        description="<strong>Closed grants tag</strong>"
+                        tag="Closed"
+                        icon="'../assets/icon-closed-red.svg' | relative_url "
+                        classes="closed-grant"
+                        %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/10d14d05-a371-499d-9877-103b49d87fcd/'"
+        btn-text="View design specifications"
+        %}
+
+
+       
+
+         <!-- LAYOUTS -->
+         <h2 class="section-start" id="layouts">Layouts</h2>
+
+         <p>Finder tool result tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left side menu layout</a>.</p>
+ 
+         
+         {% include layouts-dropdown.html
+         layout-name="Two column - left side menu layout"
+         singlelayout="true"
+         %}
+ 
+         <div class="layout-example show two-col-leftmenu mt-0 mb-5 px-4 py-0">
+ 
+             {% include layouts-accordion.html
+             layout-name="twocol-leftmenu"
+ 
+             min1200-visibility="true"
+             min992-visibility="false"
+             min768-visibility="false"
+             min576-visibility="true"
+             finalbp-visibility="true"
+ 
+             finalbp="Breakpoint &lt; 576px"
+ 
+             min1200-img="'../assets/layout-images/search-tile-2col-leftmenu-min1200.png' | relative_url "
+             min576-img="'../assets/layout-images/search-tile-2col-leftmenu-min576.png' | relative_url "
+             finalbp-img="'../assets/layout-images/search-tile-2col-leftmenu-finalbp.png' | relative_url "
+ 
+             min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+             <p>Search tiles span the full width of the content area.</p>"
+ 
+             min576-rules="<p>The content area is 9 grid-columns wide.</p>
+             <p>Search tiles span the full width of the content area.</p>"
+ 
+             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+             <p>Search tiles span the full width of the content area.</p>"
+ 
+             example-link="'../html-examples/search-layout.html#finder-tiles-example' | relative_url'"
+             example-link-text="View layout example"
+ 
+             %}
+ 
+         </div>
+ 
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Used in the business.gov.au finder tools to display a collection of filterable links.</p>
+        
+
+    </div>
+
+</div>

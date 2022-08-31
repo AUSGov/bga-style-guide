@@ -1,0 +1,65 @@
+<div class="events-tile {{ include.classes }} mb-5">
+
+    <div class="delivery-type remove-element-padding py-3 px-4">
+        <h3><img class="me-2" src={{ include.icon }} alt="" /><strong>{{ include.delivery-type }}</strong></h3>
+    </div>
+
+    <div class="component-text p-4 remove-element-padding">
+
+        <h3 class="tile-title mb-3 pt-0">{{ include.title }}</h3>
+
+        <div class="date-time mb-2 d-flex">
+            <p class="m-0 pe-4"><strong>{{ include.date }}</strong></p>
+            <p class="m-0"><strong>{{ include.time }}</strong></p>
+        </div>
+
+        <div class="location-cost mb-4 d-flex">
+            <p class="m-0 pe-4"><strong>Location: </strong>{{ include.location }}</p>
+            <p class="m-0"><strong>Cost: </strong>{{ include.cost }}</p>
+        </div>
+
+        <div class="event-details p-3 mb-4">
+            
+            <p class="description">{{ include.description }}</p>
+
+            <button tabindex="0" class="read-more-btn d-flex align-items-center p-0"><span>Read more</span><svg class="ms-2" data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                    <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
+                  </svg>
+                  
+            </button>
+
+            <div class="read-more-content pt-3 remove-element-padding">
+                <div class="highlighted-info pt-3 mb-3">
+                   
+                    <p><strong>Speaker: </strong>{{ include.speaker }}</p>
+                    <p><strong>Event organiser: </strong>{{ include.organiser }}</p>
+                    
+                    {% if include.address %}
+                        <p><strong>Address: </strong>{{ include.address }}</p>
+                    {% endif %}
+                </div>
+
+                {{ include.read-more-info }}
+
+            <button tabindex="0" class="close-btn p-0">
+                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8,9.6,1.6,16,0,14.4,6.4,8,0,1.6,1.6,0,8,6.4,14.4,0,16,1.6,9.6,8,16,14.4,14.4,16Z" fill="#2e6cb9"/></svg>Close</button>    
+            </div>
+
+        </div>
+
+        <div class="registration d-flex align-items-center remove-element-padding">
+            <div class="button-example me-3">
+                <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Register
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path d="M0,16V0H7V2H2V14H14V9h2v7ZM6.293,8.293,12.586,2H10V0h6V6H14V3.414L7.707,9.707ZM14,2h0Z" />
+                </svg>
+            </button>
+            </div>
+            <p><strong>Register for this event though {{ include.registration }}</strong></p>
+        </div>
+
+
+
+    </div>
+
+</div>

@@ -2,30 +2,32 @@
 
 layout: html-examples
 title: Search layout example
-description: Search result pages use the two column - left side menu layout. 
+description: Search result pages use the two column - left side menu layout.
 
 ---
 
 
 <div class="container my-5">
 
-<div class="row">
-    
-    <div class="anchor-menu-wrapper remove-top-spaces col-12 col-sm-3">
-    
-    <h5>Filters</h5> 
-    <ul class="anchor-menu ps-0 pb-4 m-0">
-        <li class="mb-3"><a tabindex="0" href="">Lorem ipsum dolor sit amet</a></li>
-        <li class="mb-3"><a tabindex="0" href="">Nullam malesuada</a></li>
-        <li class="mb-3"><a tabindex="0" href="">Curabitur lobortis ipsum congue elit vulputate</a></li>
-        
-    </ul>
-    </div>
- 
-    <div class="remove-top-spaces col-12 col-sm-9 col-xl-8">
+    <div class="row">
 
-        <div id="search-tiles-example" class="col-12"> 
-            
+        <div class="anchor-menu-wrapper remove-top-spaces col-12 col-sm-3">
+
+            <h5>Filters</h5>
+            <ul class="anchor-menu ps-0 pb-4 m-0">
+                <li class="mb-3"><a tabindex="0" href="">Lorem ipsum dolor sit amet</a></li>
+                <li class="mb-3"><a tabindex="0" href="">Nullam malesuada</a></li>
+                <li class="mb-3"><a tabindex="0" href="">Curabitur lobortis ipsum congue elit vulputate</a></li>
+
+            </ul>
+        </div>
+
+        <div class="remove-top-spaces col-12 col-sm-9 col-xl-8">
+
+            <div class="col-12">
+
+                <h2 id="search-tiles-example">Global search tile examples</h2>
+
                 {% include component-examples/global-search-tile-example.html
                 title="How to develop your country of origin label"
                 description="Understanding country of origin labelling is crucial when you sell or produce food products
@@ -72,14 +74,70 @@ description: Search result pages use the two column - left side menu layout.
                 timeframe="Closing in 12 days"
                 classes="open-grant"
                 %}
-            </div>
+
+
+
+                <h2 id="finder-tiles-example">Finder tool tile examples</h2>
+                
+                <h3>Grants and programs search tile</h3>
+                {% include component-examples/global-search-tile-example.html
+                label="Grant or program name"
+                title="Lorem ipsum dolor sit amet constetur"
+                description="Live Performance Support Program TAS
+                The Live Performance Support Program provides funding guarantees to arts organisations, festival
+                organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
+                and other venues throughout 2021."
+                tag="Open"
+                icon="'../assets/icon-tick-box-green.svg' | relative_url "
+                timeframe="Closing in 12 days"
+                apply="<p><strong>Who is this for?</strong></p>
+                    <p>Businesses who employ people registered with a Disability Service provider.</p>
+                    <p><strong>What you get?</strong></p>
+                    <p>Funding of up to $1650.</p>"
+                shortlist="true"
+                classes="open-grant grants-finder-tool"
+                %}
+                
+                <h3>Advisers search tile</h3>
+                {% include component-examples/global-search-tile-example.html
+                label="Federal government"
+                title="Fair Work Ombudsman Small Business Helpline"
+                description="The Small business helpline provides workplace advice on managing your employees and meeting your employer obligations."
+                services="Services offered over the phone and online."
+                cost="Free"
+                tag="<strong>Service area:</strong> Australia wide"
+                icon="'../assets/icon-pin-black.svg' | relative_url "
+                classes="adviser-finder-tool"
+                %}
+               
+
+                <h3>Events search tile - in person events</h3>
+                {% include component-examples/events-tile-example.html
+                    delivery-type="Workshop for ACT businesses"
+                    date="Monday 10 Aug 2022"
+                    time="11:00 AM - 12:30 PM AEST"
+                    cost="Free"
+                    location="Shepparton, VIC"
         
-        <div id="pagination-example" class="col-12"> 
-        {% include component-examples/pagination-example.html %}
+                    title="Lunch and learn: Designing your team culture"
+                    description="This workshop provides ACT businesses with tips and tools to help them build a strong team and healthy workplace culture."
+
+                    speaker="Bronwyn Brown"
+                    organiser="Canberra Innovation Network"
+                    address="Canberra Innovation Network, Level 5, 1 Moore Street, Canberra, ACT, 2601"
+                    read-more-info="<p>Vestibulum eget tincidunt ligula. Fusce vestibulum imperdiet mi, sed lobortis lectus sagittis vel. Donec ut neque at est sodales pretium. Suspendisse molestie orci nulla, quis sagittis mi ornare ut.</p><p>Nam rutrum vulputate dui, eu mattis lorem facilisis vitae. Praesent consequat quis nunc vitae blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nibh tortor, scelerisque at viverra eget, tincidunt eu elit. Etiam eu egestas components/download-list.htmlaugue. Donec viverra pharetra vulputate. Nulla eu vestibulum est, vel tempor tellus. Donec bibendum tortor rhoncus, vestibulum quam nec, pulvinar eros. Nullam ac dignissim tellus. Quisque ac ante quis elit mollis varius eu vitae eros. Donec aliquam finibus metus, quis dapibus dui sagittis id. Pellentesque tincidunt velit eget elit ultricies hendrerit.</p>"
+                    icon="'../assets/icon-events-in-person.svg' | relative_url "
+                    registration="Canberra Innovation Network"
+                    classes="events-finder-tool in-person-event"
+                %}
+            </div>
+
+            <div id="pagination-example" class="col-12">
+                {% include component-examples/pagination-example.html %}
+            </div>
+
         </div>
 
     </div>
 
-</div>
-    
 </div>

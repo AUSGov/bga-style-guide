@@ -26,7 +26,9 @@
             }
         }
     }
-    .description {
+    .description,
+    .services, 
+    .cost {
         font-size: 0.875rem;
     }
 
@@ -79,6 +81,10 @@
         text-align: left;
         font-size: 0.875rem;
         line-height: 1.5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.2s ease-in-out;
 
         &:focus-visible {
             background: $bga-blue-background-light;
@@ -92,7 +98,172 @@
     .apply-details.open {
         .apply-btn {
             background: $bga-blue-background-light;
+
+            svg {
+                transform: scaleY(-1);
+            }
         }
     }
 
+    &.grants-finder-tool {
+        .top-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .label {
+                margin-right: 48px;
+            }
+        }
+        .shortlist-btn {
+            background: $bga-white url(../assets/icon-star-unstarred.svg) no-repeat;
+            background-position: right center;
+            min-height: 26px;
+            border: none;
+            font-size: .75rem;
+            line-height: 1.5;
+            color: $bga-blue-black-dark;
+            padding: 0 35px 0 0;
+            text-align: right;
+            white-space: nowrap;
+
+            &.added {
+                background-image: url(../assets/icon-star-starred.svg);
+            }
+        }
+    }
+
+}
+
+.events-tile {
+    .delivery-type {
+        width: 100%;
+        background: $bga-teal-tool-mid;
+        
+        h3 {
+            color: $bga-white; 
+            font-size: 1.125rem;
+            font-weight: 600;
+        }   
+    }
+    .component-text {
+        background: $bga-teal-highlight-light;
+    }
+    .location-cost {
+        p {
+            font-size: 0.875rem;
+        }
+    }
+    .event-details {
+        background: $bga-white;
+
+        p {
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+        }
+        .read-more-btn {
+            background: none;
+            border: none;
+            font-size: 0.875rem;
+            color: $bga-blue-links;
+            transition: transform 0.2s ease-in-out;
+
+            &:focus-visible {
+                border: $bga-text-focus-border;
+                border-radius: $bga-focus-radius;
+            }
+
+        }
+        .read-more-content {
+            display: none;
+        }
+        .highlighted-info {
+            border-top: solid 2px $bga-blue-black-light;
+            border-bottom: solid 2px $bga-blue-black-light;
+
+            p {
+                margin-bottom: 8px;
+
+                &:last-of-type {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 0.875rem;
+            color: $bga-blue-links;
+
+            &:focus-visible {
+                border: $bga-text-focus-border;
+                border-radius: $bga-focus-radius;
+            }
+        }
+
+        &.open {
+            .read-more-btn {
+                svg {
+                    transform: scaleY(-1);
+                }
+            }
+        }
+    }
+    &.online-event {
+        .delivery-type {
+            background: $bga-blue-background-dark;
+        }
+        .component-text {
+            background: $bga-blue-background-light;
+        }
+    }
+}
+
+// Mixins for media queries and smaller screen examples
+@mixin search-tiles-below576 () {
+    .search-tile {
+        &.grants-finder-tool {
+            .top-section {
+                align-items: unset;
+                flex-direction: column-reverse;
+
+                .label {
+                    margin-top: 16px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .events-tile {
+        .date-time,
+        .location-cost {
+            flex-wrap: wrap;
+            p {
+                width: 100%;
+            }
+        }
+        .registration {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+
+            p {
+                width: 100%;
+            }
+            .button-example {
+                width: 100%;
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include search-tiles-below576();
+}
+
+// Media queries for HTML example pages
+@media (max-width: 576px) {
+    @include search-tiles-below576();
 }

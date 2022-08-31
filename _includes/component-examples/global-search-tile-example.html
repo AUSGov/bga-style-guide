@@ -3,8 +3,13 @@
     <div class="component-text p-4 remove-element-padding">
 
         {% if include.label %}
-        <p class="label"><strong>{{ include.label }}</strong></p>
+        <div class="top-section">
+            <p class="label"><strong>{{ include.label }}</strong></p>
 
+            {% if include.shortlist %}
+            <button class="shortlist-btn">Add to shortlist</button>
+            {% endif %}
+        </div>
         {% endif %}
 
         {% if include.title %}
@@ -14,6 +19,15 @@
         {% if include.description %}
         <p class="description">{{ include.description }}</p>
         {% endif %}
+
+        {% if include.services %}
+        <p class="services mb-3"><strong>{{ include.services }}</strong></p>
+        {% endif %}
+
+        {% if include.cost %}
+            <p class="cost"><strong>Cost:</strong> {{ include.cost }}</p>
+        {% endif %}
+
 
         {% if include.tag %}
         <div class="tag-wrapper align-items-center d-flex">
@@ -36,7 +50,13 @@
         <div class="apply-details-content p-4 remove-element-padding">
             {{ include.apply }}
         </div>
-        <button class="apply-btn p-4">Who can apply?</button>
+        <button class="apply-btn p-4">Who can apply?
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <path data-name="Path 9539" d="M614-1182.972,607.982-1189,606-1187.014l8,8.014,8-8.014L620.018-1189Z" transform="translate(622 -1179) rotate(180)" fill="#333" fill-rule="evenodd"/>
+              </svg>
+              
+              
+        </button>
     </div>
     {% endif %}
 
