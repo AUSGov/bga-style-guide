@@ -713,40 +713,40 @@ $(document).ready(function () {
     // COMPONENT EXAMPLE: INFORMATION SIDEBAR
     // Set height of sidebars
     function sidebar_fullheight() {
-        
 
-            $('.sidebar-wrapper.fullheight').each(function () {
-                var question_height;
 
-                if ($(window).width() > 768) {
-                    question_height = Math.round($(this).parents('.row').find('.question-section').height());
-                } else {
-                    question_height = 230;
-                }
-                // Set sidebar height
-                var text_height = question_height - 72;
-                $(this).css('height', question_height + 'px');
+        $('.sidebar-wrapper.fullheight').each(function () {
+            var question_height;
 
-                // Set .component_text height
-                $(this).find('.component-text').css('height', text_height + 'px');
+            if ($(window).width() > 768) {
+                question_height = Math.round($(this).parents('.row').find('.question-section').height());
+            } else {
+                question_height = 230;
+            }
+            // Set sidebar height
+            var text_height = question_height - 72;
+            $(this).css('height', question_height + 'px');
 
-                // Check if text box is in overflow. Set read more link accordingly
-                var full_text_height= $(this).find('.component-text').prop('scrollHeight');
-                if (full_text_height > text_height) {
-                    $(this).find('.component-text').addClass('fixed-height');
-                    $(this).find('.more-info-toggle').removeClass('hide');
-                } else {
-                    $(this).find('.component-text').removeClass('fixed-height');
-                    $(this).find('.more-info-toggle').addClass('hide');
-                }
-            });
+            // Set .component_text height
+            $(this).find('.component-text').css('height', text_height + 'px');
+
+            // Check if text box is in overflow. Set read more link accordingly
+            var full_text_height = $(this).find('.component-text').prop('scrollHeight');
+            if (full_text_height > text_height) {
+                $(this).find('.component-text').addClass('fixed-height');
+                $(this).find('.more-info-toggle').removeClass('hide');
+            } else {
+                $(this).find('.component-text').removeClass('fixed-height');
+                $(this).find('.more-info-toggle').addClass('hide');
+            }
+        });
     }
     sidebar_fullheight();
 
     // Read more toggle function
     $('.more-info-toggle').on('click', function () {
         $(this).parents('.sidebar-wrapper').toggleClass('extended');
-        
+
         if ($(this).parents('.sidebar-wrapper').hasClass('extended')) {
             $(this).parents('.sidebar-wrapper').css('height', '100%');
             $(this).find('span').text('Read less');
@@ -755,22 +755,22 @@ $(document).ready(function () {
         }
     });
 
-    $(window).resize(function () { 
+    $(window).resize(function () {
         sidebar_fullheight();
     });
 
 
     // COMPONENT EXAMPLE: EDIT ANSWERS COMPONENT
-    $('.edit-answers-toggle').on('click', function(){
+    $('.edit-answers-toggle').on('click', function () {
         $(this).toggleClass('open');
         $(this).parents('.edit-answers-component').find('.component-content').slideToggle();
     });
 
 
     // COMPONENT EXAMPLE: MODALS
-    
+
     // Function to detect if scrollable section is overflowing            
-    var detect_overflowing = function(parent_elem, scrollable_name){
+    var detect_overflowing = function (parent_elem, scrollable_name) {
         var scroll_height = parent_elem.find(scrollable_name)[0].scrollHeight;
         var container_height = parent_elem.find(scrollable_name)[0].offsetHeight;
 
@@ -781,8 +781,8 @@ $(document).ready(function () {
         }
     };
 
-    if ($('.modal-shortlist')) {      
-        $('.modal-shortlist').each(function(){
+    if ($('.modal-shortlist')) {
+        $('.modal-shortlist').each(function () {
             // Add shortlist item count to counter
             var shortlist_count = $(this).find('.shortlist-item').length;
             $(this).find('.counter').text(shortlist_count);
@@ -790,12 +790,12 @@ $(document).ready(function () {
             // Set class for scrollable appearance
             detect_overflowing($(this), ".scrollable");
         });
-       
+
         // remove shortlist items on click
-        $('.modal-shortlist .remove-btn').on('click', function(){
+        $('.modal-shortlist .remove-btn').on('click', function () {
             $(this).parents('.shortlist-item').hide();
             var counter = $(this).parents('.modal-shortlist').find('.counter'),
-            count =  $(this).parents('.modal-shortlist').find('.shortlist-item:visible').length;
+                count = $(this).parents('.modal-shortlist').find('.shortlist-item:visible').length;
             counter.text(count);
 
             if (counter.text() == "0") {
@@ -808,8 +808,8 @@ $(document).ready(function () {
     }
 
     // On scroll detect if content is at top or bottom of container and add classes accordingly.
-    $(".modal-example .scrollable").on("scroll", function() {
-            
+    $(".modal-example .scrollable").on("scroll", function () {
+
         var scroll_wrapper = $(this).parents('.scroll-wrapper'),
             scroll_position = $(this).scrollTop(),
             scroll_height = $(this)[0].scrollHeight,
@@ -825,41 +825,41 @@ $(document).ready(function () {
             scroll_wrapper.removeClass("scroll-done");
             scroll_wrapper.addClass('scrolling');
         }
-        
+
     });
 
     // On smaller screen sizes set modal scrollable height to fit with the form toggle.
-    var mobile_modal_display = function(){
+    var mobile_modal_display = function () {
         if ($(window).width() < 768) {
-            $('.modal-form').each(function(){
+            $('.modal-form').each(function () {
                 var modal_height = $(this).outerHeight(),
-                top_section_height = $(this).find('.title-area').outerHeight() + 24, //bottom margin
-                toggle_height = $(this).find('.mobile-form-toggle').outerHeight(),
-                scrollable_height = modal_height- top_section_height - toggle_height - 32 - 24; //top and bottom padding 
+                    top_section_height = $(this).find('.title-area').outerHeight() + 24, //bottom margin
+                    toggle_height = $(this).find('.mobile-form-toggle').outerHeight(),
+                    scrollable_height = modal_height - top_section_height - toggle_height - 32 - 24; //top and bottom padding 
 
-                $(this).find('.scrollable').css('max-height', scrollable_height+'px');
-            });  
-        } else if ($(window).width() >= 768){
-            $('.modal-form').each(function(){
+                $(this).find('.scrollable').css('max-height', scrollable_height + 'px');
+            });
+        } else if ($(window).width() >= 768) {
+            $('.modal-form').each(function () {
                 $(this).find('.scrollable').css('max-height', '400px');
             });
         }
     };
     mobile_modal_display();
-    
+
     $(window).resize(function () {
-       mobile_modal_display();
+        mobile_modal_display();
     });
 
     //Toggle modal form on mobile screens
-    $('.mobile-form-toggle').on('click', function(){
+    $('.mobile-form-toggle').on('click', function () {
         $(this).parents('.email-form').toggleClass('open').find('form').slideToggle();
     });
 
 
     // COMPONENT EXAMPLE: ANCHOR MENU
-    $('.anchor-menu.example li a').on('click', function(){
-        $('.anchor-menu.example li a').each(function(){
+    $('.anchor-menu.example li a').on('click', function () {
+        $('.anchor-menu.example li a').each(function () {
             $(this).removeClass('current');
         });
         $(this).addClass('current');
@@ -868,7 +868,7 @@ $(document).ready(function () {
 
     // COMPONENT EXAMPLE: PAGINATION
 
-    $('.pagination-links li.number').on('click', function(){
+    $('.pagination-links li.number').on('click', function () {
         /*
         var new_position = $(this).attr('data-position'),
         current_position = parseInt($('.pagination-links li.current').attr('data-position'));
@@ -893,19 +893,19 @@ $(document).ready(function () {
           console.log("final: " + new_position);
 
           $('li').data('data-position', new_position);*/
-        
-          $('.pagination-links li.current').removeClass('current');
-          $(this).addClass('current');
+
+        $('.pagination-links li.current').removeClass('current');
+        $(this).addClass('current');
 
     });
 
 
     // COMPONENT EXAMPLE: GRANTS SEARCH TILE 
-    $('.search-tile .apply-btn').on('click', function(){
+    $('.search-tile .apply-btn').on('click', function () {
         $(this).parents('.apply-details').toggleClass('open').find('.apply-details-content').slideToggle();
 
     });
-    $('.shortlist-btn').on('click', function(){
+    $('.shortlist-btn').on('click', function () {
         $(this).toggleClass('added');
 
         if ($(this).hasClass('added')) {
@@ -916,9 +916,9 @@ $(document).ready(function () {
     });
 
     // COMPONENT EXAMPLE: EVENTS SEARCH TILE
-    $('.events-tile .read-more-btn').on('click', function(){
+    $('.events-tile .read-more-btn').on('click', function () {
         var parent_section = $(this).parents('.event-details');
-        if ( parent_section.hasClass('open') ) {
+        if (parent_section.hasClass('open')) {
             parent_section.removeClass('open');
             parent_section.find('.read-more-content').slideUp();
             $(this).find('span').text('Read more');
@@ -928,12 +928,34 @@ $(document).ready(function () {
             $(this).find('span').text('Read less');
         }
     });
-    $('.events-tile .close-btn').on('click', function(){
+    $('.events-tile .close-btn').on('click', function () {
         var parent_section = $(this).parents('.event-details');
         parent_section.removeClass('open');
         parent_section.find('.read-more-content').slideUp();
         parent_section.find('span').text('Read more');
     });
+
+
+    // COMPONENT EXAMPLE: CHAT BUTTON
+
+    $('.chat.closed').hover(
+        function () {
+            if ($(window).width() >= 768) {
+                $('.chat-closed-msg').addClass("show");
+            }
+        },
+        function () {
+            if ($(window).width() >= 768) {
+                $('.chat-closed-msg').removeClass("show");
+            }
+        }
+    );
+    $('.chat.closed').on('click', function () {
+        if ($(window).width() <= 768) {
+            $('.chat-closed-msg').toggleClass("show");
+        }
+    });
+
 
 
 

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Information sidebar</title>
+    <title>Chat button</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -34,7 +34,7 @@
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/information-sidebar.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/chat-button.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -167,7 +167,7 @@
                     
 
                     <li class="breadcrumb breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0">Information sidebar</p>
+                        <p class="breadcrumb-location m-0 p-0">Chat button</p>
                     </li>
                 </ul>
                 
@@ -187,13 +187,13 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Information sidebar</h1>
-                        <p class="header-intro">Provide extra information on a tool section or task in an expandable sidebar.</p>
+                        <h1>Chat button</h1>
+                        <p class="header-intro">Provide a link to the business.gov.au online chat service.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
                                 <li class="me-2 mb-0 py-1 ps-5 pe-2 true">business.gov.au</li> 
-                                <li class="m-0 mb-0 py-1 ps-5 pe-2 true">subsites</li>
+                                <li class="m-0 mb-0 py-1 ps-5 pe-2 false">subsites</li>
                             </ul>
                         </div>
                     </div>
@@ -246,12 +246,48 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+       <!-- Breakpoint radio buttons -->
+       <div class="breakpoints m-0 p-4">
 
     
-    <p class="pe-3 m-0">All breakpoints</p>
-    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                      
+                    <input type="radio" class="btn-check bp-md true" name="-group" id="-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="-bp-md">≥768px (md)</label>
+                
+
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;768px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
     
 
 </div>
@@ -262,181 +298,69 @@
 
         <div class="component-example m-0">
 
-            <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+            <div class="component-wrapper remove-element-padding">
 
-                <div class="row">
-                    <p><strong>Note: At smaller breakpoints the sidebar is stacked under associated content and its
-                            height is limited to 230px.</strong></p>
+                    
+                   
+                    <div class="chat-button-example-container p-4">
+                        
+                    <h3>Open chat button</h3>
+                        
+<button class="chat open example">
+    <span>Live chat</span>
+</button>
 
-                    <div class="col-12 col-md-6 h-100">
-                        <div class="question-section">
 
-                            <div class="bga-component sidebar dummy-sidebar m-0">
 
-                                <div class="p-4 component-content">
 
-                                    <div class="component-text remove-element-padding">
-                                        <h3>Lorem ipsum dolor sit amet.</h3>
-                                        <p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
-                                        <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent
-                                            tincidunt congue elit, a vehicula urna ornare quis.</p>
-                                    </div>
 
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
 
+                    
+                    <div class="chat-button-example-container p-4">
+                        
+                    <h3 class="mt-4">Closed chat button</h3>
+                    
 
-                    <div class="col-12 col-md-6 h-100">
-                        <div class="bga-component-wrapper sidebar-wrapper fullheight teal">
-<div class="bga-component sidebar information-sidebar m-0">
 
-    <div class="p-4 component-content">
 
-        <div class="component-text pb-4 remove-element-padding">
-            
-                <h3>Lorem ipsum dolor sit amet.!!!</h3>
-            
-            
-            
-                <p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
-                        <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue
-                            elit, a
-                            vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at
-                            posuere.
-                            Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis
-                            iaculis.
-                            Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa
-                            quis
-                            purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut
-                            mauris
-                            dictum tempor. </p>
-            
-            
-        </div>
 
-        <button class="more-info-toggle hide m-0 p-0">
-            <svg class="me-2" data-name="Icon: Chevron right" xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16">
-            <path data-name="Chevron / Right" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" fill="#2e6cb9"/>
-              </svg><span>Read more</span></button>
+<div class="chat-closed-msg example">
+    <div class="msg-container remove-element-padding p-3">
+    <h5>Sorry, live chat is closed.</h5>
+    <p>Live chat is open from 8am to 8pm Monday to Friday across Australia. Closed on Australian National Public Holidays.</p>
+    </div> 
+    <span class="arrow"></span>
     
-
-    </div>
-
 </div>
-</div>
+
+<button class="chat closed example">
+    <span>Live chat is closed</span></button>
+
                     </div>
-
-                </div>
 
             </div>
 
         </div>
-        <div class="component-example m-0">
-
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <div class="row">
-
-                    <h3>Colour variations</h3>
-                    <div class="col-12 col-sm-4">
-                        <div class="bga-component-wrapper sidebar-wrapper colour-example gradient">
-<div class="bga-component sidebar sidebar-colours m-0 teal colour-example">
-
-    <div class="p-4 component-content">
-
-        <div class="component-text remove-element-padding">
-            
-                <h3>Teal</h3>
-            
-            
-            
-                <p>Used in tool pages only.</p>
-            
-            
-        </div>
-
-    </div>
-
-</div>
-</div>
-                    </div>
-
-                    <div class="col-12 col-sm-4">
-                        <div class="bga-component-wrapper sidebar-wrapper colour-example gradient">
-<div class="bga-component sidebar sidebar-colours m-0 yellow">
-
-    <div class="p-4 component-content">
-
-        <div class="component-text remove-element-padding">
-            
-                <h3>Yellow</h3>
-            
-            
-            
-                <p>Can be used in site pages and tools.</p>
-            
-            
-        </div>
-
-    </div>
-
-</div>
-</div>
-                    </div>
-
-                    <div class="col-12 col-sm-4">
-                        <div class="bga-component-wrapper sidebar-wrapper colour-example gradient">
-<div class="bga-component sidebar sidebar-colours m-0 blue">
-
-    <div class="p-4 component-content">
-
-        <div class="component-text remove-element-padding">
-            
-                <h3>Blue</h3>
-            
-            
-            
-                <p>Can be used in site pages and tools.</p>
-            
-            
-        </div>
-
-    </div>
-
-</div>
-</div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
 
 
 
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/a09452a7-3c07-406b-9f14-c1106266a08e/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/66e9ed19-14d0-40c2-a56d-9d963e38fadb/' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The information sidebar can be used in <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - right sidebar layouts</a>. It should not be used in other layouts.</p>
-
+        <p>The chat button is used on <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>all page layouts</a>.</p>
+       
         <div class="layouts m-0 p-4">
     
     
-    <p class="pe-3 m-0 all-layouts">Layout: <strong>Single column - full width</strong></p>
+    <p class="pe-3 m-0 all-layouts">Layout: <strong>All layouts</strong></p>
     
     
 
@@ -444,83 +368,42 @@
     
 </div>
 
-        <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+        <div class="layout-example show full-border mt-0 p-4">
 
             
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-
-
-                     
-
-
-                       
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-collapseThree" aria-expanded="false" aria-controls="twocol-rightbar-collapseThree">
-                                    Breakpoint ≥ 768px
-                                </button>
-                            </h2>
-                            <div id="twocol-rightbar-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/info-sidebar-2col-rightsidebar-min768.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p>
-            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    
-
-
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-collapseFive" aria-expanded="false" aria-controls="twocol-rightbar-collapseFive">
-                                    Breakpoint &lt; 768px
-                                </button>
-                            </h2>
-                            <div id="twocol-rightbar-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/info-sidebar-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p>
-            <p>Sidebars span the full width of the content area. In general they stack below the right side content.</p>
-            
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
+    
+    <div class="py-4">
+        
+        <h6>All breakpoints</h6>
+        
+        <div class="layouts-wrapper">
+        <div class="layout-image me-5">
+            <img src='../assets/layout-images/chat-button-allbp.png' | relative_url  alt="" />
         </div>
-
+        <div class="layout-rules">
+              <p>The chat button is fixed to the bottom of the screen, 24px from the bottom right corner.</p>
+        </div>
+        </div>
+    </div>
 
     
 
 
 
 
-    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/ECB-content-page.html' | relative_url' role="button">View layout example</a>
-    </div>
-
 
 
         </div>
+
+        <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
+<a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-full-width.html' | relative_url role="button">View layout example (open button)</a>
+</div>
+
+        <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
+<a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html' | relative_url role="button">View layout example (closed button)</a>
+</div>
+
+
 
 
 
@@ -528,16 +411,13 @@
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h4>Purpose: </h4>
-        <p>The information sidebar is used to highlight useful information in the context of a process or step.</p>
+        <p>Used to provide a link to the business.gov.au online chat service.</p><p>The chat button has an open and closed state. Hovering over the closed button or clicking on the closed button on mobile screens displays a pop up message explaining when the chat is open.</p>
+       
         <h4>When to use this component: </h4>
         <ul>
-            <li>Used in tools for information the user may find useful but is not of high importance.</li>
+            <li>Used with all pages of the business.gov.au site.</li>
         </ul>
-        <h4>Style rules: </h4>
-        <ul>
-            <li>The height of the sidebar is equal to the height of the content on the right side of the section. When
-                sidebar content extends past this height it is hidden and revealed with a "Read more" button.</li>
-        </ul>
+       
 
     </div>
             
