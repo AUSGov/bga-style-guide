@@ -1,0 +1,128 @@
+---
+
+layout: content-tagged
+title: Save your progress sidebar
+description: Provide the user with a clear pathway to save their progress in a tool with an email link.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+            md-visibility="true"
+            final-visibility="true"
+            breakpoint-final="768"
+            %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+
+            <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+
+                <p><strong>Note: On mobile screens the sidebar is fixed to the bottom of the screen. It incorporates the fixed chat button that appears on all business.gov.au pages.</strong></p>
+
+                {% include component-examples/progress-sidebar-example.html
+                title="Save your progress."
+                text="<p>Save your checklist and get a link to it – you’ll be able to continue on from where you were.</p>"
+                classes="yellow"
+                %}
+  
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/92751111-3a85-4178-83db-e7f44ab3296d/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Sidebars can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" |
+                relative_url }}>two column - right sidebar layouts</a>. They should not be used in other layouts.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Single column - full width"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+
+            min768-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>
+            "
+
+            example-link="'../html-examples/two-col-right-sidebar.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h4>Purpose: </h4>
+        <p>The save your progress sidebar provides the ability to save and email a link recording the users progress though a process.</p>
+        <p>Clicking on the 'save your progress' button triggers a <a href={{ "components/modal.html" | relative_url }}>modal with email form</a>.</p>
+        <h4>When to use this component: </h4>
+        <ul>
+            <li>Used with the standard checklist.</li>
+        </ul>
+       
+
+    </div>

@@ -1,0 +1,112 @@
+.chat-button-example-container {
+    position: relative;
+    min-height: 170px;
+
+    &:first-of-type {
+        border-bottom: solid 1px $bga-blue-border;
+    }
+}
+button.chat {
+    height: 56px;
+    width:auto;
+    padding: 0 67px 0 32px;
+    display: inline-flex;
+    align-items: center;
+    z-index: 9000;
+    border-radius: 60px;
+    box-shadow: $bga-btn-boxshadow;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+
+    &.example {
+        position: absolute;
+    }
+
+    span {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    &.open {
+        background: url(../assets/icon-chat-open.svg) #ACFF98 no-repeat;
+        background-position: right 32px center;
+        border: solid #348621 3px;
+    }
+
+    &.closed {
+        background: url(../assets/icon-chat-closed.svg) $bga-blue-black-lightest no-repeat;
+        border: solid $bga-blue-black-light 3px;
+        background-position: right 32px center;
+    }
+}
+
+.chat-closed-msg {
+    display: none;
+    z-index: 9000;
+    width: 100%;
+    max-width: 300px;
+    background: $bga-white;
+    border: 3px solid $bga-blue-black-light;
+    border-radius: 4px;
+    box-shadow: $bga-btn-boxshadow;
+    position: fixed;
+    right: 24px;
+    bottom: 90px;
+
+    &.example {
+        position:absolute;
+    }
+    span.arrow {
+        background-color: $bga-white;
+        border-bottom: 3px solid $bga-blue-black-light;
+        border-right: 3px solid $bga-blue-black-light;
+        bottom: -16px;
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        bottom: -18px;
+        right: 2rem;
+        transform: translate(-50%, -50%) rotate(45deg);
+        z-index: 900;
+    }
+
+    &.show {
+        display: block;
+    }
+}
+
+
+@mixin chat-button-below768 {
+    button.chat {
+        text-indent: -9999px;
+        height: 58px;
+        width: 58px;
+        padding: 0;
+
+        &.open,
+        &.closed {
+            background-position: center center;
+        }
+    }
+
+    .chat-closed-msg {
+        &.show {
+            background: url(../assets/icon-close-black.svg) no-repeat $bga-white;
+            background-position: right 16px top 16px;
+            padding-top: 32px !important;
+           
+
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768, .component-example.small-screen {
+    @include chat-button-below768();
+}
+
+// Media queries for HTML example pages.
+@media (max-width: 768px) {
+    @include chat-button-below768();
+}

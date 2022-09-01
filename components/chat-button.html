@@ -1,0 +1,133 @@
+---
+
+layout: content-tagged
+title: Chat button
+description: Provide a link to the business.gov.au online chat service.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: false
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+       <!-- Breakpoint radio buttons -->
+       {% include breakpoints.html 
+        md-visibility="true"
+        final-visibility="true"
+        breakpoint-final="768"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+
+            <div class="component-wrapper remove-element-padding">
+
+                    
+                   
+                    <div class="chat-button-example-container p-4">
+                        
+                    <h3>Open chat button</h3>
+                        {% include component-examples/chat-button-example.html
+                        button-state="open"
+                        classes="example"
+                        %}
+
+                    </div>
+
+                    
+                    <div class="chat-button-example-container p-4">
+                        
+                    <h3 class="mt-4">Closed chat button</h3>
+                    {% include component-examples/chat-button-example.html
+                        button-state="closed"
+                        classes="example"
+                        %}
+                    </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/66e9ed19-14d0-40c2-a56d-9d963e38fadb/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>The chat button is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all page layouts</a>.</p>
+       
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 p-4">
+
+            {% include layouts-accordion.html
+
+            singlelayout="true"
+
+            allbp-img="'../assets/layout-images/chat-button-allbp.png' | relative_url "
+
+            allbp-rules="  <p>The chat button is fixed to the bottom of the screen, 24px from the bottom right corner.</p>"
+
+            %}
+
+        </div>
+
+        {% include design-specs-link.html 
+            btn-link="'../html-examples/single-col-full-width.html' | relative_url"
+            btn-text="View layout example (open button)"
+            %}
+
+        {% include design-specs-link.html 
+            btn-link="'../html-examples/single-col-two-thirds-width.html' | relative_url"
+            btn-text="View layout example (closed button)"
+            %}
+
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h4>Purpose: </h4>
+        <p>Used to provide a link to the business.gov.au online chat service.</p><p>The chat button has an open and closed state. Hovering over the closed button or clicking on the closed button on mobile screens displays a pop up message explaining when the chat is open.</p>
+       
+        <h4>When to use this component: </h4>
+        <ul>
+            <li>Used with all pages of the business.gov.au site.</li>
+        </ul>
+       
+
+    </div>

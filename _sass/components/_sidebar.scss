@@ -1,22 +1,25 @@
 .dummy-sidebar {
     background: $bga-teal-highlight-light;
 }
+
 .sidebar-wrapper {
     height: 100%;
     width: 100%;
     justify-content: space-between;
-    
-    .sidebar {
-        background: $bga-teal-highlight-light;
-        height: 100%;
+    height: 100%;
 
-        &.yellow {
-            background: $bga-yellow-highlight-light;
-        }
-        &.blue {
-            background: $bga-blue-background-light;
-        }
+    &.teal {
+        background: $bga-teal-highlight-light;
     }
+
+    &.yellow {
+        background: $bga-yellow-highlight-light;
+    }
+
+    &.blue {
+        background: $bga-blue-background-light;
+    }
+
     .component-text {
         overflow: hidden;
         position: relative;
@@ -27,7 +30,7 @@
                 content: "";
                 width: 100%;
                 height: 48px;
-                background: linear-gradient(0deg, rgba(207,235,235,1) 30%, rgba(207,235,235,0) 100%);
+                background: linear-gradient(0deg, rgba(207, 235, 235, 1) 30%, rgba(207, 235, 235, 0) 100%);
                 bottom: 0;
                 position: absolute;
             }
@@ -50,49 +53,107 @@
     &.extended {
         .component-text {
             height: 100% !important;
-    
+
             &.fixed-height {
                 &::after {
                     display: none;
                 }
             }
         }
+
         .more-info-toggle {
             svg {
-                transform:  rotate(-90deg);
+                transform: rotate(-90deg);
             }
         }
     }
 
     &.colour-example.gradient {
-        .teal .component-text::after {
-            content: "";
+        .teal {
+            background: $bga-teal-highlight-light;
+            .component-text::after {
+                content: "";
                 width: 100%;
                 height: 24px;
-                background: linear-gradient(0deg, rgba(207,235,235,1) 30%, rgba(207,235,235,0) 100%);
+                background: linear-gradient(0deg, rgba(207, 235, 235, 1) 30%, rgba(207, 235, 235, 0) 100%);
                 bottom: 0;
                 position: absolute;
+            }
         }
-        .yellow .component-text::after {
-            content: "";
+
+        .yellow {
+            background: $bga-yellow-highlight-light;
+            .component-text::after {
+                content: "";
                 width: 100%;
                 height: 24px;
-                background: linear-gradient(0deg, rgba(255,243,205,1) 0%, rgba(255,243,205,0) 100%);
+                background: linear-gradient(0deg, rgba(255, 243, 205, 1) 0%, rgba(255, 243, 205, 0) 100%);
                 bottom: 0;
                 position: absolute;
+            }
         }
-        .blue .component-text::after {
-            content: "";
+
+        .blue {
+            background: $bga-blue-background-light;
+            .component-text::after {
+                content: "";
                 width: 100%;
                 height: 24px;
-                background: linear-gradient(0deg, rgba(200,217,238,1) 0%, rgba(200,217,238,0) 100%);
+                background: linear-gradient(0deg, rgba(200, 217, 238, 1) 0%, rgba(200, 217, 238, 0) 100%);
                 bottom: 0;
                 position: absolute;
+            }
+        }
+    }
+
+    &.save-progress {
+        height: auto !important;
+        position: relative;
+        max-width: 420px;
+
+        .mobile-chat {
+            display: none;
+        }        
+    }
+}
+
+@mixin sidebar-below768 {
+    .sidebar-wrapper {
+        &.save-progress {
+            width: 100%;
+            max-width: none;
+            box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.3);
+            
+            .component-content {
+                padding-top: 16px !important;
+            }
+
+            .mobile-chat {
+                display: block;
+            }
+
+            .component-text {
+                display: none;
+            }
+
+            &.in-page {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+            }
         }
     }
 }
 
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768 {
+    @include sidebar-below768();
+}
+
+
+// Media queries for HTML example pages.
 @media (max-width: 768px) {
+    // just for in-page more inf examples
     .sidebar-wrapper {
         margin: 32px 0 0 0 !important;
 
@@ -101,4 +162,9 @@
             padding-bottom: 32px !important;
         }
     }
+    // In-page save your progress
+    @include sidebar-below768();
 }
+
+
+
