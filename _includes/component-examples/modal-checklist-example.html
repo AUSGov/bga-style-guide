@@ -1,0 +1,78 @@
+<div class="bga-component-wrapper mb-5">
+    <div class="bga-component modal-example {{include.classes}}">
+
+        <button class="close m-0 p-0">Close</button>
+
+        <div class="component-content d-flex">
+
+            <div class="component-text remove-element-padding">
+                {% if include.title %}
+                <div class="title-area">
+                <h3 class="mt-0"><svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <g data-name="Group 19457" transform="translate(-1848 -1172.4)">
+                      <circle data-name="Ellipse 48" cx="16" cy="16" r="16" transform="translate(1848 1172.4)" fill="#299f28"/>
+                      <g data-name="Icon: Tick" transform="translate(1857 1183.4)">
+                        <path d="M0,6.487,1.66,4.8,4.589,7.732,12.325,0,14,1.664,4.589,11.075Z" fill="#fff"/>
+                      </g>
+                    </g>
+                  </svg>{{ include.title }}</h3>
+                {% endif %}
+
+                {% if include.text %}
+                  {{ include.text }}
+                {% endif %}
+
+                {% if include.link-text %}
+                  <div class="link-wrapper p-3 mb-3">
+                    <a href="">{{ include.link-text }}</a>
+                    </div>
+                    <a href="" class="copy-link"><span>Copy link</span></a>
+                    </div>
+                {% endif %}
+               
+
+
+
+            </div>
+
+            <div class="email-form">
+                <button class="mobile-form-toggle">{{ include.toggle-text}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15">
+                        <path  data-name="Chevron / Up" d="M9.042,12,0,21.026,2.979,24,15,12,2.979,0,0,2.974Z" transform="translate(0 15) rotate(-90)" fill="#333"/>
+                      </svg>
+                      
+                      
+                </button>
+                
+                <form class="remove-element-padding">
+                    {% if include.form-title %}
+                    <h4>{{ include.form-title }}</h4>
+                    {% endif %}
+
+                    <p>{{ include.form-description }}</p>
+
+                    <label class="mb-3">Email</label>
+                    <div class="form-element-wrapper mb-5">
+                        <input type="text" class="form-control mb-0" value="" required>
+                    </div>
+
+                    {% if include.button %}
+                    <div class="button-example">
+                        <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">{{
+                            include.button }}
+                            <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="23.453"
+                                height="20.102" viewBox="0 0 23.453 20.102">
+                                <path d="M.011,20.1,23.453,10.051.011,0,0,7.818l16.752,2.234L0,12.285Z" fill="#333" />
+                            </svg>
+                        </button>
+                    </div>
+                    {% endif %}
+
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

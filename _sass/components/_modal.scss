@@ -176,10 +176,35 @@
             width: 66%;
             padding: 32px 24px 32px 32px;
         }
+        .link-wrapper {
+            background: $bga-blue-black-background-lightest;
+            word-break: break-word;
+
+            a {
+                color: $bga-black;
+                text-decoration: none;
+                font-weight: 400;
+            }
+        }
+        .copy-link {
+            padding: 0 0 0 26px;
+            background: url(../assets/icon-copy-blue.svg) no-repeat;
+            background-position: left center;
+
+            &.copied {
+                background-image: url(../assets/icon-copied-green.svg);
+                color: $bga-green-success-background;
+            }
+        }
         .email-form {
             width: 34%;
             background: $bga-teal-highlight-light;
             padding: 72px 32px 32px 24px;
+        }
+        &.blue {
+            .email-form { 
+                background: $bga-blue-background-light;
+            }
         }
     }
 }
