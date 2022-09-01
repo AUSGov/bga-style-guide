@@ -856,6 +856,11 @@ $(document).ready(function () {
         $(this).parents('.email-form').toggleClass('open').find('form').slideToggle();
     });
 
+    //Checklist modal copy link
+    $('.modal-example .copy-link').on('click',function(){
+        $(this).addClass('copied');
+    });
+
 
     // COMPONENT EXAMPLE: ANCHOR MENU
     $('.anchor-menu.example li a').on('click', function () {
