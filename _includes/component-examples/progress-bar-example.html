@@ -1,0 +1,9 @@
+<div class="bga-progress-bar {{include.classes}}">
+    {% if include.label %}
+    <p class="progress-label mb-2">{{ include.label }}</p>
+    {% endif %}
+    <div class="progress mb-5">
+        <div class="progress-bar w-{{ include.percentage }}" role="progressbar" aria-valuenow="{{ include.percentage }}"
+            aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>

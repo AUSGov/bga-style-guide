@@ -1,0 +1,158 @@
+---
+
+layout: content-tagged
+title: Progress bar
+description: Show users how far they have progressed through a process.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Un-named steps</h3>
+                {% include component-examples/progress-bar-example.html
+                percentage="75"
+                label="<strong>75% complete</strong>"
+                %}
+
+
+                <h3>Named steps</h3>
+                {% include component-examples/progress-bar-example.html
+                percentage="50"
+                label="<strong>Step name:</strong> 50% complete"
+                %}
+
+
+            </div>
+
+        </div>
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <h3>Colour variations</h3>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <h4>Blue</h4>
+                        {% include component-examples/progress-bar-example.html
+                        percentage="75"
+                        %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <h4>Teal</h4>
+                        {% include component-examples/progress-bar-example.html
+                        percentage="75" 
+                        classes="teal"
+                        %}
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/e1bbc668-f5b5-4923-96ce-ba85a881d833/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Progress bars can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - two thirds width layout</a>.</p>
+
+
+        {% include layouts-dropdown.html
+        layout-name="Single column - two thirds width"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/progress-bar-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/progress-bar-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/progress-bar-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/progress-bar-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Progress bars span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Progress bars span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Progress bars span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Progress bars span the full width of the content area.</p>"
+            %}
+
+        </div>
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>The progress bar visually shows the user how far they have progressed through a process. Progress bars are <strong>not</strong> used for navigation.</p>
+        <h3>When to use this component:</h3>
+        <h4>Un-named steps progress bar</h4>
+        <p>This is the default progress bar and shows progress through an entire process.</p>
+        <h4>Named steps progress bar</h4>
+        <p>This progress bar shows the progress of sub-steps within a larger process. Naming each step makes it clear the progress refers to a particular step, rather than the whole process.</p>
+
+    </div>
