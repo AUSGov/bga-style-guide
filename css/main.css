@@ -2870,7 +2870,7 @@ p.updated { font-size: .75rem; font-style: italic; line-height: 1.125rem; }
 
 a, button { font-weight: 600; }
 
-a:focus, a:focus-visible, a:focus-within, button:focus, button:focus-visible, button:focus-within { outline: none; border: 2px solid #2E6CB9; border-radius: 4px; }
+a:focus-visible, button:focus-visible { outline: none; border: 2px solid #2E6CB9; border-radius: 4px; }
 
 strong { font-weight: 600; }
 
@@ -5254,7 +5254,7 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .chat-closed-msg.example { position: absolute; }
 
-.chat-closed-msg span.arrow { background-color: #ffffff; border-bottom: 3px solid #ABB1BD; border-right: 3px solid #ABB1BD; bottom: -16px; height: 16px; width: 16px; position: absolute; bottom: -18px; right: 2rem; transform: translate(-50%, -50%) rotate(45deg); z-index: 900; }
+.chat-closed-msg span.arrow { background-color: #ffffff; border-bottom: 3px solid #ABB1BD; border-right: 3px solid #ABB1BD; height: 16px; width: 16px; position: absolute; bottom: -18px; right: 2rem; transform: translate(-50%, -50%) rotate(45deg); z-index: 900; }
 
 .chat-closed-msg.show { display: block; }
 
@@ -5273,5 +5273,21 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 .bga-progress-bar .progress-bar { border-bottom-right-radius: 10px; border-top-right-radius: 10px; background: #2E6CB9; }
 
 .bga-progress-bar.teal .progress-bar { background: #489595; }
+
+.utility-group { position: relative; }
+
+.utility-group .utility-item { display: inline-flex; align-items: center; }
+
+.utility-group .utility-icon { width: 16px; height: auto; }
+
+.utility-group .share-container { display: none; z-index: 9000; background: #ffffff; border: 3px solid #ABB1BD; border-radius: 4px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: absolute; left: 0px; top: 36px; }
+
+.utility-group .share-container .share-body .utility-item { display: flex; align-items: center; width: 100%; }
+
+.utility-group .share-container .share-body .utility-item svg { flex-shrink: 0; }
+
+.utility-group .share-container span.arrow { background-color: #ffffff; height: 16px; width: 16px; position: absolute; z-index: 900; left: 32px; top: -2px; border-left: 3px solid #ABB1BD; border-top: 3px solid #ABB1BD; transform: translate(-50%, -50%) rotate(45deg); }
+
+.utility-group .share-container.show { display: block; }
 
 /*# sourceMappingURL=main.css.map */
