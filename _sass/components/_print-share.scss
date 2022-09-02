@@ -1,0 +1,52 @@
+.utility-group {
+    position: relative;
+
+    .utility-item {
+        display: inline-flex;
+        align-items: center;
+    }
+    .utility-icon {
+        width: 16px;
+        height: auto;
+    }
+
+    .share-container {
+        display: none;
+        z-index: 9000;
+        background: $bga-white;
+        border: 3px solid $bga-blue-black-light;
+        border-radius: 4px;
+        box-shadow: $bga-btn-boxshadow; 
+        position: absolute;
+        left: 0px;
+        top: 36px;
+
+        .share-body {  
+            .utility-item {
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                svg {
+                    flex-shrink: 0;
+                }
+            }
+        }
+        span.arrow {
+            background-color: $bga-white;
+            height: 16px;
+            width: 16px;
+            position: absolute;
+            z-index: 900;
+            left: 32px;
+            top: -2px;
+            border-left: 3px solid $bga-blue-black-light;
+            border-top: 3px solid $bga-blue-black-light;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    
+        &.show {
+            display: block;
+        }
+    }
+}

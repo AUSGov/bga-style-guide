@@ -961,6 +961,11 @@ $(document).ready(function () {
         }
     });
 
+    // COMPONENT EXAMPLE: PRINT SHARE UTILITIES
+    $('#share-popover').on('click', function(){
+        $('.share-container').toggleClass('show');
+    });
+
 
 
 

@@ -1,0 +1,218 @@
+---
+
+layout: content-tagged
+title: Print and share utilities
+description: Display the option to share print or email content..
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper d-flex justify-content-end p-4">
+
+                {% include component-examples/print-share-example.html %}
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/156ff432-5ab8-47ae-8009-fd718718e961/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>THe print and share utility component is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all
+                page layouts</a>.</p>
+
+
+        {% include layouts-dropdown.html
+        single-col-fullwidth-visibility="true"
+        single-col-twothirds-visibility="true"
+        two-col-leftmenu-visibility="true"
+        two-col-rightsidebar-visibility="true"
+        %}
+
+
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-fw"
+            
+                singlelayout="true"
+                
+                allbp-img="'../assets/layout-images/utilities-1colfullwidth-allbp.png' | relative_url "
+            
+                allbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>The print and share component spans the full width of the content area. Content within the component is aligned to the right.</p>"
+            
+                example-link="'../html-examples/single-col-full-width.html#utilities-example' | relative_url'"
+            example-link-text="View layout example"
+                
+            %}
+            
+            
+        </div>
+
+
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/utilities-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/utilities-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/utilities-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/utilities-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>The print and share component spans 12 grid-columns. Content within the component is aligned to the right.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>The print and share component spans 12 grid-columns. Content within the component is aligned to the right.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>The print and share component spans 12 grid-columns. Content within the component is aligned to the right.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The print and share component spans 12 grid-columns. Content within the component is aligned to the right.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#utilities-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/utilities-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/utilities-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/utilities-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>The print and share component spans the full width of the content area. Content within the component is aligned to the right.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>The print and share component spans the full width of the content area. Content within the component is aligned to the right.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The print and share component spans the full width of the content area. Content within the component is aligned to the right.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#utilities-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+
+            min768-img="'../assets/layout-images/utilities-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/utilities-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>The print and share component spans 12-grid-columns. Content within the component is aligned to the right.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The print and share component spans 12-grid-columns. Content within the component is aligned to the right.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar.html#utilities-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Enables users to share or save page content.</p>
+        <div>
+            <h3>When to use this component:</h3>
+            <ul>
+                <li>Used across every page of the website to ensure a consistent user experience.</li>
+                <li>The component is placed at the bottom of site pages, just above the footer.</li>
+            </ul>
+        </div>
+
+    </div>
