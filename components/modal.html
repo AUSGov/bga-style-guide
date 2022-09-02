@@ -17,8 +17,7 @@ subsite-tag: true
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
-
+        classes="in-page"
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
@@ -34,6 +33,7 @@ classes="in-page"
 
         <!-- Breakpoint radio buttons -->
         {% include breakpoints.html
+        element-string="modal"
         md-visibility="true"
         sm-visibility="true"
         final-visibility="true"
@@ -96,14 +96,10 @@ classes="in-page"
         </div>
 
 
-
-
-
-
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/fb8aed08-66a1-4fdb-bb52-a23d13d4b3e9/'"
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/b485a8c6-302a-46d4-bc7b-afac3748b96b'"
         btn-text="View design specifications"
         %}
 
@@ -124,7 +120,8 @@ classes="in-page"
             singlelayout="true"
             allbp-img="'../assets/layout-images/modal-allbp.png' | relative_url "
             allbp-rules="<p>Modals are placed in the center of the screen.</p>
-            <p>Modals have a maximum width of 640px.</p>"
+            <p>Single column modals have a maximum width of 640px.</p>
+            <p>Two column modals have a maximum width of 900px.</p>"
             %}
 
         </div>

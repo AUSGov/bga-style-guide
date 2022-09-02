@@ -851,6 +851,14 @@ $(document).ready(function () {
         mobile_modal_display();
     });
 
+    $('#modal-bp-sm').on('click', function(){
+        mobile_modal_display();
+    });
+    $('#modal-bp-final').on('click', function(){
+        mobile_modal_display();
+    });
+
+
     //Toggle modal form on mobile screens
     $('.mobile-form-toggle').on('click', function () {
         $(this).parents('.email-form').toggleClass('open').find('form').slideToggle();
