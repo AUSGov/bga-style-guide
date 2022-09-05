@@ -1,0 +1,142 @@
+.filters {
+    //background: $bga-green-success-light;
+    max-width: 350px;
+    font-size: .875rem;
+    line-height: 1.5;
+
+    &.text-input {
+
+        .filter-item {
+            align-items: center;
+        }
+
+        span {
+            display: none;
+        }
+        label {
+            font-size: 1.125rem;
+        }
+        input {
+            height: 48px;
+            font-size: 1rem;
+            
+            &::placeholder {
+                font-size: .8125rem; 
+            }
+        }
+        button {
+            height: 48px;
+            background: $bga-teal-highlight-light;
+            border: solid 2px $bga-teal-tool-dark;
+            border-radius: 50px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            padding: 8px 24px 8px 16px;
+            box-shadow: none;
+            min-width: 100px;
+
+            &:focus-visible {
+                background: $bga-teal-tool-dark;
+                color: $bga-white;
+            }
+            &:hover {
+                background: $bga-teal-tool-mid;
+                color: $bga-white;
+            }
+        }  
+    }
+
+    &.checkboxes-primary {
+        .checkbox-item {
+            border-bottom: solid 1px $bga-blue-black-light;
+            padding: 16px 0;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+
+            
+            label {
+                font-size: 1.125rem;
+            }
+
+            input {
+                height: 30px;
+                width: 30px;
+                -webkit-appearance: none;
+                -ms-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border: solid 2px $bga-black;
+                border-radius: 0;
+
+                &:checked {
+                    background: $bga-teal-tool-mid url(../assets/icon-tick-white.svg) no-repeat;
+                    background-position: center center;
+                    background-size: 18px 14px;
+                    border-color: $bga-teal-tool-mid;
+                    
+                }
+            }
+        }
+    }
+
+    &.checkboxes-secondary {
+        .checkbox-item {
+            display: flex;
+
+            label {
+            font-weight: 400;
+            }
+            input {
+                height: 24px;
+                width: 24px;
+                -webkit-appearance: none;
+                -ms-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border: solid 1px $bga-black;
+                border-radius: 0;
+                margin: 0 8px 16px 0;
+
+                &:checked {
+                    background: $bga-white url(../assets/icon-tick-black.svg) no-repeat;
+                    background-position: center center;
+                    border: solid 2px $bga-black;
+                }
+
+            }
+        }
+        
+    }
+    .filter-item-title {
+        display: flex;
+        justify-content: space-between;
+    }
+    .active-filters {
+        ul {
+            text-indent: 0;
+            
+            li {
+                background: $bga-teal-tool-light url(../assets/icon-close-black.svg) no-repeat;
+                background-size: 10px 10px;
+                background-position: left 12px center;
+                display: none;
+                align-items: center;
+                padding: 2px 12px 2px 34px;
+                border: 1px solid $bga-teal-tool-dark;
+                border-radius: 50px;
+                margin: 8px 8px 0 0;
+                text-indent: 0;
+
+                &.selected {
+                    display: inline-block;
+                }
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
