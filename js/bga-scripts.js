@@ -838,10 +838,12 @@ $(document).ready(function () {
                     scrollable_height = modal_height - top_section_height - toggle_height - 32 - 24; //top and bottom padding 
 
                 $(this).find('.scrollable').css('max-height', scrollable_height + 'px');
+
             });
         } else if ($(window).width() >= 768) {
             $('.modal-form').each(function () {
-                $(this).find('.scrollable').css('max-height', '400px');
+                $(this).find('.scrollable').css('max-height', '400px');  
+                $(this).find('.email-form').removeClass('open').find('form').css('display', 'block');
             });
         }
     };
@@ -851,11 +853,19 @@ $(document).ready(function () {
         mobile_modal_display();
     });
 
-    $('#modal-bp-sm').on('click', function(){
+    $('#modal-bp-md').on('click', function(){
         mobile_modal_display();
+
+        $('.modal-form .email-form').each(function () {
+            $(this).removeClass('open').find('form').css('display', 'block');
+        });
     });
     $('#modal-bp-final').on('click', function(){
         mobile_modal_display();
+
+        $('.modal-form .email-form').each(function () {
+            $(this).removeClass('open').find('form').slideUp();
+        });
     });
 
 

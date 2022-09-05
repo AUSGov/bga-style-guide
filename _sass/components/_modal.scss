@@ -162,6 +162,10 @@
 
     &.modal-form {
         max-width: 900px;
+
+        form {
+            display: block;
+        }
         
         .mobile-form-toggle {
             display: none;
@@ -204,6 +208,7 @@
             width: 40%;
             background: $bga-teal-highlight-light;
             padding: 72px 24px 24px 24px;
+            display: block;
         }
         &.blue {
             .email-form { 
@@ -220,6 +225,11 @@
 
             form {
                 display: none;
+                padding: 24px;
+
+                h4 {
+                    display: none;
+                }
             }
 
             .component-content {
@@ -261,13 +271,6 @@
                     .mobile-form-toggle {
                         svg {
                             transform: scaleY(-1);
-                        }
-                    }
-                    form {
-                        padding: 24px;
-
-                        h4 {
-                            display: none;
                         }
                     }
                 }
