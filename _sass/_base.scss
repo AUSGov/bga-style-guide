@@ -456,7 +456,11 @@ table.table {
 }
 
 .approved-icons {
-    text-align: center;
+    //text-align: center;
+
+    .icon-name {
+        font-size: 1.125rem;
+    }
 
     .copy-icon-example {
         background: none;
@@ -465,19 +469,19 @@ table.table {
         width: 100%;
 
         .svg-icon-container {
+            height: 80px;
+            
             img {
-                height: 48px;
+                max-height: 48px;
+                max-width: 48px;
             }
         }
         .button-text {
             background: $bga-blue-links;
             color: $bga-white;
             
-            svg.success {
-                display: none;
-                width: 12px;
-                height: 12px;
-                margin-right: 4xpx;
+            span {
+                font-weight: 400;
             }
         }
 
@@ -493,7 +497,7 @@ table.table {
     }
     &.dark-bkg {
         .svg-icon-container {
-             background: $bga-blue-background-dark;
+             background: $bga-blue-black-mid;
          }
     }
 }
