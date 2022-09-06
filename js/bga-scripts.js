@@ -984,6 +984,13 @@ $(document).ready(function () {
         $('.share-container').toggleClass('show');
     });
 
+    // CONTEXTUAL HELP {
+    $('.complex-question').on('click', function(){
+        $('.complex-answer').slideToggle();
+        $(this).parents('.complex').toggleClass('open');
+    });
+
+
 
 
 

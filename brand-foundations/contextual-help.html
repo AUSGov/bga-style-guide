@@ -1,0 +1,130 @@
+---
+
+layout: content-tagged
+title: Contextual help
+description: Provide help and tips to users when completing form fields.
+breadcrumb1: Brand foundations
+url1: /brand-foundations.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Simple inline help" link-id-1="#simple-inline-help"
+        link-2="Complex inline help" link-id-2="#complex-inline-help"
+        link-5="Design specifications" link-id-5="#design-specifications"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
+
+        <h3>Style notes</h3>
+        <p>Default styling for form labels is the standard paragraph style. Lower level heading styles can also be used
+            for labels when appropriate.</p>
+        <p>Text elements in forms have a bottom margin of 16px instead of the 24px used elsewhere on business.gov.au.
+        </p>
+
+        <!-- SIMPLE INLINE HELP -->
+        <h2 class="section-start" id="simple-inline-help">Simple inline help</h2>
+       
+
+        {% include breakpoints.html singlebp="true" %}
+
+        <div class="component-example mb-5">
+
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <div class="row g-0">
+                    <form>
+                        <div class="col-12 mb-2 p-0 form-example">
+
+                            <label for="simple-help" class="form-label mb-3">Text box label</label>
+                            <div class="form-element-wrapper d-block mb-3">
+                                <p class="mb-3 help">Help message providing information on how to fill out the field.</p>
+                                <input type="text" class="form-control mb-0" id="simple-help" value="" required>
+                            </div>
+                            <p class="error-feedback mb-3">Descriptive error message</p>
+
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- INLINE HELP COMPLEX -->
+        <h2 class="section-start" id="complex-inline-help">Complex inline help</h2>
+
+
+        {% include breakpoints.html singlebp="true" %}
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+
+
+                <div class="row">
+                    <form>
+                        <div class="col-12 mb-2 p-0 form-example">
+
+                            <label for="complex-help" class="form-label mb-3">Text box label</label>
+                            <div class="form-element-wrapper d-block mb-3">
+
+                                <div class="help-wrapper complex" tabindex="0">
+                                    <p class="mb-3 complex-question" id="contextual-question-1">
+                                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+                                            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
+                                          </svg><span>How to work out your input credits</span></p>
+                                    <div class="complex-answer mb-3 remove-element-padding" id="contextual-answer-1">
+                                        <p class="mb-3">First work out the lesser of the following two amounts, then divide that amount by three.</p>
+                                        <ul>
+                                            <li class="mb-3">Expenditure in acquiring or producing credit inputs and energy inputs for which you have claimed the incentive.</li>
+                                            <li>To the extent that it is reasonably attributable to the production of the relevant output (expenditure).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <input type="text" class="form-control mb-0" id="complex-help" value="" required>
+                            </div>
+                            <p class="error-feedback mb-3">Descriptive error message</p>
+
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Design specifications link -->
+        <h2 class="section-start" id="design-specifications">Design specifications</h2>
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/2953af6b-7a74-4156-81ce-b1514e61df90/'"
+        btn-text="View design specifications"
+        %}
+
+
+    </div>
+
+
+
+</div>

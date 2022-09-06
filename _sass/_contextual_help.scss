@@ -1,0 +1,30 @@
+.help-wrapper {
+    &.complex {
+        .complex-question {
+            cursor: pointer;
+            color: $bga-blue-links;
+            text-decoration: underline;
+            padding: 0 0 0 0;
+            margin-bottom: 16px;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+        .complex-answer {
+            border-left: 2px solid $bga-blue-links;
+            margin-left: 2px;
+            padding-left: 12px;
+            display: none;
+            
+            p, li {
+                font-size: 0.9375rem;
+                line-height: 1.5;
+            }
+        }
+
+        &.open {
+            .complex-question svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
