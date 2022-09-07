@@ -13,50 +13,64 @@ subsite-tag: true
 
 
 <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
+        classes="in-page"
 
-            link-1="Datepicker" link-id-1="#datepicker"
-            link-2="Design specifications" link-id-2="#design-specifications"
+        link-1="Datepicker" link-id-1="#datepicker"
+        link-2="Design specifications" link-id-2="#design-specifications"
         %}
 
     </div>
-    
+
     <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
-   
-          
-        <!--DROPDOWN -->     
+
+
+        <!--DROPDOWN -->
         <h2 class="section-start" id="datepicker">Datepicker</h2>
-        <h3>Style notes</h3>
-        <p>Default styling for form labels is the standard paragraph style. Lower level heading styles can also be used for labels when appropriate.</p>
-        <p>Text elements in forms have a bottom margin of 16px instead of the 24px used elsewhere on business.gov.au.</p>
-        
+
         {% include breakpoints.html singlebp="true" %}
 
         <div class="component-example mb-5">
             <div class="component-wrapper remove-element-padding p-4">
-                
-                
-     
+
+                <div class="" id="datepicker-container">
+
+                    <!-- Component content -->
+
+                    <div id="datepicker">
+                        <label for="date" class="form-text-box-label mb-3">Date field label</label>
+                        <p class="help mb-3">Enter the date in the format dd/mm/yyyy</p>
+                        <div class="form-combo-box-input-container">
+                            <div class="input-group date">
+                                <input type="text" class="form-control date-field"><span tabindex="0"   
+                                    class="input-group-addon close-button"><i class="glyphicon glyphicon-th"></i></span>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
+            </div>
+
 
         </div>
 
-        
+
+
         <!-- Design specifications link -->
         <h2 class="section-start" id="design-specifications">Design specifications</h2>
-        
-        {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/a428b9fb-bad5-46bb-8b8b-2fe5e4d38843/specs/'"
-            btn-text="View design specifications"
-            %}
 
-            
-        </div>
-    
-        
-    
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/a428b9fb-bad5-46bb-8b8b-2fe5e4d38843/specs/'"
+        btn-text="View design specifications"
+        %}
+
+
+    </div>
+
+
+
 </div>
