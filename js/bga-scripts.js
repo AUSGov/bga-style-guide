@@ -1001,29 +1001,23 @@ $(document).ready(function () {
 		weekStart: 1,
 		container: '#datepicker-container',
 		orientation: "bottom left"
-	});
+	}).on('hide', function(e) {
+        $(this).parents('#datepicker-container').removeClass('open');
+    }).on('show', function(e) {
+        $(this).parents('#datepicker-container').addClass('open');
+    });
+
 	$('.close-button').unbind();
 
 	$('.close-button').click(function () {
-		//var common_ancestor = $(this).closest('.design-system-card');
-
 		if ($('.datepicker').is(":visible")) {
 			$('.date').datepicker('hide');
-
-			//common_ancestor.find('.state-selector label input').removeAttr('checked');
-			//common_ancestor.find('.default-label input').attr('checked', 'checked');
-			//$(this).closest(".example").attr('data-state', 'default-state');
-
 		} else {
 			$('.date').datepicker('show');
-
-			//common_ancestor.find('.state-selector label input').removeAttr('checked');
-			//common_ancestor.find('.focus-label input').attr('checked', 'checked');
-			//$(this).closest(".example").attr('data-state', 'focus-state');
-
 		}
 	});
 
+   
 
 
 
