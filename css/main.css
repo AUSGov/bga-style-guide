@@ -5376,7 +5376,9 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .filters { max-width: 350px; font-size: .875rem; line-height: 1.5; }
 
-.filters.text-input .filter-item { align-items: center; }
+.filters.text-input { border-bottom: solid 1px #ABB1BD; }
+
+.filters.text-input .filter-item { align-items: center; border-bottom: none; }
 
 .filters.text-input span { display: none; }
 
@@ -5408,14 +5410,50 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .filters.checkboxes-secondary .checkbox-item input:checked { background: #ffffff url(../assets/icon-tick-black.svg) no-repeat; background-position: center center; border: solid 2px #333333; }
 
-.filters .filter-item-title { display: flex; justify-content: space-between; }
+.filters.checkboxes-secondary .filter-item { border-bottom: solid 1px #ABB1BD; }
+
+.filters .filter-item-title { display: flex; justify-content: space-between; align-items: center; }
+
+.filters .filter-item-title p { font-size: 1rem; font-weight: 600; }
 
 .filters .active-filters ul { text-indent: 0; }
 
-.filters .active-filters ul li { background: #BFE2E2 url(../assets/icon-close-black.svg) no-repeat; background-size: 10px 10px; background-position: left 12px center; display: none; align-items: center; padding: 2px 12px 2px 34px; border: 1px solid #105C5C; border-radius: 50px; margin: 8px 8px 0 0; text-indent: 0; }
+.filters .active-filters ul li { background: #BFE2E2 url(../assets/icon-close-black.svg) no-repeat; background-size: 10px 10px; background-position: left 12px center; display: none; align-items: center; padding: 2px 12px 2px 34px; border: 1px solid #105C5C; border-radius: 50px; margin: 0 8px 8px 0; text-indent: 0; }
 
 .filters .active-filters ul li.selected { display: inline-block; }
 
 .filters .active-filters ul li::before { display: none; }
+
+.filters .filter-item-content { display: none; }
+
+.filters.toggle-switch input { position: absolute; z-index: -1; opacity: 0; }
+
+.filters.toggle-switch label:before { width: 44px; height: 16px; background: #788295; border: none; margin-top: 4px; border-radius: 50px; cursor: pointer; content: " "; }
+
+.filters.toggle-switch label:after { background: url(../assets/icon-tick-black.svg) no-repeat #fff; background-position: center center; border: solid 2px #333; background-size: 18px 14px; left: -34px; content: " "; }
+
+.filters.single-select { border-bottom: solid 1px #ABB1BD; }
+
+.filters.single-select select { height: 35px; font-size: .875rem; padding: 0 8px; }
+
+.filters .name-search { background: #E4E6EA; }
+
+.filters .name-search h4, .filters .name-search .h4 { color: #333333; }
+
+.filters .name-search .search-wrapper { display: flex; }
+
+.filters .name-search input { height: 52px; border: solid #333333 1px; border-right: 0px; width: calc(100% - 52px); padding: 0 16px; }
+
+.filters .name-search input:focus { border: solid 3px #2E6CB9; border-radius: 4px; border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important; outline: none; }
+
+.filters .name-search button { text-indent: -9999px; height: 52px; width: 52px; border: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px; background: url(../assets/icon-search-white.svg) #2E6CB9 no-repeat; background-position: center center; }
+
+.filters .name-search button:focus { border: solid 3px #2E6CB9; background: url(../assets/icon-search-blue.svg) #C8D9EE no-repeat; background-position: center center; }
+
+.filters .name-search button:hover { background: url(../assets/icon-search-white.svg) #2157AA no-repeat; background-position: center center; }
+
+.filters .name-search button:active { background: url(../assets/icon-search-white.svg) #2157AA no-repeat; background-position: center center; }
+
+.filters .name-search .search-list-wrapper li { margin: 0; }
 
 /*# sourceMappingURL=main.css.map */

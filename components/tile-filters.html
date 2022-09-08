@@ -307,7 +307,7 @@
 
                 <h3>Text input</h3>
 
-                <div class="filters text-input mb-3">
+                <div class="filters text-input pb-3 mb-3">
 
                     <div class="filter-item text-field-filter d-flex remove-element-padding" id="postcode">
 
@@ -373,8 +373,8 @@
                 <div class="filters checkboxes-secondary">
 
                     <div class="filter-item" id="location">
-                        <div class="filter-item-title">
-                            <p>Location <span class="mobile-counter"></span></p>
+                        <div class="filter-item-title remove-element-padding py-3">
+                            <p class="mb-0">Location <span class="mobile-counter"></span></p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                                 <g transform="translate(20 12.5) rotate(180)">
                                     <path id="Chevron_Up" data-name="Chevron / Up"
@@ -384,7 +384,7 @@
                             </svg>
 
                         </div>
-                        <div class="active-filters multi-select">
+                        <div class="active-filters pb-2 multi-select">
                             <ul class="m-0 p-0">
                                 <li filter-type="location" filter-value="10" data-value="australian-capital-territory">
                                     Australian Capital Territory</li>
@@ -401,8 +401,6 @@
                                     Australia</li>
                                 <li filter-type="location" filter-value="15" data-value="other-australian-territory">
                                     Other Australian territory</li>
-                                <li filter-type="rural" filter-value="51" data-value="regional-or-rural-area"
-                                    class="filter-toggle-switch">Regional or rural area</li>
                             </ul>
                         </div>
                         <div class="filter-item-content">
@@ -455,19 +453,12 @@
 
                             </form>
 
-                            <div class="custom-control custom-switch toggle-question">
-                                <input type="checkbox" class="custom-control-input" id="filter-regional-or-rural-area"
-                                    toggle-filter-type="rural" filter-value="51">
-                                <label class="custom-control-label" for="filter-regional-or-rural-area">Regional or
-                                    rural area</label>
-                            </div>
-
                         </div>
                     </div>
 
                     <div class="filter-item" id="support-type">
-                        <div class="filter-item-title">
-                            <p>Support type <span class="mobile-counter"></span></p>
+                        <div class="filter-item-title remove-element-padding py-3">
+                            <p class="mb-0">Support type <span class="mobile-counter"></span></p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                                 <g transform="translate(20 12.5) rotate(180)">
                                     <path id="Chevron_Up" data-name="Chevron / Up"
@@ -477,7 +468,7 @@
                             </svg>
 
                         </div>
-                        <div class="active-filters multi-select">
+                        <div class="active-filters pb-2 multi-select">
                             <ul class="m-0 p-0">
                                 <li filter-type="support-type" filter-value="30" data-value="advice">Advice &amp;
                                     mentoring</li>
@@ -534,13 +525,28 @@
                 <hr/>
 
 
+                <h3>Toggle switch</h3>
+
+                <div class="filters toggle-switch">
+
+                    <div class="custom-control custom-switch toggle-question">
+                        <input type="checkbox" class="custom-control-input" id="filter-regional-or-rural-area" toggle-filter-type="rural" filter-value="51">
+                        <label class="custom-control-label" for="filter-regional-or-rural-area">Regional or rural area</label>
+                    </div>
+
+                </div>
+
+                <hr/>
+
+
+
                 <h3>Single select</h3>
 
-                <div class="filters single-select">
+                <div class="filters single-select pb-3">
 
                     <div class="filter-item" id="business-stage">
-                        <div class="filter-item-title open">
-                            <p>Business stage <span class="mobile-counter"></span></p>
+                        <div class="filter-item-title py-3">
+                            <p class="mb-0">Business stage <span class="mobile-counter"></span></p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                                 <g transform="translate(20 12.5) rotate(180)">
                                     <path id="Chevron_Up" data-name="Chevron / Up"
@@ -550,7 +556,7 @@
                             </svg>
 
                         </div>
-                        <div class="active-filters single-select">
+                        <div class="active-filters pb-2 single-select">
                             <ul class="m-0 p-0">
                                 <li filter-value="27" data-value="2-years-or-less" class="select-option">2 years or
                                     less</li>
@@ -564,7 +570,7 @@
                         <div class="filter-item-content" style="display: block;">
 
                             <form>
-                                <select id="filter_stage" select-filter-type="business-stage" filter-value="27">
+                                <select class="form-select" id="filter_stage" select-filter-type="business-stage" filter-value="27">
                                     <option value="select-option">select stage</option>
                                     <option value="2-years-or-less" class="select-option">2 years or less</option>
                                     <option value="3-and-5-years" class="select-option">3 and 5 years</option>
@@ -586,8 +592,8 @@
 
                 <div class="filters search-box">
 
-                    <div class="name-search">
-                        <h5>Filter grants and programs <span>by name</span></h5>
+                    <div class="name-search p-4">
+                        <h4 class="mb-3">Filter grants and programs <span>by name</span></h4>
 
                         <div class="search-wrapper">
                             <input type="search" placeholder="Enter grant name">
@@ -599,7 +605,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="search-list-wrapper">
+                        <div class="search-list-wrapper mt-4">
                             <div class="search-list active active-filters">
                                 <ul class="m-0 p-0" id="searchbar-list" class="searchbar-list">
                                     <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Integration
@@ -615,11 +621,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <ul class="name-filter">
-                            <li filter-value="10" data-value="modern-manufacturing" class="select-option">modern
-                                manufacturing</li>
-                        </ul>
-
+                      
                     </div>
 
 
