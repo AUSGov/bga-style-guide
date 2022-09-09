@@ -1019,6 +1019,73 @@ $(document).ready(function () {
 
    
 
+    // COMPONENT EXAMPLE: FILTERS
+    $('.filter-item-title').on('click', function(){
+        
+        $(this).parents('.filter-item').toggleClass('open').find('.filter-item-content').slideToggle();
+
+        $('.filter-item-title').not(this).parents('.filter-item').removeClass('open').find('.filter-item-content').slideUp();
+    });
+
+    // filter bubbles
+    $('.active-filters li').on('click', function(){
+        var item_value = $(this).attr('data-value');
+
+        //checkboxes
+        $('#' + item_value).prop("checked", false);
+        $(this).removeClass('selected');
+
+        //single-select
+        if ($(this).parents('.filters').hasClass('single-select')) {
+            $(this).parents('.filters').find('select').val('select-option');
+        }
+        
+        // Toggle switch
+        if ($(this).parents('.filters').hasClass('toggle-switch')) {
+            $('#' + item_value).prop("checked", false);
+            $(this).parents('.toggle-switch').removeClass('selected');
+        }
+    });
+
+    // checkboxes & bubbles
+    $('.checkboxes-secondary input').on('click', function(){
+        var item_value = $(this).attr('id');
+        
+        if ($(this).is(":checked")) {
+            $('li[data-value="' + item_value + '"]').addClass('selected');
+        } else {
+            $('li[data-value="' + item_value + '"]').removeClass('selected')
+        }
+    });
+    
+    // dropdowns
+    $('.filters.single-select select').on('change', function(){
+        var item_value = $(this).val();
+
+        $(this).parents('.filter-item').find('.active-filters li').each(function(){
+            $(this).removeClass('selected');
+        });
+    
+        if (item_value !== 'select-option') {
+            $('li[data-value="' + item_value + '"]').addClass('selected');
+        }  
+    });
+
+    // toggle switch
+    $('.filters.toggle-switch input').on('click', function(){
+        var item_value = $(this).attr('id');
+        
+        $(this).parents('.toggle-switch').toggleClass('selected');
+
+        if ($(this).is(":checked")) {
+            $('li[data-value="' + item_value + '"]').addClass('selected');
+        } else {
+            $('li[data-value="' + item_value + '"]').removeClass('selected')
+        }
+    });
+
+
+
 
 
 

@@ -651,22 +651,310 @@
 
     <div class="row">
 
-        <div class="anchor-menu-wrapper remove-top-spaces col-12 col-sm-3">
+        <div class="anchor-menu-wrapper remove-top-spaces col-12 col-md-4">
 
-            <h5>Filters</h5>
-            <ul class="anchor-menu ps-0 pb-4 m-0">
-                <li class="mb-3"><a tabindex="0" href="">Lorem ipsum dolor sit amet</a></li>
-                <li class="mb-3"><a tabindex="0" href="">Nullam malesuada</a></li>
-                <li class="mb-3"><a tabindex="0" href="">Curabitur lobortis ipsum congue elit vulputate</a></li>
+            <div class="filters text-input pb-3">
 
-            </ul>
+                <div class="filter-item text-field-filter d-flex remove-element-padding" id="postcode">
+
+                    <label>Postcode</label>
+
+                    <span class="clear-postcode" id="clear-postcode">Remove postcode</span>
+
+                    <input class="form-control ms-3 px-2" id="postcode-input" type="text"
+                        placeholder="Enter your postcode">
+
+                    <button class="apply-postcode" id="apply-postcode" filter-type="postcode">Add</button>
+                </div>
+
+            </div>
+
+
+            <div class="filters checkboxes-primary">
+
+                <div class="filter-item" id="delivery-type">
+
+                    <form>
+                        <div class="checkbox-item" data-label="in-person" filter-type="delivery-type">
+                            <label id="delivery-inperson" data-option="in-person" data-label="in-person"
+                                filter-type="delivery-type">
+
+                                In person services</label>
+                            <input type="checkbox" id="in-person">
+                        </div>
+
+                        <div class="checkbox-item" data-label="phone" filter-type="delivery-type">
+                            <label id="delivery-phone" data-option="phone" data-label="phone"
+                                filter-type="delivery-type">
+
+                                Phone services</label>
+                            <input type="checkbox" id="phone">
+                        </div>
+
+
+                        <div class="checkbox-item" data-label="online" filter-type="delivery-type">
+                            <label id="delivery-online" data-option="online" data-label="online"
+                                filter-type="delivery-type">
+
+                                Online services</label>
+                            <input type="checkbox" id="online">
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <div class="filters checkboxes-secondary toggle-switch">
+
+                <div class="filter-item" id="location">
+                    <div class="filter-item-title remove-element-padding py-3">
+                        <p class="mb-0">Location <span class="mobile-counter"></span></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                            <g transform="translate(20 12.5) rotate(180)">
+                                <path  data-name="Chevron / Up"
+                                    d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                </path>
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="active-filters multi-select">
+                        <ul class="m-0 p-0">
+                            <li filter-type="location" filter-value="10" data-value="australian-capital-territory">
+                                Australian Capital Territory</li>
+                            <li filter-type="location" filter-value="15" data-value="new-south-wales">New South
+                                Wales</li>
+                            <li filter-type="location" filter-value="15" data-value="northern-territory">
+                                Northern Territory</li>
+                            <li filter-type="location" filter-value="15" data-value="queensland">Queensland</li>
+                            <li filter-type="location" filter-value="15" data-value="south-australia">South
+                                Australia</li>
+                            <li filter-type="location" filter-value="15" data-value="tasmania">Tasmania</li>
+                            <li filter-type="location" filter-value="15" data-value="victoria">Victoria</li>
+                            <li filter-type="location" filter-value="15" data-value="western-australia">Western
+                                Australia</li>
+                            <li filter-type="location" filter-value="15" data-value="other-australian-territory">
+                                Other Australian territory</li>
+                            <li filter-type="" filter-value="10" data-value="regional-or-rural-area">Only show regional opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="filter-item-content">
+
+                        <form>
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="australian-capital-territory">
+                                <label>Australian Capital Territory</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="new-south-wales">
+                                <label>New South Wales</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="northern-territory">
+                                <label>Northern Territory</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="queensland">
+                                <label>Queensland</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="south-australia">
+                                <label>South Australia</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="tasmania">
+                                <label>Tasmania</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="victoria">
+                                <label>Victoria</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="western-australia">
+                                <label>Western Australia</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-type="location" filter-value="15">
+                                <input type="checkbox" id="other-australian-territory">
+                                <label>Other Australian territory</label>
+                            </div>
+
+                        </form>
+
+                        <div class="custom-control custom-switch toggle-question mb-3">
+                            <input type="checkbox" class="custom-control-input" id="regional-or-rural-area" toggle-filter-type="rural" filter-value="51">
+                            <label class="custom-control-label" for="regional-or-rural-area">Only show regional opportunities</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="filter-item" id="support-type">
+                    <div class="filter-item-title remove-element-padding py-3">
+                        <p class="mb-0">Support type <span class="mobile-counter"></span></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                            <g transform="translate(20 12.5) rotate(180)">
+                                <path  data-name="Chevron / Up"
+                                    d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                </path>
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="active-filters multi-select">
+                        <ul class="m-0 p-0">
+                            <li filter-type="support-type" filter-value="30" data-value="advice">Advice &amp;
+                                mentoring</li>
+                            <li filter-type="support-type" filter-value="60" data-value="funding">Funding</li>
+                            <li filter-type="support-type" filter-value="10" data-value="loan">Loan</li>
+                            <li filter-type="support-type" filter-value="10" data-value="sponsorship">
+                                Sponsorship</li>
+                            <li filter-type="support-type" filter-value="30" data-value="subsidy">Subsidies
+                                &amp; rebates</li>
+                            <li filter-type="support-type" filter-value="10" data-value="tax-rebate">Tax
+                                benefits</li>
+
+                        </ul>
+                    </div>
+                    <div class="filter-item-content">
+
+                        <form>
+                            <div class="checkbox-item" filter-value="30" filter-type="support-type">
+                                <input type="checkbox" id="advice">
+                                <label for="advice">Advice &amp; mentoring</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-value="60" filter-type="support-type">
+                                <input type="checkbox" id="funding">
+                                <label for="funding">Funding</label>
+                            </div>
+                            <div class="checkbox-item" filter-value="10" filter-type="support-type">
+                                <input type="checkbox" id="loan">
+                                <label for="loan">Loan</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-value="10" filter-type="support-type">
+                                <input type="checkbox" id="sponsorship">
+                                <label for="sponsorship">Sponsorship</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-value="30" filter-type="support-type">
+                                <input type="checkbox" id="subsidy">
+                                <label for="subsidy">Subsidies &amp; rebates</label>
+                            </div>
+
+                            <div class="checkbox-item" filter-value="10" filter-type="support-type">
+                                <input type="checkbox" id="tax-rebate">
+                                <label for="tax-rebate">Tax benefits</label>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="filters single-select">
+
+                <div class="filter-item" id="business-stage">
+                    <div class="filter-item-title py-3">
+                        <p class="mb-0">Business stage <span class="mobile-counter"></span></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                            <g transform="translate(20 12.5) rotate(180)">
+                                <path  data-name="Chevron / Up"
+                                    d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                </path>
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="active-filters single-select">
+                        <ul class="m-0 p-0">
+                            <li filter-value="27" data-value="2-years-or-less" class="select-option">2 years or
+                                less</li>
+                            <li filter-value="27" data-value="3-and-5-years" class="select-option">3 and 5 years
+                            </li>
+                            <li filter-value="27" data-value="more-than-5-years" class="select-option">More than
+                                5 years</li>
+
+                        </ul>
+                    </div>
+                    <div class="filter-item-content pb-3">
+
+                        <form>
+                            <select class="form-select" id="filter_stage" select-filter-type="business-stage" filter-value="27">
+                                <option value="select-option">select stage</option>
+                                <option value="2-years-or-less" class="select-option">2 years or less</option>
+                                <option value="3-and-5-years" class="select-option">3 and 5 years</option>
+                                <option value="more-than-5-years" class="select-option">More than 5 years
+                                </option>
+
+                            </select>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="filters search-box mt-3">
+
+                <div class="name-search p-4">
+                    <h4 class="mb-3">Filter grants and programs <span>by name</span></h4>
+
+                    <div class="search-wrapper">
+                        <input type="search" placeholder="Enter grant name">
+                        <button class="name-search-btn">
+                            <svg width="20" height="20">
+                                <path fill-rule="evenodd"
+                                    d="M15.27 12.815l-.409.409-1.706-1.706c2.052-2.838 1.802-6.836-.753-9.39A7.218 7.218 0 0 0 7.264 0a7.22 7.22 0 0 0-5.139 2.128c-2.833 2.833-2.833 7.443 0 10.276a7.22 7.22 0 0 0 5.139 2.128c1.549 0 3.023-.483 4.253-1.375l1.706 1.705-.41.41L17.543 20 20 17.543l-4.73-4.728zm-11.507-2.05a4.955 4.955 0 0 1 0-6.999 4.918 4.918 0 0 1 3.5-1.45c1.323 0 2.566.515 3.5 1.45a4.955 4.955 0 0 1 0 7 4.919 4.919 0 0 1-3.5 1.449 4.92 4.92 0 0 1-3.5-1.45z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="search-list-wrapper mt-4">
+                        <div class="search-list active active-filters">
+                            <ul class="m-0 p-0" id="searchbar-list" class="searchbar-list">
+                                <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Integration
+                                    Stream</li>
+                                <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Collaboration
+                                    Stream</li>
+                                <li><span>Manufacturing</span> Modernisation Fund Round 2 Grant Recipients</li>
+                                <li>Advanced <span>Manufacturing</span> Growth Fund grant recipients</li>
+                                <li>Funding opportunities available under the Modern <span>Manufacturing</span>
+                                    Initiative</li>
+                                <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Translation
+                                    Stream grant recipients</li>
+                            </ul>
+                        </div>
+                    </div>
+                  
+                </div>
+
+
+            </div>
+
+
+
         </div>
 
-        <div class="remove-top-spaces col-12 col-sm-9 col-xl-8">
-
-            <div class="col-12">
-
-                <h2 id="search-tiles-example">Global search tile examples</h2>
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+    
+            <h2 id="search-tiles-example">Global search tile examples</h2>
 
                 <div class="search-tile  mb-5">
 
@@ -1066,7 +1354,7 @@
     </div>
 
 </div>
-            </div>
+           
 
             <div id="pagination-example" class="col-12">
                 <div class="bga-pagination remove-element-padding mt-0 mb-5 p-0">
