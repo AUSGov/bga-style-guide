@@ -48,7 +48,7 @@ subsite-tag: true
 
                 <h3>Text input</h3>
 
-                <div class="filters text-input pb-3 mb-3">
+                <div class="filters example text-input pb-3 mb-3">
 
                     <div class="filter-item text-field-filter d-flex remove-element-padding" id="postcode">
 
@@ -69,7 +69,7 @@ subsite-tag: true
 
                 <h3>Checkboxes - primary level</h3>
 
-                <div class="filters checkboxes-primary">
+                <div class="filters example checkboxes-primary">
 
                     <div class="filter-item" id="delivery-type">
 
@@ -111,21 +111,21 @@ subsite-tag: true
 
                 <h3>Checkboxes - secondary level</h3>
 
-                <div class="filters checkboxes-secondary">
+                <div class="filters example checkboxes-secondary">
 
                     <div class="filter-item" id="location">
-                        <div class="filter-item-title remove-element-padding py-3">
+                        <div class="filter-item-title remove-element-padding py-2 my-2">
                             <p class="mb-0">Location <span class="mobile-counter"></span></p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                                 <g transform="translate(20 12.5) rotate(180)">
-                                    <path id="Chevron_Up" data-name="Chevron / Up"
+                                    <path  data-name="Chevron / Up"
                                         d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
                                     </path>
                                 </g>
                             </svg>
 
                         </div>
-                        <div class="active-filters pb-2 multi-select">
+                        <div class="active-filters multi-select">
                             <ul class="m-0 p-0">
                                 <li filter-type="location" filter-value="10" data-value="australian-capital-territory">
                                     Australian Capital Territory</li>
@@ -198,18 +198,18 @@ subsite-tag: true
                     </div>
 
                     <div class="filter-item" id="support-type">
-                        <div class="filter-item-title remove-element-padding py-3">
+                        <div class="filter-item-title remove-element-padding py-2 my-2">
                             <p class="mb-0">Support type <span class="mobile-counter"></span></p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                                 <g transform="translate(20 12.5) rotate(180)">
-                                    <path id="Chevron_Up" data-name="Chevron / Up"
+                                    <path  data-name="Chevron / Up"
                                         d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
                                     </path>
                                 </g>
                             </svg>
 
                         </div>
-                        <div class="active-filters pb-2 multi-select">
+                        <div class="active-filters multi-select">
                             <ul class="m-0 p-0">
                                 <li filter-type="support-type" filter-value="30" data-value="advice">Advice &amp;
                                     mentoring</li>
@@ -268,11 +268,37 @@ subsite-tag: true
 
                 <h3>Toggle switch</h3>
 
-                <div class="filters toggle-switch">
+                <div class="filters example toggle-switch">
 
-                    <div class="custom-control custom-switch toggle-question">
-                        <input type="checkbox" class="custom-control-input" id="filter-regional-or-rural-area" toggle-filter-type="rural" filter-value="51">
-                        <label class="custom-control-label" for="filter-regional-or-rural-area">Regional or rural area</label>
+                    <div class="filter-item">
+
+                    <div class="filter-item-title py-3">
+                        <p class="mb-0">Location <span class="mobile-counter"></span></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                            <g transform="translate(20 12.5) rotate(180)">
+                                <path data-name="Chevron / Up"
+                                    d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                </path>
+                            </g>
+                        </svg>
+
+                    </div>
+
+                    <div class="active-filters">
+                        <ul class="m-0 p-0">
+                            <li filter-type="" filter-value="10" data-value="regional-or-rural-area">Only show regional opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-item-content">
+                        
+                        <div class="custom-control custom-switch toggle-question mb-3">
+                            <input type="checkbox" class="custom-control-input" id="regional-or-rural-area" toggle-filter-type="rural" filter-value="51">
+                            <label class="custom-control-label" for="regional-or-rural-area">Only show regional opportunities</label>
+                        </div>
+
+                    </div>
+
                     </div>
 
                 </div>
@@ -283,21 +309,21 @@ subsite-tag: true
 
                 <h3>Single select</h3>
 
-                <div class="filters single-select pb-3">
+                <div class="filters example single-select">
 
                     <div class="filter-item" id="business-stage">
                         <div class="filter-item-title py-3">
                             <p class="mb-0">Business stage <span class="mobile-counter"></span></p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                                 <g transform="translate(20 12.5) rotate(180)">
-                                    <path id="Chevron_Up" data-name="Chevron / Up"
+                                    <path  data-name="Chevron / Up"
                                         d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
                                     </path>
                                 </g>
                             </svg>
 
                         </div>
-                        <div class="active-filters pb-2 single-select">
+                        <div class="active-filters single-select">
                             <ul class="m-0 p-0">
                                 <li filter-value="27" data-value="2-years-or-less" class="select-option">2 years or
                                     less</li>
@@ -308,7 +334,7 @@ subsite-tag: true
 
                             </ul>
                         </div>
-                        <div class="filter-item-content" style="display: block;">
+                        <div class="filter-item-content pb-3">
 
                             <form>
                                 <select class="form-select" id="filter_stage" select-filter-type="business-stage" filter-value="27">
@@ -331,7 +357,7 @@ subsite-tag: true
 
                 <h3>Search box</h3>
 
-                <div class="filters search-box">
+                <div class="filters example search-box">
 
                     <div class="name-search p-4">
                         <h4 class="mb-3">Filter grants and programs <span>by name</span></h4>

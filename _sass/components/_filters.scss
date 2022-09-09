@@ -1,5 +1,8 @@
 .filters {
-    max-width: 350px;
+
+    &.example {
+        max-width: 350px;
+    }
     font-size: .875rem;
     line-height: 1.5;
 
@@ -123,11 +126,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
 
         p {
-            font-size: 1rem;
+            font-size: 1.125rem;
             font-weight: 600;
         }
+    }
+
+    .filter-item-content {
+        display: none;
     }
 
     .active-filters ul {
@@ -155,39 +163,60 @@
         }
     }
 
-    .filter-item-content {
-        display: none;
-    }
-
     &.toggle-switch {
-            input {
+    
+        .custom-control-input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .custom-control-label {
+            position: relative;
+            padding-left: 52px;
+            font-weight: 400;
+
+            &:before {
+                width: 44px;
+                height: 16px;
+                display: block;
+                background: $bga-blue-black-light;
+                border: none;
+                margin-top: 4px;
+                border-radius: 50px;
                 position: absolute;
-                z-index: -1;
-                opacity: 0;
+                left: 0;
+                content: "";
             }
 
+            &:after {
+                background: url(../assets/icon-close-grey.svg) no-repeat $bga-white;
+                background-position: center center;
+                border: solid 2px $bga-blue-black-mid;
+                background-size: 16px 16px;
+                left: 0;
+                top: -4px;
+                width: 30px;
+                height: 30px;
+                display: block;
+                position: absolute;
+                border-radius: 50px;
+                cursor: pointer;
+                content: "";
+            }
+        }
+
+        &.selected {
             label {
-                
-                &:before {
-                    width: 44px;
-                    height: 16px;
-                    background: $bga-blue-black-mid;
-                    border: none;
-                    margin-top: 4px;
-                    border-radius: 50px;
-                    cursor: pointer;
-                    content: " ";
-                }
-
                 &:after {
-                    background: url(../assets/icon-tick-black.svg) no-repeat #fff;
+                    background: url(../assets/icon-tick-black.svg) no-repeat $bga-white;
                     background-position: center center;
-                    border: solid 2px #333;
+                    border: solid 2px $bga-black;
                     background-size: 18px 14px;
-                    left: -34px;
-                    content: " ";
+                    left: 14px;
                 }
             }
+        }
     }
 
     &.single-select {
@@ -198,6 +227,8 @@
             font-size: .875rem;
             padding: 0 8px;
         }
+
+        
     }
 
     .name-search {
@@ -257,6 +288,14 @@
         .search-list-wrapper {
             li {
                 margin: 0;
+            }
+        }
+    }
+
+    .filter-item.open {
+        .filter-item-title {
+            svg {
+                transform: scaleY(-1);
             }
         }
     }
