@@ -416,8 +416,7 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Finder tool result tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" |
-                relative_url }}>two column - left side menu layout</a>.</p>
+        <p>Tile filters are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left filters layout</a>.</p>
 
 
         {% include layouts-dropdown.html
@@ -430,28 +429,22 @@ subsite-tag: true
             {% include layouts-accordion.html
             layout-name="twocol-leftmenu"
 
-            min1200-visibility="true"
+            min1200-visibility="false"
             min992-visibility="false"
-            min768-visibility="false"
-            min576-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
             finalbp-visibility="true"
 
-            finalbp="Breakpoint &lt; 576px"
+            finalbp="Breakpoint &lt; 768px"
 
-            min1200-img="'../assets/layout-images/search-tile-2col-leftmenu-min1200.png' | relative_url "
-            min576-img="'../assets/layout-images/search-tile-2col-leftmenu-min576.png' | relative_url "
-            finalbp-img="'../assets/layout-images/search-tile-2col-leftmenu-finalbp.png' | relative_url "
+            min768-img="'../assets/layout-images/tilefilters-2col-leftfilters-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/tilefilters-2col-leftfilters-finalbp.png' | relative_url "
 
-            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Search tiles span the full width of the content area.</p>"
+            min768-rules="<p>Tile filters span the 4 grid-columns.</p>"
 
-            min576-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Search tiles span the full width of the content area.</p>"
+            finalbp-rules="<p>Tile filters span the full width of the content area.</p> <p>Visibility of the filters is turned on and off with a mobile filters button.</p>"
 
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Search tiles span the full width of the content area.</p>"
-
-            example-link="'../html-examples/search-layout.html#finder-tiles-example' | relative_url'"
+            example-link="'../html-examples/two-col-left-filters.html#finder-tiles-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
