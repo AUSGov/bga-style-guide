@@ -91,8 +91,10 @@ classes="in-page"
         <p>This layout is typically used for navigation pages. Page patterns that use this layout include:</p>
         <ul>
             <li>Home page</li>
-            <li>Category page</li>
-            <li>Customer stories landing</li>
+            <li>Category pages</li>
+            <li>Topic pages</li>
+            <li>Customer stories landing pages</li>
+            <li>News page</li>
         </ul>
         
 
@@ -180,10 +182,10 @@ classes="in-page"
         <div class="layout-example full-border show two-col-leftmenu m-0 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="onecol-twothirdsw"
+                layout-name="twocol-lefftmenu"
             
                 min1200-visibility="true"
-                min992-visibility="falsee"
+                min992-visibility="false"
                 min768-visibility="false"
                 min576-visibility="true"
                 finalbp-visibility="true"
@@ -192,7 +194,7 @@ classes="in-page"
                
                 min1200-img="'../assets/layout-images/2col-leftmenu-min1200.png' | relative_url "
             
-                min576-img="'../assets/layout-images/2col-leftmenu-min576.png' | relative_url "
+                min576-img="'../assets/layout-images/2col-leftmenu-min768.png' | relative_url "
 
                 finalbp-img="'../assets/layout-images/2col-leftmenu-finalbp.png' | relative_url "
 
@@ -210,6 +212,52 @@ classes="in-page"
             btn-link="'../html-examples/two-col-left-side-menu.html' | relative_url"
             btn-text="View html example of the two column - left side menu layout"
             %}
+
+
+        
+            <!-- Two column - left filters -->
+            <h3>Two column - left filters layout</h3>
+            <p>This layout is used for search and finder tool result pages including:</p>
+            <ul>
+                <li>business.gov.au search results page</li>
+                <li>Grants and programs finder tool</li>
+                <li>Adviser finder tool</li>
+                <li>Events finder tool</li>
+            </ul>
+            
+            <div class="layout-example full-border show two-col-leftfilters m-0 px-4 py-0">
+                
+                {% include layouts-accordion.html 
+                    layout-name="twocol-leftfilters"
+                
+                    min1200-visibility="true"
+                    min992-visibility="false"
+                    min768-visibility="true"
+                    min576-visibility="false"
+                    finalbp-visibility="true"
+                    
+                    finalbp="Breakpoint &lt; 768px"
+                   
+                    min1200-img="'../assets/layout-images/2col-leftfilters-min1200.png' | relative_url "
+                
+                    min768-img="'../assets/layout-images/2col-leftfilters-min768.png' | relative_url "
+    
+                    finalbp-img="'../assets/layout-images/2col-leftfilters-finalbp.png' | relative_url "
+    
+                    min1200-rules="<p>The left filter area is 4 grid-columns wide. The content area is 7 grid-columns wide.</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
+                    
+                    min768-rules="<p>The left filter area is 4 grid-columns wide. The content area is 8 grid-columns wide</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
+                    
+                    finalbp-rules="<p>The content area and the filter area are both 12 grid-columns wide.</p><p>Filter visibility can be turned on and off with a mobile filter button.</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
+                    
+                %}
+                
+            </div>
+            
+            {% include design-specs-link.html 
+                btn-link="'../html-examples/search-layout.html' | relative_url"
+                btn-text="View html example of the two column - left filters layout"
+                %}
         
         
         
