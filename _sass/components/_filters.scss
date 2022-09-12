@@ -1,10 +1,10 @@
 .filters {
 
     &.example {
-        max-width: 350px;
+        max-width: 400px;
     }
-    font-size: .875rem;
-    line-height: 1.5;
+
+   
 
     &.text-input {
         border-bottom: solid 1px $bga-blue-black-light;
@@ -12,6 +12,7 @@
         .filter-item {
             align-items: center;
             border-bottom: none;
+            display: flex;
         }
 
         span {
@@ -91,6 +92,7 @@
     &.checkboxes-secondary {
         .checkbox-item {
             display: flex;
+            margin-top: 16px;
 
             label {
                 font-weight: 400;
@@ -105,7 +107,7 @@
                 appearance: none;
                 border: solid 1px $bga-black;
                 border-radius: 0;
-                margin: 0 8px 16px 0;
+                margin: 0 8px 0 0;
 
                 &:checked {
                     background: $bga-white url(../assets/icon-tick-black.svg) no-repeat;
@@ -131,6 +133,7 @@
         p {
             font-size: 1.125rem;
             font-weight: 600;
+            line-height: normal;
         }
     }
 
@@ -150,8 +153,9 @@
             padding: 2px 12px 2px 34px;
             border: 1px solid $bga-teal-tool-dark;
             border-radius: 50px;
-            margin: 0 8px 8px 0;
+            margin: 8px 8px 0 0;
             text-indent: 0;
+            font-size: .8125rem;
 
             &.selected {
                 display: inline-block;
@@ -164,11 +168,19 @@
     }
 
     &.toggle-switch {
-    
+        .filter-item {
+            border-bottom: solid 1px $bga-blue-black-light;
+        }
+
+        .custom-control {
+            margin-top: 16px;
+        }
+
         .custom-control-input {
             position: absolute;
             z-index: -1;
             opacity: 0;
+
         }
 
         .custom-control-label {
@@ -223,16 +235,18 @@
         border-bottom: solid 1px $bga-blue-black-light;
 
         select {
+            margin-top: 16px;
             height: 35px;
             font-size: .875rem;
             padding: 0 8px;
         }
 
-        
+
     }
 
     .name-search {
         background: $bga-blue-black-lightest;
+        margin-top: 16px;
 
         h4 {
             color: $bga-black;
@@ -300,4 +314,154 @@
         }
     }
 
+}
+
+.mobile-filter-toggle {
+    display: none;
+}
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin filters-bp-768 {
+    .filters {
+        &.example {
+            max-width: 300px;
+        }
+        &.text-input {
+            label { 
+                width: 100%;
+                padding-bottom: 8px;
+            }
+
+            .filter-item {
+                display: block;
+            }
+
+            .form-control {
+                margin-left: 0 !important;
+            }
+        }
+    }
+}
+
+@mixin filters-below768 {
+    .filters {
+        &.example {
+            max-width: 280px;
+        }
+
+        &.text-input {
+            label {
+                font-size: .875rem;
+            }
+            button {
+                min-width: auto;
+                font-size: .875rem;
+            }    
+        }
+        &.checkboxes-primary {
+            .checkbox-item {
+                padding: 8px 0;
+
+                label {
+                    font-size: .875rem;
+                }
+                input {
+                    height: 24px;
+                    width: 24px;
+
+                    &:checked {
+                        background-size: 16px 13px;
+                    }
+                }
+            }
+        }
+        &.checkboxes-secondary {
+            .checkbox-item {
+                label {
+                    font-size: .875rem;
+                }
+            }
+        }
+        .filter-item-title {
+            p {
+                font-size: .875rem;
+            }
+            svg {
+                width: 16px;
+                height: 10px;
+            }
+        }
+        &.toggle-switch {
+            .custom-control-label {
+                padding-left: 44px;
+                font-size: .875rem;
+    
+                &:before {
+                    width: 32px;
+                    height: 12px;
+                }
+                &:after {
+                    background-size: 12px 12px;
+                    left: 0;
+                    top: -4px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }  
+        }
+    }
+    .filters-wrapper {
+        display: none;
+    }
+
+    .mobile-filter-toggle {
+        display: block;
+        width: 100%;
+
+        button {
+            background: $bga-blue-black-lightest;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1rem;
+            border: none;
+
+            span {
+                background: $bga-blue-background-dark;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 20px;
+                width: 20px;
+                border-radius: 50px;
+                margin-left: 8px;
+                font-size: .75rem;
+                font-weight: 700;
+                color: $bga-white;
+            }
+        }
+    }
+}
+
+
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-768,
+.component-example.bp-below768 {
+    @include filters-bp-768();
+}
+
+.component-example.bp-below768 {
+    @include filters-below768();
+}
+
+// Media queries
+@media (max-width: 992px) {
+    @include filters-bp-768();
+}
+
+@media (max-width: 768px) {
+    @include filters-below768();
 }
