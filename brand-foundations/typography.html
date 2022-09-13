@@ -13,339 +13,533 @@ subsite-tag: true
 
 
 <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
- 
-            link-1="Base typography rules" link-id-1="#base-typography-rules"
-            link-2="Text styles" link-id-2="#text-styles"
+        classes="in-page"
+
+        link-1="Base typography rules" link-id-1="#base-typography-rules"
+        link-2="Text styles" link-id-2="#text-styles"
+        link-3="Layouts" link-id-3="#layouts"
         %}
-        
+
     </div>
-    
+
     <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
-   
-          
-        <!-- VERTICAL GRID -->   
+
+
+        <!-- TYPOGRAPHY RULES -->
         <h2 class="section-start" id="base-typography-rules">Base typography rules</h2>
-        
-        <p>Typography rules apply across the whole of business.gov.au including within most components. Unless otherwise stated the following rules apply.</p>
+
+        <p>Typography rules apply across the whole of business.gov.au including within most components. Unless otherwise
+            stated the following rules apply.</p>
         <ul>
-        <li>All text on business.gov.au is from the <a href="https://fonts.google.com/specimen/Open+Sans" >Google Open Sans font family</a>.</li>
-        <li>Three font weights are used: Regular (400) for general body copy, Semibold (600) for headings and elements, Bold (700) for H1 elements only.</li>
-        <li>Default line-height is 1.5 times the font size. For example for H2 elements the font size is 34px and the line-height is 51px  (32 x 1.5 = 51).</li>
-        <li>Default letter spacing is 0px.</li>
-        <li>Body copy elements have no margin (top and bottom) and 24px padding below.</li>
-        <li>Heading elements (H1, H2, H3, H4, H5) have padding above as well as the 24px padding below. The amount of padding depends on the heading level.</li>
-        <li>H1 elements are reserved for use in the page header. They should not appear elsewhere on the page.</li>
+            <li>All text on business.gov.au is from the <a href="https://fonts.google.com/specimen/Open+Sans">Google
+                    Open Sans font family</a>.</li>
+            <li>Three font weights are used: Regular (400) for general body copy, Semibold (600) for headings and
+                elements, Bold (700) for H1 elements only.</li>
+            <li>Default line-height is 1.5 times the font size. For example for H2 elements the font size is 34px and
+                the line-height is 51px (32 x 1.5 = 51).</li>
+            <li>Default letter spacing is 0px.</li>
+            <li>Body copy elements have no margin (top and bottom) and 24px padding below.</li>
+            <li>Heading elements (H1, H2, H3, H4, H5) have padding above as well as the 24px padding below. The amount
+                of padding depends on the heading level.</li>
+            <li>H1 elements are reserved for use in the page header. They should not appear elsewhere on the page.</li>
         </ul>
-            
-        
-        <!-- PAGE LAYOUTS -->   
+
+
+        <!-- PAGE LAYOUTS -->
         <h2 class="section-start" id="text-styles">Text styles</h2>
 
 
         <!-- H1 Example -->
-        {% include typography-breakpoints.html 
-            element-name="Heading level 1"
-            element-string="headingone"
-            %}
-        
-        <div class="component-example foundation-example mb-4">   
-            {% include component-examples/typography-example.html 
-                text-example="<h1>H1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>"
-                font="Open Sans Bold 700"
-                fontsize="44px"
-                colour="#2E3E5A"
-                lineheight="66px"
-                letterspacing="0"
-                mobilestyle="true"
-                mobilefont="Open Sans Bold 700"
-                mobilefontsize="32px"
-                mobilecolour="#2E3E5A"
-                mobilelineheight="48px"
-                mobileletterspacing="0"
-            %}    
-        </div>
-        
-        
-        
-        <!-- H2 Example -->
-        {% include typography-breakpoints.html 
-            element-name="Heading level 2"
-            element-string="headingtwo"
-            %}
-        
+        {% include typography-breakpoints.html
+        element-name="Heading level 1"
+        element-string="headingone"
+        %}
+
         <div class="component-example foundation-example mb-4">
-            {% include component-examples/typography-example.html 
-                text-example="<h2>H2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>"
-                font="Open Sans SemiBold 600"
-                fontsize="34px"
-                colour="#2E3E5A"
-                lineheight="51px"
-                letterspacing="0"
-                mobilestyle="true"
-                mobilefont="Open Sans Bold 700"
-                mobilefontsize="28px"
-                mobilecolour="#2E3E5A"
-                mobilelineheight="42px"
-                mobileletterspacing="0"
-            %}   
+            {% include component-examples/typography-example.html
+            text-example="<h1>H1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>"
+            font="Open Sans Bold 700"
+            fontsize="44px"
+            colour="#2E3E5A"
+            lineheight="66px"
+            letterspacing="0"
+            mobilestyle="true"
+            mobilefont="Open Sans Bold 700"
+            mobilefontsize="32px"
+            mobilecolour="#2E3E5A"
+            mobilelineheight="48px"
+            mobileletterspacing="0"
+            %}
         </div>
-        
-    
-        
+
+
+
+        <!-- H2 Example -->
+        {% include typography-breakpoints.html
+        element-name="Heading level 2"
+        element-string="headingtwo"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<h2>H2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>"
+            font="Open Sans SemiBold 600"
+            fontsize="34px"
+            colour="#2E3E5A"
+            lineheight="51px"
+            letterspacing="0"
+            mobilestyle="true"
+            mobilefont="Open Sans Bold 700"
+            mobilefontsize="28px"
+            mobilecolour="#2E3E5A"
+            mobilelineheight="42px"
+            mobileletterspacing="0"
+            %}
+        </div>
+
+
+
         <!-- H3 Example -->
-        {% include typography-breakpoints.html 
-            element-name="Heading level 3"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="Heading level 3"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<h3>H3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>"
+            font="Open Sans SemiBold 600"
+            fontsize="22px"
+            colour="#2E3E5A"
+            lineheight="33px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<h3>H3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>"
-                font="Open Sans SemiBold 600"
-                fontsize="22px"
-                colour="#2E3E5A"
-                lineheight="33px"
-                letterspacing="0"  
-            %}       
         </div>
-        
-        
-        
+
+
+
         <!-- H4 Example -->
-        {% include typography-breakpoints.html 
-            element-name="Heading level 4"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="Heading level 4"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<h4>H4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>"
+            font="Open Sans SemiBold 600"
+            fontsize="19px"
+            colour="#2E3E5A"
+            lineheight="28.5px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<h4>H4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>"
-                font="Open Sans SemiBold 600"
-                fontsize="19px"
-                colour="#2E3E5A"
-                lineheight="28.5px"
-                letterspacing="0"  
-            %}       
         </div>
-        
-        
+
+
         <!-- H5 Example -->
-        {% include typography-breakpoints.html 
-            element-name="Heading level 5"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="Heading level 5"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<h5>H5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>"
+            font="Open Sans SemiBold 600"
+            fontsize="16px"
+            colour="#2E3E5A"
+            lineheight="26px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<h5>H5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>"
-                font="Open Sans SemiBold 600"
-                fontsize="16px"
-                colour="#2E3E5A"
-                lineheight="26px"
-                letterspacing="0"  
-            %}       
         </div>
-        
-        
-        
+
+
+
         <!-- Body copy paragraph Example -->
-        {% include typography-breakpoints.html 
-            element-name="Body copy paragraph"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="Body copy paragraph"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p>Standard paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Second paragraph. Nunc a lorem ut metus aliquam bibendum vel sit amet mi. Donec luctus rutrum magna sit
+                amet porttitor. Ut malesuada egestas nisi eget tempus.</p>"
+            font="Open Sans Regular 400"
+            fontsize="16px"
+            colour="#333333"
+            lineheight="26px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<p>Standard paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Second paragraph. Nunc a lorem ut metus aliquam bibendum vel sit amet mi. Donec luctus rutrum magna sit amet porttitor. Ut malesuada egestas nisi eget tempus.</p>"
-                font="Open Sans Regular 400"
-                fontsize="16px"
-                colour="#333333"
-                lineheight="26px"
-                letterspacing="0"  
-            %}       
         </div>
-        
-        
+
+
         <!-- List Example -->
-        {% include typography-breakpoints.html 
-            element-name="Lists"
-            element-string="lists"
+        {% include typography-breakpoints.html
+        element-name="Lists"
+        element-string="lists"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p>This is an example of a normal paragraph above the list.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <ul>
+                    <li>Nested list ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <ul>
+                        <li>Third nesting. It's cozy in here.</li>
+                        <li>Lipsum dolor sit amet</li>
+                    </ul>
+                </ul>
+                <li>Donec luctus rutrum magna</li>
+            </ul>"
+            font="Open Sans Regular 400"
+            fontsize="16px"
+            colour="#333333"
+            lineheight="26px"
+            letterspacing="0"
+            mobilestyle="true"
+            mobilefont="Open Sans Regular 400"
+            mobilefontsize="16px"
+            mobilecolour="#333333"
+            mobilelineheight="26px"
+            mobileletterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-            text-example="<p>This is an example of a normal paragraph above the list.</p><ul><li>Lorem ipsum dolor sit amet</li><li>Consectetur adipiscing elit</li><ul><li>Nested list ipsum dolor sit amet</li><li>Lorem ipsum dolor sit amet</li><ul><li>Third nesting. It's cozy in here.</li><li>Lipsum dolor sit amet</li></ul></ul><li>Donec luctus rutrum magna</li></ul>"
-                font="Open Sans Regular 400"
-                fontsize="16px"
-                colour="#333333"
-                lineheight="26px"
-                letterspacing="0"
-                mobilestyle="true"
-                mobilefont="Open Sans Regular 400"
-                mobilefontsize="16px"
-                mobilecolour="#333333"
-                mobilelineheight="26px"
-                mobileletterspacing="0"  
-            %}       
         </div>
-        
+
         <!-- Numbered List Example -->
-        {% include typography-breakpoints.html 
-            element-name="Numbered lists"
-            element-string="numberedlists"
+        {% include typography-breakpoints.html
+        element-name="Numbered lists"
+        element-string="numberedlists"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p>This is an example of a normal paragraph above the list.</p>
+            <ol>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <ol>
+                    <li>Nested list ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <ol>
+                        <li>Third nesting. It's cozy in here.</li>
+                        <li>Lipsum dolor sit amet</li>
+                    </ol>
+                </ol>
+                <li>Donec luctus rutrum magna</li>
+            </ol>"
+            font="Open Sans Regular 400"
+            fontsize="16px"
+            colour="#333333"
+            lineheight="26px"
+            letterspacing="0"
+            mobilestyle="true"
+            mobilefont="Open Sans Regular 400"
+            mobilefontsize="16px"
+            mobilecolour="#333333"
+            mobilelineheight="26px"
+            mobileletterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-            text-example="<p>This is an example of a normal paragraph above the list.</p><ol><li>Lorem ipsum dolor sit amet</li><li>Consectetur adipiscing elit</li><ol><li>Nested list ipsum dolor sit amet</li><li>Lorem ipsum dolor sit amet</li><ol><li>Third nesting. It's cozy in here.</li><li>Lipsum dolor sit amet</li></ol></ol><li>Donec luctus rutrum magna</li></ol>"
-                font="Open Sans Regular 400"
-                fontsize="16px"
-                colour="#333333"
-                lineheight="26px"
-                letterspacing="0" 
-                mobilestyle="true"
-                mobilefont="Open Sans Regular 400"
-                mobilefontsize="16px"
-                mobilecolour="#333333"
-                mobilelineheight="26px"
-                mobileletterspacing="0" 
-            %}       
         </div>
-        
-        
-        
+
+
+
         <!-- Body copy paragraph Mini Example -->
-        {% include typography-breakpoints.html 
-            element-name="Body copy paragraph - mini"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="Body copy paragraph - mini"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p class='mini'>Mini paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class='mini'>Second paragraph. Nunc a lorem ut metus aliquam bibendum vel sit amet mi. Donec luctus
+                rutrum magna sit amet porttitor. Ut malesuada egestas nisi eget tempus.</p>"
+            font="Open Sans Regular 400"
+            fontsize="14px"
+            colour="#333333"
+            lineheight="24px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<p class='mini'>Mini paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p class='mini'>Second paragraph. Nunc a lorem ut metus aliquam bibendum vel sit amet mi. Donec luctus rutrum magna sit amet porttitor. Ut malesuada egestas nisi eget tempus.</p>"
-                font="Open Sans Regular 400"
-                fontsize="14px"
-                colour="#333333"
-                lineheight="24px"
-                letterspacing="0"  
-            %}       
         </div>
-        
-        
-        
+
+
+
         <!-- Header label Example -->
-        {% include typography-breakpoints.html 
-            element-name="Header label"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="Header label"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p>Header label. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+            font="Open Sans Regular 400"
+            fontsize="16px"
+            colour="#333333"
+            lineheight="26px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<p>Header label. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-                font="Open Sans Regular 400"
-                fontsize="16px"
-                colour="#333333"
-                lineheight="26px"
-                letterspacing="0" 
-            %}       
         </div>
-        
-        
+
+
         <!-- Header intro Example -->
-        {% include typography-breakpoints.html 
-            element-name="Heading intro"
-            element-string="headerintro"
+        {% include typography-breakpoints.html
+        element-name="Heading intro"
+        element-string="headerintro"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p class='header-intro'>Header intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>"
+            font="Open Sans Regular 400"
+            fontsize="18px"
+            colour="#333333"
+            lineheight="32px"
+            letterspacing="0"
+            mobilestyle="true"
+            mobilefont="Open Sans Regular 400"
+            mobilefontsize="16px"
+            mobilecolour="#333333"
+            mobilelineheight="26px"
+            mobileletterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<p class='header-intro'>Header intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-                font="Open Sans Regular 400"
-                fontsize="18px"
-                colour="#333333"
-                lineheight="32px"
-                letterspacing="0" 
-                mobilestyle="true"
-                mobilefont="Open Sans Regular 400"
-                mobilefontsize="16px"
-                mobilecolour="#333333"
-                mobilelineheight="26px"
-                mobileletterspacing="0"  
-            %}       
         </div>
-        
-        
+
+
         <!-- Last updated Example -->
-        {% include typography-breakpoints.html 
-            element-name="Last updated"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="Last updated"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p class='updated'>Last updated. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+            font="Open Sans Regular 400 Italic"
+            fontsize="12px"
+            colour="#333333"
+            lineheight="18px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<p class='updated'>Last updated. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-                font="Open Sans Regular 400 Italic"
-                fontsize="12px"
-                colour="#333333"
-                lineheight="18px"
-                letterspacing="0" 
-            %}       
         </div>
-        
-        
-        
+
+
+
         <!-- Search card labels Example -->
-        {% include typography-breakpoints.html 
-            element-name="Search cards label"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="Search cards label"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p class='label-search-cards'>Search card labels. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+            font="Open Sans SemiBold 600"
+            fontsize="12px"
+            colour="#333333"
+            lineheight="18px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<p class='label-search-cards'>Search card labels. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-                font="Open Sans SemiBold 600"
-                fontsize="12px"
-                colour="#333333"
-                lineheight="18px"
-                letterspacing="0"  
-            %}       
         </div>
-        
-        
+
+
         <!-- External links (hero pathways) Example -->
-        {% include typography-breakpoints.html 
-            element-name="External link (hero pathway)"
-            singlebp="true"
+        {% include typography-breakpoints.html
+        element-name="External link (hero pathway)"
+        singlebp="true"
+        %}
+
+        <div class="component-example foundation-example mb-4">
+            {% include component-examples/typography-example.html
+            text-example="<p class='external-pathway-link'>External link (hero pathway). Lorem ipsum dolor sit amet.</p>
+            "
+            font="Open Sans SemiBold 600"
+            fontsize="14px"
+            colour="#333333"
+            lineheight="18px"
+            letterspacing="0"
             %}
-        
-        <div class="component-example foundation-example mb-4">          
-            {% include component-examples/typography-example.html 
-                text-example="<p class='external-pathway-link'>External link (hero pathway). Lorem ipsum dolor sit amet.</p>"
-                font="Open Sans SemiBold 600"
-                fontsize="14px"
-                colour="#333333"
-                lineheight="18px"
-                letterspacing="0"  
-            %}       
         </div>
-        
-        
-        
+
+
+
         <!-- Design specifications link -->
 
-        {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/a787826f-fb27-40a0-a6c5-bbafb0f31a84/'"
-            btn-text="View design specifications"
-            %}
-        
-            
-        </div>
-    
-        
-    
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/a787826f-fb27-40a0-a6c5-bbafb0f31a84/'"
+        btn-text="View design specifications"
+        %}
+
+
+
+         <!-- LAYOUTS -->   
+         <h2 class="section-start" id="layouts">Layouts</h2>
+
+
+         <p>Body copy is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all page layouts</a>.</p>
+
+
+    {% include layouts-dropdown.html
+        single-col-fullwidth-visibility="true"
+        single-col-twothirds-visibility="true"
+        two-col-leftmenu-visibility="true"
+        two-col-rightsidebar-visibility="true"
+    %}
+
+
+    <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+
+        {% include layouts-accordion.html
+        layout-name="onecol-fw"
+
+        min1200-visibility="true"
+        min992-visibility="true"
+        min768-visibility="false"
+        min576-visibility="false"
+        finalbp-visibility="true"
+
+        finalbp="Breakpoint &lt; 992px"
+
+        min1200-img="'../assets/layout-images/bodycopy-1colfullwidth-min1200.png' | relative_url "
+        min992-img="'../assets/layout-images/bodycopy-1colfullwidth-min992.png' | relative_url "
+        finalbp-img="'../assets/layout-images/bodycopy-1colfullwidth-finalbp.png' | relative_url "
+
+
+        min1200-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Body copy spans 8 grid-columns each.</p>"
+
+        min992-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Body copy spans 9 grid-columns each.</p>"
+
+        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Body copy spans 12 grid-columns each.</p>"
+
+        example-link="'../html-examples/single-col-full-width.html#bodycopy-example' | relative_url'"
+        example-link-text="View layout example"
+
+        %}
+
+
+    </div>
+
+
+    <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+        {% include layouts-accordion.html
+        layout-name="onecol-twothirdsw"
+
+        min1200-visibility="true"
+        min992-visibility="true"
+        min768-visibility="true"
+        min576-visibility="false"
+        finalbp-visibility="true"
+
+        finalbp="Breakpoint &lt; 768px"
+
+        min1200-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min1200.png' | relative_url "
+        min992-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min992.png' | relative_url "
+        min768-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min768.png' | relative_url "
+        finalbp-img="'../assets/layout-images/bodycopy-1col2thirdswidth-finalbp.png' | relative_url "
+
+        min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        min992-rules="<p>The content area is 9 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        min768-rules="<p>The content area is 11 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        example-link="'../html-examples/single-col-two-thirds-width.html#bodycopy-example' | relative_url'"
+        example-link-text="View layout example"
+
+        %}
+
+    </div>
+
+
+    <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+        {% include layouts-accordion.html
+        layout-name="twocol-leftmenu"
+
+        min1200-visibility="true"
+        min992-visibility="false"
+        min768-visibility="false"
+        min576-visibility="true"
+        finalbp-visibility="true"
+
+        finalbp="Breakpoint &lt; 576px"
+
+        min1200-img="'../assets/layout-images/bodycopy-2col-leftmenu-min1200.png' | relative_url "
+        min576-img="'../assets/layout-images/bodycopy-2col-leftmenu-min576.png' | relative_url "
+        finalbp-img="'../assets/layout-images/bodycopy-2col-leftmenu-finalbp.png' | relative_url "
+
+        min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        min576-rules="<p>The content area is 9 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        example-link="'../html-examples/two-col-left-side-menu.html#fbodycopy-example' | relative_url'"
+        example-link-text="View layout example"
+
+        %}
+
+    </div>
+
+
+    <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+        {% include layouts-accordion.html
+        layout-name="twocol-rightbar"
+
+        min1200-visibility="false"
+        min992-visibility="false"
+        min768-visibility="true"
+        min576-visibility="false"
+        finalbp-visibility="true"
+
+        finalbp="Breakpoint &lt; 768px"
+
+
+        min768-img="'../assets/layout-images/bodycopy-2col-rightsidebar-min768.png' | relative_url "
+        finalbp-img="'../assets/layout-images/bodycopy-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+        min768-rules="<p>The content area is 8 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+        <p>Body copy spans the full width of the content area.</p>"
+
+        example-link="'../html-examples/two-col-right-sidebar.html#bodycopy-example' | relative_url'"
+        example-link-text="View layout example"
+
+        %}
+
+    </div>
+
+
+    </div>
+
+
+
 </div>
