@@ -1,0 +1,151 @@
+---
+
+layout: content-tagged
+title: Home page banner
+description: business.gov.au home page banner components.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        element-string="bga-site-header"
+        xl-visibility="true"
+        lg-visibility="true"
+        md-visibility="true"
+        sm-visibility="true"
+        xs-visibility="true"
+        breakpoint-final="350"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding py-4">
+
+                <div class="banner-background pb-5">
+                    <div class="spacer"></div>
+                <div class="container">
+                    <div id="home-banner">
+                         <div class="row">
+                             <div class="col-12 banner-container">
+                                 <div class="banner-content">
+                                     <h1>Support for businesses in Australia</h1>
+            
+                                     <p class="lead">Information, grants, services and support from across government to help your business succeed.</p>
+                                 </div>
+                                 <div class="banner-image"></div>
+                             </div>
+                         </div>
+                     </div>
+                    <div id="alert">
+                        <div class="row">
+            
+                            <div class="col-12">
+                                <div class="">
+                                    <a  tabindex=0 class="alert-container">
+                                        <h2>Coronavirus support</h2>
+                                        <p>Find financial assistance, eligibility and timing for the new government support for Australian businesses.</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu-highlight">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>Business information</h2>
+                                <ul class="business-info">
+                                    <li tabindex=0><a>Planning</a></li>
+                                    <li tabindex=0 ><a>Finance</a></li>
+                                    <li tabindex=0 ><a>Marketing</a></li>
+                                    <li tabindex=0 ><a>Online</a></li>
+                                    <li tabindex=0 ><a>People</a></li>
+                                    <li tabindex=0 ><a>Products and services</a></li>
+                                    <li tabindex=0 ><a>Risk management</a></li>
+                                    <li tabindex=0 ><a>Change and growth</a></li>
+                                    <li tabindex=0 ><a>Exiting</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                
+
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/60d1f290-192d-4c53-9ebe-275cf5ff0d2c'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>The site header is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>Single column - full width layout</a>.</p>
+
+        
+        {% include layouts-dropdown.html
+        layout-name="Single column - full width"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 mb-0 p-4">
+            {% include layouts-accordion.html
+                singlelayout="true"
+                allbp-img="'../assets/layout-images/homebanner-header-allbp.png' | relative_url "
+                allbp-rules="<p>The home banner is 12 grid-columns wide.</p><p>The blue background behind home banner components stretches full width of the screen.</p>"
+
+                
+            %}
+        
+        </div>
+        {% include design-specs-link.html
+            btn-link="'../html-examples/home-example.html' | relative_url'"
+            btn-text="View layout example"
+            %}
+
+
+
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <p>The home banner consistents of a collection of components that are only used on the business.gov.au home page. They should not appear elsewhere on the site.</p>
+        
+    </div>
