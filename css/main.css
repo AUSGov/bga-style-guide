@@ -5414,13 +5414,13 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .filters .filter-item-title { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
 
-.filters .filter-item-title p { font-size: 1.125rem; font-weight: 600; line-height: normal; }
+.filters .filter-item-title p { font-size: 1.125rem; font-weight: 600; line-height: normal; display: inline-flex; }
 
 .filters .filter-item-content { display: none; }
 
 .filters .active-filters ul { text-indent: 0; }
 
-.filters .active-filters ul li { background: #BFE2E2 url(../assets/icon-close-black.svg) no-repeat; background-size: 10px 10px; background-position: left 12px center; display: none; align-items: center; padding: 2px 12px 2px 34px; border: 1px solid #105C5C; border-radius: 50px; margin: 8px 8px 0 0; text-indent: 0; font-size: .8125rem; }
+.filters .active-filters ul li { background: #BFE2E2 url(../assets/icon-close-black.svg) no-repeat; background-size: 10px 10px; background-position: left 12px center; display: none; align-items: center; padding: 2px 12px 2px 34px; border: 1px solid #218080; border-radius: 50px; margin: 8px 8px 0 0; text-indent: 0; font-size: .8125rem; }
 
 .filters .active-filters ul li.selected { display: inline-block; }
 
@@ -5462,9 +5462,13 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .filters .name-search button:active { background: url(../assets/icon-search-white.svg) #2157AA no-repeat; background-position: center center; }
 
+.filters .name-search .search-list-wrapper { display: none; }
+
 .filters .name-search .search-list-wrapper li { margin: 0; }
 
 .filters .filter-item.open .filter-item-title svg { transform: scaleY(-1); }
+
+.filters .mobile-counter { display: none; }
 
 .mobile-filter-toggle { display: none; }
 
@@ -5490,28 +5494,48 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .component-example.bp-below768 .filters.checkboxes-primary .checkbox-item input:checked { background-size: 16px 13px; }
 
+.component-example.bp-below768 .filters.checkboxes-secondary .filter-item { padding: 8px 0 !important; }
+
 .component-example.bp-below768 .filters.checkboxes-secondary .checkbox-item label { font-size: .875rem; }
 
 .component-example.bp-below768 .filters .filter-item-title p { font-size: .875rem; }
 
 .component-example.bp-below768 .filters .filter-item-title svg { width: 16px; height: 10px; }
 
-.component-example.bp-below768 .filters.toggle-switch .custom-control-label { padding-left: 44px; font-size: .875rem; }
+.component-example.bp-below768 .filters.toggle-switch .filter-item { padding: 8px 0 !important; }
 
-.component-example.bp-below768 .filters.toggle-switch .custom-control-label:before { width: 32px; height: 12px; }
+.component-example.bp-below768 .filters.toggle-switch .custom-control-label { padding-left: 40px; font-size: .875rem; }
 
-.component-example.bp-below768 .filters.toggle-switch .custom-control-label:after { background-size: 12px 12px; left: 0; top: -4px; width: 24px; height: 24px; }
+.component-example.bp-below768 .filters.toggle-switch .custom-control-label:before { width: 32px; height: 12px; top: 1px; }
+
+.component-example.bp-below768 .filters.toggle-switch .custom-control-label:after { background-size: 12px 12px; left: 0; top: -1px; width: 24px; height: 24px; }
+
+.component-example.bp-below768 .filters.toggle-switch.selected label:after { background-size: 14px 11px; left: 10px; }
+
+.component-example.bp-below768 .filters.single-select .filter-item { padding: 8px 0 !important; }
+
+.component-example.bp-below768 .filters .active-filters ul { display: none !important; }
+
+.component-example.bp-below768 .filters .name-search h4, .component-example.bp-below768 .filters .name-search .h4 { margin-bottom: 8px !important; font-size: 1rem; }
+
+.component-example.bp-below768 .filters .name-search input { height: 40px; padding: 0 12px; }
+
+.component-example.bp-below768 .filters .name-search button { height: 40px; width: 40px; background-size: 20px 20px; }
+
+.component-example.bp-below768 .filters .mobile-counter { display: inline-flex; background: #2E6CB9; color: #ffffff; align-items: center; justify-content: center; font-size: .75rem; font-weight: 700; line-height: normal; width: auto; height: auto; border-radius: 50px; margin-left: 6px; }
+
+.component-example.bp-below768 .filters .mobile-counter.not-empty { width: 19px; height: 19px; }
 
 .component-example.bp-below768 .filters-wrapper { display: none; }
 
 .component-example.bp-below768 .mobile-filter-toggle { display: block; width: 100%; }
 
-.component-example.bp-below768 .mobile-filter-toggle button { background: #E4E6EA; width: 100%; display: flex; justify-content: center; text-transform: uppercase; font-weight: 400; font-size: 1rem; border: none; }
+.component-example.bp-below768 .mobile-filter-toggle button { background: #E4E6EA; width: 100%; display: flex; justify-content: center; text-transform: uppercase; font-weight: 400; font-size: 1rem; border: none; line-height: normal; }
 
 .component-example.bp-below768 .mobile-filter-toggle button span { background: #2E6CB9; display: inline-flex; align-items: center; justify-content: center; height: 20px; width: 20px; border-radius: 50px; margin-left: 8px; font-size: .75rem; font-weight: 700; color: #ffffff; }
 
 @media (max-width: 992px) { .filters.example { max-width: 300px; } .filters.text-input label { width: 100%; padding-bottom: 8px; } .filters.text-input .filter-item { display: block; } .filters.text-input .form-control { margin-left: 0 !important; } }
 
-@media (max-width: 768px) { .filters.example { max-width: 280px; } .filters.text-input label { font-size: .875rem; } .filters.text-input button { min-width: auto; font-size: .875rem; } .filters.checkboxes-primary .checkbox-item { padding: 8px 0; } .filters.checkboxes-primary .checkbox-item label { font-size: .875rem; } .filters.checkboxes-primary .checkbox-item input { height: 24px; width: 24px; } .filters.checkboxes-primary .checkbox-item input:checked { background-size: 16px 13px; } .filters.checkboxes-secondary .checkbox-item label { font-size: .875rem; } .filters .filter-item-title p { font-size: .875rem; } .filters .filter-item-title svg { width: 16px; height: 10px; } .filters.toggle-switch .custom-control-label { padding-left: 44px; font-size: .875rem; } .filters.toggle-switch .custom-control-label:before { width: 32px; height: 12px; } .filters.toggle-switch .custom-control-label:after { background-size: 12px 12px; left: 0; top: -4px; width: 24px; height: 24px; } .filters-wrapper { display: none; } .mobile-filter-toggle { display: block; width: 100%; } .mobile-filter-toggle button { background: #E4E6EA; width: 100%; display: flex; justify-content: center; text-transform: uppercase; font-weight: 400; font-size: 1rem; border: none; } .mobile-filter-toggle button span { background: #2E6CB9; display: inline-flex; align-items: center; justify-content: center; height: 20px; width: 20px; border-radius: 50px; margin-left: 8px; font-size: .75rem; font-weight: 700; color: #ffffff; } }
+@media (max-width: 768px) { .filters.example { max-width: 280px; } .filters.text-input label { font-size: .875rem; } .filters.text-input button { min-width: auto; font-size: .875rem; } .filters.checkboxes-primary .checkbox-item { padding: 8px 0; } .filters.checkboxes-primary .checkbox-item label { font-size: .875rem; } .filters.checkboxes-primary .checkbox-item input { height: 24px; width: 24px; } .filters.checkboxes-primary .checkbox-item input:checked { background-size: 16px 13px; } .filters.checkboxes-secondary .filter-item { padding: 8px 0 !important; } .filters.checkboxes-secondary .checkbox-item label { font-size: .875rem; } .filters .filter-item-title p { font-size: .875rem; } .filters .filter-item-title svg { width: 16px; height: 10px; } .filters.toggle-switch .filter-item { padding: 8px 0 !important; } .filters.toggle-switch .custom-control-label { padding-left: 40px; font-size: .875rem; } .filters.toggle-switch .custom-control-label:before { width: 32px; height: 12px; top: 1px; } .filters.toggle-switch .custom-control-label:after { background-size: 12px 12px; left: 0; top: -1px; width: 24px; height: 24px; } .filters.toggle-switch.selected label:after { background-size: 14px 11px; left: 10px; } .filters.single-select .filter-item { padding: 8px 0 !important; } .filters .active-filters ul { display: none !important; } .filters .name-search h4, .filters .name-search .h4 { margin-bottom: 8px !important; font-size: 1rem; } .filters .name-search input { height: 40px; padding: 0 12px; } .filters .name-search button { height: 40px; width: 40px; background-size: 20px 20px; } .filters .mobile-counter { display: inline-flex; background: #2E6CB9; color: #ffffff; align-items: center; justify-content: center; font-size: .75rem; font-weight: 700; line-height: normal; width: auto; height: auto; border-radius: 50px; margin-left: 6px; } .filters .mobile-counter.not-empty { width: 19px; height: 19px; } .filters-wrapper { display: none; } .mobile-filter-toggle { display: block; width: 100%; } .mobile-filter-toggle button { background: #E4E6EA; width: 100%; display: flex; justify-content: center; text-transform: uppercase; font-weight: 400; font-size: 1rem; border: none; line-height: normal; } .mobile-filter-toggle button span { background: #2E6CB9; display: inline-flex; align-items: center; justify-content: center; height: 20px; width: 20px; border-radius: 50px; margin-left: 8px; font-size: .75rem; font-weight: 700; color: #ffffff; } }
 
 /*# sourceMappingURL=main.css.map */

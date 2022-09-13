@@ -1029,11 +1029,20 @@ $(document).ready(function () {
 
     // filter bubbles
     $('.active-filters li').on('click', function(){
-        var item_value = $(this).attr('data-value');
-
+        var item_value = $(this).attr('data-value'),
+        counter = parseInt($(this).parents('.filter-item').find('.mobile-counter').text());
+        counter--;
+        
+        if (counter != 0) {
+            $(this).parents('.filter-item').find('.mobile-counter').text(String(counter));
+        } else  {
+            $(this).parents('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
+        }
+        
         //checkboxes
         $('#' + item_value).prop("checked", false);
         $(this).removeClass('selected');
+    
 
         //single-select
         if ($(this).parents('.filters').hasClass('single-select')) {
@@ -1049,12 +1058,27 @@ $(document).ready(function () {
 
     // checkboxes & bubbles
     $('.checkboxes-secondary input').on('click', function(){
-        var item_value = $(this).attr('id');
+        var item_value = $(this).attr('id'),
+        counter = parseInt($(this).parents('.filter-item').find('.mobile-counter').text());
+        if (isNaN(counter)) {
+            counter = 0;
+        }
         
         if ($(this).is(":checked")) {
             $('li[data-value="' + item_value + '"]').addClass('selected');
+            counter++;
+            $(this).parents('.filter-item').find('.mobile-counter').text(String(counter)).addClass('not-empty');
+            
+
         } else {
-            $('li[data-value="' + item_value + '"]').removeClass('selected')
+            $('li[data-value="' + item_value + '"]').removeClass('selected');
+            counter--;
+
+            if (counter != 0) {
+                $(this).parents('.filter-item').find('.mobile-counter').text(String(counter)).addClass('not-empty');
+            } else  {
+                $(this).parents('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
+            }
         }
     });
     
@@ -1064,10 +1088,12 @@ $(document).ready(function () {
 
         $(this).parents('.filter-item').find('.active-filters li').each(function(){
             $(this).removeClass('selected');
+            $(this).parents('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
         });
     
         if (item_value !== 'select-option') {
             $('li[data-value="' + item_value + '"]').addClass('selected');
+            $(this).parents('.filter-item').find('.mobile-counter').text('1').addClass('not-empty');
         }  
     });
 
@@ -1079,8 +1105,10 @@ $(document).ready(function () {
 
         if ($(this).is(":checked")) {
             $('li[data-value="' + item_value + '"]').addClass('selected');
+            $(this).parents('.filter-item').find('.mobile-counter').text('1').addClass('not-empty');
         } else {
-            $('li[data-value="' + item_value + '"]').removeClass('selected')
+            $('li[data-value="' + item_value + '"]').removeClass('selected');
+            $(this).parents('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
         }
     });
 
