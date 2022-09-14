@@ -279,7 +279,7 @@
             li {
                 &.level-1 {
                     height: 65px;
-                    background-position: right 8px top 16px;
+                    background-position: right 8px top 16px !important;
                 }
 
                 span {
@@ -292,8 +292,11 @@
 }
 
 @mixin bga-site-header-bp-350 {
+    .header-wrapper {
+        margin-top: 24px !important;
+    }
     .bga-site-header {
-        
+
         #header-strap {
             margin-bottom: 0;
 
@@ -416,7 +419,6 @@
             
         }
 
-
         .navbar {
             display: none;
             margin: 0;
@@ -481,7 +483,7 @@
                     padding: 12px 16px;
                     background-image: url(../assets/Chevron-down-blue.svg);
                     background-repeat: no-repeat;
-                    background-position: right 16px center;
+                    background-position: right 16px center !important;
                     position: relative;
     
                     &.open {
@@ -628,3 +630,11 @@
     @include bga-site-header-below350();
 }
 
+
+// OVERRIDE BOOTSTRAP DEFAULT BREAKPOINT FOR MOBILE NAV
+@media (min-width: 768px) {
+.navbar-expand-lg.example .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+}
