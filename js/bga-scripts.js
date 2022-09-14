@@ -131,7 +131,6 @@ $(document).ready(function () {
 
 
     // ANCHOR MENU 
-
     if ($('.in-page #anchor-menu').length) {
 
         //Create object containing 
@@ -391,7 +390,6 @@ $(document).ready(function () {
     });
 
 
-
     // TEXTAREA COUNT 
     var max_length = 100;
     $('#textarea-example').highlightWithinTextarea({
@@ -472,7 +470,6 @@ $(document).ready(function () {
     });
 
 
-
     // SITE NAV EXAMPLE
     // Level 1 open and close on desktop and mobile.
     $(".bga-site-header .level-1").on('click', function () {
@@ -515,7 +512,7 @@ $(document).ready(function () {
             }
     });
 
-    // Mobile level 2 open and close
+    // Mobile level 2 open and close. 
     $(".bga-site-header .level-2").on('click', function () {
 
         if ($(this).hasClass('open')) {
@@ -586,7 +583,7 @@ $(document).ready(function () {
     });
 
     $(window).resize(function () {
-        if ($(window).width() >= 767) {
+        if ($(window).width() >= 992) {
             $('.bga-site-header #mobile-search').hide();
             $('.bga-site-header .mobile-search').removeClass('open');
         }
