@@ -7,14 +7,12 @@
         h2 {
             color: $bga-white;
             margin: 0;
-            font-weight: 600;
-            font-size: 32px;
             padding: 0;
         }
 
         &.graphic {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
 
             .audio-player-title {
                 display: flex;
@@ -24,8 +22,7 @@
             img {
                 width: 132px;
                 height: 132px;
-                margin-right: 32px;
-                vertical-align: middle;
+                margin-right: 24px;
                 border-style: none;
                 flex-shrink: 0;
 
@@ -46,7 +43,7 @@
     }
 
     .audio-player-controls-background {
-        background: $bga-blue-links;
+        background: $bga-blue-footer;
         height: 70px;
         display: flex;
         align-items: center;
@@ -173,7 +170,7 @@
                     }
 
                     &:before {
-                       display: none;
+                        display: none;
                     }
                 }
             }
@@ -379,23 +376,27 @@
         }
     }
 
-   
+
 }
 
-
-@media (max-width: 992px) {
+@mixin audioplayer-below576 {
+    .media-player-example {
         .audio-player-banner {
-            h2 {
-                font-size: 24px;
-                line-height: 32px;
-            }
-
             &.graphic {
                 img {
-                    width: 80px;
-                    height: 80px;
-                    margin-right: 1rem;
+                    display: none;
                 }
             }
         }
     }
+}
+
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768 {
+    @include audioplayer-below576();
+}
+
+//Media queries
+@media (max-width: 768px) {
+    @include audioplayer-below576();    
+}
