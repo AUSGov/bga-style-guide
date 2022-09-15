@@ -1110,26 +1110,22 @@ $(document).ready(function () {
     });
 
 
-
-    // COMPONENT EXAMPLE: VIDEO PLAYER
-    	/*----------- COMPONENT EXAMPLE: Media Player ----------- */
+    // COMPONENT EXAMPLE: VIDEO & AUDIO PLAYER
 	$('.media-player-transcript-toggle button').on('click', function () {
-		//$('.media-player-transcript').toggleClass('open');
+        var parent = $(this).parents('.media-player'),
+        transcript = parent.find('.media-player-transcript'),
+        transcript_toggle = parent.find('.media-player-transcript-toggle');
 
-
-		if ($('.media-player-transcript').hasClass('open')) {
-			$('.media-player-transcript').removeClass('open');
-			$('.media-player-transcript-toggle span').text('Open Transcript');
-			$('.media-player .media-player-transcript-toggle .iconAnimateWrapper svg').removeClass('open');
+		if (transcript.hasClass('open')) {
+			transcript.removeClass('open');
+			transcript_toggle.find('span').text('Open Transcript');
+			transcript_toggle.find('.iconAnimateWrapper svg').removeClass('open');
 		} else {
-			$('.media-player-transcript').addClass('open');
-			$('.media-player-transcript-toggle span').text('Close Transcript');
-			$('.media-player .media-player-transcript-toggle .iconAnimateWrapper svg').addClass('open');
+			transcript.addClass('open');
+			transcript_toggle.find('span').text('Close Transcript');
+			transcript_toggle.find('.iconAnimateWrapper svg').addClass('open');
 		}
 	});
-
-
-
 
 
 }); //End doc ready
