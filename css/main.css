@@ -5646,19 +5646,19 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .media-player-example .audio-player-banner { background: #2E6CB9; padding: 32px; }
 
-.media-player-example .audio-player-banner h2, .media-player-example .audio-player-banner .h2 { color: #ffffff; margin: 0; font-weight: 600; font-size: 32px; padding: 0; }
+.media-player-example .audio-player-banner h2, .media-player-example .audio-player-banner .h2 { color: #ffffff; margin: 0; padding: 0; }
 
-.media-player-example .audio-player-banner.graphic { display: flex; align-items: flex-start; }
+.media-player-example .audio-player-banner.graphic { display: flex; align-items: center; }
 
 .media-player-example .audio-player-banner.graphic .audio-player-title { display: flex; align-items: center; }
 
-.media-player-example .audio-player-banner.graphic img { width: 132px; height: 132px; margin-right: 32px; vertical-align: middle; border-style: none; flex-shrink: 0; }
+.media-player-example .audio-player-banner.graphic img { width: 132px; height: 132px; margin-right: 24px; border-style: none; flex-shrink: 0; }
 
 .media-player-example .audio-player-banner.graphic img.hide-image { display: none; }
 
 .media-player-example .audio-player-player { background-position: center; background-size: cover; background-repeat: no-repeat; position: relative; cursor: pointer; background-color: #788295; }
 
-.media-player-example .audio-player-controls-background { background: #2157AA; height: 70px; display: flex; align-items: center; justify-content: stretch; }
+.media-player-example .audio-player-controls-background { background: #113869; height: 70px; display: flex; align-items: center; justify-content: stretch; }
 
 .media-player-example .media-transcript { background-color: #E4E6EA; border-bottom: 0.125rem solid #ABB1BD; padding: 0; position: relative; width: 100%; }
 
@@ -5746,6 +5746,8 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .media-player-example .media-player-info .media-player-info-detail { color: #333333; font-size: 1rem; letter-spacing: 0.0125rem; line-height: 2; margin-bottom: 0; padding: 0; }
 
-@media (max-width: 992px) { .audio-player-banner h2, .audio-player-banner .h2 { font-size: 24px; line-height: 32px; } .audio-player-banner.graphic img { width: 80px; height: 80px; margin-right: 1rem; } }
+.component-example.bp-below768 .media-player-example .audio-player-banner.graphic img { display: none; }
+
+@media (max-width: 768px) { .media-player-example .audio-player-banner.graphic img { display: none; } }
 
 /*# sourceMappingURL=main.css.map */
