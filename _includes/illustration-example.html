@@ -1,0 +1,60 @@
+<div class="illustration-example mb-5">
+
+    <div class="illustration">
+        <h4>{{ include.title }}</h4>
+        <div class="image-wrapper">
+            <img src={{ include.new_src }} alt="{{include.description}}">
+        </div>
+        <div class="button-wrapper p-3">
+        <button class="bga-btn bga-secondary-btn bkg-light copy-illustration"><span>Copy svg code</span></button>
+        </div>
+    </div>
+
+    <div class="sitecore-info-container">
+        {% if include.old_src %}
+            <div class="sitecore-toggle d-flex p-3">    
+                <h5 class="m-0 p-0">Existing sitecore illustation/s</h5>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                    <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#333"/>
+                </svg>
+                
+            </div>
+            
+            <div class="sitecore-details p-3">
+                <div class="row">
+
+                    <div class="col-4">
+                        <div class="original-image">
+                            <img src={{ include.old_src }} alt="">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="sitecore-names">
+                            <ul>
+                                {% if include.existing1 %}
+                                <li>{{ include.existing1 }}</li>
+                                {% endif %}
+
+                                {% if include.existing2 %}
+                                <li>{{ include.existing2 }}</li>
+                                {% endif %}
+
+                                {% if include.existing3 %}
+                                <li>{{ include.existing3 }}</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+        {% else if %}
+            <div class="new-illustration p-3">    
+                <h5 class="m-0 p-0">New illustration</h5>
+            </div>
+        {% endif %}
+
+    </div>
+
+</div>

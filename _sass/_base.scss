@@ -698,6 +698,86 @@ table.table {
     padding: 32px 9999px;
 }
 
+// Illustration examples
+.illustration-example {
+    .image-wrapper {
+        border: solid 1px $bga-blue-border;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .button-wrapper {
+        width: 100%;
+        border: solid 1px $bga-blue-border;
+        text-align: right;
+    }
+    button {
+        &.copied {
+            background: $bga-green-success-light;
+            color: $bga-green-success-background;
+            border-color: $bga-green-success-background;
+
+            &:hover {
+                background: $bga-green-success-light;
+                color: $bga-green-success-background;
+                border-color: $bga-green-success-background;
+            }
+        }
+    }
+    
+    .sitecore-info-container {
+        font-size: .875rem;
+        border: solid 1px $bga-blue-border;
+
+        h5 {
+            font-size: .875rem;
+        }
+        .sitecore-toggle {
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            background-color: $bga-blue-background-light;
+
+            &.open {
+                svg {
+                    transform: scaleY(-1);
+                }
+            }
+
+            svg {
+                width: 16px;
+                height: auto;
+            }
+        }
+        .sitecore-details {
+            display: none;
+
+            img {
+                width: 100%;
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    list-style-type: disc;
+                    text-indent: 0px;
+
+                    &:before {
+                        display: none;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
 
 // Media queries
 

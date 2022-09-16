@@ -450,6 +450,39 @@ $(document).ready(function () {
         }
     });
 
+    // COPY ILLUSTRATION CODE
+    $('.copy-illustration').on('click', function () {
+
+        // Get SVG
+        var svgSrc = $(this).parents('.illustration').find("img").attr('src');
+
+        $.get(svgSrc, function (data) {
+            var svgNode = data.childNodes;
+            var svgCode = svgNode[0].outerHTML || new
+                XMLSerializer().serializeToString(svgNode[0]);
+
+            // Copy code
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val(svgCode).select();
+            document.execCommand("copy");
+            $temp.remove();
+
+            $(".example.copied").focus().blur();
+        });
+
+        // Change text on copy buttons
+        $(this).addClass('copied').find('span').text('Copied');
+        $('.copy-illustration').not(this).removeClass('copied').find('span').text('Copy svg code');
+
+    });
+    // OPEN CLOSE sitecore illustration details
+    $('.sitecore-toggle').on('click', function(){
+        $(this).toggleClass('open');
+        $(this).parents('.sitecore-info-container').find('.sitecore-details').slideToggle();
+    });
+
+
 
     // SEARCH INPUT EXAMPLE
     $(".bga-site-header .search-container input").on('focus', function () {
