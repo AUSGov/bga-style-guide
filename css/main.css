@@ -4668,15 +4668,17 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-default-accordion.grant-rounds .accordion-item .round-row:last-of-type { border-bottom: none; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row .round { width: 15%; }
+.bga-default-accordion.grant-rounds .accordion-item .round-row .round-info { display: flex; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row .link { width: 60%; }
+.bga-default-accordion.grant-rounds .accordion-item .round-row .round { white-space: nowrap; padding-right: 16px; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row .tag { width: 25%; font-size: .75rem; }
+.bga-default-accordion.grant-rounds .accordion-item .round-row .tag { font-size: .75rem; padding-right: 16px; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row .tag span { background: #FCE9E9; border-radius: 50px; padding: 6px 16px; }
+.bga-default-accordion.grant-rounds .accordion-item .round-row .tag span { background: #FCE9E9; border-radius: 50px; padding: 2px 16px; display: block; white-space: nowrap; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row.open .tag span { background: #ffffff; border: 1px solid #299F28; padding: 5px 15px; }
+.bga-default-accordion.grant-rounds .accordion-item .round-row.open { background: #D4EDD4; }
+
+.bga-default-accordion.grant-rounds .accordion-item .round-row.open .tag span { background: #ffffff; border: 1px solid #299F28; padding: 1px 15px; }
 
 .bga-default-accordion.grant-rounds .accordion-item .round-row.coming-soon .tag span { background: #FFF3CD; }
 
@@ -4688,7 +4690,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below576 .bga-default-accordion .accordion-item .accordion-body, .component-example.small-screen .bga-default-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; }
 
-@media (max-width: 576px) { .bga-default-accordion .accordion-item .accordion-button { font-size: 1rem; padding: 16px !important; } .bga-default-accordion .accordion-item .accordion-button p { padding-right: 16px !important; } .bga-default-accordion .accordion-item .accordion-button::after { height: 32px; width: 32px; } .bga-default-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } }
+.component-example.bp-below576 .bga-default-accordion.grant-rounds .accordion-body, .component-example.small-screen .bga-default-accordion.grant-rounds .accordion-body { padding: 0 !important; }
+
+.component-example.bp-below576 .bga-default-accordion.grant-rounds .round-row, .component-example.small-screen .bga-default-accordion.grant-rounds .round-row { padding: 16px !important; display: block !important; }
+
+.component-example.bp-below576 .bga-default-accordion.grant-rounds .round-row .round-info, .component-example.small-screen .bga-default-accordion.grant-rounds .round-row .round-info { padding-bottom: 16px; }
+
+@media (max-width: 576px) { .bga-default-accordion .accordion-item .accordion-button { font-size: 1rem; padding: 16px !important; } .bga-default-accordion .accordion-item .accordion-button p { padding-right: 16px !important; } .bga-default-accordion .accordion-item .accordion-button::after { height: 32px; width: 32px; } .bga-default-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } .bga-default-accordion.grant-rounds .accordion-body { padding: 0 !important; } .bga-default-accordion.grant-rounds .round-row { padding: 16px !important; display: block !important; } .bga-default-accordion.grant-rounds .round-row .round-info { padding-bottom: 16px; } }
 
 .mini-list .accordion-item { border: none; background: #C8D9EE; }
 
