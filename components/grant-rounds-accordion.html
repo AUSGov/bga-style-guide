@@ -53,19 +53,25 @@ classes="in-page"
                 title1="All grant rounds for this opportunity"
 
                 content1="<div class='round-row closed'>
+                        <div class='round-info'>
                         <div class='round'>Round 1</div>
                         <div class='tag'><span>Closed</span></div>
+                        </div>
                         <div class='link'><a>Safer Communities Fund - Round 1 - Early Intervention Grants</a></div>
                     </div>
                     <div class='round-row open'>
+                        <div class='round-info'>
                         <div class='round'>Round 2</div>
                         <div class='tag'><span>Open</span></div>
+                        </div>
                         <div class='link'>Safer Communities Fund - Round 2 - Early Intervention Grants</div>
                     </div>
                     <div class='round-row coming-soon'>
+                        <div class='round-info'>
                         <div class='round'>Round 3</div>
                         <div class='tag'><span>Coming soon</span></div>
-                        <div class='link'>Safer Communities Fund - Round 3 - Early Intervention Grants</div>
+                        </div>
+                        <div class='link'><a>Safer Communities Fund - Round 3 - Early Intervention Grants</a></div>
                     </div>"
 
                 classes="grant-rounds no-openall"
@@ -79,7 +85,7 @@ classes="in-page"
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/aa072634-b3aa-408b-966a-2e8f09cf920b-ff54/screen/d9e7436d-f593-44b5-a76a-03ba5a3ebc75'"
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/72aa6f31-283d-422f-9a4d-fa75edb1f8ba'"
         btn-text="View design specifications"
         %}
 
@@ -87,13 +93,12 @@ classes="in-page"
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Accordions can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>page layouts</a> except the single column - full width layout and the two column - left filter layout.</p>
+        <p>Accordions can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - two thirds width layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left side menu layout</a> .</p>
 
 
         {% include layouts-dropdown.html
         single-col-twothirds-visibility="true"
         two-col-leftmenu-visibility="true"
-        two-col-rightsidebar-visibility="true"
         %}
 
 
@@ -110,24 +115,24 @@ classes="in-page"
 
             finalbp="Breakpoint &lt; 768px"
 
-            min1200-img="'../assets/layout-images/accordion-1col2thirdswidth-min1200.png' | relative_url "
-            min992-img="'../assets/layout-images/accordion-1col2thirdswidth-min992.png' | relative_url "
-            min768-img="'../assets/layout-images/accordion-1col2thirdswidth-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/accordion-1col2thirdswidth-finalbp.png' | relative_url "
+            min1200-img="'../assets/layout-images/grantround-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/grantround-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/grantround-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/grantround-1col2thirdswidth-finalbp.png' | relative_url "
 
             min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
 
             min992-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
 
             min768-rules="<p>The content area is 11 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
 
-            example-link="'../html-examples/single-col-two-thirds-width.html#accordion-example' | relative_url'"
+            example-link="'../html-examples/single-col-two-thirds-width.html#grant-rounds-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
@@ -148,79 +153,41 @@ classes="in-page"
 
             finalbp="Breakpoint &lt; 576px"
 
-            min1200-img="'../assets/layout-images/accordion-2col-leftmenu-min1200.png' | relative_url "
-            min576-img="'../assets/layout-images/accordion-2col-leftmenu-min576.png' | relative_url "
-            finalbp-img="'../assets/layout-images/accordion-2col-leftmenu-finalbp.png' | relative_url "
+            min1200-img="'../assets/layout-images/grantround-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/grantround-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/grantround-2col-leftmenu-finalbp.png' | relative_url "
 
             min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
 
             min576-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
 
-            example-link="'../html-examples/two-col-left-side-menu.html#accordion-example' | relative_url'"
+            example-link="'../html-examples/two-col-left-side-menu.html#grant-rounds-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
 
         </div>
-
-
-        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
-
-            {% include layouts-accordion.html
-            layout-name="twocol-rightbar"
-
-            min1200-visibility="false"
-            min992-visibility="false"
-            min768-visibility="true"
-            min576-visibility="false"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 768px"
-
-
-            min768-img="'../assets/layout-images/accordion-2col-rightsidebar-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/accordion-2col-rightsidebar-finalbp.png' | relative_url "
-
-
-            min768-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Accordions span the full width of the content area.</p>"
-
-            example-link="'../html-examples/two-col-right-sidebar.html#accordion-example' | relative_url'"
-            example-link-text="View layout example"
-
-            %}
-
-        </div>
-
 
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>An accordion is an expandable section with nested content. This component provides content details when
-            opened by users on a content page. It can help to streamline the user experience by keeping content relevant
-            to the user.</p>
+        <p>The grant rounds accordion provides links to a series of connected grant opportunities.</p>
         <h3>When to use this component:</h3>
         <ul>
-            <li>For optional content (e.g. frequently asked questions at the end of a transaction page).</li>
-            <li>For directory type content (e.g. state and territory links).</li>
-            <li>To streamline a transaction process.</li>
+            <li>Used on internal and external grant pages when there are multiple rounds of the grant / opportunity.</li>
+
         </ul>
         <h3>Content rules:</h3>
         <ul>
-            <li>Select &ldquo;open all&rdquo; accordion option if you have 2 or more accordion items.</li>
-            <li>Avoid single accordion items, although they are sometimes used on grant application pages to streamline
-                the application process.</li>
-            <li>Avoid using bold in accordion body content.</li>
+            <li>The grant rounds accordion should be used as a single accordion item with all related rounds listed within that item.</li>
+            <li>The 'open all' link should not be used as the accordion should always be a single item.</li>
         </ul>
 
     </div>

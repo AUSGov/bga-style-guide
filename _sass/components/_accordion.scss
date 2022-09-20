@@ -140,28 +140,33 @@
                 &:last-of-type {
                     border-bottom: none;
                 }
-                .round {
-                    width: 15%;
+                .round-info {
+                    display: flex;
                 }
-                .link {
-                    width: 60%;
+                .round {
+                    white-space: nowrap;
+                    padding-right: 16px;
                 }
                 .tag {
-                    width: 25%;
                     font-size: .75rem;
+                    padding-right: 16px;
 
                     span {
                         background: $bga-red-fail-light;
                         border-radius: 50px;
-                        padding: 6px 16px;
+                        padding: 2px 16px;
+                        display: block;
+                        white-space: nowrap;
                     }
                 }
                 &.open {
+                    background: $bga-green-highlight-light;
+
                     .tag {
                         span {
                             background: $bga-white;
                             border: 1px solid $bga-green-success-dark; 
-                            padding: 5px 15px;   
+                            padding: 1px 15px;   
                         }
                     }
                 }
@@ -199,6 +204,19 @@
             }
             .accordion-body {
                 padding: 0 16px 16px 16px !important;
+            }
+        }
+        &.grant-rounds {
+            .accordion-body {
+                padding: 0 !important;
+            }
+            .round-row {
+                padding: 16px !important;
+                display: block !important;
+
+                .round-info {
+                    padding-bottom: 16px;
+                }
             }
         }
     }
