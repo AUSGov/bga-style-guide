@@ -118,6 +118,66 @@
             }
         }
     } 
+
+    &.grant-rounds {
+        .accordion-toggle {
+            display: none;
+        }
+        .accordion-item {
+            background: $bga-white;
+
+            .accordion-body {
+                padding: 0 !important;
+                font-size: .875rem;
+                line-height: 1.75;
+            }
+            .round-row {
+                display: flex;
+                padding: 16px 24px;
+                border-bottom: 2px solid $bga-blue-black-lightest;
+                width: 100%;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                .round {
+                    width: 15%;
+                }
+                .link {
+                    width: 60%;
+                }
+                .tag {
+                    width: 25%;
+                    font-size: .75rem;
+
+                    span {
+                        background: $bga-red-fail-light;
+                        border-radius: 50px;
+                        padding: 6px 16px;
+                    }
+                }
+                &.open {
+                    .tag {
+                        span {
+                            background: $bga-white;
+                            border: 1px solid $bga-green-success-dark; 
+                            padding: 5px 15px;   
+                        }
+                    }
+                }
+                &.coming-soon {
+                    .tag {
+                        span {
+                            background: $bga-yellow-highlight-light;
+                        }
+                    }
+                }
+
+            }
+            
+
+        }
+    }
 }
 
 
