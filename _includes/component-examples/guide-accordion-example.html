@@ -1,0 +1,190 @@
+<div class="bga-component-wrapper pb-5">
+    <div class="bga-component bga-guide-accordion m-0">
+
+        <button class="accordion-toggle mt-4 pb-0 px-0 mb-4">
+            <span>Open all</span>
+            <svg class="ms-2" data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16"
+                height="10" viewBox="0 0 16 10">
+                <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z"
+                    transform="translate(16) rotate(90)" fill="#333" />
+            </svg>
+        </button>
+
+        <div class="accordion">
+
+            {% if include.item1 %}
+            <div class="accordion-item" tabindex="-1">
+                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-1">
+                    <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseOne"
+                        aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseOne">
+                        <div class="img-wrapper">
+                            <img src={{ include.img1 }} alt="" />
+                        </div>
+                        <h3 class="pe-4">{{ include.title1 }}</h3>
+                        <p>{{ include.description1 }}</p>
+                    </button>
+                </h5>
+                <div id="{{include.layout-name}}-collapseOne" class="accordion-collapse collapse"
+                    aria-labelledby="{{include.layout-name}}-1">
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+
+                        {% if include.item1-content1 %}
+                            
+                            <div class="guide-tile">
+
+                                <div class="tag {{ include.item1-content1-tag }}">
+                                    {{ include.item1-content1-tag }}
+                                </div>
+
+                                <div class="content">
+                                    {{ include.item1-content1 }}
+                                </div>
+                                <div class="link">
+                                    <a href="">
+                                        <svg id="Icon_arrow_right" data-name="Icon / arrow / right"
+                                            xmlns="http://www.w3.org/2000/svg" width="15.007" height="14.203"
+                                            viewBox="0 0 15.007 14.203">
+                                            <path id="Arrow_Right" data-name="Arrow / Right"
+                                                d="M10.479,8.508H0V5.694H10.478L6.584,1.8,8.375,0l6.632,7.1L8.375,14.2,6.584,12.413Z"
+                                                fill="#333" />
+                                        </svg>{{ include.item1-content1-link }}
+                                    </a>
+                                </div>
+                            </div>
+
+                        {% endif %}
+
+                        {% if include.item1-content2 %}
+                            
+                            <div class="guide-tile">
+
+                                <div class="tag {{ include.item1-content2-tag }}">
+                                    {{ include.item1-content2-tag }}
+                                </div>
+
+                                <div class="content">
+                                    {{ include.item1-content2 }}
+                                </div>
+                                <div class="link">
+                                    <a href="">
+                                        <svg id="Icon_arrow_right" data-name="Icon / arrow / right"
+                                            xmlns="http://www.w3.org/2000/svg" width="15.007" height="14.203"
+                                            viewBox="0 0 15.007 14.203">
+                                            <path id="Arrow_Right" data-name="Arrow / Right"
+                                                d="M10.479,8.508H0V5.694H10.478L6.584,1.8,8.375,0l6.632,7.1L8.375,14.2,6.584,12.413Z"
+                                                fill="#333" />
+                                        </svg>{{ include.item1-content2-link }}
+                                    </a>
+                                </div>
+                            </div>
+
+                        {% endif %}
+
+                        {% if include.item1-content3 %}
+                            
+                            <div class="guide-tile">
+
+                                <div class="tag {{ include.item1-content3-tag }}">
+                                    {{ include.item1-content3-tag }}
+                                </div>
+
+                                <div class="content">
+                                    {{ include.item1-content3 }}
+                                </div>
+                                <div class="link">
+                                    <a href="">
+                                        <svg id="Icon_arrow_right" data-name="Icon / arrow / right"
+                                            xmlns="http://www.w3.org/2000/svg" width="15.007" height="14.203"
+                                            viewBox="0 0 15.007 14.203">
+                                            <path id="Arrow_Right" data-name="Arrow / Right"
+                                                d="M10.479,8.508H0V5.694H10.478L6.584,1.8,8.375,0l6.632,7.1L8.375,14.2,6.584,12.413Z"
+                                                fill="#333" />
+                                        </svg>{{ include.item1-content3-link }}
+                                    </a>
+                                </div>
+                            </div>
+
+                        {% endif %}
+
+                        {% if include.item1-content4 %}
+                            
+                            <div class="guide-tile">
+
+                                <div class="tag {{ include.item1-content4-tag }}">
+                                    {{ include.item1-content4-tag }}
+                                </div>
+
+                                <div class="content">
+                                    {{ include.item1-content4 }}
+                                </div>
+                                <div class="link">
+                                    <a href="">
+                                        <svg id="Icon_arrow_right" data-name="Icon / arrow / right"
+                                            xmlns="http://www.w3.org/2000/svg" width="15.007" height="14.203"
+                                            viewBox="0 0 15.007 14.203">
+                                            <path id="Arrow_Right" data-name="Arrow / Right"
+                                                d="M10.479,8.508H0V5.694H10.478L6.584,1.8,8.375,0l6.632,7.1L8.375,14.2,6.584,12.413Z"
+                                                fill="#333" />
+                                        </svg>{{ include.item1-content4-link }}
+                                    </a>
+                                </div>
+                            </div>
+
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+
+            {% if include.item2 == "true" %}
+            <div class="accordion-item">
+                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-2">
+                    <button class="accordion-button collapsed remove-element-padding p-4" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseTwo"
+                        aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseTwo">
+                        <p class="pe-4"><strong>{{ include.title2 }}</strong></p>
+                    </button>
+                </h5>
+                <div id="{{include.layout-name}}-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="{{include.layout-name=}}-2">
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+
+                        {{ include.content2 }}
+
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+
+            {% if include.item3 == "true" %}
+            <div class="accordion-item">
+                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-3">
+                    <button class="accordion-button collapsed remove-element-padding p-4" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseThree"
+                        aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseThree">
+                        <p class="pe-4"><strong>{{ include.title3 }}</strong></p>
+                    </button>
+                </h5>
+                <div id="{{include.layout-name}}-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="{{include.layout-name}}-3">
+
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+
+                        {{ include.content3 }}
+
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+
+
+        </div>
+
+
+    </div>
+</div>

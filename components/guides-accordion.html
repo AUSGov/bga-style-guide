@@ -1,0 +1,191 @@
+---
+
+layout: content-tagged
+title: Guides accordion
+description: Group links to related content in an accordion.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        md-visibility="true"
+        final-visibility="true"
+        breakpoint-final="768"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include component-examples/guide-accordion-example.html
+
+                layout-name="guide-accordion"
+
+                item1="teal"
+                
+                img1="'../assets/refresh-illustrations/signpost.svg' | relative_url"
+                title1="1. Make key decisions"
+                description1="The decisions you make early on can affect many areas of your business. Including the licences you need, how much tax you pay and the volume of paperwork."
+
+                item1-content1="<h4>Decide on a business structure</h4><p>The main structures are sole trader, partnership, company or trust. Choosing a structure for your business affects your tax, paperwork and finances. Consider getting expert advice to help you.</p>"
+                item1-content1-tag="Required"
+                item1-content1-link="Business structures"
+
+                item1-content2="<h4>Are you an employee or contractor?</h4><p>If you're working on your own you'll need to know your worker status. Find out if you're an independent contractor or an employee before entering into a contract.</p>"
+                item1-content2-tag="Required"
+                item1-content2-link="How to choose a business name"
+
+                item1-content3="<h4>Choose your business location</h4><p>Each business has different needs for storage, equipment, or just being close to the right customers. Consider what’s important for your business before you decide where you’ll be based.</p>"
+                item1-content3-tag="Recommended"
+                item1-content3-link="Choose your business location"
+
+                item1-content4="<h4>Learn how to choose a business name</h4><p>There may be more to choosing a business name than you think. Consider whether the name is unique, available to use or exists as a protected trade mark before you decide.</p>"
+                item1-content4-tag="Recommended"
+                item1-content4-link="How to choose a business name"
+
+                
+
+                classes="teal"
+
+                %}
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/cecf8106-009b-421e-a55e-101bc2acd4cf'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Accordions can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - two thirds width layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left side menu layout</a> .</p>
+
+
+        {% include layouts-dropdown.html
+        single-col-twothirds-visibility="true"
+        two-col-leftmenu-visibility="true"
+        %}
+
+
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/grantround-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/grantround-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/grantround-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/grantround-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#grant-rounds-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/grantround-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/grantround-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/grantround-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The grant rounds accordion spans the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#grant-rounds-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>The grant rounds accordion provides links to a series of connected grant opportunities.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used on internal and external grant pages when there are multiple rounds of the grant / opportunity.</li>
+
+        </ul>
+        <h3>Content rules:</h3>
+        <ul>
+            <li>The grant rounds accordion should be used as a single accordion item with all related rounds listed within that item.</li>
+            <li>The 'open all' link should not be used as the accordion should always be a single item.</li>
+        </ul>
+
+    </div>
