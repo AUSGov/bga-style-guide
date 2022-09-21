@@ -18,16 +18,19 @@
     }
     .accordion {
         text-align: left;
-        border-top: $bga-blue-black-lightest solid 2px;
     }
     .accordion-item {
         border: none;
-        background: $bga-blue-black-lightest;
-        border-bottom: $bga-blue-black-lightest solid 2px;
+        background: $bga-white;
+        border: $bga-blue-border solid 1px;
+        border-left: solid $bga-teal-highlight-dark 8px;
+        border-radius: 0;
         
         &:last-of-type {
             .accordion-button {
                 border-radius: 0;
+                padding: 0;
+                text-decoration: none;
             }
         }
         &:first-of-type {
@@ -39,29 +42,31 @@
             outline: none; 
         }
         &:hover {
-            border-bottom: $bga-yellow-links-background solid 4px;
+            text-decoration: none;
         }
         &.show {
-            border-bottom: $bga-yellow-links-background solid 4px;
+            text-decoration: none;
         }
 
         .accordion-button {
-            background: $bga-white;
-            font-weight: 600;
-            color: $bga-blue-black-dark;
-            justify-content: space-between;
+            background: $bga-teal-highlight-light;
             
+            .img-wrapper {
+                background: $bga-white;
+                width: 250px;
+                flex-shrink: 0;
+            }
+            .title-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+            .chevron-wrapper {
+                background: $bga-teal-highlight-mid;
+                height: 100%;
+            }
             &::after {
-                background-color: $bga-yellow-highlight-dark;
-                background-image: url(../assets/Chevron-down-black.svg);
-                background-position: center center;
-                background-size: 16px 10px;
-                height: 48px;
-                width: 48px;
-                border-radius: 100px;
-                box-shadow: $bga-btn-boxshadow;
-                margin: auto 0;
-                
+                display: none;
             }
             &:focus {
                 box-shadow: none;
@@ -74,21 +79,14 @@
                 background: $bga-white;
                 text-decoration: underline;
                 
-                &::after {
-                    background-color: $bga-yellow-links-background;
-                }
             }
             &:not(.collapsed) {
-                background-color: $bga-blue-black-lightest;
+                background-color: $bga-white;
                 box-shadow: none;
 
                 &:hover {
                     border-bottom: none;
-                    background: $bga-blue-black-lightest;
-                }
-                &::after {
-                    box-shadow: -2px -2px 3px 0px rgba(51, 51, 51, 0.2);
-                    background-color: $bga-yellow-links-background;
+                    background: $bga-white;
                 }
             }
     
@@ -119,70 +117,7 @@
         }
     } 
 
-    &.grant-rounds {
-        .accordion-toggle {
-            display: none;
-        }
-        .accordion-item {
-            background: $bga-white;
 
-            .accordion-body {
-                padding: 0 !important;
-                font-size: .875rem;
-                line-height: 1.75;
-            }
-            .round-row {
-                display: flex;
-                padding: 16px 24px;
-                border-bottom: 2px solid $bga-blue-black-lightest;
-                width: 100%;
-
-                &:last-of-type {
-                    border-bottom: none;
-                }
-                .round-info {
-                    display: flex;
-                }
-                .round {
-                    white-space: nowrap;
-                    padding-right: 16px;
-                }
-                .tag {
-                    font-size: .75rem;
-                    padding-right: 16px;
-
-                    span {
-                        background: $bga-red-fail-light;
-                        border-radius: 50px;
-                        padding: 2px 16px;
-                        display: block;
-                        white-space: nowrap;
-                    }
-                }
-                &.open {
-                    background: $bga-green-highlight-light;
-
-                    .tag {
-                        span {
-                            background: $bga-white;
-                            border: 1px solid $bga-green-success-dark; 
-                            padding: 1px 15px;   
-                        }
-                    }
-                }
-                &.coming-soon {
-                    .tag {
-                        span {
-                            background: $bga-yellow-highlight-light;
-                        }
-                    }
-                }
-
-            }
-            
-
-        }
-    }
 }
 
 
@@ -204,19 +139,6 @@
             }
             .accordion-body {
                 padding: 0 16px 16px 16px !important;
-            }
-        }
-        &.grant-rounds {
-            .accordion-body {
-                padding: 0 !important;
-            }
-            .round-row {
-                padding: 16px !important;
-                display: block !important;
-
-                .round-info {
-                    padding-bottom: 16px;
-                }
             }
         }
     }

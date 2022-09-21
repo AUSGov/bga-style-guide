@@ -13,16 +13,22 @@
         <div class="accordion">
 
             {% if include.item1 %}
-            <div class="accordion-item" tabindex="-1">
+            <div class="accordion-item mb-4" tabindex="-1">
                 <h5 class="accordion-header pt-0" id="{{include.layout-name}}-1">
-                    <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseOne"
-                        aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseOne">
+                    <button tabindex="0" class="accordion-button collapsed remove-element-padding" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseOne" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseOne">
                         <div class="img-wrapper">
                             <img src={{ include.img1 }} alt="" />
                         </div>
+                        <div class="title-wrapper px-4">
                         <h3 class="pe-4">{{ include.title1 }}</h3>
                         <p>{{ include.description1 }}</p>
+                        </div>
+                        <div class="chevron-wrapper px-5">
+                            <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18">
+                                <path data-name="Chevron / Down" d="M10.851,14,0,24.531,3.575,28,18,14,3.575,0,0,3.469Z" transform="translate(28) rotate(90)" fill="#333"/>
+                              </svg>
+                              
+                        </div>
                     </button>
                 </h5>
                 <div id="{{include.layout-name}}-collapseOne" class="accordion-collapse collapse"
