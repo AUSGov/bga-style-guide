@@ -647,6 +647,10 @@ table.table {
         &:not(.collapsed) {
             background: $bga-white;
             box-shadow: none;
+
+            &::after {
+                transform: scaleY(-1);
+            }
         }
 
         &::after {

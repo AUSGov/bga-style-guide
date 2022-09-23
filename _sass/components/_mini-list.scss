@@ -30,6 +30,12 @@
             &:not(.collapsed) {
                 background-color: $bga-blue-background-light;
                 box-shadow: none;
+
+                &::after {
+                    transform: scaleY(-1);
+                }
+
+                
             }
             &::after {
                 background-image: url(../assets/Chevron-down-black.svg);
