@@ -2796,6 +2796,8 @@ table.table { margin-bottom: 32px; }
 
 .layout-example .accordion-button:not(.collapsed) { background: #ffffff; box-shadow: none; }
 
+.layout-example .accordion-button:not(.collapsed)::after { transform: scaleY(-1); }
+
 .layout-example .accordion-button::after { background-image: url(../assets/Chevron-down-black.svg); }
 
 .layout-example .accordion-button:focus { box-shadow: none; }
@@ -4654,7 +4656,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-default-accordion .accordion-item .accordion-button:not(.collapsed):hover { border-bottom: none; background: #E4E6EA; }
 
-.bga-default-accordion .accordion-item .accordion-button:not(.collapsed)::after { box-shadow: -2px -2px 3px 0px rgba(51, 51, 51, 0.2); background-color: #FFCF3B; }
+.bga-default-accordion .accordion-item .accordion-button:not(.collapsed)::after { box-shadow: 2px -2px 3px 0px rgba(51, 51, 51, 0.2); background-color: #FFCF3B; transform: scaleY(-1); }
 
 .bga-default-accordion .accordion-item .accordion-button p { display: block; width: 100%; }
 
@@ -4777,6 +4779,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .mini-list .accordion-item .accordion-button { background: #E3ECF6; font-weight: 600; color: #333333; align-items: flex-start; justify-content: space-between; }
 
 .mini-list .accordion-item .accordion-button:not(.collapsed) { background-color: #C8D9EE; box-shadow: none; }
+
+.mini-list .accordion-item .accordion-button:not(.collapsed)::after { transform: scaleY(-1); }
 
 .mini-list .accordion-item .accordion-button::after { background-image: url(../assets/Chevron-down-black.svg); background-position: center center; margin: auto 0; }
 
