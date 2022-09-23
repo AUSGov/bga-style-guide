@@ -1,55 +1,59 @@
 .bga-footer-example {
     background: $bga-blue-links;
-    color: $bga-white;  
+    color: $bga-white;
     display: flex;
-    
+
     .footer-wrapper {
         display: flex;
         width: 66.66%;
     }
 
+
+
     .footer-links {
         width: 33.33%;
-        
+
         h3 {
             color: $bga-white;
 
         }
+
         ul {
             margin: 0;
             padding: 0;
-            
+
             li {
                 display: block;
                 color: $bga-white;
                 text-indent: 0;
-                margin: 0 0 24px 24px;
+                margin: 0 0 24px 18px;
                 padding: 0;
 
                 &:last-of-type {
                     margin-bottom: 0 !important;
-                }  
-            
+                }
+
                 &::before {
                     display: none;
                 }
-                
+
                 a {
                     background: url(../assets/Chevron-right-white.svg) no-repeat;
                     background-position: left 0 top 5px;
-                    padding: 0 0 0 24px;
+                    padding: 0 0 0 18px;
                     text-indent: 0;
-                    margin-left: -24px;
+                    margin-left: -18px;
                     display: block;
                     line-height: 26px;
                     font-weight: 400;
-                    
+
                     &:focus {
                         border: 2px solid $bga-white;
                         border-radius: 4px;
                         outline: none;
                         text-decoration: underline;
                     }
+
                     &:hover {
                         border: none;
                         text-decoration: underline !important;
@@ -59,16 +63,21 @@
             }
         }
     }
-    
+
+    .footer-divider {
+        display: none;
+    }
+
     .contact-social-wrapper {
+
         width: 33.33%;
     }
 
-    .call-us-wrapper {    
+    .call-us-wrapper {
         a {
             font-size: 24px;
             font-weight: 600;
-            
+
             &:focus {
                 border: 2px solid $bga-white;
                 border-radius: 4px;
@@ -77,6 +86,7 @@
                 text-decoration-thickness: 1px;
                 text-underline-offset: 2px;
             }
+
             &:hover {
                 border: none;
                 text-decoration: underline !important;
@@ -86,15 +96,15 @@
             }
         }
     }
-    
+
     .social-links-wrapper {
         width: 100%;
-        
+
         .footer-social {
             display: flex;
             margin: 0;
             padding: 0;
-            
+
             li {
                 display: block;
                 width: 48px;
@@ -102,29 +112,29 @@
                 background: $bga-blue-footer;
                 border: solid $bga-white 2px;
                 border-radius: 50%;
-                padding: 0; 
+                padding: 0;
 
                 &::before {
                     display: none;
                 }
-                
+
                 svg {
                     fill: $bga-white;
                     width: 22px;
                     height: 100%;
                     margin: auto;
                     display: block;
-                    
+
                     &.linkedin {
                         margin: -2px auto 0;
                     }
                 }
-                
+
                 &:focus {
                     border: 3px solid $bga-white;
                     background: $bga-white;
                     outline: none;
-                    
+
                     svg {
                         fill: $bga-blue-footer;
                     }
@@ -134,32 +144,33 @@
                     border: solid $bga-white 3px;
                     cursor: pointer;
                     background: $bga-white;
-                    
+
                     svg {
                         fill: $bga-blue-footer;
                     }
-                    
+
                 }
             }
         }
-        
+
     }
-    
+
     .subscribe-wrapper {
-        background: $bga-white;  
-        
+        background: $bga-white;
+
         p {
             color: $bga-black;
         }
+
         .subscribe-form {
             text-align: left;
-            
+
             a {
-                color: $bga-blue-links !important;
+                color: $bga-blue-links  !important;
                 text-decoration: underline;
                 white-space: nowrap;
                 display: inline-block;
-                
+
                 &:focus {
                     color: $bga-black;
                     border: solid $bga-blue-focus 2px;
@@ -167,6 +178,7 @@
                     border-radius: 4px;
                     outline: none;
                 }
+
                 &:hover {
                     color: $bga-black;
                     cursor: pointer;
@@ -176,20 +188,21 @@
         }
     }
 }
+
 .copyright {
-     background: $bga-blue-footer; 
-     color: $bga-white;
-    
+    background: $bga-blue-footer;
+    color: $bga-white;
+
     p {
         color: $bga-white;
     }
 
-     svg {
-         width: 90%;
-         max-width: 300px;
-         height: auto;
-         margin-bottom: 32px;
-     } 
+    svg {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 32px;
+    }
 }
 
 // Mixins for smaller screen sizes and media queries
@@ -199,42 +212,60 @@
 
         .footer-wrapper {
             width: 100%;
-            border-bottom: solid 1px $bga-white;
-            margin-bottom: 32px !important;
             padding-bottom: 32px !important;
         }
+
+        .footer-divider {
+            display: block;
+            padding: 0 16px;
+        }
+
+        hr {
+            display: block;
+            border-top: solid 1px $bga-white;
+                opacity: 1;
+                margin: 0;
+            padding: 0;
+        }
+
         .footer-links {
             ul {
                 li {
-                    margin: 0 0 16px 24px;
+                    margin: 0 0 16px 18px;
                 }
             }
         }
+
         .contact-social-wrapper {
+
+            padding-top: 32px !important;
             width: 100%;
             display: flex;
 
             .contact-social {
                 width: 50%
             }
+
             .subscribe-wrapper {
                 width: 50%;
             }
         }
-        
+
     }
 }
 
 @mixin bga-site-footer-bp-576 () {
     .bga-footer-example {
         padding-bottom: 32px !important;
+
         .footer-wrapper {
-            display: block; 
+            display: block;
         }
+
         .footer-links {
             width: 100%;
-            padding-bottom: 32px !important; 
-            
+            padding-bottom: 32px !important;
+
             &:last-of-type {
                 padding-bottom: 0 !important;
             }
@@ -246,30 +277,40 @@
             .contact-social {
                 width: 100%
             }
+
             .subscribe-wrapper {
                 width: 100%;
             }
         }
     }
+
     .copyright {
-        padding: 32px !important;
+        padding: 32px 0 !important;
     }
 }
 
 @mixin bga-site-footer-bp-350 () {
     .bga-footer-example {
+        .social-links-wrapper {
+            .footer-social {
+                li {
+                    margin-right: 16px !important;
+                }
+            }
+        }
         .subscribe-wrapper {
             button {
                 font-size: .875rem;
                 line-height: 1.125rem;
                 padding: 12px 24px;
             }
+
             a {
                 font-size: .875rem;
                 line-height: 1.125rem;
             }
         }
-        
+
     }
 }
 
@@ -286,11 +327,18 @@
 
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-768, .component-example.bp-576, .component-example.bp-350, .component-example.bp-below350, .component-example.small-screen {
+.component-example.bp-768,
+.component-example.bp-576,
+.component-example.bp-350,
+.component-example.bp-below350,
+.component-example.small-screen {
     @include bga-site-footer-bp-768();
 }
 
-.component-example.bp-576, .component-example.bp-350, .component-example.bp-below350, .component-example.small-screen {
+.component-example.bp-576,
+.component-example.bp-350,
+.component-example.bp-below350,
+.component-example.small-screen {
     @include bga-site-footer-bp-576();
 }
 
@@ -305,7 +353,7 @@
 }
 
 //Media queries for HTML example pages
-@media (max-width: 992px)  {
+@media (max-width: 992px) {
     @include bga-site-footer-bp-768();
 }
 

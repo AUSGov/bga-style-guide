@@ -12,7 +12,24 @@ description: Example content placement for this layout.
 
         <div class="remove-top-spaces col-12">
 
-            <h2>First element in the content area has no padding or margin above.</h2>
+            <h2>Recommended for you</h2>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="feature-example-wrapper full-width-layout">
+                        {% include component-examples/feature-image-pathway-example.html
+                        image="'../assets/potter-on-computer.jpg' | relative_url "
+                        title="Feature image pathway heading Lorem ipsum dolor sit amet"
+                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
+                        quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                        %}
+                    </div>
+
+                </div>
+            </div>
+
+
+            <h2>Popular information</h2>
 
             <div class="hero-pathway-block" id="hero-layout-example">
 
@@ -76,160 +93,56 @@ description: Example content placement for this layout.
 
 
             <div class="coloured-bkg-wrapper">
+        
+                <h2>Find government assistance, grants and events</h2>
 
-                <div class="row">
-                    <h2>First element has standard margins and padding for that element.</h2>
 
-                    <div class="hero-pathway-block">
+                <div class="standard-pathway-block" id="standard-pathway-example">
 
-                        <div class="row">
+                    <div class="row">
 
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                {% include component-examples/hero-pathway-example.html
-                                classes="border-green small-hero"
-                                title="Hero pathway heading Lorem ipsum dolor sit amet"
-                                description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin
-                                mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
-                                %}
-                            </div>
-
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                {% include component-examples/hero-pathway-example.html
-                                classes="border-blue small-hero external"
-                                title="Lorem ipsum dolor sit amet"
-                                description="Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
-                                %}
-                            </div>
-
+                       
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            {% include component-examples/standard-pathway-example.html
+                            title="Grants and programs finder"
+                            description="Find grants, funding and support programs to help your business grow and succeed!"
+                            %}
                         </div>
 
+
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            {% include component-examples/standard-pathway-example.html
+                            title="Expertise and advice finder"
+                            description="You don’t have to do it alone! Use our search to find a business adviser or expert."
+                            %}
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            {% include component-examples/standard-pathway-example.html
+                            title="Events and training finder"
+                            description="Use our search to find business events and training to improve your skills and grow your network."
+                            %}
+                        </div>
+
+
+
+
                     </div>
+
+
+
+
 
                 </div>
 
             </div>
 
 
-
-            <div class="standard-pathway-block" id="standard-pathway-example">
-
-                <div class="row">
-
-                    <h2>Standard pathway example</h2>
-
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        {% include component-examples/standard-pathway-example.html
-                        title="Standard pathway title"
-                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
-                        quam, rhoncus feugiat euismod nec, imperdiet in lorem."
-                        %}
-                    </div>
-
-
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        {% include component-examples/standard-pathway-example.html
-                        title="Standard pathway title Lorem ipsum dolor et"
-                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
-                        quam, rhoncus feugiat euismod nec, imperdiet in lorem."
-                        %}
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        {% include component-examples/standard-pathway-example.html
-                        title="Standard pathway title Lorem ipsum dolor et"
-                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
-                        quam, rhoncus feugiat euismod nec, imperdiet in lorem. Morbi sit amet nunc eget. This one is
-                        extra extra extra long."
-                        %}
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        {% include component-examples/standard-pathway-example.html
-                        title="Standard pathway title Lorem"
-                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
-                        %}
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        {% include component-examples/standard-pathway-example.html
-                        title="Standard pathway title Lorem"
-                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
-                        %}
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="coloured-bkg-wrapper">
-
-                <div class="light-pathway-block" id="light-pathway-example">
-                    <div class="row ">
-
-                        <h2>Light pathway example</h2>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                            {% include component-examples/light-pathway-example.html
-                            title="Light pathway with internal link"
-                            %}
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                            {% include component-examples/light-pathway-example.html
-                            title="Light pathway with external link"
-                            external-link="example.gov.au"
-                            classes="external"
-                            %}
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                            {% include component-examples/light-pathway-example.html
-                            title="Light pathway with internal link"
-                            %}
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                            {% include component-examples/light-pathway-example.html
-                            title="Light pathway with external link"
-                            external-link="example.gov.au"
-                            classes="external"
-                            %}
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                            {% include component-examples/light-pathway-example.html
-                            title="Light pathway with internal link"
-
-                            %}
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                            {% include component-examples/light-pathway-example.html
-                            title="Light pathway with external link"
-                            external-link="example.gov.au"
-                            classes="external"
-                            %}
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                            {% include component-examples/light-pathway-example.html
-                            title="Light pathway with internal link"
-                            %}
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-            </div>
 
 
             <div class="image-pathway-block" id="image-pathway-example">
 
-                <h2>Image pathway example</h2>
+                <h2>News</h2>
 
                 <div class="row">
                     <div class="col-12 col-sm-6 col-lg-4">
@@ -266,25 +179,8 @@ description: Example content placement for this layout.
 
 
 
-            <h2 id="featurebox-example">Feature box example</h2>
 
-            <div class="row">
-                <div class="col-12">
-                    {% include component-examples/featurebox-example.html
-                    title="Tip - Assess your business needs"
-                    content="<p>Before you start, it’s a good idea to assess your business needs so you can choose the
-                        right
-                        person for your business. Think about: </p>
-                    <ul>
-                        <li>the tasks you need the employee to do</li>
-                        <li>any skills and qualifications they’ll require</li>
-                        <li>how busy the job will be</li>
-                    </ul>"
-                    icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
-                    classes="full-width-layout orange"
-                    %}
-                </div>
-            </div>
+
 
 
 
@@ -292,7 +188,7 @@ description: Example content placement for this layout.
                 <div class="col-12" id="utilities-example">
                     <div class="d-flex justify-content-end">
                         {% include component-examples/print-share-example.html %}
-                        </div>
+                    </div>
                 </div>
             </div>
 
