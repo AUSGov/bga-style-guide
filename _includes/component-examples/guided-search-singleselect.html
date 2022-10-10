@@ -1,0 +1,107 @@
+<div class="guided-search-wrapper {{ include.classes}} px-4 pt-4 mb-5">
+
+    {% if include.page-title %}
+    <h1>{{ include.page-title }}</h1>
+    {% endif %}
+    <div class="bga-component guided-search multiselect mb-4">
+
+        <div class="component-content px-4 py-5 remove-element-padding">
+
+            {% if include.question %}
+            <h2>{{ include.question }}</h2>
+            {% endif %}
+
+            {% if include.description %}
+            {{ include.description }}
+            {% endif %}
+
+            <div class="single-select-wrapper">
+
+                <select class="form-select mb-5">
+                    
+                    <option value="" class="select-option">Select industry</option>
+                    
+                    {% if include.select1 %}
+                        <option class="select-option">{{ include.select1 }}</option>
+                    {% endif %}
+
+                    {% if include.select2 %}
+                        <option class="select-option">{{ include.select2 }}</option>
+                    {% endif %}
+
+                    {% if include.select3 %}
+                        <option class="select-option">{{ include.select3 }}</option>
+                    {% endif %}
+
+                    {% if include.select4 %}
+                        <option class="select-option">{{ include.select4 }}</option>
+                    {% endif %}
+
+                    {% if include.select5 %}
+                        <option class="select-option">{{ include.select5 }}</option>
+                    {% endif %}
+
+                    {% if include.select6 %}
+                        <option class="select-option">{{ include.select6 }}</option>
+                    {% endif %}
+
+                    {% if include.select7 %}
+                        <option class="select-option">{{ include.select7 }}</option>
+                    {% endif %}
+
+                    {% if include.select8 %}
+                        <option class="select-option">{{ include.select8 }}</option>
+                    {% endif %}
+
+                    
+
+                </select>
+
+                
+
+
+            </div>
+
+            {% if include.toggle %}
+            <div class="toggle secondary-toggle">
+            <div class="custom-control custom-switch toggle-question">
+                <label class="custom-control-label" for="secondary-toggle">{{ include.toggle }}</label>
+                <input type="checkbox" class="custom-control-input" id="secondary-toggle" toggle-filter-type="rural" filter-value="51">
+            </div>
+            </div>
+            {% endif %}
+
+            <div class="button-group">
+
+                {% if include.start-again %}
+                <a href="" class="start-again me-5">Start again<svg class="ms-1" xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16.01" viewBox="0 0 16 16.01">
+                        <path id="Path_10264" data-name="Path 10264"
+                            d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z"
+                            transform="translate(-4.01 -4)" fill="#2157aa" />
+                    </svg>
+                </a>
+                {% endif %}
+
+                {% if include.previous %}
+                <a href="" class="me-5">Previous</a>
+                {% endif %}
+
+
+                <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">{{ include.button }}</a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    {% if include.need %}
+    {{ include.need }}
+    {% endif %}
+
+    {% if include.get %}
+    {{ include.get }}
+    {% endif %}
+
+</div>

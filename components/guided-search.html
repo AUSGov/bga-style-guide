@@ -2,7 +2,7 @@
 
 layout: content-tagged
 title: Guided search
-description: Guide the users through a series of questions to help them find relenvant information.
+description: Guide users through a series of questions to help them find relevant information.
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -47,33 +47,80 @@ classes="in-page"
 
                 <h3 class="ms-4">Multi-select questions</h3>
                 
-                <div class="page-header-wrapper tool-stepped-nav teal">
-                {% include component-examples/stepped-navigation-example.html
-                    
-                    classes="teal p-5"
-                %}
-                </div>
+                    {% include component-examples/guided-search-multiselect.html
+                        page-title="Tool title"
+                        question="I am interested in"
+                        description="<p class='mini'>Select one or more options</p>"
+                        start-again="true"
+                        previous="true"
+                        button="Next"
+
+                        select1="Advice"
+                        select2="Concession"
+                        select3="Funding"
+                        select4="Mentorship"
+                        select5="Scholarship"
+                        select6="Subsidy"
+                        select7="Tax rebate"
+                        select8="Other"
+                    %}
+
 
                 <h3 class="ms-4">Single select questions</h3>
 
-                {% include component-examples/stepped-navigation-example.html
-                   
-                    classes="white p-5"
+                {% include component-examples/guided-search-singleselect.html
+                    page-title="Tool title"
+                    question="My business is in the industry of"
+                    start-again="true"
+                    previous="true"
+                    button="Next"
+
+                    select1="Accommodation and food services"
+                    select2="Administrative and support services"
+                    select3="Arts and recreation services"
+                    select4="Construction"
+                    select5="Defence"
+                    select6="Electricity, gas, water and waste services"
+                    select7="Financial and insurance services"
+                    select8="Information media and telecommunications"
                 %}
 
-                <h3 class="ms-4">Single select questions</h3>
+              
 
-                {% include component-examples/stepped-navigation-example.html
-                   
-                    classes="white p-5"
+                <h3 class="ms-4">Toggle questions</h3>
+                
+                {% include component-examples/guided-search-toggle.html
+                    page-title="Tool title"
+                    start-again="true"
+                    previous="true"
+                    button="Next"
+
+                    toggle="I am of Aboriginal or Torres Strait Islander origin"
                 %}
 
-                <h3 class="ms-4">Single select questions</h3>
+                
 
-                {% include component-examples/stepped-navigation-example.html
-                   
-                    classes="white p-5"
+                <h3 class="ms-4">Secondary toggle questions</h3>
+                
+                {% include component-examples/guided-search-singleselect.html
+                    page-title="Tool title"
+                    question="My business is in the industry of"
+                    start-again="true"
+                    previous="true"
+                    button="View results"
+
+                    select1="Accommodation and food services"
+                    select2="Administrative and support services"
+                    select3="Arts and recreation services"
+                    select4="Construction"
+                    select5="Defence"
+                    select6="Electricity, gas, water and waste services"
+                    select7="Financial and insurance services"
+                    select8="Information media and telecommunications"
+
+                    toggle="Exclude grants for all industries"
                 %}
+                
 
 
             </div>
