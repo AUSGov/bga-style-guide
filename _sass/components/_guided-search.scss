@@ -1,131 +1,245 @@
-.guided-search-wrapper {
-    
-    background: linear-gradient(180deg, rgba(158,210,211,1) 0%, rgba(191,226,226,1) 100%);
+    .guided-search-wrapper {
 
-    .component-content {
-        background: $bga-teal-highlight-light;
-    }
-    .multi-select-wrapper {
-        width: 100%;
-        max-width: 900px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 auto 16px auto;
-    }
-    .multi-select {
-        background: $bga-white url(../assets/icon-plus-blue.svg) no-repeat;
-        background-size: 14px 14px;
-        background-position: center left 16px;
-        border: solid 2px $bga-blue-links;
-        border-radius: 50px;
-        font-size: 0.9375rem;
-        cursor: pointer;
-        box-shadow: $bga-btn-boxshadow;
-        padding: 8px 16px 8px 38px;
-        display: block;
-        margin: 0 16px 16px 0;
+        background: linear-gradient(180deg, rgba(158, 210, 211, 1) 0%, rgba(191, 226, 226, 1) 100%);
 
-        &:focus-visible {
-            background: $bga-blue-footer url(../assets/icon-plus-white.svg) no-repeat;
-            background-size: 14px 14px;
-            background-position: center left 16px;
-            border: solid 2px $bga-blue-footer;
-            color: $bga-white;
-            outline: none;
+        .component-content {
+            background: $bga-teal-highlight-light;
         }
-        &:hover {
-            background: $bga-blue-links url(../assets/icon-plus-white.svg) no-repeat;
+
+        .multi-select-wrapper {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto 16px auto;
+        }
+
+        .multi-select {
+            background: $bga-white url(../assets/icon-plus-blue.svg) no-repeat;
             background-size: 14px 14px;
             background-position: center left 16px;
             border: solid 2px $bga-blue-links;
-            color: $bga-white;
-        }
-    } 
+            border-radius: 50px;
+            font-size: 0.9375rem;
+            cursor: pointer;
+            box-shadow: $bga-btn-boxshadow;
+            padding: 8px 16px 8px 38px;
+            display: block;
+            margin: 0 16px 16px 0;
 
-    .form-select {
-        padding: 8px 48px 8px 16px;
-        border: none;
-        border-bottom: 3px solid $bga-blue-links;
-        width: auto;
-
-        &:focus {
-            border-radius: 0;
-            border: none;
-            border-bottom: 3px solid $bga-blue-links;
-        }
-        &:focus-visible {
-            border: $bga-component-focus-border;
-            border-radius: $bga-focus-radius;
-        }
-        
-    }
-
-    .toggle {
-
-        .custom-control {
-            margin-top: 16px;
-        }
-
-        .custom-control-input {
-            position: absolute;
-            z-index: -1;
-            opacity: 0;
-
-        }
-
-        .custom-control-label {
-            position: relative;
-            padding-left: 52px;
-            font-weight: 400;
-
-            &:before {
-                width: 44px;
-                height: 16px;
-                display: block;
-                background: $bga-blue-black-light;
-                border: none;
-                margin-top: 4px;
-                border-radius: 50px;
-                position: absolute;
-                left: 0;
-                content: "";
+            &:focus-visible {
+                background: $bga-blue-footer url(../assets/icon-plus-white.svg) no-repeat;
+                background-size: 14px 14px;
+                background-position: center left 16px;
+                border: solid 2px $bga-blue-footer;
+                color: $bga-white;
+                outline: none;
             }
 
-            &:after {
-                background: url(../assets/icon-close-grey.svg) no-repeat $bga-white;
-                background-position: center center;
-                border: solid 2px $bga-blue-black-mid;
-                background-size: 16px 16px;
-                left: 0;
-                top: -4px;
-                width: 30px;
-                height: 30px;
-                display: block;
-                position: absolute;
-                border-radius: 50px;
-                cursor: pointer;
-                content: "";
+            &:hover {
+                background: $bga-blue-links url(../assets/icon-plus-white.svg) no-repeat;
+                background-size: 14px 14px;
+                background-position: center left 16px;
+                border: solid 2px $bga-blue-links;
+                color: $bga-white;
             }
-        }
 
-        &.selected {
-            label {
-                &:after {
-                    background: url(../assets/icon-tick-black.svg) no-repeat $bga-white;
-                    background-position: center center;
-                    border: solid 2px $bga-black;
+            &.selected {
+                background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
+                background-size: 18px 14px;
+                background-position: center left 12px;
+                border: solid 2px $bga-blue-links;
+                color: $bga-white;
+
+                &:focus-visible {
+                    background: $bga-blue-footer url(../assets/icon-tick-white.svg) no-repeat;
                     background-size: 18px 14px;
-                    left: 14px;
+                    background-position: center left 12px;
+                    border: solid 2px $bga-blue-footer;
+                    color: $bga-white;
+                    outline: none;
+                }
+
+                &:hover {
+                    background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
+                    background-size: 18px 14px;
+                    background-position: center left 12px;
+                    border: solid 2px $bga-blue-links;
+                    color: $bga-white;
                 }
             }
         }
-    }
 
-    
-    .button-group {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        .form-select {
+            padding: 8px 48px 8px 16px;
+            border: none;
+            border-bottom: 3px solid $bga-blue-links;
+            width: auto;
+            max-width: 100%;
+
+            &:focus {
+                border-radius: 0;
+                border: none;
+                border-bottom: 3px solid $bga-blue-links;
+            }
+
+            &:focus-visible {
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
+            }
+
+        }
+
+        .toggle {
+            .custom-control {
+                display: inline-flex;
+                flex-wrap: wrap;
+            }
+
+            .custom-control-input {
+                height: 42px;
+                min-width: 66px;
+                order: 2;
+                position: relative;
+                width: 66px;
+                appearance: none;
+                background: none;
+                border: none;
+
+
+                &:before {
+                    width: 66px;
+                    height: 24px;
+                    background: #b3c2d8;
+                    border: none;
+                    display: block;
+                    background: $bga-blue-highlight-shadow;
+                    border: none;
+                    border-radius: 50px;
+                    position: absolute;
+                    left: 0;
+                    content: "";
+                }
+
+                &:after {
+                    background: url(../assets/icon-close-blue.svg) no-repeat $bga-white;
+                    background-position: center center;
+                    border: solid 2px $bga-blue-links;
+                    box-shadow: $bga-btn-boxshadow;
+                    background-size: 14px 14px;
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    display: block;
+                    position: absolute;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    content: "";
+                }
+
+                &:focus-visible {
+                    border: none;
+                    outline: none;
+
+                    &:after {
+                        background: $bga-blue-footer url(../assets/icon-close-white.svg) no-repeat;
+                        background-position: center center;
+                        border: solid 2px $bga-blue-footer;
+                        background-size: 14px 14px;
+                    }
+                }
+
+                &:hover {
+                    &:after {
+                        background: $bga-blue-links url(../assets/icon-close-white.svg) no-repeat;
+                        background-position: center center;
+                        border: solid 2px $bga-blue-links;
+                        background-size: 14px 14px;
+                    }
+                }
+            }
+
+            &.selected {
+                .custom-control-input {
+                    &:after {
+                        background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
+                        background-position: center center;
+                        border: solid 2px $bga-blue-links;
+                        background-size: 18px 14px;
+                        left: auto;
+                        right: 0;
+                    }
+
+                    &:focus-visible {
+                        &:after {
+                            background: $bga-blue-footer url(../assets/icon-tick-white.svg) no-repeat;
+                            background-position: center center;
+                            border: solid 2px $bga-blue-footer;
+                            background-size: 18px 14px;
+                        }
+                    }
+
+                    &:hover {
+                        &:after {
+                            background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
+                            background-position: center center;
+                            border: solid 2px $bga-blue-links;
+                            background-size: 18px 14px;
+                        }
+                    }
+                }
+            }
+
+            .custom-control-label {
+                position: relative;
+                padding-right: 16px;
+            }
+            
+            label {
+                margin-bottom: 16px;
+            }
+            
+            &.toggle-primary {
+                label {
+                    font-size: 2.125rem;
+                    font-weight: 600;
+                    color: $bga-blue-black-dark;
+                    line-height: 1.5;
+                }
+                .custom-control-input {
+                    &:before {
+                        top: calc(50% - 4px);
+                    }
+                    &:after {
+                        top: calc(50% - 12px); 
+                    }
+                }
+            }
+            
+            &.toggle-secondary {
+                label {
+                    font-size: 1.375rem;
+                    font-weight: 600;
+                    color: $bga-blue-black-dark;
+                    line-height: 1.5;
+                }
+                .custom-control-input {
+                    &:before {
+                        top: calc(50% - 14px);
+                    }
+                    &:after {
+                        top: calc(50% - 22px); 
+                    }
+                }
+            }
+
+        }
+
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
-}
