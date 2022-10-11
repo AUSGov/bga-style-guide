@@ -243,3 +243,68 @@
             align-items: center;
         }
     }
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin guided-search-below576 () {
+    .guided-search-wrapper {
+        padding: 24px 0 0 0 !important;
+
+        .component-content {
+            padding: 24px !important;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-left: 24px;
+        }
+        h2 {
+            font-size: 1.75rem;
+        }
+        .toggle {
+            &.toggle-primary {
+                label {
+                    font-size: 1.75rem;
+                }
+            }
+            &.toggle-secondary {
+                padding-top: 8px !important;
+
+                label {
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .mini {
+            margin-bottom: 16px;
+        }
+        .button-group {
+            .previous, .start-again {
+                font-size: .875rem; 
+                margin-right: 16px !important;
+
+                svg {
+                    display: none;
+                }
+            }
+        }
+        .multi-select-wrapper {
+            margin: 0 auto 8px auto;
+        }
+        .form-select {
+            margin-bottom: 24px !important;
+        }
+        
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include guided-search-below576();
+}
+
+
+// MEDIA Queries for HTML demo pages.
+@media(max-width: 576px) {
+    @include guided-search-below576();
+}
