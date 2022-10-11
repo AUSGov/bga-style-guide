@@ -45,11 +45,13 @@
             text-decoration: none;
         }
         &.show {
-            background: pink;
+            background: $bga-white;
         }
 
         .accordion-button {
             background: $bga-teal-highlight-light;
+            display: flex;
+            align-items: stretch;
             
             .img-wrapper {
                 background: $bga-white;
@@ -60,10 +62,20 @@
                 display: flex;
                 flex-wrap: wrap;
 
+                    h3 {
+                        text-decoration: none;
+                    }
+                    p {
+                        text-decoration: none;
+                        display: block;
+                        width: 100%;
+                    }
             }
+
             .chevron-wrapper {
                 background: $bga-teal-highlight-mid;
-                height: 100%;
+                display: flex;
+                align-items: center;
             }
             &::after {
                 display: none;
@@ -77,42 +89,52 @@
             }
             &:hover {
                 background: $bga-white;
-                text-decoration: underline;
-                
+                text-decoration: none;
+
+                h3 {
+                    text-decoration: underline;
+                }
+                .chevron-wrapper {
+                    background: $bga-white;
+
+                    svg {
+                        transform: scaleY(-1);
+                    }
+                }
+
             }
             &:not(.collapsed) {
                 background-color: $bga-white;
                 box-shadow: none;
+
+                .chevron-wrapper {
+                    background: $bga-white;
+
+                    svg {
+                        transform: scaleY(-1);
+                    }
+                }
+
+                p {
+                    color: $bga-black;
+                }
 
                 &:hover {
                     border-bottom: none;
                     background: $bga-white;
                 }
             }
-    
-            p {
-                display: block;
-                width: 100%;
-            }
         }
         .accordion-body {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
 
-            a {
-                cursor: pointer;
-                color: $bga-blue-links;
-                text-decoration: underline;
-
-                &:focus-visible {
-                    border: $bga-text-focus-border;
-                    background: $bga-white;
-                    border-radius: $bga-focus-radius;
-                    outline: none;
-                }
-                &:hover {
-                    background: $bga-white;
-                }
+            .guide-tile {
+                background: $bga-teal-highlight-light;
+                flex: 0 0 auto;
+                width: calc(33.33333333% - 16px);
+                margin-bottom: 24px;
             }
         }
     } 
@@ -122,35 +144,17 @@
 
 
 // Mixins for smaller screen sizes
-@mixin accordion-below576 () {
-    .bga-default-accordion {
-        .accordion-item {
-            .accordion-button {
-                font-size: 1rem;
-                padding: 16px !important;
-
-                p {
-                    padding-right: 16px !important;
-                }
-                &::after {
-                    height: 32px;
-                    width: 32px;
-                }
-            }
-            .accordion-body {
-                padding: 0 16px 16px 16px !important;
-            }
-        }
-    }
+@mixin guide-accordion-below576 () {
+   
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-below576,
 .component-example.small-screen {
-    @include accordion-below576();
+    @include guide-accordion-below576();
 }
 
 // Media queries for HTML example pages
 @media (max-width: 576px) {
-    @include accordion-below576();
+    @include guide-accordion-below576();
 }

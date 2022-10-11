@@ -14,6 +14,8 @@
 
             {% if include.item1 %}
             <div class="accordion-item mb-4" tabindex="-1">
+                
+                <!-- Item header -->
                 <h5 class="accordion-header pt-0" id="{{include.layout-name}}-1">
                     <button tabindex="0" class="accordion-button collapsed remove-element-padding" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseOne" aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseOne">
                         <div class="img-wrapper">
@@ -31,13 +33,15 @@
                         </div>
                     </button>
                 </h5>
+
+                <!-- Item body-->
                 <div id="{{include.layout-name}}-collapseOne" class="accordion-collapse collapse"
                     aria-labelledby="{{include.layout-name}}-1">
-                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                    <div class="accordion-body remove-element-padding px-4 pt-4">
 
                         {% if include.item1-content1 %}
                             
-                            <div class="guide-tile">
+                            <div class="guide-tile p-4">
 
                                 <div class="tag {{ include.item1-content1-tag }}">
                                     {{ include.item1-content1-tag }}
@@ -63,7 +67,7 @@
 
                         {% if include.item1-content2 %}
                             
-                            <div class="guide-tile">
+                            <div class="guide-tile p-4">
 
                                 <div class="tag {{ include.item1-content2-tag }}">
                                     {{ include.item1-content2-tag }}
@@ -89,7 +93,7 @@
 
                         {% if include.item1-content3 %}
                             
-                            <div class="guide-tile">
+                            <div class="guide-tile p-4">
 
                                 <div class="tag {{ include.item1-content3-tag }}">
                                     {{ include.item1-content3-tag }}
@@ -115,7 +119,7 @@
 
                         {% if include.item1-content4 %}
                             
-                            <div class="guide-tile">
+                            <div class="guide-tile p-4">
 
                                 <div class="tag {{ include.item1-content4-tag }}">
                                     {{ include.item1-content4-tag }}
