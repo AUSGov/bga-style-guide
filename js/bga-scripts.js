@@ -1161,6 +1161,17 @@ $(document).ready(function () {
 	});
 
 
+    // COMPONENT EXAMPLE: GUIDED SEARCH
+    // toggle switch
+    $('.guided-search-wrapper .toggle input').on('click', function(){
+        var item_value = $(this).attr('id');
+        $(this).parents('.toggle').toggleClass('selected');
+    });
+    // Multi-select bubbles
+    $('.multi-select-wrapper .multi-select').on('click', function(){
+        $(this).toggleClass('selected');
+    });
+
 }); //End doc ready
 
 
