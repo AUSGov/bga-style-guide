@@ -19,7 +19,7 @@
                         <div class="img-wrapper">
                             <img src={{ include.img1 }} alt="" />
                         </div>
-                        <div class="title-wrapper px-4">
+                        <div class="title-wrapper remove-element-padding p-4">
                         <h3 class="pe-4">{{ include.title1 }}</h3>
                         <p>{{ include.description1 }}</p>
                         </div>
@@ -145,48 +145,7 @@
             {% endif %}
 
 
-            {% if include.item2 == "true" %}
-            <div class="accordion-item">
-                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-2">
-                    <button class="accordion-button collapsed remove-element-padding p-4" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseTwo"
-                        aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseTwo">
-                        <p class="pe-4"><strong>{{ include.title2 }}</strong></p>
-                    </button>
-                </h5>
-                <div id="{{include.layout-name}}-collapseTwo" class="accordion-collapse collapse"
-                    aria-labelledby="{{include.layout-name=}}-2">
-                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                        {{ include.content2 }}
-
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-
-
-            {% if include.item3 == "true" %}
-            <div class="accordion-item">
-                <h5 class="accordion-header pt-0" id="{{include.layout-name}}-3">
-                    <button class="accordion-button collapsed remove-element-padding p-4" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#{{include.layout-name=}}-collapseThree"
-                        aria-expanded="false" aria-controls="{{include.layout-name=}}-collapseThree">
-                        <p class="pe-4"><strong>{{ include.title3 }}</strong></p>
-                    </button>
-                </h5>
-                <div id="{{include.layout-name}}-collapseThree" class="accordion-collapse collapse"
-                    aria-labelledby="{{include.layout-name}}-3">
-
-                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                        {{ include.content3 }}
-
-                    </div>
-                </div>
-
-            </div>
-            {% endif %}
+            
 
 
         </div>
