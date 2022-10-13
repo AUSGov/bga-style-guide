@@ -1,4 +1,4 @@
-.bga-guide-accordion {
+.bga-pathway-accordion {
     background: none;
     text-align: right;
 
@@ -88,27 +88,23 @@
                 border-radius: $bga-focus-radius;
             }
             &:hover {
-                background: $bga-white;
+                background-color: darken($bga-teal-highlight-light, 5%);
                 text-decoration: none;
 
                 h3 {
                     text-decoration: underline;
                 }
                 .chevron-wrapper {
-                    background: $bga-white;
-
-                    svg {
-                        transform: scaleY(-1);
-                    }
+                    background-color: $bga-teal-highlight-dark;
                 }
 
             }
             &:not(.collapsed) {
-                background-color: $bga-white;
+                background-color: lighten($bga-teal-highlight-light, 50%);
                 box-shadow: none;
 
                 .chevron-wrapper {
-                    background: $bga-white;
+                    background-color: $bga-teal-highlight-dark;
 
                     svg {
                         transform: scaleY(-1);
@@ -121,7 +117,7 @@
 
                 &:hover {
                     border-bottom: none;
-                    background: $bga-white;
+                    background: $bga-teal-highlight-light;
                 }
             }
         }
