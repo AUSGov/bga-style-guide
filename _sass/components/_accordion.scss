@@ -4,7 +4,7 @@
 
     .accordion-toggle {
         border: none;
-        background: $bga-white;
+        background: transparent;
         text-decoration: underline;
         cursor: pointer;
         font-weight: 600;
@@ -119,6 +119,40 @@
             }
         }
     } 
+    &.colour-bkg {
+        .accordion {
+            border-top: $bga-blue-black-light solid 2px;
+        }
+        .accordion-item {
+            background: $bga-blue-background-light;
+            border-bottom: $bga-blue-black-light solid 2px;
+
+            &:hover {
+                border-bottom: $bga-yellow-highlight-shadow solid 4px;
+            }
+            &.show {
+                border-bottom: $bga-yellow-highlight-shadow solid 4px;
+            }            
+
+            .accordion-button {
+                background: $bga-blue-background-light;
+
+                &:hover {
+                    background: $bga-blue-background-light;
+                }
+                &:not(.collapsed) {
+                    background-color: $bga-blue-background-extralight;
+                    
+                    &:hover {
+                        background: $bga-blue-background-extralight;
+                    }
+                }
+            }
+            .accordion-body {
+                background: $bga-blue-background-extralight;
+            }
+        }
+    }
 
     &.grant-rounds {
         .accordion-toggle {

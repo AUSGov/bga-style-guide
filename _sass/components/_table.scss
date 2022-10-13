@@ -1,25 +1,34 @@
 .bga-component.table {
     thead {
         background: $bga-blue-black-lightest;
-        border-bottom: 4px solid $bga-blue-black-light;
+        border-bottom: 4px solid $bga-blue-black-mid;
     }
+
     th {
-       line-height: 1.75;
-       vertical-align: top;
-       font-weight: 600;
+        line-height: 1.75;
+        vertical-align: top;
+        font-weight: 600;
     }
+
     tr {
         border-bottom: $bga-blue-black-mid solid 1px;
     }
-    td { 
+
+    td {
         vertical-align: top;
         line-height: 1.75;
+    }
+
+    &.coloured-bkg {
+        thead {
+            background: $bga-blue-background-extralight;
+        }
     }
 }
 
 // Mixins for smaller screen sizes and media queries
 @mixin table-bp-768 () {
-    .bga-component.table.narrow {  
+    .bga-component.table.narrow {
         .responsive {
 
             /* Hide table headers (but not display: none;, for accessibility) */
@@ -28,6 +37,7 @@
                 top: -9999px;
                 left: -9999px;
             }
+
             td {
                 display: none;
                 position: relative;
@@ -89,11 +99,36 @@
                 display: block;
                 transition: all 0.4s;
             }
+
             .groupParent td {
                 &:first-of-type {
                     background: $bga-blue-black-lightest url(../assets/Chevron-up-black.svg) no-repeat;
                     background-position: right 8px center;
                     background-size: 16px 10px;
+                }
+            }
+        }
+
+        &.coloured-bkg {
+            .responsive {
+                tr {
+                    td {
+                        background: $bga-blue-background-extralight;
+
+                        &:first-of-type {
+                            background: $bga-blue-background-extralight url(../assets/Chevron-down-black.svg) no-repeat;
+                            background-position: right 8px center;
+                            background-size: 16px 10px;;
+                        }
+                    }
+                }
+
+                .groupParent td {
+                    &:first-of-type {
+                        background: $bga-blue-background-extralight url(../assets/Chevron-up-black.svg) no-repeat;
+                        background-position: right 8px center;
+                        background-size: 16px 10px;
+                    }
                 }
             }
         }
@@ -111,6 +146,7 @@
                 top: -9999px;
                 left: -9999px;
             }
+
             td {
                 display: none;
                 position: relative;
@@ -172,6 +208,7 @@
                 display: block;
                 transition: all 0.4s;
             }
+
             .groupParent td {
                 &:first-of-type {
                     background: $bga-blue-black-lightest url(../assets/Chevron-up-black.svg) no-repeat;
@@ -180,15 +217,41 @@
                 }
             }
         }
+        &.coloured-bkg {
+            .responsive {
+                tr {
+                    td {
+                        background: $bga-blue-background-extralight;
+
+                        &:first-of-type {
+                            background: $bga-blue-background-extralight url(../assets/Chevron-down-black.svg) no-repeat;
+                            background-position: right 8px center;
+                            background-size: 16px 10px;;
+                        }
+                    }
+                }
+
+                .groupParent td {
+                    &:first-of-type {
+                        background: $bga-blue-background-extralight url(../assets/Chevron-up-black.svg) no-repeat;
+                        background-position: right 8px center;
+                        background-size: 16px 10px;
+                    }
+                }
+            }
+        }
     }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-768, .component-example.bp-below768, .component-example.small-screen {
+.component-example.bp-768,
+.component-example.bp-below768,
+.component-example.small-screen {
     @include table-bp-768();
 }
 
-.component-example.bp-below768, .component-example.small-screen {
+.component-example.bp-below768,
+.component-example.small-screen {
     @include table-below768();
 }
 

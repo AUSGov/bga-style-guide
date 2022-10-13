@@ -2,10 +2,14 @@
     
     a {
         background: $bga-blue-background-extralight;
-        border-left: solid 8px $bga-blue-border;
-        display: flex;
-        flex-wrap: wrap;
         text-decoration: none;
+        display: flex;
+
+        .link-wrapper {
+            border-left: solid 8px $bga-blue-border;
+            display: flex;
+            flex-wrap: wrap;
+        }
         
         &:focus-visible {
             color: $bga-blue-links;
@@ -38,13 +42,26 @@
         span {
             display: inline-block;
         }
-    }  
+    }
+    &.colour-bkg {
+        a {
+            &:focus-visible {
+                background: $bga-white;
+            }
+            &:hover {
+                background: $bga-white;
+            }
+        }
+    } 
 }
 
 .inline-pathway.callout-link {
     a {
-        flex-wrap: nowrap;
-        align-items: center;
+        .link-wrapper {
+            flex-wrap: nowrap;
+            align-items: center;
+
+        }
     }
     .icon-wrapper {
         width: 56px;
@@ -65,10 +82,11 @@
 // Mixins for smaller screen sizes and media queries
 @mixin inline-callout-below576 (){
     .inline-pathway.callout-link {
-        a {
+        .link-wrapper {
             flex-wrap: wrap;
             align-items: center;   
             justify-content: center;
+
         }
         .icon-wrapper {
             width: 44px;

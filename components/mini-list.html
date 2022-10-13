@@ -97,6 +97,29 @@ classes="in-page"
         </div>
 
         <div class="component-example">
+            <div class="component-wrapper coloured-section remove-element-padding p-4">
+                <div class="row">
+                    <h3>Coloured background sections - colour variations</h3>
+
+                    {% include component-examples/mini-list-example.html
+                    
+                        layout-name="mini-list-coloured-bkg"
+    
+                        item1="true"
+                        title1="Blue (default)"
+                        content1="<p>This is how the mini-list displays in coloured background sections.</p>"
+
+                        classes="colour-bkg"
+                        
+                    %}
+                    
+                    
+            
+                </div>
+            </div>
+        </div>
+
+        <div class="component-example">
             <div class="component-wrapper remove-element-padding p-4">
                 <div class="row">
 
@@ -134,12 +157,46 @@ classes="in-page"
 
 
         {% include layouts-dropdown.html
+            single-col-fullwidth-visibility="true"
             single-col-twothirds-visibility="true"
             two-col-leftmenu-visibility="true"
             two-col-rightsidebar-visibility="true"
         %}
 
 
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-fw"
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+                min1200-img="'../assets/layout-images/mini-list-1colfullwidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/mini-list-1colfullwidth-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/mini-list-1colfullwidth-finalbp.png' | relative_url "
+            
+            
+                min1200-rules="<p>The content area is 12 grid-columns wide.</p><p>Mini-lists span 8 grid-columns each.</p>"
+            
+                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>Mini-lists span 9 grid-columns each.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Mini-lists span 12 grid-columns each.</p>"
+            
+                example-link="'../html-examples/single-col-full-width.html#mini-list-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+            
+        </div>
+
+       
         <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
 
             {% include layouts-accordion.html
@@ -177,7 +234,8 @@ classes="in-page"
 
         </div>
 
-
+        
+        
         <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
 
             {% include layouts-accordion.html

@@ -48,7 +48,7 @@
 
         .accordion-item {
             border: none;
-            background: $bga-white;
+            background: transparent;
 
             &:last-of-type {
                 border-bottom: none;
@@ -70,13 +70,13 @@
             }
 
             .accordion-button {
-                background: $bga-white;
+                background: transparent;
                 font-weight: 600;
                 color: $bga-black;
                 justify-content: space-between;
 
                 &:not(.collapsed) {
-                    background: $bga-white;
+                    background: transparent;
                     box-shadow: none;
                 }
 
@@ -99,7 +99,7 @@
                 }
 
                 &:hover {
-                    background-color: $bga-white;
+                    background-color:transparent;
                     text-decoration: underline;
                 }
 
@@ -108,8 +108,12 @@
                 padding-left: 28px;
             }
         }
-
     }
-
+    &.coloured-bkg {
+        &.visible, .accordion.disclaimer {
+            border-top: $bga-blue-black-mid solid 1px;
+            border-bottom: $bga-blue-black-mid solid 1px;
+        }
+    }
 
 }

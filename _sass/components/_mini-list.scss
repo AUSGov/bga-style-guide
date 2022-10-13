@@ -105,6 +105,41 @@
             }
         }
     }
+    &.colour-bkg {
+        .accordion-item {
+
+            .accordion-button {
+                &:hover {
+                    background: $bga-white;
+                    
+                    .icon-wrapper {
+                        background: $bga-blue-background-light;
+                    }
+                    
+                }
+                &:not(.collapsed) {
+                    background-color: $bga-white;
+                    
+                    .icon-wrapper {
+                        background: $bga-blue-background-light;
+                    }
+                    
+                    &:hover {
+                        background: $bga-white; 
+                        
+                        .icon-wrapper {
+                            background: $bga-blue-background-light;
+                        }
+                    }
+                   
+                }
+                
+            }
+            .accordion-body {
+                background: $bga-white;
+            }
+        }
+    }
 }
 
 // Mixins for smaller screen sizes and media queries
