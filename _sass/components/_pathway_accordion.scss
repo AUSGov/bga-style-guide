@@ -1,3 +1,46 @@
+// MIXING for different accordion colours.
+@mixin pathway-accordion-colour ($colour-light, $colour-mid, $colour-dark) {
+       
+    border-left: solid $colour-dark 8px;
+
+        .accordion-button {
+            background: $colour-light;
+
+            .chevron-wrapper {
+                background: $colour-mid;
+            }
+
+            &:hover {
+                background-color: darken($colour-light, 5%);
+
+                .chevron-wrapper {
+                    background-color: $colour-dark;
+                }
+            }
+
+            &:not(.collapsed) {
+                background-color: darken($colour-light, 5%);
+
+                .chevron-wrapper {
+                    background-color: $colour-dark;
+                }
+                &:hover {
+                    background-color: darken($colour-light, 5%);
+
+                    .chevron-wrapper {
+                        background-color: $colour-dark;
+                    }
+                }
+            }
+        }
+        .accordion-body {
+            .guide-tile {
+                background: $colour-light;
+            }
+        }
+}
+
+
 .bga-pathway-accordion {
     background: none;
     text-align: right;
@@ -16,34 +59,26 @@
             }
         }
     }
+
     .accordion {
         text-align: left;
     }
+
     .accordion-item {
         border: none;
         background: $bga-white;
         border: $bga-blue-border solid 1px;
         border-left: solid $bga-teal-highlight-dark 8px;
         border-radius: 0;
-        
-        &:last-of-type {
-            .accordion-button {
-                border-radius: 0;
-                padding: 0;
-                text-decoration: none;
-            }
-        }
-        &:first-of-type {
-            .accordion-button {
-                border-radius: 0;
-            }
-        }
+
         &:focus-visible {
-            outline: none; 
+            outline: none;
         }
+
         &:hover {
             text-decoration: none;
         }
+
         &.show {
             background: $bga-white;
         }
@@ -52,24 +87,30 @@
             background: $bga-teal-highlight-light;
             display: flex;
             align-items: stretch;
-            
+            border-radius: 0;
+            padding: 0;
+            text-decoration: none;
+
             .img-wrapper {
                 background: $bga-white;
                 width: 250px;
                 flex-shrink: 0;
+                display: flex;
             }
+
             .title-wrapper {
                 display: flex;
                 flex-wrap: wrap;
 
-                    h3 {
-                        text-decoration: none;
-                    }
-                    p {
-                        text-decoration: none;
-                        display: block;
-                        width: 100%;
-                    }
+                h3 {
+                    text-decoration: none;
+                }
+
+                p {
+                    text-decoration: none;
+                    display: block;
+                    width: 100%;
+                }
             }
 
             .chevron-wrapper {
@@ -77,16 +118,20 @@
                 display: flex;
                 align-items: center;
             }
+
             &::after {
                 display: none;
             }
+
             &:focus {
                 box-shadow: none;
             }
+
             &:focus-visible {
                 border: $bga-component-focus-border;
                 border-radius: $bga-focus-radius;
             }
+
             &:hover {
                 background-color: darken($bga-teal-highlight-light, 5%);
                 text-decoration: none;
@@ -94,13 +139,16 @@
                 h3 {
                     text-decoration: underline;
                 }
+
                 .chevron-wrapper {
                     background-color: $bga-teal-highlight-dark;
                 }
 
             }
+
             &:not(.collapsed) {
-                background-color: lighten($bga-teal-highlight-light, 50%);
+                background-color: darken($bga-teal-highlight-light, 5%);
+                border-bottom: $bga-blue-border solid 1px;
                 box-shadow: none;
 
                 .chevron-wrapper {
@@ -116,41 +164,117 @@
                 }
 
                 &:hover {
-                    border-bottom: none;
-                    background: $bga-teal-highlight-light;
+
+                    background-color: darken($bga-teal-highlight-light, 5%);
+
+                    .chevron-wrapper {
+                        background-color: $bga-teal-highlight-dark;
+                    }
                 }
             }
         }
+
         .accordion-body {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            column-gap: 24px;
 
             .guide-tile {
                 background: $bga-teal-highlight-light;
                 flex: 0 0 auto;
                 width: calc(33.33333333% - 16px);
                 margin-bottom: 24px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+
+            .tile-content-wrapper {
+                display: flex;
+                align-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 24px;
+            }
+
+            .content {
+                height: 100% !important;
+            }
+
+            .tag {
+                font-size: 0.75rem;
+                font-weight: 600;
+                padding: 0px 8px;
+                background: $bga-yellow-highlight-dark;
+                border-radius: 10px;
+                border: solid 2px $bga-yellow-highlight-dark;
+                display: inline-flex;
+                align-content: center;
+
+                &.Recommended {
+                    background: $bga-white;
+                }
+            }
+
+            .link {
+                display: flex;
+                align-items: center;
+
+                a {
+                    font-size: .75rem;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: $bga-black;
+                }
             }
         }
-    } 
+    }
 
-
+    .accordion-item.purple {
+        @include pathway-accordion-colour($bga-purple-highlight-light, $bga-purple-highlight-mid, $bga-purple-highlight-dark);
+    }
+    .accordion-item.orange {
+        @include pathway-accordion-colour($bga-orange-highlight-light, $bga-orange-highlight-mid, $bga-orange-highlight-dark);
+    }
+    .accordion-item.yellow {
+        @include pathway-accordion-colour($bga-yellow-highlight-light, $bga-yellow-highlight-mid, $bga-yellow-highlight-dark);
+    }
+    .accordion-item.green {
+        @include pathway-accordion-colour($bga-green-highlight-light, $bga-green-highlight-mid, $bga-green-highlight-dark);
+    }
+    .accordion-item.blue {
+        @include pathway-accordion-colour($bga-blue-highlight-light, $bga-blue-highlight-mid, $bga-blue-highlight-dark);
+    }
 }
 
 
 // Mixins for smaller screen sizes
-@mixin guide-accordion-below576 () {
-   
+@mixin pathway-accordion-below768 () {
+    .bga-pathway-accordion {
+        .img-wrapper {
+            display: none;
+        }
+
+        .accordion-button {
+            .chevron-wrapper {
+                padding: 0 16px !important;
+            }
+        }
+
+        .accordion-body {
+            .guide-tile {
+                width: 100%;
+            }
+        }
+    }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576,
+.component-example.bp-below768,
 .component-example.small-screen {
-    @include guide-accordion-below576();
+    @include pathway-accordion-below768();
 }
 
 // Media queries for HTML example pages
-@media (max-width: 576px) {
-    @include guide-accordion-below576();
+@media (max-width: 768px) {
+    @include pathway-accordion-below768();
 }
