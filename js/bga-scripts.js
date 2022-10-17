@@ -68,6 +68,39 @@ $(document).ready(function () {
     });
 
 
+    // PAGE PATTERNS - click on hotspots to go to rules
+
+   
+
+	$('.spot a').on('click', function () {
+        
+		var rule_number = "#rule-" + $(this).text();
+        console.log(rule_number);
+
+		$('html, body').animate({
+			scrollTop: $(rule_number).offset().top
+		}, 300);
+
+		setTimeout(function () {
+            $(rule_number).find('.collapse').collapse('show');  
+		}, 1000);
+
+	});
+
+	$('.spot p').on('click', function () {
+		var rule_number = "#rule-" + $(this).parents('.spot').find('a').text();
+
+		$('html, body').animate({
+			scrollTop: $(rule_number).offset().top
+		}, 300);
+
+		setTimeout(function () {
+            $(rule_number).find('.collapse').collapse('show');    
+		}, 1000);
+
+	});
+
+
 
     // SEARCH COMPONENTS BY NAME
     var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-to-action', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-global-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs', 'bga-tile-filters', 'bga-grant-rounds-accordion', 'bga-pathway-accordions'];
