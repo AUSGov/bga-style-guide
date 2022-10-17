@@ -1,43 +1,67 @@
 // MIXING for different accordion colours.
 @mixin pathway-accordion-colour ($colour-light, $colour-mid, $colour-dark) {
-       
+
     border-left: solid $colour-dark 8px;
 
-        .accordion-button {
-            background: $colour-light;
+    .accordion-button {
+        background: $colour-light;
+
+        .chevron-wrapper {
+            background: $colour-mid;
+        }
+
+        &:focus-visible {
+            background-color: darken($colour-light, 5%);
+
+            .img-wrapper {
+                background-color: lighten($colour-light, 5%);
+            }
 
             .chevron-wrapper {
-                background: $colour-mid;
+                background-color: $colour-dark;
+            }
+        }
+
+        &:hover {
+            background-color: darken($colour-light, 5%);
+
+            .img-wrapper {
+                background-color: lighten($colour-light, 2%);
+            }
+
+            .chevron-wrapper {
+                background-color: $colour-dark;
+            }
+        }
+
+        &:not(.collapsed) {
+            background-color: darken($colour-light, 5%);
+
+            .img-wrapper {
+                background-color: lighten($colour-light, 2%);
+            }
+
+            .chevron-wrapper {
+                background-color: $colour-dark;
             }
 
             &:hover {
                 background-color: darken($colour-light, 5%);
 
-                .chevron-wrapper {
-                    background-color: $colour-dark;
+                .img-wrapper {
+                    background-color: lighten($colour-light, 2%);
                 }
-            }
-
-            &:not(.collapsed) {
-                background-color: darken($colour-light, 5%);
 
                 .chevron-wrapper {
                     background-color: $colour-dark;
                 }
-                &:hover {
-                    background-color: darken($colour-light, 5%);
+            }
+        }
+    }
 
-                    .chevron-wrapper {
-                        background-color: $colour-dark;
-                    }
-                }
-            }
-        }
-        .accordion-body {
-            .guide-tile {
-                background: $colour-light;
-            }
-        }
+    .accordion-body {
+        background: darken($colour-light, 5%);
+    }
 }
 
 
@@ -101,6 +125,7 @@
             .title-wrapper {
                 display: flex;
                 flex-wrap: wrap;
+                width: calc(100% - 342px);
 
                 h3 {
                     text-decoration: none;
@@ -130,6 +155,20 @@
             &:focus-visible {
                 border: $bga-component-focus-border;
                 border-radius: $bga-focus-radius;
+                background-color: darken($bga-teal-highlight-light, 5%);
+                text-decoration: none;
+
+                h3 {
+                    text-decoration: underline;
+                }
+
+                .img-wrapper {
+                    background-color: lighten($bga-teal-highlight-light, 5%);
+                }
+
+                .chevron-wrapper {
+                    background-color: $bga-teal-highlight-dark;
+                }
             }
 
             &:hover {
@@ -138,6 +177,10 @@
 
                 h3 {
                     text-decoration: underline;
+                }
+
+                .img-wrapper {
+                    background-color: lighten($bga-teal-highlight-light, 5%);
                 }
 
                 .chevron-wrapper {
@@ -150,6 +193,10 @@
                 background-color: darken($bga-teal-highlight-light, 5%);
                 border-bottom: $bga-blue-border solid 1px;
                 box-shadow: none;
+
+                .img-wrapper {
+                    background-color: lighten($bga-teal-highlight-light, 5%);
+                }
 
                 .chevron-wrapper {
                     background-color: $bga-teal-highlight-dark;
@@ -167,6 +214,10 @@
 
                     background-color: darken($bga-teal-highlight-light, 5%);
 
+                    .img-wrapper {
+                        background-color: lighten($bga-teal-highlight-light, 5%);
+                    }
+
                     .chevron-wrapper {
                         background-color: $bga-teal-highlight-dark;
                     }
@@ -178,15 +229,33 @@
             display: flex;
             flex-wrap: wrap;
             column-gap: 24px;
+            background: darken($bga-teal-highlight-light, 5%);
 
             .guide-tile {
-                background: $bga-teal-highlight-light;
+                background: $bga-white;
                 flex: 0 0 auto;
                 width: calc(33.33333333% - 16px);
                 margin-bottom: 24px;
                 display: flex;
                 flex-wrap: wrap;
                 align-content: space-between;
+                cursor: pointer;
+
+                &:focus-visible {
+                    border: $bga-component-focus-border;
+                    border-radius: $bga-focus-radius;
+                    outline: none;
+
+                    h4 {
+                        text-decoration: underline;
+                    }
+                }
+
+                &:hover {
+                    h4 {
+                        text-decoration: underline;
+                    }
+                }
             }
 
             .tile-content-wrapper {
@@ -213,6 +282,10 @@
                 &.Recommended {
                     background: $bga-white;
                 }
+
+                &.none {
+                    display: none;
+                }
             }
 
             .link {
@@ -229,48 +302,74 @@
         }
     }
 
+    &.no-desc {
+        .accordion-item {
+            .accordion-button {
+                .title-wrapper {
+                    align-content: center;
+
+                    h3 {
+                        font-size: $h2-font-size;
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
     .accordion-item.purple {
         @include pathway-accordion-colour($bga-purple-highlight-light, $bga-purple-highlight-mid, $bga-purple-highlight-dark);
     }
+
     .accordion-item.orange {
         @include pathway-accordion-colour($bga-orange-highlight-light, $bga-orange-highlight-mid, $bga-orange-highlight-dark);
     }
+
     .accordion-item.yellow {
         @include pathway-accordion-colour($bga-yellow-highlight-light, $bga-yellow-highlight-mid, $bga-yellow-highlight-dark);
     }
+
     .accordion-item.green {
         @include pathway-accordion-colour($bga-green-highlight-light, $bga-green-highlight-mid, $bga-green-highlight-dark);
     }
+
     .accordion-item.blue {
-        @include pathway-accordion-colour($bga-blue-highlight-light, $bga-blue-highlight-mid, $bga-blue-highlight-dark);
+        @include pathway-accordion-colour($bga-blue-background-extralight, $bga-blue-highlight-mid, $bga-blue-highlight-dark);
     }
 }
 
 
 // Mixins for smaller screen sizes
 @mixin pathway-accordion-below768 () {
-    .bga-pathway-accordion {
-        .img-wrapper {
-            display: none;
-        }
+    .bga-pathway-accordion {  
+        .accordion-item  { 
+            .accordion-button {
+                .img-wrapper {
+                    display: none;
+                }
+                .title-wrapper {
+                    width: calc(100% - 60px);
 
-        .accordion-button {
-            .chevron-wrapper {
-                padding: 0 16px !important;
+                    h3 {
+                        font-size: $h3-font-size !important;
+                    }
+                }
+
+                .chevron-wrapper {
+                    padding: 0 16px !important;
+                }
             }
-        }
-
-        .accordion-body {
-            .guide-tile {
-                width: 100%;
+            .accordion-body {
+                .guide-tile {
+                    width: 100%;
+                }
             }
         }
     }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below768,
-.component-example.small-screen {
+.component-example.bp-below768 {
     @include pathway-accordion-below768();
 }
 

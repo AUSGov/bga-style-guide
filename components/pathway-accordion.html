@@ -44,6 +44,7 @@ classes="in-page"
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
 
+                <h3>Default pathway accordion (guide pattern)</h3>
                 {% include component-examples/pathway-accordion-example.html
 
                 item1-name="make-key-decisions"
@@ -98,7 +99,7 @@ classes="in-page"
 
                 item3="orange"
                 
-                img3="'../assets/refresh-illustrations/checklist-calculator.svg' | relative_url"
+                img3="'../assets/refresh-illustrations/people-handshake.svg' | relative_url"
                 title3="3. Help for your business"
                 description3="Find resources to help you with your business, from general business advice to finance assistance and support for your mental health and wellbeing."
 
@@ -120,7 +121,7 @@ classes="in-page"
 
                 item4="green"
                 
-                img4="'../assets/refresh-illustrations/checklist-calculator.svg' | relative_url"
+                img4="'../assets/refresh-illustrations/computer-success.svg' | relative_url"
                 title4="4. Register your business"
                 description4="To make it official, you’ll need to register. This makes sure your business gets taxed at the right rate, avoids penalties and protects your brand and ideas."
 
@@ -142,7 +143,7 @@ classes="in-page"
 
                 item5="yellow"
                 
-                img5="'../assets/refresh-illustrations/checklist-calculator.svg' | relative_url"
+                img5="'../assets/refresh-illustrations/laptop-finance.svg' | relative_url"
                 title5="5. Prepare your finances"
                 description5="It's essential to take charge of your business finances and know how to manage your cash flow. It could make or break your business. If you need help, consider speaking to a financial adviser."
 
@@ -164,7 +165,7 @@ classes="in-page"
 
                 item6="blue"
                 
-                img6="'../assets/refresh-illustrations/checklist-calculator.svg' | relative_url"
+                img6="'../assets/refresh-illustrations/legal-scales.svg' | relative_url"
                 title6="6. Know the law"
                 description6="Finding out your business isn't entirely above board can cost you time and money. Start off strong by setting up and protecting your business legally. Consider speaking to a legal professional to help you along the way."
 
@@ -182,6 +183,82 @@ classes="in-page"
 
                 %}
 
+
+
+                <h3>Pathway accordion variation  - no item description</h3>
+
+                {% include component-examples/pathway-accordion-example.html
+
+                    classes="no-desc"
+                    item1-name="all-state-and-territories"
+    
+                    item1="teal"
+                    
+                    img1="'../assets/refresh-illustrations/australia-map.svg' | relative_url"
+                    title1="All states and territories"
+    
+                    item1-content1="<h4>Decide on a business structure</h4><p>The main structures are sole trader, partnership, company or trust. Choosing a structure for your business affects your tax, paperwork and finances. Consider getting expert advice to help you.</p>"
+                    item1-content1-tag="none"
+                    item1-content1-link="Business structures"
+    
+                    item1-content2="<h4>Are you an employee or contractor?</h4><p>If you're working on your own you'll need to know your worker status. Find out if you're an independent contractor or an employee before entering into a contract.</p>"
+                    item1-content2-tag="none"
+                    item1-content2-link="How to choose a business name"
+    
+                    item1-content3="<h4>Choose your business location</h4><p>Each business has different needs for storage, equipment, or just being close to the right customers. Consider what’s important for your business before you decide where you’ll be based.</p>"
+                    item1-content3-tag="none"
+                    item1-content3-link="Choose your business location"
+    
+                    item1-content4="<h4>Learn how to choose a business name</h4><p>There may be more to choosing a business name than you think. Consider whether the name is unique, available to use or exists as a protected trade mark before you decide.</p>"
+                    item1-content4-tag="none"
+                    item1-content4-link="How to choose a business name"
+
+    
+    
+                    item2-name="act"
+    
+                    item2="blue"
+                    
+                    img2="'../assets/refresh-illustrations/act-map.svg' | relative_url"
+                    title2="Australian Capital Territory"
+    
+                    item2-content1="<h4>Develop your business plan</h4><p>Planning out your business gives you direction and keeps your business on track. You'll also need a business plan if you seek finance.</p>"
+                    item2-content1-tag="none"
+                    item2-content1-link="Develop your business plan"
+    
+                    item2-content2="<h4>Create your risk management plan</h4><p>Having a good risk management plan in place will help guide the business decisions you make and reduce the impact of unexpected events on your business.</p>"
+                    item2-content2-tag="none"
+                    item2-content2-link="Assess and manage risk"
+    
+                    item2-content3="<h4>Write your marketing plan</h4><p>Need to tell everyone about your new business? A marketing plan can help you find and reach your customers and work out what makes your business different.</p>"
+                    item2-content3-tag="none"
+                    item2-content3-link="Develop your marketing plan"
+    
+    
+    
+                    item3-name="nsw"
+    
+                    item3="yellow"
+                    
+                    img3="'../assets/refresh-illustrations/nsw-map.svg' | relative_url"
+                    title3="New South Wales"
+
+    
+                    item3-content1="<h4>Develop your business plan</h4><p>Planning out your business gives you direction and keeps your business on track. You'll also need a business plan if you seek finance.</p>"
+                    item3-content1-tag="none"
+                    item3-content1-link="Develop your business plan"
+    
+                    item3-content2="<h4>Create your risk management plan</h4><p>Having a good risk management plan in place will help guide the business decisions you make and reduce the impact of unexpected events on your business.</p>"
+                    item3-content2-tag="none"
+                    item3-content2-link="Assess and manage risk"
+    
+                    item3-content3="<h4>Write your marketing plan</h4><p>Need to tell everyone about your new business? A marketing plan can help you find and reach your customers and work out what makes your business different.</p>"
+                    item3-content3-tag="none"
+                    item3-content3-link="Develop your marketing plan"
+                 
+    
+                    %}
+
             </div>
         </div>
 
@@ -197,101 +274,55 @@ classes="in-page"
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Accordions can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - two thirds width layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left side menu layout</a> .</p>
+        <p>Pathway accordions can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - full width layout</a>.</p>
 
 
         {% include layouts-dropdown.html
-        single-col-twothirds-visibility="true"
-        two-col-leftmenu-visibility="true"
+            layout-name="Single column - full width"
+            singlelayout="true"
         %}
 
-
-        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+        <div class="layout-example show full-border mt-0 p-4">
 
             {% include layouts-accordion.html
-            layout-name="onecol-twothirdsw"
 
-            min1200-visibility="true"
-            min992-visibility="true"
-            min768-visibility="true"
-            min576-visibility="false"
-            finalbp-visibility="true"
+            singlelayout="true"
 
-            finalbp="Breakpoint &lt; 768px"
+            allbp-img="'../assets/layout-images/pathway-accordion-1colfullwidth-allbp.png' | relative_url "
 
-            min1200-img="'../assets/layout-images/grantround-1col2thirdswidth-min1200.png' | relative_url "
-            min992-img="'../assets/layout-images/grantround-1col2thirdswidth-min992.png' | relative_url "
-            min768-img="'../assets/layout-images/grantround-1col2thirdswidth-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/grantround-1col2thirdswidth-finalbp.png' | relative_url "
-
-            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>The grant rounds accordion spans the full width of the content area.</p>"
-
-            min992-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>The grant rounds accordion spans the full width of the content area.</p>"
-
-            min768-rules="<p>The content area is 11 grid-columns wide.</p>
-            <p>The grant rounds accordion spans the full width of the content area.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>The grant rounds accordion spans the full width of the content area.</p>"
-
-            example-link="'../html-examples/single-col-two-thirds-width.html#grant-rounds-example' | relative_url'"
-            example-link-text="View layout example"
+            allbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Pathway accordions span the full width of the content area.</p>"
 
             %}
 
         </div>
 
-
-        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-
-            {% include layouts-accordion.html
-            layout-name="twocol-leftmenu"
-
-            min1200-visibility="true"
-            min992-visibility="false"
-            min768-visibility="false"
-            min576-visibility="true"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 576px"
-
-            min1200-img="'../assets/layout-images/grantround-2col-leftmenu-min1200.png' | relative_url "
-            min576-img="'../assets/layout-images/grantround-2col-leftmenu-min576.png' | relative_url "
-            finalbp-img="'../assets/layout-images/grantround-2col-leftmenu-finalbp.png' | relative_url "
-
-            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>The grant rounds accordion spans the full width of the content area.</p>"
-
-            min576-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>The grant rounds accordion spans the full width of the content area.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>The grant rounds accordion spans the full width of the content area.</p>"
-
-            example-link="'../html-examples/two-col-left-side-menu.html#grant-rounds-example' | relative_url'"
-            example-link-text="View layout example"
-
+        {% include design-specs-link.html 
+            btn-link="'../html-examples/single-col-full-width.html#pathway-accordion-example' | relative_url"
+            btn-text="View layout example"
             %}
+        
 
-        </div>
+
 
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>The grant rounds accordion provides links to a series of connected grant opportunities.</p>
+        <p>An accordion is an expandable section with nested content. This component provides details when opened by users on a content page. It can help to streamline the user experience by keeping content relevant to the user.</p>
+        <p>Pathway accordion items contains a series of links to both internal and external site pages.</p>
+        
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used on internal and external grant pages when there are multiple rounds of the grant / opportunity.</li>
+            <li>Used on guide landing pages to provide links to related content on business.gov.au.</li>
+            <li>Can also be used to collate a collection of links to other sites. e.g Covid-19 support sites.</li>
 
         </ul>
         <h3>Content rules:</h3>
         <ul>
-            <li>The grant rounds accordion should be used as a single accordion item with all related rounds listed within that item.</li>
-            <li>The 'open all' link should not be used as the accordion should always be a single item.</li>
+            <li>When used in the context of a guide landing page the pathway tiles within accordion items <strong>MUST</strong> have 'required' or 'recommended' tags.</li>
+            <li>Pathway accordion items should only contain pathway tiles. They should not contain body copy.</li>
         </ul>
 
     </div>
