@@ -32,6 +32,25 @@ button.chat {
         background: url(../assets/icon-chat-open.svg) #ACFF98 no-repeat;
         background-position: right 32px center;
         border: solid #348621 3px;
+
+        &:focus-visible {
+            background-image: url(../assets/icon-chat-open-white.svg);
+            background-color: #068905;
+            color: $bga-white;
+            border: $bga-component-focus-border;
+        }
+        &:hover {
+            background-image: url(../assets/icon-chat-open-white.svg);
+            background-color: #068905;
+            color: $bga-white;
+            border: solid #348621 3px;
+        }
+        &:active {
+            background-image: url(../assets/icon-chat-open-white.svg);
+            background-color: #276718;
+            color: $bga-white;
+            border: solid #276718 3px;
+        }
     }
 
     &.closed {

@@ -1,0 +1,664 @@
+.example.page-pattern {
+    img {
+        border: solid 1px $bga-blue-border;
+    }
+
+    position: relative;
+
+    .spot {
+        position: absolute;
+        cursor: pointer;
+
+        .spot-subwrapper {
+            position: relative;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background: #ACFF98;
+            color: $bga-black;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: solid #348621 3px;
+            box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.3);
+            line-height: 0;
+            cursor: pointer;
+        }
+
+        p {
+            display: inline-block;
+            margin-left: 8px;
+            min-height: 32px;
+            background: #068905;
+            color: $white;
+            padding: 6px 16px 6px 32px;
+            border-radius: 15px;
+            box-shadow: 0 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.3);
+            display: none;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.3rem;
+        }
+
+        &:hover {
+            p {
+                display: inline-block;
+            }
+        }
+    }
+
+    // HOTSPOT PLACEMENT - DESKTOP
+
+    // Checklist
+    &.checklist-container {
+        #spot-01 {
+            top: 21%;
+            left: 4%;
+        }
+
+        #spot-02 {
+            top: 28.5%;
+            left: 4%;
+        }
+
+        #spot-03 {
+            top: 39.8%;
+            left: 2%;
+        }
+
+        #spot-04 {
+            top: 46%;
+            left: 8%;
+        }
+
+        #spot-05 {
+            top: 52%;
+            left: 8%;
+        }
+
+        #spot-06 {
+            top: 40%;
+            left: 69%;
+        }
+    }
+
+    // Checklist
+    &.lightweight-checklist-container {
+        #spot-01 {
+            top: 13.6%;
+            left: 4.5%;
+        }
+
+        #spot-02 {
+            top: 18.5%;
+            left: 4.5%;
+        }
+
+        #spot-03 {
+            top: 28.3%;
+            left: 4.5%
+        }
+
+        #spot-04 {
+            top: 38%;
+            left: 13%;
+        }
+
+        #spot-05 {
+            top: 54.8%;
+            left: 13%;
+        }
+
+        #spot-06 {
+            top: 88.2%;
+            left: 4.5%;
+        }
+    }
+
+    // Topic page
+    &.topic-page-container {
+        #spot-01 {
+            top: 16.5%;
+            left: 4%;
+        }
+
+        #spot-02 {
+            top: 20.5%;
+            left: 4%;
+        }
+
+        #spot-03 {
+            top: 36%;
+            left: 7%;
+        }
+
+        #spot-04 {
+            top: 39%;
+            left: 7%;
+        }
+
+        #spot-05 {
+            top: 69%;
+            left: 5%;
+        }
+
+    }
+
+    // Category page
+    &.category-page-container {
+        #spot-01 {
+            top: 22.5%;
+            left: 6%;
+        }
+
+        #spot-02 {
+            top: 29%;
+            left: 6%;
+        }
+
+        #spot-03 {
+            top: 48%;
+            left: 7%;
+        }
+
+        #spot-04 {
+            top: 53%;
+            left: 7%;
+        }
+
+    }
+
+    // Guides page
+    &.guides-page-container {
+        #spot-01 {
+            top: 10.5%;
+            left: 5%;
+        }
+
+        #spot-02 {
+            top: 13.3%;
+            left: 5%;
+        }
+
+        #spot-03 {
+            top: 9.7%;
+            left: 61%;
+        }
+
+        #spot-04 {
+            top: 24.5%;
+            left: 7%;
+        }
+
+        #spot-05 {
+            top: 34.2%;
+            left: 7%;
+        }
+
+        #spot-06 {
+            top: 51%;
+            left: 10%;
+        }
+
+    }
+
+    // Transaction action page
+    &.transaction-action-page-container {
+        #spot-01 {
+            top: 12.8%;
+            left: 4%;
+        }
+
+        #spot-02 {
+            top: 17.3%;
+            left: 4%;
+        }
+
+        #spot-03 {
+            top: 24%;
+            left: 15%;
+        }
+
+        #spot-04 {
+            top: 29%;
+            left: 15%;
+        }
+
+        #spot-05 {
+            top: 41%;
+            left: 17%;
+        }
+
+        #spot-06 {
+            top: 63.5%;
+            left: 17%;
+        }
+
+        #spot-07 {
+            top: 81.5%;
+            left: 15%;
+        }
+
+    }
+
+    // Advisor detail page
+    &.advisor-detail-page-container {
+        #spot-01 {
+            top: 19.6%;
+            left: 4%;
+        }
+
+        #spot-02 {
+            top: 37%;
+            left: 15%;
+        }
+
+        #spot-03 {
+            top: 63%;
+            left: 15%;
+
+        }
+
+    }
+
+    // Tutorial page
+    &.tutorial-page-container {
+        #spot-01 {
+            top: 8.4%;
+            left: 4%;
+        }
+
+        #spot-02 {
+            top: 11.5%;
+            left: 4%;
+        }
+
+        #spot-03 {
+            top: 16.1%;
+            left: 4%;
+
+            .spot-subwrapper {
+                z-index: 100;
+            }
+        }
+
+        #spot-04 {
+            top: 16.1%;
+            left: 27.2%;
+        }
+
+        #spot-05 {
+            top: 27.4%;
+            left: 29%;
+        }
+
+        #spot-06 {
+            top: 52.4%;
+            left: 29%;
+        }
+
+        #spot-07 {
+            top: 59.8%;
+            left: 29%;
+        }
+
+        #spot-08 {
+            top: 72.8%;
+            left: 29%;
+        }
+
+        #spot-09 {
+            top: 84.7%;
+            left: 27.2%;
+        }
+
+
+    }
+
+    // Resource article page
+    &.resource-article-page-container {
+        #spot-01 {
+            top: 12.3%;
+            left: 4%;
+        }
+
+        #spot-02 {
+            top: 16.8%;
+            left: 4%;
+        }
+
+        #spot-03 {
+            top: 23.4%;
+            left: 18%;
+        }
+
+        #spot-04 {
+            top: 49.7%;
+            left: 15.5%;
+        }
+
+        #spot-05 {
+            top: 54.5%;
+            left: 15.5%;
+        }
+
+        #spot-06 {
+            top: 70.5%;
+            left: 15.5%;
+        }
+
+        #spot-07 {
+            top: 77.8%;
+            left: 15.5%;
+        }
+    }
+
+    // 101 page
+    &.one-zero-one-page-container {
+        #spot-01 {
+            top: 8.4%;
+            left: 4%;
+        }
+
+        #spot-02 {
+            top: 11.5%;
+            left: 4%;
+        }
+
+        #spot-03 {
+            top: 16%;
+            left: 4%;
+
+            .spot-subwrapper {
+                z-index: 100;
+            }
+        }
+
+        #spot-04 {
+            top: 16%;
+            left: 27.5%;
+        }
+
+        #spot-05 {
+            top: 24.5%;
+            left: 29%;
+        }
+
+        #spot-06 {
+            top: 52.4%;
+            left: 29%;
+        }
+
+        #spot-07 {
+            top: 59.8%;
+            left: 29%;
+        }
+
+        #spot-08 {
+            top: 76.2%;
+            left: 29%;
+        }
+
+        #spot-09 {
+            top: 88%;
+            left: 27.5%;
+        }
+
+
+    }
+
+    // Customer stories landing page
+    &.customer-stories-landing-container {
+        #spot-01 {
+            top: 16.4%;
+            left: 5%;
+        }
+
+        #spot-02 {
+            top: 22%;
+            left: 5%;
+        }
+
+        #spot-03 {
+            top: 31.2%;
+            left: 6.5%;
+        }
+
+        #spot-04 {
+            top: 45%;
+            left: 6.5%;
+        }
+
+        #spot-05 {
+            top: 49%;
+            left: 6.5%;
+        }
+    }
+
+    // Customer story page
+    &.customer-story-container {
+        #spot-01 {
+            top: 12.6%;
+            left: 5%;
+        }
+
+        #spot-02 {
+            top: 17.1%;
+            left: 5%;
+        }
+
+        #spot-03 {
+            top: 23.8%;
+            left: 16%;
+        }
+
+        #spot-04 {
+            top: 57.6%;
+            left: 16%;
+        }
+
+        #spot-05 {
+            top: 75.9%;
+            left: 16%;
+        }
+
+        #spot-06 {
+            top: 84%;
+            left: 16%;
+        }
+    }
+
+    // Frant recipients page
+    &.grant-recipients-container {
+        #spot-01 {
+            top: 17.5%;
+            left: 5%;
+        }
+
+        #spot-02 {
+            top: 24%;
+            left: 5%;
+        }
+
+        #spot-03 {
+            top: 33.3%;
+            left: 5%;
+        }
+    }
+
+    // Customer story page
+    &.external-grant-landing-container {
+        #spot-01 {
+            top: 9.4%;
+            left: 4.5%;
+        }
+
+        #spot-02 {
+            top: 11.6%;
+            left: 4.5%;
+        }
+
+        #spot-03 {
+            top: 20.2%;
+            left: 16%;
+        }
+
+        #spot-04 {
+            top: 24%;
+            left: 16%;
+        }
+
+        #spot-05 {
+            top: 28.2%;
+            left: 16%;
+        }
+
+        #spot-06 {
+            top: 31.2%;
+            left: 16%;
+        }
+
+        #spot-07 {
+            top: 33.2%;
+            left: 16%;
+        }
+
+        #spot-08 {
+            top: 35.5%;
+            left: 16%;
+        }
+
+        #spot-9 {
+            top: 38.7%;
+            left: 16%;
+        }
+
+        #spot-10 {
+            top: 45%;
+            left: 16%;
+        }
+
+        #spot-11 {
+            top: 51%;
+            left: 16%;
+        }
+
+        #spot-12 {
+            top: 63%;
+            left: 16%;
+        }
+
+        #spot-13 {
+            top: 75%;
+            left: 16%;
+        }
+
+        #spot-14 {
+            top: 83%;
+            left: 16%;
+        }
+
+
+    }
+}
+
+
+.page-pattern-rules {
+    
+    .accordion-toggle {
+        border: none;
+        background: $bga-white;
+        text-decoration: underline;
+        float: right;
+        font-weight: 600;
+        box-shadow: none;
+        border-radius: none;
+
+    }
+
+    .accordion-item {
+        border: none;
+        border-bottom: solid 1px $bga-blue-border;
+
+        &:last-of-type {
+            border-bottom: none;
+
+            .accordion-button {
+                border-radius: 0;
+            }
+        }
+
+        &:first-of-type {
+            .accordion-button {
+                border-radius: 0;
+            }
+        }
+    }
+
+    .accordion-button {
+        background: $bga-white;
+        font-weight: 600;
+        color: $bga-black;
+        padding: 16px 0;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ACFF98;
+            color: $bga-black;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: solid #348621 3px;
+            margin-right: 8px;
+            line-height: 0;
+        }
+
+        &:not(.collapsed) {
+            background: $bga-white;
+            box-shadow: none;
+
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+            &:focus-visible {
+                box-shadow: none;
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
+            }
+            &:hover {
+                border: none;
+            }
+
+            &::after {
+                transform: scaleY(-1);
+            }
+        }
+
+        &::after {
+            background-image: url(../assets/Chevron-down-black.svg);
+        }
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
+        &:focus-visible {
+            box-shadow: none;
+            border: $bga-component-focus-border;
+            border-radius: $bga-focus-radius;
+        }
+        &:hover {
+            border: none;
+        }
+    }
+}

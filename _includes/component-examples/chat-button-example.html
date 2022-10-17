@@ -1,5 +1,5 @@
 {% if include.button-state == "open" %}
-<button class="chat open {{ include.classes }}">
+<button tabindex="0" class="chat open {{ include.classes }}">
     <span>Live chat</span>
 </button>
 {% endif %}
@@ -16,6 +16,6 @@
     
 </div>
 
-<button class="chat closed {{ include.classes }}">
+<button tabindex="0" class="chat closed {{ include.classes }}">
     <span>Live chat is closed</span></button>
 {% endif %}
