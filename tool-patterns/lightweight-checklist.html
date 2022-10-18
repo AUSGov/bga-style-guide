@@ -1,0 +1,117 @@
+---
+
+layout: content-tagged
+title: Lightweight checklist pattern
+description: Lightweight checklist pattern
+breadcrumb1: Tool patterns
+url1: /tool-patterns.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Page anatomy" link-id-1="#page-anatomy"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+       
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                    classes="lightweight-checklist-container"
+                    img="'../assets/page-patterns/lightweight-checklist.png' | relative_url"
+
+                    spot1="Heading (page title)"
+                    spot2="Long description (supporting text)"
+                    spot3="Numbered checklist item - open"
+                    spot4="Feature box"
+                    spot5="Inline pathway"
+                    spot6="Numbered checklist item - closed"
+                %}
+                
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+                    
+                    item1="Heading (page title)"
+                    content1="<p>A direct, short title focused on the main topic the user will learn about.</p><ul><li>Maximum character limit of 50.</li></ul>"
+
+                    item2="Long description (supporting text)"
+                    content2="<p>A short paragraph that expands on what the checklist is about.</p><ul><li>The supporting text should explain the end to end process the checklist is for.</li><li>Maximum character limit of 90.</li><li>Include the top three keywords for the page.</li></ul>"
+
+                    item3="Numbered checklist item - open"
+                    content3="<p>Item titles should be short, action oriented statements that make it clear at a high-level what the user needs to do.</p>"
+
+
+                    item4="Feature box"
+                    content4="<p>Feature boxes highlight certain information in the context of the checklist item.</p>"
+
+                    item5="Inline pathway"
+                    content5="<p>The inline pathway provides a way for internal and external links to stand out when the user needs to complete an important, but optional task.</p><p>An inline pathway component can list one or more links. It is used within the context of written content if it is a medium value step in a process.</p><ul></ul>"
+
+
+                    item6="Numbered checklist item - closed"
+                    content6="<p>Item titles should be short, action oriented statements that make it clear at a high-level what the user needs to do. Items are closed until the user chooses to open them.</p>"
+                %}
+
+            
+        </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>The checklist pattern presents the user with an end to end journey in logical steps and provides links to content to help them complete each step.</p>
+        <p>The main difference between the lightweight and standard checklist patterns is the amount of content each contains. The lightweight pattern should be used for simpler journeys or a series of tips. It does not allow for nested items within each main item.</p>
+        <h3>General rules:</h3>
+        <ul>
+        <li>Should only be used where there is a logical order to complete a journey.</li>
+        <li>Provides numbered steps that presents a specific start and end point.</li>
+        <li>Can include online and offline actions.</li>
+        <li>When you are educating the user about a specific stage in an end to end journey (use the tutorial pattern).</li>
+        </ul>
+        <h3>When not to use this pattern:</h3>
+        <ul>
+        <li>When the user only needs to read guidance and not take an action (use Guide pattern instead).</li>
+        </ul>
+
+       
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "components/feature-box.html" | relative_url }}>Feature box</a></li>
+            <li><a href={{ "components/inline-pathway.html" | relative_url }}>Inline pathway</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+      
+
+    </div>

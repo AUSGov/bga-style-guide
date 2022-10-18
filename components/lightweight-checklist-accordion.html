@@ -1,0 +1,200 @@
+---
+
+layout: content-tagged
+title: Lightweight checklist accordion
+description: An accordion with numbered steps used for presenting simple end to end journeys.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-9">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        md-visibility="true"
+        final-visibility="true"
+        breakpoint-final="768"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+                
+                {% include component-examples/lightweight-checklist-example.html %}
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/d9e7436d-f593-44b5-a76a-03ba5a3ebc75'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Accordions can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>page layouts</a> except the single column - full width layout and the two column - left filter layout.</p>
+
+
+        {% include layouts-dropdown.html
+        single-col-twothirds-visibility="true"
+        two-col-leftmenu-visibility="true"
+        two-col-rightsidebar-visibility="true"
+        %}
+
+
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/accordion-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/accordion-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/accordion-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/accordion-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#accordion-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/accordion-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/accordion-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/accordion-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#accordion-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+
+            min768-img="'../assets/layout-images/accordion-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/accordion-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Accordions span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar.html#accordion-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>An accordion is an expandable section with nested content. This component provides content details when
+            opened by users on a content page. It can help to streamline the user experience by keeping content relevant
+            to the user.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>For optional content (e.g. frequently asked questions at the end of a transaction page).</li>
+            <li>For directory type content (e.g. state and territory links).</li>
+            <li>To streamline a transaction process.</li>
+        </ul>
+        <h3>Content rules:</h3>
+        <ul>
+            <li>Select &ldquo;open all&rdquo; accordion option if you have 2 or more accordion items.</li>
+            <li>Avoid single accordion items, although they are sometimes used on grant application pages to streamline
+                the application process.</li>
+            <li>Avoid using bold in accordion body content.</li>
+        </ul>
+
+    </div>

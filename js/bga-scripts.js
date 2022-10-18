@@ -103,7 +103,7 @@ $(document).ready(function () {
 
 
     // SEARCH COMPONENTS BY NAME
-    var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-to-action', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-global-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs', 'bga-tile-filters', 'bga-grant-rounds-accordion', 'bga-pathway-accordions'];
+    var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-to-action', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-global-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs', 'bga-tile-filters', 'bga-grant-rounds-accordion', 'bga-pathway-accordions', 'bga-lightweight-checklist-accordion'];
 
     $('#component_name').on('change', function () {
 
@@ -955,31 +955,6 @@ $(document).ready(function () {
     // COMPONENT EXAMPLE: PAGINATION
 
     $('.pagination-links li.number').on('click', function () {
-        /*
-        var new_position = $(this).attr('data-position'),
-        current_position = parseInt($('.pagination-links li.current').attr('data-position'));
-        $('.pagination-links li.current').removeClass('current');
-
-        switch(new_position) {
-            case "first":
-                position = "1";
-                break;
-            case "previous":
-                new_position = (current_position - 1).toString();
-                break;
-            case "next":
-                new_position = (current_position + 1).toString();
-                break;
-            case "last":
-                new_position = "8";
-                break;
-            default:
-              new_position = new_position;
-          }
-          console.log("final: " + new_position);
-
-          $('li').data('data-position', new_position);*/
-
         $('.pagination-links li.current').removeClass('current');
         $(this).addClass('current');
 
@@ -1204,6 +1179,154 @@ $(document).ready(function () {
     $('.multi-select-wrapper .multi-select').on('click', function(){
         $(this).toggleClass('selected');
     });
+
+
+   
+    // COMPONENT EXAMPLE: CHECKLISTS
+
+    // Lightweight checklist open all toggle
+    $('.checklist-toggle').on('click', function () {
+        var button_state = $(this).find('span').text();
+
+        if (button_state === "Open all") {
+            $(this).addClass('close');
+            $(this).find('span').text('Close all');
+
+            $('.checklist-item').each(function(){
+                $(this).addClass('open');
+            });
+            $('.checklist-sub-item-wrapper').each(function(){
+                $(this).slideDown(400);
+            });
+
+            
+        } else {
+            $(this).removeClass('close');
+            $(this).find('span').text('Open all');
+
+            $('.checklist-item').each(function(){
+                $(this).removeClass('open');
+            });
+            $('.checklist-sub-item-wrapper').each(function(){
+                $(this).slideUp(400);
+            });
+
+        }
+    });
+
+	// Open & close checklist items 
+	$(".checklist-item-title").on("click", function () {
+		$(this).next('.checklist-sub-item-wrapper').slideToggle(400);
+
+		if ($(this).closest('.checklist-item').hasClass('open')) {
+
+			$(this).closest('.checklist-item').removeClass('open');
+
+
+			// Close sub-items when close step
+			if ($(this).closest('.checklist-item').find('.checklist-sub-item').hasClass('open')) {
+
+				$(this).closest('.checklist-item').find('.checklist-sub-item.open').find('.content-wrapper').slideToggle(400);
+				$(this).closest('.checklist-item').find('.checklist-sub-item').removeClass('open');
+			}
+
+		} else {
+			$(this).closest('.checklist-item').addClass('open');
+		}
+
+        if ( $('.checklist-item.open').length == $('.checklist-item').length) {
+            $('.checklist-toggle span').text('Close all');
+            $('.checklist-toggle').addClass('close');
+        } 
+        if ( $('.checklist-item.open').length == 0 ) {
+            $('.checklist-toggle span').text('Open all');
+            $('.checklist-toggle').removeClass('close');
+        }
+
+	});
+
+	// Close checklist step button
+	$(' .checklist-close-step').on('click', function () {
+		$(this).parents('.checklist-sub-item-wrapper').hide();
+		$(this).parents('.checklist-item').removeClass('open');
+	});
+
+
+	// Open & close sub-checklist items
+	$(".checklist-sub-item-title").on("click", function () {
+
+		$(this).next('.content-wrapper').slideToggle(400);
+
+		if ($(this).closest('.checklist-sub-item').hasClass('open')) {
+			$(this).closest('.checklist-sub-item').removeClass('open');
+		} else {
+			$(this).closest('.checklist-sub-item').addClass('open');
+		}
+
+	});
+	// Checkbox functionality
+	$('.checklist-item-checkbox').on('click', function () {
+		if ($(this).parents('.checklist-sub-item.must-do').hasClass('done')) {
+			$(this).parents('.checklist-sub-item.must-do').removeClass('done');
+		} else {
+			$(this).parents('.checklist-sub-item.must-do').addClass('done');
+		}
+
+		$(this).parents('.checklist-item').find('.checklist-sub-item.must-do').each(function () {
+
+			var item_completion = false;
+			if ($(this).hasClass('done')) {
+				item_completion = true;
+			} else {
+				item_completion = false;
+				$(this).parents('.checklist-item').removeClass('item-done');
+				return false;
+			}
+			if (item_completion === true) {
+				$(this).parents('.checklist-item').addClass('item-done');
+			}
+
+		});
+	});
+    
+    
+
+    
+    // Open & close lightweight checklist items
+    /*
+    $(".lightweight .checklist-sub-item-title").on("click", function () {
+
+        $(this).next('.checklist-sub-item:after').slideToggle(400);
+
+		if ($(this).closest('.checklist-sub-item').hasClass('open')) {
+			$(this).closest('.checklist-sub-item').removeClass('open');
+		} else {
+			$(this).closest('.checklist-sub-item').addClass('open');
+		}
+
+	});
+    */
+    
+     //Close functionality 
+    $('.lightweight .close-item btn').on('click', function () {
+        // Scroll and close
+        var parent_item = $(this).parents('.checklist-item');
+
+        parent_item.removeClass('open');
+        var parent_position = parent_item.position();
+        $("html").animate({
+                scrollTop: $(parent_item).offset().top
+            },
+            400 //speed
+        );
+
+        var content = $(this).parents('.checklist-sub-item-wrapper');
+        setTimeout(function () {
+            content.slideUp(1000);
+        }, 400);
+    });
+
+
 
 }); //End doc ready
 
