@@ -48,7 +48,6 @@
             opacity: 1;
         }
 
-
         .checklist-item {
             position: relative;
 
@@ -92,6 +91,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    flex-shrink: 0;
                 }
 
                 &:focus-visible {
@@ -251,36 +251,77 @@
     .checklist-wrapper {
 
         .checklist-line {
-            height: calc(100% - 130px);  
+            height: calc(100% - 130px);
             margin: 48px 0 0 16px;
         }
+        .checklist-item-divider {
+            width: calc(100% - 56px);
+            margin: 8px 0 8px 48px;
+        }
 
-    .checklist-item {
+        .checklist-item {
 
-        .checklist-item-title {
-            margin-left: 40px;
+            .checklist-item-title {
+                margin-left: 40px;
+                padding: 16px;
 
-            h2 {
-                font-size: 1.25rem;
-                span {
-                    width: 36px;
-                    height: 36px;
-                    left: -40px;
-                }
-            }  
-        } 
-        &:last-of-type {
-            .checklist-sub-item:last-of-type {
-                &:after {
-                    left: -48px;
+                h2 {
+                    font-size: 1.25rem;
+
+                    span {
+                        width: 36px;
+                        height: 36px;
+                        left: -40px;
+                    }
                 }
             }
+
+            &:last-of-type {
+                .checklist-sub-item:last-of-type {
+                    &:after {
+                        left: -48px;
+                    }
+                }
+            }
+
+            .checklist-sub-item-wrapper {
+                .content-wrapper {
+                    padding: 0 0 0 8px !important;
+                }
+            }
+
+            .checklist-sub-item {
+                .checklist-item-content {
+                    padding: 0 16px 16px 16px;
+                }
+                .checklist-item-checkbox {
+                    padding: 16px;
+
+                    .close-item svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+            .feature-box {
+                .icon-wrapper {
+                    display: none;
+                }
+                .component-content {
+                    border-left-width: 4px;
+                    padding: 16px !important;
+                }
+            }
+            .inline-pathway a .link-wrapper {
+                border-left-width: 4px;
+                padding: 16px !important;
+            }
+        }
+
+        .line-end {
+            left: 16px;
         }
     }
-    .line-end {
-        left: 16px;
-    }
-}
 }
 
 .component-example.bp-below768,
