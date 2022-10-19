@@ -1,0 +1,119 @@
+---
+
+layout: content-tagged
+title: Standard checklist pattern
+description: A checklist pattern for presenting an end to end journey in logical steps.
+breadcrumb1: Tool patterns
+url1: /tool-patterns.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Page anatomy" link-id-1="#page-anatomy"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+        <p>The standard checklist pattern consists of a list of numbered items and a 'save progress' feature. The items open to reveal sub-items with checkboxes allowing users to track their progress through the list.</p>
+
+       
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                    classes="standard-checklist-container"
+                    img="'../assets/page-patterns/standard-checklist.png' | relative_url"
+
+                    spot1="Heading (page title)"
+                    spot2="Long description (supporting text)"
+                    spot3="Numbered checklist item"
+                    spot4="'Tips' sub-item"
+                    spot5="'Must do' sub-item"
+                    spot6="Save progress feature"
+                %}
+                
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+                    
+                    item1="Heading (page title)"
+                    content1="<p>A direct, short title focused on the main topic the user will learn about.</p><ul><li>Maximum character limit of 50.</li></ul>"
+
+                    item2="Long description (supporting text)"
+                    content2="<p>A short paragraph that expands on what the checklist is about.</p><ul><li>The supporting text should explain the end to end process the checklist is for.</li><li>Maximum character limit of 90.</li><li>Include the top three keywords for the page.</li></ul>"
+
+                    item3="Numbered checklist item"
+                    content3="<p>Item titles should be short, action oriented statements that make it clear at a high-level what the user needs to do.</p>"
+
+
+                    item4="'Tips' sub-item"
+                    content4="<p>Recommended content that users should consider.</p><ul><li>These sub-items are not checkable.</li><li>Actions are not legally required.</li></ul>"
+
+                    item5="'Must do' sub-item"
+                    content5="<p>A direct, short title focused on the main action the user will complete on the page.</p><ul><li>These sub-items are checkable, users can mark them as done.</li><li>Actions are legally required.</li></ul>"
+
+
+                    item6="Save progress feature"
+                    content6="<p>Provides users with the ability to save a link to the checklist.</p><ul><li>Title and description in this box should stay the same across checklists</li></ul>"
+                %}
+
+            
+        </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>A checklist is used for an end to end process that includes legal steps. This pattern is helpful for someone who needs to complete tasks in a specific order and should include task/action based content only.</p>
+        <h3>General rules:</h3>
+        <ul>
+            <li>Should only be used where there is a logical order to complete a larger journey.</li>
+            <li>Provides numbered steps that presents a specific start and end point.</li>
+            <li>Provides links within content to other websites to complete each step.</li>
+            <li>Can include online and offline actions.</li>
+            <li>Key content is legally required (&lsquo;Must do&rsquo;) steps.</li>
+        </ul>
+        <h3>When not to use this pattern:</h3>
+        <ul>
+            <li>When the user only needs to read guidance and not take an action (use Guide pattern instead).</li>
+            <li>When you are educating the user about a specific stage in an end to end journey (use the tutorial pattern).</li>
+        </ul>
+
+       
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "components/standard-checklist-accordion.html" | relative_url }}>Staandard checklist accordion</a></li>
+            <li><a href={{ "components/save-progress-sidebar.html" | relative_url }}>Save your progress sidebar</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+      
+
+    </div>
