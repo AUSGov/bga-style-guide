@@ -3753,6 +3753,10 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .checklist-wrapper.lightweight .checklist-sub-item .checklist-item-checkbox .close-item p { margin: 0; padding: 0; }
 
+.checklist-wrapper.standard .checklist-item-divider { width: calc(100% - 64px); margin: 16px 0 16px 64px; }
+
+.checklist-wrapper.standard .checklist-item .checklist-item-title { padding: 24px 24px 24px 0; }
+
 .checklist-wrapper.standard .checklist-item.open:last-of-type .checklist-item-title:before { height: 100%; }
 
 .checklist-wrapper.standard .checklist-item.open .checklist-item-title { border: none; }
@@ -3761,35 +3765,47 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .checklist-wrapper.standard .checklist-item.open .checklist-sub-item-wrapper { display: block; }
 
-.checklist-wrapper.standard .checklist-item.item-done .checklist-item-title h2 span, .checklist-wrapper.standard .checklist-item.item-done .checklist-item-title .h2 span { background: green url("../assets/Icon-tick-white.svg") no-repeat; background-position: center center; background-size: 20px 16px; border: 3px solid green; color: #fff; text-indent: -9999px; }
+.checklist-wrapper.standard .checklist-item.item-done .checklist-item-title h2 span, .checklist-wrapper.standard .checklist-item.item-done .checklist-item-title .h2 span { background: #299F28 url("../assets/Icon-tick-white.svg") no-repeat; background-position: center center; background-size: 20px 16px; border: 3px solid #299F28; color: #fff; text-indent: -9999px; }
 
-.checklist-wrapper.standard .checklist-sub-item-wrapper { display: none; margin-left: 48px; }
+.checklist-wrapper.standard .checklist-sub-item-wrapper { display: none; margin-left: 32px; }
 
-.checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-close-step-wrapper { text-align: right; }
-
-.checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-close-step-wrapper .checklist-close-step { margin-bottom: 32px; display: inline-block; text-decoration: underline; color: blue; padding-left: 24px; background: url("../assets/Icon-cross-blue.svg") no-repeat; background-size: 16px 16px; background-position: left center; cursor: pointer; }
+.checklist-wrapper.standard .checklist-sub-item-wrapper .content-wrapper { padding: 0 !important; display: none; }
 
 .checklist-wrapper.standard .checklist-sub-item { position: relative; margin-left: 32px; }
 
-.checklist-wrapper.standard .checklist-sub-item:before { content: url("../assets/checklist-grey-dot.svg"); position: absolute; z-index: 100; left: -67px; height: 100%; top: 32px; }
+.checklist-wrapper.standard .checklist-sub-item:before { content: url("../assets/checklist-grey-dot.svg"); position: absolute; z-index: 100; left: -51px; height: 100%; top: 30px; }
 
-.checklist-wrapper.standard .checklist-sub-item .checklist-item-content { background: #E5EDF7; padding: 16px 32px 32px 32px; position: relative; }
+.checklist-wrapper.standard .checklist-sub-item .checklist-sub-item-title { display: flex; justify-content: space-between; align-items: center; background: #C8D9EE; padding: 24px; cursor: pointer; }
+
+.checklist-wrapper.standard .checklist-sub-item .checklist-sub-item-title .icon-wrapper { background: transparent; width: 32px; height: 32px; border-radius: 50px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.checklist-wrapper.standard .checklist-sub-item .checklist-sub-item-title:hover h3, .checklist-wrapper.standard .checklist-sub-item .checklist-sub-item-title:hover .h3 { text-decoration: underline; }
+
+.checklist-wrapper.standard .checklist-sub-item .checklist-sub-item-title:hover .icon-wrapper { background: #ffffff; }
+
+.checklist-wrapper.standard .checklist-sub-item .checklist-item-content { background: #C8D9EE; padding: 0px 24px 24px 24px; position: relative; }
 
 .checklist-wrapper.standard .checklist-sub-item .checklist-item-content h3, .checklist-wrapper.standard .checklist-sub-item .checklist-item-content .h3 { padding-right: 120px; }
 
-.checklist-wrapper.standard .checklist-sub-item .checklist-item-checkbox { padding: 16px 32px; background: #BAC8DB url("../assets/checkbox-unchecked.svg") no-repeat; background-position: left 32px center; }
+.checklist-wrapper.standard .checklist-sub-item .checklist-item-checkbox { padding: 16px 24px; background: #B3CBE8 url("../assets/checkbox-unchecked.svg") no-repeat; background-position: left 24px center; display: flex; align-items: center; }
 
 .checklist-wrapper.standard .checklist-sub-item .checklist-item-checkbox input[type="checkbox"] { opacity: 0; width: 28px !important; height: 28px !important; cursor: pointer; }
 
 .checklist-wrapper.standard .checklist-sub-item .checklist-item-checkbox label { padding-left: 6px; }
 
-.checklist-wrapper.standard .checklist-sub-item.done .checklist-item-checkbox { background: #B7DDB7 url("../assets/checkbox-checked.svg") no-repeat; background-position: left 32px center; }
+.checklist-wrapper.standard .checklist-sub-item.done .checklist-item-checkbox { background: #A0D1A0 url("../assets/checkbox-checked.svg") no-repeat; background-position: left 24px center; }
 
-.checklist-wrapper.standard .checklist-sub-item.done:before { content: url("../assets/checklist-grey-dot-checked.svg"); position: absolute; z-index: 100; left: -67px; top: 32px; height: 100%; }
+.checklist-wrapper.standard .checklist-sub-item.done:before { content: url("../assets/checklist-grey-dot-checked.svg"); position: absolute; z-index: 100; left: -51px; top: 30px; height: 100%; }
 
 .checklist-wrapper.standard .checklist-sub-item.tip:before { content: ' '; }
 
+.checklist-wrapper.standard .checklist-sub-item.tip .checklist-sub-item-title { background: #E4E6EA; }
+
 .checklist-wrapper.standard .checklist-sub-item.tip .checklist-item-content { background: #E4E6EA; }
+
+.checklist-wrapper.standard .checklist-sub-item.open .checklist-sub-item-title .icon-wrapper { background: #ffffff; }
+
+.checklist-wrapper.standard .checklist-sub-item.open .checklist-sub-item-title .icon-wrapper svg { transform: scaleY(-1); }
 
 .checklist-wrapper .line-end { height: 100%; width: 5px; background: #ffffff; position: absolute; z-index: 10; top: 48px; left: 22px; }
 
