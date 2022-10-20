@@ -165,6 +165,21 @@
                     display: block;
                 }
             }
+            &:after {
+                content: " ";
+                position: absolute;
+                z-index: 90;
+                left: 24px;
+                top: 30px;
+                height: calc(100% + 32px);
+                background: $bga-blue-black-light;
+                width: 2.5px;
+            }
+            &:last-of-type {
+                &:after {
+                   display: none;
+                }
+            }
         }
 
         .checklist-sub-item-wrapper {
@@ -248,9 +263,50 @@
             margin: 16px 0 16px 64px;
         }
         .checklist-item {
+
+            &:after {
+                content: " ";
+                position: absolute;
+                z-index: 90;
+                left: 24px;
+                top: 30px;
+                height: calc(100% + 16px);
+                background: $bga-blue-black-light;
+                width: 2.5px;
+            }
+            &:last-of-type {
+                &:after {
+                   display: none;
+                }
+                &.open {
+                    &:after {
+                        height: 94px;
+                        display: block;
+                    }
+                }
+            }
+            &:last-of-type {
+                .checklist-sub-item {
+                    &:after {
+                        content: " ";
+                        position: absolute;
+                        z-index: 90;
+                        left: -40px;
+                        top: 32px;
+                        height: calc(100% + 16px);
+                        background: $bga-blue-black-light;
+                        width: 2.5px;   
+                    }
+                    &:last-of-type:after {
+                        display: none;
+                    }
+                }
+                
+            }
             .checklist-item-title {
                 padding: 24px 24px 24px 0;
             }
+
             &.open {
                 &:last-of-type {
                     .checklist-item-title:before {
@@ -266,6 +322,7 @@
                             text-decoration: underline;
                         }
                     }
+
                 }
 
                 .checklist-sub-item-wrapper {
@@ -337,6 +394,7 @@
                     h3 {
                         text-decoration: underline;
                     }
+
                     .icon-wrapper {
                         background: $bga-white;
                     }
@@ -372,7 +430,6 @@
                     padding-left: 6px;
                 }
             }
-
 
             &.done {
                 .checklist-item-checkbox {
@@ -423,15 +480,7 @@
 
     }
 
-    .line-end {
-        height: 100%;
-        width: 5px;
-        background: $bga-white;
-        position: absolute;
-        z-index: 10;
-        top: 48px;
-        left: 22px;
-    }
+
 
 }
 
@@ -520,6 +569,7 @@
 
         .line-end {
             left: 16px;
+            height: 90%;
         }
     }
 }
