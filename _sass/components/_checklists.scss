@@ -28,16 +28,6 @@
         }
     }
 
-    .checklist-line {
-        height: calc(100% - 115px);
-        width: 2.5px;
-        background: $bga-blue-black-light;
-        display: block;
-        z-index: 0;
-        position: absolute;
-        margin: 48px 0 0 24px;
-    }
-
     .checklist-item-divider {
         border-top: 2px solid $bga-blue-black-light;
         width: calc(100% - 96px);
@@ -90,6 +80,7 @@
                 align-items: center;
                 justify-content: center;
                 flex-shrink: 0;
+                margin-left: 24px;
             }
 
             &:focus-visible {
@@ -379,6 +370,10 @@
                 padding: 24px;
                 cursor: pointer;
 
+                h3 {
+                    display: flex;
+                }
+
                 .icon-wrapper {
                     background: transparent;
                     width: 32px;
@@ -388,6 +383,7 @@
                     align-items: center;
                     justify-content: center;
                     flex-shrink: 0;
+                    margin-left: 24px;
                 }
 
                 &:hover {
@@ -488,14 +484,9 @@
 @mixin checklist-below768 () {
     .checklist-wrapper {
 
-        .checklist-line {
-            height: calc(100% - 130px);
-            margin: 48px 0 0 16px;
-        }
-
         .checklist-item-divider {
-            width: calc(100% - 56px);
-            margin: 8px 0 8px 48px;
+            width: calc(100% - 56px) !important;
+            margin: 8px 0 8px 56px !important;
         }
 
         .checklist-item {
@@ -511,11 +502,14 @@
                         width: 36px;
                         height: 36px;
                         left: -40px;
+                        top: 16px;
                     }
+                }
+                .icon-wrapper {
+                    margin-left: 16px;
                 }
 
             }
-
             &:last-of-type {
                 .checklist-sub-item:last-of-type {
                     &:after {
@@ -523,9 +517,6 @@
                     }
                 }
             }
-
-
-
             .feature-box {
                 .icon-wrapper {
                     display: none;
@@ -543,8 +534,12 @@
             }
         }
 
-
         &.lightweight {
+            .checklist-item {
+                &:after {
+                    left: 16px;
+                }
+            }
             .checklist-sub-item-wrapper {
                 .content-wrapper {
                     padding: 0 0 0 8px !important;
@@ -567,9 +562,64 @@
             }
         }
 
-        .line-end {
-            left: 16px;
-            height: 90%;
+        &.standard {
+            .checklist-item {
+                .checklist-item-title {
+                    padding: 16px !important;
+                }
+    
+                
+                &:after {
+                    z-index: 90;
+                    left: 17px;
+                }
+                &:last-of-type {
+                    &.open {
+                        &:after {
+                            height: 94px;
+                        }
+                    }
+                }
+                &:last-of-type {
+                    .checklist-sub-item {
+                        &:after {
+                            left: -39px;
+                        }
+                    } 
+                }
+            }
+            .checklist-sub-item-wrapper {
+                margin-left: 40px;
+
+                .checklist-sub-item {
+                    margin-left: 16px;
+
+                    &:before {
+                        left: -50px;
+                    }
+                    .checklist-sub-item-title {
+                        padding: 16px;
+                        
+                        h3 {
+                            font-size: 1.125rem;
+
+                            svg {
+                                display: none;
+                            }
+                        }
+                        .icon-wrapper {
+                            margin-left: 16px;
+                        }
+                    }
+                    .checklist-item-content {
+                        padding: 0 16px 16px 16px;
+                    }
+                    .checklist-item-checkbox {
+                        padding: 16px;
+                        background-position: left 16px center;
+                    }
+                }
+            }
         }
     }
 }
