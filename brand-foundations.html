@@ -83,12 +83,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link inactive" href="#">Get started</a>
-                                </li>
-                                
-                                
+            
                                 <li class="nav-item">
                                     <a class="nav-link" href=/bga-style-guide/brand-foundations.html >Brand foundations</a>
                                 </li>
@@ -103,11 +98,7 @@
                                     <a class="nav-link" href=/bga-style-guide/page-patterns.html>Page patterns</a>
                                 </li>
                                 
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href=/bga-style-guide/tool-patterns.html>Tool patterns</a>
-                                </li>
-                                
+
                                 <li class="nav-item">
                                     <a class="nav-link" href=/bga-style-guide/resources.html>Resources</a>
                                 </li>
@@ -211,18 +202,76 @@
 
 
 <div class="row">
+
+    <div class="col-12 col-md-4 col-xl-3  d-none d-md-block">
+
+        <div class="nav-tile-search p-4 mb-4">
+            <label class="mb-3" for="component_name ">Search by foundation name</label>
+            <div class="input-wrapper">
+                <input type="text" id="component_name" name="component_name">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+
+        <div class="nav-tile-filters filter-component-type mt-0 mb-2 p-0">
+            <h5>Filter components</h5>
+
+            <fieldset>
+                <div class="filter-item">
+    <input class="me-2 mb-3" type="checkbox" id="colour-and-graphics" name="colour-and-graphics">
+    <label for="colour-and-graphics">Colour and graphics</label>
+</div>
+                
+                <div class="filter-item">
+    <input class="me-2 mb-3" type="checkbox" id="form-elements" name="form-elements">
+    <label for="form-elements">Form elements</label>
+</div> 
+                    
+                <div class="filter-item">
+    <input class="me-2 mb-3" type="checkbox" id="text-styles" name="text-styles">
+    <label for="text-styles">Text styles</label>
+</div>
+                    
+                <div class="filter-item">
+    <input class="me-2 mb-3" type="checkbox" id="grid-layout" name="grid-layout">
+    <label for="grid-layout">Grid layout</label>
+</div>
+                
+                 
+                
+            </fieldset>
+            
+        </div>
+        
+        
+        
+        <div class="reset-filters">
+            <button>Clear all filters<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16.01" viewBox="0 0 16 16.01">
+                        <path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)" fill="#333" />
+                    </svg></button>
+        </div>
+        
+    </div>
+
+
+
+    <div class="col-12 col-md-8 col-xl-9">
+   
+        <div class="row remove-element-padding">
     
     <!-- Colour -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 colour-and-graphics bga-colour nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/colour.html >Colour</a>
 
-            <p class="tile-description mb-0">Guidance for using colour.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Colour and graphics</span>
                 
                 
                 
@@ -241,16 +290,18 @@
 </div>
     
     <!-- Typography -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 text-styles bga-typography nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/typography.html >Typography</a>
 
-            <p class="tile-description mb-0">Business.gov.au fonts and text styles.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Text styles</span>
                 
                 
                 
@@ -269,16 +320,18 @@
 </div>
     
     <!-- Grid and page layouts -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 grid-layout nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html >Grid and page layouts</a>
 
-            <p class="tile-description mb-0">Grid and spacing guidelines for business.gov.au.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Grid layout</span>
                 
                 
                 
@@ -297,16 +350,18 @@
 </div>
     
     <!-- Buttons and links -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-buttons-and-links nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/buttons-and-links.html >Buttons and links</a>
 
-            <p class="tile-description mb-0">Global styles for buttons and links.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Form elements</span>
                 
                 
                 
@@ -325,16 +380,18 @@
 </div>
     
     <!-- Text inputs -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-text-inputs nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/text-inputs.html >Text inputs</a>
 
-            <p class="tile-description mb-0">Guidelines on form text input fields.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Form elements</span>
                 
                 
                 
@@ -352,16 +409,18 @@
     </div>
 </div>
      <!-- Dropdown selects -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-dropdown-select nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/dropdown-select.html >Dropdown select</a>
 
-            <p class="tile-description mb-0">Guidelines on form dropdowns.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Form elements</span>
                 
                 
                 
@@ -380,16 +439,18 @@
 </div>
     
     <!-- Checkboxes and radio buttons -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-checkboxes-and-radio-buttons bga-radio-buttons bga-checkboxes nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/checkboxes-and-radio-buttons.html >Checkboxes and radio buttons</a>
 
-            <p class="tile-description mb-0">Guidelines checkboxes and radio buttons.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Form elements</span>
                 
                 
                 
@@ -408,16 +469,18 @@
 </div>
     
     <!-- Datepicker -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-datepicker nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/datepicker.html >Datepicker</a>
 
-            <p class="tile-description mb-0">Style guidance for datepicker for fields.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Form elements</span>
                 
                 
                 
@@ -436,16 +499,18 @@
 </div>
     
     <!-- Contextual help -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-contextual-help nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/contextual-help.html >Contextual help</a>
 
-            <p class="tile-description mb-0">Guidance for including contextual help in forms and tools.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Form elements</span>
                 
                 
                 
@@ -464,16 +529,18 @@
 </div>
 
     <!-- Form field groups -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-form-fields bga-form-groups nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/form-fields.html >Form fields</a>
 
-            <p class="tile-description mb-0">Guidelines for grouping form elements.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Form elements</span>
                 
                 
                 
@@ -492,16 +559,18 @@
 </div>
     
      <!-- Iconography -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 colour-and-graphics bga-iconography bga-icons nav-tile-wrapper">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href=/bga-style-guide/brand-foundations/iconography.html >Iconography</a>
 
-            <p class="tile-description mb-0">Icons used on business.gov.au</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Colour and graphics</span>
                 
                 
                 
@@ -521,16 +590,18 @@
         
 
     <!-- Logos -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 bga-logos colour-and-graphics nav-tile-wrapper coming-soon">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href= >Logos</a>
 
-            <p class="tile-description mb-0">Rules for using the business.gov.au crest and other logos in business.gov.au digital products.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Colour and graphics</span>
                 
                 
                 
@@ -550,16 +621,18 @@
     
     
     <!-- Illustrations -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 colour-and-graphics bga-illustrations nav-tile-wrapper coming-soon">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href= >Illustrations</a>
 
-            <p class="tile-description mb-0">Guidelines for illustration styles and use on business.gov.au.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Colour and graphics</span>
                 
                 
                 
@@ -579,16 +652,18 @@
     
     
     <!-- Infographics -->
-    <div class="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 bga-infographics colour-and-graphics nav-tile-wrapper coming-soon">
     <div class="bga-component nav-image-tile h-100">
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
             <a class="tile-title stretched-link mb-4" href= >Infographics</a>
 
-            <p class="tile-description mb-0">Guidelines for infographics and graphs.</p>
+            <p class="tile-description mb-0"></p>
             
             <div class="filter-tags mb-4">
+                
+                <span class="filter-tag px-3 py-1 mb-2 me-2">Colour and graphics</span>
                 
                 
                 
@@ -606,6 +681,8 @@
     </div>
 </div>
     
+        </div>
+    </div>
 
     
 
