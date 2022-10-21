@@ -1,0 +1,95 @@
+---
+
+layout: content-tagged
+title: Topic page
+description: A topic page pattern for navigation to pages under a business topic.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Page anatomy" link-id-1="#page-anatomy"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+       
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                    classes="topic-page-container"
+                    img="'../assets/page-patterns/topic-page.png' | relative_url"
+
+                    spot1="Heading (topic title)"
+                    spot2="Header description"
+                    spot3="Tile heading"
+                    spot4="Tile description"
+                    spot5="Section heading"
+                %}
+                
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+                    
+                    item1="Heading (topic title)"
+                    content1="<p>A direct, short title focused on the main topic the user will learn about.</p><ul><li>Maximum character limit of 50.</li><li>Page title is the business topic.</li></ul>"
+
+                    item2="Header description"
+                    content2="<p>A short paragraph that expands on what the topic is about and why it is important. </p><p><strong>Rules: </strong></p><ul><li>The description text should always start with one of the following:</li><li>&ldquo;Find out &hellip;&rdquo;</li><li>&ldquo;Learn how &hellip;&rdquo;</li><li>&ldquo;Understand &hellip;&rdquo;</li><li>Include the top three keywords for the page. </li><li>Maximum character limit of 90.</li></ul>"
+
+                    item3="Tile heading"
+                    content3="<p>A direct, short title focused on the main topic the user will learn about.</p><ul><li>Maximum character limit of 50.</li><li>Page title is the business topic.</li></ul>"
+
+                    item4="Tile description"
+                    content4="<p>This is automatically populated using the level 2 short description:</p><ul><li>Use one of these three intro phrases: &ldquo;learn how to&rdquo;, &ldquo;understand&rdquo; or &ldquo;find out&rdquo;. </li><li>Include the top three keywords for the page.</li><li>Maximum character limit of 90.</li></ul>"
+
+                    item5="Section heading"
+                    content5="<p>Can be used to break up pages into groups</p><ul><li>Short name explaining groups</li></ul>"
+                %}
+
+            
+        </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3><p>A topic page is the level 2 page. It provides the user with enough information to navigation to pages (transaction, 101, resource or tutorial) pages under each business topic. The content is pulled from metadata from pages below to populate the content tiles.</p><h3>It should always include:</h3><ul><li>The name of the business topic it is related to.</li><li>A long description explaining what the topic is about.</li></ul>
+
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Topic page header</a></li>
+            <li><a href={{ "/components/hero-pathway.html" | relative_url }}>Hero pathway list</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+      
+
+    </div>
