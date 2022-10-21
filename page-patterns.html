@@ -16,118 +16,234 @@ description: A collection of page designs outlining how different page types sho
 </div>
 
 <div class="row">
+
+
+    <div class="col-12 col-md-4 col-xl-3  d-none d-md-block">
+
+        <div class="nav-tile-search p-4 mb-4">
+            <label class="mb-3" for="component_name ">Search by pattern name</label>
+            <div class="input-wrapper">
+                <input type="text" id="component_name" name="component_name">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+        
+        
+        <div class="nav-tile-filters filter-component-type mt-0 mb-2 p-0">
+            <h5>Filter page patterns</h5>
+
+            <fieldset>
+                {% include filter-item.html
+                    item-title="Navigation pages" 
+                    item-string="navigation-pages" %}
+                
+                {% include filter-item.html
+                    item-title="Information pages" 
+                    item-string="information-pages" %}
+                
+                {% include filter-item.html
+                    item-title="Tool patterns" 
+                    item-string="tool-patterns" %}
+                
+            </fieldset>
+            
+        </div>
+
+        
+        
+        
+        <div class="reset-filters">
+            <button>Clear all filters<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16.01" viewBox="0 0 16 16.01">
+                        <path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)" fill="#333" />
+                    </svg></button>
+        </div>
+        
+    </div>
+
+
+
+
+    <div class="col-12 col-md-8 col-xl-9">
+
+        <div class="row remove-element-padding">
     
     <!-- Category -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-category-page"
         tile-url="page-patterns/category-page.html"
         tile-title="Category page" 
-        tile-text="A page pattern for navigation to business topic pages." 
+        tile-tag1="Navigation page" 
         tile-image="assets/nav-images/nav-tile-categorypage.svg" 
     %}
     
     <!-- Topic -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
-        tile-title="Topic page" 
-        tile-text="A page pattern for navigation to pages under a business topic." 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-topic-page coming-soon"
+        tile-title="Topic page"
+        tile-tag1="Navigation page"  
         tile-image="assets/nav-images/nav-tile-topicpage.svg" 
     %}
     
     <!-- Guide -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-guide-page"
+        tile-url="page-patterns/guide-page.html"
         tile-title="Guide page" 
-        tile-text="A navigation pattern that pulls together information from different areas of the site." 
+        tile-tag1="Navigation page" 
         tile-image="assets/nav-images/nav-tile-guidepage.svg" 
     %}
     
     <!-- Transaction Action -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-transaction-action-page coming-soon"
         tile-title="Transaction action page" 
-        tile-text="A page that provides the user with enough information to complete a single transaction-based task confidently and quickly." 
+        tile-tag1="Information page" 
         tile-image="assets/nav-images/nav-tile-transactionactionpage.svg" 
     %}
     
     <!-- 101 -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-101-page coming-soon"
         tile-title="101 page" 
-        tile-text="A single page that provides simple facts to help a user understand the basics of a business topic." 
+        tile-tag1="Information page"
         tile-image="assets/nav-images/nav-tile-101page.svg" 
     %}
     
     <!-- Tutorial -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-tutorial-page coming-soon"
         tile-title="Tutorial page" 
-        tile-text="Provides the user with steps and actionable guidance to help them complete a more complicated task or understand a more complicated topic." 
+        tile-tag1="Information page"
         tile-image="assets/nav-images/nav-tile-tutorialpage.svg" 
     %}
     
     <!-- Resource Article -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-resource-article-page coming-soon"
         tile-title="Resource article page" 
-        tile-text="A short, sharp page styled like an article that helps a user with a quick, simple topic or task." 
+        tile-tag1="Information page"
         tile-image="assets/nav-images/nav-tile-resourcearticle.svg" 
     %}
     
     <!-- Internal grants landing -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-internal-grants-landing-page coming-soon"
         tile-title="Internal grants landing page" 
-        tile-text="A single page providing information about grant amounts, eligibility, the application process and key documents." 
+        tile-tag1="Information page"
         tile-image="assets/nav-images/nav-tile-internalgrantslandingpage.svg" 
     %}
     
     <!-- External grants landing -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
-        tile-title="External grants landing page" 
-        tile-text="A single information page for external grants." 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-external-grants-landing-page coming-soon"
+        tile-title="External grants landing page"
+        tile-tag1="Information page" 
         tile-image="assets/nav-images/nav-tile-externalgrantslandingpage.svg" 
     %}
     
     <!-- Grant recipients -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-grant-recipients-page coming-soon"
         tile-title="Grant recipients page" 
-        tile-text="A single page listing successful grant recipients, usually in table form." 
+        tile-tag1="Information page"
         tile-image="assets/nav-images/nav-tile-grantrecipientspage.svg" 
     %}
     
     <!-- Customer stories landing -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-customer-stories-landing-page navigation-pages coming-soon"
         tile-title="Customer stories landing page" 
-        tile-text="A landing page for all of a program's customer stories." 
+        tile-tag1="Navgation page"
         tile-image="assets/nav-images/nav-tile-customerstorieslandingpage.svg" 
     %}
     
     <!-- Customer story (single) -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
-        tile-title="Customer story (single) page" 
-        tile-text="An article page about how successful grant recipients have used their grant to improve their business." 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-customer-story-page coming-soon"
+        tile-title="Customer story page" 
+        tile-tag1="Information page"
         tile-image="assets/nav-images/nav-tile-customerstorypage.svg" 
     %}
     
     <!-- Adviser detail -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-adviser-detail-page coming-soon"
         tile-title="Adviser detail page" 
-        tile-text="A single page detailing one advisor." 
+        tile-tag1="Information page"
         tile-image="assets/nav-images/nav-tile-adviserdetailpage.svg" 
     %}
     
     <!-- Event page -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-event-page coming-soon"
         tile-title="Event page" 
-        tile-text="A single page detailing an event." 
+        tile-tag1="Information page"
         tile-image="assets/nav-images/nav-tile-eventpage.svg" 
     %}
+
+        <!-- Patterns to collect information -->
+    <!-- BGA search -->
+    {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-search-page coming-soon"
+        tile-title="Search page" 
+        tile-tag1="Tool pattern"
+        tile-image="assets/nav-images/nav-tile-tilefilters.svg" 
+    %}
+
+     <!-- Tile filters with guided search questions -->
+     {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-tiled-page-with-filters coming-soon"
+        tile-title="Tiled page with filters" 
+        tile-tag1="Tool pattern"
+        tile-image="assets/nav-images/nav-tile-tilefilters.svg" 
+    %}
+    
+    <!-- Tile filters with guided search questions -->
+    {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-tiled-page-with-guided-search-questions coming-soon"
+        tile-title="Tiled page with guided search questions" 
+        tile-tag1="Tool pattern"
+        tile-image="assets/nav-images/nav-tile-tilefilterswithguidedquestions.svg" 
+    %}
+    
+    <!-- Internal stepped question and answer tools -->
+    {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-internal-q&a-tools coming-soon"
+        tile-title="Internal Q&amp;A tools" 
+        tile-tag1="Tool pattern"
+        tile-image="assets/nav-images/nav-tile-steppedquestionandanswer.svg" 
+    %}
+    
+    <!-- External stepped question and answer tools -->
+    {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-external-bga-branded-q&a-tools coming-soon"
+        tile-title="External BGA branded Q&amp;A tools" 
+        tile-tag1="Tool pattern"
+        tile-image="assets/nav-images/nav-tile-steppedquestionandanswer.svg" 
+    %}
+    
+    <!-- Standard checklist -->
+    {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns information-pages bga-standard-checklist"
+        tile-url="page-patterns/standard-checklist.html"
+        tile-title="Standard checklist" 
+        tile-tag1="Tool pattern"
+        tile-tag2="Information page"
+        tile-image="assets/nav-images/nav-tile-standardchecklist.svg" 
+    %}
+    
+    <!-- Lightweight checklist -->
+    {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns information-pages bga-lightweight-checklist"
+        tile-url="page-patterns/lightweight-checklist.html"
+        tile-title="Lightweight checklist" 
+        tile-tag1="Tool pattern"
+        tile-tag2="Information page"
+        tile-image="assets/nav-images/nav-tile-lightweightchecklist.svg" 
+    %}
+
+    </div>
+    </div>
+    
     
 </div>

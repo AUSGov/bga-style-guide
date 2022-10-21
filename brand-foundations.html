@@ -16,132 +16,186 @@ description: The global rules and elements which govern the appearance, structur
 
 
 <div class="row">
+
+    <div class="col-12 col-md-4 col-xl-3  d-none d-md-block">
+
+        <div class="nav-tile-search p-4 mb-4">
+            <label class="mb-3" for="component_name ">Search by foundation name</label>
+            <div class="input-wrapper">
+                <input type="text" id="component_name" name="component_name">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+
+        <div class="nav-tile-filters filter-component-type mt-0 mb-2 p-0">
+            <h5>Filter components</h5>
+
+            <fieldset>
+                {% include filter-item.html
+                    item-title="Colour and graphics" 
+                    item-string="colour-and-graphics" %}
+                
+                {% include filter-item.html
+                    item-title="Form elements" 
+                    item-string="form-elements" %} 
+                    
+                {% include filter-item.html
+                    item-title="Text styles" 
+                    item-string="text-styles" %}
+                    
+                {% include filter-item.html
+                    item-title="Grid layout" 
+                    item-string="grid-layout" %}
+                
+                 
+                
+            </fieldset>
+            
+        </div>
+        
+        
+        
+        <div class="reset-filters">
+            <button>Clear all filters<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16.01" viewBox="0 0 16 16.01">
+                        <path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)" fill="#333" />
+                    </svg></button>
+        </div>
+        
+    </div>
+
+
+
+    <div class="col-12 col-md-8 col-xl-9">
+   
+        <div class="row remove-element-padding">
     
     <!-- Colour -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 colour-and-graphics bga-colour nav-tile-wrapper"
         tile-title="Colour" 
-        tile-text="Guidance for using colour." 
+        tile-tag1="Colour and graphics"
         tile-image="assets/nav-images/nav-tile-color.svg" 
         tile-url="brand-foundations/colour.html"
     %}
     
     <!-- Typography -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 text-styles bga-typography nav-tile-wrapper"
         tile-title="Typography" 
-        tile-text="Business.gov.au fonts and text styles." 
+        tile-tag1="Text styles"
         tile-image="assets/nav-images/nav-tile-typography.svg" 
         tile-url="brand-foundations/typography.html"
     %}
     
     <!-- Grid and page layouts -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 grid-layout nav-tile-wrapper"
         tile-title="Grid and page layouts" 
-        tile-text="Grid and spacing guidelines for business.gov.au." 
+        tile-tag1="Grid layout"
         tile-image="assets/nav-images/nav-tile-gridandlayouts.svg" 
         tile-url="brand-foundations/grid-and-page-layouts.html"
     %}
     
     <!-- Buttons and links -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-buttons-and-links nav-tile-wrapper"
         tile-title="Buttons and links" 
-        tile-text="Global styles for buttons and links." 
+        tile-tag1="Form elements"
         tile-image="assets/nav-images/nav-tile-buttonsandlinks.svg"
         tile-url="brand-foundations/buttons-and-links.html"
     %}
     
     <!-- Text inputs -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-text-inputs nav-tile-wrapper"
         tile-title="Text inputs" 
-        tile-text="Guidelines on form text input fields." 
+        tile-tag1="Form elements"
         tile-image="assets/nav-images/nav-tile-text-inputs.svg"
         tile-url="brand-foundations/text-inputs.html"
     %}
      <!-- Dropdown selects -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-dropdown-select nav-tile-wrapper"
         tile-title="Dropdown select" 
-        tile-text="Guidelines on form dropdowns." 
+        tile-tag1="Form elements"
         tile-image="assets/nav-images/Nav-tile-dropdown.svg"
         tile-url="brand-foundations/dropdown-select.html"
     %}
     
     <!-- Checkboxes and radio buttons -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-checkboxes-and-radio-buttons bga-radio-buttons bga-checkboxes nav-tile-wrapper"
         tile-title="Checkboxes and radio buttons" 
-        tile-text="Guidelines checkboxes and radio buttons." 
+        tile-tag1="Form elements"
         tile-image="assets/nav-images/nav-tile-checks.svg"
         tile-url="brand-foundations/checkboxes-and-radio-buttons.html"
     %}
     
     <!-- Datepicker -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-datepicker nav-tile-wrapper"
         tile-url="brand-foundations/datepicker.html"
+        tile-tag1="Form elements"
         tile-title="Datepicker" 
-        tile-text="Style guidance for datepicker for fields." 
         tile-image="assets/nav-images/nav-tile-datepicker.svg" 
     %}
     
     <!-- Contextual help -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-contextual-help nav-tile-wrapper"
         tile-url="brand-foundations/contextual-help.html"
+        tile-tag1="Form elements"
         tile-title="Contextual help" 
-        tile-text="Guidance for including contextual help in forms and tools." 
         tile-image="assets/nav-images/nav-tile-help.svg" 
     %}
 
     <!-- Form field groups -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 form-elements bga-form-fields bga-form-groups nav-tile-wrapper"
         tile-url="brand-foundations/form-fields.html"
+        tile-tag1="Form elements"
         tile-title="Form fields" 
-        tile-text="Guidelines for grouping form elements." 
         tile-image="assets/nav-images/nav-tile-formfield.svg"
     %}
     
      <!-- Iconography -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 colour-and-graphics bga-iconography bga-icons nav-tile-wrapper"
         tile-url="brand-foundations/iconography.html"
+        tile-tag1="Colour and graphics"
         tile-title="Iconography" 
-        tile-text="Icons used on business.gov.au" 
         tile-image="assets/nav-images/nav-tile-iconography.svg" 
     %}
         
 
     <!-- Logos -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 bga-logos colour-and-graphics nav-tile-wrapper coming-soon"
         tile-title="Logos" 
-        tile-text="Rules for using the business.gov.au crest and other logos in business.gov.au digital products." 
+        tile-tag1="Colour and graphics"
         tile-image="assets/nav-images/nav-tile-logos.svg" 
     %}
     
     
     <!-- Illustrations -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 colour-and-graphics bga-illustrations nav-tile-wrapper coming-soon"
         tile-title="Illustrations" 
-        tile-text="Guidelines for illustration styles and use on business.gov.au." 
+        tile-tag1="Colour and graphics"
         tile-image="assets/nav-images/nav-tile-illustrations.svg" 
     %}
     
     
     <!-- Infographics -->
     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-lg-4 mb-5 nav-tile-wrapper coming-soon"
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 bga-infographics colour-and-graphics nav-tile-wrapper coming-soon"
         tile-title="Infographics" 
-        tile-text="Guidelines for infographics and graphs." 
+        tile-tag1="Colour and graphics"
         tile-image="assets/nav-images/nav-tile-infographics.svg"
     %}
     
+        </div>
+    </div>
 
     
 
