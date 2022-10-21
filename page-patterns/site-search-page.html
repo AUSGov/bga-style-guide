@@ -1,0 +1,93 @@
+---
+
+layout: content-tagged
+title: Site search page
+description: A landing page for the business.gov.au site search.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Page anatomy" link-id-1="#page-anatomy"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="search-page-container"
+                img="'../assets/page-patterns/site-search-page.png' | relative_url"
+                spot1="Header search bar"
+                spot2="Results showing number"
+                spot3="Filters"
+                spot4="Search result tiles"
+                spot5="Pagination"
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Header search bar"
+                content1="<p>The search bar is placed in page header, it replaces the search bar that usually displays on the top right of the site header.</p><p>The page loads with the current search term visible in the search bar</p>"
+
+                item2="Results showing number"
+                content2="<p>The results showing number highlights the number of items returned in the current search.</p>"
+
+                item3="Filters"
+                content3="<p>The search filters allow users to refine the current search with a series of checkboxes.</p><p>Checkbox filter items names include a number at the end indicating how many results are in each filter category.</p>"
+
+                item4="Search result tiles"
+                content4="<p>Search result tiles are used to link to business.gov au pages.</p><p>Search result tiles contain a heading that relates to the connected page title and a description of the page. They can also contain additional information depending on the type of page they link to.</p>"
+
+                item5="Pagination"
+                content5="<p>The pagination link provide a way to navigate through multiple pages of search result tiles.</p>"
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>The business.gov.au site search page provides users with a series of results relating to a search.</p>
+    
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li> 
+            <li><a href={{ "/components/tile-filters.html" | relative_url }}>Tile filters</a></li>
+            <li><a href={{ "/components/site-search-result-tiles.html" | relative_url }}>Site search result tiles</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
