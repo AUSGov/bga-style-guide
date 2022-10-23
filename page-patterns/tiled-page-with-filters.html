@@ -1,0 +1,99 @@
+---
+
+layout: content-tagged
+title: Tiled page with filters
+description: A tool page for displaying and filtering a series of information tiles.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Page anatomy" link-id-1="#page-anatomy"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="filtered-tile-page-container"
+                img="'../assets/page-patterns/filtered-tile-page.png' | relative_url"
+                spot1="Heading (tool title)"
+                spot2="Header description"
+                spot3="Results showing number"
+                spot4="Filters"
+                spot5="Result tiles"
+                spot6="Pagination"
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (tool title)"
+                content1="<p>A direct, short title focused on how the tool can help the user.</p><ul><li>Maximum character limit of 50.</li><li>Title is the name of the tool.</li></ul>"
+
+                item2="Header description"
+                content2="<p>A short paragraph that expands on what information the&nbsp;tool&nbsp;provides and why it is important.</p><ul><li>Include the top three keywords for the page.</li><li>Maximum character limit of 90.</li></ul>"
+
+                item3="Results showing number"
+                content3="<p>The results showing number highlights the number of information tiles available. When the page loads the showing number is set to the total number of items available. When the user interacts with the filters to refine the set of tiles the showing number changes accordingly.</p><p>The showing number text should describe the type of information being displayed:</p><ul><li>Showing XX services</li><li>Showing XX events</li></ul>"
+
+                item4="Filters"
+                content4="<p>The filters allow users to refine the current set of information tiles using a series of checkboxes, dropdown selects and / or text input fields.</p><p>Filter configurations vary from tool to tool.</p>"
+
+                item5="Result tiles"
+                content5="<p>Result tiles are used to link to business.gov au pages.</p><p>Tile designs vary between tools but generally have a title that relates to the linked page title and a short description.</p>"
+
+                item6="Pagination"
+                content6="<p>The pagination links provide a way to navigate through multiple pages of result tiles.</p>"
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>Tiled pages with filters provide users with a series of links to related information such as a set of services or events. Filters can be used to refine the number of items included helping users to find informtion that is relevant to them.</p><p>Examples of this pattern are the business.gov.au events finder and adviser finder tools.</p>
+
+    
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Topic page header (teal)</a></li> 
+            <li><a href={{ "/components/tile-filters.html" | relative_url }}>Tile filters</a></li>
+            <li><a href={{ "/components/site-search-result-tiles.html" | relative_url }}>Site search result tiles</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
