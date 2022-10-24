@@ -1,0 +1,130 @@
+---
+
+layout: content-tagged
+title: Transaction action page
+description: A page that provides the user with enough information to complete a single transaction-based task confidently and quickly.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="transaction-action-page-container"
+                img="'../assets/page-patterns/transaction-action-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="H2 sub-headings"
+                spot4="Opening body copy paragraph/s"
+                spot5="Call to action (CTA)"
+                spot6="Accordion"
+                spot7="Read next"
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>A direct, short title focused on the main action the user will complete on the page.</p><ul><li>Maximum character limit of 50.</li><li>Start with &ldquo;Register for&hellip;&rdquo;&nbsp; or &ldquo;Search for..&rdquo;</li></ul>"
+
+                item2="Header description"
+                content2="<p>A short paragraph that expands on what the main action on the page is and why it is important.</p><p><strong>Rules for long description:</strong></p><ul><li>The supporting text should explain who the page is for, what the user will learn and the benefit of the page.</li><li>Maximum character limit of 350.</li></ul><p><strong>Rules for short description:</strong></p><ul><li>The short description will not appear on page, it is used for the topic page tile description (populated from metadata).</li><li>The supporting text always following the format of [intro phrase] [sub-topic], [sub-topic] and [sub-topic], so you can [user outcome].</li><li>Use one of these three intro phrases: “learn how to”, “understand” or “find out”.</li><li>Include the top three keywords for the page.</li><li>Maximum character limit of 90.</li></ul>"
+
+                item3="H2 sub-headings"
+                content3="<p>Short titles used to break up the content into sub-topics. </p><ul><li>Maximum length of one line.</li><li>Don’t hyperlink the headings.</li><li>Avoid replicating the page title.</li></ul>"
+
+                item4="Opening body copy paragraph/s"
+                content4="<p>This should help explain what the transaction or service is about, who it applies to and what the end goal is.</p><ul><li>No more than two blocks above the CTA.</li><li>No more than two paragraphs each block.</li></ul>"
+
+                item5="Call to action (CTA)"
+                content5="<p>The call to action is the main reason why this page exists. This box should only contain information about the form or service.</p><ul><li>Only use one CTA per page.</li><li>Maximum of 50 characters in heading text.</li><li>Title must include the name of the tool/form</li><li>Maximum of 200 characters in body text.</li><li>The text must cover what the business needs to do before actioning the CTA or a quick description of the tool.</li><li>A max of three dot points can be included if there are important steps or information that must be known before completing the tool/form. This excludes other tools that must be completed.</li><li>Avoid hyperlinks in the text.</li><li>The call to action must include an action. E.g. Register… or Search…</li><li>Maximum of <strong>four</strong> words in the text on the button.</li><li>CTA can be an internal or external resource.</li></ul>"
+
+                item6="Accordion"
+                content6="<p>Used to house frequently asked questions or information about the transaction action the user is completing.</p><ul><li>Only use one group per page.</li><li>Maximum of 9 accordion items/questions.</li><li>Maximum of 60 characters in item heading.</li><li>Maximum of 600 characters in body text of each item. </li></ul>"
+
+
+                item7="Read next"
+                content7="<p>An optional component used to direct the user to what they might find most helpful next when there is a logical next step.</p><ul><li>Always use &ldquo;Read next&rdquo; for the heading.</li><li>Maximum of one link.</li><li>The link should always be internal.</li></ul>"
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>A transaction page is a page that gives the user with enough information to complete a single
+            transaction-based task confidently and quickly.</p>
+        <h3>It should always include:</h3>
+        <ul>
+            <li>One clear action with an outcome for the user highlighted with a strong call to action (CTA) to complete
+                the task. </li>
+            <li>A short explanation of what the task is. </li>
+            <li>Simple information in a list format to help the user qualify/disqualify themselves quickly.</li>
+            <li>Information on what a user needs to know/prepare before completing the task. </li>
+            <li>Information to address common concerns or question related to the task. </li>
+            <li>The name of the agency the task is related to. </li>
+            <li>An outcome for the user. </li>
+        </ul>
+        <h3>It can also include:</h3>
+        <ul>
+            <li>The benefits of completing the task for the user. </li>
+        </ul>
+        <h3>It must NOT include:</h3>
+        <ul>
+            <li>Multiple confusing actions or more than one call to action.</li>
+            <li>A CTA that is too far down the page (i.e. well below the fold when the page loads)</li>
+            <li>Long pages or too much detail.</li>
+            <li>Anything that detracts or distracts from the main CTA.</li>
+            <li>More than one piece of content the user is directed to at the bottom of the page.</li>
+        </ul>
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/call-to-action.html" | relative_url }}>Call to action</a></li>
+            <li><a href={{ "/components/accordion.html" | relative_url }}>Accordion</a></li>
+            <li><a href={{ "/components/inline-pathway.html" | relative_url }}>Inline pathway</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
