@@ -44,7 +44,8 @@ subsite-tag: true
             <div class="component-wrapper remove-element-padding py-0">
 
                 {% include component-examples/global-alert-example.html
-                message="<p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>"
+                message="<p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am
+                        (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>"
                 %}
 
             </div>
@@ -61,8 +62,9 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Global alerts are used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all page layouts</a>.</p>
-       
+        <p>Global alerts are used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all
+                page layouts</a>.</p>
+
         {% include layouts-dropdown.html
         layout-name="All layouts"
         singlelayout="true"
@@ -84,10 +86,10 @@ subsite-tag: true
 
         </div>
 
-        {% include design-specs-link.html 
-            btn-link="'../html-examples/single-col-full-width.html' | relative_url"
-            btn-text="View layout example"
-            %}
+        {% include design-specs-link.html
+        btn-link="'../html-examples/single-col-full-width.html' | relative_url"
+        btn-text="View layout example"
+        %}
 
 
 
@@ -97,13 +99,47 @@ subsite-tag: true
 
         <h3>Purpose:</h3>
         <p>Global alerts warn users about current issues on the site with a message at the top of every page.</p>
-        <p>Global alerts can be dismissed by the user with a close button in the top right corner. Once the user has dismissed a global alert it should not reappear on other pages of the site.</p>
-        
+        <p>Global alerts can be dismissed by the user with a close button in the top right corner. Once the user has
+            dismissed a global alert it should not reappear on other pages of the site.</p>
+
         <h3>When to use this component:</h3>
+        <p>A banner alert message is only used in these situations:</p>
         <ul>
-            <li>Typically used for messages about scheduled site maintenance or releases.</li>
+            <li>During scheduled maintenance on business.gov.au with little to no risk of an outage.</li>
+            <li>Site performance issues</li>
+            <li>Level 3 emergency</li>
+            <li>Microsoft login problems for Business Registration Service and Customer portal</li>
+            <li>Outages to the business.gov.au:</li>
+                <ul>
+                    <li>Chat now</li>
+                    <li>Site search</li>
+                </ul>
+            <li>Complete outage to these key services attached to the website:</li>
+                <ul>
+                    <li>Contact centre phone lines</li>
+                    <li>Customer portal</li>
+                    <li>Business registration service.</li>
+                </ul>
+        </ul>
+
+        <h3>When not to use this component</h3>
+        <p>The banner alert message is not used in these situations:</p>
+        <ul>
+            <li>Scheduled maintenance on services attached to the website:</li>
+            <ul>
+            <li>Business Registration Service</li>
+            <li>ABLIS</li>
+            <li>Tools (e.g. Cyber security tool)</li>
+            <li>Single grant portals (e.g. RDTI portal).</li>
+        </ul>
+        <li>Outage of single applications or portals:</li>
+            <ul>
+            <li>Single grant portals (e.g. RDTI portal)</li>
+            <li>Tools (eg. TM Assist)</li>
+            </ul>
         </ul>
         
+
 
 
     </div>
