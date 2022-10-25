@@ -1,0 +1,139 @@
+---
+
+layout: content-tagged
+title: 101 page
+description: A single page that provides simple facts to help a user understand the basics of a business topic.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="one-zero-one-page-container"
+                img="'../assets/page-patterns/101-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="Left hand navigation"
+                spot4="H2 Sub-headings"
+                spot5="Image or video"
+                spot6="Call out"
+                spot7="Download call out"
+                spot8="Call to action"
+                spot9="Read next"
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>A direct, short title that tells the user what the page is about.</p><ul><li>The page title follows the format of &ldquo;[topic] or &ldquo;[topic] for&nbsp;business&rdquo;</li><li>Maximum character limit of 50.</li></ul>"
+
+                item2="Header description"
+                content2="<p>A short paragraph that expands on what the main action on the&nbsp;page is and why it is important.&nbsp;</p><ul><li>The supporting text should explain who the page is for, what the&nbsp;user will learn and the benefit of the page.</li><li>Maximum character limit of 350.</li></ul>"
+
+                item3="Left hand navigation"
+                content3="<p>The in-page navigation that allows users to skip to a sub-section via an anchor link.</p><ul><li>Built off sub-headings used for each sub-section on the page.</li></ul>"
+
+
+                item4="H2 Sub-headings"
+                content4="<p>Short titles used to break up the content into sub-topics.</p><ul><li>Maximum length of one line.</li><li>Don&rsquo;t hyperlink the headings.</li><li>Avoid replicating the page title.</li></ul>"
+
+
+                item5="Image or video"
+                content5="<p>Optional supporting media to enhance the text content.</p><ul><li>Use only one per page.</li><li>Use an image OR a video, but not both.</li><li>Only use when it is relevant and adds significant value.</li><li>Avoid using stock photos.</li></ul>"
+
+
+                item6="Call out"
+                content6="<p>Used to highlight a supporting example, important information or a formula.</p><ul><li>Only use one per sub-section.</li><li>Maximum word count of 200.</li></ul>"
+
+
+                item7="Download call out"
+                content7="<p>Used to highlight important related resources that are available to download.</p><ul><li>Maximum of four resources per call out.</li><li>Each one is for a single resource.</li><li>The links in each one are used for different document formats of the same resource or two closely related resources. (e.g. Business plan template &amp; guide)</li></ul>"
+
+                
+                item8="Call to action"
+                content8="<p><strong>Optional</strong>. Used to highlight an important internal or external site section/ tool.</p><ul><li>Only use one CTA per page.</li><li>Maximum of three words in the text on the button.</li><li>Maximum of 50 characters in heading text.</li><li>Maximum of 100 characters in body text.</li></ul>"
+
+
+                item9="Read next"
+                content9="<p>Used to direct the user to what they might find most helpful next.</p><ul><li>Always use &ldquo;Read next&rdquo; for the heading.</li><li>All links should be internal links.</li><li>Maximum of three links.</li></ul>"
+
+
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>A 101 page is a single page that provides simple facts to help a user understand the basics of a business topic.</p>
+        <h3>It should always include:</h3>
+        <ul>
+            <li>An introduction that explains what the page is and what the user will get out of it.</li>
+            <li>Co-ordinated sub-headings that follow a similar style to create an overview of what&rsquo;s on the page.</li>
+            <li>Content that helps the user work out quickly if they need to understand what the page covers.</li>
+            <li>Content that helps the user understand why the topic is important.</li>
+            <li>Content that is sustainable to maintain.</li>
+        </ul>
+        <h3>It must NOT include:</h3>
+        <ul>
+            <li>Word-for-word legislation</li>
+            <li>Excess &ldquo;what to do&rsquo;s&rdquo;</li>
+            <li>Steps or tips to complete specific processes</li>
+            <li>Content focused on completing a transaction-based action</li>
+            <li>More than three pieces of content the user is directed to at the bottom of the page</li>
+        </ul>
+
+        
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/callout-box.html" | relative_url }}>Call out box</a></li>
+            <li><a href={{ "/components/call-to-action.html" | relative_url }}>Call to action</a></li>
+            <li><a href={{ "/components/inline-pathway.html" | relative_url }}>Inline pathway</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
