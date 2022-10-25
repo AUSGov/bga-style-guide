@@ -1,0 +1,100 @@
+---
+
+layout: content-tagged
+title: Grant recipients page
+description: A single page listing successful grant recipients over various rounds, usually in table form.  
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="grant-recipients-container"
+                img="'../assets/page-patterns/grant-recipients-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="H2 Sub-headings"
+                spot4="Grant recipients"
+
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>A direct, short title that tells the user what the page is about.</p><ul><li>While there is no maximum character limit it should read: [program name] grant recipients.</li></ul>"
+
+                item2="Header description"
+                content2="<p>A sentence that explains what the user will learn on the page.</p><ul><li>Maximum character limit of 350.</li></ul>"
+
+                item3="H2 Sub-headings"
+                content3="<p>Short titles used to break up the grant recipient tables (if needed) by date (e.g. month) or round (e.g. round 5).</p><ul><li>Maximum length of one line.</li><li>Use date or round titles as they would appear in the left-hand navigation.</li></ul>"
+
+                item4="Grant recipients"
+                content4="<p>A list of grant recipients usually in table form. Includes:</p><ul><li>Applicant’s name</li><li>Funding amount</li><li>Project description</li></ul>"                
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>A grants recipients page is a single page listing successful grant recipients over various rounds, usually in table form.</p>
+        <h3>It should always include:</h3>
+        <ul>
+        <li>Applicant’s name</li>
+        <li>Funding amount</li>
+        <li>Project description</li>
+        <li>A maximum 90 character metadata description for search (this does not appear on the page).</li>
+        </ul>
+                
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/table.html" | relative_url }}>Table</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>

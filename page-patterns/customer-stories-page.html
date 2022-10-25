@@ -1,0 +1,107 @@
+---
+
+layout: content-tagged
+title: Customer stories landing page
+description: A landing page that provides a home page for all program customer stories.  
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="customer-stories-landing-container"
+                img="'../assets/page-patterns/customer-stories-landing-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="Story image"
+                spot4="Story heading"
+                spot5="Story description"
+
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>A direct, short title that tells the user what the page is about.</p><ul><li>It should read: [program name] customer stories</li></ul>"
+
+                item2="Header description"
+                content2="<p>A paragraph that explains what the user will learn on the page and how it will help them.</p><ul><li>Maximum character limit of 250.</li></ul>"
+
+                item3="Story image"
+                content3="<p>Image is automatically pulled from the Listing Image from the Customer story page.</p><ul><li>Must not include alternative text.</li></ul>"
+
+                item4="Story heading"
+                content4="<p>Story heading is automatically pulled from the Customer story page.</p>" 
+                
+                item5="Story description"
+                content5="<p>A short description that is automatically pulled from the customer story page.</p>" 
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>A customer stories landing page provides a home page for all program customer stories. Each tile is a link to a customer story (single) page that contains individual customer stories. The tiles are created from an Image Pathway List or Simple Pathway list if there are no thumbnails.</p>
+        <h3>It should always include:</h3>
+        <ul>
+        <li>[program name] customer stories</li>
+        <li>Maximum 250 character on page description (this appears in the header block on the page and in the search results)</li>
+        <li>A maximum 90 character metadata description for search (this appears in navigation pathway, not on the page)</li>
+        </ul>
+        <h3>It must NOT include:</h3>
+        <ul>
+        <li>Left-hand navigation</li>
+        </ul>
+                
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/image-pathway.html" | relative_url }}>Image pathway list</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>

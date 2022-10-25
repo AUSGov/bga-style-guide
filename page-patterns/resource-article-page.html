@@ -1,0 +1,124 @@
+---
+
+layout: content-tagged
+title: Resource article page
+description: A short, sharp page styled like an article that helps a user with a quick, simple topic or task.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="resource-article-page-container"
+                img="'../assets/page-patterns/resource-article-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="Image or video"
+                spot4="H2 Sub-headings"
+                spot5="Body content"
+                spot6="Pull quote"
+                spot7="Want more"
+
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>A short, catchy headline summarising the topic and purpose. </p><ul><li>Less formal than other page titles for other content types.</li><li>Maximum character limit of 50.</li></ul>"
+
+                item2="Header description"
+                content2="<p>A short paragraph that expands on what the main action on the page is and why it is important. </p><ul><li>The supporting text should explain who the page is for, what the user will learn and the benefit of the page.</li><li>Maximum character limit of 350.</li><li>Maximum character limit of 90.</li></ul>"
+
+                item3="Image or video"
+                content3="<p>Supporting media to enhance the content.</p><ul><li>Maximum of one image or video per page.</li><li>Image should always be the first element after the header. </li><li>Avoid logos as images or on images.</li></ul>"
+
+                item4="H2 Sub-headings"
+                content4="<p>Short titles used to break up the content into sub-topics.</p><ul><li>Maximum of three per page.</li><li>Avoid replicating the page title.</li></ul>"
+
+                item5="Body content"
+                content5="<p>The main text content of the article apart from H2 sub-headings.</p><ul><li>Word limit of 800.</li><li>Each sub-section should have a maximum of two paragraphs.</li></ul>"
+
+                item6="Pull quote"
+                content6="<p>Used to highlight a quote</p><ul><li>No more than one pull quote per resource article.</li></ul>"
+
+                item7="Want more"
+                content7="<p>Used to direct the user to what they might find most helpful next.</p><ul><li>Always use &ldquo;Want more?&rdquo; for the heading.</li><li>All links should be internal links.</li><li>Should direct users to longer pieces of content (e.g. 101 or tutorial pages).</li><li>Maximum of three links.</li></ul>"
+                
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>A resource article page is a short, sharp page styled like an article that helps a user with a quick, simple topic or task.</p>
+        <h3>It should always include:</h3>
+        <ul>
+            <li>Focus on a single topic that has been shaped into a short, simple message.</li>
+            <li>An engaging headline that clearly communicates the hook.</li>
+            <li>A more engaging, less formal voice.</li>
+            <li>Links to additional information.</li>
+            <li>A relevant image.</li>
+        </ul>
+        <h3>It must NOT include:</h3>
+        <ul>
+            <li>Overly long message (i.e. in excess of 1000 words).</li>
+            <li>Short-term content that expires quickly that would be better communicated in a news article.</li>
+            <li>Complicated how-to&rsquo;s ;or explanations that would be better suited to a tutorial.</li>
+            <li>More than three pathways to other website resources.</li>
+        </ul>
+                
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/image.html" | relative_url }}>Image</a></li>
+            <li><a href={{ "/components/video-player.html" | relative_url }}>Video player</a></li> 
+            <li><a href={{ "/components/pull-quote.html" | relative_url }}>Pull quote</a></li>
+            <li><a href={{ "/components/inline-pathway.html" | relative_url }}>Inline pathway</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>

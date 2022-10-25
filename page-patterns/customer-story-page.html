@@ -1,0 +1,111 @@
+---
+
+layout: content-tagged
+title: Customer story page
+description: An article about a successful grant recipient and how they are using their grant to improve their business.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="customer-story-container"
+                img="'../assets/page-patterns/customer-story-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="Image or video"
+                spot4="H2 Sub-headings"
+                spot5="Pull quote"
+                spot6="H3 More information"
+
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>Company name then em hyphen (&mdash;) then a short journalist style sentence (i.e. from little things, big grain silos grow!)</p><ul><li>Maximum 90 characters</li></ul>"
+
+                item2="Header description"
+                content2="<p>A sub title for the customer story providing context to why they are a successful grant recipient.</p><ul><li>Maximum character limit of 250.</li></ul>"
+
+                item3="Image or video"
+                content3="<p>Optional supporting media to enhance the text content.</p><ul><li>Use only one per page.</li><li>Use an image OR a video, but not both.</li></ul>"
+
+                item4="H2 Sub-headings"
+                content4="<p>Short titles used to break up the content into sub-topics.</p><ul><li>Maximum length of one line.</li><li>Don&rsquo;t hyperlink the headings.</li><li>Avoid replicating the page title.</li></ul>" 
+                
+                item5="Pull quote"
+                content5="<p>Used to highlight an important quote from the story.</p><ul><li>Only use one per sub-section.</li><li>While there is no maximum set, keep it concise.</li></ul>" 
+
+                item6="H3 More information"
+                content6="<p>This section is not compulsory across programs, but some programs provide links to the grant recipients website, plus program landing page or key documents.</p>" 
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>A customer story (also know as a case study) page is an article about a successful grant recipient and how they are using their grant to improve their business.</p>
+        <h3>It should always include:</h3>
+        <ul>
+        <li>Mention of the grant the recipient received</li>
+        <li>What they have used the funding for</li>
+        <li>How it has improved their business/industry</li>
+        <li>Maximum 250 character on page description (this appears in the header block on the page and in the search results)</li>
+        <li>A maximum 90 character metadata description for search (this appears in navigation pathway, not on the page)</li>
+        </ul>
+                
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/image.html" | relative_url }}>Image</a></li>
+            <li><a href={{ "/components/video-player.html" | relative_url }}>Video player</a></li>
+            <li><a href={{ "/components/pull-quote.html" | relative_url }}>Pull quote</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
