@@ -22,9 +22,13 @@
             <option value="two-col-leftmenu" class="{{include.two-col-leftmenu-visibility}}">Two column - left side menu</option>
         {% endif %}
         
-        {% if include.two-col-rightsidebar-visibility == "true" %}
-            <option value="two-col-rightsidebar" class="{{include.two-col-rightsidebar-visibility}}">Two column - right sidebar</option>
+        {% if include.two-col-leftfilter-visibility == "true" %}
+            <option value="two-col-leftfilter" class="{{include.two-col-leftfilter-visibility}}">Two column - left filter</option>
         {% endif %}
+
+        {% if include.two-col-rightsidebar-visibility == "true" %}
+        <option value="two-col-rightsidebar" class="{{include.two-col-rightsidebar-visibility}}">Two column - right sidebar</option>
+    {% endif %}
         
     </select>
     

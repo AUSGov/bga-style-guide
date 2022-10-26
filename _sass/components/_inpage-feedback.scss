@@ -1,7 +1,6 @@
 .bga-inpage-feedback {
-    .component-content {
-        border-top: 1px solid $bga-blue-black-mid-dark;
-    }
+    border-top: 1px solid $bga-blue-black-mid-dark;
+    
     .initial-question {
         align-items: center;
         display: none;
@@ -65,4 +64,30 @@
             }
         }  
     }
+}
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin feedback-below576(){
+    .bga-inpage-feedback {
+        .initial-question {
+            flex-wrap: wrap;
+
+            P {
+                width: 100%;
+                margin-bottom: 16px !important;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576,
+.component-example.small-screen {
+    @include feedback-below576();
+}
+
+// Media queries for HTML example pages
+@media (max-width: 576px) {
+    @include feedback-below576();
 }

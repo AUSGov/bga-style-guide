@@ -44,7 +44,8 @@ subsite-tag: true
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding p-4">
 
-                {% include component-examples/inpage-feedback-example.html %}
+                {% include component-examples/inpage-feedback-example.html 
+                    classes="col-12" %}
 
             </div>
         </div>
@@ -64,15 +65,117 @@ subsite-tag: true
        
         <p>The in page feedback form can be used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all layouts</a>.</p>
         
-        {% include layouts-dropdown.html
-            layout-name="Two column - left filters layout"
-            singlelayout="true"
+        {% include layouts-dropdown.html 
+            single-col-fullwidth-visibility="true"
+            single-col-twothirds-visibility="true" 
+            two-col-leftmenu-visibility="true" 
+            two-col-rightsidebar-visibility="true" 
+            two-col-leftfilter-visibility="true"
+        %}
+        
+        
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-fw"
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 992px"
+            
+                min1200-img="'../assets/layout-images/feedback-1colfullwidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/feedback-1colfullwidth-min992.png' | relative_url "
+                finalbp-img="'../assets/layout-images/feedback-1colfullwidth-finalbp.png' | relative_url "
+            
+            
+                min1200-rules="<p>The content area is 12 grid-columns wide.</p>The in page feedback component spans 8 grid-columns.</p><p>The line above the component spans 12 grid-columns</p>"
+            
+                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>The in page feedback component spans 9 grid-columns.</p><p>The line above the component spans 12 grid-columns</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The in page feedback component spans 12 grid-columns.</p><p>The line above the component spans 12 grid-columns</p>"
+            
+                example-link="'../html-examples/single-col-full-width.html#feedback-example' | relative_url'"
+                example-link-text="View layout example"
+                
             %}
-    
-            <div class="layout-example show two-col-leftmenu mt-0 mb-5 px-4 py-0">
-    
-                {% include layouts-accordion.html
+            
+            
+        </div>
+        
+        
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="onecol-twothirdsw"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/feedback-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/feedback-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/feedback-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/feedback-1col2thirdswidth-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                example-link="'../html-examples/single-col-two-thirds-width.html#feedback-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
                 layout-name="twocol-leftmenu"
+                
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 576px"
+            
+                min1200-img="'../assets/layout-images/feedback-2col-leftmenu-min1200.png' | relative_url "
+                min576-img="'../assets/layout-images/feedback-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/feedback-2col-leftmenu-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-left-side-menu.html#feedback-example' | relative_url'"
+                example-link-text="View layout example"
+                
+            %}
+            
+        </div>
+        
+        
+        <div class="layout-example two-col-leftfilter mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+                layout-name="twocol-leftfilter"
     
                 min1200-visibility="true"
                 min992-visibility="false"
@@ -82,40 +185,69 @@ subsite-tag: true
     
                 finalbp="Breakpoint &lt; 768px"
     
-                min1200-img="'../assets/layout-images/pagination-2col-leftfilters-min1200.png' | relative_url "
-                min768-img="'../assets/layout-images/pagination-2col-leftfilters-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/pagination-2col-leftfilters-finalbp.png' | relative_url "
+                min1200-img="'../assets/layout-images/feedback-2col-leftfilters-min1200.png' | relative_url "
+                min768-img="'../assets/layout-images/feedback-2col-leftfilters-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/feedback-2col-leftfilters-finalbp.png' | relative_url "
     
                 min1200-rules="<p>The content area is 7 grid-columns wide.</p>
-                <p>Pagination spans the full width of the content area.</p>"
+                <p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
     
                 min768-rules="<p>The content area is 8 grid-columns wide.</p>
-                <p>Pagination spans the full width of the content area.</p>"
+                <p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
     
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-                <p>Pagination spans the full width of the content area.</p>"
+                <p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
     
-                example-link="'../html-examples/two-col-left-filters.html#pagination-example' | relative_url'"
+                example-link="'../html-examples/two-col-left-filters.html#feedback-example' | relative_url'"
                 example-link-text="View layout example"
     
                 %}
-    
-            </div>
+
+        </div>
+
+        
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="false"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+
+                min768-img="'../assets/layout-images/feedback-2col-rightsidebar-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/feedback-2col-rightsidebar-finalbp.png' | relative_url "
+            
+        
+                min768-rules="<p>The content area is 8 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p><p>The line above the component also spans the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-right-sidebar.html#feedback-example' | relative_url'"
+                example-link-text="View layout example"
+
+            %}
+            
+        </div>
 
 
-
-
-
+        
 
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose</h3>
-        <p>Pagination provides links for navigating between a series of connected pages.</p>
+        <p>The in page feedback form is used to capture simple feedback from users in the context of a page.</p>
+        
         <h3>When to use this component:</h3>
         <ul>
-            <li>Typically used on search or tool result pages when a set of results would be too long to present on one page.</li>
+            <li>Can be used on all business.gov.au pages.</li>
         </ul>
 
 
