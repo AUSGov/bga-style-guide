@@ -6467,7 +6467,7 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 @media (max-width: 576px) { .guided-search-wrapper { padding: 24px 0 0 0 !important; } .guided-search-wrapper .component-content { padding: 24px !important; } .guided-search-wrapper h1, .guided-search-wrapper .h1 { font-size: 2rem; margin-left: 24px; } .guided-search-wrapper h2, .guided-search-wrapper .h2 { font-size: 1.75rem; } .guided-search-wrapper .toggle.toggle-primary label { font-size: 1.75rem; } .guided-search-wrapper .toggle.toggle-secondary { padding-top: 8px !important; } .guided-search-wrapper .toggle.toggle-secondary label { padding-bottom: 0; } .guided-search-wrapper .mini { margin-bottom: 16px; } .guided-search-wrapper .button-group .previous, .guided-search-wrapper .button-group .start-again { font-size: .875rem; margin-right: 16px !important; } .guided-search-wrapper .button-group .previous svg, .guided-search-wrapper .button-group .start-again svg { display: none; } .guided-search-wrapper .multi-select-wrapper { margin: 0 auto 8px auto; } .guided-search-wrapper .form-select { margin-bottom: 24px !important; } }
 
-.bga-inpage-feedback .component-content { border-top: 1px solid #5A667D; }
+.bga-inpage-feedback { border-top: 1px solid #5A667D; }
 
 .bga-inpage-feedback .initial-question { align-items: center; display: none; }
 
@@ -6496,6 +6496,12 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 .bga-inpage-feedback .thank-you-container a:focus-visible { border: 2px solid #2E6CB9; background: #E3ECF6; border-radius: 4px; outline: none; color: #2157AA; text-decoration: underline; }
 
 .bga-inpage-feedback .thank-you-container a:hover { background: #E3ECF6; color: #2157AA; text-decoration: underline; }
+
+.component-example.bp-below576 .bga-inpage-feedback .initial-question, .component-example.small-screen .bga-inpage-feedback .initial-question { flex-wrap: wrap; }
+
+.component-example.bp-below576 .bga-inpage-feedback .initial-question P, .component-example.small-screen .bga-inpage-feedback .initial-question P { width: 100%; margin-bottom: 16px !important; }
+
+@media (max-width: 576px) { .bga-inpage-feedback .initial-question { flex-wrap: wrap; } .bga-inpage-feedback .initial-question P { width: 100%; margin-bottom: 16px !important; } }
 
 .example.page-pattern { position: relative; }
 
