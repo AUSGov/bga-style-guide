@@ -1,0 +1,68 @@
+.bga-inpage-feedback {
+    .component-content {
+        border-top: 1px solid $bga-blue-black-mid-dark;
+    }
+    .initial-question {
+        align-items: center;
+        display: none;
+       
+        &.show {
+            display: flex;
+        }
+        .bga-btn.no.selected {
+            background: $bga-blue-background-dark;
+            color: $bga-white;
+            border-color: $bga-blue-background-dark;
+        }
+    }
+    .yes-answer {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+    .no-answer {
+        display: none;
+        
+        &.show {
+            display: block;
+        }
+
+        .textarea-container {
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+
+    }
+    .thank-you-container {
+        display: none;
+        
+        &.show {
+            display: block;
+        }
+        
+        a {
+            color: $bga-blue-links;
+            text-decoration: underline;
+
+            &:focus-visible {
+                border: $bga-text-focus-border;
+                background: $bga-blue-background-extralight;
+                border-radius: $bga-focus-radius;
+                outline: none;
+                color: $bga-blue-links;
+                text-decoration: underline;
+
+            }
+            &:hover {
+                background: $bga-blue-background-extralight;
+                color: $bga-blue-links;
+                text-decoration: underline;
+            }
+        }  
+    }
+}

@@ -419,10 +419,12 @@ $(document).ready(function () {
 
 
     // TEXTAREA COUNT 
-    var max_length = 100;
-    $('#textarea-example').highlightWithinTextarea({
-        highlight: [max_length, 200000]
-    });
+    if ($('#textarea-example')) {
+        var max_length =  parseInt($('#textarea-example').attr('data-count'));
+        $('#textarea-example').highlightWithinTextarea({
+            highlight: [max_length, 200000]
+        });
+    }
 
     $('#textarea-example').on('input', function () {
 
@@ -1302,6 +1304,39 @@ $(document).ready(function () {
         setTimeout(function () {
             content.slideUp(1000);
         }, 400);
+    });
+
+
+    //COMPONENT EXAMPLE: In page feedback form
+    $('.initial-question .bga-btn').on('click', function(){
+        var answer = $(this).text();
+
+        if ( answer == 'Yes' ) {
+            $('.initial-question').removeClass('show');
+            $('.yes-answer').addClass('show');
+            $('.no-answer').removeClass('show');
+            $('.bga-btn.no').removeClass('selected');
+        } else if ( answer == 'No' ) {
+            $('.no-answer').addClass('show');
+            $('.yes-answer').removeClass('show');
+            $('.bga-btn.no').addClass('selected');
+        }
+    });
+
+    $('.no-answer .checkbox').on('click', function(){
+        if ( $(this).hasClass('other') ) {
+            if ( $(this).is(":checked") ) {
+                $('.textarea-container').addClass('show');
+            } else {
+                $('.textarea-container').removeClass('show');
+            }
+        }
+    });
+
+    $('.no-answer .bga-btn').on('click', function(){
+        $('.initial-question').removeClass('show');
+        $('.no-answer').removeClass('show');
+        $('.thank-you-container').addClass('show');
     });
 
 
