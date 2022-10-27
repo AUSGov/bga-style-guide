@@ -1,0 +1,112 @@
+---
+
+layout: content-tagged
+title: Adviser  page
+description: A single page detailing one adviser  or adviser  organisation. 
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="adviser-page-container"
+                img="'../assets/page-patterns/advisor-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="Body text"
+                spot4="Cost"
+                spot5="Delivery type"
+                spot6="Service area"
+                spot7="Contact details"
+
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>A direct, short title that tells the user who the adviser  is.</p><ul><li>Maximum character limit of 50.</li></ul>"
+
+                item2="Header description"
+                content2="<p>A short paragraph that explaining who the adviser  can help and what they can help with.</p>"
+
+                item3="Body text"
+                content3="<p>A short paragraph that details what the adviser  offers (e.g. support, services). Specific services are to be provided in a list.</p><ul><li>Use a bullet list to describe specific services</li><li>Don’t hyperlink the headings</li></ul>"
+
+                item4="Cost"
+                content4="<p>The cost of the adviser  service. If the cost is unknown list the cost as 'Check with Adviser'</p>"
+
+                item5="Delivery type"
+                content5="<p>Methods the service are delivered through. Options include:</p><ul><li>In person services</li><li>Phone services</li><li>Online services</li><li>Home and workplace visits</ul>"
+
+                item6="Service area"
+                content6="<p>The area serviced by the adviser.</p>"
+
+                item7="Contact details"
+                content7="<p>Relevant contact information for each adviser .</p><ul><li>One type of contact info per line.</li></ul>"
+              
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>An adviser  detail page is a single page detailing one adviser  per page.</p>
+        <h3>It should always include:</h3>
+        <ul>
+        <li>Any relevant contact information</li>
+        <li>Brief description about the skills and background of the adviser  (try to limit to paragraphs to keep it consistent with adviser s across all areas)</li>
+        <li>A maximum 90 character metadata description for search (this does not appear on the page)</li>
+        </ul>
+                
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/contact-callout-box.html" | relative_url }}>Adviser contact call out box</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
