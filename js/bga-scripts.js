@@ -1341,6 +1341,18 @@ $(document).ready(function () {
 
 
 
+    // BRANDED VS NON-BRANDED TABS
+    $('.branding-tabs .tab').on('click', function(){
+        $('.branding-tabs .tab').each(function(){
+            $(this).toggleClass('selected');
+        });
+        $('.tab-section').each(function(){
+            $(this).toggleClass('selected');
+        });
+    
+    });
+
+
 }); //End doc ready
 
 
