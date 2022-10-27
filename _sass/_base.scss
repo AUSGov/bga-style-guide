@@ -945,6 +945,48 @@ table.table {
     }
 }
 
+
+// BRANDED VS NON-BRANDED
+.branding-tabs {
+    display: flex;
+    
+    .tab {
+        border: solid $bga-blue-border 1px;
+        border-bottom: none;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background: $bga-white;
+
+        p {
+            font-size: $h4-font-size;
+            font-weight: 600;
+            color: $bga-blue-black-dark;
+            opacity: .7;
+        }
+
+        &.selected {
+            background: $bga-blue-border;
+            p {
+                opacity: 1;
+            }   
+        }
+    }
+}
+
+.branding-sections-wrapper {
+   
+    border: solid 1px $bga-blue-border;
+    border-top: solid 5px $bga-blue-border;
+
+    .tab-section {
+         display: none; 
+         
+         &.selected {
+            display: block;
+        }
+    }
+}
+
 @media (max-width: 450px) {
     .col-xs {
         flex: 1 0 0%;
