@@ -1,0 +1,96 @@
+---
+
+layout: content-tagged
+title: Business.gov.au maintenance page
+description: Provide the user with basic information when business.gov.au is down for maintenance.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="maintenance-page-container"
+                img="'../assets/page-patterns/maintenance-page.png' | relative_url"
+
+                spot1="Error header"
+                spot2="Alternative contact information"
+                spot3="Grants portal link"
+
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Error header"
+                content1="<p>The error header title is a short message explaining that business.gov.au is unavailable.<p>"
+
+                item2="Alternative contact information"
+                content2="<p>Provide information on contact options that are availble when the site is down.</p>"
+
+                item3="Grants portal link"
+                content3="<p>A short paragraph explaining that the grants portal is still available and can be used to manage grant applications." 
+
+                %}
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>The maintenance page is used when business.gov.au is down for scheduled maintenance.</p>
+        <h3>It should always include:</h3>
+        <ul>
+         <li>The red 'error' header including the alert icon.</li>
+         <li>Information on contacting the business.gov.au call centre.</li>
+        </ul>
+        <h3>It should not include:</h3>
+        <ul>
+            <li>The business.gov.au site header. Instead just include the business.gov.au logo.</li>
+            <li>Breadcrumbs</li>
+            <li>The business.gov.au site footer.</li>
+        </ul>
+                
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Error page header (with icon)</a></li>
+            <li><a href={{ "/components/contact-callout-box.html" | relative_url }}>Contact call out box</a></li>
+        </ul>
+
+
+    </div>

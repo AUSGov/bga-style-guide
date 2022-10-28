@@ -44,6 +44,10 @@ description: A collection of page designs outlining how different page types sho
                 {% include filter-item.html
                     item-title="Tool patterns" 
                     item-string="tool-patterns" %}
+
+                {% include filter-item.html
+                    item-title="Error pages" 
+                    item-string="error-page" %}
                 
             </fieldset>
             
@@ -253,6 +257,24 @@ description: A collection of page designs outlining how different page types sho
         tile-tag1="Tool pattern"
         tile-tag2="Information page"
         tile-image="assets/nav-images/nav-tile-lightweightchecklist.svg" 
+    %}
+
+    <!-- BGA maintenance page -->
+    {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper error-page bga-maintenance"
+        tile-url="page-patterns/bga-maintenance-page.html"
+        tile-title="business.gov.au maintenance page" 
+        tile-tag1="Error page"
+        tile-image="assets/nav-images/nav-tile-errorpage.svg" 
+    %}
+
+     <!-- BGA error page -->
+     {% include nav-image-tile.html 
+        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper error-page bga-error"
+        tile-url="page-patterns/bga-error-page.html"
+        tile-title="business.gov.au error page" 
+        tile-tag1="Error page"
+        tile-image="assets/nav-images/nav-tile-errorpage.svg" 
     %}
 
     </div>
