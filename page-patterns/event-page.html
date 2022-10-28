@@ -1,0 +1,134 @@
+---
+
+layout: content-tagged
+title: Event page
+description: A single page detailing information about an event. 
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="event-page-container"
+                img="'../assets/page-patterns/event-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="H2 Event type and audience"
+                spot4="Event speaker"
+                spot5="Event sponsor/s"
+                spot6="Event organiser/s"
+                spot7="Body text"
+                spot8="Cost"
+                spot9="Location, date, time and address"
+                spot10="Registration organisation"
+                spot11="Select session dropdown"
+                spot12="Event registration link"
+
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>The name of the event.</p><ul><li>Maximum character limit of 50.</li></ul>"
+
+                item2="Header description"
+                content2="<p>A short paragraph explaining what the event is.</p>"
+
+                item3="H2 Event type and audience"
+                content3="<p>A H2 heading detailing the event type and who the event is intended for.</p><p>Format is [Event type] for [audience].</p><ul><li>Event types include:</li><ul><li>Webinar</li><li>Workshop</li><li>Forum</li><li>Networking event</li></ul><li>Audience refers to the location of the businesses that are eligible for the event. e.g. 'NSW businesses', 'Australian businesses'.</li></ul>"
+
+                item4="Event speaker"
+                content4="<p><strong>Optional</strong>. The main speaker for the event.</p>"
+                
+                item5="Event sponsor/s"
+                content5="<p>A list of the event sponsors.</p>"
+
+                item6="Event organiser/s"
+                content6="<p>A list of the event organisers.</p>"
+
+                item7="Body text"
+                content7="<p>A short paragraph that details what the event is about and what information it provides.</p>"
+
+                item8="Cost"
+                content8="<p>The cost of the event.</p>"
+
+                item9="Location, date, time and address"
+                content9="<p>Information on where and when the event is held. This information displays differently depending on whether the event has multiple sessions.<p><ul><li>Location is displayed in the format [City, State].</li><li>Digital events with no physical location are listed as 'Online'.</li><li>Date is displayed in the format [Tue 15 Nov 2022].</li><li>Time is displayed in format [12:30 - 1:30 pm AEDT]</li><li>Address is the street address of the event. Address is not displayed for online events.</li></ul>"
+
+                item10="Registration organisation"
+                content10="<p>The organisation handling the event registrations displayed in the following format:</p><ul><li>'Register for this event through [Organisation name]'</li></ul>"
+
+                item11="Select session dropdown"
+                content11="<p>A dropdown that allows users to select the session they are interested in attending.</p><p>Only displayed if an event has multiple sessions.</p>"
+
+                item12="Event registration link"
+                content12="<p>A link to the event registration page (usually on an external site).</p><p>If there are different registration links for different event sessions the link will change dynamically as a session is selected.</p>"
+              
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>An event page is a single page detailing an event.</p>
+        <h3>It should always include:</h3>
+        <ul>
+        <li>Information on what the event offers and who it is for</li>
+        <li>Brief description about the event agenda</li>
+        <li>Information on where and when the event is being held. This may include information about multiple sessions for the same event</li>
+        <li>An event registration link</li>
+        <li>A maximum 90 character metadata description for search (this does not appear on the page)</li>
+        </ul>
+                
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/event-registration-call-to-action.html" | relative_url }}>Event registration call to action</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
