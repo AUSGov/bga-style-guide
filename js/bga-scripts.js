@@ -1341,18 +1341,23 @@ $(document).ready(function () {
 
 
 
-    // BRANDED VS NON-BRANDED TABS
-    $('.branding-tabs .tab').on('click', function(){
-        $('.branding-tabs .tab').each(function(){
-            $(this).toggleClass('selected');
+    // IN PAGE TABS
+    $('.section-tabs .tab').on('click', function(){
+        var section = $(this).attr('data-tab');
+
+        $(this).addClass('selected');
+        $('.tab').not(this).removeClass('selected');
+        
+        /*$('.tab').each(function(){
+            $(this).addClass('selected');
+            $('.tab').not(this).removeClass('selected');
         });
-        $('.tab-section').each(function(){
-            $(this).toggleClass('selected');
-        });
+        */
+        $('.tab-section').removeClass('selected');
+        $("." + section).addClass('selected');
+
     
     });
 
 
 }); //End doc ready
-
-
