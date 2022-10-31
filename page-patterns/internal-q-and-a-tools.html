@@ -17,7 +17,7 @@ subsite-tag: false
 
         {% include component-examples/anchor-menu-example.html
         classes="in-page"
-        link-1="Page anatomy" link-id-1="#page-anatomy"
+        link-1="Tool pages" link-id-1="#tool-pages"
         link-2="Guidelines for use" link-id-2="#guidelines-for-use"
         link-3="Related components" link-id-3="#related-components"
         %}
@@ -28,7 +28,7 @@ subsite-tag: false
 
 
         <!-- DESIGN -->
-        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+        <h2 class="section-start" id="tool-pages">Tool pages</h2>
 
         <div class="section-tabs">
             <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="landing-page"><p>Start page</p></div>
@@ -109,7 +109,7 @@ subsite-tag: false
                         spot10="Questions"
                         spot11="Radio buttons"
                         spot12="Contextual help"
-                        spot13="Clause box"
+                        spot13="Clause / regulation box"
                         spot14="Navigation button group"
                         
                         %}
@@ -125,7 +125,7 @@ subsite-tag: false
                         content8="<p>Provides the user with information on how far through the tool they have progressed.</p><p>Progress is displayed as a percentage along with a visual indicator bar.</p>"
 
                         item9="Section title"
-                        content9="<p>The title of the section (page). Sections are limited to one per page.</p><p>Section titles should be short and clearly explain the topic questions within it relate too. Ideally titles consist of one or two words. e.g.:</p><ul><li>Position</li><li>Environmental approvals</li><li>Offshore resources</li></ul>"
+                        content9="<p>The title of the section (page). Sections are limited to one per page.</p><p>Section titles should be short and clearly explain the topic questions within it relate to. Ideally, titles consist of one or two words. e.g.:</p><ul><li>Position</li><li>Environmental approvals</li><li>Offshore resources</li></ul>"
 
                         item10="Questions"
                         content10="<p>Questions designed to help tailor the information provided by the tool.</p><p>Related questions should be grouped in the same section.</p>"
@@ -136,7 +136,7 @@ subsite-tag: false
                         item12="Contextual help"
                         content12="<p>Additional information that may help the user accurately answer the question.</p><p>Often formatted as a question and answer.</p>"
 
-                        item13="Clause box"
+                        item13="Clause / regulation box"
                         content13="<p>Regulations or clauses related to a specific question.</p><p>Clause boxes are generally shown when a user answers 'yes' to a question.</p><p>Clause boxes can include:</p><ul><li>The name of a regulation or clause</li><li>A short paragraph explaining what the clause / regulation is about</li><li>Links to further information</li></ul>"
 
                         item14="Navigation button group"
@@ -179,28 +179,28 @@ subsite-tag: false
                         {% include page-pattern-rules.html
 
                         item15="Progress bar"
-                        content15=""
+                        content15="<p>Provides the user with information on how far through the tool they have progressed.</p><p>The progress bar is set to 100% on the results page.</p>"
 
                         item16="Results page title"
-                        content16=""
+                        content16="<p>The results page title should be short and clearly explain that the page shows the tool results, e.g. 'Your results'.</p>"
 
                         item17="Results accordion"
-                        content17=""
+                        content17="<p>An accordion containing the user's results, often information such as relevant regulations they need to consider or actions they need to take. Accordion content is split into three parts:</p><ul><li>The accordion item title. e.g. the name of the regulation relevant to the user.</li><li>The accordion item subtitle. A short sentence explaining why the result is relevant to the user, e.g. '(because your project will involve foreign investors)'.</li><li>The accordion item content. A few short paragraphs providing further information. This can include links to more detailed information.</li></ul>"
 
                         item18="View or change answers"
-                        content18=""
+                        content18="<p>The view or change answers accordion displays all the user's answers to the tool questions. </p><p>The accordion is closed by default.</p>"
 
                         item19="Edit section link"
-                        content19=""
+                        content19="<p>Edit section links take the user back to a section within the tool so they can change an answer.</p>"
 
                         item20="Question answers"
-                        content20=""
+                        content20="<p>Answers the user gave to individual questions within the tool.</p>"
 
                         item21="Save result buttons"
-                        content21=""
+                        content21="<p>Buttons that provide users with the ability to save their results. Users can choose to:</p><ul><li>Email their results</li><li>Print their results</li></ul><p>Button wording should be a clear action. e.g 'Print results' or 'Email results'.</p><p>Maximum of four words in the text on the button.</p>"
 
                         item22="Next steps"
-                        content22=""
+                        content22="<p>Further actions the user can consider taking. This section could include:</p><ul><li>Further information the user may need to seek.</li><li>Links to other tools and resources the user may find helpful.</li><li>Contact information.</li></ul>"
 
                         %}
 
@@ -218,7 +218,11 @@ subsite-tag: false
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose</h3>
-        <p>The business.gov.au site search page provides users with a series of results relating to a search.</p>
+        <p>Question and answer (Q&A) tools guide the user through a series of questions designed to help provide them with information tailored specific to their situation.</p>
+        <p>Use Q&A tools when the user needs to find a tailored subset of a large amount of information.</p>
+        <p>The internal Q&A tool pattern is for tools hosted on business.gov.au. It incorporates the business.gov.au site header, breadcrumbs and site footer.</p>
+        
+
     
 
         <!-- RELATED COMPONENTS -->
@@ -226,8 +230,16 @@ subsite-tag: false
         <ul>
             <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
             <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li> 
-            <li><a href={{ "/components/tile-filters.html" | relative_url }}>Tile filters</a></li>
-            <li><a href={{ "/components/site-search-result-tiles.html" | relative_url }}>Site search result tiles</a></li>
+            <li><a href={{ "/components/tool-start-component.html" | relative_url }}>Tool start component</a></li>
+            <li><a href={{ "/components/disclaimer-alerts.html" | relative_url }}>Disclaimer alerts</a></li>
+            <li><a href={{ "/components/callout-box.html" | relative_url }}>Call out boxes</a></li>
+            <li><a href={{ "/components/progress-bar.html" | relative_url }}>Progress bar</a></li>
+            <li><a href={{ "/brand-foundations/checkboxes-and-radio-buttons.html" | relative_url }}>Radio buttons</a></li>
+            <li><a href={{ "/brand-foundations/contextual-help.html" | relative_url }}>Contextual help</a></li>
+            <li><a href={{ "/components/clause-regulation-box.html" | relative_url }}>Clause / regulation box</a></li>
+            <li><a href={{ "/brand-foundations/buttons-and-links.html" | relative_url }}>Buttons and links</a></li>
+            <li><a href={{ "/components/tool-results.html" | relative_url }}>Results accordion</a></li>
+            <li><a href={{ "/components/tool-results.html" | relative_url }}>Edit answers component</a></li>
             <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
         </ul>
 
