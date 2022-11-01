@@ -1,0 +1,241 @@
+---
+
+layout: content-tagged
+title: Tiled page with guided search
+description: A tool page for displaying a series of information tiles with filters and a series of search questions.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Tool pages" link-id-1="#tool-pages"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="tool-pages">Tool pages</h2>
+
+        <div class="section-tabs">
+            <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="landing-page"><p>Start page</p></div>
+            
+            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="multiselect-page"><p>Multi-select questions</p></div>
+            
+            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="singleselect-page"><p>Single select questions</p></div>
+        </div>
+
+
+        <div class="tab-sections-wrapper p-4 mb-5">
+            
+            <div class="tab-section landing-page selected">
+
+                <div class="component-example border-0 m-0">
+                   
+                        {% include page-pattern-example.html
+                        
+                        classes="tiled-guided-search-container"
+                        img="'../assets/page-patterns/tile-guided-search-landing.png' | relative_url"
+                        spot1="Heading (tool title)"
+                        spot2="How this tool can help you"
+                        spot3="Time to complete"
+                        spot4="Start button"
+                        spot5="Results showing number"
+                        spot6="View shortlist button"
+                        spot7="Filters"
+                        spot8="Result tiles"
+                        spot9="Pagination"
+
+                        %}
+
+                </div>
+
+                <div class="component-example border-0">
+                    <div class="page-pattern-rules pt-4">
+
+                        {% include page-pattern-rules.html
+
+                        item1="Heading (tool title)"
+                        content1="<p>The name of the tool</p><ul><li>Maximum character limit of 50.</li></ul>"
+
+                        item2="How this tool can help you"
+                        content2="<p>A short paragraph explaining who the tool is for and why they would want to use it.</p>"
+
+                        item3="Time to complete"
+                        content3="<p>An estimate of the amount of time needed to complete the tool.</p>"
+
+                        item4="Start button"
+                        content4="<p>The button that starts the guided search.</p><ul><li>Button wording should be a clear call to action. e.g 'Start now'</li><li>Maximum of <strong>four</strong> words in the text on the button.</li></ul>"
+
+                        item5="Results showing number"
+                        content5="<p>The results showing number highlights the number of information tiles available. When the page loads the showing number is set to the total number of items available. When the user interacts with the filters to refine the set of tiles the showing number changes accordingly.</p><p>The showing number text should describe the type of information being displayed, e.g. 'Showing XX grants and programs'</p>"
+
+                        item6="View shortlist button"
+                        content6="<p>Links to a modal that displays a list of user shortlisted items.</p>"
+
+                        item7="Filters"
+                        content7="<p>The filters allow users to refine the current set of information tiles using a series of checkboxes, dropdown selects and / or text input fields.</p><p>Filter configurations vary from tool to tool.</p>"
+
+                        item8="Result tiles"
+                        content8="<p>Result tiles are used to link to business.gov au pages.</p><p>Tile designs vary between tools but generally have a title that relates to the linked page title and a short description.</p>"
+
+                        item9="Pagination"
+                        content9="<p>The pagination links provide a way to navigate through multiple pages of result tiles.</p>"
+
+                        %}
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tab-section multiselect-page">
+
+                <div class="component-example border-0 m-0">
+        
+                        {% include page-pattern-example.html
+                        classes="tiled-guided-search-container"
+                        img="'../assets/page-patterns/tile-guided-search-questions-multiselect.png' | relative_url"
+
+                        spot10="Question"
+                        spot11="Question instructions"
+                        spot12="Answer options"
+                        spot13="Selected answer"
+                        spot14="Navigation button group"
+                        spot15="Matching filter"
+                        spot16="Selected filter bubble"
+                        
+                        %}
+
+                </div>
+
+                <div class="component-example border-0">
+                    <div class="page-pattern-rules pt-4">
+
+                        {% include page-pattern-rules.html
+
+
+                        item10="Question"
+                        content10="<p>A short statement that leads in to user selected answers. e.g.:<p><ul><li>'I am looking for assistance with'</li><li>'My business is operating in'</li></ul><p>Generally there is one question per screen with the exception being questions that are a subset of the first question.</p>"
+
+                        item11="Question instructions"
+                        content11="<p>Optional instructions to help the user understand how to answer the question.</p>"
+
+                        item12="Answer options"
+                        content12="<p>Options the user can select to answer the question.</p>"
+
+                        item13="Selected answer"
+                        content13="<p>User selected answers are ticked to make it clear they are currently selected.</p>"
+
+                        item14="Navigation button group"
+                        content14="<p>Buttons for navigating through the tool.</p><ul><li>The 'next' button appears on all question pages except the last one.</li><li>The 'start again' link appears on all question pages.</li><li>The 'previous' link appears on all question pages except the first one.</li><li>The wording for navigation links should always be 'start again', 'previous', and 'next'.</li><li>Styling for the button group must remain consistent throughout the tool:<ul><li>The 'start again' and 'previous' links are always styled as in-text links.</li><li>The 'next' button is always styled as a primary button.</li></ul></li></ul>"
+
+
+                        item15="Matching filter"
+                        content15="<p>Every question has a matching filter. The answer options displayed for a question must be the same as the options in the matching filter.</p><p>When a user selects an answer to a question the same filter option is selected and vice versa. There is always a direct match between the options selected in the filters and in the questions.</p>"
+
+
+                        item16="Selected filter bubble"
+                        content16="<p>Filter bubbles indicate which options are currently selected. They also provide a way for users to unselect options.</p>"
+
+                        %}
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tab-section singleselect-page">
+
+                <div class="component-example border-0 m-0">
+
+                        {% include page-pattern-example.html
+                        classes="tiled-guided-search-container"
+                        img="'../assets/page-patterns/tile-guided-search-questions-singleselect.png' | relative_url"
+
+                        spot17="Question"
+                        spot18="Answers dropdown"
+                        spot19="Toggle question"
+                        spot20="View results button"
+                        spot21="Matching filter"
+                        
+    
+                        %}
+
+
+                </div>
+
+                <div class="component-example border-0">
+                    <div class="page-pattern-rules pt-4">
+
+                        {% include page-pattern-rules.html
+
+                        item17="Question"
+                        content17="<p>A short statement that leads in to user selected answers. e.g.:<p><ul><li>'My business is operating as a'</li><li>'My business is in the industry of'</li></ul><p>Generally there is one question per screen with the exception being questions that are a subset of the first question.</p>"
+
+                        item18="Answers dropdown"
+                        content18="<p>A dropdown select allowing users to choose one option in response to the question.</p>"
+
+                        item19="Toggle question"
+                        content19="<p>A simple yes / no option. The toggle question is usually used as a secondary question.</p>"
+
+                        item20="View results button"
+                        content20="<p>The 'view results' button replaces the 'next' button on the last page. Clicking on it scrolls the user down to the result items.</p>"
+
+                        item21="Matching filter"
+                        content21="<p>Every question has a matching filter. The answer options displayed for a question must be the same as the options in the matching filter.</p><p>When a user selects an answer to a question the same filter option is selected and vice versa. There is always a direct match between the options selected in the filters and in the questions.</p>"
+
+
+                        %}
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>Tiled pages with a guided search provide users with a series of links to related information such as a set of grants and programs.</p><p>Questions in the guided search can be used to refine the number of items helping users to find information that is relevant to them. In addition to the guided search this tool pattern includes filters that also provde a way to refine the items displayed.</p>
+        <p>Examples of this pattern are the business.gov.au grants and program finder.</p>
+        
+
+    
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li> 
+            <li><a href={{ "/components/tool-start-component.html" | relative_url }}>Start component within a tool header</a></li>
+            <li><a href={{ "/components/guided-search.html" | relative_url }}>Guided search</a></li>
+            <li><a href={{ "/components/tile-filters.html" | relative_url }}>Tile filters</a></li>
+            <li><a href={{ "/components/finder-tool-result-tiles.html" | relative_url }}>Finder tool result tiles</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>  
