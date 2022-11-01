@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Chat button</title>
+    <title>Tooltip</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -42,7 +42,7 @@
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/chat-button.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/tooltip.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -163,7 +163,7 @@
                     
 
                     <li class="breadcrumb breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0">Chat button</p>
+                        <p class="breadcrumb-location m-0 p-0">Tooltip</p>
                     </li>
                 </ul>
                 
@@ -183,8 +183,8 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Chat button</h1>
-                        <p class="header-intro">Provide a link to the business.gov.au online chat service.</p>
+                        <h1>Tooltip</h1>
+                        <p class="header-intro">Provide additional information about an element when the user moves the mouse pointer over it.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
@@ -218,9 +218,7 @@
         
             <li class="mb-3"><a tabindex="0" href="#design">Design</a></li>
              
-        
-            <li class="mb-3"><a tabindex="0" href="#layouts">Layouts</a></li>
-             
+         
         
             <li class="mb-3"><a tabindex="0" href="#guidelines-for-use">Guidelines for use</a></li>
              
@@ -296,42 +294,22 @@
 
             <div class="component-wrapper remove-element-padding">
 
-                    
-                   
                     <div class="chat-button-example-container p-4">
                         
-                    <h3>Open chat button</h3>
-                        
-<button tabindex="0" class="chat open example">
-    <span>Live chat</span>
-</button>
-
-
-
-
-
-                    </div>
-
                     
-                    <div class="chat-button-example-container p-4">
-                        
-                    <h3 class="mt-4">Closed chat button</h3>
-                    
-
-
-
-
-<div class="tooltip example">
+<div class="tooltip ">
     <div class="msg-container remove-element-padding p-3">
-    <p>Live chat is open from 8am to 8pm Monday to Friday across Australia. Closed on Australian National Public Holidays.</p>
+    <p>Opens a new tab</p>
     </div> 
     <span class="arrow"></span>
     
 </div>
 
-<button tabindex="0" class="chat closed example">
-    <span>Live chat is closed</span></button>
-
+<button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button"> Register
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <path d="M0,16V0H7V2H2V14H14V9h2v7ZM6.293,8.293,12.586,2H10V0h6V6H14V3.414L7.707,9.707ZM14,2h0Z" />
+    </svg>
+</button>
                     </div>
 
             </div>
@@ -346,71 +324,27 @@
 <a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/66e9ed19-14d0-40c2-a56d-9d963e38fadb/' role="button">View design specifications</a>
 </div>
 
-
-        <!-- LAYOUTS -->
-        <h2 class="section-start" id="layouts">Layouts</h2>
-
-        <p>The chat button is used on <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>all page layouts</a>.</p>
-       
-        <div class="layouts m-0 p-4">
-    
-    
-    <p class="pe-3 m-0 all-layouts">Layout: <strong>All layouts</strong></p>
-    
-    
-
-
-    
-</div>
-
-        <div class="layout-example show full-border mt-0 p-4">
-
-            
-    
-    <div class="py-4">
         
-        <h6>All breakpoints</h6>
-        
-        <div class="layouts-wrapper">
-        <div class="layout-image me-5">
-            <img src='../assets/layout-images/chat-button-allbp.png' | relative_url  alt="" />
-        </div>
-        <div class="layout-rules">
-              <p>The chat button is fixed to the bottom of the screen, 24px from the bottom right corner.</p>
-        </div>
-        </div>
-    </div>
-
-    
-
-
-
-
-
-
-        </div>
-
-        <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-full-width.html' | relative_url role="button">View layout example (open button)</a>
-</div>
-
-        <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='../html-examples/single-col-two-thirds-width.html' | relative_url role="button">View layout example (closed button)</a>
-</div>
-
-
-
-
-
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h4>Purpose: </h4>
-        <p>Used to provide a link to the business.gov.au online chat service.</p><p>The chat button has an open and closed state. Hovering over the closed button or clicking on the closed button on mobile screens displays a pop up message explaining when the chat is open.</p>
-       
+        <p>Used to provide additional information about an element when the user moves the mouse pointer over it.</p>
+        
         <h4>When to use this component: </h4>
         <ul>
-            <li>Used with all pages of the business.gov.au site.</li>
+            <li>Used within tool pages for external links that open in new tabs. Note tooltips are not used for external links in general business.gov.au information pages.</li>
+            <li>Used with the chat button when the chat feature is unavailable.</li>
+            <li>Used with the print and share utilities component to provide links to different social media sites listed under the 'share' link.</li>
+        </ul>
+
+        <h4>Style rules</h4>
+        <p>Tooltips can be positioned above, below or to the side of their trigger element. By default tooltips should display above the trigger element. The tooltip used in the print and share utilities component displays below the trigger link.</p>
+
+        <p>Tooltips can be triggered on hover or click:</p>
+        <ul>
+            <li>The print and share utilities component tooltip has a click trigger.</li>
+            <li>External link and chat button tooltips have a hover trigger.</li>
         </ul>
        
 

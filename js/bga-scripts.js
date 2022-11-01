@@ -999,18 +999,18 @@ $(document).ready(function () {
     $('.chat.closed').hover(
         function () {
             if ($(window).width() >= 768) {
-                $('.chat-closed-msg').addClass("show");
+                $('.tooltip').addClass("show");
             }
         },
         function () {
             if ($(window).width() >= 768) {
-                $('.chat-closed-msg').removeClass("show");
+                $('.tooltip').removeClass("show");
             }
         }
     );
     $('.chat.closed').on('click', function () {
         if ($(window).width() <= 768) {
-            $('.chat-closed-msg').toggleClass("show");
+            $('.tooltip').toggleClass("show");
         }
     });
 
