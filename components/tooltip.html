@@ -1,0 +1,92 @@
+---
+
+layout: content-tagged
+title: Tooltip
+description: Provide additional information about an element when the user moves the mouse pointer over it.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: false
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+       <!-- Breakpoint radio buttons -->
+       {% include breakpoints.html 
+        md-visibility="true"
+        final-visibility="true"
+        breakpoint-final="768"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+
+            <div class="component-wrapper remove-element-padding">
+
+                    <div class="chat-button-example-container p-4">
+                        
+                    {% include component-examples/tooltip-example.html
+                        button="Register"
+                        msg="Opens a new tab"
+                        classes=""
+                        %}
+                    </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/66e9ed19-14d0-40c2-a56d-9d963e38fadb/'"
+        btn-text="View design specifications"
+        %}
+
+        
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h4>Purpose: </h4>
+        <p>Used to provide additional information about an element when the user moves the mouse pointer over it.</p>
+        
+        <h4>When to use this component: </h4>
+        <ul>
+            <li>Used within tool pages for external links that open in new tabs. Note tooltips are not used for external links in general business.gov.au information pages.</li>
+            <li>Used with the chat button when the chat feature is unavailable.</li>
+            <li>Used with the print and share utilities component to provide links to different social media sites listed under the 'share' link.</li>
+        </ul>
+
+        <h4>Style rules</h4>
+        <p>Tooltips can be positioned above, below or to the side of their trigger element. By default tooltips should display above the trigger element. The tooltip used in the print and share utilities component displays below the trigger link.</p>
+
+        <p>Tooltips can be triggered on hover or click:</p>
+        <ul>
+            <li>The print and share utilities component tooltip has a click trigger.</li>
+            <li>External link and chat button tooltips have a hover trigger.</li>
+        </ul>
+       
+
+    </div>
