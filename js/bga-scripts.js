@@ -996,7 +996,7 @@ $(document).ready(function () {
 
     // COMPONENT EXAMPLE: CHAT BUTTON
 
-    $('.chat.closed').hover(
+    $('.tooltip-hover').hover(
         function () {
             if ($(window).width() >= 768) {
                 $('.tooltip').addClass("show");
@@ -1008,7 +1008,7 @@ $(document).ready(function () {
             }
         }
     );
-    $('.chat.closed').on('click', function () {
+    $('.tooltip-hover').on('click', function () {
         if ($(window).width() <= 768) {
             $('.tooltip').toggleClass("show");
         }
@@ -1348,11 +1348,6 @@ $(document).ready(function () {
         $(this).addClass('selected');
         $('.tab').not(this).removeClass('selected');
         
-        /*$('.tab').each(function(){
-            $(this).addClass('selected');
-            $('.tab').not(this).removeClass('selected');
-        });
-        */
         $('.tab-section').removeClass('selected');
         $("." + section).addClass('selected');
 

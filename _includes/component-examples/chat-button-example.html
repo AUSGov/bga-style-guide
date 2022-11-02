@@ -8,13 +8,13 @@
 {% if include.button-state == "closed" %}
 
 <div class="tooltip {{ include.classes }}">
-    <div class="msg-container remove-element-padding p-3">
+    <div class="msg-container remove-element-padding p-2">
     <p>Live chat is open from 8am to 8pm Monday to Friday across Australia. Closed on Australian National Public Holidays.</p>
     </div> 
     <span class="arrow"></span>
     
 </div>
 
-<button tabindex="0" class="chat closed {{ include.classes }}">
+<button tabindex="0" class="chat closed tooltip-hover {{ include.classes }}">
     <span>Live chat is closed</span></button>
 {% endif %}

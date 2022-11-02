@@ -6,6 +6,11 @@
         border-bottom: solid 1px $bga-blue-border;
     }
 }
+.tooltip-example-container {
+    position: relative;
+    display: inline-flex;
+    
+}
 
 button.chat {
     height: 56px;
@@ -90,8 +95,18 @@ button.chat {
         z-index: 900;
     }
 
+    &.centered {
+        right: auto;
+        bottom: 70px;
+
+        span.arrow {
+            right: 45%;
+        }
+    }
+
     &.show {
         display: block;
+        opacity: 1;
     }
 }
 
