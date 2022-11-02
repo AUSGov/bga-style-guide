@@ -1004,7 +1004,9 @@ $(document).ready(function () {
                 $('.tooltip').removeClass("show");
         }
     );
+
     $('.tooltip-click').hover(
+       
         function () {
             if ($(window).width() >= 768) {
                 $('.tooltip').addClass("show");
@@ -1021,7 +1023,7 @@ $(document).ready(function () {
             $('.tooltip').toggleClass("show");
         }
     });
-    
+
 
     // COMPONENT EXAMPLE: PRINT SHARE UTILITIES
     $('#share-popover').on('click', function(){
