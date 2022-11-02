@@ -10,9 +10,9 @@ description: A collection of page designs outlining how different page types sho
 <div class="row">
 
     {% include showing-number.html
-        tile-type="page patterns"
+    tile-type="page patterns"
     %}
-    
+
 </div>
 
 <div class="row">
@@ -27,41 +27,44 @@ description: A collection of page designs outlining how different page types sho
                 <button type="submit">Submit</button>
             </div>
         </div>
-        
-        
+
+
         <div class="nav-tile-filters filter-component-type mt-0 mb-2 p-0">
             <h5>Filter page patterns</h5>
 
             <fieldset>
                 {% include filter-item.html
-                    item-title="Navigation pages" 
-                    item-string="navigation-pages" %}
-                
-                {% include filter-item.html
-                    item-title="Information pages" 
-                    item-string="information-pages" %}
-                
-                {% include filter-item.html
-                    item-title="Tool patterns" 
-                    item-string="tool-patterns" %}
+                item-title="Navigation pages"
+                item-string="navigation-pages" %}
 
                 {% include filter-item.html
-                    item-title="Error pages" 
-                    item-string="error-page" %}
-                
+                item-title="Information pages"
+                item-string="information-pages" %}
+
+                {% include filter-item.html
+                item-title="Tool patterns"
+                item-string="tool-patterns" %}
+
+                {% include filter-item.html
+                item-title="Error pages"
+                item-string="error-page" %}
+
             </fieldset>
-            
+
         </div>
 
-        
-        
-        
+
+
+
         <div class="reset-filters">
-            <button>Clear all filters<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16.01" viewBox="0 0 16 16.01">
-                        <path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)" fill="#333" />
-                    </svg></button>
+            <button>Clear all filters<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16.01"
+                    viewBox="0 0 16 16.01">
+                    <path
+                        d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z"
+                        transform="translate(-4.01 -4)" fill="#333" />
+                </svg></button>
         </div>
-        
+
     </div>
 
 
@@ -70,217 +73,240 @@ description: A collection of page designs outlining how different page types sho
     <div class="col-12 col-md-8 col-xl-9">
 
         <div class="row remove-element-padding">
-    
-    <!-- Category -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-category-page"
-        tile-url="page-patterns/category-page.html"
-        tile-title="Category page" 
-        tile-tag1="Navigation page" 
-        tile-image="assets/nav-images/nav-tile-categorypage.svg" 
-    %}
-    
-    <!-- Topic -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-topic-page"
-        tile-url="page-patterns/topic-page.html"
-        tile-title="Topic page"
-        tile-tag1="Navigation page"  
-        tile-image="assets/nav-images/nav-tile-topicpage.svg" 
-    %}
-    
-    <!-- Guide -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-guide-page"
-        tile-url="page-patterns/guide-page.html"
-        tile-title="Guide page" 
-        tile-tag1="Navigation page" 
-        tile-image="assets/nav-images/nav-tile-guidepage.svg" 
-    %}
-    
-    <!-- Transaction Action -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-transaction-action-page"
-        tile-url="page-patterns/transaction-action-page.html"
-        tile-title="Transaction action page" 
-        tile-tag1="Information page" 
-        tile-image="assets/nav-images/nav-tile-transactionactionpage.svg" 
-    %}
-    
-    <!-- 101 -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-101-page"
-        tile-title="101 page" 
-        tile-url="page-patterns/101-page.html"
-        tile-tag1="Information page"
-        tile-image="assets/nav-images/nav-tile-101page.svg" 
-    %}
-    
-    <!-- Tutorial -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-tutorial-page"
-        tile-url="page-patterns/tutorial-page.html"
-        tile-title="Tutorial page" 
-        tile-tag1="Information page"
-        tile-image="assets/nav-images/nav-tile-tutorialpage.svg" 
-    %}
-    
-    <!-- Resource Article -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-resource-article-page"
-        tile-url="page-patterns/resource-article-page.html"
-        tile-title="Resource article page" 
-        tile-tag1="Information page"
-        tile-image="assets/nav-images/nav-tile-resourcearticle.svg" 
-    %}
-    
-    <!-- Internal grants landing -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-internal-grants-landing-page coming-soon"
-        tile-title="Internal grants landing page" 
-        tile-tag1="Information page"
-        tile-image="assets/nav-images/nav-tile-internalgrantslandingpage.svg" 
-    %}
-    
-    <!-- External grants landing -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-external-grants-landing-page"
-        tile-url="page-patterns/external-grant-page.html"
-        tile-title="External grants landing page"
-        tile-tag1="Information page" 
-        tile-image="assets/nav-images/nav-tile-externalgrantslandingpage.svg" 
-    %}
-    
-    <!-- Grant recipients -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-grant-recipients-page"
-        tile-url="page-patterns/grant-recipients-page.html"
-        tile-title="Grant recipients page" 
-        tile-tag1="Information page"
-        tile-image="assets/nav-images/nav-tile-grantrecipientspage.svg" 
-    %}
-    
-    <!-- Customer stories landing -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-customer-stories-landing-page navigation-pages"
-        tile-url="page-patterns/customer-stories-page.html"
-        tile-title="Customer stories landing page" 
-        tile-tag1="Navgation page"
-        tile-image="assets/nav-images/nav-tile-customerstorieslandingpage.svg" 
-    %}
-    
-    <!-- Customer story (single) -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-customer-story-page"
-        tile-url="page-patterns/customer-story-page.html"
-        tile-title="Customer story page" 
-        tile-tag1="Information page"
-        tile-image="assets/nav-images/nav-tile-customerstorypage.svg" 
-    %}
-    
-    <!-- Adviser -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-adviser-detail-page"
-        tile-url="page-patterns/adviser-page.html"
-        tile-title="Adviser page" 
-        tile-tag1="Information page"
-        tile-image="assets/nav-images/nav-tile-adviserdetailpage.svg" 
-    %}
-    
-    <!-- Event page -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-event-page"
-        tile-url="page-patterns/event-page.html"
-        tile-title="Event page" 
-        tile-tag1="Information page"
-        tile-image="assets/nav-images/nav-tile-eventpage.svg" 
-    %}
 
-        <!-- Patterns to collect information -->
-    <!-- BGA site search -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-site-search-page"
-        tile-url="page-patterns/site-search-page.html"
-        tile-title="Site search page" 
-        tile-tag1="Tool pattern"
-        tile-image="assets/nav-images/nav-tile-tilefilters.svg" 
-    %}
+            <!-- Category -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-category-page"
+            tile-url="page-patterns/category-page.html"
+            tile-title="Category page"
+            tile-tag1="Navigation page"
+            tile-image="assets/nav-images/nav-tile-categorypage.svg"
+            %}
 
-     <!-- Tile filters  -->
-     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-tiled-page-with-filters"
-        tile-url="page-patterns/tiled-page-with-filters.html"
-        tile-title="Tiled page with filters" 
-        tile-tag1="Tool pattern"
-        tile-image="assets/nav-images/nav-tile-tilefilters.svg" 
-    %}
-    
-    <!-- Tile filters with guided search -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-tiled-page-with-guided-search"
-        tile-url="page-patterns/tiled-page-guided-search.html"
-        tile-title="Tiled page with guided search" 
-        tile-tag1="Tool pattern"
-        tile-image="assets/nav-images/nav-tile-tilefilterswithguidedquestions.svg" 
-    %}
-    
-    <!-- Internal stepped question tools -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-internal-q-and-a-tools bga-question-and-answer-tools"
-        tile-url="page-patterns/internal-q-and-a-tools.html"
-        tile-title="Internal Q&amp;A tools" 
-        tile-tag1="Tool pattern"
-        tile-image="assets/nav-images/nav-tile-steppedquestionandanswer.svg" 
-    %}
-    
-    <!-- External stepped question and answer tools -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-external-bga-branded-q-and-a-tools bga-branded-question-and-answer-tools coming-soon"
-        tile-title="External BGA branded Q&amp;A tools" 
-        tile-tag1="Tool pattern"
-        tile-image="assets/nav-images/nav-tile-steppedquestionandanswer.svg" 
-    %}
-    
-    <!-- Standard checklist -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns information-pages bga-standard-checklist"
-        tile-url="page-patterns/standard-checklist.html"
-        tile-title="Standard checklist" 
-        tile-tag1="Tool pattern"
-        tile-tag2="Information page"
-        tile-image="assets/nav-images/nav-tile-standardchecklist.svg" 
-    %}
-    
-    <!-- Lightweight checklist -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns information-pages bga-lightweight-checklist"
-        tile-url="page-patterns/lightweight-checklist.html"
-        tile-title="Lightweight checklist" 
-        tile-tag1="Tool pattern"
-        tile-tag2="Information page"
-        tile-image="assets/nav-images/nav-tile-lightweightchecklist.svg" 
-    %}
+            <!-- Topic -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-topic-page"
+            tile-url="page-patterns/topic-page.html"
+            tile-title="Topic page"
+            tile-tag1="Navigation page"
+            tile-image="assets/nav-images/nav-tile-topicpage.svg"
+            %}
 
-    <!-- BGA maintenance page -->
-    {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper error-page bga-maintenance"
-        tile-url="page-patterns/bga-maintenance-page.html"
-        tile-title="business.gov.au maintenance page" 
-        tile-tag1="Error page"
-        tile-image="assets/nav-images/nav-tile-errorpage.svg" 
-    %}
+            <!-- Guide -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper navigation-pages bga-guide-page"
+            tile-url="page-patterns/guide-page.html"
+            tile-title="Guide page"
+            tile-tag1="Navigation page"
+            tile-image="assets/nav-images/nav-tile-guidepage.svg"
+            %}
 
-     <!-- BGA error page -->
-     {% include nav-image-tile.html 
-        classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper error-page bga-error"
-        tile-url="page-patterns/bga-error-page.html"
-        tile-title="business.gov.au error page" 
-        tile-tag1="Error page"
-        tile-image="assets/nav-images/nav-tile-errorpage.svg" 
-        %}
+            <!-- Transaction Action -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages
+            bga-transaction-action-page"
+            tile-url="page-patterns/transaction-action-page.html"
+            tile-title="Transaction action page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-transactionactionpage.svg"
+            %}
 
+            <!-- 101 -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-101-page"
+            tile-title="101 page"
+            tile-url="page-patterns/101-page.html"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-101page.svg"
+            %}
+
+            <!-- Tutorial -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-tutorial-page"
+            tile-url="page-patterns/tutorial-page.html"
+            tile-title="Tutorial page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-tutorialpage.svg"
+            %}
+
+            <!-- Resource Article -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages
+            bga-resource-article-page"
+            tile-url="page-patterns/resource-article-page.html"
+            tile-title="Resource article page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-resourcearticle.svg"
+            %}
+
+            <!-- Internal grants landing -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages
+            bga-internal-grants-landing-page coming-soon"
+            tile-title="Internal grants landing page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-internalgrantslandingpage.svg"
+            %}
+
+            <!-- External grants landing -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages
+            bga-external-grants-landing-page"
+            tile-url="page-patterns/external-grant-page.html"
+            tile-title="External grants landing page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-externalgrantslandingpage.svg"
+            %}
+
+            <!-- Grant recipients -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages
+            bga-grant-recipients-page"
+            tile-url="page-patterns/grant-recipients-page.html"
+            tile-title="Grant recipients page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-grantrecipientspage.svg"
+            %}
+
+            <!-- Customer stories landing -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages
+            bga-customer-stories-landing-page navigation-pages"
+            tile-url="page-patterns/customer-stories-page.html"
+            tile-title="Customer stories landing page"
+            tile-tag1="Navgation page"
+            tile-image="assets/nav-images/nav-tile-customerstorieslandingpage.svg"
+            %}
+
+            <!-- Customer story (single) -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-customer-story-page"
+            tile-url="page-patterns/customer-story-page.html"
+            tile-title="Customer story page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-customerstorypage.svg"
+            %}
+
+            <!-- Adviser -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-adviser-detail-page"
+            tile-url="page-patterns/adviser-page.html"
+            tile-title="Adviser page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-adviserdetailpage.svg"
+            %}
+
+            <!-- Event page -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper information-pages bga-event-page"
+            tile-url="page-patterns/event-page.html"
+            tile-title="Event page"
+            tile-tag1="Information page"
+            tile-image="assets/nav-images/nav-tile-eventpage.svg"
+            %}
+
+            <!-- Patterns to collect information -->
+            <!-- BGA site search -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-site-search-page"
+            tile-url="page-patterns/site-search-page.html"
+            tile-title="Site search page"
+            tile-tag1="Tool pattern"
+            tile-image="assets/nav-images/nav-tile-tilefilters.svg"
+            %}
+
+            <!-- Tile filters  -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-tiled-page-with-filters"
+            tile-url="page-patterns/tiled-page-with-filters.html"
+            tile-title="Tiled page with filters"
+            tile-tag1="Tool pattern"
+            tile-image="assets/nav-images/nav-tile-tilefilters.svg"
+            %}
+
+            <!-- Tile filters with guided search -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns
+            bga-tiled-page-with-guided-search"
+            tile-url="page-patterns/tiled-page-guided-search.html"
+            tile-title="Tiled page with guided search"
+            tile-tag1="Tool pattern"
+            tile-image="assets/nav-images/nav-tile-tilefilterswithguidedquestions.svg"
+            %}
+
+            <!-- Internal stepped question tools -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns bga-internal-q-and-a-tools
+            bga-question-and-answer-tools"
+            tile-url="page-patterns/internal-q-and-a-tools.html"
+            tile-title="Internal Q&amp;A tools"
+            tile-tag1="Tool pattern"
+            tile-image="assets/nav-images/nav-tile-steppedquestionandanswer.svg"
+            %}
+
+            <!-- External stepped question and answer tools -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns
+            bga-external-bga-branded-q-and-a-tools bga-branded-question-and-answer-tools coming-soon"
+            tile-title="External BGA branded Q&amp;A tools"
+            tile-tag1="Tool pattern"
+            tile-image="assets/nav-images/nav-tile-steppedquestionandanswer.svg"
+            %}
+
+            <!-- Standard checklist -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns information-pages
+            bga-standard-checklist"
+            tile-url="page-patterns/standard-checklist.html"
+            tile-title="Standard checklist"
+            tile-tag1="Tool pattern"
+            tile-tag2="Information page"
+            tile-image="assets/nav-images/nav-tile-standardchecklist.svg"
+            %}
+
+            <!-- Lightweight checklist -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-patterns information-pages
+            bga-lightweight-checklist"
+            tile-url="page-patterns/lightweight-checklist.html"
+            tile-title="Lightweight checklist"
+            tile-tag1="Tool pattern"
+            tile-tag2="Information page"
+            tile-image="assets/nav-images/nav-tile-lightweightchecklist.svg"
+            %}
+
+            <!-- BGA maintenance page -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper error-page bga-maintenance"
+            tile-url="page-patterns/bga-maintenance-page.html"
+            tile-title="business.gov.au maintenance page"
+            tile-tag1="Error page"
+            tile-image="assets/nav-images/nav-tile-errorpage.svg"
+            %}
+
+            <!-- BGA error page -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper error-page bga-error"
+            tile-url="page-patterns/bga-error-page.html"
+            tile-title="business.gov.au error page"
+            tile-tag1="Error page"
+            tile-image="assets/nav-images/nav-tile-errorpage.svg"
+            %}
+
+
+             <!-- No results -->
+             <div class="col-12 no-results">
+                <h3>We couldn't find any pattern names containing <em><span></span></em>.</h3>
+                <p>You could:</p>
+                <ul>
+                    <li>Check your spelling.</li>
+                    <li>Ensure your search term does not contain any special characters (letters and numbers only).</li> 
+                    <li>Use an different search term.</li>
+                </ul>
+            </div>
+
+        </div>
     </div>
-    </div>
-    
-    
+
+
 </div>
