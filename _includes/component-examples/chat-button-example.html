@@ -9,12 +9,16 @@
 
 <div class="tooltip {{ include.classes }}">
     <div class="msg-container remove-element-padding p-2">
+        <button class="close mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path id="Close" d="M8,9.6,1.6,16,0,14.4,6.4,8,0,1.6,1.6,0,8,6.4,14.4,0,16,1.6,9.6,8,16,14.4,14.4,16Z" fill="#333"/>
+          </svg>
+          </button>
     <p>Live chat is open from 8am to 8pm Monday to Friday across Australia. Closed on Australian National Public Holidays.</p>
     </div> 
     <span class="arrow"></span>
     
 </div>
 
-<button tabindex="0" class="chat closed tooltip-hover {{ include.classes }}">
+<button tabindex="0" class="chat closed tooltip-click {{ include.classes }}">
     <span>Live chat is closed</span></button>
 {% endif %}

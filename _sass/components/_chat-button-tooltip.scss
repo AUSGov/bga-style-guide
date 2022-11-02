@@ -79,6 +79,10 @@ button.chat {
     right: 24px;
     bottom: 90px;
 
+    .close {
+        display: none;
+    }
+
     &.example {
         position:absolute;
     }
@@ -98,9 +102,10 @@ button.chat {
     &.centered {
         right: auto;
         bottom: 70px;
+        width: auto;
 
         span.arrow {
-            right: 45%;
+            right: calc(50% - 16px);
         }
     }
 
@@ -126,14 +131,19 @@ button.chat {
             bottom: 8px;
         }
     }
-
+    .msg-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
     .tooltip {
-        &.show {
-            background: url(../assets/icon-close-black.svg) no-repeat $bga-white;
-            background-position: right 16px top 16px;
-            padding-top: 32px !important;
-           
-
+        .close {
+            display: block;
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 0;
+            margin: 0;
         }
     }
 }
