@@ -6099,13 +6099,15 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .tooltip { display: none; z-index: 9000; width: 100%; max-width: 300px; background: #ffffff; border: 3px solid #ABB1BD; border-radius: 4px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 24px; bottom: 90px; }
 
+.tooltip .close { display: none; }
+
 .tooltip.example { position: absolute; }
 
 .tooltip span.arrow { background-color: #ffffff; border-bottom: 3px solid #ABB1BD; border-right: 3px solid #ABB1BD; height: 16px; width: 16px; position: absolute; bottom: -18px; right: 2rem; transform: translate(-50%, -50%) rotate(45deg); z-index: 900; }
 
-.tooltip.centered { right: auto; bottom: 70px; }
+.tooltip.centered { right: auto; bottom: 70px; width: auto; }
 
-.tooltip.centered span.arrow { right: 45%; }
+.tooltip.centered span.arrow { right: calc(50% - 16px); }
 
 .tooltip.show { display: block; opacity: 1; }
 
@@ -6115,9 +6117,11 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .component-example.bp-below768 button.chat.save-progress, .component-example.small-screen button.chat.save-progress { bottom: 8px; }
 
-.component-example.bp-below768 .tooltip.show, .component-example.small-screen .tooltip.show { background: url(../assets/icon-close-black.svg) no-repeat #ffffff; background-position: right 16px top 16px; padding-top: 32px !important; }
+.component-example.bp-below768 .msg-container, .component-example.small-screen .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; }
 
-@media (max-width: 768px) { button.chat { text-indent: -9999px; height: 58px; width: 58px; padding: 0; } button.chat.open, button.chat.closed { background-position: center center; } button.chat.save-progress { bottom: 8px; } .tooltip.show { background: url(../assets/icon-close-black.svg) no-repeat #ffffff; background-position: right 16px top 16px; padding-top: 32px !important; } }
+.component-example.bp-below768 .tooltip .close, .component-example.small-screen .tooltip .close { display: block; border: none; background: transparent; outline: none; padding: 0; margin: 0; }
+
+@media (max-width: 768px) { button.chat { text-indent: -9999px; height: 58px; width: 58px; padding: 0; } button.chat.open, button.chat.closed { background-position: center center; } button.chat.save-progress { bottom: 8px; } .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; } .tooltip .close { display: block; border: none; background: transparent; outline: none; padding: 0; margin: 0; } }
 
 .bga-progress-bar .progress-label { font-size: 0.875rem; }
 
