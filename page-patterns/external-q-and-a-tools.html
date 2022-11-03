@@ -1,0 +1,367 @@
+---
+
+layout: content-tagged
+title: External BGA branded Q&A tools
+description: Page patterns for stepped question and answer tools that use business.gov.au branding but are not hosted on the mian business.gov.au domain.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: false
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Tool pages" link-id-1="#tool-pages"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="tool-pages">Tool pages</h2>
+
+        <div class="section-tabs">
+            <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="landing-page"><p>Landing page</p></div>
+            
+            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="before-page"><p>Before starting page</p></div>
+
+            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="questions-page"><p>Questions page</p></div>
+            
+            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="review-page"><p>Review page</p></div>
+
+            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="success-page"><p>Success page</p></div>
+        </div>
+
+
+        <div class="tab-sections-wrapper p-4 mb-5"> 
+            
+            <div class="tab-section landing-page selected">
+
+                <div class="component-example border-0 m-0">
+                   
+                        {% include page-pattern-example.html
+                        
+                        classes="internal-q-and-a-tool-container"
+                        img="'../assets/page-patterns/external-tool-landing-page.png' | relative_url"
+                        spot1="Heading (tool title)"
+                        spot2="Who can use this tool"
+                        spot3="Time to complete"
+                        spot4="Start button"
+                        spot5="What you'll need"
+                        spot6="What you'll get"
+                        spot7="Additional starting information"
+
+                        %}
+
+                </div>
+
+                <div class="component-example border-0">
+                    <div class="page-pattern-rules pt-4">
+
+                        {% include page-pattern-rules.html
+
+                        item1="Heading (tool title)"
+                        content1="<p>The name of the tool</p><ul><li>Maximum character limit of 50.</li></ul>"
+
+                        item2="Who can use this tool"
+                        content2="<p>A short paragraph explaining who the tool is for and why they would want to use it.</p>"
+
+                        item3="Time to complete"
+                        content3="<p>An estimate of the amount of time needed to complete the tool.</p>"
+
+                        item4="Start button"
+                        content4="<p>The button that starts the tool.</p><ul><li>Button wording should be a clear call to action. e.g 'Start now'</li><li>Maximum of <strong>four</strong> words in the text on the button.</li></ul>"
+
+                        item5="What you'll need"
+                        content5="<p>A short paragraph explaining anything the user will need to complete the tool.</p><ul><li>Requirements to include:<ul><li>Any documents the user may need while using the tool, e.g. driver licence or medicare card.</li><li>Any information the user may need to look up during the process, e.g. the name of an award.</li></ul></li><li>When multiple requirements are listed use bullet points.</li></ul>"
+
+                        item6="What you'll get"
+                        content6="<p>A short paragraph explaining the outcome of using the tool.</p><p>Include specific information about what the user will receive e.g.:</p><ul><li>an employment contract and a letter of offer in a word document</li><li>information on the Australian government approvals you will need</li></ul>"
+
+                        item7="Additional starting information"
+                        content7="<p>Additional information the user may find useful. Can include:</p><ul><li>Disclaimers related to information the tool provides.</li><li>Infromation about who to contact for further information.</li></ul>"
+
+                        %}
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tab-section before-page">
+
+                <div class="component-example border-0 m-0">
+        
+                        {% include page-pattern-example.html
+                        classes="internal-q-and-a-tool-container"
+                        img="'../assets/page-patterns/external-tool-before-begin.png' | relative_url"
+
+                        spot8="Progress bar"
+                        spot9="Section title"
+                        spot10="Questions"
+                        spot11="Radio buttons"
+                        spot12="Contextual help"
+                        spot13="Clause / regulation box"
+                        spot14="Navigation button group"
+                        
+                        %}
+
+                </div>
+
+                <div class="component-example border-0">
+                    <div class="page-pattern-rules pt-4">
+
+                        {% include page-pattern-rules.html
+
+                        item8="Progress bar"
+                        content8="<p>Provides the user with information on how far through the tool they have progressed.</p><p>Progress is displayed as a percentage along with a visual indicator bar.</p>"
+
+                        item9="Section title"
+                        content9="<p>The title of the section (page). Sections are limited to one per page.</p><p>Section titles should be short and clearly explain the topic questions within it relate to. Ideally, titles consist of one or two words. e.g.:</p><ul><li>Position</li><li>Environmental approvals</li><li>Offshore resources</li></ul>"
+
+                        item10="Questions"
+                        content10="<p>Questions designed to help tailor the information provided by the tool.</p><p>Related questions should be grouped in the same section.</p>"
+
+                        item11="Radio buttons"
+                        content11="<p>Radio buttons for answering questions.</p><p>All questions must be answered before the user can move to the next section of the tool.</p>"
+
+                        item12="Contextual help"
+                        content12="<p>Additional information that may help the user accurately answer the question.</p><p>Often formatted as a question and answer.</p>"
+
+                        item13="Clause / regulation box"
+                        content13="<p>Regulations or clauses related to a specific question.</p><p>Clause boxes are generally shown when a user answers 'yes' to a question.</p><p>Clause boxes can include:</p><ul><li>The name of a regulation or clause</li><li>A short paragraph explaining what the clause / regulation is about</li><li>Links to further information</li></ul>"
+
+                        item14="Navigation button group"
+                        content14="<p>Buttons for navigating through the tool.</p><ul><li>The 'previous' link and 'next' button appear on all questions pages.</li><li>The wording for navigation links should always be 'previous' and 'next'.</li><li>Styling for the button group must remain consistent throughout the tool:<ul><li>The 'previous' link is always styled as an in-text link.</li><li>The 'next' button is always styled as a primary button.</li></ul></li><li>The 'return to results' button is not present on questions pages until the user has visited the results page. It appears when users navigate back through the tool and allows users to skip straight the results page without going through all the questions pages again. </li></ul>"
+
+                        %}
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tab-section questions-page">
+
+                <div class="component-example border-0 m-0">
+
+                        {% include page-pattern-example.html
+                        classes="internal-q-and-a-tool-container"
+                        img="'../assets/page-patterns/external-tool-question.png' | relative_url"
+
+                        spot15="Progress bar"
+                        spot16="Results page title"
+                        spot17="Results accordion"
+                        spot18="View or change answers"
+                        spot19="Edit section link"
+                        spot20="Question answers"
+                        spot21="Save result buttons"
+                        spot22="Next steps"
+                        
+                        %}
+
+
+                </div>
+
+                <div class="component-example border-0">
+                    <div class="page-pattern-rules pt-4">
+
+                        {% include page-pattern-rules.html
+
+                        item15="Progress bar"
+                        content15="<p>Provides the user with information on how far through the tool they have progressed.</p><p>The progress bar is set to 100% on the results page.</p>"
+
+                        item16="Results page title"
+                        content16="<p>The results page title should be short and clearly explain that the page shows the tool results, e.g. 'Your results'.</p>"
+
+                        item17="Results accordion"
+                        content17="<p>An accordion containing the user's results, often information such as relevant regulations they need to consider or actions they need to take. Accordion content is split into three parts:</p><ul><li>The accordion item title. e.g. the name of the regulation relevant to the user.</li><li>The accordion item subtitle. A short sentence explaining why the result is relevant to the user, e.g. '(because your project will involve foreign investors)'.</li><li>The accordion item content. A few short paragraphs providing further information. This can include links to more detailed information.</li></ul>"
+
+                        item18="View or change answers"
+                        content18="<p>The view or change answers accordion displays all the user's answers to the tool questions. </p><p>The accordion is closed by default.</p>"
+
+                        item19="Edit section link"
+                        content19="<p>Edit section links take the user back to a section within the tool so they can change an answer.</p>"
+
+                        item20="Question answers"
+                        content20="<p>Answers the user gave to individual questions within the tool.</p>"
+
+                        item21="Save result buttons"
+                        content21="<p>Buttons that provide users with the ability to save their results. Users can choose to:</p><ul><li>Email their results</li><li>Print their results</li></ul><p>Button wording should be a clear action. e.g 'Print results' or 'Email results'.</p><p>Maximum of four words in the text on the button.</p>"
+
+                        item22="Next steps"
+                        content22="<p>Further actions the user can consider taking. This section could include:</p><ul><li>Further information the user may need to seek.</li><li>Links to other tools and resources the user may find helpful.</li><li>Contact information.</li></ul>"
+
+                        %}
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tab-section review-page">
+
+                <div class="component-example border-0 m-0">
+        
+                        {% include page-pattern-example.html
+                        classes="internal-q-and-a-tool-container"
+                        img="'../assets/page-patterns/external-tool-review.png' | relative_url"
+
+                        spot8="Progress bar"
+                        spot9="Section title"
+                        spot10="Questions"
+                        spot11="Radio buttons"
+                        spot12="Contextual help"
+                        spot13="Clause / regulation box"
+                        spot14="Navigation button group"
+                        
+                        %}
+
+                </div>
+
+                <div class="component-example border-0">
+                    <div class="page-pattern-rules pt-4">
+
+                        {% include page-pattern-rules.html
+
+                        item8="Progress bar"
+                        content8="<p>Provides the user with information on how far through the tool they have progressed.</p><p>Progress is displayed as a percentage along with a visual indicator bar.</p>"
+
+                        item9="Section title"
+                        content9="<p>The title of the section (page). Sections are limited to one per page.</p><p>Section titles should be short and clearly explain the topic questions within it relate to. Ideally, titles consist of one or two words. e.g.:</p><ul><li>Position</li><li>Environmental approvals</li><li>Offshore resources</li></ul>"
+
+                        item10="Questions"
+                        content10="<p>Questions designed to help tailor the information provided by the tool.</p><p>Related questions should be grouped in the same section.</p>"
+
+                        item11="Radio buttons"
+                        content11="<p>Radio buttons for answering questions.</p><p>All questions must be answered before the user can move to the next section of the tool.</p>"
+
+                        item12="Contextual help"
+                        content12="<p>Additional information that may help the user accurately answer the question.</p><p>Often formatted as a question and answer.</p>"
+
+                        item13="Clause / regulation box"
+                        content13="<p>Regulations or clauses related to a specific question.</p><p>Clause boxes are generally shown when a user answers 'yes' to a question.</p><p>Clause boxes can include:</p><ul><li>The name of a regulation or clause</li><li>A short paragraph explaining what the clause / regulation is about</li><li>Links to further information</li></ul>"
+
+                        item14="Navigation button group"
+                        content14="<p>Buttons for navigating through the tool.</p><ul><li>The 'previous' link and 'next' button appear on all questions pages.</li><li>The wording for navigation links should always be 'previous' and 'next'.</li><li>Styling for the button group must remain consistent throughout the tool:<ul><li>The 'previous' link is always styled as an in-text link.</li><li>The 'next' button is always styled as a primary button.</li></ul></li><li>The 'return to results' button is not present on questions pages until the user has visited the results page. It appears when users navigate back through the tool and allows users to skip straight the results page without going through all the questions pages again. </li></ul>"
+
+                        %}
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tab-section success-page">
+
+                <div class="component-example border-0 m-0">
+
+                        {% include page-pattern-example.html
+                        classes="internal-q-and-a-tool-container"
+                        img="'../assets/page-patterns/external-tool-success.png' | relative_url"
+
+                        spot15="Progress bar"
+                        spot16="Results page title"
+                        spot17="Results accordion"
+                        spot18="View or change answers"
+                        spot19="Edit section link"
+                        spot20="Question answers"
+                        spot21="Save result buttons"
+                        spot22="Next steps"
+                        
+                        %}
+
+
+                </div>
+
+                <div class="component-example border-0">
+                    <div class="page-pattern-rules pt-4">
+
+                        {% include page-pattern-rules.html
+
+                        item15="Progress bar"
+                        content15="<p>Provides the user with information on how far through the tool they have progressed.</p><p>The progress bar is set to 100% on the results page.</p>"
+
+                        item16="Results page title"
+                        content16="<p>The results page title should be short and clearly explain that the page shows the tool results, e.g. 'Your results'.</p>"
+
+                        item17="Results accordion"
+                        content17="<p>An accordion containing the user's results, often information such as relevant regulations they need to consider or actions they need to take. Accordion content is split into three parts:</p><ul><li>The accordion item title. e.g. the name of the regulation relevant to the user.</li><li>The accordion item subtitle. A short sentence explaining why the result is relevant to the user, e.g. '(because your project will involve foreign investors)'.</li><li>The accordion item content. A few short paragraphs providing further information. This can include links to more detailed information.</li></ul>"
+
+                        item18="View or change answers"
+                        content18="<p>The view or change answers accordion displays all the user's answers to the tool questions. </p><p>The accordion is closed by default.</p>"
+
+                        item19="Edit section link"
+                        content19="<p>Edit section links take the user back to a section within the tool so they can change an answer.</p>"
+
+                        item20="Question answers"
+                        content20="<p>Answers the user gave to individual questions within the tool.</p>"
+
+                        item21="Save result buttons"
+                        content21="<p>Buttons that provide users with the ability to save their results. Users can choose to:</p><ul><li>Email their results</li><li>Print their results</li></ul><p>Button wording should be a clear action. e.g 'Print results' or 'Email results'.</p><p>Maximum of four words in the text on the button.</p>"
+
+                        item22="Next steps"
+                        content22="<p>Further actions the user can consider taking. This section could include:</p><ul><li>Further information the user may need to seek.</li><li>Links to other tools and resources the user may find helpful.</li><li>Contact information.</li></ul>"
+
+                        %}
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>Question and answer (Q&A) tools guide the user through a series of questions designed to help provide them with information tailored specific to their situation.</p>
+        <p>Use Q&A tools when the user needs to find a tailored subset of a large amount of information.</p>
+        <p>The internal Q&A tool pattern is for tools hosted on business.gov.au. It incorporates the business.gov.au site header, breadcrumbs and site footer.</p>
+        
+
+    
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li> 
+            <li><a href={{ "/components/tool-start-component.html" | relative_url }}>Tool start component</a></li>
+            <li><a href={{ "/components/disclaimer-alerts.html" | relative_url }}>Disclaimer alerts</a></li>
+            <li><a href={{ "/components/callout-box.html" | relative_url }}>Call out boxes</a></li>
+            <li><a href={{ "/components/progress-bar.html" | relative_url }}>Progress bar</a></li>
+            <li><a href={{ "/brand-foundations/checkboxes-and-radio-buttons.html" | relative_url }}>Radio buttons</a></li>
+            <li><a href={{ "/brand-foundations/contextual-help.html" | relative_url }}>Contextual help</a></li>
+            <li><a href={{ "/components/clause-regulation-box.html" | relative_url }}>Clause / regulation box</a></li>
+            <li><a href={{ "/brand-foundations/buttons-and-links.html" | relative_url }}>Buttons and links</a></li>
+            <li><a href={{ "/components/tool-results.html" | relative_url }}>Results accordion</a></li>
+            <li><a href={{ "/components/tool-results.html" | relative_url }}>Edit answers component</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
