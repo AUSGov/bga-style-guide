@@ -76,7 +76,7 @@ subsite-tag: true
                         content1="<p>The name of the tool</p><ul><li>Maximum character limit of 50.</li></ul>"
 
                         item2="Header description"
-                        content2="<p>A short paragraph that expands on what the&nbsp;tool provides&nbsp;and why it is important.</p><ul><li>The supporting text should explain the benefit of the tool.</li><li>Maximum character limit of 350.</li></ul>"
+                        content2="<p>A short paragraph that expands on what the tool provides and why it is important.</p><ul><li>The supporting text should explain the benefit of the tool.</li><li>Maximum character limit of 350.</li></ul>"
 
                         item3="Who can use this tool"
                         content3="<p>A short paragraph explaining who the tool is for and why they would want to use it.</p>"
@@ -151,10 +151,13 @@ subsite-tag: true
 
                         spot11="Step name"
                         spot12="Stepped navigation"
-                        spot13="Question sections"
-                        spot14="Clause / regulation boxes"
-                        spot15="Question tips"
-                        spot16="Form fields"
+                        spot13="Question title"
+                        spot14="Question"
+                        spot15="Question supporting text"
+                        spot16="Answer input"
+                        spot17="Dynamic clause box"
+                        spot18="Question tips"
+                        spot19="Form fields"
                         
                         %}
 
@@ -167,22 +170,31 @@ subsite-tag: true
                         {% include page-pattern-rules.html
 
                         item11="Step name"
-                        content11=""
+                        content11="<p>The name of the step within the tool.</p><p>One step per page.</p><p>Step names should be short and clearly explain what the questions within relate to. Ideally, names consist of one or two words. e.g.:</p><ul><li>Position</li><li>Obligations</li></ul>"
 
                         item112="Stepped navigation"
-                        content12=""
+                        content12="<p>Stepped navigation displays the names of all the steps in the tool as interactive links.</p><p>Links become interactive once the user has completed the relevant section. Users can navigate back through the tool to previously completed steps.</p>"
 
-                        item13="Question sections"
-                        content13=""
+                        item13="Question title"
+                        content13="<p>Question titles should be short and clearly explain what the question is about. Ideally, titles consist of one or two words. e.g.:</p><ul><li>Annual leave</li><li>Pay rate</li></ul>"
 
-                        item14="Clause / regulation box"
-                        content14=""
+                        item14="Question"
+                        content14="<p>Questions are designed to help tailor the information provided by the tool.</p>   "
 
-                        item15="Question tip"
-                        content15=""
+                        item15="Question supporting text"
+                        content15="<p>Provide any information the user may need to properly understand the question. This may include:</p><ul><li>why the question is important</li><li>how the question may apply to their situation</li><li>links to further infromation</li></ul>"
 
-                        item16="Form field"
-                        content16=""
+                        item16="Answer input"
+                        content16="<p>Input fields to allow the user to answer questions. Input fields can be in many formats including:</p><ul><li>Radio buttons</li><li>Text inputs (free text entry)</li><li>Dropdown selects</li><li>Checkboxes</li></ul>"
+
+                        item17="Dynamic clause box"
+                        content17="<p>Dynamic clauses related to a specific question. Clause boxes are interactive, when the user answers a question the text within the clause is updated to include their answer.</p><p>Dynamic clause boxes include:</p><ul><li>The name of the clause</li><li>The clause text (including any user input text)</li><li>An include/ included tag</li></ul>"
+
+                        item18="Question tip"
+                        content18="<p>Tips to help the user answer the question. Tips should be used to provide additional useful information rather than essential information.</p>"
+
+                        item19="Form field"
+                        content19="<p>When multiple inputs are required to answer a question they are grouped together in a form field. Form fields need a button for the user to add their responses to the tool once they have completed all the field inputs.</p>"
 
                         %}
 
@@ -201,7 +213,12 @@ subsite-tag: true
                         classes="external-q-and-a-tool-container"
                         img="'../assets/page-patterns/external-tool-review.png' | relative_url"
 
-                        
+                        spot20="Review page title"
+                        spot21="Step title"
+                        spot22="Question answers"
+                        spot23="Edit link"
+                        spot24="Disclaimer"
+                        spot25="Call to action button"
                         
                         %}
 
@@ -212,7 +229,23 @@ subsite-tag: true
 
                         {% include page-pattern-rules.html
 
-                       
+                        item20="Review page title"
+                        content20="<p>The review page title should be short and clearly explain that the page is for reviewing all answers entered into the tool. The review page is generally the last step in the tool.</p>"
+
+                        item21="Step title"
+                        content21="<p>The review page is split into sections based on the tool steps. Each section uses the step name as the section title.</p>"
+
+                        item22="Question answers"
+                        content22="<p>Users answers entered throught the tool are displayed in each section.</p>"
+
+                        item23="Edit link"
+                        content23="<p>Edit links take the user back to a question within the tool so they can change an answer.</p>"
+
+                        item24="Disclaimer"
+                        content24="<p>An optional disclaimer related to information the tool provides.</p>"
+
+                        item25="Call to action button"
+                        content25="<p>On the review page the next button changes to a call to action button.</p><ul><li>Button wording should be a clear call to action. e.g 'Download contract'</li><li>Maximum of <strong>four</strong> words in the text on the button.</li></ul>"
 
                         %}
 
@@ -231,7 +264,9 @@ subsite-tag: true
                         classes="external-q-and-a-tool-container"
                         img="'../assets/page-patterns/external-tool-success.png' | relative_url"
 
-                       
+                        spot26="Success page title"
+                        spot27="Header description"
+                        spot28="Next steps"
                         
                         %}
 
@@ -242,7 +277,15 @@ subsite-tag: true
                     <div class="page-pattern-rules pt-4">
 
                         {% include page-pattern-rules.html
-
+                        
+                            item26="Success page title"
+                            content26="<p>The success page title should be short and clearly explain that the user has successfully completed the main tool action.</p>"
+    
+                            item27="Header description"
+                            content27="<p>A short paragraph that further explains the action that has been successfully completed.</p>"
+    
+                            item28="Next steps"
+                            content28="<p>Further actions the user can consider taking. This section could include:</p><ul><li>Further information the user may need to seek.</li><li>Actions the user still needs to do.</li><li>Links to other tools and resources the user may find helpful.</li><li>Contact information.</li></ul>"
                         
 
                         %}
@@ -262,9 +305,13 @@ subsite-tag: true
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose</h3>
-        <p>Question and answer (Q&A) tools guide the user through a series of questions designed to help provide them with information tailored specific to their situation.</p>
-        <p>Use Q&A tools when the user needs to find a tailored subset of a large amount of information.</p>
-        <p>The internal Q&A tool pattern is for tools hosted on business.gov.au. It incorporates the business.gov.au site header, breadcrumbs and site footer.</p>
+        <p>Question and answer (Q&A) tools guide the user through a series of questions designed to help provide them with information tailored to their situation.</p>
+        <p>Use Q&A tools when the user needs to:</p> 
+        <ul>
+            <li>find a tailored subset of a large amount of information,</li>
+            <li>tailor a document to their specific circumstances.</li>
+        </ul>
+        <p>The external Q&A tool pattern is for business.gov.au branded tools that are not hosted on the main business.gov.au domain. It incorporates the subsite header and subsite footer.</p>
         
 
     
@@ -272,19 +319,19 @@ subsite-tag: true
         <!-- RELATED COMPONENTS -->
         <h2 class="section-start" id="related-components">Related components</h2>
         <ul>
-            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
-            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li> 
+            <li><a href={{ "components/subsite-header.html" | relative_url }}>Sibsite header</a></li>
             <li><a href={{ "/components/tool-start-component.html" | relative_url }}>Tool start component</a></li>
-            <li><a href={{ "/components/disclaimer-alerts.html" | relative_url }}>Disclaimer alerts</a></li>
-            <li><a href={{ "/components/callout-box.html" | relative_url }}>Call out boxes</a></li>
-            <li><a href={{ "/components/progress-bar.html" | relative_url }}>Progress bar</a></li>
-            <li><a href={{ "/brand-foundations/checkboxes-and-radio-buttons.html" | relative_url }}>Radio buttons</a></li>
-            <li><a href={{ "/brand-foundations/contextual-help.html" | relative_url }}>Contextual help</a></li>
-            <li><a href={{ "/components/clause-regulation-box.html" | relative_url }}>Clause / regulation box</a></li>
             <li><a href={{ "/brand-foundations/buttons-and-links.html" | relative_url }}>Buttons and links</a></li>
-            <li><a href={{ "/components/tool-results.html" | relative_url }}>Results accordion</a></li>
-            <li><a href={{ "/components/tool-results.html" | relative_url }}>Edit answers component</a></li>
-            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+            <li><a href={{ "/components/stepped-navigation.html" | relative_url }}>Stepped navigation</a></li>
+            <li><a href={{ "/brand-foundations/checkboxes-and-radio-buttons.html" | relative_url }}>Checkboxes and radio buttons</a></li>
+            <li><a href={{ "/brand-foundations/text-inputs.html" | relative_url }}>Text inputs</a></li>
+            <li><a href={{ "/brand-foundations/dropdown-select.html" | relative_url }}>Dropdown select</a></li>
+            <li><a href={{ "/components/clause-regulation-box.html" | relative_url }}>Clause / regulation box</a></li>
+            <li><a href={{ "/components/information-sidebar.html" | relative_url }}>Information sidebar</a></li>
+            <li><a href={{ "/brand-foundations/form-fields.html" | relative_url }}>Form fields</a></li>
+            <li><a href={{ "/components/tool-results.html" | relative_url }}>Combined results and edit component</a></li>
+            <li><a href={{ "/components/disclaimer-alerts.html" | relative_url }}>Disclaimer alerts</a></li>
+            <li><a href={{ "components/subsite-footer.html" | relative_url }}>Subsite footer</a></li>
         </ul>
 
 
