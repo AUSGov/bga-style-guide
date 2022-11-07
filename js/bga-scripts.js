@@ -68,37 +68,37 @@ $(document).ready(function () {
 
 
     // PAGE PATTERNS - click on hotspots to go to rules
-	$('.spot a').on('click', function () {
-        
-		var rule_number = "#rule-" + $(this).text();
+    $('.spot a').on('click', function () {
 
-		$('html, body').animate({
-			scrollTop: $(rule_number).offset().top
-		}, 300);
+        var rule_number = "#rule-" + $(this).text();
 
-		setTimeout(function () {
-            $(rule_number).find('.collapse').collapse('show');  
-		}, 1000);
+        $('html, body').animate({
+            scrollTop: $(rule_number).offset().top
+        }, 300);
 
-	});
+        setTimeout(function () {
+            $(rule_number).find('.collapse').collapse('show');
+        }, 1000);
 
-	$('.spot p').on('click', function () {
-		var rule_number = "#rule-" + $(this).parents('.spot').find('a').text();
+    });
 
-		$('html, body').animate({
-			scrollTop: $(rule_number).offset().top
-		}, 300);
+    $('.spot p').on('click', function () {
+        var rule_number = "#rule-" + $(this).parents('.spot').find('a').text();
 
-		setTimeout(function () {
-            $(rule_number).find('.collapse').collapse('show');    
-		}, 1000);
+        $('html, body').animate({
+            scrollTop: $(rule_number).offset().top
+        }, 300);
 
-	});
+        setTimeout(function () {
+            $(rule_number).find('.collapse').collapse('show');
+        }, 1000);
+
+    });
 
 
 
     // SEARCH COMPONENTS BY NAME
-    var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-to-action', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-site-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs', 'bga-tile-filters', 'bga-grant-rounds-accordion', 'bga-pathway-accordions', 'bga-lightweight-checklist-accordion', 'bga-standard-checklist-accordion','bga-home-page-banner', 'bga-category-page', 'bga-topic-page', 'bga-guide-page', 'bga-transaction-action-page', 'bga-101-page', 'bga-tutorial-page', 'bga-resource-article-page', 'bga-internal-grants-landing-page', 'bga-grant-recipients-page', 'bga-customer-stories-landing-page', 'bga-customer-story-page', 'bga-adviser-detail-page', 'bga-event-page', 'bga-tiled-page-with-filters', 'bga-site-search-page', 'bga-tiled-page-with-guided-search', 'bga-standard-checklist', 'bga-lightweight-checklist', 'bga-colour', 'bga-typography', 'bga-buttons-and-links', 'bga-text-inputs', 'bga-dropdown-select', 'bga-checkboxes-and-radio-buttons', 'bga-radio-buttons', 'bga-checkboxes', 'bga-datepicker', 'bga-contextual-help', 'bga-form-fields', 'bga-form-groups', 'bga-icons', 'bga-iconography', 'bga-logos', 'bga-illustrations', 'bga-infographics', 'bga-maintenance', 'bga-error', 'bga-tiled-page-with-guided-search', 'bga-internal-q-and-a-tools ', 'bga-question-and-answer-tools','bga-external-grants-landing-page', 'bga-branded-question-and-answer-tools', 'bga-external-bga-branded-q-and-a-tools', 'bga-tooltip'];
+    var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-to-action', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-site-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs', 'bga-tile-filters', 'bga-grant-rounds-accordion', 'bga-pathway-accordions', 'bga-lightweight-checklist-accordion', 'bga-standard-checklist-accordion', 'bga-home-page-banner', 'bga-category-page', 'bga-topic-page', 'bga-guide-page', 'bga-transaction-action-page', 'bga-101-page', 'bga-tutorial-page', 'bga-resource-article-page', 'bga-internal-grants-landing-page', 'bga-grant-recipients-page', 'bga-customer-stories-landing-page', 'bga-customer-story-page', 'bga-adviser-detail-page', 'bga-event-page', 'bga-tiled-page-with-filters', 'bga-site-search-page', 'bga-tiled-page-with-guided-search', 'bga-standard-checklist', 'bga-lightweight-checklist', 'bga-colour', 'bga-typography', 'bga-buttons-and-links', 'bga-text-inputs', 'bga-dropdown-select', 'bga-checkboxes-and-radio-buttons', 'bga-radio-buttons', 'bga-checkboxes', 'bga-datepicker', 'bga-contextual-help', 'bga-form-fields', 'bga-form-groups', 'bga-icons', 'bga-iconography', 'bga-logos', 'bga-illustrations', 'bga-infographics', 'bga-maintenance', 'bga-error', 'bga-tiled-page-with-guided-search', 'bga-internal-q-and-a-tools ', 'bga-question-and-answer-tools', 'bga-external-grants-landing-page', 'bga-branded-question-and-answer-tools', 'bga-external-bga-branded-q-and-a-tools', 'bga-tooltip'];
 
     $('#component_name').on('change', function () {
 
@@ -420,7 +420,7 @@ $(document).ready(function () {
 
     // TEXTAREA COUNT 
     if ($('#textarea-example')) {
-        var max_length =  parseInt($('#textarea-example').attr('data-count'));
+        var max_length = parseInt($('#textarea-example').attr('data-count'));
         $('#textarea-example').highlightWithinTextarea({
             highlight: [max_length, 200000]
         });
@@ -507,7 +507,7 @@ $(document).ready(function () {
 
     });
     // OPEN CLOSE sitecore illustration details
-    $('.sitecore-toggle').on('click', function(){
+    $('.sitecore-toggle').on('click', function () {
         $(this).toggleClass('open');
         $(this).parents('.sitecore-info-container').find('.sitecore-details').slideToggle();
     });
@@ -902,7 +902,7 @@ $(document).ready(function () {
             });
         } else if ($(window).width() >= 768) {
             $('.modal-form').each(function () {
-                $(this).find('.scrollable').css('max-height', '400px');  
+                $(this).find('.scrollable').css('max-height', '400px');
                 $(this).find('.email-form').removeClass('open').find('form').css('display', 'block');
             });
         }
@@ -913,14 +913,14 @@ $(document).ready(function () {
         mobile_modal_display();
     });
 
-    $('#modal-bp-md').on('click', function(){
+    $('#modal-bp-md').on('click', function () {
         mobile_modal_display();
 
         $('.modal-form .email-form').each(function () {
             $(this).removeClass('open').find('form').css('display', 'block');
         });
     });
-    $('#modal-bp-final').on('click', function(){
+    $('#modal-bp-final').on('click', function () {
         mobile_modal_display();
 
         $('.modal-form .email-form').each(function () {
@@ -935,7 +935,7 @@ $(document).ready(function () {
     });
 
     //Checklist modal copy link
-    $('.modal-example .copy-link').on('click',function(){
+    $('.modal-example .copy-link').on('click', function () {
         $(this).addClass('copied');
     });
 
@@ -999,9 +999,9 @@ $(document).ready(function () {
     $('.tooltip-hover').hover(
         function () {
             $('.tooltip').addClass("show");
-        }, 
+        },
         function () {
-                $('.tooltip').removeClass("show");
+            $('.tooltip').removeClass("show");
         }
     );
     //Hover on desktop, click on mobile (chat button)
@@ -1009,13 +1009,13 @@ $(document).ready(function () {
     $('.tooltip-click').hover(
         function () {
             var parent = $(this).parents('.component-example');
-            if ( ($(window).width() >= 768) && !(parent.hasClass('bp-below768'))) {
+            if (($(window).width() >= 768) && !(parent.hasClass('bp-below768'))) {
                 $('.tooltip').addClass("show");
             }
         },
         function () {
             var parent = $(this).parents('.component-example');
-            if ($(window).width() >= 768  && !(parent.hasClass('bp-below768'))) {
+            if ($(window).width() >= 768 && !(parent.hasClass('bp-below768'))) {
                 $('.tooltip').removeClass("show");
             }
         }
@@ -1023,29 +1023,29 @@ $(document).ready(function () {
     //click
     $('.tooltip-click').on('click', function () {
         var parent = $(this).parents('.component-example');
-        if ($(window).width() <= 768 ||(parent.hasClass('bp-below768')) ) {
+        if ($(window).width() <= 768 || (parent.hasClass('bp-below768'))) {
             $('.tooltip').toggleClass("show");
         }
     });
     //close tooltip
-    $('.tooltip .close').on('click', function(){
+    $('.tooltip .close').on('click', function () {
         $(this).parents('.tooltip').removeClass('show');
     });
     // reset tooltip example on breakpoint change.
-    if ( $('.tooltip-click') ) {
-        $('.breakpoints input.bp-md').on('click', function(){
+    if ($('.tooltip-click')) {
+        $('.breakpoints input.bp-md').on('click', function () {
             $('.tooltip').removeClass('show');
         });
     }
 
 
     // COMPONENT EXAMPLE: PRINT SHARE UTILITIES
-    $('#share-popover').on('click', function(){
+    $('#share-popover').on('click', function () {
         $('.share-container').toggleClass('show');
     });
 
     // CONTEXTUAL HELP {
-    $('.complex-question').on('click', function(){
+    $('.complex-question').on('click', function () {
         $('.complex-answer').slideToggle();
         $(this).parents('.complex').toggleClass('open');
     });
@@ -1054,61 +1054,61 @@ $(document).ready(function () {
 
     // COMPONENT EXAMPLE: Datepicker
 
-	$('#datepicker .input-group.date').datepicker({
-		format: "dd/mm/yyyy",
-		autoclose: true,
-		todayHighlight: true,
-		weekStart: 1,
-		container: '#datepicker-container',
-		orientation: "bottom left"
-	}).on('hide', function(e) {
+    $('#datepicker .input-group.date').datepicker({
+        format: "dd/mm/yyyy",
+        autoclose: true,
+        todayHighlight: true,
+        weekStart: 1,
+        container: '#datepicker-container',
+        orientation: "bottom left"
+    }).on('hide', function (e) {
         $(this).parents('#datepicker-container').removeClass('open');
-    }).on('show', function(e) {
+    }).on('show', function (e) {
         $(this).parents('#datepicker-container').addClass('open');
     });
 
-	$('.close-button').unbind();
+    $('.close-button').unbind();
 
-	$('.close-button').click(function () {
-		if ($('.datepicker').is(":visible")) {
-			$('.date').datepicker('hide');
-		} else {
-			$('.date').datepicker('show');
-		}
-	});
+    $('.close-button').click(function () {
+        if ($('.datepicker').is(":visible")) {
+            $('.date').datepicker('hide');
+        } else {
+            $('.date').datepicker('show');
+        }
+    });
 
-   
+
 
     // COMPONENT EXAMPLE: FILTERS
-    $('.filter-item-title').on('click', function(){
-        
+    $('.filter-item-title').on('click', function () {
+
         $(this).parents('.filter-item').toggleClass('open').find('.filter-item-content').slideToggle();
 
         $('.filter-item-title').not(this).parents('.filter-item').removeClass('open').find('.filter-item-content').slideUp();
     });
 
     // filter bubbles
-    $('.active-filters li').on('click', function(){
+    $('.active-filters li').on('click', function () {
         var item_value = $(this).attr('data-value'),
-        counter = parseInt($(this).parents('.filter-item').find('.mobile-counter').text());
+            counter = parseInt($(this).parents('.filter-item').find('.mobile-counter').text());
         counter--;
-        
+
         if (counter != 0) {
             $(this).parents('.filter-item').find('.mobile-counter').text(String(counter));
-        } else  {
+        } else {
             $(this).parents('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
         }
-        
+
         //checkboxes
         $('#' + item_value).prop("checked", false);
         $(this).removeClass('selected');
-    
+
 
         //single-select
         if ($(this).parents('.filters').hasClass('single-select')) {
             $(this).parents('.filters').find('select').val('select-option');
         }
-        
+
         // Toggle switch
         if ($(this).parents('.filters').hasClass('toggle-switch')) {
             $('#' + item_value).prop("checked", false);
@@ -1117,18 +1117,18 @@ $(document).ready(function () {
     });
 
     // checkboxes & bubbles
-    $('.checkboxes-secondary input').on('click', function(){
+    $('.checkboxes-secondary input').on('click', function () {
         var item_value = $(this).attr('id'),
-        counter = parseInt($(this).parents('.filter-item').find('.mobile-counter').text());
+            counter = parseInt($(this).parents('.filter-item').find('.mobile-counter').text());
         if (isNaN(counter)) {
             counter = 0;
         }
-        
+
         if ($(this).is(":checked")) {
             $('li[data-value="' + item_value + '"]').addClass('selected');
             counter++;
             $(this).parents('.filter-item').find('.mobile-counter').text(String(counter)).addClass('not-empty');
-            
+
 
         } else {
             $('li[data-value="' + item_value + '"]').removeClass('selected');
@@ -1136,31 +1136,31 @@ $(document).ready(function () {
 
             if (counter != 0) {
                 $(this).parents('.filter-item').find('.mobile-counter').text(String(counter)).addClass('not-empty');
-            } else  {
+            } else {
                 $(this).parents('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
             }
         }
     });
-    
+
     // dropdowns
-    $('.filters.single-select select').on('change', function(){
+    $('.filters.single-select select').on('change', function () {
         var item_value = $(this).val();
 
-        $(this).parents('.filter-item').find('.active-filters li').each(function(){
+        $(this).parents('.filter-item').find('.active-filters li').each(function () {
             $(this).removeClass('selected');
             $(this).parents('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
         });
-    
+
         if (item_value !== 'select-option') {
             $('li[data-value="' + item_value + '"]').addClass('selected');
             $(this).parents('.filter-item').find('.mobile-counter').text('1').addClass('not-empty');
-        }  
+        }
     });
 
     // toggle switch
-    $('.filters.toggle-switch input').on('click', function(){
+    $('.filters.toggle-switch input').on('click', function () {
         var item_value = $(this).attr('id');
-        
+
         $(this).parents('.toggle-switch').toggleClass('selected');
 
         if ($(this).is(":checked")) {
@@ -1174,36 +1174,36 @@ $(document).ready(function () {
 
 
     // COMPONENT EXAMPLE: VIDEO & AUDIO PLAYER
-	$('.media-player-transcript-toggle button').on('click', function () {
+    $('.media-player-transcript-toggle button').on('click', function () {
         var parent = $(this).parents('.media-player'),
-        transcript = parent.find('.media-player-transcript'),
-        transcript_toggle = parent.find('.media-player-transcript-toggle');
+            transcript = parent.find('.media-player-transcript'),
+            transcript_toggle = parent.find('.media-player-transcript-toggle');
 
-		if (transcript.hasClass('open')) {
-			transcript.removeClass('open');
-			transcript_toggle.find('span').text('Open Transcript');
-			transcript_toggle.find('.iconAnimateWrapper svg').removeClass('open');
-		} else {
-			transcript.addClass('open');
-			transcript_toggle.find('span').text('Close Transcript');
-			transcript_toggle.find('.iconAnimateWrapper svg').addClass('open');
-		}
-	});
+        if (transcript.hasClass('open')) {
+            transcript.removeClass('open');
+            transcript_toggle.find('span').text('Open Transcript');
+            transcript_toggle.find('.iconAnimateWrapper svg').removeClass('open');
+        } else {
+            transcript.addClass('open');
+            transcript_toggle.find('span').text('Close Transcript');
+            transcript_toggle.find('.iconAnimateWrapper svg').addClass('open');
+        }
+    });
 
 
     // COMPONENT EXAMPLE: GUIDED SEARCH
     // toggle switch
-    $('.guided-search-wrapper .toggle input').on('click', function(){
+    $('.guided-search-wrapper .toggle input').on('click', function () {
         var item_value = $(this).attr('id');
         $(this).parents('.toggle').toggleClass('selected');
     });
     // Multi-select bubbles
-    $('.multi-select-wrapper .multi-select').on('click', function(){
+    $('.multi-select-wrapper .multi-select').on('click', function () {
         $(this).toggleClass('selected');
     });
 
 
-   
+
     // COMPONENT EXAMPLE: CHECKLISTS
 
     // Lightweight checklist open all toggle
@@ -1214,105 +1214,105 @@ $(document).ready(function () {
             $(this).addClass('close');
             $(this).find('span').text('Close all');
 
-            $('.checklist-item').each(function(){
+            $('.checklist-item').each(function () {
                 $(this).addClass('open');
             });
-            $('.checklist-sub-item-wrapper').each(function(){
+            $('.checklist-sub-item-wrapper').each(function () {
                 $(this).slideDown(400);
             });
 
-            
+
         } else {
             $(this).removeClass('close');
             $(this).find('span').text('Open all');
 
-            $('.checklist-item').each(function(){
+            $('.checklist-item').each(function () {
                 $(this).removeClass('open');
             });
-            $('.checklist-sub-item-wrapper').each(function(){
+            $('.checklist-sub-item-wrapper').each(function () {
                 $(this).slideUp(400);
             });
 
         }
     });
 
-	// Open & close checklist items 
-	$(".checklist-item-title").on("click", function () {
-		$(this).next('.checklist-sub-item-wrapper').slideToggle(400);
+    // Open & close checklist items 
+    $(".checklist-item-title").on("click", function () {
+        $(this).next('.checklist-sub-item-wrapper').slideToggle(400);
 
-		if ($(this).closest('.checklist-item').hasClass('open')) {
+        if ($(this).closest('.checklist-item').hasClass('open')) {
 
-			$(this).closest('.checklist-item').removeClass('open');
+            $(this).closest('.checklist-item').removeClass('open');
 
 
-			// Close sub-items when close step
-			if ($(this).closest('.checklist-item').find('.checklist-sub-item').hasClass('open')) {
+            // Close sub-items when close step
+            if ($(this).closest('.checklist-item').find('.checklist-sub-item').hasClass('open')) {
 
-				$(this).closest('.checklist-item').find('.checklist-sub-item.open').find('.content-wrapper').slideToggle(400);
-				$(this).closest('.checklist-item').find('.checklist-sub-item').removeClass('open');
-			}
+                $(this).closest('.checklist-item').find('.checklist-sub-item.open').find('.content-wrapper').slideToggle(400);
+                $(this).closest('.checklist-item').find('.checklist-sub-item').removeClass('open');
+            }
 
-		} else {
-			$(this).closest('.checklist-item').addClass('open');
-		}
+        } else {
+            $(this).closest('.checklist-item').addClass('open');
+        }
 
-        if ( $('.checklist-item.open').length == $('.checklist-item').length) {
+        if ($('.checklist-item.open').length == $('.checklist-item').length) {
             $('.checklist-toggle span').text('Close all');
             $('.checklist-toggle').addClass('close');
-        } 
-        if ( $('.checklist-item.open').length == 0 ) {
+        }
+        if ($('.checklist-item.open').length == 0) {
             $('.checklist-toggle span').text('Open all');
             $('.checklist-toggle').removeClass('close');
         }
 
-	});
+    });
 
-	// Close checklist step button
-	$(' .checklist-close-step').on('click', function () {
-		$(this).parents('.checklist-sub-item-wrapper').hide();
-		$(this).parents('.checklist-item').removeClass('open');
-	});
+    // Close checklist step button
+    $(' .checklist-close-step').on('click', function () {
+        $(this).parents('.checklist-sub-item-wrapper').hide();
+        $(this).parents('.checklist-item').removeClass('open');
+    });
 
 
-	// Open & close sub-checklist items
-	$(".checklist-sub-item-title").on("click", function () {
+    // Open & close sub-checklist items
+    $(".checklist-sub-item-title").on("click", function () {
 
-		$(this).next('.content-wrapper').slideToggle(400);
+        $(this).next('.content-wrapper').slideToggle(400);
 
-		if ($(this).closest('.checklist-sub-item').hasClass('open')) {
-			$(this).closest('.checklist-sub-item').removeClass('open');
-		} else {
-			$(this).closest('.checklist-sub-item').addClass('open');
-		}
+        if ($(this).closest('.checklist-sub-item').hasClass('open')) {
+            $(this).closest('.checklist-sub-item').removeClass('open');
+        } else {
+            $(this).closest('.checklist-sub-item').addClass('open');
+        }
 
-	});
-	// Checkbox functionality
-	$('.checklist-item-checkbox').on('click', function () {
-		if ($(this).parents('.checklist-sub-item.must-do').hasClass('done')) {
-			$(this).parents('.checklist-sub-item.must-do').removeClass('done');
-		} else {
-			$(this).parents('.checklist-sub-item.must-do').addClass('done');
-		}
+    });
+    // Checkbox functionality
+    $('.checklist-item-checkbox').on('click', function () {
+        if ($(this).parents('.checklist-sub-item.must-do').hasClass('done')) {
+            $(this).parents('.checklist-sub-item.must-do').removeClass('done');
+        } else {
+            $(this).parents('.checklist-sub-item.must-do').addClass('done');
+        }
 
-		$(this).parents('.checklist-item').find('.checklist-sub-item.must-do').each(function () {
+        $(this).parents('.checklist-item').find('.checklist-sub-item.must-do').each(function () {
 
-			var item_completion = false;
-			if ($(this).hasClass('done')) {
-				item_completion = true;
-			} else {
-				item_completion = false;
-				$(this).parents('.checklist-item').removeClass('item-done');
-				return false;
-			}
-			if (item_completion === true) {
-				$(this).parents('.checklist-item').addClass('item-done');
-			}
+            var item_completion = false;
+            if ($(this).hasClass('done')) {
+                item_completion = true;
+            } else {
+                item_completion = false;
+                $(this).parents('.checklist-item').removeClass('item-done');
+                return false;
+            }
+            if (item_completion === true) {
+                $(this).parents('.checklist-item').addClass('item-done');
+            }
 
-		});
-	});
-    
+        });
+    });
+
     // Open & close lightweight checklist items
-     //Close functionality 
+    //Close functionality 
     $('.lightweight .close-item btn').on('click', function () {
         // Scroll and close
         var parent_item = $(this).parents('.checklist-item');
@@ -1320,8 +1320,8 @@ $(document).ready(function () {
         parent_item.removeClass('open');
         var parent_position = parent_item.position();
         $("html").animate({
-                scrollTop: $(parent_item).offset().top
-            },
+            scrollTop: $(parent_item).offset().top
+        },
             400 //speed
         );
 
@@ -1333,24 +1333,24 @@ $(document).ready(function () {
 
 
     //COMPONENT EXAMPLE: In page feedback form
-    $('.initial-question .bga-btn').on('click', function(){
+    $('.initial-question .bga-btn').on('click', function () {
         var answer = $(this).text();
 
-        if ( answer == 'Yes' ) {
+        if (answer == 'Yes') {
             $('.initial-question').removeClass('show');
             $('.yes-answer').addClass('show');
             $('.no-answer').removeClass('show');
             $('.bga-btn.no').removeClass('selected');
-        } else if ( answer == 'No' ) {
+        } else if (answer == 'No') {
             $('.no-answer').addClass('show');
             $('.yes-answer').removeClass('show');
             $('.bga-btn.no').addClass('selected');
         }
     });
 
-    $('.no-answer .checkbox').on('click', function(){
-        if ( $(this).hasClass('other') ) {
-            if ( $(this).is(":checked") ) {
+    $('.no-answer .checkbox').on('click', function () {
+        if ($(this).hasClass('other')) {
+            if ($(this).is(":checked")) {
                 $('.textarea-container').addClass('show');
             } else {
                 $('.textarea-container').removeClass('show');
@@ -1358,7 +1358,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.no-answer .bga-btn').on('click', function(){
+    $('.no-answer .bga-btn').on('click', function () {
         $('.initial-question').removeClass('show');
         $('.no-answer').removeClass('show');
         $('.thank-you-container').addClass('show');
@@ -1367,16 +1367,36 @@ $(document).ready(function () {
 
 
     // IN PAGE TABS
-    $('.section-tabs .tab').on('click', function(){
-        var section = $(this).attr('data-tab');
+    $('.section-tabs .tab').on('click', function () {
+            var section = $(this).attr('data-tab');
 
-        $(this).addClass('selected');
-        $('.tab').not(this).removeClass('selected');
-        
+            $(this).addClass('selected');
+            $('.tab').not(this).removeClass('selected');
+
+            $('.tab-section').removeClass('selected');
+            $("." + section).addClass('selected');
+
+    });
+
+    $('.tabs-select select').on('change', function(){
+        var section = $(this).val();
+    
         $('.tab-section').removeClass('selected');
         $("." + section).addClass('selected');
-
+    });
     
+    $(window).resize(function () {
+
+        if ($(window).width() < 768) {
+            var section = $('.tabs-select select').val();
+            $('.tab-section').removeClass('selected');
+            $("." + section).addClass('selected');
+        } else {
+            var section = $('.tab.selected').attr('data-tab');
+            $('.tab-section').removeClass('selected');
+            $("." + section).addClass('selected');
+        }
+
     });
 
 
