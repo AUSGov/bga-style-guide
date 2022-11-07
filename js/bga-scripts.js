@@ -157,6 +157,53 @@ $(document).ready(function () {
     });
 
 
+    // IN PAGE TABS
+    $('.section-tabs .tab').on('click', function () {
+        var section = $(this).attr('data-tab');
+
+        $(this).addClass('selected');
+        $('.tab').not(this).removeClass('selected');
+
+        $('.tab-section').removeClass('selected');
+        $("." + section).addClass('selected');
+
+    });
+
+    $('.tabs-select select').on('change', function(){
+        var section = $(this).val();
+
+        $('.tab-section').removeClass('selected');
+        $("." + section).addClass('selected');
+    });
+
+    $(window).resize(function () {
+
+        if ($(window).width() < 768) {
+            var section = $('.tabs-select select').val();
+            $('.tab-section').removeClass('selected');
+            $("." + section).addClass('selected');
+        } else {
+            var section = $('.tab.selected').attr('data-tab');
+            $('.tab-section').removeClass('selected');
+            $("." + section).addClass('selected');
+        }
+
+    });
+
+
+    // ILLUSTRATION ANATOMY EXAMPLE
+    $('.img-anatomy-btn').on('click', function(){
+        $(this).addClass('selected');
+        $('.img-anatomy-btn').not(this).removeClass('selected');
+
+        var img_type = '.' + $(this).attr('data-value');
+
+        $(img_type).addClass('selected');
+        $('.illustration-example-wrapper img').not(img_type).removeClass('selected');
+
+    });
+
+
 
     // ANCHOR MENU 
     if ($('.in-page #anchor-menu').length) {
@@ -1362,41 +1409,6 @@ $(document).ready(function () {
         $('.initial-question').removeClass('show');
         $('.no-answer').removeClass('show');
         $('.thank-you-container').addClass('show');
-    });
-
-
-
-    // IN PAGE TABS
-    $('.section-tabs .tab').on('click', function () {
-            var section = $(this).attr('data-tab');
-
-            $(this).addClass('selected');
-            $('.tab').not(this).removeClass('selected');
-
-            $('.tab-section').removeClass('selected');
-            $("." + section).addClass('selected');
-
-    });
-
-    $('.tabs-select select').on('change', function(){
-        var section = $(this).val();
-    
-        $('.tab-section').removeClass('selected');
-        $("." + section).addClass('selected');
-    });
-    
-    $(window).resize(function () {
-
-        if ($(window).width() < 768) {
-            var section = $('.tabs-select select').val();
-            $('.tab-section').removeClass('selected');
-            $("." + section).addClass('selected');
-        } else {
-            var section = $('.tab.selected').attr('data-tab');
-            $('.tab-section').removeClass('selected');
-            $("." + section).addClass('selected');
-        }
-
     });
 
 
