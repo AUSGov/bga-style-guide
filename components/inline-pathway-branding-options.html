@@ -32,10 +32,16 @@ classes="in-page"
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
-        <div class="section-tabs">
-            <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
-            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="non-branded"><p>No branding</p></div>
-        </div>
+        {% include section-tabs.html 
+            
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+
+            tab2="No branding"
+            tab2value="non-branded"
+
+        %}
+
 
         <div class="tab-sections-wrapper p-4">
 

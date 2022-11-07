@@ -30,17 +30,24 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="tool-pages">Tool pages</h2>
 
-        <div class="section-tabs">
-            <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="landing-page"><p>Landing page</p></div>
+        {% include section-tabs.html 
             
-            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="before-page"><p>Before starting page</p></div>
+            tab1="Landing page"
+            tab1value="landing-page"
 
-            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="questions-page"><p>Questions page</p></div>
-            
-            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="review-page"><p>Review page</p></div>
+            tab2="Before starting page"
+            tab2value="before-page"
 
-            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="success-page"><p>Success page</p></div>
-        </div>
+            tab3="Questions page"
+            tab3value="questions-page"
+
+            tab4="Review page"
+            tab4value="review-page"
+
+            tab5="Success page"
+            tab5value="success-page"
+
+        %}
 
 
         <div class="tab-sections-wrapper p-4 mb-5"> 

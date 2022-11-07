@@ -30,13 +30,19 @@ subsite-tag: false
         <!-- DESIGN -->
         <h2 class="section-start" id="tool-pages">Tool pages</h2>
 
-        <div class="section-tabs">
-            <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="landing-page"><p>Start page</p></div>
+    
+        {% include section-tabs.html 
             
-            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="multiselect-page"><p>Multi-select questions</p></div>
-            
-            <div class="tab py-2 px-3 me-2 remove-element-padding" data-tab="singleselect-page"><p>Single select questions</p></div>
-        </div>
+            tab1="Start page"
+            tab1value="landing-page"
+
+            tab2="Multi-select questions"
+            tab2value="multiselect-page"
+
+            tab3="Single select questions"
+            tab3value="singleselect-page"
+
+        %}
 
 
         <div class="tab-sections-wrapper p-4 mb-5">

@@ -1,0 +1,51 @@
+<div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        {% if include.tab1 %}
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="{{ include.tab1value }}"><p>{{ include.tab1 }}</p></div>
+        {% endif %}
+
+        {% if include.tab2 %}        
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="{{ include.tab2value }}"><p>{{ include.tab2 }}</p></div>
+        {% endif %}
+
+        {% if include.tab3 %}
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="{{ include.tab3value }}"><p>{{ include.tab3 }}</p></div>
+        {% endif %}        
+        
+        {% if include.tab4 %}
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="{{ include.tab4value }}"><p>{{ include.tab4 }}</p></div>
+        {% endif %}
+
+        {% if include.tab5 %}
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="{{ include.tab5value }}"><p>{{ include.tab5 }}</p></div>
+        {% endif %}
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            {% if include.tab1 %}
+            <option value="{{ include.tab1value }}">{{ include.tab1 }}</option>
+            {% endif %}
+
+            {% if include.tab2 %}
+            <option value="{{ include.tab2value }}">{{ include.tab2 }}</option>
+            {% endif %}
+
+            {% if include.tab3 %}
+            <option value="{{ include.tab3value }}">{{ include.tab3 }}</option>
+            {% endif %}
+
+            {% if include.tab4 %}
+            <option value="{{ include.tab4value }}">{{ include.tab4 }}</option>
+            {% endif %}
+
+            {% if include.tab5 %}
+            <option value="{{ include.tab5value }}">{{ include.tab5 }}</option>
+            {% endif %}
+
+        </select>
+    </div>
+
+</div>
