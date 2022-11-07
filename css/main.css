@@ -2878,7 +2878,9 @@ table.table { margin-bottom: 32px; }
 
 .anatomy-btns { display: flex; flex-wrap: wrap; }
 
-.anatomy-btns button { background: #ffffff; border: solid 2px #2157AA; border-radius: 50px; font-size: 0.9375rem; cursor: pointer; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); padding: 8px 16px 8px 16px; display: block; margin: 0 16px 16px 0; }
+.anatomy-btns button { background: #ffffff; border: solid 2px #2157AA; border-radius: 50px; font-size: 0.9375rem; cursor: pointer; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); padding: 8px 16px 8px 16px; display: block; margin: 0 16px 0 0; }
+
+.anatomy-btns button:last-of-type { margin: 0; }
 
 .anatomy-btns button:focus-visible { background: #113869; border: solid 2px #113869; color: #ffffff; outline: none; border-radius: 50px; }
 
@@ -2890,11 +2892,13 @@ table.table { margin-bottom: 32px; }
 
 .anatomy-btns button.selected:hover { background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-size: 18px 14px; background-position: center left 12px; }
 
-.illustration-example-wrapper { border: solid 1px #96B7DF; }
+.illustration-example-wrapper { border: solid 1px #96B7DF; position: relative; height: 100%; }
 
-.illustration-example-wrapper img { width: 100%; max-width: 100%; display: none; }
+.illustration-example-wrapper img { width: 100%; max-width: 100%; opacity: 0; position: absolute; top: 0; left: 0; z-index: 4000; }
 
-.illustration-example-wrapper img.selected { display: block; }
+.illustration-example-wrapper img:first-of-type { position: relative; z-index: 5000; opacity: .15; }
+
+.illustration-example-wrapper img.selected { transition: opacity 1s; opacity: 1; }
 
 @media (max-width: 450px) { .col-xs { flex: 1 0 0%; width: 100%; } }
 
