@@ -18,55 +18,72 @@ subsite-tag: false
 
         {% include component-examples/anchor-menu-example.html
         classes="in-page"
-        
+
         link-1="Illustation anatomy" link-id-1="#illustration-anatomy"
         link-2="Colour use" link-id-2="#colour-use"
         link-3="Style rules" link-id-3="#style-rules"
         link-4="Content and tone" link-id-4="#content-and-tone"
-        
+
         %}
 
     </div>
 
-    <div class="anchored-content remove-top-spaces mb-5 col-12 col-lg-9 col-xl-10">
+    <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-10">
 
 
         <!-- ANATOMY -->
         <h2 class="section-start" id="illustration-anatomy">Illustation anatomy</h2>
 
-        <div class="component-example m-0">
+        <p>Illustrations are based on the <a href="https://www.humaaans.com/">https://www.humaaans.com/</a> library and
+            customised with business.gov.au colours and background elements.</p>
+
+        <p>Illustrations consist of three layers, <strong>background content</strong>, <strong>background fill</strong>
+            and <strong>background lines</strong>.</p>
+
+        <div class="component-example mb-5">
             <div class="component-wrapper remove-element-padding p-4">
-                
-                <div class="anatomy-btns pb-4">
-                <button class="img-anatomy-btn complete selected" data-value="complete">Complete illustration</button>
-                <button class="img-anatomy-btn primary-content" data-value="primary-illo">Primary content</button>
-                <button class="img-anatomy-btn bkg-lines" data-value="bkg-lines">Background lines</button>
-                <button class="img-anatomy-btn bkg-fill" data-value="bkg-fill">Background fill</button>
+
+                <div class="anatomy-btns pb-2">
+                    <button class="img-anatomy-btn complete selected" data-value="complete">Complete
+                        illustration</button>
+                    <button class="img-anatomy-btn primary-content" data-value="primary-illo">Primary content</button>
+                    <button class="img-anatomy-btn bkg-fill" data-value="bkg-fill">Background fill</button>
+                    <button class="img-anatomy-btn bkg-lines" data-value="bkg-lines">Background lines</button>
+
                 </div>
 
-                <div class="row">
-                    
+                <div class="row g-4">
+
                     <div class="col-12 col-md-6">
                         <div class="illustration-example-wrapper">
-                            <img class="selected complete" src={{ "assets/illustration-anatomy/Person-ipad-complete.svg" | relative_url }} >
+                            <img class="selected complete" src={{ "assets/illustration-anatomy/Person-ipad-complete.svg"
+                                | relative_url }}>
 
-                            <img class="primary-illo" src={{ "assets/illustration-anatomy/Person-ipad-primary-illo.svg" | relative_url }} >
+                            <img class="primary-illo" src={{ "assets/illustration-anatomy/Person-ipad-primary-illo.svg"
+                                | relative_url }}>
 
-                            <img class="bkg-lines" src={{ "assets/illustration-anatomy/Person-ipad-bkg-lines.svg" | relative_url }} >
+                            <img class="bkg-lines" src={{ "assets/illustration-anatomy/Person-ipad-bkg-lines.svg" |
+                                relative_url }}>
 
-                            <img class="bkg-fill" src={{ "assets/illustration-anatomy/Person-ipad-bkg-fill.svg" | relative_url }} >
+                            <img class="bkg-fill" src={{ "assets/illustration-anatomy/Person-ipad-bkg-fill.svg" |
+                                relative_url }}>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
                         <div class="illustration-example-wrapper">
-                            <img class="selected complete" src={{ "assets/illustration-anatomy/Computer-success-complete.svg" | relative_url }} >
+                            <img class="selected complete"
+                                src={{ "assets/illustration-anatomy/Computer-success-complete.svg" | relative_url }}>
 
-                            <img class="primary-illo" src={{ "assets/illustration-anatomy/Computer-success-primary-illo.svg" | relative_url }} >
+                            <img class="primary-illo"
+                                src={{ "assets/illustration-anatomy/Computer-success-primary-illo.svg" | relative_url
+                                }}>
 
-                            <img class="bkg-lines" src={{ "assets/illustration-anatomy/Computer-success-bkg-lines.svg" | relative_url }} >
+                            <img class="bkg-lines" src={{ "assets/illustration-anatomy/Computer-success-bkg-lines.svg" |
+                                relative_url }}>
 
-                            <img class="bkg-fill" src={{ "assets/illustration-anatomy/Computer-success-bkg-fill.svg" | relative_url }} >
+                            <img class="bkg-fill" src={{ "assets/illustration-anatomy/Computer-success-bkg-fill.svg" |
+                                relative_url }}>
                         </div>
                     </div>
 
@@ -77,52 +94,173 @@ subsite-tag: false
         </div>
 
 
-         <!-- COLOUR USE -->
-         <h2 class="section-start" id="colour-use">Colour use</h2>
+        <!-- COLOUR USE -->
+        <h2 class="section-start" id="colour-use">Colour use</h2>
+
+        <h3>Primary content (no outlines, solid fill in various colours).</h3>
+
+        <h4>Approved colours</h4>
+        <div class="row g-0">
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex708DAF"
+            hex="#708DAF"
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex96B7DF"
+            hex="#96B7DF"
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexB3CBE8"
+            hex="#B3CBE8"
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex629D62"
+            hex="#629D62"
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex85CB85"
+            hex="#85CB85"
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexA0D1A0"
+            hex="#A0D1A0"
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexEDC95A"
+            hex="#EDC95A"
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexFFD964"
+            hex="#FFD964"
+
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexFFE491"
+            hex="#FFE491"
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexCC7A29"
+            hex="#CC7A29"
+
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexE88A2D"
+            hex="#E88A2D"
+
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexF1B981"
+            hex="#F1B981"
+
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex7468B4"
+            hex="#7468B4"
+
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex9183D8"
+            hex="#9183D8"
+
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexB1A8E3"
+            hex="#B1A8E3"
+
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex2E3E5A"
+            hex="#2E3E5A"
+
+            %}
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex788295"
+            hex="#788295"
+
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexABB1BD"
+            hex="#ABB1BD"
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexE4E6EA"
+            hex="#E4E6EA"
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexB28B67"
+            hex="#B28B67"
+            %}
+
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexEFC6A1"
+            hex="#EFC6A1"
+            %}
+
+        </div>
 
 
-        
+        <h3>Background fill (no outlines, solid fill in teal).</h3>
+
+        <h4>Approved colours</h4>
+        <div class="row g-0">
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hexBFE2E2"
+            hex="#BFE2E2"
+            %}
+        </div>
+
+        <h3>Background lines (2pt line thickness, no fill).</h3>
+
+        <h4>Approved colours</h4>
+        <div class="row g-0">
+            {% include colour-example.html
+            classes="col-sm-3 col-lg-2 large hex5AB3B3"
+            hex="#5AB3B3"
+            %}
+        </div>
+
+
+
         <!-- STYLE RULES -->
         <h2 class="section-start" id="style-rules">Style rules</h2>
 
-        <p>The illustration style for business.gov.au is simple and refined. Illustrations help lighten the tone of the
-            site and make the pages feel more colourful and friendly.</p>
-        <p>Illustrations tell a positive story, rather than using negative or emotive imagery.</p>
-        <p>The following style rules are used to ensure a consistent look and feel across the site:</p>
-        <ul>
-            <li>Illustrations are based on the https://www.humaaans.com/ illustration library.</li>
-            <li>Only colours in the BGA palette are used in the illustrations (see below for colour use).</li>
-            <li>Illustrations consist of three layers, background lines (2pt thickness), background fill and primary
-                illustration.
-                <ul>
-                    <li>The background lines are always &lsquo;Teal highlight - dark&rsquo; (#5AB3B3)</li>
-                    <li>The background fill is always &lsquo;Teal - illustration background&rsquo; (#BFE2E2)</li>
-                    <li>The primary illustration is made up of colours from the BGA highlight colours (excluding teal)
-                        and the blue black tones.</li>
-                </ul>
-            </li>
-            <li>Line weights should scale with the illustration when displayed at a larger size.</li>
-            <li>Lines have rounded corners and endpoints.</li>
-            <li>Illustrations should not be too complicated, a few simple lines is preferred over a high-level of
-                detail.</li>
-            <li>Illustrations should only display objects or situations that belong together. The background surrounding
-                the core illustration should depict a landscape or objects that would naturally be seen with the core
-                subject matter.</li>
-            <li>When people are included they do not have faces.</li>
-            <li>Words should not be included in illustrations unless they are part of the picture.</li>
-        </ul>
+        <div class="row g-0">
+            <div class="col-12 col-lg-9 col-xl-8">
 
-         <!-- CONTENT AND TONE -->
-         <h2 class="section-start" id="content-and-tone">Content and tone</h2>
+            <p>The following style rules are used to ensure a consistent look and feel across the site:</p>
+            <ul>
+                <li>Only colours in the BGA palette are used in the illustrations (refer to approved colours above).</li>
+                <li>The default illustration size is 400 x 320px. At this size background line weights are 2px. Line weights should scale with the illustration when displayed at a larger or smaller sizes.</li>
+                <li>Lines have rounded corners and endpoints.</li>
+                <li>Illustrations should not be too complicated, a few simple lines is preferred over a high-level of detail.</li>
+                <li>When people are included they do not have faces.</li>
+                <li>Words should not be included in illustrations unless they are part of the picture.</li>
+            </ul>
 
+            <!-- CONTENT AND TONE -->
+            <h2 class="section-start" id="content-and-tone">Content and tone</h2>
+            
+            <p>The illustration style for business.gov.au is simple and refined. Illustrations help lighten the tone of the site and make the pages feel more colourful and friendly.</p>
 
+            <p>Illustrations tell a positive story, rather than using negative or emotive imagery.</p>
 
+            <p>The primary content of illustrations can be either people or object based.</p>
+            
+            <p>Illustrations should only display objects or situations that belong together. The background elements surrounding the primary content should depict a landscape or objects that would naturally be seen with the core subject matter.</p>
 
-
+            </div>
+        </div>
 
 
     </div>
-
 
 
 </div>
