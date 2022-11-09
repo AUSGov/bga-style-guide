@@ -101,7 +101,7 @@
 }
 
 // Mixin for smaller screen examples and media queries
-@mixin grant-status-below576 {
+@mixin grant-status-below768 {
     .grant-status-indicator {
         .component-content {
             .status {
@@ -114,17 +114,20 @@
                     display: inline-block;
                 }
             }
+            .time-zone label {
+                width: 100%;
+            }
         }
     }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576, .component-example.small-screen {
-    @include grant-status-below576();
+.component-example.bp-below768, .component-example.small-screen {
+    @include grant-status-below768();
 }
 
 
 // MEDIA Queries for HTML demo pages.
-@media(max-width: 576px) {
-    @include grant-status-below576();
+@media(max-width: 768px) {
+    @include grant-status-below768();
 }
