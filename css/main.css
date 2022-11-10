@@ -3138,9 +3138,21 @@ strong { font-weight: 600; }
 
 @media (max-width: 576px) { .colour-example.hexnone { display: none; } }
 
-.component-example .logo-wrapper { border: #96B7DF 1px solid; }
+.logo-wrapper { border: #96B7DF 1px solid; }
 
-.component-example .logo-wrapper.reversed { background: #2E6CB9; }
+.logo-wrapper .mobile { display: none; }
+
+.logo-wrapper.reversed { background: #2E6CB9; }
+
+.component-example.bp-below768 .logo-wrapper .mobile { display: block; font-weight: 700; font-size: 1.25rem; color: #2157AA; margin: 0; padding: 0; }
+
+.component-example.bp-below768 .logo-wrapper svg { display: none; }
+
+.component-example.bp-below768 .logo-wrapper.reversed { background: #2E6CB9; }
+
+.component-example.bp-below768 .logo-wrapper.reversed .mobile { color: #ffffff; }
+
+@media (max-width: 768px) { .logo-wrapper .mobile { display: block; font-weight: 700; font-size: 1.25rem; color: #2157AA; margin: 0; padding: 0; } .logo-wrapper svg { display: none; } .logo-wrapper.reversed { background: #2E6CB9; } .logo-wrapper.reversed .mobile { color: #ffffff; } }
 
 .element-state-wrapper { border-top: solid 1px #96B7DF; }
 
