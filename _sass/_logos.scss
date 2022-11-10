@@ -1,23 +1,48 @@
-.component-example {
-    .logo-wrapper {
-        border: $bga-blue-border 1px solid;
+.logo-wrapper {
+    border: $bga-blue-border 1px solid;
 
-        &.reversed {
-            background: $bga-blue-background-dark;
-        }
+    .mobile {
+        display: none;
+    }
+
+    &.reversed {
+        background: $bga-blue-background-dark;
     }
 }
 
-@mixin form-fields-below768 {
-   
+@mixin logos-below768 {
+    .logo-wrapper {
+
+        .mobile {
+            display: block;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: $bga-blue-links;
+            margin: 0;
+            padding: 0;
+        }
+
+        svg {
+            display: none;
+        }
+
+        &.reversed {
+            background: $bga-blue-background-dark;
+
+            .mobile {
+                color: $bga-white;
+            }
+        }
+    }
+
 }
 
 // MOBILE display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-below768 {
-    @include form-fields-below768();
+    @include logos-below768();
 }
 
 // Media queries for HTML demo pages
 @media (max-width: 768px) {
-    @include form-fields-below768();
+    @include logos-below768();
 }
