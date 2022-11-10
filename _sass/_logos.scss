@@ -1,0 +1,23 @@
+.component-example {
+    .logo-wrapper {
+        border: $bga-blue-border 1px solid;
+
+        &.reversed {
+            background: $bga-blue-background-dark;
+        }
+    }
+}
+
+@mixin form-fields-below768 {
+   
+}
+
+// MOBILE display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768 {
+    @include form-fields-below768();
+}
+
+// Media queries for HTML demo pages
+@media (max-width: 768px) {
+    @include form-fields-below768();
+}
