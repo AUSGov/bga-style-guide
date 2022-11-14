@@ -34,8 +34,13 @@
                 border: solid $bga-black 1px;
                 border-right: 0px;
                 width: 220px;
-                padding: 0 16px;
+                padding: 12px 16px;
                 transition: width 0.6s;
+                line-height: 1.75;
+
+                &::placeholder {
+                    color: $bga-black;
+                }
 
                 &.in-focus {
                     width: calc(100% - 56px);
@@ -401,7 +406,12 @@
                     border: solid $bga-black 1px;
                     border-right: 0px;
                     width: calc(100% - 56px);
-                    padding: 0 16px;
+                    padding: 12px 16px;
+                    line-height: 1.75;
+
+                    &::placeholder {
+                        color: $bga-black;
+                    }
                 
                 }   
                 button {
