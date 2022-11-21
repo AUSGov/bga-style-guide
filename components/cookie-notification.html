@@ -1,8 +1,8 @@
 ---
 
 layout: content-tagged
-title: Toast notification
-description: Push notifications to users with an alert message that pops up from the bottom of the screen.
+title: Cookie notification
+description: A popup notification that alerts users to the use of cookies on business.gov.au.
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -59,24 +59,7 @@ classes="in-page"
                     <button id="toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
                         role="button">Trigger default toast</button>
                 </div>
-
-                <h3>Call to action toast notification</h3>
-                {% include component-examples/toast-example.html
-                title="Would you like to continue?"
-                text="<p>To protect your privacy, we will end your sessions after 3 hours of inactivity. Once your
-                    session ends you will need to restart your business plan.</p>
-                <p>Your session will end in <span>02 hrs 19 min 59 sec</span></p>
-                <p>To keep on working click ‘continue’</p>"
-                checkbox="true"
-                button="Continue"
-                classes="cta-toast"
-                %}
-
-                <h4 class="mt-5">View the call to action toast in page</h4>
-                <div class="button-example">
-                    <button id="cta-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
-                        role="button">Trigger call to action toast</button>
-                </div>
+                
 
             </div>
 
@@ -122,11 +105,18 @@ classes="in-page"
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>business.gov.au toasts are lightweight notifications that are fixed at the bottom of the screen.</p>
-        <p>Unlike modal notifications, toast notifications do not stop the user from viewing and using the page. They can be dismissed by the user with either a close or call to action button.</p>
+        <p>The cookie notification is displayed at the bottom of the screen when users first visit business.gov.au</p>
+        <p>This notification does not stop the user from viewing and using the pages on business.gov.au. The notification remains in place until the users clicks on either "Accept all cookies" or "Customise cookies". Once the user has clicked on one of these links they do not see the cookie notification again.</p>
+        <p>The "Customise cookies" link leads to a page on business.gov.au about cookies. The page should include the ability to turn off optional cookies. Ensure users can access this page from elsewhere  where on the site , e.g. a link in the footer.</p>
+
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used to display messages the user needs to see with minimal disruption to the process.</li>
+            <li>Used to on all pages of business.gov.au for users that have not seen and actioned the cookie notification before.</li>
+        </ul>
+
+        <h3>When not to use this component:</h3>
+        <ul>
+            <li>Not used for any purpose on business.gov.au other than conveying information about cookies. </li>
         </ul>
 
 
