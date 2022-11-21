@@ -14,7 +14,7 @@
 
 button.chat {
     height: 56px;
-    width:auto;
+    width: auto;
     padding: 0 67px 0 32px;
     display: inline-flex;
     align-items: center;
@@ -22,8 +22,8 @@ button.chat {
     border-radius: 60px;
     box-shadow: $bga-btn-boxshadow;
     position: fixed;
-    right: 24px;
-    bottom: 24px;
+    right: 16px;
+    bottom: 16px;
 
     &.example {
         position: absolute;
@@ -76,7 +76,7 @@ button.chat {
     border-radius: 4px;
     box-shadow: $bga-btn-boxshadow;
     position: fixed;
-    right: 24px;
+    right: 16px;
     bottom: 90px;
 
     .close {
@@ -119,16 +119,14 @@ button.chat {
 @mixin chat-button-below768 {
     button.chat {
         text-indent: -9999px;
-        height: 56px;
-        width: 56px;
+        height: 48px;
+        width: 48px;
         padding: 0;
 
         &.open,
         &.closed {
-            background-position: center center;
-        }
-        &.save-progress {
-            bottom: 8px;
+            background-position: top 10px center;
+            background-size: 24px 24px;
         }
     }
     .msg-container {
@@ -137,6 +135,8 @@ button.chat {
         justify-content: flex-end;
     }
     .tooltip {
+        bottom: 80px;
+
         .close {
             display: block;
             border: none;
