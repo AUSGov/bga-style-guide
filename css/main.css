@@ -6141,7 +6141,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .tooltip-example-container { position: relative; display: inline-flex; justify-content: center; }
 
-button.chat { height: 56px; width: auto; padding: 0 67px 0 32px; display: inline-flex; align-items: center; z-index: 9000; border-radius: 60px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 24px; bottom: 24px; }
+button.chat { height: 56px; width: auto; padding: 0 67px 0 32px; display: inline-flex; align-items: center; z-index: 9000; border-radius: 60px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 16px; bottom: 16px; }
 
 button.chat.example { position: absolute; }
 
@@ -6157,7 +6157,7 @@ button.chat.open:active { background-image: url(../assets/icon-chat-open-white.s
 
 button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-repeat; border: solid #ABB1BD 3px; background-position: right 32px center; }
 
-.tooltip { display: none; z-index: 9000; width: 100%; max-width: 300px; background: #ffffff; border: 3px solid #ABB1BD; border-radius: 4px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 24px; bottom: 90px; }
+.tooltip { display: none; z-index: 9000; width: 100%; max-width: 300px; background: #ffffff; border: 3px solid #ABB1BD; border-radius: 4px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 16px; bottom: 90px; }
 
 .tooltip .close { display: none; }
 
@@ -6171,19 +6171,19 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .tooltip.show { display: block; opacity: 1; }
 
-.component-example.bp-below768 button.chat, .component-example.small-screen button.chat { text-indent: -9999px; height: 56px; width: 56px; padding: 0; }
+.component-example.bp-below768 button.chat, .component-example.small-screen button.chat { text-indent: -9999px; height: 48px; width: 48px; padding: 0; }
 
-.component-example.bp-below768 button.chat.open, .component-example.bp-below768 button.chat.closed, .component-example.small-screen button.chat.open, .component-example.small-screen button.chat.closed { background-position: center center; }
-
-.component-example.bp-below768 button.chat.save-progress, .component-example.small-screen button.chat.save-progress { bottom: 8px; }
+.component-example.bp-below768 button.chat.open, .component-example.bp-below768 button.chat.closed, .component-example.small-screen button.chat.open, .component-example.small-screen button.chat.closed { background-position: top 10px center; background-size: 24px 24px; }
 
 .component-example.bp-below768 .msg-container, .component-example.small-screen .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+
+.component-example.bp-below768 .tooltip, .component-example.small-screen .tooltip { bottom: 80px; }
 
 .component-example.bp-below768 .tooltip .close, .component-example.small-screen .tooltip .close { display: block; border: none; background: transparent; outline: none; padding: 0; margin: 0; min-height: auto; }
 
 .component-example.bp-below768 .tooltip.centered, .component-example.small-screen .tooltip.centered { bottom: 62px; }
 
-@media (max-width: 768px) { button.chat { text-indent: -9999px; height: 56px; width: 56px; padding: 0; } button.chat.open, button.chat.closed { background-position: center center; } button.chat.save-progress { bottom: 8px; } .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; } .tooltip .close { display: block; border: none; background: transparent; outline: none; padding: 0; margin: 0; min-height: auto; } .tooltip.centered { bottom: 62px; } }
+@media (max-width: 768px) { button.chat { text-indent: -9999px; height: 48px; width: 48px; padding: 0; } button.chat.open, button.chat.closed { background-position: top 10px center; background-size: 24px 24px; } .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; } .tooltip { bottom: 80px; } .tooltip .close { display: block; border: none; background: transparent; outline: none; padding: 0; margin: 0; min-height: auto; } .tooltip.centered { bottom: 62px; } }
 
 .bga-progress-bar .progress-label { font-size: 0.875rem; }
 
