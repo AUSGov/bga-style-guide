@@ -1,0 +1,260 @@
+---
+
+layout: ecb-5-step
+title: Employment Contract Tool
+stepped-nav-step: Position
+
+---
+
+<div class="container my-5">
+
+
+    <!-- POSITION TITLE -->
+    <div class="row remove-element-padding">
+
+        <h2>Position title</h2>
+
+        <div class="col-12 col-md-8 col-xl-7">
+            <div class="question-section remove-element-padding">
+                <form>
+                    <div class="mb-5 p-0 form-example clause-box-include">
+                        <label for="position-title" class="form-label mb-3"><strong>What is the employee's position
+                                title?</strong></label>
+                        <p class="contextual-help mb-3">e.g. Accounts manager, Sales assistant</p>
+                        <input type="text" class="form-control clause-box-input mb-0" id="position-title" value=""
+                            required>
+
+                    </div>
+                </form>
+
+                <div class="bga-component-wrapper">
+                    <div class="bga-component clause-box position-title m-0">
+
+                        <div class="p-4 component-content h-100">
+
+                            <div class="header mb-4">
+
+                                <div class="title remove-element-padding me-4">
+                                    <div class="icon-wrapper me-3"><img src={{ 'assets/icon-document-blueblack.svg' |
+                                            relative_url }} alt="" /></div>
+                                    <p><strong>Position clause</strong></p>
+                                </div>
+
+                                <div class="tag"><span>Included</span>
+                                    <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg"
+                                        width="15" height="11.866" viewBox="0 0 15 11.866">
+                                        <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z"
+                                            fill="#fff" />
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="component-text remove-element-padding">
+
+                                <p>You are being employed in the position of <span>[position title]</span>.</p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-100 col-12 col-md-4 offset-xl-1">
+
+            {% include component-examples/info-sidebar-example.html
+            title="Tip"
+            text="<p>If you've already recruited someone, use the position title (or job title) you provided during your
+                recruitment process.</p>
+            <p>The position title should reflect the work your employee will do. You may also find examples of job
+                titles under the applicable award in the classifications section.</p>"
+            classes="inpage teal"
+            %}
+
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+    <!-- BUSINESS STRUCTURE -->
+    <div class="row remove-element-padding">
+
+        <h2>Business structure</h2>
+
+        <div class="col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+                <form>
+                    <div class="p-0 form-example clause-box-include">
+                        <label for="position-title" class="form-label mb-3"><strong>What is your business
+                                structure?</strong></label>
+                        <p class="mb-3">
+                            We need to know your business structure to determine the signature fields to include in your
+                            contract. This information is not shared with any other agency, for more information see our
+                            <a href="">Privacy page</a>.
+                        </p>
+
+                        <select class="form-select" aria-label="Default select example">
+                            <option class="default-option" value="">Select your business structure</option>
+                            <option value="individual sole trader">Individual sole trader</option>
+                            <option value="company with sole director">Company with sole director</option>
+                            <option value="company with more than one director">Company with more than one director
+                            </option>
+                            <option value="partnership or association">Partnership or association</option>
+                            <option value="authorised representative">Authorised representative</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Unsure of your business structure?"
+            text=" <p>If you're unsure of what your business structure is, search for your business on ABN Lookup. Your
+                business structure is displayed against the 'Entity type' field.</p>
+            <p>If none of the business structure options apply to your business, select 'other'.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+    <!-- EXAMPLE: RADIO BUTTONS -->
+    <div class="row remove-element-padding">
+
+        <h2>Duties</h2>
+
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+                <p class="mb-3"><strong>Select the type of employee you're hiring</strong></p>
+
+                <p class="mb-3">It's important you get this right. The pay rates, leave and other entitlements for each
+                    type can differ, so it will change what you need to include in your contract.</p>
+
+                <div class="mb-4 p-0 ">
+                    <div class="form-element-wrapper no-flex mb-3">
+                        <div role="radiogroup">
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault4">
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                    <strong>Full-time</strong> – usually 38 hours of work per week
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault5" checked>
+                                <label class="form-check-label" for="flexRadioDefault5">
+                                    <strong>Part-time</strong> – usually less than 38 hours of work per week
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault6" checked>
+                                <label class="form-check-label" for="flexRadioDefault6">
+                                    <strong>Casual</strong> – no firm advance commitment to continuing and indefinite
+                                    work according to an agreed pattern of work
+                                </label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <p class="error-feedback mb-3">Descriptive error message</p>
+
+                </div>
+
+                <div class="bga-component-wrapper">
+                    <div class="bga-component clause-box duties m-0">
+
+                        <div class="p-4 component-content h-100">
+
+                            <div class="header mb-4">
+
+                                <div class="title remove-element-padding me-4">
+                                    <div class="icon-wrapper me-3"><img src={{ 'assets/icon-document-blueblack.svg' |
+                                            relative_url }} alt="" /></div>
+                                    <p><strong>Duties clause</strong></p>
+                                </div>
+
+                                <div class="tag"><span>Included</span>
+                                    <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg"
+                                        width="15" height="11.866" viewBox="0 0 15 11.866">
+                                        <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z"
+                                            fill="#fff" />
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="component-text remove-element-padding">
+
+                                <p>You will perform the duties described in the <span>[attached]</span> position
+                                    description as required.</p>
+                                <p>We may also assign you other duties, where reasonable for your position, training and
+                                    experience.</p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Duties / Position description"
+            text=" <p>If you provided a position (or job) description during your recruitment process, you can use this.
+                If you don't have a position description yet, you can <a href=''>download the job description</a>
+                template from the <a href=''>Fair Work Ombudsman website</a> and fill it in later.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+
+
+
+
+
+    <!-- BUTTON GROUP -->
+    <div class="ecb-button-group">
+
+
+        <a class="bga-link me-4 bga-inline-link bkg-light" tabindex="0" href="" role="button">Previous</a>
+
+
+
+        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{ 'html-examples/ECB-success-page.html' |
+            relative_url }} role="button">Next</a>
+
+
+    </div>
+
+
+
+</div>
