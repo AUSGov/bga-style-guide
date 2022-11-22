@@ -6607,6 +6607,28 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 @media (max-width: 576px) { .bga-inpage-feedback .initial-question { flex-wrap: wrap; } .bga-inpage-feedback .initial-question P { width: 100%; margin-bottom: 16px !important; } }
 
+.cookie-notification { background-color: rgba(46, 62, 90, 0.9); box-shadow: 2px -2px 3px 0px rgba(51, 51, 51, 0.2); }
+
+.cookie-notification .component-content { display: flex; align-items: center; }
+
+.cookie-notification .component-content p, .cookie-notification .component-content a { color: #ffffff; font-size: .875rem; font-weight: 600; }
+
+.cookie-notification .component-text { max-width: 640px; }
+
+.cookie-notification .component-links { display: flex; min-width: 330px; align-items: center; }
+
+.cookie-notification .component-links p, .cookie-notification .component-links a { color: #ffffff; font-size: .875rem; font-weight: 600; }
+
+.cookie-notification .bga-btn-pill { font-size: .875rem; padding: 8px 16px !important; min-height: auto; }
+
+#inpage-cookie { position: fixed; bottom: 0; width: 100%; display: none; }
+
+.component-example.bp-below768 .cookie-notification .component-content, .component-example.small-screen .cookie-notification .component-content { flex-wrap: wrap; }
+
+.component-example.bp-below768 .cookie-notification .component-text, .component-example.small-screen .cookie-notification .component-text { margin: 0 0 16px 0 !important; max-width: 100%; }
+
+@media (max-width: 768px) { .cookie-notification .component-content { flex-wrap: wrap; } .cookie-notification .component-text { margin: 0 0 16px 0 !important; max-width: 100%; } }
+
 .example.page-pattern { position: relative; }
 
 .example.page-pattern img { border: solid 1px #96B7DF; }
