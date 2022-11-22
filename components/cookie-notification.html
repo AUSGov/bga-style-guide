@@ -26,7 +26,7 @@ classes="in-page"
 
     </div>
 
-    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
 
 
         <!-- DESIGN -->
@@ -34,10 +34,8 @@ classes="in-page"
 
         <!-- Breakpoint radio buttons -->
         {% include breakpoints.html
-        sm-visibility="true"
-        xs-visibility="true"
-        final-visibility="true"
-        breakpoint-final="350"
+        md-visibility="true"
+        breakpoint-final="768"
         %}
 
         <!-- Component example -->
@@ -46,7 +44,7 @@ classes="in-page"
             <div class="component-wrapper remove-element-padding px-4 py-4">
 
                 {% include component-examples/cookie-example.html
-                    text="<p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, c onsectetur adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
+                    text="<p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consec adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
                     button="Accept all cookies"
                     link="Customise cookies"
                     classes="default"
@@ -71,7 +69,7 @@ classes="in-page"
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/fb8aed08-66a1-4fdb-bb52-a23d13d4b3e9/'"
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/2e7fcedd-76a5-444b-87ec-ef7e9b277ea8/'"
         btn-text="View design specifications"
         %}
 
@@ -79,8 +77,7 @@ classes="in-page"
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Toast notifications can be used on all page layouts.</p>
-
+        <p>The cookie notificaiton appears on all page layouts.</p>
 
         {% include layouts-dropdown.html
         layout-name="All layouts"
@@ -90,10 +87,9 @@ classes="in-page"
         <div class="layout-example show full-border mt-0 mb-5 p-4">
             {% include layouts-accordion.html
             singlelayout="true"
-            allbp-img="'../assets/layout-images/toast-allbp.png' | relative_url "
-            allbp-rules="<p>Toasts are placed at the bottom of the screen. They are aligned to the left or in the centre
-                of the screen.</p>
-            <p>They should not be placed on the right side of the screen where the chat button lives.</p>"
+            allbp-img="'../assets/layout-images/cookie-notification-allbp.png' | relative_url "
+            allbp-rules="<p>The cookie notification is placed at the bottom of the screen. It stretches full width of the screen.</p>
+            <p>The cookie notification pushes the business.gov.au chat button up when it appears.</p>"
             %}
 
         </div>

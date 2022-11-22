@@ -1,0 +1,66 @@
+.cookie-notification {
+    background-color: rgba(46, 62, 90, .9);
+    box-shadow: 2px -2px 3px 0px rgba(51, 51, 51, 0.2);
+    
+    .component-content {
+        display: flex;
+        align-items: center;
+
+        p, a {
+            color: $bga-white;
+            font-size: .875rem;
+            font-weight: 600;
+        }
+    }
+    .component-text {
+        max-width: 640px;
+    }
+    .component-links {
+        display: flex;
+        min-width: 330px;
+        align-items: center;
+
+        p, a {
+            color: $bga-white;
+            font-size: .875rem;
+            font-weight: 600;   
+        }
+    }
+    .bga-btn-pill {
+        font-size: .875rem;
+        padding: 8px 16px !important;
+        min-height: auto;
+    }
+}
+
+#inpage-cookie {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+
+
+// Mixins for media queries and smaller screen examples
+@mixin cookies-below768 () {
+    .cookie-notification {
+        .component-content {
+            flex-wrap: wrap;
+        }
+        .component-text {
+            margin: 0 0 16px 0 !important;
+            max-width: 100%;
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768,
+.component-example.small-screen {
+    @include cookies-below768();
+}
+
+// Media queries for HTML example pages
+@media (max-width: 768px) {
+    @include cookies-below768();
+}
