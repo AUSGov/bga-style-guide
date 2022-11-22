@@ -1,0 +1,28 @@
+<div class="bga-component-wrapper">
+<div class="bga-component cookie-example {{include.classes}}">
+
+    <div class="py-4 ps-4 pe-6 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+          
+            {% if include.text %}
+                {{ include.text }}
+            {% endif %}
+
+            {% if include.button %}
+                 <div class="button-example">
+                     <button class="bga-btn bga-secondary-btn bga-btn-pill" tabindex="0" href="" role="button">{{ include.button }}  </button>
+                </div>
+            {% endif %}
+
+            {% if include.link %}
+               <a href="" >{{ include.link }}</a>
+            {% endif %}
+
+        </div>
+    
+
+    </div>
+
+</div>
+</div>

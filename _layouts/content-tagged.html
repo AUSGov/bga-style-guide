@@ -4,41 +4,54 @@
 {% include head.html %}
 
 <body>
-    
+
     {% include header.html %}
-       
+
     {% include component-examples/breadcrumbs-example.html %}
-    
+
     {% include page-header-tags.html %}
-    
-    
+
+
     <div class="container">
         <section class="body-content my-5">
-        
+
             {{ content }}
-            
-        </section> 
+
+        </section>
     </div>
-    
-    
+
+
     {% include footer.html %}
-    
+
 </body>
 
 <div id="inpage-cta-toast">
     {% include component-examples/toast-example.html
     title="Call to action toast notification"
-    text="<p>Pops up like cooked bread in a toaster.</p><p>Toasts can be left aligned or centered depending on the page context.</p>"
+    text="<p>Pops up like cooked bread in a toaster.</p>
+    <p>Toasts can be left aligned or centered depending on the page context.</p>"
     button="Close toast"
     classes="cta-toast"
     %}
-    
-</div><div id="inpage-toast">
+
+</div>
+<div id="inpage-toast">
     {% include component-examples/toast-example.html
     close="true"
     title="Toast notification"
-    text="<p>Pops up like cooked bread in a toaster.</p><p>Toasts can be left aligned or centered depending on the page context.</p>"
+    text="<p>Pops up like cooked bread in a toaster.</p>
+    <p>Toasts can be left aligned or centered depending on the page context.</p>"
     classes="default"
     %}
 </div>
+
+<div class="inpage-cookie">
+    {% include component-examples/cookie-example.html
+        text="<p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
+        button="Accept all cookies"
+        link="Customise cookies"
+        classes="in-page"
+    %}
+</div>
+
 </html>
