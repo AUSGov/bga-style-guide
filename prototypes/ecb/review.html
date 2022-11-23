@@ -10,38 +10,63 @@ stepped-nav-step: Review
 
 
     <!-- PAY RATE -->
-    <div class="row remove-element-padding">
+    <div class="row ">
 
-        <h2>Review your employment contract</h2>
+        <div class="col-12 col-md-11 col-lg-9 col-xl-8 remove-element-padding">
 
-        <h2>Position</h2>
+            <h2>Review your employment contract</h2>
+            <p>Check the clauses you've added to your contract.</p>
 
-            {% include component-examples/results-and-edit-example.html
-                title="Position title"
-                content="<p>You are being employed in the position of <strong>Accounts manager</strong>.</p>"
-            %}
+            <h2>Position</h2>
 
             {% include component-examples/results-and-edit-example.html
-                title="Duties"
-                content="<p>You will perform the duties described in the [attached] position description as required.</p><p>We may also assign you other duties, where reasonable for your position, training and experience.</p>"
+            title="Position title"
+            content="<p>You are being employed in the position of <strong><span data-value='position-title'>position title</span></strong>.</p>"
             %}
 
             {% include component-examples/results-and-edit-example.html
-                title="Award for your employee"
-                content="<p><p>Your employment terms and conditions are those set out in this contract, the <a href=''><span><strong>Airline Operations - Ground Staff Award (MA000048)</strong></span></a> and applicable legislation. 
-                    <p>You can check the minimum award entitlements for your classification level with the Fair Work Ombudsman's <a href='' >Pay and Conditions Tool</a>.</p>"
+            title="Business structure"
+            content="<p>Your business structure is <strong><span data-value='business-structure'>business structure</span></strong>.</p>"
             %}
-            
 
-                {% include component-examples/disclaimer-example.html
-                    title="Employee guidance and disclaimer"
-                    content="<p>Each party should seek independent legal advice on this contract and should consider whether this contract is suitable for their specific employment arrangement.</p><p>This contract has been prepared by the employer using an online contract tool which generates simple template employment contracts based on a series of questions about the proposed employment arrangement. You are entitled to discuss the proposed employment arrangements and negotiate the terms of your employment contract with the employer.</p><p>The owner of the online contract tool makes no warranties or representations that any employment contract will comply with all applicable laws, will be complete, or will be appropriate for a particular employment arrangement.</p><p>The owner of the online contract tool has excluded all liability, however caused, for any loss or damage suffered by any person in connection with any use of a contract produced by the tool.</p><p>The parties agree not to commence any action, claims, proceedings or demands, in any court, tribunal or otherwise, against the owner of the online contract tool in connection with any loss or damage suffered by a party which arises out of or in connection with use of the online tool or this contract document.</p>"
-                    display="visible"
-                    classes="visible"
+            {% include component-examples/results-and-edit-example.html
+            title="Employment type"
+            content="<p>You are being employed on a <strong><span data-value='employment-type'>employment type</span></strong> basis.</p> "
             %}
 
 
-       
+            <h2>Hours</h2>
+            {% include component-examples/results-and-edit-example.html
+            title="Hours of work"
+            content="<p>You are expected to work <strong><span data-value='hours-worked'>hours worked</span> hours per week</strong>. We may also request or require you to work additional hours if the additional hours are reasonable.</p>"
+            %}
+
+            {% include component-examples/results-and-edit-example.html
+            title="Flexible hours"
+            content="<p>You may have a right to make a written request for flexible working arrangements under the National Employment Standards, including for when to start and end work each day or your location of work. We may refuse your request in writing, but only if we have reasonable business grounds.</p>"
+            %}
+
+            {% include component-examples/results-and-edit-example.html
+            title="Breaks"
+            content="<p>Depending on the number of hours you work, you may be entitled to meal breaks. The award sets out:</p><ul><li>the length of the breaks</li><li>when they need to be taken</li><li>the rules about payment.</li></ul><p>You may also be entitled to rest breaks.</p>"
+            classes="no-btn"
+            %}
+
+
+            <h2>Pay</h2>
+            {% include component-examples/results-and-edit-example.html
+            title="Pay rate"
+            content="<p>You will be paid <strong><span data-value='pay-rate'>pay rate</span></strong>. This pay rate does not include superannuation, we'll pay this separately.</p>"
+            %}
+
+            {% include component-examples/results-and-edit-example.html
+            title="Payment method"
+            content="<p>We will pay you <strong><span data-value='pay-frequency'>frequency</span> into your nominated bank account</strong>.</p>"
+            %}
+
+
+        </div>
+
 
     </div>
 
@@ -52,10 +77,12 @@ stepped-nav-step: Review
     <!-- BUTTON GROUP -->
     <div class="ecb-button-group">
 
-        <a class="bga-link me-4 bga-inline-link bkg-light" tabindex="0" href={{ 'prototypes/ecb/hours.html' | relative_url }} role="button">Previous</a>
+        <a class="bga-link me-4 bga-inline-link bkg-light" tabindex="0" href={{ 'prototypes/ecb/pay.html' |
+            relative_url }} role="button">Previous</a>
 
 
-        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{ 'prototypes/ecb/review.html' | relative_url }} role="button">Next</a>
+        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{ 'prototypes/ecb/finalise.html' | relative_url }}
+            role="button">Next</a>
 
     </div>
 
