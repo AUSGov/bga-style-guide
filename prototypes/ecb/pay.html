@@ -42,7 +42,7 @@
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/ecb/position.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/ecb/pay.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -717,7 +717,7 @@
 
                         <div class="stepped-navigation-wrapper remove-element-padding ">
             
-                            <h1 class="step-title">Position</h1>
+                            <h1 class="step-title">Pay</h1>
                            
                             <div class="stepped-navigation-wrapper remove-element-padding teal">
     
@@ -804,27 +804,56 @@
     <div class="container my-5">
 
 
-    <!-- POSITION TITLE -->
+    <!-- PAY RATE -->
     <div class="row remove-element-padding">
 
-        <h2>Position title</h2>
+        <h2>Pay rate</h2>
 
         <div class="col-12 col-md-8 col-xl-7">
             <div class="question-section remove-element-padding">
                 <form>
                     <div class="mb-5 p-0 form-example clause-box-include">
-                        <label for="position-title" class="form-label mb-3"><strong>What is the employee's position title?</strong></label>
-                        <p class="contextual-help mb-3">e.g. Accounts manager, Sales assistant</p>
-                        <input type="text" class="form-control clause-box-input mb-0" id="position-title" value=""
-                            required>
+                        
+                        <label for="pay-rate-units" class="form-label mb-3"><strong>What is the employee's rate of pay?</strong></label>
+                        
+                        <p>Select an hourly or a weekly rate of pay.</p>
+   
+                        
+                        <div class="mb-5" id="pay-rate-units" role="radiogroup">
+                            
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-rate-units" id="hourly" data-value="hourly">
+                                <label class="form-check-label" for="hourly">
+                                    <strong>hourly</strong>
+                                </label>
+                            </div>
 
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-rate-units" id="weekly" data-value="weekly">
+                                <label class="form-check-label" for="weekly">
+                                    <strong>weekly</strong>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        
+                        <label for="pay-rate" class="form-label mb-3"><strong>Enter the hourly pay rate</strong></label>
+                        
+                        <div class="textbox-units form-element-wrapper mb-3">
+                            <p class="m-0">$AUD</p>
+                            <input type="text" class="form-control clause-box-input m-0 sm-width" id="pay-rate" value="" required >
+                            <p class="m-0 pay-unit">hour</p>
+                        </div>
+    
+                  
                     </div>
                 </form>
 
                 <div class="bga-component-wrapper">
-                    
+
                     <div class="bga-component-wrapper">
-    <div class="bga-component clause-box  position-title m-0">
+    <div class="bga-component clause-box  pay-rate m-0">
 
         <div class="p-4 component-content h-100">
 
@@ -836,7 +865,7 @@
                     <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-document-blueblack.svg alt="" /></div>
 
                     
-                    <p><strong>Position clause</strong></p>
+                    <p><strong>Pay clause</strong></p>
                     
 
                 </div>
@@ -853,7 +882,7 @@
             <div class="component-text remove-element-padding">
 
                 
-                    You are being employed in the position of <span>[position title]</span>.
+                    <p>You will be paid <strong>$</strong><span>[amount]</span> <strong>per hour</strong>. This pay rate does not include superannuation, we'll pay this separately.</p>
                 
 
             </div>
@@ -876,14 +905,11 @@
 
         <div class="component-text pb-4 remove-element-padding">
             
-                <h3>Tip</h3>
+                <h3>Wages</h3>
             
             
             
-                <p>If you've already recruited someone, use the position title (or job title) you provided during your
-                recruitment process.</p>
-            <p>The position title should reflect the work your employee will do. You may also find examples of job
-                titles under the applicable award in the classifications section.</p>
+                <p>Your employee's minimum wages are set out under the award – you must pay at least this amount. You'll also have to pay any applicable penalties, overtime, loadings and allowances.</p><p>The minimum wage depends on the employee's classification level in the award. You can find classification descriptions in the Pay and Conditions Tool or award.</p><p>It's important to pay the right amount. If you don't, you could face large penalties and may have to back pay your employee.</p>
             
             
         </div>
@@ -909,126 +935,54 @@
     <hr class="section-divider my-5" />
 
 
-    <!-- BUSINESS STRUCTURE -->
+    <!-- PAYMENT METHOD -->
     <div class="row remove-element-padding">
 
-        <h2>Business structure</h2>
+        <h2>Payment method</h2>
 
         <div class="col-12 col-md-8 col-xl-7">
 
             <div class="question-section remove-element-padding">
+            
                 <form>
-                    <div class="p-0 form-example clause-box-include">
-                        <label for="position-title" class="form-label mb-3"><strong>What is your business
-                                structure?</strong></label>
-                        <p class="mb-3">
-                            We need to know your business structure to determine the signature fields to include in your
-                            contract. This information is not shared with any other agency, for more information see our privacy page.
-                        </p>
-
-                        <select class="form-select" aria-label="Default select example">
-                            <option class="default-option" value="">Select your business structure</option>
-                            <option value="individual sole trader">Individual sole trader</option>
-                            <option value="company with sole director">Company with sole director</option>
-                            <option value="company with more than one director">Company with more than one director
-                            </option>
-                            <option value="partnership or association">Partnership or association</option>
-                            <option value="authorised representative">Authorised representative</option>
-                            <option value="other">Other</option>
-                        </select>
-
-                    </div>
-                </form>
-            </div>
-
-
-        </div>
-
-        <div class="h-100 col-12 col-md-4  offset-xl-1">
-            <div class="bga-component-wrapper sidebar-wrapper fullheight inpage teal">
-<div class="bga-component sidebar information-sidebar m-0">
-
-    <div class="p-4 component-content">
-
-        <div class="component-text pb-4 remove-element-padding">
-            
-                <h3>Unsure of your business structure?</h3>
-            
-            
-            
-                 <p>If you're unsure of what your business structure is, search for your business on ABN Lookup. Your
-                business structure is displayed against the 'Entity type' field.</p>
-            <p>If none of the business structure options apply to your business, select 'other'.</p>
-            
-            
-        </div>
-
-        <button class="more-info-toggle hide m-0 p-0">
-            <span class="pe-2">Read more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                <g id="Icon:_Chevron_right" data-name="Icon: Chevron right" transform="translate(16) rotate(90)">
-                  <path id="Chevron_Right" data-name="Chevron / Right" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" fill="#2157aa"/>
-                </g>
-              </svg>
-              </button>
-    
-
-    </div>
-
-</div>
-</div>
-        </div>
-
-    </div>
-
-    <hr class="section-divider my-5" />
-
-
-    <!-- EMPLOYMENT TYPE -->
-    <div class="row remove-element-padding">
-
-        <h2>Employment type</h2>
-
-        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
-
-            <div class="question-section remove-element-padding">
-                <p class="mb-3"><strong>Select the type of employee you're hiring</strong></p>
-
-                <p class="mb-3">It's important you get this right. The pay rates, leave and other entitlements for each type can differ, so it will change what you need to include in your contract.</p>
-
-                <div class="mb-4 p-0 ">
-                    <div class="form-element-wrapper no-flex mb-3">
-                        <div class="clause-box-radios" id="employment-type" role="radiogroup">
+                    <div class="mb-5 p-0 form-example clause-box-include">
+                        
+                        <label for="pay-frequency" class="form-label mb-3"><strong>How often will you pay your employee?</strong></label>
+                        
+                        <p>Select an hourly or a weekly rate of pay.</p>
+                        
+                        <div class="clause-box-radios mb-5" id="pay-frequency" role="radiogroup">
                             
                             <div class="radio-button alternate pb-1">
-                                <input class="form-check-input m-0" type="radio" name="employment-type" id="fulltime" data-value="full time">
-                                <label class="form-check-label" for="fulltime">
-                                    <strong>Full-time</strong> – usually 38 hours of work per week
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="weekly-pay" data-value="weekly">
+                                <label class="form-check-label" for="weekly-pay">
+                                    <strong>weekly</strong>
                                 </label>
                             </div>
 
                             <div class="radio-button alternate pb-1">
-                                <input class="form-check-input m-0" type="radio" name="employment-type" id="parttime" data-value="part time">
-                                <label class="form-check-label" for="parttime">
-                                    <strong>Part-time</strong> – usually less than 38 hours of work per week
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="fortnightly-pay" data-value="fortnightly">
+                                <label class="form-check-label" for="fortnightly-pay">
+                                    <strong>fortnightly</strong>
                                 </label>
                             </div>
 
                             <div class="radio-button alternate pb-1">
-                                <input class="form-check-input m-0" type="radio" name="employment-type" id="casual" data-value="casual">
-                                <label class="form-check-label" for="casual">
-                                    <strong>Casual</strong> – no firm advance commitment to continuing and indefinite work according to an agreed pattern of work
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="monthly-pay" data-value="monthly">
+                                <label class="form-check-label" for="monthly-pay">
+                                    <strong>monthly</strong>
                                 </label>
                             </div>
+
 
                         </div>
-                    </div>
 
-                </div>
+                  
+                    </div>
+                </form>
 
                 <div class="bga-component-wrapper">
-                    
-                    <div class="bga-component-wrapper">
-    <div class="bga-component clause-box  employment-type m-0">
+    <div class="bga-component clause-box  pay-frequency m-0">
 
         <div class="p-4 component-content h-100">
 
@@ -1040,7 +994,7 @@
                     <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-document-blueblack.svg alt="" /></div>
 
                     
-                    <p><strong>Employment type clause</strong></p>
+                    <p><strong>Payment method clause</strong></p>
                     
 
                 </div>
@@ -1057,7 +1011,7 @@
             <div class="component-text remove-element-padding">
 
                 
-                    You are being employed on a <span>[employment type]</span> basis.
+                    <p>We will pay you <span>[frequency]</span> into your nominated bank account.</p>
                 
 
             </div>
@@ -1066,10 +1020,9 @@
 
     </div>
 </div>
-                    
-                </div>
 
             </div>
+
 
         </div>
 
@@ -1081,11 +1034,11 @@
 
         <div class="component-text pb-4 remove-element-padding">
             
-                <h3>Duties / Position description</h3>
+                <h3>Wpihen to pay</h3>
             
             
             
-                <p>If you provided a position (or job) description during your recruitment process, you can use this. If you don't have a position description yet, you can download the job description  template from the Fair Work Ombudsman website and fill it in later.</p>
+                <p>Most awards outline how often you must pay employees – generally it will be weekly or fortnightly, and it must be at least monthly. You must pay money. Do not 'pay in kind', for example, with goods or food.</p><p>You must give your employee a pay slip within 1 working day of paying them with certain information on it. An incorrect or incomplete pay slip could be in breach of the law.</p>
             
             
         </div>
@@ -1111,17 +1064,13 @@
 
 
 
-
-
-
-
     <!-- BUTTON GROUP -->
     <div class="ecb-button-group">
 
-        <a class="bga-link me-4 bga-inline-link bkg-light" tabindex="0" href="" role="button">Previous</a>
+        <a class="bga-link me-4 bga-inline-link bkg-light" tabindex="0" href=/bga-style-guide/prototypes/ecb/hours.html role="button">Previous</a>
 
 
-        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href=/bga-style-guide/prototypes/ecb/hours.html role="button">Next</a>
+        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href=/bga-style-guide/prototypes/ecb/review.html role="button">Next</a>
 
     </div>
 
