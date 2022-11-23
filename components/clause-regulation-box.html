@@ -46,35 +46,46 @@ classes="in-page"
 
                 <h3>Default clause /regulation box</h3>
                 
-                {% include component-examples/clause-box-example.html
-                    icon="'../assets/icon-document-blueblack.svg' | relative_url "
+                <div class="pb-5">
+                    {% include component-examples/clause-box-example.html
                     title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
                     content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
                     classes="teal"
                 %}
+                </div>
 
                 <h3>Clause / regulation box with mandatory include tag</h3>
                 
+                <div class="pb-5">
+                    <form>
+                        <div class="col-12 mb-5 p-0 form-example clause-box-include">
+                            <label for="{{include.id}}" class="form-label mb-3">What is the employee's position title?</label>
+                            <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
+                            <input type="text" class="form-control clause-box-input mb-0" id="{{include.id}}" value="" required>
+                            
+                        </div>
+                    </form>
                 {% include component-examples/clause-box-example.html
-                    icon="'../assets/icon-document-blueblack.svg' | relative_url "
                     title="Position title clause"
                     tag="Included"
                     tag-type="mandatory"
                     content="<p>You are being employed in the position of <span>[position title]</span>.</p>"
                     id="position-title"
-
                 %}
+                </div>
 
                 <h3>Clause / regulation box with optional include tag</h3>
 
+                <div class="pb-5">
                 {% include component-examples/clause-box-example.html
-                    icon="'../assets/icon-document-blueblack.svg' | relative_url "
                     title="Probation period clause"
                     tag="Optional to include"
                     tag-type="optional"
+                    input-label="Include Probation period clause (optional)"
                     content="<p>You will need to complete a <span>[number] <strong>month</strong></span> probation period. During this time, we will assess your performance.</p><p>If we end your employment during the probation period, we will provide written notice according to the notice clause in this contract.</p>"
                     id="probation-period"
                 %}
+                </div>
 
             </div>
         </div>

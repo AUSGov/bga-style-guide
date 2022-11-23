@@ -729,12 +729,20 @@ $(document).ready(function () {
         }, 400);
     });
 
+
+
     // COMPONENT EXAMPLE: CLAUSE / REGULATION BOXES
     var clause_boxes = {}
+   
     $('.clause-box-input').each(function () {
         var clause = $(this).attr('id'),
             original_text = $('.' + clause).find('.component-text span').text();
         clause_boxes[clause] = original_text;
+    });
+    $('.clause-box-radios').each(function () {
+        var clause = $(this).attr('id'),
+            original_text = $('.' + clause).find('.component-text span').text();
+            clause_boxes[clause] = original_text;
     });
 
     $('.clause-box-input').change(function () {
@@ -776,6 +784,32 @@ $(document).ready(function () {
 
         }
     });
+
+    $('.clause-box-radios input').on('click', function () {
+
+        var clause = $(this).parents('.clause-box-radios').attr('id'),
+            original_text = clause_boxes[clause],
+            added_text;
+
+        // Text input
+        added_text = $(this).attr('data-value');
+        console.log(added_text);
+
+        if (added_text != "") {
+            $('.' + clause).addClass('added highlight').find('.component-text span').text(added_text);
+
+            setTimeout(function () {
+                $('.highlight').removeClass('highlight');
+            }, 800);
+
+        } else {
+            $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
+        }
+    });
+
+    
+    
+
 
     // COMPONENT EXAMPLE: STEPPED NAVIGATION
     $('.stepped-nav-toggle').on('click', function () {

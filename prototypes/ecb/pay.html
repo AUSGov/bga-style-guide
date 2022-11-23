@@ -1,0 +1,172 @@
+---
+
+layout: ecb-5-step
+title: Employment Contract Tool
+stepped-nav-step: Pay
+
+---
+
+<div class="container my-5">
+
+
+    <!-- PAY RATE -->
+    <div class="row remove-element-padding">
+
+        <h2>Pay rate</h2>
+
+        <div class="col-12 col-md-8 col-xl-7">
+            <div class="question-section remove-element-padding">
+                <form>
+                    <div class="mb-5 p-0 form-example clause-box-include">
+                        
+                        <label for="pay-rate-units" class="form-label mb-3"><strong>What is the employee's rate of pay?</strong></label>
+                        
+                        <p>Select an hourly or a weekly rate of pay.</p>
+   
+                        
+                        <div class="mb-5" id="pay-rate-units" role="radiogroup">
+                            
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-rate-units" id="hourly" data-value="hourly">
+                                <label class="form-check-label" for="hourly">
+                                    <strong>hourly</strong>
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-rate-units" id="weekly" data-value="weekly">
+                                <label class="form-check-label" for="weekly">
+                                    <strong>weekly</strong>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        
+                        <label for="pay-rate" class="form-label mb-3"><strong>Enter the hourly pay rate</strong></label>
+                        
+                        <div class="textbox-units form-element-wrapper mb-3">
+                            <p class="m-0">$AUD</p>
+                            <input type="text" class="form-control clause-box-input m-0 sm-width" id="pay-rate" value="" required >
+                            <p class="m-0 pay-unit">hour</p>
+                        </div>
+    
+                  
+                    </div>
+                </form>
+
+                <div class="bga-component-wrapper">
+
+                    {% include component-examples/clause-box-example.html
+                        title="Pay clause"
+                        tag="Included"
+                        tag-type="mandatory"
+                        content="<p>You will be paid <strong>$</strong><span>[amount]</span> <strong>per hour</strong>. This pay rate does not include superannuation, we'll pay this separately.</p>"
+                        id="pay-rate"
+                    %}
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="h-100 col-12 col-md-4 offset-xl-1">
+
+            {% include component-examples/info-sidebar-example.html
+                title="Wages"
+                text="<p>Your employee's minimum wages are set out under the award – you must pay at least this amount. You'll also have to pay any applicable penalties, overtime, loadings and allowances.</p><p>The minimum wage depends on the employee's classification level in the award. You can find classification descriptions in the Pay and Conditions Tool or award.</p><p>It's important to pay the right amount. If you don't, you could face large penalties and may have to back pay your employee.</p>"
+                classes="inpage teal"
+            %}
+
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+    <!-- PAYMENT METHOD -->
+    <div class="row remove-element-padding">
+
+        <h2>Payment method</h2>
+
+        <div class="col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+            
+                <form>
+                    <div class="mb-5 p-0 form-example clause-box-include">
+                        
+                        <label for="pay-frequency" class="form-label mb-3"><strong>How often will you pay your employee?</strong></label>
+                        
+                        <p>Select an hourly or a weekly rate of pay.</p>
+                        
+                        <div class="clause-box-radios mb-5" id="pay-frequency" role="radiogroup">
+                            
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="weekly-pay" data-value="weekly">
+                                <label class="form-check-label" for="weekly-pay">
+                                    <strong>weekly</strong>
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="fortnightly-pay" data-value="fortnightly">
+                                <label class="form-check-label" for="fortnightly-pay">
+                                    <strong>fortnightly</strong>
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="monthly-pay" data-value="monthly">
+                                <label class="form-check-label" for="monthly-pay">
+                                    <strong>monthly</strong>
+                                </label>
+                            </div>
+
+
+                        </div>
+
+                  
+                    </div>
+                </form>
+
+                {% include component-examples/clause-box-example.html
+                    title="Payment method clause"
+                    tag="Included"
+                    tag-type="mandatory"
+                    content="<p>We will pay you <span>[frequency]</span> into your nominated bank account.</p>"
+                    id="pay-frequency"
+                %}
+
+            </div>
+
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Wpihen to pay"
+            text="<p>Most awards outline how often you must pay employees – generally it will be weekly or fortnightly, and it must be at least monthly. You must pay money. Do not 'pay in kind', for example, with goods or food.</p><p>You must give your employee a pay slip within 1 working day of paying them with certain information on it. An incorrect or incomplete pay slip could be in breach of the law.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+
+    <!-- BUTTON GROUP -->
+    <div class="ecb-button-group">
+
+        <a class="bga-link me-4 bga-inline-link bkg-light" tabindex="0" href={{ 'prototypes/ecb/hours.html' | relative_url }} role="button">Previous</a>
+
+
+        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{ 'prototypes/ecb/review.html' | relative_url }} role="button">Next</a>
+
+    </div>
+
+
+
+</div>

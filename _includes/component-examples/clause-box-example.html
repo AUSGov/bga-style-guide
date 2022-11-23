@@ -1,16 +1,4 @@
-{% if include.tag-type == "mandatory" %}
-<form>
-    <div class="col-12 mb-5 p-0 form-example clause-box-include">
-        <label for="{{include.id}}" class="form-label mb-3">What is the employee's position title?</label>
-        <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
-        <input type="text" class="form-control clause-box-input mb-0" id="{{include.id}}" value="" required>
-        
-    </div>
-</form>
-{% endif %}
-
-
-<div class="bga-component-wrapper pb-5">
+<div class="bga-component-wrapper">
     <div class="bga-component clause-box {{include.classes}} {{include.id}} m-0">
 
         <div class="p-4 component-content h-100">
@@ -19,7 +7,7 @@
             <form class="mb-4">
                 <div class="col-12 p-0 form-example checkboxes clause-box-include">
                     <input class="checkbox clause-box-input m-0" type="checkbox" value="" id="{{ include.id }}">
-                    <label for="{{ include.id }}" class="form-label mb-3">Include Probation period clause (optional)</label> 
+                    <label for="{{ include.id }}" class="form-label mb-3">{{ include.input-label }}</label> 
                 </div>
             </form>
             {% endif%}
@@ -27,7 +15,7 @@
             <div class="header mb-4">
 
                 <div class="title remove-element-padding me-4">
-                    <div class="icon-wrapper me-3"><img src={{ include.icon }} alt="" /></div>
+                    <div class="icon-wrapper me-3"><img src={{ 'assets/icon-document-blueblack.svg' | relative_url }} alt="" /></div>
 
                     {% if include.title %}
                     <p><strong>{{ include.title }}</strong></p>
@@ -47,7 +35,7 @@
             <div class="component-text remove-element-padding">
 
                 {% if include.content %}
-                {{ include.content }}
+                    {{ include.content }}
                 {% endif %}
 
             </div>
