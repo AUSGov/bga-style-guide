@@ -24,7 +24,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css" integrity="sha512-RZKnkU75qu9jzuyC+OJGffPEsJKQa7oNARCA6/8hYsHk2sd7Sj89tUCWZ+mV4uAaUbuzay7xFZhq7RkKFtP4Dw==" crossorigin="anonymous" />
 
     
-    <!-- Prototype specific CSS -->
+    <!-- Style guide specific CSS -->
     <link rel="stylesheet" href=/bga-style-guide/css/main.css>
     
     <!-- jQuery -->   
@@ -41,6 +41,10 @@
     
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
+
+    <!-- Prototypes JS -->
+    <script src=/bga-style-guide/js/prototypes.js ></script>
+
     
     <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/ecb/position.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
@@ -705,7 +709,7 @@
     <!-- PAGE HEADER -->
     
 
-   
+
     <div id="page-header" class="teal stepped-nav">
         <div class="container">
 
@@ -716,9 +720,9 @@
                     <div class="col-12 remove-element-padding">
 
                         <div class="stepped-navigation-wrapper remove-element-padding ">
-            
+
                             <h1 class="step-title">Position</h1>
-                           
+
                             <div class="stepped-navigation-wrapper remove-element-padding teal">
     
    
@@ -788,7 +792,7 @@
     </div>
     
 </div>
-                        
+
                         </div>
                     </div>
 
@@ -1165,5 +1169,163 @@
     </div>
 
 </body>
+
+
+<!-- MODALS -->
+
+<!-- DOWNLOAD MODAL -->
+<div id="modal-download" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text p-0 remove-element-padding">
+
+            <h4 class="d-flex align-items-center">
+                <div class="icon-wrapper me-2"><img src=/bga-style-guide/assets/icon-tick-white.svg /></div>
+                Download successful
+            </h4>
+
+            <p>Congratulations, you’ve created your employment contract. Check your downloads folder.</p>
+            <p>Follow the steps below to complete your offer.</p>
+
+            <div class="button-example">
+                <button class="bga-btn bga-primary-btn bkg-light success-scroll" tabindex="0" href="" role="button">View next
+                    steps</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- EMAIL MODAL -->
+<div id="modal-email" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text p-0 remove-element-padding">
+
+                <div id="step-email-address" class="step show">
+                    <h4>Email your contract</h4>
+
+                    <p>Enter your email address to receive your employment contract and a letter of offer in a word
+                        document.</p>
+                    <p>You will be asked to verify it’s you with a code sent to your email address.</p>
+
+                    <form id="email-form" class="d-flex mb-4">
+                        <input type="text" class="form-control mb-0 me-3" value="">
+                        <div class="button-example">
+                            <button class="bga-btn bga-primary-btn bkg-light progress-step" tabindex="0" href="" role="button">Email <svg
+                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                    height="15.429" viewBox="0 0 18 15.429">
+                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                                </svg></button>
+                        </div>
+                    </form>
+
+                    <p class="mini">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service
+                        apply</p>
+
+                </div>
+
+                <div id="step-verify-email" class="step">
+                    <h4>Verify your email address</h4>
+
+                    <p>We’ve sent a 4 digit code to your email address. Enter the code below to verify your email address.
+                    </p>
+
+                    <form class="code-inputs d-flex mb-4">
+                        <input type="text" class="form-control mb-0 me-3" id="code1" value="">
+                        <input type="text" class="form-control mb-0 me-3" id="code2" value="">
+                        <input type="text" class="form-control mb-0 me-3" id="code3" value="">
+                        <input type="text" class="form-control mb-0 me-3" id="code4" value="">
+                    </form>
+
+                </div>
+
+
+                <div id="step-email-success" class="step">
+                    <h4 class="d-flex align-items-center">
+                        <div class="icon-wrapper me-2"><img src=/bga-style-guide/assets/icon-tick-white.svg /></div>
+                        Success – we’ve emailed your employment contract
+                    </h4>
+
+                    <p>You will need to add in personal details such as your ABN, names and signatures to finalise your
+                        contract.</p>
+                    <p>Check your inbox and follow the steps on this page to complete your offer.</p>
+
+                    <div class="button-example">
+                        <button class="bga-btn bga-primary-btn bkg-light success-scroll" tabindex="0" href="" role="button">View next
+                            steps</button>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- CLOSE TOOL MODAL -->
+<div id="modal-close-tool" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text p-0 remove-element-padding">
+
+            <h4>Your data will be deleted</h4>
+
+            <p>To protect your privacy, once you end this session the tool will reset and remove your information.</p>
+            <p>If you need to make changes, click cancel to go back into the tool.</p>
+
+            <div class="ecb-button-group">
+                <a class="bga-link me-4 bga-inline-link bkg-light" tabindex="0" href="" role="button">Cancel</a>
+                <div class="button-example">
+                    <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Yes, close this tool</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- CREATE NEW CONTRACT MODAL -->
+<div id="modal-new-contract" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text p-0 remove-element-padding">
+
+            <h4>Your data will be deleted</h4>
+
+            <p>The information you have entered into the tool will be deleted so you can start a new contract.</p>
+            <p>If you need to make changes to your current contract, click cancel to go back into the tool.</p>
+
+            <div class="ecb-button-group">
+                <a class="bga-link me-4 bga-inline-link bkg-light" tabindex="0" href="" role="button">Cancel</a>
+                <div class="button-example">
+                    <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Yes, start a new contract</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal-overlay"></div>
+
 
 </html>
