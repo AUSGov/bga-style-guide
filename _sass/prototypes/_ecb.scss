@@ -1,7 +1,74 @@
 #ecb-prototype {
+    overflow-x: hidden; 
+
     input {
         &.sm-width {
             max-width: 100px;
         }
     }
+
+    //Get contract CTA
+    .call-to-action.teal {
+        background: $bga-teal-highlight-light;
+        border-left-color: $bga-teal-highlight-mid;
+    }
+
+    //Modals
+    .modal-example {
+        max-height: none;
+        height: auto;
+        position: fixed;
+        top: 5rem;
+        z-index: 9000;
+        left: calc(50% - 320px);
+        display: none;
+
+        &.show {
+            display: block;
+        }
+
+        .icon-wrapper {
+            background: $bga-green-success-dark;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+
+            img {
+                width: 18px;
+            }
+        }
+        .code-inputs {
+            input.form-control {
+                width: 56px;
+            }
+        }
+    }
+    #modal-email {
+        .step {
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+    }
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 8500;
+        background-color: $bga-black;
+        opacity: .6;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+    
 }
