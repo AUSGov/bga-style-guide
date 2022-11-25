@@ -11,7 +11,7 @@ $(document).ready(function () {
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
     });
-    $('#ecb-prototype .modal-example .close').on('click', function(){
+    $('#ecb-prototype .modal-example .close, #ecb-prototype .modal-example .cancel').on('click', function(){
         $(this).parents('.modal-example').removeClass('show');
         $('.modal-overlay').removeClass('show');
     });
