@@ -70,6 +70,8 @@ $(document).ready(function () {
     // Sticky stepped nav behaviour
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
         var sticky_position = $('.stepped-navigation-wrapper .stepped-navigation-wrapper').offset();
+        //var sticky_height = $('.stepped-navigation-wrapper .stepped-navigation-wrapper').height();
+        //console.log(sticky_height);
         
         $(window).scroll(function () {
             if ($(window).scrollTop() > sticky_position.top) {

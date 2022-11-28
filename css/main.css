@@ -5937,11 +5937,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .results-edit-answers-component .title-area { background: #CFEBEB; display: flex; align-items: center; justify-content: space-between; }
 
-.results-edit-answers-component .edit-btn { font-size: 1.125rem; color: #2157AA; font-weight: 600; background: none; border: none; border-bottom: 1px solid #2157AA; flex-shrink: 0; }
+.results-edit-answers-component .edit-btn { font-size: 1.125rem; color: #2157AA; font-weight: 600; background: none; border: none; border-bottom: 1px solid #2157AA; flex-shrink: 0; text-decoration: none; cursor: pointer; }
+
+.results-edit-answers-component .edit-btn:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
+
+.results-edit-answers-component .edit-btn:hover { text-decoration: none; }
 
 .results-edit-answers-component .edit-btn svg { height: 18px; width: 18px; }
 
-.results-edit-answers-component.no-btn button { display: none; }
+.results-edit-answers-component.no-btn .edit-btn { display: none; }
 
 .component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; }
 
