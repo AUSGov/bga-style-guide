@@ -135,6 +135,16 @@
         border: none;
         border-bottom: 1px solid $bga-blue-links;
         flex-shrink: 0;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:focus-visible {
+            border: $bga-text-focus-border;
+            border-radius: $bga-focus-radius;
+        }
+        &:hover {
+            text-decoration: none;
+        }
 
         svg {
             height: 18px;
@@ -142,7 +152,7 @@
         }
     }
     &.no-btn {
-        button {
+        .edit-btn {
             display: none;
         }
     }
