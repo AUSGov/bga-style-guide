@@ -70,5 +70,71 @@
             display: block;
         }
     }
+
+    //Stepped nav
+    .stepped-navigation {
+        .step {
+            width: 150px;
+            flex: initial;
+        }
+    }
+
+    //Sticky header 
+    #page-header.fixed {
+        position: fixed;
+        top: 0;
+        z-index: 8500;
+        width: 100%;
+        box-shadow: $bga-btn-boxshadow;
+
+        .step-title {
+            display: none;
+        }
+        .inner-wrapper {
+            padding: 0 !important;
+        }
+        .header-content {
+            padding: 24px 32px 16px !important;
+        }
+
+    }
     
+
+
+// Mixins for media queries and smaller screen examples
+@mixin ecb-stepped-below768 {
+    #page-header.stepped-nav .stepped-navigation-wrapper {
+        
+        .stepped-navigation-wrapper {
+            padding: 0 !important;
+        }
+
+        .stepped-navigation {
+            padding: 16px 0 0 0 !important;
+
+            .step {
+                width: auto;
+            }
+        }
+    }
+    #page-header.fixed {
+        .header-content {
+            padding: 0 !important;
+        }
+    }
 }
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768,
+.component-example.small-screen {
+    @include ecb-stepped-below768();
+}
+
+// Media queries for HTML example pages
+@media (max-width: 768px) {
+    @include ecb-stepped-below768();
+}
+
+
+
+} //End #ecb-prototype

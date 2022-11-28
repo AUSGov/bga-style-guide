@@ -657,26 +657,6 @@
 
 
     <!-- PAGE HEADER -->
-    {% if page.description %}
-    <div id="page-header" class="teal">
-        <div class="container">
-
-            <div class="row inner-wrapper pt-5 mx-0">
-
-                <div class="header-content p-5">
-
-                    <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>{{ page.title }}</h1>
-                        <p class="header-intro">{{ page.description }}</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %}
-
-
     <div id="page-header" class="teal stepped-nav">
         <div class="container">
 
@@ -688,7 +668,12 @@
 
                         <div class="stepped-navigation-wrapper remove-element-padding {{ include.classes }}">
 
-                            <h1 class="step-title">{{ page.stepped-nav-step }}</h1>
+                            <h1 class="step-title" data-step="{{page.step-number}}">{{ page.stepped-nav-step }}</h1>
+
+                            <div class="mobile-stepped-nav remove-element-padding">
+                                <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
+                                <p>Step {{ page.step-number }} of 5: <strong>{{ page.stepped-nav-step }}</strong></p>
+                            </div>
 
                             {% include component-examples/stepped-navigation-example.html
                             step1="Position"
@@ -868,7 +853,7 @@
             <div class="ecb-button-group">
                 <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
                 <div class="button-example">
-                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{ "prototypes/ecb/redirect.html" | relative_url }} role="button">Yes, close this tool</a>
+                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/redirect.html" | relative_url }} role="button">Yes, close this tool</a>
                 </div>
             </div>
 
@@ -895,7 +880,7 @@
             <div class="ecb-button-group">
                 <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
                 <div class="button-example">
-                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Yes, start a new contract</a>
+                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Yes, start a new contract</a>
                 </div>
             </div>
 

@@ -13,7 +13,7 @@
                 background-color: $bga-white;
                 border-color: $bga-blue-black-light;
             }
-            &::after {
+            &::before {
                 border-bottom-color: $bga-blue-black-light;
             }
         }
@@ -36,23 +36,23 @@
         position: relative;
         border: solid 4px transparent;
         padding: 4px 0;
-
+ 
         &:focus-visible {
             border: $bga-component-focus-border;
             border-radius: $bga-focus-radius;
             outline: none;
         }
        
-        &::after {
+        &::before {
             content: "";
             width: 100%;
             position: absolute;
             border-bottom: 4px solid $bga-teal-highlight-mid;
             z-index: 1000;
-            left: 27px;
+            right: calc(100% - 14px);
             top: 19px;
         }
-        &:last-of-type::after {
+        &:first-of-type::before {
             display: none;
         }
         
@@ -80,7 +80,7 @@
         &.completed {
             cursor: pointer;
 
-            &::after {
+            &::before {
                 border-bottom-color: $bga-blue-links;
             }
             
@@ -102,6 +102,9 @@
         
         }
         &.active {
+            &::before {
+                border-bottom: 4px solid $bga-blue-links;
+            }
             .step-number {
                 background: $bga-white;
                 color: $bga-blue-links;
@@ -127,6 +130,7 @@
     }
     .stepped-navigation-wrapper {
         padding: 16px 32px !important;
+
         .step-title {
             display: none;
         }
@@ -149,9 +153,8 @@
             
         }
         &.white {
-            
             .step {
-                &::after {
+                &::before {
                     border-left-color: $bga-blue-black-light;
                     border-bottom: none;
                 }
@@ -189,15 +192,23 @@
                 display: block;
             }
 
-            &::after {
+            &::before {
                 width: 4px;
                 height: 100%;
                 border-left: 3px solid $bga-teal-highlight-mid;
                 border-bottom: none;
                 left: 15px;
-                top: 34px;
+                top: -12px;
+            }
+            &.completed, &.active {
+                &::before {
+                    border-left: 3px solid $bga-blue-links;
+                }
             }
         }
+    }
+    .stepped-nav-toggle {
+        min-height: auto !important;
     }
 }
 
