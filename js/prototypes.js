@@ -70,18 +70,98 @@ $(document).ready(function () {
     // Sticky stepped nav behaviour
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
         var sticky_position = $('.stepped-navigation-wrapper .stepped-navigation-wrapper').offset();
-        //var sticky_height = $('.stepped-navigation-wrapper .stepped-navigation-wrapper').height();
-        //console.log(sticky_height);
         
         $(window).scroll(function () {
             if ($(window).scrollTop() > sticky_position.top) {
                 $('#page-header').addClass('fixed');
+                $('.page-content').addClass('fixed');
             } else {
                 $('#page-header').removeClass('fixed');
+                $('.page-content').removeClass('fixed');
             }
         });
     } 
 
+
+    // Save text input & select answers and re-populate on page load
+    $('#ecb-prototype input[type=text], #ecb-prototype select').on('change', function(){
+        var input_field = $(this).attr('id'),
+        input_value = $(this).val();
+        localStorage.setItem(input_field, input_value);
+    });
+
+    var save_input_answers = function(id){
+        if (localStorage.getItem(id) !== null) {
+            var user_input = localStorage.getItem(id);
+            $('#' + id).val(user_input);
+            
+            if (user_input !== "") {
+                $('.' + id).addClass('added');
+            }
+        }
+    };
+
+    // Save checkbox answers and re-populate on page load
+    $('#ecb-prototype input[type=checkbox]').on('change', function(){
+        var input_field = $(this).attr('id');
+        if ( $(this).is(":checked")) {
+            input_value = $(this).parents('.checkboxes').find('label').text();
+            localStorage.setItem(input_field, input_value);
+        } else {
+            localStorage.setItem(input_field, "");
+        }
+    });
+    var save_checkbox_answers = function(id) {
+        if (localStorage.getItem(id) !== null) {
+            var user_input = localStorage.getItem(id);
+
+            if (user_input !== "") {
+                $('#' + id).prop('checked', true);
+                $('.' + id).addClass('added');
+            }
+        }
+    };
+
+    // Save radio answers and re-populate on page load
+    $('#ecb-prototype input[type=radio]').on('change', function(){
+        var input_field = $(this).parents('.radios').attr('id'),
+        input_value = $(this).attr('id');
+        localStorage.setItem(input_field, input_value);
+        console.log(input_field);
+        
+    });
+    var save_radio_answers = function(radio_group) {
+        if (localStorage.getItem(radio_group) !== null) {
+            var user_input = localStorage.getItem(radio_group);
+            $('#' + user_input).prop('checked', true);
+            $('.' + radio_group).addClass('added');
+        }
+    };
+
+
+    // Apply saved user answer on page load
+    if ( $('.position-page').length ) {
+        save_input_answers('position-title');
+        save_input_answers('business-structure');
+        save_radio_answers('employment-type');
+    }
+
+    if ( $('.hours-page').length ) {
+        save_input_answers('hours-worked');
+        save_checkbox_answers('flexible-hours');
+    }
+
+    if ( $('.pay-page').length ) {
+        save_input_answers('pay-rate');
+        save_radio_answers('pay-rate-units');
+        save_radio_answers('pay-frequency');
+    }
+
+    if ( $('.review-page').length ) {
+        if ( localStorage.getItem('flexible-hours') == "" ) {
+            $('.results-edit-answers-component.flexible-hours').addClass('d-none');
+        }
+    }
 
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="ecb-prototype" lang="en">
 
 <head>
   
@@ -707,7 +707,7 @@
 
 
     <!-- PAGE HEADER -->
-    <div id="page-header" class="teal stepped-nav">
+    <div id="page-header" tabindex="-1" class="teal stepped-nav">
         <div class="container">
 
             <div class="row inner-wrapper pt-5 mx-0">
@@ -787,19 +787,17 @@
 
 
 
-
-
-    <div class="container my-5">
+    <div class="container page-content position-page my-5">
 
 
     <!-- POSITION TITLE -->
-    <div class="row remove-element-padding">
+    <div id="section-position-title"class="row remove-element-padding">
 
-        <h2 id="position-title">Position title</h2>
+        <h2>Position title</h2>
 
         <div class="col-12 col-md-8 col-xl-7">
             <div class="question-section remove-element-padding">
-                <form>
+               
                     <div class="mb-5 p-0 form-example clause-box-include">
                         <label for="position-title" class="form-label mb-3"><strong>What is the employee's position title?</strong></label>
                         <p class="contextual-help mb-3">e.g. Accounts manager, Sales assistant</p>
@@ -807,7 +805,7 @@
                             required>
 
                     </div>
-                </form>
+          
 
                 <div class="bga-component-wrapper">
                     
@@ -898,23 +896,23 @@
 
 
     <!-- BUSINESS STRUCTURE -->
-    <div class="row remove-element-padding">
+    <div id="section-business-structure" class="row remove-element-padding">
 
-        <h2 id="business-structure">Business structure</h2>
+        <h2>Business structure</h2>
 
         <div class="col-12 col-md-8 col-xl-7">
 
             <div class="question-section remove-element-padding">
-                <form>
+               
                     <div class="p-0 form-example clause-box-include">
-                        <label for="position-title" class="form-label mb-3"><strong>What is your business
+                        <label for="business-structure" class="form-label mb-3"><strong>What is your business
                                 structure?</strong></label>
                         <p class="mb-3">
                             We need to know your business structure to determine the signature fields to include in your
                             contract. This information is not shared with any other agency, for more information see our privacy page.
                         </p>
 
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" id="business-structure" aria-label="Default select example">
                             <option class="default-option" value="">Select your business structure</option>
                             <option value="individual sole trader">Individual sole trader</option>
                             <option value="company with sole director">Company with sole director</option>
@@ -926,7 +924,7 @@
                         </select>
 
                     </div>
-                </form>
+            
             </div>
 
 
@@ -972,9 +970,9 @@
 
 
     <!-- EMPLOYMENT TYPE -->
-    <div class="row remove-element-padding">
+    <div id="section-employment-type" class="row remove-element-padding">
 
-        <h2 id="employment-type">Employment type</h2>
+        <h2>Employment type</h2>
 
         <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
 
@@ -985,7 +983,7 @@
 
                 <div class="mb-4 p-0 ">
                     <div class="form-element-wrapper no-flex mb-3">
-                        <div class="clause-box-radios" id="employment-type" role="radiogroup">
+                        <div class="clause-box-radios radios" id="employment-type" role="radiogroup">
                             
                             <div class="radio-button alternate pb-1">
                                 <input class="form-check-input m-0" type="radio" name="employment-type" id="fulltime" data-value="full time">
@@ -1116,7 +1114,6 @@
 
 
 </div>
-
 
 
 
