@@ -30,10 +30,20 @@ $(document).ready(function () {
     $('.success-scroll').on('click', function(){
         $(this).parents('.modal-example').removeClass('show');
         $('.modal-overlay').removeClass('show');
-
+  
         setTimeout(function () {
-            var anchor = $("#next-steps");
-            $('html,body').animate({scrollTop: anchor.offset().top},'fast');
+            
+            var window_width = window.innerWidth,
+            anchor = $("#next-steps"),
+            extra_padding;
+
+            if (window_width <= 768) {
+                extra_padding = 60;
+            } else  {
+                extra_padding = 125;
+            }
+            
+            $('html,body').animate({scrollTop: anchor.offset().top - extra_padding},'fast');
         }, 200);
     });
 
@@ -68,7 +78,15 @@ $(document).ready(function () {
 
     // Sticky stepped nav behaviour
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
-        var sticky_position = $('.stepped-navigation-wrapper .stepped-navigation-wrapper').offset();
+        
+        var window_width = window.innerWidth,
+        sticky_position;
+    
+        if (window_width <= 768) {
+            sticky_position = $('.stepped-navigation-wrapper').offset();
+        } else {
+            sticky_position = $('.stepped-navigation-wrapper .stepped-navigation-wrapper').offset();
+        }
         
         $(window).scroll(function () {
             if ($(window).scrollTop() > sticky_position.top) {
@@ -80,6 +98,7 @@ $(document).ready(function () {
             }
         });
     } 
+
 
     // Save text input & select answers and re-populate on page load
     $('#ecb-prototype input[type=text], #ecb-prototype select').on('change', function(){
@@ -184,7 +203,7 @@ $(document).ready(function () {
     }
 
     if ( $('.review-page').length ) {
-        if ( sessionStorage.getItem('flexible-hours') == "" ) {
+        if ( sessionStorage.getItem('flexible-hours') == "" || sessionStorage.getItem('flexible-hours') == null ) {
             $('.results-edit-answers-component.flexible-hours').addClass('d-none');
         }
 
