@@ -26,6 +26,9 @@ $(document).ready(function () {
         $('#step-verify-email').addClass('show');
     });
 
+    // Verify email code
+    
+
     // Close modal and scroll page on download / email success
     $('.success-scroll').on('click', function(){
         $(this).parents('.modal-example').removeClass('show');
