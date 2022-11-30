@@ -44,7 +44,7 @@ $(document).ready(function () {
         var active_step = 'nav-step-' + $('.step-title').attr('data-step');
 
         $('#' + active_step).addClass('active');
-        localStorage.setItem(active_step, 'visited');
+        sessionStorage.setItem(active_step, 'visited');
 
         var step_titles = ["position.html", "hours.html", "pay.html", "review.html", "finalise.html"]; 
         //host = window.location.host;
@@ -53,7 +53,7 @@ $(document).ready(function () {
         for (var step = 0; step < step_titles.length; step++) {
             var step_number = step + 1,
             step_str = 'nav-step-' + step_number;
-            var state = localStorage.getItem(step_str);
+            var state = sessionStorage.getItem(step_str);
          
             if ( state == "visited" && !$('#' + step_str).hasClass('active') ) {
                 $('#' + step_str).addClass('completed').attr('href', '/bga-style-guide/prototypes/ecb/' + step_titles[step]);
@@ -63,9 +63,8 @@ $(document).ready(function () {
 
     // Reset tool on "Create new contract"
     $('#ecb-prototype .clear-tool').on('click', function(){
-        localStorage.clear();
+        sessionStorage.clear();
     });
-
 
     // Sticky stepped nav behaviour
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
@@ -82,21 +81,20 @@ $(document).ready(function () {
         });
     } 
 
-
     // Save text input & select answers and re-populate on page load
     $('#ecb-prototype input[type=text], #ecb-prototype select').on('change', function(){
         var input_field = $(this).attr('id'),
         input_value = $(this).val();
-        localStorage.setItem(input_field, input_value);
+        sessionStorage.setItem(input_field, input_value);
     });
 
     var save_input_answers = function(id){
-        if (localStorage.getItem(id) !== null) {
-            var user_input = localStorage.getItem(id);
+        if (sessionStorage.getItem(id) !== null) {
+            var user_input = sessionStorage.getItem(id);
             $('#' + id).val(user_input);
             
             if (user_input !== "") {
-                $('.' + id).addClass('added');
+                $('.' + id).addClass('added').find('.component-text span').text(user_input);
             }
         }
     };
@@ -106,14 +104,14 @@ $(document).ready(function () {
         var input_field = $(this).attr('id');
         if ( $(this).is(":checked")) {
             input_value = $(this).parents('.checkboxes').find('label').text();
-            localStorage.setItem(input_field, input_value);
+            sessionStorage.setItem(input_field, input_value);
         } else {
-            localStorage.setItem(input_field, "");
+            sessionStorage.setItem(input_field, "");
         }
     });
     var save_checkbox_answers = function(id) {
-        if (localStorage.getItem(id) !== null) {
-            var user_input = localStorage.getItem(id);
+        if (sessionStorage.getItem(id) !== null) {
+            var user_input = sessionStorage.getItem(id);
 
             if (user_input !== "") {
                 $('#' + id).prop('checked', true);
@@ -125,19 +123,41 @@ $(document).ready(function () {
     // Save radio answers and re-populate on page load
     $('#ecb-prototype input[type=radio]').on('change', function(){
         var input_field = $(this).parents('.radios').attr('id'),
-        input_value = $(this).attr('id');
-        localStorage.setItem(input_field, input_value);
-        console.log(input_field);
-        
+        input_value = $(this).attr('id'),
+        field_text = $(this).attr('data-value');
+        sessionStorage.setItem(input_field, input_value);
+        sessionStorage.setItem(input_field + '-text', field_text); 
     });
     var save_radio_answers = function(radio_group) {
-        if (localStorage.getItem(radio_group) !== null) {
-            var user_input = localStorage.getItem(radio_group);
+        if (sessionStorage.getItem(radio_group) !== null) {
+            var user_input = sessionStorage.getItem(radio_group),
+            field_text = sessionStorage.getItem(radio_group + '-text');
+            
             $('#' + user_input).prop('checked', true);
-            $('.' + radio_group).addClass('added');
+            $('.' + radio_group).addClass('added').find('.component-text span').text(field_text);
         }
     };
-
+    
+    // Change PAY UNITS on radio button selection (pay page)
+    $('#ecb-prototype #pay-rate-units input').on('change', function(){
+        if ($(this).attr('data-value') == 'weekly') {
+            $('.pay-unit').text('per week');
+            $('.pay-rate .pay-units').text('per week');
+        } else {
+            $('.pay-unit').text('per hour');
+            $('.pay-rate .pay-units').text('per hour');
+        }
+    });
+    // Change PAY UNITS on text input change (pay page)
+    $('.clause-box-input#pay-rate').on('change', function(){
+        var pay_units = sessionStorage.getItem('pay-rate-units');
+        
+        if (pay_units == 'hourly' ) {
+            $('.pay-unit, .pay-units').text('per hour');
+        } else {
+            $('.pay-unit, .pay-units').text('per week');
+        }
+    });
 
     // Apply saved user answer on page load
     if ( $('.position-page').length ) {
@@ -155,13 +175,28 @@ $(document).ready(function () {
         save_input_answers('pay-rate');
         save_radio_answers('pay-rate-units');
         save_radio_answers('pay-frequency');
+        
+        var pay_units = sessionStorage.getItem('pay-rate-units');
+        if ( (pay_units !== null) && (pay_units == 'weekly')) {
+            $('.pay-unit').text('per week');
+            $('.pay-rate .pay-units').text('per week');
+        }
     }
 
     if ( $('.review-page').length ) {
-        if ( localStorage.getItem('flexible-hours') == "" ) {
+        if ( sessionStorage.getItem('flexible-hours') == "" ) {
             $('.results-edit-answers-component.flexible-hours').addClass('d-none');
         }
+
+        $('.results-edit-answers-component').each(function(){
+            var field_type = sessionStorage.getItem($(this).attr('data-field'));
+            $(this).find('.answers span').text(field_type);
+        });
+        if (sessionStorage.getItem('pay-rate-units') == 'weekly') {
+            $('.answers .pay-units').text('per week');
+        }
     }
+
 
 
 
