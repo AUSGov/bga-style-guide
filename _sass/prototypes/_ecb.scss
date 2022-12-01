@@ -109,6 +109,27 @@ html.ecb-prototype {
                     left: 12px;
                 }
             }
+            .error-msg {
+                display: none;
+            }
+            &.error {
+                .code-inputs {
+                    box-shadow: 0 0 0 8px $bga-red-fail-mid;
+                    background: $bga-red-fail-mid;
+                }
+                input {
+                    background: $bga-red-fail-light;
+                    border-bottom-color: $bga-red-fail-dark;
+                }
+
+                .error-msg {
+                    display: block;
+                    
+                    p {
+                        color: $bga-red-fail-dark;
+                    }
+                }
+            }
         }
     }
 

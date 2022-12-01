@@ -30,8 +30,13 @@ $(document).ready(function () {
 
     // Show hide content within email modal
     $('#step-email-address .progress-step').on('click', function () {
+        var email_address = $('#step-email-address input').val();
+        
         $('#step-email-address').removeClass('show');
         $('#step-verify-email').addClass('show');
+        if ( email_address.length ) {
+            $('.user-email').text(email_address);
+        }
     });
 
     // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
@@ -63,9 +68,9 @@ $(document).ready(function () {
 
     $('#step-verify-email #verify-btn').on('click', function(){
         var code = inputElements.map(({ value }) => value).join('');
-        console.log(code);
 
         if (code == '1234' ) {
+            $('.number-code').removeClass('error');
             $('#step-verify-email .success-icon').addClass('show');
 
             setTimeout(function () {
@@ -74,7 +79,7 @@ $(document).ready(function () {
             }, 3000);
 
         } else {
-            $('#step-verify-email .error-icon').addClass('show');
+            $('.number-code').addClass('error');
         }
 
 
