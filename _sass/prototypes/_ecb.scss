@@ -50,19 +50,24 @@ html.ecb-prototype {
             }
         }
 
-        .code-inputs {
+        .number-code {
             align-items: center;
 
-            input.form-control {
+            input {
                 width: 56px;
                 border: none;
                 border-bottom: solid 4px $bga-blue-black-dark; 
                 font-size: 1.5rem;
                 font-weight: 600;
-                text-align: center
+                text-align: center;
+                color: $bga-blue-black-dark;
             }
             .success-icon {
                 display: none;
+
+                &.show {
+                    display: block;
+                }
             }
         }
     }
