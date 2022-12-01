@@ -7157,9 +7157,20 @@ html.ecb-prototype { scroll-padding-top: 125px !important; overflow: auto; }
 
 #ecb-prototype .modal-example .number-code input { width: 56px; border: none; border-bottom: solid 4px #2E3E5A; font-size: 1.5rem; font-weight: 600; text-align: center; color: #2E3E5A; }
 
-#ecb-prototype .modal-example .number-code .success-icon { display: none; }
+#ecb-prototype .modal-example .number-code .success-icon { display: none; position: relative; }
 
 #ecb-prototype .modal-example .number-code .success-icon.show { display: block; }
+
+#ecb-prototype .modal-example .number-code .success-icon circle { fill: #299F28; stroke: #299F28; stroke-width: 4px; stroke-dasharray: 126; animation: success-animation 2s linear infinite; animation-timing-function: linear; animation-iteration-count: 1; transform: rotate(-90deg); transform-origin: center; position: absolute; top: 0; left: 0; }
+
+@keyframes success-animation { 0% { stroke-dashoffset: 126;
+    fill: transparent; }
+  50% { stroke-dashoffset: 0;
+    fill: transparent; }
+  100% { stroke-dashoffset: 0;
+    fill: #299F28; } }
+
+#ecb-prototype .modal-example .number-code .success-icon .tick { position: absolute; top: 15px; left: 12px; }
 
 #ecb-prototype #modal-email .step { display: none; }
 
