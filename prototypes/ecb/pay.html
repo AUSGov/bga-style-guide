@@ -1138,7 +1138,7 @@
 
         <div class="component-text p-0 remove-element-padding">
 
-                <div id="step-email-address" class="step show">
+                <div id="step-email-address" class="step remove-element-padding show">
                     <h4>Email your contract</h4>
 
                     <p>Enter your email address to receive your employment contract and a letter of offer in a word
@@ -1164,17 +1164,17 @@
                 <div id="step-verify-email" class="step remove-element-padding">
                     <h4>Verify your email address</h4>
 
-                    <p>We’ve sent a 4 digit code to <strong>user@emailaddress.com.au</strong>.</p>
+                    <p>We’ve sent a 4 digit code to <strong><span class="user-email">user@emailaddress.com.au</span></strong>.</p>
                     <p>Enter the code below to verify your email address.
                     </p>
 
                     <form id="verify-form">
                     <fieldset class='number-code'>
-                        <div class="d-flex">
-                            <input name='code' class='code-input me-2' required/>
-                            <input name='code' class='code-input me-2' required/>
-                            <input name='code' class='code-input me-2' required/>
-                            <input name='code' class='code-input me-2' required/> 
+                        <div class="d-inline-flex code-inputs">
+                            <input name='code' class='code-input py-2 me-2' required/>
+                            <input name='code' class='code-input py-2 me-2' required/>
+                            <input name='code' class='code-input py-2 me-2' required/>
+                            <input name='code' class='code-input py-2' required/> 
                             
                             <!--<div class="success-icon ms-3">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
@@ -1196,7 +1196,7 @@
                             </div>
                         -->
                             
-                        <div class="success-icon ms-3">
+                        <div class="success-icon ms-4">
                        
                         <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
                             <circle cx="22" cy="22" r="20" />
@@ -1210,7 +1210,10 @@
                         </div>
 
 
-                        </div>  
+                        </div> 
+                        <div class="error-msg mt-3 mb-0">
+                            <p>Incorrect code. Please enter the code sent to your email address.</p>
+                        </div> 
                         <p class="mini mt-3 mb-5">Didn’t receive the code? <a href="">Resend code</a></p>
                         </fieldset>
                         
@@ -1227,7 +1230,7 @@
                 </div>
 
 
-                <div id="step-email-success" class="step">
+                <div id="step-email-success" class="step remove-element-padding">
                     <h4 class="d-flex align-items-center">
                         <!--<div class="icon-wrapper me-2"><img src=/bga-style-guide/assets/icon-tick-white.svg /></div>-->
                         Success – we’ve emailed your employment contract
@@ -1238,8 +1241,7 @@
                     <p>Check your inbox and follow the steps on this page to complete your offer.</p>
 
                     <div class="button-example">
-                        <button class="bga-btn bga-primary-btn bkg-light success-scroll" tabindex="0" href="" role="button">View next
-                            steps</button>
+                        <button class="bga-btn bga-primary-btn bkg-light success-scroll" tabindex="0" href="" role="button">View next steps</button>
                     </div>
                 </div>
 
