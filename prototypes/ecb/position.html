@@ -1214,19 +1214,21 @@
 
                 </div>
 
-                <div id="step-verify-email" class="step">
+                <div id="step-verify-email" class="step remove-element-padding">
                     <h4>Verify your email address</h4>
 
-                    <p>We’ve sent a 4 digit code to your email address. Enter the code below to verify your email address.
+                    <p>We’ve sent a 4 digit code to <strong>user@emailaddress.com.au</strong>. Enter the code below to verify your email address.
                     </p>
 
-                    <form class="code-inputs d-flex mb-4">
-                       <!--<input type="text" class="form-control mb-0 me-3" id="veification-code" value="">-->
-                       <input type="text" class="form-control mb-0 me-3" id="code1" value="">
-                        <input type="text" class="form-control mb-0 me-3" id="code2" value="">
-                        <input type="text" class="form-control mb-0 me-3" id="code3" value="">
-                        <input type="text" class="form-control mb-0 me-3" id="code4" value="">
-                        <div class="success-icon">
+                    <form id="verify-form">
+                    <fieldset class='number-code'>
+                        <div class="d-flex">
+                            <input name='code' class='code-input me-2' required/>
+                            <input name='code' class='code-input me-2' required/>
+                            <input name='code' class='code-input me-2' required/>
+                            <input name='code' class='code-input me-2' required/> 
+                            
+                            <!--<div class="success-icon ms-3">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
                             <defs>
                               <clipPath>
@@ -1243,7 +1245,31 @@
                               <path  d="M0,9.266,2.372,6.853l4.184,4.193L17.608,0,20,2.377,6.555,15.822Z" fill="#fff"/>
                             </g>
                           </svg>
-                          </div>
+                            </div>
+                        -->
+                            
+                        <div class="success-icon ms-3">
+                       
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+                            <circle id="Ellipse_22" data-name="Ellipse 22" cx="22" cy="22" r="22" fill="#299f28"/>
+                          </svg>
+                          
+                        </div>
+
+
+                        </div>  
+                        <p class="mini mt-3 mb-5">Didn’t receive the code? <a href="">Resend code</a></p>
+                        </fieldset>
+                        
+                        <div class="button-example">
+                            <button class="bga-btn bga-primary-btn bkg-light progress-step" id="verify-btn" tabindex="0" href="" role="button">Email my contract <svg
+                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                    height="15.429" viewBox="0 0 18 15.429">
+                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                                </svg></button>
+                        </div>
+
                     </form>
 
                 </div>
