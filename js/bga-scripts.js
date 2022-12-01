@@ -137,6 +137,13 @@ $(document).ready(function () {
 
     });
 
+     // Checkboxes & radios selected on 'enter' keypress
+     $('input[type=checkbox], input[type=radio]').on('keypress', function (event) {
+        if (event.which === 13) {
+            $(this).prop('checked', !$(this).prop('checked'));
+        }
+    });
+
 
     // Clear filters on components page
     $('.reset-filters').on('click', function () {
