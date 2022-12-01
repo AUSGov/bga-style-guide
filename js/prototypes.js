@@ -9,6 +9,14 @@ $(document).ready(function () {
         var modal = $(this).attr('data-modal');
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
+
+        if ( modal = 'modal-email') {
+            $('#step-email-address').addClass('show');
+            $('#step-verify-email, #step-email-success, .success-icon').removeClass('show'); 
+            $('#step-verify-email input').each(function(){
+                $(this).val('');
+            });
+        }
     });
     $('#ecb-prototype .modal-example .close, #ecb-prototype .modal-example .cancel').on('click', function () {
         $(this).parents('.modal-example').removeClass('show');
@@ -26,8 +34,7 @@ $(document).ready(function () {
         $('#step-verify-email').addClass('show');
     });
 
-    // Verify email code
-    // THANK YOU: https://codepen.io/RobertAron/pen/gOLLXLo 
+    // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
     var inputElements = [...document.querySelectorAll('input.code-input')]
 
     inputElements.forEach((ele, index) => {
@@ -60,9 +67,17 @@ $(document).ready(function () {
 
         if (code == '1234' ) {
             $('#step-verify-email .success-icon').addClass('show');
+
+            setTimeout(function () {
+                $('#step-verify-email').removeClass('show');
+                $('#step-email-success').addClass('show');
+            }, 3000);
+
         } else {
             $('#step-verify-email .error-icon').addClass('show');
         }
+
+
     });
 
 
