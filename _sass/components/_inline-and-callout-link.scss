@@ -56,13 +56,27 @@
 }
 
 .inline-pathway.callout-link {
-    a {
-        .link-wrapper {
+    background: $bga-blue-background-extralight;
+
+        .content {
+            display: flex;
             flex-wrap: nowrap;
             align-items: center;
 
+            a {
+                display: inline;
+                
+                &:focus-visible {
+                    background: $bga-white;
+                    border: $bga-component-focus-border;
+                    border-radius: $bga-focus-radius;
+                }
+                &:hover {
+                    background: $bga-white;
+                }
+            }
         }
-    }
+
     .icon-wrapper {
         width: 56px;
         height: 56px;
@@ -82,11 +96,13 @@
 // Mixins for smaller screen sizes and media queries
 @mixin inline-callout-below576 (){
     .inline-pathway.callout-link {
-        .link-wrapper {
+        .content {
             flex-wrap: wrap !important;
             align-items: center;   
             justify-content: center;
-
+        }
+        .link-wrapper {
+            width: 100%;
         }
         .icon-wrapper {
             width: 44px;
@@ -96,6 +112,7 @@
         img {
             width: 20px;
         }
+       
     }
 }
 
