@@ -220,9 +220,12 @@ $(document).ready(function () {
 
     // Change PAY UNITS on radio button selection (pay page)
     $('#ecb-prototype #pay-rate-units input').on('change', function () {
+        $('#pay-rate-units label span').text($(this).attr('data-value'));
+        
         if ($(this).attr('data-value') == 'weekly') {
             $('.pay-unit').text('per week');
             $('.pay-rate .pay-units').text('per week');
+            
         } else {
             $('.pay-unit').text('per hour');
             $('.pay-rate .pay-units').text('per hour');
@@ -260,6 +263,7 @@ $(document).ready(function () {
         if ((pay_units !== null) && (pay_units == 'weekly')) {
             $('.pay-unit').text('per week');
             $('.pay-rate .pay-units').text('per week');
+            $('#pay-rate-units label span').text('weekly');
         }
     }
 
