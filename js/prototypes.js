@@ -86,7 +86,6 @@ $(document).ready(function () {
     });
 
 
-
     // Close modal and scroll page on download / email success
     $('.success-scroll').on('click', function () {
         $(this).parents('.modal-example').removeClass('show');

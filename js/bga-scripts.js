@@ -25,7 +25,6 @@ $(document).ready(function () {
     };
 
 
-
     //FILTER ITEMS ON COMPONENTS PAGE
 
     var filter_items = function (filter_states, i) {
@@ -873,31 +872,45 @@ $(document).ready(function () {
     // Set height of sidebars
     function sidebar_fullheight() {
 
-
         $('.sidebar-wrapper.fullheight').each(function () {
             var question_height;
-
+            
             if ($(window).width() > 768) {
                 question_height = Math.round($(this).parents('.row').find('.question-section').height());
             } else {
                 question_height = 230;
             }
-            // Set sidebar height
-            var text_height = question_height - 72;
-            $(this).css('height', question_height + 'px');
 
+            // Set sidebar height
+            if ( $(this).hasClass('extended') ){
+                $(this).css('height', '100%');
+                var text_height = $('.extended').height();
+
+            } else {
+                 var text_height = question_height - 72;
+                $(this).css('height', question_height + 'px');
+            }
+            
             // Set .component_text height
             $(this).find('.component-text').css('height', text_height + 'px');
-
+            
             // Check if text box is in overflow. Set read more link accordingly
             var full_text_height = $(this).find('.component-text').prop('scrollHeight');
-            if (full_text_height > text_height) {
+            if ( $(this).hasClass('extended') ){
                 $(this).find('.component-text').addClass('fixed-height');
                 $(this).find('.more-info-toggle').removeClass('hide');
+                
             } else {
-                $(this).find('.component-text').removeClass('fixed-height');
-                $(this).find('.more-info-toggle').addClass('hide');
-            }
+                if (full_text_height > text_height) {
+                    $(this).find('.component-text').addClass('fixed-height');
+                    $(this).find('.more-info-toggle').removeClass('hide');
+                } else {
+                    $(this).find('.component-text').removeClass('fixed-height');
+                    $(this).find('.more-info-toggle').addClass('hide');
+                }
+            };
+
+
         });
     }
     sidebar_fullheight();
