@@ -1,0 +1,176 @@
+---
+
+layout: content-tagged
+title: Infographics
+description: Guidelines for infographics and graphs
+breadcrumb1: Brand foundations
+url1: /brand-foundations.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Colour sets" link-id-1="#colour-sets"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Accessibility" link-id-3="#accessibility"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="colour-sets">Colour sets</h2>
+
+        {% include section-tabs.html
+
+        tab1="Blue"
+        tab1value="blue"
+
+        tab2="Green"
+        tab2value="green"
+
+        tab3="Teal"
+        tab3value="teal"
+
+        tab4="Purple"
+        tab4value="purple"
+
+        tab5="Extended colour set"
+        tab5value="extended-colour-set"
+
+        %}
+
+
+        <div class="tab-sections-wrapper p-4 mb-5">
+            
+            <div class="tab-section blue selected">
+
+                <div class="component-example border-0 m-0">
+                    {% include infographic-examples.html 
+                     
+                        primary-colour="blue"
+                        secondary-yellow="true"
+                        secondary-bluegrey="true"
+
+                        primary1="#2E6CB9"
+                        primary1-accessible="true"
+
+                        primary2="#6C97CE"
+                        primary2-accessible="true"
+
+                        primary3="#96B7DF"
+
+                        primary4="#C8D9EE"
+
+                        primary5="#E3ECF6"
+
+                        %}
+                </div>
+
+            </div> 
+            
+            
+            <div class="tab-section green">    
+                <div class="component-example border-0 m-0">
+                    Green
+                </div>
+            </div>
+
+
+            <div class="tab-section teal">
+
+                <div class="component-example border-0 m-0">
+                    Teal
+                </div>
+
+            </div>
+
+
+            <div class="tab-section purple">
+
+                <div class="component-example border-0 m-0">
+                    Purple
+                </div>
+
+            </div>
+
+
+            <div class="tab-section extended-colour-set">
+
+                <div class="component-example border-0 m-0">
+                    Extended colour set
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Colour use</h3>
+        <p>Colours in infographics are limited to one colour set. Colours from different sets should not be combined. Each colour set has one primary colour and one secondary colour. The primary colour is the main colour used in the graphic while the secondary colour provides contrast and highlights.</p>
+        <p>The extended colour set is only for use in complex graphs and should be avoided when creating infographics.</p>
+        <h3>Font use and text colour</h3>
+        <p>Infographics and graphs should use Google OpenSans. Primary font weights are:</p>
+        <ul>
+            <li>OpenSans-Semibold</li>
+            <li>OpenSans-Regular</li>
+        </ul>
+        <p>Other weights can be used when particular elements of the design require emphasis but should be used sparingly.</p>
+        <p>The default font colour is black #333333. Accessible colours from the chosen colour set can also be used for large text in infographics.</p>
+        <h3>Visual elements</h3>
+        <p>All visual elements in infographics and graphs are 2-dimensional, not 3-dimensional.</p>
+        <p>Visual elements in infographics belong to two categories:</p>
+        <ul>
+            <li>BGA style illustrations
+                <ul>
+                    <li>The illustration style follows the guidelines outlined in the <a href={{ "brand-foundations/illustrations.html" | relative_url }}> illustration section</a>  (except for colour use rules as outlined above).</li>
+                </ul>
+            </li>
+            <li>Icons
+                <ul>
+                    <li>Where possible use icons from the <a href={{ "brand-foundations/iconography.html" | relative_url }}>BGA icon set.</a></li>
+                    <li>If the BGA icon set does not contain a required icon then any new icons created should match the  icon style.</li>
+                    <li>Google material design provides free icons that match the BGA icon set. To download Google material icons navigate to <a
+                            href="https://fonts.google.com/icons?selected=Material+Icons&icon.style=Filled">https://fonts.google.com/icons?selected=Material+Icons</a> and select the “Filled” theme.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Graphs</h3>
+        <p>Graphs always have data labels and should never rely solely on colour or contrast to convey information.</p>
+        <p>Limit colours in graphs to one colour set. Graphs with complex data may use the extended graph colour set instead.</p>
+
+
+
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="accessibility">Accessibility</h2>
+       
+        <div>
+            <p>When infographics and graphs are used online they need to meet accessibility requirements. This can include:</p>
+            <ul>
+                <li>Using HTML to display numbers and text wherever possible, rather than incorporating them into an image file.</li>
+                <li>Using labels with graphs to convey information rather than relying on colour and contrast.</li>
+                <li>Using ARIA roles recommended in the WAI-ARIA Graphics Module (see <a  href="https://www.w3.org/TR/graphics-aria-1.0/#roles)">https://www.w3.org/TR/graphics-aria-1.0/#roles)</a>
+                </li>
+                <li>Using the &lt;longdesc&gt; HTML attribute to provide a detailed explanation of the infographic content.</li>
+                <li>Including a link to the content explanation in a collapsible section of the page. An example of how to provide a content explanation is below</li>
+            </ul>
+        </div>
+
+
+    </div>
