@@ -1,104 +1,154 @@
 .infographic-example {
     .colours-wrapper {
         width: 100%;
+    }
 
-        .primary-wrapper,
-        .secondary-wrapper {
-            display: flex;
+    .primary-wrapper,
+    .secondary-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .colours-header {
+        width: 100%;
+
+        p {
+            font-size: 0.875rem;
+            margin: 0;
+            padding: 8px 0;
         }
 
-        .extended-wrapper {
-            display: flex;
-            flex-wrap: wrap;
+        &.secondary {
+            margin-top: 8px;
+        }
+    }
+
+
+    .info-colours {
+        flex: 1 0 16%;
+
+        &.primary {
+            border-top: 56px solid $bga-blue-border;
+        }
+        &.secondary {
+            border-top: 24px solid $bga-blue-black-dark;
         }
 
-        .colours-header {
-            width: 100%;
-            flex-wrap: wrap;
-            p {
-                font-size: 0.875rem;
+        &.Blue {
+            &.primary1 {
+                border-top-color: $bga-blue-background-dark;
             }
 
-            &.secondary {
-                margin-top: 8px;
+            &.primary2 {
+                border-top-color: #6C97CE;
+            }
+
+            &.primary3 {
+                border-top-color: $bga-blue-border;
+            }
+
+            &.primary4 {
+                border-top-color: $bga-blue-background-light;
+            }
+
+            &.primary5 {
+                border-top-color: $bga-blue-background-extralight;
             }
         }
+
+        &.Green {
+            &.primary1 {
+                border-top-color: $bga-green-highlight-shadow;
+            }
+
+            &.primary2 {
+                border-top-color: $bga-green-highlight-dark;
+            }
+
+            &.primary3 {
+                border-top-color: $bga-green-highlight-mid;
+            }
+
+            &.primary4 {
+                border-top-color: #BCDEBC;
+            }
+
+            &.primary5 {
+                border-top-color: $bga-green-highlight-light;
+            }
+        }
+
+        &.yellow {
+            &.secondary1 {
+                border-top-color: $bga-yellow-highlight-dark;
+            }
+            &.secondary2 {
+                border-top-color: #FFECB1;
+            }
+        }
+
+        &.bluegrey {
+            &.secondary3 {
+                border-top-color: $bga-blue-black-dark;
+            }
+            &.secondary4 {
+                border-top-color: $bga-blue-black-mid;
+            }
+            &.secondary5 {
+                border-top-color: $bga-blue-black-light;
+            }
+            &.secondary6 {
+                border-top-color: $bga-blue-black-lightest;
+            }
+        }
+
+        p {
+            font-size: 0.875rem;
+            border-bottom: $bga-blue-border solid 1px;
+            margin: 0;
+
+            &.colour {
+                padding: 8px 0 0 0;
+            }
+            &.accessible {
+                background: url(../assets/icon-tick-greencircle.svg) no-repeat;
+                background-size: 24px;
+                background-position-y: center;
+                padding: 8px 0 8px 28px;
+            }
+            &.not-accessible {
+                background: url(../assets/icon-cross-greycircle.svg) no-repeat;
+                background-size: 24px;
+                background-position-y: center;
+                text-indent: -9999px;
+                padding: 8px 0 8px 28px;
+            }   
+        }
+    }
+
+    @media (max-width: 991px) {
 
         .info-colours {
-            //width: 16.6%;
-            border-top: 48px solid $bga-blue-border;
-            flex: 1 0 16%;
-
-            &.blue {
-
-                &.primary1 {
-                    border-top-color: $bga-blue-background-dark;
-                }
-                &.primary2 {
-                    border-top-color: #6C97CE;
-                }
-                &.primary3 {
-                    border-top-color: $bga-blue-border;
-                }
-                &.primary4 {
-                    border-top-color: $bga-blue-background-light;
-                }
-                &.primary5 {
-                    border-top-color: $bga-blue-background-extralight;
-                }
-            }
-
-            
             p {
-                font-size: 0.875rem;
-                margin: 0;
-                padding: 6px 0;
-
                 span {
-                    border-top: solid 1px $bga-blue-border;
-                    display: inline-block;
-                    width: 100%;
-                    padding-left: 24px;
-
-                    &.accessible {
-                        background: url(../assets/icon-tick-greencircle.svg) no-repeat;
-                        background-size: 24px;
-                        background-position-y: center;
-                    }
-
-                    &.not-accessible {
-                        background: url(../assets/icon-cross-greycircle.svg) no-repeat;
-                        background-size: 24px;
-                        background-position-y: centerx;
-                        text-indent: -9999px;
-                    }
+                    background: none !important;
+                    padding-left: 0;
+                    color: $bga-blue-black-dark  !important;
                 }
-            }
-        }
-
-        @media (max-width: 991px) {
-
-            .info-colours {
-                p {
-                    span {
-                        background: none !important;
-                        padding-left: 0;
-                        color: $bga-blue-black-dark !important;
-                    }
-                }
-            }
-        }
-
-        @media (max-width: 767px) {
-            .primary-wrapper {
-                flex-wrap: wrap;
-            }
-
-            .info-colours {
-                width: 33%;
             }
         }
     }
+
+    @media (max-width: 767px) {
+        .primary-wrapper {
+            flex-wrap: wrap;
+        }
+
+        .info-colours {
+            width: 33%;
+        }
+    }
+
 
     .examples-wrapper {
         border: solid 1px $bga-blue-border;
