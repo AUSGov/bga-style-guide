@@ -3640,39 +3640,63 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .infographic-example .colours-wrapper { width: 100%; }
 
-.infographic-example .colours-wrapper .primary-wrapper, .infographic-example .colours-wrapper .secondary-wrapper { display: flex; }
+.infographic-example .primary-wrapper, .infographic-example .secondary-wrapper { display: flex; flex-wrap: wrap; }
 
-.infographic-example .colours-wrapper .extended-wrapper { display: flex; flex-wrap: wrap; }
+.infographic-example .colours-header { width: 100%; }
 
-.infographic-example .colours-wrapper .colours-header { width: 100%; flex-wrap: wrap; }
+.infographic-example .colours-header p { font-size: 0.875rem; margin: 0; padding: 8px 0; }
 
-.infographic-example .colours-wrapper .colours-header p { font-size: 0.875rem; }
+.infographic-example .colours-header.secondary { margin-top: 8px; }
 
-.infographic-example .colours-wrapper .colours-header.secondary { margin-top: 8px; }
+.infographic-example .info-colours { flex: 1 0 16%; }
 
-.infographic-example .colours-wrapper .info-colours { border-top: 48px solid #96B7DF; flex: 1 0 16%; }
+.infographic-example .info-colours.primary { border-top: 56px solid #96B7DF; }
 
-.infographic-example .colours-wrapper .info-colours.blue.primary1 { border-top-color: #2E6CB9; }
+.infographic-example .info-colours.secondary { border-top: 24px solid #2E3E5A; }
 
-.infographic-example .colours-wrapper .info-colours.blue.primary2 { border-top-color: #6C97CE; }
+.infographic-example .info-colours.Blue.primary1 { border-top-color: #2E6CB9; }
 
-.infographic-example .colours-wrapper .info-colours.blue.primary3 { border-top-color: #96B7DF; }
+.infographic-example .info-colours.Blue.primary2 { border-top-color: #6C97CE; }
 
-.infographic-example .colours-wrapper .info-colours.blue.primary4 { border-top-color: #C8D9EE; }
+.infographic-example .info-colours.Blue.primary3 { border-top-color: #96B7DF; }
 
-.infographic-example .colours-wrapper .info-colours.blue.primary5 { border-top-color: #E3ECF6; }
+.infographic-example .info-colours.Blue.primary4 { border-top-color: #C8D9EE; }
 
-.infographic-example .colours-wrapper .info-colours p { font-size: 0.875rem; margin: 0; padding: 6px 0; }
+.infographic-example .info-colours.Blue.primary5 { border-top-color: #E3ECF6; }
 
-.infographic-example .colours-wrapper .info-colours p span { border-top: solid 1px #96B7DF; display: inline-block; width: 100%; padding-left: 24px; }
+.infographic-example .info-colours.Green.primary1 { border-top-color: #629D62; }
 
-.infographic-example .colours-wrapper .info-colours p span.accessible { background: url(../assets/icon-tick-greencircle.svg) no-repeat; background-size: 24px; background-position-y: center; }
+.infographic-example .info-colours.Green.primary2 { border-top-color: #85CB85; }
 
-.infographic-example .colours-wrapper .info-colours p span.not-accessible { background: url(../assets/icon-cross-greycircle.svg) no-repeat; background-size: 24px; background-position-y: centerx; text-indent: -9999px; }
+.infographic-example .info-colours.Green.primary3 { border-top-color: #A0D1A0; }
 
-@media (max-width: 991px) { .infographic-example .colours-wrapper .info-colours p span { background: none !important; padding-left: 0; color: #2E3E5A !important; } }
+.infographic-example .info-colours.Green.primary4 { border-top-color: #BCDEBC; }
 
-@media (max-width: 767px) { .infographic-example .colours-wrapper .primary-wrapper { flex-wrap: wrap; } .infographic-example .colours-wrapper .info-colours { width: 33%; } }
+.infographic-example .info-colours.Green.primary5 { border-top-color: #D4EDD4; }
+
+.infographic-example .info-colours.yellow.secondary1 { border-top-color: #FFD964; }
+
+.infographic-example .info-colours.yellow.secondary2 { border-top-color: #FFECB1; }
+
+.infographic-example .info-colours.bluegrey.secondary3 { border-top-color: #2E3E5A; }
+
+.infographic-example .info-colours.bluegrey.secondary4 { border-top-color: #788295; }
+
+.infographic-example .info-colours.bluegrey.secondary5 { border-top-color: #ABB1BD; }
+
+.infographic-example .info-colours.bluegrey.secondary6 { border-top-color: #E4E6EA; }
+
+.infographic-example .info-colours p { font-size: 0.875rem; border-bottom: #96B7DF solid 1px; margin: 0; }
+
+.infographic-example .info-colours p.colour { padding: 8px 0 0 0; }
+
+.infographic-example .info-colours p.accessible { background: url(../assets/icon-tick-greencircle.svg) no-repeat; background-size: 24px; background-position-y: center; padding: 8px 0 8px 28px; }
+
+.infographic-example .info-colours p.not-accessible { background: url(../assets/icon-cross-greycircle.svg) no-repeat; background-size: 24px; background-position-y: center; text-indent: -9999px; padding: 8px 0 8px 28px; }
+
+@media (max-width: 991px) { .infographic-example .info-colours p span { background: none !important; padding-left: 0; color: #2E3E5A !important; } }
+
+@media (max-width: 767px) { .infographic-example .primary-wrapper { flex-wrap: wrap; } .infographic-example .info-colours { width: 33%; } }
 
 .infographic-example .examples-wrapper { border: solid 1px #96B7DF; }
 
