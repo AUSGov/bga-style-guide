@@ -12,7 +12,7 @@
             <div class="info-colours primary primary1 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary1 }}</strong></p>     
                 {% if include.primary1-accessible %}
-                    <p class="accessible">Accessible</p>
+                    <p class="accessible">Accessible*</p>
                     {% else %}
                     <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -22,7 +22,7 @@
             {% if include.primary2 %}
             <div class="info-colours primary primary2 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary2 }}</strong></p>
-                    {% if include.primary2-accessible %}<p class="accessible">Accessible</p>
+                    {% if include.primary2-accessible %}<p class="accessible">Accessible*</p>
                     {% else %}<p class="not-accessible">Not Accessible</p>
                     {% endif %}
             </div>
@@ -31,7 +31,7 @@
             {% if include.primary3 %}
             <div class="info-colours primary primary3 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary3 }}</strong></p>
-                    {% if include.primary3-accessible %}<p class="accessible">Accessible</p>
+                    {% if include.primary3-accessible %}<p class="accessible">Accessible*</p>
                     {% else %}<p class="not-accessible">Not Accessible</p>
                     {% endif %}
             </div>
@@ -40,7 +40,7 @@
             {% if include.primary4 %}
             <div class="info-colours primary primary4 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary4 }}</strong></p>
-                    {% if include.primary4-accessible %}<p class="accessible">Accessible</p>
+                    {% if include.primary4-accessible %}<p class="accessible">Accessible*</p>
                     {% else %}<p class="not-accessible">Not Accessible</p>
                     {% endif %}
             </div>
@@ -50,7 +50,7 @@
             <div class="info-colours primary primary5 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary5 }}</strong></p>
                     {% if include.primary5-accessible %}
-                        <p class="accessible">Accessible</p>
+                        <p class="accessible">Accessible*</p>
                     {% else %}
                         <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -61,7 +61,7 @@
             <div class="info-colours primary primary6 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary6 }}</strong></p>
                     {% if include.primary6-accessible %}
-                        <p class="accessible">Accessible</p>
+                        <p class="accessible">Accessible*</p>
                     {% else %}
                         <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -72,7 +72,7 @@
             <div class="info-colours primary primary7 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary7 }}</strong></p>
                     {% if include.primary7-accessible %}
-                        <p class="accessible">Accessible</p>
+                        <p class="accessible">Accessible*</p>
                     {% else %}
                         <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -83,7 +83,7 @@
             <div class="info-colours primary primary8 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary8 }}</strong></p>
                     {% if include.primary8-accessible %}
-                        <p class="accessible">Accessible</p>
+                        <p class="accessible">Accessible*</p>
                     {% else %}
                         <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -94,7 +94,7 @@
             <div class="info-colours primary primary9 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary9 }}</strong></p>
                     {% if include.primary9-accessible %}
-                        <p class="accessible">Accessible</p>
+                        <p class="accessible">Accessible*</p>
                     {% else %}
                         <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -105,7 +105,7 @@
             <div class="info-colours primary primary10 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary10 }}</strong></p>
                     {% if include.primary10-accessible %}
-                        <p class="accessible">Accessible</p>
+                        <p class="accessible">Accessible*</p>
                     {% else %}
                         <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -116,7 +116,7 @@
             <div class="info-colours primary primary11 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary11 }}</strong></p>
                     {% if include.primary11-accessible %}
-                        <p class="accessible">Accessible</p>
+                        <p class="accessible">Accessible*</p>
                     {% else %}
                         <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -127,7 +127,7 @@
             <div class="info-colours primary primary12 {{ include.primary-colour }}">
                 <p class="colour"><strong>{{ include.primary12 }}</strong></p>
                     {% if include.primary12-accessible %}
-                        <p class="accessible">Accessible</p>
+                        <p class="accessible">Accessible*</p>
                     {% else %}
                         <p class="not-accessible">Not Accessible</p>
                     {% endif %}
@@ -136,7 +136,7 @@
            
         </div>
 
-        
+
         <div class="colours-header">
             <p class="secondary">Secondary: <strong>Yellow and blue-black</strong></p>
         </div>
@@ -158,12 +158,12 @@
             {% if include.secondary-bluegrey %}
                 <div class="info-colours secondary secondary3 bluegrey">
                     <p class="colour"><strong>#2E3E5A</strong></p>
-                    <p class="accessible">Accessible</p>
+                    <p class="accessible">Accessible*</p>
                 </div>
 
                 <div class="info-colours secondary secondary4 bluegrey">
                     <p class="colour"><strong>#788295</strong></p>
-                    <p class="accessible">Accessible</p>
+                    <p class="accessible">Accessible*</p>
                 </div>
 
                 <div class="info-colours secondary secondary5 bluegrey">
@@ -181,13 +181,19 @@
 
             
         </div>
+
+
+        <p class="mini pt-2"><strong>* Colours listed as accessible are suitable for displaying large text on a white background.</strong></p>
+
     </div>
     
     
     <h3>Examples</h3>    
     <div class="examples-wrapper">
 
-        <div class="flex-row">
+       
+        {% if include.image-graphic %}
+        <div class="flex-row">   
         <div class="infographic width-50">
             <img alt="Example illustration depicting a computer surrounded by digital icons." src={{ include.image-graphic }} />
         </div>
@@ -195,29 +201,46 @@
             <img alt="Example infographic depicting a map and numbered states." src={{ include.image-map }} />
         </div>
         </div>
+        {% endif %}
         
+        {% if include.image-people %}
         <div class="flex-row">
         <div class="infographic width-100 bordered-top">
             <img alt="Example infographic using people icons to depict percentages." src={{ include.image-people }} />
         </div>
         </div>
-        
+        {% endif %}
+
+        {% if include.image-pie %}
         <div class="flex-row">
         <div class="infographic width-38 bordered-top">
             <img alt="Example pie chart." src={{ include.image-pie }} />
         </div> 
             <div class="infographic width-62 bordered-left bordered-top">
             <img alt="Example of a bargraph." src={{ include.image-bargraph }} />
+        </div>  
+  
         </div>
-             
-        </div>
-        
+        {% endif %}
+
+
+        {% if include.image-stackedbar %}
         <div class="flex-row">
         <div class="infographic width-100 bordered-top">
-            <img alt="Example of a stacked bar graph." src={{ include.image-stackedbar}} />
+            <img alt="Example of a stacked bar graph." src={{ include.image-stackedbar }} />
         </div>
         </div>
+        {% endif %}
+
+        {% if include.image-largepie %}
+        <div class="flex-row">
+        <div class="infographic width-100 bordered-top">
+            <img alt="Example of a piechart." src={{ include.image-largepie }} />
+        </div>
+        </div>
+        {% endif %}
         
+        {% if include.image-heat %}
         <div class="flex-row">
         <div class="infographic width-62 bordered-top">
             <img alt="Example heatmap chart." src={{ include.image-heat }} />
@@ -226,7 +249,17 @@
             <img alt="Example infographic using icons and numbers to show percentages." src={{ include.image-social }} />
         </div>  
         </div>
-        
-        
+        {% endif %}
+
+        {% if include.image-line %}
+        <div class="flex-row">
+            <div class="infographic width-100 bordered-top">
+                <img alt="Example of a line graph." src={{ include.image-line }} />
+            </div>
+            </div>
+            {% endif %}
+
         </div>
+
+
     </div>

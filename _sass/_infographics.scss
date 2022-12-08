@@ -7,6 +7,7 @@
     .secondary-wrapper {
         display: flex;
         flex-wrap: wrap;
+        row-gap: 24px;
     }
 
     .colours-header {
@@ -25,7 +26,31 @@
 
 
     .info-colours {
+        
         flex: 1 0 16%;
+
+        p {
+            font-size: 0.875rem;
+            border-bottom: $bga-blue-border solid 1px;
+            margin: 0;
+
+            &.colour {
+                padding: 8px 0 0 0;
+            }
+            &.accessible {
+                background: url(../assets/icon-tick-greencircle.svg) no-repeat;
+                background-size: 24px;
+                background-position-y: center;
+                padding: 8px 0 8px 28px;
+            }
+            &.not-accessible {
+                background: url(../assets/icon-cross-greycircle.svg) no-repeat;
+                background-size: 24px;
+                background-position-y: center;
+                text-indent: -9999px;
+                padding: 8px 0 8px 28px;
+            }   
+        }
 
         &.primary {
             border-top: 56px solid $bga-blue-border;
@@ -78,6 +103,100 @@
             }
         }
 
+        &.Teal {
+            &.primary1 {
+                border-top-color: $bga-teal-highlight-shadow;
+            }
+
+            &.primary2 {
+                border-top-color: $bga-teal-highlight-dark;
+            }
+
+            &.primary3 {
+                border-top-color: $bga-teal-highlight-mid;
+            }
+
+            &.primary4 {
+                border-top-color: #ADDADA;
+            }
+
+            &.primary5 {
+                border-top-color: $bga-teal-highlight-light;
+            }
+        }
+
+        &.Purple {
+            &.primary1 {
+                border-top-color: $bga-purple-highlight-shadow;
+            }
+
+            &.primary2 {
+                border-top-color: $bga-purple-highlight-dark;
+            }
+
+            &.primary3 {
+                border-top-color: $bga-purple-highlight-mid;
+            }
+
+            &.primary4 {
+                border-top-color: #C8C2EB;
+            }
+
+            &.primary5 {
+                border-top-color: $bga-purple-highlight-light;
+            }
+        }
+
+        &.Extended {
+            &.primary1 {
+                border-top-color: $bga-blue-background-dark;
+            }
+
+            &.primary2 {
+                border-top-color: $bga-blue-border;
+            }
+
+            &.primary3 {
+                border-top-color: $bga-teal-highlight-shadow;
+            }
+
+            &.primary4 {
+                border-top-color: $bga-teal-highlight-mid;
+            }
+
+            &.primary5 {
+                border-top-color: $bga-green-highlight-shadow;
+            }
+
+            &.primary6 {
+                border-top-color: $bga-green-highlight-mid;
+            }
+            
+            &.primary7 {
+                border-top-color: $bga-purple-highlight-dark;
+            }
+
+            &.primary8 {
+                border-top-color: $bga-purple-highlight-mid;
+            }
+
+            &.primary9 {
+                border-top-color: $bga-orange-highlight-dark;
+            }
+
+            &.primary10 {
+                border-top-color: $bga-orange-highlight-mid;
+            }
+
+            &.primary11 {
+                border-top-color: $bga-yellow-highlight-dark;
+            }
+
+            &.primary12 {
+                border-top-color: #FFECB1;
+            }
+        }
+
         &.yellow {
             &.secondary1 {
                 border-top-color: $bga-yellow-highlight-dark;
@@ -102,28 +221,7 @@
             }
         }
 
-        p {
-            font-size: 0.875rem;
-            border-bottom: $bga-blue-border solid 1px;
-            margin: 0;
-
-            &.colour {
-                padding: 8px 0 0 0;
-            }
-            &.accessible {
-                background: url(../assets/icon-tick-greencircle.svg) no-repeat;
-                background-size: 24px;
-                background-position-y: center;
-                padding: 8px 0 8px 28px;
-            }
-            &.not-accessible {
-                background: url(../assets/icon-cross-greycircle.svg) no-repeat;
-                background-size: 24px;
-                background-position-y: center;
-                text-indent: -9999px;
-                padding: 8px 0 8px 28px;
-            }   
-        }
+        
     }
 
     @media (max-width: 991px) {
@@ -158,6 +256,8 @@
         }
 
         .infographic {
+            display: flex;
+            
             img {
                 max-width: 100%;
                 width: 100%;
@@ -219,5 +319,13 @@
                 }
             }
         }
+    }
+}
+
+
+// INFOGRAPHIC ACCORDION
+.infographic-accessibility {
+    .border-blue {
+        border: solid 1px $bga-blue-border;
     }
 }
