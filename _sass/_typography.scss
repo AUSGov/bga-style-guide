@@ -38,6 +38,7 @@ ul {
     margin: 0;
     padding: 0 0 8px 48px;
 
+
     li {
         margin-bottom: 16px;
         list-style-type: none;
@@ -79,6 +80,18 @@ ul {
                     padding: 0 16px 0 0;
                 }
 
+            }
+        }
+    }
+
+    &.no-bullets {
+        padding-left: 0;
+
+        li {
+            text-indent: 0;
+            
+            &::before {
+                display: none;
             }
         }
     }

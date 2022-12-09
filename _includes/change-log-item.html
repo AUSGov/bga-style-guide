@@ -1,0 +1,28 @@
+<tr>
+    <td data-title="Change" class="toggle-row remove-element-padding" id={{ include.id }}>{{ include.change }}</td>
+
+    <td data-title="Details" class="remove-element-padding">{{ include.details }}</td>
+
+    <td data-title="Relevant designs" class="remove-element-padding">
+        <ul class="no-bullets">
+            {% if include.link1 %}
+                <li><a href={{ include.link1 }}>{{ include.link1-text }}</a></li>
+            {% endif %}
+            {% if include.link2 %}
+                <li><a href={{ include.link2 }}>{{ include.link2-text }}</a></li>
+            {% endif %}
+            {% if include.link3 %}
+                <li><a href={{ include.link3 }}>{{ include.link4-text }}</a></li>
+            {% endif %}
+            {% if include.link4 %}
+                <li><a href={{ include.link4 }}>{{ include.link4-text }}</a></li>
+            {% endif %}
+            {% if include.link5 %}
+                <li><a href={{ include.link5 }}>{{ include.link5-text }}</a></li>
+            {% endif %}
+        </ul>
+    </td>
+
+    <td data-title="Date" class="remove-element-padding">{{ include.date }}</td>
+
+</tr>
