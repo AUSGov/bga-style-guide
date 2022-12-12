@@ -3784,7 +3784,9 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #home-banner .banner-content p.lead { color: #ffffff; font-size: 24px; font-weight: 400; line-height: 36px; margin: 0; padding: 0; }
 
-#home-banner .banner-image { width: 50%; background: url(../assets/lady_man_open_sign.jpg) no-repeat #C8D9EE; background-size: cover; background-position: center center; }
+#home-banner .banner-image { width: 50%; }
+
+#home-banner .banner-image img { height: 100%; max-width: 100%; min-height: 21rem; object-fit: cover; object-position: 50% top; width: 100%; }
 
 #alert { margin-bottom: 16px; background: #ffffff; }
 
@@ -3828,21 +3830,25 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-768 #menu-highlight .business-info li, .component-example.bp-576 #menu-highlight .business-info li, .component-example.bp-350 #menu-highlight .business-info li, .component-example.bp-below350 #menu-highlight .business-info li { flex: 0 0 31%; font-size: 1rem; line-height: 1.25; }
 
-.component-example.bp-576 #home-banner .banner-container, .component-example.bp-350 #home-banner .banner-container, .component-example.bp-below350 #home-banner .banner-container { background: url(../assets/lady_man_open_sign.jpg) #2E6CB9 no-repeat; background-size: contain; margin: 0 16px; width: calc(100% - 32px); }
+.component-example.bp-576 #home-banner .banner-container, .component-example.bp-350 #home-banner .banner-container, .component-example.bp-below350 #home-banner .banner-container { flex-direction: column-reverse; flex-wrap: wrap; }
 
-.component-example.bp-576 #home-banner .banner-content, .component-example.bp-350 #home-banner .banner-content, .component-example.bp-below350 #home-banner .banner-content { padding: 24px; width: calc(100% + 32px); margin-top: 45%; background: #2E6CB9; margin-left: -16px; margin-right: -16px; }
+.component-example.bp-576 #home-banner .banner-content, .component-example.bp-350 #home-banner .banner-content, .component-example.bp-below350 #home-banner .banner-content { padding: 24px; width: 100%; background: #2E6CB9; margin: 0; }
 
 .component-example.bp-576 #home-banner .banner-content h1, .component-example.bp-576 #home-banner .banner-content .h1, .component-example.bp-350 #home-banner .banner-content h1, .component-example.bp-350 #home-banner .banner-content .h1, .component-example.bp-below350 #home-banner .banner-content h1, .component-example.bp-below350 #home-banner .banner-content .h1 { font-size: 36px; }
 
 .component-example.bp-576 #home-banner .banner-content p.lead, .component-example.bp-350 #home-banner .banner-content p.lead, .component-example.bp-below350 #home-banner .banner-content p.lead { font-size: 18px; }
 
-.component-example.bp-576 #home-banner .banner-image, .component-example.bp-350 #home-banner .banner-image, .component-example.bp-below350 #home-banner .banner-image { display: none; }
+.component-example.bp-576 #home-banner .banner-image, .component-example.bp-350 #home-banner .banner-image, .component-example.bp-below350 #home-banner .banner-image { width: 100%; max-height: 24rem; }
+
+.component-example.bp-576 #home-banner .banner-image img, .component-example.bp-350 #home-banner .banner-image img, .component-example.bp-below350 #home-banner .banner-image img { min-height: auto; }
 
 .component-example.bp-576 #alert a.alert-container h2, .component-example.bp-576 #alert a.alert-container .h2, .component-example.bp-350 #alert a.alert-container h2, .component-example.bp-350 #alert a.alert-container .h2, .component-example.bp-below350 #alert a.alert-container h2, .component-example.bp-below350 #alert a.alert-container .h2 { padding: 16px 68px 16px 24px; }
 
 .component-example.bp-576 #alert a.alert-container p, .component-example.bp-350 #alert a.alert-container p, .component-example.bp-below350 #alert a.alert-container p { padding: 16px 24px 16px 16px; }
 
 .component-example.bp-576 #menu-highlight .business-info li, .component-example.bp-350 #menu-highlight .business-info li, .component-example.bp-below350 #menu-highlight .business-info li { flex: 0 0 48%; font-size: 1rem; line-height: 1.25; }
+
+.component-example.bp-350 #home-banner .banner-image, .component-example.bp-below350 #home-banner .banner-image { max-height: 17rem; }
 
 .component-example.bp-350 #alert, .component-example.bp-below350 #alert { margin: 0; }
 
@@ -3856,17 +3862,19 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-350 #menu-highlight .business-info li, .component-example.bp-below350 #menu-highlight .business-info li { padding: 8px 32px 8px 8px; height: auto; background-size: 14px 13px; font-size: 0.875rem; line-height: 1.285; margin-bottom: 24px; }
 
+.component-example.bp-below350 #home-banner .banner-image { max-height: 11rem; }
+
 .component-example.bp-below350 #menu-highlight .business-info li { flex: 0 0 100%; font-size: 0.875rem; line-height: 1.285; margin-bottom: 24px; }
 
 @media (max-width: 1200px) { #menu-highlight .business-info li { flex: 0 0 31%; } }
 
 @media (max-width: 992px) { #home-banner .banner-content { padding: 32px; } #home-banner .banner-content h1, #home-banner .banner-content .h1 { font-size: 44px; } #home-banner .banner-content p.lead { font-size: 18px; line-height: 28px; } #alert a.alert-container h2, #alert a.alert-container .h2 { white-space: normal; padding: 16px 68px 16px 32px; } #menu-highlight .business-info li { flex: 0 0 31%; font-size: 1rem; line-height: 1.25; } }
 
-@media (max-width: 768px) { #home-banner .banner-container { background: url(../assets/lady_man_open_sign.jpg) #2E6CB9 no-repeat; background-size: contain; margin: 0 16px; width: calc(100% - 32px); } #home-banner .banner-content { padding: 24px; width: calc(100% + 32px); margin-top: 45%; background: #2E6CB9; margin-left: -16px; margin-right: -16px; } #home-banner .banner-content h1, #home-banner .banner-content .h1 { font-size: 36px; } #home-banner .banner-content p.lead { font-size: 18px; } #home-banner .banner-image { display: none; } #alert a.alert-container h2, #alert a.alert-container .h2 { padding: 16px 68px 16px 24px; } #alert a.alert-container p { padding: 16px 24px 16px 16px; } #menu-highlight .business-info li { flex: 0 0 48%; font-size: 1rem; line-height: 1.25; } }
+@media (max-width: 768px) { #home-banner .banner-container { flex-direction: column-reverse; flex-wrap: wrap; } #home-banner .banner-content { padding: 24px; width: 100%; background: #2E6CB9; margin: 0; } #home-banner .banner-content h1, #home-banner .banner-content .h1 { font-size: 36px; } #home-banner .banner-content p.lead { font-size: 18px; } #home-banner .banner-image { width: 100%; max-height: 24rem; } #home-banner .banner-image img { min-height: auto; } #alert a.alert-container h2, #alert a.alert-container .h2 { padding: 16px 68px 16px 24px; } #alert a.alert-container p { padding: 16px 24px 16px 16px; } #menu-highlight .business-info li { flex: 0 0 48%; font-size: 1rem; line-height: 1.25; } }
 
-@media (max-width: 576px) { #alert { margin: 0; } #alert a.alert-container { display: block; padding: 16px 24px 16px 24px; background: #FFD964; } #alert a.alert-container h2, #alert a.alert-container .h2 { background: url(../assets/Chevron-right-blueblack.svg) no-repeat; background-position: right top 4px; display: inline-flex; font-size: 18px; padding: 0 32px 8px 0; border-radius: 0; } #alert a.alert-container p { font-size: 14px; line-height: 20px; padding: 0; } #alert a.alert-container:hover { background: #FFCF3B; } #menu-highlight .business-info li { padding: 8px 32px 8px 8px; height: auto; background-size: 14px 13px; font-size: 0.875rem; line-height: 1.285; margin-bottom: 24px; } }
+@media (max-width: 576px) { #home-banner .banner-image { max-height: 17rem; } #alert { margin: 0; } #alert a.alert-container { display: block; padding: 16px 24px 16px 24px; background: #FFD964; } #alert a.alert-container h2, #alert a.alert-container .h2 { background: url(../assets/Chevron-right-blueblack.svg) no-repeat; background-position: right top 4px; display: inline-flex; font-size: 18px; padding: 0 32px 8px 0; border-radius: 0; } #alert a.alert-container p { font-size: 14px; line-height: 20px; padding: 0; } #alert a.alert-container:hover { background: #FFCF3B; } #menu-highlight .business-info li { padding: 8px 32px 8px 8px; height: auto; background-size: 14px 13px; font-size: 0.875rem; line-height: 1.285; margin-bottom: 24px; } }
 
-@media (max-width: 350px) { #menu-highlight .business-info li { flex: 0 0 100%; font-size: 0.875rem; line-height: 1.285; margin-bottom: 24px; } }
+@media (max-width: 350px) { #home-banner .banner-image { max-height: 11rem; } #menu-highlight .business-info li { flex: 0 0 100%; font-size: 0.875rem; line-height: 1.285; margin-bottom: 24px; } }
 
 .anchor-menu { position: relative; }
 
