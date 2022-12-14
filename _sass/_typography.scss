@@ -163,11 +163,30 @@ p {
 }
 a, button {
     font-weight: 600;
+    color: $bga-blue-links;
+
+    svg {
+        fill: $bga-blue-links;
+    }
 
     &:focus-visible {
        outline: none;
        border: $bga-text-focus-border;
-       border-radius: $bga-focus-radius ;
+       border-radius: $bga-focus-radius;
+       color: $bga-blue-footer;
+       background: $bga-blue-hover;
+
+       svg {
+        fill: $bga-blue-footer;
+    }
+    }
+    &:hover, &:active {
+        color: $bga-blue-footer;
+        background: $bga-blue-hover;
+       
+        svg {
+            fill: $bga-blue-footer;
+        }
     }
 }
 

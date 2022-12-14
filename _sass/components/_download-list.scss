@@ -18,15 +18,29 @@
                 text-decoration: underline;
                 cursor: pointer;
 
+                svg {
+                    fill: $bga-blue-links;
+                }
+
                 &:focus-visible {
                     border: $bga-text-focus-border;
                     border-radius: $bga-focus-radius;
-                    background: $bga-blue-background-light;
+                    background: $bga-blue-hover;
+                    color: $bga-blue-footer;
+
+                    svg {
+                        fill: $bga-blue-footer;
+                    }
+                    
                 }
                 &:hover {
-                    background: $bga-blue-background-light;
-                    color: $bga-blue-links;
+                    background: $bga-blue-hover;
+                    color: $bga-blue-footer;
                     text-decoration: underline;
+
+                    svg {
+                        fill: $bga-blue-footer;
+                    }
                 }
             }
 
