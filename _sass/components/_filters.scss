@@ -43,6 +43,7 @@
             box-shadow: none;
             min-width: 100px;
             padding: 12px 16px;
+            color: $bga-black;  
 
             &:focus-visible {
                 background: $bga-teal-tool-dark;
@@ -63,7 +64,7 @@
             display: flex;
             position: relative;
             justify-content: space-between;
-
+            align-items: center;
 
             label {
                 font-size: 1.125rem;
@@ -93,8 +94,8 @@
     &.checkboxes-secondary {
         .checkbox-item {
             display: flex;
-            margin-top: 16px;
-
+            align-items: center;
+        
             label {
                 font-weight: 400;
             }
@@ -155,7 +156,7 @@
             padding: 2px 12px 2px 34px;
             border: 1px solid $bga-teal-tool-mid;
             border-radius: 50px;
-            margin: 8px 8px 0 0;
+            margin: 0 8px 8px 0;
             text-indent: 0;
             font-size: .8125rem;
 
@@ -175,7 +176,7 @@
         }
 
         .custom-control {
-            margin-top: 16px;
+            margin-top: 8px 0;
         }
 
         .custom-control-input {
@@ -237,13 +238,12 @@
         border-bottom: solid 1px $bga-blue-black-light;
 
         select {
-            margin-top: 16px;
-            height: 35px;
+            margin-top: 8px;
             font-size: .875rem;
-            padding: 0 8px;
+            padding: 8px 32px 8px 8px;
+            background-position: right 8px center;
+            min-height: 35px;
         }
-
-
     }
 
     .name-search {
@@ -314,10 +314,16 @@
     }
 
     .filter-item.open {
+        padding-bottom: 8px !important;
+
         .filter-item-title {
+            padding-bottom: 8px;
             svg {
                 transform: scaleY(-1);
             }
+        }
+        .active-filters {
+            padding-top: 0 !important;
         }
     }
     .mobile-counter {
