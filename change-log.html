@@ -37,13 +37,43 @@ description: A list of updates made to the business.gov.au style guide.
                     </tr>
                 </thead>
                 <tbody>
-                     <!-- INLINE LINK HOVER STATE -->
+                    
+                    <!-- SEARCH FILTER CHECKBOX PADDING -->
+                     {% include change-log-item.html 
+                        id="toggle-row-0"
+                        
+                        change="<p><strong>Update padding on checkboxes in the tile filters.</strong></p>"
+                        
+                        details="<p>Updated the left padding on secondary checkboxes in the tile filters to match the padding on default form checkboxes.</p><p>Secondary checkboxes now have 8px padding to the left.</p>"
+
+                        link1="'components/tile-filters.html' | relative_url "
+                        link1-text="Tile filters"
+
+                        date="<p>15/12/2022</p>"
+                    %}
+
+
+                     <!-- CHECKLIST FEATURE BOX -->
+                     {% include change-log-item.html 
+                        id="toggle-row-0"
+                        
+                        change="<p><strong>Update feature boxes in the lightweight checklist.</strong></p>"
+                        
+                        details="<p>Updated padding in the feature box when it appears in the lightweight checklist.</p><p>Feature box padding (in this context) is 16px left and 24px right, top and bottom. Padding between the icon and the text is 16px."
+
+                        link1="'components/lightweight-checklist-accordion.html' | relative_url "
+                        link1-text="Lightweight checklist accordion"
+
+                        date="<p>15/12/2022</p>"
+                    %}
+                    
+                    <!-- INLINE LINK HOVER STATE -->
                      {% include change-log-item.html 
                         id="toggle-row-0"
                         
                         change="<p><strong>Update in-text link hover & focus states.</strong></p>"
                         
-                        details="<p>Changed the hover and focus state background colour on in-text links to a transparent colour. This is to ensure the same colour can be used in both white and coloured background sections. The new colour is rgba(46, 108, 185, 0.15).</p><p>Changed the font colour in the bover and focus states to #113869.</p>"
+                        details="<p>Changed the hover and focus state background colour on in-text links to a transparent colour. This is to ensure the same colour can be used in both white and coloured background sections. The new colour is rgba(46, 108, 185, 0.15).</p><p>Changed the font colour in the hover and focus states to #113869.</p>"
 
                         link1="'brand-foundations/buttons-and-links.html' | relative_url "
                         link1-text="In-text link"
