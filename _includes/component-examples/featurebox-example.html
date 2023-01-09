@@ -6,8 +6,12 @@
         
         <div class="component-text remove-element-padding">
         
-            {% if include.title %}
-                <h3>{{ include.title }}</h3>
+            {% if include.h2title %}
+                <h2>{{ include.h2title }}</h2>
+            {% endif %}
+
+            {% if include.h3title %}
+                <h3>{{ include.h3title }}</h3>
             {% endif %}
 
             {% if include.content %}
