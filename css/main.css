@@ -5717,7 +5717,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .grant-status-indicator .component-content .status { display: flex; align-items: center; }
 
-.grant-status-indicator .component-content .status .icon-wrapper { background: #ffffff; border-radius: 50px; }
+.grant-status-indicator .component-content .status .icon-wrapper { background: #ffffff; border-radius: 50px; display: inline-flex; align-items: center; }
 
 .grant-status-indicator .component-content .status .icon-wrapper img { height: 24px; width: auto; }
 
@@ -5749,11 +5749,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below768 .grant-status-indicator .component-content .status, .component-example.small-screen .grant-status-indicator .component-content .status { display: block; margin-bottom: 16px !important; }
 
-.component-example.bp-below768 .grant-status-indicator .component-content .status .icon-wrapper, .component-example.small-screen .grant-status-indicator .component-content .status .icon-wrapper { padding: 8px 16px !important; margin: 0 0 16px 0 !important; display: inline-block; }
+.component-example.bp-below768 .grant-status-indicator .component-content .status .icon-wrapper, .component-example.small-screen .grant-status-indicator .component-content .status .icon-wrapper { padding: 8px 16px !important; margin: 0 0 16px 0 !important; }
+
+.component-example.bp-below768 .grant-status-indicator .component-content .status .icon-wrapper img, .component-example.small-screen .grant-status-indicator .component-content .status .icon-wrapper img { height: 20px; width: auto; }
 
 .component-example.bp-below768 .grant-status-indicator .component-content .time-zone label, .component-example.small-screen .grant-status-indicator .component-content .time-zone label { width: 100%; }
 
-@media (max-width: 768px) { .grant-status-indicator .component-content .status { display: block; margin-bottom: 16px !important; } .grant-status-indicator .component-content .status .icon-wrapper { padding: 8px 16px !important; margin: 0 0 16px 0 !important; display: inline-block; } .grant-status-indicator .component-content .time-zone label { width: 100%; } }
+@media (max-width: 768px) { .grant-status-indicator .component-content .status { display: block; margin-bottom: 16px !important; } .grant-status-indicator .component-content .status .icon-wrapper { padding: 8px 16px !important; margin: 0 0 16px 0 !important; } .grant-status-indicator .component-content .status .icon-wrapper img { height: 20px; width: auto; } .grant-status-indicator .component-content .time-zone label { width: 100%; } }
 
 .download-list .title { font-size: 1.125rem; line-height: 1.5; }
 
@@ -6289,11 +6291,11 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .tooltip-example-container { position: relative; display: inline-flex; justify-content: center; }
 
-button.chat { height: 56px; width: auto; padding: 0 67px 0 32px; display: inline-flex; align-items: center; z-index: 9000; border-radius: 60px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 24px; bottom: 24px; }
+button.chat { height: 56px; width: auto; padding: 0 67px 0 32px; display: inline-flex; align-items: center; z-index: 9000; border-radius: 60px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 24px; bottom: 24px; color: #333333; }
 
 button.chat.example { position: absolute; }
 
-button.chat span { font-size: 16px; line-height: 26px; }
+button.chat span { font-size: 16px; line-height: 24px; }
 
 button.chat.open { background: url(../assets/icon-chat-open.svg) #ACFF98 no-repeat; background-position: right 32px center; border: solid #348621 3px; }
 
