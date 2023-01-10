@@ -13,272 +13,365 @@ subsite-tag: true
 
 
 <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
+        classes="in-page"
 
-            link-1="Design" link-id-1="#design"
-            link-2="Layouts" link-id-2="#layouts" 
-            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
         %}
-        
+
     </div>
-    
+
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
-   
-          
-        <!-- DESIGN -->   
+
+
+        <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-       {% include breakpoints.html
-            element-string="hero-pathway"
-            lg-visibility="true"
-            final-visibility="true"
-            breakpoint-final="992"
+        {% include section-tabs.html 
+            
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+
+            tab2="No branding"
+            tab2value="non-branded"
+
         %}
 
-        <!-- Component example -->
+        <div class="tab-sections-wrapper p-4">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+            <!-- BGA branding -->
+            <div class="tab-section bga-branded selected">
 
-
-            <h3>Large hero pathway with internal link</h3>
-            
-            <div class="hero-example-wrapper">
-                {% include component-examples/hero-pathway-example.html 
-                    image="'../assets/illustrations/person-shop.svg' | relative_url " 
-                    classes="border-purple"
-                    title="Hero pathway heading Lorem ipsum dolor sit amet"
-                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                element-string="hero-pathway-bga"
+                lg-visibility="true"
+                final-visibility="true"
+                breakpoint-final="992"
                 %}
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+
+                        <h3>Large hero pathway with internal link</h3>
+
+                        <div class="hero-example-wrapper">
+                            {% include component-examples/hero-pathway-example.html
+                            image="'../assets/illustrations/person-shop.svg' | relative_url "
+                            classes="border-purple"
+                            title="Hero pathway heading Lorem ipsum dolor sit amet"
+                            description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
+                            quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                            %}
+                        </div>
+
+
+                        <h3>Large hero pathway with external link</h3>
+
+                        <div class="hero-example-wrapper">
+                            {% include component-examples/hero-pathway-example.html
+                            image="'../assets/illustrations/computer-success.svg' | relative_url "
+                            classes="border-blue external"
+                            external-link="Australian Taxation Office"
+                            title="Hero pathway heading"
+                            description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. "
+                            %}
+                        </div>
+
+
+                        <h3>Small hero pathways</h3>
+
+                        <div class="small-hero-wrapper hero-example-wrapper">
+                            {% include component-examples/hero-pathway-example.html
+                            classes="border-green small-hero"
+                            title="Hero pathway heading Lorem ipsum dolor sit amet"
+                            description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
+                            quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                            %}
+
+                            {% include component-examples/hero-pathway-example.html
+                            classes="border-yellow small-hero external"
+                            external-link="IP Australia"
+                            title="Lorem ipsum dolor sit amet"
+                            description="Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                            %}
+
+                        </div>
+
+
+                    </div>
                 </div>
 
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <h3>Colour variations</h3>
 
-            <h3>Large hero pathway with external link</h3>
-                
-                <div class="hero-example-wrapper">
-                {% include component-examples/hero-pathway-example.html 
-                    image="'../assets/illustrations/computer-success.svg' | relative_url " 
-                    classes="border-blue external"
-                    external-link="Australian Taxation Office"
-                    title="Hero pathway heading"
-                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. "
-                %}
+                        <div class="colour-options-wrapper">
+                            {% include component-examples/hero-colours.html
+                            hero-classes="border-blue"
+                            external-link="Blue"
+                            %}
+
+                            {% include component-examples/hero-colours.html
+                            hero-classes="border-teal"
+                            external-link="Teal"
+                            %}
+
+                            {% include component-examples/hero-colours.html
+                            hero-classes="border-green"
+                            external-link="Green"
+                            %}
+
+                            {% include component-examples/hero-colours.html
+                            hero-classes="border-yellow"
+                            external-link="Yellow"
+                            %}
+
+                            {% include component-examples/hero-colours.html
+                            hero-classes="border-orange"
+                            external-link="Orange"
+                            %}
+
+                            {% include component-examples/hero-colours.html
+                            hero-classes="border-purple"
+                            external-link="Purple"
+                            %}
+                        </div>
+
+                    </div>
                 </div>
+            </div>
 
+            <!-- Non branded -->
+            <div class="tab-section non-branded ">
 
-            <h3>Small hero pathways</h3>
-
-            <div class="small-hero-wrapper hero-example-wrapper">
-                {% include component-examples/hero-pathway-example.html 
-                    classes="border-green small-hero"
-                    title="Hero pathway heading Lorem ipsum dolor sit amet"
-                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
-                %}  
-
-                {% include component-examples/hero-pathway-example.html 
-                    classes="border-yellow small-hero external"
-                    external-link="IP Australia"
-                    title="Lorem ipsum dolor sit amet"
-                    description="Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                element-string="hero-pathway"
+                lg-visibility="true"
+                final-visibility="true"
+                breakpoint-final="992"
                 %}
-                
-            </div>
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        <p>Apply your brand specific <strong>colours,  borders and images</strong> to the base heroe pathway shown below.</p><p><strong>Font use and component padding / spacing</strong> should remain the same as in the base hero pathway.</p>
 
 
+                        <h3>Large hero pathway</h3>
+
+                        <div class="hero-example-wrapper">
+                            {% include component-examples/hero-pathway-example.html
+                            image="'../assets/img-placeholder-1.svg' | relative_url "
+                            classes="non-branded"
+                            title="Hero pathway heading Lorem ipsum dolor sit amet"
+                            description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                            %}
+                        </div>
+
+
+                        <h3>Small hero pathways</h3>
+
+                        <div class="small-hero-wrapper hero-example-wrapper">
+                            {% include component-examples/hero-pathway-example.html
+                            classes="non-branded small-hero"
+                            title="Hero pathway heading Lorem ipsum dolor sit amet"
+                            description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
+                            quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                            %}
+
+                            {% include component-examples/hero-pathway-example.html
+                            classes="non-branded small-hero"
+                            external-link="IP Australia"
+                            title="Lorem ipsum dolor sit amet"
+                            description="Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                            %}
+
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
+
         </div>
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-                <h3>Colour variations</h3>
-
-                <div class="colour-options-wrapper">
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-blue"
-                        external-link="Blue"
-                    %} 
-
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-teal"
-                        external-link="Teal"
-                    %} 
-
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-green"
-                        external-link="Green"
-                    %} 
-
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-yellow"
-                        external-link="Yellow"
-                    %} 
-
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-orange"
-                        external-link="Orange"
-                    %} 
-
-                    {% include component-examples/hero-colours.html 
-                        hero-classes="border-purple"
-                        external-link="Purple"
-                    %} 
-            </div>
-
-            </div>
-        </div>
 
 
         <!-- Design specifications link -->
 
-        {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/4f2f85d9-aeda-476f-a5cf-6af7e81f4383/'"
-            btn-text="View design specifications"
-            %}
-
-
-        <!-- LAYOUTS -->   
-        <h2 class="section-start" id="layouts">Layouts</h2>
-        
-        <p>Hero pathways can be used in all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >page layouts</a> except the two column - left filters layout.</p>
-        
-        {% include layouts-dropdown.html 
-            single-col-fullwidth-visibility="true" 
-            single-col-twothirds-visibility="true" 
-            two-col-leftmenu-visibility="true" 
-            two-col-rightsidebar-visibility="true" 
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/4f2f85d9-aeda-476f-a5cf-6af7e81f4383/'"
+        btn-text="View design specifications"
         %}
-        
-        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="onecol-fw"
-            
-                min1200-visibility="false"
-                min992-visibility="true"
-                min768-visibility="false"
-                min576-visibility="true"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 576px"
-            
-                min992-img="'../assets/layout-images/hero-1colfullwidth-min992.png' | relative_url "
-                min576-img="'../assets/layout-images/hero-1colfullwidth-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/hero-1colfullwidth-finalbp.png' | relative_url "
-            
-            
-                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>Large hero pathway tiles span 8 grid-columns. Small hero pathway tiles span 4 grid-columns</p>"
-            
-                min576-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning 6 grid-columns each.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning 12 grid-columns each.</p>"
-            
-                example-link="'../html-examples/single-col-full-width.html#hero-layout-example' | relative_url'"
-                example-link-text="View layout example"
-                
-            %}
-            
-            
-        </div>
-        
-        
-        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="onecol-twothirdsw"    
-            
-                min1200-visibility="true"
-                min992-visibility="true"
-                min768-visibility="true"
-                min576-visibility="false"
-                finalbp-visibility="false"
-                
-                finalbp="Breakpoint &lt; 768px"
-            
-                min1200-img="'../assets/layout-images/hero-1col2thirdswidth-min1200.png' | relative_url "
-                min992-img="'../assets/layout-images/hero-1col2thirdswidth-min992.png' | relative_url "
-                min768-img="'../assets/layout-images/hero-1col2thirdswidth-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/hero-1col2thirdswidth-finalbp.png' | relative_url "
-                
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"    
-            
-                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
-            
-                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
-            
-                example-link="'../html-examples/single-col-two-thirds-width.html#hero-layout-example' | relative_url'"
-                example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="twocol-leftmenu"
-                
-                min1200-visibility="true"
-                min992-visibility="false"
-                min768-visibility="false"
-                min576-visibility="true"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 576px"
-            
-                min1200-img="'../assets/layout-images/hero-2col-leftmenu-min1200.png' | relative_url "
-                min576-img="'../assets/layout-images/hero-2col-leftmenu-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/hero-2col-leftmenu-finalbp.png' | relative_url "
-            
-    
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
-                
-                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
-            
-                example-link="'../html-examples/two-col-left-side-menu.html#hero-layout-example' | relative_url'"
-                example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="twocol-rightbar"
-            
-                min1200-visibility="false"
-                min992-visibility="false"
-                min768-visibility="true"
-                min576-visibility="false"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 768px"
-            
 
-                min768-img="'../assets/layout-images/hero-2col-rightsidebar-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/hero-2col-rightsidebar-finalbp.png' | relative_url "
-            
-        
-                min768-rules="<p>The content area is 8 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this layout should have an illustration included.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>All hero tiles are equal width spanning the full width of the content area.</p>"
-            
-                example-link="'../html-examples/two-col-right-sidebar.html#hero-layout-example' | relative_url'"
-                example-link-text="View layout example"
-                
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Hero pathways can be used in all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url
+                }}>page layouts</a> except the two column - left filters layout.</p>
+
+        {% include layouts-dropdown.html
+        single-col-fullwidth-visibility="true"
+        single-col-twothirds-visibility="true"
+        two-col-leftmenu-visibility="true"
+        two-col-rightsidebar-visibility="true"
+        %}
+
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-fw"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min992-img="'../assets/layout-images/hero-1colfullwidth-min992.png' | relative_url "
+            min576-img="'../assets/layout-images/hero-1colfullwidth-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/hero-1colfullwidth-finalbp.png' | relative_url "
+
+
+            min992-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Large hero pathway tiles span 8 grid-columns. Small hero pathway tiles span 4 grid-columns</p>"
+
+            min576-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning 6 grid-columns each.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning 12 grid-columns each.</p>"
+
+            example-link="'../html-examples/single-col-full-width.html#hero-layout-example' | relative_url'"
+            example-link-text="View layout example"
+
             %}
-            
+
+
+        </div>
+
+
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="false"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/hero-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/hero-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/hero-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/hero-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this
+                layout should have an illustration included.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this
+                layout should have an illustration included.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this
+                layout should have an illustration included.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#hero-layout-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/hero-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/hero-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/hero-2col-leftmenu-finalbp.png' | relative_url "
+
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this
+                layout should have an illustration included.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this
+                layout should have an illustration included.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#hero-layout-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+
+            min768-img="'../assets/layout-images/hero-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/hero-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area. All hero tiles used in this
+                layout should have an illustration included.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>All hero tiles are equal width spanning the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar.html#hero-layout-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
         </div>
 
 
@@ -292,9 +385,9 @@ classes="in-page"
         <ul>
             <li>Used to promote or cross reference other high-value content or services on the website. </li>
             <li>Commonly used on the home and index pages to link to a list of other pages. </li>
-            <li>They may also be used on content pages, but the link <strong>must</strong> be for a high priority task.</a> </li>
+            <li>They may also be used on content pages, but the link <strong>must</strong> be for a high priority
+                task.</a> </li>
         </ul>
 
-            
-        </div>
-        
+
+    </div>

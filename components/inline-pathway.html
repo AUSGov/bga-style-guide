@@ -32,6 +32,22 @@ classes="in-page"
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
+        {% include section-tabs.html 
+            
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+
+            tab2="No branding"
+            tab2value="non-branded"
+
+        %}
+
+
+        <div class="tab-sections-wrapper p-4">
+
+
+        <div class="tab-section bga-branded selected">
+
         <!-- Breakpoint radio buttons -->
         {% include breakpoints.html 
             singlebp="true"
@@ -86,8 +102,47 @@ classes="in-page"
             </div>
         </div>
 
+        </div>
 
+        <div class="tab-section non-branded">
+
+            <!-- Breakpoint radio buttons -->
+            {% include breakpoints.html 
+                singlebp="true"
+            %}
+    
+            <!-- Component example -->
+    
+            <div class="component-example narrow m-0">
+                <div class="component-wrapper remove-element-padding p-4">
+                   
+                <p>Apply your brand specific <strong>colours,  borders and icons</strong> to the base inline pathway shown below.</p><p><strong>Font use and component padding / spacing</strong> should remain the same as in the base inline pathway.</p>
+
+                {% include component-examples/inline-pathway-example.html
+                    link1="Find out what you need to do when deregistering a company lorem ipsum dolor sit amet, consectetur"
+                    page1="Internal page name"
+                    icon1="'../assets/icon-arrow-right-blue.svg' | relative_url "
+                    
+                    link2="Find out lorem ipsum dolor sit amet, consectetur"
+                    page2="Internal page name"
+                    icon2="'../assets/icon-arrow-right-blue.svg' | relative_url "
+                    
+                    link3="Read more about this on external site"
+                    page3="External site name"
+                    icon3="'../assets/icon-arrow-right-blue.svg' | relative_url "  
+
+                    classes="non-branded"
+                %}
+                    
+     
+                </div>
+                
+            </div>
+    
+        </div>
         
+
+        </div>
 
 
         <!-- Design specifications link -->

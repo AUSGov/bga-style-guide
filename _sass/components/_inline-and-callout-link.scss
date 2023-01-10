@@ -52,6 +52,34 @@
                 background: $bga-white;
             }
         }
+    }
+    &.non-branded {
+            a {
+                background:$nb-grey-light;
+                color: $nb-blue-links;  
+        
+                .link-wrapper {
+                    border-left: none;
+                }
+                
+                &:focus-visible {
+                    color: $nb-blue-links;
+                    border: $nb-blue-links solid 2px;
+                    border-radius: $bga-focus-radius;
+                    background: $nb-grey-mid;
+                }
+                &:hover {
+                    background: $nb-grey-mid;
+                    color: $nb-blue-links;
+                }
+            }
+            .page {
+                color: $bga-black;
+                
+                img {
+                    display: none;
+                }
+            }
     } 
 }
 
@@ -118,38 +146,7 @@
     }
 }
 
-// NO BRANDING VERSION
-.non-branded {
-    .inline-pathway {
-    
-        a {
-            background: #E8E8E8;
-            color: mediumblue;  
-    
-            .link-wrapper {
-                border-left: none;
-            }
-            
-            &:focus-visible {
-                color: mediumblue;
-                border: mediumblue solid 3px;
-                border-radius: $bga-focus-radius;
-                background: #D8D8D8;
-            }
-            &:hover {
-                background: #D8D8D8;
-                color: mediumblue;
-            }
-        }
-        .page {
-            color: $bga-black;
-            
-            img {
-                display: none;
-            }
-        }
-    }
-}
+
 
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
