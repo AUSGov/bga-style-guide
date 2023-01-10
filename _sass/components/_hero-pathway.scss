@@ -150,7 +150,7 @@
 
 // Mixins for smaller screen sizes and media queries
 @mixin hero-below992 (){
-    .hero-pathway {
+    .bga-component.hero-pathway {
         .component-content {
             border-left-width: 8px !important;
             width: 100%;
@@ -176,6 +176,7 @@
     }
 }
 
+
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-below992 {
     @include hero-below992();
@@ -191,9 +192,12 @@
         height: auto !important;
         padding-bottom: 0 !important;
     }
-    .hero-pathway {
+    .bga-component.hero-pathway {
         .component-content {
             align-content: flex-start;
+        }
+        .icon-wrapper {
+            margin-top: 32px !important;
         }
     }
 }
