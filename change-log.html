@@ -14,7 +14,8 @@ description: A list of updates made to the business.gov.au style guide.
         {% include component-examples/anchor-menu-example.html
         classes="in-page"
 
-        link-1="Recent changes" link-id-1="#recent-changes"
+        link-1="January 2023" link-id-1="#january-2023"
+        link-2="December 2022" link-id-2="#december-2022"
         %}
 
     </div>
@@ -23,7 +24,7 @@ description: A list of updates made to the business.gov.au style guide.
 
 
         <!-- RECENT CHANGES -->
-        <h2 class="section-start" id="recent-changes">Recent changes</h2>
+        <h2 class="section-start" id="january-2023">January 2023</h2>
 
         <div tabindex="0" class="bga-component table narrow m-0">
             <table class="table responsive">
@@ -38,98 +39,166 @@ description: A list of updates made to the business.gov.au style guide.
                 </thead>
                 <tbody>
                     
-                    <!-- SEARCH FILTER CHECKBOX PADDING -->
+                    <!-- BUTTON GROUPS -->
                      {% include change-log-item.html 
-                        id="toggle-row-0"
+                        id="toggle-row-7"
                         
-                        change="<p><strong>Update padding on checkboxes in the tile filters.</strong></p>"
+                        change="<p><strong>Create rules for button group spacing</strong></p>"
                         
-                        details="<p>Updated the left padding on secondary checkboxes in the tile filters to match the padding on default form checkboxes.</p><p>Secondary checkboxes now have 8px padding to the left.</p>"
+                        details="<p>Created rules for spacing between buttons and links when grouped together.</p><p>Groups of buttons and links have a row-gap of 24px and a column-gap of 24px.</p><p>Below screen widths of 576px the font-size of links and buttons in button groups is 14px with a line-height of 28px.</p><p>Below screen widths of 350px buttons and links are 100% wide.</p>"
 
-                        link1="'components/tile-filters.html' | relative_url "
-                        link1-text="Tile filters"
+                        link1="https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/0e05f78f-6e0e-452d-bc78-6997188bffbe/specs/"
+                        link1-text="Buttons and links"
 
-                        date="<p>15/12/2022</p>"
+                        link2="'components/guided-search.html' | relative_url "
+                        link2-text="Guided search"
+
+                        link3="'components/subscribe.html' | relative_url "
+                        link3-text="Subscribe component"
+
+                        link4="https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/b485a8c6-302a-46d4-bc7b-afac3748b96b/"
+                        link4-text="Modal dialog"
+
+                        link5="'components/bga-site-footer.html' | relative_url "
+                        link5-text="Business.gov.au site footer"
+
+                        link6="'components/inpage-feedback.html' | relative_url "
+                        link6-text="In page feedback form"
+
+                        date="<p>10/01/2023</p>"
                     %}
 
 
-                     <!-- CHECKLIST FEATURE BOX -->
-                     {% include change-log-item.html 
-                        id="toggle-row-0"
-                        
-                        change="<p><strong>Update feature boxes in the lightweight checklist.</strong></p>"
-                        
-                        details="<p>Updated padding in the feature box when it appears in the lightweight checklist.</p><p>Feature box padding (in this context) is 16px left and 24px right, top and bottom. Padding between the icon and the text is 16px."
-
-                        link1="'components/lightweight-checklist-accordion.html' | relative_url "
-                        link1-text="Lightweight checklist accordion"
-
-                        date="<p>15/12/2022</p>"
-                    %}
-                    
-                    <!-- INLINE LINK HOVER STATE -->
-                     {% include change-log-item.html 
-                        id="toggle-row-0"
-                        
-                        change="<p><strong>Update in-text link hover & focus states.</strong></p>"
-                        
-                        details="<p>Changed the hover and focus state background colour on in-text links to a transparent colour. This is to ensure the same colour can be used in both white and coloured background sections. The new colour is rgba(46, 108, 185, 0.15).</p><p>Changed the font colour in the hover and focus states to #113869.</p>"
-
-                        link1="'brand-foundations/buttons-and-links.html' | relative_url "
-                        link1-text="In-text link"
-
-                        date="<p>14/12/2022</p>"
-                    %}
-    
-                    
-                    <!-- STICKY HEADER PADDING -->
+                    <!-- PAGINATION FOCUS STATE -->
                     {% include change-log-item.html 
-                        id="toggle-row-0"
+                        id="toggle-row-6"
                         
-                        change="<p><strong>Update sticky header padding.</strong></p>"
+                        change="<p><strong>Update focus state on pagination links</strong></p>"
                         
-                        details="<p>Changed the top and bottom padding on the finder tool 'sticky' headers to avoid the header flickering when the user scrolls past the sticking point.</p><p>The sticky header now has 32px top and bottom on large screens. On small screens the padding is 16px above and 24px below.</p>"
+                        details="<p>Changed the background colour and border on the pagination link focus state. Pagination links focus state is now a white background with 2px blue border (#2E6CB9).</p>"
 
-                        link1="https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/8dab8a90-c2cb-4fd6-b3bb-ebef8b95186e/"
-                        link1-text="Showing number sticky header"
-
-                        date="<p>13/12/2022</p>"
+                        link1="'components/pagination.html' | relative_url "
+                        link1-text="Pagination"
+                        
+                        date="<p>09/01/2023</p>"
                     %}
 
-
-                     <!-- HOME BANNER IMAGE SIZE -->
-                    {% include change-log-item.html 
-                        id="toggle-row-0"
-                        
-                        change="<p><strong>Update home banner image size on smaller screen sizes.</strong></p>"
-                        
-                        details="<p>Added additional breakpoints for image height in the home banner.</p><p>The new image heights are:</p><ul><li>Between 768px and 576px - max height 384px</li><li>Between 576px and 350px - max height 272px</li><li>Below 350px - max height 176px</li></ul>"
-
-                        link1="'components/home-banner.html' | relative_url "
-                        link1-text="Home page banner"
-
-                        date="<p>9/12/2022</p>"
-                    %}
-                    
-                    
-                    <!-- SOCIAL MEDIA ICONS IN FOOTER -->
-                    {% include change-log-item.html 
-                        id="toggle-row-0"
-                        
-                        change="<p><strong>Update social media icon size in site footer.</strong></p>"
-                        
-                        details="<p>Removed an inconsistency in the design specifications where the social media icons were displaying at 2 different sizes.</p><p>The revised icon size is 48px wide x 48px high (including the 2px border).</p>"
-
-                        link1="'components/bga-site-footer.html' | relative_url "
-                        link1-text="business.gov.au site footer"
-
-                        date="<p>7/12/2022</p>"
-                    %}
 
                 </tbody>
             </table>
     
         </div>
+
+
+
+         <!-- RECENT CHANGES -->
+         <h2 class="section-start" id="december-2022">December 2022</h2>
+
+         <div tabindex="0" class="bga-component table narrow m-0">
+             <table class="table responsive">
+                 <thead>
+                     <tr>
+                         <th>Change</th>
+                         <th>Details</th>
+                         <th>Relevant designs</th>
+                         <th>Date</th>
+                     
+                     </tr>
+                 </thead>
+                 <tbody>
+                     
+                     <!-- SEARCH FILTER CHECKBOX PADDING -->
+                      {% include change-log-item.html 
+                         id="toggle-row-5"
+                         
+                         change="<p><strong>Update padding on checkboxes in the tile filters.</strong></p>"
+                         
+                         details="<p>Updated the left padding on secondary checkboxes in the tile filters to match the padding on default form checkboxes.</p><p>Secondary checkboxes now have 8px padding to the left.</p>"
+ 
+                         link1="'components/tile-filters.html' | relative_url "
+                         link1-text="Tile filters"
+ 
+                         date="<p>15/12/2022</p>"
+                     %}
+ 
+ 
+                      <!-- CHECKLIST FEATURE BOX -->
+                      {% include change-log-item.html 
+                         id="toggle-row-4"
+                         
+                         change="<p><strong>Update feature boxes in the lightweight checklist.</strong></p>"
+                         
+                         details="<p>Updated padding in the feature box when it appears in the lightweight checklist.</p><p>Feature box padding (in this context) is 16px left and 24px right, top and bottom. Padding between the icon and the text is 16px."
+ 
+                         link1="'components/lightweight-checklist-accordion.html' | relative_url "
+                         link1-text="Lightweight checklist accordion"
+ 
+                         date="<p>15/12/2022</p>"
+                     %}
+                     
+                     <!-- INLINE LINK HOVER STATE -->
+                      {% include change-log-item.html 
+                         id="toggle-row-3"
+                         
+                         change="<p><strong>Update in-text link hover & focus states.</strong></p>"
+                         
+                         details="<p>Changed the hover and focus state background colour on in-text links to a transparent colour. This is to ensure the same colour can be used in both white and coloured background sections. The new colour is rgba(46, 108, 185, 0.15).</p><p>Changed the font colour in the hover and focus states to #113869.</p>"
+ 
+                         link1="'brand-foundations/buttons-and-links.html' | relative_url "
+                         link1-text="In-text link"
+ 
+                         date="<p>14/12/2022</p>"
+                     %}
+     
+                     
+                     <!-- STICKY HEADER PADDING -->
+                     {% include change-log-item.html 
+                         id="toggle-row-2"
+                         
+                         change="<p><strong>Update sticky header padding.</strong></p>"
+                         
+                         details="<p>Changed the top and bottom padding on the finder tool 'sticky' headers to avoid the header flickering when the user scrolls past the sticking point.</p><p>The sticky header now has 32px top and bottom on large screens. On small screens the padding is 16px above and 24px below.</p>"
+ 
+                         link1="https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/8dab8a90-c2cb-4fd6-b3bb-ebef8b95186e/"
+                         link1-text="Showing number sticky header"
+ 
+                         date="<p>13/12/2022</p>"
+                     %}
+ 
+ 
+                      <!-- HOME BANNER IMAGE SIZE -->
+                     {% include change-log-item.html 
+                         id="toggle-row-1"
+                         
+                         change="<p><strong>Update home banner image size on smaller screen sizes.</strong></p>"
+                         
+                         details="<p>Added additional breakpoints for image height in the home banner.</p><p>The new image heights are:</p><ul><li>Between 768px and 576px - max height 384px</li><li>Between 576px and 350px - max height 272px</li><li>Below 350px - max height 176px</li></ul>"
+ 
+                         link1="'components/home-banner.html' | relative_url "
+                         link1-text="Home page banner"
+ 
+                         date="<p>9/12/2022</p>"
+                     %}
+                     
+                     
+                     <!-- SOCIAL MEDIA ICONS IN FOOTER -->
+                     {% include change-log-item.html 
+                         id="toggle-row-0"
+                         
+                         change="<p><strong>Update social media icon size in site footer.</strong></p>"
+                         
+                         details="<p>Removed an inconsistency in the design specifications where the social media icons were displaying at 2 different sizes.</p><p>The revised icon size is 48px wide x 48px high (including the 2px border).</p>"
+ 
+                         link1="'components/bga-site-footer.html' | relative_url "
+                         link1-text="business.gov.au site footer"
+ 
+                         date="<p>7/12/2022</p>"
+                     %}
+ 
+                 </tbody>
+             </table>
+     
+         </div>
 
        
     </div>
