@@ -15,11 +15,29 @@ html.ecb-prototype {
             max-width: 100px;
         }
     }
+    .ecb-button-group {
+        flex-wrap: wrap;
+        row-gap: 24px;
+        column-gap: 24px;
+
+        .two-button-group {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 24px;
+            column-gap: 24px;
+        }
+    }
 
     //Get contract CTA
     .call-to-action.teal {
         background: $bga-teal-highlight-light;
         border-left-color: $bga-teal-highlight-mid;
+            
+        .button-group {
+            flex-wrap: wrap;
+            row-gap: 24px;
+            column-gap: 24px;
+        }
     }
 
     //Modals
@@ -266,38 +284,36 @@ html.ecb-prototype {
     @media (max-width: 576px) {
         .call-to-action.teal {
             .button-group {
-                flex-wrap: wrap;
-                row-gap: 20px;
+                a {
+                    font-size: 0.875rem;
+                }
             }
-
         }
-
-        .ecb-button-group {
-            flex-wrap: wrap;
-            row-gap: 24px;
-
-            .two-button-group {
-                display: flex;
-                flex-wrap: wrap;
-                row-gap: 24px;
-            }
+        .ecb-button-group a {
+            font-size: 0.875rem;
         }
     }
 
     @media (max-width: 350px) {
         .call-to-action.teal {
             .button-group {
-                display: block !important;
-            }
+                flex-wrap: wrap;
 
-            .button-example:first-of-type {
-                margin: 0 0 24px 0 !important;
+                a {
+                    font-size: 0.875rem;
+                    width: 100%;
+                }
             }
         }
 
-        .ecb-button-group .two-button-group a {
-            width: 100%;
-            margin: 0 !important;
+        .ecb-button-group, .two-button-group {
+            flex-wrap: wrap;
+
+            a {
+                font-size: 0.875rem;
+                width: 100%;
+                text-align: center
+            }
         }
     }
 

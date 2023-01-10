@@ -168,6 +168,11 @@
 
         .subscribe-form {
             text-align: left;
+            text-align: left;
+            display: flex;
+            column-gap: 24px;
+            row-gap: 24px;
+            align-items: center;
 
             a {
                 text-decoration: underline;
@@ -318,9 +323,12 @@
 @mixin bga-site-footer-below350 () {
     .bga-footer-example {
         .subscribe-wrapper {
-            button {
+            .subscribe-form {
+                flex-wrap: wrap;
+            }
+            button, a {
                 width: 100%;
-                justify-content: center;
+                text-align: center;
             }
         }
     }

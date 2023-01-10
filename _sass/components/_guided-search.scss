@@ -241,12 +241,14 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            row-gap: 24px;
+            column-gap: 24px;
         }
     }
 
 
 // Mixins for smaller screen sizes and media queries
-@mixin guided-search-below576 () {
+@mixin guided-search-bp-350 () {
     .guided-search-wrapper {
         padding: 24px 0 0 0 !important;
 
@@ -279,9 +281,8 @@
             margin-bottom: 16px;
         }
         .button-group {
-            .previous, .start-again {
+            .previous, .start-again, .bga-btn {
                 font-size: .875rem; 
-                margin-right: 16px !important;
 
                 svg {
                     display: none;
@@ -298,13 +299,41 @@
     }
 }
 
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576 {
-    @include guided-search-below576();
+@mixin guided-search-below350 () {
+    .guided-search-wrapper {
+        .button-group {
+            flex-wrap: wrap;
+
+            .previous, .start-again, .bga-btn {
+               width: 100%;
+               text-align: center;
+               font-size: .875rem; 
+
+                svg {
+                    display: none;
+                }
+            }
+        }
+    }
 }
+
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-350 {
+    @include guided-search-bp-350();
+}
+.component-example.bp-below350 {
+    @include guided-search-below350();
+}
+
 
 
 // MEDIA Queries for HTML demo pages.
 @media(max-width: 576px) {
-    @include guided-search-below576();
+    @include guided-search-bp-350();
+}
+
+@media(max-width: 350px) {
+    @include guided-search-below350();
 }

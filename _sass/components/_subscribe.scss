@@ -10,6 +10,8 @@
 
     .button-group {
         align-items: center;
+        column-gap: 24px;
+        row-gap: 24px;
     }
     &.colour-bkg {
         background: $bga-white;
@@ -21,20 +23,25 @@
 @mixin subscribe-bp-350 {
     .callout-box.blue.subscribe {
         border-left-width: 8px;
+
+        .button-group {
+            a {
+                font-size: 0.875rem;
+            }
+        }
     }
 }
 
 @mixin subscribe-below350 {
     .callout-box.blue.subscribe {
         .button-group {
-            //flex-direction: column-reverse;
             flex-wrap: wrap;
             align-content: flex-start;
 
             a {
-                margin: 16px 0 0 0;
-                text-align: left;
+                text-align: center;
                 width: 100%;
+
             }
             .button-example {
                 width: 100%;
