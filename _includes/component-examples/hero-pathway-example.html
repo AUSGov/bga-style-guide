@@ -1,35 +1,37 @@
-<div class="bga-component-wrapper h-100 pb-5">
-<a href="" tabindex="0" class="bga-component hero-pathway mt-0 mx-0 mb-5 {{ include.classes }}">
+<div class="bga-component-wrapper h-100 d-flex pb-5">
+    <a href="" tabindex="0" class="bga-component hero-pathway mt-0 mx-0 mb-5 {{ include.classes }}">
 
-    
-    <div class="p-4 component-content">
 
-        <div class="component-text p-0">
-            <h3 class="tile-title pt-0">{{ include.title }}</h3>
-            <p class="tile-description mb-0"> {{ include.description }} </p>
+        <div class="p-4 component-content">
+
+            <div class="component-text p-0">
+                <h3 class="tile-title pt-0">{{ include.title }}</h3>
+                <p class="tile-description mb-0"> {{ include.description }} </p>
+            </div>
+
+
+
+            <div class="icon-wrapper">
+                <div class="arrow-icon">
+                    <img src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
+                </div>
+
+                {% if include.external-link %}
+                <div class="external-site ps-7 remove-element-padding">
+                    <p class="pe-5">{{ include.external-link }}</p>
+                </div>
+                {% endif %}
+            </div>
+
+
         </div>
 
+        {% if include.image %}
+        <div class="component-image">
+            <img src={{ include.image }} alt="" />
+        </div>
+        {% endif %}
 
-         <div class="icon-wrapper">
-             <div class="arrow-icon">
-                 <img src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
-             </div>
-             
-             {% if include.external-link %}
-             <div class="external-site ps-7 remove-element-padding">
-                 <p class="pe-5">{{ include.external-link }}</p>
-             </div>
-             {% endif %}
-         </div>
 
-         </div>
-
-    {% if include.image %}
-    <div class="component-image">
-        <img src={{ include.image }}  alt="" />
-    </div>
-    {% endif %}
-    
-
-</a>
+    </a>
 </div>
