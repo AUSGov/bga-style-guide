@@ -171,12 +171,13 @@ subsite-tag: true
                 <div class="component-example m-0">
                     <div class="component-wrapper remove-element-padding p-4">
 
-                        <p>Apply your brand specific <strong>colours,  borders and images</strong> to the base heroe pathway shown below.</p><p><strong>Font use and component padding / spacing</strong> should remain the same as in the base hero pathway.</p>
+                        <p>Apply your brand specific <strong>colours,  borders and images</strong> to the base hero pathway shown below.</p>
 
 
                         <h3>Large hero pathway</h3>
 
-                        <div class="hero-example-wrapper">
+                        <div class="row">
+                        <div class="col-12">
                             {% include component-examples/hero-pathway-example.html
                             image="'../assets/img-placeholder-1.svg' | relative_url "
                             classes="non-branded"
@@ -184,25 +185,30 @@ subsite-tag: true
                             description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
                             %}
                         </div>
+                        </div>
 
 
                         <h3>Small hero pathways</h3>
 
-                        <div class="small-hero-wrapper hero-example-wrapper">
+                        <div class="row">
+                            
+                            <div class="col-12 col-md-6">
                             {% include component-examples/hero-pathway-example.html
                             classes="non-branded small-hero"
                             title="Hero pathway heading Lorem ipsum dolor sit amet"
                             description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
                             quam, rhoncus feugiat euismod nec, imperdiet in lorem."
                             %}
+                            </div>
 
+                            <div class="col-12 col-md-6">
                             {% include component-examples/hero-pathway-example.html
                             classes="non-branded small-hero"
                             external-link="IP Australia"
                             title="Lorem ipsum dolor sit amet"
                             description="Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
                             %}
-
+                            </div>
                         </div>
 
 
