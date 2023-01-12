@@ -246,14 +246,59 @@
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+        <div class="tab-sections-wrapper p-4">
+    
+            <div class="tab-section bga-branded selected">
+        
+                <!-- Breakpoint radio buttons -->
+                <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-callout-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,15 +311,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-callout-group" id="bga-callout-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-callout-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-callout-group" id="bga-callout-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-callout-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -294,12 +339,12 @@
 
 
 
-        <!-- Component example -->
+                <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-                
-            <div class="bga-component-wrapper pb-5">
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        
+                    <div class="bga-component-wrapper pb-5">
 <div class="bga-component inline-pathway callout-link mb-5">
 
         <div class="content remove-element-padding p-4 ">
@@ -310,8 +355,8 @@
     
 </div>
 </div>
-                
-            <div class="bga-component-wrapper pb-5">
+                        
+                    <div class="bga-component-wrapper pb-5">
 <div class="bga-component inline-pathway callout-link mb-5">
 
         <div class="content remove-element-padding p-4 ">
@@ -322,8 +367,8 @@
     
 </div>
 </div>
-                
-            <div class="bga-component-wrapper pb-5">
+                        
+                    <div class="bga-component-wrapper pb-5">
 <div class="bga-component inline-pathway callout-link mb-5">
 
         <div class="content remove-element-padding p-4 ">
@@ -334,18 +379,18 @@
     
 </div>
 </div>
-  
-            </div>
+        
+                    </div>
 
-        </div>
+                </div>
 
 
-        <div class="component-example">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-                <div class="row">
-                    <h3>Coloured background sections - colour variations</h3>
+                <div class="component-example">
+                    <div class="component-wrapper coloured-section remove-element-padding p-4">
+                        <div class="row">
+                            <h3>Coloured background sections - colour variations</h3>
 
-                    <div class="bga-component-wrapper pb-5">
+                            <div class="bga-component-wrapper pb-5">
 <div class="bga-component inline-pathway callout-link colour-bkg">
 
         <div class="content remove-element-padding p-4 ">
@@ -356,20 +401,20 @@
     
 </div>
 </div>
-            
+                    
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
 
-        <div class="component-example">
-        <div class="component-wrapper remove-element-padding p-4">
-            <div class="row">
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
 
-                <h3>Approved icons</h3>
+                            <h3>Approved icons</h3>
 
-                <div class="col-6 col-md-3">
-                <div class="approved-icons dark-bkg">
+                            <div class="col-6 col-md-3">
+                            <div class="approved-icons dark-bkg">
 	<p class="icon-name mb-2"><strong>Email</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -380,10 +425,10 @@
 		</div>
 	</button>
 </div>
-                </div>
-                
-                <div class="col-6 col-md-3">
-                <div class="approved-icons dark-bkg">
+                            </div>
+                            
+                            <div class="col-6 col-md-3">
+                            <div class="approved-icons dark-bkg">
 	<p class="icon-name mb-2"><strong>External link</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -394,10 +439,10 @@
 		</div>
 	</button>
 </div>
-                </div>
-                
-                <div class="col-6 col-md-3">
-                <div class="approved-icons dark-bkg">
+                            </div>
+                            
+                            <div class="col-6 col-md-3">
+                            <div class="approved-icons dark-bkg">
 	<p class="icon-name mb-2"><strong>Internal link</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -408,16 +453,20 @@
 		</div>
 	</button>
 </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
-
-                </div>
             </div>
+
+            <div class="tab-section non-branded">
+                
+            </div>
+
         </div>
 
-
-        
 
 
         <!-- Design specifications link -->
