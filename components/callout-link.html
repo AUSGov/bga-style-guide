@@ -32,95 +32,115 @@ classes="in-page"
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-            sm-visibility="true"
-            final-visibility="true"
-            breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-                
-            {% include component-examples/callout-link-example.html
-                link="Subscribe to stay up-to-date with Accelerating Commercialisation news and information."
-                icon="'../assets/icon-email-white.svg' | relative_url "
-                classes="mb-5"
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
-                
-            {% include component-examples/callout-link-example.html
-                link="Lorem ipsum dolor sit amet, consectetur mauris vitae eleifend mauris fusce vel fermentum purus. "
-                icon="'../assets/icon-external-white.svg' | relative_url "
-                classes="mb-5"
-            %}
-                
-            {% include component-examples/callout-link-example.html
-                link="Important information about consectetur"
-                icon="'../assets/icon-arrow-right-white.svg' | relative_url "
-                classes="mb-5"
-            %}
-  
-            </div>
+    
+    
+        <div class="tab-sections-wrapper p-4">
+    
+            <div class="tab-section bga-branded selected">
+        
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                    element-string="bga-callout" 
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
+                %}
 
-        </div>
+                <!-- Component example -->
 
-
-        <div class="component-example">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-                <div class="row">
-                    <h3>Coloured background sections - colour variations</h3>
-
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        
+                    {% include component-examples/callout-link-example.html
+                        link="Subscribe to stay up-to-date with Accelerating Commercialisation news and information."
+                        icon="'../assets/icon-email-white.svg' | relative_url "
+                        classes="mb-5"
+                    %}
+                        
+                    {% include component-examples/callout-link-example.html
+                        link="Lorem ipsum dolor sit amet, consectetur mauris vitae eleifend mauris fusce vel fermentum purus. "
+                        icon="'../assets/icon-external-white.svg' | relative_url "
+                        classes="mb-5"
+                    %}
+                        
                     {% include component-examples/callout-link-example.html
                         link="Important information about consectetur"
                         icon="'../assets/icon-arrow-right-white.svg' | relative_url "
-                        classes="colour-bkg"
+                        classes="mb-5"
                     %}
-            
-                </div>
-            </div>
-        </div>
-
-
-        <div class="component-example">
-        <div class="component-wrapper remove-element-padding p-4">
-            <div class="row">
-
-                <h3>Approved icons</h3>
-
-                <div class="col-6 col-md-3">
-                {% include icon-example.html 
-                    src="'../assets/icon-email-white.svg' | relative_url "
-                    title="Email" 
-                    classes="dark-bkg"
-                %}
-                </div>
-                
-                <div class="col-6 col-md-3">
-                {% include icon-example.html 
-                    src="'../assets/icon-external-white.svg' | relative_url "
-                    title="External link" 
-                    classes="dark-bkg"
-                %}
-                </div>
-                
-                <div class="col-6 col-md-3">
-                {% include icon-example.html 
-                    src="'../assets/icon-arrow-right-white.svg' | relative_url "
-                    title="Internal link"
-                    classes="dark-bkg"
-                %}
-                </div>
-
-
-
-                </div>
-            </div>
-        </div>
-
-
         
+                    </div>
+
+                </div>
+
+
+                <div class="component-example">
+                    <div class="component-wrapper coloured-section remove-element-padding p-4">
+                        <div class="row">
+                            <h3>Coloured background sections - colour variations</h3>
+
+                            {% include component-examples/callout-link-example.html
+                                link="Important information about consectetur"
+                                icon="'../assets/icon-arrow-right-white.svg' | relative_url "
+                                classes="colour-bkg"
+                            %}
+                    
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
+
+                            <h3>Approved icons</h3>
+
+                            <div class="col-6 col-md-3">
+                            {% include icon-example.html 
+                                src="'../assets/icon-email-white.svg' | relative_url "
+                                title="Email" 
+                                classes="dark-bkg"
+                            %}
+                            </div>
+                            
+                            <div class="col-6 col-md-3">
+                            {% include icon-example.html 
+                                src="'../assets/icon-external-white.svg' | relative_url "
+                                title="External link" 
+                                classes="dark-bkg"
+                            %}
+                            </div>
+                            
+                            <div class="col-6 col-md-3">
+                            {% include icon-example.html 
+                                src="'../assets/icon-arrow-right-white.svg' | relative_url "
+                                title="Internal link"
+                                classes="dark-bkg"
+                            %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="tab-section non-branded">
+                
+            </div>
+
+        </div>
+
 
 
         <!-- Design specifications link -->

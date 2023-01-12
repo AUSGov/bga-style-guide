@@ -32,65 +32,153 @@ classes="in-page"
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-            element-string="contact-call-to-action"
-            md-visibility="true"
-            final-visibility="true"
-            breakpoint-final="768"
-        %}
 
-        <!-- Component example -->
+        {% include section-tabs.html
 
-        <div class="component-example narrow m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-                
-            <h3>Single session events</h3>    
-
-            {% include component-examples/event-callout-box-example.html
-                singlesession="true"
-                title="Register for this event through the Australian Taxation Office"
-                cost="Free"
-                time="10:00 - 11:00 am AEST"
-                date="Thu 30 Jun 2022"
-                location="Online"   
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
-                
-            <h3>Multiple session events with a single registration link</h3>    
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
 
-            {% include component-examples/event-callout-box-example.html
-                example-name="multiple-one-link"
-                title="Register for this event through the Australian Taxation Office"
-                cost="Free"
-                item1-label="<strong>Online: </strong>Thursday 13 Nov 2021"
-                item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
-                item2-label="<strong>Online: </strong>Wednesday 20 Jan 2022"
-                item2-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
-                
-            %}
-                
-            <h3>Multiple session events with a multiple registration links</h3>    
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="contact-call-to-action"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                    %}
 
-            {% include component-examples/event-callout-box-example.html
-                dropdown="true"
-                example-name="multiple-many-links"
-                title="Register for this event through the Australian Taxation Office"
-                cost="Free"
-                item1-label="<strong>Shepparton, VIC: </strong>Thursday 13 Nov 2021"
-                item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
-                item1-address="<strong>Address: </strong>The Parklake Hotel, 481 Wyndham Street, Shepparton, VIC"
-                item2-label="<strong>Benalla, VIC: </strong>Wednesday 12 Nov 2021"
-                item2-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
-                item2-address="<strong>Address: </strong>The Parklake Hotel, 481 Wyndham Street, Shepparton, VIC"
-                
-            %}
-                
-  
-            </div>
+                    <!-- Component example -->
+
+                    <div class="component-example narrow m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            
+                        <h3>Single session events</h3>    
+
+                        {% include component-examples/event-callout-box-example.html
+                            singlesession="true"
+                            title="Register for this event through the Australian Taxation Office"
+                            cost="Free"
+                            time="10:00 - 11:00 am AEST"
+                            date="Thu 30 Jun 2022"
+                            location="Online"   
+                        %}
+                            
+                        <h3>Multiple session events with a single registration link</h3>    
+
+                        {% include component-examples/event-callout-box-example.html
+                            example-name="multiple-one-link"
+                            title="Register for this event through the Australian Taxation Office"
+                            cost="Free"
+                            item1-label="<strong>Online: </strong>Thursday 13 Nov 2021"
+                            item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                            item2-label="<strong>Online: </strong>Wednesday 20 Jan 2022"
+                            item2-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                            
+                        %}
+                            
+                        <h3>Multiple session events with a multiple registration links</h3>    
+
+                        {% include component-examples/event-callout-box-example.html
+                            dropdown="true"
+                            example-name="multiple-many-links"
+                            title="Register for this event through the Australian Taxation Office"
+                            cost="Free"
+                            item1-label="<strong>Shepparton, VIC: </strong>Thursday 13 Nov 2021"
+                            item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                            item1-address="<strong>Address: </strong>The Parklake Hotel, 481 Wyndham Street, Shepparton, VIC"
+                            item2-label="<strong>Benalla, VIC: </strong>Wednesday 12 Nov 2021"
+                            item2-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                            item2-address="<strong>Address: </strong>The Parklake Hotel, 481 Wyndham Street, Shepparton, VIC"
+                            
+                        %}
+                            
             
-        </div>
+                        </div>
+                        
+                    </div>
         
+                </div>
+
+
+                <div class="tab-section non-branded">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="nb-contact-call-to-action"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example narrow m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                        <p>Apply your brand specific <strong>colours, borders and button styles</strong> to the base call to actions shown below.</p>
+                            
+                        <h3>Single session events</h3>    
+
+                        {% include component-examples/event-callout-box-example.html
+                            singlesession="true"
+                            title="Register for this event through the Australian Taxation Office"
+                            cost="Free"
+                            time="10:00 - 11:00 am AEST"
+                            date="Thu 30 Jun 2022"
+                            location="Online"
+                            classes="non-branded nb-background"   
+                        %}
+                            
+                        <h3>Multiple session events with a single registration link</h3>    
+
+                        {% include component-examples/event-callout-box-example.html
+                            example-name="multiple-one-link"
+                            title="Register for this event through the Australian Taxation Office"
+                            cost="Free"
+                            item1-label="<strong>Online: </strong>Thursday 13 Nov 2021"
+                            item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                            item2-label="<strong>Online: </strong>Wednesday 20 Jan 2022"
+                            item2-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                            classes="non-branded nb-background" 
+                            
+                        %}
+                            
+                        <h3>Multiple session events with a multiple registration links</h3>    
+
+                        {% include component-examples/event-callout-box-example.html
+                            dropdown="true"
+                            example-name="multiple-many-links"
+                            title="Register for this event through the Australian Taxation Office"
+                            cost="Free"
+                            item1-label="<strong>Shepparton, VIC: </strong>Thursday 13 Nov 2021"
+                            item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                            item1-address="<strong>Address: </strong>The Parklake Hotel, 481 Wyndham Street, Shepparton, VIC"
+                            item2-label="<strong>Benalla, VIC: </strong>Wednesday 12 Nov 2021"
+                            item2-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
+                            item2-address="<strong>Address: </strong>The Parklake Hotel, 481 Wyndham Street, Shepparton, VIC"
+                            classes="non-branded nb-background" 
+                        %}
+                            
+            
+                        </div>
+                        
+                    </div>
         
+                </div>
+
+
+
+
+
+            </div>
             
 
 

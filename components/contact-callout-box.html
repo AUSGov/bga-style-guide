@@ -32,48 +32,120 @@ classes="in-page"
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-            element-string="contact-callout-box"
-            md-visibility="true"
-            final-visibility="true"
-            breakpoint-final="768"
-        %}
 
-        <!-- Component example -->
+        {% include section-tabs.html
 
-        <div class="component-example narrow m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-                
-            <h3>Default contact call out box</h3>    
-
-            {% include component-examples/contact-callout-box-example.html
-                title="Contact information"
-                phone="1300 XXX XXX"
-                email="johnsmith@qwerty.com"
-                address="123 Smithson St, Lyneham, Australian Capital Territory"
-                website="webaddress.com"
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
-                
-            <h3>Adviser contact call out box</h3>    
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
 
-            {% include component-examples/contact-callout-box-example.html
-                twosections="true"
-                cost="Free"
-                delivery-type="In person services, Phone services, Online services"
-                service-area="City of Melbourne"
-                title="Find out more"
-                phone="<span>03 9658 9658</span><span>1300 XXX XXX</span>"
-                email="johnsmith@qwerty.com"
-                address="123 Smithson St, Lyneham, Australian Capital Territory"
-                website="<span>webaddress.com</span><span>alternatesiteaddress.com</span>"
-            %}
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="bga-contact-callout-box"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                    %}
 
-            
-            
+                    <!-- Component example -->
+
+                    <div class="component-example narrow m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            
+                        <h3>Default contact call out box</h3>    
+
+                        {% include component-examples/contact-callout-box-example.html
+                            title="Contact information"
+                            phone="1300 XXX XXX"
+                            email="johnsmith@qwerty.com"
+                            address="123 Smithson St, Lyneham, Australian Capital Territory"
+                            website="webaddress.com"
+                        %}
+                            
+                        <h3>Adviser contact call out box</h3>    
+
+                        {% include component-examples/contact-callout-box-example.html
+                            twosections="true"
+                            cost="Free"
+                            delivery-type="In person services, Phone services, Online services"
+                            service-area="City of Melbourne"
+                            title="Find out more"
+                            phone="<span>03 9658 9658</span><span>1300 XXX XXX</span>"
+                            email="johnsmith@qwerty.com"
+                            address="123 Smithson St, Lyneham, Australian Capital Territory"
+                            website="<span>webaddress.com</span><span>alternatesiteaddress.com</span>"
+                        %}
+
+                        
+                        
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+
+                <div class="tab-section non-branded">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="nb-contact-callout-box"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example narrow m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            
+                        <h3>Default contact call out box</h3>    
+
+                        {% include component-examples/contact-callout-box-example.html
+                            title="Contact information"
+                            phone="1300 XXX XXX"
+                            email="johnsmith@qwerty.com"
+                            address="123 Smithson St, Lyneham, Australian Capital Territory"
+                            website="webaddress.com"
+                            classes="non-branded nb-background"
+                        %}
+                            
+                        <h3>Adviser contact call out box</h3>    
+
+                        {% include component-examples/contact-callout-box-example.html
+                            twosections="true"
+                            cost="Free"
+                            delivery-type="In person services, Phone services, Online services"
+                            service-area="City of Melbourne"
+                            title="Find out more"
+                            phone="<span>03 9658 9658</span><span>1300 XXX XXX</span>"
+                            email="johnsmith@qwerty.com"
+                            address="123 Smithson St, Lyneham, Australian Capital Territory"
+                            website="<span>webaddress.com</span><span>alternatesiteaddress.com</span>"
+                            classes="non-branded nb-background"
+                        %}
+
+                        
+                        
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+
             </div>
-            
-        </div>
         
         
             

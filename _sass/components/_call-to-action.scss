@@ -48,6 +48,27 @@
 
 
     }
+
+    &.non-branded {
+        .download-link-wrapper {
+            a {
+                &:focus-visible {
+                    background: $bga-white;
+                    color: $nb-blue-links;
+                    border: $nb-blue-links solid 2px;
+                }
+                &:hover {
+                    background: $nb-grey-lightest;
+                    color: $nb-blue-links;
+                }
+                svg {
+                path {
+                    fill: $bga-black;
+                }   
+                }
+            }
+        }
+    }
 }
 
 
@@ -64,43 +85,44 @@
             padding: 12px 24px;
             width: auto;
         }
+
         h2 {
             font-size: 1.75rem;
         }
 
         ul {
             padding: 0 0 8px 24px;
-    
+
             li {
                 text-indent: -12px;
-    
+
                 &::before {
                     padding: 0 10px 0 0;
                 }
             }
-    
+
             ul {
                 padding: 0 0 0 24px;
-    
+
                 li {
                     &::before {
                         padding: 0 8px 0 0;
                     }
                 }
-    
+
                 ul {
                     padding: 0 0 0 24px;
-    
+
                     li {
                         &::before {
                             padding: 0 10px 0 0;
                         }
-    
+
                     }
                 }
             }
         }
-    
+
     }
 }
 
@@ -108,7 +130,7 @@
 
     .callout-box,
     .callout-box.call-to-action {
-        
+
         .bga-btn.bga-secondary-btn,
         .bga-btn.bga-primary-btn {
             width: 100%;

@@ -1,11 +1,21 @@
 .bga-component.non-branded {
-   border: none;
+    border: none;
 
-   &.nb-border {
-    border: 1px solid $nb-grey-dark;
-   }
+    &.nb-border {
+        border: 1px solid $nb-grey-dark;
+    }
 
-    a, .tile-title {
+    &.nb-background {
+        background: $nb-grey-light;
+    }
+
+    // TYPOGRAPHY
+    h1, h2, h3, h4, h5, h6 {
+        color: $bga-black;
+    }
+
+    a,
+    .tile-title {
         color: $nb-blue-links;
 
         &:focus-visible {
@@ -13,10 +23,59 @@
             border: $nb-blue-links solid 2px;
             border-radius: $bga-focus-radius;
         }
+
+        &:focus-visible {
+            border: 2px solid $nb-blue-links;
+            border-radius: 4px;
+        }
         &:hover {
             color: $nb-blue-links;
         }
     }
+
+    // BUTTONS
+    button {
+        &:focus-visible {
+            color: $bga-black;
+        }
+        &:hover, &:active {
+            color: $bga-black;
+            background: $nb-grey-lightest;
+        }
+    }
+    .bga-btn {
+        border: solid 2px $bga-black;
+        background: $nb-grey-light;
+        border-radius: 8px;
+
+        &.bga-secondary-btn {
+            background: $bga-white;
+            border-color: $nb-grey-extra-darkest;
+        }
+
+        &:focus-visible {
+            border-color: $nb-blue-links;
+            color: $bga-black;
+        }
+        &:hover {
+            border-color: $bga-black;
+            color: $bga-black;
+            background: $nb-grey-lightest;
+        }
+
+    }
+
+    // SELECTS
+    .form-select {
+        border:$bga-black solid 1px;
+
+        &:focus-visible {
+            border: solid 2px $nb-blue-links;
+        }
+    }
+
+
+    // COMPONENTS
     .component-content {
         border: none;
     }
@@ -24,5 +83,4 @@
     .arrow-icon {
         background: $nb-grey-mid;
     }
-    
 }

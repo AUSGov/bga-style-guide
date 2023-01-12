@@ -39,6 +39,28 @@
         }
         
     }
+
+    &.non-branded {
+        &.blue {
+            .header-section, .footer-section {
+                background: $nb-grey-mid;
+            }
+        }
+        .accordion.event-sessions {
+            border-bottom: 1px solid $bga-black;
+
+            .accordion-header {
+                .accordion-button {   
+                    border-top: 1px solid $bga-black;
+                    
+                    &:focus-visible {
+                        border: $nb-blue-links 2px solid;
+                    }
+                }
+            }
+            
+        }
+    }
 }
 
 // Events callouts
