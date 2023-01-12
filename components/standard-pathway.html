@@ -12,115 +12,185 @@ subsite-tag: true
 
 
 <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
+        classes="in-page"
 
-            link-1="Design" link-id-1="#design"
-            link-2="Layouts" link-id-2="#layouts" 
-            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
         %}
-        
+
     </div>
-    
+
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
-   
-          
-        <!-- DESIGN -->   
+
+
+        <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-       {% include breakpoints.html 
-        singlebp="true" 
+        {% include section-tabs.html
+
+        tab1="Business.gov.au branding"
+        tab1value="bga-branded"
+
+        tab2="No branding"
+        tab2value="non-branded"
+
         %}
 
-        <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+        <div class="tab-sections-wrapper p-4">
 
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                    {% include component-examples/standard-pathway-example.html 
-                        title="Standard pathway title"
-                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
-                    %}
-                    </div>
-                     <div class="col-12 col-md-6">
-                    {% include component-examples/standard-pathway-example.html 
-                        title="Standard pathway title"
-                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
-                    %}
+
+            <div class="tab-section bga-branded selected">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                singlebp="true"
+                %}
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/standard-pathway-example.html
+                                title="Standard pathway title"
+                                description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin
+                                mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                                icon1="'../assets/icon-arrow-right-white.svg' | relative_url "
+                                %}
+                            </div>
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/standard-pathway-example.html
+                                title="Standard pathway title"
+                                description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
+                                icon1="'../assets/icon-arrow-right-white.svg' | relative_url "
+                                %}
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                
+
             </div>
+
+
+            <div class="tab-section non-branded ">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                singlebp="true"
+                %}
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        <p>Apply your brand specific <strong>colours and borders</strong> to the base standard pathway shown below.</p>
+
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/standard-pathway-example.html
+                                title="Standard pathway title"
+                                description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin
+                                mauris quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                                classes="non-branded nb-border"
+                                icon1="'../assets/icon-arrow-right-black.svg' | relative_url "
+                                %}
+                            </div>
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/standard-pathway-example.html
+                                title="Standard pathway title"
+                                description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc."
+                                classes="non-branded nb-border"
+                                icon1="'../assets/icon-arrow-right-black.svg' | relative_url "
+                                %}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
+
+
+
+
+        </div>
 
 
         <!-- Design specifications link -->
 
-        {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/0adac2b5-bd2d-495f-9296-20dd442f8dc7'"
-            btn-text="View design specifications"
-            %}
-
-
-        <!-- LAYOUTS -->   
-        <h2 class="section-start" id="layouts">Layouts</h2>
-        
-        <p>Standard pathways can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column - full width layouts</a>. It should not be used in other layouts.</p>
-        
-        {% include layouts-dropdown.html 
-            layout-name="Single column - full width"
-            singlelayout="true"
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/0adac2b5-bd2d-495f-9296-20dd442f8dc7'"
+        btn-text="View design specifications"
         %}
-        
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Standard pathways can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url
+                }}>single column - full width layouts</a>. It should not be used in other layouts.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Single column - full width"
+        singlelayout="true"
+        %}
+
         <div class="layout-example show single-col-fullwidth mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="onecol-fw"
-            
-                min1200-visibility="false"
-                min992-visibility="true"
-                min768-visibility="false"
-                min576-visibility="true"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 576px"
-            
-                min992-img="'../assets/layout-images/standard-1colfullwidth-min992.png' | relative_url "
-                min576-img="'../assets/layout-images/standard-1colfullwidth-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/standard-1colfullwidth-finalbp.png' | relative_url "
-            
-            
-                min992-rules="<p>The content area is 12 grid-columns wide.</p><p>Standard pathway tiles are equal width spanning 4 grid-columns each.</p>"
-            
-                min576-rules="<p>The content area is 12 grid-columns wide.</p><p>Standard pathway tiles are equal width spanning 6 grid-columns each.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Standard pathway tiles are equal width spanning 12 grid-columns each.</p>"
-            
-                example-link="'../html-examples/single-col-full-width.html#standard-pathway-example' | relative_url'"
-                example-link-text="View layout example"
-                
+
+            {% include layouts-accordion.html
+            layout-name="onecol-fw"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min992-img="'../assets/layout-images/standard-1colfullwidth-min992.png' | relative_url "
+            min576-img="'../assets/layout-images/standard-1colfullwidth-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/standard-1colfullwidth-finalbp.png' | relative_url "
+
+
+            min992-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Standard pathway tiles are equal width spanning 4 grid-columns each.</p>"
+
+            min576-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Standard pathway tiles are equal width spanning 6 grid-columns each.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Standard pathway tiles are equal width spanning 12 grid-columns each.</p>"
+
+            example-link="'../html-examples/single-col-full-width.html#standard-pathway-example' | relative_url'"
+            example-link-text="View layout example"
+
             %}
-            
+
         </div>
-        
-        
+
+
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Generally used as a default option within index pages to link to a list of pages on the website.  </p>
+        <p>Generally used as a default option within index pages to link to a list of pages on the website. </p>
         <h3>When to use this component: </h3>
         <ul>
             <li>Used primarily for category or topic index pages. </li>
-            <li>May also be used to show page hierarchy when a level that is lower than hero and higher than light pathways is required. </li>
+            <li>May also be used to show page hierarchy when a level that is lower than hero and higher than light
+                pathways is required. </li>
         </ul>
-            
-        </div>
-        
+
+    </div>

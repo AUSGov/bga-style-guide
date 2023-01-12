@@ -1,8 +1,21 @@
 .bga-component.non-branded {
    border: none;
 
+   &.nb-border {
+    border: 1px solid $nb-grey-dark;
+   }
+
     a, .tile-title {
         color: $nb-blue-links;
+
+        &:focus-visible {
+            color: $nb-blue-links;
+            border: $nb-blue-links solid 2px;
+            border-radius: $bga-focus-radius;
+        }
+        &:hover {
+            color: $nb-blue-links;
+        }
     }
     .component-content {
         border: none;

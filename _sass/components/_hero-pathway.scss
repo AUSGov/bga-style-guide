@@ -106,11 +106,16 @@
     }
     
     &.non-branded {
-        border: 1px solid $nb-grey-dark;
 
         &:focus, &:hover {
            color: $bga-black;
-           background: $nb-grey-light;
+           background: $nb-grey-lightest;
+        }
+
+        .icon-wrapper {
+            .external-site {
+                background: transparent;
+            }
         }
     }
 }

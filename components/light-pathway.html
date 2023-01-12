@@ -13,356 +13,481 @@ subsite-tag: true
 
 
 <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
+        classes="in-page"
 
-            link-1="Design" link-id-1="#design"
-            link-2="Layouts" link-id-2="#layouts" 
-            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
         %}
-        
+
     </div>
-    
+
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
-   
-          
-        <!-- DESIGN -->   
+
+
+        <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-            singlebp="true" 
+
+        {% include section-tabs.html
+
+        tab1="Business.gov.au branding"
+        tab1value="bga-branded"
+
+        tab2="No branding"
+        tab2value="non-branded"
+
         %}
-        <!-- Component example -->
 
-        <div class="component-example m-0">
-            
-            <div class="component-wrapper remove-element-padding p-4">
 
-            <div class="row">
-                
-                <h3>Light pathways with no icon</h3>
-               
-                <div class="col-12 col-sm-6 col-md-4">
-                {% include component-examples/light-pathway-example.html  
-                    title="Light pathway"
-                    bottom="pb-5"
+        <div class="tab-sections-wrapper p-4">
+
+
+            <div class="tab-section bga-branded selected">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                singlebp="true"
                 %}
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        <div class="row">
+
+                            <h3>Light pathways with no icon</h3>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                {% include component-examples/light-pathway-example.html
+                                title="Light pathway"
+                                bottom="pb-5"
+                                %}
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                {% include component-examples/light-pathway-example.html
+                                title="Light pathway with external link"
+                                external-link="ACT Government"
+                                classes="external"
+                                bottom="pb-5"
+                                %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <h3>Light pathways with icons</h3>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                {% include component-examples/light-pathway-example.html
+                                title="Browse our facebook community"
+                                classes="fb-blue external"
+                                external-link="Facebook"
+                                top-icon="'../assets/icon-facebook.svg' | relative_url "
+                                bottom="pb-5"
+                                %}
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                {% include component-examples/light-pathway-example.html
+                                title="Follow us on Twitter"
+                                external-link="Twitter"
+                                classes="twitter-blue external"
+                                top-icon="'../assets/icon-twitter.svg' | relative_url "
+                                bottom="pb-5"
+                                %}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-4">
-                {% include component-examples/light-pathway-example.html
-                    title="Light pathway with external link"
-                    external-link="ACT Government"
-                    classes="external"
-                    bottom="pb-5"
-                %}
-                </div>
-            </div>
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
 
-             <div class="row">
-                 
-                <h3>Light pathways with icons</h3>
-                
-                <div class="col-12 col-sm-6 col-md-4">
-                {% include component-examples/light-pathway-example.html  
-                    title="Browse our facebook community"
-                    classes="fb-blue external"
-                    external-link="Facebook"
-                    top-icon="'../assets/icon-facebook.svg'  | relative_url "
-                    bottom="pb-5"                   
-                %}
-                 </div>
+                            <h3>Icon background colour variations</h3>
 
-                <div class="col-12 col-sm-6 col-md-4">
-                {% include component-examples/light-pathway-example.html
-                    title="Follow us on Twitter"
-                    external-link="Twitter"
-                    classes="twitter-blue external"
-                    top-icon="'../assets/icon-twitter.svg' | relative_url "
-                    bottom="pb-5"
-                %}
-                </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                                {% include component-examples/light-pathway-colours.html
+                                classes="fb-blue"
+                                colour="Facebook blue"
+                                top-icon="'../assets/icon-facebook.svg' | relative_url "
+                                %}
+                            </div>
 
-            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                                {% include component-examples/light-pathway-colours.html
+                                classes="twitter-blue"
+                                colour="Twitter blue"
+                                top-icon="'../assets/icon-twitter.svg' | relative_url "
+                                %}
+                            </div>
 
-            </div>
-                
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                                {% include component-examples/light-pathway-colours.html
+                                classes="youtube-red"
+                                colour="YouTube"
+                                top-icon="'../assets/icon-youtube.svg' | relative_url "
+                                %}
+                            </div>
 
-        </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                                {% include component-examples/light-pathway-colours.html
+                                classes="linkedin-blue"
+                                colour="LinkedIn"
+                                top-icon="'../assets/icon-linkedin.svg' | relative_url "
+                                %}
+                            </div>
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
 
-                    <h3>Icon background colour variations</h3>
+                        </div>
 
-                    <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-                        {% include component-examples/light-pathway-colours.html 
-                            classes="fb-blue"
-                            colour="Facebook blue"
-                            top-icon="'../assets/icon-facebook.svg'  | relative_url "
-                        %}
                     </div>
-
-                    <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-                        {% include component-examples/light-pathway-colours.html 
-                            classes="twitter-blue"
-                            colour="Twitter blue"
-                            top-icon="'../assets/icon-twitter.svg'  | relative_url "
-                        %}
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-                        {% include component-examples/light-pathway-colours.html 
-                            classes="youtube-red"
-                            colour="YouTube"
-                            top-icon="'../assets/icon-youtube.svg'  | relative_url "
-                        %}
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-                        {% include component-examples/light-pathway-colours.html 
-                            classes="linkedin-blue"
-                            colour="LinkedIn"
-                            top-icon="'../assets/icon-linkedin.svg'  | relative_url "
-                        %}
-                    </div>
-
-                    
                 </div>
 
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
+
+                            <h3>Approved icons</h3>
+
+
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
+                                {% include icon-example.html
+                                src=" '../assets/icon-facebook.svg' | relative_url"
+                                title="Facebook"
+
+                                %}
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
+                                {% include icon-example.html
+                                src=" '../assets/icon-twitter.svg' | relative_url"
+                                title="Twitter"
+
+                                %}
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
+                                {% include icon-example.html
+                                src=" '../assets/icon-youtube.svg' | relative_url"
+                                title="YouTube"
+
+                                %}
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
+                                {% include icon-example.html
+                                src=" '../assets/icon-linkedin.svg' | relative_url"
+                                title="LinkedIn"
+
+                                %}
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-        </div>
-        
-        <div class="component-example">
-        <div class="component-wrapper remove-element-padding p-4">
-            <div class="row">
-
-                <h3>Approved icons</h3>
-                
-
-                    <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
-                    {% include icon-example.html 
-                        src=" '../assets/icon-facebook.svg' | relative_url"
-                        title="Facebook"
-                        
-                    %}
-                    </div>
-                
-                <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
-                    {% include icon-example.html 
-                        src=" '../assets/icon-twitter.svg' | relative_url"
-                        title="Twitter"
-                        
-                    %}
-                    </div>
-                
-                <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
-                    {% include icon-example.html 
-                        src=" '../assets/icon-youtube.svg' | relative_url"
-                        title="YouTube"
-                        
-                    %}
-                    </div>
-                
-                <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
-                    {% include icon-example.html 
-                        src=" '../assets/icon-linkedin.svg' | relative_url"
-                        title="LinkedIn"
-                       
-                    %}
-                    </div>
 
 
+
+            <div class="tab-section non-branded ">
+
+                <div class="component-example m-0">
+
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        <p>Apply your brand specific <strong>colours and borders</strong> to the base light pathway shown below.</p>
+
+                        <div class="row">
+
+                            <h3>Light pathways with no icon</h3>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                {% include component-examples/light-pathway-example.html
+                                title="Light pathway"
+                                bottom="pb-5"
+                                classes="non-branded nb-border"
+                                %}
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                {% include component-examples/light-pathway-example.html
+                                title="Light pathway with external link"
+                                external-link="ACT Government"
+                                classes="external non-branded nb-border"
+                                bottom="pb-5"
+                                %}
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <h3>Light pathways with icons</h3>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                {% include component-examples/light-pathway-example.html
+                                title="Browse our facebook community"
+                                classes="fb-blue external non-branded nb-border"
+                                external-link="Facebook"
+                                top-icon="'../assets/icon-facebook-grey.svg' | relative_url "
+                                bottom="pb-5"
+                                %}
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4">
+                                {% include component-examples/light-pathway-example.html
+                                title="Follow us on Twitter"
+                                classes="twitter-blue external non-branded nb-border"
+                                top-icon="'../assets/icon-twitter-grey.svg' | relative_url "
+                                bottom="pb-5"
+                                %}
+                            </div>
+
+                        </div>
+
                     </div>
+
+
+                </div>
 
             </div>
-        </div>
 
 
-        <!-- Design specifications link -->
+            <!-- Design specifications link -->
 
-        {% include design-specs-link.html 
+            {% include design-specs-link.html
             btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/b5599d62-d933-4788-b279-1a3bfe66b28a/'"
             btn-text="View design specifications"
             %}
 
 
-        <!-- LAYOUTS -->   
-        <h2 class="section-start" id="layouts">Layouts</h2>
-        
-        <p>Light pathways can be used in all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >page layouts</a> except the two column - left filters layout.</p>
-        
-        {% include layouts-dropdown.html 
-            single-col-fullwidth-visibility="true" 
-            single-col-twothirds-visibility="true" 
-            two-col-leftmenu-visibility="true" 
-            two-col-rightsidebar-visibility="true" 
-        %}
-        
-        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
+            <!-- LAYOUTS -->
+            <h2 class="section-start" id="layouts">Layouts</h2>
+
+            <p>Light pathways can be used in all <a href={{ "brand-foundations/grid-and-page-layouts.html" |
+                    relative_url }}>page layouts</a> except the two column - left filters layout.</p>
+
+            {% include layouts-dropdown.html
+            single-col-fullwidth-visibility="true"
+            single-col-twothirds-visibility="true"
+            two-col-leftmenu-visibility="true"
+            two-col-rightsidebar-visibility="true"
+            %}
+
+            <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
                 layout-name="onecol-fw"
-            
+
                 min1200-visibility="true"
                 min992-visibility="false"
                 min768-visibility="true"
                 min576-visibility="true"
                 finalbp-visibility="true"
-                
+
                 finalbp="Breakpoint &lt; 576px"
-            
+
                 min1200-img="'../assets/layout-images/light-1colfullwidth-min1200.png' | relative_url "
                 min768-img="'../assets/layout-images/light-1colfullwidth-min768.png' | relative_url "
                 min576-img="'../assets/layout-images/light-1colfullwidth-min576.png' | relative_url "
                 finalbp-img="'../assets/layout-images/light-1colfullwidth-finalbp.png' | relative_url "
-            
-                min1200-rules="<p>The content area is 12 grid-columns wide.</p><p>Light pathway tiles span 3 grid-columns</p>"
-                
-                min768-rules="<p>The content area is 12 grid-columns wide.</p><p>Light pathway tiles span 4 grid-columns</p>"
-            
-                min576-rules="<p>The content area is 12 grid-columns wide.</p><p>Light pathway tiles span 6 grid-columns</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Light pathway tiles span 12 grid-columns each.</p>"
-            
+
+                min1200-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles span 3 grid-columns</p>"
+
+                min768-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles span 4 grid-columns</p>"
+
+                min576-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles span 6 grid-columns</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles span 12 grid-columns each.</p>"
+
                 example-link="'../html-examples/single-col-full-width.html#light-pathway-example' | relative_url'"
                 example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
-        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
-                layout-name="onecol-twothirdsw"    
-            
+
+                %}
+
+            </div>
+
+
+            <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="onecol-twothirdsw"
+
                 min1200-visibility="true"
                 min992-visibility="true"
                 min768-visibility="true"
                 min576-visibility="true"
                 finalbp-visibility="true"
-                
+
                 finalbp="Breakpoint &lt; 576px"
-            
-                min1200-img="'../assets/layout-images/light-1col2thirdswidth-min1200.png' | relative_url "    
+
+                min1200-img="'../assets/layout-images/light-1col2thirdswidth-min1200.png' | relative_url "
                 min992-img="'../assets/layout-images/light-1col2thirdswidth-min992.png' | relative_url "
                 min768-img="'../assets/layout-images/light-1col2thirdswidth-min768.png' | relative_url "
                 min576-img="'../assets/layout-images/light-1col2thirdswidth-min576.png' | relative_url "
                 finalbp-img="'../assets/layout-images/light-1col2thirdswidth-finalbp.png' | relative_url "
-            
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Light pathway tiles span 2.5 grid-columns each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-                
-                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Light pathway tiles span 4.5 grid-columns each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-            
-                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Light pathway tiles span 5.5 grid-columns each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-            
-                min576-rules="<p>The content area is 12 grid-columns wide.</p><p>Light pathway tiles span 12 grid-columns each.</p><p><strong>The horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Light pathway tiles span 12 grid-columns each.</p><p><strong>The horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-            
+
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Light pathway tiles span 2.5 grid-columns each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
+                min992-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Light pathway tiles span 4.5 grid-columns each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
+                min768-rules="<p>The content area is 11 grid-columns wide.</p>
+                <p>Light pathway tiles span 5.5 grid-columns each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
+                min576-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles span 12 grid-columns each.</p>
+                <p><strong>The horizontal gap between light pathway tiles is reduced from 32px to 24px in this
+                        layout.</strong></p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles span 12 grid-columns each.</p>
+                <p><strong>The horizontal gap between light pathway tiles is reduced from 32px to 24px in this
+                        layout.</strong></p>"
+
                 example-link="'../html-examples/single-col-two-thirds-width.html#light-pathway-example' | relative_url'"
                 example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
+
+                %}
+
+            </div>
+
+
+            <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
                 layout-name="twocol-leftmenu"
-                
+
                 min1200-visibility="true"
                 min768-visibility="true"
                 min576-visibility="true"
                 finalbp-visibility="true"
-                
+
                 finalbp="Breakpoint &lt; 576px"
-            
+
                 min1200-img="'../assets/layout-images/light-2col-leftmenu-min1200.png' | relative_url "
                 min768-img="'../assets/layout-images/light-2col-leftmenu-min768.png' | relative_url "
                 min576-img="'../assets/layout-images/light-2col-leftmenu-min576.png' | relative_url "
                 finalbp-img="'../assets/layout-images/light-2col-leftmenu-finalbp.png' | relative_url "
-            
-    
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Light pathway tiles span 2.5 grid-columns each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
 
-            
-                min768-rules="<p>The content area is 9 grid-columns wide.</p><p>Light pathway tiles span 4.5 grid-columns each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-                
-                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Light pathway tiles span 9 grid-columns each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-            
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Light pathway tiles span 12 grid-columns each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-            
+
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Light pathway tiles span 2.5 grid-columns each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
+
+                min768-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Light pathway tiles span 4.5 grid-columns each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
+                min576-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Light pathway tiles span 9 grid-columns each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles span 12 grid-columns each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
                 example-link="'../html-examples/two-col-left-side-menu.html#light-pathway-example' | relative_url'"
                 example-link-text="View layout example"
-                
-            %}
-            
-        </div>
-        
-        
-        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
-            
-            {% include layouts-accordion.html 
+
+                %}
+
+            </div>
+
+
+            <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
                 layout-name="twocol-rightbar"
-            
+
                 min1200-visibility="true"
                 min992-visibility="false"
                 min768-visibility="true"
-               
+
                 finalbp-visibility="true"
-                
+
                 finalbp="Breakpoint &lt; 576px"
-            
+
                 min1200-img="'../assets/layout-images/light-2col-rightsidebar-min1200.png' | relative_url "
                 min768-img="'../assets/layout-images/light-2col-rightsidebar-min768.png' | relative_url "
-               
+
                 finalbp-img="'../assets/layout-images/light-2col-rightsidebar-finalbp.png' | relative_url "
 
-                
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Light pathway tiles are 2.5 grid-columns wide each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
 
-                min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Light pathway tiles are 4 grid-columns wide each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-            
-               
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Light pathway tiles are 12 grid-columns wide each.</p><p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
-            
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Light pathway tiles are 2.5 grid-columns wide each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
+                min768-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Light pathway tiles are 4 grid-columns wide each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
+
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles are 12 grid-columns wide each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
+                        this layout.</strong></p>"
+
                 example-link="'../html-examples/two-col-right-sidebar.html#light-pathway-example' | relative_url'"
                 example-link-text="View layout example"
-                
-            %}
-            
+
+                %}
+
+            </div>
+
+
+
+            <!-- GUIDELINES -->
+            <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+            <h3>Purpose: </h3>
+            <p>Generally used as a lightweight option within index pages to link to a list of pages on the site. May be
+                used to show linked page hierarchy alongside hero and standard pathways. </p>
+            <h3>When to use this component: </h3>
+            <ul>
+                <li>Light pathways are used primarily on the home, category and topic pages. </li>
+                <li>They may be used to show pathways that are lower in hierarchy than standard and hero pathways.</li>
+            </ul>
+
+            <h3>Content rules: </h3>
+            <ul>
+                <li>All light pathway tiles grouped together should have consistent top icon use. Tiles without a top
+                    icon should not appear in the same group as tiles with a top icon.</li>
+                <li>Tiles linking to external sites should state the agency or name of website.</li>
+            </ul>
+
         </div>
-
-
-
-        <!-- GUIDELINES -->
-        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
-
-        <h3>Purpose: </h3>
-        <p>Generally used as a lightweight option within index pages to link to a list of pages on the site. May be used to show linked page hierarchy alongside hero and standard pathways. </p>
-        <h3>When to use this component: </h3>
-        <ul>
-            <li>Light pathways are used primarily on the home, category and topic pages. </li>
-            <li>They may be used to show pathways that are lower in hierarchy than standard and hero pathways.</li>
-        </ul>
-        
-        <h3>Content rules: </h3>
-        <ul>
-            <li>All light pathway tiles grouped together should have consistent top icon use. Tiles without a top icon should not appear in the same group as tiles with a top icon.</li>
-            <li>Tiles linking to external sites should state the agency or name of website.</li>
-        </ul>
-
-        </div>
-        
