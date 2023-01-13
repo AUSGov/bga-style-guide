@@ -246,14 +246,61 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-grants-accordion-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,15 +313,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-grants-accordion-group" id="bga-grants-accordion-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-grants-accordion-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-grants-accordion-group" id="bga-grants-accordion-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-grants-accordion-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -294,12 +341,12 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <div class="bga-component-wrapper pb-5">
+                            <div class="bga-component-wrapper pb-5">
 <div class="bga-component bga-default-accordion grant-rounds no-openall m-0">
    
     <button class="accordion-toggle mt-4 pb-0 px-0 mb-4">
@@ -322,26 +369,26 @@
                     <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
                        
                         <div class='round-row closed'>
-                        <div class='round-info'>
-                        <div class='round'>Round 1</div>
-                        <div class='tag'><span>Closed</span></div>
-                        </div>
-                        <div class='link'><a>Safer Communities Fund - Round 1 - Early Intervention Grants</a></div>
-                    </div>
-                    <div class='round-row open'>
-                        <div class='round-info'>
-                        <div class='round'>Round 2</div>
-                        <div class='tag'><span>Open</span></div>
-                        </div>
-                        <div class='link'>Safer Communities Fund - Round 2 - Early Intervention Grants</div>
-                    </div>
-                    <div class='round-row coming-soon'>
-                        <div class='round-info'>
-                        <div class='round'>Round 3</div>
-                        <div class='tag'><span>Coming soon</span></div>
-                        </div>
-                        <div class='link'><a>Safer Communities Fund - Round 3 - Early Intervention Grants</a></div>
-                    </div>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 1</div>
+                                    <div class='tag'><span>Closed</span></div>
+                                    </div>
+                                    <div class='link'><a>Safer Communities Fund - Round 1 - Early Intervention Grants</a></div>
+                                </div>
+                                <div class='round-row open'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 2</div>
+                                    <div class='tag'><span>Open</span></div>
+                                    </div>
+                                    <div class='link'>Safer Communities Fund - Round 2 - Early Intervention Grants</div>
+                                </div>
+                                <div class='round-row coming-soon'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 3</div>
+                                    <div class='tag'><span>Coming soon</span></div>
+                                    </div>
+                                    <div class='link'><a>Safer Communities Fund - Round 3 - Early Intervention Grants</a></div>
+                                </div>
 
                     </div>
                 </div>
@@ -361,8 +408,139 @@
 </div>
 </div>
 
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="tab-section non-branded">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-grants-accordion-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-grants-accordion-group" id="nb-grants-accordion-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-grants-accordion-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-grants-accordion-group" id="nb-grants-accordion-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-grants-accordion-bp-final">&lt;576px</label>
+
+                </div>
+
             </div>
-        </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <p>Apply your brand specific <strong>colours and borders</strong> to the base accordion shown below.</p>
+
+                            <div class="bga-component-wrapper pb-5">
+<div class="bga-component bga-default-accordion grant-rounds no-openall non-branded m-0">
+   
+    <button class="accordion-toggle mt-4 pb-0 px-0 mb-4">
+        <span>Open all</span>
+        <svg class="ms-2" data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+        <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#333"/>
+        </svg>
+      </button>
+    
+    <div class="accordion">
+
+            
+            <div class="accordion-item" tabindex="-1">
+                <h5 class="accordion-header pt-0" id="accordion-1">
+                    <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapseOne" aria-expanded="false" aria-controls="accordion-collapseOne">
+                        <p class="pe-4"><strong>All grant rounds for this opportunity</strong></p>
+                    </button>
+                </h5>
+                <div id="accordion-collapseOne" class="accordion-collapse collapse" aria-labelledby="accordion-1" >
+                    <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                       
+                        <div class='round-row closed'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 1</div>
+                                    <div class='tag'><span>Closed</span></div>
+                                    </div>
+                                    <div class='link'><a>Safer Communities Fund - Round 1 - Early Intervention Grants</a></div>
+                                </div>
+                                <div class='round-row open'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 2</div>
+                                    <div class='tag'><span>Open</span></div>
+                                    </div>
+                                    <div class='link'>Safer Communities Fund - Round 2 - Early Intervention Grants</div>
+                                </div>
+                                <div class='round-row coming-soon'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 3</div>
+                                    <div class='tag'><span>Coming soon</span></div>
+                                    </div>
+                                    <div class='link'><a>Safer Communities Fund - Round 3 - Early Intervention Grants</a></div>
+                                </div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+        
+
+
+        
+
+
+</div>
+          
+            
+</div>
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
 
 
         <!-- Design specifications link -->

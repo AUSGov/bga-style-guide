@@ -5077,7 +5077,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-default-accordion { background: none; text-align: right; }
 
-.bga-default-accordion .accordion-toggle { border: none; background: transparent; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; }
+.bga-default-accordion .accordion-toggle { border: none; background: transparent !important; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; color: #333333; }
 
 .bga-default-accordion .accordion-toggle.close svg { transform: scaleY(-1); }
 
@@ -5164,6 +5164,42 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .bga-default-accordion.grant-rounds .accordion-item .round-row.open .tag span { background: #ffffff; border: 1px solid #299F28; padding: 1px 15px; }
 
 .bga-default-accordion.grant-rounds .accordion-item .round-row.coming-soon .tag span { background: #FFF3CD; }
+
+.bga-default-accordion.non-branded .accordion { border-top: #333333 solid 1px; }
+
+.bga-default-accordion.non-branded .accordion-item { background: #E8E8E8; border-bottom: #333333 solid 1px; }
+
+.bga-default-accordion.non-branded .accordion-item:hover { border-bottom: #333333 solid 2px; }
+
+.bga-default-accordion.non-branded .accordion-item.show { border-bottom: #333333 solid 2px; }
+
+.bga-default-accordion.non-branded .accordion-item .accordion-button { color: #333333; }
+
+.bga-default-accordion.non-branded .accordion-item .accordion-button::after { background-color: transparent; border-radius: none; box-shadow: none; }
+
+.bga-default-accordion.non-branded .accordion-item .accordion-button:focus-visible { border-color: mediumblue; }
+
+.bga-default-accordion.non-branded .accordion-item .accordion-button:hover::after { background-color: transparent; }
+
+.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed) { background-color: #E8E8E8; }
+
+.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed):hover { background: #E8E8E8; }
+
+.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed)::after { box-shadow: none; background-color: transparent; }
+
+.bga-default-accordion.non-branded .accordion-item .accordion-body a { color: mediumblue; }
+
+.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row { border-bottom: 2px solid #333333; }
+
+.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row .tag { font-size: .75rem; padding-right: 16px; }
+
+.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row .tag span { background: #D8D8D8; }
+
+.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row.open { background: #F8F8F8; }
+
+.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row.open .tag span { background: #ffffff; border: 1px solid #B8B8B8; }
+
+.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row.coming-soon .tag span { background: #D8D8D8; }
 
 .component-example.bp-below576 .bga-default-accordion .accordion-item .accordion-button, .component-example.small-screen .bga-default-accordion .accordion-item .accordion-button { font-size: 1rem; padding: 16px !important; }
 
@@ -6829,7 +6865,7 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .bga-component.non-branded a:focus-visible, .bga-component.non-branded .tile-title:focus-visible { border: 2px solid mediumblue; border-radius: 4px; }
 
-.bga-component.non-branded a:hover, .bga-component.non-branded .tile-title:hover { color: mediumblue; }
+.bga-component.non-branded a:hover, .bga-component.non-branded .tile-title:hover { color: mediumblue; background: transparent; }
 
 .bga-component.non-branded button:focus-visible { color: #333333; }
 
