@@ -28,7 +28,7 @@
     <link rel="stylesheet" href=/bga-style-guide/css/main.css>
     
     <!-- jQuery -->   
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -246,14 +246,59 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
+
+                <!-- Breakpoint radio buttons -->
+                <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-feature-box-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -262,22 +307,22 @@
                 
                 
                   
-                    <input type="radio" class="btn-check bp-lg true" name="-group" id="-bp-lg" autocomplete="off" data-breakpoint="bp-992">
-                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="-bp-lg">≥992px (lg)</label>
+                    <input type="radio" class="btn-check bp-lg true" name="bga-feature-box-group" id="bga-feature-box-bp-lg" autocomplete="off" data-breakpoint="bp-992">
+                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="bga-feature-box-bp-lg">≥992px (lg)</label>
                 
 
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-feature-box-group" id="bga-feature-box-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-feature-box-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-feature-box-group" id="bga-feature-box-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-feature-box-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -297,14 +342,14 @@
 
 
 
-        <!-- Component example -->
+                <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Layout: Single column - full width</h3>
+                        <h3>Layout: Single column - full width</h3>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
 <div class="bga-component feature-box full-width-layout purple m-0">
     
     <div class="py-4 ps-4 pe-8 component-content h-100">
@@ -320,12 +365,12 @@
 
             
                 <p>Before you start, it’s a good idea to assess your business needs so you can choose the right
-                    person for your business. Think about: </p>
-                <ul>
-                    <li>the tasks you need the employee to do</li>
-                    <li>any skills and qualifications they’ll require</li>
-                    <li>how busy the job will be</li>
-                </ul>
+                            person for your business. Think about: </p>
+                        <ul>
+                            <li>the tasks you need the employee to do</li>
+                            <li>any skills and qualifications they’ll require</li>
+                            <li>how busy the job will be</li>
+                        </ul>
             
 
         </div>
@@ -335,9 +380,9 @@
 </div>
 </div>
 
-                <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+                        <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
 <div class="bga-component feature-box two-col-layout green m-0">
     
     <div class="py-4 ps-4 pe-8 component-content h-100">
@@ -353,12 +398,12 @@
 
             
                 <p>Before you start, it’s a good idea to assess your business needs so you can choose the right
-                    person for your business. Think about: </p>
-                <ul>
-                    <li>the tasks you need the employee to do</li>
-                    <li>any skills and qualifications they’ll require</li>
-                    <li>how busy the job will be</li>
-                </ul>
+                            person for your business. Think about: </p>
+                        <ul>
+                            <li>the tasks you need the employee to do</li>
+                            <li>any skills and qualifications they’ll require</li>
+                            <li>how busy the job will be</li>
+                        </ul>
             
 
         </div>
@@ -368,16 +413,16 @@
 </div>
 </div>
 
-            </div>
-        </div>
+                    </div>
+                </div>
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-                    <h3>Colour variations</h3>
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
+                            <h3>Colour variations</h3>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                <div class="bga-component-wrapper pb-5 h-100">
 <div class="bga-component feature-box feature-box-colours teal">
     
     <div class="p-4 component-content h-100">
@@ -396,10 +441,10 @@
 
 </div>
 </div>
-                    </div>
+                            </div>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                <div class="bga-component-wrapper pb-5 h-100">
 <div class="bga-component feature-box feature-box-colours purple">
     
     <div class="p-4 component-content h-100">
@@ -418,10 +463,10 @@
 
 </div>
 </div>
-                    </div>
+                            </div>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                <div class="bga-component-wrapper pb-5 h-100">
 <div class="bga-component feature-box feature-box-colours orange">
     
     <div class="p-4 component-content h-100">
@@ -440,19 +485,19 @@
 
 </div>
 </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
 
-        <div class="component-example">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-                <div class="row">
-                    <h3>Coloured background sections - colour variations</h3>
+                <div class="component-example">
+                    <div class="component-wrapper coloured-section remove-element-padding p-4">
+                        <div class="row">
+                            <h3>Coloured background sections - colour variations</h3>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                <div class="bga-component-wrapper pb-5 h-100">
 <div class="bga-component feature-box feature-box-colours teal colour-bkg">
     
     <div class="p-4 component-content h-100">
@@ -471,10 +516,10 @@
 
 </div>
 </div>
-                    </div>
+                            </div>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                <div class="bga-component-wrapper pb-5 h-100">
 <div class="bga-component feature-box feature-box-colours purple colour-bkg">
     
     <div class="p-4 component-content h-100">
@@ -493,10 +538,10 @@
 
 </div>
 </div>
-                    </div>
+                            </div>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <div class="bga-component-wrapper pb-5 h-100">
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                <div class="bga-component-wrapper pb-5 h-100">
 <div class="bga-component feature-box feature-box-colours orange colour-bkg">
     
     <div class="p-4 component-content h-100">
@@ -515,20 +560,20 @@
 
 </div>
 </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
 
-                    <h3>Approved icons</h3>
+                            <h3>Approved icons</h3>
 
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="approved-icons ">
 	<p class="icon-name mb-2"><strong>Tips</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -539,10 +584,10 @@
 		</div>
 	</button>
 </div>
-                    </div>
+                            </div>
 
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="approved-icons ">
 	<p class="icon-name mb-2"><strong>Case studies / examples</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -553,10 +598,10 @@
 		</div>
 	</button>
 </div>
-                    </div>
+                            </div>
 
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="approved-icons ">
 	<p class="icon-name mb-2"><strong>News</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -567,16 +612,151 @@
 		</div>
 	</button>
 </div>
+                            </div>
+
+
+
+                        </div>
                     </div>
+                </div>
+            
+            </div>
 
 
+            <div class="tab-section non-branded ">
+
+
+                <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-feature-box-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                  
+                    <input type="radio" class="btn-check bp-lg true" name="nb-feature-box-group" id="nb-feature-box-bp-lg" autocomplete="off" data-breakpoint="bp-992">
+                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="nb-feature-box-bp-lg">≥992px (lg)</label>
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-feature-box-group" id="nb-feature-box-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-feature-box-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-feature-box-group" id="nb-feature-box-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-feature-box-bp-final">&lt;576px</label>
 
                 </div>
+
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                    <!-- Component example -->
+    
+                    <div class="component-example m-0">
+
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <p>Apply your brand specific <strong>colours and borders</strong> to the base feature boxes shown below.</p>
+    
+                            <h3>Layout: Single column - full width</h3>
+    
+                            <div class="bga-component-wrapper pb-5">
+<div class="bga-component feature-box full-width-layout non-branded nb-background m-0">
+    
+    <div class="py-4 ps-4 pe-8 component-content h-100">
+        <div class="icon-wrapper me-3 mb-3"><img src='../assets/icon-lightbulb-black.svg' | relative_url  alt="" /></div>
+        
+        <div class="component-text remove-element-padding">
+        
+            
+                <h2>Tip - Assess your business needs</h2>
+            
+
+            
+
+            
+                <p>Before you start, it’s a good idea to assess your business needs so you can choose the right
+                                person for your business. Think about: </p>
+                            <ul>
+                                <li>the tasks you need the employee to do</li>
+                                <li>any skills and qualifications they’ll require</li>
+                                <li>how busy the job will be</li>
+                            </ul>
+            
+
         </div>
+    </div>
+           
+            
+</div>
+</div>
+    
+                            <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+    
+                            <div class="bga-component-wrapper pb-5">
+<div class="bga-component feature-box two-col-layout non-branded nb-background m-0">
+    
+    <div class="py-4 ps-4 pe-8 component-content h-100">
+        <div class="icon-wrapper me-3 mb-3"><img src='../assets/icon-casestudy-black.svg' | relative_url  alt="" /></div>
+        
+        <div class="component-text remove-element-padding">
+        
+            
 
+            
+                <h3>Tip - Assess your business needs</h3>
+            
 
+            
+                <p>Before you start, it’s a good idea to assess your business needs so you can choose the right
+                                person for your business. Think about: </p>
+                            <ul>
+                                <li>the tasks you need the employee to do</li>
+                                <li>any skills and qualifications they’ll require</li>
+                                <li>how busy the job will be</li>
+                            </ul>
+            
 
+        </div>
+    </div>
+           
+            
+</div>
+</div>
+    
+                        </div>
+                    </div>
+    
+
+            </div>
+
+        </div>
 
 
         <!-- Design specifications link -->
