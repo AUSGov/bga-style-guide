@@ -32,156 +32,229 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        lg-visibility="true"
-        sm-visibility="true"
-        final-visibility="true"
-        breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <h3>Layout: Single column - full width</h3>
-
-                {% include component-examples/featurebox-example.html
-                    h2title="Tip - Assess your business needs"
-                    content="<p>Before you start, it’s a good idea to assess your business needs so you can choose the right
-                    person for your business. Think about: </p>
-                <ul>
-                    <li>the tasks you need the employee to do</li>
-                    <li>any skills and qualifications they’ll require</li>
-                    <li>how busy the job will be</li>
-                </ul>"
-                icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
-                classes="full-width-layout purple"
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                element-string="bga-feature-box"
+                lg-visibility="true"
+                sm-visibility="true"
+                final-visibility="true"
+                breakpoint-final="576"
                 %}
 
-                <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+                <!-- Component example -->
 
-                {% include component-examples/featurebox-example.html
-                    h3title="Tip - Assess your business needs"
-                    content="<p>Before you start, it’s a good idea to assess your business needs so you can choose the right
-                    person for your business. Think about: </p>
-                <ul>
-                    <li>the tasks you need the employee to do</li>
-                    <li>any skills and qualifications they’ll require</li>
-                    <li>how busy the job will be</li>
-                </ul>"
-                icon="'../assets/icon-casestudy-blueblack.svg' | relative_url "
-                classes="two-col-layout green"
-                %}
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
 
-            </div>
-        </div>
+                        <h3>Layout: Single column - full width</h3>
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-                    <h3>Colour variations</h3>
-
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        {% include component-examples/feature-box-colours.html
-                        classes="teal"
-                        colour="Teal"
-                        top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                        {% include component-examples/featurebox-example.html
+                            h2title="Tip - Assess your business needs"
+                            content="<p>Before you start, it’s a good idea to assess your business needs so you can choose the right
+                            person for your business. Think about: </p>
+                        <ul>
+                            <li>the tasks you need the employee to do</li>
+                            <li>any skills and qualifications they’ll require</li>
+                            <li>how busy the job will be</li>
+                        </ul>"
+                        icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                        classes="full-width-layout purple"
                         %}
-                    </div>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        {% include component-examples/feature-box-colours.html
-                        classes="purple"
-                        colour="Purple"
-                        top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
-                        %}
-                    </div>
+                        <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        {% include component-examples/feature-box-colours.html
-                        classes="orange"
-                        colour="Orange"
-                        top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                        {% include component-examples/featurebox-example.html
+                            h3title="Tip - Assess your business needs"
+                            content="<p>Before you start, it’s a good idea to assess your business needs so you can choose the right
+                            person for your business. Think about: </p>
+                        <ul>
+                            <li>the tasks you need the employee to do</li>
+                            <li>any skills and qualifications they’ll require</li>
+                            <li>how busy the job will be</li>
+                        </ul>"
+                        icon="'../assets/icon-casestudy-blueblack.svg' | relative_url "
+                        classes="two-col-layout green"
                         %}
+
                     </div>
                 </div>
-            </div>
-        </div>
 
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
+                            <h3>Colour variations</h3>
 
-        <div class="component-example">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-                <div class="row">
-                    <h3>Coloured background sections - colour variations</h3>
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                {% include component-examples/feature-box-colours.html
+                                classes="teal"
+                                colour="Teal"
+                                top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                                %}
+                            </div>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        {% include component-examples/feature-box-colours.html
-                        classes="teal colour-bkg"
-                        colour="Teal"
-                        top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
-                        %}
-                    </div>
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                {% include component-examples/feature-box-colours.html
+                                classes="purple"
+                                colour="Purple"
+                                top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                                %}
+                            </div>
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        {% include component-examples/feature-box-colours.html
-                        classes="purple colour-bkg"
-                        colour="Purple"
-                        top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
-                        %}
-                    </div>
-
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        {% include component-examples/feature-box-colours.html
-                        classes="orange colour-bkg"
-                        colour="Orange"
-                        top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
-                        %}
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                {% include component-examples/feature-box-colours.html
+                                classes="orange"
+                                colour="Orange"
+                                top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                                %}
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
+                <div class="component-example">
+                    <div class="component-wrapper coloured-section remove-element-padding p-4">
+                        <div class="row">
+                            <h3>Coloured background sections - colour variations</h3>
 
-                    <h3>Approved icons</h3>
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                {% include component-examples/feature-box-colours.html
+                                classes="teal colour-bkg"
+                                colour="Teal"
+                                top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                                %}
+                            </div>
 
-                    <div class="col-6 col-md-4 mb-4">
-                        {% include icon-example.html
-                        src="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
-                        title="Tips"
-                        classes=""
-                        %}
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                {% include component-examples/feature-box-colours.html
+                                classes="purple colour-bkg"
+                                colour="Purple"
+                                top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                                %}
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                                {% include component-examples/feature-box-colours.html
+                                classes="orange colour-bkg"
+                                colour="Orange"
+                                top-icon="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                                %}
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="col-6 col-md-4 mb-4">
-                        {% include icon-example.html
-                        src="'../assets/icon-casestudy-blueblack.svg' | relative_url "
-                        title="Case studies / examples"
-                        classes=""
-                        %}
-                    </div>
-
-                    <div class="col-6 col-md-4 mb-4">
-                        {% include icon-example.html
-                        src="'../assets/icon-news-blueblack.svg' | relative_url "
-                        title="News"
-                        classes=""
-                        %}
-                    </div>
-
-
-
                 </div>
+
+
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
+
+                            <h3>Approved icons</h3>
+
+                            <div class="col-6 col-md-4 mb-4">
+                                {% include icon-example.html
+                                src="'../assets/icon-lightbulb-blueblack.svg' | relative_url "
+                                title="Tips"
+                                classes=""
+                                %}
+                            </div>
+
+                            <div class="col-6 col-md-4 mb-4">
+                                {% include icon-example.html
+                                src="'../assets/icon-casestudy-blueblack.svg' | relative_url "
+                                title="Case studies / examples"
+                                classes=""
+                                %}
+                            </div>
+
+                            <div class="col-6 col-md-4 mb-4">
+                                {% include icon-example.html
+                                src="'../assets/icon-news-blueblack.svg' | relative_url "
+                                title="News"
+                                classes=""
+                                %}
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            
             </div>
+
+
+            <div class="tab-section non-branded ">
+
+
+                {% include breakpoints.html
+                    element-string="nb-feature-box"
+                    lg-visibility="true"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
+                    %}
+    
+                    <!-- Component example -->
+    
+                    <div class="component-example m-0">
+
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <p>Apply your brand specific <strong>colours and borders</strong> to the base feature boxes shown below.</p>
+    
+                            <h3>Layout: Single column - full width</h3>
+    
+                            {% include component-examples/featurebox-example.html
+                                h2title="Tip - Assess your business needs"
+                                content="<p>Before you start, it’s a good idea to assess your business needs so you can choose the right
+                                person for your business. Think about: </p>
+                            <ul>
+                                <li>the tasks you need the employee to do</li>
+                                <li>any skills and qualifications they’ll require</li>
+                                <li>how busy the job will be</li>
+                            </ul>"
+                            icon="'../assets/icon-lightbulb-black.svg' | relative_url "
+                            classes="full-width-layout non-branded nb-background"
+                            %}
+    
+                            <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+    
+                            {% include component-examples/featurebox-example.html
+                                h3title="Tip - Assess your business needs"
+                                content="<p>Before you start, it’s a good idea to assess your business needs so you can choose the right
+                                person for your business. Think about: </p>
+                            <ul>
+                                <li>the tasks you need the employee to do</li>
+                                <li>any skills and qualifications they’ll require</li>
+                                <li>how busy the job will be</li>
+                            </ul>"
+                            icon="'../assets/icon-casestudy-black.svg' | relative_url "
+                            classes="two-col-layout non-branded nb-background"
+                            %}
+    
+                        </div>
+                    </div>
+    
+
+            </div>
+
         </div>
-
-
-
 
 
         <!-- Design specifications link -->

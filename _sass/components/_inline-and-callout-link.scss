@@ -54,24 +54,30 @@
         }
     }
     &.non-branded {
-            a {
-                background:$nb-grey-light;
-                color: $nb-blue-links;  
-        
-                .link-wrapper {
-                    border-left: none;
-                }
-                
-                &:focus-visible {
-                    background: $nb-grey-mid;
-                }
-                &:hover {
-                    color: $nb-blue-links;
-                }
+        a {
+            background:$nb-grey-light;
+            color: $nb-blue-links;  
+    
+            .link-wrapper {
+                border-left: none;
             }
-            .page {
-                color: $bga-black;
+            
+            &:focus-visible {
+                background: $nb-grey-mid;
             }
+            &:hover {
+                color: $nb-blue-links;
+            }
+        }
+        .page {
+            color: $bga-black;
+        }
+        &.callout-link {
+            .icon-wrapper {
+                background: $nb-grey-extra-darkest;
+            }
+        }
+
     } 
 }
 
