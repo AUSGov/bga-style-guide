@@ -4,11 +4,12 @@
 
     .accordion-toggle {
         border: none;
-        background: transparent;
+        background: transparent !important;
         text-decoration: underline;
         cursor: pointer;
         font-weight: 600;
         box-shadow: none;
+        color: $bga-black;
 
         &.close {
             svg {
@@ -216,6 +217,96 @@
             }
             
 
+        }
+    }
+
+    &.non-branded {
+        .accordion {
+            border-top: $bga-black solid 1px;
+        }
+        .accordion-item {
+            background: $nb-grey-light;
+            border-bottom: $bga-black solid 1px;
+
+            &:hover {
+                border-bottom: $bga-black solid 2px;
+            }
+            &.show {
+                border-bottom: $bga-black solid 2px;
+            }
+
+            .accordion-button {
+                color: $bga-black;
+                
+                &::after {
+                    background-color: transparent;
+                    border-radius: none;
+                    box-shadow: none;
+                }
+                
+                &:focus-visible {
+                   border-color: $nb-blue-links;
+                }
+                &:hover {
+                    &::after {
+                        background-color: transparent;
+                    }
+                }
+                &:not(.collapsed) {
+                    background-color: $nb-grey-light;
+                    
+                    &:hover {
+                        background: $nb-grey-light;
+                    }
+                    &::after {
+                        box-shadow: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            .accordion-body {
+                a {
+                    color: $nb-blue-links;
+                }
+            }
+        }
+
+        &.grant-rounds {
+            .accordion-item {
+                .round-row {
+                    border-bottom: 2px solid $bga-black;
+                    
+                    .tag {
+                        font-size: .75rem;
+                        padding-right: 16px;
+    
+                        span {
+                            background: $nb-grey-mid;
+                        }
+                    }
+                    &.open {
+                        background: $nb-grey-lightest;
+    
+                        .tag {
+                            span {
+                                background: $bga-white;
+                                border: 1px solid $nb-grey-darkest; 
+                            }
+                        }
+                    }
+                    &.coming-soon {
+                        .tag {
+                            span {
+                                background: $nb-grey-mid;
+                            }
+                        }
+                    }
+    
+                }
+                
+    
+            }
         }
     }
 }

@@ -32,54 +32,135 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        sm-visibility="true"
-        final-visibility="true"
-        breakpoint-final="576"
-        %}
 
-        <!-- Component example -->
+        {% include section-tabs.html
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
 
-                {% include component-examples/accordion-example.html
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-grants-accordion"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
+                    %}
 
-                layout-name="accordion"
+                    <!-- Component example -->
 
-                item1="true"
-                
-                title1="All grant rounds for this opportunity"
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                content1="<div class='round-row closed'>
-                        <div class='round-info'>
-                        <div class='round'>Round 1</div>
-                        <div class='tag'><span>Closed</span></div>
+                            {% include component-examples/accordion-example.html
+
+                            layout-name="accordion"
+
+                            item1="true"
+                            
+                            title1="All grant rounds for this opportunity"
+
+                            content1="<div class='round-row closed'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 1</div>
+                                    <div class='tag'><span>Closed</span></div>
+                                    </div>
+                                    <div class='link'><a>Safer Communities Fund - Round 1 - Early Intervention Grants</a></div>
+                                </div>
+                                <div class='round-row open'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 2</div>
+                                    <div class='tag'><span>Open</span></div>
+                                    </div>
+                                    <div class='link'>Safer Communities Fund - Round 2 - Early Intervention Grants</div>
+                                </div>
+                                <div class='round-row coming-soon'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 3</div>
+                                    <div class='tag'><span>Coming soon</span></div>
+                                    </div>
+                                    <div class='link'><a>Safer Communities Fund - Round 3 - Early Intervention Grants</a></div>
+                                </div>"
+
+                            classes="grant-rounds no-openall"
+
+                            %}
+
                         </div>
-                        <div class='link'><a>Safer Communities Fund - Round 1 - Early Intervention Grants</a></div>
                     </div>
-                    <div class='round-row open'>
-                        <div class='round-info'>
-                        <div class='round'>Round 2</div>
-                        <div class='tag'><span>Open</span></div>
+
+                </div>
+
+
+                <div class="tab-section non-branded">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="nb-grants-accordion"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <p>Apply your brand specific <strong>colours and borders</strong> to the base accordion shown below.</p>
+
+                            {% include component-examples/accordion-example.html
+
+                            layout-name="accordion"
+
+                            item1="true"
+                            
+                            title1="All grant rounds for this opportunity"
+
+                            content1="<div class='round-row closed'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 1</div>
+                                    <div class='tag'><span>Closed</span></div>
+                                    </div>
+                                    <div class='link'><a>Safer Communities Fund - Round 1 - Early Intervention Grants</a></div>
+                                </div>
+                                <div class='round-row open'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 2</div>
+                                    <div class='tag'><span>Open</span></div>
+                                    </div>
+                                    <div class='link'>Safer Communities Fund - Round 2 - Early Intervention Grants</div>
+                                </div>
+                                <div class='round-row coming-soon'>
+                                    <div class='round-info'>
+                                    <div class='round'>Round 3</div>
+                                    <div class='tag'><span>Coming soon</span></div>
+                                    </div>
+                                    <div class='link'><a>Safer Communities Fund - Round 3 - Early Intervention Grants</a></div>
+                                </div>"
+
+                            classes="grant-rounds no-openall non-branded"
+
+                            %}
+
                         </div>
-                        <div class='link'>Safer Communities Fund - Round 2 - Early Intervention Grants</div>
                     </div>
-                    <div class='round-row coming-soon'>
-                        <div class='round-info'>
-                        <div class='round'>Round 3</div>
-                        <div class='tag'><span>Coming soon</span></div>
-                        </div>
-                        <div class='link'><a>Safer Communities Fund - Round 3 - Early Intervention Grants</a></div>
-                    </div>"
 
-                classes="grant-rounds no-openall"
+                </div>
 
-                %}
+
 
             </div>
-        </div>
 
 
         <!-- Design specifications link -->
