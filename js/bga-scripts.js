@@ -1014,7 +1014,7 @@ $(document).ready(function () {
             });
         } else if ($(window).width() >= 768) {
             $('.modal-form').each(function () {
-                $(this).find('.scrollable').css('max-height', '400px');
+                $(this).find('.scrollable').css('max-height', '428px');
                 $(this).find('.email-form').removeClass('open').find('form').css('display', 'block');
             });
         }
