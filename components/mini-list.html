@@ -246,14 +246,59 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-mini-list-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,15 +311,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-mini-list-group" id="bga-mini-list-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-mini-list-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-mini-list-group" id="bga-mini-list-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-mini-list-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -294,12 +339,12 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <div class="bga-component-wrapper pb-5">
+                            <div class="bga-component-wrapper pb-5">
 <div class="bga-component mini-list  m-0">
    
     <div class="accordion mini-list">
@@ -381,15 +426,15 @@
 </div>
 </div>
 
-            </div>
-        </div>
+                        </div>
+                    </div>
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-                    <h3>Colour variations</h3>
+                    <div class="component-example">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            <div class="row">
+                                <h3>Colour variations</h3>
 
-                    <div class="bga-component-wrapper pb-5">
+                                <div class="bga-component-wrapper pb-5">
 <div class="bga-component mini-list  m-0">
    
     <div class="accordion mini-list">
@@ -429,7 +474,7 @@
 </div>
 </div>
 
-                    <div class="bga-component-wrapper pb-5">
+                                <div class="bga-component-wrapper pb-5">
 <div class="bga-component mini-list yellow m-0">
    
     <div class="accordion mini-list">
@@ -468,17 +513,17 @@
             
 </div>
 </div>
-                    
-                </div>
-            </div>
-        </div>
+                                
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="component-example">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-                <div class="row">
-                    <h3>Coloured background sections - colour variations</h3>
+                    <div class="component-example">
+                        <div class="component-wrapper coloured-section remove-element-padding p-4">
+                            <div class="row">
+                                <h3>Coloured background sections - colour variations</h3>
 
-                    <div class="bga-component-wrapper pb-5">
+                                <div class="bga-component-wrapper pb-5">
 <div class="bga-component mini-list colour-bkg m-0">
    
     <div class="accordion mini-list">
@@ -517,21 +562,21 @@
             
 </div>
 </div>
-                    
-                    
-            
-                </div>
-            </div>
-        </div>
+                                
+                                
+                        
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
+                    <div class="component-example">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            <div class="row">
 
-                    <h3>Approved icons</h3>
+                                <h3>Approved icons</h3>
 
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
+                                <div class="col-6 col-md-4 mb-4">
+                                    <div class="approved-icons ">
 	<p class="icon-name mb-2"><strong>Tick</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -542,12 +587,158 @@
 		</div>
 	</button>
 </div>
+                                </div>
+
+
+                            </div>
+                        </div>
                     </div>
 
+                </div>
+
+                <div class="tab-section non-branded ">
+                    
+                     <!-- Breakpoint radio buttons -->
+                     <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-mini-list-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-mini-list-group" id="nb-mini-list-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-mini-list-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-mini-list-group" id="nb-mini-list-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-mini-list-bp-final">&lt;576px</label>
 
                 </div>
+
             </div>
-        </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <p>Apply your brand specific <strong>colours and borders</strong> to the base mini-list shown below.</p>
+                            
+                            <div class="bga-component-wrapper pb-5">
+<div class="bga-component mini-list non-branded m-0">
+   
+    <div class="accordion mini-list">
+
+            
+            <div class="accordion-item mb-1" tabindex="-1">
+                <h5 class="accordion-header pt-0" id="mini-list-1">
+                    <button tabindex="0" class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#mini-list-collapseOne" aria-expanded="false" aria-controls="mini-list-collapseOne">
+                        <div class="icon-wrapper me-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
+                            <path d="M0,6.654,1.873,4.921l3.3,3.011L13.907,0,15.8,1.707,5.178,11.361Z" fill="#333"/>
+                          </svg>
+                          </div>
+                        <p class="pe-3"><strong>Know your decision for closing your business, such as financial or personal circumstances</strong></p>
+                    </button>
+                </h5>
+                <div id="mini-list-collapseOne" class="accordion-collapse collapse" aria-labelledby="mini-list-1" >
+                    <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
+                       
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus urna arcu, nec ullamcorper orci tristique eu. <a tabindex='0'>In lobortis ornare ultricies.</a></p>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            
+            <div class="accordion-item mb-1">
+                <h5 class="accordion-header pt-0" id="mini-list-2">
+                    <button class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#mini-list-collapseTwo" aria-expanded="false" aria-controls="mini-list-collapseTwo">
+                        <div class="icon-wrapper me-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
+                            <path d="M0,6.654,1.873,4.921l3.3,3.011L13.907,0,15.8,1.707,5.178,11.361Z" fill="#333"/>
+                          </svg>
+                          </div>
+                        <p class="pe-3"><strong>Get professional advice from an accountant or business adviser</strong></p>
+                    </button>
+                </h5>
+                <div id="mini-list-collapseTwo" class="accordion-collapse collapse" aria-labelledby="mini-list-2" >
+                    <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
+                        
+                        <p>Praesent nec magna semper, pulvinar sapien sagittis, tempor urna. Praesent pretium finibus interdum.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        
+
+
+           
+            <div class="accordion-item">
+                <h5 class="accordion-header pt-0" id=mini-list-3">
+                    <button class="accordion-button collapsed remove-element-padding py-3 ps-3 pe-4" type="button" data-bs-toggle="collapse" data-bs-target="#mini-list-collapseThree" aria-expanded="false" aria-controls="mini-list-collapseThree">
+                        <div class="icon-wrapper me-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15.797" height="11.361" viewBox="0 0 15.797 11.361">
+                            <path d="M0,6.654,1.873,4.921l3.3,3.011L13.907,0,15.8,1.707,5.178,11.361Z" fill="#333"/>
+                          </svg>
+                          </div>
+                        <p class="pe-3"><strong>Set your date to officially close your business</strong></p>
+                    </button>
+                </h5>
+                <div id="mini-list-collapseThree" class="accordion-collapse collapse" aria-labelledby=mini-list-3">
+                    
+                    <div class="accordion-body remove-element-padding pt-0 ps-8 pb-4 pe-4">
+                       
+                        <p>Phasellus venenatis nulla tempor quam egestas auctor.</p><p>Cras sed tortor a dolor dictum tincidunt ut nec enim. Fusce vitae quam suscipit, suscipit leo at, efficitur turpis.</p>
+                       
+                    </div>
+                </div>
+
+            </div>
+        
+
+
+</div>
+          
+            
+</div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
 
 
 

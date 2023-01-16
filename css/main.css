@@ -4465,7 +4465,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.hero-pathway.non-branded:focus, .bga-component.hero-pathway.non-branded:hover { color: #333333; background: #F8F8F8; }
 
-.bga-component.hero-pathway.non-branded .icon-wrapper .external-site { background: transparent; }
+.bga-component.hero-pathway.non-branded .icon-wrapper .external-site { background: transparent; padding: 0 0 0 16px !important; margin-left: 0; min-height: auto; }
 
 .colour-options-wrapper { display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 -16px; }
 
@@ -4540,6 +4540,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .light-pathway.purple .top-icon { background: #7468B4; }
 
 .light-pathway.teal .top-icon { background: #489595; }
+
+.light-pathway.non-branded .arrow-icon { position: initial; }
 
 .light-pathway.non-branded:focus, .light-pathway.non-branded:hover { background: #F8F8F8; }
 
@@ -5219,7 +5221,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-pathway-accordion { background: none; text-align: right; }
 
-.bga-pathway-accordion .accordion-toggle { border: none; background: #ffffff; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; }
+.bga-pathway-accordion .accordion-toggle { border: none; background: #ffffff; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; color: #333333; }
 
 .bga-pathway-accordion .accordion-toggle.close svg { transform: scaleY(-1); }
 
@@ -5471,6 +5473,46 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-pathway-accordion .accordion-item.blue .accordion-body { background: #d0dff0; }
 
+.bga-pathway-accordion.non-branded .accordion-item { border: none !important; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb { border-left: solid #C8C8C8 8px; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button { background: #E8E8E8; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button .chevron-wrapper { background: #D8D8D8; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible { background-color: #dbdbdb; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible .img-wrapper { background-color: whitesmoke; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible .chevron-wrapper { background-color: #C8C8C8; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover { background-color: #dbdbdb; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover .img-wrapper { background-color: #ededed; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover .chevron-wrapper { background-color: #C8C8C8; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) { background-color: #dbdbdb; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) .img-wrapper { background-color: #ededed; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #C8C8C8; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover { background-color: #dbdbdb; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #ededed; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #C8C8C8; }
+
+.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-body { background: #dbdbdb; }
+
+.bga-pathway-accordion.non-branded .accordion-item .accordion-button:not(.collapsed) { border-bottom: #B8B8B8 1px solid; }
+
+.bga-pathway-accordion.non-branded .accordion-item .accordion-body .tag { padding: 0px; background: none; border-radius: 0; border: none; }
+
+.component-example.bp-below768 .bga-pathway-accordion .accordion-item { border-left: #96B7DF solid 1px; }
+
 .component-example.bp-below768 .bga-pathway-accordion .accordion-item .accordion-button .img-wrapper { display: none; }
 
 .component-example.bp-below768 .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper { width: calc(100% - 60px); }
@@ -5481,7 +5523,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below768 .bga-pathway-accordion .accordion-item .accordion-body .guide-tile { width: 100%; }
 
-@media (max-width: 768px) { .bga-pathway-accordion .accordion-item .accordion-button .img-wrapper { display: none; } .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper { width: calc(100% - 60px); } .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper h3, .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper .h3 { font-size: 1.375rem !important; } .bga-pathway-accordion .accordion-item .accordion-button .chevron-wrapper { padding: 0 16px !important; } .bga-pathway-accordion .accordion-item .accordion-body .guide-tile { width: 100%; } }
+@media (max-width: 768px) { .bga-pathway-accordion .accordion-item { border-left: #96B7DF solid 1px; } .bga-pathway-accordion .accordion-item .accordion-button .img-wrapper { display: none; } .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper { width: calc(100% - 60px); } .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper h3, .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper .h3 { font-size: 1.375rem !important; } .bga-pathway-accordion .accordion-item .accordion-button .chevron-wrapper { padding: 0 16px !important; } .bga-pathway-accordion .accordion-item .accordion-body .guide-tile { width: 100%; } }
 
 .mini-list .accordion-item { border: none; background: #C8D9EE; }
 
@@ -5540,6 +5582,18 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed):hover .icon-wrapper { background: #C8D9EE; }
 
 .mini-list.colour-bkg .accordion-item .accordion-body { background: #ffffff; }
+
+.mini-list.non-branded .accordion-item { background: #D8D8D8; }
+
+.mini-list.non-branded .accordion-item .accordion-button { background: #E8E8E8; }
+
+.mini-list.non-branded .accordion-item .accordion-button:not(.collapsed) { background-color: #D8D8D8; }
+
+.mini-list.non-branded .accordion-body a { color: mediumblue; }
+
+.mini-list.non-branded .accordion-body a:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; }
+
+.mini-list.non-branded .accordion-body a:hover { color: mediumblue; background: transparent; }
 
 .component-example.bp-below576 .mini-list .accordion-item .accordion-button, .component-example.small-screen .mini-list .accordion-item .accordion-button { font-size: 1rem; padding: 16px 16px 16px 8px !important; }
 
@@ -6863,8 +6917,6 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .bga-component.non-branded a:focus-visible, .bga-component.non-branded .tile-title:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; }
 
-.bga-component.non-branded a:focus-visible, .bga-component.non-branded .tile-title:focus-visible { border: 2px solid mediumblue; border-radius: 4px; }
-
 .bga-component.non-branded a:hover, .bga-component.non-branded .tile-title:hover { color: mediumblue; background: transparent; }
 
 .bga-component.non-branded button:focus-visible { color: #333333; }
@@ -6885,7 +6937,13 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .bga-component.non-branded .component-content { border: none; }
 
-.bga-component.non-branded .arrow-icon { background: #D8D8D8; }
+.bga-component.non-branded .icon-wrapper { min-width: auto; min-height: auto; height: auto; width: auto; }
+
+.bga-component.non-branded .icon-wrapper .external-site { min-height: none; }
+
+.bga-component.non-branded .arrow-icon { background: transparent; height: auto; width: auto; }
+
+.bga-component.non-branded .arrow-icon img { max-width: none; }
 
 .example.page-pattern { position: relative; }
 
