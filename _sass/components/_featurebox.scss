@@ -1,4 +1,4 @@
-.feature-box {
+.bga-component.feature-box {
     max-width: 840px;
 
     .component-content {
@@ -90,12 +90,28 @@
         .component-content {
             background: $nb-grey-light;
         }
+        .icon-wrapper {
+            width: 56px;
+            height: 56px;
+        }
+        img {
+            width: 56px;
+        }
+        &.full-width-layout {
+            .icon-wrapper {
+                width: 88px;
+                height: 88px;
+            }
+            img {
+                width: 88px;
+            }
+        }
     }
 }
 
 // Mixins for smaller screen sizes and media queries
 @mixin featurebox-bp-576 (){
-    .feature-box, .feature-box.full-width-layout {
+    .bga-component.feature-box, .bga-component.feature-box.full-width-layout {
         max-width: 100%;
 
         .component-content {
@@ -112,11 +128,18 @@
         img {
             width: 40px;
         }
+
+        &.non-branded {
+            img {
+                width: 56px;
+            }
+        }
+
     }
 }
 
 @mixin featurebox-below576 () {
-    .feature-box, .feature-box.full-width-layout {
+    .bga-component.feature-box, .bga-component.feature-box.full-width-layout {
 
         h2 {
             font-size: 1.75rem;
@@ -147,7 +170,11 @@
                 margin-bottom: 24px;
             }
         }
-
+        &.non-branded {
+            img {
+                width: 44px;
+            }
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-.bga-default-accordion {
+.bga-component.bga-default-accordion {
     background: none;
     text-align: right;
 
@@ -278,31 +278,18 @@
                     border-bottom: 2px solid $bga-black;
                     
                     .tag {
-                        font-size: .75rem;
-                        padding-right: 16px;
+                        font-size: .875rem;
+                        line-height: 1.75;
     
                         span {
-                            background: $nb-grey-mid;
+                            background: transparent !important;
+                            border: none; 
+                            padding: 0 !important;
                         }
                     }
                     &.open {
-                        background: $nb-grey-lightest;
-    
-                        .tag {
-                            span {
-                                background: $bga-white;
-                                border: 1px solid $nb-grey-darkest; 
-                            }
-                        }
+                        background: $nb-grey-lightest; 
                     }
-                    &.coming-soon {
-                        .tag {
-                            span {
-                                background: $nb-grey-mid;
-                            }
-                        }
-                    }
-    
                 }
                 
     

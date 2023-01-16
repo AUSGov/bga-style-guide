@@ -67,6 +67,7 @@
             }
             &:hover {
                 color: $nb-blue-links;
+                background: $nb-grey-mid !important;
             }
         }
         .page {
@@ -118,6 +119,22 @@
     img {
         width: 24px;
         height: auto;
+    }
+    &.non-branded {
+        a {
+            &:focus-visible {
+                color: $nb-blue-links;
+                border: $nb-blue-links solid 2px;
+                border-radius: $bga-focus-radius;
+            }
+            &:hover {
+                color: $nb-blue-links;
+                background: transparent !important;
+            } 
+        }
+        img {
+            width: auto !important;
+        }
     }
 }
 
