@@ -4545,7 +4545,9 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .light-pathway.non-branded:focus, .light-pathway.non-branded:hover { background: #F8F8F8; }
 
-.light-pathway.non-branded.external .icon-wrapper .external-site { background: transparent; }
+.light-pathway.non-branded.external .icon-wrapper .external-site { background: transparent; padding: 0 0 0 16px; }
+
+.light-pathway.non-branded.external .icon-wrapper .external-site p { padding: 0; }
 
 .feature-pathway { display: flex; background: #2E6CB9; color: #ffffff; }
 
@@ -4635,7 +4637,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .inline-pathway.non-branded a:focus-visible { background: #D8D8D8; }
 
-.inline-pathway.non-branded a:hover { color: mediumblue; }
+.inline-pathway.non-branded a:hover { color: mediumblue; background: #D8D8D8 !important; }
 
 .inline-pathway.non-branded .page { color: #333333; }
 
@@ -4654,6 +4656,12 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .inline-pathway.callout-link .icon-wrapper { width: 56px; height: 56px; background: #2E6CB9; border-radius: 100px; display: flex; align-content: center; justify-content: center; flex-shrink: 0; }
 
 .inline-pathway.callout-link img { width: 24px; height: auto; }
+
+.inline-pathway.callout-link.non-branded a:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; }
+
+.inline-pathway.callout-link.non-branded a:hover { color: mediumblue; background: transparent !important; }
+
+.inline-pathway.callout-link.non-branded img { width: auto !important; }
 
 .component-example.bp-below576 .inline-pathway.callout-link .content, .component-example.small-screen .inline-pathway.callout-link .content { flex-wrap: wrap !important; align-items: center; justify-content: center; }
 
@@ -4696,6 +4704,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .standard-pathway.image-pathway .component-content { border-left: none; width: 100%; height: calc(100% - 272px); display: flex; flex-wrap: wrap; align-content: space-between; }
 
 .standard-pathway.image-pathway .component-text { width: 100%; height: 100%; }
+
+.standard-pathway.image-pathway.non-branded .component-content { height: calc(100% - 256px); }
 
 .page-header-wrapper { background: linear-gradient(0deg, #b8cde7 0%, #9cb6db 100%); margin: 0 -24px; padding: 32px 32px 0; }
 
@@ -4989,63 +4999,75 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 768px) { .modal-example.modal-form { min-height: 600px; } .modal-example.modal-form form { display: none; padding: 24px; } .modal-example.modal-form form h4, .modal-example.modal-form form .h4 { display: none; } .modal-example.modal-form .component-content { flex-wrap: wrap; } .modal-example.modal-form .component-text { width: 100%; height: 100% !important; } .modal-example.modal-form .mobile-form-toggle { display: block; width: 100%; padding: 24px; background: #FFD964; border: none; margin: 0; font-size: 1.1875rem; line-height: 1.5; font-weight: 600; display: flex; justify-content: space-between; align-items: center; text-align: left; transition: transform 0.2s ease-in-out; } .modal-example.modal-form .mobile-form-toggle svg { margin-left: 16px; } .modal-example.modal-form .email-form { width: 100%; padding: 0; position: absolute; bottom: 0; z-index: 8000; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); } .modal-example.modal-form .email-form.open .mobile-form-toggle svg { transform: scaleY(-1); } }
 
-.feature-box { max-width: 840px; }
+.bga-component.feature-box { max-width: 840px; }
 
-.feature-box .component-content { background: #CFEBEB; border-left: solid 8px #5AB3B3; display: flex; }
+.bga-component.feature-box .component-content { background: #CFEBEB; border-left: solid 8px #5AB3B3; display: flex; }
 
-.feature-box .icon-wrapper { width: 56px; height: 56px; background: #ffffff; border-radius: 100px; display: flex; align-content: center; justify-content: center; flex-shrink: 0; display: flex; justify-content: center; align-items: center; }
+.bga-component.feature-box .icon-wrapper { width: 56px; height: 56px; background: #ffffff; border-radius: 100px; display: flex; align-content: center; justify-content: center; flex-shrink: 0; display: flex; justify-content: center; align-items: center; }
 
-.feature-box img { width: 40px; height: auto; }
+.bga-component.feature-box img { width: 40px; height: auto; }
 
-.feature-box.purple .component-content { background: #E2DDF8; border-left: solid 8px #9183D8; }
+.bga-component.feature-box.purple .component-content { background: #E2DDF8; border-left: solid 8px #9183D8; }
 
-.feature-box.orange .component-content { background: #FDE6D0; border-left: solid 8px #E88A2D; }
+.bga-component.feature-box.orange .component-content { background: #FDE6D0; border-left: solid 8px #E88A2D; }
 
-.feature-box.colour-bkg .component-content { background: #ffffff; }
+.bga-component.feature-box.colour-bkg .component-content { background: #ffffff; }
 
-.feature-box.colour-bkg.teal .icon-wrapper { background: #CFEBEB; }
+.bga-component.feature-box.colour-bkg.teal .icon-wrapper { background: #CFEBEB; }
 
-.feature-box.colour-bkg.purple .icon-wrapper { background: #E2DDF8; }
+.bga-component.feature-box.colour-bkg.purple .icon-wrapper { background: #E2DDF8; }
 
-.feature-box.colour-bkg.orange .icon-wrapper { background: #FDE6D0; }
+.bga-component.feature-box.colour-bkg.orange .icon-wrapper { background: #FDE6D0; }
 
-.feature-box.full-width-layout { max-width: 100%; }
+.bga-component.feature-box.full-width-layout { max-width: 100%; }
 
-.feature-box.full-width-layout .component-content { border-left-width: 16px; padding-right: 120px !important; }
+.bga-component.feature-box.full-width-layout .component-content { border-left-width: 16px; padding-right: 120px !important; }
 
-.feature-box.full-width-layout .icon-wrapper { width: 88px; height: 88px; margin-right: 32px !important; }
+.bga-component.feature-box.full-width-layout .icon-wrapper { width: 88px; height: 88px; margin-right: 32px !important; }
 
-.feature-box.full-width-layout img { width: 56px; }
+.bga-component.feature-box.full-width-layout img { width: 56px; }
 
-.feature-box.feature-box-colours .component-content { align-items: center; }
+.bga-component.feature-box.feature-box-colours .component-content { align-items: center; }
 
-.feature-box.non-branded .component-content { background: #E8E8E8; }
+.bga-component.feature-box.non-branded .component-content { background: #E8E8E8; }
 
-.component-example.bp-576 .feature-box, .component-example.bp-576 .feature-box.full-width-layout, .component-example.bp-below576 .feature-box, .component-example.bp-below576 .feature-box.full-width-layout { max-width: 100%; }
+.bga-component.feature-box.non-branded .icon-wrapper { width: 56px; height: 56px; }
 
-.component-example.bp-576 .feature-box .component-content, .component-example.bp-576 .feature-box.full-width-layout .component-content, .component-example.bp-below576 .feature-box .component-content, .component-example.bp-below576 .feature-box.full-width-layout .component-content { border-left-width: 8px; padding-right: 64px !important; }
+.bga-component.feature-box.non-branded img { width: 56px; }
 
-.component-example.bp-576 .feature-box .icon-wrapper, .component-example.bp-576 .feature-box.full-width-layout .icon-wrapper, .component-example.bp-below576 .feature-box .icon-wrapper, .component-example.bp-below576 .feature-box.full-width-layout .icon-wrapper { width: 56px; height: 56px; margin-right: 16px !important; }
+.bga-component.feature-box.non-branded.full-width-layout .icon-wrapper { width: 88px; height: 88px; }
 
-.component-example.bp-576 .feature-box img, .component-example.bp-576 .feature-box.full-width-layout img, .component-example.bp-below576 .feature-box img, .component-example.bp-below576 .feature-box.full-width-layout img { width: 40px; }
+.bga-component.feature-box.non-branded.full-width-layout img { width: 88px; }
 
-.component-example.bp-below576 .feature-box h2, .component-example.bp-below576 .feature-box .h2, .component-example.bp-below576 .feature-box.full-width-layout h2 { font-size: 1.75rem; }
+.component-example.bp-576 .bga-component.feature-box, .component-example.bp-576 .bga-component.feature-box.full-width-layout, .component-example.bp-below576 .bga-component.feature-box, .component-example.bp-below576 .bga-component.feature-box.full-width-layout { max-width: 100%; }
 
-.component-example.bp-below576 .feature-box .component-content, .component-example.bp-below576 .feature-box.full-width-layout .component-content { flex-wrap: wrap; justify-content: center; padding-right: 24px !important; }
+.component-example.bp-576 .bga-component.feature-box .component-content, .component-example.bp-576 .bga-component.feature-box.full-width-layout .component-content, .component-example.bp-below576 .bga-component.feature-box .component-content, .component-example.bp-below576 .bga-component.feature-box.full-width-layout .component-content { border-left-width: 8px; padding-right: 64px !important; }
 
-.component-example.bp-below576 .feature-box .icon-wrapper, .component-example.bp-below576 .feature-box.full-width-layout .icon-wrapper { width: 44px; height: 44px; margin-right: 0 !important; }
+.component-example.bp-576 .bga-component.feature-box .icon-wrapper, .component-example.bp-576 .bga-component.feature-box.full-width-layout .icon-wrapper, .component-example.bp-below576 .bga-component.feature-box .icon-wrapper, .component-example.bp-below576 .bga-component.feature-box.full-width-layout .icon-wrapper { width: 56px; height: 56px; margin-right: 16px !important; }
 
-.component-example.bp-below576 .feature-box img, .component-example.bp-below576 .feature-box.full-width-layout img { width: 30px; }
+.component-example.bp-576 .bga-component.feature-box img, .component-example.bp-576 .bga-component.feature-box.full-width-layout img, .component-example.bp-below576 .bga-component.feature-box img, .component-example.bp-below576 .bga-component.feature-box.full-width-layout img { width: 40px; }
 
-.component-example.bp-below576 .feature-box.feature-box-colours .component-content, .component-example.bp-below576 .feature-box.full-width-layout.feature-box-colours .component-content { justify-content: center; }
+.component-example.bp-576 .bga-component.feature-box.non-branded img, .component-example.bp-576 .bga-component.feature-box.full-width-layout.non-branded img, .component-example.bp-below576 .bga-component.feature-box.non-branded img, .component-example.bp-below576 .bga-component.feature-box.full-width-layout.non-branded img { width: 56px; }
 
-.component-example.bp-below576 .feature-box.feature-box-colours .component-text, .component-example.bp-below576 .feature-box.full-width-layout.feature-box-colours .component-text { width: 100%; text-align: center; }
+.component-example.bp-below576 .bga-component.feature-box h2, .component-example.bp-below576 .bga-component.feature-box .h2, .component-example.bp-below576 .bga-component.feature-box.full-width-layout h2 { font-size: 1.75rem; }
 
-.component-example.bp-below576 .feature-box.feature-box-colours .icon-wrapper, .component-example.bp-below576 .feature-box.full-width-layout.feature-box-colours .icon-wrapper { margin-bottom: 24px; }
+.component-example.bp-below576 .bga-component.feature-box .component-content, .component-example.bp-below576 .bga-component.feature-box.full-width-layout .component-content { flex-wrap: wrap; justify-content: center; padding-right: 24px !important; }
 
-@media (max-width: 992px) { .feature-box, .feature-box.full-width-layout { max-width: 100%; } .feature-box .component-content, .feature-box.full-width-layout .component-content { border-left-width: 8px; padding-right: 64px !important; } .feature-box .icon-wrapper, .feature-box.full-width-layout .icon-wrapper { width: 56px; height: 56px; margin-right: 16px !important; } .feature-box img, .feature-box.full-width-layout img { width: 40px; } }
+.component-example.bp-below576 .bga-component.feature-box .icon-wrapper, .component-example.bp-below576 .bga-component.feature-box.full-width-layout .icon-wrapper { width: 44px; height: 44px; margin-right: 0 !important; }
 
-@media (max-width: 576px) { .feature-box h2, .feature-box .h2, .feature-box.full-width-layout h2 { font-size: 1.75rem; } .feature-box .component-content, .feature-box.full-width-layout .component-content { flex-wrap: wrap; justify-content: center; padding-right: 24px !important; } .feature-box .icon-wrapper, .feature-box.full-width-layout .icon-wrapper { width: 44px; height: 44px; margin-right: 0 !important; } .feature-box img, .feature-box.full-width-layout img { width: 30px; } .feature-box.feature-box-colours .component-content, .feature-box.full-width-layout.feature-box-colours .component-content { justify-content: center; } .feature-box.feature-box-colours .component-text, .feature-box.full-width-layout.feature-box-colours .component-text { width: 100%; text-align: center; } .feature-box.feature-box-colours .icon-wrapper, .feature-box.full-width-layout.feature-box-colours .icon-wrapper { margin-bottom: 24px; } }
+.component-example.bp-below576 .bga-component.feature-box img, .component-example.bp-below576 .bga-component.feature-box.full-width-layout img { width: 30px; }
+
+.component-example.bp-below576 .bga-component.feature-box.feature-box-colours .component-content, .component-example.bp-below576 .bga-component.feature-box.full-width-layout.feature-box-colours .component-content { justify-content: center; }
+
+.component-example.bp-below576 .bga-component.feature-box.feature-box-colours .component-text, .component-example.bp-below576 .bga-component.feature-box.full-width-layout.feature-box-colours .component-text { width: 100%; text-align: center; }
+
+.component-example.bp-below576 .bga-component.feature-box.feature-box-colours .icon-wrapper, .component-example.bp-below576 .bga-component.feature-box.full-width-layout.feature-box-colours .icon-wrapper { margin-bottom: 24px; }
+
+.component-example.bp-below576 .bga-component.feature-box.non-branded img, .component-example.bp-below576 .bga-component.feature-box.full-width-layout.non-branded img { width: 44px; }
+
+@media (max-width: 992px) { .bga-component.feature-box, .bga-component.feature-box.full-width-layout { max-width: 100%; } .bga-component.feature-box .component-content, .bga-component.feature-box.full-width-layout .component-content { border-left-width: 8px; padding-right: 64px !important; } .bga-component.feature-box .icon-wrapper, .bga-component.feature-box.full-width-layout .icon-wrapper { width: 56px; height: 56px; margin-right: 16px !important; } .bga-component.feature-box img, .bga-component.feature-box.full-width-layout img { width: 40px; } .bga-component.feature-box.non-branded img, .bga-component.feature-box.full-width-layout.non-branded img { width: 56px; } }
+
+@media (max-width: 576px) { .bga-component.feature-box h2, .bga-component.feature-box .h2, .bga-component.feature-box.full-width-layout h2 { font-size: 1.75rem; } .bga-component.feature-box .component-content, .bga-component.feature-box.full-width-layout .component-content { flex-wrap: wrap; justify-content: center; padding-right: 24px !important; } .bga-component.feature-box .icon-wrapper, .bga-component.feature-box.full-width-layout .icon-wrapper { width: 44px; height: 44px; margin-right: 0 !important; } .bga-component.feature-box img, .bga-component.feature-box.full-width-layout img { width: 30px; } .bga-component.feature-box.feature-box-colours .component-content, .bga-component.feature-box.full-width-layout.feature-box-colours .component-content { justify-content: center; } .bga-component.feature-box.feature-box-colours .component-text, .bga-component.feature-box.full-width-layout.feature-box-colours .component-text { width: 100%; text-align: center; } .bga-component.feature-box.feature-box-colours .icon-wrapper, .bga-component.feature-box.full-width-layout.feature-box-colours .icon-wrapper { margin-bottom: 24px; } .bga-component.feature-box.non-branded img, .bga-component.feature-box.full-width-layout.non-branded img { width: 44px; } }
 
 .pull-quote .component-content { border-left: 8px solid #9183D8; }
 
@@ -5077,131 +5099,127 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 576px) { .pull-quote { padding: 24px 0 32px 0 !important; } .pull-quote blockquote { font-size: 1.125rem; font-style: italic; } }
 
-.bga-default-accordion { background: none; text-align: right; }
+.bga-component.bga-default-accordion { background: none; text-align: right; }
 
-.bga-default-accordion .accordion-toggle { border: none; background: transparent !important; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; color: #333333; }
+.bga-component.bga-default-accordion .accordion-toggle { border: none; background: transparent !important; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; color: #333333; }
 
-.bga-default-accordion .accordion-toggle.close svg { transform: scaleY(-1); }
+.bga-component.bga-default-accordion .accordion-toggle.close svg { transform: scaleY(-1); }
 
-.bga-default-accordion .accordion { text-align: left; border-top: #E4E6EA solid 2px; }
+.bga-component.bga-default-accordion .accordion { text-align: left; border-top: #E4E6EA solid 2px; }
 
-.bga-default-accordion .accordion-item { border: none; background: #E4E6EA; border-bottom: #E4E6EA solid 2px; }
+.bga-component.bga-default-accordion .accordion-item { border: none; background: #E4E6EA; border-bottom: #E4E6EA solid 2px; }
 
-.bga-default-accordion .accordion-item:last-of-type .accordion-button { border-radius: 0; }
+.bga-component.bga-default-accordion .accordion-item:last-of-type .accordion-button { border-radius: 0; }
 
-.bga-default-accordion .accordion-item:first-of-type .accordion-button { border-radius: 0; }
+.bga-component.bga-default-accordion .accordion-item:first-of-type .accordion-button { border-radius: 0; }
 
-.bga-default-accordion .accordion-item:focus-visible { outline: none; }
+.bga-component.bga-default-accordion .accordion-item:focus-visible { outline: none; }
 
-.bga-default-accordion .accordion-item:hover { border-bottom: #FFCF3B solid 4px; }
+.bga-component.bga-default-accordion .accordion-item:hover { border-bottom: #FFCF3B solid 4px; }
 
-.bga-default-accordion .accordion-item.show { border-bottom: #FFCF3B solid 4px; }
+.bga-component.bga-default-accordion .accordion-item.show { border-bottom: #FFCF3B solid 4px; }
 
-.bga-default-accordion .accordion-item .accordion-button { background: #ffffff; font-weight: 600; color: #2E3E5A; justify-content: space-between; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button { background: #ffffff; font-weight: 600; color: #2E3E5A; justify-content: space-between; }
 
-.bga-default-accordion .accordion-item .accordion-button::after { background-color: #FFD964; background-image: url(../assets/Chevron-down-black.svg); background-position: center center; background-size: 16px 10px; height: 48px; width: 48px; border-radius: 100px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); margin: auto 0; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button::after { background-color: #FFD964; background-image: url(../assets/Chevron-down-black.svg); background-position: center center; background-size: 16px 10px; height: 48px; width: 48px; border-radius: 100px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); margin: auto 0; }
 
-.bga-default-accordion .accordion-item .accordion-button:focus { box-shadow: none; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button:focus { box-shadow: none; }
 
-.bga-default-accordion .accordion-item .accordion-button:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
 
-.bga-default-accordion .accordion-item .accordion-button:hover { background: #ffffff; text-decoration: underline; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button:hover { background: #ffffff; text-decoration: underline; }
 
-.bga-default-accordion .accordion-item .accordion-button:hover::after { background-color: #FFCF3B; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button:hover::after { background-color: #FFCF3B; }
 
-.bga-default-accordion .accordion-item .accordion-button:not(.collapsed) { background-color: #E4E6EA; box-shadow: none; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button:not(.collapsed) { background-color: #E4E6EA; box-shadow: none; }
 
-.bga-default-accordion .accordion-item .accordion-button:not(.collapsed):hover { border-bottom: none; background: #E4E6EA; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button:not(.collapsed):hover { border-bottom: none; background: #E4E6EA; }
 
-.bga-default-accordion .accordion-item .accordion-button:not(.collapsed)::after { box-shadow: 2px -2px 3px 0px rgba(51, 51, 51, 0.2); background-color: #FFCF3B; transform: scaleY(-1); }
+.bga-component.bga-default-accordion .accordion-item .accordion-button:not(.collapsed)::after { box-shadow: 2px -2px 3px 0px rgba(51, 51, 51, 0.2); background-color: #FFCF3B; transform: scaleY(-1); }
 
-.bga-default-accordion .accordion-item .accordion-button p { display: block; width: 100%; }
+.bga-component.bga-default-accordion .accordion-item .accordion-button p { display: block; width: 100%; }
 
-.bga-default-accordion .accordion-item .accordion-body { display: flex; flex-wrap: wrap; }
+.bga-component.bga-default-accordion .accordion-item .accordion-body { display: flex; flex-wrap: wrap; }
 
-.bga-default-accordion .accordion-item .accordion-body a { cursor: pointer; color: #2157AA; text-decoration: underline; }
+.bga-component.bga-default-accordion .accordion-item .accordion-body a { cursor: pointer; color: #2157AA; text-decoration: underline; }
 
-.bga-default-accordion .accordion-item .accordion-body a:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; color: #113869; }
+.bga-component.bga-default-accordion .accordion-item .accordion-body a:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; color: #113869; }
 
-.bga-default-accordion .accordion-item .accordion-body a:hover { color: #113869; }
+.bga-component.bga-default-accordion .accordion-item .accordion-body a:hover { color: #113869; }
 
-.bga-default-accordion.colour-bkg .accordion { border-top: #ABB1BD solid 2px; }
+.bga-component.bga-default-accordion.colour-bkg .accordion { border-top: #ABB1BD solid 2px; }
 
-.bga-default-accordion.colour-bkg .accordion-item { background: #C8D9EE; border-bottom: #ABB1BD solid 2px; }
+.bga-component.bga-default-accordion.colour-bkg .accordion-item { background: #C8D9EE; border-bottom: #ABB1BD solid 2px; }
 
-.bga-default-accordion.colour-bkg .accordion-item:hover { border-bottom: #EDC95A solid 4px; }
+.bga-component.bga-default-accordion.colour-bkg .accordion-item:hover { border-bottom: #EDC95A solid 4px; }
 
-.bga-default-accordion.colour-bkg .accordion-item.show { border-bottom: #EDC95A solid 4px; }
+.bga-component.bga-default-accordion.colour-bkg .accordion-item.show { border-bottom: #EDC95A solid 4px; }
 
-.bga-default-accordion.colour-bkg .accordion-item .accordion-button { background: #C8D9EE; }
+.bga-component.bga-default-accordion.colour-bkg .accordion-item .accordion-button { background: #C8D9EE; }
 
-.bga-default-accordion.colour-bkg .accordion-item .accordion-button:hover { background: #C8D9EE; }
+.bga-component.bga-default-accordion.colour-bkg .accordion-item .accordion-button:hover { background: #C8D9EE; }
 
-.bga-default-accordion.colour-bkg .accordion-item .accordion-button:not(.collapsed) { background-color: #E3ECF6; }
+.bga-component.bga-default-accordion.colour-bkg .accordion-item .accordion-button:not(.collapsed) { background-color: #E3ECF6; }
 
-.bga-default-accordion.colour-bkg .accordion-item .accordion-button:not(.collapsed):hover { background: #E3ECF6; }
+.bga-component.bga-default-accordion.colour-bkg .accordion-item .accordion-button:not(.collapsed):hover { background: #E3ECF6; }
 
-.bga-default-accordion.colour-bkg .accordion-item .accordion-body { background: #E3ECF6; }
+.bga-component.bga-default-accordion.colour-bkg .accordion-item .accordion-body { background: #E3ECF6; }
 
-.bga-default-accordion.grant-rounds .accordion-toggle { display: none; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-toggle { display: none; }
 
-.bga-default-accordion.grant-rounds .accordion-item { background: #ffffff; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item { background: #ffffff; }
 
-.bga-default-accordion.grant-rounds .accordion-item .accordion-body { padding: 0 !important; font-size: .875rem; line-height: 1.75; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .accordion-body { padding: 0 !important; font-size: .875rem; line-height: 1.75; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row { display: flex; padding: 16px 24px; border-bottom: 2px solid #E4E6EA; width: 100%; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row { display: flex; padding: 16px 24px; border-bottom: 2px solid #E4E6EA; width: 100%; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row:last-of-type { border-bottom: none; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row:last-of-type { border-bottom: none; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row .round-info { display: flex; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row .round-info { display: flex; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row .round { white-space: nowrap; padding-right: 16px; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row .round { white-space: nowrap; padding-right: 16px; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row .tag { font-size: .75rem; padding-right: 16px; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row .tag { font-size: .75rem; padding-right: 16px; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row .tag span { background: #FCE9E9; border-radius: 50px; padding: 2px 16px; display: block; white-space: nowrap; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row .tag span { background: #FCE9E9; border-radius: 50px; padding: 2px 16px; display: block; white-space: nowrap; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row.open { background: #D4EDD4; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row.open { background: #D4EDD4; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row.open .tag span { background: #ffffff; border: 1px solid #299F28; padding: 1px 15px; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row.open .tag span { background: #ffffff; border: 1px solid #299F28; padding: 1px 15px; }
 
-.bga-default-accordion.grant-rounds .accordion-item .round-row.coming-soon .tag span { background: #FFF3CD; }
+.bga-component.bga-default-accordion.grant-rounds .accordion-item .round-row.coming-soon .tag span { background: #FFF3CD; }
 
-.bga-default-accordion.non-branded .accordion { border-top: #333333 solid 1px; }
+.bga-component.bga-default-accordion.non-branded .accordion { border-top: #333333 solid 1px; }
 
-.bga-default-accordion.non-branded .accordion-item { background: #E8E8E8; border-bottom: #333333 solid 1px; }
+.bga-component.bga-default-accordion.non-branded .accordion-item { background: #E8E8E8; border-bottom: #333333 solid 1px; }
 
-.bga-default-accordion.non-branded .accordion-item:hover { border-bottom: #333333 solid 2px; }
+.bga-component.bga-default-accordion.non-branded .accordion-item:hover { border-bottom: #333333 solid 2px; }
 
-.bga-default-accordion.non-branded .accordion-item.show { border-bottom: #333333 solid 2px; }
+.bga-component.bga-default-accordion.non-branded .accordion-item.show { border-bottom: #333333 solid 2px; }
 
-.bga-default-accordion.non-branded .accordion-item .accordion-button { color: #333333; }
+.bga-component.bga-default-accordion.non-branded .accordion-item .accordion-button { color: #333333; }
 
-.bga-default-accordion.non-branded .accordion-item .accordion-button::after { background-color: transparent; border-radius: none; box-shadow: none; }
+.bga-component.bga-default-accordion.non-branded .accordion-item .accordion-button::after { background-color: transparent; border-radius: none; box-shadow: none; }
 
-.bga-default-accordion.non-branded .accordion-item .accordion-button:focus-visible { border-color: mediumblue; }
+.bga-component.bga-default-accordion.non-branded .accordion-item .accordion-button:focus-visible { border-color: mediumblue; }
 
-.bga-default-accordion.non-branded .accordion-item .accordion-button:hover::after { background-color: transparent; }
+.bga-component.bga-default-accordion.non-branded .accordion-item .accordion-button:hover::after { background-color: transparent; }
 
-.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed) { background-color: #E8E8E8; }
+.bga-component.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed) { background-color: #E8E8E8; }
 
-.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed):hover { background: #E8E8E8; }
+.bga-component.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed):hover { background: #E8E8E8; }
 
-.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed)::after { box-shadow: none; background-color: transparent; }
+.bga-component.bga-default-accordion.non-branded .accordion-item .accordion-button:not(.collapsed)::after { box-shadow: none; background-color: transparent; }
 
-.bga-default-accordion.non-branded .accordion-item .accordion-body a { color: mediumblue; }
+.bga-component.bga-default-accordion.non-branded .accordion-item .accordion-body a { color: mediumblue; }
 
-.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row { border-bottom: 2px solid #333333; }
+.bga-component.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row { border-bottom: 2px solid #333333; }
 
-.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row .tag { font-size: .75rem; padding-right: 16px; }
+.bga-component.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row .tag { font-size: .875rem; line-height: 1.75; }
 
-.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row .tag span { background: #D8D8D8; }
+.bga-component.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row .tag span { background: transparent !important; border: none; padding: 0 !important; }
 
-.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row.open { background: #F8F8F8; }
-
-.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row.open .tag span { background: #ffffff; border: 1px solid #B8B8B8; }
-
-.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row.coming-soon .tag span { background: #D8D8D8; }
+.bga-component.bga-default-accordion.non-branded.grant-rounds .accordion-item .round-row.open { background: #F8F8F8; }
 
 .component-example.bp-below576 .bga-default-accordion .accordion-item .accordion-button, .component-example.small-screen .bga-default-accordion .accordion-item .accordion-button { font-size: 1rem; padding: 16px !important; }
 
@@ -5219,297 +5237,299 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 576px) { .bga-default-accordion .accordion-item .accordion-button { font-size: 1rem; padding: 16px !important; } .bga-default-accordion .accordion-item .accordion-button p { padding-right: 16px !important; } .bga-default-accordion .accordion-item .accordion-button::after { height: 32px; width: 32px; } .bga-default-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } .bga-default-accordion.grant-rounds .accordion-body { padding: 0 !important; } .bga-default-accordion.grant-rounds .round-row { padding: 16px !important; display: block !important; } .bga-default-accordion.grant-rounds .round-row .round-info { padding-bottom: 16px; } }
 
-.bga-pathway-accordion { background: none; text-align: right; }
+.bga-component.bga-pathway-accordion { background: none; text-align: right; }
 
-.bga-pathway-accordion .accordion-toggle { border: none; background: #ffffff; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; color: #333333; }
+.bga-component.bga-pathway-accordion .accordion-toggle { border: none; background: #ffffff; text-decoration: underline; cursor: pointer; font-weight: 600; box-shadow: none; color: #333333; }
 
-.bga-pathway-accordion .accordion-toggle.close svg { transform: scaleY(-1); }
+.bga-component.bga-pathway-accordion .accordion-toggle.close svg { transform: scaleY(-1); }
 
-.bga-pathway-accordion .accordion { text-align: left; }
+.bga-component.bga-pathway-accordion .accordion { text-align: left; }
 
-.bga-pathway-accordion .accordion-item { border: none; background: #ffffff; border: #96B7DF solid 1px; border-left: solid #5AB3B3 8px; border-radius: 0; }
+.bga-component.bga-pathway-accordion .accordion-item { border: none; background: #ffffff; border: #96B7DF solid 1px; border-left: solid #5AB3B3 8px; border-radius: 0; }
 
-.bga-pathway-accordion .accordion-item:focus-visible { outline: none; }
+.bga-component.bga-pathway-accordion .accordion-item:focus-visible { outline: none; }
 
-.bga-pathway-accordion .accordion-item:hover { text-decoration: none; }
+.bga-component.bga-pathway-accordion .accordion-item:hover { text-decoration: none; }
 
-.bga-pathway-accordion .accordion-item.show { background: #ffffff; }
+.bga-component.bga-pathway-accordion .accordion-item.show { background: #ffffff; }
 
-.bga-pathway-accordion .accordion-item .accordion-button { background: #CFEBEB; display: flex; align-items: stretch; border-radius: 0; padding: 0; text-decoration: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button { background: #CFEBEB; display: flex; align-items: stretch; border-radius: 0; padding: 0; text-decoration: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-button .img-wrapper { background: #ffffff; width: 250px; flex-shrink: 0; display: flex; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button .img-wrapper { background: #ffffff; width: 250px; flex-shrink: 0; display: flex; }
 
-.bga-pathway-accordion .accordion-item .accordion-button .title-wrapper { display: flex; flex-wrap: wrap; width: calc(100% - 342px); }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button .title-wrapper { display: flex; flex-wrap: wrap; width: calc(100% - 342px); }
 
-.bga-pathway-accordion .accordion-item .accordion-button .title-wrapper h3, .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper .h3 { text-decoration: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button .title-wrapper h3, .bga-component.bga-pathway-accordion .accordion-item .accordion-button .title-wrapper .h3 { text-decoration: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-button .title-wrapper p { text-decoration: none; display: block; width: 100%; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button .title-wrapper p { text-decoration: none; display: block; width: 100%; }
 
-.bga-pathway-accordion .accordion-item .accordion-button .chevron-wrapper { background: #8BCACA; display: flex; align-items: center; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button .chevron-wrapper { background: #8BCACA; display: flex; align-items: center; }
 
-.bga-pathway-accordion .accordion-item .accordion-button::after { display: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button::after { display: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:focus { box-shadow: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:focus { box-shadow: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; background-color: #bde4e4; text-decoration: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; background-color: #bde4e4; text-decoration: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:focus-visible h3, .bga-pathway-accordion .accordion-item .accordion-button:focus-visible .h3 { text-decoration: underline; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:focus-visible h3, .bga-component.bga-pathway-accordion .accordion-item .accordion-button:focus-visible .h3 { text-decoration: underline; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:focus-visible .img-wrapper { background-color: #e1f3f3; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:focus-visible .img-wrapper { background-color: #e1f3f3; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:focus-visible .chevron-wrapper { background-color: #5AB3B3; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:focus-visible .chevron-wrapper { background-color: #5AB3B3; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:hover { background-color: #bde4e4; text-decoration: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:hover { background-color: #bde4e4; text-decoration: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:hover h3, .bga-pathway-accordion .accordion-item .accordion-button:hover .h3 { text-decoration: underline; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:hover h3, .bga-component.bga-pathway-accordion .accordion-item .accordion-button:hover .h3 { text-decoration: underline; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:hover .img-wrapper { background-color: #e1f3f3; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:hover .img-wrapper { background-color: #e1f3f3; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:hover .chevron-wrapper { background-color: #5AB3B3; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:hover .chevron-wrapper { background-color: #5AB3B3; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) { background-color: #bde4e4; border-bottom: #96B7DF solid 1px; box-shadow: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) { background-color: #bde4e4; border-bottom: #96B7DF solid 1px; box-shadow: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) .img-wrapper { background-color: #e1f3f3; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) .img-wrapper { background-color: #e1f3f3; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #5AB3B3; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #5AB3B3; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) .chevron-wrapper svg { transform: scaleY(-1); }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) .chevron-wrapper svg { transform: scaleY(-1); }
 
-.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) p { color: #333333; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed) p { color: #333333; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed):hover { background-color: #bde4e4; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed):hover { background-color: #bde4e4; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #e1f3f3; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #e1f3f3; }
 
-.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #5AB3B3; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #5AB3B3; }
 
-.bga-pathway-accordion .accordion-item .accordion-body { display: flex; flex-wrap: wrap; column-gap: 24px; background: #bde4e4; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body { display: flex; flex-wrap: wrap; column-gap: 24px; background: #bde4e4; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .guide-tile { background: #ffffff; flex: 0 0 auto; width: calc(33.33333333% - 16px); margin-bottom: 24px; display: flex; flex-wrap: wrap; align-content: space-between; cursor: pointer; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .guide-tile { background: #ffffff; flex: 0 0 auto; width: calc(33.33333333% - 16px); margin-bottom: 24px; display: flex; flex-wrap: wrap; align-content: space-between; cursor: pointer; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .guide-tile:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .guide-tile:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .guide-tile:focus-visible h4, .bga-pathway-accordion .accordion-item .accordion-body .guide-tile:focus-visible .h4 { text-decoration: underline; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .guide-tile:focus-visible h4, .bga-component.bga-pathway-accordion .accordion-item .accordion-body .guide-tile:focus-visible .h4 { text-decoration: underline; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .guide-tile:hover h4, .bga-pathway-accordion .accordion-item .accordion-body .guide-tile:hover .h4 { text-decoration: underline; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .guide-tile:hover h4, .bga-component.bga-pathway-accordion .accordion-item .accordion-body .guide-tile:hover .h4 { text-decoration: underline; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .tile-content-wrapper { display: flex; align-content: space-between; flex-wrap: wrap; margin-bottom: 24px; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .tile-content-wrapper { display: flex; align-content: space-between; flex-wrap: wrap; margin-bottom: 24px; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .content { height: 100% !important; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .content { height: 100% !important; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .tag { font-size: 0.75rem; font-weight: 600; padding: 0px 8px; background: #FFD964; border-radius: 10px; border: solid 2px #FFD964; display: inline-flex; align-content: center; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .tag { font-size: 0.75rem; font-weight: 600; padding: 0px 8px; background: #FFD964; border-radius: 10px; border: solid 2px #FFD964; display: inline-flex; align-content: center; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .tag.Recommended { background: #ffffff; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .tag.Recommended { background: #ffffff; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .tag.none { display: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .tag.none { display: none; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .link { display: flex; align-items: center; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .link { display: flex; align-items: center; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .link a { font-size: .75rem; font-weight: 400; text-decoration: none; color: #333333; display: flex; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .link a { font-size: .75rem; font-weight: 400; text-decoration: none; color: #333333; display: flex; }
 
-.bga-pathway-accordion .accordion-item .accordion-body .link a:hover { background: none; }
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .link a:hover { background: none; }
 
-.bga-pathway-accordion.no-desc .accordion-item .accordion-button .title-wrapper { align-content: center; }
+.bga-component.bga-pathway-accordion.no-desc .accordion-item .accordion-button .title-wrapper { align-content: center; }
 
-.bga-pathway-accordion.no-desc .accordion-item .accordion-button .title-wrapper h3, .bga-pathway-accordion.no-desc .accordion-item .accordion-button .title-wrapper .h3 { font-size: 2.125rem; margin-bottom: 0 !important; }
+.bga-component.bga-pathway-accordion.no-desc .accordion-item .accordion-button .title-wrapper h3, .bga-component.bga-pathway-accordion.no-desc .accordion-item .accordion-button .title-wrapper .h3 { font-size: 2.125rem; margin-bottom: 0 !important; }
 
-.bga-pathway-accordion .accordion-item.purple { border-left: solid #9183D8 8px; }
+.bga-component.bga-pathway-accordion .accordion-item.purple { border-left: solid #9183D8 8px; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button { background: #E2DDF8; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button { background: #E2DDF8; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button .chevron-wrapper { background: #B1A8E3; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button .chevron-wrapper { background: #B1A8E3; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:focus-visible { background-color: #d0c8f4; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:focus-visible { background-color: #d0c8f4; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:focus-visible .img-wrapper { background-color: #f4f2fc; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:focus-visible .img-wrapper { background-color: #f4f2fc; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:focus-visible .chevron-wrapper { background-color: #9183D8; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:focus-visible .chevron-wrapper { background-color: #9183D8; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:hover { background-color: #d0c8f4; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:hover { background-color: #d0c8f4; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:hover .img-wrapper { background-color: #e9e5fa; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:hover .img-wrapper { background-color: #e9e5fa; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:hover .chevron-wrapper { background-color: #9183D8; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:hover .chevron-wrapper { background-color: #9183D8; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed) { background-color: #d0c8f4; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed) { background-color: #d0c8f4; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed) .img-wrapper { background-color: #e9e5fa; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed) .img-wrapper { background-color: #e9e5fa; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #9183D8; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #9183D8; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed):hover { background-color: #d0c8f4; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed):hover { background-color: #d0c8f4; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #e9e5fa; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #e9e5fa; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #9183D8; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #9183D8; }
 
-.bga-pathway-accordion .accordion-item.purple .accordion-body { background: #d0c8f4; }
+.bga-component.bga-pathway-accordion .accordion-item.purple .accordion-body { background: #d0c8f4; }
 
-.bga-pathway-accordion .accordion-item.orange { border-left: solid #E88A2D 8px; }
+.bga-component.bga-pathway-accordion .accordion-item.orange { border-left: solid #E88A2D 8px; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button { background: #FDE6D0; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button { background: #FDE6D0; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button .chevron-wrapper { background: #F1B981; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button .chevron-wrapper { background: #F1B981; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:focus-visible { background-color: #fcd9b8; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:focus-visible { background-color: #fcd9b8; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:focus-visible .img-wrapper { background-color: #fef3e8; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:focus-visible .img-wrapper { background-color: #fef3e8; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:focus-visible .chevron-wrapper { background-color: #E88A2D; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:focus-visible .chevron-wrapper { background-color: #E88A2D; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:hover { background-color: #fcd9b8; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:hover { background-color: #fcd9b8; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:hover .img-wrapper { background-color: #fdebda; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:hover .img-wrapper { background-color: #fdebda; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:hover .chevron-wrapper { background-color: #E88A2D; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:hover .chevron-wrapper { background-color: #E88A2D; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed) { background-color: #fcd9b8; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed) { background-color: #fcd9b8; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed) .img-wrapper { background-color: #fdebda; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed) .img-wrapper { background-color: #fdebda; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #E88A2D; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #E88A2D; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed):hover { background-color: #fcd9b8; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed):hover { background-color: #fcd9b8; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #fdebda; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #fdebda; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #E88A2D; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #E88A2D; }
 
-.bga-pathway-accordion .accordion-item.orange .accordion-body { background: #fcd9b8; }
+.bga-component.bga-pathway-accordion .accordion-item.orange .accordion-body { background: #fcd9b8; }
 
-.bga-pathway-accordion .accordion-item.yellow { border-left: solid #FFD964 8px; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow { border-left: solid #FFD964 8px; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button { background: #FFF3CD; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button { background: #FFF3CD; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button .chevron-wrapper { background: #FFE491; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button .chevron-wrapper { background: #FFE491; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:focus-visible { background-color: #ffedb4; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:focus-visible { background-color: #ffedb4; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:focus-visible .img-wrapper { background-color: #fff9e7; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:focus-visible .img-wrapper { background-color: #fff9e7; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:focus-visible .chevron-wrapper { background-color: #FFD964; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:focus-visible .chevron-wrapper { background-color: #FFD964; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:hover { background-color: #ffedb4; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:hover { background-color: #ffedb4; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:hover .img-wrapper { background-color: #fff5d7; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:hover .img-wrapper { background-color: #fff5d7; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:hover .chevron-wrapper { background-color: #FFD964; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:hover .chevron-wrapper { background-color: #FFD964; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed) { background-color: #ffedb4; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed) { background-color: #ffedb4; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed) .img-wrapper { background-color: #fff5d7; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed) .img-wrapper { background-color: #fff5d7; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #FFD964; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #FFD964; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed):hover { background-color: #ffedb4; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed):hover { background-color: #ffedb4; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #fff5d7; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #fff5d7; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #FFD964; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #FFD964; }
 
-.bga-pathway-accordion .accordion-item.yellow .accordion-body { background: #ffedb4; }
+.bga-component.bga-pathway-accordion .accordion-item.yellow .accordion-body { background: #ffedb4; }
 
-.bga-pathway-accordion .accordion-item.green { border-left: solid #85CB85 8px; }
+.bga-component.bga-pathway-accordion .accordion-item.green { border-left: solid #85CB85 8px; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button { background: #D4EDD4; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button { background: #D4EDD4; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button .chevron-wrapper { background: #A0D1A0; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button .chevron-wrapper { background: #A0D1A0; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:focus-visible { background-color: #c2e5c2; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:focus-visible { background-color: #c2e5c2; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:focus-visible .img-wrapper { background-color: #e6f5e6; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:focus-visible .img-wrapper { background-color: #e6f5e6; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:focus-visible .chevron-wrapper { background-color: #85CB85; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:focus-visible .chevron-wrapper { background-color: #85CB85; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:hover { background-color: #c2e5c2; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:hover { background-color: #c2e5c2; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:hover .img-wrapper { background-color: #dbf0db; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:hover .img-wrapper { background-color: #dbf0db; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:hover .chevron-wrapper { background-color: #85CB85; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:hover .chevron-wrapper { background-color: #85CB85; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed) { background-color: #c2e5c2; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed) { background-color: #c2e5c2; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed) .img-wrapper { background-color: #dbf0db; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed) .img-wrapper { background-color: #dbf0db; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #85CB85; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #85CB85; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed):hover { background-color: #c2e5c2; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed):hover { background-color: #c2e5c2; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #dbf0db; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #dbf0db; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #85CB85; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #85CB85; }
 
-.bga-pathway-accordion .accordion-item.green .accordion-body { background: #c2e5c2; }
+.bga-component.bga-pathway-accordion .accordion-item.green .accordion-body { background: #c2e5c2; }
 
-.bga-pathway-accordion .accordion-item.blue { border-left: solid #96B7DF 8px; }
+.bga-component.bga-pathway-accordion .accordion-item.blue { border-left: solid #96B7DF 8px; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button { background: #E3ECF6; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button { background: #E3ECF6; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button .chevron-wrapper { background: #B3CBE8; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button .chevron-wrapper { background: #B3CBE8; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:focus-visible { background-color: #d0dff0; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:focus-visible { background-color: #d0dff0; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:focus-visible .img-wrapper { background-color: #f6f9fc; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:focus-visible .img-wrapper { background-color: #f6f9fc; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:focus-visible .chevron-wrapper { background-color: #96B7DF; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:focus-visible .chevron-wrapper { background-color: #96B7DF; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:hover { background-color: #d0dff0; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:hover { background-color: #d0dff0; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:hover .img-wrapper { background-color: #ebf1f8; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:hover .img-wrapper { background-color: #ebf1f8; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:hover .chevron-wrapper { background-color: #96B7DF; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:hover .chevron-wrapper { background-color: #96B7DF; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed) { background-color: #d0dff0; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed) { background-color: #d0dff0; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed) .img-wrapper { background-color: #ebf1f8; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed) .img-wrapper { background-color: #ebf1f8; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #96B7DF; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #96B7DF; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed):hover { background-color: #d0dff0; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed):hover { background-color: #d0dff0; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #ebf1f8; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #ebf1f8; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #96B7DF; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #96B7DF; }
 
-.bga-pathway-accordion .accordion-item.blue .accordion-body { background: #d0dff0; }
+.bga-component.bga-pathway-accordion .accordion-item.blue .accordion-body { background: #d0dff0; }
 
-.bga-pathway-accordion.non-branded .accordion-item { border: none !important; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item { border: none !important; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb { border-left: solid #C8C8C8 8px; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb { border-left: solid #C8C8C8 8px; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button { background: #E8E8E8; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button { background: #E8E8E8; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button .chevron-wrapper { background: #D8D8D8; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button .chevron-wrapper { background: #D8D8D8; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible { background-color: #dbdbdb; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible { background-color: #dbdbdb; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible .img-wrapper { background-color: whitesmoke; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible .img-wrapper { background-color: whitesmoke; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible .chevron-wrapper { background-color: #C8C8C8; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:focus-visible .chevron-wrapper { background-color: #C8C8C8; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover { background-color: #dbdbdb; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover { background-color: #dbdbdb; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover .img-wrapper { background-color: #ededed; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover .img-wrapper { background-color: #ededed; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover .chevron-wrapper { background-color: #C8C8C8; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:hover .chevron-wrapper { background-color: #C8C8C8; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) { background-color: #dbdbdb; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) { background-color: #dbdbdb; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) .img-wrapper { background-color: #ededed; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) .img-wrapper { background-color: #ededed; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #C8C8C8; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed) .chevron-wrapper { background-color: #C8C8C8; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover { background-color: #dbdbdb; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover { background-color: #dbdbdb; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #ededed; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover .img-wrapper { background-color: #ededed; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #C8C8C8; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-button:not(.collapsed):hover .chevron-wrapper { background-color: #C8C8C8; }
 
-.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-body { background: #dbdbdb; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item.nb .accordion-body { background: #dbdbdb; }
 
-.bga-pathway-accordion.non-branded .accordion-item .accordion-button:not(.collapsed) { border-bottom: #B8B8B8 1px solid; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item .accordion-button:not(.collapsed) { border-bottom: #B8B8B8 1px solid; }
 
-.bga-pathway-accordion.non-branded .accordion-item .accordion-body .tag { padding: 0px; background: none; border-radius: 0; border: none; }
+.bga-component.bga-pathway-accordion.non-branded .accordion-item .accordion-button .img-wrapper { background: #D8D8D8; }
+
+.bga-component.bga-pathway-accordion.non-branded .accordion-item .accordion-body .tag { padding: 0px; background: none; border-radius: 0; border: none; }
 
 .component-example.bp-below768 .bga-pathway-accordion .accordion-item { border-left: #96B7DF solid 1px; }
 
@@ -5525,75 +5545,77 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 768px) { .bga-pathway-accordion .accordion-item { border-left: #96B7DF solid 1px; } .bga-pathway-accordion .accordion-item .accordion-button .img-wrapper { display: none; } .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper { width: calc(100% - 60px); } .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper h3, .bga-pathway-accordion .accordion-item .accordion-button .title-wrapper .h3 { font-size: 1.375rem !important; } .bga-pathway-accordion .accordion-item .accordion-button .chevron-wrapper { padding: 0 16px !important; } .bga-pathway-accordion .accordion-item .accordion-body .guide-tile { width: 100%; } }
 
-.mini-list .accordion-item { border: none; background: #C8D9EE; }
+.bga-component.mini-list .accordion-item { border: none; background: #C8D9EE; }
 
-.mini-list .accordion-item:last-of-type { border-bottom: none; }
+.bga-component.mini-list .accordion-item:last-of-type { border-bottom: none; }
 
-.mini-list .accordion-item:last-of-type .accordion-button { border-radius: 0; }
+.bga-component.mini-list .accordion-item:last-of-type .accordion-button { border-radius: 0; }
 
-.mini-list .accordion-item:first-of-type .accordion-button { border-radius: 0; }
+.bga-component.mini-list .accordion-item:first-of-type .accordion-button { border-radius: 0; }
 
-.mini-list .accordion-item:focus-visible { outline: none; }
+.bga-component.mini-list .accordion-item:focus-visible { outline: none; }
 
-.mini-list .accordion-item .accordion-button { background: #E3ECF6; font-weight: 600; color: #333333; align-items: flex-start; justify-content: space-between; }
+.bga-component.mini-list .accordion-item .accordion-button { background: #E3ECF6; font-weight: 600; color: #333333; align-items: flex-start; justify-content: space-between; }
 
-.mini-list .accordion-item .accordion-button:not(.collapsed) { background-color: #C8D9EE; box-shadow: none; }
+.bga-component.mini-list .accordion-item .accordion-button:not(.collapsed) { background-color: #C8D9EE; box-shadow: none; }
 
-.mini-list .accordion-item .accordion-button:not(.collapsed)::after { transform: scaleY(-1); }
+.bga-component.mini-list .accordion-item .accordion-button:not(.collapsed)::after { transform: scaleY(-1); }
 
-.mini-list .accordion-item .accordion-button::after { background-image: url(../assets/Chevron-down-black.svg); background-position: center center; margin: auto 0; }
+.bga-component.mini-list .accordion-item .accordion-button::after { background-image: url(../assets/Chevron-down-black.svg); background-position: center center; margin: auto 0; }
 
-.mini-list .accordion-item .accordion-button:focus { box-shadow: none; }
+.bga-component.mini-list .accordion-item .accordion-button:focus { box-shadow: none; }
 
-.mini-list .accordion-item .accordion-button:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
+.bga-component.mini-list .accordion-item .accordion-button:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
 
-.mini-list .accordion-item .accordion-button:hover { background-color: #C8D9EE; text-decoration: underline; }
+.bga-component.mini-list .accordion-item .accordion-button:hover { background-color: #C8D9EE; text-decoration: underline; }
 
-.mini-list .accordion-item .accordion-button p { display: block; width: 100%; }
+.bga-component.mini-list .accordion-item .accordion-button p { display: block; width: 100%; }
 
-.mini-list .accordion-item .accordion-button .icon-wrapper { width: 32px; height: 32px; border-radius: 100px; background: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.bga-component.mini-list .accordion-item .accordion-button .icon-wrapper { width: 32px; height: 32px; border-radius: 100px; background: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
-.mini-list .accordion-item .accordion-body { display: flex; flex-wrap: wrap; }
+.bga-component.mini-list .accordion-item .accordion-body { display: flex; flex-wrap: wrap; }
 
-.mini-list .accordion-item .accordion-body a { cursor: pointer; color: #2157AA; text-decoration: underline; }
+.bga-component.mini-list .accordion-item .accordion-body a { cursor: pointer; color: #2157AA; text-decoration: underline; }
 
-.mini-list .accordion-item .accordion-body a:focus-visible { border: 2px solid #2E6CB9; color: #113869; border-radius: 4px; outline: none; }
+.bga-component.mini-list .accordion-item .accordion-body a:focus-visible { border: 2px solid #2E6CB9; color: #113869; border-radius: 4px; outline: none; }
 
-.mini-list .accordion-item .accordion-body a:hover { color: #113869; }
+.bga-component.mini-list .accordion-item .accordion-body a:hover { color: #113869; }
 
-.mini-list.yellow .accordion-item { background: #FFE491; }
+.bga-component.mini-list.yellow .accordion-item { background: #FFE491; }
 
-.mini-list.yellow .accordion-item .accordion-button { background-color: #FFF3CD; }
+.bga-component.mini-list.yellow .accordion-item .accordion-button { background-color: #FFF3CD; }
 
-.mini-list.yellow .accordion-item .accordion-button:hover { background-color: #FFE491; }
+.bga-component.mini-list.yellow .accordion-item .accordion-button:hover { background-color: #FFE491; }
 
-.mini-list.yellow .accordion-item .accordion-button:not(.collapsed) { background: #FFE491; }
+.bga-component.mini-list.yellow .accordion-item .accordion-button:not(.collapsed) { background: #FFE491; }
 
-.mini-list.colour-bkg .accordion-item .accordion-button:hover { background: #ffffff; }
+.bga-component.mini-list.colour-bkg .accordion-item .accordion-button:hover { background: #ffffff; }
 
-.mini-list.colour-bkg .accordion-item .accordion-button:hover .icon-wrapper { background: #C8D9EE; }
+.bga-component.mini-list.colour-bkg .accordion-item .accordion-button:hover .icon-wrapper { background: #C8D9EE; }
 
-.mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed) { background-color: #ffffff; }
+.bga-component.mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed) { background-color: #ffffff; }
 
-.mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed) .icon-wrapper { background: #C8D9EE; }
+.bga-component.mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed) .icon-wrapper { background: #C8D9EE; }
 
-.mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed):hover { background: #ffffff; }
+.bga-component.mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed):hover { background: #ffffff; }
 
-.mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed):hover .icon-wrapper { background: #C8D9EE; }
+.bga-component.mini-list.colour-bkg .accordion-item .accordion-button:not(.collapsed):hover .icon-wrapper { background: #C8D9EE; }
 
-.mini-list.colour-bkg .accordion-item .accordion-body { background: #ffffff; }
+.bga-component.mini-list.colour-bkg .accordion-item .accordion-body { background: #ffffff; }
 
-.mini-list.non-branded .accordion-item { background: #D8D8D8; }
+.bga-component.mini-list.non-branded .accordion-item { background: #D8D8D8; }
 
-.mini-list.non-branded .accordion-item .accordion-button { background: #E8E8E8; }
+.bga-component.mini-list.non-branded .accordion-item .accordion-button { background: #E8E8E8; }
 
-.mini-list.non-branded .accordion-item .accordion-button:not(.collapsed) { background-color: #D8D8D8; }
+.bga-component.mini-list.non-branded .accordion-item .accordion-button:not(.collapsed) { background-color: #D8D8D8; }
 
-.mini-list.non-branded .accordion-body a { color: mediumblue; }
+.bga-component.mini-list.non-branded .accordion-item .accordion-button .icon-wrapper { background: transparent; width: auto; }
 
-.mini-list.non-branded .accordion-body a:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; }
+.bga-component.mini-list.non-branded .accordion-body a { color: mediumblue; }
 
-.mini-list.non-branded .accordion-body a:hover { color: mediumblue; background: transparent; }
+.bga-component.mini-list.non-branded .accordion-body a:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; }
+
+.bga-component.mini-list.non-branded .accordion-body a:hover { color: mediumblue; background: transparent; }
 
 .component-example.bp-below576 .mini-list .accordion-item .accordion-button, .component-example.small-screen .mini-list .accordion-item .accordion-button { font-size: 1rem; padding: 16px 16px 16px 8px !important; }
 
@@ -6937,9 +6959,11 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .bga-component.non-branded .component-content { border: none; }
 
-.bga-component.non-branded .icon-wrapper { min-width: auto; min-height: auto; height: auto; width: auto; }
+.bga-component.non-branded .icon-wrapper { min-width: auto; min-height: auto; height: auto; width: auto; padding: 0; }
 
-.bga-component.non-branded .icon-wrapper .external-site { min-height: none; }
+.bga-component.non-branded .icon-wrapper p { padding: 0; }
+
+.bga-component.non-branded .icon-wrapper .external-site { min-height: auto; }
 
 .bga-component.non-branded .arrow-icon { background: transparent; height: auto; width: auto; }
 
