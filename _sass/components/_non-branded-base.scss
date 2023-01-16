@@ -23,11 +23,6 @@
             border: $nb-blue-links solid 2px;
             border-radius: $bga-focus-radius;
         }
-
-        &:focus-visible {
-            border: 2px solid $nb-blue-links;
-            border-radius: 4px;
-        }
         &:hover {
             color: $nb-blue-links;
             background: transparent;
@@ -81,7 +76,24 @@
         border: none;
     }
 
+    .icon-wrapper {
+        min-width: auto;
+        min-height: auto;
+        height: auto;
+        width: auto;
+        
+        .external-site {
+            min-height: none;
+        }
+    }
     .arrow-icon {
-        background: $nb-grey-mid;
+        background: transparent;
+        height: auto;
+        width: auto;
+
+        img {
+            max-width: none;
+        }
+        
     }
 }

@@ -76,6 +76,7 @@
         cursor: pointer;
         font-weight: 600;
         box-shadow: none;
+        color: $bga-black;
 
         &.close {
             svg {
@@ -342,6 +343,29 @@
     .accordion-item.blue {
         @include pathway-accordion-colour($bga-blue-background-extralight, $bga-blue-highlight-mid, $bga-blue-highlight-dark);
     }
+
+    &.non-branded {
+        .accordion-item {
+            &.nb {
+                @include pathway-accordion-colour($nb-grey-light, $nb-grey-mid, $nb-grey-dark);
+            }
+            border: none !important;
+
+            .accordion-button {
+                &:not(.collapsed) {
+                    border-bottom: $nb-grey-darkest 1px solid;
+                }
+            }
+            .accordion-body {
+                .tag {
+                    padding: 0px;
+                    background: none;
+                    border-radius: 0;
+                    border: none;
+                }
+            }
+        }
+    }
 }
 
 
@@ -349,6 +373,7 @@
 @mixin pathway-accordion-below768 () {
     .bga-pathway-accordion {  
         .accordion-item  { 
+            border-left: $bga-blue-border solid 1px;
             .accordion-button {
                 .img-wrapper {
                     display: none;

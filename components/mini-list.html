@@ -32,111 +32,172 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        sm-visibility="true"
-        final-visibility="true"
-        breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-
-                {% include component-examples/mini-list-example.html
-                    
-                    layout-name="mini-list"
-
-                    item1="true"
-                    item2="true"
-                    item3="true"
-
-                    title1="Know your decision for closing your business, such as financial or personal circumstances"
-                    title2="Get professional advice from an accountant or business adviser"
-                    title3="Set your date to officially close your business"
-
-                    content1="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus urna arcu, nec ullamcorper orci tristique eu. <a tabindex='0'>In lobortis ornare ultricies.</a></p>"
-                    
-                    content2="<p>Praesent nec magna semper, pulvinar sapien sagittis, tempor urna. Praesent pretium finibus interdum.</p>"
-                    
-                    content3="<p>Phasellus venenatis nulla tempor quam egestas auctor.</p><p>Cras sed tortor a dolor dictum tincidunt ut nec enim. Fusce vitae quam suscipit, suscipit leo at, efficitur turpis.</p>"
-                %}
-
-            </div>
-        </div>
-
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-                    <h3>Colour variations</h3>
-
-                    {% include component-examples/mini-list-example.html
-                    
-                        layout-name="blue-mini-list"
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
     
-                        item1="true"
-                        title1="Blue (default)"
-                        content1="<p>This is the default colour for the mini-list.</p>"
-                        
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-mini-list"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
                     %}
 
-                    {% include component-examples/mini-list-example.html
-                    
-                        layout-name="yellow-mini-list"
-    
-                        item1="true"
-                        title1="Yellow (BGA guides)"
-                        content1="<p>The yellow mini-list should only appear on BGA guide pages.</p>"
-                        classes="yellow"
-                        
-                    %}
-                    
-                </div>
-            </div>
-        </div>
+                    <!-- Component example -->
 
-        <div class="component-example">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-                <div class="row">
-                    <h3>Coloured background sections - colour variations</h3>
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                    {% include component-examples/mini-list-example.html
-                    
-                        layout-name="mini-list-coloured-bkg"
-    
-                        item1="true"
-                        title1="Blue (default)"
-                        content1="<p>This is how the mini-list displays in coloured background sections.</p>"
+                            {% include component-examples/mini-list-example.html
+                                
+                                layout-name="mini-list"
 
-                        classes="colour-bkg"
-                        
-                    %}
-                    
-                    
-            
-                </div>
-            </div>
-        </div>
+                                item1="true"
+                                item2="true"
+                                item3="true"
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
+                                title1="Know your decision for closing your business, such as financial or personal circumstances"
+                                title2="Get professional advice from an accountant or business adviser"
+                                title3="Set your date to officially close your business"
 
-                    <h3>Approved icons</h3>
+                                content1="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus urna arcu, nec ullamcorper orci tristique eu. <a tabindex='0'>In lobortis ornare ultricies.</a></p>"
+                                
+                                content2="<p>Praesent nec magna semper, pulvinar sapien sagittis, tempor urna. Praesent pretium finibus interdum.</p>"
+                                
+                                content3="<p>Phasellus venenatis nulla tempor quam egestas auctor.</p><p>Cras sed tortor a dolor dictum tincidunt ut nec enim. Fusce vitae quam suscipit, suscipit leo at, efficitur turpis.</p>"
+                            %}
 
-                    <div class="col-6 col-md-4 mb-4">
-                        {% include icon-example.html
-                        src="'../assets/icon-tick-black.svg' | relative_url "
-                        title="Tick"
-                        classes=""
-                        %}
+                        </div>
                     </div>
 
+                    <div class="component-example">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            <div class="row">
+                                <h3>Colour variations</h3>
+
+                                {% include component-examples/mini-list-example.html
+                                
+                                    layout-name="blue-mini-list"
+                
+                                    item1="true"
+                                    title1="Blue (default)"
+                                    content1="<p>This is the default colour for the mini-list.</p>"
+                                    
+                                %}
+
+                                {% include component-examples/mini-list-example.html
+                                
+                                    layout-name="yellow-mini-list"
+                
+                                    item1="true"
+                                    title1="Yellow (BGA guides)"
+                                    content1="<p>The yellow mini-list should only appear on BGA guide pages.</p>"
+                                    classes="yellow"
+                                    
+                                %}
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="component-example">
+                        <div class="component-wrapper coloured-section remove-element-padding p-4">
+                            <div class="row">
+                                <h3>Coloured background sections - colour variations</h3>
+
+                                {% include component-examples/mini-list-example.html
+                                
+                                    layout-name="mini-list-coloured-bkg"
+                
+                                    item1="true"
+                                    title1="Blue (default)"
+                                    content1="<p>This is how the mini-list displays in coloured background sections.</p>"
+
+                                    classes="colour-bkg"
+                                    
+                                %}
+                                
+                                
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="component-example">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            <div class="row">
+
+                                <h3>Approved icons</h3>
+
+                                <div class="col-6 col-md-4 mb-4">
+                                    {% include icon-example.html
+                                    src="'../assets/icon-tick-black.svg' | relative_url "
+                                    title="Tick"
+                                    classes=""
+                                    %}
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
+
+                <div class="tab-section non-branded ">
+                    
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        element-string="nb-mini-list"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                        %}
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <p>Apply your brand specific <strong>colours and borders</strong> to the base mini-list shown below.</p>
+                            
+                            {% include component-examples/mini-list-example.html
+                                
+                                layout-name="mini-list"
+
+                                item1="true"
+                                item2="true"
+                                item3="true"
+
+                                title1="Know your decision for closing your business, such as financial or personal circumstances"
+                                title2="Get professional advice from an accountant or business adviser"
+                                title3="Set your date to officially close your business"
+
+                                content1="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus urna arcu, nec ullamcorper orci tristique eu. <a tabindex='0'>In lobortis ornare ultricies.</a></p>"
+                                
+                                content2="<p>Praesent nec magna semper, pulvinar sapien sagittis, tempor urna. Praesent pretium finibus interdum.</p>"
+                                
+                                content3="<p>Phasellus venenatis nulla tempor quam egestas auctor.</p><p>Cras sed tortor a dolor dictum tincidunt ut nec enim. Fusce vitae quam suscipit, suscipit leo at, efficitur turpis.</p>"
+
+                                classes="non-branded"
+                            %}
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-        </div>
 
 
 

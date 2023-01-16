@@ -33,8 +33,6 @@
                 &::after {
                     transform: scaleY(-1);
                 }
-
-                
             }
             &::after {
                 background-image: url(../assets/Chevron-down-black.svg);
@@ -136,6 +134,35 @@
             }
             .accordion-body {
                 background: $bga-white;
+            }
+        }
+    }
+
+    &.non-branded {
+        .accordion-item {
+            background: $nb-grey-mid;
+
+            .accordion-button {
+                background: $nb-grey-light;
+                
+                &:not(.collapsed) {
+                    background-color: $nb-grey-mid;
+                }
+            }
+        }
+        .accordion-body {
+            a {
+                color: $nb-blue-links;
+
+                &:focus-visible {
+                    color: $nb-blue-links;
+                    border: $nb-blue-links solid 2px;
+                    border-radius: $bga-focus-radius;
+                }
+                &:hover {
+                    color: $nb-blue-links;
+                    background: transparent;
+                }
             }
         }
     }
