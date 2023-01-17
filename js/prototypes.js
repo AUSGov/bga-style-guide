@@ -109,25 +109,53 @@ $(document).ready(function () {
 
 
     // Stepped nav functionality
-    if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
-
-        var active_step = 'nav-step-' + $('.step-title').attr('data-step');
+    var stepped_nav_functionality = function(path, task){
+        var active_step = 'nav-step-' + $('.step-title').attr('data-step'),
+        active_number = parseInt($('.step-title').attr('data-step')),
+        task = task;
 
         $('#' + active_step).addClass('active');
-        sessionStorage.setItem(active_step, 'visited');
+
+        sessionStorage.setItem(task + '-' + active_step, 'visited');
 
         var step_titles = ["position.html", "hours.html", "pay.html", "review.html", "finalise.html"];
-        //host = window.location.host;
         var completed_steps = active_step - 1;
 
         for (var step = 0; step < step_titles.length; step++) {
             var step_number = step + 1,
                 step_str = 'nav-step-' + step_number;
-            var state = sessionStorage.getItem(step_str);
+            var state = sessionStorage.getItem(task + '-' + step_str);
 
-            if (state == "visited" && !$('#' + step_str).hasClass('active')) {
-                $('#' + step_str).addClass('completed').attr('href', '/bga-style-guide/prototypes/ecb/' + step_titles[step]);
+            if (step_number < active_number) {
+                $('#' + step_str).addClass('completed').attr('href', path + step_titles[step]);
+            } else if ( step_number > active_number) {
+                if (state == "visited" && !$('#' + step_str).hasClass('active')) {
+                        $('#' + step_str).addClass('completed').attr('href', path + step_titles[step]);
+                    }
             }
+        }
+    };
+    
+    if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
+
+        if ( $('body').hasClass('ecb-default-state') ) {
+
+            stepped_nav_functionality('/bga-style-guide/prototypes/ecb/', 'ecb-default-state');
+
+        
+        } else if ( $('body').hasClass('ecb-final-state') ) {
+
+            var path = '/bga-style-guide/prototypes/ecb/' + $('body').attr('data-task') + '/',
+            task = $('body').attr('data-task');
+
+            sessionStorage.setItem(task + '-' + 'nav-step-1', 'visited');
+            sessionStorage.setItem(task + '-' + 'nav-step-2', 'visited');
+            sessionStorage.setItem(task + '-' + 'nav-step-3', 'visited');
+            sessionStorage.setItem(task + '-' + 'nav-step-4', 'visited');
+            sessionStorage.setItem(task + '-' + 'nav-step-5', 'visited');
+           
+            stepped_nav_functionality(path, task);
+
         }
     }
 
