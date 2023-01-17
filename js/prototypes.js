@@ -135,18 +135,24 @@ $(document).ready(function () {
             }
         }
     };
-    
+
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
+
+        var task =  $('body').attr('data-task'),
+        path;
+
+        if (task) {
+            path = '/bga-style-guide/prototypes/ecb/' + $('body').attr('data-task') + '/';
+        } else {
+            path = '/bga-style-guide/prototypes/ecb/';
+        }
+
 
         if ( $('body').hasClass('ecb-default-state') ) {
 
-            stepped_nav_functionality('/bga-style-guide/prototypes/ecb/', 'ecb-default-state');
-
+            stepped_nav_functionality(path, task);
         
         } else if ( $('body').hasClass('ecb-final-state') ) {
-
-            var path = '/bga-style-guide/prototypes/ecb/' + $('body').attr('data-task') + '/',
-            task = $('body').attr('data-task');
 
             sessionStorage.setItem(task + '-' + 'nav-step-1', 'visited');
             sessionStorage.setItem(task + '-' + 'nav-step-2', 'visited');
@@ -306,6 +312,90 @@ $(document).ready(function () {
         if (sessionStorage.getItem('pay-rate-units') == 'weekly') {
             $('.answers .pay-units').text('per week');
         }
+    }
+
+
+    // Add url fragments for task tracking in Loop11
+    var initial_fragment = function(task){
+        if (sessionStorage.getItem(task) ) {
+            fragment = sessionStorage.getItem(task);
+            window.location.hash = fragment;
+        }
+    };
+    
+    var set_fragment = function(current_fragment, task, task_str){
+         if (current_fragment.includes(task_str)) {
+                fragment = current_fragment;
+            } else {
+                fragment = current_fragment + task_str;
+            } 
+            window.location.hash = fragment;
+            sessionStorage.setItem(task, fragment);
+            
+    };
+    
+    //TASK 1
+    if ($('body').hasClass('task1')) {
+
+        var fragment = "";
+        
+        initial_fragment('task1-fragment');
+
+        $('#verify-btn').on('click', function(){
+            set_fragment(fragment, 'task1-fragment', "-email-success");
+        });
+    }
+
+    //TASK 2
+    if ($('body').hasClass('task2')) {
+        
+        var fragment = "";
+        
+        initial_fragment('task2-fragment');
+
+        $('.stepped-navigation .step').on('click', function(){
+            set_fragment(fragment, 'task2-fragment', "-nav-link");
+        });
+
+        $('.ecb-button-group .prev, .ecb-button-group .next').on('click', function(){
+            set_fragment(fragment, 'task2-fragment', "-bottom-btn");
+        });
+
+    }
+
+
+    //TASK 3
+    if ($('body').hasClass('task3')) {
+        
+        var fragment = "";
+
+        initial_fragment('task3-fragment');
+
+        $('.checklist-item-title, .checklist-toggle').on('click', function(){
+            set_fragment(fragment, 'task3-fragment', "-item-open");
+        });
+    }
+
+
+    //TASK 4
+    if ($('body').hasClass('task4')) {
+        
+        var fragment = "";
+        
+        initial_fragment('task4-fragment');
+        
+
+        $('.new-contract').on('click', function(){
+            set_fragment(fragment, 'task4-fragment', "-create-btn");
+        });
+
+        $('.stepped-navigation .step').on('click', function(){
+            set_fragment(fragment, 'task4-fragment', "-nav-link");
+        });
+
+        $('.ecb-button-group .prev, .ecb-button-group .next').on('click', function(){
+            set_fragment(fragment, 'task4-fragment', "-bottom-btn");
+        });
     }
 
 
