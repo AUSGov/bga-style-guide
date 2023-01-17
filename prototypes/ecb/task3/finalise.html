@@ -1,13 +1,14 @@
 ---
 
-layout: ecb-5-step
+layout: ecb-5-step-final-state
 title: Employment Contract Tool
 stepped-nav-step: Finalise
 step-number: 5
+task: task3
 
 ---
 
-<div class="container page-content prototype-default-state my-5">
+<div class="container page-content my-5">
 
     <div class="row ">
 
@@ -544,7 +545,7 @@ step-number: 5
 
             {% include component-examples/callout-link-example.html
             link="Subscribe to the business.gov.au newsletter."
-            icon="'../../assets/icon-email-white.svg' | relative_url "
+            icon="'../../../assets/icon-email-white.svg' | relative_url "
             classes="mb-5"
             %}
 
@@ -563,13 +564,17 @@ step-number: 5
     <!-- BUTTON GROUP -->
     <div class="ecb-button-group final-actions">
 
-        <a class="bga-link  bga-inline-link bkg-light" tabindex="0" href={{ 'prototypes/ecb/review.html' |
+        <a class="bga-link  bga-inline-link bkg-light" tabindex="0" href={{ 'prototypes/ecb/task3/review.html' |
             relative_url }} role="button">Previous</a>
 
         <div class="two-button-group">
         <a data-modal="modal-new-contract" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href="" role="button">Create new contract</a>
 
-        <a data-modal="modal-close-tool" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href="" role="button">Close tool</a>
+        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Close tool</a>
+
+        <!-- WORKING CLOSE BUTTON - turned off for user testing
+            <a data-modal="modal-close-tool" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href="" role="button">Close tool</a>
+        -->
 
         </div>
 
@@ -724,7 +729,7 @@ step-number: 5
             <div class="ecb-button-group">
                 <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
                 <div class="button-example">
-                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/redirect.html" | relative_url }} role="button">Yes, close this tool</a>
+                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/task3/redirect.html" | relative_url }} role="button">Yes, close this tool</a>
                 </div>
             </div>
 
@@ -751,7 +756,7 @@ step-number: 5
             <div class="ecb-button-group">
                 <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
                 <div class="button-example">
-                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Yes, start a new contract</a>
+                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/task3/landing.html" | relative_url }} role="button">Yes, start a new contract</a>
                 </div>
             </div>
 
@@ -764,6 +769,7 @@ step-number: 5
 <div class="modal-overlay"></div>
 
 
+</html>
 
 
 
