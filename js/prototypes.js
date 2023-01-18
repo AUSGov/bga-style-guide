@@ -1,5 +1,6 @@
 /*jshint browser: true, devel: true, jquery: true*/
 
+
 $(document).ready(function () {
 
     //ECB REVISED FLOW PROTOTYPE
@@ -36,7 +37,11 @@ $(document).ready(function () {
         $('#step-verify-email').addClass('show');
         if ( email_address.length ) {
             $('.user-email').text(email_address);
-        }
+        } 
+
+        setTimeout(function () {
+            $('.testing-msg').addClass('show');
+        }, 600);
     });
 
     // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
@@ -166,8 +171,16 @@ $(document).ready(function () {
     }
 
     // Reset tool on "Create new contract"
-    $('#ecb-prototype .clear-tool').on('click', function () {
+    $('#ecb-prototype .clear-tool').on('click', function(e) {
+        e.preventDefault();
+        var location = $(this).attr('href');
+        fragment = window.location.hash,
+        task = $('body').attr('data-task');
+        
         sessionStorage.clear();
+        sessionStorage.setItem(task + '-fragment', fragment);
+
+        window.location = location + fragment;
     });
 
     // Sticky stepped nav behaviour
@@ -314,7 +327,6 @@ $(document).ready(function () {
         }
     }
 
-
     // Add url fragments for task tracking in Loop11
     var initial_fragment = function(task){
         if (sessionStorage.getItem(task) ) {
@@ -383,7 +395,6 @@ $(document).ready(function () {
         var fragment = "";
         
         initial_fragment('task4-fragment');
-        
 
         $('.new-contract').on('click', function(){
             set_fragment(fragment, 'task4-fragment', "-create-btn");
@@ -396,6 +407,7 @@ $(document).ready(function () {
         $('.ecb-button-group .prev, .ecb-button-group .next').on('click', function(){
             set_fragment(fragment, 'task4-fragment', "-bottom-btn");
         });
+
     }
 
 
