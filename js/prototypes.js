@@ -3,6 +3,20 @@
 
 $(document).ready(function () {
 
+    /*
+    $(window).on('load', function(){
+        var prev_location = sessionStorage.getItem('prev-location'),
+        nav_item_clicked = sessionStorage.getItem('nav-item-clicked');
+        console.log(prev_location);
+        console.log(nav_item_clicked);
+
+        if (!nav_item_clicked == "true") {
+
+        }
+
+    });
+    */
+
     //ECB REVISED FLOW PROTOTYPE
 
     // Open & close modals
@@ -367,10 +381,12 @@ $(document).ready(function () {
 
         $('.stepped-navigation .step').on('click', function(){
             set_fragment(fragment, 'task2-fragment', "-nav-link");
+            sessionStorage.setItem('nav-item-clicked','true');
         });
 
         $('.ecb-button-group .prev, .ecb-button-group .next').on('click', function(){
             set_fragment(fragment, 'task2-fragment', "-bottom-btn");
+            sessionStorage.setItem('nav-item-clicked','true');
         });
 
     }
@@ -410,5 +426,13 @@ $(document).ready(function () {
 
     }
 
+    /*
+    $(window).on('beforeunload', function () {
+        var location = window.location
+        sessionStorage.setItem('prev-location', location);     
+    });
+    */
+
 
 }); //End doc ready
+
