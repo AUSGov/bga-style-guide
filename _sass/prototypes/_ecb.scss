@@ -86,7 +86,8 @@ html.ecb-prototype {
                 position: relative;
 
                 &.show {
-                    display: block;
+                    display: flex;
+                    align-items: center;
                 }
 
                 circle {
@@ -123,7 +124,7 @@ html.ecb-prototype {
 
                 .tick {
                     position: absolute;
-                    top: 15px;
+                    top: 20px;
                     left: 12px;
                 }
             }
@@ -180,6 +181,21 @@ html.ecb-prototype {
 
         &.show {
             display: block;
+        }
+    }
+    .testing-msg {
+        display: none;
+        background: $bga-orange-highlight-light;
+        border: $bga-orange-highlight-dark 3px double;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.1;
+        
+        strong {
+            font-size: 1.6rem;
+        }
+        &.show {
+            display: inline-block;
         }
     }
 
@@ -291,6 +307,21 @@ html.ecb-prototype {
         }
         .ecb-button-group a {
             font-size: 0.875rem;
+        }
+        #email-form {
+            flex-wrap: wrap;
+
+            input {
+                width: 100%;
+                margin-bottom: 24px !important;
+            }
+        }
+        .modal-example {
+            .number-code {
+                input {
+                    width: 32px;
+                }
+            }
         }
     }
 
