@@ -3,19 +3,7 @@
 
 $(document).ready(function () {
 
-    /*
-    $(window).on('load', function(){
-        var prev_location = sessionStorage.getItem('prev-location'),
-        nav_item_clicked = sessionStorage.getItem('nav-item-clicked');
-        console.log(prev_location);
-        console.log(nav_item_clicked);
-
-        if (!nav_item_clicked == "true") {
-
-        }
-
-    });
-    */
+    
 
     //ECB REVISED FLOW PROTOTYPE
 
@@ -127,15 +115,13 @@ $(document).ready(function () {
     });
 
 
-    // Stepped nav functionality
-    var stepped_nav_functionality = function(path, task){
+    var stepped_nav_functionality = function(path){
         var active_step = 'nav-step-' + $('.step-title').attr('data-step'),
-        active_number = parseInt($('.step-title').attr('data-step')),
-        task = task;
+        active_number = parseInt($('.step-title').attr('data-step'));
 
         $('#' + active_step).addClass('active');
 
-        sessionStorage.setItem(task + '-' + active_step, 'visited');
+        sessionStorage.setItem(active_step, 'visited');
 
         var step_titles = ["position.html", "hours.html", "pay.html", "review.html", "finalise.html"];
         var completed_steps = active_step - 1;
@@ -143,7 +129,7 @@ $(document).ready(function () {
         for (var step = 0; step < step_titles.length; step++) {
             var step_number = step + 1,
                 step_str = 'nav-step-' + step_number;
-            var state = sessionStorage.getItem(task + '-' + step_str);
+            var state = sessionStorage.getItem(step_str);
 
             if (step_number < active_number) {
                 $('#' + step_str).addClass('completed').attr('href', path + step_titles[step]);
@@ -157,44 +143,56 @@ $(document).ready(function () {
 
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
 
-        var task =  $('body').attr('data-task'),
+        var location = window.location.href,
         path;
 
-        if (task) {
-            path = '/bga-style-guide/prototypes/ecb/' + $('body').attr('data-task') + '/';
+        if(location.includes('tasks')) {
+            path = '/bga-style-guide/prototypes/ecb/tasks/';
         } else {
             path = '/bga-style-guide/prototypes/ecb/';
         }
-
-
-        if ( $('body').hasClass('ecb-default-state') ) {
-
-            stepped_nav_functionality(path, task);
         
-        } else if ( $('body').hasClass('ecb-final-state') ) {
+        stepped_nav_functionality(path);
 
-            sessionStorage.setItem(task + '-' + 'nav-step-1', 'visited');
-            sessionStorage.setItem(task + '-' + 'nav-step-2', 'visited');
-            sessionStorage.setItem(task + '-' + 'nav-step-3', 'visited');
-            sessionStorage.setItem(task + '-' + 'nav-step-4', 'visited');
-            sessionStorage.setItem(task + '-' + 'nav-step-5', 'visited');
-           
-            stepped_nav_functionality(path, task);
-
-        }
     }
 
-    // Reset tool on "Create new contract"
-    $('#ecb-prototype .clear-tool').on('click', function(e) {
+    $('.stepped-navigation .step.active').on('click', function(e){
         e.preventDefault();
-        var location = $(this).attr('href');
-        fragment = window.location.hash,
-        task = $('body').attr('data-task');
+    });
+
+    // Reset tool on "Create new contract"
+   $('#ecb-prototype .clear-tool').on('click', function(e) {
+        e.preventDefault();
+        var location = $(this).attr('href'),
+        fragment = sessionStorage.getItem('fragment'),
+        current_task = sessionStorage.getItem('current_task'),
+        task1 =  sessionStorage.getItem('task1'),
+        task2 =sessionStorage.getItem('task2'),
+        task3 = sessionStorage.getItem('task3'),
+        task4 = sessionStorage.getItem('task4');
         
         sessionStorage.clear();
-        sessionStorage.setItem(task + '-fragment', fragment);
 
-        window.location = location + fragment;
+        if(fragment) {
+            sessionStorage.setItem('fragment', fragment);
+        };
+        if (current_task) {
+            sessionStorage.setItem('current_task', current_task);
+        }
+        if (task1) {
+            sessionStorage.setItem('task1', task1);
+        }
+        if (task2) {
+            sessionStorage.setItem('task2', task2);
+        }
+        if (task3) {
+            sessionStorage.setItem('task3', task3);
+        }
+        if (task4) {
+            sessionStorage.setItem('task4', task4);
+        }
+
+        window.location = location;
     });
 
     // Sticky stepped nav behaviour
@@ -341,98 +339,194 @@ $(document).ready(function () {
         }
     }
 
-    // Add url fragments for task tracking in Loop11
-    var initial_fragment = function(task){
-        if (sessionStorage.getItem(task) ) {
-            fragment = sessionStorage.getItem(task);
+    // Add url fragments for task tracking in Loop11    
+    var set_fragment = function(task_str){
+        var current_fragment = sessionStorage.getItem('fragment');
+        if (!current_fragment) {
+            current_fragment = "";
+        }
+        
+        console.log(current_fragment);
+        console.log(task_str);
+
+        var new_fragment;
+        
+        if (current_fragment.includes(task_str)) {
+            new_fragment = current_fragment;
+                
+            } else {
+                new_fragment = current_fragment + task_str;
+            } 
+            window.location.hash = new_fragment;
+            sessionStorage.setItem('fragment', new_fragment);    
+    };
+
+      
+    
+    // GET current task function
+    var get_current_task = function(){
+        var current_task;
+        if (sessionStorage.getItem('task4')== 'true') {
+            current_task = 'task4';
+
+        } else if ( (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true') ) {
+            current_task = 'task3';
+        }  else if ( (sessionStorage.getItem('task2')== 'true') &! (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true') ) {
+            current_task = 'task2';
+        } else if ((sessionStorage.getItem('task1')== 'true') &! (sessionStorage.getItem('task2')== 'true') &! (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true')) {
+            current_task = 'task1'
+        }
+        console.log(current_task);
+        sessionStorage.setItem('current_task', current_task);
+    };
+    
+    // Set task number to true in sessionStorage when a task landing page loads & set nav steps for each task.
+    //TASK 1
+    if (window.location.href.includes("task1-start.html")) {
+        console.log('task1 start page');
+        sessionStorage.setItem('task1', 'true'); 
+    }
+    //TASK 2
+    if (window.location.href.includes("task2-start.html")) {
+        console.log('task2 start page');
+        sessionStorage.setItem('task2', 'true');
+        sessionStorage.setItem('nav-step-1', 'visited');
+        sessionStorage.setItem('nav-step-2', 'visited');
+        sessionStorage.setItem('nav-step-3', 'visited');
+        sessionStorage.setItem('nav-step-4', 'visited');
+        sessionStorage.setItem('nav-step-5', 'visited');   
+    }
+    //TASK 3
+    if (window.location.href.includes("task3-start.html")) {
+        console.log('task3 start page');
+        sessionStorage.setItem('task3', 'true'); 
+        sessionStorage.setItem('nav-step-1', 'visited');
+        sessionStorage.setItem('nav-step-2', 'visited');
+        sessionStorage.setItem('nav-step-3', 'visited');
+        sessionStorage.setItem('nav-step-4', 'visited');
+        sessionStorage.setItem('nav-step-5', 'visited');   
+    }
+    //TASK 4
+    if (window.location.href.includes("task4-start.html")) {
+        console.log('task4 start page');
+        sessionStorage.setItem('task4', 'true');
+        sessionStorage.setItem('nav-step-1', 'visited');
+        sessionStorage.setItem('nav-step-2', 'visited');
+        sessionStorage.setItem('nav-step-3', 'visited');
+        sessionStorage.setItem('nav-step-4', 'visited');
+        sessionStorage.setItem('nav-step-5', 'visited');    
+    }
+    
+    get_current_task();
+
+
+    // Load existing URL fragments on page load.
+    $(window).on('load', function(){
+       var fragment = sessionStorage.getItem('fragment');
+        if (fragment) {
             window.location.hash = fragment;
         }
-    };
-    
-    var set_fragment = function(current_fragment, task, task_str){
-         if (current_fragment.includes(task_str)) {
-                fragment = current_fragment;
-            } else {
-                fragment = current_fragment + task_str;
-            } 
-            window.location.hash = fragment;
-            sessionStorage.setItem(task, fragment);
-            
-    };
-    
-    //TASK 1
-    if ($('body').hasClass('task1')) {
-
-        var fragment = "";
-        
-        initial_fragment('task1-fragment');
-
-        $('#verify-btn').on('click', function(){
-            set_fragment(fragment, 'task1-fragment', "-email-success");
-        });
-    }
-
-    //TASK 2
-    if ($('body').hasClass('task2')) {
-        
-        var fragment = "";
-        
-        initial_fragment('task2-fragment');
-
-        $('.stepped-navigation .step').on('click', function(){
-            set_fragment(fragment, 'task2-fragment', "-nav-link");
-            sessionStorage.setItem('nav-item-clicked','true');
-        });
-
-        $('.ecb-button-group .prev, .ecb-button-group .next').on('click', function(){
-            set_fragment(fragment, 'task2-fragment', "-bottom-btn");
-            sessionStorage.setItem('nav-item-clicked','true');
-        });
-
-    }
-
-
-    //TASK 3
-    if ($('body').hasClass('task3')) {
-        
-        var fragment = "";
-
-        initial_fragment('task3-fragment');
-
-        $('.checklist-item-title, .checklist-toggle').on('click', function(){
-            set_fragment(fragment, 'task3-fragment', "-item-open");
-        });
-    }
-
-
-    //TASK 4
-    if ($('body').hasClass('task4')) {
-        
-        var fragment = "";
-        
-        initial_fragment('task4-fragment');
-
-        $('.new-contract').on('click', function(){
-            set_fragment(fragment, 'task4-fragment', "-create-btn");
-        });
-
-        $('.stepped-navigation .step').on('click', function(){
-            set_fragment(fragment, 'task4-fragment', "-nav-link");
-        });
-
-        $('.ecb-button-group .prev, .ecb-button-group .next').on('click', function(){
-            set_fragment(fragment, 'task4-fragment', "-bottom-btn");
-        });
-
-    }
-
-    /*
-    $(window).on('beforeunload', function () {
-        var location = window.location
-        sessionStorage.setItem('prev-location', location);     
     });
-    */
 
+    // Track button clicks with URL fragments
+    $('#verify-btn').on('click', function(){
+        if (sessionStorage.current_task == "task1") {
+            set_fragment("T1-email");
+        }
+    });
+ 
+    $('.stepped-navigation .step').on('click', function(e){
+       
+        e.preventDefault();
+        sessionStorage.setItem('ecb-link-clicked','true');
+        var href = $(this).attr('href');
+
+        if (sessionStorage.current_task == "task2") {
+            set_fragment("T2-nav"); 
+        } else if (sessionStorage.current_task == "task4") {
+            set_fragment("T4-nav");
+        } 
+        
+        window.location = href;
+
+    });
+
+    $('.ecb-button-group .prev, .ecb-button-group .next').on('click', function(e){     
+        e.preventDefault();
+        sessionStorage.setItem('ecb-link-clicked','true'); 
+        var href = $(this).attr('href');
+
+        if (sessionStorage.current_task == "task2") {
+            set_fragment("T2-bottom"); 
+        } else if (sessionStorage.current_task == "task4") {
+            set_fragment("T4-bottom"); 
+        }
+        window.location = href
+
+    });
+
+
+    $('.checklist-item-title, .checklist-toggle').on('click', function(){
+        if (sessionStorage.current_task == "task3") {
+            set_fragment("T3-openitem");
+        }
+    });
+
+    $('.new-contract').on('click', function(e){     
+        e.preventDefault();
+        sessionStorage.setItem('ecb-link-clicked','true');
+
+        if (sessionStorage.current_task == "task4") {
+            set_fragment("T4-createbtn"); 
+        }
+    });
+
+    $('.edit-btn').on('click', function(){
+        e.preventDefault();
+        sessionStorage.setItem('ecb-link-clicked','true');
+        var href = $(this).attr('href');
+        window.location = href
+    });
+    
+    
+    // Detect if an ECB link was clicked on page change. Record browser fragment if no link was clicked.
+    // Check if page is sames as previous page.
+    var detect_nav_method = function(){
+
+        var location = window.location.pathname,
+        task = sessionStorage.getItem('current_task')
+        prev_location = sessionStorage.getItem('prev-location'),
+        ecb_link_clicked = sessionStorage.getItem('ecb-link-clicked');
+
+        if (ecb_link_clicked != "true") {
+            console.log(location);
+            console.log(prev_location);
+           
+            if (task == 'task2') {    
+                if (!(location.includes('task2-start'))) {
+                
+                    set_fragment('T2-browser');
+                }
+            } else if (task == 'task4') {    
+                if (!(location.includes('task4-start'))) {
+                
+                    set_fragment('T4-browser');
+                }
+            } else {
+                console.log('not task 2 or 4');
+            }
+        }
+        sessionStorage.removeItem('prev-location');
+        sessionStorage.removeItem('ecb-link-clicked');
+    };   
+    detect_nav_method();
+
+    // On page unload add page location to sessionStorage in 'prev_location' item
+    $(window).on('beforeunload', function () {
+        var location = window.location.pathname;
+        sessionStorage.setItem('prev-location', location);     
+    });  
+    
 
 }); //End doc ready
 

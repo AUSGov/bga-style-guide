@@ -46,14 +46,14 @@
     <script src=/bga-style-guide/js/prototypes.js ></script>
 
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/ecb/task2/review.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/ecb/tasks/pay.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
 
 
 
-<body class="ecb-example-layout ecb-final-state offset task2" data-task="task2" id="ecb-prototype">
+<body class="ecb-example-layout ecb-default-state offset " data-task="" id="ecb-prototype">
 
     <!-- SUBSITE HEADER -->
     <header>
@@ -718,11 +718,11 @@
 
                         <div class="stepped-navigation-wrapper remove-element-padding ">
 
-                            <h1 class="step-title" data-step="4">Review</h1>
+                            <h1 class="step-title" data-step="3">Pay</h1>
 
                             <div class="mobile-stepped-nav remove-element-padding">
                                 <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
-                                <p>Step 4 of 5: <strong>Review</strong></p>
+                                <p>Step 3 of 5: <strong>Pay</strong></p>
                             </div>
 
                             <div class="stepped-navigation-wrapper remove-element-padding teal">
@@ -787,338 +787,262 @@
 
 
 
-    <div class="container page-content review-page my-5">
+    <div class="container page-content pay-page prototype-default-state my-5">
 
 
     <!-- PAY RATE -->
-    <div class="row ">
 
-        <div class="col-12 col-md-11 col-lg-9 col-xl-8 remove-element-padding">
+    <div id="section-pay-rate" class="row remove-element-padding">
 
-            <h2>Review your employment contract</h2>
-            <p>Check the clauses you've added to your contract.</p>
+        <h2>Pay rate</h2>
 
-            <h2>Position</h2>
+        <div class="col-12 col-md-8 col-xl-7">
+            <div class="question-section remove-element-padding">
+                
+                    <div class="mb-5 p-0 form-example clause-box-include">
+                        
+                        <label for="pay-rate-units" class="form-label mb-3"><strong>What is the employee's rate of pay?</strong></label>
+                        
+                        <p>Select an hourly or a weekly rate of pay.</p>
+   
+                        <div class="radios" id="pay-rate-units">
+                        <div class="mb-5"  role="radiogroup">
+                            
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-rate-units" id="hourly" data-value="hourly">
+                                <label class="form-check-label" for="hourly">
+                                    <strong>hourly</strong>
+                                </label>
+                            </div>
 
-            <div class="bga-component-wrapper pb-5">
-    <div class="bga-component results-edit-answers-component position-title m-0"  data-field="position-title">
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" id="weekly" type="radio" name="pay-rate-units" id="weekly" data-value="weekly">
+                                <label class="form-check-label" for="weekly">
+                                    <strong>weekly</strong>
+                                </label>
+                            </div>
 
-        <div class="title-area py-3 px-4 remove-element-padding">
+                        </div>
 
-            <h3 class="m-0">Position title</h3>
-            <a tabindex="0"  href='position.html' | relative_url   class="edit-btn p-0 ms-4">
-                <span>edit</span>
-                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
-                  </svg>
-                  
-                </a>
-
-        </div>
-
-        <div class="p-4 component-content">
-
-            <div class="component-text p-0 remove-element-padding">
-
-
-                <div class="answers-section">
-
-
-                    <div class="answers remove-element-padding">
-                        <p>You are being employed in the position of <strong><span data-value='position-title'>[position title]</span></strong>.</p>
+                        
+                        <label for="pay-rate" class="form-label mb-3"><strong>Enter the <span>hourly</span> pay rate</strong></label>
+                        
+                        <div class="textbox-units form-element-wrapper mb-3">
+                            <p class="m-0">$AUD</p>
+                            <input type="text" class="form-control clause-box-input m-0 sm-width" id="pay-rate" value="" required >
+                            <p class="m-0 pay-unit">per hour</p>
+                        </div>
+    
+                        </div>
                     </div>
+    
+
+                <div class="bga-component-wrapper">
+
+                    <div class="bga-component-wrapper">
+    <div class="bga-component clause-box  pay-rate m-0">
+
+        <div class="p-4 component-content h-100">
+
+            
+
+            <div class="header mb-4">
+
+                <div class="title remove-element-padding me-4">
+                    <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-document-blueblack.svg alt="" /></div>
+
+                    
+                    <p><strong>Pay clause</strong></p>
+                    
 
                 </div>
 
+                
+                <div class="tag mandatory"><span>Included</span>
+                    <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="15" height="11.866" viewBox="0 0 15 11.866">
+                    <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z" fill="#fff"/>
+                  </svg>
+                  </div>
+                
+            </div>
+
+            <div class="component-text remove-element-padding">
+
+                
+                    <p>You will be paid <strong>$</strong><span>[amount]</span> <strong class='pay-units'>per hour</strong>. This pay rate does not include superannuation, we'll pay this separately.</p>
+                
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="h-100 col-12 col-md-4 offset-xl-1">
+
+            <div class="bga-component-wrapper sidebar-wrapper fullheight inpage teal">
+<div class="bga-component sidebar information-sidebar m-0">
+
+    <div class="p-4 component-content">
+
+        <div class="component-text pb-4 remove-element-padding">
+            
+                <h3>Wages</h3>
+            
+            
+            
+                <p>Your employee's minimum wages are set out under the award – you must pay at least this amount. You'll also have to pay any applicable penalties, overtime, loadings and allowances.</p><p>The minimum wage depends on the employee's classification level in the award. You can find classification descriptions in the Pay and Conditions Tool or award.</p><p>It's important to pay the right amount. If you don't, you could face large penalties and may have to back pay your employee.</p>
+            
+            
+        </div>
+
+        <button class="more-info-toggle hide m-0 p-0">
+            <span class="pe-2">Read more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <g id="Icon:_Chevron_right" data-name="Icon: Chevron right" transform="translate(16) rotate(90)">
+                  <path id="Chevron_Right" data-name="Chevron / Right" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" fill="#2157aa"/>
+                </g>
+              </svg>
+              </button>
+    
+
+    </div>
+
+</div>
+</div>
+
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+    <!-- PAYMENT METHOD -->
+
+    <div id="section-payment-method" class="row remove-element-padding">
+
+        <h2>Payment method</h2>
+
+        <div class="col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+                
+                    <div class="mb-5 p-0 form-example clause-box-include">
+                        
+                        <label for="pay-frequency" class="form-label mb-3"><strong>How often will you pay your employee?</strong></label>
+                        
+                        <p>Select an hourly or a weekly rate of pay.</p>
+                        
+                        <div class="clause-box-radios radios mb-5" id="pay-frequency" role="radiogroup">
+                            
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="weekly-pay" data-value="weekly">
+                                <label class="form-check-label" for="weekly-pay">
+                                    <strong>weekly</strong>
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="fortnightly-pay" data-value="fortnightly">
+                                <label class="form-check-label" for="fortnightly-pay">
+                                    <strong>fortnightly</strong>
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="pay-frequency" id="monthly-pay" data-value="monthly">
+                                <label class="form-check-label" for="monthly-pay">
+                                    <strong>monthly</strong>
+                                </label>
+                            </div>
+
+
+                        </div>
+
+                  
+                    </div>
+
+                <div class="bga-component-wrapper">
+    <div class="bga-component clause-box  pay-frequency m-0">
+
+        <div class="p-4 component-content h-100">
+
+            
+
+            <div class="header mb-4">
+
+                <div class="title remove-element-padding me-4">
+                    <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-document-blueblack.svg alt="" /></div>
+
+                    
+                    <p><strong>Payment method clause</strong></p>
+                    
+
+                </div>
+
+                
+                <div class="tag mandatory"><span>Included</span>
+                    <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="15" height="11.866" viewBox="0 0 15 11.866">
+                    <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z" fill="#fff"/>
+                  </svg>
+                  </div>
+                
+            </div>
+
+            <div class="component-text remove-element-padding">
+
+                
+                    <p>We will pay you <span>[frequency]</span> into your nominated bank account.</p>
+                
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
 
             </div>
 
 
         </div>
 
-    </div>
-</div>
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            <div class="bga-component-wrapper sidebar-wrapper fullheight inpage teal">
+<div class="bga-component sidebar information-sidebar m-0">
 
-            <div class="bga-component-wrapper pb-5">
-    <div class="bga-component results-edit-answers-component business-structure m-0"  data-field="business-structure">
+    <div class="p-4 component-content">
 
-        <div class="title-area py-3 px-4 remove-element-padding">
-
-            <h3 class="m-0">Business structure</h3>
-            <a tabindex="0"  href='position.html' | relative_url   class="edit-btn p-0 ms-4">
-                <span>edit</span>
-                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
-                  </svg>
-                  
-                </a>
-
+        <div class="component-text pb-4 remove-element-padding">
+            
+                <h3>When to pay</h3>
+            
+            
+            
+                <p>Most awards outline how often you must pay employees – generally it will be weekly or fortnightly, and it must be at least monthly. You must pay money. Do not 'pay in kind', for example, with goods or food.</p><p>You must give your employee a pay slip within 1 working day of paying them with certain information on it. An incorrect or incomplete pay slip could be in breach of the law.</p>
+            
+            
         </div>
 
-        <div class="p-4 component-content">
-
-            <div class="component-text p-0 remove-element-padding">
-
-
-                <div class="answers-section">
-
-
-                    <div class="answers remove-element-padding">
-                        <p>Your business structure is <strong><span data-value='business-structure'>[business structure]</span></strong>.</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
+        <button class="more-info-toggle hide m-0 p-0">
+            <span class="pe-2">Read more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <g id="Icon:_Chevron_right" data-name="Icon: Chevron right" transform="translate(16) rotate(90)">
+                  <path id="Chevron_Right" data-name="Chevron / Right" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" fill="#2157aa"/>
+                </g>
+              </svg>
+              </button>
+    
 
     </div>
+
 </div>
-
-            <div class="bga-component-wrapper pb-5">
-    <div class="bga-component results-edit-answers-component employment-type m-0"  data-field="employment-type-text">
-
-        <div class="title-area py-3 px-4 remove-element-padding">
-
-            <h3 class="m-0">Employment type</h3>
-            <a tabindex="0"  href='position.html' | relative_url   class="edit-btn p-0 ms-4">
-                <span>edit</span>
-                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
-                  </svg>
-                  
-                </a>
-
-        </div>
-
-        <div class="p-4 component-content">
-
-            <div class="component-text p-0 remove-element-padding">
-
-
-                <div class="answers-section">
-
-
-                    <div class="answers remove-element-padding">
-                        <p>You are being employed on a <strong><span data-value='employment-type'>[employment type]</span></strong> basis.</p> 
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
 </div>
-
-
-            <h2>Hours</h2>
-            <div class="bga-component-wrapper pb-5">
-    <div class="bga-component results-edit-answers-component hours-worked m-0"  data-field="hours-worked">
-
-        <div class="title-area py-3 px-4 remove-element-padding">
-
-            <h3 class="m-0">Hours of work</h3>
-            <a tabindex="0"  href='hours.html' | relative_url   class="edit-btn p-0 ms-4">
-                <span>edit</span>
-                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
-                  </svg>
-                  
-                </a>
-
         </div>
-
-        <div class="p-4 component-content">
-
-            <div class="component-text p-0 remove-element-padding">
-
-
-                <div class="answers-section">
-
-
-                    <div class="answers remove-element-padding">
-                        <p>You are expected to work <strong><span data-value='hours-worked'>[number]</span> ordinary hour(s) per week</strong>. We may also request or require you to work additional hours if the additional hours are reasonable.</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-</div>
-
-            <div class="bga-component-wrapper pb-5">
-    <div class="bga-component results-edit-answers-component flexible-hours m-0" >
-
-        <div class="title-area py-3 px-4 remove-element-padding">
-
-            <h3 class="m-0">Flexible hours</h3>
-            <a tabindex="0"  href='hours.html' | relative_url   class="edit-btn p-0 ms-4">
-                <span>edit</span>
-                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
-                  </svg>
-                  
-                </a>
-
-        </div>
-
-        <div class="p-4 component-content">
-
-            <div class="component-text p-0 remove-element-padding">
-
-
-                <div class="answers-section">
-
-
-                    <div class="answers remove-element-padding">
-                        <p>You may have a right to make a written request for flexible working arrangements under the National Employment Standards, including for when to start and end work each day or your location of work. We may refuse your request in writing, but only if we have reasonable business grounds.</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-</div>
-
-            <div class="bga-component-wrapper pb-5">
-    <div class="bga-component results-edit-answers-component no-btn breaks m-0" >
-
-        <div class="title-area py-3 px-4 remove-element-padding">
-
-            <h3 class="m-0">Breaks</h3>
-            <a tabindex="0"  class="edit-btn p-0 ms-4">
-                <span>edit</span>
-                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
-                  </svg>
-                  
-                </a>
-
-        </div>
-
-        <div class="p-4 component-content">
-
-            <div class="component-text p-0 remove-element-padding">
-
-
-                <div class="answers-section">
-
-
-                    <div class="answers remove-element-padding">
-                        <p>Depending on the number of hours you work, you may be entitled to meal breaks. The award sets out:</p><ul><li>the length of the breaks</li><li>when they need to be taken</li><li>the rules about payment.</li></ul><p>You may also be entitled to rest breaks.</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-</div>
-
-
-            <h2>Pay</h2>
-            <div class="bga-component-wrapper pb-5">
-    <div class="bga-component results-edit-answers-component pay-rate m-0"  data-field="pay-rate">
-
-        <div class="title-area py-3 px-4 remove-element-padding">
-
-            <h3 class="m-0">Pay rate</h3>
-            <a tabindex="0"  href='pay.html' | relative_url   class="edit-btn p-0 ms-4">
-                <span>edit</span>
-                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
-                  </svg>
-                  
-                </a>
-
-        </div>
-
-        <div class="p-4 component-content">
-
-            <div class="component-text p-0 remove-element-padding">
-
-
-                <div class="answers-section">
-
-
-                    <div class="answers remove-element-padding">
-                        <p>You will be paid <strong>$<span data-value='pay-rate'>[amount]</span></strong> <strong class='pay-units'>per hour</strong>. This pay rate does not include superannuation, we'll pay this separately.</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-</div>
-
-            <div class="bga-component-wrapper pb-5">
-    <div class="bga-component results-edit-answers-component pay-frequency m-0"  data-field="pay-frequency-text">
-
-        <div class="title-area py-3 px-4 remove-element-padding">
-
-            <h3 class="m-0">Payment method</h3>
-            <a tabindex="0"  href='pay.html' | relative_url   class="edit-btn p-0 ms-4">
-                <span>edit</span>
-                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
-                  </svg>
-                  
-                </a>
-
-        </div>
-
-        <div class="p-4 component-content">
-
-            <div class="component-text p-0 remove-element-padding">
-
-
-                <div class="answers-section">
-
-
-                    <div class="answers remove-element-padding">
-                        <p>We will pay you <strong><span data-value='pay-frequency'>[frequency]</span> into your nominated bank account</strong>.</p>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-</div>
-
-
-        </div>
-
 
     </div>
 
@@ -1129,11 +1053,10 @@
     <!-- BUTTON GROUP -->
     <div class="ecb-button-group">
 
-        <a class="bga-link bga-inline-link bkg-light prev" tabindex="0" href=/bga-style-guide/prototypes/ecb/task2/pay.html role="button">Previous</a>
+        <a class="bga-link bga-inline-link bkg-light prev" tabindex="0" href=/bga-style-guide/prototypes/ecb/tasks/hours.html role="button">Previous</a>
 
 
-        <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0" href=/bga-style-guide/prototypes/ecb/task2/finalise.html
-            role="button">Next</a>
+        <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0" href=/bga-style-guide/prototypes/ecb/tasks/review.html role="button">Next</a>
 
     </div>
 
@@ -1176,6 +1099,7 @@
     </div>
 
 </body>
+
 
 
 </html>
