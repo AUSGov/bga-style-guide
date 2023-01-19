@@ -156,14 +156,10 @@ $(document).ready(function () {
 
     }
 
-    $('.stepped-navigation .step.active').on('click', function(e){
-        e.preventDefault();
-    });
-
     // Reset tool on "Create new contract"
    $('#ecb-prototype .clear-tool').on('click', function(e) {
         e.preventDefault();
-        sessionStorage.setItem('ecb-link-clicked','true');
+        
         
         var location = $(this).attr('href'),
         fragment = sessionStorage.getItem('fragment'),
@@ -193,6 +189,7 @@ $(document).ready(function () {
         if (task4) {
             sessionStorage.setItem('task4', task4);
         }
+        sessionStorage.setItem('ecb-link-clicked','true');
 
         window.location = location;
     });
@@ -348,9 +345,6 @@ $(document).ready(function () {
             current_fragment = "";
         }
         
-        console.log(current_fragment);
-        console.log(task_str);
-
         var new_fragment;
         
         if (current_fragment.includes(task_str)) {
@@ -378,7 +372,6 @@ $(document).ready(function () {
         } else if ((sessionStorage.getItem('task1')== 'true') &! (sessionStorage.getItem('task2')== 'true') &! (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true')) {
             current_task = 'task1'
         }
-        console.log(current_task);
         sessionStorage.setItem('current_task', current_task);
     };
     
@@ -439,17 +432,21 @@ $(document).ready(function () {
  
     $('.stepped-navigation .step').on('click', function(e){
        
-        e.preventDefault();
-        sessionStorage.setItem('ecb-link-clicked','true');
-        var href = $(this).attr('href');
+        if ($(this).hasClass('active')) {
+            e.preventDefault();
+        } else {
+            e.preventDefault();
+            sessionStorage.setItem('ecb-link-clicked','true');
+            var href = $(this).attr('href');
 
-        if (sessionStorage.current_task == "task2") {
-            set_fragment("T2-nav"); 
-        } else if (sessionStorage.current_task == "task4") {
-            set_fragment("T4-nav");
-        } 
-        
-        window.location = href;
+            if (sessionStorage.current_task == "task2") {
+                set_fragment("T2-nav"); 
+            } else if (sessionStorage.current_task == "task4") {
+                set_fragment("T4-nav");
+            } 
+            
+            window.location = href;
+        }
 
     });
 
@@ -479,7 +476,7 @@ $(document).ready(function () {
         sessionStorage.setItem('ecb-link-clicked','true');
 
         if (sessionStorage.current_task == "task4") {
-            set_fragment("T4-createbtn"); 
+            set_fragment("T4-createbtn");
         }
     });
 
@@ -501,8 +498,6 @@ $(document).ready(function () {
         ecb_link_clicked = sessionStorage.getItem('ecb-link-clicked');
 
         if (ecb_link_clicked != "true") {
-            console.log(location);
-            console.log(prev_location);
            
             if (task == 'task2') {    
                 if (!(location.includes('task2-start'))) {
@@ -514,9 +509,7 @@ $(document).ready(function () {
                 
                     set_fragment('T4-browser');
                 }
-            } else {
-                console.log('not task 2 or 4');
-            }
+            } 
         }
         sessionStorage.removeItem('prev-location');
         sessionStorage.removeItem('ecb-link-clicked');
