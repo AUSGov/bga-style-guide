@@ -163,6 +163,8 @@ $(document).ready(function () {
     // Reset tool on "Create new contract"
    $('#ecb-prototype .clear-tool').on('click', function(e) {
         e.preventDefault();
+        sessionStorage.setItem('ecb-link-clicked','true');
+        
         var location = $(this).attr('href'),
         fragment = sessionStorage.getItem('fragment'),
         current_task = sessionStorage.getItem('current_task'),
