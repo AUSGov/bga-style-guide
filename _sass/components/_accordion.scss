@@ -300,6 +300,22 @@
 
 
 // Mixins for smaller screen sizes
+@mixin grants-accordion-bp-576 {
+    .bga-default-accordion.grant-rounds {
+         .accordion-body {
+                padding: 0 !important;
+            }
+            .round-row {
+                padding: 16px !important;
+                display: block !important;
+
+                .round-info {
+                    padding-bottom: 16px;
+                }
+            }
+    }
+}
+
 @mixin accordion-below576 () {
     .bga-default-accordion {
         .accordion-item {
@@ -319,29 +335,25 @@
                 padding: 0 16px 16px 16px !important;
             }
         }
-        &.grant-rounds {
-            .accordion-body {
-                padding: 0 !important;
-            }
-            .round-row {
-                padding: 16px !important;
-                display: block !important;
-
-                .round-info {
-                    padding-bottom: 16px;
-                }
-            }
-        }
     }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576,
-.component-example.small-screen {
+.component-example.bp-576 {
+    @include grants-accordion-bp-576();
+}
+
+.component-example.bp-below576 {
     @include accordion-below576();
+    @include grants-accordion-bp-576();
 }
 
 // Media queries for HTML example pages
+@media (max-width: 768px) {
+    @include grants-accordion-bp-576();
+}
+
 @media (max-width: 576px) {
     @include accordion-below576();
+    @include grants-accordion-bp-576();
 }

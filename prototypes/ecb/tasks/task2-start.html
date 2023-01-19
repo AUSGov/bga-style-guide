@@ -1,6 +1,6 @@
 ---
 
-layout: ecb-5-step-final-state
+layout: ecb-5-step
 title: Employment Contract Tool
 stepped-nav-step: Finalise
 step-number: 5
@@ -8,7 +8,7 @@ task: task2
 
 ---
 
-<div class="container page-content my-5">
+<div class="container page-content prototype-default-state my-5">
 
     <div class="row ">
 
@@ -564,18 +564,17 @@ task: task2
     <!-- BUTTON GROUP -->
     <div class="ecb-button-group final-actions">
 
-        <a class="bga-link prev bga-inline-link bkg-light" tabindex="0" href={{ 'prototypes/ecb/task2/review.html' |
+        <a class="bga-link  bga-inline-link bkg-light prev" tabindex="0" href={{ 'prototypes/ecb/tasks/review.html' |
             relative_url }} role="button">Previous</a>
 
         <div class="two-button-group">
-        <a data-modal="modal-new-contract" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href="" role="button">Create new contract</a>
+        <a data-modal="modal-new-contract" class="bga-btn bga-primary-btn bkg-light modal-trigger new-contract" tabindex="0" href="" role="button">Create new contract</a>
 
         <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Close tool</a>
 
         <!-- WORKING CLOSE BUTTON - turned off for user testing
             <a data-modal="modal-close-tool" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href="" role="button">Close tool</a>
         -->
-
         </div>
 
     </div>
@@ -651,6 +650,7 @@ task: task2
                     <p>We’ve sent a 4 digit code to <strong><span class="user-email">user@emailaddress.com.au</span></strong>.</p>
                     <p>Enter the code below to verify your email address.
                     </p>
+
                     <div class="testing-msg p-3 remove-element-padding mb-4">
                         <p>For testing purposes the code is <strong>1234</strong></p>
                     </div>
@@ -732,7 +732,7 @@ task: task2
             <div class="ecb-button-group">
                 <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
                 <div class="button-example">
-                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/task2/redirect.html" | relative_url }} role="button">Yes, close this tool</a>
+                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/tasks/redirect.html" | relative_url }} role="button">Yes, close this tool</a>
                 </div>
             </div>
 
@@ -759,7 +759,7 @@ task: task2
             <div class="ecb-button-group">
                 <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
                 <div class="button-example">
-                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/task2/landing.html" | relative_url }} role="button">Yes, start a new contract</a>
+                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/tasks/landing.html" | relative_url }} role="button">Yes, start a new contract</a>
                 </div>
             </div>
 
@@ -771,8 +771,6 @@ task: task2
 
 <div class="modal-overlay"></div>
 
-
-</html>
 
 
 
