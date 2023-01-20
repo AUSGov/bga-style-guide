@@ -1107,37 +1107,10 @@ $(document).ready(function () {
 
 
     // COMPONENT EXAMPLE: CHAT BUTTON
-    //Hover only example (tooltip page)
-    $('.tooltip-hover').hover(
-        function () {
-            $('.tooltip').addClass("show");
-        },
-        function () {
-            $('.tooltip').removeClass("show");
-        }
-    );
-    //Hover on desktop, click on mobile (chat button)
-    //hover
-    $('.tooltip-click').hover(
-        function () {
-            var parent = $(this).parents('.component-example');
-            if (($(window).width() >= 768) && !(parent.hasClass('bp-below768'))) {
-                $('.tooltip').addClass("show");
-            }
-        },
-        function () {
-            var parent = $(this).parents('.component-example');
-            if ($(window).width() >= 768 && !(parent.hasClass('bp-below768'))) {
-                $('.tooltip').removeClass("show");
-            }
-        }
-    );
     //click
     $('.tooltip-click').on('click', function () {
-        var parent = $(this).parents('.component-example');
-        if ($(window).width() <= 768 || (parent.hasClass('bp-below768'))) {
-            $('.tooltip').toggleClass("show");
-        }
+        //var parent = $(this).parents('.component-example');
+        $('.tooltip').toggleClass("show");
     });
     //close tooltip
     $('.tooltip .close').on('click', function () {
@@ -1149,6 +1122,7 @@ $(document).ready(function () {
             $('.tooltip').removeClass('show');
         });
     }
+
 
 
     // COMPONENT EXAMPLE: PRINT SHARE UTILITIES

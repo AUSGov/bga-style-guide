@@ -67,6 +67,11 @@ button.chat {
         background-position: right 32px center;
     }
 }
+.msg-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
 
 .tooltip {
     display: none;
@@ -82,7 +87,13 @@ button.chat {
     bottom: 94px;
 
     .close {
-        display: none;
+        display: block;
+        border: none;
+        background: transparent;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        min-height: auto;
     }
 
     &.example {
@@ -142,15 +153,6 @@ button.chat {
         bottom: 78px;
         right: 16px;
 
-        .close {
-            display: block;
-            border: none;
-            background: transparent;
-            outline: none;
-            padding: 0;
-            margin: 0;
-            min-height: auto;
-        }
         &.centered {
             bottom: 62px;
         }
