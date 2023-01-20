@@ -32,157 +32,220 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        sm-visibility="true"
-        final-visibility="true"
-        breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example narrow m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <h3>Information notification</h3>
-
-                {% include component-examples/notification-example.html
-                icon="'../assets/icon-notification-circle-info.svg' | relative_url "
-                title="Optional notification title"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante."
-                classes="information"
-                %}
-
-                {% include component-examples/notification-example.html
-                icon="'../assets/icon-notification-circle-info.svg' | relative_url "
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante."
-                classes="information"
-                close="true"
-                %}
-
-                <h3>Success notification</h3>
-
-                {% include component-examples/notification-example.html
-                icon="'../assets/icon-notification-circle-success.svg' | relative_url "
-                title="Success notification"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante."
-                classes="success"
-                %}
-
-                {% include component-examples/notification-example.html
-                icon="'../assets/icon-notification-circle-success.svg' | relative_url "
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante."
-                classes="success"
-                close="true"
-                %}
-
-                <h3>Warning notification</h3>
-
-                {% include component-examples/notification-example.html
-                icon="'../assets/icon-notification-circle-warning.svg' | relative_url "
-                title="Warning notification"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante."
-                classes="warning"
-                %}
-
-                {% include component-examples/notification-example.html
-                icon="'../assets/icon-notification-circle-warning.svg' | relative_url "
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante."
-                classes="warning"
-                close="true"
-                %}
-
-
-            </div>
-
-        </div>
-
-        <div class="component-example m-0">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-
-            <h3>Coloured background sections - colour variations</h3>
-           
-            <h4>Information notification</h4>
-
-            {% include component-examples/notification-example.html
-            icon="'../assets/icon-notification-circle-info.svg' | relative_url "
-            title="Optional notification title"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-            non, finibus vehicula leo. Phasellus porta rhoncus ante."
-            classes="information colour-bkg"
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
-
-
-            <h4>Success notification</h4>
-
-                {% include component-examples/notification-example.html
-                icon="'../assets/icon-notification-circle-success.svg' | relative_url "
-                title="Success notification"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante."
-                classes="success colour-bkg"
-                %}  
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
                 
-                
-            <h4>Warning notification</h4>
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                element-string="bga-notification"
+                sm-visibility="true"
+                final-visibility="true"
+                breakpoint-final="576"
+                %}
 
-            {% include component-examples/notification-example.html
-            icon="'../assets/icon-notification-circle-warning.svg' | relative_url "
-            title="Warning notification"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-            non, finibus vehicula leo. Phasellus porta rhoncus ante."
-            classes="warning colour-bkg"
-            %}
-            
-           
-            </div>
+                <!-- Component example -->
 
-          
-        </div>
+                <div class="component-example narrow m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
 
+                        <h3>Information notification</h3>
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-
-                    <h3>Approved icons</h3>
-
-                    <p>Icon background colour MUST be matched with the notification box colour.</p>
-
-                    <div class="col-6 col-md-3">
-                        {% include icon-example.html
-                        src="'../assets/icon-notification-circle-info.svg' | relative_url "
-                        title="Information"
-                        classes=""
+                        {% include component-examples/notification-example.html
+                        icon="'../assets/icon-notification-circle-info.svg' | relative_url "
+                        title="Optional notification title"
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                        classes="information"
                         %}
-                    </div>
 
-                    <div class="col-6 col-md-3">
-                        {% include icon-example.html
-                        src="'../assets/icon-notification-circle-success.svg' | relative_url "
-                        title="Success"
-                        classes=""
+                        {% include component-examples/notification-example.html
+                        icon="'../assets/icon-notification-circle-info.svg' | relative_url "
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                        classes="information"
+                        close="true"
                         %}
-                    </div>
 
-                    <div class="col-6 col-md-3">
-                        {% include icon-example.html
-                        src="'../assets/icon-notification-circle-warning.svg' | relative_url "
-                        title="Warning"
-                        classes=""
+                        <h3>Success notification</h3>
+
+                        {% include component-examples/notification-example.html
+                        icon="'../assets/icon-notification-circle-success.svg' | relative_url "
+                        title="Success notification"
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                        classes="success"
                         %}
+
+                        {% include component-examples/notification-example.html
+                        icon="'../assets/icon-notification-circle-success.svg' | relative_url "
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                        classes="success"
+                        close="true"
+                        %}
+
+                        <h3>Warning notification</h3>
+
+                        {% include component-examples/notification-example.html
+                        icon="'../assets/icon-notification-circle-warning.svg' | relative_url "
+                        title="Warning notification"
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                        classes="warning"
+                        %}
+
+                        {% include component-examples/notification-example.html
+                        icon="'../assets/icon-notification-circle-warning.svg' | relative_url "
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                        classes="warning"
+                        close="true"
+                        %}
+
+
                     </div>
-
-
 
                 </div>
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper coloured-section remove-element-padding p-4">
+
+                    <h3>Coloured background sections - colour variations</h3>
+                
+                    <h4>Information notification</h4>
+
+                    {% include component-examples/notification-example.html
+                    icon="'../assets/icon-notification-circle-info.svg' | relative_url "
+                    title="Optional notification title"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                    non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                    classes="information colour-bkg"
+                    %}
+
+
+                    <h4>Success notification</h4>
+
+                        {% include component-examples/notification-example.html
+                        icon="'../assets/icon-notification-circle-success.svg' | relative_url "
+                        title="Success notification"
+                        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                        classes="success colour-bkg"
+                        %}  
+                        
+                        
+                    <h4>Warning notification</h4>
+
+                    {% include component-examples/notification-example.html
+                    icon="'../assets/icon-notification-circle-warning.svg' | relative_url "
+                    title="Warning notification"
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                    non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                    classes="warning colour-bkg"
+                    %}
+                    
+                
+                    </div>
+
+                
+                </div>
+
+
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
+
+                            <h3>Approved icons</h3>
+
+                            <p>Icon background colour MUST be matched with the notification box colour.</p>
+
+                            <div class="col-6 col-md-3">
+                                {% include icon-example.html
+                                src="'../assets/icon-notification-circle-info.svg' | relative_url "
+                                title="Information"
+                                classes=""
+                                %}
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                {% include icon-example.html
+                                src="'../assets/icon-notification-circle-success.svg' | relative_url "
+                                title="Success"
+                                classes=""
+                                %}
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                {% include icon-example.html
+                                src="'../assets/icon-notification-circle-warning.svg' | relative_url "
+                                title="Warning"
+                                classes=""
+                                %}
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="tab-section non-branded ">
+
+                 <!-- Breakpoint radio buttons -->
+                 {% include breakpoints.html
+                    element-string="nb-notification"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
+                    %}
+    
+                    <!-- Component example -->
+    
+                    <div class="component-example narrow m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+
+                        <p>Apply your brand specific <strong>colours, borders and icons</strong> to the base notification shown below.</p>
+    
+                            <h3>Notification</h3>
+    
+                            {% include component-examples/notification-example.html
+                            icon="'../assets/Img-icon-placeholder.svg' | relative_url "
+                            title="Optional notification title"
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                            non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                            classes="information non-branded nb-background"
+                            %}
+    
+                            {% include component-examples/notification-example.html
+                            icon="'../assets/Img-icon-placeholder.svg' | relative_url "
+                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                            non, finibus vehicula leo. Phasellus porta rhoncus ante."
+                            classes="information non-branded nb-background"
+                            close="true"
+                            %}
+
+                        </div>
+    
+                    </div>
+    
+
+            </div>
+
         </div>
 
 

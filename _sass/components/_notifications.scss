@@ -1,4 +1,4 @@
-.notification {
+.bga-component.notification {
 
     background: $bga-blue-background-extralight;
     border-left: solid 8px $bga-blue-border;
@@ -73,11 +73,18 @@
     &.colour-bkg {
         background: $bga-white !important;
     }
+
+    &.non-branded {
+        .icon-wrapper {
+            height: 44px;
+            background: transparent;
+        }
+    }
 }
 
 // Mixins for smaller screen sizes and media queries
 @mixin notification-below576 () {
-    .notification {
+    .bga-component.notification {
         .notification-wrapper {
             flex-wrap: wrap;
             justify-content: center;

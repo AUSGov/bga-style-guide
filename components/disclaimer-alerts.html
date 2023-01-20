@@ -17,8 +17,7 @@ subsite-tag: true
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
-
+            classes="in-page"
             link-1="Design" link-id-1="#design"
             link-2="Layouts" link-id-2="#layouts" 
             link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
@@ -32,64 +31,120 @@ classes="in-page"
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-        singlebp="true" 
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <h3>Visible disclaimer</h3>
-                {% include component-examples/disclaimer-example.html
-                    title="Disclaimer"
-                    content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><ul><li>Bullet points can be used in call out boxes.</li><li>Integer erat arcu, venenatis et nibh non.</li></ul><p>Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum.</p>"
-                    display="visible"
-                    classes="visible"
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
-
-            <h3>Hidden disclaimer</h3>
-            {% include component-examples/disclaimer-example.html
-                title="Disclaimer"
-                content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p><p>Ut nisi risus, venenatis ac purus at, congue pharetra nisi. Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum. Aenean tempor, lacus ac finibus feugiat, lorem ligula placerat dolor, quis fringilla velit diam sed mi. Nullam nec libero vel nibh facilisis condimentum in in risus. Morbi egestas eget neque ac accumsan. In luctus purus odio, sed luctus sem eleifend ac. Nulla facilisi. Proin neque quam, consequat quis purus a, tempus commodo lacus. Vivamus cursus, turpis quis vestibulum dapibus, dolor arcu malesuada tellus, a congue lacus augue eget erat. Vestibulum laoreet erat malesuada, interdum ligula eu, scelerisque tellus. Praesent ultricies quis massa nec vulputate. Aliquam nibh enim, interdum eget sem vitae, gravida mattis nulla.</p>"
-                display="hidden"
-                layout-name="disclaimer"
-                classes="hidden"
-            %}
-            
-            </div>
-            
-        </div>
-
-
-        <div class="component-example m-0">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-
-                <h3>Coloured background sections - colour variations</h3>
-
-                {% include component-examples/disclaimer-example.html
-                    
-                    title="Disclaimer"
-                    content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum.</p>"
-                    display="visible"
-                    classes="visible coloured-bkg"
-                %}
-
-            
-                {% include component-examples/disclaimer-example.html
-                    title="Disclaimer"
-                    content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p><p>Aliquam nibh enim, interdum eget sem vitae, gravida mattis nulla.</p>"
-                    display="hidden"
-                    layout-name="disclaimer-coloured-bkg"
-                    classes="hidden coloured-bkg"
-                %}
-            
-            </div>
-            
-        </div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
         
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                    singlebp="true" 
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>Visible disclaimer</h3>
+                            {% include component-examples/disclaimer-example.html
+                                title="Disclaimer"
+                                content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><ul><li>Bullet points can be used in call out boxes.</li><li>Integer erat arcu, venenatis et nibh non.</li></ul><p>Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum.</p>"
+                                display="visible"
+                                classes="visible"
+                        %}
+
+                        <h3>Hidden disclaimer</h3>
+                        {% include component-examples/disclaimer-example.html
+                            title="Disclaimer"
+                            content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p><p>Ut nisi risus, venenatis ac purus at, congue pharetra nisi. Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum. Aenean tempor, lacus ac finibus feugiat, lorem ligula placerat dolor, quis fringilla velit diam sed mi. Nullam nec libero vel nibh facilisis condimentum in in risus. Morbi egestas eget neque ac accumsan. In luctus purus odio, sed luctus sem eleifend ac. Nulla facilisi. Proin neque quam, consequat quis purus a, tempus commodo lacus. Vivamus cursus, turpis quis vestibulum dapibus, dolor arcu malesuada tellus, a congue lacus augue eget erat. Vestibulum laoreet erat malesuada, interdum ligula eu, scelerisque tellus. Praesent ultricies quis massa nec vulputate. Aliquam nibh enim, interdum eget sem vitae, gravida mattis nulla.</p>"
+                            display="hidden"
+                            layout-name="disclaimer"
+                            classes="hidden"
+                        %}
+                        
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper coloured-section remove-element-padding p-4">
+
+                            <h3>Coloured background sections - colour variations</h3>
+
+                            {% include component-examples/disclaimer-example.html
+                                
+                                title="Disclaimer"
+                                content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum.</p>"
+                                display="visible"
+                                classes="visible coloured-bkg"
+                            %}
+
+                        
+                            {% include component-examples/disclaimer-example.html
+                                title="Disclaimer"
+                                content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p><p>Aliquam nibh enim, interdum eget sem vitae, gravida mattis nulla.</p>"
+                                display="hidden"
+                                layout-name="disclaimer-coloured-bkg"
+                                classes="hidden coloured-bkg"
+                            %}
+                        
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        singlebp="true" 
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                <p>Apply your brand specific <strong>colours and borders</strong> to the base standard pathway shown below.</p>
+    
+                                <h3>Visible disclaimer</h3>
+                                {% include component-examples/disclaimer-example.html
+                                    title="Disclaimer"
+                                    content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><ul><li>Bullet points can be used in call out boxes.</li><li>Integer erat arcu, venenatis et nibh non.</li></ul><p>Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum.</p>"
+                                    display="visible"
+                                    classes="visible non-branded"
+                            %}
+    
+                            <h3>Hidden disclaimer</h3>
+                            {% include component-examples/disclaimer-example.html
+                                title="Disclaimer"
+                                content="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo.</p><p>Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p><p>Ut nisi risus, venenatis ac purus at, congue pharetra nisi. Duis et dignissim risus, eget consectetur risus. Cras sed quam vel est dignissim laoreet eu eget eros. Suspendisse a semper erat. Etiam eleifend facilisis rutrum. Aenean tempor, lacus ac finibus feugiat, lorem ligula placerat dolor, quis fringilla velit diam sed mi. Nullam nec libero vel nibh facilisis condimentum in in risus. Morbi egestas eget neque ac accumsan. In luctus purus odio, sed luctus sem eleifend ac. Nulla facilisi. Proin neque quam, consequat quis purus a, tempus commodo lacus. Vivamus cursus, turpis quis vestibulum dapibus, dolor arcu malesuada tellus, a congue lacus augue eget erat. Vestibulum laoreet erat malesuada, interdum ligula eu, scelerisque tellus. Praesent ultricies quis massa nec vulputate. Aliquam nibh enim, interdum eget sem vitae, gravida mattis nulla.</p>"
+                                display="hidden"
+                                layout-name="disclaimer"
+                                classes="hidden non-branded"
+                            %}
+                            
+                            </div>
+                            
+                        </div>
+
+                </div>
+
+             </div>
+                
         
         
             
