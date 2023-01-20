@@ -246,14 +246,59 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
+                
+                <!-- Breakpoint radio buttons -->
+                <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-notification-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,15 +311,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-notification-group" id="bga-notification-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-notification-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-notification-group" id="bga-notification-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-notification-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -294,14 +339,14 @@
 
 
 
-        <!-- Component example -->
+                <!-- Component example -->
 
-        <div class="component-example narrow m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                <div class="component-example narrow m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Information notification</h3>
+                        <h3>Information notification</h3>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification information m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -317,7 +362,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -327,7 +372,7 @@
     </div>
 </div>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification information m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -343,7 +388,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -353,9 +398,9 @@
     </div>
 </div>
 
-                <h3>Success notification</h3>
+                        <h3>Success notification</h3>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification success m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -371,7 +416,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -381,7 +426,7 @@
     </div>
 </div>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification success m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -397,7 +442,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -407,9 +452,9 @@
     </div>
 </div>
 
-                <h3>Warning notification</h3>
+                        <h3>Warning notification</h3>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification warning m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -425,7 +470,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -435,7 +480,7 @@
     </div>
 </div>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification warning m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -451,7 +496,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -462,18 +507,18 @@
 </div>
 
 
-            </div>
+                    </div>
 
-        </div>
+                </div>
 
-        <div class="component-example m-0">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
+                <div class="component-example m-0">
+                    <div class="component-wrapper coloured-section remove-element-padding p-4">
 
-            <h3>Coloured background sections - colour variations</h3>
-           
-            <h4>Information notification</h4>
+                    <h3>Coloured background sections - colour variations</h3>
+                
+                    <h4>Information notification</h4>
 
-            <div class="bga-component-wrapper pb-5">
+                    <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification information colour-bkg m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -489,7 +534,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-            non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                    non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -500,9 +545,9 @@
 </div>
 
 
-            <h4>Success notification</h4>
+                    <h4>Success notification</h4>
 
-                <div class="bga-component-wrapper pb-5">
+                        <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification success colour-bkg m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -518,7 +563,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-                non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                        non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -527,11 +572,11 @@
 
     </div>
 </div>  
-                
-                
-            <h4>Warning notification</h4>
+                        
+                        
+                    <h4>Warning notification</h4>
 
-            <div class="bga-component-wrapper pb-5">
+                    <div class="bga-component-wrapper pb-5">
     <div class="bga-component notification warning colour-bkg m-0">
 
         <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
@@ -547,7 +592,7 @@
 
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
-            non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                    non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
                 
 
                 
@@ -556,24 +601,24 @@
 
     </div>
 </div>
-            
-           
-            </div>
+                    
+                
+                    </div>
 
-          
-        </div>
+                
+                </div>
 
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
+                <div class="component-example">
+                    <div class="component-wrapper remove-element-padding p-4">
+                        <div class="row">
 
-                    <h3>Approved icons</h3>
+                            <h3>Approved icons</h3>
 
-                    <p>Icon background colour MUST be matched with the notification box colour.</p>
+                            <p>Icon background colour MUST be matched with the notification box colour.</p>
 
-                    <div class="col-6 col-md-3">
-                        <div class="approved-icons ">
+                            <div class="col-6 col-md-3">
+                                <div class="approved-icons ">
 	<p class="icon-name mb-2"><strong>Information</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -584,10 +629,10 @@
 		</div>
 	</button>
 </div>
-                    </div>
+                            </div>
 
-                    <div class="col-6 col-md-3">
-                        <div class="approved-icons ">
+                            <div class="col-6 col-md-3">
+                                <div class="approved-icons ">
 	<p class="icon-name mb-2"><strong>Success</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -598,10 +643,10 @@
 		</div>
 	</button>
 </div>
-                    </div>
+                            </div>
 
-                    <div class="col-6 col-md-3">
-                        <div class="approved-icons ">
+                            <div class="col-6 col-md-3">
+                                <div class="approved-icons ">
 	<p class="icon-name mb-2"><strong>Warning</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -612,12 +657,135 @@
 		</div>
 	</button>
 </div>
+                            </div>
+
+
+
+                        </div>
                     </div>
+                </div>
 
+            </div>
 
+            <div class="tab-section non-branded ">
+
+                 <!-- Breakpoint radio buttons -->
+                 <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-notification-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-notification-group" id="nb-notification-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-notification-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-notification-group" id="nb-notification-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-notification-bp-final">&lt;576px</label>
 
                 </div>
+
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                    <!-- Component example -->
+    
+                    <div class="component-example narrow m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+
+                        <p>Apply your brand specific <strong>colours, borders and icons</strong> to the base notification shown below.</p>
+    
+                            <h3>Notification</h3>
+    
+                            <div class="bga-component-wrapper pb-5">
+    <div class="bga-component notification information non-branded nb-background m-0">
+
+        <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
+            
+
+            <div class="icon-wrapper me-4"><img src='../assets/Img-icon-placeholder.svg' | relative_url  alt="" />
+            </div>
+
+            <div class="component-content remove-element-padding">
+                
+                <h4>Optional notification title</h4>
+                
+
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                            non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                
+
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+                            <div class="bga-component-wrapper pb-5">
+    <div class="bga-component notification information non-branded nb-background m-0">
+
+        <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
+            
+            <button class="close m-0 p-0">Close</button>
+            
+
+            <div class="icon-wrapper me-4"><img src='../assets/Img-icon-placeholder.svg' | relative_url  alt="" />
+            </div>
+
+            <div class="component-content remove-element-padding">
+                
+
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh
+                            non, finibus vehicula leo. Phasellus porta rhoncus ante.</p>
+                
+
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+                        </div>
+    
+                    </div>
+    
+
+            </div>
+
         </div>
 
 
