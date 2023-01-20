@@ -3,8 +3,6 @@
 
 $(document).ready(function () {
 
-    
-
     //ECB REVISED FLOW PROTOTYPE
 
     // Open & close modals
@@ -356,8 +354,6 @@ $(document).ready(function () {
             window.location.hash = new_fragment;
             sessionStorage.setItem('fragment', new_fragment);    
     };
-
-      
     
     // GET current task function
     var get_current_task = function(){
@@ -373,6 +369,7 @@ $(document).ready(function () {
             current_task = 'task1'
         }
         sessionStorage.setItem('current_task', current_task);
+        console.log(current_task);
     };
     
     // Set task number to true in sessionStorage when a task landing page loads & set nav steps for each task.
@@ -416,12 +413,14 @@ $(document).ready(function () {
 
 
     // Load existing URL fragments on page load.
+    /*
     $(window).on('load', function(){
        var fragment = sessionStorage.getItem('fragment');
         if (fragment) {
             window.location.hash = fragment;
         }
     });
+    */
 
     // Track button clicks with URL fragments
     $('#verify-btn').on('click', function(){
@@ -490,23 +489,21 @@ $(document).ready(function () {
     
     // Detect if an ECB link was clicked on page change. Record browser fragment if no link was clicked.
     // Check if page is sames as previous page.
+    
     var detect_nav_method = function(){
 
         var location = window.location.pathname,
-        task = sessionStorage.getItem('current_task')
-        prev_location = sessionStorage.getItem('prev-location'),
+        task = sessionStorage.getItem('current_task'),
         ecb_link_clicked = sessionStorage.getItem('ecb-link-clicked');
 
         if (ecb_link_clicked != "true") {
            
             if (task == 'task2') {    
                 if (!(location.includes('task2-start'))) {
-                
                     set_fragment('T2-browser');
                 }
             } else if (task == 'task4') {    
                 if (!(location.includes('task4-start'))) {
-                
                     set_fragment('T4-browser');
                 }
             } 
@@ -515,13 +512,27 @@ $(document).ready(function () {
         sessionStorage.removeItem('ecb-link-clicked');
     };   
     detect_nav_method();
+       
 
     // On page unload add page location to sessionStorage in 'prev_location' item
     $(window).on('beforeunload', function () {
         var location = window.location.pathname;
         sessionStorage.setItem('prev-location', location);     
     });  
+
+     // Load existing URL fragments on page load.
+     var existing_fragment = sessionStorage.getItem('fragment');
+     if (existing_fragment) {
+         window.location.hash = existing_fragment;
+     };
     
 
 }); //End doc ready
 
+// Ensure URL fragments are added to the url (this catches back button clicks that)
+window.onhashchange = function() {
+    var existing_fragment = sessionStorage.getItem('fragment');
+    if (existing_fragment) {
+        window.location.hash = existing_fragment;
+    };
+}
