@@ -412,16 +412,6 @@ $(document).ready(function () {
     get_current_task();
 
 
-    // Load existing URL fragments on page load.
-    /*
-    $(window).on('load', function(){
-       var fragment = sessionStorage.getItem('fragment');
-        if (fragment) {
-            window.location.hash = fragment;
-        }
-    });
-    */
-
     // Track button clicks with URL fragments
     $('#verify-btn').on('click', function(){
         if (sessionStorage.current_task == "task1") {
@@ -490,6 +480,7 @@ $(document).ready(function () {
     // Detect if an ECB link was clicked on page change. Record browser fragment if no link was clicked.
     // Check if page is sames as previous page.
     
+    /*
     var detect_nav_method = function(){
 
         var location = window.location.pathname,
@@ -512,7 +503,7 @@ $(document).ready(function () {
         sessionStorage.removeItem('ecb-link-clicked');
     };   
     detect_nav_method();
-       
+    */ 
 
     // On page unload add page location to sessionStorage in 'prev_location' item
     $(window).on('beforeunload', function () {
