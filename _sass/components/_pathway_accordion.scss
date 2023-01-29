@@ -371,6 +371,19 @@
     }
 }
 
+// Mixins for smaller screen sizes
+@mixin pathway-accordion-bp-768 () {
+    .bga-pathway-accordion {  
+        .accordion-item  { 
+            .accordion-body {
+                .guide-tile {
+                    width: calc(50% - 12px);
+                }
+            }
+        }
+    }
+}
+
 
 // Mixins for smaller screen sizes
 @mixin pathway-accordion-below768 () {
@@ -403,11 +416,18 @@
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-768 {
+    @include pathway-accordion-bp-768();
+}
+
 .component-example.bp-below768 {
     @include pathway-accordion-below768();
 }
 
 // Media queries for HTML example pages
+@media (max-width: 992px) {
+    @include pathway-accordion-bp-768();
+}
 @media (max-width: 768px) {
     @include pathway-accordion-below768();
 }
