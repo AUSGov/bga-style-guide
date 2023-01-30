@@ -6815,19 +6815,15 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .guided-search-wrapper .toggle .custom-control-input { height: 42px; min-width: 66px; order: 2; position: relative; width: 66px; appearance: none; background: none; border: none; }
 
-.guided-search-wrapper .toggle .custom-control-input:before { width: 66px; height: 24px; background: #b3c2d8; border: none; display: block; background: #708DAF; border: none; border-radius: 50px; position: absolute; left: 0; content: ""; }
+.guided-search-wrapper .toggle .custom-control-input:before { width: 64px; height: 24px; background: #b3c2d8; border: none; display: block; background: #708DAF; border: none; border-radius: 50px; position: absolute; left: 0; content: ""; }
 
 .guided-search-wrapper .toggle .custom-control-input:after { background: url(../assets/icon-close-blue.svg) no-repeat #ffffff; background-position: center center; border: solid 2px #2157AA; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); background-size: 14px 14px; left: 0; width: 40px; height: 40px; display: block; position: absolute; border-radius: 50px; cursor: pointer; content: ""; }
 
-.guided-search-wrapper .toggle .custom-control-input:focus-visible { border: none; outline: none; }
-
-.guided-search-wrapper .toggle .custom-control-input:focus-visible:after { background: #113869 url(../assets/icon-close-white.svg) no-repeat; background-position: center center; border: solid 2px #113869; background-size: 14px 14px; }
+.guided-search-wrapper .toggle .custom-control-input:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; }
 
 .guided-search-wrapper .toggle .custom-control-input:hover:after { background: #2157AA url(../assets/icon-close-white.svg) no-repeat; background-position: center center; border: solid 2px #2157AA; background-size: 14px 14px; }
 
 .guided-search-wrapper .toggle.selected .custom-control-input:after { background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; border: solid 2px #2157AA; background-size: 18px 14px; left: auto; right: 0; }
-
-.guided-search-wrapper .toggle.selected .custom-control-input:focus-visible:after { background: #113869 url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; border: solid 2px #113869; background-size: 18px 14px; }
 
 .guided-search-wrapper .toggle.selected .custom-control-input:hover:after { background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; border: solid 2px #2157AA; background-size: 18px 14px; }
 
@@ -6835,17 +6831,19 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .guided-search-wrapper .toggle label { margin-bottom: 16px; }
 
+.guided-search-wrapper .toggle.toggle-primary #primary-toggle { margin-top: 8px; }
+
 .guided-search-wrapper .toggle.toggle-primary label { font-size: 2.125rem; font-weight: 600; color: #2E3E5A; line-height: 1.5; }
 
-.guided-search-wrapper .toggle.toggle-primary .custom-control-input:before { top: calc(50% - 4px); }
+.guided-search-wrapper .toggle.toggle-primary .custom-control-input:before { top: calc(50% - 12px); }
 
-.guided-search-wrapper .toggle.toggle-primary .custom-control-input:after { top: calc(50% - 12px); }
+.guided-search-wrapper .toggle.toggle-primary .custom-control-input:after { top: calc(50% - 20px); }
 
 .guided-search-wrapper .toggle.toggle-secondary label { font-size: 1.375rem; font-weight: 600; color: #2E3E5A; line-height: 1.5; }
 
 .guided-search-wrapper .toggle.toggle-secondary .custom-control-input:before { top: calc(50% - 14px); }
 
-.guided-search-wrapper .toggle.toggle-secondary .custom-control-input:after { top: calc(50% - 22px); }
+.guided-search-wrapper .toggle.toggle-secondary .custom-control-input:after { top: calc(50% - 20px); }
 
 .guided-search-wrapper .button-group { display: flex; justify-content: flex-end; align-items: center; row-gap: 24px; column-gap: 24px; }
 
