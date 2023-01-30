@@ -109,7 +109,7 @@
 
 
                 &:before {
-                    width: 66px;
+                    width: 64px;
                     height: 24px;
                     background: #b3c2d8;
                     border: none;
@@ -139,15 +139,10 @@
                 }
 
                 &:focus-visible {
-                    border: none;
+                    border: $bga-text-focus-border;
+                    border-radius: $bga-focus-radius;
                     outline: none;
 
-                    &:after {
-                        background: $bga-blue-footer url(../assets/icon-close-white.svg) no-repeat;
-                        background-position: center center;
-                        border: solid 2px $bga-blue-footer;
-                        background-size: 14px 14px;
-                    }
                 }
 
                 &:hover {
@@ -171,15 +166,6 @@
                         right: 0;
                     }
 
-                    &:focus-visible {
-                        &:after {
-                            background: $bga-blue-footer url(../assets/icon-tick-white.svg) no-repeat;
-                            background-position: center center;
-                            border: solid 2px $bga-blue-footer;
-                            background-size: 18px 14px;
-                        }
-                    }
-
                     &:hover {
                         &:after {
                             background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
@@ -201,6 +187,9 @@
             }
             
             &.toggle-primary {
+                #primary-toggle {
+                    margin-top: 8px;
+                }
                 label {
                     font-size: 2.125rem;
                     font-weight: 600;
@@ -209,10 +198,10 @@
                 }
                 .custom-control-input {
                     &:before {
-                        top: calc(50% - 4px);
+                        top: calc(50% - 12px);
                     }
                     &:after {
-                        top: calc(50% - 12px); 
+                        top: calc(50% - 20px);
                     }
                 }
             }
@@ -229,7 +218,7 @@
                         top: calc(50% - 14px);
                     }
                     &:after {
-                        top: calc(50% - 22px); 
+                        top: calc(50% - 20px); 
                     }
                 }
             }
