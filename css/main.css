@@ -6005,21 +6005,25 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .stepped-navigation .step .step-name { width: 100%; display: block; font-size: .875rem; }
 
-.stepped-navigation .step.completed { cursor: pointer; }
+.stepped-navigation .step.completed { cursor: pointer; font-weight: 600; }
 
 .stepped-navigation .step.completed::before { border-bottom-color: #2157AA; }
 
 .stepped-navigation .step.completed .step-number { text-indent: -9999px; background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; background-size: 18px 14px; border-color: #2157AA; }
 
-.stepped-navigation .step.completed .step-name { color: #2157AA; }
+.stepped-navigation .step.completed .step-name { color: #2157AA; text-decoration: underline; text-decoration-color: #2157AA; }
 
 .stepped-navigation .step.completed:hover { text-decoration: underline; text-decoration-color: #2157AA; }
+
+.stepped-navigation .step.completed.active .step-number { background: #ffffff url(../assets/icon-tick-blue.svg) no-repeat; background-position: center center; background-size: 18px 14px; }
+
+.stepped-navigation .step.completed.active:hover { text-decoration: none; }
 
 .stepped-navigation .step.active::before { border-bottom: 4px solid #2157AA; }
 
 .stepped-navigation .step.active .step-number { background: #ffffff; color: #2157AA; border-color: #2157AA; }
 
-.stepped-navigation .step.active .step-name { font-weight: 700; color: #2157AA; text-decoration: underline; text-decoration-color: #2157AA; }
+.stepped-navigation .step.active .step-name { font-weight: 700; color: #2157AA; text-decoration: none; }
 
 .component-example.bp-below768 .page-header-wrapper.tool-stepped-nav.teal, .component-example.small-screen .page-header-wrapper.tool-stepped-nav.teal { background: none; padding: 0 !important; }
 
