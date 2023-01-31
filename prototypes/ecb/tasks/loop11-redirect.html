@@ -1,0 +1,213 @@
+---
+
+layout: blank
+title: Loop11 redirect
+
+---
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description"
+        content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700, 700i&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href={{"favicon.ico?" | relative_url }}>
+
+    <!-- Style guide specific CSS -->
+    <link rel="stylesheet" href={{ "css/main.css" | relative_url }}>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <script src={{"/js/bootstrap-datepicker.js" | relative_url }}></script>
+
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml" | prepend:
+        site.baseurl | prepend: site.url }}">
+
+</head>
+
+
+
+
+<body>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="instructions p-5 mt-6 remove-element-padding">
+                    <h1>Evaluation complete</h1>
+
+                    <h2>Explore government resources for businesses</h2>
+
+
+                    <div class="hero-pathway-block" id="hero-layout-example">
+
+                        <div class="row">
+
+                            <div class="col-12 col-sm-6 col-lg-8">
+                                <div class="bga-component-wrapper h-100 d-flex pb-5">
+                                    <a href="https://business.gov.au" tabindex="0"
+                                        class="bga-component hero-pathway mt-0 mx-0 mb-5 border-teal">
+
+
+                                        <div class="p-4 component-content">
+
+                                            <div class="component-text p-0">
+                                                <h3 class="tile-title pt-0">Visit business.gov.au</h3>
+                                                <p class="tile-description mb-0">business.gov.au is a whole-of-government website for the Australian business community. It provides information, grants, services and support from 3 levels of government to make it easier for business owners to find everything in one place</p>
+                                            </div>
+
+
+
+                                            <div class="icon-wrapper">
+                                                <div class="arrow-icon">
+                                                    <img src="../../../assets/icon-arrow-right-black.svg" alt="">
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <div class="component-image">
+                                            <img src="../../../assets/refresh-illustrations/person-ipad.svg"  alt="">
+                                        </div>
+
+
+
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                        <h3>Find government assistance, grants and events</h3>
+
+
+                        <div class="standard-pathway-block" id="standard-pathway-example">
+
+                            <div class="row">
+
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="bga-component-wrapper h-100 pb-5">
+                                        <a href="https://business.gov.au/grants-and-programs" tabindex="0"
+                                            class="bga-component standard-pathway m-0 ">
+
+                                            <div class="p-4 component-content h-100">
+
+                                                <div class="component-text p-0">
+                                                    <h3 class="tile-title pt-0">Grants and programs finder</h3>
+                                                    <p class="mb-4">Find grants, funding and support programs to help
+                                                        your business grow and succeed!</p>
+                                                </div>
+
+                                                <div class="arrow-icon">
+                                                    <img src="../../../assets/icon-arrow-right-white.svg">
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="bga-component-wrapper h-100 pb-5">
+                                        <a href="https://business.gov.au/expertise-and-advice" tabindex="0"
+                                            class="bga-component standard-pathway m-0 ">
+
+                                            <div class="p-4 component-content h-100">
+
+                                                <div class="component-text p-0">
+                                                    <h3 class="tile-title pt-0">Expertise and advice finder</h3>
+                                                    <p class="mb-4">You don’t have to do it alone! Use our search to
+                                                        find a business adviser or expert.</p>
+                                                </div>
+
+                                                <div class="arrow-icon">
+                                                    <img src="../../../assets/icon-arrow-right-white.svg">
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="bga-component-wrapper h-100 pb-5">
+                                        <a href="https://business.gov.au/events-and-training" tabindex="0"
+                                            class="bga-component standard-pathway m-0 ">
+
+                                            <div class="p-4 component-content h-100">
+
+                                                <div class="component-text p-0">
+                                                    <h3 class="tile-title pt-0">Events and training finder</h3>
+                                                    <p class="mb-4">Use our search to find business events and training
+                                                        to improve your skills and grow your network.</p>
+                                                </div>
+
+                                                <div class="arrow-icon">
+                                                    <img src="../../../assets/icon-arrow-right-white.svg">
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
