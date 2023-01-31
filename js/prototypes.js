@@ -56,7 +56,7 @@ $(document).ready(function () {
         })
         ele.addEventListener('input', (e) => {
             // take the first character of the input
-            // this actually breaks if you input an emoji like 👨‍👩‍👧‍👦....
+            // this actually breaks if you input an emoji
             // but I'm willing to overlook insane security code practices.
             var [first, ...rest] = e.target.value;
             e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
@@ -148,6 +148,7 @@ $(document).ready(function () {
         });
         if (completed_number > active_number) {
             $('.step.active').addClass('completed');
+            $('.step.completed').last().addClass('visited').removeClass('completed');
         } else {
             $('.step.active').removeClass('completed');
         }
@@ -160,7 +161,11 @@ $(document).ready(function () {
         path;
 
         if(location.includes('tasks')) {
-            path = '/bga-style-guide/prototypes/ecb/tasks/';
+            if (location.includes('mobile')) {
+                path = '/bga-style-guide/prototypes/ecb/tasks-mobile/';
+            } else {
+                path = '/bga-style-guide/prototypes/ecb/tasks/';
+            }
         } else {
             path = '/bga-style-guide/prototypes/ecb/';
         }
