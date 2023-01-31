@@ -79,6 +79,7 @@
 
         &.completed {
             cursor: pointer;
+            font-weight: 600;
 
             &::before {
                 border-bottom-color: $bga-blue-links;
@@ -93,13 +94,24 @@
             }
             .step-name {
                 color: $bga-blue-links;
+                text-decoration: underline;
+                text-decoration-color: $bga-blue-links;
             }
 
             &:hover {
                 text-decoration: underline;
                 text-decoration-color: $bga-blue-links;
             }
-        
+            &.active {
+                .step-number {
+                    background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat;
+                    background-position: center center;
+                    background-size: 18px 14px;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
         &.active {
             &::before {
@@ -113,8 +125,7 @@
             .step-name {
                 font-weight: 700;
                 color: $bga-blue-links;
-                text-decoration: underline;
-                text-decoration-color: $bga-blue-links;
+                text-decoration: none;
             }
         }
     }

@@ -112,8 +112,9 @@ $(document).ready(function () {
         }, 200);
     });
 
-
+    // Stepped nav functionality
     var stepped_nav_functionality = function(path){
+        
         var active_step = 'nav-step-' + $('.step-title').attr('data-step'),
         active_number = parseInt($('.step-title').attr('data-step'));
 
@@ -122,7 +123,6 @@ $(document).ready(function () {
         sessionStorage.setItem(active_step, 'visited');
 
         var step_titles = ["position.html", "hours.html", "pay.html", "review.html", "finalise.html"];
-        var completed_steps = active_step - 1;
 
         for (var step = 0; step < step_titles.length; step++) {
             var step_number = step + 1,
@@ -137,6 +137,21 @@ $(document).ready(function () {
                     }
             }
         }
+
+        var completed_number;
+        $('.stepped-navigation .step').each(function(index){
+            var step = index + 1,
+            visited_state = sessionStorage.getItem('nav-step-'+ step);
+            if (visited_state == 'visited') {
+               completed_number = step;
+            } 
+        });
+        if (completed_number > active_number) {
+            $('.step.active').addClass('completed');
+        } else {
+            $('.step.active').removeClass('completed');
+        }
+
     };
 
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
@@ -157,7 +172,6 @@ $(document).ready(function () {
     // Reset tool on "Create new contract"
    $('#ecb-prototype .clear-tool').on('click', function(e) {
         e.preventDefault();
-        
         
         var location = $(this).attr('href'),
         fragment = sessionStorage.getItem('fragment'),
@@ -357,19 +371,21 @@ $(document).ready(function () {
     
     // GET current task function
     var get_current_task = function(){
-        var current_task;
-        if (sessionStorage.getItem('task4')== 'true') {
-            current_task = 'task4';
+        if ($('#ecb-prototype').length) {
+            var current_task;
+            if (sessionStorage.getItem('task4')== 'true') {
+                current_task = 'task4';
 
-        } else if ( (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true') ) {
-            current_task = 'task3';
-        }  else if ( (sessionStorage.getItem('task2')== 'true') &! (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true') ) {
-            current_task = 'task2';
-        } else if ((sessionStorage.getItem('task1')== 'true') &! (sessionStorage.getItem('task2')== 'true') &! (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true')) {
-            current_task = 'task1'
+            } else if ( (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true') ) {
+                current_task = 'task3';
+            }  else if ( (sessionStorage.getItem('task2')== 'true') &! (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true') ) {
+                current_task = 'task2';
+            } else if ((sessionStorage.getItem('task1')== 'true') &! (sessionStorage.getItem('task2')== 'true') &! (sessionStorage.getItem('task3')== 'true') &! (sessionStorage.getItem('task4')== 'true')) {
+                current_task = 'task1'
+            }
+            sessionStorage.setItem('current_task', current_task);
+            console.log(current_task);
         }
-        sessionStorage.setItem('current_task', current_task);
-        console.log(current_task);
     };
     
     // Set task number to true in sessionStorage when a task landing page loads & set nav steps for each task.
@@ -408,9 +424,8 @@ $(document).ready(function () {
         sessionStorage.setItem('nav-step-4', 'visited');
         sessionStorage.setItem('nav-step-5', 'visited');    
     }
-    
-    get_current_task();
 
+    get_current_task();
 
     // Track button clicks with URL fragments
     $('#verify-btn').on('click', function(){
@@ -419,7 +434,7 @@ $(document).ready(function () {
         }
     });
  
-    $('.stepped-navigation .step').on('click', function(e){
+    $('#ecb-prototype .stepped-navigation .step').on('click', function(e){
        
         if ($(this).hasClass('active')) {
             e.preventDefault();
@@ -476,34 +491,6 @@ $(document).ready(function () {
         window.location = href
     });
     
-    
-    // Detect if an ECB link was clicked on page change. Record browser fragment if no link was clicked.
-    // Check if page is sames as previous page.
-    
-    /*
-    var detect_nav_method = function(){
-
-        var location = window.location.pathname,
-        task = sessionStorage.getItem('current_task'),
-        ecb_link_clicked = sessionStorage.getItem('ecb-link-clicked');
-
-        if (ecb_link_clicked != "true") {
-           
-            if (task == 'task2') {    
-                if (!(location.includes('task2-start'))) {
-                    set_fragment('T2-browser');
-                }
-            } else if (task == 'task4') {    
-                if (!(location.includes('task4-start'))) {
-                    set_fragment('T4-browser');
-                }
-            } 
-        }
-        sessionStorage.removeItem('prev-location');
-        sessionStorage.removeItem('ecb-link-clicked');
-    };   
-    detect_nav_method();
-    */ 
 
     // On page unload add page location to sessionStorage in 'prev_location' item
     $(window).on('beforeunload', function () {
