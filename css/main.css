@@ -3732,6 +3732,41 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .infographic-accessibility .border-blue { border: solid 1px #96B7DF; }
 
+.bga-animation { display: flex; justify-content: center; flex-wrap: wrap; }
+
+@keyframes fa-spin { 0% { transform: rotate(0deg); }
+  to { transform: rotate(1turn); } }
+
+.bga-animation.loading-animation svg { width: 40px; height: 40px; flex: 1 100%; }
+
+.bga-animation.loading-animation.show svg { animation: fa-spin 2s linear infinite; }
+
+@keyframes circle-animation { 0% { stroke-dashoffset: 126;
+    fill: transparent; }
+  50% { stroke-dashoffset: 0;
+    fill: transparent; }
+  100% { stroke-dashoffset: 0;
+    fill: #299F28; } }
+
+@keyframes tick-fadein { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+.bga-animation.success-animation .success-icon { display: flex; position: relative; justify-content: center; align-items: center; }
+
+.bga-animation.success-animation .success-icon circle { fill: #299F28; stroke: #299F28; stroke-width: 4px; stroke-dasharray: 126; position: absolute; top: 0; left: 0; z-index: 1000; }
+
+.bga-animation.success-animation .success-icon .tick { position: absolute; z-index: 2000; }
+
+.bga-animation.success-animation.show .success-icon { display: flex; align-items: center; }
+
+.bga-animation.success-animation.show .success-icon circle { fill: #299F28; stroke: #299F28; stroke-width: 4px; stroke-dasharray: 126; animation: circle-animation 2s linear infinite; animation-timing-function: linear; animation-iteration-count: 1; transform: rotate(-90deg); transform-origin: center; }
+
+.bga-animation.success-animation.show .success-icon .tick { animation: tick-fadein 2s; }
+
+.bga-animation.highlight-animation span { background-color: #ffffff; transition: background-color 800ms linear; -moz-transition: background-color 800ms linear; -webkit-transition: background-color 800ms linear; -ms-transition: background-color 800ms linear; }
+
+.bga-animation.highlight-animation span.highlight { background-color: #A0D1A0; }
+
 .banner-background { background: #C8D9EE; background: linear-gradient(0deg, #b8cde7 0%, #9cb6db 100%); padding: 0 0 32px 0; margin-bottom: 32px; position: relative; }
 
 .spacer { background: url(../assets/white-spacer-1x56px.png) repeat-x; width: 100%; height: 56px; position: absolute; z-index: 10; }
