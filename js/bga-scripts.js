@@ -774,8 +774,9 @@ $(document).ready(function () {
     var clause_boxes = {}
    
     $('.clause-box-input').each(function () {
+       
         var clause = $(this).attr('id'),
-            original_text = $('.' + clause).find('.component-text span').text();
+        original_text = $('.' + clause).find('.component-text span').text();
         clause_boxes[clause] = original_text;
     });
     $('.clause-box-radios').each(function () {
