@@ -1,0 +1,136 @@
+---
+
+layout: content-tagged
+title: Animations
+description: Draw the users attention to an interaction with motion.
+breadcrumb1: Brand foundations
+url1: /brand-foundations.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Loading icon animation" link-id-1="#loading-icon-animation"
+        link-2="Success icon animation" link-id-2="#success-icon-animation"
+        link-5="Text-highlight animation" link-id-5="#text-highlight-animation"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
+
+        <!-- LOADING -->
+        <h2 class="section-start" id="loading-icon-animation">Loading icon animation</h2>
+
+        <p>Use the loading animation when there is a delay in a process completing, for example when a page is loading
+            or filter selections are processing.</p>
+        <p>Text explaining what is happening is optional. It should be used where space permits.</p>
+
+        <div class="component-example mb-5">
+
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <div class="bga-animation loading-animation mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" viewBox="0 0 512 512"
+                        focusable="false">
+                        <path class="" fill="#333333"
+                            d="M 288 39.056 v 16.659 c 0 10.804 7.281 20.159 17.686 23.066 C 383.204 100.434 440 171.518 440 256 c 0 101.689 -82.295 184 -184 184 c -101.689 0 -184 -82.295 -184 -184 c 0 -84.47 56.786 -155.564 134.312 -177.219 C 216.719 75.874 224 66.517 224 55.712 V 39.064 c 0 -15.709 -14.834 -27.153 -30.046 -23.234 C 86.603 43.482 7.394 141.206 8.003 257.332 c 0.72 137.052 111.477 246.956 248.531 246.667 C 393.255 503.711 504 392.788 504 256 c 0 -115.633 -79.14 -212.779 -186.211 -240.236 C 302.678 11.889 288 23.456 288 39.056 Z">
+                        </path>
+                    </svg>
+                    <p>Generating your contract</p>
+                </div>
+
+                <div class="button-example">
+                    <button id="loading-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                        role="button">Trigger loading animation</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SUCCESS ANIMATION -->
+        <h2 class="section-start" id="success-icon-animation">Success icon animation</h2>
+
+        <p>Use the success animation when a user interaction has been successfully completed, for example when a user
+            entered code has been successfully validated.</p>
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+
+
+                <div class="bga-animation success-animation mb-5">
+                    <div class="success-icon">
+
+                        <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="18.857" height="14.918"
+                            viewBox="0 0 18.857 14.918">
+                            <path d="M0,8.737,2.236,6.461l3.945,3.954L16.6,0l2.256,2.241L6.181,14.918Z" fill="#ffffff">
+                            </path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+                            <circle cx="22" cy="22" r="20"></circle>
+                        </svg>
+
+                    </div>
+                </div>
+
+
+                <div class="button-example">
+                    <button id="success-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                        role="button">Trigger success animation</button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HIGHLIGHT ANIMATION -->
+        <h2 class="section-start" id="text-highlight-animation">Text highlight animation</h2>
+
+
+        <p>Use the highlight animation to draw the users attention to a text change in the page. This animation is usually used when text is changing due to a user interaction.</p>
+        <p>Colours from the <a href={{ "brand-foundations/colour.html" | relative_url }} >business.gov.au colour palette</a> can be used for the highlight colour.</p>
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+
+
+                <div class="bga-animation highlight-animation">
+                    <p>Some of this text <span>is about to change</span>.</p>
+                </div>
+
+
+                <div class="button-example">
+                    <button id="highlight-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                        role="button">Trigger highlight animation</button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+</div>
