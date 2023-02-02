@@ -32,23 +32,72 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        element-string="inpage-feedback"
-        sm-visibility="true"
-        breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
+                    
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-inpage-feedback"
+                    sm-visibility="true"
+                    breakpoint-final="576"
+                    %}
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Component example -->
 
-                {% include component-examples/inpage-feedback-example.html 
-                    classes="col-12" %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include component-examples/inpage-feedback-example.html 
+                                classes="col-12" 
+                                %}
+                                
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        element-string="nb-inpage-feedback"
+                        sm-visibility="true"
+                        breakpoint-final="576"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="standard pathways"
+                                    brand-elements="colours and button styles"
+                                %}
+    
+                                {% include component-examples/inpage-feedback-example.html 
+                                    classes="col-12 non-branded"
+                                    id="nb" 
+                                    %}
+                                   
+    
+                            </div>
+                        </div>
+
+                </div>
 
             </div>
-        </div>
 
 
         <!-- Design specifications link -->

@@ -31,25 +31,77 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        sm-visibility="true"
-        final-visibility="true"
-        breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+        
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-global-alert"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
+                    %}
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding py-0">
+                    <!-- Component example -->
 
-                {% include component-examples/global-alert-example.html
-                message="<p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am
-                        (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>"
-                %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding py-0">
+
+                            {% include component-examples/global-alert-example.html
+                            message="<p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>"
+                            %}
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="nb-global-alert"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding py-0">
+                                
+                                {% include non-branded-explanation.html
+                                    component="global alert"
+                                    classes="m-4"
+                                    brand-elements="colours"
+                                %}
+    
+                                {% include component-examples/global-alert-example.html
+                                message="<p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>"
+                                classes="non-branded nb-background"
+                                %}
+    
+                            </div>
+                        </div>
+
+                </div>
+
 
             </div>
-        </div>
 
         <!-- Design specifications link -->
 

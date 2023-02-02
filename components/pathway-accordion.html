@@ -299,7 +299,10 @@ classes="in-page"
                         <div class="component-example m-0">
                             <div class="component-wrapper remove-element-padding p-4">
 
-                                <p>Apply your brand specific <strong>colours, images and borders</strong> to the base pathway accordion shown below.</p>
+                                {% include non-branded-explanation.html
+                                    component="pathway accordion"
+                                    brand-elements="colours, borders and images"
+                                %}
                                
                                 {% include component-examples/pathway-accordion-example.html
     

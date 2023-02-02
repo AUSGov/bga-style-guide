@@ -32,34 +32,86 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        md-visibility="true"
-        breakpoint-final="768"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding px-4 py-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="bga-cookie"
+                        md-visibility="true"
+                        breakpoint-final="768"
+                    %}
 
-                {% include component-examples/cookie-example.html
-                    text="<p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consec adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
-                    button="Accept all cookies"
-                    link="Customise cookies"
-                    classes="default"
-                %}
+                    <!-- Component example -->
 
-                <h3 class="mt-5">View the cookie notification in page</h3>
-                <div class="button-example mb-4">
-                    <button id="cookie-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
-                        role="button">Trigger cookie notification</button>
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding px-4 py-4">
+
+                            {% include component-examples/cookie-example.html
+                                text="<p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consec adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
+                                button="Accept all cookies"
+                                link="Customise cookies"
+                                classes="default"
+                            %}
+
+                            <h3 class="mt-5">View the cookie notification in page</h3>
+                            <div class="button-example mb-4">
+                                <button id="cookie-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                                    role="button">Trigger cookie notification</button>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+
                 </div>
-                
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        element-string="nb-cookie"
+                        md-visibility="true"
+                        breakpoint-final="768"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding px-4 py-4">
+
+                            {% include non-branded-explanation.html
+                                component="cookie notification"
+                                brand-elements="colours and button styles"
+                            %}
+
+                            {% include component-examples/cookie-example.html
+                                text="<p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consec adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
+                                button="Accept all cookies"
+                                link="Customise cookies"
+                                classes="default non-branded nb-background-dark"
+                            %}
+
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
-
-        </div>
 
 
 

@@ -32,46 +32,100 @@ classes="in-page"
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-         <!-- Breakpoint radio buttons -->
-         {% include breakpoints.html 
-            sm-visibility="true"
-            xs-visibility="true"
-            final-visibility="true"
-            breakpoint-final="350"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-           
-            {% include component-examples/subscribe-example.html
-                title="Stay up to date. <span>Subscribe to the newsletter.</span>"
-                text="<p>Get the latest business news delivered straight to your inbox each month.</p>"
-                button="Subscribe"
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="bga-subscribe"
+                        sm-visibility="true"
+                        xs-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="350"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                    
+                        {% include component-examples/subscribe-example.html
+                            title="Stay up to date. <span>Subscribe to the newsletter.</span>"
+                            text="<p>Get the latest business news delivered straight to your inbox each month.</p>"
+                            button="Subscribe"
+                        %}
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper coloured-section remove-element-padding p-4">
+
+                        <h3>Coloured background sections - colour variations</h3>
+                    
+                        {% include component-examples/subscribe-example.html
+                            title="Stay up to date. <span>Subscribe to the newsletter.</span>"
+                            text="<p>Get the latest business news delivered straight to your inbox each month.</p>"
+                            button="Subscribe"
+
+                            classes="colour-bkg"
+                        %}
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="nb-subscribe"
+                        sm-visibility="true"
+                        xs-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="350"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                        {% include non-branded-explanation.html
+                            component="subscribe component"
+                            brand-elements="colours, borders and button styles"
+                        %}
+                    
+                        {% include component-examples/subscribe-example.html
+                            title="Stay up to date. <span>Subscribe to the newsletter.</span>"
+                            text="<p>Get the latest business news delivered straight to your inbox each month.</p>"
+                            button="Subscribe"
+                            classes="non-branded nb-background"
+                        %}
+
+                        </div>
+                        
+                    </div>
+
+                </div>
 
             </div>
-            
-        </div>
-
-        <div class="component-example m-0">
-            <div class="component-wrapper coloured-section remove-element-padding p-4">
-
-            <h3>Coloured background sections - colour variations</h3>
-           
-            {% include component-examples/subscribe-example.html
-                title="Stay up to date. <span>Subscribe to the newsletter.</span>"
-                text="<p>Get the latest business news delivered straight to your inbox each month.</p>"
-                button="Subscribe"
-
-                classes="colour-bkg"
-            %}
-
-            </div>
-            
-        </div>
 
         
 

@@ -116,7 +116,10 @@ classes="in-page"
             <div class="component-example narrow m-0">
                 <div class="component-wrapper remove-element-padding p-4">
                    
-                <p>Apply your brand specific <strong>colours and borders</strong> to the base inline pathway shown below.</p>
+                    {% include non-branded-explanation.html
+                        component="inline-pathways"
+                        brand-elements="colours and borders"
+                    %}
 
                 {% include component-examples/inline-pathway-example.html
                     link1="Find out what you need to do when deregistering a company lorem ipsum dolor sit amet, consectetur"

@@ -69,6 +69,59 @@
             }
         }  
     }
+
+    .non-branded {
+        
+        .bga-btn {
+            border: solid 2px $bga-black;
+            background: $nb-grey-light;
+            border-radius: 8px;
+
+            &.no.selected {
+                background-color: $bga-black;
+                color: $bga-white;
+                border-color: $bga-black;
+            }
+    
+            &.bga-secondary-btn {
+                background: $bga-white;
+                border-color: $nb-grey-extra-darkest;
+            }
+    
+            &:focus-visible {
+                border-color: $nb-blue-links;
+                color: $bga-black;
+            }
+            &:hover {
+                border-color: $bga-black;
+                color: $bga-black;
+                background: $nb-grey-lightest;
+            }
+    
+        }
+        .checkboxes [type=checkbox]:checked {
+            background: #ffffff url(../assets/icon-tick-black.svg) no-repeat center center;
+            border: solid 3px $bga-black !important;
+    
+            + label {
+                color: $bga-black;
+            }
+        }
+        a{
+            color: $nb-blue-links;
+
+            &:focus-visible {
+                color: $nb-blue-links;
+                border: $nb-blue-links solid 2px;
+                border-radius: $bga-focus-radius;
+                background: transparent;
+            }
+            &:hover {
+                color: $nb-blue-links;
+                background: transparent;
+            }
+        }
+    }
 }
 
 

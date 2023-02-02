@@ -66,6 +66,24 @@ button.chat {
         border: solid $bga-blue-black-light 3px;
         background-position: right 32px center;
     }
+    &.non-branded {
+        border: solid 2px $bga-black;
+        background: url(../assets/Img-icon-placeholder.svg)$nb-grey-light no-repeat !important;
+        background-position: right 32px center !important;
+        background-size: 27px !important;
+        border-radius: 8px;
+
+        &:focus-visible {
+            border-color: $nb-blue-links;
+            color: $bga-black;
+        }
+        &:hover {
+            border-color: $bga-black;
+            color: $bga-black;
+            background: $nb-grey-lightest;
+        }
+
+    }
 }
 .msg-container {
     display: flex;
@@ -126,6 +144,30 @@ button.chat {
         display: block;
         opacity: 1;
     }
+    &.non-branded {
+        border: 1px solid $bga-black;
+
+        span.arrow {
+            border-bottom: 1px solid $bga-black;
+            border-right: 1px solid $bga-black;
+            bottom: -16px;
+        }
+
+        a {
+            color: $nb-blue-links;
+
+            &:focus-visible {
+                color: $nb-blue-links;
+                border: $nb-blue-links solid 2px;
+                border-radius: $bga-focus-radius;
+                background: transparent;
+            }
+            &:hover {
+                color: $nb-blue-links;
+                background: transparent;
+            }
+        }
+    }
 }
 
 
@@ -142,6 +184,10 @@ button.chat {
         &.closed {
             background-position: top 10px center;
             background-size: 24px 24px;
+        }
+
+        &.non-branded {
+            background-position: center center !important;
         }
     }
     .msg-container {
