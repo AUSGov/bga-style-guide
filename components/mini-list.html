@@ -169,7 +169,10 @@ classes="in-page"
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                            <p>Apply your brand specific <strong>colours and borders</strong> to the base mini-list shown below.</p>
+                            {% include non-branded-explanation.html
+                                component="mini-list"
+                                brand-elements="colours and borders"
+                            %}
                             
                             {% include component-examples/mini-list-example.html
                                 

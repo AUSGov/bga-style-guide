@@ -118,7 +118,10 @@ classes="in-page"
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                            <p>Apply your brand specific <strong>colours, borders and tags</strong> to the base accordion shown below.</p>
+                            {% include non-branded-explanation.html
+                                component="accordion"
+                                brand-elements="colours and borders"
+                            %}
 
                             {% include component-examples/accordion-example.html
 

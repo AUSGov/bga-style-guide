@@ -227,6 +227,63 @@
             white-space: nowrap;
         }
     }
+
+    &.non-branded {
+        .close {
+            background: transparent url(../assets/icon-close-black.svg) no-repeat !important;
+        }
+        .button-group {
+            button {
+                color: $nb-blue-links;
+                border-bottom: none;
+                text-decoration: underline;
+                svg {
+                    display: none;
+                }
+                &:hover {
+                    background: none;
+                    color: $nb-blue-links;
+                    text-decoration: underline;
+                }
+                &:focus-visible {
+                    color: $nb-blue-links;
+                    border: $nb-blue-links solid 2px;
+                    border-radius: $bga-focus-radius;
+                }
+            }
+        }
+        .scroll-wrapper {
+            background: $nb-grey-lightest;
+            
+            .scrollable {
+                &::-webkit-scrollbar-thumb {
+                    background-color: $nb-grey-dark;
+                    border-radius: 4px;
+                    z-index: 99;
+                }
+                &::-webkit-scrollbar-track {
+                    background: $nb-grey-mid;
+                }
+            }
+        }
+        &.modal-form {
+            .title-area { 
+                svg {
+                    display: none;
+                }
+            }
+            .link-wrapper {
+                background: $nb-grey-lightest;
+            }
+            .copy-link {
+                background: none !important;
+                padding: 0;
+            }
+            .email-form {
+                background: $nb-grey-light;
+            }
+        }
+    }
 }
 
 @mixin modal-bp-768 {
@@ -242,7 +299,6 @@
                     display: none;
                 }
             }
-
             .component-content {
                 flex-wrap: wrap;
             }
@@ -286,6 +342,13 @@
                     }
                 }
             } 
+        }
+        &.non-branded {
+            &.modal-form {
+                .mobile-form-toggle {
+                    background: $nb-grey-mid;
+                }
+            }
         }
     }
 }

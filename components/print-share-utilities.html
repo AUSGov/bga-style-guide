@@ -32,23 +32,74 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include layouts-dropdown.html
-        layout-name="All layouts"
-        singlelayout="true"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper d-flex justify-content-end p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include layouts-dropdown.html
+                    layout-name="All layouts"
+                    singlelayout="true"
+                    %}
 
-                {% include component-examples/print-share-example.html
-                    classes="mb-5" %}
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper d-flex justify-content-end p-4">
+
+                            {% include component-examples/print-share-example.html
+                                classes="mb-5" %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="tab-section non-branded">
+ 
+                    <!-- Breakpoint radio buttons -->
+                    {% include layouts-dropdown.html
+                        layout-name="All layouts"
+                        singlelayout="true"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="print and share utility"
+                                    brand-elements="colours and icons"
+                                    
+                                %}
+
+                                <div class="d-flex justify-content-end">
+    
+                                {% include component-examples/print-share-example.html
+                                    classes="mb-5 non-branded" %}
+
+                                </div>
+    
+                            </div>
+    
+                        </div>
+
+                </div>
+    
 
             </div>
-
-        </div>
 
 
 

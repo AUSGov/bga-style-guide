@@ -32,58 +32,124 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        sm-visibility="true"
-        xs-visibility="true"
-        final-visibility="true"
-        breakpoint-final="350"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+        
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-toast"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                    %}
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding px-4 py-4">
+                    <!-- Component example -->
 
-                <h3>Default toast notification</h3>
-                {% include component-examples/toast-example.html
-                close="true"
-                title="Important message for the user"
-                text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum
-                    cursus.</p>"
-                classes="default"
-                %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding px-4 py-4">
 
-                <h4 class="mt-5">View the default toast in page</h4>
-                <div class="button-example mb-4">
-                    <button id="toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
-                        role="button">Trigger default toast</button>
+                            <h3>Default toast notification</h3>
+                            {% include component-examples/toast-example.html
+                            close="true"
+                            title="Important message for the user"
+                            text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum
+                                cursus.</p>"
+                            classes="default"
+                            %}
+
+                            <h4 class="mt-5">View the default toast in page</h4>
+                            <div class="button-example mb-4">
+                                <button id="toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                                    role="button">Trigger default toast</button>
+                            </div>
+
+                            <h3>Call to action toast notification</h3>
+                            {% include component-examples/toast-example.html
+                            title="Would you like to continue?"
+                            text="<p>To protect your privacy, we will end your sessions after 3 hours of inactivity. Once your
+                                session ends you will need to restart your business plan.</p>
+                            <p>Your session will end in <span>02 hrs 19 min 59 sec</span></p>
+                            <p>To keep on working click ‘continue’</p>"
+                            checkbox="true"
+                            button="Continue"
+                            classes="cta-toast"
+                            %}
+
+                            <h4 class="mt-5">View the call to action toast in page</h4>
+                            <div class="button-example">
+                                <button id="cta-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                                    role="button">Trigger call to action toast</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h3>Call to action toast notification</h3>
-                {% include component-examples/toast-example.html
-                title="Would you like to continue?"
-                text="<p>To protect your privacy, we will end your sessions after 3 hours of inactivity. Once your
-                    session ends you will need to restart your business plan.</p>
-                <p>Your session will end in <span>02 hrs 19 min 59 sec</span></p>
-                <p>To keep on working click ‘continue’</p>"
-                checkbox="true"
-                button="Continue"
-                classes="cta-toast"
-                %}
+                <div class="tab-section non-branded ">
 
-                <h4 class="mt-5">View the call to action toast in page</h4>
-                <div class="button-example">
-                    <button id="cta-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
-                        role="button">Trigger call to action toast</button>
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="nb-toast"
+                        sm-visibility="true"
+                        xs-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="350"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding px-4 py-4">
+    
+                                {% include non-branded-explanation.html
+                                    component="toast notifications"
+                                    brand-elements="colours and button styles"
+                                %}
+                                
+                                <h3>Default toast notification</h3>
+                                {% include component-examples/toast-example.html
+                                close="true"
+                                title="Important message for the user"
+                                text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum
+                                    cursus.</p>"
+                                classes="default non-branded nb-background"
+                                %}
+    
+                                <h3>Call to action toast notification</h3>
+                                {% include component-examples/toast-example.html
+                                title="Would you like to continue?"
+                                text="<p>To protect your privacy, we will end your sessions after 3 hours of inactivity. Once your
+                                    session ends you will need to restart your business plan.</p>
+                                <p>Your session will end in <span>02 hrs 19 min 59 sec</span></p>
+                                <p>To keep on working click ‘continue’</p>"
+                                checkbox="true"
+                                button="Continue"
+                                classes="cta-toast non-branded nb-background"
+                                %}
+    
+    
+                            </div>
+    
+                        </div>
                 </div>
 
             </div>
-
-        </div>
-
-
-
 
 
 

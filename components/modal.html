@@ -31,69 +31,141 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
         
+        {% include section-tabs.html
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        element-string="modal"
-        md-visibility="true"
-        final-visibility="true"
-        breakpoint-final="768"
-        %}
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
 
-        <!-- Component example -->
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-modal"
+                    md-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="768"
+                    %}
 
-        <div class="component-example m-0">
-            <div class="component-wrapper modal-component-wrapper d-flex remove-element-padding bkg-grey px-4 py-4">
+                    <!-- Component example -->
 
-                <h3 class="w-100">Default modal</h3>
-                {% include component-examples/modal-example.html
-                title="Important message for the user"
-                text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p><p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad.</p>"
-                classes="default"
-                %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper modal-component-wrapper d-flex remove-element-padding bkg-grey px-4 py-4">
 
-
-                <h3 class="w-100 mt-5">Modal with print button and scroll section</h3>
-                {% include component-examples/modal-scroll-example.html
-                title="Employment Contract Tool – Terms of Use"
-                text="<p>It’s important that you have all the information you need to apply. You can download the documents you may have missed now.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sapien imperdiet lectus vulputate hendrerit. Cras a cursus libero, at consequat nulla. Nullam commodo massa at nisl placerat ultricies. Sed nisi ex, volutpat sit amet augue id, lobortis rutrum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ultricies placerat lectus, eu egestas sapien porta non. Donec id finibus magna. Integer ac nulla diam. Vestibulum aliquam sapien tortor. Ut urna magna, malesuada vel feugiat et, convallis vulputate urna. Sed vitae commodo dolor.</p><p>Ut ullamcorper euismod euismod. Vivamus mi nunc, convallis sed massa in, bibendum pharetra nisl. Vestibulum mollis eros nec mi viverra.</p><p>Sed ac justo sollicitudin odio feugiat elementum. In hac habitasse platea dictumst. Donec consequat mollis leo vestibulum gravida. Nullam et lobortis eros. Nunc lectus diam, mollis quis ultrices convallis, pulvinar eget dui. Pellentesque sit amet metus vestibulum, viverra magna eu, egestas justo. Nulla ac orci tellus. Curabitur semper, nisi egestas ullamcorper bibendum, tortor magna ullamcorper orci, a sagittis metus felis vitae mauris. Aliquam rutrum, odio in tincidunt lacinia, quam dolor interdum mi, id efficitur enim ex et mi. Ut interdum nulla vitae turpis fringilla, vel dapibus est mattis. Integer urna mauris, commodo eget quam nec, bibendum ullamcorper turpis. Cras ut nulla et elit ornare finibus. Integer fermentum mauris diam, at gravida dui rutrum vitae. Aliquam erat volutpat.</p>"
-                button="Agree to terms of use"
-                classes="print-group"
-                %}
+                            <h3 class="w-100">Default modal</h3>
+                            {% include component-examples/modal-example.html
+                            title="Important message for the user"
+                            text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p><p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad.</p>"
+                            classes="default"
+                            %}
 
 
-                <h3 class="w-100 mt-5">Modals with email form</h3>
+                            <h3 class="w-100 mt-5">Modal with print button and scroll section</h3>
+                            {% include component-examples/modal-scroll-example.html
+                            title="Employment Contract Tool – Terms of Use"
+                            text="<p>It’s important that you have all the information you need to apply. You can download the documents you may have missed now.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sapien imperdiet lectus vulputate hendrerit. Cras a cursus libero, at consequat nulla. Nullam commodo massa at nisl placerat ultricies. Sed nisi ex, volutpat sit amet augue id, lobortis rutrum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ultricies placerat lectus, eu egestas sapien porta non. Donec id finibus magna. Integer ac nulla diam. Vestibulum aliquam sapien tortor. Ut urna magna, malesuada vel feugiat et, convallis vulputate urna. Sed vitae commodo dolor.</p><p>Ut ullamcorper euismod euismod. Vivamus mi nunc, convallis sed massa in, bibendum pharetra nisl. Vestibulum mollis eros nec mi viverra.</p><p>Sed ac justo sollicitudin odio feugiat elementum. In hac habitasse platea dictumst. Donec consequat mollis leo vestibulum gravida. Nullam et lobortis eros. Nunc lectus diam, mollis quis ultrices convallis, pulvinar eget dui. Pellentesque sit amet metus vestibulum, viverra magna eu, egestas justo. Nulla ac orci tellus. Curabitur semper, nisi egestas ullamcorper bibendum, tortor magna ullamcorper orci, a sagittis metus felis vitae mauris. Aliquam rutrum, odio in tincidunt lacinia, quam dolor interdum mi, id efficitur enim ex et mi. Ut interdum nulla vitae turpis fringilla, vel dapibus est mattis. Integer urna mauris, commodo eget quam nec, bibendum ullamcorper turpis. Cras ut nulla et elit ornare finibus. Integer fermentum mauris diam, at gravida dui rutrum vitae. Aliquam erat volutpat.</p>"
+                            button="Agree to terms of use"
+                            classes="print-group"
+                            %}
+
+
+                            <h3 class="w-100 mt-5">Modals with email form</h3>
+                        
+                            {% include component-examples/modal-grants-example.html
+                                title="Grants and programs shortlist"
+                                shortlist1="<h4><a href=''>Youth Jobs Path</a></h4><p>Assistance for businesses employing young people</p>"
+                                shortlist2="<h4><a href=''>Workforce Incentive Program (WIP) - practice stream</a></h4><p>Funding for general practices to employ health workers in areas of need</p>"
+                                shortlist3="<h4><a href=''>Employer Support Payment Scheme</a></h4><p>Payments for employers of Reservists</p>"
+                                shortlist4="<h4><a href=''>Textile, clothing and footwear corporatewear register</a></h4><p>Textile, Clothing and Footwear Corporatewear Register</p>"
+                                shortlist5="<h4><a href=''>Support Wage System</a></h4><p>Free productivity assessment for employers of people with a disability</p>"
+                                shortlist6="<h4><a href=''>Textile, clothing and footwear corporatewear register</a></h4><p>Textile, Clothing and Footwear Corporatewear Register</p>"
+                                form-title="Email your shortlist so you can review it later"
+                                form-description="Enter your email address and we will send you a list of links to your shortlisted grants."
+                                button="Email"
+                                classes="modal-form modal-shortlist teal"
+                                toggle-text="Email your shortlist so you can review it later"
+                                %}
+
+                        
+                            {% include component-examples/modal-checklist-example.html
+                                title="You have saved your checklist progress"
+                                text="<p>Use this link to continue on from where you were:</p>"
+                                link-text="https://business.gov.au/people/employees/hiring-employees?c52=1&c51=1&c11=1&c12=1&c54=1&c53=1&c81=1&c82=1&c91=1"
+                                form-description="You can also enter your email address and we’ll send you this link."
+                                button="Email my link"
+                                classes="modal-form blue"
+                                toggle-text="Email your link"
+                                %}
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        element-string="nb-modal"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper modal-component-wrapper d-flex remove-element-padding bkg-grey px-4 py-4">
+
+                                {% include non-branded-explanation.html
+                                    component="modals"
+                                    brand-elements="colours, icons and button styles"
+                                %}
+    
+                                <h3 class="w-100">Default modal</h3>
+                                {% include component-examples/modal-example.html
+                                title="Important message for the user"
+                                text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p><p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod ut labore et dolore magna aliqua. Ut enim ad.</p>"
+                                classes="default non-branded"
+                                %}
+    
+    
+                                <h3 class="w-100 mt-5">Modal with print button and scroll section</h3>
+                                {% include component-examples/modal-scroll-example.html
+                                title="Employment Contract Tool – Terms of Use"
+                                text="<p>It’s important that you have all the information you need to apply. You can download the documents you may have missed now.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sapien imperdiet lectus vulputate hendrerit. Cras a cursus libero, at consequat nulla. Nullam commodo massa at nisl placerat ultricies. Sed nisi ex, volutpat sit amet augue id, lobortis rutrum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ultricies placerat lectus, eu egestas sapien porta non. Donec id finibus magna. Integer ac nulla diam. Vestibulum aliquam sapien tortor. Ut urna magna, malesuada vel feugiat et, convallis vulputate urna. Sed vitae commodo dolor.</p><p>Ut ullamcorper euismod euismod. Vivamus mi nunc, convallis sed massa in, bibendum pharetra nisl. Vestibulum mollis eros nec mi viverra.</p><p>Sed ac justo sollicitudin odio feugiat elementum. In hac habitasse platea dictumst. Donec consequat mollis leo vestibulum gravida. Nullam et lobortis eros. Nunc lectus diam, mollis quis ultrices convallis, pulvinar eget dui. Pellentesque sit amet metus vestibulum, viverra magna eu, egestas justo. Nulla ac orci tellus. Curabitur semper, nisi egestas ullamcorper bibendum, tortor magna ullamcorper orci, a sagittis metus felis vitae mauris. Aliquam rutrum, odio in tincidunt lacinia, quam dolor interdum mi, id efficitur enim ex et mi. Ut interdum nulla vitae turpis fringilla, vel dapibus est mattis. Integer urna mauris, commodo eget quam nec, bibendum ullamcorper turpis. Cras ut nulla et elit ornare finibus. Integer fermentum mauris diam, at gravida dui rutrum vitae. Aliquam erat volutpat.</p>"
+                                button="Agree to terms of use"
+                                classes="print-group non-branded"
+                                %}
+    
+    
+                                <h3 class="w-100 mt-5">Modals with email form</h3>
             
-                {% include component-examples/modal-grants-example.html
-                    title="Grants and programs shortlist"
-                    shortlist1="<h4><a href=''>Youth Jobs Path</a></h4><p>Assistance for businesses employing young people</p>"
-                    shortlist2="<h4><a href=''>Workforce Incentive Program (WIP) - practice stream</a></h4><p>Funding for general practices to employ health workers in areas of need</p>"
-                    shortlist3="<h4><a href=''>Employer Support Payment Scheme</a></h4><p>Payments for employers of Reservists</p>"
-                    shortlist4="<h4><a href=''>Textile, clothing and footwear corporatewear register</a></h4><p>Textile, Clothing and Footwear Corporatewear Register</p>"
-                    shortlist5="<h4><a href=''>Support Wage System</a></h4><p>Free productivity assessment for employers of people with a disability</p>"
-                    shortlist6="<h4><a href=''>Textile, clothing and footwear corporatewear register</a></h4><p>Textile, Clothing and Footwear Corporatewear Register</p>"
-                    form-title="Email your shortlist so you can review it later"
-                    form-description="Enter your email address and we will send you a list of links to your shortlisted grants."
-                    button="Email"
-                    classes="modal-form modal-shortlist teal"
-                    toggle-text="Email your shortlist so you can review it later"
-                    %}
-
-               
-                {% include component-examples/modal-checklist-example.html
-                    title="You have saved your checklist progress"
-                    text="<p>Use this link to continue on from where you were:</p>"
-                    link-text="https://business.gov.au/people/employees/hiring-employees?c52=1&c51=1&c11=1&c12=1&c54=1&c53=1&c81=1&c82=1&c91=1"
-                    form-description="You can also enter your email address and we’ll send you this link."
-                    button="Email my link"
-                    classes="modal-form blue"
-                    toggle-text="Email your link"
-                    %}
-                
+                                {% include component-examples/modal-checklist-example.html
+                                    title="You have saved your checklist progress"
+                                    text="<p>Use this link to continue on from where you were:</p>"
+                                    link-text="https://business.gov.au/people/employees/hiring-employees?c52=1&c51=1&c11=1&c12=1&c54=1&c53=1&c81=1&c82=1&c91=1"
+                                    form-description="You can also enter your email address and we’ll send you this link."
+                                    button="Email my link"
+                                    classes="modal-form non-branded"
+                                    toggle-text="Email your link"
+                                    %}
+                                
+    
+                            </div>
+    
+                        </div>
+                </div>
 
             </div>
-
-        </div>
 
 
         <!-- Design specifications link -->

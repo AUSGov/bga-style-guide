@@ -94,7 +94,10 @@ subsite-tag: true
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                            <p>Apply your brand specific <strong>colours and borders</strong> to the base call out boxes shown below.</p>
+                            {% include non-branded-explanation.html
+                                component="call out boxes"
+                                brand-elements="colours and borders"
+                            %}
     
                             {% include component-examples/callout-box-example.html
                             h2title="H2 level title, lorem ipsum dolor sit amet."

@@ -154,7 +154,10 @@ subsite-tag: true
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                            <p>Apply your brand specific <strong>colours, borders and icons</strong> to the base call out link shown below.</p>
+                            {% include non-branded-explanation.html
+                                component="call out link"
+                                brand-elements="colours, borders and icons"
+                            %}
 
                             {% include component-examples/callout-link-example.html
                             link="Subscribe to stay up-to-date with Accelerating Commercialisation news and information."

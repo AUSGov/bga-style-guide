@@ -8,6 +8,9 @@
     &.nb-background {
         background: $nb-grey-light;
     }
+    &.nb-background-dark {
+        background: $bga-black;
+    }
 
     // TYPOGRAPHY
     h1, h2, h3, h4, h5, h6 {
@@ -22,6 +25,7 @@
             color: $nb-blue-links;
             border: $nb-blue-links solid 2px;
             border-radius: $bga-focus-radius;
+            background: transparent;
         }
         &:hover {
             color: $nb-blue-links;
@@ -61,7 +65,7 @@
 
     }
 
-    // SELECTS
+    // FORM ELEMENTS
     .form-select {
         border:$bga-black solid 1px;
 
@@ -69,6 +73,20 @@
             border: solid 2px $nb-blue-links;
         }
     }
+    input.form-control {
+        &:focus-visible {
+            border: solid 2px $nb-blue-links;
+        }
+    }
+    .checkboxes [type=checkbox]:checked {
+        background: #ffffff url(../assets/icon-tick-black.svg) no-repeat center center;
+        border: solid 3px $bga-black !important;
+
+        + label {
+            color: $bga-black;
+        }
+    }
+    
 
 
     // COMPONENTS

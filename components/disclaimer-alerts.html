@@ -118,7 +118,10 @@ subsite-tag: true
                         <div class="component-example m-0">
                             <div class="component-wrapper remove-element-padding p-4">
 
-                                <p>Apply your brand specific <strong>colours and borders</strong> to the base standard pathway shown below.</p>
+                                {% include non-branded-explanation.html
+                                    component="disclaimers"
+                                    brand-elements="colours and borders"
+                                %}
     
                                 <h3>Visible disclaimer</h3>
                                 {% include component-examples/disclaimer-example.html
