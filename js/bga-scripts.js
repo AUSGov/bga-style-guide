@@ -1059,19 +1059,32 @@ $(document).ready(function () {
         mobile_modal_display();
     });
 
-    $('#modal-bp-md').on('click', function () {
+    $('#bga-modal-bp-md, #nb-modal-bp-md').on('click', function () {
         mobile_modal_display();
 
-        $('.modal-form .email-form').each(function () {
-            $(this).removeClass('open').find('form').css('display', 'block');
-        });
+        if ($(this).parents('.tab-section.bga-branded').length) {
+            $('.bga-branded .modal-form .email-form').each(function () {
+                $(this).removeClass('open').find('form').css('display', 'block');
+            });
+        }
+        else if ($(this).parents('.tab-section.non-branded').length) {
+            $('.non-branded .modal-form .email-form').each(function () {
+                $(this).removeClass('open').find('form').css('display', 'block');
+            });
+        }
     });
-    $('#modal-bp-final').on('click', function () {
+    $('#bga-modal-bp-final, #nb-modal-bp-final').on('click', function () {
         mobile_modal_display();
 
-        $('.modal-form .email-form').each(function () {
-            $(this).removeClass('open').find('form').slideUp();
-        });
+        if ($(this).parents('.tab-section.bga-branded').length) {
+            $('.bga-branded .modal-form .email-form').each(function () {
+                $(this).removeClass('open').find('form').slideUp();
+            });
+        } else if ($(this).parents('.tab-section.non-branded').length) {
+            $('.non-branded .modal-form .email-form').each(function () {
+                $(this).removeClass('open').find('form').slideUp();
+            });
+        }
     });
 
 
@@ -1144,24 +1157,18 @@ $(document).ready(function () {
     //click
     $('.tooltip-click').on('click', function () {
         //var parent = $(this).parents('.component-example');
-        $('.tooltip').toggleClass("show");
+        $(this).prev('.tooltip').toggleClass("show");
     });
     //close tooltip
     $('.tooltip .close').on('click', function () {
         $(this).parents('.tooltip').removeClass('show');
     });
-    // reset tooltip example on breakpoint change.
-    if ($('.tooltip-click')) {
-        $('.breakpoints input.bp-md').on('click', function () {
-            $('.tooltip').removeClass('show');
-        });
-    }
 
 
 
     // COMPONENT EXAMPLE: PRINT SHARE UTILITIES
-    $('#share-popover').on('click', function () {
-        $('.share-container').toggleClass('show');
+    $('.share-popover').on('click', function () {
+        $(this).next('.share-container').toggleClass('show');
     });
 
     // CONTEXTUAL HELP {
@@ -1453,35 +1460,58 @@ $(document).ready(function () {
 
 
     //COMPONENT EXAMPLE: In page feedback form
-    $('.initial-question .bga-btn').on('click', function () {
-        var answer = $(this).text();
+    var feedback_step1 = function(target_elem, parent_elem){
+        var answer = target_elem.text(),
+        parent = target_elem.parents(parent_elem);
 
         if (answer == 'Yes') {
-            $('.initial-question').removeClass('show');
-            $('.yes-answer').addClass('show');
-            $('.no-answer').removeClass('show');
-            $('.bga-btn.no').removeClass('selected');
+            parent.find('.initial-question').removeClass('show');
+            parent.find('.yes-answer').addClass('show');
+            parent.find('.no-answer').removeClass('show');
+            parent.find('.bga-btn.no').removeClass('selected');
         } else if (answer == 'No') {
-            $('.no-answer').addClass('show');
-            $('.yes-answer').removeClass('show');
-            $('.bga-btn.no').addClass('selected');
+            parent.find('.no-answer').addClass('show');
+            parent.find('.yes-answer').removeClass('show');
+            parent.find('.bga-btn.no').addClass('selected');
         }
+    };
+    $('#feedback-example .initial-question .bga-btn').on('click', function () {
+        feedback_step1($(this), "#feedback-example");
+    });
+    $('#nb-feedback-example .initial-question .bga-btn').on('click', function () {
+        feedback_step1($(this), "#nb-feedback-example");
     });
 
-    $('.no-answer .checkbox').on('click', function () {
-        if ($(this).hasClass('other')) {
-            if ($(this).is(":checked")) {
-                $('.textarea-container').addClass('show');
+    var feedback_step2 = function(target_elem, parent_elem) {
+        var parent = target_elem.parents(parent_elem);
+
+        if (target_elem.hasClass('other')) {
+            if (target_elem.is(":checked")) {
+                parent.find('.textarea-container').addClass('show');
             } else {
-                $('.textarea-container').removeClass('show');
+                parent.find('.textarea-container').removeClass('show');
             }
         }
+    };
+    $('#feedback-example .no-answer .checkbox').on('click', function () {
+        feedback_step2($(this), "#feedback-example");
+    });
+    $('#nb-feedback-example .no-answer .checkbox').on('click', function () {
+        feedback_step2($(this), "#nb-feedback-example");
     });
 
-    $('.no-answer .bga-btn').on('click', function () {
-        $('.initial-question').removeClass('show');
-        $('.no-answer').removeClass('show');
-        $('.thank-you-container').addClass('show');
+    var feedback_step3 = function(target_elem, parent_elem) {
+        var parent = target_elem.parents(parent_elem);
+        
+        parent.find('.initial-question').removeClass('show');
+        parent.find('.no-answer').removeClass('show');
+        parent.find('.thank-you-container').addClass('show');
+    };
+    $('#feedback-example .no-answer .bga-btn').on('click', function () {
+        feedback_step3($(this), "#feedback-example");
+    });
+    $('#nb-feedback-example .no-answer .bga-btn').on('click', function () {
+        feedback_step3($(this), "#nb-feedback-example");
     });
 
 

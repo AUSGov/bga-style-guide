@@ -246,14 +246,60 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-       <!-- Breakpoint radio buttons -->
-       <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">    
+        
+                <!-- Breakpoint radio buttons -->
+                <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-chat-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -264,8 +310,8 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-md true" name="-group" id="-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="-bp-md">≥768px (md)</label>
+                    <input type="radio" class="btn-check bp-md true" name="bga-chat-group" id="bga-chat-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="bga-chat-bp-md">≥768px (md)</label>
                 
 
                 
@@ -273,8 +319,8 @@
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;768px</label>
+                <input type="radio" class="btn-check true" name="bga-chat-group" id="bga-chat-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-chat-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -294,18 +340,18 @@
 
 
 
-        <!-- Component example -->
+                <!-- Component example -->
 
-        <div class="component-example m-0">
+                <div class="component-example m-0">
 
-            <div class="component-wrapper remove-element-padding">
+                    <div class="component-wrapper remove-element-padding">
 
-                    
-                   
-                    <div class="chat-button-example-container p-4">
+                            
                         
-                    <h3>Open chat button</h3>
-                        
+                            <div class="chat-button-example-container p-4">
+                                
+                            <h3>Open chat button</h3>
+                                
 <button tabindex="0" class="chat open example">
     <span>Live chat</span>
 </button>
@@ -314,13 +360,13 @@
 
 
 
-                    </div>
+                            </div>
 
-                    
-                    <div class="chat-button-example-container p-4">
-                        
-                    <h3>Closed chat button</h3>
-                    
+                            
+                            <div class="chat-button-example-container p-4">
+                                
+                            <h3>Closed chat button</h3>
+                            
 
 
 
@@ -340,11 +386,124 @@
 <button tabindex="0" class="chat closed tooltip-click example">
     <span>Live chat is closed</span></button>
 
+                            </div>
+
                     </div>
+
+                </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-chat-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                      
+                    <input type="radio" class="btn-check bp-md true" name="nb-chat-group" id="nb-chat-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="nb-chat-bp-md">≥768px (md)</label>
+                
+
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-chat-group" id="nb-chat-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-chat-bp-final">&lt;768px</label>
+
+                </div>
 
             </div>
 
-        </div>
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                    <!-- Component example -->
+    
+                    <div class="component-example m-0">
+    
+                        <div class="component-wrapper remove-element-padding">
+
+                            <p class="m-4">Apply your brand specific <strong>colours, icons and button styles</strong> to the base chat button shown below.</p>
+
+
+    
+                            
+                                <div class="chat-button-example-container p-4">
+                                    
+                                <h3>Open chat button</h3>
+                                    
+<button tabindex="0" class="chat open example non-branded">
+    <span>Live chat</span>
+</button>
+
+
+
+
+    
+                                </div>
+    
+                                
+                                <div class="chat-button-example-container p-4">
+                                    
+                                <h3>Closed chat button</h3>
+                                
+
+
+
+
+<div class="tooltip example non-branded">
+    <div class="msg-container remove-element-padding p-2">
+        <button class="close mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path id="Close" d="M8,9.6,1.6,16,0,14.4,6.4,8,0,1.6,1.6,0,8,6.4,14.4,0,16,1.6,9.6,8,16,14.4,14.4,16Z" fill="#333"/>
+          </svg>
+          </button>
+    <p>Our live chat service is open from 8am - 8pm, Monday to Friday across Australia. (excluding public holidays). Learn about the other ways you can <a href="">contact us</a>.</p>
+    </div> 
+    <span class="arrow"></span>
+    
+</div>
+
+<button tabindex="0" class="chat closed tooltip-click example non-branded">
+    <span>Live chat is closed</span></button>
+
+                                </div>
+    
+                        </div>
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+
 
 
 

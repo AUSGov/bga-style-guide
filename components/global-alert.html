@@ -246,14 +246,60 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+        
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-global-alert-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,15 +312,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-global-alert-group" id="bga-global-alert-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-global-alert-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-global-alert-group" id="bga-global-alert-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-global-alert-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -294,12 +340,12 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding py-0">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding py-0">
 
-                <div class="bga-component global-alert py-3 mb-5 ">
+                            <div class="bga-component global-alert py-3 mb-5 ">
     <button class="close p-0">Close</button>
     <div class="container">
     <div class="row">
@@ -307,8 +353,7 @@
             <div class="component-content px-3 d-flex">
 
                 <div class="component-text remove-element-padding">
-                    <p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am
-                        (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>
+                    <p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>
                 </div>
             </div>
 
@@ -317,8 +362,94 @@
 </div>
 </div>
 
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-global-alert-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-global-alert-group" id="nb-global-alert-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-global-alert-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-global-alert-group" id="nb-global-alert-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-global-alert-bp-final">&lt;576px</label>
+
+                </div>
+
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding py-0">
+                                
+                                <p class="m-4">Apply your brand specific <strong>colours</strong> to the base global alert shown below.</p>
+
+
+    
+                                <div class="bga-component global-alert py-3 mb-5 non-branded nb-background">
+    <button class="close p-0">Close</button>
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="component-content px-3 d-flex">
+
+                <div class="component-text remove-element-padding">
+                    <p><strong>We’ll be updating our website on Wednesday 16 December 2020 between 6am and 8am (AEDT). See our <a href=''>service availability page</a> for more information.</p></strong>
+                </div>
+            </div>
+
         </div>
+    </div>
+</div>
+</div>
+    
+                            </div>
+                        </div>
+
+                </div>
+
+
+            </div>
 
         <!-- Design specifications link -->
 

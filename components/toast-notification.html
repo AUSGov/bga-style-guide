@@ -246,14 +246,60 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+        
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-toast-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,18 +312,18 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-toast-group" id="bga-toast-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-toast-bp-sm">≥576px (sm)</label>
                 
 
                       
-                    <input type="radio" class="btn-check bp-xs true" name="-group" id="-bp-xs" autocomplete="off" data-breakpoint="bp-350">
-                    <label class="btn bp-xs btn-outline-primary py-2 px-3 true" for="-bp-xs">≥350px (xs)</label>
+                    <input type="radio" class="btn-check bp-xs true" name="bga-toast-group" id="bga-toast-bp-xs" autocomplete="off" data-breakpoint="bp-350">
+                    <label class="btn bp-xs btn-outline-primary py-2 px-3 true" for="bga-toast-bp-xs">≥350px (xs)</label>
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below350">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;350px</label>
+                <input type="radio" class="btn-check true" name="bga-toast-group" id="bga-toast-bp-final" autocomplete="off" data-breakpoint="bp-below350">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-toast-bp-final">&lt;350px</label>
 
                 </div>
 
@@ -297,13 +343,13 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding px-4 py-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding px-4 py-4">
 
-                <h3>Default toast notification</h3>
-                <div class="bga-component-wrapper">
+                            <h3>Default toast notification</h3>
+                            <div class="bga-component-wrapper">
 <div class="bga-component callout-box toast-example default">
 
     
@@ -320,7 +366,7 @@
           
             
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum
-                    cursus.</p>
+                                cursus.</p>
             
 
             
@@ -335,14 +381,14 @@
 </div>
 </div>
 
-                <h4 class="mt-5">View the default toast in page</h4>
-                <div class="button-example mb-4">
-                    <button id="toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
-                        role="button">Trigger default toast</button>
-                </div>
+                            <h4 class="mt-5">View the default toast in page</h4>
+                            <div class="button-example mb-4">
+                                <button id="toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                                    role="button">Trigger default toast</button>
+                            </div>
 
-                <h3>Call to action toast notification</h3>
-                <div class="bga-component-wrapper">
+                            <h3>Call to action toast notification</h3>
+                            <div class="bga-component-wrapper">
 <div class="bga-component callout-box toast-example cta-toast">
 
     
@@ -357,9 +403,9 @@
           
             
                 <p>To protect your privacy, we will end your sessions after 3 hours of inactivity. Once your
-                    session ends you will need to restart your business plan.</p>
-                <p>Your session will end in <span>02 hrs 19 min 59 sec</span></p>
-                <p>To keep on working click ‘continue’</p>
+                                session ends you will need to restart your business plan.</p>
+                            <p>Your session will end in <span>02 hrs 19 min 59 sec</span></p>
+                            <p>To keep on working click ‘continue’</p>
             
 
             
@@ -385,18 +431,164 @@
 </div>
 </div>
 
-                <h4 class="mt-5">View the call to action toast in page</h4>
-                <div class="button-example">
-                    <button id="cta-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
-                        role="button">Trigger call to action toast</button>
+                            <h4 class="mt-5">View the call to action toast in page</h4>
+                            <div class="button-example">
+                                <button id="cta-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                                    role="button">Trigger call to action toast</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-toast-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-toast-group" id="nb-toast-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-toast-bp-sm">≥576px (sm)</label>
+                
+
+                      
+                    <input type="radio" class="btn-check bp-xs true" name="nb-toast-group" id="nb-toast-bp-xs" autocomplete="off" data-breakpoint="bp-350">
+                    <label class="btn bp-xs btn-outline-primary py-2 px-3 true" for="nb-toast-bp-xs">≥350px (xs)</label>
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-toast-group" id="nb-toast-bp-final" autocomplete="off" data-breakpoint="bp-below350">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-toast-bp-final">&lt;350px</label>
+
                 </div>
 
             </div>
 
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding px-4 py-4">
+    
+                                <p class="">Apply your brand specific <strong>colours and button styles</strong> to the base toast notifications shown below.</p>
+
+
+                                
+                                <h3>Default toast notification</h3>
+                                <div class="bga-component-wrapper">
+<div class="bga-component callout-box toast-example default non-branded nb-background">
+
+    
+            <button class="close m-0 p-0">Close</button>
+            
+
+    <div class="py-4 ps-4 pe-6 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+            
+                <h4>Important message for the user</h4>
+            
+            
+          
+            
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non leo quis metus dictum
+                                    cursus.</p>
+            
+
+            
+            
+            
+
         </div>
+    
 
+    </div>
 
+</div>
+</div>
+    
+                                <h3>Call to action toast notification</h3>
+                                <div class="bga-component-wrapper">
+<div class="bga-component callout-box toast-example cta-toast non-branded nb-background">
 
+    
+
+    <div class="py-4 ps-4 pe-6 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+            
+                <h4>Would you like to continue?</h4>
+            
+            
+          
+            
+                <p>To protect your privacy, we will end your sessions after 3 hours of inactivity. Once your
+                                    session ends you will need to restart your business plan.</p>
+                                <p>Your session will end in <span>02 hrs 19 min 59 sec</span></p>
+                                <p>To keep on working click ‘continue’</p>
+            
+
+            
+            <div class="checkboxes mb-4">
+                <input class="checkbox m-0" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Don't warn me again
+                </label>
+            </div>
+            
+            
+            
+                 <div class="button-example">
+                     <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Continue  </button>
+                </div>
+            
+
+        </div>
+    
+
+    </div>
+
+</div>
+</div>
+    
+    
+                            </div>
+    
+                        </div>
+                </div>
+
+            </div>
 
 
 

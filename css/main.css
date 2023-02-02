@@ -4716,6 +4716,10 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .callout-box.blue.subscribe.colour-bkg { background: #ffffff; }
 
+.callout-box.blue.subscribe.non-branded .bga-btn { background: #ffffff; }
+
+.callout-box.blue.subscribe.non-branded .bga-btn:hover { background: #F8F8F8; }
+
 .component-example.bp-350 .callout-box.blue.subscribe, .component-example.bp-below350 .callout-box.blue.subscribe { border-left-width: 8px; }
 
 .component-example.bp-350 .callout-box.blue.subscribe .button-group a, .component-example.bp-below350 .callout-box.blue.subscribe .button-group a { font-size: 0.875rem; }
@@ -5014,6 +5018,30 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .modal-example.modal-form a.external { white-space: nowrap; }
 
+.modal-example.non-branded .close { background: transparent url(../assets/icon-close-black.svg) no-repeat !important; }
+
+.modal-example.non-branded .button-group button { color: mediumblue; border-bottom: none; text-decoration: underline; }
+
+.modal-example.non-branded .button-group button svg { display: none; }
+
+.modal-example.non-branded .button-group button:hover { background: none; color: mediumblue; text-decoration: underline; }
+
+.modal-example.non-branded .button-group button:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; }
+
+.modal-example.non-branded .scroll-wrapper { background: #F8F8F8; }
+
+.modal-example.non-branded .scroll-wrapper .scrollable::-webkit-scrollbar-thumb { background-color: #C8C8C8; border-radius: 4px; z-index: 99; }
+
+.modal-example.non-branded .scroll-wrapper .scrollable::-webkit-scrollbar-track { background: #D8D8D8; }
+
+.modal-example.non-branded.modal-form .title-area svg { display: none; }
+
+.modal-example.non-branded.modal-form .link-wrapper { background: #F8F8F8; }
+
+.modal-example.non-branded.modal-form .copy-link { background: none !important; padding: 0; }
+
+.modal-example.non-branded.modal-form .email-form { background: #E8E8E8; }
+
 .component-example.bp-below768 .modal-example.modal-form { min-height: 600px; }
 
 .component-example.bp-below768 .modal-example.modal-form form { display: none; padding: 24px; }
@@ -5032,7 +5060,9 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below768 .modal-example.modal-form .email-form.open .mobile-form-toggle svg { transform: scaleY(-1); }
 
-@media (max-width: 768px) { .modal-example.modal-form { min-height: 600px; } .modal-example.modal-form form { display: none; padding: 24px; } .modal-example.modal-form form h4, .modal-example.modal-form form .h4 { display: none; } .modal-example.modal-form .component-content { flex-wrap: wrap; } .modal-example.modal-form .component-text { width: 100%; height: 100% !important; } .modal-example.modal-form .mobile-form-toggle { display: block; width: 100%; padding: 24px; background: #FFD964; border: none; margin: 0; font-size: 1.1875rem; line-height: 1.5; font-weight: 600; display: flex; justify-content: space-between; align-items: center; text-align: left; transition: transform 0.2s ease-in-out; } .modal-example.modal-form .mobile-form-toggle svg { margin-left: 16px; } .modal-example.modal-form .email-form { width: 100%; padding: 0; position: absolute; bottom: 0; z-index: 8000; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); } .modal-example.modal-form .email-form.open .mobile-form-toggle svg { transform: scaleY(-1); } }
+.component-example.bp-below768 .modal-example.non-branded.modal-form .mobile-form-toggle { background: #D8D8D8; }
+
+@media (max-width: 768px) { .modal-example.modal-form { min-height: 600px; } .modal-example.modal-form form { display: none; padding: 24px; } .modal-example.modal-form form h4, .modal-example.modal-form form .h4 { display: none; } .modal-example.modal-form .component-content { flex-wrap: wrap; } .modal-example.modal-form .component-text { width: 100%; height: 100% !important; } .modal-example.modal-form .mobile-form-toggle { display: block; width: 100%; padding: 24px; background: #FFD964; border: none; margin: 0; font-size: 1.1875rem; line-height: 1.5; font-weight: 600; display: flex; justify-content: space-between; align-items: center; text-align: left; transition: transform 0.2s ease-in-out; } .modal-example.modal-form .mobile-form-toggle svg { margin-left: 16px; } .modal-example.modal-form .email-form { width: 100%; padding: 0; position: absolute; bottom: 0; z-index: 8000; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); } .modal-example.modal-form .email-form.open .mobile-form-toggle svg { transform: scaleY(-1); } .modal-example.non-branded.modal-form .mobile-form-toggle { background: #D8D8D8; } }
 
 .bga-component.feature-box { max-width: 840px; }
 
@@ -6326,7 +6356,9 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below576 .global-alert .component-content { padding: 0 16px 0 0 !important; }
 
-@media (max-width: 576px) { .global-alert .component-content { padding: 0 16px 0 0 !important; } }
+.component-example.bp-below576 .global-alert .close { min-height: auto; }
+
+@media (max-width: 576px) { .global-alert .component-content { padding: 0 16px 0 0 !important; } .global-alert .close { min-height: auto; } }
 
 .bga-pagination .pagination-links { width: 100%; }
 
@@ -6502,6 +6534,12 @@ button.chat.open:active { background-image: url(../assets/icon-chat-open-white.s
 
 button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-repeat; border: solid #ABB1BD 3px; background-position: right 32px center; }
 
+button.chat.non-branded { border: solid 2px #333333; background: url(../assets/Img-icon-placeholder.svg) #E8E8E8 no-repeat !important; background-position: right 32px center !important; background-size: 27px !important; border-radius: 8px; }
+
+button.chat.non-branded:focus-visible { border-color: mediumblue; color: #333333; }
+
+button.chat.non-branded:hover { border-color: #333333; color: #333333; background: #F8F8F8; }
+
 .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; }
 
 .tooltip { display: none; z-index: 9000; width: 100%; max-width: 300px; background: #ffffff; border: 3px solid #ABB1BD; border-radius: 4px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 24px; bottom: 94px; }
@@ -6518,9 +6556,21 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .tooltip.show { display: block; opacity: 1; }
 
+.tooltip.non-branded { border: 1px solid #333333; }
+
+.tooltip.non-branded span.arrow { border-bottom: 1px solid #333333; border-right: 1px solid #333333; bottom: -16px; }
+
+.tooltip.non-branded a { color: mediumblue; }
+
+.tooltip.non-branded a:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; background: transparent; }
+
+.tooltip.non-branded a:hover { color: mediumblue; background: transparent; }
+
 .component-example.bp-below768 button.chat, .component-example.small-screen button.chat { text-indent: -9999px; height: 48px; width: 48px; padding: 0; right: 16px; bottom: 16px; }
 
 .component-example.bp-below768 button.chat.open, .component-example.bp-below768 button.chat.closed, .component-example.small-screen button.chat.open, .component-example.small-screen button.chat.closed { background-position: top 10px center; background-size: 24px 24px; }
+
+.component-example.bp-below768 button.chat.non-branded, .component-example.small-screen button.chat.non-branded { background-position: center center !important; }
 
 .component-example.bp-below768 .msg-container, .component-example.small-screen .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; }
 
@@ -6528,7 +6578,7 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .component-example.bp-below768 .tooltip.centered, .component-example.small-screen .tooltip.centered { bottom: 62px; }
 
-@media (max-width: 768px) { button.chat { text-indent: -9999px; height: 48px; width: 48px; padding: 0; right: 16px; bottom: 16px; } button.chat.open, button.chat.closed { background-position: top 10px center; background-size: 24px 24px; } .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; } .tooltip { bottom: 78px; right: 16px; } .tooltip.centered { bottom: 62px; } }
+@media (max-width: 768px) { button.chat { text-indent: -9999px; height: 48px; width: 48px; padding: 0; right: 16px; bottom: 16px; } button.chat.open, button.chat.closed { background-position: top 10px center; background-size: 24px 24px; } button.chat.non-branded { background-position: center center !important; } .msg-container { display: flex; flex-wrap: wrap; justify-content: flex-end; } .tooltip { bottom: 78px; right: 16px; } .tooltip.centered { bottom: 62px; } }
 
 .bga-progress-bar .progress-label { font-size: 0.875rem; }
 
@@ -6555,6 +6605,14 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 .utility-group .share-container.show { display: block; }
 
 .utility-group a:focus-visible, .utility-group a:hover { background: none; color: #2157AA; }
+
+.utility-group.non-branded .utility-icon { display: none; }
+
+.utility-group.non-branded .share-container { border: 1px solid #333333; }
+
+.utility-group.non-branded .share-container svg { display: none; }
+
+.utility-group.non-branded span.arrow { border-left: 1px solid #333333; border-top: 1px solid #333333; top: 0; }
 
 .filters.example { max-width: 400px; }
 
@@ -6962,6 +7020,26 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .bga-inpage-feedback .thank-you-container a:hover { background: rgba(46, 108, 185, 0.15); color: #113869; text-decoration: underline; }
 
+.bga-inpage-feedback .non-branded .bga-btn { border: solid 2px #333333; background: #E8E8E8; border-radius: 8px; }
+
+.bga-inpage-feedback .non-branded .bga-btn.no.selected { background-color: #333333; color: #ffffff; border-color: #333333; }
+
+.bga-inpage-feedback .non-branded .bga-btn.bga-secondary-btn { background: #ffffff; border-color: #A8A8A8; }
+
+.bga-inpage-feedback .non-branded .bga-btn:focus-visible { border-color: mediumblue; color: #333333; }
+
+.bga-inpage-feedback .non-branded .bga-btn:hover { border-color: #333333; color: #333333; background: #F8F8F8; }
+
+.bga-inpage-feedback .non-branded .checkboxes [type=checkbox]:checked { background: #ffffff url(../assets/icon-tick-black.svg) no-repeat center center; border: solid 3px #333333 !important; }
+
+.bga-inpage-feedback .non-branded .checkboxes [type=checkbox]:checked + label { color: #333333; }
+
+.bga-inpage-feedback .non-branded a { color: mediumblue; }
+
+.bga-inpage-feedback .non-branded a:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; background: transparent; }
+
+.bga-inpage-feedback .non-branded a:hover { color: mediumblue; background: transparent; }
+
 .component-example.bp-below576 .bga-inpage-feedback .initial-question, .component-example.small-screen .bga-inpage-feedback .initial-question { flex-wrap: wrap; }
 
 .component-example.bp-below576 .bga-inpage-feedback .initial-question P, .component-example.small-screen .bga-inpage-feedback .initial-question P { width: 100%; margin-bottom: 16px !important; }
@@ -6986,6 +7064,12 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .cookie-notification .bga-btn-pill { font-size: .875rem; padding: 8px 16px !important; min-height: auto; }
 
+.cookie-notification.non-branded .component-links a { color: #ffffff; }
+
+.cookie-notification.non-branded .component-links a:hover, .cookie-notification.non-branded .component-links a:focus-visible { color: #ffffff; }
+
+.cookie-notification.non-branded .component-links a:focus-visible { border-color: #ffffff; }
+
 #inpage-cookie { position: fixed; bottom: 0; width: 100%; display: none; }
 
 .component-example.bp-below768 .cookie-notification .component-content, .component-example.small-screen .cookie-notification .component-content { flex-wrap: wrap; }
@@ -7000,11 +7084,13 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 
 .bga-component.non-branded.nb-background { background: #E8E8E8; }
 
+.bga-component.non-branded.nb-background-dark { background: #333333; }
+
 .bga-component.non-branded h1, .bga-component.non-branded .h1, .bga-component.non-branded h2, .bga-component.non-branded .h2, .bga-component.non-branded h3, .bga-component.non-branded .h3, .bga-component.non-branded h4, .bga-component.non-branded .h4, .bga-component.non-branded h5, .bga-component.non-branded .h5, .bga-component.non-branded h6, .bga-component.non-branded .h6 { color: #333333; }
 
 .bga-component.non-branded a, .bga-component.non-branded .tile-title { color: mediumblue; }
 
-.bga-component.non-branded a:focus-visible, .bga-component.non-branded .tile-title:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; }
+.bga-component.non-branded a:focus-visible, .bga-component.non-branded .tile-title:focus-visible { color: mediumblue; border: mediumblue solid 2px; border-radius: 4px; background: transparent; }
 
 .bga-component.non-branded a:hover, .bga-component.non-branded .tile-title:hover { color: mediumblue; background: transparent; }
 
@@ -7023,6 +7109,12 @@ button.chat.closed { background: url(../assets/icon-chat-closed.svg) #E4E6EA no-
 .bga-component.non-branded .form-select { border: #333333 solid 1px; }
 
 .bga-component.non-branded .form-select:focus-visible { border: solid 2px mediumblue; }
+
+.bga-component.non-branded input.form-control:focus-visible { border: solid 2px mediumblue; }
+
+.bga-component.non-branded .checkboxes [type=checkbox]:checked { background: #ffffff url(../assets/icon-tick-black.svg) no-repeat center center; border: solid 3px #333333 !important; }
+
+.bga-component.non-branded .checkboxes [type=checkbox]:checked + label { color: #333333; }
 
 .bga-component.non-branded .component-content { border: none; }
 

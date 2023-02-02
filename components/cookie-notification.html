@@ -246,14 +246,60 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-cookie-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -264,8 +310,8 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-md true" name="-group" id="-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="-bp-md">≥768px (md)</label>
+                    <input type="radio" class="btn-check bp-md true" name="bga-cookie-group" id="bga-cookie-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="bga-cookie-bp-md">≥768px (md)</label>
                 
 
                 
@@ -273,8 +319,8 @@
                 
 
                     
-                <input type="radio" class="btn-check " name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label class="btn btn-outline-primary py-2 px-3 " for="-bp-final">&lt;768px</label>
+                <input type="radio" class="btn-check " name="bga-cookie-group" id="bga-cookie-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 " for="bga-cookie-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -294,12 +340,12 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding px-4 py-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding px-4 py-4">
 
-                <div class="bga-component-wrapper">
+                            <div class="bga-component-wrapper">
 <div class="bga-component cookie-notification default">
 
     <div class="py-3 px-4 component-content">
@@ -330,16 +376,115 @@
 </div>
 </div>
 
-                <h3 class="mt-5">View the cookie notification in page</h3>
-                <div class="button-example mb-4">
-                    <button id="cookie-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
-                        role="button">Trigger cookie notification</button>
+                            <h3 class="mt-5">View the cookie notification in page</h3>
+                            <div class="button-example mb-4">
+                                <button id="cookie-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                                    role="button">Trigger cookie notification</button>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+
                 </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-cookie-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
                 
+                
+                
+
+                      
+                    <input type="radio" class="btn-check bp-md true" name="nb-cookie-group" id="nb-cookie-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="nb-cookie-bp-md">≥768px (md)</label>
+                
+
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check " name="nb-cookie-group" id="nb-cookie-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 " for="nb-cookie-bp-final">&lt;768px</label>
+
+                </div>
 
             </div>
 
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding px-4 py-4">
+
+                            <p class="">Apply your brand specific <strong>colours and button styles</strong> to the base cookie notification shown below.</p>
+
+
+
+                            <div class="bga-component-wrapper">
+<div class="bga-component cookie-notification default non-branded nb-background-dark">
+
+    <div class="py-3 px-4 component-content">
+
+        <div class="component-text p-0 me-5 remove-element-padding">
+          
+            
+                <p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consec adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>
+            
+
         </div>
+
+        <div class="component-links p-0 remove-element-padding">
+            
+                 <div class="button-example">
+                     <button class="cookie-link bga-btn bga-secondary-btn bga-btn-pill me-3" tabindex="0" href="" role="button">Accept all cookies</button>
+                </div>
+            
+
+            
+               <a href="" class="cookie-link">Customise cookies</a>
+            
+        </div>
+    
+
+    </div>
+
+</div>
+</div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
 
 
 
