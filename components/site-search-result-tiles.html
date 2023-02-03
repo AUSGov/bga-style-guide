@@ -31,141 +31,224 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        singlebp="true"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    singlebp="true"
+                    %}
 
-                <h3>Base search tile</h3>
-                {% include component-examples/global-search-tile-example.html
-                title="How to develop your country of origin label"
-                description="Understanding country of origin labelling is crucial when you sell or produce food products
-                in Australia. This tutorial will help you identify the key elements of country of origin labelling and
-                where to find information on your obligations."
-                %}
+                    <!-- Component example -->
 
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-
-                <h3>External sites search tile</h3>
-                {% include component-examples/global-search-tile-example.html
-                title="Guide to exporting"
-                description="Exporting is a great way to grow your business and reduce your dependence on the local
-                market."
-                tag="export.business.gov.au"
-                icon="'../assets/icon-arrow-right-black.svg' | relative_url "
-                %}
-
-
-                <h3>Advisers search tile</h3>
-                {% include component-examples/global-search-tile-example.html
-                label="Expertise and advice"
-                title="Sydney business"
-                description="This business advice centre provides businesses across the greater Sydney metropolitan area
-                with low-cost advice, training, workshops and mentoring to help them build and develop sustainable
-                businesses."
-                tag="<strong>Service area:</strong> Australia wide"
-                icon="'../assets/icon-pin-black.svg' | relative_url "
-                %}
+                            <h3>Base search tile</h3>
+                            {% include component-examples/global-search-tile-example.html
+                            title="How to develop your country of origin label"
+                            description="Understanding country of origin labelling is crucial when you sell or produce food products
+                            in Australia. This tutorial will help you identify the key elements of country of origin labelling and
+                            where to find information on your obligations."
+                            %}
 
 
-                <h3>Events search tile</h3>
-                {% include component-examples/global-search-tile-example.html
-                label="Events and training"
-                title="Victorian chamber business recovery regional roadshow"
-                description="This roadshow provides Victorian regional businesses with information to help them rebuild
-                from COVID-19 and offers advice for suppliers on how to win contracts with large vendors."
-                tag="Roadshow"
-                icon="'../assets/icon-events-black.svg' | relative_url "
-                %}
+
+                            <h3>External sites search tile</h3>
+                            {% include component-examples/global-search-tile-example.html
+                            title="Guide to exporting"
+                            description="Exporting is a great way to grow your business and reduce your dependence on the local
+                            market."
+                            tag="export.business.gov.au"
+                            icon="'../assets/icon-arrow-right-black.svg' | relative_url "
+                            %}
 
 
-                <h3>Grants and programs search tile</h3>
-                {% include component-examples/global-search-tile-example.html
-                label="Grant or program name"
-                title="Lorem ipsum dolor sit amet constetur"
-                description="Live Performance Support Program TAS
-                The Live Performance Support Program provides funding guarantees to arts organisations, festival
-                organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
-                and other venues throughout 2021."
-                tag="Open"
-                icon="'../assets/icon-tick-box-green.svg' | relative_url "
-                timeframe="Closing in 12 days"
-                apply="<p><strong>Who is this for?</strong></p>
-                    <p>Businesses who employ people registered with a Disability Service provider.</p>
-                    <p><strong>What you get?</strong></p>
-                    <p>Funding of up to $1650.</p>"
-                classes="open-grant"
-                %}
+                            <h3>Advisers search tile</h3>
+                            {% include component-examples/global-search-tile-example.html
+                            label="Expertise and advice"
+                            title="Sydney business"
+                            description="This business advice centre provides businesses across the greater Sydney metropolitan area
+                            with low-cost advice, training, workshops and mentoring to help them build and develop sustainable
+                            businesses."
+                            tag="<strong>Service area:</strong> Australia wide"
+                            icon="'../assets/icon-pin-black.svg' | relative_url "
+                            %}
 
 
-            </div>
-        </div>
+                            <h3>Events search tile</h3>
+                            {% include component-examples/global-search-tile-example.html
+                            label="Events and training"
+                            title="Victorian chamber business recovery regional roadshow"
+                            description="This roadshow provides Victorian regional businesses with information to help them rebuild
+                            from COVID-19 and offers advice for suppliers on how to win contracts with large vendors."
+                            tag="Roadshow"
+                            icon="'../assets/icon-events-black.svg' | relative_url "
+                            %}
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Tag and icon variations</h3>
-                <div class="row">
+                            <h3>Grants and programs search tile</h3>
+                            {% include component-examples/global-search-tile-example.html
+                            label="Grant or program name"
+                            title="Lorem ipsum dolor sit amet constetur"
+                            description="Live Performance Support Program TAS
+                            The Live Performance Support Program provides funding guarantees to arts organisations, festival
+                            organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
+                            and other venues throughout 2021."
+                            tag="Open"
+                            icon="'../assets/icon-tick-box-green.svg' | relative_url "
+                            timeframe="Closing in 12 days"
+                            apply="<p><strong>Who is this for?</strong></p>
+                                <p>Businesses who employ people registered with a Disability Service provider.</p>
+                                <p><strong>What you get?</strong></p>
+                                <p>Funding of up to $1650.</p>"
+                            classes="open-grant"
+                            %}
 
-                    <div class="col-12 col-md-6">
-                        {% include component-examples/global-search-tile-example.html
-                        description="<strong>External site tag</strong>"
-                        tag="External site name"
-                        icon="'../assets/icon-arrow-right-black.svg' | relative_url "
-                        %}
+
+                        </div>
                     </div>
 
-                    <div class="col-12 col-md-6">
-                        {% include component-examples/global-search-tile-example.html
-                        description="<strong>Adviser tag</strong>"
-                        tag="<strong>Service area:</strong> Location, location, location is the key to this tag."
-                        icon="'../assets/icon-pin-black.svg' | relative_url "
-                        %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>Tag and icon variations</h3>
+                            <div class="row">
+
+                                <div class="col-12 col-md-6">
+                                    {% include component-examples/global-search-tile-example.html
+                                    description="<strong>External site tag</strong>"
+                                    tag="External site name"
+                                    icon="'../assets/icon-arrow-right-black.svg' | relative_url "
+                                    %}
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    {% include component-examples/global-search-tile-example.html
+                                    description="<strong>Adviser tag</strong>"
+                                    tag="<strong>Service area:</strong> Location, location, location is the key to this tag."
+                                    icon="'../assets/icon-pin-black.svg' | relative_url "
+                                    %}
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    {% include component-examples/global-search-tile-example.html
+                                    description="<strong>Events tag</strong>"
+                                    tag="Event type"
+                                    icon="'../assets/icon-events-black.svg' | relative_url "
+                                    %}
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    {% include component-examples/global-search-tile-example.html
+                                    description="<strong>Open grants tag</strong>"
+                                    tag="Open"
+                                    icon="'../assets/icon-tick-box-green.svg' | relative_url "
+                                    classes="open-grant"
+                                    %}
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    {% include component-examples/global-search-tile-example.html
+                                    description="<strong>Coming soon grants tag</strong>"
+                                    tag="Coming soon"
+                                    icon="'../assets/icon-events-yellow.svg' | relative_url "
+                                    classes="soon-grant"
+                                    %}
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    {% include component-examples/global-search-tile-example.html
+                                    description="<strong>Closed grants tag</strong>"
+                                    tag="Closed"
+                                    icon="'../assets/icon-closed-red.svg' | relative_url "
+                                    classes="closed-grant"
+                                    %}
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="col-12 col-md-6">
-                        {% include component-examples/global-search-tile-example.html
-                        description="<strong>Events tag</strong>"
-                        tag="Event type"
-                        icon="'../assets/icon-events-black.svg' | relative_url "
-                        %}
-                    </div>
+                </div>
 
-                    <div class="col-12 col-md-6">
-                        {% include component-examples/global-search-tile-example.html
-                        description="<strong>Open grants tag</strong>"
-                        tag="Open"
-                        icon="'../assets/icon-tick-box-green.svg' | relative_url "
-                        classes="open-grant"
-                        %}
-                    </div>
+                <div class="tab-section non-branded ">
 
-                    <div class="col-12 col-md-6">
-                        {% include component-examples/global-search-tile-example.html
-                        description="<strong>Coming soon grants tag</strong>"
-                        tag="Coming soon"
-                        icon="'../assets/icon-events-yellow.svg' | relative_url "
-                        classes="soon-grant"
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        singlebp="true"
                         %}
-                    </div>
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
 
-                    <div class="col-12 col-md-6">
-                        {% include component-examples/global-search-tile-example.html
-                        description="<strong>Closed grants tag</strong>"
-                        tag="Closed"
-                        icon="'../assets/icon-closed-red.svg' | relative_url "
-                        classes="closed-grant"
-                        %}
-                    </div>
+                                {% include non-branded-explanation.html
+                                    component="search result tiles"
+                                    brand-elements="colours, tag and button styles"
+                                %}
+        
+    
+                                <h3>Base search tile</h3>
+                                {% include component-examples/global-search-tile-example.html
+                                title="How to develop your country of origin label"
+                                description="Understanding country of origin labelling is crucial when you sell or produce food products
+                                in Australia. This tutorial will help you identify the key elements of country of origin labelling and
+                                where to find information on your obligations."
+                                classes="non-branded nb-border"
+                                %}
+    
+    
+                                <h3>Search tile with information tag</h3>
+                                {% include component-examples/global-search-tile-example.html
+                                label="Label"
+                                title="Victorian chamber business recovery regional roadshow"
+                                description="This roadshow provides Victorian regional businesses with information to help them rebuild
+                                from COVID-19 and offers advice for suppliers on how to win contracts with large vendors."
+                                tag="Roadshow"
+                                icon="'../assets/icon-events-black.svg' | relative_url "
+                                classes="non-branded nb-border"
+                                %}
+    
+    
+                                <h3>Search tile with additional information accordion</h3>
+                                {% include component-examples/global-search-tile-example.html
+                                label="Label"
+                                title="Lorem ipsum dolor sit amet constetur"
+                                description="Live Performance Support Program TAS
+                                The Live Performance Support Program provides funding guarantees to arts organisations, festival
+                                organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
+                                and other venues throughout 2021."
+                                tag="Open"
+                                icon="'../assets/icon-tick-box-green.svg' | relative_url "
+                                timeframe="Closing in 12 days"
+                                apply="<p><strong>Who is this for?</strong></p>
+                                    <p>Businesses who employ people registered with a Disability Service provider.</p>
+                                    <p><strong>What you get?</strong></p>
+                                    <p>Funding of up to $1650.</p>"
+                                classes="open-grant non-branded nb-border"
+                                %}
+    
+    
+                            </div>
+                        </div>
+
                 </div>
 
             </div>
-        </div>
 
 
         <!-- Design specifications link -->

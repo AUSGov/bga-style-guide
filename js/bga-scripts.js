@@ -907,6 +907,7 @@ $(document).ready(function () {
     function sidebar_fullheight() {
 
         $('.sidebar-wrapper.fullheight').each(function () {
+    
             var question_height;
             
             if ($(window).width() > 768) {

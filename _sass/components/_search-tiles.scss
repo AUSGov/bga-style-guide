@@ -131,6 +131,73 @@
                 background-image: url(../assets/icon-star-starred.svg);
             }
         }
+
+        &.non-branded {
+            .shortlist-btn {
+                background: $bga-white;
+                padding: 0;
+                color: $bga-black;
+            }
+        }
+    }
+
+    &.non-branded {
+        .tile-title a {
+            &:focus-visible {
+                background: transparent;
+                color: $nb-blue-links;
+                border-color: $nb-blue-links;
+            }
+            &:hover {
+                background: transparent;
+                color: $nb-blue-links;
+            }
+        }
+        .tag {
+            background: $nb-grey-light;
+            border-radius: 8px;
+            .icon {
+                width: 16px;
+                height: 16px;
+                background: $nb-grey-dark;
+
+                img {
+                    display: none !important;
+                }
+            }
+        }
+        .apply-details {
+            background: $nb-grey-light;
+            
+            .apply-details-content {
+                display: none;
+            }
+            p {
+                font-size: 0.875rem;
+                margin-bottom: 16px;
+    
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .apply-btn {
+            background: $nb-grey-light;
+            color: $nb-blue-links;
+        
+            &:focus-visible {
+                background: $nb-grey-mid;
+                border-color: $nb-blue-links;
+            }
+            &:hover {
+                background: $nb-grey-mid;
+            }
+        }
+        .apply-details.open {
+            .apply-btn {
+                background: $nb-grey-mid;
+            }
+        }
     }
 
 }
@@ -215,6 +282,55 @@
         }
         .component-text {
             background: $bga-blue-background-light;
+        }
+    }
+
+    &.non-branded {
+        .delivery-type {
+            background: $bga-black url(../assets/img-icon-placeholder.svg) no-repeat;
+            padding-left: 64px !important;
+            background-position: left 24px center;
+            background-size: 32px;
+
+            img {
+                display: none;
+            }
+            
+        }
+        .component-text {
+            background:$nb-grey-light;
+        }
+        .event-details {
+            .read-more-btn {
+                color: $nb-blue-links;
+
+                svg path {
+                    fill: $nb-blue-links;
+                }
+    
+                &:focus-visible {
+                    border-color: $nb-blue-links;
+                }
+    
+            }
+            .highlighted-info {
+                border-top: solid 2px $nb-grey-darkest;
+                border-bottom: solid 2px $nb-grey-darkest;
+            }
+            .close-btn {
+                color: $nb-blue-links;
+
+                svg path {
+                    fill: $nb-blue-links;
+                }
+    
+                &:focus-visible {
+                    border-color: $nb-blue-links;
+                }
+            }
+        }
+        .registration button svg {
+            display: none;
         }
     }
 }

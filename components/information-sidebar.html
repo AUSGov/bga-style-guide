@@ -32,105 +32,166 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        singlebp="true"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
 
-        <div class="component-example m-0">
+            <div class="tab-sections-wrapper p-4">
 
-            <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+                <div class="tab-section bga-branded selected">
 
-                <div class="row">
-                    <p><strong>Note: At smaller breakpoints the sidebar is stacked under associated content and its
-                            height is limited to 230px.</strong></p>
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    singlebp="true"
+                    %}
 
-                    <div class="col-12 col-md-6 h-100">
-                        <div class="question-section">
+                    <!-- Component example -->
 
-                            <div class="bga-component sidebar dummy-sidebar m-0">
+                    <div class="component-example m-0">
 
-                                <div class="p-4 component-content">
+                        <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
 
-                                    <div class="component-text remove-element-padding">
-                                        <h3>Lorem ipsum dolor sit amet.</h3>
-                                        <p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
-                                        <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent
-                                            tincidunt congue elit, a vehicula urna ornare quis.</p>
+                            <div class="row">
+                                <p><strong>Note: At smaller breakpoints the sidebar is stacked under associated content and its
+                                        height is limited to 230px.</strong></p>
+
+                                <div class="col-12 col-md-6 h-100">
+                                    <div class="question-section">
+
+                                        <div class="bga-component sidebar dummy-sidebar m-0">
+
+                                            <div class="p-4 component-content">
+
+                                                <div class="component-text remove-element-padding">
+                                                    <h3>Lorem ipsum dolor sit amet.</h3>
+                                                    <p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                                                    <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent
+                                                        tincidunt congue elit, a vehicula urna ornare quis.</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
                                     </div>
+                                </div>
 
+
+                                <div class="col-12 col-md-6 h-100">
+                                    {% include component-examples/info-sidebar-example.html
+                                    title="Lorem ipsum dolor sit amet.!!!"
+                                    text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                                    <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue elit, a vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at posuere.Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis iaculis. Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa quis purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut mauris dictum tempor. </p>"
+                                    classes="teal"
+                                    %}
                                 </div>
 
                             </div>
+
                         </div>
+
                     </div>
+                    <div class="component-example m-0">
 
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                    <div class="col-12 col-md-6 h-100">
-                        {% include component-examples/info-sidebar-example.html
-                        title="Lorem ipsum dolor sit amet.!!!"
-                        text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
-                        <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue
-                            elit, a
-                            vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at
-                            posuere.
-                            Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis
-                            iaculis.
-                            Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa
-                            quis
-                            purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut
-                            mauris
-                            dictum tempor. </p>"
-                            classes="teal"
-                        %}
-                    </div>
+                            <div class="row">
 
-                </div>
+                                <h3>Colour variations</h3>
+                                <div class="col-12 col-sm-4">
+                                    {% include component-examples/sidebar-colour-example.html
+                                    title="Teal"
+                                    text="<p>Used in tool pages only.</p>"
+                                    classes="teal colour-example"
+                                    fade="true"
+                                    %}
+                                </div>
 
-            </div>
+                                <div class="col-12 col-sm-4">
+                                    {% include component-examples/sidebar-colour-example.html
+                                    title="Yellow"
+                                    text="<p>Can be used in site pages and tools.</p>"
+                                    classes="yellow"
+                                    fade="true"
+                                    %}
+                                </div>
 
-        </div>
-        <div class="component-example m-0">
+                                <div class="col-12 col-sm-4">
+                                    {% include component-examples/sidebar-colour-example.html
+                                    title="Blue"
+                                    text="<p>Can be used in site pages and tools.</p>"
+                                    classes="blue"
+                                    fade="true"
+                                    %}
+                                </div>
 
-            <div class="component-wrapper remove-element-padding p-4">
+                            </div>
 
-                <div class="row">
+                        </div>
 
-                    <h3>Colour variations</h3>
-                    <div class="col-12 col-sm-4">
-                        {% include component-examples/sidebar-colour-example.html
-                        title="Teal"
-                        text="<p>Used in tool pages only.</p>"
-                        classes="teal colour-example"
-                        fade="true"
-                        %}
-                    </div>
-
-                    <div class="col-12 col-sm-4">
-                        {% include component-examples/sidebar-colour-example.html
-                        title="Yellow"
-                        text="<p>Can be used in site pages and tools.</p>"
-                        classes="yellow"
-                        fade="true"
-                        %}
-                    </div>
-
-                    <div class="col-12 col-sm-4">
-                        {% include component-examples/sidebar-colour-example.html
-                        title="Blue"
-                        text="<p>Can be used in site pages and tools.</p>"
-                        classes="blue"
-                        fade="true"
-                        %}
                     </div>
 
                 </div>
 
-            </div>
+                <div class="tab-section non-branded ">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        singlebp="true"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+    
+                            <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+    
+                                <div class="row">
+                                    <p><strong>Note: At smaller breakpoints the sidebar is stacked under associated content and its
+                                            height is limited to 230px.</strong></p>
+    
+                                    <div class="col-12 col-md-6 h-100">
+                                        <div class="question-section">
+    
+                                            <div class="bga-component non-branded nb-background sidebar dummy-sidebar m-0">
+    
+                                                <div class="p-4 component-content">
+    
+                                                    <div class="component-text remove-element-padding">
+                                                        <h3>Lorem ipsum dolor sit amet.</h3>
+                                                        <p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                                                        <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent
+                                                            tincidunt congue elit, a vehicula urna ornare quis.</p>
+                                                    </div>
+    
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+    
+    
+                                    <div class="col-12 col-md-6 h-100">
+                                        {% include component-examples/info-sidebar-example.html
+                                        title="Lorem ipsum dolor sit amet.!!!"
+                                        text="<p>Vestibulum mi quam, consequat ut dignissim a, hendrerit in massa.</p>
+                                        <p>Morbi augue augue, pulvinar quis fermentum nec, ultricies ut lacus. Praesent tincidunt congue elit, a vehicula urna ornare quis. Sed imperdiet id eros et laoreet. Nullam varius quis mi at posuere. Pellentesque suscipit elementum sapien eget mattis. Etiam tristique arcu tempor iaculis iaculis. Quisque sit met fringilla metus, in dignissim enim. Vestibulum et nunc enim. Donec eu massa quis purus laoreet auctor. Praesent tincidunt id dui nec efficitur. Vivamus imperdiet magna ut mauris dictum tempor. </p>"
+                                        classes="non-branded nb-background"
+                                        %}
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                </div>
 
-        </div>
+            </div>
 
 
 
