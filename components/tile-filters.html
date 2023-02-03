@@ -246,15 +246,58 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="result-tile-group">
+        <fieldset id="bga-filters-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -265,8 +308,8 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-md true" name="result-tile-group" id="result-tile-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="result-tile-bp-md">≥768px (md)</label>
+                    <input type="radio" class="btn-check bp-md true" name="bga-filters-group" id="bga-filters-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="bga-filters-bp-md">≥768px (md)</label>
                 
 
                 
@@ -274,8 +317,8 @@
                 
 
                     
-                <input type="radio" class="btn-check true" name="result-tile-group" id="result-tile-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="result-tile-bp-final">&lt;768px</label>
+                <input type="radio" class="btn-check true" name="bga-filters-group" id="bga-filters-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-filters-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -295,14 +338,14 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Text input</h3>
+                            <h3>Text input</h3>
 
-               <div class="filters example text-input pb-3">
+                        <div class="filters example text-input pb-3">
 
     <div class="filter-item text-field-filter remove-element-padding" id="postcode">
 
@@ -320,12 +363,12 @@
 
 </div>
 
-                <hr />
+                            <hr />
 
 
-                <h3>Checkboxes - primary level</h3>
+                            <h3>Checkboxes - primary level</h3>
 
-                <div class="filters  example  checkboxes-primary">
+                            <div class="filters  example  checkboxes-primary">
 
     <div class="filter-item" id="delivery-type">
 
@@ -361,13 +404,13 @@
     </div>
 
 </div>
-            
-                <hr/>
+                        
+                            <hr/>
 
 
-                <h3>Checkboxes - secondary level</h3>
+                            <h3>Checkboxes - secondary level</h3>
 
-                <div class="filters  example  checkboxes-secondary">
+                            <div class="filters  example  checkboxes-secondary">
 
     <div tabindex="0" class="filter-item pt-3 pb-2" id="location">
         <div class="filter-item-title remove-element-padding">
@@ -520,12 +563,12 @@
 </div>
 
 
-                <hr/>
+                            <hr/>
 
 
-                <h3>Toggle switch</h3>
+                            <h3>Toggle switch</h3>
 
-                <div class="filters example toggle-switch">
+                            <div class="filters example toggle-switch">
 
     <div class="filter-item pt-3 pb-2">
 
@@ -560,13 +603,13 @@
 
 </div>
 
-                <hr/>
+                            <hr/>
 
 
 
-                <h3>Single select</h3>
+                            <h3>Single select</h3>
 
-                <div class="filters  example  single-select">
+                            <div class="filters  example  single-select">
 
     <div class="filter-item pt-3 pb-2" id="business-stage">
         <div class="filter-item-title">
@@ -609,12 +652,12 @@
 
 </div>
 
-                <hr/>
+                            <hr/>
 
 
-                <h3>Search box</h3>
+                            <h3>Search box</h3>
 
-                <div class="filters  example  search-box">
+                            <div class="filters  example  search-box">
 
     <div class="name-search remove-element-padding p-4">
         <h4 class="mb-3">Filter grants and programs <span>by name</span></h4>
@@ -651,13 +694,428 @@
 
 </div>
 
-                <hr/>
+                            <hr/>
 
 
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-filters-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                      
+                    <input type="radio" class="btn-check bp-md true" name="nb-filters-group" id="nb-filters-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="nb-filters-bp-md">≥768px (md)</label>
+                
+
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-filters-group" id="nb-filters-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-filters-bp-final">&lt;768px</label>
+
+                </div>
 
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+    
+                                <h3>Text input</h3>
+    
+                            <div class="filters example non-branded text-input pb-3">
+
+    <div class="filter-item text-field-filter remove-element-padding" id="postcode">
+
+        <label>Postcode</label>
+
+        <div class="text-input-wrapper d-flex">
+            
+            <span class="clear-postcode" id="clear-postcode">Remove postcode</span>
+            <input class="form-control px-3" id="postcode-input" type="text" placeholder="Enter your postcode">
+
+            <button class="apply-postcode" id="apply-postcode" filter-type="postcode">Add</button>
         </div>
 
+    </div>
+
+</div>
+    
+                                <hr />
+    
+    
+                                <h3>Checkboxes - primary level</h3>
+    
+                                <div class="filters  example non-branded  checkboxes-primary">
+
+    <div class="filter-item" id="delivery-type">
+
+        <form>
+            <div tabindex="0" class="checkbox-item py-3" data-label="in-person" filter-type="delivery-type">
+                <label id="delivery-inperson" data-option="in-person" data-label="in-person"
+                    filter-type="delivery-type">
+
+                    In person services</label>
+                <input tabindex="-1" type="checkbox" id="in-person">
+            </div>
+
+            <div tabindex="0" class="checkbox-item py-3" data-label="phone" filter-type="delivery-type">
+                <label id="delivery-phone" data-option="phone" data-label="phone"
+                    filter-type="delivery-type">
+
+                    Phone services</label>
+                <input tabindex="-1" type="checkbox" id="phone">
+            </div>
+
+
+            <div tabindex="0" class="checkbox-item py-3" data-label="online" filter-type="delivery-type">
+                <label id="delivery-online" data-option="online" data-label="online"
+                    filter-type="delivery-type">
+
+                    Online services</label>
+                <input tabindex="-1" type="checkbox" id="online">
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+                            
+                                <hr/>
+    
+    
+                                <h3>Checkboxes - secondary level</h3>
+    
+                                <div class="filters example non-branded checkboxes-secondary">
+
+                                    <div tabindex="0" class="filter-item pt-3 pb-2" id="location-1">
+                                        <div class="filter-item-title remove-element-padding">
+                                            <p class="mb-0">Location <span class="mobile-counter"></span></p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                                                <g transform="translate(20 12.5) rotate(180)">
+                                                    <path  data-name="Chevron / Up"
+                                                        d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                
+                                        </div>
+                                        <div class="active-filters pt-2 multi-select">
+                                            <ul class="m-0 p-0">
+                                                <li filter-type="location-1" filter-value="10" data-value="australian-capital-territory-1">
+                                                    Australian Capital Territory</li>
+                                                <li filter-type="location-1" filter-value="15" data-value="new-south-wales-1">New South
+                                                    Wales</li>
+                                                <li filter-type="location-1" filter-value="15" data-value="northern-territory-1">
+                                                    Northern Territory</li>
+                                                <li filter-type="location-1" filter-value="15" data-value="queensland-1">Queensland</li>
+                                                <li filter-type="location-1" filter-value="15" data-value="south-australia-1">South
+                                                    Australia</li>
+                                                <li filter-type="location-1" filter-value="15" data-value="tasmania-1">Tasmania</li>
+                                                <li filter-type="location-1" filter-value="15" data-value="victoria-1">Victoria</li>
+                                                <li filter-type="location-1" filter-value="15" data-value="western-australia-1">Western
+                                                    Australia</li>
+                                                <li filter-type="location-1" filter-value="15" data-value="other-australian-territory-1">
+                                                    Other Australian territory</li>
+                                            </ul>
+                                        </div>
+                                        <div class="filter-item-content">
+                                
+                                            <form>
+                                                <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="australian-capital-territory-1">
+                                                    <label>Australian Capital Territory</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="new-south-wales-1">
+                                                    <label>New South Wales</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="northern-territory-1">
+                                                    <label>Northern Territory</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="queensland-1">
+                                                    <label>Queensland</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="south-australia">
+                                                    <label>South Australia</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="tasmania-1">
+                                                    <label>Tasmania</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="victoria-1">
+                                                    <label>Victoria</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="western-australia-1">
+                                                    <label>Western Australia</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-type="location-1" filter-value="15">
+                                                    <input type="checkbox" tabindex="-1" id="other-australian-territory-1">
+                                                    <label>Other Australian territory</label>
+                                                </div>
+                                
+                                            </form>
+                                
+                                        </div>
+                                    </div>
+                                
+                                    <div tabindex="0" class="filter-item pt-3 pb-2" id="support-type-1">
+                                        <div class="filter-item-title remove-element-padding">
+                                            <p class="mb-0">Support type <span class="mobile-counter"></span></p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                                                <g transform="translate(20 12.5) rotate(180)">
+                                                    <path  data-name="Chevron / Up"
+                                                        d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                
+                                        </div>
+                                        <div class="active-filters pt-2 multi-select">
+                                            <ul class="m-0 p-0">
+                                                <li filter-type="support-type-1" filter-value="30" data-value="advice-1">Advice &amp;
+                                                    mentoring</li>
+                                                <li filter-type="support-type-1" filter-value="60" data-value="funding-1">Funding</li>
+                                                <li filter-type="support-type-1" filter-value="10" data-value="loan-1">Loan</li>
+                                                <li filter-type="support-type-1" filter-value="10" data-value="sponsorship-1">
+                                                    Sponsorship</li>
+                                                <li filter-type="support-type-1" filter-value="30" data-value="subsidy-1">Subsidies
+                                                    &amp; rebates</li>
+                                                <li filter-type="support-type-1" filter-value="10" data-value="tax-rebate-1">Tax
+                                                    benefits</li>
+                                
+                                            </ul>
+                                        </div>
+                                        <div class="filter-item-content">
+                                
+                                            <form>
+                                               <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="support-type-1">
+                                                    <input type="checkbox" tabindex="-1" id="advice-1">
+                                                    <label for="advice">Advice &amp; mentoring</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-value="60" filter-type="support-type-1">
+                                                    <input type="checkbox" tabindex="-1" id="funding-1">
+                                                    <label for="funding">Funding</label>
+                                                </div>
+                                               <div tabindex="0" class="checkbox-item p-2" filter-value="10" filter-type="support-type-1">
+                                                    <input type="checkbox" tabindex="-1" id="loan-1">
+                                                    <label for="loan">Loan</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-value="10" filter-type="support-type-1">
+                                                    <input type="checkbox" tabindex="-1" id="sponsorship-1">
+                                                    <label for="sponsorship">Sponsorship</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="support-type-1">
+                                                    <input type="checkbox" tabindex="-1" id="subsidy-1">
+                                                    <label for="subsidy">Subsidies &amp; rebates</label>
+                                                </div>
+                                
+                                               <div tabindex="0" class="checkbox-item p-2" filter-value="10" filter-type="support-type-1">
+                                                    <input type="checkbox" tabindex="-1" id="tax-rebate-1">
+                                                    <label for="tax-rebate">Tax benefits</label>
+                                                </div>
+                                
+                                            </form>
+                                
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                
+    
+                                <hr/>
+    
+                                <h3>Toggle switch</h3>
+    
+                                <div class="filters example non-branded toggle-switch">
+
+                                    <div class="filter-item pt-3 pb-2">
+                                
+                                    <div class="filter-item-title">
+                                        <p class="mb-0">Location <span class="mobile-counter"></span></p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                                            <g transform="translate(20 12.5) rotate(180)">
+                                                <path data-name="Chevron / Up"
+                                                    d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                
+                                    </div>
+                                
+                                    <div class="active-filters pt-2">
+                                        <ul class="m-0 p-0">
+                                            <li filter-type="" filter-value="10" data-value="regional-or-rural-area-1">Only show regional opportunities</li>
+                                        </ul>
+                                    </div>
+                                
+                                    <div class="filter-item-content">
+                                        
+                                        <div class="custom-control custom-switch toggle-question">
+                                            <input type="checkbox" class="custom-control-input" id="regional-or-rural-area-1" toggle-filter-type="rural" filter-value="51">
+                                            <label class="custom-control-label" for="regional-or-rural-area-1">Only show regional opportunities</label>
+                                        </div>
+                                
+                                    </div>
+                                
+                                    </div>
+                                
+                                </div>
+    
+                                <hr/>
+    
+    
+                                <h3>Single select</h3>
+    
+                                <div class="filters example non-branded single-select">
+
+                                    <div class="filter-item pt-3 pb-2" id="business-stage-1">
+                                        <div class="filter-item-title">
+                                            <p class="mb-0">Business stage <span class="mobile-counter"></span></p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                                                <g transform="translate(20 12.5) rotate(180)">
+                                                    <path  data-name="Chevron / Up"
+                                                        d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                
+                                        </div>
+                                        <div class="active-filters pt-2 single-select">
+                                            <ul class="m-0 p-0">
+                                                <li filter-value="27" data-value="2-years-or-less-1" class="select-option">2 years or
+                                                    less</li>
+                                                <li filter-value="27" data-value="3-and-5-years-1" class="select-option">3 and 5 years
+                                                </li>
+                                                <li filter-value="27" data-value="more-than-5-years-1" class="select-option">More than
+                                                    5 years</li>
+                                
+                                            </ul>
+                                        </div>
+                                        <div class="filter-item-content pb-2">
+                                
+                                            <form>
+                                                <select class="form-select" id="filter_stage" select-filter-type="business-stage-1" filter-value="27">
+                                                    <option value="select-option">select stage</option>
+                                                    <option value="2-years-or-less-1" class="select-option">2 years or less</option>
+                                                    <option value="3-and-5-years-1" class="select-option">3 and 5 years</option>
+                                                    <option value="more-than-5-years-1" class="select-option">More than 5 years
+                                                    </option>
+                                
+                                                </select>
+                                            </form>
+                                
+                                        </div>
+                                    </div>
+                                
+                                </div>
+    
+                                <hr/>
+    
+    
+                                <h3>Search box</h3>
+    
+                                <div class="filters  example non-branded  search-box">
+
+    <div class="name-search remove-element-padding p-4">
+        <h4 class="mb-3">Filter grants and programs <span>by name</span></h4>
+
+        <div class="search-wrapper">
+            <input type="search" placeholder="Enter grant name">
+            <button class="name-search-btn">
+                <svg width="20" height="20">
+                    <path fill-rule="evenodd"
+                        d="M15.27 12.815l-.409.409-1.706-1.706c2.052-2.838 1.802-6.836-.753-9.39A7.218 7.218 0 0 0 7.264 0a7.22 7.22 0 0 0-5.139 2.128c-2.833 2.833-2.833 7.443 0 10.276a7.22 7.22 0 0 0 5.139 2.128c1.549 0 3.023-.483 4.253-1.375l1.706 1.705-.41.41L17.543 20 20 17.543l-4.73-4.728zm-11.507-2.05a4.955 4.955 0 0 1 0-6.999 4.918 4.918 0 0 1 3.5-1.45c1.323 0 2.566.515 3.5 1.45a4.955 4.955 0 0 1 0 7 4.919 4.919 0 0 1-3.5 1.449 4.92 4.92 0 0 1-3.5-1.45z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!--<div class="search-list-wrapper mt-4">
+            <div class="search-list active active-filters">
+                <ul class="m-0 p-0" id="searchbar-list" class="searchbar-list">
+                    <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Integration
+                        Stream</li>
+                    <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Collaboration
+                        Stream</li>
+                    <li><span>Manufacturing</span> Modernisation Fund Round 2 Grant Recipients</li>
+                    <li>Advanced <span>Manufacturing</span> Growth Fund grant recipients</li>
+                    <li>Funding opportunities available under the Modern <span>Manufacturing</span>
+                        Initiative</li>
+                    <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Translation
+                        Stream grant recipients</li>
+                </ul>
+            </div>
+        </div>-->
+      
+    </div>
+
+
+</div>
+    
+                                <hr/>
+    
+    
+    
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
 
         <!-- Design specifications link -->
 

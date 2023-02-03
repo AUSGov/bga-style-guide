@@ -246,14 +246,60 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-clause-box-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,15 +312,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-clause-box-group" id="bga-clause-box-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-clause-box-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-clause-box-group" id="bga-clause-box-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-clause-box-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -294,15 +340,15 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Default clause /regulation box</h3>
-                
-                <div class="pb-5">
-                    <div class="bga-component-wrapper">
+                            <h3>Default clause /regulation box</h3>
+                            
+                            <div class="pb-5">
+                                <div class="bga-component-wrapper">
     <div class="bga-component clause-box teal  m-0">
 
         <div class="p-4 component-content h-100">
@@ -335,20 +381,20 @@
 
     </div>
 </div>
-                </div>
+                            </div>
 
-                <h3>Clause / regulation box with mandatory include tag</h3>
-                
-                <div class="pb-5">
-                    <form>
-                        <div class="col-12 mb-5 p-0 form-example clause-box-include">
-                            <label for="" class="form-label mb-3">What is the employee's position title?</label>
-                            <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
-                            <input type="text" class="form-control clause-box-input mb-0" id="position-title">
+                            <h3>Clause / regulation box with mandatory include tag</h3>
                             
-                        </div>
-                    </form>
-                <div class="bga-component-wrapper">
+                            <div class="pb-5">
+                                <form>
+                                    <div class="col-12 mb-5 p-0 form-example clause-box-include">
+                                        <label for="" class="form-label mb-3">What is the employee's position title?</label>
+                                        <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
+                                        <input type="text" class="form-control clause-box-input mb-0" id="position-title">
+                                        
+                                    </div>
+                                </form>
+                            <div class="bga-component-wrapper">
     <div class="bga-component clause-box  position-title m-0">
 
         <div class="p-4 component-content h-100">
@@ -387,12 +433,12 @@
 
     </div>
 </div>
-                </div>
+                            </div>
 
-                <h3>Clause / regulation box with optional include tag</h3>
+                            <h3>Clause / regulation box with optional include tag</h3>
 
-                <div class="pb-5">
-                <div class="bga-component-wrapper">
+                            <div class="pb-5">
+                            <div class="bga-component-wrapper">
     <div class="bga-component clause-box  probation-period m-0">
 
         <div class="p-4 component-content h-100">
@@ -440,20 +486,20 @@
 
     </div>
 </div>
-                </div>
+                            </div>
 
-            </div>
-        </div>
+                        </div>
+                    </div>
 
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
+                    <div class="component-example">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            <div class="row">
 
-                    <h3>Approved icons</h3>
+                                <h3>Approved icons</h3>
 
-                    <div class="col-6 col-md-4 mb-4">
-                        <div class="approved-icons ">
+                                <div class="col-6 col-md-4 mb-4">
+                                    <div class="approved-icons ">
 	<p class="icon-name mb-2"><strong>Document</strong></p>
 	<button class="copy-icon-example p-0" tabindex="0">
 		<div class="svg-icon-container d-flex px-3 py-3">
@@ -464,11 +510,222 @@
 		</div>
 	</button>
 </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
                 </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-clause-box-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-clause-box-group" id="nb-clause-box-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-clause-box-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-clause-box-group" id="nb-clause-box-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-clause-box-bp-final">&lt;576px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <p class="">Apply your brand specific <strong>colours, borders and icons</strong> to the base clause / regulation boxes shown below.</p>
+
+
+
+                            <h3>Default clause /regulation box</h3>
+                            
+                            <div class="pb-5">
+                                <div class="bga-component-wrapper">
+    <div class="bga-component clause-box non-branded nb-background  m-0">
+
+        <div class="p-4 component-content h-100">
+
+            
+
+            <div class="header mb-4">
+
+                <div class="title remove-element-padding me-4">
+                    <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-document-blueblack.svg alt="" /></div>
+
+                    
+                    <p><strong>Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em></strong></p>
+                    
+
+                </div>
+
+                
+            </div>
+
+            <div class="component-text remove-element-padding">
+
+                
+                    <p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>
+                
+
             </div>
         </div>
+
+
+    </div>
+</div>
+                            </div>
+
+                            <h3>Clause / regulation box with mandatory include tag</h3>
+                            
+                            <div class="pb-5">
+                                <form>
+                                    <div class="col-12 mb-5 p-0 form-example clause-box-include">
+                                        <label for="" class="form-label mb-3">What is the employee's position title?</label>
+                                        <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
+                                        <input type="text" class="form-control clause-box-input mb-0" id="position-title-2">
+                                        
+                                    </div>
+                                </form>
+                            <div class="bga-component-wrapper">
+    <div class="bga-component clause-box non-branded nb-background position-title-2 m-0">
+
+        <div class="p-4 component-content h-100">
+
+            
+
+            <div class="header mb-4">
+
+                <div class="title remove-element-padding me-4">
+                    <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-document-blueblack.svg alt="" /></div>
+
+                    
+                    <p><strong>Position title clause</strong></p>
+                    
+
+                </div>
+
+                
+                <div class="tag mandatory"><span>Included</span>
+                    <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="15" height="11.866" viewBox="0 0 15 11.866">
+                    <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z" fill="#fff"/>
+                  </svg>
+                  </div>
+                
+            </div>
+
+            <div class="component-text remove-element-padding">
+
+                
+                    <p>You are being employed in the position of <span>[position title]</span>.</p>
+                
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+                            </div>
+
+                            <h3>Clause / regulation box with optional include tag</h3>
+
+                            <div class="pb-5">
+                            <div class="bga-component-wrapper">
+    <div class="bga-component clause-box non-branded nb-background probation-period-2 m-0">
+
+        <div class="p-4 component-content h-100">
+
+            
+            <form class="mb-4">
+                <div class="col-12 p-0 form-example checkboxes clause-box-include">
+                    <input class="checkbox clause-box-input m-0" type="checkbox" role="checkbox"
+                    aria-checked="false"
+                    tabindex="0" aria-labelledby="probation-period-2" id="probation-period-2">
+                    <label for="probation-period-2" class="form-label mb-3">Include Probation period clause (optional)</label> 
+                </div>
+            </form>
+            
+
+            <div class="header mb-4">
+
+                <div class="title remove-element-padding me-4">
+                    <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-document-blueblack.svg alt="" /></div>
+
+                    
+                    <p><strong>Probation period clause</strong></p>
+                    
+
+                </div>
+
+                
+                <div class="tag optional"><span>Optional to include</span>
+                    <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="15" height="11.866" viewBox="0 0 15 11.866">
+                    <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z" fill="#fff"/>
+                  </svg>
+                  </div>
+                
+            </div>
+
+            <div class="component-text remove-element-padding">
+
+                
+                    <p>You will need to complete a <span>[number] <strong>month</strong></span> probation period. During this time, we will assess your performance.</p><p>If we end your employment during the probation period, we will provide written notice according to the notice clause in this contract.</p>
+                
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
 
 
 

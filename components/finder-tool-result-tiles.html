@@ -246,15 +246,59 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-         <!-- Breakpoint radio buttons -->
-         <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="result-tile-group">
+        <fieldset id="bga-result-tile-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -267,15 +311,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="result-tile-group" id="result-tile-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="result-tile-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-result-tile-group" id="bga-result-tile-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-result-tile-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="result-tile-group" id="result-tile-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="result-tile-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-result-tile-group" id="bga-result-tile-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-result-tile-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -295,13 +339,13 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Grants and programs search tile</h3>
-                <div class="search-tile open-grant grants-finder-tool mb-5">
+                            <h3>Grants and programs search tile</h3>
+                            <div class="search-tile open-grant grants-finder-tool mb-5">
 
     <div class="component-text p-4 remove-element-padding">
 
@@ -321,9 +365,9 @@
 
         
         <p class="description">Live Performance Support Program TAS
-                The Live Performance Support Program provides funding guarantees to arts organisations, festival
-                organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
-                and other venues throughout 2021.</p>
+                            The Live Performance Support Program provides funding guarantees to arts organisations, festival
+                            organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
+                            and other venues throughout 2021.</p>
         
 
         
@@ -351,9 +395,9 @@
     <div class="apply-details">
         <div class="apply-details-content p-4 remove-element-padding">
             <p><strong>Who is this for?</strong></p>
-                    <p>Businesses who employ people registered with a Disability Service provider.</p>
-                    <p><strong>What you get?</strong></p>
-                    <p>Funding of up to $1650.</p>
+                                <p>Businesses who employ people registered with a Disability Service provider.</p>
+                                <p><strong>What you get?</strong></p>
+                                <p>Funding of up to $1650.</p>
         </div>
         <button class="apply-btn p-4">Who can apply?
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
@@ -366,9 +410,9 @@
     
 
 </div>
-                
-                <h3>Advisers search tile</h3>
-                <div class="search-tile adviser-finder-tool mb-5">
+                            
+                            <h3>Advisers search tile</h3>
+                            <div class="search-tile adviser-finder-tool mb-5">
 
     <div class="component-text p-4 remove-element-padding">
 
@@ -416,10 +460,10 @@
     
 
 </div>
-               
+                        
 
-                <h3>Events search tile - in person events</h3>
-                <div class="events-tile events-finder-tool in-person-event mb-5">
+                            <h3>Events search tile - in person events</h3>
+                            <div class="events-tile events-finder-tool in-person-event mb-5">
 
     <div class="delivery-type remove-element-padding py-3 px-4">
         <h3 class="d-flex align-items-center"><img class="me-3" src='../assets/icon-events-in-person.svg' | relative_url  alt="" /><strong>Workshop for ACT businesses</strong></h3>
@@ -486,8 +530,8 @@
 </div>
 
 
-                <h3>Events search tile - online events</h3>
-                <div class="events-tile events-finder-tool online-event mb-5">
+                            <h3>Events search tile - online events</h3>
+                            <div class="events-tile events-finder-tool online-event mb-5">
 
     <div class="delivery-type remove-element-padding py-3 px-4">
         <h3 class="d-flex align-items-center"><img class="me-3" src='../assets/icon-events-online.svg' | relative_url  alt="" /><strong>Webinar for ACT businesses</strong></h3>
@@ -552,17 +596,17 @@
 </div>
 
 
-            </div>
-        </div>
+                        </div>
+                    </div>
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Tag and icon variations</h3>
-                <div class="row">
+                            <h3>Tag and icon variations</h3>
+                            <div class="row">
 
-                    <div class="col-12 col-md-6">
-                        <div class="search-tile  mb-5">
+                                <div class="col-12 col-md-6">
+                                    <div class="search-tile  mb-5">
 
     <div class="component-text p-4 remove-element-padding">
 
@@ -598,10 +642,10 @@
     
 
 </div>
-                    </div>  
+                                </div>  
 
-                    <div class="col-12 col-md-6">
-                        <div class="search-tile open-grant mb-5">
+                                <div class="col-12 col-md-6">
+                                    <div class="search-tile open-grant mb-5">
 
     <div class="component-text p-4 remove-element-padding">
 
@@ -637,10 +681,10 @@
     
 
 </div>
-                    </div>
+                                </div>
 
-                    <div class="col-12 col-md-6">
-                        <div class="search-tile soon-grant mb-5">
+                                <div class="col-12 col-md-6">
+                                    <div class="search-tile soon-grant mb-5">
 
     <div class="component-text p-4 remove-element-padding">
 
@@ -676,10 +720,10 @@
     
 
 </div>
-                    </div>
+                                </div>
 
-                    <div class="col-12 col-md-6">
-                        <div class="search-tile closed-grant mb-5">
+                                <div class="col-12 col-md-6">
+                                    <div class="search-tile closed-grant mb-5">
 
     <div class="component-text p-4 remove-element-padding">
 
@@ -715,11 +759,264 @@
     
 
 </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-result-tile-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-result-tile-group" id="nb-result-tile-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-result-tile-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-result-tile-group" id="nb-result-tile-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-result-tile-bp-final">&lt;576px</label>
+
                 </div>
 
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            
+                            <p class="">Apply your brand specific <strong>colours, borders, tags and button styles</strong> to the base finder tool tiles shown below.</p>
+
+
+
+                            <h3>Grants and programs search tile</h3>
+                            <div class="search-tile open-grant grants-finder-tool non-branded nb-border mb-5">
+
+    <div class="component-text p-4 remove-element-padding">
+
+        
+        <div class="top-section">
+            <p class="label"><strong>Grant or program name</strong></p>
+
+            
+            <button class="shortlist-btn">Add to shortlist</button>
+            
         </div>
+        
+
+        
+        <h3 class="tile-title pt-0"><a href="">Lorem ipsum dolor sit amet constetur</a></h3>
+        
+
+        
+        <p class="description">Live Performance Support Program TAS
+                            The Live Performance Support Program provides funding guarantees to arts organisations, festival
+                            organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
+                            and other venues throughout 2021.</p>
+        
+
+        
+
+        
+
+
+        
+        <div class="tag-wrapper align-items-center d-flex">
+            <div class="tag d-inline-flex align-items-center remove-element-padding me-3">
+                <div class="icon d-flex me-2">
+                    <img src='../assets/icon-tick-box-green.svg' | relative_url  alt="" />
+                </div>
+                <p>Open</p>
+            </div>
+            <div class="timeframe remove-element-padding">
+                <p><strong>Closing in 12 days</strong></p>
+            </div>
+        </div>
+        
+
+    </div>
+
+    
+    <div class="apply-details">
+        <div class="apply-details-content p-4 remove-element-padding">
+            <p><strong>Who is this for?</strong></p>
+                                <p>Businesses who employ people registered with a Disability Service provider.</p>
+                                <p><strong>What you get?</strong></p>
+                                <p>Funding of up to $1650.</p>
+        </div>
+        <button class="apply-btn p-4">Who can apply?
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <path data-name="Path 9539" d="M614-1182.972,607.982-1189,606-1187.014l8,8.014,8-8.014L620.018-1189Z" transform="translate(622 -1179) rotate(180)" fill="#333" fill-rule="evenodd"/>
+              </svg>
+              
+              
+        </button>
+    </div>
+    
+
+</div>
+                            
+                            <h3>Advisers search tile</h3>
+                            <div class="search-tile adviser-finder-tool non-branded nb-border mb-5">
+
+    <div class="component-text p-4 remove-element-padding">
+
+        
+        <div class="top-section">
+            <p class="label"><strong>Federal government</strong></p>
+
+            
+        </div>
+        
+
+        
+        <h3 class="tile-title pt-0"><a href="">Fair Work Ombudsman Small Business Helpline</a></h3>
+        
+
+        
+        <p class="description">The Small business helpline provides workplace advice on managing your employees and meeting your employer obligations.</p>
+        
+
+        
+        <p class="services mb-2"><strong>Services offered over the phone and online.</strong></p>
+        
+
+        
+            <p class="cost"><strong>Cost:</strong> Free</p>
+        
+
+
+        
+        <div class="tag-wrapper align-items-center d-flex">
+            <div class="tag d-inline-flex align-items-center remove-element-padding me-3">
+                <div class="icon d-flex me-2">
+                    <img src='../assets/icon-pin-black.svg' | relative_url  alt="" />
+                </div>
+                <p><strong>Service area:</strong> Australia wide</p>
+            </div>
+            <div class="timeframe remove-element-padding">
+                <p><strong></strong></p>
+            </div>
+        </div>
+        
+
+    </div>
+
+    
+
+</div>
+                        
+
+                            <h3>Events search tile - in person events</h3>
+                            <div class="events-tile events-finder-tool in-person-event non-branded nb-background mb-5">
+
+    <div class="delivery-type remove-element-padding py-3 px-4">
+        <h3 class="d-flex align-items-center"><img class="me-3" src='../assets/icon-events-in-person.svg' | relative_url  alt="" /><strong>Workshop for ACT businesses</strong></h3>
+    </div>
+
+    <div class="component-text p-4 remove-element-padding">
+
+        <h3 class="tile-title mb-3 pt-0">Lunch and learn: Designing your team culture</h3>
+
+        <div class="date-time mb-2 d-flex">
+            <p class="m-0 pe-4"><strong>Monday 10 Aug 2022</strong></p>
+            <p class="m-0"><strong>11:00 AM - 12:30 PM AEST</strong></p>
+        </div>
+
+        <div class="location-cost mb-4 d-flex">
+            <p class="m-0 pe-4"><strong>Location: </strong>Shepparton, VIC</p>
+            <p class="m-0"><strong>Cost: </strong>Free</p>
+        </div>
+
+        <div class="event-details p-3 mb-4">
+            
+            <p class="description">This workshop provides ACT businesses with tips and tools to help them build a strong team and healthy workplace culture.</p>
+
+            <button tabindex="0" class="read-more-btn d-flex align-items-center p-0"><span>Read more</span><svg class="ms-2" data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                    <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
+                  </svg>
+                  
+            </button>
+
+            <div class="read-more-content pt-3 remove-element-padding">
+                <div class="highlighted-info pt-3 mb-3">
+                   
+                    <p><strong>Speaker: </strong>Bronwyn Brown</p>
+                    <p><strong>Event organiser: </strong>Canberra Innovation Network</p>
+                    
+                    
+                        <p><strong>Address: </strong>Canberra Innovation Network, Level 5, 1 Moore Street, Canberra, ACT, 2601</p>
+                    
+                </div>
+
+                <p>Vestibulum eget tincidunt ligula. Fusce vestibulum imperdiet mi, sed lobortis lectus sagittis vel. Donec ut neque at est sodales pretium. Suspendisse molestie orci nulla, quis sagittis mi ornare ut.</p><p>Nam rutrum vulputate dui, eu mattis lorem facilisis vitae. Praesent consequat quis nunc vitae blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nibh tortor, scelerisque at viverra eget, tincidunt eu elit. Etiam eu egestas components/download-list.htmlaugue. Donec viverra pharetra vulputate. Nulla eu vestibulum est, vel tempor tellus. Donec bibendum tortor rhoncus, vestibulum quam nec, pulvinar eros. Nullam ac dignissim tellus. Quisque ac ante quis elit mollis varius eu vitae eros. Donec aliquam finibus metus, quis dapibus dui sagittis id. Pellentesque tincidunt velit eget elit ultricies hendrerit.</p>
+
+            <button tabindex="0" class="d-flex align-items-center close-btn p-0">
+                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8,9.6,1.6,16,0,14.4,6.4,8,0,1.6,1.6,0,8,6.4,14.4,0,16,1.6,9.6,8,16,14.4,14.4,16Z" fill="#2e6cb9"/></svg>Close</button>    
+            </div>
+
+        </div>
+
+        <div class="registration d-flex align-items-center remove-element-padding">
+            <div class="button-example me-3">
+                <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">Register
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path d="M0,16V0H7V2H2V14H14V9h2v7ZM6.293,8.293,12.586,2H10V0h6V6H14V3.414L7.707,9.707ZM14,2h0Z" />
+                </svg>
+            </button>
+            </div>
+            <p><strong>Register for this event though Canberra Innovation Network</strong></p>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
 
 
         <!-- Design specifications link -->
