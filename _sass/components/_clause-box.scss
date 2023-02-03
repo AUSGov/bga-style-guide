@@ -1,4 +1,4 @@
-.clause-box {
+.bga-component.clause-box {
 
     form {
         border-bottom: solid 1px $bga-blue-black-mid;
@@ -158,6 +158,93 @@
         .component-content {
             background: $bga-teal-highlight-light;
             border-left: solid 8px $bga-teal-highlight-dark;
+        }
+    }
+
+    &.non-branded {
+        form {
+            border-bottom: solid 1px $bga-black;
+            
+            label {
+                border: solid 3px $nb-grey-light;
+            }
+            .checkboxes [type=checkbox] {
+    
+                &:focus {
+                    
+                    + label {
+                        border: $nb-grey-light solid 3px;
+                    }
+                }
+                &:focus-visible + label {
+                    border-color: $nb-blue-links;
+                }
+            }
+        }
+        .component-content {
+            background: $nb-grey-light;
+        }
+        .icon-wrapper {
+            background: $nb-grey-light url(../assets/img-icon-placeholder.svg) no-repeat;
+            border-radius: 0;
+            width: 56px;
+            height: 56px;
+
+            img {
+                display: none;
+            }
+        }
+        .tag {
+            background: $bga-white;
+            border-color: $bga-white;
+            color: $bga-black;
+            border-radius: 8px;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+            
+            &.optional {
+                color: $bga-black;
+                border-color: $bga-white;
+            }
+           
+            svg {
+                display: none;
+            }
+        }
+        .component-text {
+            a {
+                color: $nb-blue-links;
+               
+                &:focus-visible {
+                    border-color: $nb-blue-links;
+                    color: $nb-blue-links;
+                }
+    
+                &:hover {
+                    color: $nb-blue-links;
+                }
+                
+            }
+        }
+        &.added {
+            .tag {
+                background: $bga-black;
+                border-color: $bga-black;
+                color: $bga-white;
+            }
+    
+            .component-text {
+                span {
+                    background-color: $nb-grey-light;
+                }
+            }
+    
+            &.highlight {
+                .component-text {
+                    span {
+                        background-color: $nb-grey-mid;
+                    }
+                }
+            }
         }
     }
 

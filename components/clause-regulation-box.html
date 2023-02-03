@@ -32,82 +32,173 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-            sm-visibility="true"
-            final-visibility="true"
-            breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="bga-clause-box"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
 
-                <h3>Default clause /regulation box</h3>
-                
-                <div class="pb-5">
-                    {% include component-examples/clause-box-example.html
-                    title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
-                    content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
-                    classes="teal"
-                %}
-                </div>
+                    <!-- Component example -->
 
-                <h3>Clause / regulation box with mandatory include tag</h3>
-                
-                <div class="pb-5">
-                    <form>
-                        <div class="col-12 mb-5 p-0 form-example clause-box-include">
-                            <label for="{{include.id}}" class="form-label mb-3">What is the employee's position title?</label>
-                            <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
-                            <input type="text" class="form-control clause-box-input mb-0" id="position-title">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>Default clause /regulation box</h3>
                             
+                            <div class="pb-5">
+                                {% include component-examples/clause-box-example.html
+                                title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
+                                content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
+                                classes="teal"
+                            %}
+                            </div>
+
+                            <h3>Clause / regulation box with mandatory include tag</h3>
+                            
+                            <div class="pb-5">
+                                <form>
+                                    <div class="col-12 mb-5 p-0 form-example clause-box-include">
+                                        <label for="{{include.id}}" class="form-label mb-3">What is the employee's position title?</label>
+                                        <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
+                                        <input type="text" class="form-control clause-box-input mb-0" id="position-title">
+                                        
+                                    </div>
+                                </form>
+                            {% include component-examples/clause-box-example.html
+                                title="Position title clause"
+                                tag="Included"
+                                tag-type="mandatory"
+                                content="<p>You are being employed in the position of <span>[position title]</span>.</p>"
+                                id="position-title"
+                            %}
+                            </div>
+
+                            <h3>Clause / regulation box with optional include tag</h3>
+
+                            <div class="pb-5">
+                            {% include component-examples/clause-box-example.html
+                                title="Probation period clause"
+                                tag="Optional to include"
+                                tag-type="optional"
+                                input-label="Include Probation period clause (optional)"
+                                content="<p>You will need to complete a <span>[number] <strong>month</strong></span> probation period. During this time, we will assess your performance.</p><p>If we end your employment during the probation period, we will provide written notice according to the notice clause in this contract.</p>"
+                                id="probation-period"
+                            %}
+                            </div>
+
                         </div>
-                    </form>
-                {% include component-examples/clause-box-example.html
-                    title="Position title clause"
-                    tag="Included"
-                    tag-type="mandatory"
-                    content="<p>You are being employed in the position of <span>[position title]</span>.</p>"
-                    id="position-title"
-                %}
-                </div>
-
-                <h3>Clause / regulation box with optional include tag</h3>
-
-                <div class="pb-5">
-                {% include component-examples/clause-box-example.html
-                    title="Probation period clause"
-                    tag="Optional to include"
-                    tag-type="optional"
-                    input-label="Include Probation period clause (optional)"
-                    content="<p>You will need to complete a <span>[number] <strong>month</strong></span> probation period. During this time, we will assess your performance.</p><p>If we end your employment during the probation period, we will provide written notice according to the notice clause in this contract.</p>"
-                    id="probation-period"
-                %}
-                </div>
-
-            </div>
-        </div>
+                    </div>
 
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
+                    <div class="component-example">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            <div class="row">
 
-                    <h3>Approved icons</h3>
+                                <h3>Approved icons</h3>
 
-                    <div class="col-6 col-md-4 mb-4">
-                        {% include icon-example.html
-                        src="'../assets/icon-document.svg' | relative_url "
-                        title="Document"
-                        classes=""
-                        %}
+                                <div class="col-6 col-md-4 mb-4">
+                                    {% include icon-example.html
+                                    src="'../assets/icon-document.svg' | relative_url "
+                                    title="Document"
+                                    classes=""
+                                    %}
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
                 </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="nb-clause-box"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include non-branded-explanation.html
+                                component="clause / regulation boxes"
+                                brand-elements="colours, borders and icons"
+                            %}
+
+                            <h3>Default clause /regulation box</h3>
+                            
+                            <div class="pb-5">
+                                {% include component-examples/clause-box-example.html
+                                title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
+                                content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
+                                classes="non-branded nb-background"
+                            %}
+                            </div>
+
+                            <h3>Clause / regulation box with mandatory include tag</h3>
+                            
+                            <div class="pb-5">
+                                <form>
+                                    <div class="col-12 mb-5 p-0 form-example clause-box-include">
+                                        <label for="{{include.id}}" class="form-label mb-3">What is the employee's position title?</label>
+                                        <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
+                                        <input type="text" class="form-control clause-box-input mb-0" id="position-title-2">
+                                        
+                                    </div>
+                                </form>
+                            {% include component-examples/clause-box-example.html
+                                title="Position title clause"
+                                tag="Included"
+                                tag-type="mandatory"
+                                content="<p>You are being employed in the position of <span>[position title]</span>.</p>"
+                                id="position-title-2"
+                                classes="non-branded nb-background"
+                            %}
+                            </div>
+
+                            <h3>Clause / regulation box with optional include tag</h3>
+
+                            <div class="pb-5">
+                            {% include component-examples/clause-box-example.html
+                                title="Probation period clause"
+                                tag="Optional to include"
+                                tag-type="optional"
+                                input-label="Include Probation period clause (optional)"
+                                content="<p>You will need to complete a <span>[number] <strong>month</strong></span> probation period. During this time, we will assess your performance.</p><p>If we end your employment during the probation period, we will provide written notice according to the notice clause in this contract.</p>"
+                                id="probation-period-2"
+                                classes="non-branded nb-background"
+                            %}
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-        </div>
 
 
 

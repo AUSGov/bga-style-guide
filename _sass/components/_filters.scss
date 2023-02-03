@@ -340,6 +340,101 @@
     .mobile-counter {
         display: none;
     }
+
+    &.non-branded {
+        &.text-input {
+            border-bottom: solid 1px $nb-grey-dark;
+
+            input {
+                &:focus {
+                    border-color: $nb-blue-links;
+                }
+            }
+    
+            button {
+                background: $nb-grey-light;
+                border: solid 2px $bga-black;
+                border-radius: 8px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+    
+                &:focus-visible, &:hover {
+                    background: $nb-grey-light;
+                    color: $bga-black;
+                }
+            }
+        }
+        &.checkboxes-primary {
+            .checkbox-item {
+                border-bottom: solid 1px $nb-grey-dark;
+            
+                input {
+                    &:checked {
+                        background-color: $bga-black;
+                        border-color: $bga-black;
+                    }
+                }
+             }
+        }
+        &.checkboxes-secondary {
+            .filter-item {
+                border-bottom: solid 1px $nb-grey-dark;
+            }
+        }
+        .active-filters ul {
+            li {
+                background-color: $nb-grey-mid ;
+                border: 1px solid $nb-grey-mid;
+                border-radius: 8px;
+            }
+        }
+        &.toggle-switch {
+            .filter-item {
+                border-bottom: solid 1px $nb-grey-dark;
+            }
+            .custom-control-label {
+                &:before {
+                    background: $nb-grey-mid;
+                }
+                &:after {
+                    border: solid 2px $bga-black;
+                }
+            }
+        }
+        &.single-select {
+            border-bottom: solid 1px $nb-grey-dark;
+    
+            select {    
+                &:focus, &:focus-visible {
+                    border-color: $nb-blue-links;
+                }
+            }
+        }
+        .name-search {
+            background: $nb-grey-mid;
+           
+            input {
+                &:focus, &:focus-visible {
+                    border-color: $nb-blue-links;
+                }
+            }
+    
+            button {
+                background-color: $bga-black;
+    
+                &:focus, &:focus-visible {
+                    background: url(../assets/icon-search-white.svg) $bga-black no-repeat;
+                    background-position: center center;
+                    border-color: $nb-blue-links;
+                }
+                &:hover, &:active {
+                    background: url(../assets/icon-search-white.svg) $bga-black no-repeat;
+                    background-position: center center;
+                }
+    
+            }
+        }
+    }
 }
 
 .mobile-filter-toggle {
@@ -487,6 +582,11 @@
             &.not-empty {
                 width: 19px;
                 height: 19px;
+            }
+        }
+        &.non-branded {
+            .mobile-counter {
+                background: $bga-black;
             }
         }    
     }
