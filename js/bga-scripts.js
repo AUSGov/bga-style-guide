@@ -166,12 +166,13 @@ $(document).ready(function () {
     // IN PAGE TABS
     $('.section-tabs .tab').on('click', function () {
         var section = $(this).attr('data-tab');
+        console.log(section);
 
         $(this).addClass('selected');
-        $('.tab').not(this).removeClass('selected');
+        $('.section-tabs .tab').not(this).removeClass('selected');
 
         $('.tab-section').removeClass('selected');
-        $("." + section).addClass('selected');
+        $(".tab-section." + section).addClass('selected');
 
     });
 
@@ -179,7 +180,7 @@ $(document).ready(function () {
         var section = $(this).val();
 
         $('.tab-section').removeClass('selected');
-        $("." + section).addClass('selected');
+        $(".tab-section." + section).addClass('selected');
     });
 
     $(window).resize(function () {
@@ -1239,6 +1240,7 @@ $(document).ready(function () {
 
         // Toggle switch
         if ($(this).parents('.filters').hasClass('toggle-switch')) {
+            console.log(item_value);
             $('#' + item_value).prop("checked", false);
             $(this).parents('.toggle-switch').removeClass('selected');
         }
@@ -1287,16 +1289,17 @@ $(document).ready(function () {
 
     // toggle switch
     $('.filters.toggle-switch input').on('click', function () {
-        var item_value = $(this).attr('id');
+        var item_value = $(this).attr('id'),
+        parent = $(this).parents('.toggle-switch');
 
-        $(this).parents('.toggle-switch').toggleClass('selected');
+       parent.toggleClass('selected');
 
         if ($(this).is(":checked")) {
-            $('li[data-value="' + item_value + '"]').addClass('selected');
-            $(this).parents('.filter-item').find('.mobile-counter').text('1').addClass('not-empty');
+            parent.find('li[data-value="' + item_value + '"]').addClass('selected');
+            parent.find('.filter-item').find('.mobile-counter').text('1').addClass('not-empty');
         } else {
-            $('li[data-value="' + item_value + '"]').removeClass('selected');
-            $(this).parents('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
+            parent.find('li[data-value="' + item_value + '"]').removeClass('selected');
+            parent.find('.filter-item').find('.mobile-counter').text('').removeClass('not-empty');
         }
     });
 
