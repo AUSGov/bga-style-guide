@@ -166,7 +166,6 @@ $(document).ready(function () {
     // IN PAGE TABS
     $('.section-tabs .tab').on('click', function () {
         var section = $(this).attr('data-tab');
-        console.log(section);
 
         $(this).addClass('selected');
         $('.section-tabs .tab').not(this).removeClass('selected');
@@ -834,7 +833,6 @@ $(document).ready(function () {
 
         // Text input
         added_text = $(this).attr('data-value');
-        console.log(added_text);
 
         if (added_text != "") {
             $('.' + clause).addClass('added highlight').find('.component-text span').text(added_text);
@@ -907,8 +905,9 @@ $(document).ready(function () {
     // Set height of sidebars
     function sidebar_fullheight() {
 
+        var full_text_height;
+        
         $('.sidebar-wrapper.fullheight').each(function () {
-    
             var question_height;
             
             if ($(window).width() > 768) {
@@ -931,7 +930,10 @@ $(document).ready(function () {
             $(this).find('.component-text').css('height', text_height + 'px');
             
             // Check if text box is in overflow. Set read more link accordingly
-            var full_text_height = $(this).find('.component-text').prop('scrollHeight');
+            if (!$(this).parents('.non-branded').length) {
+                full_text_height = $(this).find('.component-text').prop('scrollHeight');  
+            }
+ 
             if ( $(this).hasClass('extended') ){
                 $(this).find('.component-text').addClass('fixed-height');
                 $(this).find('.more-info-toggle').removeClass('hide');

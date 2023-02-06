@@ -225,13 +225,97 @@
 
         }
 
-
         .button-group {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             row-gap: 24px;
             column-gap: 24px;
+        }
+
+        &.non-branded {
+            background: $nb-grey-mid;
+
+            .component-content {
+                background: $nb-grey-light;
+            }
+            .multi-select {
+                background-image: url(../assets/icon-plus-black.svg);
+                border: none !important;
+                box-shadow: $bga-btn-boxshadow;
+                border-radius: 4px;
+    
+                &:focus-visible,  &:hover {
+                    background-image: url(../assets/icon-plus-white.svg);
+                    background-color: $bga-black;
+                }
+    
+                &.selected {
+                    background-image: url(../assets/icon-tick-white.svg);
+                    background-color: $bga-black;
+    
+                    &:focus-visible, &:hover {
+                        background-image: url(../assets/icon-tick-white.svg);
+                        background-color: $bga-black;
+                    }
+                }
+            }
+            .bga-btn {
+                background: $bga-white;
+                color: $bga-black;
+            }
+            a svg path {
+                fill: $nb-blue-links;
+            }
+            .toggle {
+                .custom-control-input {
+                    &:before {
+                        background:$nb-grey-extra-darkest;
+                    }
+                    &:after {
+                        background-image: url(../assets/icon-close-black.svg);
+                        border-color: $bga-black;
+                    }
+                    &:focus-visible {
+                        border-color: $nb-blue-links;
+                    }
+                    &:hover {
+                        &:after {
+                            background-color: $bga-black;
+                            background-image: url(../assets/icon-close-white.svg);
+                            border-color: $bga-black;
+                        }
+                    }
+                }
+                &.selected {
+                    .custom-control-input {
+                        &:after {
+                            background-image: url(../assets/icon-tick-white.svg);
+                            background-color: $bga-black;
+                            border-color: $bga-black;
+                        }
+    
+                        &:hover {
+                            &:after {
+                                background-image: url(../assets/icon-tick-white.svg);
+                                background-color: $bga-black;
+                                border-color: $bga-black;
+                            }
+                        }
+                    }
+                }
+                &.toggle-primary {
+                    label {
+                        color: $bga-black;
+                    }  
+                }
+                
+                &.toggle-secondary {
+                    label {
+                        color: $bga-black;
+                    }
+                }
+            }
         }
     }
 
@@ -244,10 +328,9 @@
         .component-content {
             padding: 24px !important;
         }
-
-        h1 {
-            font-size: 2rem;
+         h1 {
             margin-left: 24px;
+            font-size: 2rem;
         }
         h2 {
             font-size: 1.75rem;
@@ -290,6 +373,29 @@
 
 @mixin guided-search-below350 () {
     .guided-search-wrapper {
+        padding: 24px 0 0 0 !important;
+
+        h1 {
+            margin-left: 24px;
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.75rem;
+        }
+        .toggle {
+            &.toggle-primary {
+                label {
+                    font-size: 1.75rem;
+                }
+            }
+            &.toggle-secondary {
+                padding-top: 8px !important;
+
+                label {
+                    padding-bottom: 0;
+                }
+            }
+        }
         .button-group {
             flex-wrap: wrap;
 

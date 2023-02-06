@@ -32,100 +32,225 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        element-string="stepped-navigation"
-        sm-visibility="true"
-        xs-visibility="true"
-        final-visibility="true"
-        breakpoint-final="350"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding py-4">
-
-                <h3 class="ms-4">Multi-select questions</h3>
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
                 
-                    {% include component-examples/guided-search-multiselect.html
-                        page-title="Tool title"
-                        question="I am interested in"
-                        description="<p class='mini'>Select one or more options</p>"
-                        start-again="true"
-                        previous="true"
-                        button="Next"
+                <div class="tab-section bga-branded selected">
 
-                        select1="Advice"
-                        select2="Concession"
-                        select3="Funding"
-                        select4="Mentorship"
-                        select5="Scholarship"
-                        select6="Subsidy"
-                        select7="Tax rebate"
-                        select8="Other"
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-guided-search"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
                     %}
 
+                    <!-- Component example -->
 
-                <h3 class="ms-4">Single select questions</h3>
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding py-4">
 
-                {% include component-examples/guided-search-singleselect.html
-                    page-title="Tool title"
-                    question="My business is in the industry of"
-                    start-again="true"
-                    previous="true"
-                    button="Next"
+                            <h3 class="ms-4">Multi-select questions</h3>
+                            
+                                {% include component-examples/guided-search-multiselect.html
+                                    page-title="Tool title"
+                                    question="I am interested in"
+                                    description="<p class='mini'>Select one or more options</p>"
+                                    start-again="true"
+                                    previous="true"
+                                    button="Next"
 
-                    select1="Accommodation and food services"
-                    select2="Administrative and support services"
-                    select3="Arts and recreation services"
-                    select4="Construction"
-                    select5="Defence"
-                    select6="Electricity, gas, water and waste services"
-                    select7="Financial and insurance services"
-                    select8="Information media and telecommunications"
-                %}
+                                    select1="Advice"
+                                    select2="Concession"
+                                    select3="Funding"
+                                    select4="Mentorship"
+                                    select5="Scholarship"
+                                    select6="Subsidy"
+                                    select7="Tax rebate"
+                                    select8="Other"
+                                %}
 
-              
 
-                <h3 class="ms-4">Toggle questions</h3>
-                
-                {% include component-examples/guided-search-toggle.html
-                    page-title="Tool title"
-                    start-again="true"
-                    previous="true"
-                    button="Next"
+                            <h3 class="ms-4">Single select questions</h3>
 
-                    toggle="I am of Aboriginal or Torres Strait Islander origin"
-                %}
+                            {% include component-examples/guided-search-singleselect.html
+                                page-title="Tool title"
+                                question="My business is in the industry of"
+                                start-again="true"
+                                previous="true"
+                                button="Next"
 
-                
+                                select1="Accommodation and food services"
+                                select2="Administrative and support services"
+                                select3="Arts and recreation services"
+                                select4="Construction"
+                                select5="Defence"
+                                select6="Electricity, gas, water and waste services"
+                                select7="Financial and insurance services"
+                                select8="Information media and telecommunications"
+                            %}
 
-                <h3 class="ms-4">Secondary toggle questions</h3>
-                
-                {% include component-examples/guided-search-singleselect.html
-                    page-title="Tool title"
-                    question="My business is in the industry of"
-                    start-again="true"
-                    previous="true"
-                    button="View results"
+                        
 
-                    select1="Accommodation and food services"
-                    select2="Administrative and support services"
-                    select3="Arts and recreation services"
-                    select4="Construction"
-                    select5="Defence"
-                    select6="Electricity, gas, water and waste services"
-                    select7="Financial and insurance services"
-                    select8="Information media and telecommunications"
+                            <h3 class="ms-4">Toggle questions</h3>
+                            
+                            {% include component-examples/guided-search-toggle.html
+                                page-title="Tool title"
+                                start-again="true"
+                                previous="true"
+                                button="Next"
 
-                    toggle="Exclude grants for all industries"
-                %}
-                
+                                toggle="I am of Aboriginal or Torres Strait Islander origin"
+                            %}
 
+                            
+
+                            <h3 class="ms-4">Secondary toggle questions</h3>
+                            
+                            {% include component-examples/guided-search-singleselect.html
+                                page-title="Tool title"
+                                question="My business is in the industry of"
+                                start-again="true"
+                                previous="true"
+                                button="View results"
+
+                                select1="Accommodation and food services"
+                                select2="Administrative and support services"
+                                select3="Arts and recreation services"
+                                select4="Construction"
+                                select5="Defence"
+                                select6="Electricity, gas, water and waste services"
+                                select7="Financial and insurance services"
+                                select8="Information media and telecommunications"
+
+                                toggle="Exclude grants for all industries"
+                            %}
+                            
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="nb-guided-search"
+                        sm-visibility="true"
+                        xs-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="350"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding py-4">
+    
+                                <h3 class="ms-4">Multi-select questions</h3>
+                                
+                                    {% include component-examples/guided-search-multiselect.html
+                                        page-title="Tool title"
+                                        question="I am interested in"
+                                        description="<p class='mini'>Select one or more options</p>"
+                                        start-again="true"
+                                        previous="true"
+                                        button="Next"
+    
+                                        select1="Advice"
+                                        select2="Concession"
+                                        select3="Funding"
+                                        select4="Mentorship"
+                                        select5="Scholarship"
+                                        select6="Subsidy"
+                                        select7="Tax rebate"
+                                        select8="Other"
+
+                                        classes="non-branded"
+                                    %}
+    
+    
+                                <h3 class="ms-4">Single select questions</h3>
+    
+                                {% include component-examples/guided-search-singleselect.html
+                                    page-title="Tool title"
+                                    question="My business is in the industry of"
+                                    start-again="true"
+                                    previous="true"
+                                    button="Next"
+    
+                                    select1="Accommodation and food services"
+                                    select2="Administrative and support services"
+                                    select3="Arts and recreation services"
+                                    select4="Construction"
+                                    select5="Defence"
+                                    select6="Electricity, gas, water and waste services"
+                                    select7="Financial and insurance services"
+                                    select8="Information media and telecommunications"
+
+                                    classes="non-branded"
+                                %}
+    
+                            
+    
+                                <h3 class="ms-4">Toggle questions</h3>
+                                
+                                {% include component-examples/guided-search-toggle.html
+                                    page-title="Tool title"
+                                    start-again="true"
+                                    previous="true"
+                                    button="Next"
+    
+                                    toggle="I am of Aboriginal or Torres Strait Islander origin"
+
+                                    classes="non-branded"
+                                %}
+    
+                                
+    
+                                <h3 class="ms-4">Secondary toggle questions</h3>
+                                
+                                {% include component-examples/guided-search-singleselect.html
+                                    page-title="Tool title"
+                                    question="My business is in the industry of"
+                                    start-again="true"
+                                    previous="true"
+                                    button="View results"
+    
+                                    select1="Accommodation and food services"
+                                    select2="Administrative and support services"
+                                    select3="Arts and recreation services"
+                                    select4="Construction"
+                                    select5="Defence"
+                                    select6="Electricity, gas, water and waste services"
+                                    select7="Financial and insurance services"
+                                    select8="Information media and telecommunications"
+    
+                                    toggle="Exclude grants for all industries"
+
+                                    classes="non-branded"
+                                %}
+                                
+    
+    
+                            </div>
+                        </div>
+
+                </div>
 
             </div>
-        </div>
 
 
         <!-- Design specifications link -->

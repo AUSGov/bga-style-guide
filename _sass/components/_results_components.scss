@@ -49,6 +49,36 @@
             width: 100%;
         }
     }
+    &.non-branded {
+        .accordion-item {
+            &:hover, &.show {
+                border-bottom: $bga-black solid 1px;
+            }
+        }
+        .accordion-button {
+            &:hover {
+                background: $nb-grey-light;
+            }
+            &:not(.collapsed) {
+    
+                &:hover {
+                    background: $nb-grey-light;
+                }
+            }
+        }
+        a {
+            &:focus-visible {
+                color: $nb-blue-links;
+                border: $nb-blue-links solid 2px;
+                border-radius: $bga-focus-radius;
+                background: transparent;
+            }
+            &:hover {
+                color: $nb-blue-links;
+                background: transparent;
+            }   
+        }
+    }
 }
 
 .edit-answers-component {
@@ -116,6 +146,42 @@
             width: 18px;
         }
     }
+
+    &.non-branded {
+        background: $nb-grey-light;
+
+        .edit-answers-toggle {
+            background: $nb-grey-mid;
+        }
+        .answers-section {
+            border-bottom-color:  $nb-grey-darkest;
+        }
+        .answers {
+            p {
+                border-bottom-color: $nb-grey-darkest;
+            }  
+        }
+        .edit-btn {
+            color: $nb-blue-links;
+            border-bottom: 1px solid $nb-blue-links;
+    
+            svg {
+                path {
+                    fill: $nb-blue-links;
+                }
+            }
+            &:focus-visible {
+                color: $nb-blue-links;
+                border: $nb-blue-links solid 2px;
+                border-radius: $bga-focus-radius;
+                background: transparent;
+            }
+            &:hover {
+                color: $nb-blue-links;
+                background: transparent;
+            }   
+        }
+    }
 }
 
 .results-edit-answers-component {
@@ -154,6 +220,32 @@
     &.no-btn {
         .edit-btn {
             display: none;
+        }
+    }
+
+    &.non-branded {
+        .title-area {
+            background: $nb-grey-light;
+        }
+        .edit-btn {
+            color: $nb-blue-links;
+            border-bottom: 1px solid $nb-blue-links;
+    
+            svg {
+                path {
+                    fill: $nb-blue-links;
+                }
+            }
+            &:focus-visible {
+                color: $nb-blue-links;
+                border: $nb-blue-links solid 2px;
+                border-radius: $bga-focus-radius;
+                background: transparent;
+            }
+            &:hover {
+                color: $nb-blue-links;
+                background: transparent;
+            }   
         }
     }
 }
@@ -217,6 +309,9 @@
                     text-align: left;
                 }
             }
+        }
+        .edit-btn {
+            min-height: auto;
         }
     }
 

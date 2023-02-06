@@ -1,5 +1,4 @@
 .start-component-wrapper {
-    
     border: $bga-component-border;
 
     .bga-component {
@@ -37,6 +36,34 @@
         .bga-component {
             margin-bottom: 0 !important;
             background: $bga-white;
+        }
+    }
+
+    &.non-branded {
+        border: none;
+        &.tool-header {
+            background: $nb-grey-dark;
+
+            .bga-component {
+                background: $bga-white;
+            }
+        }
+
+        .bga-component {
+            background: $nb-grey-light;
+            border-left: none;
+
+            .additional-info {
+                background: $nb-grey-mid;
+
+                svg {
+                    display: none;
+                }
+            } 
+        }
+        .bga-btn  {
+            background: $bga-white;
+            color: $bga-black;
         }
     }
     
@@ -78,6 +105,21 @@
                 background: $bga-white;
             }
         }
+
+        &.non-branded {
+            &.tool-header {
+                background: $nb-grey-dark;
+                .bga-component {
+                    background: $nb-grey-light;
+                }
+            }
+            .bga-component {
+                background: $nb-grey-light;
+                .additional-info { 
+                    background: transparent;
+                } 
+            }
+        }
     }
 }
 
@@ -103,6 +145,7 @@
                 background: transparent;
             }
         }
+        
     }
 }
 

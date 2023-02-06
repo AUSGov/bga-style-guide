@@ -122,6 +122,53 @@
             display: none;
         }        
     }
+
+    &.non-branded {
+        .component-text {
+            &.fixed-height {
+                &::after {
+                    background: linear-gradient(0deg, rgba(232,232,232, 1) 30%, rgba(207, 235, 235, 0) 100%);
+                }
+            }
+        }
+        .more-info-toggle {
+            color: $nb-blue-links;
+
+            svg path {
+                fill: $nb-blue-links;
+            }
+    
+            &:focus-visible {
+                border-color: $nb-blue-links;
+            }
+            &:hover {
+                background: transparent;
+            }
+        }
+        .mobile-chat button {
+            border: solid 2px $bga-black;
+            background: url(../assets/Img-icon-placeholder.svg)$nb-grey-light no-repeat !important;
+            background-position: top 10px center !important;
+            background-size: 27px !important;
+            border-radius: 8px;
+    
+            &:focus-visible {
+                border-color: $nb-blue-links;
+                color: $bga-black;
+            }
+            &:hover {
+                border-color: $bga-black;
+                color: $bga-black;
+                background: $nb-grey-lightest;
+            }
+        }
+    }
+}
+.clear-progress-link svg.non-branded {
+    background: none;
+    path {
+        fill: $nb-blue-links;
+    }
 }
 
 @mixin sidebar-below768 {
