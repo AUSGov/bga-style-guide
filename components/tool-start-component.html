@@ -32,47 +32,116 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        element-string="hero-pathway"
-        md-visibility="true"
-        sm-visibility="true"
-        final-visibility="true"
-        breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-
-
-                <h3>Start component within a tool header</h3>
-
-                {% include component-examples/start-component-example.html
-                    page-title="Grants and programs finder"
-                    title="How this tool can help you"
-                    description="<p>If you’re doing business in Australia, this guided search will help you find grants, funding and support programs from across government.</p><p>Answer a few questions about your business to find grants and programs you may be eligible for.</p>"
-                    time="Less than 5 minutes"
-                    classes="tool-header"
-                %}
-
-
-                <h3>Start component in page content</h3>
-                <p><strong>Note: border is optional. It should be used when the coloured start box needs to be visually grouped with content below.</strong></p>
-                {% include component-examples/start-component-example.html
-                    title="Who can use this tool"
-                    description="<p>Use this tool if you are working on a development or major project. It will help you understand which Government approvals you need.</p>"
-                    time="Around 10 minutes"
-                    need="<h3>What you’ll need</h3><p>You don’t need any documentation up front to use this tool.</p>"
-                    get="<h3>What you'll get</h3><p>This tool can help you work out:</p><ul class='remove-element-padding pb-0'><li>the Australian Government approvals you need, and
-                    </li><li>the approvals process you must consider</li></ul>"
-                %}
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
                 
+                <div class="tab-section bga-branded selected">
 
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-tool-start"
+                    md-visibility="true"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+
+                            <h3>Start component within a tool header</h3>
+
+                            {% include component-examples/start-component-example.html
+                                page-title="Grants and programs finder"
+                                title="How this tool can help you"
+                                description="<p>If you’re doing business in Australia, this guided search will help you find grants, funding and support programs from across government.</p><p>Answer a few questions about your business to find grants and programs you may be eligible for.</p>"
+                                time="Less than 5 minutes"
+                                classes="tool-header"
+                            %}
+
+
+                            <h3>Start component in page content</h3>
+                            <p><strong>Note: border is optional. It should be used when the coloured start box needs to be visually grouped with content below.</strong></p>
+                            {% include component-examples/start-component-example.html
+                                title="Who can use this tool"
+                                description="<p>Use this tool if you are working on a development or major project. It will help you understand which Government approvals you need.</p>"
+                                time="Around 10 minutes"
+                                need="<h3>What you’ll need</h3><p>You don’t need any documentation up front to use this tool.</p>"
+                                get="<h3>What you'll get</h3><p>This tool can help you work out:</p><ul class='remove-element-padding pb-0'><li>the Australian Government approvals you need, and
+                                </li><li>the approvals process you must consider</li></ul>"
+                            %}
+                            
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="nb-tool-start"
+                        md-visibility="true"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+    
+                                {% include non-branded-explanation.html
+                                    component="start components"
+                                    brand-elements="colours, borders, icons and button styles"
+                                %}
+    
+                                <h3>Start component within a tool header</h3>
+    
+                                {% include component-examples/start-component-example.html
+                                    page-title="Grants and programs finder"
+                                    title="How this tool can help you"
+                                    description="<p>If you’re doing business in Australia, this guided search will help you find grants, funding and support programs from across government.</p><p>Answer a few questions about your business to find grants and programs you may be eligible for.</p>"
+                                    time="Less than 5 minutes"
+                                    classes="tool-header non-branded"
+                                %}
+    
+    
+                                <h3>Start component in page content</h3>
+                                
+                                {% include component-examples/start-component-example.html
+                                    title="Who can use this tool"
+                                    description="<p>Use this tool if you are working on a development or major project. It will help you understand which Government approvals you need.</p>"
+                                    time="Around 10 minutes"
+                                    need="<h3>What you’ll need</h3><p>You don’t need any documentation up front to use this tool.</p>"
+                                    get="<h3>What you'll get</h3><p>This tool can help you work out:</p><ul class='remove-element-padding pb-0'><li>the Australian Government approvals you need, and
+                                    </li><li>the approvals process you must consider</li></ul>"
+                                    classes="non-branded nb-border"
+                                %}
+                                
+    
+    
+                            </div>
+                        </div>
+
+                </div>
 
             </div>
-        </div>
 
 
         <!-- Design specifications link -->

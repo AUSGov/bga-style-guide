@@ -32,68 +32,165 @@ classes="in-page"
         <!-- DESIGN -->   
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-            sm-visibility="true"
-            final-visibility="true"
-            breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-            
-            <h3>Results accordion</h3>
-            {% include component-examples/results-accordion-example.html
-
-                layout-name="accordion"
-
-                item1="true"
-                item2="true"
-
-                title1="Foreign Acquisitions and Takeovers Act 1975"
-                subtitle1="(because your project will involve foreign investors)"
-                
-                content1="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p>
-                <p>For more information see the <a tabindex='0' href=''>fact sheet</a>.</p>
-                <p>Relevant authority: <a tabindex='0' href=''>Foreign Investment Review Board</a></p>"
-                
-                title2="The Security Of Critical Infrastructure Act 2018"
-                subtitle2="(because your project will have investment or third party contractual arrangements in Australia’s critical infrastructure)"
-
-                content2="<p>If your project involves foreign involvement in Australia’s critical infrastructure through investment, third party contractual arrangements and supply chains, you must comply with this Act.</p>
-                <p>For more information see the <a tabindex='0' href=''>fact sheet</a>.</p>
-                <p>Relevant authority: <a tabindex='0' href=''>Department of Home Affairs</a></p>"
-
-                %}
-
-            <h3>Edit answers component</h3>
-            {% include component-examples/edit-answers-example.html
-                title1="Investment approvals"
-                content1="<p>Will your project involve foreign investors?<span>No</span></p><p>Will your project involve capital expenditure over AUD $500 million?<span>Yes</span></p>"
-
-                title2="Location"
-                content2="<p>Where will your project take place?<span>Both on land and at sea</span></p>"
-
-                title3="Import and export"
-                content3="<p>Will your project involve importing or exporting goods?<span>No</span></p>"
-
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
-
-
-            <h3>Combined results and edit component</h3>
-                {% include component-examples/results-and-edit-example.html
-                    title="Our competitors"
-                    content="<h4>Competitor 1</h4><p>Lorem ipsum dolor sit amet, consetetur</p><h4>What they do well</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p><h4>What we do differently</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>"
-                %}
+    
+            <div class="tab-sections-wrapper p-4">
                 
-           
-  
-            </div>
+                <div class="tab-section bga-branded selected">
 
-        </div>
- 
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="bga-tools"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                        
+                        <h3>Results accordion</h3>
+                        {% include component-examples/results-accordion-example.html
+
+                            layout-name="accordion"
+
+                            item1="true"
+                            item2="true"
+
+                            title1="Foreign Acquisitions and Takeovers Act 1975"
+                            subtitle1="(because your project will involve foreign investors)"
+                            
+                            content1="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p>
+                            <p>For more information see the <a tabindex='0' href=''>fact sheet</a>.</p>
+                            <p>Relevant authority: <a tabindex='0' href=''>Foreign Investment Review Board</a></p>"
+                            
+                            title2="The Security Of Critical Infrastructure Act 2018"
+                            subtitle2="(because your project will have investment or third party contractual arrangements in Australia’s critical infrastructure)"
+
+                            content2="<p>If your project involves foreign involvement in Australia’s critical infrastructure through investment, third party contractual arrangements and supply chains, you must comply with this Act.</p>
+                            <p>For more information see the <a tabindex='0' href=''>fact sheet</a>.</p>
+                            <p>Relevant authority: <a tabindex='0' href=''>Department of Home Affairs</a></p>"
+
+                            %}
+
+                        <h3>Edit answers component</h3>
+                        {% include component-examples/edit-answers-example.html
+                            title1="Investment approvals"
+                            content1="<p>Will your project involve foreign investors?<span>No</span></p><p>Will your project involve capital expenditure over AUD $500 million?<span>Yes</span></p>"
+
+                            title2="Location"
+                            content2="<p>Where will your project take place?<span>Both on land and at sea</span></p>"
+
+                            title3="Import and export"
+                            content3="<p>Will your project involve importing or exporting goods?<span>No</span></p>"
+
+                        %}
+
+
+                        <h3>Combined results and edit component</h3>
+                            {% include component-examples/results-and-edit-example.html
+                                title="Our competitors"
+                                content="<h4>Competitor 1</h4><p>Lorem ipsum dolor sit amet, consetetur</p><h4>What they do well</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p><h4>What we do differently</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>"
+                            %}
+                            
+                    
+            
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html 
+                        element-string="nb-tools"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                        {% include non-branded-explanation.html
+                            component="tool result components"
+                            brand-elements="colours, borders and button styles"
+                        %}
+                        
+                        <h3>Results accordion</h3>
+                        {% include component-examples/results-accordion-example.html
+
+                            layout-name="accordion"
+
+                            item1="true"
+                            item2="true"
+
+                            title1="Foreign Acquisitions and Takeovers Act 1975"
+                            subtitle1="(because your project will involve foreign investors)"
+                            
+                            content1="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p>
+                            <p>For more information see the <a tabindex='0' href=''>fact sheet</a>.</p>
+                            <p>Relevant authority: <a tabindex='0' href=''>Foreign Investment Review Board</a></p>"
+                            
+                            title2="The Security Of Critical Infrastructure Act 2018"
+                            subtitle2="(because your project will have investment or third party contractual arrangements in Australia’s critical infrastructure)"
+
+                            content2="<p>If your project involves foreign involvement in Australia’s critical infrastructure through investment, third party contractual arrangements and supply chains, you must comply with this Act.</p>
+                            <p>For more information see the <a tabindex='0' href=''>fact sheet</a>.</p>
+                            <p>Relevant authority: <a tabindex='0' href=''>Department of Home Affairs</a></p>"
+
+                            classes="non-branded"
+
+                            %}
+
+                        <h3>Edit answers component</h3>
+                        {% include component-examples/edit-answers-example.html
+                            title1="Investment approvals"
+                            content1="<p>Will your project involve foreign investors?<span>No</span></p><p>Will your project involve capital expenditure over AUD $500 million?<span>Yes</span></p>"
+
+                            title2="Location"
+                            content2="<p>Where will your project take place?<span>Both on land and at sea</span></p>"
+
+                            title3="Import and export"
+                            content3="<p>Will your project involve importing or exporting goods?<span>No</span></p>"
+
+                            classes="non-branded"
+
+                        %}
+
+
+                        <h3>Combined results and edit component</h3>
+                            {% include component-examples/results-and-edit-example.html
+                                title="Our competitors"
+                                content="<h4>Competitor 1</h4><p>Lorem ipsum dolor sit amet, consetetur</p><h4>What they do well</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p><h4>What we do differently</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>"
+
+                                classes="non-branded nb-border"
+                            %}
+                            
+                    
+            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
 
 
         <!-- Design specifications link -->

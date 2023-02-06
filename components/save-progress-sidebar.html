@@ -28,40 +28,90 @@ classes="in-page"
 
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
 
+        {% include section-tabs.html
 
-        <!-- DESIGN -->
-        <h2 class="section-start" id="design">Design</h2>
-
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html 
-            md-visibility="true"
-            final-visibility="true"
-            breakpoint-final="768"
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <!-- Component example -->
+                    <!-- DESIGN -->
+                    <h2 class="section-start" id="design">Design</h2>
 
-        <div class="component-example m-0">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="bga-save-progress"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
 
-            <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+                    <!-- Component example -->
 
-                {% include component-examples/progress-sidebar-example.html
-                title="Save your progress."
-                text="<p>Save your checklist and get a link to it – you’ll be able to continue on from where you were.</p>"
-                classes="yellow"
-                %}
+                    <div class="component-example m-0">
+
+                        <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+
+                            {% include component-examples/progress-sidebar-example.html
+                            title="Save your progress."
+                            text="<p>Save your checklist and get a link to it – you’ll be able to continue on from where you were.</p>"
+                            classes="yellow"
+                            %}
+
+                        </div>
+
+                    </div>
+
+                    <div class="component-example m-0 p-4 remove-element-padding">
+                        <h3>Sticky behaviour</h3>
+                        <h4>Desktop</h4>
+                        <p>The save your progress sidebar displays sticky behaviour when the users scrolls down the page. The sidebar is fixed in place when it is 32px from the top of the screen. The sidebar position is unfixed at the bottom of the page so it sits just above the site footer and share utilities.</p>
+                        <h4>Mobile</h4>
+                        <p>Save your progress sidebar is fixed at the bottom of the screen along with the chat button. The “clear checklist progress” link displays underneath the checklist. It is not fixed in the sidebar.</p>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="nb-save-progress"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+
+                        <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+
+                            {% include non-branded-explanation.html
+                                component="sidebar"
+                                brand-elements="colours, borders and button styles"
+                            %}
+    
+
+                            {% include component-examples/progress-sidebar-example.html
+                            title="Save your progress."
+                            text="<p>Save your checklist and get a link to it – you’ll be able to continue on from where you were.</p>"
+                            classes="non-branded nb-background"
+                            %}
+
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
-
-        </div>
-
-        <div class="component-example m-0 p-4 remove-element-padding">
-            <h3>Sticky behaviour</h3>
-            <h4>Desktop</h4>
-            <p>The save your progress sidebar displays sticky behaviour when the users scrolls down the page. The sidebar is fixed in place when it is 32px from the top of the screen. The sidebar position is unfixed at the bottom of the page so it sits just above the site footer and share utilities.</p>
-            <h4>Mobile</h4>
-            <p>Save your progress sidebar is fixed at the bottom of the screen along with the chat button. The “clear checklist progress” link displays underneath the checklist. It is not fixed in the sidebar.</p>
-        </div>
 
 
 

@@ -32,61 +32,119 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include layouts-dropdown.html
-        layout-name="All layouts"
-        singlelayout="true"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include layouts-dropdown.html
+                    layout-name="All layouts"
+                    singlelayout="true"
+                    %}
 
-                <h3>Un-named steps</h3>
-                {% include component-examples/progress-bar-example.html
-                percentage="75"
-                label="<strong>75% complete</strong>"
-                %}
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>Un-named steps</h3>
+                            {% include component-examples/progress-bar-example.html
+                            percentage="75"
+                            label="<strong>75% complete</strong>"
+                            %}
 
 
-                <h3>Named steps</h3>
-                {% include component-examples/progress-bar-example.html
-                percentage="50"
-                label="<strong>Step name:</strong> 50% complete"
-                %}
+                            <h3>Named steps</h3>
+                            {% include component-examples/progress-bar-example.html
+                            percentage="50"
+                            label="<strong>Step name:</strong> 50% complete"
+                            %}
 
 
-            </div>
+                        </div>
 
-        </div>
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <h3>Colour variations</h3>
-                <div class="row">
-                    <div class="col-12 col-sm-6">
-                        <h4>Blue</h4>
-                        {% include component-examples/progress-bar-example.html
-                        percentage="75"
-                        %}
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <h4>Teal</h4>
-                        {% include component-examples/progress-bar-example.html
-                        percentage="75" 
-                        classes="teal"
-                        %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>Colour variations</h3>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <h4>Blue</h4>
+                                    {% include component-examples/progress-bar-example.html
+                                    percentage="75"
+                                    %}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <h4>Teal</h4>
+                                    {% include component-examples/progress-bar-example.html
+                                    percentage="75" 
+                                    classes="teal"
+                                    %}
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
                     </div>
+
                 </div>
 
+                <div class="tab-section non-branded ">
+                    
+                    <!-- Breakpoint radio buttons -->
+                    {% include layouts-dropdown.html
+                        layout-name="All layouts"
+                        singlelayout="true"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+    
+                                {% include non-branded-explanation.html
+                                    component="progress bars"
+                                    brand-elements="colours"
+                                %}
+                                
+                                <h3>Un-named steps</h3>
+                                {% include component-examples/progress-bar-example.html
+                                percentage="75"
+                                label="<strong>75% complete</strong>"
+                                classes="non-branded"
+                                %}
+    
+    
+                                <h3>Named steps</h3>
+                                {% include component-examples/progress-bar-example.html
+                                percentage="50"
+                                label="<strong>Step name:</strong> 50% complete"
+                                classes="non-branded"
+                                %}
+    
+    
+                            </div>
+    
+                        </div>
 
-
-
+                </div>
 
             </div>
-
-        </div>
 
 
 
