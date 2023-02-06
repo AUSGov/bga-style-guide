@@ -481,8 +481,95 @@
 
     }
 
+    &.non-branded {
+        .checklist-toggle {
+            &:focus-visible {
+                border-color: $nb-blue-links;
+            }
+        }
+        .checklist-item-divider {
+            border-top: 1px solid $bga-black;
+        }
+        .checklist-item {
+            .checklist-item-title {
+                h2 span {
+                    border-color: $bga-black;
+                }
+                .icon-wrapper {
+                    background: transparent !important;
+                    svg path {
+                        fill: $bga-black;
+                    }
+                }
+                &:focus-visible {
+                    border-color: $nb-blue-links;
+                }
+            }
+        }
 
+        &.lightweight {
+            .checklist-item {
+                &.open {
+                    .checklist-item-title {
+                        background: $nb-grey-light;
+                        h2 {
+                            span {
+                                background: $bga-black;
+                                border-color: $bga-black;
+                            }
+                        }
+                    }
+                }
+                &:after {
+                    background: $bga-black;
+                    width: 2.5px;
+                }
+            }
+            .checklist-sub-item {
+                .checklist-item-content {
+                    background: $nb-grey-light;
+                }
+                .checklist-item-checkbox {
+                    background: $nb-grey-mid;
+                }
+            }
+            .bga-component.feature-box {
+                .component-content {
+                    border: none;
+                }
+                .icon-wrapper {
+                    background: $nb-grey-light url(../assets/img-icon-placeholder.svg) no-repeat;
+                    border-radius: 0;
+                    height: 48px;
+                    width: 48px;
 
+                    img {
+                        display: none;
+                    }
+                }
+            }
+            .inline-pathway {
+                a {
+                    background: $bga-white;
+                }
+                .link-wrapper {
+                    border: none;
+                }
+                .page {
+                    img {
+                        display: none;
+                    }
+                    &:before {
+                        content: "";
+                        width: 16px;
+                        height: 16px;
+                        background: $nb-grey-dark;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Mixins for smaller screen sizes
