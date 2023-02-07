@@ -31,20 +31,64 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        singlebp="true"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    singlebp="true"
+                    %}
 
-                {% include component-examples/video-example.html %}
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include component-examples/video-example.html %}
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        singlebp="true"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="video player"
+                                    brand-elements="colours, borders and icons"
+                                %}
+    
+                                {% include component-examples/video-example.html 
+                                    classes="non-branded"
+                                    %}
+    
+                            </div>
+                        </div>
+                    
+                </div>
 
             </div>
-        </div>
 
 
 
