@@ -48,8 +48,27 @@
         display: flex;
         align-items: center;
         justify-content: stretch;
-    }
 
+        .mejs__play {
+            button {
+                &:hover {
+                    background: transparent url(../assets/mejs-controls.svg);
+                    border: 0;
+                    cursor: pointer;
+                    display: block;
+                    font-size: 0;
+                    height: 20px;
+                    line-height: 0;
+                    margin: 10px 6px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    text-decoration: none;
+                    width: 20px;
+                }
+            }
+        }
+    }
 
     .media-transcript {
         background-color: $bga-blue-black-lightest;
@@ -376,6 +395,83 @@
         }
     }
 
+    &.non-branded {
+        .audio-player-banner {
+            background: $nb-grey-extra-darkest;
+        }
+        .audio-player-controls-background {
+            background: $bga-black;
+        }
+
+
+        .media-transcript {
+            background-color: $nb-grey-lightest;
+            border-bottom: 1px solid $bga-black;
+    
+            .media-transcript-content {
+                &:before {
+                    background: -webkit-gradient(linear,
+                            left bottom,
+                            left top,
+                            from(hsla(0, 0%, 92.2%, 0)),
+                            to($nb-grey-lightest));
+                    background: linear-gradient(0deg, hsla(0, 0%, 92.2%, 0), $nb-grey-lightest);
+                }
+                &:after {
+                    background: -webkit-gradient(linear,
+                            left top,
+                            left bottom,
+                            from(hsla(0, 0%, 92.2%, 0)),
+                            to($nb-grey-lightest));
+                    background: linear-gradient(180deg, hsla(0, 0%, 92.2%, 0), $nb-grey-lightest);
+                }
+            }
+        }
+        .media-player {
+            .media-player-player {
+                background: $nb-grey-lightest url(../assets/img-placeholder-2.svg) no-repeat;
+                background-size: cover;
+                background-position: center center;
+    
+                &:hover {
+                    .media-player-button svg .playiconWrapper {
+                        fill: $bga-black;
+                    }
+                }  
+            }
+            .media-player-button {
+                &:focus {
+                    svg {
+                        .playiconWrapper {
+                            fill: $nb-blue-links;
+                        }
+                    }
+                }
+               
+            }
+            .media-player-transcript-toggle {
+                background-color: $nb-grey-lightest;
+                border-bottom: 1px solid $bga-black;
+    
+                button {
+                    &:focus-visible {
+                        border-color: $nb-blue-links;
+                    }
+                }
+            }
+        }
+        .media-player-transcript {
+            border-bottom: 1px solid $bga-black;
+    
+            &.open {
+                border-bottom: 1px solid $bga-black;
+            }
+        } 
+        .media-player-info {
+            background-color: $nb-grey-lightest;
+            border-bottom: 1px solid $bga-black;
+        }
+    }
 
 }
 

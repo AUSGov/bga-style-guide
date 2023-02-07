@@ -31,29 +31,82 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-            md-visibility="true"
-            final-visibility="true"
-            breakpoint-final="768"
+        {% include section-tabs.html
+
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
             %}
-        <!-- Component example -->
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
+        
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="bga-audio"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Default audio player</h3>
-                {% include component-examples/audio-example.html %}
+                            <h3>Default audio player</h3>
+                            {% include component-examples/audio-example.html %}
 
-                <h3>Audio player with optional graphic</h3>
-                {% include component-examples/audio-example.html
-                classes="graphic"
-                graphic="'../assets/audio-player-placeholder.png' | relative_url"
-                %}
+                            <h3>Audio player with optional graphic</h3>
+                            {% include component-examples/audio-example.html
+                            classes="graphic"
+                            graphic="'../assets/audio-player-placeholder.png' | relative_url"
+                            %}
 
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        element-string="nb-audio"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include non-branded-explanation.html
+                                component="audio players"
+                                brand-elements="colours, borders, icons and images"
+                            %}
+
+                            <h3>Default audio player</h3>
+                            {% include component-examples/audio-example.html 
+                                classes="non-branded" 
+                                %}
+
+                            <h3>Audio player with optional graphic</h3>
+                            {% include component-examples/audio-example.html
+                            classes="graphic non-branded"
+                            graphic="'../assets/img-placeholder-1.svg' | relative_url"
+                            %}
+
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
-        </div>
 
 
 

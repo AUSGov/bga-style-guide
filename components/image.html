@@ -31,34 +31,82 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        singlebp="true"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    singlebp="true"
+                    %}
 
-                <h3>Image component with caption</h3>
+                    <!-- Component example -->
 
-                        {% include component-examples/image-example.html
-                        image="'../assets/woman_welding.jpg' | relative_url"
-                        alt-text="A woman in a workshop welding."
-                        description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
-                        quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>Image component with caption</h3>
+
+                                    {% include component-examples/image-example.html
+                                    image="'../assets/woman_welding.jpg' | relative_url"
+                                    alt-text="A woman in a workshop welding."
+                                    description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
+                                    quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                                    %}
+
+
+                                <h3>Image component without caption</h3>
+
+                                    {% include component-examples/image-example.html
+                                    image="'../assets/potter-on-computer.jpg' | relative_url"
+                                    alt-text="A female pooter in her workshop looking at a laptop computer"
+                                    %}
+                    </div>
+                    </div>
+
+                </div>
+                
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        singlebp="true"
                         %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
 
+                                {% include non-branded-explanation.html
+                                    component="image component"
+                                    brand-elements="colours"
+                                %}
+    
+                                {% include component-examples/image-example.html
+                                image="'../assets/img-placeholder-2.svg' | relative_url"
+                                alt-text="A woman in a workshop welding."
+                                description="Morbi sit amet nunc eget nisl eleifend viverra nec consequat nunc. Proin mauris
+                                quam, rhoncus feugiat euismod nec, imperdiet in lorem."
+                                classes="non-branded"
+                                %}
+    
+                        </div>
+                        </div>
 
-                    <h3>Image component without caption</h3>
+                </div>
 
-                        {% include component-examples/image-example.html
-                        image="'../assets/potter-on-computer.jpg' | relative_url"
-                        alt-text="A female pooter in her workshop looking at a laptop computer"
-                        %}
-        </div>
-    </div>
+            </div>
 
 
     <!-- Design specifications link -->
