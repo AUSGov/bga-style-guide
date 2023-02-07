@@ -31,29 +31,81 @@ subsite-tag: true
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        singlebp="true"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    singlebp="true"
+                    %}
 
-                {% include component-examples/anchor-menu-example.html
-                classes="example"
-                link-1="At a glance"
-                link-2="Who can apply"
-                link-3="Applications"
-                link-4="Contact"
-                link-5="Customer stories"
-                link-6="Key documents"
-                %}
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include component-examples/anchor-menu-example.html
+                            classes="example"
+                            link-1="At a glance"
+                            link-2="Who can apply"
+                            link-3="Applications"
+                            link-4="Contact"
+                            link-5="Customer stories"
+                            link-6="Key documents"
+                            %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        singlebp="true"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="anchor menu"
+                                    brand-elements="colours and borders"
+                                %}
+    
+                                {% include component-examples/anchor-menu-example.html
+                                classes="example"
+                                link-1="At a glance"
+                                link-2="Who can apply"
+                                link-3="Applications"
+                                link-4="Contact"
+                                link-5="Customer stories"
+                                link-6="Key documents"
+                                classes="non-branded"
+                                %}
+    
+                            </div>
+    
+                        </div>
+
+                </div>
 
             </div>
-
-        </div>
 
 
 

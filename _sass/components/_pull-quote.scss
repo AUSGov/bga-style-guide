@@ -39,10 +39,29 @@
     }
     &.no-icon {
         .quotation-mark {
-            display: none;
+            display: none !important;
         }
         blockquote {
             margin-bottom: 8px !important;
+        }
+    }
+
+    &.non-branded {
+        svg {
+            display: none;
+        }
+        .quotation-mark {
+            display: block;
+            &::before {
+                content: "";
+                background: url(../assets/Img-icon-placeholder.svg) no-repeat;
+                background-size: 32px;
+                width: 32px;
+                height: 32px;
+                display: block;
+                margin-right: 16px;
+                margin-top: 4px;
+            }
         }
     }
 }

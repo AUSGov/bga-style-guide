@@ -16,8 +16,7 @@ subsite-tag: false
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
-
+        classes="in-page"
         link-1="Design" link-id-1="#design"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
         %}
@@ -30,26 +29,74 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-       <!-- Breakpoint radio buttons -->
-       {% include breakpoints.html 
-        singlebp="true" 
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                    singlebp="true" 
+                    %}
 
-            <div class="component-wrapper p-4 remove-element-padding">
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+
+                        <div class="component-wrapper p-4 remove-element-padding">
+                                    
+                                {% include component-examples/tooltip-example.html
+                                    button="Hover on me"
+                                    msg="Opens a new tab"
+                                    classes=""
+                                    %}
                         
-                    {% include component-examples/tooltip-example.html
-                        button="Hover on me"
-                        msg="Opens a new tab"
-                        classes=""
-                        %}
-            
-            </div>
+                        </div>
 
-        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html 
+                        singlebp="true" 
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+    
+                            <div class="component-wrapper p-4 remove-element-padding">
+
+                                {% include non-branded-explanation.html
+                                    component="tooltip"
+                                    brand-elements="colours and borders"
+                                %}
+                                        
+                                {% include component-examples/tooltip-example.html
+                                    button="Hover on me"
+                                    msg="Opens a new tab"
+                                    classes="non-branded"
+                                    %}
+                        
+                            </div>
+    
+                        </div>
+
+                </div>
+
+            </div>
 
 
 
@@ -79,8 +126,8 @@ classes="in-page"
 
         <p>Tooltips can be triggered on hover or click:</p>
         <ul>
-            <li>The print and share utilities component tooltip has a click trigger.</li>
-            <li>External link and chat button tooltips have a hover trigger.</li>
+            <li>The chat button and print and share utilities component tooltips have a click trigger.</li>
+            <li>External link tooltips have a hover trigger.</li>
         </ul>
        
 

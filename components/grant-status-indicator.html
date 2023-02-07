@@ -17,8 +17,7 @@ subsite-tag: false
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
-
+        classes="in-page"
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
@@ -32,63 +31,120 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        md-visibility="true"
-        final-visibility="true"
-        breakpoint-final="768"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-grant-status"
+                    md-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="768"
+                    %}
 
-                <h3>Open status</h3>
+                    <!-- Component example -->
 
-                {% include component-examples/grant-status-example.html
-                status="Open"
-                classes="open"
-                icon="'../assets/icon-tick-green.svg' | relative_url "
-                status-detail="Closing in 11 days"
-                close-date="true"
-                time-zone="true"
-                application-detail="You can submit an expression of interest ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar luctus ipsum, sed sagittis neque venenatis in."
-                what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
-                who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
-                %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
+                            <h3>Open status</h3>
 
-                <h3>Coming soon status</h3>
-
-                {% include component-examples/grant-status-example.html
-                status="Coming soon"
-                classes="coming-soon"
-                icon="'../assets/icon-comingsoon-orange.svg' | relative_url "
-                status-detail="Open in 3 days"
-                open-date="true"
-                close-date="true"
-                time-zone="true"
-                application-detail="You can submit an expression of interest ipsum dolor sit amet."
-                what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
-                who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
-                %}
+                            {% include component-examples/grant-status-example.html
+                            status="Open"
+                            classes="open"
+                            icon="'../assets/icon-tick-green.svg' | relative_url "
+                            status-detail="Closing in 11 days"
+                            close-date="true"
+                            time-zone="true"
+                            application-detail="You can submit an expression of interest ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar luctus ipsum, sed sagittis neque venenatis in."
+                            what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
+                            who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
+                            %}
 
 
-                <h3>Closed status</h3>
+                            <h3>Coming soon status</h3>
 
-                {% include component-examples/grant-status-example.html
-                status="Closed"
-                classes="closed"
-                icon="'../assets/icon-closed-red.svg' | relative_url "
-                status-detail="Round X opens in 25 days"
-                application-detail="See <a href=''>grant name - round X</a> for information on applying for the next round."
-                what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
-                who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
-                %}
+                            {% include component-examples/grant-status-example.html
+                            status="Coming soon"
+                            classes="coming-soon"
+                            icon="'../assets/icon-comingsoon-orange.svg' | relative_url "
+                            status-detail="Open in 3 days"
+                            open-date="true"
+                            close-date="true"
+                            time-zone="true"
+                            application-detail="You can submit an expression of interest ipsum dolor sit amet."
+                            what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
+                            who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
+                            %}
+
+
+                            <h3>Closed status</h3>
+
+                            {% include component-examples/grant-status-example.html
+                            status="Closed"
+                            classes="closed"
+                            icon="'../assets/icon-closed-red.svg' | relative_url "
+                            status-detail="Round X opens in 25 days"
+                            application-detail="See <a href=''>grant name - round X</a> for information on applying for the next round."
+                            what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
+                            who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
+                            %}
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="nb-grant-status"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="status indicator component"
+                                    brand-elements="colours, borders and icons"
+                                %}
+    
+                                {% include component-examples/grant-status-example.html
+                                status="Coming soon"
+                                classes="coming-soon non-branded"
+                                icon="'../assets/Img-icon-placeholder.svg' | relative_url "
+                                status-detail="Open in 3 days"
+                                open-date="true"
+                                close-date="true"
+                                time-zone="true"
+                                application-detail="You can submit an expression of interest ipsum dolor sit amet."
+                                what-get="Approximately $276 million available over three years from 2021–22 to 2023–24."
+                                who-for="Applicants affected by the 2019-20 bushfires, who are in an eligible Local Government Area, which are listed at Appendix A of the grant opportunity guidelines."
+                                %}
+    
+                            </div>
+                        </div>
+
+                </div>
 
             </div>
-        </div>
 
 
 

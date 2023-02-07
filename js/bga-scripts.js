@@ -855,14 +855,16 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $(this).parents('.stepped-navigation-wrapper').find('.stepped-navigation').slideToggle();
     });
-    // Reset css display on breakpoint button click and res
-    $('#stepped-navigation-bp-md').on('click', function () {
-        $('.stepped-nav-toggle').removeClass('open');
-        $('.stepped-navigation-wrapper').find('.stepped-navigation').css('display', 'flex');
+    // Reset css display on breakpoint button click and reset
+    $('#bga-stepped-navigation-bp-md, #nb-stepped-navigation-bp-md').on('click', function () {
+        var parent = $(this).parents('.tab-section');
+        parent.find('.stepped-nav-toggle').removeClass('open');
+        parent.find('.stepped-navigation-wrapper').find('.stepped-navigation').css('display', 'flex');
     });
-    $('#stepped-navigation-bp-final').on('click', function () {
-        $('.stepped-nav-toggle').removeClass('open');
-        $('.stepped-navigation-wrapper').find('.stepped-navigation').css('display', 'none');
+    $('#bga-stepped-navigation-bp-final, #nb-stepped-navigation-bp-final').on('click', function () {
+        var parent = $(this).parents('.tab-section');
+        parent.find('.stepped-nav-toggle').removeClass('open');
+        parent.find('.stepped-navigation-wrapper').find('.stepped-navigation').css('display', 'none');
     });
     $(window).resize(function () {
         var window_width = window.innerWidth;
@@ -1158,9 +1160,8 @@ $(document).ready(function () {
 
 
     // COMPONENT EXAMPLE: CHAT BUTTON
-    //click
+
     $('.tooltip-click').on('click', function () {
-        //var parent = $(this).parents('.component-example');
         $(this).prev('.tooltip').toggleClass("show");
     });
     //close tooltip
@@ -1168,6 +1169,16 @@ $(document).ready(function () {
         $(this).parents('.tooltip').removeClass('show');
     });
 
+    // TOOLTIP - HOVER
+    //Hover only example (tooltip page)
+    $('.tooltip-hover').hover(
+        function () {
+            $(this).prev('.tooltip').addClass("show");
+        },
+        function () {
+            $(this).prev('.tooltip').removeClass("show");
+        }
+    );
 
 
     // COMPONENT EXAMPLE: PRINT SHARE UTILITIES

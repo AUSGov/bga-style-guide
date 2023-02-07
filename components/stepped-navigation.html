@@ -17,8 +17,7 @@ subsite-tag: true
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
-
+        classes="in-page"
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
@@ -32,57 +31,116 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        element-string="stepped-navigation"
-        md-visibility="true"
-        final-visibility="true"
-        breakpoint-final="768"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding py-4">
-
-                <h3 class="ms-4">Stepped navigation within a tool header</h3>
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
                 
-                <div class="page-header-wrapper tool-stepped-nav teal">
-                {% include component-examples/stepped-navigation-example.html
-                    title="Active step name"
-                    mobile-title="Active step name"
-                    step1="Completed step"
-                    step1-stage="completed"
-                    step2="One more completed step"
-                    step2-stage="completed"
-                    step3="Active step"
-                    step3-stage="active"
-                    step4="Unvisited step"
-                    step5="Ending employment"
-                    step6="Step six"
-                    classes="teal p-5"
-                %}
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-stepped-navigation"
+                    md-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="768"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding py-4">
+
+                            <h3 class="ms-4">Stepped navigation within a tool header</h3>
+                            
+                            <div class="page-header-wrapper tool-stepped-nav teal">
+                            {% include component-examples/stepped-navigation-example.html
+                                title="Active step name"
+                                mobile-title="Active step name"
+                                step1="Completed step"
+                                step1-stage="completed"
+                                step2="One more completed step"
+                                step2-stage="completed"
+                                step3="Active step"
+                                step3-stage="active"
+                                step4="Unvisited step"
+                                step5="Ending employment"
+                                step6="Step six"
+                                classes="teal p-5 mb-5"
+                            %}
+                            </div>
+
+                            <h3 class="ms-4">Stepped navigation in the context of a page.</h3>
+
+                            {% include component-examples/stepped-navigation-example.html
+                                mobile-title="Active step name"
+                                step1="Completed step"
+                                step1-stage="completed"
+                                step2="One more completed step"
+                                step2-stage="completed"
+                                step3="Active step"
+                                step3-stage="active"
+                                step4="Unvisited step"
+                                step5="Ending employment"
+                                step6="Step six"
+                                classes="white p-5"
+                            %}
+
+
+                        </div>
+                    </div>
+
                 </div>
 
-                <h3 class="ms-4">Stepped navigation in the context of a page.</h3>
+                <div class="tab-section non-branded ">
 
-                {% include component-examples/stepped-navigation-example.html
-                    mobile-title="Active step name"
-                    step1="Completed step"
-                    step1-stage="completed"
-                    step2="One more completed step"
-                    step2-stage="completed"
-                    step3="Active step"
-                    step3-stage="active"
-                    step4="Unvisited step"
-                    step5="Ending employment"
-                    step6="Step six"
-                    classes="white p-5"
-                %}
+                        <!-- Breakpoint radio buttons -->
+                        {% include breakpoints.html
+                        element-string="nb-stepped-navigation"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding py-4">
+                                
+                                {% include non-branded-explanation.html
+                                    component="stepped navigation"
+                                    brand-elements="colours and borders"
+                                    classes="m-4"
+                                %}
+    
+                                {% include component-examples/stepped-navigation-example.html
+                                    mobile-title="Active step name"
+                                    step1="Completed step"
+                                    step1-stage="completed"
+                                    step2="One more completed step"
+                                    step2-stage="completed"
+                                    step3="Active step"
+                                    step3-stage="active"
+                                    step4="Unvisited step"
+                                    step5="Ending employment"
+                                    step6="Step six"
+                                    classes="white p-5 non-branded"
+                                %}
+    
+    
+                            </div>
+                        </div>
 
+                </div>
 
             </div>
-        </div>
 
 
         <!-- Design specifications link -->

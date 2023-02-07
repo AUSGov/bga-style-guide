@@ -40,6 +40,9 @@
     .mobile-breadcrumb {
         display: none;
     }
+    &.non-branded {
+        background: $bga-black;  
+    }
     
 }
 
@@ -58,6 +61,18 @@
         }
         .breadcrumbs {
             display: none;
+        }
+        &.non-branded {
+            svg {
+                display: none;
+            }
+            a::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background: $nb-grey-light;
+                margin-right: 8px;
+            }
         }
     }
 }

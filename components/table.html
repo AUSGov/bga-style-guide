@@ -17,8 +17,7 @@ subsite-tag: true
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
-
+        classes="in-page"
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
@@ -32,55 +31,115 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        lg-visibility="true"
-        md-visibility="true"
-        final-visibility="true"
-        breakpoint-final="768"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
-
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <h3>Responsive tables</h3>
-
-                <h4>Layout: Single column - full width</h4>
-                {% include component-examples/table-example.html
-                    classes="default"
-                    responsive="true"
-                %}
-
-                <h4>Layouts: Single column - 2/3 width layout and two column layouts</h4>
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
                 
-                {% include component-examples/table-example.html
-                    classes="narrow"
-                    responsive="true"
-                %}
-
-                <h3>Unresponsive tables</h3>
-
-                {% include component-examples/table-example.html
-                    classes="narrow"
-                    responsive="false"
-                %}
-
-            </div>
-            
-                <div class="component-wrapper coloured-section remove-element-padding p-4">
-    
-                    <h3>Coloured background sections</h3>
-    
-                    {% include component-examples/table-example.html
-                        classes="narrow coloured-bkg"
-                        responsive="true"
+                <div class="tab-section bga-branded selected">
+        
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-table"
+                    lg-visibility="true"
+                    md-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="768"
                     %}
-    
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>Responsive tables</h3>
+
+                            <h4>Layout: Single column - full width</h4>
+                            {% include component-examples/table-example.html
+                                classes="default"
+                                responsive="true"
+                            %}
+
+                            <h4>Layouts: Single column - 2/3 width layout and two column layouts</h4>
+                            
+                            {% include component-examples/table-example.html
+                                classes="narrow"
+                                responsive="true"
+                            %}
+
+                            <h3>Unresponsive tables</h3>
+
+                            {% include component-examples/table-example.html
+                                classes="narrow"
+                                responsive="false"
+                            %}
+
+                        </div>
+                        
+                            <div class="component-wrapper coloured-section remove-element-padding p-4">
+                
+                                <h3>Coloured background sections</h3>
+                
+                                {% include component-examples/table-example.html
+                                    classes="narrow coloured-bkg"
+                                    responsive="true"
+                                %}
+                
+                            </div>
+
+                    </div>
+
                 </div>
 
-        </div>
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="nb-table"
+                       
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="tables"
+                                    brand-elements="colours and borders"
+                                %}
+    
+                                <h3>Responsive tables</h3>
+    
+                                {% include component-examples/table-example.html
+                                    classes="narrow non-branded"
+                                    responsive="true"
+                                %}
+    
+                                <h3>Unresponsive tables</h3>
+    
+                                {% include component-examples/table-example.html
+                                    classes="narrow non-branded"
+                                    responsive="false"
+                                %}
+    
+                            </div>
+    
+                        </div>
+
+                </div>
+
+            </div>
 
        
 

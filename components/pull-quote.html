@@ -32,79 +32,137 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        sm-visibility="true"
-        final-visibility="true"
-        breakpoint-final="576"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <h3>Default pull quote</h3>
-                {% include component-examples/pull-quote-example.html
-                quote="The greatest glory in living lies not in never falling, but in rising every time we fall."
-                author="Nelson Mandela, Position title, Company name"
-                classes="purple"
-                %}
-
-                {% include component-examples/pull-quote-example.html
-                    quote="Now is the winter of our discontent<br/>Made glorious summer by this sun of York;<br/>And all the clouds that lour'd upon our house<br/>In the deep bosom of the ocean buried."
-                    author="William Shakespeare, Richard III"
-                    classes="teal"
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-quote"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
                     %}
 
-                <h3>Pull quote with no source</h3>
+                    <!-- Component example -->
 
-                {% include component-examples/pull-quote-example.html
-                    quote="The biggest challenges for a growing business like us is keeping up with everything as far as your systems go; not just operating systems, but also your industrial relations systems and occupational health and safety systems."
-                    classes="orange no-icon"
-                    %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-            </div>
-        </div>
-
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-                    <h3>Colour variations</h3>
-
-                    <div class="col-6 col-lg-4">
-                        {% include component-examples/pull-quote-example.html
-                            quote="Purple"
+                            <h3>Default pull quote</h3>
+                            {% include component-examples/pull-quote-example.html
+                            quote="The greatest glory in living lies not in never falling, but in rising every time we fall."
+                            author="Nelson Mandela, Position title, Company name"
                             classes="purple"
-                            author="Default colour"
                             %}
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        {% include component-examples/pull-quote-example.html
-                            quote="Teal"
-                            classes="teal"
-                            author="Alternative colour"
-                            %}
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        {% include component-examples/pull-quote-example.html
-                            quote="Green"
-                            classes="green"
-                            author="Alternative colour"
-                            %}
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        {% include component-examples/pull-quote-example.html
-                            quote="Orange"
-                            classes="orange"
-                            author="Alternative colour"
-                            %}
+
+                            {% include component-examples/pull-quote-example.html
+                                quote="Now is the winter of our discontent<br/>Made glorious summer by this sun of York;<br/>And all the clouds that lour'd upon our house<br/>In the deep bosom of the ocean buried."
+                                author="William Shakespeare, Richard III"
+                                classes="teal"
+                                %}
+
+                            <h3>Pull quote with no source</h3>
+
+                            {% include component-examples/pull-quote-example.html
+                                quote="The biggest challenges for a growing business like us is keeping up with everything as far as your systems go; not just operating systems, but also your industrial relations systems and occupational health and safety systems."
+                                classes="orange no-icon"
+                                %}
+
+                        </div>
                     </div>
 
-                    
+                    <div class="component-example">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            <div class="row">
+                                <h3>Colour variations</h3>
+
+                                <div class="col-6 col-lg-4">
+                                    {% include component-examples/pull-quote-example.html
+                                        quote="Purple"
+                                        classes="purple"
+                                        author="Default colour"
+                                        %}
+                                </div>
+                                <div class="col-6 col-lg-4">
+                                    {% include component-examples/pull-quote-example.html
+                                        quote="Teal"
+                                        classes="teal"
+                                        author="Alternative colour"
+                                        %}
+                                </div>
+                                <div class="col-6 col-lg-4">
+                                    {% include component-examples/pull-quote-example.html
+                                        quote="Green"
+                                        classes="green"
+                                        author="Alternative colour"
+                                        %}
+                                </div>
+                                <div class="col-6 col-lg-4">
+                                    {% include component-examples/pull-quote-example.html
+                                        quote="Orange"
+                                        classes="orange"
+                                        author="Alternative colour"
+                                        %}
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        element-string="nb-quote"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="pull quotes"
+                                    brand-elements="colours, borders and icons"
+                                %}
+    
+                                <h3>Default pull quote</h3>
+                                {% include component-examples/pull-quote-example.html
+                                quote="The greatest glory in living lies not in never falling, but in rising every time we fall."
+                                author="Nelson Mandela, Position title, Company name"
+                                classes="non-branded"
+                                %}
+    
+                                <h3>Pull quote with no source</h3>
+    
+                                {% include component-examples/pull-quote-example.html
+                                    quote="The biggest challenges for a growing business like us is keeping up with everything as far as your systems go; not just operating systems, but also your industrial relations systems and occupational health and safety systems."
+                                    classes="non-branded no-icon"
+                                    %}
+    
+                            </div>
+                        </div>
+
+                </div>
+
             </div>
-        </div>
 
 
 
