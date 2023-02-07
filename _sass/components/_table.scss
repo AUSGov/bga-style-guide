@@ -26,6 +26,16 @@
             background: $bga-blue-background-extralight;
         }
     }
+
+    &.non-branded {
+        thead {
+            background: $nb-grey-light;
+            border-bottom: 1px solid $bga-black;
+        }
+        tr {
+            border-bottom: $bga-black solid 1px;
+        }
+    }
 }
 
 // Mixins for smaller screen sizes and media queries
@@ -139,9 +149,7 @@
 
 @mixin table-below768 {
     .bga-component.table.default {
-
         .responsive {
-
             /* Hide table headers (but not display: none;, for accessibility) */
             thead tr {
                 position: absolute;
@@ -243,7 +251,24 @@
             }
         }
     }
+    .bga-component.table {
+        &.non-branded {
+            .responsive {
+                tr {
+                    td {
+                        background: $nb-grey-light;
+                    }
+                }
+                .groupParent td {
+                    &:first-of-type {
+                        background-color: $nb-grey-light;
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-768,

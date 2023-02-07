@@ -46,7 +46,7 @@
                         color: $bga-white;
 
                         svg {
-                            fill: $bga-white;
+                            fill: $bga-white !important;
                         }
                     }
 
@@ -84,6 +84,40 @@
                 border: none;
                 border-bottom: 1px solid $bga-black;   
                 font-weight: 600; 
+            }
+        }
+    }
+
+    &.non-branded {
+        .pagination-links {
+            ul {
+                border-bottom: solid 1px $bga-black;
+
+                li {
+                    a {
+                        border-radius: 4px;
+                        svg {
+                            fill: $nb-blue-links;
+                        }
+                        
+                        &:focus-visible {
+                            border-color: $nb-blue-links !important;
+                            color: $nb-blue-links;
+                        }
+                        &:hover {
+                            background: $bga-black;
+                        }
+    
+                        &:active {
+                            background: $nb-grey-mid;
+                        }
+                    }
+                    &.current {
+                        a {
+                            background: $nb-grey-mid;
+                        }
+                    }
+                }
             }
         }
     }

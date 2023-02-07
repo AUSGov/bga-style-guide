@@ -106,6 +106,27 @@
             }
         }
     }
+    &.non-branded {
+        .component-content {
+            background: $nb-grey-light;
+            .status {
+                .icon-wrapper {
+                    border-radius: 4px;
+                }
+            }
+        }
+        .dates-times {
+            span {
+                &.show {
+                    background-color:$nb-grey-light;
+
+                    &.highlight {
+                        background-color: $nb-grey-dark;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Mixin for smaller screen examples and media queries

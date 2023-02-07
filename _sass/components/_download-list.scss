@@ -1,4 +1,4 @@
-.download-list {
+.bga-component.download-list {
     .title {
         font-size: 1.125rem;
         line-height: 1.5;
@@ -46,6 +46,38 @@
 
             &::before {
                 display: none;
+            }
+        }
+    }
+    &.non-branded {
+        .download-links {
+            li {
+                a {  
+                    color: $nb-blue-links;
+                    display: inline-flex;
+                    align-items: center;    
+                    
+                    svg {
+                        display: none;
+                    }
+                    &:focus-visible, &:hover {
+                        border-color: $nb-blue-links;
+                        background: transparent;
+                        color: $nb-blue-links;
+    
+                        svg {
+                            fill: $nb-blue-links;
+                        }
+                        
+                    } 
+                    &::before {
+                        content: "";
+                        background: $nb-grey-dark;
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 8px;  
+                    }
+                }
             }
         }
     }
