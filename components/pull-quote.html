@@ -128,7 +128,7 @@
 </header>
 
 
-    <div id="breadcrumbs">
+    <div id="breadcrumbs" class="">
     <div class="container">
         <div class="row">
 
@@ -246,14 +246,58 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-quote-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,15 +310,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-quote-group" id="bga-quote-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-quote-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-quote-group" id="bga-quote-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-quote-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -294,13 +338,13 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Default pull quote</h3>
-                <div class="bga-component-wrapper">
+                            <h3>Default pull quote</h3>
+                            <div class="bga-component-wrapper">
     <div class="bga-component pull-quote purple pt-5 pb-6">
 
         <div class="component-content ps-4 d-flex">
@@ -321,7 +365,7 @@
     </div>
 </div>
 
-                <div class="bga-component-wrapper">
+                            <div class="bga-component-wrapper">
     <div class="bga-component pull-quote teal pt-5 pb-6">
 
         <div class="component-content ps-4 d-flex">
@@ -342,9 +386,9 @@
     </div>
 </div>
 
-                <h3>Pull quote with no source</h3>
+                            <h3>Pull quote with no source</h3>
 
-                <div class="bga-component-wrapper">
+                            <div class="bga-component-wrapper">
     <div class="bga-component pull-quote orange no-icon pt-5 pb-6">
 
         <div class="component-content ps-4 d-flex">
@@ -363,16 +407,16 @@
     </div>
 </div>
 
-            </div>
-        </div>
+                        </div>
+                    </div>
 
-        <div class="component-example">
-            <div class="component-wrapper remove-element-padding p-4">
-                <div class="row">
-                    <h3>Colour variations</h3>
+                    <div class="component-example">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            <div class="row">
+                                <h3>Colour variations</h3>
 
-                    <div class="col-6 col-lg-4">
-                        <div class="bga-component-wrapper">
+                                <div class="col-6 col-lg-4">
+                                    <div class="bga-component-wrapper">
     <div class="bga-component pull-quote purple pt-5 pb-6">
 
         <div class="component-content ps-4 d-flex">
@@ -392,9 +436,9 @@
     </div>
     </div>
 </div>
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        <div class="bga-component-wrapper">
+                                </div>
+                                <div class="col-6 col-lg-4">
+                                    <div class="bga-component-wrapper">
     <div class="bga-component pull-quote teal pt-5 pb-6">
 
         <div class="component-content ps-4 d-flex">
@@ -414,9 +458,9 @@
     </div>
     </div>
 </div>
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        <div class="bga-component-wrapper">
+                                </div>
+                                <div class="col-6 col-lg-4">
+                                    <div class="bga-component-wrapper">
     <div class="bga-component pull-quote green pt-5 pb-6">
 
         <div class="component-content ps-4 d-flex">
@@ -436,9 +480,9 @@
     </div>
     </div>
 </div>
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        <div class="bga-component-wrapper">
+                                </div>
+                                <div class="col-6 col-lg-4">
+                                    <div class="bga-component-wrapper">
     <div class="bga-component pull-quote orange pt-5 pb-6">
 
         <div class="component-content ps-4 d-flex">
@@ -458,12 +502,123 @@
     </div>
     </div>
 </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
                     </div>
 
-                    
                 </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-quote-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-quote-group" id="nb-quote-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-quote-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-quote-group" id="nb-quote-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-quote-bp-final">&lt;576px</label>
+
+                </div>
+
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                <p class="">Apply your brand specific <strong>colours, borders and icons</strong> to the base pull quotes shown below.</p>
+
+
+    
+                                <h3>Default pull quote</h3>
+                                <div class="bga-component-wrapper">
+    <div class="bga-component pull-quote non-branded pt-5 pb-6">
+
+        <div class="component-content ps-4 d-flex">
+        <div class="quotation-mark">
+            <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="28" height="16.8" viewBox="0 0 28 16.8">
+                <path id="Path_8849" data-name="Path 8849"
+                    d="M585.874-201.2q-5.874,0-5.874-5.848T588.317-218l3.894,1.422-4.092,5.234.132.323q3.5.711,3.5,4.717Q591.749-201.2,585.874-201.2Zm15.789,0q-5.874,0-5.874-5.848T604.106-218L608-216.578l-4.092,5.234.132.323q3.5.711,3.5,4.717Q607.538-201.2,601.664-201.2Z"
+                    transform="translate(-580 218)" fill-rule="evenodd" />
+            </svg>
         </div>
+        <div class="component-text">
+            <blockquote class="mb-3">The greatest glory in living lies not in never falling, but in rising every time we fall.</blockquote>
+            
+                <p class="author m-0 pb-2">&mdash; Nelson Mandela, Position title, Company name</p>
+                
+        </div>
+    </div>
+    </div>
+</div>
+    
+                                <h3>Pull quote with no source</h3>
+    
+                                <div class="bga-component-wrapper">
+    <div class="bga-component pull-quote non-branded no-icon pt-5 pb-6">
+
+        <div class="component-content ps-4 d-flex">
+        <div class="quotation-mark">
+            <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="28" height="16.8" viewBox="0 0 28 16.8">
+                <path id="Path_8849" data-name="Path 8849"
+                    d="M585.874-201.2q-5.874,0-5.874-5.848T588.317-218l3.894,1.422-4.092,5.234.132.323q3.5.711,3.5,4.717Q591.749-201.2,585.874-201.2Zm15.789,0q-5.874,0-5.874-5.848T604.106-218L608-216.578l-4.092,5.234.132.323q3.5.711,3.5,4.717Q607.538-201.2,601.664-201.2Z"
+                    transform="translate(-580 218)" fill-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="component-text">
+            <blockquote class="mb-3">The biggest challenges for a growing business like us is keeping up with everything as far as your systems go; not just operating systems, but also your industrial relations systems and occupational health and safety systems.</blockquote>
+            
+        </div>
+    </div>
+    </div>
+</div>
+    
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
 
 
 

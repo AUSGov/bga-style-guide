@@ -128,7 +128,7 @@
 </header>
 
 
-    <div id="breadcrumbs">
+    <div id="breadcrumbs" class="">
     <div class="container">
         <div class="row">
 
@@ -246,14 +246,58 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="stepped-navigation-group">
+        <fieldset id="bga-stepped-navigation-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -264,8 +308,8 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-md true" name="stepped-navigation-group" id="stepped-navigation-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="stepped-navigation-bp-md">≥768px (md)</label>
+                    <input type="radio" class="btn-check bp-md true" name="bga-stepped-navigation-group" id="bga-stepped-navigation-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="bga-stepped-navigation-bp-md">≥768px (md)</label>
                 
 
                 
@@ -273,8 +317,8 @@
                 
 
                     
-                <input type="radio" class="btn-check true" name="stepped-navigation-group" id="stepped-navigation-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="stepped-navigation-bp-final">&lt;768px</label>
+                <input type="radio" class="btn-check true" name="bga-stepped-navigation-group" id="bga-stepped-navigation-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-stepped-navigation-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -294,15 +338,15 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding py-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding py-4">
 
-                <h3 class="ms-4">Stepped navigation within a tool header</h3>
-                
-                <div class="page-header-wrapper tool-stepped-nav teal">
-                <div class="stepped-navigation-wrapper remove-element-padding teal p-5">
+                            <h3 class="ms-4">Stepped navigation within a tool header</h3>
+                            
+                            <div class="page-header-wrapper tool-stepped-nav teal">
+                            <div class="stepped-navigation-wrapper remove-element-padding teal p-5 mb-5">
     
         <h1 class="step-title">Active step name</h1>
     
@@ -365,11 +409,11 @@
     </div>
     
 </div>
-                </div>
+                            </div>
 
-                <h3 class="ms-4">Stepped navigation in the context of a page.</h3>
+                            <h3 class="ms-4">Stepped navigation in the context of a page.</h3>
 
-                <div class="stepped-navigation-wrapper remove-element-padding white p-5">
+                            <div class="stepped-navigation-wrapper remove-element-padding white p-5">
     
    
     
@@ -432,8 +476,139 @@
 </div>
 
 
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                        <!-- Breakpoint radio buttons -->
+                        <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-stepped-navigation-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                      
+                    <input type="radio" class="btn-check bp-md true" name="nb-stepped-navigation-group" id="nb-stepped-navigation-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="nb-stepped-navigation-bp-md">≥768px (md)</label>
+                
+
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-stepped-navigation-group" id="nb-stepped-navigation-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-stepped-navigation-bp-final">&lt;768px</label>
+
+                </div>
+
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding py-4">
+                                
+                                <p class="m-4">Apply your brand specific <strong>colours and borders</strong> to the base stepped navigation shown below.</p>
+
+
+    
+                                <div class="stepped-navigation-wrapper remove-element-padding white p-5 non-branded">
+    
+   
+    
+        <div class="mobile-stepped-nav remove-element-padding">
+            <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
+            <p>Step 3 of 7: <strong>Active step name</strong></p>
         </div>
+    
+    
+    <div class="bga-component stepped-navigation">
+
+        
+        <a tabindex="1" id="nav-step-1" class="step completed me-3">
+            <span class="step-number  mb-2">1</span>
+            <span class="step-name">Completed step</span>
+        </a>
+        
+
+        
+        <a tabindex="1" id="nav-step-2" class="step completed me-3">
+            <span class="step-number mb-2">2</span>
+            <span class="step-name">One more completed step</span>
+        </a>    
+        
+
+        
+        <a tabindex="1" id="nav-step-3" class="step active me-3">
+            <span class="step-number mb-2">3</span>
+            <span class="step-name">Active step</span>
+        </a>
+        
+
+        
+        <a tabindex="1" id="nav-step-4" class="step me-3">
+            <span class="step-number mb-2">4</span>
+            <span class="step-name">Unvisited step</span>
+        </a>
+        
+
+        
+        <a tabindex="1" id="nav-step-5" class="step me-3">
+            <span class="step-number mb-2">5</span>
+            <span class="step-name">Ending employment</span>
+        </a>
+        
+
+        
+        <a tabindex="1" id="nav-step-6" class="step me-3">
+            <span class="step-number mb-2">6</span>
+            <span class="step-name">Step six</span>
+        </a>
+        
+
+        
+
+        
+
+    </div>
+    
+</div>
+    
+    
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
 
 
         <!-- Design specifications link -->

@@ -128,7 +128,7 @@
 </header>
 
 
-    <div id="breadcrumbs">
+    <div id="breadcrumbs" class="">
     <div class="container">
         <div class="row">
 
@@ -246,14 +246,58 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-breadcrumbs-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -266,15 +310,15 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="-group" id="-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-breadcrumbs-group" id="bga-breadcrumbs-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-breadcrumbs-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below576">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;576px</label>
+                <input type="radio" class="btn-check true" name="bga-breadcrumbs-group" id="bga-breadcrumbs-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-breadcrumbs-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -294,12 +338,12 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding py-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding py-4">
 
-                <div id="breadcrumbs">
+                            <div id="breadcrumbs" class="">
     <div class="container">
         <div class="row">
 
@@ -358,8 +402,137 @@
     </div>
 </div>
 
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-breadcrumbs-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-breadcrumbs-group" id="nb-breadcrumbs-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-breadcrumbs-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-breadcrumbs-group" id="nb-breadcrumbs-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-breadcrumbs-bp-final">&lt;576px</label>
+
+                </div>
+
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding py-4">
+
+                                <p class="m-4">Apply your brand specific <strong>colours</strong> to the base breadcrumbs shown below.</p>
+
+
+    
+                                <div id="breadcrumbs" class="non-branded">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+
+                
+                <div class="mobile-breadcrumb px-0">
+                    <a href="">
+                        <svg class="me-2 xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15">
+                            <path d="M4.9,10l3.167,3.167L6.233,15-.1,8.75,6.15,2.5,7.983,4.333,4.9,7.5h15V10Zm12.5,0h2.5v7.5H17.4Zm-5,5h5v2.5h-5Z" transform="translate(0.1 -2.5)" fill="#fff"/>
+                          </svg>Previous level link</a>
+                </div>
+
+                <ul class="m-0 breadcrumbs px-0">
+                    <li class="breadcrumb breadcrumb-link breadcrumb-home">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="" class="breadcrumb-link">Home
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb breadcrumb-link">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="" class="breadcrumb-link">
+                            Planning
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb breadcrumb-link">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="" class="breadcrumb-link">
+                            Business structures & types
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb breadcrumb-current">
+                        <p class="breadcrumb-location m-0 p-0">MMI Manufacturing Integration Stream Space round 2</p>
+                    </li>
+                </ul>
+
+                
+
+
+
+            </div>
+
         </div>
+    </div>
+</div>
+    
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+
+
 
         <!-- Design specifications link -->
 

@@ -128,7 +128,7 @@
 </header>
 
 
-    <div id="breadcrumbs">
+    <div id="breadcrumbs" class="">
     <div class="container">
         <div class="row">
 
@@ -246,14 +246,59 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
+
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-standard-checklist-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -264,8 +309,8 @@
                 
 
                       
-                    <input type="radio" class="btn-check bp-md true" name="-group" id="-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="-bp-md">≥768px (md)</label>
+                    <input type="radio" class="btn-check bp-md true" name="bga-standard-checklist-group" id="bga-standard-checklist-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="bga-standard-checklist-bp-md">≥768px (md)</label>
                 
 
                 
@@ -273,8 +318,8 @@
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;768px</label>
+                <input type="radio" class="btn-check true" name="bga-standard-checklist-group" id="bga-standard-checklist-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-standard-checklist-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -294,12 +339,12 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
-                
-                <div id="checklist-example" class="checklist-wrapper standard">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            
+                            <div id="checklist-example" class="checklist-wrapper standard ">
 
   
 
@@ -476,8 +521,253 @@
 
 </div>
 
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-standard-checklist-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                      
+                    <input type="radio" class="btn-check bp-md true" name="nb-standard-checklist-group" id="nb-standard-checklist-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="nb-standard-checklist-bp-md">≥768px (md)</label>
+                
+
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-standard-checklist-group" id="nb-standard-checklist-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-standard-checklist-bp-final">&lt;768px</label>
+
+                </div>
+
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                <p class="">Apply your brand specific <strong>colours, borders and icons</strong> to the base checklist shown below.</p>
+
+
+                                
+                                <div id="checklist-example" class="checklist-wrapper standard non-branded">
+
+  
+
+    <!-- ITEM 1 -->
+    <div class="checklist-item">
+
+
+        <div class="checklist-item-title ">
+            <h2><span>1</span> Item 1 descriptive title</h2>
+            <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                    <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#2e3e5a"/>
+                  </svg>
+                </div>
         </div>
+
+        <div class="checklist-sub-item-wrapper">
+
+            <div class="checklist-sub-item tip mb-3">
+
+                <div class="checklist-sub-item-title">
+                    <h3 class="m-0 p-0">
+                        <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="24" height="32.564" viewBox="0 0 24 32.564">
+                        <g data-name="Layer 1" transform="translate(-4.997 -3)">
+                          <path data-name="Path 3937" d="M17,3a11.511,11.511,0,0,0-2.4.24,11.982,11.982,0,0,0-5.587,20.7,3.333,3.333,0,0,1,1.131,2.519v3.959a3.438,3.438,0,0,0,3.428,3.428h.48a3.392,3.392,0,0,0,5.9,0h.48a3.438,3.438,0,0,0,3.428-3.428V26.463a3.324,3.324,0,0,1,1.1-2.5A11.984,11.984,0,0,0,17,3Zm3.428,27.422H13.572V28.708h6.856Zm0-3.428H13.572V25.281h6.856Zm2.245-5.587c-.154.137-.274.309-.411.446H18.5V17.7l2.948-2.948a.647.647,0,0,0,0-.908L20.235,12.63a.664.664,0,0,0-.912,0L17.01,14.946l-2.333-2.334a.665.665,0,0,0-.91,0l-1.212,1.213a.643.643,0,0,0,0,.908L15.5,17.678v4.175H11.721a5.286,5.286,0,0,0-.411-.463A8.565,8.565,0,1,1,25.569,15,8.522,8.522,0,0,1,22.673,21.407Z" transform="translate(0 0)" fill="#2e3e5a"/>
+                        </g>
+                      </svg>
+                      <span>Tip - Lorem ipsum dolor sit amet</span>
+                    </h3>
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                            <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#2e3e5a"/>
+                          </svg>
+                        </div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="checklist-item-content remove-element-padding">
+
+                        <p>Nullam id dignissim sapien. Integer efficitur feugiat neque eu porta.
+                            Pellentesque ac nisi purus. Aenean eget ipsum dapibus, consequat arcu a,
+                            consequat quam. Aenean vel felis risus. Sed pulvinar lectus erat. Mauris magna
+                            orci, aliquam ac iaculis ac, egestas et metus.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="checklist-sub-item must-do mb-3">
+
+                <div class="checklist-sub-item-title">
+                    <h3 class="m-0 p-0">Donec vestibulum lectus at pretium congue.</h3>
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                            <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#2e3e5a"/>
+                          </svg>
+                        </div>
+
+                </div>
+
+                <div class="content-wrapper">
+                    <div class="checklist-item-content remove-element-padding">
+
+                        <p>Curabitur pellentesque ante ligula. Aenean in scelerisque ipsum, nec finibus
+                            justo. Morbi dignissim in nisl non bibendum. Vestibulum mattis et lorem eget
+                            semper. In a quam mollis, ornare risus nec, tincidunt odio. Morbi eget nibh id
+                            magna vestibulum faucibus. Praesent eu lacus quam:</p>
+                        <ul>
+                            <li>full-time or part-time employee</li>
+                            <li>fixed-term employee (non-ongoing)</li>
+                            <li>casual employee</li>
+                        </ul>
+                        <p><a href="" class="bga-link bga-inline-link coloured-bkg">Find out more about the different types of
+                                employee</a></p>
+                    </div>
+                    <div class="checklist-item-checkbox">
+                        <input type="checkbox">
+                        <label>Done</label><br>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <hr class="checklist-item-divider" />
+    </div>
+
+
+    <!-- ITEM 2 -->
+    <div class="checklist-item">
+
+        <div class="checklist-item-title ">
+            <h2><span>2</span> Item 2 title</h2>
+            <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                    <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#2e3e5a"/>
+                  </svg>
+                </div>
+        </div>
+
+        <div class="checklist-sub-item-wrapper">
+
+            <div class="checklist-sub-item must-do mb-3">
+
+                <div class="checklist-sub-item-title">
+                    <h3 class="m-0 p-0">Quisque quis urna varius </h3>
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                            <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#2e3e5a"/>
+                          </svg>
+                        </div>
+
+                </div>
+                <div class="content-wrapper">
+                    <div class="checklist-item-content remove-element-padding">
+
+                        <p>Fusce augue felis, sagittis quis lacus non, convallis volutpat velit. Vestibulum
+                            faucibus diam sit amet eleifend vestibulum. Cras ultricies quis arcu et
+                            fermentum. Proin eget sodales sapien. Vivamus tincidunt ligula condimentum enim
+                            egestas molestie. Fusce at venenatis risus. Use the <a href="" class="bga-link bga-inline-link coloured-bkg">Find my award
+                                tool</a> to check: </p>
+                        <ul>
+                            <li>pay</li>
+                            <li>hours of work </li>
+                            <li>rosters </li>
+                            <li>breaks </li>
+                        </ul>
+                        <p>You can also use the <a href="" class="bga-link bga-inline-link coloured-bkg">Pay Calculator</a> to work out what you&rsquo;ll
+                            need to pay your new employee under the relevant award (including any penalty
+                            rates). </p>
+
+                    </div>
+                    <div class="checklist-item-checkbox">
+                        <input type="checkbox">
+                        <label>Done</label><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-sub-item must-do mb-3">
+
+                <div class="checklist-sub-item-title">
+                    <h3 class="m-0 p-0">Understand aliquam quis lorem volutpat hendrerit.</h3>
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                            <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#2e3e5a"/>
+                          </svg>
+                        </div>
+
+                </div>
+                <div class="content-wrapper">
+                    <div class="checklist-item-content remove-element-padding">
+
+                        <p>Proin laoreet pulvinar vulputate. Integer ultricies massa a congue ullamcorper.
+                            You will also need to have <a href="" class="bga-link bga-inline-link coloured-bkg">worker’s compensation insurance</a> for
+                            your employee. </p>
+                        <p>If you want to learn more, check our <a href="" class="bga-link bga-inline-link coloured-bkg">Managing and developing staff</a>
+                            topic. </p>
+                    </div>
+                    <div class="checklist-item-checkbox">
+                        <input type="checkbox">
+                        <label>Done</label><br>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+       
+        <hr class="checklist-item-divider" />
+    </div>
+
+</div>
+    
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
 
 
         <!-- Design specifications link -->

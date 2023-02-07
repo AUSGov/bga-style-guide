@@ -3885,6 +3885,10 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .anchor-menu li a.current { border-left: 4px solid #2157AA; padding-left: 8px; }
 
+.anchor-menu.non-branded li a:focus, .anchor-menu.non-branded li a:hover { color: mediumblue; }
+
+.anchor-menu.non-branded li a.current { color: mediumblue; }
+
 .image .component-image { width: 100%; }
 
 .image .component-image img { width: 100%; height: auto; }
@@ -4060,7 +4064,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .checklist-wrapper.non-branded.lightweight .bga-component.feature-box .component-content { border: none; }
 
-.checklist-wrapper.non-branded.lightweight .bga-component.feature-box .icon-wrapper { background: #E8E8E8 url(../assets/img-icon-placeholder.svg) no-repeat; border-radius: 0; height: 48px; width: 48px; }
+.checklist-wrapper.non-branded.lightweight .bga-component.feature-box .icon-wrapper { background: #E8E8E8 url(../assets/Img-icon-placeholder.svg) no-repeat; border-radius: 0; height: 48px; width: 48px; }
 
 .checklist-wrapper.non-branded.lightweight .bga-component.feature-box .icon-wrapper img { display: none; }
 
@@ -4071,6 +4075,36 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .checklist-wrapper.non-branded.lightweight .inline-pathway .page img { display: none; }
 
 .checklist-wrapper.non-branded.lightweight .inline-pathway .page:before { content: ""; width: 16px; height: 16px; background: #C8C8C8; margin-right: 8px; }
+
+.checklist-wrapper.non-branded.standard .checklist-item:after { background: #333333; }
+
+.checklist-wrapper.non-branded.standard .checklist-item:last-of-type .checklist-sub-item:after { background: #333333; }
+
+.checklist-wrapper.non-branded.standard .checklist-item.item-done .checklist-item-title h2 span, .checklist-wrapper.non-branded.standard .checklist-item.item-done .checklist-item-title .h2 span { background-color: #333333; border-color: #333333; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item:before { content: url("../assets/checklist-black-dot.svg"); }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item .checklist-sub-item-title { background: #E8E8E8; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item .checklist-sub-item-title:hover .icon-wrapper { background: transparent; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item .checklist-item-content { background: #E8E8E8; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item .checklist-item-checkbox { background-color: #D8D8D8; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item.done .checklist-item-checkbox { background-color: #D8D8D8; background-image: url("../assets/checkbox-checked-black.svg"); }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item.done:before { content: url("../assets/checklist-black-dot-checked.svg"); }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item.tip h3 svg, .checklist-wrapper.non-branded.standard .checklist-sub-item.tip .h3 svg { display: none; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item.tip h3::before, .checklist-wrapper.non-branded.standard .checklist-sub-item.tip .h3::before { content: ""; background: url(../assets/Img-icon-placeholder.svg) no-repeat; background-size: 32px 32px; width: 32px; height: 32px; margin-right: 8px; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item.tip .checklist-sub-item-title { background: #F8F8F8; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item.tip .checklist-item-content { background: #F8F8F8; }
+
+.checklist-wrapper.non-branded.standard .checklist-sub-item.open .checklist-sub-item-title .icon-wrapper { background: transparent; }
 
 .component-example.bp-below768 .checklist-wrapper .checklist-item-divider, .component-example.small-screen .checklist-wrapper .checklist-item-divider { width: calc(100% - 56px) !important; margin: 8px 0 8px 56px !important; }
 
@@ -4126,7 +4160,9 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below768 .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-item-checkbox, .component-example.small-screen .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-item-checkbox { padding: 16px; background-position: left 16px center; }
 
-@media (max-width: 768px) { .checklist-wrapper .checklist-item-divider { width: calc(100% - 56px) !important; margin: 8px 0 8px 56px !important; } .checklist-wrapper .checklist-item .checklist-item-title { margin-left: 40px; padding: 16px; } .checklist-wrapper .checklist-item .checklist-item-title h2, .checklist-wrapper .checklist-item .checklist-item-title .h2 { font-size: 1.25rem; } .checklist-wrapper .checklist-item .checklist-item-title h2 span, .checklist-wrapper .checklist-item .checklist-item-title .h2 span { width: 36px; height: 36px; left: -40px; top: 16px; } .checklist-wrapper .checklist-item .checklist-item-title .icon-wrapper { margin-left: 16px; } .checklist-wrapper .checklist-item:last-of-type .checklist-sub-item:last-of-type:after { left: -48px; } .checklist-wrapper .checklist-item .feature-box .icon-wrapper { display: none; } .checklist-wrapper .checklist-item .feature-box .component-content { border-left-width: 4px; padding: 16px !important; } .checklist-wrapper .checklist-item .inline-pathway a .link-wrapper { border-left-width: 4px; padding: 16px !important; } .checklist-wrapper.lightweight .checklist-item:after { left: 16px; } .checklist-wrapper.lightweight .checklist-sub-item-wrapper .content-wrapper { padding: 0 0 0 8px !important; } .checklist-wrapper.lightweight .checklist-sub-item .checklist-item-content { padding: 0 16px 16px 16px; } .checklist-wrapper.lightweight .checklist-sub-item .checklist-item-checkbox { padding: 16px; } .checklist-wrapper.lightweight .checklist-sub-item .checklist-item-checkbox .close-item svg { width: 16px; height: 16px; } .checklist-wrapper.standard .checklist-item .checklist-item-title { padding: 16px !important; } .checklist-wrapper.standard .checklist-item:after { z-index: 90; left: 17px; } .checklist-wrapper.standard .checklist-item.open:last-of-type:after { height: 94px; } .checklist-wrapper.standard .checklist-item:last-of-type .checklist-sub-item:after { left: -39px; } .checklist-wrapper.standard .checklist-sub-item-wrapper { margin-left: 40px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item { margin-left: 16px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item:before { left: -50px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title { padding: 16px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title h3, .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title .h3 { font-size: 1.125rem; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title h3 svg, .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title .h3 svg { display: none; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title .icon-wrapper { margin-left: 16px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-item-content { padding: 0 16px 16px 16px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-item-checkbox { padding: 16px; background-position: left 16px center; } }
+.component-example.bp-below768 .checklist-wrapper.non-branded.standard .checklist-sub-item.tip h3::before, .component-example.bp-below768 .checklist-wrapper.non-branded.standard .checklist-sub-item.tip .h3::before, .component-example.small-screen .checklist-wrapper.non-branded.standard .checklist-sub-item.tip h3::before, .component-example.small-screen .checklist-wrapper.non-branded.standard .checklist-sub-item.tip .h3::before { display: none; }
+
+@media (max-width: 768px) { .checklist-wrapper .checklist-item-divider { width: calc(100% - 56px) !important; margin: 8px 0 8px 56px !important; } .checklist-wrapper .checklist-item .checklist-item-title { margin-left: 40px; padding: 16px; } .checklist-wrapper .checklist-item .checklist-item-title h2, .checklist-wrapper .checklist-item .checklist-item-title .h2 { font-size: 1.25rem; } .checklist-wrapper .checklist-item .checklist-item-title h2 span, .checklist-wrapper .checklist-item .checklist-item-title .h2 span { width: 36px; height: 36px; left: -40px; top: 16px; } .checklist-wrapper .checklist-item .checklist-item-title .icon-wrapper { margin-left: 16px; } .checklist-wrapper .checklist-item:last-of-type .checklist-sub-item:last-of-type:after { left: -48px; } .checklist-wrapper .checklist-item .feature-box .icon-wrapper { display: none; } .checklist-wrapper .checklist-item .feature-box .component-content { border-left-width: 4px; padding: 16px !important; } .checklist-wrapper .checklist-item .inline-pathway a .link-wrapper { border-left-width: 4px; padding: 16px !important; } .checklist-wrapper.lightweight .checklist-item:after { left: 16px; } .checklist-wrapper.lightweight .checklist-sub-item-wrapper .content-wrapper { padding: 0 0 0 8px !important; } .checklist-wrapper.lightweight .checklist-sub-item .checklist-item-content { padding: 0 16px 16px 16px; } .checklist-wrapper.lightweight .checklist-sub-item .checklist-item-checkbox { padding: 16px; } .checklist-wrapper.lightweight .checklist-sub-item .checklist-item-checkbox .close-item svg { width: 16px; height: 16px; } .checklist-wrapper.standard .checklist-item .checklist-item-title { padding: 16px !important; } .checklist-wrapper.standard .checklist-item:after { z-index: 90; left: 17px; } .checklist-wrapper.standard .checklist-item.open:last-of-type:after { height: 94px; } .checklist-wrapper.standard .checklist-item:last-of-type .checklist-sub-item:after { left: -39px; } .checklist-wrapper.standard .checklist-sub-item-wrapper { margin-left: 40px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item { margin-left: 16px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item:before { left: -50px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title { padding: 16px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title h3, .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title .h3 { font-size: 1.125rem; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title h3 svg, .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title .h3 svg { display: none; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-sub-item-title .icon-wrapper { margin-left: 16px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-item-content { padding: 0 16px 16px 16px; } .checklist-wrapper.standard .checklist-sub-item-wrapper .checklist-sub-item .checklist-item-checkbox { padding: 16px; background-position: left 16px center; } .checklist-wrapper.non-branded.standard .checklist-sub-item.tip h3::before, .checklist-wrapper.non-branded.standard .checklist-sub-item.tip .h3::before { display: none; } }
 
 .bga-site-header #header-strap { justify-content: space-between; margin-bottom: 32px; }
 
@@ -4468,13 +4504,19 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #breadcrumbs .mobile-breadcrumb { display: none; }
 
+#breadcrumbs.non-branded { background: #333333; }
+
 .component-example.bp-below576 #breadcrumbs .mobile-breadcrumb { display: block; padding: 12px 0; }
 
 .component-example.bp-below576 #breadcrumbs .mobile-breadcrumb a { padding: 0; display: flex; align-items: center; }
 
 .component-example.bp-below576 #breadcrumbs .breadcrumbs { display: none; }
 
-@media (max-width: 576px) { #breadcrumbs .mobile-breadcrumb { display: block; padding: 12px 0; } #breadcrumbs .mobile-breadcrumb a { padding: 0; display: flex; align-items: center; } #breadcrumbs .breadcrumbs { display: none; } }
+.component-example.bp-below576 #breadcrumbs.non-branded svg { display: none; }
+
+.component-example.bp-below576 #breadcrumbs.non-branded a::before { content: ""; width: 16px; height: 16px; background: #E8E8E8; margin-right: 8px; }
+
+@media (max-width: 576px) { #breadcrumbs .mobile-breadcrumb { display: block; padding: 12px 0; } #breadcrumbs .mobile-breadcrumb a { padding: 0; display: flex; align-items: center; } #breadcrumbs .breadcrumbs { display: none; } #breadcrumbs.non-branded svg { display: none; } #breadcrumbs.non-branded a::before { content: ""; width: 16px; height: 16px; background: #E8E8E8; margin-right: 8px; } }
 
 .bga-component.hero-pathway { border: 1px solid #96B7DF; display: flex; background: #ffffff; }
 
@@ -5190,9 +5232,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .pull-quote.orange svg { fill: #F1B981; }
 
-.pull-quote.no-icon .quotation-mark { display: none; }
+.pull-quote.no-icon .quotation-mark { display: none !important; }
 
 .pull-quote.no-icon blockquote { margin-bottom: 8px !important; }
+
+.pull-quote.non-branded svg { display: none; }
+
+.pull-quote.non-branded .quotation-mark { display: block; }
+
+.pull-quote.non-branded .quotation-mark::before { content: ""; background: url(../assets/Img-icon-placeholder.svg) no-repeat; background-size: 32px; width: 32px; height: 32px; display: block; margin-right: 16px; margin-top: 4px; }
 
 .component-example.bp-below576 .pull-quote { padding: 24px 0 32px 0 !important; }
 
@@ -5802,6 +5850,10 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.table.coloured-bkg thead { background: #E3ECF6; }
 
+.bga-component.table.non-branded thead { background: #E8E8E8; border-bottom: 1px solid #333333; }
+
+.bga-component.table.non-branded tr { border-bottom: #333333 solid 1px; }
+
 .component-example.bp-768 .bga-component.table.narrow .responsive, .component-example.bp-below768 .bga-component.table.narrow .responsive, .component-example.small-screen .bga-component.table.narrow .responsive { /* Hide table headers (but not display: none;, for accessibility) */ }
 
 .component-example.bp-768 .bga-component.table.narrow .responsive thead tr, .component-example.bp-below768 .bga-component.table.narrow .responsive thead tr, .component-example.small-screen .bga-component.table.narrow .responsive thead tr { position: absolute; top: -9999px; left: -9999px; }
@@ -5866,9 +5918,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below768 .bga-component.table.default.coloured-bkg .responsive .groupParent td:first-of-type, .component-example.small-screen .bga-component.table.default.coloured-bkg .responsive .groupParent td:first-of-type { background: #E3ECF6 url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; }
 
+.component-example.bp-below768 .bga-component.table.non-branded .responsive tr td, .component-example.small-screen .bga-component.table.non-branded .responsive tr td { background: #E8E8E8; }
+
+.component-example.bp-below768 .bga-component.table.non-branded .responsive .groupParent td:first-of-type, .component-example.small-screen .bga-component.table.non-branded .responsive .groupParent td:first-of-type { background-color: #E8E8E8; }
+
 @media (max-width: 992px) { .bga-component.table.narrow .responsive { /* Hide table headers (but not display: none;, for accessibility) */ } .bga-component.table.narrow .responsive thead tr { position: absolute; top: -9999px; left: -9999px; } .bga-component.table.narrow .responsive td { display: none; position: relative; white-space: normal; text-align: left; border-top: 0px; padding-left: 45%; } .bga-component.table.narrow .responsive td::before { width: 30%; } .bga-component.table.narrow .responsive td:last-of-type { padding-bottom: 10px; } .bga-component.table.narrow .responsive td::before { position: absolute; top: 8px; left: 8px; text-align: left; content: attr(data-title); display: block; } .bga-component.table.narrow .responsive tr { display: table; width: 100%; } .bga-component.table.narrow .responsive tr td:first-of-type:hover { cursor: pointer; } .bga-component.table.narrow .responsive tr td { background: #E4E6EA; border-bottom: none; } .bga-component.table.narrow .responsive tr td:first-of-type { background: #ffffff url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; font-weight: 600; padding-left: 8px; padding-right: 32px; display: block; } .bga-component.table.narrow .responsive tr td:first-of-type::before { content: ""; } .bga-component.table.narrow .responsive .showGroup { display: block; transition: all 0.4s; } .bga-component.table.narrow .responsive .groupParent td:first-of-type { background: #E4E6EA url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.narrow.coloured-bkg .responsive tr td { background: #E3ECF6; } .bga-component.table.narrow.coloured-bkg .responsive tr td:first-of-type { background: #E3ECF6 url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.narrow.coloured-bkg .responsive .groupParent td:first-of-type { background: #E3ECF6 url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } }
 
-@media (max-width: 768px) { .bga-component.table.default .responsive { /* Hide table headers (but not display: none;, for accessibility) */ } .bga-component.table.default .responsive thead tr { position: absolute; top: -9999px; left: -9999px; } .bga-component.table.default .responsive td { display: none; position: relative; white-space: normal; text-align: left; border-top: 0px; padding-left: 45%; } .bga-component.table.default .responsive td::before { width: 30%; } .bga-component.table.default .responsive td:last-of-type { padding-bottom: 10px; } .bga-component.table.default .responsive td::before { position: absolute; top: 8px; left: 8px; text-align: left; content: attr(data-title); display: block; } .bga-component.table.default .responsive tr { display: table; width: 100%; } .bga-component.table.default .responsive tr td:first-of-type:hover { cursor: pointer; } .bga-component.table.default .responsive tr td { background: #E4E6EA; border-bottom: none; } .bga-component.table.default .responsive tr td:first-of-type { background: #ffffff url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; font-weight: 600; padding-left: 8px; padding-right: 32px; display: block; } .bga-component.table.default .responsive tr td:first-of-type::before { content: ""; } .bga-component.table.default .responsive .showGroup { display: block; transition: all 0.4s; } .bga-component.table.default .responsive .groupParent td:first-of-type { background: #E4E6EA url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.default.coloured-bkg .responsive tr td { background: #E3ECF6; } .bga-component.table.default.coloured-bkg .responsive tr td:first-of-type { background: #E3ECF6 url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.default.coloured-bkg .responsive .groupParent td:first-of-type { background: #E3ECF6 url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } }
+@media (max-width: 768px) { .bga-component.table.default .responsive { /* Hide table headers (but not display: none;, for accessibility) */ } .bga-component.table.default .responsive thead tr { position: absolute; top: -9999px; left: -9999px; } .bga-component.table.default .responsive td { display: none; position: relative; white-space: normal; text-align: left; border-top: 0px; padding-left: 45%; } .bga-component.table.default .responsive td::before { width: 30%; } .bga-component.table.default .responsive td:last-of-type { padding-bottom: 10px; } .bga-component.table.default .responsive td::before { position: absolute; top: 8px; left: 8px; text-align: left; content: attr(data-title); display: block; } .bga-component.table.default .responsive tr { display: table; width: 100%; } .bga-component.table.default .responsive tr td:first-of-type:hover { cursor: pointer; } .bga-component.table.default .responsive tr td { background: #E4E6EA; border-bottom: none; } .bga-component.table.default .responsive tr td:first-of-type { background: #ffffff url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; font-weight: 600; padding-left: 8px; padding-right: 32px; display: block; } .bga-component.table.default .responsive tr td:first-of-type::before { content: ""; } .bga-component.table.default .responsive .showGroup { display: block; transition: all 0.4s; } .bga-component.table.default .responsive .groupParent td:first-of-type { background: #E4E6EA url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.default.coloured-bkg .responsive tr td { background: #E3ECF6; } .bga-component.table.default.coloured-bkg .responsive tr td:first-of-type { background: #E3ECF6 url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.default.coloured-bkg .responsive .groupParent td:first-of-type { background: #E3ECF6 url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.non-branded .responsive tr td { background: #E8E8E8; } .bga-component.table.non-branded .responsive .groupParent td:first-of-type { background-color: #E8E8E8; } }
 
 #subsite-header .bga-link-strap { background: #113869; color: #ffffff; padding: 12px 32px; }
 
@@ -6000,6 +6056,14 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .grant-status-indicator.closed .component-content a { text-decoration: underline; cursor: pointer; }
 
+.grant-status-indicator.non-branded .component-content { background: #E8E8E8; }
+
+.grant-status-indicator.non-branded .component-content .status .icon-wrapper { border-radius: 4px; }
+
+.grant-status-indicator.non-branded .dates-times span.show { background-color: #E8E8E8; }
+
+.grant-status-indicator.non-branded .dates-times span.show.highlight { background-color: #C8C8C8; }
+
 .component-example.bp-below768 .grant-status-indicator .component-content .status, .component-example.small-screen .grant-status-indicator .component-content .status { display: block; margin-bottom: 16px !important; }
 
 .component-example.bp-below768 .grant-status-indicator .component-content .status .icon-wrapper, .component-example.small-screen .grant-status-indicator .component-content .status .icon-wrapper { padding: 8px 16px !important; margin: 0 0 16px 0 !important; }
@@ -6010,23 +6074,33 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 768px) { .grant-status-indicator .component-content .status { display: block; margin-bottom: 16px !important; } .grant-status-indicator .component-content .status .icon-wrapper { padding: 8px 16px !important; margin: 0 0 16px 0 !important; } .grant-status-indicator .component-content .status .icon-wrapper img { height: 20px; width: auto; } .grant-status-indicator .component-content .time-zone label { width: 100%; } }
 
-.download-list .title { font-size: 1.125rem; line-height: 1.5; }
+.bga-component.download-list .title { font-size: 1.125rem; line-height: 1.5; }
 
-.download-list .download-links li { display: inline-block; list-style-type: none; text-indent: 0; margin-right: 32px; margin-bottom: 0; }
+.bga-component.download-list .download-links li { display: inline-block; list-style-type: none; text-indent: 0; margin-right: 32px; margin-bottom: 0; }
 
-.download-list .download-links li a { font-size: .75rem; font-weight: 700; color: #2157AA; text-decoration: underline; cursor: pointer; }
+.bga-component.download-list .download-links li a { font-size: .75rem; font-weight: 700; color: #2157AA; text-decoration: underline; cursor: pointer; }
 
-.download-list .download-links li a svg { fill: #2157AA; }
+.bga-component.download-list .download-links li a svg { fill: #2157AA; }
 
-.download-list .download-links li a:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; background: rgba(46, 108, 185, 0.15); color: #113869; }
+.bga-component.download-list .download-links li a:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; background: rgba(46, 108, 185, 0.15); color: #113869; }
 
-.download-list .download-links li a:focus-visible svg { fill: #113869; }
+.bga-component.download-list .download-links li a:focus-visible svg { fill: #113869; }
 
-.download-list .download-links li a:hover { background: rgba(46, 108, 185, 0.15); color: #113869; text-decoration: underline; }
+.bga-component.download-list .download-links li a:hover { background: rgba(46, 108, 185, 0.15); color: #113869; text-decoration: underline; }
 
-.download-list .download-links li a:hover svg { fill: #113869; }
+.bga-component.download-list .download-links li a:hover svg { fill: #113869; }
 
-.download-list .download-links li::before { display: none; }
+.bga-component.download-list .download-links li::before { display: none; }
+
+.bga-component.download-list.non-branded .download-links li a { color: mediumblue; display: inline-flex; align-items: center; }
+
+.bga-component.download-list.non-branded .download-links li a svg { display: none; }
+
+.bga-component.download-list.non-branded .download-links li a:focus-visible, .bga-component.download-list.non-branded .download-links li a:hover { border-color: mediumblue; background: transparent; color: mediumblue; }
+
+.bga-component.download-list.non-branded .download-links li a:focus-visible svg, .bga-component.download-list.non-branded .download-links li a:hover svg { fill: mediumblue; }
+
+.bga-component.download-list.non-branded .download-links li a::before { content: ""; background: #C8C8C8; width: 16px; height: 16px; margin-right: 8px; }
 
 .bga-component.clause-box form { border-bottom: solid 1px #788295; }
 
@@ -6163,6 +6237,34 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .stepped-navigation .step.visited .step-number { background: #ffffff; color: #2157AA; border-color: #2157AA; }
 
 .stepped-navigation .step.visited .step-name { font-weight: 600; color: #2157AA; text-decoration: underline; text-decoration-color: #2157AA; }
+
+.stepped-navigation-wrapper.non-branded.white .step { color: #333333; position: relative; border: solid 2px transparent; }
+
+.stepped-navigation-wrapper.non-branded.white .step:focus-visible { border-color: mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step::before { border-bottom: 4px solid #B8B8B8; }
+
+.stepped-navigation-wrapper.non-branded.white .step .step-number { border: solid 3px #B8B8B8; background: #F8F8F8; }
+
+.stepped-navigation-wrapper.non-branded.white .step.completed::before { border-bottom-color: mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.completed .step-number { background: mediumblue url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; background-size: 18px 14px; border-color: mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.completed .step-name { color: mediumblue; text-decoration-color: mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.completed:hover { text-decoration-color: mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.active::before { border-bottom: 4px solid mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.active .step-number { background: #ffffff; color: mediumblue; border-color: mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.active .step-name { color: mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.visited::before { border-bottom: 4px solid mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.visited .step-number { color: mediumblue; border-color: mediumblue; }
+
+.stepped-navigation-wrapper.non-branded.white .step.visited .step-name { color: mediumblue; text-decoration-color: mediumblue; }
 
 .component-example.bp-below768 .page-header-wrapper.tool-stepped-nav.teal, .component-example.small-screen .page-header-wrapper.tool-stepped-nav.teal { background: none; padding: 0 !important; }
 
@@ -6528,7 +6630,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-pagination .pagination-links ul li a:hover { background: #2E6CB9; color: #ffffff; }
 
-.bga-pagination .pagination-links ul li a:hover svg { fill: #ffffff; }
+.bga-pagination .pagination-links ul li a:hover svg { fill: #ffffff !important; }
 
 .bga-pagination .pagination-links ul li a:active { background: #C8D9EE; color: #333333; }
 
@@ -6541,6 +6643,20 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .bga-pagination .below-pagination { width: 100%; justify-content: space-between; }
 
 .bga-pagination .below-pagination .items-number select { height: 28px; margin-left: 8px; border: none; border-bottom: 1px solid #333333; font-weight: 600; }
+
+.bga-pagination.non-branded .pagination-links ul { border-bottom: solid 1px #333333; }
+
+.bga-pagination.non-branded .pagination-links ul li a { border-radius: 4px; }
+
+.bga-pagination.non-branded .pagination-links ul li a svg { fill: mediumblue; }
+
+.bga-pagination.non-branded .pagination-links ul li a:focus-visible { border-color: mediumblue !important; color: mediumblue; }
+
+.bga-pagination.non-branded .pagination-links ul li a:hover { background: #333333; }
+
+.bga-pagination.non-branded .pagination-links ul li a:active { background: #D8D8D8; }
+
+.bga-pagination.non-branded .pagination-links ul li.current a { background: #D8D8D8; }
 
 .component-example.bp-576 .bga-pagination .pagination-links ul li.first, .component-example.bp-576 .bga-pagination .pagination-links ul li.previous, .component-example.bp-576 .bga-pagination .pagination-links ul li.next, .component-example.bp-576 .bga-pagination .pagination-links ul li.last, .component-example.bp-350 .bga-pagination .pagination-links ul li.first, .component-example.bp-350 .bga-pagination .pagination-links ul li.previous, .component-example.bp-350 .bga-pagination .pagination-links ul li.next, .component-example.bp-350 .bga-pagination .pagination-links ul li.last, .component-example.bp-below350 .bga-pagination .pagination-links ul li.first, .component-example.bp-below350 .bga-pagination .pagination-links ul li.previous, .component-example.bp-below350 .bga-pagination .pagination-links ul li.next, .component-example.bp-below350 .bga-pagination .pagination-links ul li.last { text-indent: -9999px; }
 

@@ -128,7 +128,7 @@
 </header>
 
 
-    <div id="breadcrumbs">
+    <div id="breadcrumbs" class="">
     <div class="container">
         <div class="row">
 
@@ -246,14 +246,58 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="pagination-group">
+        <fieldset id="bga-pagination-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -262,25 +306,25 @@
                 
                 
                   
-                    <input type="radio" class="btn-check bp-lg true" name="pagination-group" id="pagination-bp-lg" autocomplete="off" data-breakpoint="bp-992">
-                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="pagination-bp-lg">≥992px (lg)</label>
+                    <input type="radio" class="btn-check bp-lg true" name="bga-pagination-group" id="bga-pagination-bp-lg" autocomplete="off" data-breakpoint="bp-992">
+                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="bga-pagination-bp-lg">≥992px (lg)</label>
                 
 
                 
 
                       
-                    <input type="radio" class="btn-check bp-sm true" name="pagination-group" id="pagination-bp-sm" autocomplete="off" data-breakpoint="bp-576">
-                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="pagination-bp-sm">≥576px (sm)</label>
+                    <input type="radio" class="btn-check bp-sm true" name="bga-pagination-group" id="bga-pagination-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-pagination-bp-sm">≥576px (sm)</label>
                 
 
                       
-                    <input type="radio" class="btn-check bp-xs true" name="pagination-group" id="pagination-bp-xs" autocomplete="off" data-breakpoint="bp-350">
-                    <label class="btn bp-xs btn-outline-primary py-2 px-3 true" for="pagination-bp-xs">≥350px (xs)</label>
+                    <input type="radio" class="btn-check bp-xs true" name="bga-pagination-group" id="bga-pagination-bp-xs" autocomplete="off" data-breakpoint="bp-350">
+                    <label class="btn bp-xs btn-outline-primary py-2 px-3 true" for="bga-pagination-bp-xs">≥350px (xs)</label>
                 
 
                     
-                <input type="radio" class="btn-check " name="pagination-group" id="pagination-bp-final" autocomplete="off" data-breakpoint="bp-below350">
-                <label class="btn btn-outline-primary py-2 px-3 " for="pagination-bp-final">&lt;350px</label>
+                <input type="radio" class="btn-check " name="bga-pagination-group" id="bga-pagination-bp-final" autocomplete="off" data-breakpoint="bp-below350">
+                <label class="btn btn-outline-primary py-2 px-3 " for="bga-pagination-bp-final">&lt;350px</label>
 
                 </div>
 
@@ -300,13 +344,12 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-
-                <div class="bga-pagination remove-element-padding mt-0 mb-5 p-0">
+                            <div class="bga-pagination  remove-element-padding mt-0 mb-5 p-0">
 
     <div class="pagination-links">
         <ul class="d-flex px-0 pt-0 pb-2 ">
@@ -368,9 +411,144 @@
 
 </div>
 
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-pagination-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                  
+                    <input type="radio" class="btn-check bp-lg true" name="nb-pagination-group" id="nb-pagination-bp-lg" autocomplete="off" data-breakpoint="bp-992">
+                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="nb-pagination-bp-lg">≥992px (lg)</label>
+                
+
+                
+
+                      
+                    <input type="radio" class="btn-check bp-sm true" name="nb-pagination-group" id="nb-pagination-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-pagination-bp-sm">≥576px (sm)</label>
+                
+
+                      
+                    <input type="radio" class="btn-check bp-xs true" name="nb-pagination-group" id="nb-pagination-bp-xs" autocomplete="off" data-breakpoint="bp-350">
+                    <label class="btn bp-xs btn-outline-primary py-2 px-3 true" for="nb-pagination-bp-xs">≥350px (xs)</label>
+                
+
+                    
+                <input type="radio" class="btn-check " name="nb-pagination-group" id="nb-pagination-bp-final" autocomplete="off" data-breakpoint="bp-below350">
+                <label class="btn btn-outline-primary py-2 px-3 " for="nb-pagination-bp-final">&lt;350px</label>
+
+                </div>
 
             </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                <p class="">Apply your brand specific <strong>colours</strong> to the base pagination links shown below.</p>
+
+
+    
+                                <div class="bga-pagination non-branded remove-element-padding mt-0 mb-5 p-0">
+
+    <div class="pagination-links">
+        <ul class="d-flex px-0 pt-0 pb-2 ">
+            <li class="first" data-position="first"><a href="">
+                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                        <g data-name="Icon / chevron double / right" transform="translate(12 12) rotate(180)">
+                            <path data-name="Chevron Double / Right"
+                                d="M4.5,10.513,9.021,6,4.5,1.487,5.989,0,12,6,5.989,12Zm-4.5,0L4.521,6,0,1.487,1.49,0,7.5,6,1.49,12Z" />
+                        </g>
+                    </svg>First</a></li>
+            <li class="previous" data-position="previous"><a href="">
+                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+                        <g data-name="Icon / right" transform="translate(7.5 12) rotate(180)">
+                            <path data-name="Chevron / Right" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" />
+                        </g>
+                    </svg>Previous</a></li>
+            <li class="number" data-position="1"><a href="">1</a></li>
+            <li class="number current" data-position="2"><a href="">2</a></li>
+            <li class="number" data-position="3"><a href="">3</a></li>
+            <li class="number" data-position="4"><a href="">4</a></li>
+            <li class="number" data-position="5"><a href="">5</a></li>
+            <li class="number hidden" data-position="6"><a href="">6</a></li>
+            <li class="number hidden" data-position="7"><a href="">7</a></li>
+            <li class="number hidden" data-position="8"><a href="">8</a></li>
+
+            <li class="next" data-position="next"><a href="">
+                    Next
+                    <svg class="ms-2" data-name="Icon / right" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12"
+                        viewBox="0 0 7.5 12">
+                        <path data-name="Chevron / Right" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" />
+                    </svg>
+                </a></li>
+            <li class="last" data-position="last"><a href="">
+                    Last
+                    <svg class="ms-2" data-name="Icon / chevron double / right" xmlns="http://www.w3.org/2000/svg" width="12"
+                        height="12" viewBox="0 0 12 12">
+                        <path data-name="Chevron Double / Right"
+                            d="M4.5,10.513,9.021,6,4.5,1.487,5.989,0,12,6,5.989,12Zm-4.5,0L4.521,6,0,1.487,1.49,0,7.5,6,1.49,12Z" />
+                    </svg>
+                </a></li>
+        </ul>   
+    </div>
+
+
+    <div class="below-pagination mt-2 d-flex">
+        <div class="page-number remove-element-padding">
+            <p>Page <span>2</span> of 8</p>
         </div>
+        <div class="items-number d-flex">
+            <p class="m-0">Results per page</p>
+            <select id="results-per-page">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+    </div>
+
+
+</div>
+    
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
 
 
         <!-- Design specifications link -->

@@ -128,7 +128,7 @@
 </header>
 
 
-    <div id="breadcrumbs">
+    <div id="breadcrumbs" class="">
     <div class="container">
         <div class="row">
 
@@ -246,14 +246,58 @@
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        <div class="breakpoints m-0 p-4">
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>Business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">Business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
+        
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="-group">
+        <fieldset id="bga-table-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -262,13 +306,13 @@
                 
                 
                   
-                    <input type="radio" class="btn-check bp-lg true" name="-group" id="-bp-lg" autocomplete="off" data-breakpoint="bp-992">
-                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="-bp-lg">≥992px (lg)</label>
+                    <input type="radio" class="btn-check bp-lg true" name="bga-table-group" id="bga-table-bp-lg" autocomplete="off" data-breakpoint="bp-992">
+                    <label class="btn btn-outline-primary bp-lg py-2 px-3 true" for="bga-table-bp-lg">≥992px (lg)</label>
                 
 
                       
-                    <input type="radio" class="btn-check bp-md true" name="-group" id="-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="-bp-md">≥768px (md)</label>
+                    <input type="radio" class="btn-check bp-md true" name="bga-table-group" id="bga-table-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="bga-table-bp-md">≥768px (md)</label>
                 
 
                 
@@ -276,8 +320,8 @@
                 
 
                     
-                <input type="radio" class="btn-check true" name="-group" id="-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label class="btn btn-outline-primary py-2 px-3 true" for="-bp-final">&lt;768px</label>
+                <input type="radio" class="btn-check true" name="bga-table-group" id="bga-table-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="bga-table-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -297,15 +341,15 @@
 
 
 
-        <!-- Component example -->
+                    <!-- Component example -->
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
-                <h3>Responsive tables</h3>
+                            <h3>Responsive tables</h3>
 
-                <h4>Layout: Single column - full width</h4>
-                <div class="bga-component-wrapper pb-5">
+                            <h4>Layout: Single column - full width</h4>
+                            <div class="bga-component-wrapper pb-5">
     <div tabindex="0" class="bga-component table default m-0">
 
         
@@ -354,9 +398,9 @@
     </div>
 </div>
 
-                <h4>Layouts: Single column - 2/3 width layout and two column layouts</h4>
-                
-                <div class="bga-component-wrapper pb-5">
+                            <h4>Layouts: Single column - 2/3 width layout and two column layouts</h4>
+                            
+                            <div class="bga-component-wrapper pb-5">
     <div tabindex="0" class="bga-component table narrow m-0">
 
         
@@ -405,9 +449,9 @@
     </div>
 </div>
 
-                <h3>Unresponsive tables</h3>
+                            <h3>Unresponsive tables</h3>
 
-                <div class="bga-component-wrapper pb-5">
+                            <div class="bga-component-wrapper pb-5">
     <div tabindex="0" class="bga-component table narrow m-0">
 
         
@@ -454,13 +498,13 @@
     </div>
 </div>
 
-            </div>
-            
-                <div class="component-wrapper coloured-section remove-element-padding p-4">
-    
-                    <h3>Coloured background sections</h3>
-    
-                    <div class="bga-component-wrapper pb-5">
+                        </div>
+                        
+                            <div class="component-wrapper coloured-section remove-element-padding p-4">
+                
+                                <h3>Coloured background sections</h3>
+                
+                                <div class="bga-component-wrapper pb-5">
     <div tabindex="0" class="bga-component table narrow coloured-bkg m-0">
 
         
@@ -508,10 +552,179 @@
 
     </div>
 </div>
-    
+                
+                            </div>
+
+                    </div>
+
                 </div>
 
-        </div>
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-table-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                      
+                    <input type="radio" class="btn-check bp-md true" name="nb-table-group" id="nb-table-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label class="btn btn-outline-primary bp-md py-2 px-3 true" for="nb-table-bp-md">≥768px (md)</label>
+                
+
+                
+
+                
+
+                    
+                <input type="radio" class="btn-check true" name="nb-table-group" id="nb-table-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label class="btn btn-outline-primary py-2 px-3 true" for="nb-table-bp-final">&lt;768px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                <p class="">Apply your brand specific <strong>colours and borders</strong> to the base tables shown below.</p>
+
+
+    
+                                <h3>Responsive tables</h3>
+    
+                                <div class="bga-component-wrapper pb-5">
+    <div tabindex="0" class="bga-component table narrow non-branded m-0">
+
+        
+        <table class="table responsive">
+            <thead>
+                <tr>
+                    <th>Recipient Organisation</th>
+                    <th>Project Description</th>
+                    <th>Grant (Exc GST)</th>
+                    <th>Expected Total Investment (Exc GST)</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-title="Recipient Organisation" class="toggle-row" id="toggle-row-0">District Council Of
+                        Endor</td>
+                    <td data-title="Project Description">Materials Development and Design for Electrification and
+                        Automation</td>
+                    <td data-title="Grant (Exc GST)">$417,000</td>
+                    <td data-title="Expected Total Investment (Exc GST)">$417,000</td>
+                    <td data-title="State">Victoria</td>
+                </tr>
+
+                <tr>
+                    <td data-title="Recipient Organisation" class="toggle-row" id="toggle-row-1">Tattoine plantation
+                    </td>
+                    <td data-title="Project Description">Cyber-Safe Connected Vehicles: Ensuring Secure, Trusted, and
+                        Robust Cooperative Automotive Systems</td>
+                    <td data-title="Grant (Exc GST)">$494,900</td>
+                    <td data-title="Expected Total Investment (Exc GST)">$494,900</td>
+                    <td data-title="State">Victoria</td>
+
+                </tr>
+
+
+
+
+            </tbody>
+        </table>
+        
+
+
+        
+
+    </div>
+</div>
+    
+                                <h3>Unresponsive tables</h3>
+    
+                                <div class="bga-component-wrapper pb-5">
+    <div tabindex="0" class="bga-component table narrow non-branded m-0">
+
+        
+
+
+        
+        <table class="table unresponsive">
+            <tbody>
+                <tr>
+                    <td>Balonne</td>
+                    <td>Flinders</td>
+                    <td>Quilpie</td>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>Goondiwindi</td>
+                    <td>Richmond</td>
+                </tr>
+                <tr>
+                    <td>Barcaldine</td>
+                    <td>Lockyer Valley</td>
+                    <td>Scenic Rim</td>
+                </tr>
+                <tr>
+                    <td>Barcoo</td>
+                    <td>Longreach</td>
+                    <td>Somerset</td>
+                </tr>
+                <tr>
+                    <td>Blackall Tambo</td>
+                    <td>Maranoa</td>
+                    <td>South Burnett</td>
+                </tr>
+                <tr>
+                    <td>Boulia</td>
+                    <td>McKinlay</td>
+                    <td>Southern Downs</td>
+                </tr>
+
+            </tbody>
+        </table>
+        
+
+    </div>
+</div>
+    
+                            </div>
+    
+                        </div>
+
+                </div>
+
+            </div>
 
        
 
