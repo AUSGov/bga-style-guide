@@ -186,6 +186,24 @@ table.table {
 
 
 // Nav image tiles
+.tiles-wrapper {
+    &.inactive {
+        opacity: .4;
+    }
+}
+.bga-animation.loading-animation.tiles-loading {
+    display: none;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    left: calc(50% + 120px);
+    padding: 0%;
+    top: 40%;
+    
+    &.show {
+        display: block;
+    }
+}
 .nav-image-tile {
     border: 1px solid $bga-blue-border;
     border-left: 8px solid $bga-blue-background-dark;
@@ -286,6 +304,12 @@ table.table {
         width: calc(100% - 52px);
         height: 52px;
         padding: 1px 8px;
+
+        &:focus-visible {
+            border: $bga-text-focus-border;
+            border-radius: $bga-focus-radius;
+            outline: none;
+        }
     }
 
     button {
@@ -299,6 +323,17 @@ table.table {
         outline: none;
         box-shadow: none;
         text-indent: -9999px;
+
+        &:focus-visible {
+            background: url(../assets/icon-search-white.svg) no-repeat $bga-blue-links;
+            background-position: center center;
+            border: $bga-text-focus-border;
+            outline: none;
+        }
+        &:hover {
+            background: url(../assets/icon-search-white.svg) no-repeat $bga-blue-links;
+            background-position: center center;
+        }
     }
 
 }
@@ -308,6 +343,13 @@ table.table {
         border: none;
         background: none;
         text-decoration: underline;
+        color: $bga-black;
+        padding: 0;
+
+        &:hover {
+            background: transparent;
+            color: $bga-black;
+        }
     }
 }
 
