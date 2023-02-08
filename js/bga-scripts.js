@@ -247,16 +247,20 @@ $(document).ready(function () {
     // ANCHOR MENU 
     if ($('.in-page #anchor-menu').length) {
 
-        //Create object containing 
+        //Create object containing sections
         var sections = {};
-        $('.in-page #anchor-menu li a').each(function () {
-
-            if ($(this).attr('href')) {
-                var anchor_link = $(this).attr('href');
-                var section_position = $(anchor_link).position();
-                sections[anchor_link] = Math.round(section_position.top);
-            }
-        });
+        var get_section_positions = function(){
+             $('.in-page #anchor-menu li a').each(function () {
+                if ($(this).attr('href')) {
+                    var anchor_link = $(this).attr('href');
+                    var section_position = $(anchor_link).position();
+                    sections[anchor_link] = Math.round(section_position.top);
+                }
+            });
+            //  console.log(sections);
+        };
+        get_section_positions();
+       
 
         // Stickiness
         var make_sticky = function () {
@@ -264,13 +268,13 @@ $(document).ready(function () {
             var menu_width = $('.anchor-menu-wrapper').width();
             var menu_height = $('.in-page.anchor-menu').height();
             var footer_height = $('#footer').height();
-            var unfix = $(document).height() - footer_height - menu_height;
 
-            $('in-page.anchor-menu').css('width', menu_width);
+            $('.in-page.anchor-menu').css('width', menu_width);
 
             if ($(window).width() >= 992) {
 
                 $(window).scroll(function () {
+                    var unfix = $(document).height() - footer_height - menu_height;
                     var scroll_position = $(window).scrollTop();
 
                     if (scroll_position >= menu_position && scroll_position < unfix) {
@@ -289,18 +293,17 @@ $(document).ready(function () {
         make_sticky();
 
         $(window).resize(function () {
-
             if ($(window).width() < 992) {
                 $('.in-page.anchor-menu').removeClass('fixed');
             }
-
             make_sticky();
         });
 
         // Current section
         $(window).scroll(function () {
-            var current_section;
+            get_section_positions();
 
+            var current_section;
             for (var key in sections) {
 
                 if ($(window).scrollTop() >= sections[key] - 16) {
@@ -845,9 +848,6 @@ $(document).ready(function () {
             $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
         }
     });
-
-    
-    
 
 
     // COMPONENT EXAMPLE: STEPPED NAVIGATION

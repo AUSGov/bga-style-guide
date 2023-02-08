@@ -356,6 +356,7 @@ $(document).ready(function () {
     }
 
     // Add url fragments for task tracking in Loop11    
+   /*
     var set_fragment = function(task_str){
         var current_fragment = sessionStorage.getItem('fragment');
         if (!current_fragment) {
@@ -373,8 +374,10 @@ $(document).ready(function () {
             window.location.hash = new_fragment;
             sessionStorage.setItem('fragment', new_fragment);    
     };
+    */
     
     // GET current task function
+    /* 
     var get_current_task = function(){
         if ($('#ecb-prototype').length) {
             var current_task;
@@ -392,14 +395,15 @@ $(document).ready(function () {
             console.log(current_task);
         }
     };
+    */
     
     // Set task number to true in sessionStorage when a task landing page loads & set nav steps for each task.
-    //TASK 1
+    /*
     if (window.location.href.includes("task1-start.html")) {
         console.log('task1 start page');
         sessionStorage.setItem('task1', 'true'); 
     }
-    //TASK 2
+
     if (window.location.href.includes("task2-start.html")) {
         console.log('task2 start page');
         sessionStorage.setItem('task2', 'true');
@@ -409,7 +413,7 @@ $(document).ready(function () {
         sessionStorage.setItem('nav-step-4', 'visited');
         sessionStorage.setItem('nav-step-5', 'visited');   
     }
-    //TASK 3
+
     if (window.location.href.includes("task3-start.html")) {
         console.log('task3 start page');
         sessionStorage.setItem('task3', 'true'); 
@@ -419,7 +423,7 @@ $(document).ready(function () {
         sessionStorage.setItem('nav-step-4', 'visited');
         sessionStorage.setItem('nav-step-5', 'visited');   
     }
-    //TASK 4
+
     if (window.location.href.includes("task4-start.html")) {
         console.log('task4 start page');
         sessionStorage.setItem('task4', 'true');
@@ -431,8 +435,10 @@ $(document).ready(function () {
     }
 
     get_current_task();
+    */
 
     // Track button clicks with URL fragments
+    /*
     $('#verify-btn').on('click', function(){
         if (sessionStorage.current_task == "task1") {
             set_fragment("T1-email");
@@ -495,9 +501,10 @@ $(document).ready(function () {
         var href = $(this).attr('href');
         window.location = href
     });
-    
+    */
 
     // On page unload add page location to sessionStorage in 'prev_location' item
+    /*
     $(window).on('beforeunload', function () {
         var location = window.location.pathname;
         sessionStorage.setItem('prev-location', location);     
@@ -508,14 +515,17 @@ $(document).ready(function () {
      if (existing_fragment) {
          window.location.hash = existing_fragment;
      };
+     */
     
 
 }); //End doc ready
 
 // Ensure URL fragments are added to the url (this catches back button clicks that)
+/*
 window.onhashchange = function() {
     var existing_fragment = sessionStorage.getItem('fragment');
     if (existing_fragment) {
         window.location.hash = existing_fragment;
     };
 }
+*/
