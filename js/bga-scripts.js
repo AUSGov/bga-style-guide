@@ -599,7 +599,6 @@ $(document).ready(function () {
     });
 
 
-
     // SEARCH INPUT EXAMPLE
     $(".bga-site-header .search-container input").on('focus', function () {
         $(this).addClass('in-focus');
@@ -679,27 +678,31 @@ $(document).ready(function () {
     });
 
     // Reset on breakpoint change
-    $('#bga-site-header-group label:last-of-type').on('click', function () {
-        $("#mobile-search").hide();
-        $('.mobile-search').removeClass('open');
-        $('.navbar').hide();
-        $('.mobile-nav').removeClass('open');
+    $('#bga-site-header-group label:last-of-type, #nb-site-header-group label:last-of-type').on('click', function () {
+        var parent = $('.tab-section');
+        parent.find("#mobile-search").hide();
+        parent.find('.mobile-search').removeClass('open');
+        parent.find('.navbar').hide();
+        parent.find('.mobile-nav').removeClass('open');
     });
-    $('#bga-site-header-group label.bp-xs').on('click', function () {
-        $("#mobile-search").hide();
-        $('.mobile-search').removeClass('open');
-        $('.navbar').hide();
-        $('.mobile-nav').removeClass('open');
+    $('#bga-site-header-group label.bp-xs, #nb-site-header-group label.bp-xs').on('click', function () {
+        var parent = $('.tab-section');
+        parent.find("#mobile-search").hide();
+        parent.find('.mobile-search').removeClass('open');
+        parent.find('.navbar').hide();
+        parent.find('.mobile-nav').removeClass('open');
     });
-    $('#bga-site-header-group label.bp-md').on('click', function () {
-        $("#mobile-search").hide();
-        $('.mobile-search').removeClass('open');
-        $('.navbar').show();
+    $('#bga-site-header-group label.bp-md, #nb-site-header-group label.bp-md').on('click', function () {
+        var parent = $('.tab-section');
+        parent.find("#mobile-search").hide();
+        parent.find('.mobile-search').removeClass('open');
+        parent.find('.navbar').show();
     });
-    $('#bga-site-header-group label.bp-lg').on('click', function () {
-        $("#mobile-search").hide();
-        $('.mobile-search').removeClass('open');
-        $('.navbar').show();
+    $('#bga-site-header-group label.bp-lg, #nb-site-header-group label.bp-lg').on('click', function () {
+        var parent = $('.tab-section');
+        parent.find("#mobile-search").hide();
+        parent.find ('.mobile-search').removeClass('open');
+        parent.find('.navbar').show();
     });
 
     // Close nav on click outside  
@@ -845,9 +848,6 @@ $(document).ready(function () {
             $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
         }
     });
-
-    
-    
 
 
     // COMPONENT EXAMPLE: STEPPED NAVIGATION
