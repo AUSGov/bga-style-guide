@@ -17,8 +17,7 @@ subsite-tag: false
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
-
+        classes="in-page"
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
@@ -32,26 +31,72 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-        {% include breakpoints.html
-        element-string="bga-site-header"
-        lg-visibility="true"
-        md-visibility="true"
-        xs-visibility="true"
-        breakpoint-final="350"
-        %}
+        {% include section-tabs.html
 
-        <!-- Component example -->
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+                
+                <div class="tab-section bga-branded selected">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-site-header"
+                    lg-visibility="true"
+                    md-visibility="true"
+                    xs-visibility="true"
+                    breakpoint-final="350"
+                    %}
 
+                    <!-- Component example -->
 
-                {% include component-examples/bga-site-header-example.html %}
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
 
+                            {% include component-examples/bga-site-header-example.html %}
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html
+                        element-string="nb-site-header"
+                        lg-visibility="true"
+                        md-visibility="true"
+                        xs-visibility="true"
+                        breakpoint-final="350"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="site header"
+                                    brand-elements="colours, borders and logo"
+                                %}
+    
+                                {% include component-examples/bga-site-header-example.html 
+                                    classes="non-branded"
+                                    %}
+    
+                            </div>
+                        </div>
+
+                </div>
 
             </div>
-        </div>
 
 
         <!-- Design specifications link -->
