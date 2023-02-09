@@ -8,8 +8,6 @@
         width: 66.66%;
     }
 
-
-
     .footer-links {
         width: 33.33%;
 
@@ -24,7 +22,7 @@
 
             li {
                 display: block;
-                color: $bga-white;
+                color: $bga-white !important;
                 text-indent: 0;
                 margin: 0 0 24px 18px;
                 padding: 0;
@@ -52,6 +50,7 @@
                         border-radius: 4px;
                         outline: none;
                         text-decoration: underline;
+                        color: $bga-white !important;
                     }
 
                     &:hover {
@@ -69,7 +68,6 @@
     }
 
     .contact-social-wrapper {
-
         width: 33.33%;
     }
 
@@ -77,6 +75,7 @@
         a {
             font-size: 24px;
             font-weight: 600;
+            color: $bga-white !important;
 
             &:focus {
                 border: 2px solid $bga-white;
@@ -193,7 +192,54 @@
             }
         }
     }
-}
+
+    &.non-branded {
+        background: $nb-black-light;
+
+        .social-links-wrapper {
+            .footer-social {
+                li {
+                    background: url(../assets/Img-icon-placeholder.svg) no-repeat;
+                    background-size: 48px;
+                    background-position: center center;
+                    border: none;
+                    border-radius:0;
+                    width: 48px;
+                    height: 48px;
+    
+                    &::before {
+                        display: none;
+                    }
+                    svg {
+                        display: none;
+                    }
+                    &:focus {
+                        border: 3px solid $bga-white;
+                        background: url(../assets/Img-icon-placeholder.svg) no-repeat;
+                        background-size: 48px;
+                        background-position: center center;
+                    }
+                    &:hover {
+                        border: none;
+                        background: url(../assets/Img-icon-placeholder.svg) no-repeat;
+                        background-size: 48px;
+                        background-position: center center;
+                    }
+                }
+            }
+        }
+        .subscribe-wrapper {
+            .subscribe-form {
+                a {
+                    &:focus {
+                        border: solid $nb-blue-links 2px;
+        
+                    }
+                }
+            }
+        }
+    }
+}   
 
 .copyright {
     background: $bga-blue-footer;
@@ -208,6 +254,10 @@
         max-width: 300px;
         height: auto;
         margin-bottom: 32px;
+    }
+
+    &.non-branded {
+        background: $bga-black;
     }
 }
 

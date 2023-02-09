@@ -432,6 +432,7 @@ table.table {
     p {
         font-size: 1rem;
         font-weight: 600;
+        line-height: 1;
     }
 
     .show {
@@ -447,30 +448,32 @@ table.table {
         background: $bga-white;
         border: solid 3px $bga-blue-footer;
         color: $bga-blue-links;
+        display: flex !important;
+        justify-items: center;
+        align-items: center;
+        box-shadow: none !important;
+        outline: none !important;
 
-        &:focus {
-            color: $bga-white;
-            background: $bga-blue-links;
+        &:focus, &:focus-visible {
+            background: $bga-blue-background-light;
+            border: solid 3px $bga-blue-links !important;
+            box-shadow: none;
+            outline: none;
         }
 
         &:hover {
             color: $bga-white;
             background: $bga-blue-background-dark;
+            border: solid 3px $bga-blue-footer !important;
         }
     }
-
     .btn-check:checked+.btn-outline-primary,
     .btn-check:active+.btn-outline-primary,
     .btn-outline-primary:active,
     .btn-outline-primary.active,
     .btn-outline-primary.dropdown-toggle.show {
-        background: $bga-blue-footer;
+        background: $bga-blue-footer !important;
         border-color: $bga-blue-footer;
-    }
-
-    .btn-check:focus+.btn-outline-primary,
-    .btn-outline-primary:focus {
-        box-shadow: none;
     }
 }
 

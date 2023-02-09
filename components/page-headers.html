@@ -13,197 +13,273 @@ subsite-tag: true
 
 
 <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
+        classes="in-page"
 
-            link-1="Design" link-id-1="#design"
-            link-2="Layouts" link-id-2="#layouts" 
-            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
         %}
-        
+
     </div>
-    
+
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
-   
-          
-        <!-- DESIGN -->   
+
+
+        <!-- DESIGN -->
         <h2 class="section-start" id="design">Design</h2>
 
-        <!-- Breakpoint radio buttons -->
-       {% include breakpoints.html
-            element-string="hero-pathway"
-            md-visibility="true"
-            sm-visibility="true"
-            final-visibility="true"
-            breakpoint-final="576"
+        {% include section-tabs.html
+
+        tab1="Business.gov.au branding"
+        tab1value="bga-branded"
+
+        tab2="No branding"
+        tab2value="non-branded"
+
         %}
 
-        <!-- Component example -->
+        <div class="tab-sections-wrapper p-4">
 
-        <div class="component-example m-0">
-            <div class="component-wrapper remove-element-padding p-4">
+            <div class="tab-section bga-branded selected">
 
-
-            <h3>Category pages</h3>
-                
-                {% include component-examples/page-header-example.html 
-                    description="The long description can be used to briefly describe the contents of the page."
-                    header-image="'../assets/planning.jpg' | relative_url " 
-                    header-classes="category blue"
-                    header-type="Category page header"
-                %}
-                
-                
-            <h3>Topic pages</h3>
-                {% include component-examples/page-header-example.html 
-                    header-classes="topic blue"
-                    header-type="Topic page header"
-                    description="The long description can be used to briefly describe the contents of the page."
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                element-string="bga-headers"
+                md-visibility="true"
+                sm-visibility="true"
+                final-visibility="true"
+                breakpoint-final="576"
                 %}
 
-                
-            <h3>Information page</h3>
-                {% include component-examples/page-header-example.html 
-                    header-classes="information blue"
-                    updated="Last updated: 21 June 2022"
-                    header-type="Information page header"
-                    description="The long description can be used to briefly describe the contents of the page."
-                %}
-                
-            <h3>Grants and program page</h3>
-                {% include component-examples/page-header-example.html 
-                    header-classes="grants blue"
-                    updated="Last updated: 21 June 2022"
-                    label="Grant or program name"
-                    header-type="Grants page header"
-                %}
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+
+                        <h3>Category pages</h3>
+
+                        {% include component-examples/page-header-example.html
+                        description="The long description can be used to briefly describe the contents of the page."
+                        header-image="'../assets/planning.jpg' | relative_url "
+                        header-classes="category blue"
+                        header-type="Category page header"
+                        %}
+
+
+                        <h3>Topic pages</h3>
+                        {% include component-examples/page-header-example.html
+                        header-classes="topic blue"
+                        header-type="Topic page header"
+                        description="The long description can be used to briefly describe the contents of the page."
+                        %}
+
+
+                        <h3>Information page</h3>
+                        {% include component-examples/page-header-example.html
+                        header-classes="information blue"
+                        updated="Last updated: 21 June 2022"
+                        header-type="Information page header"
+                        description="The long description can be used to briefly describe the contents of the page."
+                        %}
+
+                        <h3>Grants and program page</h3>
+                        {% include component-examples/page-header-example.html
+                        header-classes="grants blue"
+                        updated="Last updated: 21 June 2022"
+                        label="Grant or program name"
+                        header-type="Grants page header"
+                        %}
 
 
 
-                <h3>Colour variations</h3>
+                        <h3>Colour variations</h3>
 
-                <div class="header-colour-options-wrapper">
-                    {% include component-examples/page-headers-colours.html 
-                        classes="blue"
-                        text="Blue - default colour"
-                    %} 
+                        <div class="header-colour-options-wrapper">
+                            {% include component-examples/page-headers-colours.html
+                            classes="blue"
+                            text="Blue - default colour"
+                            %}
 
-                   {% include component-examples/page-headers-colours.html 
-                        classes="yellow"
-                        text="Yellow - guide headers"
-                    %} 
-                    
-                   {% include component-examples/page-headers-colours.html 
-                        classes="teal"
-                        text="Teal - tool headers"
-                    %} 
+                            {% include component-examples/page-headers-colours.html
+                            classes="yellow"
+                            text="Yellow - guide headers"
+                            %}
 
-                    {% include component-examples/page-headers-colours.html 
-                        classes="green"
-                        text="Green - success pages"
-                        icon="success"
-                    %} 
-                    
-                   {% include component-examples/page-headers-colours.html 
-                        classes="red"
-                        text="Red - error pages"
-                        icon="fail"
-                    %} 
+                            {% include component-examples/page-headers-colours.html
+                            classes="teal"
+                            text="Teal - tool headers"
+                            %}
+
+                            {% include component-examples/page-headers-colours.html
+                            classes="green"
+                            text="Green - success pages"
+                            icon="success"
+                            %}
+
+                            {% include component-examples/page-headers-colours.html
+                            classes="red"
+                            text="Red - error pages"
+                            icon="fail"
+                            %}
+
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
 
+            <div class="tab-section non-branded">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                element-string="nb-headers"
+                md-visibility="true"
+                sm-visibility="true"
+                final-visibility="true"
+                breakpoint-final="576"
+                %}
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        {% include non-branded-explanation.html
+                            component="page headers"
+                            brand-elements="colours and images"
+                        %}
+
+                        <h3>Page header with image</h3>
+
+                        {% include component-examples/page-header-example.html
+                        description="The long description can be used to briefly describe the contents of the page."
+                        header-image="'../assets/img-placeholder-2.svg' | relative_url "
+                        header-classes="category blue"
+                        classes="non-branded"
+                        header-type="Page title"
+                        %}
+
+                        <h3>Page header without image</h3>
+                        {% include component-examples/page-header-example.html
+                        header-classes="information blue"
+                        classes="non-branded"
+                        updated="Last updated: 21 June 2022"
+                        header-type="Page title"
+                        description="The long description can be used to briefly describe the contents of the page."
+                        %}
+
+                    </div>
+                </div>
+
+
             </div>
+
+
         </div>
 
 
         <!-- Design specifications link -->
 
-        {% include design-specs-link.html 
-            btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/fe6137db-86f0-4ca9-bd13-c177cd0e807a/'"
-            btn-text="View design specifications"
-            %}
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/fe6137db-86f0-4ca9-bd13-c177cd0e807a/'"
+        btn-text="View design specifications"
+        %}
 
 
-        <!-- LAYOUTS -->   
+        <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
-        
-        <p>Page headers are used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >all page layouts</a>.</p> 
+
+        <p>Page headers are used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all page
+                layouts</a>.</p>
 
         <h4>Bootstrap classes for header content</h4>
         <ul>
             <li>All headers except the category page header: <strong>.col-sm-12 .col-lg-10 .col-xl-8</strong></li>
             <li>Category page header (includes text area and image): <strong>.col-12</strong></li>
         </ul>
-       
-        
-        
-        
-        
-        <h3>Default header grid layout</h3>
-        {% include layouts-dropdown.html 
-            layout-name="All layouts"
-            singlelayout="true"
-        %}
-        
-        <div class="layout-example show full-border mt-0 mb-5 p-4">
-        {% include layouts-accordion.html 
-        
-                min1200-visibility="true"
-                min992-visibility="true"
-                min768-visibility="false"
-                min576-visibility="false"
-                finalbp-visibility="true"
-                
-                finalbp="Breakpoint &lt; 992px"
-            
-                min1200-img="'../assets/layout-images/page-header-default-min1200.png' | relative_url "
-                min992-img="'../assets/layout-images/page-header-default-min992.png' | relative_url "
-                finalbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
-            
-                min1200-rules="<p>The header content area is 8 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
 
-                min992-rules="<p>The header content area is 10 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
-            
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
-                
-            %}
-            
-        </div>
-        
-        
-        <h3>Category page grid layout</h3>
-        {% include layouts-dropdown.html 
-            layout-name="All layouts"
-            singlelayout="true"
+
+
+
+
+        <h3>Default header grid layout</h3>
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
         %}
-        
+
         <div class="layout-example show full-border mt-0 mb-5 p-4">
-            
-            {% include layouts-accordion.html 
-        
-                singlelayout="true"
-            
-                allbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
-            
-                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The coloured header container is 12 grid-columns wide.</p><p>The gradient background extends full width of the viewport.</p>"
-                
+            {% include layouts-accordion.html
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+            min1200-img="'../assets/layout-images/page-header-default-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/page-header-default-min992.png' | relative_url "
+            finalbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
+
+            min1200-rules="<p>The header content area is 8 grid-columns wide.</p>
+            <p>The coloured header container is 12 grid-columns wide.</p>
+            <p>The gradient background extends full width of the viewport.</p>"
+
+            min992-rules="<p>The header content area is 10 grid-columns wide.</p>
+            <p>The coloured header container is 12 grid-columns wide.</p>
+            <p>The gradient background extends full width of the viewport.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The coloured header container is 12 grid-columns wide.</p>
+            <p>The gradient background extends full width of the viewport.</p>"
+
             %}
-            
+
         </div>
-        
-        
-    
+
+
+        <h3>Category page grid layout</h3>
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+
+            {% include layouts-accordion.html
+
+            singlelayout="true"
+
+            allbp-img="'../assets/layout-images/page-header-category-allbp.png' | relative_url "
+
+            allbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The coloured header container is 12 grid-columns wide.</p>
+            <p>The gradient background extends full width of the viewport.</p>"
+
+            %}
+
+        </div>
+
+
+
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose: </h3>
-        <p>A page header helps users understand what the content of the page is about and its relevance to them. It includes the primary H1 (page title), a label and a supporting page description.  </p>
+        <p>A page header helps users understand what the content of the page is about and its relevance to them. It
+            includes the primary H1 (page title), a label and a supporting page description.  </p>
         <h4>Headers for grant landing pages </h4>
-        <p>These differ from all other headers. They use a plain English title as the H1, and the grant name is displayed in the label field &ndash; this is also the page title in this case. </p>
+        <p>These differ from all other headers. They use a plain English title as the H1, and the grant name is
+            displayed in the label field &ndash; this is also the page title in this case. </p>
         <h3>When to use this component: </h3>
         <ul>
             <li>Page headers are built into every page pattern and the component doesn’t need to be added manually.</li>
@@ -214,6 +290,5 @@ classes="in-page"
             <li>Description: Recommended 250 character limit  </li>
         </ul>
 
-            
-        </div>
-        
+
+    </div>
