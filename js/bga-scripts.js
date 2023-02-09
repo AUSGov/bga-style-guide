@@ -748,6 +748,18 @@ $(document).ready(function () {
         parent.find('.navbar').show();
     });
 
+    // Reset on branded / unbranded tab change {
+    if ( $('#bga-site-header-group').length ) {
+        
+        $('.section-tabs tab').on('click', function(){
+            console.log('clicked'); 
+            $("#mobile-search").hide();
+            $('.mobile-search').removeClass('open');
+            $('.navbar').show();
+        });
+
+    };
+
     // Close nav on click outside  
     $(document).mouseup(function (e) {
 
