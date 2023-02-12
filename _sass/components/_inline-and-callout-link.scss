@@ -86,6 +86,7 @@
     background: $bga-blue-background-extralight;
 
         .content {
+            border-left: solid 8px $bga-blue-border;
             display: flex;
             flex-wrap: nowrap;
             align-items: center;
@@ -121,6 +122,9 @@
         height: auto;
     }
     &.non-branded {
+        .content {
+            border: none;
+        }
         a {
             &:focus-visible {
                 color: $nb-blue-links;
