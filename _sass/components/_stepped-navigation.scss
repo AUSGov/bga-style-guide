@@ -55,6 +55,9 @@
         &:first-of-type::before {
             display: none;
         }
+        &:last-of-type {
+            margin-right: 0 !important;
+        }
         
         .step-number {
             width: 38px;
@@ -75,6 +78,7 @@
             width: 100%;
             display: block;
             font-size: .875rem;
+
         }
 
         &.completed {
@@ -216,8 +220,29 @@
     }
 }
 
-
 // Mixins for media queries and smaller screen examples
+@mixin stepped-nav-bp-768 {
+    .page-header-wrapper.tool-stepped-nav.teal, .ecb-example-layout #page-header.stepped-nav.teal {
+        background: $bga-teal-highlight-light;
+        padding: 0 !important;
+    }
+    .header-content {
+        padding: 0 0 32px 0 !important;
+    }
+    .stepped-navigation {
+        .step {
+            margin-right: 4px !important;
+
+            &::before {
+                right: calc(100% - 30px);
+            }
+            .step-name {
+                font-size: 0.8125rem;
+            }
+        }
+    }
+}
+
 @mixin stepped-nav-below768 {
     .page-header-wrapper.tool-stepped-nav.teal {
         background: none;
@@ -228,6 +253,9 @@
 
         .step-title {
             display: none;
+        }
+        .step .step-name {
+            font-size: .875rem;
         }
         .mobile-stepped-nav {
             display: flex;
@@ -307,13 +335,21 @@
     }
 }
 
+
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below768,
-.component-example.small-screen {
+.component-example.bp-768, .component-example.bp-below768 {
+    @include stepped-nav-bp-768();
+}
+
+
+.component-example.bp-below768 {
     @include stepped-nav-below768();
 }
 
 // Media queries for HTML example pages
+@media (max-width: 992px) {
+    @include stepped-nav-bp-768();
+}
 @media (max-width: 768px) {
     @include stepped-nav-below768();
 }

@@ -199,14 +199,6 @@ html.ecb-prototype {
         }
     }
 
-    //Stepped nav
-    .stepped-navigation {
-        .step {
-            width: 150px;
-            flex: initial;
-        }
-    }
-
     //Sticky header 
     #page-header.fixed {
         position: fixed;
@@ -227,11 +219,6 @@ html.ecb-prototype {
         .header-content {
             padding: 24px 32px 24px !important;
         }
-
-        .step-name {
-            height: 21px;
-            text-overflow: unset;
-        }
     }
 
     .page-content.fixed {
@@ -242,13 +229,8 @@ html.ecb-prototype {
     // Media queries
     @media (max-width: 992px) {
         #page-header.fixed {
-            .step-name {
-                text-overflow: ellipsis;
-                width: 110px;
-                height: 21px;
-                display: block;
-                overflow: hidden;
-                white-space: nowrap;
+            .header-content {
+                padding: 24px 0 !important;
             }
         }
     }
