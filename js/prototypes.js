@@ -4,7 +4,7 @@
 $(document).ready(function () {
 
     //ECB REVISED FLOW PROTOTYPE
-
+/*
     // Open & close modals
     $('#ecb-prototype .modal-trigger').on('click', function () {
         var modal = $(this).attr('data-modal');
@@ -89,7 +89,7 @@ $(document).ready(function () {
 
 
     });
-
+*/
 
     // Close modal and scroll page on download / email success
     $('.success-scroll').on('click', function () {
