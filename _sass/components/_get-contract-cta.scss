@@ -1,0 +1,142 @@
+.get-contract-modal.modal-example {
+    max-height: none;
+    height: auto;
+    position: fixed;
+    top: 5rem;
+    z-index: 9000;
+    left: calc(50% - 320px);
+    display: none;
+
+    &.show {
+        display: block;
+    }
+
+    .icon-wrapper {
+        background: $bga-green-success-dark;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+
+        img {
+            width: 18px;
+        }
+    }
+
+    .number-code {
+        align-items: center;
+
+        input {
+            width: 56px;
+            border: none;
+            border-bottom: solid 4px $bga-blue-black-dark;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            color: $bga-blue-black-dark;
+        }
+
+        .success-icon {
+            display: none;
+            position: relative;
+
+            &.show {
+                display: flex;
+                align-items: center;
+            }
+
+            circle {
+                fill: $bga-green-success-dark;
+                stroke: $bga-green-success-dark;
+                stroke-width: 4px;
+                stroke-dasharray: 126;
+                animation: success-animation 2s linear infinite;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                transform: rotate(-90deg);
+                transform-origin: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            @keyframes success-animation {
+                0% {
+                    stroke-dashoffset: 126;
+                    fill: transparent;
+                }
+
+                50% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                }
+
+                100% {
+                    stroke-dashoffset: 0;
+                    fill: $bga-green-success-dark;
+                }
+            }
+
+            .tick {
+                position: absolute;
+                top: 20px;
+                left: 12px;
+            }
+        }
+        .error-msg {
+            display: none;
+        }
+        &.error {
+            .code-inputs {
+                box-shadow: 0 0 0 8px $bga-red-fail-mid;
+                background: $bga-red-fail-mid;
+            }
+            input {
+                background: $bga-red-fail-light;
+                border-bottom-color: $bga-red-fail-dark;
+            }
+
+            .error-msg {
+                display: block;
+                
+                p {
+                    color: $bga-red-fail-dark;
+                }
+            }
+        }
+    }
+}
+
+#modal-email {
+    .step {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+}
+#email-form {
+    input {
+        width: auto;
+        flex-grow: 1;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8500;
+    background-color: $bga-black;
+    opacity: .6;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
