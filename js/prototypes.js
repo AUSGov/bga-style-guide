@@ -122,7 +122,7 @@ $(document).ready(function () {
 
         sessionStorage.setItem(active_step, 'visited');
 
-        var step_titles = ["position.html", "hours.html", "pay.html", "review.html", "finalise.html"];
+        var step_titles = ["position.html", "hours.html", "pay.html", "leave.html", "obligations.html", "ending-employment", "review.html", "finalise.html"];
 
         for (var step = 0; step < step_titles.length; step++) {
             var step_number = step + 1,

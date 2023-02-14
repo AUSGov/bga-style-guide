@@ -918,7 +918,7 @@ $(document).ready(function () {
         $(this).parents('.stepped-navigation-wrapper').find('.stepped-navigation').slideToggle();
     });
     // Reset css display on breakpoint button click and reset
-    $('#bga-stepped-navigation-bp-md, #nb-stepped-navigation-bp-md').on('click', function () {
+    $('#bga-stepped-navigation-bp-lg, #nb-stepped-navigation-bp-lg, #bga-stepped-navigation-bp-md, #nb-stepped-navigation-bp-md').on('click', function () {
         var parent = $(this).parents('.tab-section');
         parent.find('.stepped-nav-toggle').removeClass('open');
         parent.find('.stepped-navigation-wrapper').find('.stepped-navigation').css('display', 'flex');
