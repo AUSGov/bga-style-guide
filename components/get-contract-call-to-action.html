@@ -362,7 +362,7 @@
                 <div class="button-group d-flex">
 
                     <div class="button-example">
-                        <button data-modal="modal-download" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href=""
+                        <button data-modal="bga-modal-download" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href=""
                             role="button">Download contract <svg data-name="Icon: Download"
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 viewBox="0 0 16 16">
@@ -373,7 +373,7 @@
                     </div>
 
                     <div class="button-example">
-                        <button data-modal="modal-email" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href=""
+                        <button data-modal="bga-modal-email" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href=""
                             role="button">Email contract <svg id="Icon:_Send" data-name="Icon: Send"
                                 xmlns="http://www.w3.org/2000/svg" width="18" height="15.429"
                                 viewBox="0 0 18 15.429">
@@ -395,7 +395,7 @@
 
 
 <!-- DOWNLOAD MODAL -->
-<div id="modal-download" class="bga-component get-contract-modal modal-example px-4 pb-4 pt-5">
+<div id="bga-modal-download" class="bga-component get-contract-modal modal-example px-4 pb-4 pt-5">
 
     <button class="close m-0 p-0">Close</button>
 
@@ -404,7 +404,7 @@
         <div class="component-text p-0 remove-element-padding">
 
             <h4 class="d-flex align-items-center">
-                <div class="icon-wrapper me-2"><img src=/bga-style-guide/assets/icon-tick-white.svg /></div>
+                <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-tick-white.svg /></div>
                 Download successful
             </h4>
 
@@ -422,7 +422,7 @@
 
 
 <!-- EMAIL MODAL -->
-<div id="modal-email" class="bga-component get-contract-modal modal-example px-4 pb-4 pt-5">
+<div id="bga-modal-email" class="bga-component get-contract-modal modal-example px-4 pb-4 pt-5">
 
     <button class="close m-0 p-0">Close</button>
 
@@ -430,7 +430,7 @@
 
         <div class="component-text p-0 remove-element-padding">
 
-                <div id="step-email-address" class="step remove-element-padding show">
+                <div id="step-email-address" data-id="bga" class="step remove-element-padding show">
                     <h4>Email your contract</h4>
 
                     <p>Enter your email to receive a copy of your employment contract and letter of offer in a word document.</p>
@@ -447,19 +447,18 @@
                         </div>
                     </form>
 
-                    <p class="mini">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service
-                        apply</p>
+                    <p class="mini">This site is protected by reCAPTCHA and the<a href="">Google Privacy Policy</a> and <a href="">Terms of Service</a> apply</p>
 
                 </div>
 
-                <div id="step-verify-email" class="step remove-element-padding">
+                <div id="step-verify-email" data-id="bga" class="step remove-element-padding">
                     <h4>Verify your email address</h4>
 
                     <p>We’ve sent a 4 digit code to <strong><span class="user-email">user@emailaddress.com.au</span></strong>.</p>
                     <p>Enter the code below to verify your email address.
                     </p>
 
-                    <form id="verify-form">
+                    <form id="verify-form" data-id="bga">
                     <fieldset class='number-code'>
                         <div class="d-inline-flex code-inputs">
                             <input name='code' class='code-input py-2 me-2' required/>
@@ -482,7 +481,7 @@
 
 
                         </div> 
-                        <div class="error-msg mt-3 mb-0">
+                        <div class="error-msg remove-element-padding mt-3 mb-3">
                             <p>Incorrect code. Please enter the code sent to your email address.</p>
                         </div> 
                         <p class="mini mt-3 mb-5">Didn’t receive the code? <a href="">Resend code</a></p>
@@ -501,7 +500,7 @@
                 </div>
 
 
-                <div id="step-email-success" class="step remove-element-padding">
+                <div id="step-email-success" data-id="bga" class="step remove-element-padding">
                     <h4 class="d-flex align-items-center">Success – we’ve emailed your employment contract</h4>
 
                     <p>You will need to add in personal details such as your ABN, names and signatures to finalise your contract.</p>
@@ -589,7 +588,8 @@
                     <div class="component-example narrow m-0">
                         <div class="component-wrapper remove-element-padding p-4">
                             
-                        <h3>Default contact call out box</h3>    
+                        <p class="">Apply your brand specific <strong>colours, borders, icons and button styles</strong> to the base call to action shown below.</p>
+
 
                         <div class="bga-component-wrapper pb-5">
     <div class="bga-component callout-box call-to-action non-branded nb-background m-0">
@@ -604,7 +604,7 @@
                 <div class="button-group d-flex">
 
                     <div class="button-example">
-                        <button data-modal="modal-download" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href=""
+                        <button data-modal="nb-modal-download" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href=""
                             role="button">Download contract <svg data-name="Icon: Download"
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 viewBox="0 0 16 16">
@@ -615,7 +615,7 @@
                     </div>
 
                     <div class="button-example">
-                        <button data-modal="modal-email" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href=""
+                        <button data-modal="nb-modal-email" class="bga-btn bga-primary-btn bkg-light modal-trigger" tabindex="0" href=""
                             role="button">Email contract <svg id="Icon:_Send" data-name="Icon: Send"
                                 xmlns="http://www.w3.org/2000/svg" width="18" height="15.429"
                                 viewBox="0 0 18 15.429">
@@ -637,7 +637,7 @@
 
 
 <!-- DOWNLOAD MODAL -->
-<div id="modal-download" class="bga-component get-contract-modal modal-example px-4 pb-4 pt-5">
+<div id="nb-modal-download" class="bga-component get-contract-modal modal-example px-4 pb-4 pt-5">
 
     <button class="close m-0 p-0">Close</button>
 
@@ -646,7 +646,7 @@
         <div class="component-text p-0 remove-element-padding">
 
             <h4 class="d-flex align-items-center">
-                <div class="icon-wrapper me-2"><img src=/bga-style-guide/assets/icon-tick-white.svg /></div>
+                <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-tick-white.svg /></div>
                 Download successful
             </h4>
 
@@ -664,7 +664,7 @@
 
 
 <!-- EMAIL MODAL -->
-<div id="modal-email" class="bga-component get-contract-modal modal-example px-4 pb-4 pt-5">
+<div id="nb-modal-email" class="bga-component get-contract-modal modal-example px-4 pb-4 pt-5">
 
     <button class="close m-0 p-0">Close</button>
 
@@ -672,7 +672,7 @@
 
         <div class="component-text p-0 remove-element-padding">
 
-                <div id="step-email-address" class="step remove-element-padding show">
+                <div id="step-email-address" data-id="nb" class="step remove-element-padding show">
                     <h4>Email your contract</h4>
 
                     <p>Enter your email to receive a copy of your employment contract and letter of offer in a word document.</p>
@@ -689,19 +689,18 @@
                         </div>
                     </form>
 
-                    <p class="mini">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service
-                        apply</p>
+                    <p class="mini">This site is protected by reCAPTCHA and the<a href="">Google Privacy Policy</a> and <a href="">Terms of Service</a> apply</p>
 
                 </div>
 
-                <div id="step-verify-email" class="step remove-element-padding">
+                <div id="step-verify-email" data-id="nb" class="step remove-element-padding">
                     <h4>Verify your email address</h4>
 
                     <p>We’ve sent a 4 digit code to <strong><span class="user-email">user@emailaddress.com.au</span></strong>.</p>
                     <p>Enter the code below to verify your email address.
                     </p>
 
-                    <form id="verify-form">
+                    <form id="verify-form" data-id="nb">
                     <fieldset class='number-code'>
                         <div class="d-inline-flex code-inputs">
                             <input name='code' class='code-input py-2 me-2' required/>
@@ -724,7 +723,7 @@
 
 
                         </div> 
-                        <div class="error-msg mt-3 mb-0">
+                        <div class="error-msg remove-element-padding mt-3 mb-3">
                             <p>Incorrect code. Please enter the code sent to your email address.</p>
                         </div> 
                         <p class="mini mt-3 mb-5">Didn’t receive the code? <a href="">Resend code</a></p>
@@ -743,7 +742,7 @@
                 </div>
 
 
-                <div id="step-email-success" class="step remove-element-padding">
+                <div id="step-email-success" data-id="nb" class="step remove-element-padding">
                     <h4 class="d-flex align-items-center">Success – we’ve emailed your employment contract</h4>
 
                     <p>You will need to add in personal details such as your ABN, names and signatures to finalise your contract.</p>

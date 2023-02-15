@@ -1131,10 +1131,11 @@ $(document).ready(function () {
     // Open & close modals
     $('.modal-trigger').on('click', function () {
         var modal = $(this).attr('data-modal');
+        console.log(modal);
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
 
-        if ( modal = 'modal-email') {
+        if ( modal.includes('modal-email')) {
             $('#step-email-address').addClass('show');
             $('#step-verify-email, #step-email-success, .success-icon').removeClass('show'); 
             $('#step-verify-email input').each(function(){
@@ -1148,12 +1149,15 @@ $(document).ready(function () {
     });
 
     // Stop forms in email modal from reloading the page
-    $("#email-form, #verify-form").submit(function (e) {
+    $("#email-form, #verify-form, #bga-email-form, #bga-verify-form, #nb-email-form, #nb-verify-form").submit(function (e) {
         e.preventDefault();
     });
 
     // Show hide content within email modal
     $('#step-email-address .progress-step').on('click', function () {
+        var id = $(this).parents('.step').attr('data-id');
+
+        console.log(id);
         var email_address = $('#step-email-address input').val();
         
         $('#step-email-address').removeClass('show');
@@ -1212,27 +1216,6 @@ $(document).ready(function () {
 
 
     });
-
-    // Close modal and scroll page on download / email success
-    /*$('.success-scroll').on('click', function () {
-        $(this).parents('.modal-example').removeClass('show');
-        $('.modal-overlay').removeClass('show');
-
-        setTimeout(function () {
-
-            var window_width = window.innerWidth,
-                anchor = $("#next-steps"),
-                extra_padding;
-
-            if (window_width <= 768) {
-                extra_padding = 60;
-            } else {
-                extra_padding = 125;
-            }
-
-            $('html,body').animate({ scrollTop: anchor.offset().top - extra_padding }, 'fast');
-        }, 200);
-    });*/
 
     $('#bga-modal-bp-md, #nb-modal-bp-md').on('click', function () {
         mobile_modal_display();
