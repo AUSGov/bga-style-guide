@@ -65,6 +65,7 @@ classes="in-page"
                         {% include component-examples/get-contract-example.html
                             title="Get your contract"
                             classes="teal"
+                            id-prefix="bga"
                         %}
 
                        
@@ -92,11 +93,14 @@ classes="in-page"
                     <div class="component-example narrow m-0">
                         <div class="component-wrapper remove-element-padding p-4">
                             
-                        <h3>Default contact call out box</h3>    
-
+                        {% include non-branded-explanation.html
+                            component="call to action"
+                            brand-elements="colours, borders, icons and button styles"
+                        %}
                         {% include component-examples/get-contract-example.html
                             title="Get your contract"
                             classes="non-branded nb-background"
+                            id-prefix="nb"
                         %}
                             
                       

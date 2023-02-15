@@ -52,8 +52,6 @@
     &.teal {
         background: $bga-teal-highlight-light;
         border-left-color: $bga-teal-highlight-mid;
-            
-       
     } 
     .button-group {
         flex-wrap: wrap;
@@ -80,6 +78,13 @@
                 }
             }
         }
+        .bga-btn {
+            background: $bga-white;
+
+            svg {
+                display: none;
+            }
+        }
     }
 }
 
@@ -89,13 +94,14 @@
 
     .callout-box,
     .callout-box.call-to-action {
-
         .bga-btn.bga-secondary-btn,
         .bga-btn.bga-primary-btn {
+            width: auto;
             font-size: .875rem;
             line-height: 1.125rem;
-            padding: 12px 24px;
-            width: auto;
+            padding: 8px 24px;
+            min-height: 48px;
+            min-width: 80px;
         }
 
         h2 {
@@ -142,10 +148,9 @@
 
     .callout-box,
     .callout-box.call-to-action {
-
-        .bga-btn.bga-secondary-btn,
+        .button-example, .bga-btn.bga-secondary-btn,
         .bga-btn.bga-primary-btn {
-            width: 100%;
+            width: 100% !important;
         }
     }
 }
