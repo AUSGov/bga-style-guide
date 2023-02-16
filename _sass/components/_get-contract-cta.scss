@@ -6,7 +6,7 @@
     z-index: 9000;
     left: calc(50% - 320px);
     display: none;
-
+  
     &.show {
         display: block;
     }
@@ -139,4 +139,79 @@
     &.show {
         display: block;
     }
+}
+
+@mixin get-contract-bp-768 {
+    .get-contract-modal.modal-example {
+        top: 1rem;
+        left: 16px;
+        width: calc(100% - 32px);
+        max-width: none;
+    }
+}
+@mixin get-contract-bp-576 {
+    .get-contract-modal.modal-example {
+        #email-form {
+            flex-wrap: wrap;
+
+            input {
+                width: 100%;
+                margin-bottom: 24px !important;
+            }
+        }
+        .modal-example {
+            .number-code {
+                input {
+                    width: 24%;
+                    max-width: 56px;
+                    padding: 8px 0px !important;
+                }
+            }
+        }
+    }
+}
+@mixin get-contract-bp-350 {
+    .get-contract-modal.modal-example {
+        .number-code {
+           
+            input {
+                width: 40px;
+            }
+            .success-icon {
+                margin-left: 16px !important;
+            }
+        }
+    }
+}
+
+.component-example.bp-350, .component-example.bp-below350 {
+    @include get-contract-bp-768();
+    @include get-contract-bp-576();
+
+    .get-contract-modal.modal-example {
+        max-width: 576px;
+        left: calc(50% - 288px);
+    }
+
+}
+
+.component-example.bp-below350 {
+    @include get-contract-bp-768();
+    @include get-contract-bp-576();
+    @include get-contract-bp-350();
+
+    .get-contract-modal.modal-example {
+        max-width: 350px;
+        left: calc(50% - 175px);
+    }
+}
+
+@media (max-width: 768px) {
+    @include get-contract-bp-768();    
+}
+@media (max-width: 576px) {
+    @include get-contract-bp-576();
+}
+@media (max-width: 350px) {
+    @include get-contract-bp-350();
 }
