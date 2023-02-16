@@ -44,8 +44,8 @@ html.ecb-prototype {
 
         .icon-wrapper {
             background: $bga-green-success-dark;
-            width: 44px;
-            height: 44px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -139,7 +139,7 @@ html.ecb-prototype {
             }
         }
     }
-
+    
     #ecb-modal-email {
         .step {
             display: none;
@@ -284,17 +284,10 @@ html.ecb-prototype {
             input {
                 width: 100%;
                 margin-bottom: 24px !important;
+                margin-right: 0 !important;
             }
         }
-        .modal-example {
-            .number-code {
-                input {
-                    width: 24%;
-                    max-width: 56px;
-                    padding: 8px 0px !important;
-                }
-            }
-        }
+        
     }
 
     @media (max-width: 350px) {
@@ -305,6 +298,16 @@ html.ecb-prototype {
                 a {
                     font-size: 0.875rem;
                     width: 100%;
+                }
+            }
+        }
+        .modal-example {
+            .number-code {
+                input {
+                    width: 40px;
+                }
+                .success-icon {
+                    margin-left: 16px !important;
                 }
             }
         }
