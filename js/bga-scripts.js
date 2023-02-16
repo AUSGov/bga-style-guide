@@ -1131,7 +1131,7 @@ $(document).ready(function () {
     // Open & close modals
     $('.modal-trigger').on('click', function () {
         var modal = $(this).attr('data-modal');
-        console.log(modal);
+        //console.log(modal);
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
 
@@ -1149,26 +1149,23 @@ $(document).ready(function () {
     });
 
     // Stop forms in email modal from reloading the page
-    $("#email-form, #verify-form, #bga-email-form, #bga-verify-form, #nb-email-form, #nb-verify-form").submit(function (e) {
+    $("#email-form, #verify-form").submit(function (e) {
         e.preventDefault();
     });
 
     // Show hide content within email modal
     $('#step-email-address .progress-step').on('click', function () {
-        var id = $(this).parents('.step').attr('data-id');
-
-        console.log(id);
-        var email_address = $('#step-email-address input').val();
+        var id = $(this).parents('.step').attr('data-id'),
+        email_address = $('#step-email-address[data-id=' + id + '] input').val();
         
-        $('#step-email-address').removeClass('show');
-        $('#step-verify-email').addClass('show');
+        $('#step-email-address[data-id=' + id + ']').removeClass('show');
+        $('#step-verify-email[data-id=' + id + ']').addClass('show');
         if ( email_address.length ) {
-            $('.user-email').text(email_address);
+            $('#step-verify-email[data-id=' + id + '] .user-email').text(email_address);
         } 
-
-        setTimeout(function () {
+        /*setTimeout(function () {
             $('.testing-msg').addClass('show');
-        }, 600);
+        }, 600);*/
     });
 
     // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
@@ -1199,23 +1196,48 @@ $(document).ready(function () {
     })
 
     $('#step-verify-email #verify-btn').on('click', function(){
-        var code = inputElements.map(({ value }) => value).join('');
+        var code = inputElements.map(({ value }) => value).join(''),
+        id = $(this).parents('.step').attr('data-id');
 
         if (code == '1234' ) {
-            $('.number-code').removeClass('error');
-            $('#step-verify-email .success-icon').addClass('show');
+            $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
+            $('#step-verify-email[data-id=' + id + '] .success-icon').addClass('show');
 
             setTimeout(function () {
-                $('#step-verify-email').removeClass('show');
-                $('#step-email-success').addClass('show');
+                $('#step-verify-email[data-id=' + id + ']').removeClass('show');
+                $('#step-email-success[data-id=' + id + ']').addClass('show');
             }, 3000);
 
         } else {
-            $('.number-code').addClass('error');
+            $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
         }
 
+    });
+
+    // Close modal and scroll page on download / email success
+    $('.success-scroll').on('click', function () {
+        $(this).parents('.modal-example').removeClass('show');
+        $('.modal-overlay').removeClass('show');
+
+        if ($("html").hasClass('ecb-prototype')) {
+            setTimeout(function () {
+
+                var window_width = window.innerWidth,
+                    anchor = $("#next-steps"),
+                    extra_padding;
+
+                if (window_width <= 768) {
+                    extra_padding = 60;
+                } else {
+                    extra_padding = 125;
+                }
+
+                $('html,body').animate({ scrollTop: anchor.offset().top - extra_padding }, 'fast');
+            }, 200);
+        }
 
     });
+    
 
     $('#bga-modal-bp-md, #nb-modal-bp-md').on('click', function () {
         mobile_modal_display();
