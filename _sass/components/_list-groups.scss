@@ -1,0 +1,40 @@
+.bga-component.list-group {  
+
+    ul {
+        margin: 0;
+        padding: 0;  
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            border-bottom: $bga-blue-black-mid solid 1px;
+            list-style-type: none;
+            text-indent: 0;
+            width: 33%;
+            
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .bga-component.list-group {  
+        ul {
+            li {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .bga-component.list-group {  
+        ul {
+            li {
+                width: 100%;
+            }
+        }
+    }
+}
