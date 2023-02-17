@@ -6137,6 +6137,16 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 768px) { .bga-component.table.default .responsive { /* Hide table headers (but not display: none;, for accessibility) */ } .bga-component.table.default .responsive thead tr { position: absolute; top: -9999px; left: -9999px; } .bga-component.table.default .responsive td { display: none; position: relative; white-space: normal; text-align: left; border-top: 0px; padding-left: 45%; } .bga-component.table.default .responsive td::before { width: 30%; } .bga-component.table.default .responsive td:last-of-type { padding-bottom: 10px; } .bga-component.table.default .responsive td::before { position: absolute; top: 8px; left: 8px; text-align: left; content: attr(data-title); display: block; } .bga-component.table.default .responsive tr { display: table; width: 100%; } .bga-component.table.default .responsive tr td:first-of-type:hover { cursor: pointer; } .bga-component.table.default .responsive tr td { background: #E4E6EA; border-bottom: none; } .bga-component.table.default .responsive tr td:first-of-type { background: #ffffff url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; font-weight: 600; padding-left: 8px; padding-right: 32px; display: block; } .bga-component.table.default .responsive tr td:first-of-type::before { content: ""; } .bga-component.table.default .responsive .showGroup { display: block; transition: all 0.4s; } .bga-component.table.default .responsive .groupParent td:first-of-type { background: #E4E6EA url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.default.coloured-bkg .responsive tr td { background: #E3ECF6; } .bga-component.table.default.coloured-bkg .responsive tr td:first-of-type { background: #E3ECF6 url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.default.coloured-bkg .responsive .groupParent td:first-of-type { background: #E3ECF6 url(../assets/Chevron-up-black.svg) no-repeat; background-position: right 8px center; background-size: 16px 10px; } .bga-component.table.non-branded .responsive tr td { background: #E8E8E8; } .bga-component.table.non-branded .responsive .groupParent td:first-of-type { background-color: #E8E8E8; } }
 
+.bga-component.list-group ul { margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+
+.bga-component.list-group ul li { border-bottom: #788295 solid 1px; list-style-type: none; text-indent: 0; width: 33%; }
+
+.bga-component.list-group ul li::before { display: none; }
+
+@media (max-width: 768px) { .bga-component.list-group ul li { width: 50%; } }
+
+@media (max-width: 350px) { .bga-component.list-group ul li { width: 100%; } }
+
 #subsite-header .bga-link-strap { background: #113869; color: #ffffff; padding: 12px 32px; }
 
 #subsite-header .bga-link-strap ul li { display: block; text-indent: 0; }
