@@ -222,7 +222,7 @@
             }
 
             &.alphalist {
-                padding-left: 32px;
+                padding-left: 16px;
                 li {                
                     counter-increment: alphalist;
                     
@@ -232,7 +232,7 @@
             }
             }
             &.romanlist {
-                padding-left: 32px;
+                padding-left: 16px;
                 li {
                     counter-increment: romanlist;
 
@@ -245,6 +245,9 @@
 
         ol > li:last-child {
             margin-bottom: 0;
+        }
+        li ol {
+            margin-top: 16px;  
         }
     
     }
@@ -377,6 +380,20 @@
 
 @mixin modal-bp-768 {
     .modal-example {
+        ol {  //Heading level -  full integer
+            padding-left: 32px;
+
+            ol { // Decimal
+                padding-left: 32px;
+                
+                &.alphalist {
+                    padding-left: 16px;  
+                }
+                &.romanlist {
+                    padding-left: 16px;
+                }
+            }
+        }
         &.modal-form {
             min-height: 600px;
 
