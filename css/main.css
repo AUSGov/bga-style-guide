@@ -5295,19 +5295,21 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .modal-example ol ol li:before { font-weight: normal; font-size: 1rem; text-align: right; }
 
-.modal-example ol ol.alphalist { padding-left: 32px; }
+.modal-example ol ol.alphalist { padding-left: 16px; }
 
 .modal-example ol ol.alphalist li { counter-increment: alphalist; }
 
 .modal-example ol ol.alphalist li:before { content: counter(alphalist, lower-alpha) "."; }
 
-.modal-example ol ol.romanlist { padding-left: 32px; }
+.modal-example ol ol.romanlist { padding-left: 16px; }
 
 .modal-example ol ol.romanlist li { counter-increment: romanlist; }
 
 .modal-example ol ol.romanlist li:before { content: counter(romanlist, lower-roman) "."; }
 
 .modal-example ol ol > li:last-child { margin-bottom: 0; }
+
+.modal-example ol li ol { margin-top: 16px; }
 
 .modal-example.modal-form { max-width: 900px; }
 
@@ -5361,6 +5363,14 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .modal-example.non-branded.modal-form .email-form { background: #E8E8E8; }
 
+.component-example.bp-below768 .modal-example ol { padding-left: 32px; }
+
+.component-example.bp-below768 .modal-example ol ol { padding-left: 32px; }
+
+.component-example.bp-below768 .modal-example ol ol.alphalist { padding-left: 16px; }
+
+.component-example.bp-below768 .modal-example ol ol.romanlist { padding-left: 16px; }
+
 .component-example.bp-below768 .modal-example.modal-form { min-height: 600px; }
 
 .component-example.bp-below768 .modal-example.modal-form form { display: none; padding: 24px; }
@@ -5381,7 +5391,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below768 .modal-example.non-branded.modal-form .mobile-form-toggle { background: #D8D8D8; }
 
-@media (max-width: 768px) { .modal-example.modal-form { min-height: 600px; } .modal-example.modal-form form { display: none; padding: 24px; } .modal-example.modal-form form h4, .modal-example.modal-form form .h4 { display: none; } .modal-example.modal-form .component-content { flex-wrap: wrap; } .modal-example.modal-form .component-text { width: 100%; height: 100% !important; } .modal-example.modal-form .mobile-form-toggle { display: block; width: 100%; padding: 24px; background: #FFD964; border: none; margin: 0; font-size: 1.1875rem; line-height: 1.5; font-weight: 600; display: flex; justify-content: space-between; align-items: center; text-align: left; transition: transform 0.2s ease-in-out; } .modal-example.modal-form .mobile-form-toggle svg { margin-left: 16px; } .modal-example.modal-form .email-form { width: 100%; padding: 0; position: absolute; bottom: 0; z-index: 8000; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); } .modal-example.modal-form .email-form.open .mobile-form-toggle svg { transform: scaleY(-1); } .modal-example.non-branded.modal-form .mobile-form-toggle { background: #D8D8D8; } }
+@media (max-width: 768px) { .modal-example ol { padding-left: 32px; } .modal-example ol ol { padding-left: 32px; } .modal-example ol ol.alphalist { padding-left: 16px; } .modal-example ol ol.romanlist { padding-left: 16px; } .modal-example.modal-form { min-height: 600px; } .modal-example.modal-form form { display: none; padding: 24px; } .modal-example.modal-form form h4, .modal-example.modal-form form .h4 { display: none; } .modal-example.modal-form .component-content { flex-wrap: wrap; } .modal-example.modal-form .component-text { width: 100%; height: 100% !important; } .modal-example.modal-form .mobile-form-toggle { display: block; width: 100%; padding: 24px; background: #FFD964; border: none; margin: 0; font-size: 1.1875rem; line-height: 1.5; font-weight: 600; display: flex; justify-content: space-between; align-items: center; text-align: left; transition: transform 0.2s ease-in-out; } .modal-example.modal-form .mobile-form-toggle svg { margin-left: 16px; } .modal-example.modal-form .email-form { width: 100%; padding: 0; position: absolute; bottom: 0; z-index: 8000; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); } .modal-example.modal-form .email-form.open .mobile-form-toggle svg { transform: scaleY(-1); } .modal-example.non-branded.modal-form .mobile-form-toggle { background: #D8D8D8; } }
 
 .bga-component.feature-box { max-width: 840px; }
 
