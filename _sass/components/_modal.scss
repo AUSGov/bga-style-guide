@@ -163,6 +163,91 @@
             display: none;
         }
     }
+    
+    ol {  //Heading level -  full integer
+        counter-reset: item;
+        padding: 0;
+        padding-left: 40px;
+        
+        h3, h4, p {
+            padding: 0;
+        }
+
+        li:has(> h3) {
+            &:before {
+                font-weight: 600;
+                color: $bga-blue-black-dark;
+                font-size: 1.375rem;
+                line-height: 1.5;
+            }
+        }
+
+        li:has(> h4) {
+            &:before {
+                font-weight: 600;
+                color: $bga-blue-black-dark;
+                font-style: italic;
+                font-size: 1.1875rem;
+                line-height: 1.5;
+            }
+        }
+        
+        li {
+            display: inline-block;
+            width: 100%;
+            position: relative; 
+            
+            &:before {
+                content: counters(item,".") ".";
+                counter-increment: item;
+                display: inline-block;
+                width: 36px;
+                position: absolute;
+                left: -40px;
+                text-align: right;
+                font-weight: 600;
+                font-size: 1.3125rem;
+            }
+           
+        }
+
+        ol { // Decimal
+            padding-left: 40px;
+            li {
+                &:before {
+                    font-weight: normal;
+                    font-size: 1rem;
+                    text-align: right;
+                }
+            }
+
+            &.alphalist {
+                padding-left: 32px;
+                li {                
+                    counter-increment: alphalist;
+                    
+                    &:before {
+                        content: counter(alphalist,lower-alpha) ".";
+                    }
+            }
+            }
+            &.romanlist {
+                padding-left: 32px;
+                li {
+                    counter-increment: romanlist;
+
+                    &:before {
+                        content: counter(romanlist,lower-roman) ".";
+                    }
+                }
+            }
+        }
+
+        ol > li:last-child {
+            margin-bottom: 0;
+        }
+    
+    }
 
     &.modal-form {
         max-width: 900px;
