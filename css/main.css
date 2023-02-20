@@ -5279,6 +5279,36 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .modal-example .no-shortlist.hidden { display: none; }
 
+.modal-example ol { counter-reset: item; padding: 0; padding-left: 40px; }
+
+.modal-example ol h3, .modal-example ol .h3, .modal-example ol h4, .modal-example ol .h4, .modal-example ol p { padding: 0; }
+
+.modal-example ol li:has(> h3, > .h3):before { font-weight: 600; color: #2E3E5A; font-size: 1.375rem; line-height: 1.5; }
+
+.modal-example ol li:has(> h4, > .h4):before { font-weight: 600; color: #2E3E5A; font-style: italic; font-size: 1.1875rem; line-height: 1.5; }
+
+.modal-example ol li { display: inline-block; width: 100%; position: relative; }
+
+.modal-example ol li:before { content: counters(item, ".") "."; counter-increment: item; display: inline-block; width: 36px; position: absolute; left: -40px; text-align: right; font-weight: 600; font-size: 1.3125rem; }
+
+.modal-example ol ol { padding-left: 40px; }
+
+.modal-example ol ol li:before { font-weight: normal; font-size: 1rem; text-align: right; }
+
+.modal-example ol ol.alphalist { padding-left: 32px; }
+
+.modal-example ol ol.alphalist li { counter-increment: alphalist; }
+
+.modal-example ol ol.alphalist li:before { content: counter(alphalist, lower-alpha) "."; }
+
+.modal-example ol ol.romanlist { padding-left: 32px; }
+
+.modal-example ol ol.romanlist li { counter-increment: romanlist; }
+
+.modal-example ol ol.romanlist li:before { content: counter(romanlist, lower-roman) "."; }
+
+.modal-example ol ol > li:last-child { margin-bottom: 0; }
+
 .modal-example.modal-form { max-width: 900px; }
 
 .modal-example.modal-form form { display: block; }
