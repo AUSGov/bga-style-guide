@@ -1,11 +1,17 @@
-.bga-component.list-group {  
+.component-example .bga-component.list-group {
+    max-width: 800px;
 
+    &.full-width {
+        max-width: none;
+    }
+}
+.bga-component.list-group {  
     ul {
         margin: 0;
         padding: 0;  
         display: flex;
         flex-wrap: wrap;
-
+        
         li {
             border-bottom: $bga-blue-black-mid solid 1px;
             list-style-type: none;
@@ -17,10 +23,50 @@
             }
         }
     }
+    &.full-width {  
+        ul {
+            li {
+                width: 16.6666%;
+            }
+        }
+    }
+    &.non-branded {
+        ul li {
+            border-bottom: $nb-grey-darkest solid 1px;
+        }
+    }
 }
 
-@media (max-width: 768px) {
-    .bga-component.list-group {  
+
+@mixin list-group-bp-992 {
+    .bga-component.list-group.full-width {  
+        ul {
+            li {
+                width: 20%;
+            }
+        }
+    }
+}
+@mixin list-group-bp-768 {
+    .bga-component.list-group.full-width {  
+        ul {
+            li {
+                width: 25%;
+            }
+        }
+    }
+}
+@mixin list-group-bp-576 {
+    .bga-component.list-group, .bga-component.list-group.full-width {  
+        ul {
+            li {
+                width: 33%;
+            }
+        }
+    }
+}
+@mixin list-group-bp-350 {
+    .bga-component.list-group, .bga-component.list-group.full-width {  
         ul {
             li {
                 width: 50%;
@@ -28,9 +74,8 @@
         }
     }
 }
-
-@media (max-width: 350px) {
-    .bga-component.list-group {  
+@mixin list-group-below350 {
+    .bga-component.list-group, .bga-component.list-group.full-width {  
         ul {
             li {
                 width: 100%;
@@ -38,3 +83,38 @@
         }
     }
 }
+
+
+.component-example.bp-992 {
+    @include list-group-bp-992();
+}
+.component-example.bp-768 {
+    @include list-group-bp-768();
+}
+.component-example.bp-576 {
+    @include list-group-bp-576();
+}
+.component-example.bp-350 {
+    @include list-group-bp-350();
+}
+.component-example.bp-below350 {
+    @include list-group-below350();
+}
+
+// Media queries
+@media (max-width: 1200px) {
+    @include list-group-bp-992();
+}
+@media (max-width: 992px) {
+    @include list-group-bp-768();
+}
+@media (max-width: 768px) {
+    @include list-group-bp-576();
+}
+@media (max-width: 576px) {
+    @include list-group-bp-350();
+}
+@media (max-width: 350px) {
+    @include list-group-below350();
+}
+

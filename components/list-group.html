@@ -47,11 +47,14 @@ subsite-tag: true
         
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
-                    element-string="bga-table"
+                    element-string="bga-listgroup"
+                    xl-visibility="true"
                     lg-visibility="true"
                     md-visibility="true"
+                    sm-visibility="true"
+                    xs-visibility="true"
                     final-visibility="true"
-                    breakpoint-final="768"
+                    breakpoint-final="350"
                     %}
 
                     <!-- Component example -->
@@ -59,6 +62,12 @@ subsite-tag: true
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
+                            <h3>Layout: Single column - full width</h3>
+                            {% include component-examples/list-group-example.html
+                                classes="full-width"
+                            %}
+
+                            <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
                             {% include component-examples/list-group-example.html
                                 classes=""
                             %}
@@ -72,11 +81,14 @@ subsite-tag: true
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
-                        element-string="nb-table"
-                       
+                        element-string="nb-listgroup"
+                        xl-visibility="true"
+                        lg-visibility="true"
                         md-visibility="true"
+                        sm-visibility="true"
+                        xs-visibility="true"
                         final-visibility="true"
-                        breakpoint-final="768"
+                        breakpoint-final="350"
                         %}
     
                         <!-- Component example -->
@@ -84,8 +96,13 @@ subsite-tag: true
                         <div class="component-example m-0">
                             <div class="component-wrapper remove-element-padding p-4">
 
+                                {% include non-branded-explanation.html
+                                    component="list group"
+                                    brand-elements="borders"
+                                %}
+
                                 {% include component-examples/list-group-example.html
-                                    classes="non-branded"
+                                    classes="non-branded full-width"
                                 %}
     
                             </div>
@@ -104,7 +121,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="''"
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/bd0cf3a4-45d8-48ed-964b-574e373fd5bd/'"
         btn-text="View design specifications"
         %}
 
@@ -128,10 +145,10 @@ subsite-tag: true
             layout-name="onecol-fw"
 
                 singlelayout="true"
-                allbp-img="'../assets/layout-images/table-1colfullwidth-allbp.png' | relative_url "
-                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tables span the full width of the content area.</p>"
+                allbp-img="'../assets/layout-images/listgroup-1colfullwidth-allbp.png' | relative_url "
+                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>List groups span the full width of the content area.</p>"
 
-                example-link="'../html-examples/single-col-full-width.html#table-example' | relative_url'"
+                example-link="'../html-examples/single-col-full-width.html#listgroup-example' | relative_url'"
                 example-link-text="View layout example"
 
             %}
@@ -152,24 +169,24 @@ subsite-tag: true
 
             finalbp="Breakpoint &lt; 768px"
 
-            min1200-img="'../assets/layout-images/table-1col2thirdswidth-min1200.png' | relative_url "
-            min992-img="'../assets/layout-images/table-1col2thirdswidth-min992.png' | relative_url "
-            min768-img="'../assets/layout-images/table-1col2thirdswidth-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/table-1col2thirdswidth-finalbp.png' | relative_url "
+            min1200-img="'../assets/layout-images/listgroup-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/listgroup-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/listgroup-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/listgroup-1col2thirdswidth-finalbp.png' | relative_url "
 
             min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
             min992-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
             min768-rules="<p>The content area is 11 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
-            example-link="'../html-examples/single-col-two-thirds-width.html#table-example' | relative_url'"
+            example-link="'../html-examples/single-col-two-thirds-width.html#listgroup-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
@@ -190,20 +207,20 @@ subsite-tag: true
 
             finalbp="Breakpoint &lt; 576px"
 
-            min1200-img="'../assets/layout-images/table-2col-leftmenu-min1200.png' | relative_url "
-            min576-img="'../assets/layout-images/table-2col-leftmenu-min576.png' | relative_url "
-            finalbp-img="'../assets/layout-images/table-2col-leftmenu-finalbp.png' | relative_url "
+            min1200-img="'../assets/layout-images/listgroup-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/listgroup-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/listgroup-2col-leftmenu-finalbp.png' | relative_url "
 
             min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
             min576-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
-            example-link="'../html-examples/two-col-left-side-menu.html#table-example' | relative_url'"
+            example-link="'../html-examples/two-col-left-side-menu.html#listgroup-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
@@ -225,17 +242,17 @@ subsite-tag: true
             finalbp="Breakpoint &lt; 768px"
 
 
-            min768-img="'../assets/layout-images/table-2col-rightsidebar-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/table-2col-rightsidebar-finalbp.png' | relative_url "
+            min768-img="'../assets/layout-images/listgroup-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/listgroup-2col-rightsidebar-finalbp.png' | relative_url "
 
 
             min768-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Tables span the full width of the content area.</p>"
+            <p>List groups span the full width of the content area.</p>"
 
-            example-link="'../html-examples/two-col-right-sidebar.html#table-example' | relative_url'"
+            example-link="'../html-examples/two-col-right-sidebar.html#listgroup-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
