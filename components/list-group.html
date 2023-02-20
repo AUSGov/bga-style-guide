@@ -48,9 +48,6 @@ subsite-tag: true
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
                     element-string="bga-listgroup"
-                    xl-visibility="true"
-                    lg-visibility="true"
-                    md-visibility="true"
                     sm-visibility="true"
                     xs-visibility="true"
                     final-visibility="true"
@@ -61,13 +58,15 @@ subsite-tag: true
 
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
-
+                            <!--
                             <h3>Layout: Single column - full width</h3>
                             {% include component-examples/list-group-example.html
                                 classes="full-width"
                             %}
 
                             <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
+                            -->
+
                             {% include component-examples/list-group-example.html
                                 classes=""
                             %}
@@ -82,9 +81,6 @@ subsite-tag: true
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
                         element-string="nb-listgroup"
-                        xl-visibility="true"
-                        lg-visibility="true"
-                        md-visibility="true"
                         sm-visibility="true"
                         xs-visibility="true"
                         final-visibility="true"
@@ -102,7 +98,7 @@ subsite-tag: true
                                 %}
 
                                 {% include component-examples/list-group-example.html
-                                    classes="non-branded full-width"
+                                    classes="non-branded"
                                 %}
     
                             </div>
@@ -143,18 +139,36 @@ subsite-tag: true
 
             {% include layouts-accordion.html
             layout-name="onecol-fw"
-
-                singlelayout="true"
-                allbp-img="'../assets/layout-images/listgroup-1colfullwidth-allbp.png' | relative_url "
-                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>List groups span the full width of the content area.</p>"
-
-                example-link="'../html-examples/single-col-full-width.html#listgroup-example' | relative_url'"
-                example-link-text="View layout example"
-
+    
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="false"
+            finalbp-visibility="true"
+    
+            finalbp="Breakpoint &lt; 992px"
+    
+            min1200-img="'../assets/layout-images/listgroup-1colfullwidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/listgroup-1colfullwidth-min992.png' | relative_url "
+            finalbp-img="'../assets/layout-images/listgroup-1colfullwidth-finalbp.png' | relative_url "
+    
+    
+            min1200-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>List groups span 8 grid-columns each.</p>"
+    
+            min992-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>List groups span 9 grid-columns each.</p>"
+    
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>List groups span 12 grid-columns each.</p>"
+    
+            example-link="'../html-examples/single-col-full-width.html#listgroup-example' | relative_url'"
+            example-link-text="View layout example"
+    
             %}
-
+    
+    
         </div>
-        
         
         <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
 
