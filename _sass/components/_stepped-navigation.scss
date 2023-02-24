@@ -225,10 +225,12 @@
     .page-header-wrapper.tool-stepped-nav.teal, .ecb-example-layout #page-header.stepped-nav.teal {
         background: $bga-teal-highlight-light;
         padding: 0 !important;
+        
+        .header-content {
+            padding: 0 0 32px 0 !important;
+        }
     }
-    .header-content {
-        padding: 0 0 32px 0 !important;
-    }
+    
     .stepped-navigation {
         .step {
             margin-right: 4px !important;
@@ -244,9 +246,13 @@
 }
 
 @mixin stepped-nav-below768 {
-    .page-header-wrapper.tool-stepped-nav.teal {
-        background: none;
+    .page-header-wrapper.tool-stepped-nav.teal, .ecb-example-layout #page-header.stepped-nav.teal {
+        //background: none;
         padding: 0 !important;
+        
+        .header-content {
+            padding: 0 !important;
+        }
     }
     .stepped-navigation-wrapper {
         padding: 16px 32px !important;
