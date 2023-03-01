@@ -5,62 +5,93 @@
     svg {
         fill: $bga-purple-highlight-mid;
     }
+   
     blockquote {
         font-size: 1.375rem;
         font-style: italic;
+        text-indent: -44px;
+        margin-left: 44px;
+        
+        &:before {
+            content: "";
+            height: 17px;
+            width: 28px;
+            margin-right: 16px;
+            display: inline-block;
+            background-color: $bga-purple-highlight-mid;
+            -webkit-mask-image: url(../assets/icon-quote-left.svg);
+            mask-image: url(../assets/icon-quote-left.svg);
+        }
+        &:after {
+            content: "";
+            height: 17px;
+            width: 28px;
+            display: inline-block;
+            margin-left: 16px;
+            background-color: $bga-purple-highlight-mid;
+            -webkit-mask-image: url(../assets/icon-quote-right.svg);
+            mask-image: url(../assets/icon-quote-right.svg);
+        }
     }
     .author {
         font-size: .875rem;
+        margin-left: 44px;
     }
 
     &.teal {
         .component-content {
             border-left: 8px solid $bga-teal-highlight-dark;
         }
-        svg {
-            fill: $bga-teal-highlight-mid;
+        blockquote {
+            &:before, &:after {
+                background-color: $bga-teal-highlight-mid;
+            }
         }
     }
     &.green {
         .component-content {
             border-left: 8px solid $bga-green-highlight-dark;
         }
-        svg {
-            fill: $bga-green-highlight-mid;
+        blockquote {
+            &:before, &:after {
+                background-color: $bga-green-highlight-mid;
+            }
         }
     }
     &.orange {
         .component-content {
             border-left: 8px solid $bga-orange-highlight-dark;
         }
-        svg {
-            fill: $bga-orange-highlight-mid;
+        blockquote {
+            &:before, &:after {
+                background-color: $bga-orange-highlight-mid;
+            }
         }
     }
     &.no-icon {
-        .quotation-mark {
-            display: none !important;
-        }
+       
         blockquote {
             margin-bottom: 8px !important;
+            text-indent: 0;
+            margin-left: 0;
+            
+            &:before, &:after {
+                display: none;
+            }
         }
     }
 
     &.non-branded {
-        svg {
-            display: none;
-        }
-        .quotation-mark {
-            display: block;
-            &::before {
+        blockquote {
+            &:before, &:after {
                 content: "";
                 background: url(../assets/Img-icon-placeholder.svg) no-repeat;
-                background-size: 32px;
-                width: 32px;
-                height: 32px;
-                display: block;
-                margin-right: 16px;
-                margin-top: 4px;
+                background-size: 28px;
+                background-position: center center;
+                width: 28px;
+                height: 16px;
+                -webkit-mask-image: none;
+                mask-image: none;
             }
         }
     }
@@ -69,6 +100,10 @@
 @mixin pull-quote-below576 {
     .pull-quote {
         padding: 24px 0 32px 0 !important;
+
+        .component-content {
+            padding-left: 16px !important;
+        }
     
         blockquote {
             font-size: 1.125rem;
