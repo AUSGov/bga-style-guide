@@ -5467,37 +5467,39 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .pull-quote svg { fill: #B1A8E3; }
 
-.pull-quote blockquote { font-size: 1.375rem; font-style: italic; }
+.pull-quote blockquote { font-size: 1.375rem; font-style: italic; text-indent: -44px; margin-left: 44px; }
 
-.pull-quote .author { font-size: .875rem; }
+.pull-quote blockquote:before { content: ""; height: 17px; width: 28px; margin-right: 16px; display: inline-block; background-color: #B1A8E3; -webkit-mask-image: url(../assets/icon-quote-left.svg); mask-image: url(../assets/icon-quote-left.svg); }
+
+.pull-quote blockquote:after { content: ""; height: 17px; width: 28px; display: inline-block; margin-left: 16px; background-color: #B1A8E3; -webkit-mask-image: url(../assets/icon-quote-right.svg); mask-image: url(../assets/icon-quote-right.svg); }
+
+.pull-quote .author { font-size: .875rem; margin-left: 44px; }
 
 .pull-quote.teal .component-content { border-left: 8px solid #5AB3B3; }
 
-.pull-quote.teal svg { fill: #8BCACA; }
+.pull-quote.teal blockquote:before, .pull-quote.teal blockquote:after { background-color: #8BCACA; }
 
 .pull-quote.green .component-content { border-left: 8px solid #85CB85; }
 
-.pull-quote.green svg { fill: #A0D1A0; }
+.pull-quote.green blockquote:before, .pull-quote.green blockquote:after { background-color: #A0D1A0; }
 
 .pull-quote.orange .component-content { border-left: 8px solid #E88A2D; }
 
-.pull-quote.orange svg { fill: #F1B981; }
+.pull-quote.orange blockquote:before, .pull-quote.orange blockquote:after { background-color: #F1B981; }
 
-.pull-quote.no-icon .quotation-mark { display: none !important; }
+.pull-quote.no-icon blockquote { margin-bottom: 8px !important; text-indent: 0; margin-left: 0; }
 
-.pull-quote.no-icon blockquote { margin-bottom: 8px !important; }
+.pull-quote.no-icon blockquote:before, .pull-quote.no-icon blockquote:after { display: none; }
 
-.pull-quote.non-branded svg { display: none; }
-
-.pull-quote.non-branded .quotation-mark { display: block; }
-
-.pull-quote.non-branded .quotation-mark::before { content: ""; background: url(../assets/Img-icon-placeholder.svg) no-repeat; background-size: 32px; width: 32px; height: 32px; display: block; margin-right: 16px; margin-top: 4px; }
+.pull-quote.non-branded blockquote:before, .pull-quote.non-branded blockquote:after { content: ""; background: url(../assets/Img-icon-placeholder.svg) no-repeat; background-size: 28px; background-position: center center; width: 28px; height: 16px; -webkit-mask-image: none; mask-image: none; }
 
 .component-example.bp-below576 .pull-quote { padding: 24px 0 32px 0 !important; }
 
+.component-example.bp-below576 .pull-quote .component-content { padding-left: 16px !important; }
+
 .component-example.bp-below576 .pull-quote blockquote { font-size: 1.125rem; font-style: italic; }
 
-@media (max-width: 576px) { .pull-quote { padding: 24px 0 32px 0 !important; } .pull-quote blockquote { font-size: 1.125rem; font-style: italic; } }
+@media (max-width: 576px) { .pull-quote { padding: 24px 0 32px 0 !important; } .pull-quote .component-content { padding-left: 16px !important; } .pull-quote blockquote { font-size: 1.125rem; font-style: italic; } }
 
 .bga-component.bga-default-accordion { background: none; text-align: right; }
 
