@@ -2984,6 +2984,8 @@ p.updated { font-size: .75rem; font-style: italic; line-height: 1.125rem; }
 
 a, button { font-weight: 600; color: #2157AA; }
 
+a.mini, button.mini { font-size: .875rem; line-height: 1.75; }
+
 a svg, button svg { fill: #2157AA; }
 
 a:focus-visible, button:focus-visible { outline: none; border: 2px solid #2E6CB9; border-radius: 4px; color: #113869; background: rgba(46, 108, 185, 0.15); }
@@ -3320,7 +3322,9 @@ strong { font-weight: 600; }
 
 .component-example.bp-below576 .bga-btn, .component-example.bp-below576 button, .component-example.bp-below576 .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; }
 
-@media (max-width: 576px) { .bga-primary-btn, .bga-secondary-btn { min-width: 80px; } .bga-btn, button, .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; } }
+.component-example.bp-below576 .bga-link.bga-tertiary-link, .component-example.bp-below576 .bga-link-state.bga-tertiary-link { font-size: .875rem; line-height: 1.125rem; min-height: 32px; display: flex; align-items: center; }
+
+@media (max-width: 576px) { .bga-primary-btn, .bga-secondary-btn { min-width: 80px; } .bga-btn, button, .bga-btn-state { font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; } .bga-link.bga-tertiary-link, .bga-link-state.bga-tertiary-link { font-size: .875rem; line-height: 1.125rem; min-height: 32px; display: flex; align-items: center; } }
 
 @media (max-width: 350px) { .button-example { width: 100%; } }
 
@@ -5138,7 +5142,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 350px) { .callout-box .button-example, .callout-box .bga-btn.bga-secondary-btn, .callout-box .bga-btn.bga-primary-btn, .callout-box.call-to-action .button-example, .callout-box.call-to-action .bga-btn.bga-secondary-btn, .callout-box.call-to-action .bga-btn.bga-primary-btn { width: 100% !important; } }
 
-.get-contract-modal.modal-example { max-height: none; height: auto; position: fixed; top: 5rem; z-index: 9000; left: calc(50% - 320px); display: none; }
+.get-contract-modal.modal-example { max-height: none; height: auto; position: fixed; top: 5rem; z-index: 9000; left: calc(50% - 320px); display: none; /* .resend-success-icon { width: 20px; height: 20px; display: none; position: relative; opacity: 0; transition: opacity 0.2s; &.show { display: flex; align-items: center; opacity: 1; } circle { position: absolute; top: 0; left: 0; fill: $bga-blue-links; stroke: $bga-blue-links; stroke-width: 2px; stroke-dasharray: 57; //animation: resend-animation 4s linear infinite; //animation-timing-function: linear; //animation-iteration-count: 1; //transform: rotate(-90deg); //transform-origin: center; } @keyframes resend-animation { 0% { stroke-dashoffset: 57; fill: transparent; } 50% { stroke-dashoffset: 0; fill: transparent; } 100% { stroke-dashoffset: 0; fill: $bga-blue-links; } } .tick { position: absolute; top: 5px; left: 4px; } } */ }
 
 .get-contract-modal.modal-example.show { display: block; }
 
@@ -5174,6 +5178,16 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .get-contract-modal.modal-example .number-code.error .error-msg { display: block; }
 
 .get-contract-modal.modal-example .number-code.error .error-msg p { color: #D2201E; }
+
+.get-contract-modal.modal-example .resend { display: flex; }
+
+.get-contract-modal.modal-example .resend a.sent { color: #068905; text-decoration: none; cursor: default; }
+
+.get-contract-modal.modal-example .resend a.sent:hover { background: transparent; }
+
+.get-contract-modal.modal-example .resend-success-icon { display: none; }
+
+#nb.get-contract-modal.modal-example .resend a.sent { color: green; }
 
 #bga-modal-email .step, #nb-modal-email .step, #modal-email .step { display: none; }
 
