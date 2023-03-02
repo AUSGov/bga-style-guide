@@ -1131,7 +1131,6 @@ $(document).ready(function () {
     // Open & close modals
     $('.modal-trigger').on('click', function () {
         var modal = $(this).attr('data-modal');
-        //console.log(modal);
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
 
@@ -1163,9 +1162,6 @@ $(document).ready(function () {
         if ( email_address.length ) {
             $('#step-verify-email[data-id=' + id + '] .user-email').text(email_address);
         } 
-        /*setTimeout(function () {
-            $('.testing-msg').addClass('show');
-        }, 600);*/
     });
 
     // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
@@ -1212,6 +1208,16 @@ $(document).ready(function () {
             $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
         }
 
+    });
+
+    $('.resend a').on('click', function(){
+        //$('.resend-success-icon').addClass('show');
+        $(this).text('Code sent').addClass('sent');
+
+        setTimeout(function () {
+            //$('.resend-success-icon').removeClass('show');
+            $('.resend a').text('Resend code again').removeClass('sent');
+        }, 3000);
     });
 
     // Close modal and scroll page on download / email success
