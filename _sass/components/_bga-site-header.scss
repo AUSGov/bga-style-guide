@@ -192,7 +192,7 @@
 
             .menu-group {
                 width: 150px;
-                margin: 0 32px 40px 0;
+                margin: 0 0 24px 0;
                 display: inline-block;
                 width: 100%;
             }
@@ -208,7 +208,7 @@
                 text-indent: 0;
                 list-style-type: none;
                 padding: 0;
-                margin: 0 0 8px 0;
+                margin: 0;
                 width: 100%;
 
                 &:last-of-type {
@@ -224,15 +224,22 @@
                     color: $bga-blue-links;
                     padding: 0;
                     margin: 0;
+                    background: none;
                 }
 
                 &:focus-visible {
                     outline: none;
-                    border: $bga-text-focus-border;
-                    background: none !important;
+                    border: none;
+                    background: $bga-blue-background-dark;
+
+                    a {
+                        color: $bga-white;
+                    }
                 }
                 &:hover {
-                    background: $bga-blue-links;
+                    background: rgba(46, 108, 185, 0.15);
+                    background: $bga-blue-background-dark;
+                    
                     a {
                         color: $bga-white;
                     }
@@ -240,21 +247,34 @@
 
                 &.level-2 {
                     a {
-                        font-size: 1.125rem;
+                        font-size: 1rem;
                         font-weight: 700;
+                        padding: 4px 4px 4px 4px;
                     }
 
-                    +ul {
-                        margin-top: 8px;
+                    + ul {
+                        //margin-top: 8px;
                     }
                 }
 
                 &.level-3 {
+                    font-size: .9375rem;
+                    line-height: 1.3;
+
                     a {
-                        font-weight: 600;
+                        font-weight: 400;
                         text-decoration: none;
                         font-size: .9375rem;
-                        line-height: 1.3355;
+                        line-height: 1.3;
+                        padding: 4px 4px 4px 16px;
+                        background: url(../assets/Chevron-right-bluelinks.svg) no-repeat;
+                        background-position: left 4px top 10px;
+                        background-size: 5px 8px;
+                    }
+                    &:focus-visible, &:hover {
+                        a {
+                            background-image: url(../assets/Chevron-right-white.svg);
+                        }
                     }
                 }
             }
