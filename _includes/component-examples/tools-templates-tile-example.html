@@ -1,0 +1,32 @@
+<div class="bga-component-wrapper h-100 pb-5">
+    <a href="" tabindex="0" class="bga-component tools-templates-tile m-0 {{ include.classes }}">
+
+        <div class="p-4 component-content h-100">
+
+            <div class="component-text p-0 remove-element-padding">
+
+                {% if include.title %}
+                <h3 class="tile-title pt-0">{{ include.title }}</h3>
+                {% endif %}
+
+                {% if include.description %}
+                <p class="description mini pb-4">{{ include.description }}</p>
+                {% endif %}
+
+            </div>
+
+            {% if include.tag %}
+            <div class="tag-wrapper align-items-center d-flex">
+                <div class="tag d-inline-flex align-items-cente remove-element-padding me-3">
+                    <div class="icon d-flex me-2"><img src={{ include.icon }} alt="" /></div>
+                    <p>{{ include.tag }}</p>
+                </div>
+            </div>
+            {% endif %}
+
+           
+        </div>
+
+
+    </a>
+</div>

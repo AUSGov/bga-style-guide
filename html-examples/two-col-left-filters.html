@@ -139,7 +139,52 @@ description: Example content placement for this layout.
                     registration="Canberra Innovation Network"
                     classes="events-finder-tool in-person-event"
                 %}
-           
+                
+                <h3 id="tools-templates-example">Tools and templates tiles</h3>
+
+                    <div class="row">
+
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+
+                            {% include component-examples/tools-templates-tile-example.html
+                            title="Marketing plan template"
+                            description="A marketing plan can help you understand who your customers are, how to
+                            reach them and how to define your brand."
+                            tag="Template"
+                            icon="'../assets/icon-template.svg' | relative_url "
+                            classes="tile-template"
+                            %}
+
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+
+                            {% include component-examples/tools-templates-tile-example.html
+                            title="Grants finder"
+                            description="Find grants, funding and support programs to help your business grow and
+                            succeed!"
+                            tag="Tool"
+                            icon="'../assets/icon-tool.svg' | relative_url "
+                            classes="tile-tool"
+                            %}
+
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+
+                            {% include component-examples/tools-templates-tile-example.html
+                            title="Example calculator title"
+                            description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                            eirmod tempor invidunt ut labore et dolore magna."
+                            tag="Calculator"
+                            icon="'../assets/icon-calculator.svg' | relative_url "
+                            classes="tile-calculator"
+                            %}
+
+                        </div>
+
+                    </div>
+
 
             <div id="pagination-example" class="col-12 pb-5">
                 {% include component-examples/pagination-example.html %}

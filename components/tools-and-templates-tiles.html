@@ -1,0 +1,322 @@
+---
+
+layout: content-tagged
+title: Tools and templates tiles
+description: Present a collection of links within the context of the business.gov.au tools and templates finder
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-0 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+        tab1="Business.gov.au branding"
+        tab1value="bga-branded"
+
+        tab2="No branding"
+        tab2value="non-branded"
+
+        %}
+
+
+        <div class="tab-sections-wrapper p-4">
+
+            <div class="tab-section bga-branded selected">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                singlebp="true"
+                %}
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+
+                                {% include component-examples/tools-templates-tile-example.html
+                                title="Marketing plan template"
+                                description="A marketing plan can help you understand who your customers are, how to
+                                reach them and how to define your brand."
+                                tag="Template"
+                                icon="'../assets/icon-template.svg' | relative_url "
+                                classes="tile-template"
+                                %}
+
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+
+                                {% include component-examples/tools-templates-tile-example.html
+                                title="Grants finder"
+                                description="Find grants, funding and support programs to help your business grow and
+                                succeed!"
+                                tag="Tool"
+                                icon="'../assets/icon-tool.svg' | relative_url "
+                                classes="tile-tool"
+                                %}
+
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+
+                                {% include component-examples/tools-templates-tile-example.html
+                                title="Example calculator title"
+                                description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                eirmod tempor invidunt ut labore et dolore magna."
+                                tag="Calculator"
+                                icon="'../assets/icon-calculator.svg' | relative_url "
+                                classes="tile-calculator"
+                                %}
+
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+
+                                {% include component-examples/tools-templates-tile-example.html
+                                title="Guide to starting a business"
+                                description="This guide will take you through each step of starting a business and help
+                                you understand what’s ahead."
+                                tag="Guide"
+                                icon="'../assets/icon-guide.svg' | relative_url "
+                                classes="tile-guide"
+                                %}
+
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+
+                                {% include component-examples/tools-templates-tile-example.html
+                                title="Growing your business checklist"
+                                description="Use our growing a business checklist to explore opportunities for growth
+                                and understand your obligations as your business changes."
+                                tag="Checklist"
+                                icon="'../assets/icon-checklist.svg' | relative_url "
+                                classes="tile-checklist"
+                                %}
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        <h3>Approved icons and tags</h3>
+
+                        <div class="row">
+
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/tools-templates-tile-example.html
+                                description="<strong>Template tag</strong>"
+                                tag="Template"
+                                icon="'../assets/icon-template.svg' | relative_url "
+                                %}
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/tools-templates-tile-example.html
+                                description="<strong>Tool tag</strong>"
+                                tag="Tool"
+                                icon="'../assets/icon-tool.svg' | relative_url "
+                                classes="tile-tool"
+                                %}
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/tools-templates-tile-example.html
+                                description="<strong>Calculator tag</strong>"
+                                tag="Calculator"
+                                icon="'../assets/icon-calculator.svg' | relative_url "
+                                classes="tile-calculator"
+                                %}
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/tools-templates-tile-example.html
+                                description="<strong>Guide tag</strong>"
+                                tag="Guide"
+                                icon="'../assets/icon-guide.svg' | relative_url "
+                                classes="tile-guide"
+                                %}
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                {% include component-examples/tools-templates-tile-example.html
+                                description="<strong>Checklist tag</strong>"
+                                tag="Checklist"
+                                icon="'../assets/icon-checklist.svg' | relative_url "
+                                classes="tile-checklist"
+                                %}
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="tab-section non-branded">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                singlebp="true"
+                %}
+
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        {% include non-branded-explanation.html
+                        component="tiles"
+                        brand-elements="colours, borders and tags"
+                        %}
+
+                        <div class="row">
+                        <div class="col-12 col-sm-6">
+
+                            {% include component-examples/tools-templates-tile-example.html
+                            title="Marketing plan template"
+                            description="A marketing plan can help you understand who your customers are, how to
+                            reach them and how to define your brand."
+                            tag="Template"
+                            icon="'../assets/img-placeholder-2.svg' | relative_url "
+                            classes="tile-template non-branded nb-border"
+                            %}
+
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+
+                            {% include component-examples/tools-templates-tile-example.html
+                            title="Grants finder"
+                            description="Find grants, funding and support programs to help your business grow and
+                            succeed!"
+                            tag="Tool"
+                            icon="'../assets/img-placeholder-2.svg' | relative_url "
+                            classes="tile-tool non-branded nb-border"
+                            %}
+
+                        </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/a081baaa-c8c7-47cd-b137-a8c198413327/''"
+        btn-text="View design specifications"
+        %}
+
+
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Tools and templates tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left filters layout</a>.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Two column - left filters layout"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+                layout-name="twocol-leftmenu"
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="true"
+                finalbp-visibility="true"
+    
+                finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/tools-templates-tile-2col-leftfilters-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/tools-templates-tile-2col-leftfilters-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/tools-templates-tile-2col-leftfilters-min768.png' | relative_url "
+            min576-img="'../assets/layout-images/tools-templates-tile-2col-leftfilters-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/tools-templates-tile-2col-leftfilters-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 7 grid-columns wide.</p>
+            <p>Tools and templates tiles span are 3.5 grid-columns wide.</p>"
+
+            min992-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Tools and templates tiles span are 4 grid-columns wide.</p>"
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Tools and templates tiles span are 8 grid-columns wide.</p>"
+
+            min576-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Tools and templates tiles span are 6 grid-columns wide.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Tools and templates tiles span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-filters.html#tools-templates-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Used in the business.gov.au tools and templates page to display a collection of filterable links.</p>
+
+    </div>
+
+</div>
+
+</div>

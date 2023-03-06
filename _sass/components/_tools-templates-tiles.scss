@@ -1,0 +1,106 @@
+@mixin templates-tools-colour ($border-colour, $tag-hover-colour) {
+    .component-content {
+        border-left-color: $border-colour;
+    }
+    .tag {
+        background: $tag-hover-colour;
+    }
+    &:focus,
+    &:hover {
+        background: $tag-hover-colour;  
+    }
+}
+
+
+.bga-component.tools-templates-tile {
+        border: 1px solid $bga-blue-border;
+        background: $bga-white;
+        display: block;
+    
+        .component-content {
+            border-left: 8px solid $bga-blue-highlight-shadow;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+    
+            p {
+                font-weight: 400;
+            }
+        }
+        .component-text {
+            width: 100%;
+        }
+
+        .tile-title {
+            font-size: 1.125rem;
+    
+            a {
+                text-decoration: underline;
+    
+                &:focus-visible {
+                    color: $bga-blue-links;
+                    background: $bga-blue-background-light;
+                    border: $bga-text-focus-border;
+                    border-radius: $bga-focus-radius;
+                }
+                &:hover {
+                    color: $bga-blue-links;
+                    background: $bga-blue-background-light;
+                }
+            }
+        }
+    
+        .tag {
+            padding: 10px 16px;
+            background: $bga-blue-background-light;
+            border-radius: 40px;
+            font-size: .75rem;
+            line-height: 1.5;
+            align-items: center;
+    
+            img {
+                height: 16px;
+                width: auto;
+                flex-shrink: 0;
+            }
+        } 
+        
+        &:focus,
+        &:hover {
+            color: $bga-black;
+            background: $bga-blue-background-light;
+
+            .tag {
+                background: $bga-white !important;
+            }
+        }
+        &:active {
+           border: 1px solid $bga-blue-border !important; 
+        }
+
+        &.tile-template {
+            @include templates-tools-colour ($bga-blue-highlight-shadow, $bga-blue-background-light);
+        }
+        &.tile-tool {
+            @include templates-tools-colour ($bga-teal-highlight-shadow, $bga-teal-highlight-light);
+        }
+        &.tile-calculator {
+            @include templates-tools-colour ($bga-orange-highlight-shadow, $bga-orange-highlight-light);
+        }
+        &.tile-guide {
+            @include templates-tools-colour ($bga-yellow-highlight-shadow, $bga-yellow-highlight-light);
+        }
+        &.tile-checklist {
+            @include templates-tools-colour ($bga-purple-highlight-shadow, $bga-purple-highlight-light);
+        }
+       
+
+        &.non-branded {
+            @include templates-tools-colour ($nb-grey-extra-darkest, $nb-grey-light);
+
+            .tag {
+                color: $bga-black;
+                border-radius: 4px;
+            }
+        }
+    }
