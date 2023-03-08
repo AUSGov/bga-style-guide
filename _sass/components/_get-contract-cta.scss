@@ -145,6 +145,41 @@
     }
 }
 
+#bga-modal-download, #nb-modal-download, #modal-download, #ecb-modal-download {
+    .hide {
+        display: none;
+    }
+    .step {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+    .animation-wrapper {
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+    .loading-animation {
+
+        @keyframes fa-spin {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(1turn)
+            }
+        }
+        svg {
+            width: 44px;
+            height: 44px;
+            animation: fa-spin 2s linear infinite;
+        }
+
+    }
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
