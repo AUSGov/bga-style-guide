@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
 
-
     // SET SHOWING NUMBER ON LANDING PAGES
     var get_component_number = function () {
         var component_num = $('.bga-component:visible').length;
@@ -1129,19 +1128,49 @@ $(document).ready(function () {
 
     // GET CONTRACT MODALS
     // Open & close modals
+    
     $('.modal-trigger').on('click', function () {
         var modal = $(this).attr('data-modal');
+        var id= "bga";
+            if (modal.includes('ecb')) {
+                id='ecb'
+            } else if (modal.includes('nb')) {
+                id='nb'
+            } 
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
 
-        if ( modal.includes('modal-email')) {
+        console.log(modal);
+        console.log(id);
+
+        if ( modal.includes('modal-email') ) { 
+
             $('#step-email-address').addClass('show');
             $('#step-verify-email, #step-email-success, .success-icon').removeClass('show'); 
             $('#step-verify-email input').each(function(){
                 $(this).val('');
             });
+
+        } else if ( modal.includes('modal-download') ) {
+            console.log('download');
+            $('#step-download-generate').addClass('show');
+            $('#step-success-animation').removeClass('show');
+            $('#' + id + '-modal-download .close').addClass('hide');
+            $('#' + id + '-modal-download .download-msg').addClass('hide');
+
+            setTimeout(function () {
+                $('#step-download-generate[data-id=' + id + ']').removeClass('show');
+                $('#step-success-animation[data-id=' + id + ']').addClass('show');
+            }, 2000);
+            
+            setTimeout(function () {
+                $('#' + id + '-modal-download .hide').each(function(){
+                    $(this).removeClass('hide');
+                });
+            }, 4000);
         }
     });
+
     $('.modal-example .close, #ecb-prototype .modal-example .cancel').on('click', function () {
         $(this).parents('.modal-example').removeClass('show');
         $('.modal-overlay').removeClass('show');
@@ -1219,6 +1248,7 @@ $(document).ready(function () {
             $('.resend a').text('Resend code again').removeClass('sent');
         }, 3000);
     });
+
 
     // Close modal and scroll page on download / email success
     $('.success-scroll').on('click', function () {
