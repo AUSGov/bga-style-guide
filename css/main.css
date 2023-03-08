@@ -5213,6 +5213,19 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #email-form input { width: auto; flex-grow: 1; }
 
+#bga-modal-download .hide, #nb-modal-download .hide, #modal-download .hide, #ecb-modal-download .hide { display: none; }
+
+#bga-modal-download .step, #nb-modal-download .step, #modal-download .step, #ecb-modal-download .step { display: none; }
+
+#bga-modal-download .step.show, #nb-modal-download .step.show, #modal-download .step.show, #ecb-modal-download .step.show { display: block; }
+
+#bga-modal-download .animation-wrapper, #nb-modal-download .animation-wrapper, #modal-download .animation-wrapper, #ecb-modal-download .animation-wrapper { column-gap: 16px; row-gap: 16px; }
+
+@keyframes fa-spin { 0% { transform: rotate(0deg); }
+  to { transform: rotate(1turn); } }
+
+#bga-modal-download .loading-animation svg, #nb-modal-download .loading-animation svg, #modal-download .loading-animation svg, #ecb-modal-download .loading-animation svg { width: 44px; height: 44px; animation: fa-spin 2s linear infinite; }
+
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 8500; background-color: #333333; opacity: .6; display: none; }
 
 .modal-overlay.show { display: block; }
