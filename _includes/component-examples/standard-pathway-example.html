@@ -1,5 +1,9 @@
 <div class="bga-component-wrapper h-100 pb-5">
-<a href="" tabindex="0" class="bga-component standard-pathway m-0 {{ include.classes }}">
+<a  {% if include.link %} 
+href={{include.link}} 
+{% else %} href="" 
+{% endif %}  
+tabindex="0" class="bga-component standard-pathway m-0 {{ include.classes }}">
 
     <div class="p-4 component-content h-100">
 
