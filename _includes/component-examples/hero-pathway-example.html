@@ -1,5 +1,9 @@
 <div class="bga-component-wrapper h-100 d-flex pb-5">
-    <a href="" tabindex="0" class="bga-component hero-pathway mt-0 mx-0 mb-5 {{ include.classes }}">
+    <a {% if include.link %} 
+    href={{include.link}} 
+    {% else %} href="" 
+    {% endif %} 
+    tabindex="0" class="bga-component hero-pathway mt-0 mx-0 mb-5 {{ include.classes }}">
 
 
         <div class="p-4 component-content">
@@ -8,7 +12,6 @@
                 <h3 class="tile-title pt-0">{{ include.title }}</h3>
                 <p class="tile-description mb-0"> {{ include.description }} </p>
             </div>
-
 
 
             <div class="icon-wrapper">
