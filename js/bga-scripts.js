@@ -717,7 +717,7 @@ $(document).ready(function () {
                 $(this).removeClass('open');
             });
         } else {
-            $(".bga-site-header .level-2").each(function () {
+            $(".bga-site-header .level-2").each(function (e) {
                 $(this).removeClass('open');
             });
             $(this).addClass('open');
