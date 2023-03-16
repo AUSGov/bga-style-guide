@@ -59,16 +59,13 @@ $(document).ready(function () {
         // GET current task function
         var get_current_task = function () {
             var current_task;
-            if (sessionStorage.getItem('T4') == 'true') {
-                current_task = 'T4';
-                $('.loop11-instructions .header-wrapper').addClass('show');
-            } else if ((sessionStorage.getItem('T3') == 'true') & !(sessionStorage.getItem('T4') == 'true')) {
+            if ((sessionStorage.getItem('T3') == 'true')) {
                 current_task = 'T3';
                 $('.loop11-instructions .header-wrapper').addClass('show');
-            } else if ((sessionStorage.getItem('T2') == 'true') & !(sessionStorage.getItem('T3') == 'true') & !(sessionStorage.getItem('T4') == 'true')) {
+            } else if ((sessionStorage.getItem('T2') == 'true') & !(sessionStorage.getItem('T3') == 'true')) {
                 current_task = 'T2';
                 $('.loop11-instructions .header-wrapper').addClass('show');
-            } else if ((sessionStorage.getItem('T1') == 'true') & !(sessionStorage.getItem('T2') == 'true') & !(sessionStorage.getItem('T3') == 'true') & !(sessionStorage.getItem('T4') == 'true')) {
+            } else if ((sessionStorage.getItem('T1') == 'true') & !(sessionStorage.getItem('T2') == 'true') & !(sessionStorage.getItem('T3') == 'true')) {
                 current_task = 'T1'
             }
             sessionStorage.setItem('current_task', current_task);
@@ -89,10 +86,6 @@ $(document).ready(function () {
 
         if (window.location.href.includes("task3-start.html")) {
             sessionStorage.setItem('T3', 'true');
-        }
-
-        if (window.location.href.includes("task4-start.html")) {
-            sessionStorage.setItem('T4', 'true');
         }
 
         get_current_task();
