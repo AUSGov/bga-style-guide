@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body {% if page.id %} id="{{page.id}}" {% endif %}>
+<body {% if page.id %} id="{{page.id}}" {% endif %} class="loop11-instructions">
     
     <div class="container">
         <div class="row">
@@ -15,16 +15,11 @@
         </div>
     </div>
 
-    {% include prototypes/breadcrumbs-example.html %}
-    
-    {% include page-header.html
-        classes="teal" %}
 
-            {{ content }}
-
-    {% include component-examples/bga-site-footer-example.html %}
+    {{ content }}
 
     {% include prototypes/inactive-feature-modal.html %}
+
     
 </body>
 </html>
