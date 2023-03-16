@@ -1,7 +1,7 @@
 <div class="bga-component-wrapper pb-5">
     <div tabindex="0" class="bga-component table {{ include.classes }} m-0">
 
-        {% if include.responsive == "true" %}
+        {% if include.responsive == "true wide" %}
         <table class="table responsive">
             <thead>
                 <tr>
@@ -32,6 +32,36 @@
                     <td data-title="Expected Total Investment (Exc GST)">$494,900</td>
                     <td data-title="State">Victoria</td>
 
+                </tr>
+
+            </tbody>
+        </table>
+        {% endif %}
+
+        {% if include.responsive == "true narrow" %}
+        <table class="table responsive">
+            <thead>
+                <tr>
+                    <th>Recipient Organisation</th>
+                    <th>Project Description</th>
+                    <th>Grant (Exc GST)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-title="Recipient Organisation" class="toggle-row" id="toggle-row-0">District Council Of
+                        Endor</td>
+                    <td data-title="Project Description">Materials Development and Design for Electrification and
+                        Automation</td>
+                    <td data-title="Grant (Exc GST)">$417,000</td>
+                </tr>
+
+                <tr>
+                    <td data-title="Recipient Organisation" class="toggle-row" id="toggle-row-1">Tattoine plantation
+                    </td>
+                    <td data-title="Project Description">Cyber-Safe Connected Vehicles: Ensuring Secure, Trusted, and
+                        Robust Cooperative Automotive Systems</td>
+                    <td data-title="Grant (Exc GST)">$494,900</td>
                 </tr>
 
 

@@ -338,11 +338,19 @@ url2: /brand-foundations/grid-and-page-layouts.html
                 <h2 id="table-example">Responsive table example</h2>
                 <div class="row">
                     <div class="col-12">
+                    
+                    <h4>Tables with 5 or more columns</h4>
 
-                        {% include component-examples/table-example.html
-                        classes="narrow"
-                        responsive="true"
-                        %}
+                    {% include component-examples/table-example.html
+                        classes="default bp992"
+                        responsive="true wide"
+                    %}
+
+                    <h4>Tables with 4 or less columns</h4>
+                    {% include component-examples/table-example.html
+                        classes="default pb768"
+                        responsive="true narrow"
+                    %}
                     </div>
                 </div>
 

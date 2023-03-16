@@ -49,8 +49,9 @@ subsite-tag: true
                     {% include breakpoints.html
                     element-string="bga-table"
                     lg-visibility="true"
+                    md-visibility="true"
                     final-visibility="true"
-                    breakpoint-final="992"
+                    breakpoint-final="768"
                     %}
 
                     <!-- Component example -->
@@ -59,16 +60,23 @@ subsite-tag: true
                         <div class="component-wrapper remove-element-padding p-4">
 
                             <h3>Responsive tables</h3>
+                            <h4>Tables with 5 or more columns</h4>
 
                             {% include component-examples/table-example.html
-                                classes="default"
-                                responsive="true"
+                                classes="default bp992"
+                                responsive="true wide"
+                            %}
+
+                            <h4>Tables with 4 or less columns</h4>
+                            {% include component-examples/table-example.html
+                                classes="default pb768"
+                                responsive="true narrow"
                             %}
 
                             <h3>Unresponsive tables</h3>
 
                             {% include component-examples/table-example.html
-                                classes="narrow"
+                                classes=""
                                 responsive="false"
                             %}
 
