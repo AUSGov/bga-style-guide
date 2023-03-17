@@ -8,7 +8,7 @@ $(document).ready(function () {
         console.log('bga prototype page');
 
         // Inactive feature modal
-        $('a[href=""], a:not([href]), .search-container input, .name-search input, .business-info li').on("click", function () {
+        $('a[href=""], a:not([href]), .search-container input, .name-search input, .business-info li, .callout-box button').on("click", function () {
             console.log('no link');
             $(".modal-example").addClass("show");
             $(".modal-overlay").addClass("show");
@@ -106,6 +106,28 @@ $(document).ready(function () {
                 set_fragment(task + "-linkclick");
             }
         });
+
+        if (window.location.href.includes("manage-your-environmental-impact.html") || window.location.href.includes("manage-energy-use.html") || location.href.includes("environmental-impact.html ") ) {
+            var task = sessionStorage.current_task;
+            if (task == 'T1') {
+                set_fragment(task + "-success");
+            }
+        }
+
+        if (window.location.href.includes("registrations-your-business-needs.html") || window.location.href.includes("register-for-an-australian-business-number-abn.html") ) {
+            var task = sessionStorage.current_task;
+            if (task == 'T2') {
+                set_fragment(task + "-success");
+            }
+        }
+
+        if (window.location.href.includes("grants-finder.html") ) {
+            var task = sessionStorage.current_task;
+            if (task == 'T3') {
+                set_fragment(task + "-success");
+            }
+        }
+
 
 
 
