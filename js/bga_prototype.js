@@ -107,7 +107,7 @@ $(document).ready(function () {
             }
         });
 
-        if (window.location.href.includes("manage-your-environmental-impact.html") || window.location.href.includes("manage-energy-use.html") || location.href.includes("environmental-impact.html ") ) {
+        if (window.location.href.includes("manage-your-environmental-impact.html") || window.location.href.includes("manage-energy-use.html") || location.href.includes("environmental-impact.html") ) {
             var task = sessionStorage.current_task;
             if (task == 'T1') {
                 set_fragment(task + "-success");
@@ -127,7 +127,7 @@ $(document).ready(function () {
                 set_fragment(task + "-success");
             }
         }
-
+        
 
 
 
