@@ -976,7 +976,7 @@ $(document).ready(function () {
             if ($(window).width() > 768) {
                 question_height = Math.round($(this).parents('.row').find('.question-section').height());
             } else {
-                question_height = 230;
+                question_height = 300;
             }
 
             // Set sidebar height
