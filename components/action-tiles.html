@@ -1,0 +1,174 @@
+---
+
+layout: content-tagged
+title: Action tiles
+description: Present short activities to help the user understand how to carry out a task.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-9">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+            tab1="Business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper p-4">
+    
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="bga-action-tiles"
+                        lg-visibility="true"
+                        breakpoint-final="992"
+                        %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                           
+                            {% include component-examples/action-tile-example.html
+                            title="Adjust your pricing"
+                            subtitle="How to do it"
+                            img="'../assets/action-tiles/action_laptop.svg' | relative_url "
+
+                            steps="<ol><li>Consider the actions below. Do any of them apply to your situation?</li>
+                                <li>Use the <a href=''>cash flow statement</a> to forecast how changing these considerations could affect your cash flow. For example, what would happen if you increased your prices by 10?</li></ol>"
+
+                            item1="true"
+                            title1="Change prices"
+                            content1="<p>How much margin do you need to cover your expenses?</p>
+                            <p>How much could you increase prices without losing business?</p>
+                            <p>Could you implement small regular price increases? E.g. CPI</p>"
+
+                            item2="true"
+                            title2="Focus on most profitable customers, products or services"
+                            content2="<p>Which are your most profitable customers, products or services?</p>
+                            <p>How much time do you need to invest in your sales efforts towards these customers?</p>"
+
+                            item3="true"
+                            title3="Increase value you deliver"
+                            content3="<p>What other problems could you help your customer solve?</p>
+                            <p>Do the costumers only want one particular part of your product or service? Can you focus only on this?</p>"
+
+                            %}
+
+                        </div>
+                    </div>
+
+                   
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        singlebp="true"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        
+                </div>
+
+            </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="''"
+        btn-text="View design specifications"
+        %}
+
+
+       
+
+         <!-- LAYOUTS -->
+         <h2 class="section-start" id="layouts">Layouts</h2>
+
+         <p>Action tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left filters layout</a>.</p>
+ 
+         
+         {% include layouts-dropdown.html
+         layout-name="Two column - left filters layout"
+         singlelayout="true"
+         %}
+ 
+         <div class="layout-example show two-col-leftmenu mt-0 mb-5 px-4 py-0">
+ 
+             {% include layouts-accordion.html
+             layout-name="twocol-leftmenu"
+ 
+             min1200-visibility="true"
+             min992-visibility="false"
+             min768-visibility="true"
+             min576-visibility="false"
+             finalbp-visibility="true"
+ 
+             finalbp="Breakpoint &lt; 768px"
+ 
+             min1200-img="'../assets/layout-images/search-tile-2col-leftfilters-min1200.png' | relative_url "
+             min768-img="'../assets/layout-images/search-tile-2col-leftfilters-min768.png' | relative_url "
+             finalbp-img="'../assets/layout-images/search-tile-2col-leftfilters-finalbp.png' | relative_url "
+ 
+             min1200-rules="<p>The content area is 7 grid-columns wide.</p>
+             <p>Search tiles span the full width of the content area.</p>"
+ 
+             min768-rules="<p>The content area is 8 grid-columns wide.</p>
+             <p>Search tiles span the full width of the content area.</p>"
+ 
+             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+             <p>Search tiles span the full width of the content area.</p>"
+ 
+             example-link="'../html-examples/two-col-left-filters.html#search-tiles-example' | relative_url'"
+             example-link-text="View layout example"
+ 
+             %}
+ 
+         </div>
+ 
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>XXXXX</p>
+        
+
+    </div>
