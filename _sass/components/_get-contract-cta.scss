@@ -37,6 +37,33 @@
             text-align: center;
             color: $bga-blue-black-dark;
         }
+        
+        .loading-animation {    
+            display: none;
+            position: relative;
+
+            &.show {
+                display: flex;
+                align-items: center;
+            }
+
+           
+            @keyframes fa-spin {
+                0% {
+                    transform: rotate(0deg)
+                }
+    
+                to {
+                    transform: rotate(1turn)
+                }
+            }
+            svg {
+                width: 44px;
+                height: 44px;
+                animation: fa-spin 2s linear infinite;
+            }
+    
+        }
 
         .success-icon {
             display: none;
@@ -47,6 +74,9 @@
                 align-items: center;
             }
 
+            svg {
+                flex-shrink: 0;
+            }
             circle {
                 fill: $bga-green-success-dark;
                 stroke: $bga-green-success-dark;
@@ -83,6 +113,15 @@
                 position: absolute;
                 top: 20px;
                 left: 12px;
+            }
+            .msg {
+                color: $bga-green-success-background;
+                line-height: 1.5;
+                display: none;
+
+                &.show {
+                    display: block;
+                }
             }
         }
         .error-msg {
@@ -233,16 +272,36 @@
             input {
                 width: 40px;
             }
-            .success-icon {
-                margin-left: 16px !important;
+            .loading-animation { 
+                svg {
+                    width: 32px;
+                    height: auto;
+                }
             }
+            .success-icon {
+                margin-left: 16px !important;   
+
+                svg {
+                    width: 32px;
+                    height: auto;
+                }
+                svg.tick {
+                    width: 15px;
+                    top: 22px;
+                    left: 8px;
+                }
+            }
+        
         }
     }
 }
 
+
 .component-example.bp-350, .component-example.bp-below350 {
     @include get-contract-bp-768();
     @include get-contract-bp-576();
+    @include get-contract-bp-350();
+
 
     .get-contract-modal.modal-example {
         max-width: 400px;
@@ -250,7 +309,6 @@
     }
 
 }
-
 .component-example.bp-below350 {
     @include get-contract-bp-768();
     @include get-contract-bp-576();

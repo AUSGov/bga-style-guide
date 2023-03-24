@@ -23,7 +23,6 @@ $(document).ready(function () {
         });
     };
 
-
     //FILTER ITEMS ON COMPONENTS PAGE
 
     var filter_items = function (filter_states, i) {
@@ -1226,12 +1225,23 @@ $(document).ready(function () {
 
         if (code == '1234' ) {
             $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
-            $('#step-verify-email[data-id=' + id + '] .success-icon').addClass('show');
+            $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+            $(this).prop('disabled', true).addClass('disabled');
+            
+           setTimeout(function () {
+               
+                $('#step-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
+                $('#step-verify-email[data-id=' + id + '] .success-icon').addClass('show');
+                $('#step-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );
+                
+            }, 1000);
 
-            setTimeout(function () {
+           setTimeout(function () {
+                $('#step-verify-email[data-id=' + id + '] .success-icon .msg').hide();
+                $('#step-verify-email #verify-btn').prop('disabled', false).removeClass('disabled');
                 $('#step-verify-email[data-id=' + id + ']').removeClass('show');
                 $('#step-email-success[data-id=' + id + ']').addClass('show');
-            }, 3000);
+            }, 4000);
 
         } else {
             $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
