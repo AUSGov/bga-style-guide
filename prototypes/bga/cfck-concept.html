@@ -797,7 +797,7 @@
     </div>
 </div>
     
-    <div id="page-header" class="">
+    <div id="page-header" class="teal">
     <div class="container">
 
         <div class="row pt-5 mx-0">
@@ -815,11 +815,39 @@
     </div>
 </div>
 
-            <div class="container my-5">
+            <div class="container">
+
+    <div class="row">
+        <div class="col-12 remove-element-padding showing-header">
+
+            <h2 class="showing-number">Showing <span>18</span> actions</h2>
+
+            <div class="buttons-wrapper">
+
+            <div class="button-example"> 
+            <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center" tabindex="0" href="" role="button">Print
+                <svg xmlns="http://www.w3.org/2000/svg" width="17.003" height="16.123" viewBox="0 0 17.003 16.123">
+                    <g id="Group_19439" data-name="Group 19439" transform="translate(-1394.5 -537.5)">
+                      <path id="Exclusion_2" data-name="Exclusion 2" d="M13.925,11.036H2.044V7.562H0V0H2.044V2.657H14.1V0H16l-.043,7.562H13.939l-.014,3.473ZM3.678,7.766v1.84h8.583V7.766Z" transform="translate(1395 542.087)" fill="#333333" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+                      <path id="Path" d="M8.788,4.141V0H0V5.109H8.788Z" transform="translate(1398.679 538)" fill="#333333" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+                    </g>
+                  </svg>
+                  
+            </button>
+            </div>
+
+            <div class="filter-toggle">
+                <button class="d-flex align-items-center">Filters<span>0</span></button>
+            </div>
+    
+            </div>
+            
+        </div>
+    </div>
 
     <div class="row">
 
-        <div class="filters-wrapper remove-top-spaces col-12 col-md-4">
+        <div class="filters-wrapper showing-page remove-top-spaces col-12 col-md-4">
 
             <div class="filters checkboxes-primary">
 
@@ -860,13 +888,9 @@
 
         </div>
         
-        <div class="mobile-filter-toggle mb-4">
-            <button class="p-3">Filters<span>0</span></button>
-        </div>
 
 
-
-        <div class="remove-top-spaces col-12 col-md-8">
+        <div class="remove-top-spaces showing-page page-content col-12 col-md-8">
     
            
             <div class="bga-component-wrapper pb-5">
@@ -1454,6 +1478,76 @@
     </div>
 
 </div>
+
+
+<!-- FILTERS MODAL -->
+<div id="showing-filters-modal" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="filters checkboxes-primary">
+
+            <div class="filter-item" id="cfck">
+        
+                <form>
+                    <div tabindex="0" class="checkbox-item py-3" data-label="planning-for-cash-flow" filter-type="cfck">
+                        <label id="cfck-planning-for-cash-flow" data-option="planning-for-cash-flow" data-label="planning-for-cash-flow"
+                            filter-type="cfck">Planning for cash flow ???</label>
+                        <input tabindex="-1" type="checkbox" id="planning-for-cash-flow">
+                    </div>
+        
+                    <div tabindex="0" class="checkbox-item py-3" data-label="phone" filter-type="cfck">
+                        <label id="cfck-increasing-cash-in" data-option="increasing-cash-in" data-label="increasing-cash-in"
+                            filter-type="cfck">Increasing cash in</label>
+                        <input tabindex="-1" type="checkbox" id="increasing-cash-in">
+                    </div>
+        
+        
+                    <div tabindex="0" class="checkbox-item py-3" data-label="reducing-cash-out" filter-type="cfck">
+                        <label id="cfck-reducing-cash-out" data-option="reducing-cash-out" data-label="reducing-cash-out"
+                            filter-type="cfck">Reducing cash out</label>
+                        <input tabindex="-1" type="checkbox" id="reducing-cash-out">
+                    </div>
+
+                    <div tabindex="0" class="checkbox-item py-3" data-label="tracking-cash-flow" filter-type="cfck">
+                        <label id="cfck-tracking-cash-flow" data-option="tracking-cash-flow" data-label="tracking-cash-flow"
+                            filter-type="cfck">Tracking cash flow ???</label>
+                        <input tabindex="-1" type="checkbox" id="tracking-cash-flow">
+                    </div>
+        
+        
+                </form>
+        
+            </div>
+        
+        </div>
+
+        <div class="filter-control-group d-flex align-items-center justify-content-left mt-5">
+    
+            <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center view-results" tabindex="0" href="" role="button">View results</button>
+
+            <div class="clear-filters ms-4">
+                <a href="" >Clear all filters</a>
+                <svg class="ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)"></path></svg>
+            </div>
+
+           
+            <div>
+               
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="modal-overlay"></div>
+
+
 
     <div class="bga-footer-example  py-6">
 
