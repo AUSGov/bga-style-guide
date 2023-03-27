@@ -86,6 +86,13 @@ $(document).ready(function () {
 
     });
 
+    $('.showing-header .filter-toggle button').on('click', function(){
+        $('#showing-filters-modal, .modal-overlay').addClass('show');
+    });
+    $('.view-results').on('click', function(){
+        $('#showing-filters-modal, .modal-overlay').removeClass('show');
+    });
+
 
     // PAGE PATTERNS - click on hotspots to go to rules
     $('.spot a').on('click', function () {
@@ -1750,6 +1757,25 @@ $(document).ready(function () {
     $('#nb-feedback-example .no-answer .bga-btn').on('click', function () {
         feedback_step3($(this), "#nb-feedback-example");
     });
+
+    // COMPONENT EXAMPLE: Showing number sticky header
+    if ($('.showing-header').length) {
+        
+        var window_width = window.innerWidth,
+        sticky_position = $('.showing-header').offset();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > sticky_position.top) {
+                $('.showing-header').addClass('fixed');
+                $('.showing-page-content').addClass('fixed');
+            } else {
+                $('.showing-header').removeClass('fixed');
+                $('.showing-page-content').removeClass('fixed');
+            }
+        });
+
+    };
+   
 
 
 }); //End doc ready
