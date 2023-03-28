@@ -1759,17 +1759,17 @@ $(document).ready(function () {
     });
 
     // COMPONENT EXAMPLE: Showing number sticky header
-    if ($('.showing-header').length) {
+    if ($('.showing-header-wrapper').length) {
         
         var window_width = window.innerWidth,
-        sticky_position = $('.showing-header').offset();
+        sticky_position = $('.showing-header-wrapper').offset();
 
         $(window).scroll(function () {
             if ($(window).scrollTop() > sticky_position.top) {
-                $('.showing-header').addClass('fixed');
+                $('.showing-header-wrapper').addClass('fixed');
                 $('.showing-page-content').addClass('fixed');
             } else {
-                $('.showing-header').removeClass('fixed');
+                $('.showing-header-wrapper').removeClass('fixed');
                 $('.showing-page-content').removeClass('fixed');
             }
         });
