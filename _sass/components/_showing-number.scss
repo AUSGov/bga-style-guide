@@ -1,9 +1,12 @@
-.showing-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 32px 16px;
+.showing-header-wrapper {
+
+    .showing-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 32px 16px;
+    }
         
         h2.showing-number {
         font-size: 1.75rem;
@@ -29,10 +32,10 @@
         position: fixed;
         background: $bga-teal-highlight-light;
         top: 0;
-        left: 0;
-        padding: 32px 32px;
+        z-index: 8500;
+        width: 100%;
         box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2);
-        z-index: 9000;
+        transition: top 1s linear;
     }
 }
 .showing-page.fixed {
@@ -48,6 +51,7 @@
         top: 1rem;
         left: 16px;
         max-height: none;
+        max-width: none;
         height: calc(100% - 32px);
     }
 
@@ -63,9 +67,11 @@
 }
 
 @media( max-width: 768px) {
-    .showing-header {
-        padding: 16px 16px;
-        flex-wrap: wrap;
+    .showing-header-wrapper {
+        .showing-header {
+            padding: 16px 16px;
+            flex-wrap: wrap;
+        }
 
         h2.showing-number {
             font-size: 1rem;
