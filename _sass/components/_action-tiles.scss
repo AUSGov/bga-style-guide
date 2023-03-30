@@ -4,6 +4,7 @@
         //border: $bga-component-border;
     }
     .component-title {
+        min-height: 340px;
         width: 250px;
         background: $bga-blue-background-light;
         display: flex;
@@ -24,10 +25,7 @@
             justify-content: center;
 
         }
-        img {
-            width: 140px;
-            height: auto;
-        }
+        
     }
     .component-text {
         width: calc(100% - 250px);
@@ -106,6 +104,15 @@
                     box-shadow: none;
                     background-color: transparent;
                     transform: scaleY(-1);
+                }
+            }
+        }
+        .accordion-body {
+            ul {
+                padding: 0 0 8px 32px;
+
+                li {
+                    margin-bottom: 8px;
                 }
             }
         }
