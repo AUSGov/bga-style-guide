@@ -66,6 +66,23 @@
     }
 }
 
+// Mixins for smaller screen sizes
+@mixin showing-number-below576 () {
+    .showing-header-wrapper {
+        .bga-secondary-btn {
+           svg {
+                display: none;
+           }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include showing-number-below576();
+}
+
+
 @media( max-width: 768px) {
     .showing-header-wrapper {
         .showing-header {
@@ -138,4 +155,8 @@
         }
 
     }
+}
+
+@media (max-width: 576px) {
+    @include showing-number-below576();
 }
