@@ -47,45 +47,7 @@ description: Cras luctus auctor velit eget pretium. Praesent posuere dolor lacus
 
         <div class="filters-wrapper showing-page remove-top-spaces col-12 col-md-4">
 
-            <div class="filters checkboxes-primary">
-
-                <div class="filter-item" id="cfck">
-            
-                    <form>
-                        <div tabindex="0" class="checkbox-item py-3" data-label="check-your-cash-flow-health" filter-type="cfck">
-                            <label id="cfck-check-your-cash-flow-health" data-option="check-your-cash-flow-health" data-label="check-your-cash-flow-health"
-                                filter-type="cfck">Do a health check</label>
-                            <input tabindex="-1" type="checkbox" id="check-your-cash-flow-health">
-                        </div>
-            
-                        <div tabindex="0" class="checkbox-item py-3" data-label="phone" filter-type="cfck">
-                            <label id="cfck-increasing-cash-in" data-option="increasing-cash-in" data-label="increasing-cash-in"
-                                filter-type="cfck">Increase your cash in </label>
-                            <input tabindex="-1" type="checkbox" id="increasing-cash-in">
-                        </div>
-            
-            
-                        <div tabindex="0" class="checkbox-item py-3" data-label="reducing-cash-out" filter-type="cfck">
-                            <label id="cfck-reducing-cash-out" data-option="reducing-cash-out" data-label="reducing-cash-out"
-                                filter-type="cfck">Decrease your cash out</label>
-                            <input tabindex="-1" type="checkbox" id="reducing-cash-out">
-                        </div>
-
-                    
-                        <div tabindex="0" class="checkbox-item py-3" data-label="tracking-cash-flow" filter-type="cfck">
-                            <label id="cfck-tracking-cash-flow" data-option="tracking-cash-flow" data-label="tracking-cash-flow"
-                                filter-type="cfck">Manage your cash flow </label>
-                            <input tabindex="-1" type="checkbox" id="tracking-cash-flow">
-                        </div>
-                   
-            
-            
-                    </form>
-            
-                </div>
-            
-            </div>
-
+            {% include prototypes/cfck-filters.html %}
         </div>
         
 
@@ -282,44 +244,8 @@ description: Cras luctus auctor velit eget pretium. Praesent posuere dolor lacus
 
     <div class="component-content mt-2">
 
-        <div class="filters checkboxes-primary">
-
-            <div class="filter-item" id="cfck">
+        {% include prototypes/cfck-filters.html %}
         
-                <form>
-                    <div tabindex="0" class="checkbox-item py-3" data-label="check-your-cash-flow-health" filter-type="cfck">
-                        <label id="cfck-check-your-cash-flow-health" data-option="check-your-cash-flow-health" data-label="check-your-cash-flow-health"
-                            filter-type="cfck">Do a health check</label>
-                        <input tabindex="-1" type="checkbox" id="check-your-cash-flow-health">
-                    </div>
-        
-                    <div tabindex="0" class="checkbox-item py-3" data-label="phone" filter-type="cfck">
-                        <label id="cfck-increasing-cash-in" data-option="increasing-cash-in" data-label="increasing-cash-in"
-                            filter-type="cfck">Increase your cash in</label>
-                        <input tabindex="-1" type="checkbox" id="increasing-cash-in">
-                    </div>
-        
-        
-                    <div tabindex="0" class="checkbox-item py-3" data-label="reducing-cash-out" filter-type="cfck">
-                        <label id="cfck-reducing-cash-out" data-option="reducing-cash-out" data-label="reducing-cash-out"
-                            filter-type="cfck">Decrease your cash out</label>
-                        <input tabindex="-1" type="checkbox" id="reducing-cash-out">
-                    </div>
-
-                 
-                    <div tabindex="0" class="checkbox-item py-3" data-label="tracking-cash-flow" filter-type="cfck">
-                        <label id="cfck-tracking-cash-flow" data-option="tracking-cash-flow" data-label="tracking-cash-flow"
-                            filter-type="cfck">Manage your cash flow</label>
-                        <input tabindex="-1" type="checkbox" id="tracking-cash-flow">
-                    </div>
-            
-        
-                </form>
-        
-            </div>
-        
-        </div>
-
         <div class="filter-control-group d-flex align-items-center justify-content-left mt-5">
     
             <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center view-results" tabindex="0" href="" role="button">View results</button>
