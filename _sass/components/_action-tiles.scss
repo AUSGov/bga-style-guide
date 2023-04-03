@@ -1,7 +1,6 @@
 .bga-component.action-tile {
     .component-content {
         display: flex;
-        //border: $bga-component-border;
     }
     .component-title {
         min-height: 340px;
@@ -82,11 +81,13 @@
             &:focus-visible {
                 border: $bga-component-focus-border;
                 border-radius: $bga-focus-radius;
+                background: $bga-white;
                 outline: none;
             }   
             &:hover {
                 background: $bga-blue-black-lightest;
-                text-decoration: none;
+                text-decoration: underline;
+                text-decoration-color: $bga-blue-black-dark;
                 
                 &::after {
                     background-color: transparent;
@@ -99,6 +100,8 @@
                 &:hover {
                     border-bottom: none;
                     background: $bga-white;
+                    text-decoration: underline;
+                    text-decoration-color: $bga-blue-black-dark;
                 }
                 &::after {
                     box-shadow: none;
@@ -146,6 +149,41 @@
     &.purple {
         .component-title {
             background: $bga-purple-highlight-mid;
+        }
+    }
+
+    &.non-branded {
+        .component-title {
+            background: $nb-grey-dark;
+
+            .img-wrapper {
+                background: transparent;
+                border-radius: 0;
+            }
+        }
+        .component-text {
+            background: $nb-grey-lightest;
+        }
+        .action-tile-accordion {
+            border-top: $bga-black solid 1px;
+            .accordion-item {
+                border-bottom: $bga-black solid 1px;
+
+                &:hover, &.show {
+                    border-bottom: $bga-black solid 1px;
+                }
+            }
+            .accordion-button {
+                &:hover {
+                    background: $nb-grey-light;
+                }
+                &:not(.collapsed) {
+            
+                    &:hover {
+                        text-decoration-color: $nb-grey-light;
+                    }
+                }
+            }
         }
     }
 
