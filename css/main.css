@@ -5349,15 +5349,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.action-tile .action-tile-accordion .accordion-button:focus { border: none; box-shadow: none; }
 
-.bga-component.action-tile .action-tile-accordion .accordion-button:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; }
+.bga-component.action-tile .action-tile-accordion .accordion-button:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; background: #ffffff; outline: none; }
 
-.bga-component.action-tile .action-tile-accordion .accordion-button:hover { background: #E4E6EA; text-decoration: none; }
+.bga-component.action-tile .action-tile-accordion .accordion-button:hover { background: #E4E6EA; text-decoration: underline; text-decoration-color: #2E3E5A; }
 
 .bga-component.action-tile .action-tile-accordion .accordion-button:hover::after { background-color: transparent; }
 
 .bga-component.action-tile .action-tile-accordion .accordion-button:not(.collapsed) { box-shadow: none; background: #ffffff; }
 
-.bga-component.action-tile .action-tile-accordion .accordion-button:not(.collapsed):hover { border-bottom: none; background: #ffffff; }
+.bga-component.action-tile .action-tile-accordion .accordion-button:not(.collapsed):hover { border-bottom: none; background: #ffffff; text-decoration: underline; text-decoration-color: #2E3E5A; }
 
 .bga-component.action-tile .action-tile-accordion .accordion-button:not(.collapsed)::after { box-shadow: none; background-color: transparent; transform: scaleY(-1); }
 
@@ -5376,6 +5376,22 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .bga-component.action-tile.orange .component-title { background: #F1B981; }
 
 .bga-component.action-tile.purple .component-title { background: #B1A8E3; }
+
+.bga-component.action-tile.non-branded .component-title { background: #C8C8C8; }
+
+.bga-component.action-tile.non-branded .component-title .img-wrapper { background: transparent; border-radius: 0; }
+
+.bga-component.action-tile.non-branded .component-text { background: #F8F8F8; }
+
+.bga-component.action-tile.non-branded .action-tile-accordion { border-top: #333333 solid 1px; }
+
+.bga-component.action-tile.non-branded .action-tile-accordion .accordion-item { border-bottom: #333333 solid 1px; }
+
+.bga-component.action-tile.non-branded .action-tile-accordion .accordion-item:hover, .bga-component.action-tile.non-branded .action-tile-accordion .accordion-item.show { border-bottom: #333333 solid 1px; }
+
+.bga-component.action-tile.non-branded .action-tile-accordion .accordion-button:hover { background: #E8E8E8; }
+
+.bga-component.action-tile.non-branded .action-tile-accordion .accordion-button:not(.collapsed):hover { text-decoration-color: #E8E8E8; }
 
 .component-example.bp-below992 .bga-component.action-tile .component-content { flex-wrap: wrap; }
 
