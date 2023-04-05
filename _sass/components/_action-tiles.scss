@@ -32,10 +32,6 @@
 
         p, li {
             margin-bottom: 16px;
-
-            &:last-of-type {
-                margin-bottom: 0;
-            }
         }
 
         ul, ol {
@@ -116,6 +112,14 @@
 
                 li {
                     margin-bottom: 8px;
+                }
+            }
+            > *:last-child {
+                padding-bottom: 0;
+                margin-bottom: 0;
+
+                li:last-child {
+                    margin-bottom: 0;
                 }
             }
         }
