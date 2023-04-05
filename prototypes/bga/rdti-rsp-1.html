@@ -1,0 +1,96 @@
+---
+
+layout: cfck
+title: Find a Research Service Provider for the R&D Tax Incentive
+description: View a list of the current registered RSPs, their locations, contact details and research specialities.   
+
+---
+
+<div class="showing-header-wrapper">
+    <div class="container ">
+    <div class="row">
+            <div class="col-12 remove-element-padding showing-header">
+
+                <h2 class="showing-number">Showing <span>XXX</span> research providers</h2>
+
+
+                <div class="filter-toggle">
+                    <button class="d-flex align-items-center">Filters<span>0</span></button>
+                </div>
+        
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+
+
+    <div class="row">
+
+        <div class="filters-wrapper showing-page remove-top-spaces col-12 col-md-4">
+            {% include prototypes/rsp-filters.html %}
+        </div>
+        
+
+        <div class="remove-top-spaces showing-page page-content col-12 col-md-8">
+
+         <!-- CARDS -->
+         {% include component-examples/rsp-tile-example.html
+            title="How to do the cash flow activities"
+            subtitle="Why?"
+            img="'../../assets/action-tiles/action-cards.svg' | relative_url "
+            id="cash-flow-activities"
+            classes="blue"
+
+            steps="<p>There&rsquo;s a lot to learn about cash flow and it&rsquo;s tricky to know where to start. The activities help by guiding you through a cash flow coaching process in 3 simple steps.</p>
+            <h4>How to do them</h4>
+            <p>It&rsquo;s best to do the activities in order, either by yourself or with your business advisor. It may take a few sessions to do them all, but it&rsquo;s worth it!</p>"
+
+            %}
+
+         
+        
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FILTERS MODAL -->
+<div id="showing-filters-modal" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        {% include prototypes/rsp-filters.html %}
+
+        <div class="filter-control-group d-flex align-items-center justify-content-left mt-5">
+    
+            <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center view-results" tabindex="0" href="" role="button">View results</button>
+
+            <div class="clear-filters ms-4">
+                <a href="" >Clear all filters</a>
+                <svg class="ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)"></path></svg>
+            </div>
+
+           
+            <div>
+               
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="modal-overlay"></div>
+
