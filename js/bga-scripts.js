@@ -1365,6 +1365,12 @@ $(document).ready(function () {
         }
     });
 
+    // COMPONENT EXAMPLE: RSP TILE 
+    $('.search-tile .codes-btn').on('click', function () {
+        $(this).parents('.codes').toggleClass('open').find('.codes-content').slideToggle();
+    });
+   
+
     // COMPONENT EXAMPLE: EVENTS SEARCH TILE
     $('.events-tile .read-more-btn').on('click', function () {
         var parent_section = $(this).parents('.event-details');
