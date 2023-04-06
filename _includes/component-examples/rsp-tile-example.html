@@ -1,20 +1,75 @@
-<div class="bga-component-wrapper pb-5">
-    <div class="bga-component rsp-tile {{include.classes}} m-0">
+<div class="search-tile rsp-tile mb-5">
 
-        <div class="component-content">
+    <div class="component-text p-4 remove-element-padding">
 
-            <div class="component-title p-4">
-                <h3 class="p-0">{{ include.title }}</h3>
-
-            </div>
-
-
-            <div class="component-text p-4 remove-element-padding">
-
-
-            </div>
-
+        {% if include.label %}
+        <div class="top-section">
+            <p class="label"><strong>{{ include.label }}</strong></p>
         </div>
+        {% endif %}
+
+        {% if include.title %}
+        <h3 class="tile-title pt-0">{{ include.title }}</h3>
+        {% endif %}
+
+        {% if include.location %}
+        <p class="detail location"><strong>Address:</strong> {{ include.location }}</p>
+        {% endif %}
+
+        {% if include.contact %}
+        <p class="detail contact"><strong>Contact:</strong> {{ include.contact }}</p>
+        {% endif %}
+
+        {% if include.phone %}
+        <p class="detail phone"><strong>Phone:</strong> <a href="">{{ include.phone }}</a></p>
+        {% endif %}
+
+        {% if include.website %}
+        <p class="detail website"><strong>Website:</strong> {{ include.website }}</p>
+        {% endif %}
+
+       
+        {% if include.tag == "Registered" %}
+            <div class="tag-wrapper align-items-center d-flex">
+                <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
+                    <div class="icon d-flex me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
+                            <path data-name="Path 11396" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
+                          </svg>
+                    </div>
+                    <p>{{ include.tag }}</p>
+                </div>
+            </div>
+        {% else include.tag == "Not registered" %}
+            <div class="tag-wrapper align-items-center d-flex">
+                <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
+                    <div class="icon d-flex me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M8,16a8,8,0,1,1,8-8A8.009,8.009,0,0,1,8,16ZM2.948,4.08a6.393,6.393,0,0,0,8.971,8.972ZM8,1.6A6.347,6.347,0,0,0,4.08,2.948l8.972,8.971A6.343,6.343,0,0,0,14.4,8,6.407,6.407,0,0,0,8,1.6Z" fill="#d2201e"/>
+                          </svg>
+                          
+                    </div>
+                    <p>{{ include.tag }}</p>
+                </div>
+                <div class="timeframe remove-element-padding">
+                    <p><strong>This provider was registered for the 2021-2022 income period.</strong></p>
+                </div>
+            </div>
+        {% endif %}
 
     </div>
+
+    {% if include.codes %}
+    <div class="codes">
+        <div class="codes-content p-4 remove-element-padding">
+            {{ include.codes }}
+        </div>
+        <button class="codes-btn p-4">Supported ANZSRC codes
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <path data-name="Path 11396" d="M614-1182.972,607.982-1189,606-1187.014l8,8.014,8-8.014L620.018-1189Z" transform="translate(-606 1189)" fill="#333" fill-rule="evenodd"/>
+              </svg>       
+        </button>
+    </div>
+    {% endif %}
+
 </div>
