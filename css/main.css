@@ -5361,9 +5361,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.action-tile .action-tile-accordion .accordion-button:not(.collapsed)::after { box-shadow: none; background-color: transparent; transform: scaleY(-1); }
 
-.bga-component.action-tile .action-tile-accordion .accordion-body ul { padding: 0 0 8px 32px; }
+.bga-component.action-tile .action-tile-accordion .accordion-body ul { padding: 0 0 8px 16px; }
 
-.bga-component.action-tile .action-tile-accordion .accordion-body ul li { margin-bottom: 8px; }
+.bga-component.action-tile .action-tile-accordion .accordion-body ul li { margin-bottom: 8px; text-indent: -16px; }
+
+.bga-component.action-tile .action-tile-accordion .accordion-body ul li::before { padding: 0 8px 0 0; }
+
+.bga-component.action-tile .action-tile-accordion .accordion-body ol { padding: 0 0 8px 16px; }
 
 .bga-component.action-tile .action-tile-accordion .accordion-body > *:last-child { padding-bottom: 0; margin-bottom: 0; }
 
