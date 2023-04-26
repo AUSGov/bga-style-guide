@@ -116,6 +116,26 @@
 
                         </div>
                     {% endif %}
+
+
+                    {% if include.item6 == "true" %}   
+                        <div class="accordion-item">
+                            <h5 class="accordion-header pt-0" id="{{include.id}}-6">
+                                <button class="accordion-button collapsed remove-element-padding py-3 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#{{include.id=}}-collapseSix" aria-expanded="false" aria-controls="{{include.id=}}-collapseSix">
+                                <h5 class="pe-2">{{ include.title6 }}</h5>
+                                </button>
+                            </h5>
+                            <div id="{{include.id=}}-collapseSix" class="accordion-collapse collapse" aria-labelledby="{{include.id}}-6" >
+                                
+                                <div class="accordion-body remove-element-padding pt-0 px-2 pb-3">
+                                
+                                    {{ include.content6 }}
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endif %}
             
             
             </div>
