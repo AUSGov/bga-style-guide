@@ -7551,6 +7551,26 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .filters.text-input button:hover { background: #218080; color: #ffffff; }
 
+.filters.text-input-secondary { border-bottom: solid 1px #ABB1BD; }
+
+.filters.text-input-secondary .filter-item { align-items: center; border-bottom: none; display: flex; display: block; }
+
+.filters.text-input-secondary span { display: none; }
+
+.filters.text-input-secondary label { font-size: 1.125rem; width: 100%; padding-bottom: 8px; }
+
+.filters.text-input-secondary input { font-size: 1rem; padding: 12px 16px; border-color: #333333; }
+
+.filters.text-input-secondary input::placeholder { color: #333333; }
+
+.filters.text-input-secondary input:focus { border-color: #2E6CB9; }
+
+.filters.text-input-secondary button { background: #CFEBEB; border: solid 2px #105C5C; border-radius: 50px; border-top-left-radius: 0; border-bottom-left-radius: 0; padding: 8px 24px 8px 16px; box-shadow: none; min-width: 140px; padding: 12px 16px; color: #333333; }
+
+.filters.text-input-secondary button:focus-visible { background: #105C5C; color: #ffffff; }
+
+.filters.text-input-secondary button:hover { background: #218080; color: #ffffff; }
+
 .filters.checkboxes-primary .checkbox-item { border-bottom: solid 1px #ABB1BD; padding: 16px 0; display: flex; position: relative; justify-content: space-between; align-items: center; }
 
 .filters.checkboxes-primary .checkbox-item label { font-size: 1.125rem; }
@@ -7559,9 +7579,9 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .filters.checkboxes-primary .checkbox-item input:checked { background: #218080 url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; background-size: 18px 14px; border-color: #218080; }
 
-.filters.checkboxes-secondary .checkbox-item { display: flex; align-items: center; }
+.filters.checkboxes-secondary .checkbox-item { display: flex; align-items: flex-start; }
 
-.filters.checkboxes-secondary .checkbox-item label { font-weight: 400; }
+.filters.checkboxes-secondary .checkbox-item label { font-weight: 400; font-size: .875rem; }
 
 .filters.checkboxes-secondary .checkbox-item input { height: 24px; width: 24px; -webkit-appearance: none; -ms-appearance: none; -moz-appearance: none; appearance: none; border: solid 1px #333333; border-radius: 0; margin: 0 8px 0 0; }
 
@@ -7574,6 +7594,8 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 .filters .filter-item-title p { font-size: 1.125rem; font-weight: 600; line-height: normal; display: inline-flex; }
 
 .filters .filter-item-content { display: none; }
+
+.filters .filter-item-content.show { display: block; }
 
 .filters .active-filters ul { text-indent: 0; }
 
@@ -7602,6 +7624,18 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 .filters.single-select select { margin-top: 8px; font-size: .875rem; padding: 8px 32px 8px 8px; background-position: right 8px center; min-height: 35px; border-color: #333333; }
 
 .filters.single-select select:focus, .filters.single-select select:focus-visible { border-color: #2E6CB9; }
+
+.filters.single-select-dynamic { font-size: 1.125rem; font-weight: 600; }
+
+.filters.checkboxes-dynamic { border-bottom: solid 1px #ABB1BD; }
+
+.filters.checkboxes-dynamic .checkbox-item { display: flex; align-items: flex-start; }
+
+.filters.checkboxes-dynamic .checkbox-item label { font-weight: 400; font-size: .875rem; }
+
+.filters.checkboxes-dynamic .checkbox-item input { height: 24px; width: 24px; -webkit-appearance: none; -ms-appearance: none; -moz-appearance: none; appearance: none; border: solid 1px #333333; border-radius: 0; margin: 0 8px 0 0; }
+
+.filters.checkboxes-dynamic .checkbox-item input:checked { background: #ffffff url(../assets/icon-tick-black.svg) no-repeat; background-position: center center; border: solid 2px #333333; }
 
 .filters .name-search { background: #E4E6EA; margin-top: 16px; }
 

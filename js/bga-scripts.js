@@ -1493,7 +1493,7 @@ $(document).ready(function () {
     });
 
     // checkboxes & bubbles
-    $('.checkboxes-secondary input').on('click', function () {
+    $('.checkboxes-secondary input, .checkboxes-dynamic input').on('click', function () {
         var item_value = $(this).attr('id'),
             counter = parseInt($(this).parents('.filter-item').find('.mobile-counter').text());
         if (isNaN(counter)) {
@@ -1531,6 +1531,15 @@ $(document).ready(function () {
             $('li[data-value="' + item_value + '"]').addClass('selected');
             $(this).parents('.filter-item').find('.mobile-counter').text('1').addClass('not-empty');
         }
+    });
+
+    $('.filters.single-select-dynamic select').on('change', function(){
+        var item_value = $(this).val(),
+        item_parent = $(this).parents('.filter-item').attr('id');
+
+        $('.filter-item-content.' + item_parent).removeClass('show');
+        $('.filter-item-content#' + item_value).addClass('show');
+
     });
 
     // toggle switch
