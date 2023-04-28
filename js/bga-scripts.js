@@ -1540,6 +1540,8 @@ $(document).ready(function () {
         $('.filter-item-content.' + item_parent).removeClass('show');
         $('.filter-item-content#' + item_value).addClass('show');
 
+        
+
     });
 
     // toggle switch

@@ -887,7 +887,9 @@
 <div class="filters checkboxes-dynamic">
 
     <div class="active-filters pt-2 multi-select">
-        <ul class="m-0 p-0">
+
+        <p class="filter-group-title agricultural-veterinary-and-food-sciences">
+        <ul class="m-0 p-0 agricultural-veterinary-and-food-sciences">
             <li filter-type="research-field" filter-value="10" data-value="ag-3001">3001 Agricultural biotechnology</li>
             <li filter-type="research-field" filter-value="15" data-value="ag-3002">3002 Agriculture, land and farm management</li>
             <li filter-type="research-field" filter-value="15" data-value="ag-3003">3003 Animal production</li>
@@ -898,8 +900,10 @@
             <li filter-type="research-field" filter-value="15" data-value="ag-3008">3008 Horticultural production</li>
             <li filter-type="research-field" filter-value="15"  data-value="ag-3009">3009 Veterinary sciences</li>
             <li filter-type="research-field" filter-value="15" data-value="ag-3099">3099 Other agricultural, veterinary and food sciences</li>
+        </ul>
 
-
+        <p class="filter-group-title biological-sciences">
+        <ul class="m-0 p-0 biological-sciences">
             <li filter-type="research-field" filter-value="10" data-value="bio-3101">3101 Biochemistry and cell biology</li>
             <li filter-type="research-field" filter-value="15" data-value="bio-3102">3102 Bioinformatics and computational biology</li>
             <li filter-type="research-field" filter-value="15" data-value="bio-3103">3103 Ecology</li>
@@ -910,9 +914,6 @@
             <li filter-type="research-field" filter-value="15" data-value="bio-3108">3108 Plant biology</li>
             <li filter-type="research-field" filter-value="15"  data-value="bio-3109">3109 Zoology</li>
             <li filter-type="research-field" filter-value="15" data-value="bio-3199">3199 Other biological sciences</li>
-
-
-
         </ul>
     </div>
 
@@ -1126,7 +1127,7 @@
 
     <div tabindex="0" class="filter-item pt-3 pb-2" id="provider-status">
         <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">Provider status <span class="mobile-counter"></span></p>
+            <p class="mb-0">Provider registration status <span class="mobile-counter"></span></p>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                 <g transform="translate(20 12.5) rotate(180)">
                     <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
@@ -1138,9 +1139,8 @@
         </div>
         <div class="active-filters pt-2 multi-select">
             <ul class="m-0 p-0">
-                <li filter-type="provider-status" filter-value="30" data-value="registered">Registered</li>
-                <li filter-type="provider-status" filter-value="60" data-value="not-registered">Registered for 2021-2022
-                </li>
+                <li filter-type="provider-status" filter-value="30" data-value="registered">Registered for 2022 - 2023</li>
+                <li filter-type="provider-status" filter-value="60" data-value="not-registered">Registered for 2021 - 2022</li>
 
 
             </ul>
@@ -1150,12 +1150,12 @@
             <form>
                 <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="provider-status">
                     <input type="checkbox" tabindex="-1" id="registered">
-                    <label for="registered">Registered</label>
+                    <label for="registered">Registered for current financial year (2022 - 2023)</label>
                 </div>
 
                 <div tabindex="0" class="checkbox-item p-2" filter-value="60" filter-type="provider-status">
                     <input type="checkbox" tabindex="-1" id="not-registered">
-                    <label for="not-registered">Registered for 2021-2022</label>
+                    <label for="not-registered">Registered for previous financial year (2021 - 2022)</label>
                 </div>
 
 
@@ -1222,18 +1222,20 @@
         
 
        
-        
-            <div class="tag-wrapper align-items-center d-flex">
-                <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
-                    <div class="icon d-flex me-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
-                            <path data-name="Path 11396" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
-                          </svg>
+        <div class="tag-wrapper d-flex align-items-center">
+            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
+
+            
+                <div class="tag-wrapper align-items-center d-flex">
+                    <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
+                        
+                        <p><strong>Current financial year</strong> (2022-2023)</p>
                     </div>
-                    <p>Registered</p>
                 </div>
-            </div>
-        
+            
+
+            
+        </div>
 
     </div>
 
@@ -1281,22 +1283,23 @@
         
 
        
-        
-            <div class="tag-wrapper align-items-center d-flex">
-                <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
-                    <div class="icon d-flex me-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <path d="M8,16a8,8,0,1,1,8-8A8.009,8.009,0,0,1,8,16ZM2.948,4.08a6.393,6.393,0,0,0,8.971,8.972ZM8,1.6A6.347,6.347,0,0,0,4.08,2.948l8.972,8.971A6.343,6.343,0,0,0,14.4,8,6.407,6.407,0,0,0,8,1.6Z" fill="#d2201e"/>
-                          </svg>
-                          
+        <div class="tag-wrapper d-flex align-items-center">
+            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
+
+            
+
+            
+                <div class="tag-wrapper align-items-center d-flex">
+                    <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
+                        
+                        <p><strong>Past financial year</strong> (2021-2022)</p>
                     </div>
-                    <p>Not registered</p>
+                    <!--<div class="timeframe remove-element-padding">
+                        <p><strong>This provider was registered for the 2021-2022 income period.</strong></p>
+                    </div>-->
                 </div>
-                <div class="timeframe remove-element-padding">
-                    <p><strong>This provider was registered for the 2021-2022 income period.</strong></p>
-                </div>
-            </div>
-        
+            
+        </div>
 
     </div>
 
@@ -1344,18 +1347,30 @@
         
 
        
-        
-            <div class="tag-wrapper align-items-center d-flex">
-                <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
-                    <div class="icon d-flex me-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
-                            <path data-name="Path 11396" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
-                          </svg>
+        <div class="tag-wrapper d-flex align-items-center">
+            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
+
+            
+                <div class="tag-wrapper align-items-center d-flex">
+                    <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
+                        
+                        <p><strong>Current financial year</strong> (2022-2023)</p>
                     </div>
-                    <p>Registered</p>
                 </div>
-            </div>
-        
+            
+
+            
+                <div class="tag-wrapper align-items-center d-flex">
+                    <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
+                        
+                        <p><strong>Past financial year</strong> (2021-2022)</p>
+                    </div>
+                    <!--<div class="timeframe remove-element-padding">
+                        <p><strong>This provider was registered for the 2021-2022 income period.</strong></p>
+                    </div>-->
+                </div>
+            
+        </div>
 
     </div>
 
@@ -1403,18 +1418,20 @@
         
 
        
-        
-            <div class="tag-wrapper align-items-center d-flex">
-                <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
-                    <div class="icon d-flex me-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
-                            <path data-name="Path 11396" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
-                          </svg>
+        <div class="tag-wrapper d-flex align-items-center">
+            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
+
+            
+                <div class="tag-wrapper align-items-center d-flex">
+                    <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
+                        
+                        <p><strong>Current financial year</strong> (2022-2023)</p>
                     </div>
-                    <p>Registered</p>
                 </div>
-            </div>
-        
+            
+
+            
+        </div>
 
     </div>
 
@@ -1495,7 +1512,9 @@
 <div class="filters checkboxes-dynamic">
 
     <div class="active-filters pt-2 multi-select">
-        <ul class="m-0 p-0">
+
+        <p class="filter-group-title agricultural-veterinary-and-food-sciences">
+        <ul class="m-0 p-0 agricultural-veterinary-and-food-sciences">
             <li filter-type="research-field" filter-value="10" data-value="ag-3001">3001 Agricultural biotechnology</li>
             <li filter-type="research-field" filter-value="15" data-value="ag-3002">3002 Agriculture, land and farm management</li>
             <li filter-type="research-field" filter-value="15" data-value="ag-3003">3003 Animal production</li>
@@ -1506,8 +1525,10 @@
             <li filter-type="research-field" filter-value="15" data-value="ag-3008">3008 Horticultural production</li>
             <li filter-type="research-field" filter-value="15"  data-value="ag-3009">3009 Veterinary sciences</li>
             <li filter-type="research-field" filter-value="15" data-value="ag-3099">3099 Other agricultural, veterinary and food sciences</li>
+        </ul>
 
-
+        <p class="filter-group-title biological-sciences">
+        <ul class="m-0 p-0 biological-sciences">
             <li filter-type="research-field" filter-value="10" data-value="bio-3101">3101 Biochemistry and cell biology</li>
             <li filter-type="research-field" filter-value="15" data-value="bio-3102">3102 Bioinformatics and computational biology</li>
             <li filter-type="research-field" filter-value="15" data-value="bio-3103">3103 Ecology</li>
@@ -1518,9 +1539,6 @@
             <li filter-type="research-field" filter-value="15" data-value="bio-3108">3108 Plant biology</li>
             <li filter-type="research-field" filter-value="15"  data-value="bio-3109">3109 Zoology</li>
             <li filter-type="research-field" filter-value="15" data-value="bio-3199">3199 Other biological sciences</li>
-
-
-
         </ul>
     </div>
 
@@ -1734,7 +1752,7 @@
 
     <div tabindex="0" class="filter-item pt-3 pb-2" id="provider-status">
         <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">Provider status <span class="mobile-counter"></span></p>
+            <p class="mb-0">Provider registration status <span class="mobile-counter"></span></p>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                 <g transform="translate(20 12.5) rotate(180)">
                     <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
@@ -1746,9 +1764,8 @@
         </div>
         <div class="active-filters pt-2 multi-select">
             <ul class="m-0 p-0">
-                <li filter-type="provider-status" filter-value="30" data-value="registered">Registered</li>
-                <li filter-type="provider-status" filter-value="60" data-value="not-registered">Registered for 2021-2022
-                </li>
+                <li filter-type="provider-status" filter-value="30" data-value="registered">Registered for 2022 - 2023</li>
+                <li filter-type="provider-status" filter-value="60" data-value="not-registered">Registered for 2021 - 2022</li>
 
 
             </ul>
@@ -1758,12 +1775,12 @@
             <form>
                 <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="provider-status">
                     <input type="checkbox" tabindex="-1" id="registered">
-                    <label for="registered">Registered</label>
+                    <label for="registered">Registered for current financial year (2022 - 2023)</label>
                 </div>
 
                 <div tabindex="0" class="checkbox-item p-2" filter-value="60" filter-type="provider-status">
                     <input type="checkbox" tabindex="-1" id="not-registered">
-                    <label for="not-registered">Registered for 2021-2022</label>
+                    <label for="not-registered">Registered for previous financial year (2021 - 2022)</label>
                 </div>
 
 
