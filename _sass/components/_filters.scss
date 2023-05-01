@@ -655,11 +655,28 @@
                 padding: 8px 0 !important;
             }
         }
-        .active-filters ul {
-            display: none !important;
+        &.single-select-dynamic {
+            select {
+                margin-top: 8px;
+                font-size: .875rem;
+                padding: 8px 32px 8px 8px;
+                background-position: right 8px center;
+                min-height: 35px;
+                border-color: $bga-black;
+
+                &:focus, &:focus-visible {
+                    border-color: $bga-blue-focus;
+                }
+            }
+        }
+        .active-filters {
+            padding-top: 0 !important;
+            ul {
+                display: none !important;
+            }
         }
         .name-search {
-            padding: 16px 16px 24px !important;
+            //padding: 24px !important;
 
             h4 {
                 margin-bottom: 8px !important;
@@ -739,6 +756,34 @@
                 font-weight: 700;
                 color: $bga-white;
             }
+        }
+    }
+
+    //rsp filter example
+    #showing-filters-modal {
+        position: relative;
+
+        .scroll-wrapper {
+            background: $bga-white; 
+        }
+
+        .scrollable {
+            max-height: none;
+        }
+
+        .bottom-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $bga-teal-highlight-light;
+        }
+        .filter-control-group {
+            margin-top: 0 !important;
+            padding: 24px;
+        }
+        .name-search {
+            margin-top: 0;
         }
     }
 }

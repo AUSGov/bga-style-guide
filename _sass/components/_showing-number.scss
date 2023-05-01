@@ -103,7 +103,12 @@
         }
         .button-example, .filter-toggle {
             width: 49%;
-            display: block;
+            display: block; 
+            
+            &.full-width {
+                width: 100%;
+            }
+
         }
         .filter-toggle button, .bga-secondary-btn {
             background: $bga-blue-black-lightest;
@@ -135,6 +140,7 @@
                 color: $bga-white;
             }
 
+           
             &:focus-visible, &:focus, &:hover, &:active {
                 background: $bga-blue-black-lightest;
                 color: $bga-black;

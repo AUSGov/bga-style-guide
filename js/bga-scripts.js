@@ -1056,6 +1056,8 @@ $(document).ready(function () {
     var detect_overflowing = function (parent_elem, scrollable_name) {
         var scroll_height = parent_elem.find(scrollable_name)[0].scrollHeight;
         var container_height = parent_elem.find(scrollable_name)[0].offsetHeight;
+        console.log(scroll_height);
+        console.log(container_height);
 
         if (container_height < scroll_height) {
             parent_elem.removeClass('no-scroll');
@@ -1064,6 +1066,7 @@ $(document).ready(function () {
         }
     };
 
+    //Grants shortlist scrollable area
     if ($('.modal-shortlist')) {
         $('.modal-shortlist').each(function () {
             // Add shortlist item count to counter
@@ -1089,7 +1092,7 @@ $(document).ready(function () {
             detect_overflowing($(this).parents('.modal-shortlist'), ".scrollable");
         });
     }
-
+    
     // On scroll detect if content is at top or bottom of container and add classes accordingly.
     $(".modal-example .scrollable").on("scroll", function () {
 
@@ -1134,7 +1137,26 @@ $(document).ready(function () {
 
     $(window).resize(function () {
         mobile_modal_display();
+    }); 
+    
+
+    //RSP filters scrollable area
+   /* var mobile_filter_height = $('#showing-filters-modal').height(),
+    filter_bottom_height = $('.bottom-content').height() + 24,
+    scroll_container_height = mobile_filter_height - filter_bottom_height;
+    
+    $('#showing-filters-modal .scrollable').height(scroll_container_height).css('max-height', 'none');
+    detect_overflowing($('#showing-filters-modal'), ".scrollable");
+
+    $('#showing-filters-modal').on('click', function(){
+        detect_overflowing($('#showing-filters-modal'), ".scrollable");
     });
+    $('#showing-filters-modal input, #showing-filters-modal select').on('change', function(){
+        console.log('changing');
+        detect_overflowing($('#showing-filters-modal'), ".scrollable");
+    });*/   
+
+
 
     // GET CONTRACT MODALS
     // Open & close modals

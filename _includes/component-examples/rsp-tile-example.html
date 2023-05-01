@@ -2,16 +2,8 @@
 
     <div class="component-text p-4 remove-element-padding">
 
-        {% if include.label %}
-        <div class="top-section">
-            <p class="label"><strong>{{ include.label }}</strong></p>
-        </div>
-        {% endif %}
-
-        {% if include.title %}
         <h3 class="tile-title pt-0">{{ include.title }}</h3>
-        {% endif %}
-
+        
         {% if include.location %}
         <p class="detail location"><strong>Address:</strong> {{ include.location }}</p>
         {% endif %}
@@ -26,10 +18,16 @@
 
         {% if include.website %}
         <p class="detail website"><strong>Website:</strong> {{ include.website }}</p>
+        {% endif %} 
+     
+        
+
+       {% if include.rsp-number %}
+        <p class="mt-4 mb-2"><strong>RSP number:</strong> {{ include.rsp-number }}</p>
         {% endif %}
 
-       
-        <div class="tag-wrapper d-flex align-items-center">
+
+        <div class="tag-wrapper d-flex align-items-center ">
             <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
 
             {% if include.tag contains "current" %}
@@ -44,16 +42,13 @@
             {% if include.tag contains "previous" %}
                 <div class="tag-wrapper align-items-center d-flex">
                     <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
-                        
                         <p><strong>Past financial year</strong> (2021-2022)</p>
                     </div>
-                    <!--<div class="timeframe remove-element-padding">
-                        <p><strong>This provider was registered for the 2021-2022 income period.</strong></p>
-                    </div>-->
                 </div>
             {% endif %}
-        </div>
-
+        </div> 
+        
+        
     </div>
 
     {% if include.codes %}
