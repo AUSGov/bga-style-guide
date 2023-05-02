@@ -91,7 +91,8 @@ $(document).ready(function () {
     });
 
     $('.showing-header .filter-toggle button').on('click', function(){
-        $('#showing-filters-modal, .modal-overlay').addClass('show');
+        $('#showing-filters-modal').addClass('show');
+        $('.modal-overlay').addClass('show');
     });
     $('.view-results').on('click', function(){
         $('#showing-filters-modal, .modal-overlay').removeClass('show');
@@ -1056,8 +1057,6 @@ $(document).ready(function () {
     var detect_overflowing = function (parent_elem, scrollable_name) {
         var scroll_height = parent_elem.find(scrollable_name)[0].scrollHeight;
         var container_height = parent_elem.find(scrollable_name)[0].offsetHeight;
-        console.log(scroll_height);
-        console.log(container_height);
 
         if (container_height < scroll_height) {
             parent_elem.removeClass('no-scroll');
@@ -1065,6 +1064,16 @@ $(document).ready(function () {
             parent_elem.addClass('no-scroll');
         }
     };
+
+    // Function to set max-height of scrollable area
+    var scroll_max_height = function(parent_elem, bottom_elem, scrollable_elem){
+        var mobile_filter_height = $(parent_elem).height(),
+        filter_bottom_height = $(bottom_elem).height() + 8,
+        scroll_container_height = mobile_filter_height - filter_bottom_height;
+
+        $(scrollable_elem).css('max-height', scroll_container_height);
+    };
+
 
     //Grants shortlist scrollable area
     if ($('.modal-shortlist')) {
@@ -1115,7 +1124,7 @@ $(document).ready(function () {
     });
 
     // On smaller screen sizes set modal scrollable height to fit with the form toggle.
-    var mobile_modal_display = function () {
+    mobile_modal_display = function () {
         if ($(window).width() < 768) {
             $('.modal-form').each(function () {
                 var modal_height = $(this).outerHeight(),
@@ -1128,33 +1137,21 @@ $(document).ready(function () {
             });
         } else if ($(window).width() >= 768) {
             $('.modal-form').each(function () {
-                $(this).find('.scrollable').css('max-height', '428px');
+                //$(this).find('.modal-shortlist .scrollable, .print-group .scrollable').css('max-height', '428px');
                 $(this).find('.email-form').removeClass('open').find('form').css('display', 'block');
             });
         }
-    };
+    }
     mobile_modal_display();
+    scroll_max_height('#showing-filters-modal', '.bottom-content', '.scrollable');
 
     $(window).resize(function () {
         mobile_modal_display();
+        scroll_max_height('#showing-filters-modal', '.bottom-content', '.scrollable');
     }); 
     
 
-    //RSP filters scrollable area
-   /* var mobile_filter_height = $('#showing-filters-modal').height(),
-    filter_bottom_height = $('.bottom-content').height() + 24,
-    scroll_container_height = mobile_filter_height - filter_bottom_height;
-    
-    $('#showing-filters-modal .scrollable').height(scroll_container_height).css('max-height', 'none');
-    detect_overflowing($('#showing-filters-modal'), ".scrollable");
-
-    $('#showing-filters-modal').on('click', function(){
-        detect_overflowing($('#showing-filters-modal'), ".scrollable");
-    });
-    $('#showing-filters-modal input, #showing-filters-modal select').on('change', function(){
-        console.log('changing');
-        detect_overflowing($('#showing-filters-modal'), ".scrollable");
-    });*/   
+     
 
 
 
@@ -1486,6 +1483,13 @@ $(document).ready(function () {
         $(this).parents('.filter-item').toggleClass('open').find('.filter-item-content').slideToggle();
 
         $('.filter-item-title').not(this).parents('.filter-item').removeClass('open').find('.filter-item-content').slideUp();
+
+         // RSP example - mobile scrollable height
+         if ( $('#showing-filters-modal').length ) {
+            setTimeout(function () {
+                detect_overflowing($('#showing-filters-modal'), ".scrollable");
+            }, 400);  
+        }
     });
 
     // filter bubbles
@@ -1552,7 +1556,6 @@ $(document).ready(function () {
         }
     });
 
-    // checkboxes & bubbles
     $('.checkboxes-dynamic input').on('click', function () {
         var item_value = $(this).attr('id'),
             item_parent = $(this).parents('.filter-item-content').attr('id');
@@ -1560,11 +1563,13 @@ $(document).ready(function () {
         if (isNaN(counter)) {
             counter = 0;
         }
-       
+        console.log(counter);
 
         if ($(this).is(":checked")) {
             $('li[data-value="' + item_value + '"]').addClass('selected');
             counter++;
+            console.log(counter);
+
             $(this).parents('.filter-item').find('.mobile-counter').text(String(counter)).addClass('not-empty');
 
             $('.filter-group-title.' + item_parent).addClass('show');
@@ -1583,11 +1588,18 @@ $(document).ready(function () {
             if ( !$('.checkboxes-dynamic #' + item_parent + ' input' ).is(":checked") ) {
                 $('.filter-group-title.' + item_parent).removeClass('show');
             };
+        }
 
-
-
+        // RSP example - mobile scrollable height
+        if ( $('#showing-filters-modal').length ) {
+            setTimeout(function () {
+                detect_overflowing($('#showing-filters-modal'), ".scrollable");
+            }, 400);
         }
     });
+
+
+    
 
     // dropdowns
     $('.filters.single-select select').on('change', function () {
@@ -1607,11 +1619,16 @@ $(document).ready(function () {
     $('.filters.single-select-dynamic select').on('change', function(){
         var item_value = $(this).val(),
         item_parent = $(this).parents('.filter-item').attr('id');
-        //console.log(item_value);
-        //console.log(item_parent);
 
         $('.filter-item-content.' + item_parent).removeClass('show');
         $('.filter-item-content#' + item_value).addClass('show');
+
+         // RSP example - mobile scrollable height
+         if ( $('#showing-filters-modal').length ) {
+            setTimeout(function () {
+                detect_overflowing($('#showing-filters-modal'), ".scrollable");
+            }, 400);
+        }
 
     });
 
