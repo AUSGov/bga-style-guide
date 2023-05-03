@@ -68,3 +68,31 @@
         }
     }
 }
+
+@mixin rsp-tiles-below576 () {
+    .search-tile.rsp-tile {
+        .tag-section-wrapper {
+            flex-wrap: wrap;
+
+            .registration {
+                width: 100%;
+            }
+            .tag-wrapper {
+                flex-wrap: wrap;
+            }
+            .tag {
+                margin-top: 8px;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include rsp-tiles-below576();
+}
+
+// Media queries for HTML example pages
+@media (max-width: 576px) {
+    @include rsp-tiles-below576();
+}

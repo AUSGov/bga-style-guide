@@ -27,25 +27,24 @@
         {% endif %}
 
 
-        <div class="tag-wrapper d-flex align-items-center ">
+        <div class="tag-section-wrapper d-flex align-items-center ">
             <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
 
-            {% if include.tag contains "current" %}
+           
                 <div class="tag-wrapper align-items-center d-flex">
-                    <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
-                        
+                    {% if include.tag contains "current" %}
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
                         <p><strong>Current financial year</strong> (2022-2023)</p>
-                    </div>
-                </div>
-            {% endif %}
+                        </div> 
+                    {% endif %}
 
-            {% if include.tag contains "previous" %}
-                <div class="tag-wrapper align-items-center d-flex">
-                    <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
-                        <p><strong>Past financial year</strong> (2021-2022)</p>
-                    </div>
+                    {% if include.tag contains "previous" %}
+                        <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
+                            <p><strong>Past financial year</strong> (2021-2022)</p>
+                        </div> 
+                    {% endif %}
                 </div>
-            {% endif %}
+           
         </div> 
         
         

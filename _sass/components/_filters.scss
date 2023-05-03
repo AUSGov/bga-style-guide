@@ -330,6 +330,10 @@
     &.single-select-dynamic {
         font-size: 1.125rem;
         font-weight: 600;
+
+        label svg {
+            display: none;
+        }
     }
     &.checkboxes-dynamic {
         border-bottom: solid 1px $bga-blue-black-light;
@@ -353,6 +357,7 @@
                 border: solid 1px $bga-black;
                 border-radius: 0;
                 margin: 0 8px 0 0;
+                flex-shrink: 0;
 
                 &:checked {
                     background: $bga-white url(../assets/icon-tick-black.svg) no-repeat;
@@ -619,6 +624,9 @@
                 height: 10px;
             }
         }
+        .filter-group-title.show {
+            display: flex;
+        }
         &.toggle-switch {
             .filter-item {
                 padding: 8px 0 !important;
@@ -656,7 +664,20 @@
             }
         }
         &.single-select-dynamic {
+            label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+
+                svg {
+                    width: 16px;
+                    height: 10px;
+                    display: block;
+                }
+            }
             select {
+                display: none;
                 margin-top: 8px;
                 font-size: .875rem;
                 padding: 8px 32px 8px 8px;
@@ -666,6 +687,14 @@
 
                 &:focus, &:focus-visible {
                     border-color: $bga-blue-focus;
+                }
+            }
+            &.open {
+                select {
+                    display: block;
+                }
+                label svg {
+                    transform: scaleY(-1);
                 }
             }
         }
@@ -716,6 +745,7 @@
             &.not-empty {
                 width: 19px;
                 height: 19px;
+                flex-shrink: 0;
             }
         }
         &.non-branded {
@@ -763,11 +793,6 @@
     #showing-filters-modal {
         position: relative; 
         
-       
-        .scroll-wrapper {
-            background: $bga-white; 
-        }
-
         .scrollable {
             max-height: none;
         }
@@ -777,7 +802,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: $bga-teal-highlight-light;
+            background-color: $bga-white;
         }
         .filter-control-group {
             margin-top: 0 !important;
