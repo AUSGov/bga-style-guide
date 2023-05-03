@@ -846,7 +846,13 @@
 
     <div class="filter-item pb-2" id="research-field">
        
-        <label id="research-field-dropdown" class="mb-3" data-option="research-field" data-label="research-field" filter-type="research-field">Research field</label>
+        <label id="research-field-dropdown" class="mb-3" data-option="research-field" data-label="research-field" filter-type="research-field">Research field 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+            <g transform="translate(20 12.5) rotate(180)">
+                <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                </path>
+            </g>
+        </svg></label>
             
                 <form>
                     <select class="form-select" id="filter_stage" select-filter-type="research-field" filter-value="27">
@@ -885,38 +891,69 @@
 
 <div class="filters checkboxes-dynamic">
 
-    <div class="active-filters pt-2 multi-select">
+    <div class="active-filters dynamic-groups pt-2 multi-select">
 
-        <p class="filter-group-title agricultural-veterinary-and-food-sciences mb-1">Agricultural, veterinary and food sciences <span class="mobile-counter"></span></p>
+        <div class="visible-filters"></div>
+    
+        <div class="filter-group agricultural-veterinary-and-food-sciences" >
+        
+            <p class="filter-group-title agricultural-veterinary-and-food-sciences mb-1" data-filter-group="agricultural-veterinary-and-food-sciences">Agricultural, veterinary and food sciences <span class="mobile-counter"></span></p>
 
-        <ul class="m-0 p-0" data-filter-group="agricultural-veterinary-and-food-sciences" >
-            <li filter-type="research-field" filter-value="10" data-value="ag-3001">3001 Agricultural biotechnology</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3002">3002 Agriculture, land and farm management</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3003">3003 Animal production</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3004">3004 Crop and pasture production</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3005">3005 Fisheries sciences</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3006">3006 Food sciences</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3007">3007 Forestry sciences</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3008">3008 Horticultural production</li>
-            <li filter-type="research-field" filter-value="15"  data-value="ag-3009">3009 Veterinary sciences</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3099">3099 Other agricultural, veterinary and food sciences</li>
-        </ul>
+            <ul class="m-0 p-0 agricultural-veterinary-and-food-sciences" data-filter-group="agricultural-veterinary-and-food-sciences" >
+                <li filter-type="research-field" filter-value="10" data-value="ag-3001">3001 Agricultural biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3002">3002 Agriculture, land and farm management</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3003">3003 Animal production</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3004">3004 Crop and pasture production</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3005">3005 Fisheries sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3006">3006 Food sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3007">3007 Forestry sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3008">3008 Horticultural production</li>
+                <li filter-type="research-field" filter-value="15"  data-value="ag-3009">3009 Veterinary sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3099">3099 Other agricultural, veterinary and food sciences</li>
+            </ul>
 
-        <p class="filter-group-title biological-sciences mb-1">Biological sciences <span class="mobile-counter"></span></p>
+        </div>
 
-        <ul class="m-0 p-0" data-filter-group="biological-sciences">
-            <li filter-type="research-field" filter-value="10" data-value="bio-3101">3101 Biochemistry and cell biology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3102">3102 Bioinformatics and computational biology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3103">3103 Ecology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3104">3104 Evolutionary biology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3105">3105 Genetics</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3106">3106 Industrial biotechnology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3107">3107 Microbiology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3108">3108 Plant biology</li>
-            <li filter-type="research-field" filter-value="15"  data-value="bio-3109">3109 Zoology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3199">3199 Other biological sciences</li>
-        </ul>
-    </div>
+        <div class="filter-group biological-sciences">
+        
+            <p class="filter-group-title biological-sciences mb-1" data-filter-group="biological-sciences">Biological sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 biological-sciences" data-filter-group="biological-sciences">
+                <li filter-type="research-field" filter-value="10" data-value="bio-3101">3101 Biochemistry and cell biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3102">3102 Bioinformatics and computational biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3103">3103 Ecology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3104">3104 Evolutionary biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3105">3105 Genetics</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3106">3106 Industrial biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3107">3107 Microbiology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3108">3108 Plant biology</li>
+                <li filter-type="research-field" filter-value="15"  data-value="bio-3109">3109 Zoology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3199">3199 Other biological sciences</li>
+            </ul>
+
+        </div>
+
+
+        <div class="filter-group biomedical-and-clinical-sciences">
+        
+            <p class="filter-group-title biomedical-and-clinical-sciences mb-1"  data-filter-group="biomedical-and-clinical-sciences">Biomedical and clinical sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 biomedical-and-clinical-sciences" data-filter-group="biomedical-and-clinical-sciences">
+                <li filter-type="research-field" filter-value="10" data-value="bio-3201">3201 Cardiovascular medicine and haematology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3202">3202 Clinical sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3203">3203 Dentistry</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3204">3204 Immunology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3205">3205 Medical biochemistry and metabolomics</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3206">3206 Medical biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3207">3207 Medical microbiology</li>
+               
+            </ul>
+
+        </div>
+    
+    
+    
+</div>
 
     <div class="filter-item-content research-field" id="agricultural-veterinary-and-food-sciences">
 
@@ -978,7 +1015,7 @@
         </div>
 
 
-        <div class="filter-item-content research-field" id="biological-sciences">
+    <div class="filter-item-content research-field" id="biological-sciences">
 
             <form>
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
@@ -1036,6 +1073,49 @@
                 </form>
             
         </div>
+
+    <div class="filter-item-content research-field" id="biomedical-and-clinical-sciences">
+
+        <form>
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3201">
+                <label>3201 Cardiovascular medicine and haematology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3202">
+                <label>3202 Clinical sciences</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3203">
+                <label>3203 Dentistry</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3204">
+                <label>3204 Immunology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3205">
+                <label>3205 Medical biochemistry and metabolomics</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3206">
+                <label>3206 Medical biotechnology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3207">
+                <label>3207 Medical microbiology</label>
+            </div>
+    
+    
+            </form>
+        
+    </div>
 
 </div>
 
@@ -1222,19 +1302,20 @@
         
 
 
-        <div class="tag-wrapper d-flex align-items-center ">
+        <div class="tag-section-wrapper d-flex align-items-center ">
             <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
 
-            
+           
                 <div class="tag-wrapper align-items-center d-flex">
-                    <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
-                        
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
                         <p><strong>Current financial year</strong> (2022-2023)</p>
-                    </div>
-                </div>
-            
+                        </div> 
+                    
 
-            
+                    
+                </div>
+           
         </div> 
         
         
@@ -1282,18 +1363,20 @@
         
 
 
-        <div class="tag-wrapper d-flex align-items-center ">
+        <div class="tag-section-wrapper d-flex align-items-center ">
             <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
 
-            
-
-            
+           
                 <div class="tag-wrapper align-items-center d-flex">
-                    <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
-                        <p><strong>Past financial year</strong> (2021-2022)</p>
-                    </div>
+                    
+
+                    
+                        <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
+                            <p><strong>Past financial year</strong> (2021-2022)</p>
+                        </div> 
+                    
                 </div>
-            
+           
         </div> 
         
         
@@ -1341,25 +1424,24 @@
         
 
 
-        <div class="tag-wrapper d-flex align-items-center ">
+        <div class="tag-section-wrapper d-flex align-items-center ">
             <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
 
-            
+           
                 <div class="tag-wrapper align-items-center d-flex">
-                    <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
-                        
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
                         <p><strong>Current financial year</strong> (2022-2023)</p>
-                    </div>
-                </div>
-            
+                        </div> 
+                    
 
-            
-                <div class="tag-wrapper align-items-center d-flex">
-                    <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
-                        <p><strong>Past financial year</strong> (2021-2022)</p>
-                    </div>
+                    
+                        <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
+                            <p><strong>Past financial year</strong> (2021-2022)</p>
+                        </div> 
+                    
                 </div>
-            
+           
         </div> 
         
         
@@ -1407,19 +1489,20 @@
         
 
 
-        <div class="tag-wrapper d-flex align-items-center ">
+        <div class="tag-section-wrapper d-flex align-items-center ">
             <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
 
-            
+           
                 <div class="tag-wrapper align-items-center d-flex">
-                    <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">
-                        
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
                         <p><strong>Current financial year</strong> (2022-2023)</p>
-                    </div>
-                </div>
-            
+                        </div> 
+                    
 
-            
+                    
+                </div>
+           
         </div> 
         
         
@@ -1463,11 +1546,17 @@
 
             <div class="scrollable remove-element-padding">
                
-                <div class="filters single-select-dynamic">
+               <div class="filters single-select-dynamic">
 
     <div class="filter-item pb-2" id="research-field">
        
-        <label id="research-field-dropdown" class="mb-3" data-option="research-field" data-label="research-field" filter-type="research-field">Research field</label>
+        <label id="research-field-dropdown" class="mb-3" data-option="research-field" data-label="research-field" filter-type="research-field">Research field 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+            <g transform="translate(20 12.5) rotate(180)">
+                <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                </path>
+            </g>
+        </svg></label>
             
                 <form>
                     <select class="form-select" id="filter_stage" select-filter-type="research-field" filter-value="27">
@@ -1506,38 +1595,69 @@
 
 <div class="filters checkboxes-dynamic">
 
-    <div class="active-filters pt-2 multi-select">
+    <div class="active-filters dynamic-groups pt-2 multi-select">
 
-        <p class="filter-group-title agricultural-veterinary-and-food-sciences mb-1">Agricultural, veterinary and food sciences <span class="mobile-counter"></span></p>
+        <div class="visible-filters"></div>
+    
+        <div class="filter-group agricultural-veterinary-and-food-sciences" >
+        
+            <p class="filter-group-title agricultural-veterinary-and-food-sciences mb-1" data-filter-group="agricultural-veterinary-and-food-sciences">Agricultural, veterinary and food sciences <span class="mobile-counter"></span></p>
 
-        <ul class="m-0 p-0" data-filter-group="agricultural-veterinary-and-food-sciences" >
-            <li filter-type="research-field" filter-value="10" data-value="ag-3001">3001 Agricultural biotechnology</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3002">3002 Agriculture, land and farm management</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3003">3003 Animal production</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3004">3004 Crop and pasture production</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3005">3005 Fisheries sciences</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3006">3006 Food sciences</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3007">3007 Forestry sciences</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3008">3008 Horticultural production</li>
-            <li filter-type="research-field" filter-value="15"  data-value="ag-3009">3009 Veterinary sciences</li>
-            <li filter-type="research-field" filter-value="15" data-value="ag-3099">3099 Other agricultural, veterinary and food sciences</li>
-        </ul>
+            <ul class="m-0 p-0 agricultural-veterinary-and-food-sciences" data-filter-group="agricultural-veterinary-and-food-sciences" >
+                <li filter-type="research-field" filter-value="10" data-value="ag-3001">3001 Agricultural biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3002">3002 Agriculture, land and farm management</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3003">3003 Animal production</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3004">3004 Crop and pasture production</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3005">3005 Fisheries sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3006">3006 Food sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3007">3007 Forestry sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3008">3008 Horticultural production</li>
+                <li filter-type="research-field" filter-value="15"  data-value="ag-3009">3009 Veterinary sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3099">3099 Other agricultural, veterinary and food sciences</li>
+            </ul>
 
-        <p class="filter-group-title biological-sciences mb-1">Biological sciences <span class="mobile-counter"></span></p>
+        </div>
 
-        <ul class="m-0 p-0" data-filter-group="biological-sciences">
-            <li filter-type="research-field" filter-value="10" data-value="bio-3101">3101 Biochemistry and cell biology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3102">3102 Bioinformatics and computational biology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3103">3103 Ecology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3104">3104 Evolutionary biology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3105">3105 Genetics</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3106">3106 Industrial biotechnology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3107">3107 Microbiology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3108">3108 Plant biology</li>
-            <li filter-type="research-field" filter-value="15"  data-value="bio-3109">3109 Zoology</li>
-            <li filter-type="research-field" filter-value="15" data-value="bio-3199">3199 Other biological sciences</li>
-        </ul>
-    </div>
+        <div class="filter-group biological-sciences">
+        
+            <p class="filter-group-title biological-sciences mb-1" data-filter-group="biological-sciences">Biological sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 biological-sciences" data-filter-group="biological-sciences">
+                <li filter-type="research-field" filter-value="10" data-value="bio-3101">3101 Biochemistry and cell biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3102">3102 Bioinformatics and computational biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3103">3103 Ecology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3104">3104 Evolutionary biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3105">3105 Genetics</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3106">3106 Industrial biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3107">3107 Microbiology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3108">3108 Plant biology</li>
+                <li filter-type="research-field" filter-value="15"  data-value="bio-3109">3109 Zoology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3199">3199 Other biological sciences</li>
+            </ul>
+
+        </div>
+
+
+        <div class="filter-group biomedical-and-clinical-sciences">
+        
+            <p class="filter-group-title biomedical-and-clinical-sciences mb-1"  data-filter-group="biomedical-and-clinical-sciences">Biomedical and clinical sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 biomedical-and-clinical-sciences" data-filter-group="biomedical-and-clinical-sciences">
+                <li filter-type="research-field" filter-value="10" data-value="bio-3201">3201 Cardiovascular medicine and haematology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3202">3202 Clinical sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3203">3203 Dentistry</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3204">3204 Immunology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3205">3205 Medical biochemistry and metabolomics</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3206">3206 Medical biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3207">3207 Medical microbiology</li>
+               
+            </ul>
+
+        </div>
+    
+    
+    
+</div>
 
     <div class="filter-item-content research-field" id="agricultural-veterinary-and-food-sciences">
 
@@ -1599,7 +1719,7 @@
         </div>
 
 
-        <div class="filter-item-content research-field" id="biological-sciences">
+    <div class="filter-item-content research-field" id="biological-sciences">
 
             <form>
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
@@ -1657,6 +1777,49 @@
                 </form>
             
         </div>
+
+    <div class="filter-item-content research-field" id="biomedical-and-clinical-sciences">
+
+        <form>
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3201">
+                <label>3201 Cardiovascular medicine and haematology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3202">
+                <label>3202 Clinical sciences</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3203">
+                <label>3203 Dentistry</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3204">
+                <label>3204 Immunology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3205">
+                <label>3205 Medical biochemistry and metabolomics</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3206">
+                <label>3206 Medical biotechnology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3207">
+                <label>3207 Medical microbiology</label>
+            </div>
+    
+    
+            </form>
+        
+    </div>
 
 </div>
 
