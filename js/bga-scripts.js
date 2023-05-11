@@ -1172,9 +1172,6 @@ $(document).ready(function () {
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
 
-        console.log(modal);
-        console.log(id);
-
         if ( modal.includes('modal-email') ) { 
 
             $('#step-email-address').addClass('show');
@@ -1271,10 +1268,15 @@ $(document).ready(function () {
 
            setTimeout(function () {
                 $('#step-verify-email[data-id=' + id + '] .success-icon .msg').hide();
-                $('#step-verify-email #verify-btn').prop('disabled', false).removeClass('disabled');
+                $('#step-verify-email[data-id=' + id + '] .success-icon').removeClass('show');
+                $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+            }, 4000);
+
+            setTimeout(function () {
                 $('#step-verify-email[data-id=' + id + ']').removeClass('show');
                 $('#step-email-success[data-id=' + id + ']').addClass('show');
-            }, 4000);
+                
+            }, 6000);
 
         } else {
             $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
@@ -1283,11 +1285,9 @@ $(document).ready(function () {
     });
 
     $('.resend a').on('click', function(){
-        //$('.resend-success-icon').addClass('show');
         $(this).text('Code sent').addClass('sent');
 
         setTimeout(function () {
-            //$('.resend-success-icon').removeClass('show');
             $('.resend a').text('Resend code again').removeClass('sent');
         }, 3000);
     });
