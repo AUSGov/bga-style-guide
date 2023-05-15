@@ -35,6 +35,13 @@ description: View a list of the current registered RSPs, their locations, contac
         <div class="filters-wrapper showing-page remove-top-spaces col-12 col-md-4">
             {% include prototypes/rsp-filters.html %}
 
+
+            <div class="clear-filters clear-filters mt-4 mb-5">
+                <a href="" >Clear all filters</a>
+                <svg class="ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)"></path></svg>
+            </div>
+
+
             <div class="filters search-box">
 
                 <div class="name-search remove-element-padding p-4">
@@ -108,6 +115,11 @@ description: View a list of the current registered RSPs, their locations, contac
 
             %}
     
+
+        {% include component-examples/pagination-example.html %}
+
+        {% include component-examples/print-share-example.html 
+            classes="mb-5" %}
 
          
         

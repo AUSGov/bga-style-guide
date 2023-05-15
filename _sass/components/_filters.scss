@@ -140,6 +140,7 @@
             input {
                 height: 30px;
                 width: 30px;
+                flex-shrink: 0;
                 -webkit-appearance: none;
                 -ms-appearance: none;
                 -moz-appearance: none;
@@ -171,6 +172,7 @@
             input {
                 height: 24px;
                 width: 24px;
+                flex-shrink: 0;
                 -webkit-appearance: none;
                 -ms-appearance: none;
                 -moz-appearance: none;
@@ -558,6 +560,15 @@
         }
     }
 }
+.clear-filters {
+    a {
+        color: $bga-black !important;
+    } 
+    svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+}
 
 .mobile-filter-toggle {
     display: none;
@@ -618,10 +629,12 @@
         .filter-item-title {
             p {
                 font-size: .875rem;
+                align-items: center;
             }
             svg {
                 width: 16px;
                 height: 10px;
+                margin-left: 8px;
             }
         }
         .filter-group-title.show {
@@ -692,6 +705,9 @@
             &.open {
                 select {
                     display: block;
+                    height: 35px;
+                    padding: 0 32px 0 8px;
+                    background-color: transparent;
                 }
                 label svg {
                     transform: scaleY(-1);
@@ -741,6 +757,7 @@
             height: auto;
             border-radius: 50px;
             margin-left: 6px;
+            
 
             &.not-empty {
                 width: 19px;
@@ -822,6 +839,7 @@
         }
     }
 }
+
 
 
 // SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
