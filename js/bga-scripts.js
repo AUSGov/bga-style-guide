@@ -1508,7 +1508,15 @@ $(document).ready(function () {
         if ( !$(this).parents('.single-select-dynamic').hasClass('open')) {
             $('.filter-item-content').removeClass('show');
             $(this).parents('.single-select-dynamic').find('select').val('select-option');
-            $(this).parents('.single-select-dynamic').find('.filter-group-title.show');
+            
+            $('.filter-group-title').each(function(){
+                var counter = $(this).find('.mobile-counter');
+                console.log(counter);
+                
+                if (!counter.hasClass('not-empty')) {
+                    $(this).removeClass('show');
+                }
+            });
         };
     });
    
