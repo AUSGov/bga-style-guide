@@ -1488,20 +1488,38 @@ $(document).ready(function () {
         $('.filter-item-title').not(this).parents('.filter-item').removeClass('open').find('.filter-item-content').slideUp();
 
          // RSP example - mobile scrollable height
-         if ( $('#showing-filters-modal').length ) {
+         if ( $('#showing-filters-modal.modal-example').length ) {
             setTimeout(function () {
                 detect_overflowing($('#showing-filters-modal'), ".scrollable");
             }, 400);  
         }
     });
-    $('#showing-filters-modal .single-select-dynamic .filter-item label').on('click', function(){
+    // Add modal id to filter page example of dynamic checkboxes.
+    $('#bga-filters-bp-final').on('click', function(){
+        $('.filters-wrapper.dynamic').attr('id', 'showing-filters-modal');
+    });
+    $('#bga-filters-bp-md').on('click', function(){
+        $('.filters-wrapper.dynamic').removeAttr('id');
+    });
+    // Open / close parent accordion of dynamic filter on mobile only.
+    $( "body" ).on( "click", "#showing-filters-modal .single-select-dynamic .filter-item label", function() {
         $(this).parents('.single-select-dynamic').toggleClass('open').find('.single-select-dynamic select').slideToggle();
 
         if ( !$(this).parents('.single-select-dynamic').hasClass('open')) {
             $('.filter-item-content').removeClass('show');
+            $(this).parents('.single-select-dynamic').find('select').val('select-option');
+            
+            $('.filter-group-title').each(function(){
+                var counter = $(this).find('.mobile-counter');
+                console.log(counter);
+                
+                if (!counter.hasClass('not-empty')) {
+                    $(this).removeClass('show');
+                }
+            });
         };
     });
-
+   
     // filter bubbles
     $('.active-filters li').on('click', function () {
         var item_value = $(this).attr('data-value')
@@ -1574,38 +1592,29 @@ $(document).ready(function () {
             item_parent = $(this).parents('.filter-item-content').attr('id'),
             item_title = '.filter-group-title.' + item_parent,
             counter = parseInt($(item_title + ' .mobile-counter').text());
+            
         if (isNaN(counter)) {
             counter = 0;
         }
-
         if ($(this).is(":checked")) {
             $('li[data-value="' + item_value + '"]').addClass('selected');
             counter++;
-            $('.modal-example ' + item_title + ' .mobile-counter').text(String(counter)).addClass('not-empty');
-            $(item_title).addClass('show');
+            $('#showing-filters-modal ' + item_title + ' .mobile-counter').text(String(counter)).addClass('not-empty');
+            $('#showing-filters-modal ' + item_title).addClass('show');
         
         } else {
             $('li[data-value="' + item_value + '"]').removeClass('selected');
             counter--;
 
             if (counter != 0) {
-                $('.modal-example ' + item_title + ' .mobile-counter').text(String(counter)).addClass('not-empty');
+                $('#showing-filters-modal ' + item_title + ' .mobile-counter').text(String(counter)).addClass('not-empty');
             } else {
-                $('.modal-example ' + item_title + ' .mobile-counter').text('').removeClass('not-empty');
+                $('#showing-filters-modal ' + item_title + ' .mobile-counter').text('').removeClass('not-empty');
             }
-
-            /*
-            if ( !$('.filters-wrapper checkboxes-dynamic #' + item_parent + ' input' ).is(":checked") ) {
-                if ( $('.filters.single-select-dynamic select').val() != item_parent ) {
-                    $(item_title).removeClass('show');
-                } 
-              
-            };
-            */
         }
 
-        // RSP example - mobile scrollable height
-        if ( $('#showing-filters-modal').length ) {
+        // RSP modal example - mobile scrollable height
+        if ( $('#showing-filters-modal.modal-example').length ) {
             setTimeout(function () {
                 detect_overflowing($('#showing-filters-modal'), ".scrollable");
             }, 400);
@@ -1675,7 +1684,7 @@ $(document).ready(function () {
 
      
          // RSP example - mobile scrollable height
-         if ( $('#showing-filters-modal').length ) {
+         if ( $('#showing-filters-modal.modal-example').length ) {
             setTimeout(function () {
                 detect_overflowing($('#showing-filters-modal'), ".scrollable");
             }, 400);
