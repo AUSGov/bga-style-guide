@@ -577,9 +577,10 @@
 
 // Mixins for smaller screen sizes and media queries
 @mixin filters-below768 {
+    
     .filters {
         &.example {
-            max-width: 280px;
+            max-width: 320px;
         }
 
         &.text-input {
@@ -721,7 +722,6 @@
             }
         }
         .name-search {
-            //padding: 24px !important;
 
             h4 {
                 margin-bottom: 8px !important;
@@ -773,6 +773,11 @@
     }
     .filters-wrapper {
         display: none;
+       
+        &#showing-filters-modal {
+            display: block !important; //Show on the filter example page but not in modal examples.
+
+        }
     }
 
     .mobile-filter-toggle {
@@ -806,7 +811,7 @@
         }
     }
 
-    //rsp filter example
+    //rsp mobile filters example
     #showing-filters-modal {
         position: relative; 
         
@@ -829,8 +834,6 @@
             margin-top: 0;
         }
 
-       
-
         .single-select-dynamic {
             label {
                 font-size: .875rem;
@@ -838,6 +841,7 @@
             }
         }
     }
+
 }
 
 
