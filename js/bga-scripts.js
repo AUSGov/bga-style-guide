@@ -1497,6 +1497,14 @@ $(document).ready(function () {
     // Add modal id to filter page example of dynamic checkboxes.
     $('#bga-filters-bp-final').on('click', function(){
         $('.filters-wrapper.dynamic').attr('id', 'showing-filters-modal');
+        $('.filter-group-title').removeClass('show');
+        $('.mobile-counter').text('').removeClass('not-empty');
+        
+        $('.filters.checkboxes-dynamic .checkbox-item input:checked').prop("checked", false); 
+       
+        $('.single-select-dynamic').find('select').val('select-option');   
+        $('.filter-item-content').removeClass('show'); 
+        $('.single-select-dynamic').removeClass('open');
     });
     $('#bga-filters-bp-md').on('click', function(){
         $('.filters-wrapper.dynamic').removeAttr('id');
@@ -1510,9 +1518,7 @@ $(document).ready(function () {
             $(this).parents('.single-select-dynamic').find('select').val('select-option');
             
             $('.filter-group-title').each(function(){
-                var counter = $(this).find('.mobile-counter');
-                console.log(counter);
-                
+                var counter = $(this).find('.mobile-counter');             
                 if (!counter.hasClass('not-empty')) {
                     $(this).removeClass('show');
                 }
