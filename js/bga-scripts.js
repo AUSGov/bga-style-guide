@@ -1878,6 +1878,8 @@ $(document).ready(function () {
     var feedback_step1 = function(target_elem, parent_elem){
         var answer = target_elem.text(),
         parent = target_elem.parents(parent_elem);
+        console.log(answer);
+        console.log(parent);
 
         if (answer == 'Yes') {
             parent.find('.initial-question').removeClass('show');
@@ -1885,13 +1887,14 @@ $(document).ready(function () {
             parent.find('.no-answer').removeClass('show');
             parent.find('.bga-btn.no').removeClass('selected');
         } else if (answer == 'No') {
+            
             parent.find('.no-answer').addClass('show');
             parent.find('.yes-answer').removeClass('show');
             parent.find('.bga-btn.no').addClass('selected');
         }
     };
     $('#feedback-example .initial-question .bga-btn').on('click', function () {
-        feedback_step1($(this), "#feedback-example");
+        feedback_step1($(this).find('span'), "#feedback-example");
     });
     $('#nb-feedback-example .initial-question .bga-btn').on('click', function () {
         feedback_step1($(this), "#nb-feedback-example");

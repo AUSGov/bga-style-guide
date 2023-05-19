@@ -13,6 +13,13 @@
         &.show {
             display: flex;
         }
+        .bga-btn.yes, .bga-btn.no {
+            &:focus, &:hover, &:active, &.selected {
+                svg path.fill {
+                    fill: $bga-white;
+                }
+            }
+        } 
         .bga-btn.no.selected {
             background: $bga-blue-background-dark;
             color: $bga-white;
