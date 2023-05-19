@@ -1897,7 +1897,7 @@ $(document).ready(function () {
         feedback_step1($(this).find('span'), "#feedback-example");
     });
     $('#nb-feedback-example .initial-question .bga-btn').on('click', function () {
-        feedback_step1($(this), "#nb-feedback-example");
+        feedback_step1($(this).find('span'), "#nb-feedback-example");
     });
 
     var feedback_step2 = function(target_elem, parent_elem) {
