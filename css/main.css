@@ -6459,9 +6459,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #subsite-header .bga-link-strap a { background: none !important; }
 
-#subsite-header .bga-link-strap a:hover { cursor: pointer; }
+#subsite-header .bga-link-strap a:focus-visible { border: 2px solid #ffffff; border-radius: 4px; box-shadow: none; outline: none; }
 
-#subsite-header .bga-link-strap .bga-header-link { display: flex; align-items: center; }
+#subsite-header .bga-link-strap a:hover { cursor: pointer; text-decoration: underline; }
+
+#subsite-header .bga-link-strap .bga-header-link { display: inline-flex; align-items: center; }
+
+#subsite-header .bga-link-strap .bga-header-link:focus-visible { border: 2px solid #ffffff; border-radius: 4px; box-shadow: none; outline: none; }
 
 #subsite-header .bga-link-strap .secondary-links { text-align: right; }
 
