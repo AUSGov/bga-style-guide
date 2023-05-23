@@ -23,13 +23,28 @@
         }
         a {
             background: none !important;
-        }
-        a:hover {
+
+            &:focus-visible {
+                border: 2px solid $bga-white;
+                border-radius: $bga-focus-radius;
+                box-shadow: none;
+                outline: none;
+            }
+            &:hover {
             cursor: pointer;
+                text-decoration: underline;
+            }
         }
         .bga-header-link {
-            display: flex;
+            display: inline-flex;
             align-items: center;
+
+            &:focus-visible {
+                border: 2px solid $bga-white;
+                border-radius: $bga-focus-radius;
+                box-shadow: none;
+                outline: none;
+            }
         }
         .secondary-links {
             text-align: right;
@@ -46,6 +61,7 @@
                 font-size: 1.375rem;
                 line-height: 1.5;
                 color: $bga-white;
+
             }
             svg {
                 height: 60px;   
