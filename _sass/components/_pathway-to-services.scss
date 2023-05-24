@@ -1,0 +1,107 @@
+#subsite-header.pathway-to-services {
+    .secondary-links {
+        position: relative;
+    }
+    
+    button.service-links-trigger {
+        background: $bga-blue-footer;
+        border: none;
+        padding: 12px 8px;
+
+        a {
+            font-weight: 400;
+            color: $bga-white;
+            text-decoration: none;
+        }
+
+        &:focus-visible {
+            border: 2px solid $bga-white;
+            border-radius: $bga-focus-radius;
+            
+            a {
+                color: $bga-white;
+                text-decoration: underline;
+            }
+        }
+        &:hover {
+            a {
+                color: $bga-white;
+                text-decoration: underline;
+            }
+        }
+    }
+    .service-links-wrapper {
+        background: $bga-blue-black-background-lightest;
+        width: 600px;
+        position: absolute; 
+        right: 0;
+        top: 53px;
+        box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.4);
+    }
+    .service-links {
+        background: $bga-white; 
+
+        li { 
+            color: $bga-black;
+            border-bottom: $bga-blue-black-light solid 1px;
+            
+            &:last-of-type {
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+                border-bottom: none !important;
+            }
+        }
+        .bga-tertiary-link {
+            background: url(../assets/icon-tertiary-arrow.svg) no-repeat !important;
+            width: 100%;
+            font-weight: 600;
+            text-decoration: none;
+
+            &:focus-visible {
+                background-image: url(../assets/icon-tertiary-arrow-hover.svg) !important;
+                color: $bga-blue-footer;
+                border: $bga-text-focus-border;
+                border-radius: $bga-focus-radius;
+            }
+            &:hover {
+                background-image: url(../assets/icon-tertiary-arrow-hover.svg) !important;
+                color: $bga-blue-footer;
+            }
+            &:active {
+                background-image: url(../assets/icon-tertiary-arrow-active.svg) !important;
+            }
+        }
+    }
+}
+
+
+@mixin pathway-to-services-below768(){
+    #subsite-header.pathway-to-services {
+        .service-links-wrapper {
+            //width: 100%;
+            padding: 12px 24px !important;
+
+            h4 {
+                display: none;
+            }
+        }
+        .service-links {
+
+            li {
+                font-size: .875rem;
+                line-height: 1.75;
+            }
+        }
+    }
+}
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768, .component-example.small-screen {
+    @include pathway-to-services-below768();
+}
+
+// Media queries for HTML examples
+@media (max-width: 768px) {
+   @include pathway-to-services-below768();
+}
