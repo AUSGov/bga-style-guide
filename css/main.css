@@ -6447,7 +6447,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 350px) { .bga-component.list-group ul li, .bga-component.list-group.full-width ul li { width: 100%; } }
 
-#subsite-header .bga-link-strap { background: #113869; color: #ffffff; padding: 12px 32px; }
+#subsite-header .bga-link-strap { background: #113869; color: #ffffff; padding: 0 32px; }
 
 #subsite-header .bga-link-strap ul li { display: block; text-indent: 0; }
 
@@ -6457,17 +6457,21 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #subsite-header .bga-link-strap ul li::before { display: none; }
 
-#subsite-header .bga-link-strap a { background: none !important; }
+#subsite-header .bga-link-strap a { background: none !important; display: inline-block; }
 
 #subsite-header .bga-link-strap a:focus-visible { border: 2px solid #ffffff; border-radius: 4px; box-shadow: none; outline: none; }
 
 #subsite-header .bga-link-strap a:hover { cursor: pointer; text-decoration: underline; }
 
-#subsite-header .bga-link-strap .bga-header-link { display: inline-flex; align-items: center; }
+#subsite-header .bga-link-strap .bga-header-link { display: inline-flex; align-items: center; margin: 12px 0; }
 
 #subsite-header .bga-link-strap .bga-header-link:focus-visible { border: 2px solid #ffffff; border-radius: 4px; box-shadow: none; outline: none; }
 
+#subsite-header .bga-link-strap .bga-header-link:hover a { text-decoration: underline; }
+
 #subsite-header .bga-link-strap .secondary-links { text-align: right; }
+
+#subsite-header .bga-link-strap .secondary-links a { margin: 12px 0; }
 
 #subsite-header .main-header { background: #2E6CB9; }
 
@@ -6486,6 +6490,46 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .component-example.bp-below576 #subsite-header .main-header .subsite-logo span, .component-example.small-screen #subsite-header .main-header .subsite-logo span { max-width: 140px; padding-left: 8px !important; }
 
 @media (max-width: 576px) { #subsite-header .main-header { padding: 16px 32px !important; } #subsite-header .main-header .subsite-logo a { font-size: 1rem; } #subsite-header .main-header .subsite-logo svg { height: 48px; padding-right: 8px !important; } #subsite-header .main-header .subsite-logo span { max-width: 140px; padding-left: 8px !important; } }
+
+#subsite-header.pathway-to-services .strap-wrapper { display: flex; flex-wrap: wrap; }
+
+#subsite-header.pathway-to-services .bga-link-strap { width: 100%; }
+
+#subsite-header.pathway-to-services button.service-links-trigger { background: #113869; border: none; padding: 12px 8px; }
+
+#subsite-header.pathway-to-services button.service-links-trigger a { font-weight: 400; color: #ffffff; text-decoration: none; }
+
+#subsite-header.pathway-to-services button.service-links-trigger:focus-visible { border: 2px solid #ffffff; border-radius: 4px; }
+
+#subsite-header.pathway-to-services button.service-links-trigger:focus-visible a { color: #ffffff; text-decoration: underline; }
+
+#subsite-header.pathway-to-services button.service-links-trigger:hover a { color: #ffffff; text-decoration: underline; }
+
+#subsite-header.pathway-to-services .service-links-wrapper { background: #EFF0F2; width: 600px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.4); }
+
+#subsite-header.pathway-to-services .service-links { background: #ffffff; }
+
+#subsite-header.pathway-to-services .service-links li { color: #333333; border-bottom: #ABB1BD solid 1px; display: block; text-indent: 0; }
+
+#subsite-header.pathway-to-services .service-links li::before { display: none; }
+
+#subsite-header.pathway-to-services .service-links li:last-of-type { margin-bottom: 0 !important; padding-bottom: 0 !important; border-bottom: none !important; }
+
+#subsite-header.pathway-to-services .service-links .bga-tertiary-link { background: url(../assets/icon-tertiary-arrow.svg) no-repeat !important; width: 100%; font-weight: 600; text-decoration: none; display: inline-flex; }
+
+#subsite-header.pathway-to-services .service-links .bga-tertiary-link:focus-visible { background-image: url(../assets/icon-tertiary-arrow-hover.svg) !important; color: #113869; border: 2px solid #2E6CB9; border-radius: 4px; }
+
+#subsite-header.pathway-to-services .service-links .bga-tertiary-link:hover { background-image: url(../assets/icon-tertiary-arrow-hover.svg) !important; color: #113869; }
+
+#subsite-header.pathway-to-services .service-links .bga-tertiary-link:active { background-image: url(../assets/icon-tertiary-arrow-active.svg) !important; }
+
+.component-example.bp-below768 #subsite-header.pathway-to-services .service-links-wrapper, .component-example.small-screen #subsite-header.pathway-to-services .service-links-wrapper { width: 100%; padding: 12px 24px !important; }
+
+.component-example.bp-below768 #subsite-header.pathway-to-services .service-links-wrapper h4, .component-example.bp-below768 #subsite-header.pathway-to-services .service-links-wrapper .h4, .component-example.small-screen #subsite-header.pathway-to-services .service-links-wrapper h4, .component-example.small-screen #subsite-header.pathway-to-services .service-links-wrapper .h4 { display: none; }
+
+.component-example.bp-below768 #subsite-header.pathway-to-services .service-links li, .component-example.small-screen #subsite-header.pathway-to-services .service-links li { font-size: .875rem; line-height: 1.75; }
+
+@media (max-width: 768px) { #subsite-header.pathway-to-services .service-links-wrapper { width: 100%; padding: 12px 24px !important; } #subsite-header.pathway-to-services .service-links-wrapper h4, #subsite-header.pathway-to-services .service-links-wrapper .h4 { display: none; } #subsite-header.pathway-to-services .service-links li { font-size: .875rem; line-height: 1.75; } }
 
 .subsite-footer { background: #113869; }
 
@@ -7395,7 +7439,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.tools-templates-tile .tag { padding: 10px 16px; background: #C8D9EE; border-radius: 40px; font-size: .75rem; line-height: 1.5; align-items: center; }
 
-.bga-component.tools-templates-tile .tag img { width: auto; flex-shrink: 0; }
+.bga-component.tools-templates-tile .tag img { height: 16px; width: auto; flex-shrink: 0; }
 
 .bga-component.tools-templates-tile:focus, .bga-component.tools-templates-tile:hover { color: #333333; background: #C8D9EE; }
 
@@ -7440,6 +7484,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .bga-component.tools-templates-tile.non-branded:focus, .bga-component.tools-templates-tile.non-branded:hover { background: #E8E8E8; }
 
 .bga-component.tools-templates-tile.non-branded .tag { color: #333333; border-radius: 4px; }
+
+.bga-component.tools-templates-tile.non-branded .tag img { height: 24px; width: 24px; }
 
 .chat-button-example-container { position: relative; min-height: 170px; }
 
