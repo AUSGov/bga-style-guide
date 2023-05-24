@@ -1,8 +1,12 @@
 #subsite-header.pathway-to-services {
-    .secondary-links {
-        position: relative;
-    }
     
+    .strap-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .bga-link-strap {
+        width: 100%;
+    }
     button.service-links-trigger {
         background: $bga-blue-footer;
         border: none;
@@ -33,9 +37,9 @@
     .service-links-wrapper {
         background: $bga-blue-black-background-lightest;
         width: 600px;
-        position: absolute; 
-        right: 0;
-        top: 53px;
+        //position: absolute; 
+        //right: 0;
+        //top: 53px;
         box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.4);
     }
     .service-links {
@@ -44,6 +48,12 @@
         li { 
             color: $bga-black;
             border-bottom: $bga-blue-black-light solid 1px;
+            display: block;
+            text-indent: 0;
+            
+            &::before {
+                display: none;
+            }
             
             &:last-of-type {
                 margin-bottom: 0 !important;
@@ -56,6 +66,7 @@
             width: 100%;
             font-weight: 600;
             text-decoration: none;
+            display: inline-flex;
 
             &:focus-visible {
                 background-image: url(../assets/icon-tertiary-arrow-hover.svg) !important;
@@ -78,7 +89,7 @@
 @mixin pathway-to-services-below768(){
     #subsite-header.pathway-to-services {
         .service-links-wrapper {
-            //width: 100%;
+            width: 100%;
             padding: 12px 24px !important;
 
             h4 {
