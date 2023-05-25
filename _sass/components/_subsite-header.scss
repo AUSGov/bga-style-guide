@@ -3,7 +3,7 @@
     .bga-link-strap {
         background: $bga-blue-footer;
         color: $bga-white;
-        padding: 12px 32px;
+        padding: 0 32px;
 
         ul {
             li {
@@ -23,6 +23,7 @@
         }
         a {
             background: none !important;
+            display: inline-block;
 
             &:focus-visible {
                 border: 2px solid $bga-white;
@@ -38,6 +39,7 @@
         .bga-header-link {
             display: inline-flex;
             align-items: center;
+            margin: 12px 0;
 
             &:focus-visible {
                 border: 2px solid $bga-white;
@@ -45,9 +47,18 @@
                 box-shadow: none;
                 outline: none;
             }
+            &:hover {
+                a {
+                    text-decoration: underline;
+                }
+            }
         }
         .secondary-links {
             text-align: right;
+
+            a {
+                margin: 12px 0;
+            }
         }
     }
 
