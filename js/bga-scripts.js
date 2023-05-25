@@ -1949,6 +1949,13 @@ $(document).ready(function () {
         });
 
     };
+
+
+    // COMPONENT EXAMPLE: global pathway to services
+    $('button.service-links-trigger').on('click', function(){
+        $('.service-links-wrapper').slideToggle();
+        $(this).toggleClass('open');
+    });
    
 
 

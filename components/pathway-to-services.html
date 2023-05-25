@@ -35,7 +35,8 @@ classes="in-page"
         {% include breakpoints.html
         element-string="pathway-to-services"
         md-visibility="true"
-        breakpoint-final="768"
+        sm-visibility="true"
+        breakpoint-final="576"
         %}
 
         <!-- Component example -->
@@ -44,9 +45,7 @@ classes="in-page"
             <div class="component-wrapper remove-element-padding pb-4">
 
 
-                {% include component-examples/pathway-to-services-example.html 
-                    
-                    %}
+                {% include component-examples/pathway-to-services-example.html %}
 
 
             </div>
@@ -56,7 +55,7 @@ classes="in-page"
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/b7cf7b89-f8d4-40a6-ad4e-790ad0924148/'"
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/f1672534-1ae1-4869-b52b-5dcd295d14b6/'"
         btn-text="View design specifications"
         %}
 
@@ -64,7 +63,7 @@ classes="in-page"
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The site header is used on BGA subsite pages.</p>
+        <p>The global pathway to services is displayed on all business.gov.au pages.</p>
 
 
         {% include layouts-dropdown.html
@@ -72,16 +71,16 @@ classes="in-page"
         singlelayout="true"
         %}
 
-        <div class="layout-example show full-border mt-0p-4">
+        <div class="layout-example show full-border mt-0 p-4">
             {% include layouts-accordion.html
             singlelayout="true"
             allbp-img="'../assets/layout-images/subsite-header-allbp.png' | relative_url "
-            allbp-rules="<p>The subsite header is 12 grid-columns wide.</p>"
+            allbp-rules="<p>The global pathway to services is 12 grid-columns wide.</p>"
             %}
 
         </div>
         {% include design-specs-link.html
-            btn-link="'../html-examples/ECB-landing-start-component.html' | relative_url'"
+            btn-link="'../html-examples/home-example.html' | relative_url'"
             btn-text="View layout example"
             %}
 
@@ -95,12 +94,20 @@ classes="in-page"
          <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>The subsite header provides branding for BGA subsites and a link to the main homepage of business.gov.au. It can also provide additional subsite links if required.</p>
+        <p>The global pathway to services provides the user with links to business.gov.au related services.</p>
+
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used across every page of a busniess.gov.au subsite or tool to ensure a consistent user experience.
-            </li>
+            <li>Used across every page of business.gov.au.</li>
         </ul>
+
+        <h3>Rules</h3>
+        <ul>
+            <li>The left side link is used to provide a return link for users that have come directly from a business.gov.au service or subsite (e.g export.business.gov.au). If users have not come from a business.gov.au product no link is displayed.</li>
+            <li>The return link uses the wording 'Return to ...'.</li>
+            <li>The right side button reveals a dropdown list of sign in pages for government business portals.</li>
+        </ul>
+
 
 
     </div>
