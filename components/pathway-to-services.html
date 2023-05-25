@@ -59,7 +59,7 @@
     <header>
 
     <div class="container">
-        <div id="header-strap" class="my-4">
+        <div id="header-strap" class="my-5">
             <div class="row">
 
                 <div class="col-8 site-name position-relative">
@@ -291,13 +291,16 @@
                     <label tabindex=0 class="btn btn-outline-primary bp-md py-2 px-3 true" for="pathway-to-services-bp-md">≥768px (md)</label>
                 
 
+                      
+                    <input tabindex=-1 type="radio" class="btn-check bp-sm true" name="pathway-to-services-group" id="pathway-to-services-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label tabindex=0 class="btn btn-outline-primary bp-sm py-2 px-3 true" for="pathway-to-services-bp-sm">≥576px (sm)</label>
                 
 
                 
 
                     
-                <input tabindex=-1 type="radio" class="btn-check " name="pathway-to-services-group" id="pathway-to-services-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 " for="pathway-to-services-bp-final">&lt;768px</label>
+                <input tabindex=-1 type="radio" class="btn-check " name="pathway-to-services-group" id="pathway-to-services-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 " for="pathway-to-services-bp-final">&lt;576px</label>
 
                 </div>
 
@@ -326,82 +329,92 @@
                 <div id="subsite-header" class="pathway-to-services">
 
     <div class="strap-wrapper">
-        <div class="bga-link-strap">
+        <div class="bga-link-strap p-0">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-6">
+                      
+                            <a tabindex="0" class="return-link p-0">
+                                <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="10" height="16"
+                                    viewBox="0 0 10 16">
+                                    <path id="Path_8941" data-name="Path 8941"
+                                        d="M115.972,22,122,28.018,120.014,30,112,22l8.014-8L122,15.982Z"
+                                        transform="translate(-112 -14)" fill="#fff" fill-rule="evenodd" />
+                                </svg><span>Return to export.gov.au</span></a>
+                    
+                    </div>
+
+
+                    <div class="col-6 secondary-links">
+
+                        <button class="service-links-trigger m-0">
+                            <a tabindex="0" class="p-0 m-0">Sign in to business service portals</a><svg class="ms-2"
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                                <g data-name="Icon / chevron / down" transform="translate(32 30)">
+                                    <path data-name="Chevron / Down"
+                                        d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z"
+                                        transform="translate(-16 -30) rotate(90)" fill="#fff" />
+                                </g>
+                            </svg>
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="container service-links-container">
 
             <div class="row">
-                <div class="col-6">
-                    <ul class="p-0 m-0">
-                        <li tabindex="0" class="bga-header-link p-0">
-                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="10" height="16"
-                                viewBox="0 0 10 16">
-                                <path id="Path_8941" data-name="Path 8941"
-                                    d="M115.972,22,122,28.018,120.014,30,112,22l8.014-8L122,15.982Z"
-                                    transform="translate(-112 -14)" fill="#fff" fill-rule="evenodd" />
-                            </svg>
-                            <a>Back to export.gov.au</a>
-                        </li>
-                    </ul class="p-0 m-0">
+                <div class="col-12">
+                    <div class="service-links-wrapper p-4 text-start remove-element-padding">
+
+                        <h4>Select from the list of business services below. You will be redirected to the sign in portal for each service.</h4>
+
+                        <ul class="service-links p-3">
+                            <li class="pb-3 mb-3">
+                                <a class="bga-link bga-tertiary-link bkg-light mt-0 mb-2" tabindex="0" href=""
+                                    role="button">Grants portal</a>
+                                Apply for and manage a grant for your business.
+                            </li>
+
+                            <li class="pb-3 mb-3">
+                                <a class="bga-link bga-tertiary-link bkg-light mt-0 mb-2" tabindex="0" href=""
+                                    role="button">Business Registration Service</a>
+                                Apply for key business and tax registrations in one place.
+                            </li>
+
+                            <li class="pb-3 mb-3">
+                                <a class="bga-link bga-tertiary-link bkg-light mt-0 mb-2" tabindex="0" href=""
+                                    role="button">Research and Development Tax Incentive portal</a>
+                                Manage your interactions with the R&D Tax Incentive program.
+                            </li>
+
+                            <li class="pb-3 mb-3">
+                                <a class="bga-link bga-tertiary-link bkg-light mt-0 mb-2" tabindex="0" href=""
+                                    role="button">Online services for business</a>
+                                Use online services for business to interact with the ATO online for all tax and super
+                                needs.
+                            </li>
+
+                        </ul>
+                    </div>
+
                 </div>
-
-
-                <div class="col-6 secondary-links">
-
-                    <button class="service-links-trigger m-0">
-                        <a tabindex="0" class="p-0 m-0">Sign in to business service portals</a><svg class="ms-2"
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                            <g data-name="Icon / chevron / down" transform="translate(32 30)">
-                                <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z"
-                                    transform="translate(-16 -30) rotate(90)" fill="#fff" />
-                            </g>
-                        </svg>
-                    </button>
-
-                </div>
-
 
             </div>
 
         </div>
 
-        <div class="row">
 
-            <div class="col-12">
-                <div class="service-links-wrapper p-4 text-start remove-element-padding">
-
-                    <h4>Select from the list of business services below. You will be redirected to the sign in portal for
-                        each service.</h4>
-
-                    <ul class="service-links p-3">
-                        <li class="pb-3 mb-3">
-                            <a class="bga-link bga-tertiary-link bkg-light mt-0 mb-2" tabindex="0" href=""
-                                role="button">Grants portal</a>
-                            Apply for and manage a grant for your business.
-                        </li>
-
-                        <li class="pb-3 mb-3">
-                            <a class="bga-link bga-tertiary-link bkg-light mt-0 mb-2" tabindex="0" href=""
-                                role="button">Business Registration Service</a>
-                            Apply for key business and tax registrations in one place.
-                        </li>
-
-                        <li class="pb-3 mb-3">
-                            <a class="bga-link bga-tertiary-link bkg-light mt-0 mb-2" tabindex="0" href=""
-                                role="button">Research and Development Tax Incentive portal</a>
-                            Manage your interactions with the R&D Tax Incentive program.
-                        </li>
-
-                        <li class="pb-3 mb-3">
-                            <a class="bga-link bga-tertiary-link bkg-light mt-0 mb-2" tabindex="0" href=""
-                                role="button">Online services for business</a>
-                            Use online services for business to interact with the ATO online for all tax and super needs.
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
-            
-        </div>
 
     </div>
 
@@ -416,14 +429,14 @@
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/b7cf7b89-f8d4-40a6-ad4e-790ad0924148/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/f1672534-1ae1-4869-b52b-5dcd295d14b6/' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The site header is used on BGA subsite pages.</p>
+        <p>The global pathway to services is displayed on all business.gov.au pages.</p>
 
 
         <div class="layouts m-0 p-4">
@@ -437,7 +450,7 @@
     
 </div>
 
-        <div class="layout-example show full-border mt-0p-4">
+        <div class="layout-example show full-border mt-0 p-4">
             
     
     <div class="py-4">
@@ -449,7 +462,7 @@
             <img src='../assets/layout-images/subsite-header-allbp.png' | relative_url  alt="" />
         </div>
         <div class="layout-rules">
-            <p>The subsite header is 12 grid-columns wide.</p>
+            <p>The global pathway to services is 12 grid-columns wide.</p>
         </div>
         </div>
     </div>
@@ -463,7 +476,7 @@
 
         </div>
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='../html-examples/ECB-landing-start-component.html' | relative_url' role="button">View layout example</a>
+<a class="btn btn-primary" tabindex="0" href='../html-examples/home-example.html' | relative_url' role="button">View layout example</a>
 </div>
 
 
@@ -476,15 +489,24 @@
          <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>The subsite header provides branding for BGA subsites and a link to the main homepage of business.gov.au. It can also provide additional subsite links if required.</p>
+        <p>The global pathway to services provides the user with links to business.gov.au related services.</p>
+
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used across every page of a busniess.gov.au subsite or tool to ensure a consistent user experience.
-            </li>
+            <li>Used across every page of business.gov.au.</li>
+        </ul>
+
+        <h3>Rules</h3>
+        <ul>
+            <li>The left side link is used to provide a return link for users that have come directly from a business.gov.au service or subsite (e.g export.business.gov.au). If users have not come from a business.gov.au product no link is displayed.</li>
+            <li>The return link uses the wording 'Return to ...'.</li>
+            <li>The right side button reveals a dropdown list of sign in pages for government business portals.</li>
         </ul>
 
 
+
     </div>
+
 
         </section>
     </div>

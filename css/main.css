@@ -6491,9 +6491,11 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 576px) { #subsite-header .main-header { padding: 16px 32px !important; } #subsite-header .main-header .subsite-logo a { font-size: 1rem; } #subsite-header .main-header .subsite-logo svg { height: 48px; padding-right: 8px !important; } #subsite-header .main-header .subsite-logo span { max-width: 140px; padding-left: 8px !important; } }
 
-#subsite-header.pathway-to-services .strap-wrapper { display: flex; flex-wrap: wrap; }
+#subsite-header.pathway-to-services .strap-wrapper { display: flex; flex-wrap: wrap; justify-content: flex-end; position: relative; }
 
 #subsite-header.pathway-to-services .bga-link-strap { width: 100%; }
+
+#subsite-header.pathway-to-services .return-link { margin: 12px 0; color: #ffffff; text-decoration: none; font-weight: 400; }
 
 #subsite-header.pathway-to-services button.service-links-trigger { background: #113869; border: none; padding: 12px 8px; }
 
@@ -6505,7 +6507,17 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #subsite-header.pathway-to-services button.service-links-trigger:hover a { color: #ffffff; text-decoration: underline; }
 
-#subsite-header.pathway-to-services .service-links-wrapper { background: #EFF0F2; width: 600px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.4); }
+#subsite-header.pathway-to-services button.service-links-trigger.open { background: #EFF0F2; }
+
+#subsite-header.pathway-to-services button.service-links-trigger.open a { color: #113869; }
+
+#subsite-header.pathway-to-services button.service-links-trigger.open svg { transform: scaleY(-1); }
+
+#subsite-header.pathway-to-services button.service-links-trigger.open svg path { fill: #113869; }
+
+#subsite-header.pathway-to-services .service-links-wrapper { background: #EFF0F2; width: 600px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.4); position: absolute; top: 0px; right: 32px; z-index: 8000; display: none; }
+
+#subsite-header.pathway-to-services .service-links-container { position: relative; }
 
 #subsite-header.pathway-to-services .service-links { background: #ffffff; }
 
@@ -6523,13 +6535,19 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #subsite-header.pathway-to-services .service-links .bga-tertiary-link:active { background-image: url(../assets/icon-tertiary-arrow-active.svg) !important; }
 
-.component-example.bp-below768 #subsite-header.pathway-to-services .service-links-wrapper, .component-example.small-screen #subsite-header.pathway-to-services .service-links-wrapper { width: 100%; padding: 12px 24px !important; }
+.component-example.bp-576 #subsite-header.pathway-to-services .return-link, .component-example.bp-below576 #subsite-header.pathway-to-services .return-link { display: none; }
 
-.component-example.bp-below768 #subsite-header.pathway-to-services .service-links-wrapper h4, .component-example.bp-below768 #subsite-header.pathway-to-services .service-links-wrapper .h4, .component-example.small-screen #subsite-header.pathway-to-services .service-links-wrapper h4, .component-example.small-screen #subsite-header.pathway-to-services .service-links-wrapper .h4 { display: none; }
+.component-example.bp-576 #subsite-header.pathway-to-services button.service-links-trigger a, .component-example.bp-below576 #subsite-header.pathway-to-services button.service-links-trigger a { font-size: .875rem; line-height: 1.75; }
 
-.component-example.bp-below768 #subsite-header.pathway-to-services .service-links li, .component-example.small-screen #subsite-header.pathway-to-services .service-links li { font-size: .875rem; line-height: 1.75; }
+.component-example.bp-576 #subsite-header.pathway-to-services .secondary-links, .component-example.bp-below576 #subsite-header.pathway-to-services .secondary-links { width: 100%; }
 
-@media (max-width: 768px) { #subsite-header.pathway-to-services .service-links-wrapper { width: 100%; padding: 12px 24px !important; } #subsite-header.pathway-to-services .service-links-wrapper h4, #subsite-header.pathway-to-services .service-links-wrapper .h4 { display: none; } #subsite-header.pathway-to-services .service-links li { font-size: .875rem; line-height: 1.75; } }
+.component-example.bp-576 #subsite-header.pathway-to-services .service-links-wrapper, .component-example.bp-below576 #subsite-header.pathway-to-services .service-links-wrapper { width: 100%; padding: 12px 24px !important; box-shadow: none; position: relative; top: auto; right: auto; }
+
+.component-example.bp-576 #subsite-header.pathway-to-services .service-links-wrapper h4, .component-example.bp-576 #subsite-header.pathway-to-services .service-links-wrapper .h4, .component-example.bp-below576 #subsite-header.pathway-to-services .service-links-wrapper h4, .component-example.bp-below576 #subsite-header.pathway-to-services .service-links-wrapper .h4 { display: none; }
+
+.component-example.bp-576 #subsite-header.pathway-to-services .service-links li, .component-example.bp-below576 #subsite-header.pathway-to-services .service-links li { font-size: .875rem; line-height: 1.75; }
+
+@media (max-width: 768px) { #subsite-header.pathway-to-services .return-link { display: none; } #subsite-header.pathway-to-services button.service-links-trigger a { font-size: .875rem; line-height: 1.75; } #subsite-header.pathway-to-services .secondary-links { width: 100%; } #subsite-header.pathway-to-services .service-links-wrapper { width: 100%; padding: 12px 24px !important; box-shadow: none; position: relative; top: auto; right: auto; } #subsite-header.pathway-to-services .service-links-wrapper h4, #subsite-header.pathway-to-services .service-links-wrapper .h4 { display: none; } #subsite-header.pathway-to-services .service-links li { font-size: .875rem; line-height: 1.75; } }
 
 .subsite-footer { background: #113869; }
 
@@ -7439,7 +7457,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.tools-templates-tile .tag { padding: 10px 16px; background: #C8D9EE; border-radius: 40px; font-size: .75rem; line-height: 1.5; align-items: center; }
 
-.bga-component.tools-templates-tile .tag img { height: 16px; width: auto; flex-shrink: 0; }
+.bga-component.tools-templates-tile .tag img { width: auto; flex-shrink: 0; }
 
 .bga-component.tools-templates-tile:focus, .bga-component.tools-templates-tile:hover { color: #333333; background: #C8D9EE; }
 
