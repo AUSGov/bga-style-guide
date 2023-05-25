@@ -13,7 +13,9 @@
         margin: 12px 0;
         color: $bga-white;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 400;
+        display: inline-flex;
+        align-items: center;
     }
     button.service-links-trigger {
         background: $bga-blue-footer;
@@ -21,7 +23,7 @@
         padding: 12px 8px;
 
         a {
-            font-weight: 600;
+            font-weight: 400;
             color: $bga-white;
             text-decoration: none;
         }
@@ -36,15 +38,23 @@
             }
         }
         &:hover {
+            background: $bga-blue-black-background-lightest;
             a {
-                color: $bga-white;
+                color: $bga-blue-footer;
                 text-decoration: underline;
+            }
+
+            svg {
+                path {
+                    fill: $bga-blue-footer;
+                }
             }
         }
         &.open {
             background: $bga-blue-black-background-lightest;
             a {
                 color: $bga-blue-footer;
+                text-decoration: underline;
             }
 
             svg {
@@ -143,6 +153,14 @@
             li {
                 font-size: .875rem;
                 line-height: 1.75;
+                margin-bottom: 12px !important;
+                padding-bottom: 12px !important;
+
+                &:last-of-type {
+                    margin-bottom: 0 !important;
+                    padding-bottom: 0 !important;
+                    border-bottom: none !important;
+                }
             }
         }
     }
