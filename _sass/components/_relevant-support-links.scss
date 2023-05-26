@@ -1,0 +1,201 @@
+.bga-component.relevant-support-links {
+    a {
+        border: $bga-component-border;
+        background: $bga-white;
+        text-decoration: none;
+
+        .icon-wrapper {
+            background: $bga-purple-highlight-light;
+            border-left: 8px solid $bga-purple-highlight-dark;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            min-width: 152px;
+            align-items: center;
+
+            p {
+                font-size: $h4-font-size;
+                font-weight: 600;
+                text-decoration: none;
+                color: $bga-black;
+                line-height: 1.5;
+            }
+        }
+
+        .arrow-icon {
+            display: flex;
+
+            img {
+                width: 16px;
+                height: auto;
+            }
+        }
+
+        p {
+            text-decoration: underline;
+        }
+
+        &:focus-visible {
+            border: $bga-component-focus-border;
+            border-radius: $bga-focus-radius;
+        }
+
+        &:focus-visible, &:hover {
+            background: $bga-purple-highlight-light;
+            
+            .icon-wrapper {
+                background: $bga-purple-highlight-mid;
+
+                p {
+                    color: $bga-black;
+                }
+            }
+            p {
+                color: $bga-blue-links;
+            }
+        }
+
+        &.event {
+            .icon-wrapper {
+                background: $bga-orange-highlight-light;
+                border-left: 8px solid $bga-orange-highlight-dark;
+            }
+            &:focus-visible, &:hover {
+                background: $bga-orange-highlight-light;
+                
+                .icon-wrapper {
+                    background: $bga-orange-highlight-mid;
+                }
+            }
+
+        }
+
+        &.adviser {
+            .icon-wrapper {
+                background: $bga-yellow-highlight-light;
+                border-left: 8px solid $bga-yellow-highlight-dark;
+            }
+            &:focus-visible, &:hover {
+                background: $bga-yellow-highlight-light;
+                
+                .icon-wrapper {
+                    background: $bga-yellow-highlight-mid;
+                }
+            }
+
+        }
+    }
+
+    &.colour-examples {
+        display: flex;
+
+        a {
+            margin-right: 24px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        .icon-wrapper {
+            min-width: auto;
+        }
+        .arrow-icon {
+            flex-shrink: 0;
+        }
+    }
+}
+
+
+@mixin support-links-bp-350 {
+    .bga-component.relevant-support-links {
+        a { 
+            background: white !important;  
+            
+            .icon-wrapper {
+                background: none !important;
+                border-radius: 0;
+                min-width: auto;
+                padding-right: 0 !important;
+
+                p {
+                    display: none;
+                }
+            }
+            .arrow-icon {
+                background: $bga-purple-highlight-light;
+                height: 48px;
+                width: 48px;
+                flex-wrap: wrap;
+                justify-content: center;
+                border-radius: 50px; 
+            }
+    
+            .link-text {
+                padding: 16px !important;
+            }
+            &:focus-visible, &:hover {
+                border: $bga-component-border;
+                border-radius: 0;
+                
+                .icon-wrapper {
+                    background: none !important; 
+                }   
+            }
+    
+            &.event {
+                .arrow-icon {
+                    background: $bga-orange-highlight-light;
+                }
+            }
+    
+            &.adviser {
+                .arrow-icon {
+                    background: $bga-yellow-highlight-light;
+                }
+            }
+        }
+    }
+    
+}
+
+@mixin support-links-below350 {
+    .bga-component.relevant-support-links {
+        a { 
+            .icon-wrapper {
+                padding: 0 !important;
+            }
+            .arrow-icon {
+               display: none !important;
+            } 
+        }
+    } 
+}
+
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-350, .component-example.bp-below350 {
+    @include support-links-bp-350();
+}
+.component-example.bp-below350 {
+    @include support-links-below350();
+}
+
+//Media queries
+@media (max-width: 768px) {
+    .bga-component.relevant-support-links.colour-examples {
+       display: block;
+        a { 
+          width: 100% !important;
+
+          .link-wrapper {
+            align-items: center;
+          }
+        }
+    } 
+}
+
+@media (max-width: 576px) {
+    @include support-links-bp-350();    
+}
+
+@media (max-width: 350px) {
+    @include support-links-below350();    
+}
