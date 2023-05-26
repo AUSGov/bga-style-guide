@@ -102,6 +102,29 @@
             flex-shrink: 0;
         }
     }
+
+    &.non-branded {
+        a {
+            border: 1px solid $nb-grey-dark;
+            
+            .icon-wrapper {
+                background: $nb-grey-light;
+                border-left: none;
+                border-radius: 0;
+            }
+            &:focus-visible, &:hover {
+                
+                .icon-wrapper {
+                    p {
+                        color: $bga-black;
+                    }
+                }
+                p {
+                    color: $nb-blue-links;
+                }
+            }
+        }
+    }
 }
 
 
@@ -151,6 +174,15 @@
                 .arrow-icon {
                     background: $bga-yellow-highlight-light;
                 }
+            }
+
+            
+        }
+
+       
+        &.non-branded {
+            a .arrow-icon {
+                background: $nb-grey-light !important;
             }
         }
     }
