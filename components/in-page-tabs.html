@@ -1,0 +1,161 @@
+---
+
+layout: content-tagged
+title: In page tabs
+description: Allow the user to switch between related content that belongs at the same hierarchy level.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-0 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-filters"
+                    md-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="768"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                        {% include component-examples/in-page-tabs-example.html
+
+                            tab1 = "List view"
+                            content1="Twas brillig and the slithy toves did gyre and gimble in the wabe."
+                            
+                            tab2 = "Map view"
+                            content2="All mimsy were the borograves and the mome raths outgrabe."
+
+                            %}
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    {% include breakpoints.html
+                        element-string="nb-filters"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding p-4">
+    
+                                
+    
+    
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/38ca9807-4bd8-4d91-b845-81371871ead1/'"
+        btn-text="View design specifications"
+        %}
+
+
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Tile filters are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left filters layout</a>.</p>
+
+
+        {% include layouts-dropdown.html
+        layout-name="Two column - left side menu layout"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min768-img="'../assets/layout-images/tilefilters-2col-leftfilters-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/tilefilters-2col-leftfilters-finalbp.png' | relative_url "
+
+            min768-rules="<p>Tile filters span the 4 grid-columns.</p>"
+
+            finalbp-rules="<p>Tile filters span the full width of the content area.</p> <p>Visibility of the filters is turned on and off with a mobile filters button.</p>"
+
+            example-link="'../html-examples/two-col-left-filters.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Allow the user to switch between related content that belongs at the same hierarchy level.</p>
+
+
+    </div>
+
+</div>

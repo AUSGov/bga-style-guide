@@ -1,0 +1,47 @@
+<div class="bga-component in-page-tabs {{ include.classes }}">
+    <div class="in-page-section-tabs d-none d-md-flex">
+        {% if include.tab1 %}
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="{{ include.tab1value }}"><p>{{ include.tab1 }}</p></div>
+        {% endif %}
+
+        {% if include.tab2 %}        
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="{{ include.tab2value }}"><p>{{ include.tab2 }}</p></div>
+        {% endif %}
+
+        {% if include.tab3 %}
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="{{ include.tab3value }}"><p>{{ include.tab3 }}</p></div>
+        {% endif %}        
+
+    </div>
+
+</div>
+
+<div class="in-page-tab-sections">
+     
+    {% if include.content1 %}
+    <div class="in-page-tab-section {{ include.tab1 }} selected">
+
+        {{ include.content1 }}
+
+    </div>
+    {% endif %}
+
+    {% if include.content2 %}
+    <div class="in-page-tab-section {{ include.tab2 }}">
+
+        {{ include.content2 }}
+
+    </div>
+    {% endif %}
+
+    {% if include.content3 %}
+    <div class="in-page-tab-section {{ include.tab22- }}">
+
+        {{ include.content3 }}
+
+    </div>
+    {% endif %}
+
+
+
+</div>
