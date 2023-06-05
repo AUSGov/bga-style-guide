@@ -223,38 +223,7 @@ $(document).ready(function () {
     });
 
 
-    // IN PAGE TABS
-    $('.section-tabs .tab').on('click', function () {
-        var section = $(this).attr('data-tab');
 
-        $(this).addClass('selected');
-        $('.section-tabs .tab').not(this).removeClass('selected');
-
-        $('.tab-section').removeClass('selected');
-        $(".tab-section." + section).addClass('selected');
-
-    });
-
-    $('.tabs-select select').on('change', function(){
-        var section = $(this).val();
-
-        $('.tab-section').removeClass('selected');
-        $(".tab-section." + section).addClass('selected');
-    });
-
-    $(window).resize(function () {
-
-        if ($(window).width() < 768) {
-            var section = $('.tabs-select select').val();
-            $('.tab-section').removeClass('selected');
-            $("." + section).addClass('selected');
-        } else {
-            var section = $('.tab.selected').attr('data-tab');
-            $('.tab-section').removeClass('selected');
-            $("." + section).addClass('selected');
-        }
-
-    });
 
 
     // ILLUSTRATION ANATOMY EXAMPLE
@@ -428,8 +397,53 @@ $(document).ready(function () {
         set_screen_width();
     });
 
+    
+    // IN PAGE TABS - style guide component pages
+    var tab_functionality = function(tab, content) {
+        $(tab).on('click', function () {
+            var section = $(this).attr('data-tab');
+    
+            $(this).addClass('selected');
+            $(tab).not(this).removeClass('selected');
+    
+            $(content).removeClass('selected');
+            $(content + '.' + section).addClass('selected');
+    
+        });
+    }
+    
+    tab_functionality('.section-tabs .tab', '.tab-section');
 
-    // COMPONENTS PAGE - LAYOUT EXAMPLES
+    $('.tabs-select select').on('change', function(){
+        var section = $(this).val();
+
+        $('.tab-section').removeClass('selected');
+        $(".tab-section." + section).addClass('selected');
+    });
+
+    $(window).resize(function () {
+
+        if ($(window).width() < 768) {
+            var section = $('.tabs-select select').val();
+            $('.tab-section').removeClass('selected');
+            $("." + section).addClass('selected');
+        } else {
+            var section = $('.tab.selected').attr('data-tab');
+            $('.tab-section').removeClass('selected');
+            $("." + section).addClass('selected');
+        }
+
+    });
+
+
+    // COMPONENTS PAGE - LAYOUT EXAMPLES    
+
+    // In page tabs examples
+    tab_functionality('.example .in-page-section-tabs .tab', '.example .in-page-tab-section');
+
+    tab_functionality('.colour-bkg .in-page-section-tabs .tab', '.colour-bkg .in-page-tab-section');
+
+    tab_functionality('.non-branded .in-page-section-tabs .tab', '.non-branded .in-page-tab-section');
 
     // Show first layout example (rest are set to display none by default)
     if ($('.layouts-select').length) {

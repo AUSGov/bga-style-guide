@@ -1,25 +1,25 @@
 <div class="bga-component in-page-tabs {{ include.classes }}">
-    <div class="in-page-section-tabs d-none d-md-flex">
+    <div class="in-page-section-tabs d-flex">
         {% if include.tab1 %}
-        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="{{ include.tab1value }}"><p>{{ include.tab1 }}</p></div>
+        <div tabindex="0" class="tab remove-element-padding selected" data-tab="{{ include.tab1value }}"><p>{{ include.tab1 }}</p></div>
         {% endif %}
 
         {% if include.tab2 %}        
-        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="{{ include.tab2value }}"><p>{{ include.tab2 }}</p></div>
+        <div tabindex="0" class="tab remove-element-padding" data-tab="{{ include.tab2value }}"><p>{{ include.tab2 }}</p></div>
         {% endif %}
 
         {% if include.tab3 %}
-        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="{{ include.tab3value }}"><p>{{ include.tab3 }}</p></div>
+        <div tabindex="0" class="tab remove-element-padding" data-tab="{{ include.tab3value }}"><p>{{ include.tab3 }}</p></div>
         {% endif %}        
 
     </div>
 
 </div>
 
-<div class="in-page-tab-sections">
+<div class="in-page-tab-sections remove-element-padding my-5 {{ include.classes }}">
      
     {% if include.content1 %}
-    <div class="in-page-tab-section {{ include.tab1 }} selected">
+    <div class="in-page-tab-section remove-element-padding {{ include.tab1value }} selected">
 
         {{ include.content1 }}
 
@@ -27,7 +27,7 @@
     {% endif %}
 
     {% if include.content2 %}
-    <div class="in-page-tab-section {{ include.tab2 }}">
+    <div class="in-page-tab-section remove-element-padding {{ include.tab2value }}">
 
         {{ include.content2 }}
 
@@ -35,7 +35,7 @@
     {% endif %}
 
     {% if include.content3 %}
-    <div class="in-page-tab-section {{ include.tab22- }}">
+    <div class="in-page-tab-section remove-element-padding {{ include.tab3value }}">
 
         {{ include.content3 }}
 

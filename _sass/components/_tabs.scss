@@ -1,11 +1,143 @@
 .bga-component.in-page-tabs {
+    height: auto;
+
+    .in-page-section-tabs {
+        border-bottom: $bga-teal-tool-mid solid 4px;
+    }
     .tab {
         background: $bga-teal-highlight-light;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
         padding: 8px 32px;
+        margin-right: 4px;
         min-height: 56px;
+        min-width: 120px;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
 
+        &.selected {
+            background: $bga-teal-tool-mid;
+            
+            p {
+                color: $bga-white;
+                font-weight: 600;
+            }            
+        }
+
+        &:focus-visible {
+            border: $bga-component-focus-border;
+            border-radius: $bga-focus-radius;
+            outline: none;
+            box-shadow: none;
+            background: $bga-white;
+            
+            p {
+                color: $bga-black;
+            }
+        }
+        &:hover, &:active {
+            background: $bga-teal-tool-dark;
+
+            p {
+                color: $bga-white;
+            }
+        }
     }
+
+    &.colour-bkg {
+        .tab {
+            background: $bga-blue-background-extralight;
+
+            &.selected {
+                background: $bga-teal-tool-mid;
+            }
+
+            &:focus-visible {
+                background: $bga-white;
+                
+                p {
+                    color: $bga-black;
+                }
+            }
+            &:hover, &:active {
+                background: $bga-teal-tool-dark;
+    
+                p {
+                    color: $bga-white;
+                }
+            }
+        }
+    }
+
+    &.non-branded {
+        .in-page-section-tabs {
+            border-bottom: $bga-black solid 1px;
+        }
+
+        .tab {
+            background: $nb-grey-light;
+            border-radius: 0;
+
+            &.selected {
+                background: $bga-black;
+            }
+
+            &:focus-visible {
+                background: $bga-white;
+                border-color: $nb-blue-links;
+                
+                p {
+                    color: $bga-black;
+                }
+            }
+            &:hover, &:active {
+                background: $bga-black;
+    
+                p {
+                    color: $bga-white;
+                }
+            }
+        }
+    }
+    
+    
+}
+.in-page-tab-sections {
+    .in-page-tab-section {
+        display: none;
+
+        &.selected {
+            display: block;
+        }
+    }
+}
+
+// Mixins for smaller screen sizes and media queries
+@mixin in-page-tabs-below768 {
+    .bga-component.in-page-tabs {
+        .tab {
+            min-width: 80px;
+            padding: 8px 24px;
+            min-height: 48px;
+
+            p {
+                font-size: .875rem;
+            }
+        }
+    }
+}
+
+
+
+// SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+
+.component-example.bp-below768 {
+    @include in-page-tabs-below768();
+}
+
+// Media queries
+@media (max-width: 768px) {
+    @include in-page-tabs-below768();
 }

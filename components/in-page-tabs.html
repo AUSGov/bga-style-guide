@@ -61,14 +61,42 @@ subsite-tag: true
                         {% include component-examples/in-page-tabs-example.html
 
                             tab1 = "List view"
-                            content1="Twas brillig and the slithy toves did gyre and gimble in the wabe."
+                            tab1value = "list-view"
+                            content1="<h3>Content for the first tab.</h3><p>The first tab is visible by default when the page loads.</p>"
                             
                             tab2 = "Map view"
-                            content2="All mimsy were the borograves and the mome raths outgrabe."
+                            tab2value = "map-view"
+                            content2="<p>Content for the second tab is shown when the second tab is clicked on.</p>"
+
+                            classes="example"
 
                             %}
 
 
+                        </div>
+                    </div>
+
+                    
+                    <div class="component-example">
+                        <div class="component-wrapper coloured-section remove-element-padding p-4">
+                            <div class="row">
+                                <h3>Coloured background sections - colour variations</h3>
+
+                                {% include component-examples/in-page-tabs-example.html
+
+                                    tab1 = "List view"
+                                    tab1value = "list-view-bkg"
+                                    content1="<p>Content for the first tab.</p>"
+                                    
+                                    tab2 = "Map view"
+                                    tab2value = "map-view-bkg"
+                                    content2="<p>Content for the second tab.</p>"
+
+                                    classes="colour-bkg"
+        
+                                    %}
+
+                            </div>
                         </div>
                     </div>
 
@@ -84,15 +112,32 @@ subsite-tag: true
                         %}
     
                         <!-- Component example -->
-    
+
                         <div class="component-example m-0">
-                            <div class="component-wrapper remove-element-padding p-4">
-    
-                                
-    
-    
+                        <div class="component-wrapper remove-element-padding p-4">
+                         
+                            {% include non-branded-explanation.html
+                                component="in page tabs"
+                                brand-elements="colours and borders"
+                            %}    
+
+                        {% include component-examples/in-page-tabs-example.html
+
+                            tab1 = "List view"
+                            tab1value = "list-view-nb"
+                            content1="<h3>Content for the first tab.</h3><p>The first tab is visible by default when the page loads.</p>"
+                            
+                            tab2 = "Map view"
+                            tab2value = "map-view-nb"
+                            content2="<p>Content for the second tab is shown when the second tab is clicked on.</p>"
+
+                            classes="non-branded"
+
+                            %}
+
                             </div>
                         </div>
+                            
 
                 </div>
 
@@ -111,7 +156,7 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Tile filters are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left filters layout</a>.</p>
+        <p>In page tabs can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - left filters layout</a>.</p>
 
 
         {% include layouts-dropdown.html
@@ -132,14 +177,14 @@ subsite-tag: true
 
             finalbp="Breakpoint &lt; 768px"
 
-            min768-img="'../assets/layout-images/tilefilters-2col-leftfilters-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/tilefilters-2col-leftfilters-finalbp.png' | relative_url "
+            min768-img="'../assets/layout-images/inpagetabs-2col-leftfilters-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/inpagetabs-2col-leftfilters-finalbp.png' | relative_url "
 
-            min768-rules="<p>Tile filters span the 4 grid-columns.</p>"
+            min768-rules="<p>The content area spans 8 grid-columns.</p><p>In page tabs span the full width of the content area.</p>"
 
-            finalbp-rules="<p>Tile filters span the full width of the content area.</p> <p>Visibility of the filters is turned on and off with a mobile filters button.</p>"
+            finalbp-rules="<p>The content area spans 12 grid-columns.</p><p>In page tabs span the full width of the content area.</p>"
 
-            example-link="'../html-examples/two-col-left-filters.html' | relative_url'"
+            example-link="'../html-examples/two-col-left-filters.html#in-page-tabs-example' | relative_url'"
             example-link-text="View layout example"
 
             %}
@@ -154,6 +199,14 @@ subsite-tag: true
 
         <h3>Purpose:</h3>
         <p>Allow the user to switch between related content that belongs at the same hierarchy level.</p>
+
+        <h3>When to use this component:</h3>
+        <p>In page tabs are not currently in use on business.gov.au.</p>
+        <p>An intended future use for in page tabs is to provide a way to switch between a list view and a map view in the adviser finder result page.</p>
+
+        <h3>Content rules: </h3>
+        <p>In page tabs should have a maximum of 3 tabs. If more tabs are required consider placing content on separate pages instead.</p>
+
 
 
     </div>
