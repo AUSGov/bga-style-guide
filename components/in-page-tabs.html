@@ -366,14 +366,14 @@
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                        <div class="bga-component in-page-tabs ">
-    <div class="in-page-section-tabs d-none d-md-flex">
+                        <div class="bga-component in-page-tabs example">
+    <div class="in-page-section-tabs d-flex">
         
-        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab=""><p>List view</p></div>
+        <div tabindex="0" class="tab remove-element-padding selected" data-tab="list-view"><p>List view</p></div>
         
 
                 
-        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab=""><p>Map view</p></div>
+        <div tabindex="0" class="tab remove-element-padding" data-tab="map-view"><p>Map view</p></div>
         
 
                 
@@ -382,20 +382,20 @@
 
 </div>
 
-<div class="in-page-tab-sections">
+<div class="in-page-tab-sections remove-element-padding my-5 example">
      
     
-    <div class="in-page-tab-section List view selected">
+    <div class="in-page-tab-section remove-element-padding list-view selected">
 
-        Twas brillig and the slithy toves did gyre and gimble in the wabe.
+        <h3>Content for the first tab.</h3><p>The first tab is visible by default when the page loads.</p>
 
     </div>
     
 
     
-    <div class="in-page-tab-section Map view">
+    <div class="in-page-tab-section remove-element-padding map-view">
 
-        All mimsy were the borograves and the mome raths outgrabe.
+        <p>Content for the second tab is shown when the second tab is clicked on.</p>
 
     </div>
     
@@ -407,6 +407,56 @@
 </div>
 
 
+                        </div>
+                    </div>
+
+                    
+                    <div class="component-example">
+                        <div class="component-wrapper coloured-section remove-element-padding p-4">
+                            <div class="row">
+                                <h3>Coloured background sections - colour variations</h3>
+
+                                <div class="bga-component in-page-tabs colour-bkg">
+    <div class="in-page-section-tabs d-flex">
+        
+        <div tabindex="0" class="tab remove-element-padding selected" data-tab="list-view-bkg"><p>List view</p></div>
+        
+
+                
+        <div tabindex="0" class="tab remove-element-padding" data-tab="map-view-bkg"><p>Map view</p></div>
+        
+
+                
+
+    </div>
+
+</div>
+
+<div class="in-page-tab-sections remove-element-padding my-5 colour-bkg">
+     
+    
+    <div class="in-page-tab-section remove-element-padding list-view-bkg selected">
+
+        <p>Content for the first tab.</p>
+
+    </div>
+    
+
+    
+    <div class="in-page-tab-section remove-element-padding map-view-bkg">
+
+        <p>Content for the second tab.</p>
+
+    </div>
+    
+
+    
+
+
+
+</div>
+
+                            </div>
                         </div>
                     </div>
 
@@ -462,15 +512,57 @@
 
     
                         <!-- Component example -->
-    
+
                         <div class="component-example m-0">
-                            <div class="component-wrapper remove-element-padding p-4">
+                        <div class="component-wrapper remove-element-padding p-4">
+                         
+                            <p class="">Apply your brand specific <strong>colours and borders</strong> to the base in page tabs shown below.</p>
+
     
-                                
+
+                        <div class="bga-component in-page-tabs non-branded">
+    <div class="in-page-section-tabs d-flex">
+        
+        <div tabindex="0" class="tab remove-element-padding selected" data-tab="list-view-nb"><p>List view</p></div>
+        
+
+                
+        <div tabindex="0" class="tab remove-element-padding" data-tab="map-view-nb"><p>Map view</p></div>
+        
+
+                
+
+    </div>
+
+</div>
+
+<div class="in-page-tab-sections remove-element-padding my-5 non-branded">
+     
     
+    <div class="in-page-tab-section remove-element-padding list-view-nb selected">
+
+        <h3>Content for the first tab.</h3><p>The first tab is visible by default when the page loads.</p>
+
+    </div>
     
+
+    
+    <div class="in-page-tab-section remove-element-padding map-view-nb">
+
+        <p>Content for the second tab is shown when the second tab is clicked on.</p>
+
+    </div>
+    
+
+    
+
+
+
+</div>
+
                             </div>
                         </div>
+                            
 
                 </div>
 
@@ -488,7 +580,7 @@
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Tile filters are used on the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - left filters layout</a>.</p>
+        <p>In page tabs can be used on the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - left filters layout</a>.</p>
 
 
         <div class="layouts m-0 p-4">
@@ -524,11 +616,11 @@
                             <div id="twocol-leftmenu-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/tilefilters-2col-leftfilters-min768.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/inpagetabs-2col-leftfilters-min768.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                        <p>Tile filters span the 4 grid-columns.</p>
+                                        <p>The content area spans 8 grid-columns.</p><p>In page tabs span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -550,11 +642,11 @@
                             <div id="twocol-leftmenu-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/tilefilters-2col-leftfilters-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/inpagetabs-2col-leftfilters-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
-                                       <p>Tile filters span the full width of the content area.</p> <p>Visibility of the filters is turned on and off with a mobile filters button.</p>
+                                       <p>The content area spans 12 grid-columns.</p><p>In page tabs span the full width of the content area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -570,7 +662,7 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-filters.html' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-left-filters.html#in-page-tabs-example' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -585,6 +677,14 @@
 
         <h3>Purpose:</h3>
         <p>Allow the user to switch between related content that belongs at the same hierarchy level.</p>
+
+        <h3>When to use this component:</h3>
+        <p>In page tabs are not currently in use on business.gov.au.</p>
+        <p>An intended future use for in page tabs is to provide a way to switch between a list view and a map view in the adviser finder result page.</p>
+
+        <h3>Content rules: </h3>
+        <p>In page tabs should have a maximum of 3 tabs. If more tabs are required consider placing content on separate pages instead.</p>
+
 
 
     </div>
