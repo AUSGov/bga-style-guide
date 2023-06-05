@@ -1,0 +1,49 @@
+.map {
+    background: $bga-blue-background-light url(../assets/map-australia.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    &.controls-group {
+        min-height: 100px;
+       
+        #reset {
+            position: absolute;
+            bottom: 8px;
+            right: 45px;
+            z-index: 500;
+            padding: 4px 12px;
+            background: #fff;
+            box-shadow: rgba(0,0,0,0.1) 0px 2px 6px 0px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        #zoom {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            box-shadow: rgba(0,0,0,0.1) 0px 2px 6px 0px;
+            cursor: pointer;
+        }
+    }
+
+    &.clusters {
+        min-height: 150px;
+
+        .cluster {
+            cursor: pointer;
+            
+            &.large {
+                position: absolute;
+                left: 30%;
+                top: 35%;
+            }
+            &.small {
+                position: absolute;
+                right: 30%;
+                top: 35%;
+            }
+        }
+    }
+}
