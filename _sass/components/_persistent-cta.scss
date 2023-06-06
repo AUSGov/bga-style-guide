@@ -1,0 +1,45 @@
+.persistent-cta-wrapper {
+    background: $bga-orange-highlight-light;
+}
+
+// Mixins for smaller screen sizes and media queries
+@mixin persistent-cta-bp-350 {
+    .persistent-cta {
+        .bga-primary-btn, .bga-secondary-btn {
+            min-width: 80px;
+            font-size: .875rem;
+            line-height: 1.125rem;
+            padding: 8px 24px;
+            min-height: 48px;
+        }
+        .description {
+            margin-bottom: 16px !important;
+        }
+    }
+}
+@mixin persistent-cta-below350 {
+    .persistent-cta {
+        .bga-primary-btn, .bga-secondary-btn {
+            width: 100%; 
+        }
+    }
+}
+
+
+// MOBILE display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-350, .component-example.bp-below350 {
+    @include persistent-cta-bp-350();
+}
+.component-example.bp-below350 {
+    @include persistent-cta-below350();
+}
+
+
+// Media queries for HTML demo pages
+@media (max-width: 576px) {
+    @include persistent-cta-bp-350();
+}
+
+@media (max-width: 350px) {
+    @include persistent-cta-below350();
+}

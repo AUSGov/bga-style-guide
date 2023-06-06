@@ -1,0 +1,180 @@
+---
+
+layout: content-tagged
+title: Persistent tool call to action
+description: Present a call to action button in a consistent place across multiple pages of a business.gov.au tool.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: false
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+        tab1="business.gov.au branding"
+        tab1value="bga-branded"
+
+        tab2="No branding"
+        tab2value="non-branded"
+
+        %}
+
+
+        <div class="tab-sections-wrapper ">
+
+
+            <div class="tab-section bga-branded selected">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                    element-string="bga-persistent-cta"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                %}
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding py-4">
+
+                        {% include component-examples/persistent-cta-example.html
+                        text="<p class='description'>If you can’t complete all the sections of your plan right now, download a Word document to save your progress. You can complete it in your own Word Editor later.</p>"
+                        button="Download business plan"
+                        %}
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tab-section non-branded">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                    element-string="nb-cta"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                    %}
+    
+                    <!-- Component example -->
+    
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding py-4">
+
+                            {% include non-branded-explanation.html
+                                component="persistent tool call to action"
+                                brand-elements="colours and borders"
+                            %}
+    
+    
+                        </div>
+    
+                    </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+            <!-- Design specifications link -->
+
+            {% include design-specs-link.html
+            btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/00640525-919e-4104-9196-6264ba17ec7a'"
+            btn-text="View design specifications"
+            %}
+
+
+            <!-- LAYOUTS -->
+            <h2 class="section-start" id="layouts">Layouts</h2>
+
+            <p>Call to action components can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - two thirds width layout</a>.
+            </p>
+
+
+            <!---->
+            {% include layouts-dropdown.html
+            singlelayout="true"
+            layout-name="Single column - two thirds width"
+            %}
+
+
+            <div class="layout-example single-col-twothirdswidth show mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="onecol-twothirdsw"
+
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+
+                finalbp="Breakpoint &lt; 768px"
+
+                min1200-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/calltoaction-1col2thirdswidth-finalbp.png' | relative_url "
+
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                min992-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                min768-rules="<p>The content area is 11 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                example-link="'../html-examples/single-col-two-thirds-width.html#persistent-cta-example' | relative_url'"
+                example-link-text="View layout example"
+
+                %}
+
+            </div>
+
+            
+
+
+
+            <!-- GUIDELINES -->
+            <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+            
+            <h3>Purpose:</h3>
+           
+        </div>

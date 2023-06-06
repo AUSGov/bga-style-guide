@@ -1,0 +1,39 @@
+<div class="bga-component-wrapper persistent-cta-wrapper">
+
+    <div class="container">
+    <div class="row">
+
+        <div class="bga-component persistent-cta {{include.classes}} py-4 m-0">
+
+            <div class="component-content">
+
+                <div class="component-text p-0 remove-element-padding">
+                    {% if include.title %}
+                    <h2>{{ include.title }}</h2>
+                    {% endif %}
+
+
+                    {% if include.text %}
+                    {{ include.text }}
+                    {% endif %}
+
+                    {% if include.button %}
+
+                    <div class="button-example">
+                        <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">{{
+                            include.button }}</button>
+                    </div>
+
+                    {% endif %}
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+</div>
