@@ -133,7 +133,7 @@ $(document).ready(function () {
 
 
     // SEARCH COMPONENTS BY NAME
-    var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-get-contract-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-to-action', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-list-group', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-global-pathway-to-services', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-site-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs', 'bga-tile-filters', 'bga-grant-rounds-accordion', 'bga-pathway-accordions', 'bga-lightweight-checklist-accordion', 'bga-standard-checklist-accordion', 'bga-home-page-banner', 'bga-category-page', 'bga-topic-page', 'bga-guide-page', 'bga-transaction-action-page', 'bga-101-page', 'bga-tutorial-page', 'bga-resource-article-page', 'bga-internal-grants-landing-page', 'bga-grant-recipients-page', 'bga-customer-stories-landing-page', 'bga-customer-story-page', 'bga-adviser-detail-page', 'bga-event-page', 'bga-tiled-page-with-filters', 'bga-site-search-page', 'bga-tiled-page-with-guided-search', 'bga-standard-checklist', 'bga-lightweight-checklist', 'bga-colour', 'bga-grid-and-page-layouts', 'bga-typography', 'bga-buttons-and-links', 'bga-text-inputs', 'bga-dropdown-select', 'bga-checkboxes-and-radio-buttons', 'bga-radio-buttons', 'bga-checkboxes', 'bga-datepicker', 'bga-contextual-help', 'bga-form-fields', 'bga-form-groups', 'bga-icons', 'bga-iconography', 'bga-logos', 'bga-illustrations', 'bga-infographics', 'bga-maintenance', 'bga-error', 'bga-tiled-page-with-guided-search', 'bga-internal-q-and-a-tools ', 'bga-question-and-answer-tools', 'bga-external-grants-landing-page', 'bga-branded-question-and-answer-tools', 'bga-external-bga-branded-q-and-a-tools', 'bga-tooltip', 'bga-cookie-notification', 'bga-animations', 'bga-tools-and-templates-tiles', 'bga-action-tiles', 'bga-in-page-tabs', 'bga-relevant-support-links'];
+    var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-get-contract-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-to-action', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-list-group', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-global-pathway-to-services', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-site-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs', 'bga-tile-filters', 'bga-grant-rounds-accordion', 'bga-pathway-accordions', 'bga-lightweight-checklist-accordion', 'bga-standard-checklist-accordion', 'bga-home-page-banner', 'bga-category-page', 'bga-topic-page', 'bga-guide-page', 'bga-transaction-action-page', 'bga-101-page', 'bga-tutorial-page', 'bga-resource-article-page', 'bga-internal-grants-landing-page', 'bga-grant-recipients-page', 'bga-customer-stories-landing-page', 'bga-customer-story-page', 'bga-adviser-detail-page', 'bga-event-page', 'bga-tiled-page-with-filters', 'bga-site-search-page', 'bga-tiled-page-with-guided-search', 'bga-standard-checklist', 'bga-lightweight-checklist', 'bga-colour', 'bga-grid-and-page-layouts', 'bga-typography', 'bga-buttons-and-links', 'bga-text-inputs', 'bga-dropdown-select', 'bga-checkboxes-and-radio-buttons', 'bga-radio-buttons', 'bga-checkboxes', 'bga-datepicker', 'bga-contextual-help', 'bga-form-fields', 'bga-form-groups', 'bga-icons', 'bga-iconography', 'bga-logos', 'bga-illustrations', 'bga-infographics', 'bga-maintenance', 'bga-error', 'bga-tiled-page-with-guided-search', 'bga-internal-q-and-a-tools ', 'bga-question-and-answer-tools', 'bga-external-grants-landing-page', 'bga-branded-question-and-answer-tools', 'bga-external-bga-branded-q-and-a-tools', 'bga-tooltip', 'bga-cookie-notification', 'bga-animations', 'bga-tools-and-templates-tiles', 'bga-action-tiles', 'bga-in-page-tabs', 'bga-relevant-support-links', 'bga-map-elements'];
 
     var name_search = function(input){
         var str = $(input).val();
@@ -1370,6 +1370,23 @@ $(document).ready(function () {
     $('.modal-example .copy-link').on('click', function () {
         $(this).addClass('copied');
     });
+
+
+    //COMPONENT EXAMPLE: ADVISER MAP TILES
+    $('.map .adviser-marker').on('click', function(){
+        $(this).parents('.marker-wrapper').find('.adviser-tile').addClass('show');
+    });
+    $('.adviser-tile .close').on('click', function(){
+        $(this).parents('.marker-wrapper').find('.adviser-tile').removeClass('show');
+    });
+    if ( $('.map .adviser-tile').length) {
+        detect_overflowing($('.map .search-tile'), ".scrollable");
+    }
+    $(window).resize(function () {
+        if ( $('.map .adviser-tile').length) {
+            detect_overflowing($('.map .search-tile'), ".scrollable");
+        }
+    }); 
 
 
     // COMPONENT EXAMPLE: ANCHOR MENU
