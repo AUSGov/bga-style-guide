@@ -1372,6 +1372,23 @@ $(document).ready(function () {
     });
 
 
+    //COMPONENT EXAMPLE: ADVISER MAP TILES
+    $('.map .adviser-marker').on('click', function(){
+        $(this).parents('.marker-wrapper').find('.adviser-tile').addClass('show');
+    });
+    $('.adviser-tile .close').on('click', function(){
+        $(this).parents('.marker-wrapper').find('.adviser-tile').removeClass('show');
+    });
+    if ( $('.map .adviser-tile').length) {
+        detect_overflowing($('.map .search-tile'), ".scrollable");
+    }
+    $(window).resize(function () {
+        if ( $('.map .adviser-tile').length) {
+            detect_overflowing($('.map .search-tile'), ".scrollable");
+        }
+    }); 
+
+
     // COMPONENT EXAMPLE: ANCHOR MENU
     $('.anchor-menu.example li a').on('click', function () {
         $('.anchor-menu.example li a').each(function () {

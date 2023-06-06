@@ -14,137 +14,250 @@ subsite-tag: true
 
 <div class="row">
 
-    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+  <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
-        {% include component-examples/anchor-menu-example.html
-        classes="in-page"
+    {% include component-examples/anchor-menu-example.html
+    classes="in-page"
 
-        link-1="Map controls" link-id-1="#map-controls"
-        link-2="Marker clusters" link-id-2="#marker-clusters"
-        link-3="Location pin" link-id-3="#location-pin"
-        %}
+    link-1="Map controls" link-id-1="#map-controls"
+    link-2="Marker clusters" link-id-2="#marker-clusters"
+    link-3="Location marker" link-id-3="#location-marker"
+    link-4="Design specifications" link-id-4="#design-specifications"
+    %}
+
+  </div>
+
+  <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
+
+
+    <!-- MAP CONTROLS -->
+    <h2 class="section-start" id="map-controls">Map controls</h2>
+
+    <p>Google maps provides a number of possible map controls. On business.gov.au include only two control types:</p>
+    <ul>
+      <li>The default zoom controls - plus and minus buttons that allow the user to zoom in and out of the map.</li>
+      <li>A custom 'reset map' button - returns the user to the original map position.</li>
+    </ul>
+
+    <p>For more information on Google map controls visit the <a
+        href="https://developers.google.com/maps/documentation/javascript/controls">documentation on map controls</a>.
+    </p>
+
+    <div class="component-example mb-5">
+
+      <div class="component-wrapper remove-element-padding p-4">
+
+        <div class="map controls-group">
+
+          <div id="reset">Reset map</div>
+
+          <div id="zoom">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="58" viewBox="0 0 29 58">
+              <g id="Group_21798" data-name="Group 21798" transform="translate(-501 -751)">
+                <g id="Group_21792" data-name="Group 21792" transform="translate(-758 -347)">
+                  <path id="Rectangle_2281" data-name="Rectangle 2281"
+                    d="M4,0H25a4,4,0,0,1,4,4V29a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z"
+                    transform="translate(1259 1098)" fill="#fff" />
+                  <path id="Rectangle_6446" data-name="Rectangle 6446"
+                    d="M0,0H29a0,0,0,0,1,0,0V25a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V0A0,0,0,0,1,0,0Z"
+                    transform="translate(1259 1127)" fill="#fff" />
+                  <g id="Icon:_Plus" data-name="Icon: Plus" transform="translate(1266 1105)">
+                    <path id="Plus" d="M5.893,15V9.106H0V5.893H5.893V0H9.107V5.893H15V9.106H9.107V15Z" fill="#666" />
+                  </g>
+                  <g id="Icon:_Minus" data-name="Icon: Minus" transform="translate(1266 1140)">
+                    <rect id="Minus" width="15" height="3.314" fill="#666" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
+
+    <!-- MARKER CLUSTERS -->
+    <h2 class="section-start" id="marker-clusters">Marker clusters</h2>
+
+    <p>Google map clusters are used when a large number of pins occur close together. Users can click on a cluster to
+      zoom in and see individual pin locations.</p>
+    <p>On business.gov.au cluster colours and fonts are customised but sizing and behaviours use Google defaults.</p>
+
+    <p>For more information on Google marker clusters visit the <a
+        href="https://developers.google.com/maps/documentation/javascript/marker-clustering">documentation on marker
+        clustering</a>.</p>
+
+    <div class="component-example mb-5">
+
+      <div class="component-wrapper remove-element-padding p-4">
+
+        <div class="map clusters">
+
+          <svg class="cluster large" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+            <g data-name="Group 21796" transform="translate(-298 -677)">
+              <g data-name="Group 21793" transform="translate(-766 -372)">
+                <circle data-name="Ellipse 11" cx="27" cy="27" r="27" transform="translate(1064 1049)" fill="#113869"
+                  opacity="0.2" />
+                <circle data-name="Ellipse 12" cx="22" cy="22" r="22" transform="translate(1069 1054)" fill="#113869"
+                  opacity="0.3" />
+                <circle data-name="Ellipse 13" cx="16.875" cy="16.875" r="16.875" transform="translate(1074 1059)"
+                  fill="#113869" />
+                <text data-name="28" transform="translate(1082 1082)" fill="#fff" font-size="16"
+                  font-family="OpenSans-Semibold, Open Sans" font-weight="600" letter-spacing="0.013em">
+                  <tspan x="0" y="0">28</tspan>
+                </text>
+              </g>
+            </g>
+          </svg>
+
+          <svg class="cluster small" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+            <g data-name="Group 21795" transform="translate(-261 -627)">
+              <g data-name="Group 21794" transform="translate(-766 -372)">
+                <g data-name="Group 10028" transform="translate(-1270 -1318)">
+                  <circle data-name="Ellipse 11" cx="27.5" cy="27.5" r="27.5" transform="translate(2297 2317)"
+                    fill="#2157aa" opacity="0.2" />
+                  <circle data-name="Ellipse 12" cx="22.813" cy="22.813" r="22.813" transform="translate(2302 2322)"
+                    fill="#2157aa" opacity="0.3" />
+                  <circle data-name="Ellipse 13" cx="17.188" cy="17.188" r="17.188"
+                    transform="translate(2307.625 2327.625)" fill="#2157aa" />
+                </g>
+                <text data-name="4" transform="translate(1050 1033)" fill="#fff" font-size="16"
+                  font-family="OpenSans-Semibold, Open Sans" font-weight="600" letter-spacing="0.013em">
+                  <tspan x="0" y="0">4</tspan>
+                </text>
+              </g>
+            </g>
+          </svg>
+
+        </div>
 
 
-        <!-- MAP CONTROLS -->
-        <h2 class="section-start" id="map-controls">Map controls</h2>
+      </div>
 
-        <p>Google maps provides a number of possible map controls. On business.gov.au include only two control types:</p>
-        <ul>
-            <li>The default zoom controls - plus and minus buttons that allow the user to zoom in and out of the map.</li>
-            <li>A custom 'reset map' button - returns the user to the original map position.</li>      
-        </ul>
+    </div>
 
-        <p>For more information on Google map controls visit the <a href="https://developers.google.com/maps/documentation/javascript/controls">Google maps platform documentation</a>.</p>
 
-        <div class="component-example mb-5">
+    <!-- LOCATION MARKER -->
+    <h2 class="section-start" id="location-marker">Location marker</h2>
 
-            <div class="component-wrapper remove-element-padding p-4">
+    <p>business.gov.au uses a custom marker to show the location of business advisers. Clicking on a marker reveals the search result tile for that adviser.</p>
+      <p>If maps are used in other situations consider using a custom marker that uses a colour from the business.gov.au colour palette. For more information on custom markers visit the <a
+        href="https://developers.google.com/maps/documentation/javascript/custom-markers">documentation on custom
+        markers</a>.</p>
 
-                <div class="map controls-group">
+    <div class="component-example mb-5">
 
-                    <div id="reset">Reset map</div>
+      <div class="component-wrapper remove-element-padding p-4">
 
-                    <div id="zoom">
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="58" viewBox="0 0 29 58">
-                            <g id="Group_21798" data-name="Group 21798" transform="translate(-501 -751)">
-                              <g id="Group_21792" data-name="Group 21792" transform="translate(-758 -347)">
-                                <path id="Rectangle_2281" data-name="Rectangle 2281" d="M4,0H25a4,4,0,0,1,4,4V29a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(1259 1098)" fill="#fff"/>
-                                <path id="Rectangle_6446" data-name="Rectangle 6446" d="M0,0H29a0,0,0,0,1,0,0V25a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V0A0,0,0,0,1,0,0Z" transform="translate(1259 1127)" fill="#fff"/>
-                                <g id="Icon:_Plus" data-name="Icon: Plus" transform="translate(1266 1105)">
-                                  <path id="Plus" d="M5.893,15V9.106H0V5.893H5.893V0H9.107V5.893H15V9.106H9.107V15Z" fill="#666"/>
-                                </g>
-                                <g id="Icon:_Minus" data-name="Icon: Minus" transform="translate(1266 1140)">
-                                  <rect id="Minus" width="15" height="3.314" fill="#666"/>
-                                </g>
-                              </g>
-                            </g>
-                          </svg>
-                          
-                          
+        <div class="map marker">
+
+          <div class="marker-wrapper">
+
+            <svg class="adviser-marker" xmlns="http://www.w3.org/2000/svg" width="24.834" height="33"
+              viewBox="0 0 24.834 33">
+              <g transform="translate(-2163 -2252)">
+                <path data-name="Path 7540"
+                  d="M105.3,72.192A12.4,12.4,0,0,0,95.536,92.2l8.919,12.532a1.095,1.095,0,0,0,1.784,0L115.117,92.2a12.811,12.811,0,0,0,2.632-8.355A12.616,12.616,0,0,0,105.3,72.192Z"
+                  transform="translate(2070.072 2179.808)" fill="#113869" />
+                <path data-name="Path 7541"
+                  d="M104.435,82.679a3.006,3.006,0,1,0-3.007-3.006A3.005,3.005,0,0,0,104.435,82.679Zm0,1.5c-2.007,0-6.014,1.007-6.014,3.007v1.5h12.026v-1.5C110.447,85.19,106.441,84.182,104.435,84.182Z"
+                  transform="translate(2070.893 2180.808)" fill="#fff" />
+              </g>
+            </svg>
+
+
+            <div class="bga-component-wrapper adviser-tile">
+              <div class="bga-component search-tile modal-example px-3 pb-3 pt-4">
+
+                <button class="close m-0 p-0">Close</button>
+
+                <div class="component-content mt-2">
+
+                  <div class="component-text remove-element-padding">
+
+                    <div class="scroll-wrapper">
+                      <span class="scroll-separator scroll-separator--top"></span>
+
+                      <div class="scrollable remove-element-padding">
+
+
+
+                        <div class="top-section">
+                          <p class="label"><strong>Federal government</strong></p>
+                        </div>
+
+                        <h3 class="tile-title pt-0"><a href="">Fair Work Ombudsman Small Business Helpline</a></h3>
+
+                        <p class="description">The Small business helpline provides workplace advice on managing your
+                          employees and meeting your employer obligations.</p>
+
+                        <p class="services mb-2"><strong>Services offered over the phone and online.</strong></p>
+
+                        <p class="cost"><strong>Cost:</strong> Free</p>
+
+
+                        <div class="tag-wrapper align-items-center d-flex">
+                          <div class="tag d-inline-flex align-items-center remove-element-padding me-3">
+
+                            <div class="icon d-flex me-2">
+                              <img src={{ 'assets/icon-pin-black.svg' | relative_url }} alt="" />
+                            </div>
+
+                            <p><strong>Service area:</strong> Australia wide</p>
+                          </div>
+
+                        </div>
+
+
+                      </div>
+                      <span class="scroll-separator scroll-separator--bottom"></span>
                     </div>
 
 
-                </div>   
 
-            </div>
+                  </div>
 
-        </div>
-
-
-        <!-- MARKER CLUSTERS -->
-        <h2 class="section-start" id="marker-clusters">Marker clusters</h2> 
-        
-        <p>Google map clusters are used when a large number of pins occur close together. Users can click on a cluster to zoom in and see individual pin locations.</p>
-        <p>On business.gov.au cluster colours and fonts are customised but sizing and behaviours use Google defaults.</p>
-
-        <p>For more information on Google marker clusters visit the <a href="https://developers.google.com/maps/documentation/javascript/marker-clustering">Google maps platform documentation</a>.</p>
-
-        <div class="component-example mb-5">
-
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <div class="map clusters">
-
-                    <svg class="cluster large" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
-                        <g data-name="Group 21796" transform="translate(-298 -677)">
-                          <g data-name="Group 21793" transform="translate(-766 -372)">
-                            <circle data-name="Ellipse 11" cx="27" cy="27" r="27" transform="translate(1064 1049)" fill="#113869" opacity="0.2"/>
-                            <circle data-name="Ellipse 12" cx="22" cy="22" r="22" transform="translate(1069 1054)" fill="#113869" opacity="0.3"/>
-                            <circle data-name="Ellipse 13" cx="16.875" cy="16.875" r="16.875" transform="translate(1074 1059)" fill="#113869"/>
-                            <text data-name="28" transform="translate(1082 1082)" fill="#fff" font-size="16" font-family="OpenSans-Semibold, Open Sans" font-weight="600" letter-spacing="0.013em"><tspan x="0" y="0">28</tspan></text>
-                          </g>
-                        </g>
-                      </svg>
-
-                      <svg class="cluster small" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
-                        <g data-name="Group 21795" transform="translate(-261 -627)">
-                          <g data-name="Group 21794" transform="translate(-766 -372)">
-                            <g data-name="Group 10028" transform="translate(-1270 -1318)">
-                              <circle data-name="Ellipse 11" cx="27.5" cy="27.5" r="27.5" transform="translate(2297 2317)" fill="#2157aa" opacity="0.2"/>
-                              <circle data-name="Ellipse 12" cx="22.813" cy="22.813" r="22.813" transform="translate(2302 2322)" fill="#2157aa" opacity="0.3"/>
-                              <circle data-name="Ellipse 13" cx="17.188" cy="17.188" r="17.188" transform="translate(2307.625 2327.625)" fill="#2157aa"/>
-                            </g>
-                            <text data-name="4" transform="translate(1050 1033)" fill="#fff" font-size="16" font-family="OpenSans-Semibold, Open Sans" font-weight="600" letter-spacing="0.013em"><tspan x="0" y="0">4</tspan></text>
-                          </g>
-                        </g>
-                      </svg>
 
                 </div>
-                      
+
+                <span class="arrow"></span>
+
+              </div>
+
+
 
             </div>
 
-        </div>
-
-
-        <!-- LOCATION PIN -->
-        <h2 class="section-start" id="location-pin">Location pin</h2>
-
-        <div class="component-example mb-5">
-
-            <div class="component-wrapper remove-element-padding p-4">
-
-                <div class="map">
-
-
-
-                </div>   
-
-            </div>
+          </div>
 
         </div>
 
-
-
-
-
+      </div>
 
     </div>
+
+
+
+    <!-- DESIGN SPECIFICATIONS -->
+    <h2 class="section-start" id="design-specifications">Design specifications</h2>
+
+    {% include design-specs-link.html
+    btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/6bbf13fc-d694-4b43-9c8b-430104555b33/'"
+    btn-text="View design specifications"
+    %}
+
+
+
+
+
+  </div>
 
 
 
