@@ -786,11 +786,25 @@ table.table {
             max-width: 100%;
         }
     }
+    &.action-tile {
+        .image-wrapper {
+            background: $bga-blue-background-light;
+            padding: 24px;
+
+            img {
+                height: 180px;
+                max-width: 100%;
+                width: auto;
+                background: $bga-white;
+                border-radius: 100px;
+            }
+        }
+    }
 
     .button-wrapper {
         width: 100%;
         border: solid 1px $bga-blue-border;
-        text-align: right;
+        text-align: left;
     }
 
     button {
@@ -804,59 +818,6 @@ table.table {
                 color: $bga-green-success-background;
                 border-color: $bga-green-success-background;
             }
-        }
-    }
-
-    .sitecore-info-container {
-        font-size: .875rem;
-        border: solid 1px $bga-blue-border;
-
-        h5 {
-            font-size: .875rem;
-        }
-
-        .sitecore-toggle {
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;
-            background-color: $bga-blue-background-light;
-
-            &.open {
-                svg {
-                    transform: scaleY(-1);
-                }
-            }
-
-            svg {
-                width: 16px;
-                height: auto;
-            }
-        }
-
-        .sitecore-details {
-            display: none;
-
-            img {
-                width: 100%;
-            }
-
-            ul {
-                padding: 0;
-
-                li {
-                    list-style-type: disc;
-                    text-indent: 0px;
-
-                    &:before {
-                        display: none;
-                    }
-
-                    &:last-of-type {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-
         }
     }
 }
