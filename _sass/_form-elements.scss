@@ -360,6 +360,138 @@ textarea {
 }
 
 
+// Multiple select bubbles
+
+.select-bubbles {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 16px auto;
+    row-gap: 16px;
+    column-gap: 16px;
+
+    .multi-select {
+        background: $bga-white url(../assets/icon-plus-blue.svg) no-repeat;
+        background-size: 14px 14px;
+        background-position: center left 16px;
+        border: solid 2px $bga-blue-links;
+        border-radius: 50px;
+        font-size: 0.9375rem;
+        cursor: pointer;
+        box-shadow: $bga-btn-boxshadow;
+        padding: 8px 16px 8px 38px;
+        display: block;
+        
+       
+
+        &:focus-visible {
+            background: $bga-teal-highlight-dark url(../assets/icon-plus-black.svg) no-repeat;
+            background-size: 14px 14px;
+            background-position: center left 16px;
+            border: solid 2px $bga-teal-highlight-dark;
+            color: $bga-black;
+            outline: none;
+        }
+
+        &:hover {
+            background: $bga-teal-highlight-mid url(../assets/icon-plus-black.svg) no-repeat;
+            background-size: 14px 14px;
+            background-position: center left 16px;
+            border: solid 2px $bga-teal-highlight-mid;
+            color: $bga-black;
+        }
+
+        &.selected {
+            background: $bga-teal-highlight-light url(../assets/icon-tick-black.svg) no-repeat;
+            background-size: 18px 14px;
+            background-position: center left 12px;
+            border: solid 2px $bga-teal-highlight-mid;
+            color: $bga-black;
+
+            &:focus-visible {
+                background: $bga-teal-highlight-dark url(../assets/icon-tick-black.svg) no-repeat;
+                background-size: 18px 14px;
+                background-position: center left 12px;
+                border: solid 2px $bga-teal-highlight-dark;
+                color: $bga-black;
+                outline: none;
+            }
+
+            &:hover {
+                background: $bga-teal-highlight-mid url(../assets/icon-tick-black.svg) no-repeat;
+                background-size: 18px 14px;
+                background-position: center left 12px;
+                border: solid 2px $bga-teal-highlight-mid;
+                color: $bga-black;
+            }
+        }
+    }
+
+    &.error {
+        .multi-select {
+            border: solid 2px $bga-red-fail-dark;
+
+            &:focus-visible {
+                border: solid 2px $bga-teal-highlight-dark;
+            }
+    
+            &:hover {
+                border: solid 2px $bga-teal-highlight-mid;
+            }
+        }
+    }
+}
+.bga-multi-select {
+    background: $bga-white url(../assets/icon-plus-blue.svg) no-repeat;
+    background-size: 14px 14px;
+    background-position: center left 16px;
+    border: solid 2px $bga-blue-links;
+    border-radius: 50px;
+    font-size: 0.9375rem;
+    cursor: default;
+    box-shadow: $bga-btn-boxshadow;
+    padding: 8px 16px 8px 38px;
+    display: inline-block;
+    
+
+    &.focus {
+        background: $bga-teal-highlight-dark url(../assets/icon-plus-black.svg) no-repeat;
+        background-size: 14px 14px;
+        background-position: center left 16px;
+        border: solid 2px $bga-teal-highlight-dark;
+        color: $bga-black;
+        outline: none;
+    }
+
+    &.hover {
+        background: $bga-teal-highlight-mid url(../assets/icon-plus-black.svg) no-repeat;
+        background-size: 14px 14px;
+        background-position: center left 16px;
+        border: solid 2px $bga-teal-highlight-mid;
+        color: $bga-black;
+    }
+
+    &.selected {
+        background: $bga-teal-highlight-light url(../assets/icon-tick-black.svg) no-repeat;
+        background-size: 18px 14px;
+        background-position: center left 12px;
+        border: solid 2px $bga-teal-highlight-mid;
+        color: $bga-black;
+    }
+    &.disabled {
+        background: $bga-white url(../assets/icon-plus-blueblack.svg) no-repeat;
+        background-size: 14px 14px;
+        background-position: center left 16px;
+        border: solid 2px $bga-blue-black-mid;
+        color: $bga-black;
+        outline: none;
+        opacity: .65;
+    }
+
+}
+
+
 // Radio buttons
 .radio-button {
     position: relative;

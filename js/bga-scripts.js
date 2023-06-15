@@ -569,6 +569,13 @@ $(document).ready(function () {
             $(this).parents('.form-element-wrapper').removeClass('error');
         }
     });
+    $('.select-bubbles .multi-select').on('click', function(){
+        $(this).toggleClass('selected');
+
+        if ( $(this).hasClass('error-trigger') ) {
+            $(this).parents('.select-bubbles').toggleClass('error');
+        }
+    });
 
     $('.form-element-wrapper .radio-button input').on('change', function () {
         var error_radio = $(this).parents('.form-element-wrapper').find('.error-radio');
