@@ -234,7 +234,7 @@
         <section class="body-content my-5">
 
             <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         <div class="anchor-menu in-page remove-element-padding mt-0 mb-2 p-0">
@@ -243,7 +243,10 @@
     
     <ul id="anchor-menu" class="p-0">
         
-            <li class="mb-3"><a tabindex="0" href="#checkboxes">Checkboxes</a></li>
+            <li class="mb-3"><a tabindex="0" href="#checkboxes">Multiple select - checkboxes</a></li>
+             
+        
+            <li class="mb-3"><a tabindex="0" href="#select-bubbles">Multiple select - bubbles</a></li>
              
         
             <li class="mb-3"><a tabindex="0" href="#radio-buttons">Radio buttons</a></li>
@@ -255,23 +258,25 @@
          
          
          
-         
         
     </ul>
 
 </div>
 
     </div>
-    
+
     <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
-   
-          
-        <!-- CHECKBOXES -->   
-        <h2 class="section-start" id="checkboxes">Checkboxes</h2>
+
         <h3>Style notes</h3>
-        <p>Default styling for form labels is the standard paragraph style. Bold paragraph styles or lower level heading styles can also be used for labels when appropriate.</p>
-        <p>Text elements in forms have a bottom margin of 16px instead of the 24px used elsewhere on business.gov.au.</p>
-       
+        <p>Default styling for form labels is the standard paragraph style. Bold paragraph styles or lower level heading
+            styles can also be used for labels when appropriate.</p>
+        <p>Text elements in forms have a bottom margin of 16px instead of the 24px used elsewhere on business.gov.au.
+        </p>
+
+
+        <!-- CHECKBOXES -->
+        <h2 class="section-start" id="checkboxes">Multiple select - checkboxes</h2>
+
         <div class="breakpoints m-0 p-4">
 
     
@@ -285,13 +290,13 @@
 
         <div class="component-example mb-5">
             <div class="component-wrapper remove-element-padding p-4">
-                
-                <p>To view error state select the 'error' checkbox.</p>
+
+                <p>To view error state select the 'error state' checkbox.</p>
                 <div class="row g-0">
-                    
-                        <div class="col-12 col-sm-6 col-lg-5 mb-3 p-0 ">
-                            <p class="mb-3"><strong>Checkboxes title</strong></p>
-                            <div class="form-element-wrapper no-flex mb-3">
+
+                    <div class="col-12 col-sm-6 col-lg-5 mb-3 p-0 ">
+                        <p class="mb-3"><strong>Checkboxes title</strong></p>
+                        <div class="form-element-wrapper no-flex mb-3">
                             <div>
                                 <div class="checkboxes">
                                     <input class="checkbox m-0" type="checkbox" value="" id="flexCheckDefault">
@@ -299,109 +304,242 @@
                                         Default checkbox
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkboxes">
                                     <input class="checkbox m-0" type="checkbox" value="" id="flexCheckChecked" checked>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Checked checkbox
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkboxes">
-                                    <input class="checkbox error-checkbox m-0" type="checkbox" value="" id="errorChecked">
+                                    <input class="checkbox error-checkbox m-0" type="checkbox" value=""
+                                        id="errorChecked">
                                     <label class="form-check-label" for="errorChecked">
                                         Error state
                                     </label>
                                 </div>
-                                </div>
                             </div>
-                            <p class="error-feedback mb-3">Descriptive error message</p>
-
                         </div>
+                        <p class="error-feedback mb-3">Descriptive error message</p>
+
+                    </div>
 
                 </div>
 
+            </div>
+
+            <div class="element-state-wrapper p-4">
+
+                <div class="row ">
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Default state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-checkbox default mb-0"><span class="input"></span>
+                                    <p class="label m-0">Checkbox</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Focus/selected state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-checkbox focus mb-0"><span class="input"></span>
+                                    <p class="label m-0">Checkbox</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Keyboard focus state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-checkbox default keyboard mb-0"><span class="input"></span>
+                                    <p class="label m-0">Checkbox</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error state</p>
+                            <div class="form-element-wrapper no-flex mb-3 error">
+                                <div class="bga-checkbox error mb-0"><span class="input"></span>
+                                    <p class="label m-0">Checkbox</p>
+                                </div>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error and focus state</p>
+                            <div class="form-element-wrapper no-flex mb-3 error">
+                                <div class="bga-checkbox error keyboard mb-0"><span class="input"></span>
+                                    <p class="label m-0">Checkbox</p>
+                                </div>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Disabled state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-checkbox disabled mb-0"><span class="input"></span>
+                                    <p class="label m-0">Checkbox</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
-                <div class="element-state-wrapper p-4">
-                
-                    <div class="row ">
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Default state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-checkbox default mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Focus/selected state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-checkbox focus mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Keyboard focus state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-checkbox default keyboard mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error state</p>
-                                <div class="form-element-wrapper no-flex mb-3 error">
-                                    <div class="bga-checkbox error mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error and focus state</p>
-                                <div class="form-element-wrapper no-flex mb-3 error">
-                                    <div class="bga-checkbox error keyboard mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Disabled state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-checkbox disabled mb-0"><span class="input"></span><p class="label m-0">Checkbox</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        
             </div>
-                    
-            </div>
-            
+
         </div>
-       
-        
 
-        <!-- RADIO BUTTONS -->   
-        <h2 class="section-start" id="radio-buttons">Radio buttons</h2>
-       
+
+        <!-- BUBBLES -->
+        <h2 class="section-start" id="select-bubbles">Multiple select - bubbles</h2>
+
+        <div class="breakpoints m-0 p-4">
+
     
+    <p class="pe-3 m-0">All breakpoints</p>
+    
+    
+
+</div>
+
+
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <p>To view error state select the 'error state' bubble.</p>
+                <div class="row g-0">
+
+                    <div class="col-12 p-0 ">
+                        <p class="mb-3"><strong>Multiple select title</strong></p>
+                        <div class="form-element-wrapper select-bubbles mb-3">
+
+                                <span role="button" tabindex="0" class="multi-select ">Default state</span>
+
+                                <span role="button" tabindex="0" class="multi-select selected">Selected state</span>
+
+                                <span role="button" tabindex="0" class="multi-select error-trigger">Error state</span>
+
+                                <span role="button" tabindex="0" class="multi-select ">Option four</span>
+
+                                <span role="button" tabindex="0" class="multi-select ">Option five</span>
+
+                                <span role="button" tabindex="0" class="multi-select ">Final option</span>
+
+                        </div>
+                        <p class="error-feedback mb-3">Descriptive error message</p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="element-state-wrapper p-4">
+
+                <div class="row ">
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Default state</p>
+                            <span role="button" tabindex="0" class="bga-multi-select ">Select bubble</span>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Hover state</p>
+                            <span role="button" tabindex="0" class="bga-multi-select hover">Select bubble</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Focus / keyboard focus states</p>
+                            <span role="button" tabindex="0" class="bga-multi-select focus">Select bubble</span>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Selected state</p>
+                            <span role="button" tabindex="0" class="bga-multi-select selected">Select bubble</span>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error state</p>
+                            <div class="form-element-wrapper error select-bubbles">
+                                <span role="button" tabindex="0" class="bga-multi-select error">Select bubble</span>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error and focus state</p>
+                            <div class="form-element-wrapper error select-bubbles">
+                                <span role="button" tabindex="0" class="bga-multi-select error focus">Select bubble</span>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Disabled state</p>
+                            <span role="button" tabindex="0" class="bga-multi-select disabled">Select bubble</span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RADIO BUTTONS -->
+        <h2 class="section-start" id="radio-buttons">Radio buttons</h2>
+
+
         <div class="breakpoints m-0 p-4">
 
     
@@ -418,115 +556,130 @@
                 <h3>Primary radio button style</h3>
 
                 <div class="row g-0">
-                    
-                        <div class="col-12 col-sm-6 col-lg-5 mb-3 p-0 ">
-                            <p class="mb-3"><strong>Radio buttons title</strong></p>
-                            <div class="form-element-wrapper no-flex mb-3">
-                                <div role="radiogroup">
+
+                    <div class="col-12 col-sm-6 col-lg-5 mb-3 p-0 ">
+                        <p class="mb-3"><strong>Radio buttons title</strong></p>
+                        <div class="form-element-wrapper no-flex mb-3">
+                            <div role="radiogroup">
                                 <div class="radio-button pb-2">
-                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault3" id="flexRadioDefault1">
+                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault3"
+                                        id="flexRadioDefault1">
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         Default radio
                                     </label>
                                 </div>
                                 <div class="radio-button pb-2">
-                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault3" id="flexRadioDefault2" checked>
+                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault3"
+                                        id="flexRadioDefault2" checked>
                                     <label class="form-check-label" for="flexRadioDefault2">
                                         Default checked radio
                                     </label>
-                                </div> 
-                                
+                                </div>
+
                                 <div class="radio-button pb-0">
-                                    <input class="form-check-input error-radio m-0" type="radio" name="flexRadioDefault3" id="flexRadioError">
+                                    <input class="form-check-input error-radio m-0" type="radio"
+                                        name="flexRadioDefault3" id="flexRadioError">
                                     <label class="form-check-label" for="flexRadioError">View error state
-                                        </label>
-                                </div>
+                                    </label>
                                 </div>
                             </div>
-                            <p class="error-feedback mb-3">Descriptive error message</p>
-
                         </div>
+                        <p class="error-feedback mb-3">Descriptive error message</p>
 
-                </div>
-                
+                    </div>
 
                 </div>
 
-                <div class="element-state-wrapper p-4">
-                
-                    <div class="row ">
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Default state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-radio default mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                            </div>
-                        </div>
 
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Focus/selected state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-radio focus mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Keyboard focus state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-radio default keyboard mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error state</p>
-                                <div class="form-element-wrapper no-flex mb-3 error">
-                                    <div class="bga-radio error mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error and focus state</p>
-                                <div class="form-element-wrapper no-flex mb-3 error">
-                                    <div class="bga-radio error keyboard mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Disabled state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-radio disabled mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        
             </div>
-                    
+
+            <div class="element-state-wrapper p-4">
+
+                <div class="row ">
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Default state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-radio default mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Focus/selected state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-radio focus mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Keyboard focus state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-radio default keyboard mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error state</p>
+                            <div class="form-element-wrapper no-flex mb-3 error">
+                                <div class="bga-radio error mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error and focus state</p>
+                            <div class="form-element-wrapper no-flex mb-3 error">
+                                <div class="bga-radio error keyboard mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Disabled state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-radio disabled mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
             </div>
-            
+
         </div>
-       
-   
-        
+
+
+
         <div class="breakpoints m-0 p-4">
 
     
@@ -543,132 +696,146 @@
                 <h3>Alternative radio button style</h3>
                 <p>To view error state select the 'error' radio button.</p>
                 <div class="row g-0">
-                    
-                        <div class="col-12 col-sm-6 col-lg-5 mb-3 p-0 ">
-                            <p class="mb-3"><strong>Radio buttons title</strong></p>
-                            <div class="form-element-wrapper no-flex mb-3">
-                                <div role="radiogroup">
+
+                    <div class="col-12 col-sm-6 col-lg-5 mb-3 p-0 ">
+                        <p class="mb-3"><strong>Radio buttons title</strong></p>
+                        <div class="form-element-wrapper no-flex mb-3">
+                            <div role="radiogroup">
                                 <div class="radio-button alternate pb-1">
-                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault4">
                                     <label class="form-check-label" for="flexRadioDefault4">
                                         Default radio
                                     </label>
                                 </div>
                                 <div class="radio-button alternate pb-1">
-                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+                                    <input class="form-check-input m-0" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault5" checked>
                                     <label class="form-check-label" for="flexRadioDefault5">
                                         Default checked radio
                                     </label>
-                                </div> 
-                                
+                                </div>
+
                                 <div class="radio-button alternate pb-0">
-                                    <input class="form-check-input error-radio m-0" type="radio" name="flexRadioDefault" id="flexRadioError2">
+                                    <input class="form-check-input error-radio m-0" type="radio" name="flexRadioDefault"
+                                        id="flexRadioError2">
                                     <label class="form-check-label" for="flexRadioError2">Error state
-                                        </label>
-                                </div>
+                                    </label>
                                 </div>
                             </div>
-                            <p class="error-feedback mb-3">Descriptive error message</p>
-
                         </div>
+                        <p class="error-feedback mb-3">Descriptive error message</p>
 
-                </div>
-                
+                    </div>
 
                 </div>
 
-                <div class="element-state-wrapper p-4">
-                
-                    <div class="row ">
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Default state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-radio alternate default mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                            </div>
-                        </div>
 
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Focus/selected state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-radio alternate focus mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Keyboard focus state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-radio alternate default keyboard mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error state</p>
-                                <div class="form-element-wrapper no-flex mb-3 error">
-                                    <div class="bga-radio alternate error mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error and focus state</p>
-                                <div class="form-element-wrapper no-flex mb-3 error">
-                                    <div class="bga-radio alternate error keyboard mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Disabled state</p>
-                                <div class="form-element-wrapper no-flex mb-3">
-                                    <div class="bga-radio alternate disabled mb-0"><span class="input"></span><p class="label m-0">Radio button</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        
             </div>
-                    
+
+            <div class="element-state-wrapper p-4">
+
+                <div class="row ">
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Default state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-radio alternate default mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Focus/selected state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-radio alternate focus mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Keyboard focus state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-radio alternate default keyboard mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error state</p>
+                            <div class="form-element-wrapper no-flex mb-3 error">
+                                <div class="bga-radio alternate error mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error and focus state</p>
+                            <div class="form-element-wrapper no-flex mb-3 error">
+                                <div class="bga-radio alternate error keyboard mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Disabled state</p>
+                            <div class="form-element-wrapper no-flex mb-3">
+                                <div class="bga-radio alternate disabled mb-0"><span class="input"></span>
+                                    <p class="label m-0">Radio button</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
             </div>
-            
+
         </div>
-       
-       
-        
-        
-        
+
+
+
+
+
         <!-- Design specifications link -->
         <h2 class="section-start" id="design-specifications">Design specifications</h2>
-        
+
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
 <a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/7e6774ff-6857-48f7-a201-1b96b082757e/' role="button">View design specifications</a>
 </div>
-        
-        
-            
-        </div>
-    
-        
-    
-</div>
 
+
+
+    </div>
+
+
+
+</div>
 
         </section>
     </div>
