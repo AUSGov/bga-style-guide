@@ -36,6 +36,12 @@
             font-weight: 600;
             text-align: center;
             color: $bga-blue-black-dark;
+
+            &:focus-visible {
+                border: $bga-text-focus-border;
+                border-radius: $bga-focus-radius;
+                border-bottom: $bga-blue-focus solid 4px;
+            }
         }
         
         .loading-animation {    
@@ -111,8 +117,8 @@
 
             .tick {
                 position: absolute;
-                top: 20px;
-                left: 12px;
+                top: 21px;
+                left: 13px;
             }
             .msg {
                 color: $bga-green-success-background;

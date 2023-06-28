@@ -1,4 +1,4 @@
-<div class="bga-component-wrapper h-100 {{ include.bottom }}">
+<div class="bga-component-wrapper h-100 {{ include.bottom }} ">
 <a href={{ include.link }} tabindex="0" class="bga-component light-pathway {{ include.classes }} m-0">
 
     <div class="p-4 component-content h-100">
@@ -15,10 +15,22 @@
         </div>
         </div>
 
-        <div class="icon-wrapper">
-             <div class="arrow-icon">
-                 <img src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
+        <div class="icon-wrapper {{include.classes}} ">
+            {% if include.classes contains "final" %} 
+            <div class="bottom-icon">
+               <img src={{ "assets/icon-approved.svg" | relative_url }} alt="" />
              </div>
+
+            {% elsif include.classes contains "in-progress" %}
+            <div class="bottom-icon">
+                <img src={{ "assets/icon-in-progress.svg" | relative_url }} alt="" />
+              </div>
+
+            {% else %}
+             <div class="bottom-icon">
+                <img src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
+            </div>
+            {% endif %}
              
              {% if include.external-link %}
              <div class="external-site remove-element-padding">
