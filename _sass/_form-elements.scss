@@ -236,10 +236,8 @@ textarea {
 .checkboxes,
 .bga-checkbox {
     position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 0 0 4px 0;
-    background: pink;
+    display: block;
+    padding: 0 0 4px 0;
     
     &:last-of-type {
         padding: 0;
@@ -248,32 +246,26 @@ textarea {
     label,
     .label {
         font-weight: 400;
-        padding: 8px;
-        margin-left: -8px;
-        //border: solid 3px transparent;
+        padding: 5px 5px 5px 44px;
+        border: solid 3px transparent;
         background: transparent;
         width: 100%;
-        //min-height: 44px;
-        display: inline-flex;
-
-        &::before {
-            content: "";
-            display: inline-flex;
-            height: 28px;
-            width: 28px;
-            margin-right: 8px;
-            border-radius: 0;
-            border: solid 1px $bga-blue-black-dark;
-            background: $bga-white;
-            cursor: pointer;
-        }
+        min-height: 44px;
+        display: inline-block;
     }
     [type=checkbox],
     .input {
-        //position: absolute;
-        height: 0;
-        width: 0;
-        opacity: 0;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        -webkit-appearance: none;
+        height: 28px;
+        width: 28px;
+        vertical-align: middle;
+        border-radius: 0;
+        border: solid 1px $bga-blue-black-dark;
+        background: $bga-white;
+        cursor: pointer;
         
         &:focus {
             border: solid 1px $bga-blue-black-dark;
