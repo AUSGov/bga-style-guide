@@ -3398,15 +3398,13 @@ textarea:focus { box-shadow: none; border: 2px solid #2E6CB9; border-radius: 4px
 
 .form-example .hwt-content mark.hide-mark, .form-example .hwt-content .hide-mark.mark { display: none !important; }
 
-.checkboxes, .bga-checkbox { position: relative; display: flex; flex-wrap: nowrap; margin: 0 0 4px 0; background: pink; }
+.checkboxes, .bga-checkbox { position: relative; display: block; padding: 0 0 4px 0; }
 
 .checkboxes:last-of-type, .bga-checkbox:last-of-type { padding: 0; }
 
-.checkboxes label, .checkboxes .label, .bga-checkbox label, .bga-checkbox .label { font-weight: 400; padding: 8px; margin-left: -8px; background: transparent; width: 100%; display: inline-flex; }
+.checkboxes label, .checkboxes .label, .bga-checkbox label, .bga-checkbox .label { font-weight: 400; padding: 5px 5px 5px 44px; border: solid 3px transparent; background: transparent; width: 100%; min-height: 44px; display: inline-block; }
 
-.checkboxes label::before, .checkboxes .label::before, .bga-checkbox label::before, .bga-checkbox .label::before { content: ""; display: inline-flex; height: 28px; width: 28px; margin-right: 8px; border-radius: 0; border: solid 1px #2E3E5A; background: #ffffff; cursor: pointer; }
-
-.checkboxes [type=checkbox], .checkboxes .input, .bga-checkbox [type=checkbox], .bga-checkbox .input { height: 0; width: 0; opacity: 0; }
+.checkboxes [type=checkbox], .checkboxes .input, .bga-checkbox [type=checkbox], .bga-checkbox .input { position: absolute; top: 8px; left: 8px; -webkit-appearance: none; height: 28px; width: 28px; vertical-align: middle; border-radius: 0; border: solid 1px #2E3E5A; background: #ffffff; cursor: pointer; }
 
 .checkboxes [type=checkbox]:focus, .checkboxes .input:focus, .bga-checkbox [type=checkbox]:focus, .bga-checkbox .input:focus { border: solid 1px #2E3E5A; outline: none; }
 
