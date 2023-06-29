@@ -1353,7 +1353,7 @@ $(document).ready(function () {
             });
         }
     });
-    $('#bga-modal-bp-final, #bga-modal-bp-xs, #nb-modal-bp-final, #nb-modal-bp-xs').on('click', function () {
+    $('#bga-modal-bp-final, #bga-modal-bp-xs, #nb-modal-bp-final').on('click', function () {
         mobile_modal_display();
 
         if ($(this).parents('.tab-section.bga-branded').length) {
