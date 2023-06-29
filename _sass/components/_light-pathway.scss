@@ -100,6 +100,42 @@
         }
     }
     
+    // Approved, in progress versions for style guide
+    &.final.external, 
+    &.in-progress.external {
+        background: $bga-green-highlight-light;
+        border: none;
+
+        .component-content {
+            border-left: 8px solid $bga-green-highlight-mid;  
+        }
+        .bottom-icon {
+            background: $bga-green-highlight-dark;
+    
+            img {
+                width: 32px;
+                height: auto;
+            }
+        }
+        &.external {
+            .icon-wrapper {
+                .external-site {
+                    background: $bga-white;  
+                }
+            }
+        }
+    }
+    &.in-progress.external {
+        background: $bga-yellow-highlight-light;
+
+        .component-content {
+            border-left: 8px solid $bga-yellow-highlight-mid;  
+        }
+        .bottom-icon {
+            background: $bga-yellow-highlight-shadow; 
+        }
+    }   
+
     &:hover {
         .bottom-icon {
             background: $bga-blue-border;
