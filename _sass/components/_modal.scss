@@ -379,7 +379,7 @@
     }
 }
 
-@mixin modal-bp-768 {
+@mixin modal-bp-350 {
     .modal-example {
         ol {  //Heading level -  full integer
             padding-left: 32px;
@@ -450,6 +450,18 @@
                 }
             } 
         }
+        .scroll-wrapper {
+            .scrollable {
+                max-height: 400px;
+            }
+        }
+        &.modal-shortlist {
+            .scroll-wrapper {
+                .scrollable {
+                    max-height: 370px;
+                }
+            }
+        }
         &.non-branded {
             &.modal-form {
                 .mobile-form-toggle {
@@ -460,13 +472,45 @@
     }
 }
 
+@mixin modal-bp-below350 {
+    .modal-example {
+        &.modal-form.save-progress {
+            .title-area {
+                h3 {
+                    flex-wrap: wrap;
+
+                    svg {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+
+        &.modal-shortlist {
+            .scroll-wrapper {
+                .scrollable {
+                    max-height: 340px;
+                }
+            }
+        }
+    }
+}
+
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below768 {
-    @include modal-bp-768();
+.component-example.bp-350 {
+    @include modal-bp-350();
+}
+
+.component-example.bp-below350 {
+    @include modal-bp-350();
+    @include modal-bp-below350(); 
 }
 
 
 // Media queries for HTML example pages
 @media (max-width: 768px) {
-    @include modal-bp-768();
+    @include modal-bp-350();
+}
+@media (max-width: 350px) {
+    @include modal-bp-below350(); 
 }
