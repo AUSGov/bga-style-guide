@@ -113,7 +113,7 @@ input:-webkit-autofill:active {
 .form-element-wrapper {
     box-shadow: none;
     display: flex;
-    
+   
     &.no-flex {
         display: block;
     }
@@ -236,58 +236,55 @@ textarea {
 .checkboxes,
 .bga-checkbox {
     position: relative;
-    display: block;
-    padding: 0 0 4px 0;
-    
-    &:last-of-type {
-        padding: 0;
-    }
+    padding: 0 ;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 0 4px 0;
     
     label,
     .label {
         font-weight: 400;
-        padding: 5px 5px 5px 44px;
-        border: solid 3px transparent;
         background: transparent;
         width: 100%;
-        min-height: 44px;
-        display: inline-block;
+        padding: 8px;
+        margin: 0 0 0 -8px;
+        display: inline-flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: inline-flex;
+            height: 28px;
+            width: 28px;
+            margin-right: 8px;
+            border-radius: 0;
+            border: solid 1px $bga-blue-black-dark;
+            background: $bga-white;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        
     }
     [type=checkbox],
     .input {
-        position: absolute;
-        top: 8px;
-        left: 8px;
-        -webkit-appearance: none;
-        height: 28px;
-        width: 28px;
-        vertical-align: middle;
-        border-radius: 0;
-        border: solid 1px $bga-blue-black-dark;
-        background: $bga-white;
-        cursor: pointer;
+        height: 0;
+        width: 0;
+        opacity: 0;
         
-        &:focus {
-            border: solid 1px $bga-blue-black-dark;
-            outline: none;
-            
-            + label {
-                border: transparent solid 3px;
+        &:focus-visible + label  {
+                border: none;
                 border-radius: $bga-focus-radius;
-            }
-        }
-        &:focus-visible + label {
-            border: $bga-component-focus-border;
-            border-radius: $bga-focus-radius;
-        }
-        
+                box-shadow: $bga-focus-boxshadow;
+        }     
         &:checked {
-            background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
-            border: solid 3px $bga-blue-links !important;
-            
             + label {
                 color: $bga-blue-links;
                 font-weight: 600;
+
+                &::before {
+                    border: solid 3px $bga-blue-links;
+                    background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
+                }
             }
         }
     }
@@ -295,32 +292,33 @@ textarea {
 }
 // Checkbox states
 .bga-checkbox {
-
     &.error {
         .input {
-
             + .label {
-                border:  $bga-component-error-border;
+                border: none;
+                box-shadow: $bga-error-boxshadow;
                 border-radius: $bga-focus-radius;
             }
         }
     }
     &.focus {
         .input {
-            background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
-            border: solid 3px $bga-blue-links !important;
-
             + .label {
                 color: $bga-blue-links;
                 font-weight: 600;
 
+                &::before {
+                    border: solid 3px $bga-blue-links;
+                    background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
+                }
             }
         }
     }
 
     &.keyboard .input {
         + .label {
-            border: $bga-component-focus-border;
+            border: none;
+            box-shadow: $bga-focus-boxshadow;
             border-radius: $bga-focus-radius;
         }
     }
@@ -337,7 +335,7 @@ textarea {
         [type=checkbox] {
             border: solid 1px $bga-blue-black-dark;
             border-radius: 0;
-
+            
             &:focus,
             &:focus-visible {
                 border: solid 1px $bga-blue-black-dark;
@@ -350,7 +348,7 @@ textarea {
             }
         }
         label {
-            border:  $bga-component-error-border;
+            border: $bga-component-error-border;
             border-radius: 4px;
         } 
     }
@@ -499,25 +497,28 @@ textarea {
     
     label {
         font-weight: 400;
-        padding: 8px 8px 8px 40px;
+        padding: 8px;
         border: solid 1px $bga-blue-black-dark;
         background: $white;
         width: 100%;
-        min-height: 40px;
-        display: inline-block;
+        display: inline-flex;
+
+        &::before {
+            content: "";
+            height: 24px;
+            width: 24px;
+            border-radius: 100px;
+            border: solid 2px $bga-blue-black-mid;
+            background: $bga-white;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
     }
     [type="radio"] {
+        height: 0;
+        width: 0;
+        opacity: 0;
         position: absolute;
-        top: 9px;
-        left: 8px;
-        -webkit-appearance: none;
-        height: 24px;
-        width: 24px;
-        vertical-align: middle;
-        border-radius: 100px;
-        border: solid 2px $bga-blue-black-mid;
-        background: $bga-white;
-        outline: none !important;
         
         &:focus {
             border: $bga-blue-links solid 2px;
@@ -529,44 +530,45 @@ textarea {
             }
         }
         &:focus-visible {
-            top: 11px;
-            
             + label {
-                border: $bga-component-focus-border;
+                border: none;
+                box-shadow: $bga-focus-boxshadow;
                 border-radius: $bga-focus-radius;
             }
         }
         &:checked {
-            background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
-            border: solid 2px $bga-blue-links !important;
-            outline: none !important;
-            
             + label {
                 color: $bga-blue-links;
                 font-weight: 600;
+                
+                &::before {
+                    background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
+                    border: solid 2px $bga-blue-links !important;
+                    outline: none !important;
+                }
             }
         }
     }
     
     &.alternate {
         label {
-            border:solid 3px $bga-white;
-            padding: 5px 5px 5px 40px;
+            border: none;
+            //padding: 0;
         }
         [type="radio"] {
-            top: 8px;
             
             &:focus {
                 + label {
-                    border:solid 3px $bga-white;
+                    border: none;  
                 }
             }
             
-            &:focus-visible {
-                top: 8px;
-                
+            &:focus-visible {      
                 + label {
-                    border: $bga-component-focus-border;
+                    //border: $bga-component-focus-border;
+                    box-shadow: $bga-focus-boxshadow;
+                    border-radius: $bga-focus-radius;
+                    border: none;
                 }
             }
         }
@@ -575,11 +577,11 @@ textarea {
 .form-element-wrapper.error {
     .radio-button {
         label {
-            border:  $bga-component-error-border;
+            border:  none;
+            box-shadow: $bga-error-boxshadow;
             border-radius: $bga-focus-radius;
         }
         [type="radio"] {
-            top: 11px;
             border-radius: 100px;
             border: solid 2px $bga-blue-black-mid;
             
@@ -594,7 +596,7 @@ textarea {
         }
         &.alternate {
             [type="radio"] {
-                top: 8px;
+               
             }
         }
     }
@@ -606,7 +608,7 @@ textarea {
 
     .label {
         font-weight: 400;
-        padding: 8px 8px 8px 40px;
+        padding: 8px;
         border: solid 1px $bga-blue-black-dark;
         background: $white;
         width: 100%;
