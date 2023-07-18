@@ -163,6 +163,14 @@
         .checkbox-item {
             display: flex;
             align-items: flex-start;
+            margin-left: -8px;
+
+            &:focus-visible {
+                border: none;
+                border-radius: $bga-focus-radius;
+                box-shadow: $bga-focus-boxshadow;
+                outline: none;
+            }
         
             label {
                 font-weight: 400;
@@ -339,10 +347,18 @@
     }
     &.checkboxes-dynamic {
         border-bottom: solid 1px $bga-blue-black-light;
-        
+       
         .checkbox-item {
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; 
+            margin-left: -8px;
+
+            &:focus-visible {
+                border: none;
+                border-radius: $bga-focus-radius;
+                box-shadow: $bga-focus-boxshadow;
+                outline: none;
+            }
         
             label {
                 font-weight: 400;

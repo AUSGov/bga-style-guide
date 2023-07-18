@@ -118,6 +118,9 @@ input:-webkit-autofill:active {
         display: block;
     }
     
+    &.checkboxes-wrapper {
+        margin-left: -8px;
+    }
     &.error {
         box-shadow: 0 0 0 8px $bga-red-fail-mid;
         background: $bga-red-fail-mid;
@@ -247,7 +250,6 @@ textarea {
         background: transparent;
         width: 100%;
         padding: 8px;
-        margin: 0 0 0 -8px;
         display: inline-flex;
         align-items: center;
 
@@ -331,6 +333,11 @@ textarea {
     }
 }
 .form-element-wrapper.error {
+   
+    &.checkboxes-wrapper {
+        //padding: 0px 0px 0px 8px;
+       // margin: 0px 0 0 -8px;
+    }
     .checkboxes {
         [type=checkbox] {
             border: solid 1px $bga-blue-black-dark;
@@ -342,14 +349,14 @@ textarea {
                 outline: none;
 
                 + label {
-                    border: $bga-component-focus-border;
+                    box-shadow: $bga-focus-boxshadow;
                     border-radius: $bga-focus-radius;
                 }
             }
         }
         label {
-            border: $bga-component-error-border;
-            border-radius: 4px;
+            box-shadow: $bga-error-boxshadow;
+            border-radius: $bga-focus-radius;
         } 
     }
     + .error-feedback {
@@ -502,6 +509,7 @@ textarea {
         background: $white;
         width: 100%;
         display: inline-flex;
+        line-height: 1.75;
 
         &::before {
             content: "";
@@ -551,52 +559,36 @@ textarea {
     }
     
     &.alternate {
+        margin-left: -8px;
         label {
             border: none;
-            //padding: 0;
         }
         [type="radio"] {
-            
             &:focus {
                 + label {
                     border: none;  
                 }
             }
-            
-            &:focus-visible {      
-                + label {
-                    //border: $bga-component-focus-border;
-                    box-shadow: $bga-focus-boxshadow;
-                    border-radius: $bga-focus-radius;
-                    border: none;
-                }
-            }
         }
     }
 }
-.form-element-wrapper.error {
+.form-element-wrapper.error  {
+    &.radio {
+        padding: 0px 0px 0px 8px;
+        margin: 0px 0 0 -8px;
+    }
+
     .radio-button {
         label {
             border:  none;
             box-shadow: $bga-error-boxshadow;
             border-radius: $bga-focus-radius;
         }
-        [type="radio"] {
-            border-radius: 100px;
-            border: solid 2px $bga-blue-black-mid;
-            
-            &:focus,
-            &:focus-visible {
-                + label {
-                    border: $bga-component-focus-border;
-                    border-radius: $bga-focus-radius;
-                    outline: none;
-                }
-            }
-        }
-        &.alternate {
-            [type="radio"] {
-               
+
+        input:focus-visible {
+            + label {
+                box-shadow: $bga-focus-boxshadow;
+                border-radius: $bga-focus-radius;
             }
         }
     }
@@ -604,50 +596,52 @@ textarea {
 
 // Radio button states
 .bga-radio {
-    position: relative;
 
     .label {
         font-weight: 400;
+        display: flex;
+        font-weight: 400;
         padding: 8px;
         border: solid 1px $bga-blue-black-dark;
-        background: $white;
+        background: $bga-white;
         width: 100%;
-        min-height: 40px;
-        display: inline-block;
+        display: inline-flex;
+
+        &::before {
+            content: "";
+            margin-right: 8px;
+            height: 24px;
+            width: 24px;
+            border-radius: 100px;
+            border: solid 2px $bga-blue-black-mid;
+            background: $bga-white;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
     }
 
     .input {
-        position: absolute;
-        top: 10px;
-        left: 8px;
-        -webkit-appearance: none;
-        height: 24px;
-        width: 24px;
-        vertical-align: middle;
-        border-radius: 100px;
-        border: solid 2px $bga-blue-black-mid;
-        background: $bga-white;
-        outline: none !important;
+        height: 0;
+        width: 0;
+        opacity: 0;
+        position: absolute;       
     }
 
     &.focus {
-        .input  {
-            border: $bga-blue-links solid 2px;
-            outline: none !important;
-            box-shadow: none;
-            background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
+        .label {
+            border: solid 1px $bga-blue-black-dark;
+            color: $bga-blue-links;
+            font-weight: 600;
 
-            + .label {
-                border: solid 1px $bga-blue-black-dark;
-                color: $bga-blue-links;
-                font-weight: 600;
+            &::before {
+                border: $bga-blue-links solid 2px;
+                outline: none !important;
+                box-shadow: none;
+                background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
             }
         }
     }
     &.error {
-        .input {
-            top: 12px;
-        }
         .label {
             border:  $bga-component-error-border;
             border-radius: $bga-focus-radius;
@@ -656,16 +650,16 @@ textarea {
 
     &.keyboard {
         .input {
-            top: 12px;
-            border: $bga-blue-links solid 2px;
-            background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
-
-
             + .label {
                 border: $bga-component-focus-border;
                 border-radius: $bga-focus-radius;
                 color: $bga-blue-links;
                 font-weight: 600;
+
+                &::before {
+                    border: $bga-blue-links solid 2px;
+                    background: $bga-white url(../assets/radio-inside-circle.svg) no-repeat center center;
+                }
             }
         }
     }
@@ -675,28 +669,13 @@ textarea {
     
     &.alternate {
         .label {
-            border:solid 3px $bga-white;
-            padding: 5px 5px 5px 40px;
+            border: none;
         }
-        .input {
-            top: 8px;
-        }
-        &.focus .input {
-            + .label {
-                border:solid 3px $bga-white;
-            }
-        }
-        &.error .input {
-            + .label {
+        &.error .label {
                 border:  $bga-component-error-border;
-            }
         }
-        &.keyboard .input {
-            top: 8px;
-
-            + .label {
-                border: $bga-component-focus-border;    
-            }
+        &.keyboard .label {
+            border: $bga-component-focus-border;    
         }
     }
 
