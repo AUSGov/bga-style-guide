@@ -5,7 +5,6 @@
         
         label {
             background: none;
-            border: solid 3px $bga-blue-black-background-lightest;
             display: inline-flex;
             align-items: center;
             min-height: 28px;
@@ -14,17 +13,6 @@
         .checkboxes [type=checkbox] {
             top: 8px;
             left: 8px;
-
-            &:focus {
-                
-                + label {
-                    border:$bga-blue-black-background-lightest solid 3px;
-                }
-            }
-            &:focus-visible + label {
-                border: $bga-component-focus-border;
-                border-radius: $bga-focus-radius;
-            }
         }
     }
     .component-content {
