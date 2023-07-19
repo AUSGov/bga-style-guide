@@ -1,14 +1,10 @@
 .bga-component.easy-read {
-    background: $bga-blue-background-extralight;
-    border: $bga-blue-border 4px solid;
-    border-radius: $bga-focus-radius;
     
     .component-content {
         display: flex;
     }
 
     .component-image {
-        width: 25%;
         background: $bga-white;
         flex-shrink: 0;
         display: flex;
@@ -56,12 +52,102 @@
                 width: 10px;
             }
         }
-    }   
+    } 
+    
+    &.in-page {
+        background: $bga-blue-background-extralight;
+        border: $bga-blue-border 4px solid;
+        border-radius: $bga-focus-radius;
+
+        .component-image {
+            width: 25%;
+        }
+    }
+
+    &.standalone {
+        border-bottom: solid 2px $bga-blue-border;
+
+        .component-image {
+            width: 20%;
+        }
+    }
 }
 
 #easy-read {
+    background: pink;
+    
     h2 {
         padding: 48px 0 0 0;
         margin: 0 0 48px 0;
     }
+
+    &.standalone {
+        h2 {
+            padding: 64px 0 0 0;
+            margin: 0 0 24px 0;
+        }
+    }
+}
+
+
+
+.easy-read-header {
+    .header-wrapper {
+        background: $bga-blue-background-dark;
+        position: relative;
+    }
+
+    .return-link {
+        margin: 12px 0;
+        color: $bga-white;
+        text-decoration: underline;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 1.3rem;
+        line-height: 1.85;
+    }
+
+    .menu-trigger {
+        text-align: right;
+
+        button {
+            margin: 12px 0;
+            text-decoration: underline;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            background: none;
+            font-size: 1.3rem;
+            line-height: 1.85;
+            box-shadow: none;
+            border: none;
+            outline: none;
+
+            a {
+                color: $bga-white;
+            }
+        }
+    }
+
+    .menu-container {
+        position: relative;
+
+        .menu-wrapper {
+            display: none;
+
+            &.show {
+                display: block;
+                background: $bga-white;
+                width: 600px;
+                box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.4);
+                position: absolute;
+                top: 0px;
+                right: 32px;
+                z-index: 8000;
+            }
+        }
+        
+    }
+
 }

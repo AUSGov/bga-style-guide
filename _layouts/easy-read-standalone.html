@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body {% if page.id %} id="{{page.id}}" {% endif %}>
+    
+
+    <header class="easy-read-header">
+        <div class="header-wrapper p-0">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-7 col-lg-4 offset-lg-1">
+                      
+                        <a tabindex="0" class="return-link px-0 py-5 m-0">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="10" height="16"
+                                viewBox="0 0 10 16">
+                                <path id="Path_8941" data-name="Path 8941"
+                                    d="M115.972,22,122,28.018,120.014,30,112,22l8.014-8L122,15.982Z"
+                                    transform="translate(-112 -14)" fill="#fff" fill-rule="evenodd" />
+                            </svg><span>Back to business.gov.au</span></a>
+                    
+                    </div>
+
+
+                    <div class="col-5 col-lg-6 menu-trigger">
+
+                        <button tabindex="0"class="easy-read-menu-trigger m-0 py-5">
+                            <a tabindex="1" class="py-0 ps-0 pe-3 m-0">Menu</a>
+                            <svg data-name="Icon: Menu" xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21">
+                                <path d="M1.5,21A1.5,1.5,0,0,1,0,19.5V19a1.5,1.5,0,0,1,1.5-1.5h25A1.5,1.5,0,0,1,28,19v.5A1.5,1.5,0,0,1,26.5,21Zm0-8.75A1.5,1.5,0,0,1,0,10.75v-.5a1.5,1.5,0,0,1,1.5-1.5h25a1.5,1.5,0,0,1,1.5,1.5v.5a1.5,1.5,0,0,1-1.5,1.5Zm0-8.75A1.5,1.5,0,0,1,0,2V1.5A1.5,1.5,0,0,1,1.5,0h25A1.5,1.5,0,0,1,28,1.5V2a1.5,1.5,0,0,1-1.5,1.5Z" fill="#fff"/>
+                              </svg>
+                              
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="container menu-container">
+
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <div class="menu-wrapper show p-4 text-start remove-element-padding">
+
+                        <h4>In this guide</h4>
+
+                        <ul class="menu-links p-3">
+                            <li class="pb-3 mb-3">
+                                <a class="bga-link bkg-light mt-0 mb-2" tabindex="0" href="" role="button">How to use this document</a>
+                            </li>
+
+                            <li class="pb-3 mb-3">
+                                <a class="bga-link bkg-light mt-0 mb-2" tabindex="0" href="" role="button">What is an Australian Business Number?</a>
+                            </li>
+
+                            <li class="pb-3 mb-3">
+                                <a class="bga-link bkg-light mt-0 mb-2" tabindex="0" href=""
+                                    role="button">How to cancel your ABN</a>
+                                </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </header>
+
+
+    {{ content }}
+
+
+    <footer>Footer</footer>
+
+    
+</body>
+</html>
+
+
+
