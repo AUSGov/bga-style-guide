@@ -9216,8 +9216,6 @@ html.ecb-prototype { scroll-padding-top: 125px !important; overflow: auto; }
 
 .bga-component.easy-read.standalone .component-image { width: 20%; }
 
-#easy-read { background: pink; }
-
 #easy-read h2, #easy-read .h2 { padding: 48px 0 0 0; margin: 0 0 48px 0; }
 
 #easy-read.standalone h2, #easy-read.standalone .h2 { padding: 64px 0 0 0; margin: 0 0 24px 0; }
@@ -9226,16 +9224,28 @@ html.ecb-prototype { scroll-padding-top: 125px !important; overflow: auto; }
 
 .easy-read-header .return-link { margin: 12px 0; color: #ffffff; text-decoration: underline; display: inline-flex; align-items: center; cursor: pointer; font-size: 1.3rem; line-height: 1.85; }
 
-.easy-read-header .menu-trigger { text-align: right; }
+.easy-read-header .menu-trigger { text-align: right; margin-right: -32px; }
 
 .easy-read-header .menu-trigger button { margin: 12px 0; text-decoration: underline; display: inline-flex; align-items: center; cursor: pointer; background: none; font-size: 1.3rem; line-height: 1.85; box-shadow: none; border: none; outline: none; }
 
 .easy-read-header .menu-trigger button a { color: #ffffff; }
 
+.easy-read-header .menu-trigger button a:focus-visible, .easy-read-header .menu-trigger button a:hover { background: #ffffff; }
+
+.easy-read-header .menu-trigger.open button { background: #ffffff; }
+
+.easy-read-header .menu-trigger.open button a { color: #2157AA; }
+
+.easy-read-header .menu-trigger.open button svg path { fill: #2157AA; }
+
 .easy-read-header .menu-container { position: relative; }
 
 .easy-read-header .menu-container .menu-wrapper { display: none; }
 
-.easy-read-header .menu-container .menu-wrapper.show { display: block; background: #ffffff; width: 600px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.4); position: absolute; top: 0px; right: 32px; z-index: 8000; }
+.easy-read-header .menu-container .menu-wrapper.show { display: block; border: #2E6CB9 2px solid; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; background: #ffffff; width: 50%; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.4); position: absolute; top: 0px; right: 16px; z-index: 8000; }
+
+.easy-read-header .menu-container .utilities { background: #C8D9EE; }
+
+.easy-read-header .menu-container ul li::before { display: none; }
 
 /*# sourceMappingURL=main.css.map */
