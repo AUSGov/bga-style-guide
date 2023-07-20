@@ -35,6 +35,27 @@ $(document).ready(function () {
         });
 
 
+        // EASY READ
+        $('.easy-read-menu-trigger').on('click', function(){
+            $(this).parents('.menu-trigger').toggleClass('open');
+            $('.menu-wrapper').toggleClass('show');
+        });
+
+        $('.easy-read-footer .bga-btn.standalone-1').on('click', function(){
+            window.location.pathname = "/bga-style-guide/prototypes/bga/easy-read-standalone-1.html";
+        });
+        $('.easy-read-footer .bga-btn.standalone-2').on('click', function(){
+            window.location.pathname = "/bga-style-guide/prototypes/bga/easy-read-standalone-2.html";
+        });
+        $('.easy-read-footer .bga-btn.standalone-3').on('click', function(){
+            window.location.pathname = "/bga-style-guide/prototypes/bga/easy-read-standalone-3.html";
+        });
+
+        
+
+
+
+
         // Add fragments to URL to track task success
         // Add url fragments for task tracking in Loop11    
         /*
