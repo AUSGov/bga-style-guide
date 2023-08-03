@@ -171,7 +171,8 @@
     }
 }
 
-@mixin sidebar-below768 {
+
+@mixin sidebar-bp-576 {
     .sidebar-wrapper {
         &.save-progress {
             width: 100%;
@@ -183,15 +184,21 @@
                 padding: 16px !important;
                 display: flex;
                 align-items: center;
-            }
-
+            }   
             .mobile-chat {
                 display: block;
-            }
-            .bga-btn {
-                font-size: .875rem;
-                line-height: 1.125rem;
-                padding: 12px 24px;
+
+                button {
+                    text-indent: -9999px;
+                    height: 48px;
+                    width: 48px;
+                    padding: 0;
+                    right: 16px;
+                    bottom: 16px;
+                    position: absolute;
+                    background-position: top 10px center;
+                    background-size: 24px 24px;
+                }
             }
             .component-text {
                 display: none;
@@ -209,9 +216,46 @@
     }
 }
 
+@mixin sidebar-bp-350 {
+    .sidebar-wrapper {
+        &.save-progress {
+            .bga-btn {
+                font-size: .875rem;
+                line-height: 1.125rem;
+                padding: 12px 24px;
+                min-height: 48px;
+            }
+        }
+    }
+}
+@mixin sidebar-below350 {
+    .sidebar-wrapper {
+        &.save-progress {
+            .button-example {
+                width: calc(100% - 64px);
+
+                .bga-btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below768 {
-    @include sidebar-below768();
+.component-example.bp-576 {
+    @include sidebar-bp-576();
+}
+
+.component-example.bp-350 {
+    @include sidebar-bp-576();
+    @include sidebar-bp-350();
+}
+
+.component-example.bp-below350 {
+    @include sidebar-bp-576();
+    @include sidebar-bp-350();
+    @include sidebar-below350();
 }
 
 
@@ -228,7 +272,7 @@
         }
     }
     // In-page save your progress
-    @include sidebar-below768();
+    @include sidebar-bp-350();
 }
 
 
