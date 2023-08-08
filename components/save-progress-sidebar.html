@@ -3,7 +3,7 @@
 layout: content-tagged
 title: Save your progress sidebar
 description: Provide the user with a clear pathway to save their progress in a tool with an email link.
-updated: 4 August, 2023
+updated: 8 August, 2023
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -51,6 +51,7 @@ subsite-tag: true
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html 
                         element-string="bga-save-progress"
+                        lg-visibility="true"
                         md-visibility="true"
                         sm-visibility="true"
                         xs-visibility="true"
@@ -64,11 +65,21 @@ subsite-tag: true
 
                         <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
 
+                            <h3>Two column - right sidebar layout</h3>
                             {% include component-examples/progress-sidebar-example.html
                             title="Save your progress."
                             text="<p>Save your checklist and get a link to it – you’ll be able to continue on from where you were.</p>"
                             classes="yellow"
                             %}
+
+
+                            <h3 class="pt-6">Two column - right sidebar alternate layout</h3>
+                            {% include component-examples/progress-sidebar-example.html
+                                title="Save your progress."
+                                text="<p>Save your checklist and get a link to it – you’ll be able to continue on from where you were.</p>"
+                                classes="yellow alternate"
+                                %}
+    
 
                         </div>
 
@@ -88,6 +99,7 @@ subsite-tag: true
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html 
                         element-string="nb-save-progress"
+                        lg-visibility="true"
                         md-visibility="true"
                         sm-visibility="true"
                         xs-visibility="true"
@@ -133,12 +145,13 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Sidebars can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar layouts</a>. They should not be used in other layouts.</p>
+        <p>Sidebars can be used in the<a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar alternate layout</a>. They should not be used in other layouts.</p>
+
 
         {% include layouts-dropdown.html
-        layout-name="Single column - full width"
-        singlelayout="true"
-        %}
+            two-col-rightsidebar-visibility="true"
+            two-col-rightsidebar-alt-visibility="true"
+            %}
 
         <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
 
@@ -172,6 +185,41 @@ subsite-tag: true
 
         </div>
 
+        <div class="layout-example two-col-rightsidebar-alt mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar-alt"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min992-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-finalbp.png' | relative_url "
+
+            min992-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>"
+            
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Sidebars span 12 grid-columns and are fixed to the bottom of the screen.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar-alternate.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
 
 
         <!-- GUIDELINES -->
@@ -183,11 +231,16 @@ subsite-tag: true
         <h4>When to use this component: </h4>
         <ul>
             <li>Used with the standard checklist.</li>
+            <li>In tools such as the lean business plan builder</li>
         </ul>
 
 
         <!-- VERSION HISTORY-->
         <h2 class="section-start" id="version-history">Version history</h2>
+        <h4>8 August, 2023</h4>
+        <ul>
+            <li>Updated the sidebar breakpoints to reflect how it displays in two different layouts. The breakpoint for changing to the mobile display is different in the two different sidebar layouts.</li>
+        </ul>
         <h4>4 August, 2023</h4>
         <ul>
             <li>Added two additional breakpoints to make button display at each breakpoint clearer.</li>

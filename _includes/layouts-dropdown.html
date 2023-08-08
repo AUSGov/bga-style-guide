@@ -28,7 +28,11 @@
 
         {% if include.two-col-rightsidebar-visibility == "true" %}
         <option value="two-col-rightsidebar" class="{{include.two-col-rightsidebar-visibility}}">Two column - right sidebar</option>
-    {% endif %}
+        {% endif %}
+
+        {% if include.two-col-rightsidebar-alt-visibility == "true" %}
+        <option value="two-col-rightsidebar-alt" class="{{include.two-col-rightsidebar-alt-visibility}}">Two column - right sidebar alternate</option>
+        {% endif %}
         
     </select>
     
