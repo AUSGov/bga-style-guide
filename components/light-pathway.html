@@ -3,6 +3,7 @@
 layout: content-tagged
 title: Light pathway list
 description: Link to tertiary content within the context of the page.
+updated: 8 August, 2023
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -22,6 +23,7 @@ subsite-tag: true
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
         %}
 
     </div>
@@ -294,6 +296,7 @@ subsite-tag: true
             single-col-twothirds-visibility="true"
             two-col-leftmenu-visibility="true"
             two-col-rightsidebar-visibility="true"
+            two-col-rightsidebar-alt-visibility="true"
             %}
 
             <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
@@ -442,33 +445,32 @@ subsite-tag: true
                 min1200-visibility="true"
                 min992-visibility="false"
                 min768-visibility="true"
-
+                min576-visibility="true"
                 finalbp-visibility="true"
 
                 finalbp="Breakpoint &lt; 576px"
 
                 min1200-img="'../assets/layout-images/light-2col-rightsidebar-min1200.png' | relative_url "
                 min768-img="'../assets/layout-images/light-2col-rightsidebar-min768.png' | relative_url "
-
+                min576-img="'../assets/layout-images/light-2col-rightsidebar-min576.png' | relative_url "
                 finalbp-img="'../assets/layout-images/light-2col-rightsidebar-finalbp.png' | relative_url "
 
 
                 min1200-rules="<p>The content area is 8 grid-columns wide.</p>
                 <p>Light pathway tiles are 2.5 grid-columns wide each.</p>
-                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
-                        this layout.</strong></p>"
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
 
                 min768-rules="<p>The content area is 8 grid-columns wide.</p>
                 <p>Light pathway tiles are 4 grid-columns wide each.</p>
-                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
-                        this layout.</strong></p>"
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
 
-
+                min576-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles are 6 grid-columns wide each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
 
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
                 <p>Light pathway tiles are 12 grid-columns wide each.</p>
-                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in
-                        this layout.</strong></p>"
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
 
                 example-link="'../html-examples/two-col-right-sidebar.html#light-pathway-example' | relative_url'"
                 example-link-text="View layout example"
@@ -477,6 +479,52 @@ subsite-tag: true
 
             </div>
 
+            <div class="layout-example two-col-rightsidebar-alt mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="twocol-rightbar-alt"
+    
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="true"
+                finalbp-visibility="true"
+    
+                finalbp="Breakpoint &lt; 576px"
+
+                min1200-img="'../assets/layout-images/light-2col-rightsidebar-alt-min1200.png' | relative_url "    
+                min992-img="'../assets/layout-images/light-2col-rightsidebar-alt-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/light-2col-rightsidebar-alt-min768.png' | relative_url "
+                min576-img="'../assets/layout-images/light-2col-rightsidebar-alt-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/light-2col-rightsidebar-alt-finalbp.png' | relative_url "
+    
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Light pathway tiles are 2.5 grid-columns wide each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
+                
+                min992-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Light pathway tiles are 4 grid-columns wide each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
+                
+                min768-rules="<p>The content area is 11 grid-columns wide.</p>
+                <p>Light pathway tiles are 5.5 grid-columns wide each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
+
+                min576-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Light pathway tiles are 6 grid-columns wide each.</p>
+                <p><strong>The vertical and horizontal gap between light pathway tiles is reduced from 32px to 24px in this layout.</strong></p>"
+    
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>light pathway tiles span the full width of the content area.</p>"
+    
+                example-link="'../html-examples/two-col-right-sidebar-alternate.html#light-layout-example' | relative_url'"
+                example-link-text="View layout example"
+    
+                %}
+    
+            </div>
+    
+
 
 
             <!-- GUIDELINES -->
@@ -484,11 +532,11 @@ subsite-tag: true
 
             <h3>Purpose: </h3>
             <p>Generally used as a lightweight option within index pages to link to a list of pages on the site. May be
-                used to show linked page hierarchy alongside hero and standard pathways. </p>
+                used to show linked page hierarchy alongside light and standard pathways. </p>
             <h3>When to use this component: </h3>
             <ul>
                 <li>Light pathways are used primarily on the home, category and topic pages. </li>
-                <li>They may be used to show pathways that are lower in hierarchy than standard and hero pathways.</li>
+                <li>They may be used to show pathways that are lower in hierarchy than standard and light pathways.</li>
             </ul>
 
             <h3>Content rules: </h3>
@@ -496,6 +544,14 @@ subsite-tag: true
                 <li>All light pathway tiles grouped together should have consistent top icon use. Tiles without a top
                     icon should not appear in the same group as tiles with a top icon.</li>
                 <li>Tiles linking to external sites should state the agency or name of website.</li>
+            </ul>
+
+
+             <!-- VERSION HISTORY-->
+            <h2 class="section-start" id="version-history">Version history</h2>
+            <h4>8 August, 2023</h4>
+            <ul>
+                <li>Added an additional layout (the <strong>two column - right sidebar alternate</strong> layout).</li>
             </ul>
 
         </div>

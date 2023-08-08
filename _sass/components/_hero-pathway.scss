@@ -140,6 +140,7 @@
 }
 
 
+
 // Mixins for smaller screen sizes and media queries
 @mixin hero-below992 (){
     .bga-component.hero-pathway {
@@ -168,4 +169,10 @@
 // MEDIA Queries for HTML demo pages.
 @media(max-width: 992px) {
     @include hero-below992();
+
+    // In page example (single tile)    
+    .bga-component.hero-pathway.in-page {
+        width: 100%;
+    }
+
 }

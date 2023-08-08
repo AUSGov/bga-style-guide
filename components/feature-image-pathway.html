@@ -3,6 +3,7 @@
 layout: content-tagged
 title: Feature image pathway
 description: Promote links to high-value content with a feature image.
+updated: 8 August, 2023
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -22,6 +23,7 @@ classes="in-page"
             link-1="Design" link-id-1="#design"
             link-2="Layouts" link-id-2="#layouts" 
             link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+            link-4="Version history" link-id-4="#version-history"
         %}
         
     </div>
@@ -162,7 +164,8 @@ classes="in-page"
             single-col-fullwidth-visibility="true" 
             single-col-twothirds-visibility="true" 
             two-col-leftmenu-visibility="true" 
-            two-col-rightsidebar-visibility="true" 
+            two-col-rightsidebar-visibility="true"
+            two-col-rightsidebar-alt-visibility="true" 
         %}
         
         <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
@@ -279,7 +282,40 @@ classes="in-page"
             
         </div>
         
-        
+        <div class="layout-example two-col-rightsidebar-alt mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar-alt"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min992-img="'../assets/layout-images/featureimage-2col-rightsidebar-alt-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/featureimage-2col-rightsidebar-alt-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/featureimage-2col-rightsidebar-alt-finalbp.png' | relative_url "
+
+            min992-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Feature image components span the full width of the content area.</p>"
+            
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Feature image components span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Feature image components span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar-alternate.html#feature-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
 
 
 
@@ -297,6 +333,17 @@ classes="in-page"
             <li>Display description. </li>
             <li>Display content type label. </li>
             <li>No alt text for pathway image.</li>
-        </ul>     
+        </ul> 
+        
+        
+         <!-- VERSION HISTORY-->
+         <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>8 August, 2023</h4>
+         <ul>
+             <li>Added an additional layout (the <strong>two column - right sidebar alternate</strong> layout).</li>
+         </ul>
+
+
+
         </div>
         
