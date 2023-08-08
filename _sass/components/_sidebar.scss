@@ -310,11 +310,10 @@
 
 
 // Media queries for HTML example pages.
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     // just for in-page more info examples
-    .sidebar-wrapper {
+    .sidebar-wrapper.inpage.alternate {
         margin: 32px 0 0 0 !important;
-
 
         &.colour-example {
             margin: 0 !important;
@@ -322,8 +321,28 @@
         }
     }
     // In-page save your progress
+    @include sidebar-bp-768();
+}
+@media (max-width: 768px) {
+    // just for in-page more info examples
+    .sidebar-wrapper.inpage {
+        margin: 32px 0 0 0 !important;
+
+        &.colour-example {
+            margin: 0 !important;
+            padding-bottom: 32px !important;
+        }
+    }
+    // In-page save your progress
+    @include sidebar-bp-576();
+}
+@media (max-width: 576px) {
     @include sidebar-bp-350();
 }
+@media (max-width: 350px) {
+    @include sidebar-below350();
+}
+
 
 
 
