@@ -3,6 +3,7 @@
 layout: content-tagged
 title: Typography
 description: Guidelines on business.gov.au text styles
+updated: 8 August, 2023
 breadcrumb1: Brand foundations
 url1: /brand-foundations.html
 bga-tag: true
@@ -22,6 +23,7 @@ subsite-tag: true
         link-1="Base typography rules" link-id-1="#base-typography-rules"
         link-2="Text styles" link-id-2="#text-styles"
         link-3="Layouts" link-id-3="#layouts"
+        link-4="Version history" link-id-4="#version-history"
         %}
 
     </div>
@@ -45,7 +47,8 @@ subsite-tag: true
             <li>Body copy elements have no margin (top and bottom) and 24px padding below.</li>
             <li>Heading elements (H1, H2, H3, H4, H5) have padding above as well as the 24px padding below. The amount
                 of padding depends on the heading level.</li>
-            <li>When two heading elements appear together (without any text separating them) the top padding is removed from the second heading.</li>
+            <li>When two heading elements appear together (without any text separating them) the top padding is removed
+                from the second heading.</li>
             <li>H1 elements are reserved for use in the page header. They should not appear elsewhere on the page.</li>
         </ul>
 
@@ -345,7 +348,8 @@ subsite-tag: true
 
         <div class="component-example foundation-example mb-4">
             {% include component-examples/typography-example.html
-            text-example="<p class='label-search-cards'>Search card labels. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+            text-example="<p class='label-search-cards'>Search card labels. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.</p>"
             font="Open Sans SemiBold 600"
             fontsize="12px"
             colour="#333333"
@@ -384,160 +388,201 @@ subsite-tag: true
 
 
 
-         <!-- LAYOUTS -->   
-         <h2 class="section-start" id="layouts">Layouts</h2>
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
 
 
-         <p>Body copy is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all page layouts except the two column - left filters layout</a>.</p>
+        <p>Body copy is used on <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>all page
+                layouts except the two column - left filters layout</a>.</p>
 
 
-    {% include layouts-dropdown.html
+        {% include layouts-dropdown.html
         single-col-fullwidth-visibility="true"
         single-col-twothirds-visibility="true"
         two-col-leftmenu-visibility="true"
         two-col-rightsidebar-visibility="true"
-    %}
-
-
-    <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
-
-        {% include layouts-accordion.html
-        layout-name="onecol-fw"
-
-        min1200-visibility="true"
-        min992-visibility="true"
-        min768-visibility="false"
-        min576-visibility="false"
-        finalbp-visibility="true"
-
-        finalbp="Breakpoint &lt; 992px"
-
-        min1200-img="'../assets/layout-images/bodycopy-1colfullwidth-min1200.png' | relative_url "
-        min992-img="'../assets/layout-images/bodycopy-1colfullwidth-min992.png' | relative_url "
-        finalbp-img="'../assets/layout-images/bodycopy-1colfullwidth-finalbp.png' | relative_url "
-
-
-        min1200-rules="<p>The content area is 12 grid-columns wide.</p>
-        <p>Body copy spans 8 grid-columns each.</p>"
-
-        min992-rules="<p>The content area is 12 grid-columns wide.</p>
-        <p>Body copy spans 9 grid-columns each.</p>"
-
-        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-        <p>Body copy spans 12 grid-columns each.</p>"
-
-        example-link="'../html-examples/single-col-full-width.html#bodycopy-example' | relative_url'"
-        example-link-text="View layout example"
-
+        two-col-rightsidebar-alt-visibility="true"
         %}
 
 
-    </div>
+        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="onecol-fw"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="false"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+            min1200-img="'../assets/layout-images/bodycopy-1colfullwidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/bodycopy-1colfullwidth-min992.png' | relative_url "
+            finalbp-img="'../assets/layout-images/bodycopy-1colfullwidth-finalbp.png' | relative_url "
 
 
-    <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+            min1200-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Body copy spans 8 grid-columns each.</p>"
 
-        {% include layouts-accordion.html
-        layout-name="onecol-twothirdsw"
+            min992-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Body copy spans 9 grid-columns each.</p>"
 
-        min1200-visibility="true"
-        min992-visibility="true"
-        min768-visibility="true"
-        min576-visibility="false"
-        finalbp-visibility="true"
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Body copy spans 12 grid-columns each.</p>"
 
-        finalbp="Breakpoint &lt; 768px"
+            example-link="'../html-examples/single-col-full-width.html#bodycopy-example' | relative_url'"
+            example-link-text="View layout example"
 
-        min1200-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min1200.png' | relative_url "
-        min992-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min992.png' | relative_url "
-        min768-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min768.png' | relative_url "
-        finalbp-img="'../assets/layout-images/bodycopy-1col2thirdswidth-finalbp.png' | relative_url "
-
-        min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
-
-        min992-rules="<p>The content area is 9 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
-
-        min768-rules="<p>The content area is 11 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
-
-        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
-
-        example-link="'../html-examples/single-col-two-thirds-width.html#bodycopy-example' | relative_url'"
-        example-link-text="View layout example"
-
-        %}
-
-    </div>
+            %}
 
 
-    <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
-
-        {% include layouts-accordion.html
-        layout-name="twocol-leftmenu"
-
-        min1200-visibility="true"
-        min992-visibility="false"
-        min768-visibility="false"
-        min576-visibility="true"
-        finalbp-visibility="true"
-
-        finalbp="Breakpoint &lt; 576px"
-
-        min1200-img="'../assets/layout-images/bodycopy-2col-leftmenu-min1200.png' | relative_url "
-        min576-img="'../assets/layout-images/bodycopy-2col-leftmenu-min576.png' | relative_url "
-        finalbp-img="'../assets/layout-images/bodycopy-2col-leftmenu-finalbp.png' | relative_url "
-
-        min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
-
-        min576-rules="<p>The content area is 9 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
-
-        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
-
-        example-link="'../html-examples/two-col-left-side-menu.html#fbodycopy-example' | relative_url'"
-        example-link-text="View layout example"
-
-        %}
-
-    </div>
+        </div>
 
 
-    <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
 
-        {% include layouts-accordion.html
-        layout-name="twocol-rightbar"
+            {% include layouts-accordion.html
+            layout-name="onecol-twothirdsw"
 
-        min1200-visibility="false"
-        min992-visibility="false"
-        min768-visibility="true"
-        min576-visibility="false"
-        finalbp-visibility="true"
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
 
-        finalbp="Breakpoint &lt; 768px"
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min1200.png' | relative_url "
+            min992-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/bodycopy-1col2thirdswidth-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/bodycopy-1col2thirdswidth-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-two-thirds-width.html#bodycopy-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
 
 
-        min768-img="'../assets/layout-images/bodycopy-2col-rightsidebar-min768.png' | relative_url "
-        finalbp-img="'../assets/layout-images/bodycopy-2col-rightsidebar-finalbp.png' | relative_url "
+        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-leftmenu"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="false"
+            min576-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 576px"
+
+            min1200-img="'../assets/layout-images/bodycopy-2col-leftmenu-min1200.png' | relative_url "
+            min576-img="'../assets/layout-images/bodycopy-2col-leftmenu-min576.png' | relative_url "
+            finalbp-img="'../assets/layout-images/bodycopy-2col-leftmenu-finalbp.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            min576-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-left-side-menu.html#fbodycopy-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
 
 
-        min768-rules="<p>The content area is 8 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
+        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
 
-        finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-        <p>Body copy spans the full width of the content area.</p>"
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
 
-        example-link="'../html-examples/two-col-right-sidebar.html#bodycopy-example' | relative_url'"
-        example-link-text="View layout example"
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
 
-        %}
+            finalbp="Breakpoint &lt; 768px"
 
-    </div>
 
+            min768-img="'../assets/layout-images/bodycopy-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/bodycopy-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Body copy spans the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar.html#bodycopy-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+        <div class="layout-example two-col-rightsidebar-alt mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="twocol-rightbar"
+            
+                min1200-visibility="false"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min992-img="'../assets/layout-images/bodycopy-2col-rightsidebar-alt-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/bodycopy-2col-rightsidebar-alt-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/bodycopy-2col-rightsidebar-alt-finalbp.png' | relative_url "
+            
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Body copy span the full width of the content area.</p>"
+
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Body copy span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Body copy span the full width of the content area.</p>"
+            
+                example-link="'../html-examples/two-col-right-sidebar-alternate.html#bodycopy-example' | relative_url'"
+                example-link-text="View layout example"
+
+            %}
+            
+        </div>
+
+
+
+
+        <!-- VERSION HISTORY-->
+            <h2 class="section-start" id="version-history">Version history</h2>
+            <h4>8 August, 2023</h4>
+            <ul>
+                <li>Added an additional layout (the <strong>two column - right sidebar alternate</strong> layout).</li>
+            </ul>
 
     </div>
 
