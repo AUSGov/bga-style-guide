@@ -3,6 +3,7 @@
 layout: content-tagged
 title: Standard checklist accordion
 description: A checklist for presenting an end to end journey in logical steps.
+updated: 14 August, 2023
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -17,11 +18,12 @@ subsite-tag: true
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         {% include component-examples/anchor-menu-example.html
-classes="in-page"
+        classes="in-page"
 
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
         %}
 
     </div>
@@ -109,47 +111,45 @@ classes="in-page"
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Standard checklist accordions are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar layout</a>. They should not be used in other layouts.</p>
+        <p>Standard checklist accordions are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar alternate layout</a>. They should not be used in other layouts.</p>
 
 
         {% include layouts-dropdown.html
-            layout-name="Single column - full width"
+            layout-name="Two column - right sidebar alternate"
             singlelayout="true"
             %}
     
-            <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+            <div class="layout-example two-col-rightsidebar-alt show mt-0 mb-5 px-4 py-0">
+            
+                {% include layouts-accordion.html 
+                    layout-name="twocol-rightbar"
+                
+                    min1200-visibility="false"
+                    min992-visibility="true"
+                    min768-visibility="true"
+                    min576-visibility="false"
+                    finalbp-visibility="true"
+                    
+                    finalbp="Breakpoint &lt; 768px"
+                
+                    min992-img="'../assets/layout-images/standard-checklist-2col-rightsidebar-alt-min992.png' | relative_url "
+                    min768-img="'../assets/layout-images/standard-checklist-2col-rightsidebar-alt-min768.png' | relative_url "
+                    finalbp-img="'../assets/layout-images/standard-checklist-2col-rightsidebar-alt-finalbp.png' | relative_url "
+                
+                    min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Standard checklist accordions span the full width of the content area.</p>"
     
-                {% include layouts-accordion.html
-                layout-name="twocol-rightbar"
-    
-                min1200-visibility="false"
-                min992-visibility="false"
-                min768-visibility="true"
-                min576-visibility="false"
-                finalbp-visibility="true"
-    
-                finalbp="Breakpoint &lt; 768px"
-    
-    
-                min768-img="'../assets/layout-images/standard-checklist-2col-rightsidebar-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/standard-checklist-2col-rightsidebar-finalbp.png' | relative_url "
-    
-    
-                min768-rules="<p>The content area is 8 grid-columns wide.</p>
-                <p>Standard checklist accordions span the full width of the content area.</p>"
-    
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-                <p>Standard checklist accordions span the full width of the content area.</p>
-                "
-    
-                example-link="'../html-examples/two-col-right-sidebar.html' | relative_url'"
-                example-link-text="View layout example"
+                    min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Standard checklist accordions span the full width of the content area.</p>"
+                
+                    finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Standard checklist accordions span the full width of the content area.</p>"
+                
+                    example-link="'../html-examples/two-col-right-sidebar-alternate.html#checklist-example' | relative_url'"
+                    example-link-text="View layout example"
     
                 %}
-    
+                
             </div>
-    
-    
+
+
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
@@ -169,6 +169,14 @@ classes="in-page"
         <li>When the user only needs to read guidance and not take an action (use Guide pattern instead).</li>
         <li>When you are educating the user about a specific stage in an end to end journey (use the tutorial pattern).</li>
         </ul>
+
+
+         <!-- VERSION HISTORY-->
+         <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>14 August, 2023</h4>
+         <ul>
+             <li>Changed the page layout for standard accordion checklists to the <strong>two column - right sidebar alternate</strong> layout.</li>
+         </ul>
         
 
     </div>
