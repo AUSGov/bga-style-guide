@@ -1,0 +1,227 @@
+---
+
+layout: content-tagged
+title: Tags
+description: Read-only status indicators or labels that are not interactive.
+breadcrumb1: Brand foundations
+url1: /brand-foundations.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Tag styles" link-id-1="#tag-styles"
+        link-2="Design specifications" link-id-2="#design-specifications"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-10">
+
+        <!--DIRECTION -->
+        <h2 class="section-start" id="tag-styles">Tag styles</h2>
+        <h3>Style rules</h3>
+        <p>Base tags have 4px padding top and bottom and 8px padding on the left and right.</p>
+        <p>When borders are applied to tags the padding is adjusted to incorporate the width of the border. e.g. applying a 2px border reduces the padding to 2px top and bottom and 6px on the left and right.</p>
+
+        <h3>Base tags</h3>
+        
+        <div class="component-example mb-5">
+
+            <div class="component-wrapper row-col-24 d-flex flex-wrap justify-content-start remove-element-padding p-4">
+              
+                {% include component-examples/tag-example.html
+                tag="<strong>Current financial year</strong> (2022-2023)"
+                classes="base green"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="<strong>Previous financial year</strong> (2021-2022)"
+                classes="base yellow"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="Blue tag example"
+                classes="base blue"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="Red tag example"
+                classes="base red"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="Purple tag"
+                classes="base purple"
+                %}
+
+                {% include component-examples/tag-example.html
+                tag="Teal tag"
+                classes="base teal"
+                %}
+
+
+                {% include component-examples/tag-example.html
+                tag="<strong>Current financial year</strong> (2022-2023)"
+                classes="base green tag-border"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="<strong>Previous financial year</strong> (2021-2022)"
+                classes="base yellow tag-border"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="Blue tag example"
+                classes="base tag-border"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="Red tag example"
+                classes="base red tag-border"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="Purple tag"
+                classes="base purple tag-border"
+                %}
+
+                {% include component-examples/tag-example.html
+                tag="Teal tag"
+                classes="base teal tag-border"
+                %}
+
+            </div>
+
+        </div>
+
+        <h3>Tags with small icons</h3>
+
+        <div class="component-example mb-5">
+
+            <div class="component-wrapper row-col-24 d-flex flex-wrap justify-content-start remove-element-padding p-4">
+
+
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-tick-box-green.svg' | relative_url"
+                tag="Open"
+                classes="base green"
+                %}
+
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-events-yellow.svg' | relative_url"
+                tag="Coming soon"
+                classes="base yellow"
+                %}
+            
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-closed-red.svg' | relative_url"
+                tag="Closed"
+                classes="base red"
+                %}
+
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-pin-black.svg' | relative_url"
+                tag="<strong>Service area</strong> Australia wide"
+                classes="base blue"
+                %}
+        
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-checklist.svg' | relative_url"
+                tag="Checklist"
+                classes="base purple"
+                %}
+
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-tool.svg' | relative_url"
+                tag="Tool"
+                classes="base teal"
+                %}
+
+            </div>
+
+        </div>
+
+
+        <h3>Tags with large text and icons</h3>
+
+        <div class="component-example mb-5">
+
+            <div class="component-wrapper row-col-24 d-flex flex-wrap justify-content-start remove-element-padding bkg-blue-grey p-4">
+
+
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-tick-greencircle.svg' | relative_url"
+                tag="Open"
+                classes="base lrg white"
+                %}
+
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-events-yellow.svg' | relative_url"
+                tag="Coming soon"
+                classes="base lrg white"
+                %}
+            
+                {% include component-examples/tag-example.html
+                icon=" '../assets/icon-closed-red.svg' | relative_url"
+                tag="Closed"
+                classes="base lrg white"
+                %}
+
+
+            </div>
+
+        </div>
+
+
+        <h3>Tags with reduced padding</h3>
+
+        <div class="component-example mb-5">
+
+            <div class="component-wrapper row-col-24 d-flex flex-wrap justify-content-start remove-element-padding p-4">
+
+                {% include component-examples/tag-example.html
+                tag="Open"
+                classes="base sml green white tag-border"
+                %}
+
+                {% include component-examples/tag-example.html
+                tag="Coming soon"
+                classes="base sml yellow"
+                %}
+            
+                {% include component-examples/tag-example.html
+                tag="Closed"
+                classes="base sml red"
+                %}
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Design specifications link -->
+        <h2 class="section-start" id="design-specifications">Design specifications</h2>
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/dac5776a-f666-4d41-9560-6cf5d771c808/'"
+        btn-text="View design specifications"
+        %}
+
+
+    </div>
+
+
+
+</div>

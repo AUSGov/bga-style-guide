@@ -29,6 +29,10 @@
         margin-top: 0;
     }
 }
+.row-col-24 {
+    column-gap: 24px;
+    row-gap: 24px;
+}
 
 .label {
     font-weight: 600;
@@ -249,6 +253,9 @@ table.table {
     .filter-tags {
         display: flex;
         flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: 8px;
+        row-gap: 8px;
 
         &:empty {
             display: none;
@@ -257,7 +264,7 @@ table.table {
 
     .filter-tag {
         background: $bga-purple-highlight-light;
-        border-radius: 20px;
+        border-radius: 4px;
         white-space: nowrap;
         font-size: .75rem;
         font-weight: 600;
@@ -273,6 +280,7 @@ table.table {
 
         .filter-tag {
             border: $bga-purple-highlight-shadow solid 2px;
+            padding: 2px 6px !important;
         }
     }
 
@@ -574,6 +582,9 @@ table.table {
 
 .bkg-grey {
     background: rgba(51, 51, 51, .3);
+}
+.bkg-blue-grey {
+    background: $bga-blue-black-lightest;
 }
 
 .approved-icons {
