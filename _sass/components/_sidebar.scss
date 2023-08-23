@@ -180,7 +180,7 @@
             margin-bottom: 0 !important;
             
             .component-content {
-                padding: 16px !important;
+                padding: 24px !important;
                 display: flex;
                 align-items: center;
             }   
@@ -188,15 +188,18 @@
                 display: block;
 
                 button {
-                    text-indent: -9999px;
-                    height: 48px;
-                    width: 48px;
-                    padding: 0;
-                    right: 16px;
-                    bottom: 16px;
+                    height: 56px;
+                    width: auto;
                     position: absolute;
-                    background-position: top 10px center;
+                    background-position: right 32px center;
                     background-size: 24px 24px;
+                    display: inline-flex;
+                    align-items: center;
+                    z-index: 9000;
+                    border-radius: 60px;
+                    box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2);
+                    right: 24px;
+                    bottom: 24px;  
                 }
             }
             .component-text {
@@ -210,13 +213,14 @@
             }
         }
     }
-    .clear-progress-link {
+    .clear-progress-link.alternate {
         display: none;
     }
 }
 
-@mixin sidebar-bp-576 {
-    .sidebar-wrapper {
+@mixin sidebar-bp-350 {
+    .sidebar-wrapper, 
+    .sidebar-wrapper.alternate {
         &.save-progress {
             width: 100%;
             max-width: none;
@@ -228,6 +232,12 @@
                 display: flex;
                 align-items: center;
             }   
+            .bga-btn {
+                font-size: .875rem;
+                line-height: 1.125rem;
+                padding: 12px 24px;
+                min-height: 48px;
+            }
             .mobile-chat {
                 display: block;
 
@@ -246,29 +256,10 @@
             .component-text {
                 display: none;
             }
-
-            &.in-page {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-            }
         }
     }
     .clear-progress-link {
         display: none;
-    }
-}
-
-@mixin sidebar-bp-350 {
-    .sidebar-wrapper {
-        &.save-progress {
-            .bga-btn {
-                font-size: .875rem;
-                line-height: 1.125rem;
-                padding: 12px 24px;
-                min-height: 48px;
-            }
-        }
     }
 }
 @mixin sidebar-below350 {
@@ -290,20 +281,13 @@
     @include sidebar-bp-768();
 }
 
-.component-example.bp-576 {
-    @include sidebar-bp-768();
-    @include sidebar-bp-576();
-}
-
 .component-example.bp-350 {
     @include sidebar-bp-768();
-    @include sidebar-bp-576();
     @include sidebar-bp-350();
 }
 
 .component-example.bp-below350 {
     @include sidebar-bp-768();
-    @include sidebar-bp-576();
     @include sidebar-bp-350();
     @include sidebar-below350();
 }
@@ -334,7 +318,7 @@
         }
     }
     // In-page save your progress
-    @include sidebar-bp-576();
+    //@include sidebar-bp-576();
 }
 @media (max-width: 576px) {
     @include sidebar-bp-350();
