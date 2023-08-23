@@ -7345,7 +7345,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-768 .sidebar-wrapper.alternate.save-progress .component-text { display: none; }
 
-.component-example.bp-768 .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; }
+.component-example.bp-768 .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; z-index: 8000; }
 
 .component-example.bp-768 .clear-progress-link.alternate { display: none; }
 
@@ -7359,7 +7359,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-350 .sidebar-wrapper.alternate.save-progress .component-text { display: none; }
 
-.component-example.bp-350 .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; }
+.component-example.bp-350 .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; z-index: 8000; }
 
 .component-example.bp-350 .clear-progress-link.alternate { display: none; }
 
@@ -7375,6 +7375,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-350 .sidebar-wrapper.save-progress .component-text, .component-example.bp-350 .sidebar-wrapper.alternate.save-progress .component-text { display: none; }
 
+.component-example.bp-350 .sidebar-wrapper.save-progress.in-page, .component-example.bp-350 .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; z-index: 8000; }
+
 .component-example.bp-350 .clear-progress-link { display: none; }
 
 .component-example.bp-below350 .sidebar-wrapper.alternate.save-progress { width: 100%; max-width: none; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); margin-bottom: 0 !important; }
@@ -7387,7 +7389,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below350 .sidebar-wrapper.alternate.save-progress .component-text { display: none; }
 
-.component-example.bp-below350 .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; }
+.component-example.bp-below350 .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; z-index: 8000; }
 
 .component-example.bp-below350 .clear-progress-link.alternate { display: none; }
 
@@ -7403,17 +7405,17 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below350 .sidebar-wrapper.save-progress .component-text, .component-example.bp-below350 .sidebar-wrapper.alternate.save-progress .component-text { display: none; }
 
+.component-example.bp-below350 .sidebar-wrapper.save-progress.in-page, .component-example.bp-below350 .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; z-index: 8000; }
+
 .component-example.bp-below350 .clear-progress-link { display: none; }
 
 .component-example.bp-below350 .sidebar-wrapper.save-progress .button-example { width: calc(100% - 64px); }
 
 .component-example.bp-below350 .sidebar-wrapper.save-progress .button-example .bga-btn { width: 100%; }
 
-@media (max-width: 992px) { .sidebar-wrapper.inpage.alternate { margin: 32px 0 0 0 !important; } .sidebar-wrapper.inpage.alternate.colour-example { margin: 0 !important; padding-bottom: 32px !important; } .sidebar-wrapper.alternate.save-progress { width: 100%; max-width: none; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); margin-bottom: 0 !important; } .sidebar-wrapper.alternate.save-progress .component-content { padding: 24px !important; display: flex; align-items: center; } .sidebar-wrapper.alternate.save-progress .mobile-chat { display: block; } .sidebar-wrapper.alternate.save-progress .mobile-chat button { height: 56px; width: auto; position: absolute; background-position: right 32px center; background-size: 24px 24px; display: inline-flex; align-items: center; z-index: 9000; border-radius: 60px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); right: 24px; bottom: 24px; } .sidebar-wrapper.alternate.save-progress .component-text { display: none; } .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; } .clear-progress-link.alternate { display: none; } }
+@media (max-width: 992px) { .sidebar-wrapper.inpage.alternate { margin: 32px 0 0 0 !important; } .sidebar-wrapper.inpage.alternate.colour-example { margin: 0 !important; padding-bottom: 32px !important; } .sidebar-wrapper.alternate.save-progress { width: 100%; max-width: none; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); margin-bottom: 0 !important; } .sidebar-wrapper.alternate.save-progress .component-content { padding: 24px !important; display: flex; align-items: center; } .sidebar-wrapper.alternate.save-progress .mobile-chat { display: block; } .sidebar-wrapper.alternate.save-progress .mobile-chat button { height: 56px; width: auto; position: absolute; background-position: right 32px center; background-size: 24px 24px; display: inline-flex; align-items: center; z-index: 9000; border-radius: 60px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); right: 24px; bottom: 24px; } .sidebar-wrapper.alternate.save-progress .component-text { display: none; } .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; z-index: 8000; } .clear-progress-link.alternate { display: none; } }
 
-@media (max-width: 768px) { .sidebar-wrapper.inpage { margin: 32px 0 0 0 !important; } .sidebar-wrapper.inpage.colour-example { margin: 0 !important; padding-bottom: 32px !important; } }
-
-@media (max-width: 576px) { .sidebar-wrapper.save-progress, .sidebar-wrapper.alternate.save-progress { width: 100%; max-width: none; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); margin-bottom: 0 !important; } .sidebar-wrapper.save-progress .component-content, .sidebar-wrapper.alternate.save-progress .component-content { padding: 16px !important; display: flex; align-items: center; } .sidebar-wrapper.save-progress .bga-btn, .sidebar-wrapper.alternate.save-progress .bga-btn { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; min-height: 48px; } .sidebar-wrapper.save-progress .mobile-chat, .sidebar-wrapper.alternate.save-progress .mobile-chat { display: block; } .sidebar-wrapper.save-progress .mobile-chat button, .sidebar-wrapper.alternate.save-progress .mobile-chat button { text-indent: -9999px; height: 48px; width: 48px; padding: 0; right: 16px; bottom: 16px; position: absolute; background-position: top 10px center; background-size: 24px 24px; } .sidebar-wrapper.save-progress .component-text, .sidebar-wrapper.alternate.save-progress .component-text { display: none; } .clear-progress-link { display: none; } }
+@media (max-width: 768px) { .sidebar-wrapper.inpage { margin: 32px 0 0 0 !important; } .sidebar-wrapper.inpage.colour-example { margin: 0 !important; padding-bottom: 32px !important; } .sidebar-wrapper.save-progress, .sidebar-wrapper.alternate.save-progress { width: 100%; max-width: none; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); margin-bottom: 0 !important; } .sidebar-wrapper.save-progress .component-content, .sidebar-wrapper.alternate.save-progress .component-content { padding: 16px !important; display: flex; align-items: center; } .sidebar-wrapper.save-progress .bga-btn, .sidebar-wrapper.alternate.save-progress .bga-btn { font-size: .875rem; line-height: 1.125rem; padding: 12px 24px; min-height: 48px; } .sidebar-wrapper.save-progress .mobile-chat, .sidebar-wrapper.alternate.save-progress .mobile-chat { display: block; } .sidebar-wrapper.save-progress .mobile-chat button, .sidebar-wrapper.alternate.save-progress .mobile-chat button { text-indent: -9999px; height: 48px; width: 48px; padding: 0; right: 16px; bottom: 16px; position: absolute; background-position: top 10px center; background-size: 24px 24px; } .sidebar-wrapper.save-progress .component-text, .sidebar-wrapper.alternate.save-progress .component-text { display: none; } .sidebar-wrapper.save-progress.in-page, .sidebar-wrapper.alternate.save-progress.in-page { position: fixed; bottom: 0; left: 0; z-index: 8000; } .clear-progress-link { display: none; } }
 
 @media (max-width: 350px) { .sidebar-wrapper.save-progress .button-example { width: calc(100% - 64px); } .sidebar-wrapper.save-progress .button-example .bga-btn { width: 100%; } }
 
