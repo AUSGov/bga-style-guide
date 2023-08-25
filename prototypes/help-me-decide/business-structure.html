@@ -38,6 +38,8 @@
     
     <!-- Textarea highlight -->
     <script src=/bga-style-guide/js/jquery.highlight-within-textarea.js ></script>
+
+    <script src=/bga-style-guide/js/jquery.treegrid.js ></script>
     
     <!-- Style Guide JS -->
     <script src=/bga-style-guide/js/bga-scripts.js ></script>
@@ -912,26 +914,27 @@
 
             <h2>Business structure</h2>
 
-            <div class="question-section remove-element-padding">
+            <!-- know-structure -->
+            <div class="question-section q-know-structure remove-element-padding">
 
-                <div class="mb-5 p-0 form-example">
-                    <h3 for="know-structure" class="form-label h3-font-size heading-color mb-3"><strong>Do you know what  business structure you plan to use?</strong></h3>
-                    <p class="mb-3">There are a number of structures that you can choose from when starting or expanding
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="know-structure" class="form-label h3-font-size heading-color mb-3"><strong>Do you know what business structure you plan to use?</strong></h3>
+                    <p class="">There are a number of structures that you can choose from when starting or expanding
                         your business including <strong>sole trader</strong>, <strong>company</strong>,
                         <strong>partnership</strong> and <strong>trust</strong>.</p>
 
-                    <div class="clause-box-radios radios" id="employment-type" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="know-structure" role="radiogroup">
 
-                        <div class="radio-button alternate pb-1">
+                        <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="know-structure" id="know-structure-yes"
                                 data-value="know-structure-yes">
-                            <label class="form-check-label" for="fulltime">Yes</label>
+                            <label class="form-check-label" for="know-structure-yes">Yes</label>
                         </div>
 
-                        <div class="radio-button alternate pb-1">
-                            <input class="form-check-input m-0" type="radio" name="know-structure" id="parttime"
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="know-structure" id="know-structure-no"
                                 data-value="know-structure-no">
-                            <label class="form-check-label" for="parttime">No</label>
+                            <label class="form-check-label" for="know-structure-no">No</label>
                         </div>
 
 
@@ -943,23 +946,239 @@
 
             <hr class="section-divider my-5" />
 
+
+            <!-- IF YES -->
+
+            <!-- business-structure -->
+            <div class="question-section q-business-structure remove-element-padding d-none">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="business-structure" class="form-label h3-font-size heading-color mb-3"><strong>What business structure will you use?</strong></h3>
+
+                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" id="business-structure" role="radiogroup">
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="sole-trader"
+                                data-value="sole-trader">
+                            <label class="form-check-label remove-element-padding" for="sole-trader"><p><strong>Sole trader</strong> - an individual who is the sole owner of the business.</p></label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="partnership"
+                                data-value="partnership">
+                            <label class="form-check-label remove-element-padding" for="partnership"><p><strong>Partnership</strong> - partners carry on a business together and share income, losses, and control of the business.</p></label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="company"
+                                data-value="company">
+                            <label class="form-check-label remove-element-padding" for="company"><p><strong>Company</strong> - a separate legal entity from you that has at least one shareholder (owner) and one director (who runs the business).</p></label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="trust"
+                                data-value="trust">
+                            <label class="form-check-label remove-element-padding" for="trust"><p><strong>Trust</strong> - the business or businesslike activity is managed by a trustee for the benefit of others (the beneficiaries).</p></label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="superannuation"
+                                data-value="superannuation">
+                            <label class="form-check-label remove-element-padding" for="superannuation"><p><strong>Superannuation</strong> - this means all superannuation entities including Self-Managed Super Funds (SMSFs). For a super fund to exist it must hold assets and have a trust with an appointed trustee.</p></label>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="section-divider my-5" />
+
+
+            <!-- IF NO -->
+
+            <!-- number-owners -->
+            <div class="question-section q-number-owners remove-element-padding">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="number-owners" class="form-label h3-font-size heading-color mb-3"><strong>How many owners will your business have?</strong></h3>
+                    <p class="">A business owner is lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet odio pulvinar, rhoncus dui congue, semper purus.</p>
+
+                    <div class="radios w-50 d-flex radio-flex-group" id="number-owners" role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="number-owners" id="number-owners-one"
+                                data-value="number-owners-one">
+                            <label class="form-check-label" for="number-owners-one">One (just me)</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="number-owners" id="number-owners-two"
+                                data-value="number-owners-two">
+                            <label class="form-check-label" for="number-owners-no">Two or more</label>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="section-divider my-5" />
+
+            <!-- hold-assets -->
+            <div class="question-section q-hold-assets remove-element-padding">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="hold-assets" class="form-label h3-font-size heading-color mb-3"><strong>Will you hold and control an asset for the benefit of others?</strong></h3>
+                    <p class="">Assets are lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet odio pulvinar, rhoncus dui congue, semper purus.</p>
+
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="hold-assets" role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="hold-assets" id="hold-assets-yes"
+                                data-value="hold-assets-yes">
+                            <label class="form-check-label" for="hold-assets-yes">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="hold-assets" id="hold-assets-no"
+                                data-value="hold-assets-no">
+                            <label class="form-check-label" for="hold-assets-no">No</label>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="section-divider my-5" />
+
+            <!-- COMPARISON TABLES -->
+
+            <!-- sole-trader-v-company -->
+            <div class="question-section q-sole-trader-v-company remove-element-padding">
+                    <h3>Choose your business structure</h3>
+                    <p class="">Based on your answers the <strong>sole trader</strong> or <strong>company</strong> structure may be right for you.</p>
+                    <p>Compare the list of characteristics below to help you decide which business you would prefer to set up.</p>
+            
+
+                    <table id="treegrid-stvc" class="w-100 treegrid mb-5" role="treegrid" aria-label="Inbox">
+                        <colgroup>
+                          <col id="treegrid-stvc-col1">
+                          <col id="treegrid-stvc-col2">
+                          <col id="treegrid-stvc-col3">
+                          <col id="treegrid-stvc-col3">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">Consideration</th>
+                            <th scope="col">Sole trader</th>
+                            <th scope="col">Company</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false" tabindex="0">
+                            <td role="gridcell"><strong>Business decisions are made by:</strong></td>
+                            <td role="gridcell">Sole trader</td>
+                            <td role="gridcell">Directors</td>
+                            <td role="gridcell" class="learn-more"><button>Learn more</button></td>
+                          </tr>
+                          <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1" class="hidden">
+                            <td colspan="4" role="gridcell"><p>As a sole trader, you're responsible for all business decisions.</p>
+                            <p>In a company, the directors are responsible for business decisions and must make a record of certain decisions. If you're the only director, you have full control.</p>
+                            <p>If there is more than one director, the way the company will be run (including how decisions are made) will follow certain rules. These rules are usually set out in the company's <a href="">constitution or replaceable rules</a>.</p></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="sole-trader-v-company" class="form-label h3-font-size heading-color mb-3"><strong>Which business structure would you prefer?</strong></h3>
+                    
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="sole-trader-v-company" role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="sole-trader-v-company" id="sole-trader-1"
+                                data-value="sole-trader-1">
+                            <label class="form-check-label" for="sole-trader-1">Sole trader</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="sole-trader-v-company" id="company-1"
+                                data-value="company-1">
+                            <label class="form-check-label" for="company-1">Company</label>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="section-divider my-5" />
+
+             
+
+
             <!-- BUTTON GROUP -->
-            <div class="tool-button-group">
+            <div class="tool-button-group button-group">
 
                 <a class="bga-link bga-inline-link bkg-light" tabindex="0" href=/bga-style-guide/prototypes/help-me-decide/landing.html role="button">Previous</a>
-
 
                 <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href=/bga-style-guide/prototypes/help-me-decide/business-name.html role="button">Next</a>
 
             </div>
 
 
-
         </div>
 
 
         <div class="remove-top-spaces col-12 col-md-4">
+            <div class="sidebar-wrapper recommendations-sidebar mb-4 p-0 ">
+    <div class="bga-component sidebar m-0 p-0">
+        
+        
+        <div class="sidebar-section business-structure mb-4">
+            <div class="title remove-element-padding px-4 py-3">
+                <p><strong>Business structure</strong></p>
+            </div>
+            <div class="content remove-element-padding px-4 py-3">
+                <p>No chosen structure yet</p>
+            </div>
+        </div>
 
+
+        <div class="sidebar-section recommendations">
+            <div class="title remove-element-padding px-4 py-3">
+                <p><strong>Recommendation registrations</strong></p>
+            </div>
+            <div class="content remove-element-padding px-4 py-3">
+                <p>No recommendations yet</p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
         </div>
 
     </div>
