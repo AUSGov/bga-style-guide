@@ -1,4 +1,4 @@
-<div class="start-component-wrapper {{ include.classes}} p-4 mb-5">
+<div class="start-component-wrapper {{include.classes}} p-4 mb-5">
 
     {% if include.page-title %}
     <h1>{{ include.page-title }}</h1>
@@ -18,7 +18,11 @@
                 {% endif %}
 
                 <div class="button-example">
+                    {% if include.link %} 
+                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{include.link}}>Start now</a>
+                    {% else %}
                     <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Start now</a>
+                    {% endif %}
                 </div>
 
 
@@ -40,7 +44,11 @@
               <p>{{ include.time }}</p>
 
               <div class="button-example mb-0">
+                {% if include.link %} 
+                <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{include.link}}>Start now</a>
+                {% else %}
                 <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Start now</a>
+                {% endif %}
             </div>
               
 
