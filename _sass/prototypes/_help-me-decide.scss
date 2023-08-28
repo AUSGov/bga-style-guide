@@ -3,7 +3,9 @@
         row-gap: 8px;
         column-gap: 8px;
     }
-
+    .recommendations-sidebar-wrapper {
+        //position: relative;
+    }
     .recommendations-sidebar {
         .business-structure {
             .title {
@@ -20,9 +22,28 @@
             .content {
                 background: $bga-yellow-highlight-light;
             }
+            li {
+                text-indent: 0;
+                display: none;
+                margin: 0;
+                margin-bottom: 8px;
+
+                &.show {
+                    display: block;
+                }
+                &::before {
+                    display: none;    
+                }
+            }
+        }
+        &.fixed {
+            position: fixed;
+            top: 32px;
+        }
+        &.mobile-hide {
+            display: none;
         }
     }
-
 
 
     .treegrid {
