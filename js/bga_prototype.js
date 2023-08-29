@@ -1,28 +1,5 @@
 /*jshint browser: true, devel: true, jquery: true*/
 
-// Global objects storing answer combinations for help me decide
-var sole_trader = {
-    structure: 'Sole trader',
-    registrations: ['reg-individual-tfn', 'reg-abn']
-};
-var partnership = {
-    structure: 'Partnership',
-    registrations: ['reg-business-tfn', 'reg-abn']
-};
-var company = {
-    structure: 'Company',
-    registrations: ['reg-business-tfn', 'reg-abn']
-};
-var trust = {
-    structure: 'Trust',
-    registrations: ['reg-business-tfn', 'reg-abn']
-};
-var superannuation = {
-    structure: 'Superannuation',
-    registrations: ['reg-business-tfn', 'reg-abn']
-};
-
-
 $(document).ready(function () {
 
     // Check page is part of the BGA prototype
@@ -198,6 +175,26 @@ $(document).ready(function () {
     // HELP ME DECIDE
     // Check page is Help me decide prototype
     if ($('#help-me-decide-prototype').length) {
+
+        //Set recommendations sidebar on page load
+        var get_recommendations = function(){
+            var structure = sessionStorage.getItem('business-structure');
+            if (structure) {
+                $('.recommendations-sidebar .chosen-structure').text(structure);
+            }
+
+            var registrations = sessionStorage.getItem('registrations');
+            if (registrations) {
+                $('.recommendations li').each(function(){
+                    var registration = $(this).attr('data-value');
+                    if (registrations.includes(registration)) {
+                        $(this).addClass('show');
+                    };
+                });
+                $('.recommendations li.no-recommendations').removeClass('show');
+            }
+        };
+        get_recommendations();
         
         // Comparison accordions
         $('.treegrid .learn-more button').on('click', function(){
@@ -206,10 +203,9 @@ $(document).ready(function () {
         });
 
         // Sidebar stickiness
-        var sticky_sidebar = function() {
-            console.log('sticky');
-            var sidebar_position = Math.round($('.recommendations-sidebar').position().top);
-            var sidebar_width = $('.recommendations-sidebar').width();
+        var sticky_recommendations = function() {
+            var sidebar_position = Math.round($('.recommendations-sidebar-wrapper').position().top);
+            var sidebar_width = $('.recommendations-sidebar-wrapper').width();
             var sidebar_height = $('.recommendations-sidebar').height();
             var footer_height = $('.bga-footer-example').height();
             //console.log('Side bar position: ' + sidebar_position);
@@ -237,134 +233,143 @@ $(document).ready(function () {
                 $('.recommendations-sidebar').addClass('mobile-hide');
             }
         };
-        sticky_sidebar();
+        sticky_recommendations();
 
         $(window).resize(function () {
-            sticky_sidebar();
+            sticky_recommendations();
         }); 
         
 
-
-        // Dynamic question logic - single question
-        var dynamic_q_single = function(trigger_q, answer_1, dynamic_1, answer_2, dynamic_2){
-            var answer = $(trigger_q).attr('id');
-            //console.log(answer);
-            if ( answer == answer_1 && $(trigger_q).is(":checked")) {
-                $(dynamic_1).removeClass('d-none');
-                $(dynamic_2).addClass('d-none');
-            } else if ( answer_2 == answer_2 && $(trigger_q).is(":checked")) {
-                $(dynamic_1).addClass('d-none');
-                $(dynamic_2).removeClass('d-none');
+        // Functions to store recommendations
+        var add_registration = function(new_reg){
+            var registrations = sessionStorage.getItem('registrations');
+            if (!registrations) {
+                registrations = "";
             }
+            if (!registrations.includes(new_reg)) {
+                registrations = registrations + new_reg + ', ';
+                $('.recommendations .' + new_reg).addClass('show');
+            }
+            sessionStorage.setItem('registrations', registrations);
+        };
+        var remove_registration = function(old_reg) {
+            var registrations = sessionStorage.getItem('registrations');
+            if (!registrations) {
+                registrations = "";
+            }
+            if (registrations.includes(old_reg)) {
+                registrations = registrations.replace(old_reg + ', ', '');
+                $('.recommendations .' + old_reg).removeClass('show');
+            }
+            sessionStorage.setItem('registrations', registrations);
+        };
+        var clear_registrations = function(){
+            $('.recommendations-sidebar .chosen-structure').text("No chosen structure yet");
+            sessionStorage.setItem('business-structure', '');
+
+            $('.recommendations li').each(function(){
+                $(this).removeClass('show');
+            }); 
+            $('.no-recommendations').addClass('show');
+            sessionStorage.setItem('registrations', '');
         };
 
+
+        // DYNAMIC QUESTIONS
+        // Business structure page
         $('.q-know-structure .radio-button input').on('change', function(){
-            dynamic_q_single(this, 'know-structure-yes', '.q-know-structure-yes', '.know-structure-no', '.q-know-structure-no');
+            var answer = $(this).attr('id');
+
+            if ( answer == 'know-structure-yes' && $(this).is(":checked")) {
+                $('.q-know-structure-yes').removeClass('d-none');
+                $('.q-know-structure-no, .q-sole-trader-v-company, .q-partnership-v-company, .q-trust').addClass('d-none');
+            } else if ( answer == 'know-structure-no' && $(this).is(":checked")) {
+                $('.q-know-structure-yes').addClass('d-none');
+                $('.q-know-structure-no').removeClass('d-none');
+            }
+            sticky_recommendations();
         });
-
-        // Dynamic question logic - multiple questions 
-        var dynamic_q_multiple = function(section, trigger_q, answer_1, answer_2, answer_3, answer_4, display_1, display_2, display_3){
-            var answer = $(trigger_q).attr('id');
-            $(trigger_q).parents('.radios').addClass('answered');
-
-            if ( $(section + ' .radios').length == $(section + ' .radios.answered').length ) {
-                console.log('all are answered');
-                if ( $(answer_1).is(":checked") && $(answer_4).is(":checked")) {
-                    $(display_1).removeClass('d-none');
-                    $(display_2).addClass('d-none');
-                    $(display_3).addClass('d-none');
-                }  else if ( $(answer_2).is(":checked") && $(answer_4).is(":checked")) {
-                    $(display_1).addClass('d-none');
-                    $(display_2).removeClass('d-none');
-                    $(display_3).addClass('d-none');
-                }  else if ( $(answer_2).is(":checked") && $(answer_3).is(":checked")) {
-                    $(display_1).addClass('d-none');
-                    $(display_2).addClass('d-none');
-                    $(display_3).removeClass('d-none');
-                } else if ( $(answer_1).is(":checked") && $(answer_3).is(":checked")) {
-                    $(display_1).addClass('d-none');
-                    $(display_2).addClass('d-none');
-                    $(display_3).removeClass('d-none');
-                }
-
-            };
-        }; 
         
         $('.q-know-structure-no .radio-button input').on('change', function(){
-            dynamic_q_multiple('.q-know-structure-no', this, '#number-owners-one', '#number-owners-two', '#hold-assets-yes', '#hold-assets-no', '.q-sole-trader-v-company', '.q-partnership-v-company', '.q-trust');
+            var answer = $(this).attr('id');
+            $(this).parents('.radios').addClass('answered');
+
+            if ( $('.q-know-structure-no .radios').length == $('.q-know-structure-no .radios.answered').length ) {
+                if ( $('#number-owners-one').is(":checked") && $('#hold-assets-no').is(":checked")) { //Sole trader
+                    $('.q-sole-trader-v-company').removeClass('d-none');
+                    $('.q-partnership-v-company').addClass('d-none');
+                    $('.q-trust').addClass('d-none');
+
+                    clear_registrations();
+                }  
+                else if ( $('#number-owners-two').is(":checked") && $('#hold-assets-no').is(":checked")) { // Partnership
+                    $('.q-sole-trader-v-company').addClass('d-none');
+                    $('.q-partnership-v-company').removeClass('d-none');
+                    $('.q-trust').addClass('d-none');
+
+                    clear_registrations();
+                }  
+                else if ( ($('#number-owners-two').is(":checked") && $('#hold-assets-yes').is(":checked")) || ($('#number-owners-one').is(":checked") && $('#hold-assets-yes').is(":checked")) ) { // Trust
+                    $('.q-sole-trader-v-company').addClass('d-none');
+                    $('.q-partnership-v-company').addClass('d-none');
+                    $('.q-trust').removeClass('d-none');
+                    
+                    sessionStorage.setItem('business-structure', 'Trust');
+                    $('.recommendations-sidebar .chosen-structure').text('Trust');
+                    $('.no-recommendations').removeClass('show');
+
+                    add_registration('business-tfn');
+                    add_registration('abn');
+                    remove_registration('individual-tfn'); 
+                } 
+            };   
+            sticky_recommendations();
         });
 
 
 
-        // Recommendations sidebar logic
+        // RECOMMENDATIONS SIDEBAR
+        // Business structure page add / remove recommendations
+         $('.q-know-structure input#know-structure-no, .q-know-structure input#know-structure-yes').on('change', function(){
+            clear_registrations();
 
-        // Know business structure - no recommendations
-        $('.q-know-structure input#know-structure-no').on('change', function(){
-            if ($(this).is(":checked")) {
-                // Clear sidebar
-                $('.recommendations-sidebar .chosen-structure').text("No chosen structure yet");
-                $('.recommendations-sidebar .recommendations li').each(function(){
-                    $(this).removeClass('show');
-                });
-                $('.no-recommendations').addClass('show');
+             // Clear answered inputs
+             $('.q-know-structure-yes .radio-button input, .q-know-structure-no .radio-button input').each(function(){
+                $(this).prop('checked',false);
+            });
 
-                //Clear sessionStorage
-                sessionStorage.clear();
-
-                // Clear answered inputs
-                $('.q-know-structure-yes .radio-button input').each(function(){
-                    $(this).prop('checked',false);
-                });
-            }
+            sticky_recommendations
         });
-
-
-        // Know business structure - yes recommendations
-        $('.q-know-structure-yes input').on('change', function(){
-            var answer = $(this).attr('data-value');
-            sessionStorage.setItem('business-structure', window[answer].structure);
-            $('.recommendations-sidebar .chosen-structure').text(window[answer].structure);
-            $('.no-recommendations').removeClass('show');
-
-            for (var i = 0; i < window[answer].registrations.length; i++) {
-                $('.'+ window[answer].registrations[i]).addClass('show');
-                sessionStorage.setItem(window[answer].registrations[i], 'true');
-            }
-            if (answer == 'sole_trader') {
-                    sessionStorage.removeItem('reg-business-tfn');
-                    $('.reg-business-tfn').removeClass('show');
-                } else {
-                    sessionStorage.removeItem('reg-individual-tfn');
-                    $('.reg-individual-tfn').removeClass('show');
-            }
-            //sticky_sidebar();
-
-        });
-
-        $('#sole-trader-v-company input').on('change', function(){
-            var answer = $(this).attr('data-value');
-            console.log($(this));
-            sessionStorage.setItem('business-structure', window[answer].structure);
-            $('.recommendations-sidebar .chosen-structure').text(window[answer].structure);
-            $('.no-recommendations').removeClass('show');
-
-            for (var i = 0; i < window[answer].registrations.length; i++) {
-                $('.'+ window[answer].registrations[i]).addClass('show');
-                sessionStorage.setItem(window[answer].registrations[i], 'true');
-            }
-            if (answer == 'sole_trader') {
-                    sessionStorage.removeItem('reg-business-tfn');
-                    $('.reg-business-tfn').removeClass('show');
-                } else {
-                    sessionStorage.removeItem('reg-individual-tfn');
-                    $('.reg-individual-tfn').removeClass('show');
-            }
-            //sticky_sidebar();
-
-        });
-
         
+        $('.q-know-structure-yes input, #sole-trader-v-company input, #partnership-v-company input').on('change', function(){
+            var answer = $(this).attr('data-value');
 
+            // business structure
+            sessionStorage.setItem('business-structure', answer);
+            $('.recommendations-sidebar .chosen-structure').text(answer);
+            
+            // recommendations
+            $('.no-recommendations').removeClass('show');
+           
+            if (answer == 'Sole trader') {
+                add_registration('individual-tfn');
+                add_registration('abn');
+                remove_registration('business-tfn'); 
+                remove_registration('company');
+            } else if (answer == 'Company') {
+                add_registration('business-tfn');
+                add_registration('abn');
+                add_registration('company');
+                remove_registration('individual-tfn'); 
+            } else {
+                add_registration('business-tfn');
+                add_registration('abn');
+                remove_registration('individual-tfn'); 
+                remove_registration('company');
+            }
+            sticky_recommendations();
+        });
+        
 
     }; // End Help me decide
 
