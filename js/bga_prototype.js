@@ -314,8 +314,8 @@ $(document).ready(function () {
         // Set opened dynamic sections  on page load
         var get_dynamic_sections = function(){
             var open_sections = sessionStorage.getItem('dynamic_display');
-            if (!dynamic_display) {
-                dynamic_display = '';
+            if (!open_sections) {
+                open_sections = '';
             }
             $('.dynamic-section').each(function(){
                 var section = $(this).attr('id');
