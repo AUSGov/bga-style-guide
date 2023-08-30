@@ -17,22 +17,21 @@ title: Business registrations - help me decide
             <div class="question-section q-business-name remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="business-name" class="form-label h3-font-size heading-color mb-3"><strong>Will you use your own name as your business name?
-                    </strong></h3>
-                    <p class="">You need to register your business name if it’s different to your own name, or a shortened form of your name.</p>
-                    <p>For example, if your name is Joe Aaron Smith, and you want to use it (or a shortened form such as Joe Smith, J Smith, or J. A. Smith) as your business name, you don’t need to register it.</p>
+                    <h3 for="business-name" class="form-label h3-font-size heading-color mb-3"><strong>Will you use your own name as your business name?</strong></h3>
+                    <p>You need to register your business name if it’s different to your own name. For example, if your name is Joe Aaron Smith, and you want to use it (or a shortened form such as Joe Smith, J Smith, or J. A. Smith) as your business name, you don’t need to register it.</p>
+                    <p>You need to register a business name if it's anything else ('Joe Smith Plumbing').</p>
 
                     <div class="radios w-50 g-2 d-flex radio-flex-group" id="business-name" role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="business-name"
-                                id="business-name-yes" data-value="business-name-yes">
+                                id="business-name-yes" data-value="business-name">
                             <label class="form-check-label" for="business-name-yes">Yes</label>
                         </div>
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="business-name"
-                                id="business-name-no" data-value="business-name-no">
+                                id="business-name-no" data-value="">
                             <label class="form-check-label" for="business-name-no">No</label>
                         </div>
 
@@ -47,69 +46,73 @@ title: Business registrations - help me decide
             </div>
 
 
-            <!-- IF YES -->
-
-            <!-- business-structure -->
-            <div class="question-section q-trademark remove-element-padding d-none">
+            <!-- trade-mark -->
+            <div class="question-section q-trade-mark remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="business-structure" class="form-label h3-font-size heading-color mb-3"><strong>What
-                            business structure will you use?</strong></h3>
-
-                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" id="business-structure"
+                    <h3 for="trade-mark" class="form-label h3-font-size heading-color mb-3"><strong>Do you want to protect your business name so it is unique to your business?</strong></h3>
+                    <p>Registering your business name doesn't stop other businesses from using it for their products or services. You can protect your business name by applying for a trade mark.</p>
+                    
+                    
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="trade-mark"
                         role="radiogroup">
 
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="sole-trader" data-value="Sole trader" data-registrations="reg-individual-tfn reg-abn">
-                            <label class="form-check-label remove-element-padding" for="sole-trader">
-                                <p><strong>Sole trader</strong> - an individual who is the sole owner of the business.
-                                </p>
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="trade-mark" id="trade-mark-yes" data-value="trade-mark">
+                            <label class="form-check-label remove-element-padding" for="trade-mark-yes">
+                                <p>Yes</p>
                             </label>
                         </div>
 
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="partnership" data-value="Partnership" data-registrations="reg-business-tfn reg-abn">
-                            <label class="form-check-label remove-element-padding" for="partnership">
-                                <p><strong>Partnership</strong> - partners carry on a business together and share
-                                    income, losses, and control of the business.</p>
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="trade-mark" id="trade-mark-no" data-value="">
+                            <label class="form-check-label remove-element-padding" for="trade-mark-no">
+                                <p>No</p>
                             </label>
                         </div>
 
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="company"  data-value="Company" data-registrations="reg-business-tfn reg-abn">
-                            <label class="form-check-label remove-element-padding" for="company">
-                                <p><strong>Company</strong> - a separate legal entity from you that has at least one
-                                    shareholder (owner) and one director (who runs the business).</p>
-                            </label>
-                        </div>
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="trust"  data-value="Trust" data-registrations="reg-business-tfn reg-abn">
-                            <label class="form-check-label remove-element-padding" for="trust">
-                                <p><strong>Trust</strong> - the business or businesslike activity is managed by a
-                                    trustee for the benefit of others (the beneficiaries).</p>
-                            </label>
-                        </div>
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure"
-                                id="superannuation" data-value="Superannuation" data-registrations="reg-business-tfn reg-abn">
-                            <label class="form-check-label remove-element-padding" for="superannuation">
-                                <p><strong>Superannuation</strong> - this means all superannuation entities including
-                                    Self-Managed Super Funds (SMSFs). For a super fund to exist it must hold assets and
-                                    have a trust with an appointed trustee.</p>
-                            </label>
-                        </div>
-
-
-
+                       
                     </div>
                     
                     <hr class="section-divider my-5" />
 
                 </div> 
-                
-                
+
+            </div>
+
+
+
+             <!-- domain-name -->
+             <div class="question-section q-domain-name remove-element-padding">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="domain-name" class="form-label h3-font-size heading-color mb-3"><strong>Do you plan to set up a business website?</strong></h3>
+                    <p>Website addresses are called domain names, for example, sarahsflowers.com.au or josephsmitharchitects.com.au.</p><p>If you're keen to have a domain name that reflects your business name, it's a good idea to register your domain name even if you're not quite ready to set up your website.</p>
+                    
+                    
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="domain-name"
+                        role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="domain-name" id="domain-name-yes" data-value="domain-name">
+                            <label class="form-check-label remove-element-padding" for="domain-name-yes">
+                                <p>Yes</p>
+                            </label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="domain-name" id="domain-name-no" data-value="">
+                            <label class="form-check-label remove-element-padding" for="domain-name-no">
+                                <p>No</p>
+                            </label>
+                        </div>
+
+                       
+                    </div>
+                    
+                    <hr class="section-divider my-5" />
+
+                </div> 
 
             </div>
 

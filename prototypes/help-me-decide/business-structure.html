@@ -14,7 +14,7 @@ title: Business registrations - help me decide
             <h2>Business structure</h2>
 
             <!-- know-structure -->
-            <div class="question-section q-know-structure remove-element-padding">
+            <div class="question-section dynamic-trigger q-know-structure remove-element-padding" id="q-know-structure">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="know-structure" class="form-label h3-font-size heading-color mb-3"><strong>Do you know what business structure you plan to use?</strong></h3>
@@ -49,7 +49,7 @@ title: Business registrations - help me decide
             <!-- IF YES -->
 
             <!-- business-structure -->
-            <div class="question-section q-know-structure-yes remove-element-padding d-none">
+            <div class="question-section dynamic-section q-know-structure-yes remove-element-padding d-none" id="q-know-structure-yes">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="business-structure" class="form-label h3-font-size heading-color mb-3"><strong>What
@@ -59,7 +59,7 @@ title: Business registrations - help me decide
                         role="radiogroup">
 
                         <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="sole-trader" data-value="Sole trader" data-registrations="reg-individual-tfn reg-abn">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="sole-trader" data-value="Sole trader">
                             <label class="form-check-label remove-element-padding" for="sole-trader">
                                 <p><strong>Sole trader</strong> - an individual who is the sole owner of the business.
                                 </p>
@@ -67,7 +67,7 @@ title: Business registrations - help me decide
                         </div>
 
                         <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="partnership" data-value="Partnership" data-registrations="reg-business-tfn reg-abn">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="partnership" data-value="Partnership">
                             <label class="form-check-label remove-element-padding" for="partnership">
                                 <p><strong>Partnership</strong> - partners carry on a business together and share
                                     income, losses, and control of the business.</p>
@@ -75,7 +75,7 @@ title: Business registrations - help me decide
                         </div>
 
                         <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="company"  data-value="Company" data-registrations="reg-business-tfn reg-abn">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="company"  data-value="Company" >
                             <label class="form-check-label remove-element-padding" for="company">
                                 <p><strong>Company</strong> - a separate legal entity from you that has at least one
                                     shareholder (owner) and one director (who runs the business).</p>
@@ -83,7 +83,7 @@ title: Business registrations - help me decide
                         </div>
 
                         <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="trust"  data-value="Trust" data-registrations="reg-business-tfn reg-abn">
+                            <input class="form-check-input m-0" type="radio" name="business-structure" id="trust"  data-value="Trust">
                             <label class="form-check-label remove-element-padding" for="trust">
                                 <p><strong>Trust</strong> - the business or businesslike activity is managed by a
                                     trustee for the benefit of others (the beneficiaries).</p>
@@ -92,11 +92,10 @@ title: Business registrations - help me decide
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="business-structure"
-                                id="superannuation" data-value="Superannuation" data-registrations="reg-business-tfn reg-abn">
+                                id="superannuation" data-value="Superannuation">
                             <label class="form-check-label remove-element-padding" for="superannuation">
                                 <p><strong>Superannuation</strong> - this means all superannuation entities including
-                                    Self-Managed Super Funds (SMSFs). For a super fund to exist it must hold assets and
-                                    have a trust with an appointed trustee.</p>
+                                    Self-Managed Super Funds (SMSFs). For a super fund to exist it must hold assets and have a trust with an appointed trustee.</p>
                             </label>
                         </div>
 
@@ -114,10 +113,9 @@ title: Business registrations - help me decide
 
            
 
-
             <!-- IF NO -->
            
-            <div class="question-section q-know-structure-no remove-element-padding d-none">
+            <div class="question-section dynamic-section q-know-structure-no remove-element-padding d-none" id="q-know-structure-no">
                 
                 <!-- number-owners -->
                 <div class="mb-5 p-0 form-example remove-element-padding">
@@ -126,7 +124,7 @@ title: Business registrations - help me decide
                     <p class="">A business owner is lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
                         sit amet odio pulvinar, rhoncus dui congue, semper purus.</p>
 
-                    <div class="radios w-50 d-flex radio-flex-group" id="number-owners" role="radiogroup">
+                    <div class="radios w-50 d-flex dynamic-trigger radio-flex-group" id="number-owners" role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="number-owners" id="number-owners-one"
@@ -149,12 +147,10 @@ title: Business registrations - help me decide
 
                 <!-- hold-assets -->
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="hold-assets" class="form-label h3-font-size heading-color mb-3"><strong>Will you hold and
-                            control an asset for the benefit of others?</strong></h3>
-                    <p class="">Assets are lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet
-                        odio pulvinar, rhoncus dui congue, semper purus.</p>
+                    <h3 for="hold-assets" class="form-label h3-font-size heading-color mb-3"><strong>Will you hold and control an asset for the benefit of others?</strong></h3>
+                    <p class="">Assets are lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit ametodio pulvinar, rhoncus dui congue, semper purus.</p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="hold-assets" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex dynamic-trigger radio-flex-group" id="hold-assets" role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="hold-assets" id="hold-assets-yes"
@@ -180,13 +176,11 @@ title: Business registrations - help me decide
            
 
 
-            
-
 
             <!-- COMPARISON TABLES -->
 
             <!-- sole-trader-v-company -->
-            <div class="question-section q-sole-trader-v-company remove-element-padding d-none">
+            <div class="question-section dynamic-section q-sole-trader-v-company remove-element-padding d-none" id="q-sole-trader-v-company">
                 <h3>Choose your business structure</h3>
                 <p class="">Based on your answers the <strong>sole trader</strong> or <strong>company</strong> structure
                     may be right for you.</p>
@@ -418,7 +412,7 @@ title: Business registrations - help me decide
             </div>
 
             <!-- partnership-v-company -->
-            <div class="question-section q-partnership-v-company remove-element-padding d-none">
+            <div class="question-section dynamic-section q-partnership-v-company remove-element-padding d-none" id="q-partnership-v-company">
                 <h3>Choose your business structure</h3>
                 <p class="">Based on your answers the <strong>partnership</strong> or <strong>company</strong> structure may be right for you.</p>
                 <p>Compare the list of characteristics below to help you decide which business you would prefer to set up.</p>
@@ -620,7 +614,7 @@ title: Business registrations - help me decide
             </div>
 
             <!-- trust -->
-            <div class="question-section q-trust remove-element-padding d-none">
+            <div class="question-section dynamic-section q-trust remove-element-padding d-none" id="q-trust">
                 <h3>Recommended business structure - Trust</h3>
                 <p class="">Based on your answers the <strong>trust</strong> structure may be right for you.</p>
                 <h4>What is a trust?</h4>

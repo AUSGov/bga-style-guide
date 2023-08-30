@@ -1,0 +1,125 @@
+---
+
+layout: bga-inpage-tool
+title: Business registrations - help me decide
+
+---
+
+<div class="container page-content my-5" id="help-me-decide-prototype">
+
+    <div class="row">
+
+        <div class="remove-top-spaces col-12 col-md-8">
+
+            <h2>Employees</h2>
+
+            <!-- payg -->
+            <div class="question-section dynamic-trigger q-payg remove-element-padding" id="q-payg">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="payg" class="form-label h3-font-size heading-color mb-3"><strong>Will you take on employees?</strong></h3>
+                    <p>Independent contractors, sub-contractors and volunteers are not considered employees. Generally, employees:</p>
+                    <ul>
+                        <li>can be casual, permanent, part-time or full-time</li>
+                        <li>are supervised by an employer</li>
+                        <li>are required to carry out their work in a particular way</li>
+                        <li>earn a wage or salary</li>
+                        <li>are entitled to paid leave</li>
+                        <li>work set hours on a permanent, fixed term or casual basis</li>
+                        <li>can't subcontract work tasks given to them.</li>
+                    </ul>
+                    <p>If you're not sure whether you're an employee or a contractor, read about&nbsp;<a href="https://www.business.gov.au/People/Contractors/Employee-or-contractor" target="_blank">the differences of an employee and contractor</a> or speak to a legal professional.</p>
+                    
+                    
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="payg"
+                        role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="payg" id="payg-yes" data-value="payg">
+                            <label class="form-check-label remove-element-padding" for="payg-yes">
+                                <p>Yes</p>
+                            </label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="payg" id="payg-no" data-value="">
+                            <label class="form-check-label remove-element-padding" for="payg-no">
+                                <p>No</p>
+                            </label>
+                        </div>
+
+                       
+                    </div>
+                    
+                    <hr class="section-divider my-5" />
+
+                </div> 
+
+            </div>
+
+
+
+            <!-- fbt -->
+            <div class="question-section dynamic-section q-fbt remove-element-padding d-none" id="q-fbt">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="fbt" class="form-label h3-font-size heading-color mb-3"><strong>Will you offer fringe benefits to your employees?</strong></h3>
+                    <p>Fringe benefits are non-cash benefits that employers offer to employees, such as a work car for private use, low-interest loans, or movie tickets.</p>
+
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="fbt" role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="fbt"
+                                id="fbt-yes" data-value="fbt">
+                            <label class="form-check-label" for="fbt-yes">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="fbt"
+                                id="fbt-no" data-value="">
+                            <label class="form-check-label" for="fbt-no">No</label>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
+            </div>
+           
+
+
+
+            
+
+
+
+
+            <!-- BUTTON GROUP -->
+            <div class="tool-button-group button-group">
+
+                <a class="bga-link bga-inline-link bkg-light" tabindex="0"
+                    href={{ 'prototypes/help-me-decide/business-name.html' | relative_url }} role="button">Previous</a>
+
+                <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                    href={{ 'prototypes/help-me-decide/business-taxes.html' | relative_url }} role="button">Next</a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="remove-top-spaces col-12 col-md-4">
+            <div class="recommendations-sidebar-wrapper">
+            {% include prototypes/recommendations-sidebar.html
+            %}
+            </div>
+        </div>
+
+    </div>
+
+</div>

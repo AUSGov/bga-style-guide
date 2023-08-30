@@ -194,51 +194,53 @@ $(document).ready(function () {
                 $('.recommendations li.no-recommendations').removeClass('show');
             }
         };
-        get_recommendations();
+        get_recommendations(); 
         
-        // Comparison accordions
-        $('.treegrid .learn-more button').on('click', function(){
-            $(this).parents('.learn-more').toggleClass('open');
-            $(this).parents('tr').next('.more-info').slideToggle();
+        // Store selected question inputs
+        var store_answers = function(trigger_q){
+            console.log('triggered');
+            // Get question and selected answer
+            var question = $(trigger_q).parents('.radios').attr('id'), 
+            selected_input = $('#' + question + ' input:checked').attr('id');
+
+            // Get stored answers from sessionStorage
+            var answers = sessionStorage.getItem('answers');
+            if (!answers) {
+                answers = '';
+            }
+            
+            // Add answer to sessionStorage and remove other answers connected to the radio group
+            $('#' + question + ' input').each(function(){
+                if ($(this).is(":checked")) {
+                    if (!answers.includes(selected_input)) {
+                        answers = answers + selected_input + ', ';
+                        sessionStorage.setItem('answers', answers);
+                    }
+                } else {
+                    var answer = $(this).attr('id');
+                    answers = answers.replace(answer + ', ', '');
+                }
+            }); 
+        };
+        $('.question-section input').on('change', function(){
+            store_answers(this);
         });
 
-        // Sidebar stickiness
-        var sticky_recommendations = function() {
-            var sidebar_position = Math.round($('.recommendations-sidebar-wrapper').position().top);
-            var sidebar_width = $('.recommendations-sidebar-wrapper').width();
-            var sidebar_height = $('.recommendations-sidebar').height();
-            var footer_height = $('.bga-footer-example').height();
-            //console.log('Side bar position: ' + sidebar_position);
-            //console.log('Side bar width: ' + sidebar_width);
-            //console.log('Side bar width: ' + sidebar_width);
-            //console.log('Side bar height: ' + sidebar_height);
-            //console.log('Footer height: ' + footer_height);
-            
-
-            $('.recommendations-sidebar').css('width', sidebar_width);
-
-            if ($(window).width() >= 768) {
-                $('.recommendations-sidebar').removeClass('mobile-hide');
-                $(window).scroll(function () {
-                    var unfix = $(document).height() - footer_height - sidebar_height;
-                    var scroll_position = $(window).scrollTop();
-
-                    if (scroll_position >= sidebar_position && scroll_position < unfix) {
-                        $('.recommendations-sidebar').addClass('fixed');
-                    } else {
-                        $('.recommendations-sidebar').removeClass('fixed');
-                    }
-                });
-            } else if ($(window).width() < 768) {
-                $('.recommendations-sidebar').addClass('mobile-hide');
+        // Set previously selected answers on page load
+        var get_answers = function(){
+            var answers = sessionStorage.getItem('answers');
+            if (!answers) {
+                answers = '';
             }
+            
+            $('.question-section input').each(function(){
+                var id = $(this).attr('id');
+                if ( answers.includes(id) ){
+                    $(this).prop('checked', true);
+                };
+            });
         };
-        sticky_recommendations();
-
-        $(window).resize(function () {
-            sticky_recommendations();
-        }); 
-        
+        get_answers(); 
 
         // Functions to store recommendations
         var add_registration = function(new_reg){
@@ -265,21 +267,70 @@ $(document).ready(function () {
         };
         var clear_registrations = function(){
             $('.recommendations-sidebar .chosen-structure').text("No chosen structure yet");
-            sessionStorage.setItem('business-structure', '');
-
             $('.recommendations li').each(function(){
                 $(this).removeClass('show');
             }); 
             $('.no-recommendations').addClass('show');
+            
             sessionStorage.setItem('registrations', '');
+            sessionStorage.setItem('business-structure', '');
+            //sessionStorage.setItem('answers', '');
+        };
+        var single_registration_q = function(target_q, registration){
+            var answer = $(target_q).attr('data-value');
+
+            if ($(target_q).is(":checked") && answer == registration) {
+                add_registration(registration);
+            } else {
+                remove_registration(registration);
+            };
+            sticky_recommendations();
         };
 
+        // Function to store dynamic question display for page reload
+        var dynamic_display = function(){
+            var dynamic_display = sessionStorage.getItem('dynamic_display', 'dynamic_display');
+            if (!dynamic_display) {
+                dynamic_display = '';
+            }
+            //console.log(dynamic_display);
+
+            $('.dynamic-section').each(function(){
+                var id = $(this).attr('id');
+                
+                if ( $(this).hasClass('d-none') ) {
+                    dynamic_display = dynamic_display.replace(id + ', ', '');
+                } else {
+                    if (!dynamic_display.includes(id)){
+                        dynamic_display = dynamic_display + id + ', ';
+                    }
+                }
+               
+            });
+            //console.log(dynamic_display);
+            sessionStorage.setItem('dynamic_display', dynamic_display);
+          
+        };
+        // Set opened dynamic sections  on page load
+        var get_dynamic_sections = function(){
+            var open_sections = sessionStorage.getItem('dynamic_display');
+            if (!dynamic_display) {
+                dynamic_display = '';
+            }
+            $('.dynamic-section').each(function(){
+                var section = $(this).attr('id');
+                if ( open_sections.includes(section) ) {
+                    $(this).removeClass('d-none');
+                }
+            });
+        };
+        get_dynamic_sections(); 
 
         // DYNAMIC QUESTIONS
         // Business structure page
         $('.q-know-structure .radio-button input').on('change', function(){
             var answer = $(this).attr('id');
-
+           
             if ( answer == 'know-structure-yes' && $(this).is(":checked")) {
                 $('.q-know-structure-yes').removeClass('d-none');
                 $('.q-know-structure-no, .q-sole-trader-v-company, .q-partnership-v-company, .q-trust').addClass('d-none');
@@ -326,7 +377,22 @@ $(document).ready(function () {
             sticky_recommendations();
         });
 
+        // Employees page   
+        $('.q-payg .radio-button input').on('change', function(){
+            var answer = $(this).attr('id');
 
+            if ( answer == 'payg-yes' && $(this).is(":checked")) {
+                $('.q-fbt').removeClass('d-none');
+            } else {
+                $('.q-fbt').addClass('d-none');
+            }
+            sticky_recommendations();
+        });
+        
+        // Store visibility of dynamic sections in sessionStorage
+        $('.dynamic-trigger input').on('change', function(){
+            dynamic_display();
+        });
 
         // RECOMMENDATIONS SIDEBAR
         // Business structure page add / remove recommendations
@@ -369,7 +435,97 @@ $(document).ready(function () {
             }
             sticky_recommendations();
         });
+
+
+        // Business name page add / remove recommendations
+        $('.q-business-name input').on('change', function(){
+            single_registration_q(this, 'business-name');
+        });
+
+        $('.q-trade-mark input').on('change', function(){
+            single_registration_q(this, 'trade-mark');
+        });
+
+        $('.q-domain-name input').on('change', function(){
+            single_registration_q(this, 'domain-name');
+        });
+
+        //Employees page add / remove recommendations
+        $('.q-payg input').on('change', function(){
+            single_registration_q(this, 'payg');
+        });
+
+        $('.q-fbt input').on('change', function(){
+            single_registration_q(this, 'fbt');
+        });
+
+        //Business taxes page add / remove recommendations
+        $('.q-business-turnover input, .q-taxi-limousine input').on('change', function(){
+            single_registration_q(this, 'gst');
+        });
+
+        $('.q-wet input').on('change', function(){
+            single_registration_q(this, 'wet');
+            add_registration('gst');
+        });
+
+        $('.q-ftc input').on('change', function(){
+            single_registration_q(this, 'ftc');
+            add_registration('gst');
+        });
+
+        $('.q-lct input').on('change', function(){
+            single_registration_q(this, 'lct');
+            add_registration('gst');
+        });
         
+        
+        
+        
+        
+        
+        // Comparison accordions
+        $('.treegrid .learn-more button').on('click', function(){
+            $(this).parents('.learn-more').toggleClass('open');
+            $(this).parents('tr').next('.more-info').slideToggle();
+        });
+
+        // Sidebar stickiness
+        var sticky_recommendations = function() {
+            var sidebar_position = Math.round($('.recommendations-sidebar-wrapper').position().top);
+            var sidebar_width = $('.recommendations-sidebar-wrapper').width();
+            var sidebar_height = $('.recommendations-sidebar').height();
+            var footer_height = $('.bga-footer-example').height();
+            //console.log('Side bar position: ' + sidebar_position);
+            //console.log('Side bar width: ' + sidebar_width);
+            //console.log('Side bar width: ' + sidebar_width);
+            //console.log('Side bar height: ' + sidebar_height);
+            //console.log('Footer height: ' + footer_height);
+            
+
+            $('.recommendations-sidebar').css('width', sidebar_width);
+
+            if ($(window).width() >= 768) {
+                $('.recommendations-sidebar').removeClass('mobile-hide');
+                $(window).scroll(function () {
+                    var unfix = $(document).height() - footer_height - sidebar_height;
+                    var scroll_position = $(window).scrollTop();
+
+                    if (scroll_position >= sidebar_position && scroll_position < unfix) {
+                        $('.recommendations-sidebar').addClass('fixed');
+                    } else {
+                        $('.recommendations-sidebar').removeClass('fixed');
+                    }
+                });
+            } else if ($(window).width() < 768) {
+                $('.recommendations-sidebar').addClass('mobile-hide');
+            }
+        };
+        sticky_recommendations();
+
+        $(window).resize(function () {
+            sticky_recommendations();
+        }); 
 
     }; // End Help me decide
 
