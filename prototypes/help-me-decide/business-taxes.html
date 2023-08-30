@@ -47,7 +47,7 @@
     <script src=/bga-style-guide/js/bga_prototype.js ></script>
 
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/help-me-decide/business-name.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/help-me-decide/business-taxes.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -910,28 +910,66 @@
 
         <div class="remove-top-spaces col-12 col-md-8">
 
-            <h2>Business name</h2>
+            <h2>Business taxes</h2>
 
-            <!-- business-name -->
-            <div class="question-section q-business-name remove-element-padding">
+            <!-- business-turnover -->
+            <div class="question-section q-business-turnover remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="business-name" class="form-label h3-font-size heading-color mb-3"><strong>Will you use your own name as your business name?</strong></h3>
-                    <p>You need to register your business name if it’s different to your own name. For example, if your name is Joe Aaron Smith, and you want to use it (or a shortened form such as Joe Smith, J Smith, or J. A. Smith) as your business name, you don’t need to register it.</p>
-                    <p>You need to register a business name if it's anything else ('Joe Smith Plumbing').</p>
-
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="business-name" role="radiogroup">
+                    <h3 for="business-turnover" class="form-label h3-font-size heading-color mb-3"><strong>Do you expect to have business turnover of $75,000 or more in your first year?</strong></h3>
+                    <p>Business turnover is your gross business income (not your profit).</p>
+                    
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="business-turnover"
+                        role="radiogroup">
 
                         <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="business-name"
-                                id="business-name-yes" data-value="business-name">
-                            <label class="form-check-label" for="business-name-yes">Yes</label>
+                            <input class="form-check-input m-0" type="radio" name="business-turnover" id="business-turnover-yes" data-value="gst">
+                            <label class="form-check-label remove-element-padding" for="business-turnover-yes">
+                                <p>Yes</p>
+                            </label>
                         </div>
 
                         <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="business-name"
-                                id="business-name-no" data-value="">
-                            <label class="form-check-label" for="business-name-no">No</label>
+                            <input class="form-check-input m-0" type="radio" name="business-turnover" id="business-turnover-no" data-value="">
+                            <label class="form-check-label remove-element-padding" for="business-turnover-no">
+                                <p>No</p>
+                            </label>
+                        </div>
+
+                       
+                    </div>
+                    
+                    <hr class="section-divider my-5" />
+
+                </div> 
+
+            </div>
+
+            <!-- taxi-limousine -->
+            <div class="question-section q-taxi-limousine remove-element-padding">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="taxi-limousine" class="form-label h3-font-size heading-color mb-3"><strong>Are you running a taxi business, limousine hire business or providing a ride share service?</strong></h3>
+                    <p>This includes:</p>
+                    <ul>
+                        <li>drivers providing ride sharing services</li>
+                        <li>taxi drivers who own their taxi</li>
+                        <li>taxi drivers who lease or rent a taxi.</li>
+                        </ul>
+                    <p>This <strong>doesn’t</strong> car hire  or limousine hire services where you don’t provide a driver.</p>
+
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="taxi-limousine" role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="taxi-limousine"
+                                id="taxi-limousine-yes" data-value="gst">
+                            <label class="form-check-label" for="taxi-limousine-yes">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="taxi-limousine"
+                                id="taxi-limousine-no" data-value="">
+                            <label class="form-check-label" for="taxi-limousine-no">No</label>
                         </div>
 
 
@@ -944,80 +982,100 @@
 
             </div>
 
-
-            <!-- trade-mark -->
-            <div class="question-section q-trade-mark remove-element-padding">
-
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="trade-mark" class="form-label h3-font-size heading-color mb-3"><strong>Do you want to protect your business name so it is unique to your business?</strong></h3>
-                    <p>Registering your business name doesn't stop other businesses from using it for their products or services. You can protect your business name by applying for a trade mark.</p>
-                    
-                    
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="trade-mark"
-                        role="radiogroup">
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="trade-mark" id="trade-mark-yes" data-value="trade-mark">
-                            <label class="form-check-label remove-element-padding" for="trade-mark-yes">
-                                <p>Yes</p>
-                            </label>
-                        </div>
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="trade-mark" id="trade-mark-no" data-value="">
-                            <label class="form-check-label remove-element-padding" for="trade-mark-no">
-                                <p>No</p>
-                            </label>
-                        </div>
-
-                       
-                    </div>
-                    
-                    <hr class="section-divider my-5" />
-
-                </div> 
-
-            </div>
-
-
-
-             <!-- domain-name -->
-             <div class="question-section q-domain-name remove-element-padding">
+              <!-- wet -->
+              <div class="question-section q-wet remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="domain-name" class="form-label h3-font-size heading-color mb-3"><strong>Do you plan to set up a business website?</strong></h3>
-                    <p>Website addresses are called domain names, for example, sarahsflowers.com.au or josephsmitharchitects.com.au.</p><p>If you're keen to have a domain name that reflects your business name, it's a good idea to register your domain name even if you're not quite ready to set up your website.</p>
-                    
-                    
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="domain-name"
-                        role="radiogroup">
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="domain-name" id="domain-name-yes" data-value="domain-name">
-                            <label class="form-check-label remove-element-padding" for="domain-name-yes">
-                                <p>Yes</p>
-                            </label>
-                        </div>
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="domain-name" id="domain-name-no" data-value="">
-                            <label class="form-check-label remove-element-padding" for="domain-name-no">
-                                <p>No</p>
-                            </label>
-                        </div>
-
-                       
-                    </div>
-                    
-                    <hr class="section-divider my-5" />
-
-                </div> 
-
-            </div>
-
-
+                    <h3 for="wet" class="form-label h3-font-size heading-color mb-3"><strong>Will you wholesale or produce wine in Australia, including cider, perry, mead, or sake?</strong></h3>
             
+                    <p>This includes grape wine, grape wine products such as vermouth, fruit or vegetable wines, cider, perry, mead, or sake, that has more than 1.15% ethyl alcohol.</p>
 
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="wet" role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="wet"
+                                id="wet-yes" data-value="wet">
+                            <label class="form-check-label" for="wet-yes">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="wet"
+                                id="wet-no" data-value="">
+                            <label class="form-check-label" for="wet-no">No</label>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
+            </div>
+
+              <!-- ftc -->
+              <div class="question-section q-ftc remove-element-padding">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="ftc" class="form-label h3-font-size heading-color mb-3"><strong>Will you use taxable fuels in factories, equipment, machinery or heavy vehicles?</strong></h3>
+                
+                    <p>Heavy vehicles are any vehicle with a GVM (gross vehicle mass) greater than 4.5 tonnes.</p>
+
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="ftc" role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="ftc"
+                                id="ftc-yes" data-value="ftc">
+                            <label class="form-check-label" for="ftc-yes">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="ftc"
+                                id="ftc-no" data-value="">
+                            <label class="form-check-label" for="ftc-no">No</label>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
+            </div>
+
+              <!-- lct -->
+              <div class="question-section q-lct remove-element-padding">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="lct" class="form-label h3-font-size heading-color mb-3"><strong>Will you import or sell luxury cars?</strong></h3>
+                    <p>Luxury cars are cars that are worth more than $64,132 (more than $75,526 for fuel-efficient vehicles).</p>
+
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="lct" role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="lct"
+                                id="lct-yes" data-value="lct">
+                            <label class="form-check-label" for="lct-yes">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="lct"
+                                id="lct-no" data-value="">
+                            <label class="form-check-label" for="lct-no">No</label>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
+            </div>
            
 
 
@@ -1032,10 +1090,10 @@
             <div class="tool-button-group button-group">
 
                 <a class="bga-link bga-inline-link bkg-light" tabindex="0"
-                    href=/bga-style-guide/prototypes/help-me-decide/business-structure.html role="button">Previous</a>
+                    href=/bga-style-guide/prototypes/help-me-decide/employees.html role="button">Previous</a>
 
                 <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
-                    href=/bga-style-guide/prototypes/help-me-decide/employees.html role="button">Next</a>
+                    href=/bga-style-guide/prototypes/help-me-decide/results.html role="button">Next</a>
 
             </div>
 
