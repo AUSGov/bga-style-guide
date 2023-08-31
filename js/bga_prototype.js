@@ -198,10 +198,8 @@ $(document).ready(function () {
         
         // Store selected question inputs
         var store_answers = function(trigger_q){
-            console.log('triggered');
             // Get question and selected answer
-            var question = $(trigger_q).parents('.radios').attr('id'), 
-            selected_input = $('#' + question + ' input:checked').attr('id');
+            var question = $(trigger_q).parents('.radios').attr('id');
 
             // Get stored answers from sessionStorage
             var answers = sessionStorage.getItem('answers');
@@ -211,20 +209,33 @@ $(document).ready(function () {
             
             // Add answer to sessionStorage and remove other answers connected to the radio group
             $('#' + question + ' input').each(function(){
-                if ($(this).is(":checked")) {
-                    if (!answers.includes(selected_input)) {
-                        answers = answers + selected_input + ', ';
-                        sessionStorage.setItem('answers', answers);
+                var answer = $(this).attr('id');
+                if ($(this).is(":checked")) { 
+                    if (!answers.includes(answer)) {
+                        answers = answers + answer + ', ';
                     }
                 } else {
-                    var answer = $(this).attr('id');
                     answers = answers.replace(answer + ', ', '');
                 }
             }); 
+            sessionStorage.setItem('answers', answers);
         };
         $('.question-section input').on('change', function(){
             store_answers(this);
         });
+
+        var remove_answers = function(storage_item, old_answers) {
+            var items = sessionStorage.getItem(storage_item);
+            if (!items) {
+                items = "";
+            }
+            for (var j = 0; j < old_answers.length; j++) {
+                if (items.includes(old_answers[j])) {
+                    items = items.replace(old_answers[j] + ', ', '');
+                }
+            }
+            sessionStorage.setItem(storage_item, items);
+        };
 
         // Set previously selected answers on page load
         var get_answers = function(){
@@ -237,55 +248,51 @@ $(document).ready(function () {
                 var id = $(this).attr('id');
                 if ( answers.includes(id) ){
                     $(this).prop('checked', true);
+                } else {
+                    $(this).prop('checked', false);
                 };
             });
         };
         get_answers(); 
 
         // Functions to store recommendations
-        var add_registration = function(new_reg){
-            var registrations = sessionStorage.getItem('registrations');
+        var add_registrations = function(storage_item, new_regs){
+            var registrations = sessionStorage.getItem(storage_item);
             if (!registrations) {
                 registrations = "";
             }
-            if (!registrations.includes(new_reg)) {
-                registrations = registrations + new_reg + ', ';
-                $('.recommendations .' + new_reg).addClass('show');
-            }
-            sessionStorage.setItem('registrations', registrations);
-        };
-        var remove_registration = function(old_reg) {
-            var registrations = sessionStorage.getItem('registrations');
-            if (!registrations) {
-                registrations = "";
-            }
-            if (registrations.includes(old_reg)) {
-                registrations = registrations.replace(old_reg + ', ', '');
-                $('.recommendations .' + old_reg).removeClass('show');
-            }
-            sessionStorage.setItem('registrations', registrations);
-        };
-        var clear_registrations = function(){
-            $('.recommendations-sidebar .chosen-structure').text("No chosen structure yet");
-            $('.recommendations li').each(function(){
-                $(this).removeClass('show');
-            }); 
-            $('.no-recommendations').addClass('show');
             
-            sessionStorage.setItem('registrations', '');
-            sessionStorage.setItem('business-structure', '');
-            //sessionStorage.setItem('answers', '');
+            for (var i = 0; i < new_regs.length; i++) {
+                if (!registrations.includes(new_regs[i])) {
+                    registrations = registrations + new_regs[i] + ', ';
+                    $('.recommendations .' + new_regs[i]).addClass('show');
+                }
+                sessionStorage.setItem(storage_item, registrations);
+            }
+        };
+        var remove_registrations = function(storage_item, old_regs) {
+            var registrations = sessionStorage.getItem(storage_item);
+            if (!registrations) {
+                registrations = "";
+            }
+            for (var k = 0; k < old_regs.length; k++) {
+                if (registrations.includes(old_regs[k])) {
+                    registrations = registrations.replace(old_regs[k] + ', ', '');
+                    $('.recommendations .' + old_regs[k]).removeClass('show');
+                }
+            }
+            sessionStorage.setItem(storage_item, registrations);
         };
         var single_registration_q = function(target_q, registration){
             var answer = $(target_q).attr('data-value');
-
             if ($(target_q).is(":checked") && answer == registration) {
-                add_registration(registration);
+                add_registrations('registrations', [registration]);
             } else {
-                remove_registration(registration);
+                remove_registrations('registrations', [registration]);
             };
             sticky_recommendations();
         };
+        
 
         // Function to store dynamic question display for page reload
         var dynamic_display = function(){
@@ -311,7 +318,7 @@ $(document).ready(function () {
             sessionStorage.setItem('dynamic_display', dynamic_display);
           
         };
-        // Set opened dynamic sections  on page load
+        // Set opened dynamic sections on page load
         var get_dynamic_sections = function(){
             var open_sections = sessionStorage.getItem('dynamic_display');
             if (!open_sections) {
@@ -326,17 +333,37 @@ $(document).ready(function () {
         };
         get_dynamic_sections(); 
 
+        // Clear tool on 'start now' click
+        $('.start-component .bga-btn').on('click', function(){
+            sessionStorage.clear();
+        });
+
         // DYNAMIC QUESTIONS
         // Business structure page
         $('.q-know-structure .radio-button input').on('change', function(){
             var answer = $(this).attr('id');
-           
+            
+            // Clear all business structure results
+            remove_answers('answers', ['sole-trader', 'partnership', 'company', 'trust', 'superannuation', 'number-owners-one', 'number-owners', 'number-owners-two', 'hold-assets-no', 'hold-assets-yes', 'partnership-1', 'partnership-2', 'sole-trader-1', 'sole-trader-2', 'company-1']);
+
+            $('.recommendations-sidebar .chosen-structure').text("No chosen structure yet"); 
+            sessionStorage.setItem('business-structure', '');
+            
+            remove_registrations('registrations', ['individual-tfn', 'business-tfn', 'abn', 'company']);
+            if($('.recommendations li.show').length == 0) {
+                $('.recommendations li.no-recommendations').addClass('show');
+            };
+
+            //Set dynamic section
             if ( answer == 'know-structure-yes' && $(this).is(":checked")) {
                 $('.q-know-structure-yes').removeClass('d-none');
                 $('.q-know-structure-no, .q-sole-trader-v-company, .q-partnership-v-company, .q-trust').addClass('d-none');
+                remove_answers('answers', ['know-structure-no']);
+                
             } else if ( answer == 'know-structure-no' && $(this).is(":checked")) {
                 $('.q-know-structure-yes').addClass('d-none');
                 $('.q-know-structure-no').removeClass('d-none');
+                remove_answers('answers', ['know-structure-yes']);
             }
             sticky_recommendations();
         });
@@ -350,15 +377,11 @@ $(document).ready(function () {
                     $('.q-sole-trader-v-company').removeClass('d-none');
                     $('.q-partnership-v-company').addClass('d-none');
                     $('.q-trust').addClass('d-none');
-
-                    clear_registrations();
                 }  
                 else if ( $('#number-owners-two').is(":checked") && $('#hold-assets-no').is(":checked")) { // Partnership
                     $('.q-sole-trader-v-company').addClass('d-none');
                     $('.q-partnership-v-company').removeClass('d-none');
                     $('.q-trust').addClass('d-none');
-
-                    clear_registrations();
                 }  
                 else if ( ($('#number-owners-two').is(":checked") && $('#hold-assets-yes').is(":checked")) || ($('#number-owners-one').is(":checked") && $('#hold-assets-yes').is(":checked")) ) { // Trust
                     $('.q-sole-trader-v-company').addClass('d-none');
@@ -369,9 +392,8 @@ $(document).ready(function () {
                     $('.recommendations-sidebar .chosen-structure').text('Trust');
                     $('.no-recommendations').removeClass('show');
 
-                    add_registration('business-tfn');
-                    add_registration('abn');
-                    remove_registration('individual-tfn'); 
+                    add_registrations('registrations', ['business-tfn', 'abn']);
+                    remove_registrations('registrations', ['individual-tfn']); 
                 } 
             };   
             sticky_recommendations();
@@ -386,6 +408,9 @@ $(document).ready(function () {
             } else {
                 $('.q-fbt').addClass('d-none');
             }
+            $('.question-section input.q-fbt').each(function(){
+                $(this).prop('checked', false);
+            });
             sticky_recommendations();
         });
         
@@ -397,7 +422,7 @@ $(document).ready(function () {
         // RECOMMENDATIONS SIDEBAR
         // Business structure page add / remove recommendations
          $('.q-know-structure input#know-structure-no, .q-know-structure input#know-structure-yes').on('change', function(){
-            clear_registrations();
+            remove_registrations('registrations', ['individual-abn']);
 
              // Clear answered inputs
              $('.q-know-structure-yes .radio-button input, .q-know-structure-no .radio-button input').each(function(){
@@ -406,7 +431,7 @@ $(document).ready(function () {
 
             sticky_recommendations
         });
-        
+
         $('.q-know-structure-yes input, #sole-trader-v-company input, #partnership-v-company input').on('change', function(){
             var answer = $(this).attr('data-value');
 
@@ -418,20 +443,14 @@ $(document).ready(function () {
             $('.no-recommendations').removeClass('show');
            
             if (answer == 'Sole trader') {
-                add_registration('individual-tfn');
-                add_registration('abn');
-                remove_registration('business-tfn'); 
-                remove_registration('company');
+                add_registrations('registrations', ['individual-tfn', 'abn']);
+                remove_registrations('registrations', ['business-tfn', 'company']); 
             } else if (answer == 'Company') {
-                add_registration('business-tfn');
-                add_registration('abn');
-                add_registration('company');
-                remove_registration('individual-tfn'); 
+                add_registrations('registrations', ['business-tfn', 'abn', 'company']);
+                remove_registrations('registrations', ['individual-tfn']); 
             } else {
-                add_registration('business-tfn');
-                add_registration('abn');
-                remove_registration('individual-tfn'); 
-                remove_registration('company');
+                add_registrations('registrations', ['business-tfn', 'abn']);
+                remove_registrations('registrations', ['individual-tfn', 'company']); 
             }
             sticky_recommendations();
         });
@@ -439,7 +458,7 @@ $(document).ready(function () {
 
         // Business name page add / remove recommendations
         $('.q-business-name input').on('change', function(){
-            single_registration_q(this, 'business-name');
+            single_registration_q(this, 'business-name');  
         });
 
         $('.q-trade-mark input').on('change', function(){
@@ -452,6 +471,8 @@ $(document).ready(function () {
 
         //Employees page add / remove recommendations
         $('.q-payg input').on('change', function(){
+            remove_registrations('registrations', ['fbt']);
+            remove_answers('answers', ['fbt-yes', 'fbt-no']);
             single_registration_q(this, 'payg');
         });
 
@@ -459,30 +480,71 @@ $(document).ready(function () {
             single_registration_q(this, 'fbt');
         });
 
+        var check_gst = function(){
+            var gst_inputs = ['#business-turnover-yes', '#taxi-limousine-yes', '#wet-yes', '#ftc-yes', '#lct-yes'],
+            gst_required = false;
+
+            for (var i = 0; i < gst_inputs.length; i++) {
+                 if ($(gst_inputs[i]).is(':checked')) {
+                    gst_required = true;
+                    console.log('gst still required');
+                    return;
+                 }
+            }
+            if (gst_required == false) {
+                remove_registrations('registrations', ['gst']);
+            }
+        };
+
         //Business taxes page add / remove recommendations
         $('.q-business-turnover input, .q-taxi-limousine input').on('change', function(){
-            single_registration_q(this, 'gst');
+            var answer = $(this).attr('data-value');
+            if (answer == 'gst') {
+                add_registrations('registrations', ['gst']);
+            } else {
+                check_gst();
+            }
+    
+            sticky_recommendations(); 
         });
 
         $('.q-wet input').on('change', function(){
-            single_registration_q(this, 'wet');
-            add_registration('gst');
+            var answer = $(this).attr('data-value');
+            if (answer == 'wet') {
+                add_registrations('registrations', ['gst', 'wet']);
+            } else {
+                remove_registrations('registrations', ['wet']);
+                check_gst();
+            }
+            
+            sticky_recommendations(); 
         });
 
         $('.q-ftc input').on('change', function(){
-            single_registration_q(this, 'ftc');
-            add_registration('gst');
+            var answer = $(this).attr('data-value');
+            if (answer == 'ftc') {
+                add_registrations('registrations', ['gst', 'ftc']);
+            } else {
+                remove_registrations('registrations', ['ftc']);
+                check_gst();
+            }
+            
+            sticky_recommendations(); 
         });
 
         $('.q-lct input').on('change', function(){
-            single_registration_q(this, 'lct');
-            add_registration('gst');
+            var answer = $(this).attr('data-value');
+            if (answer == 'lct') {
+                add_registrations('registrations', ['gst', 'lct']);
+            } else {
+                remove_registrations('registrations', ['lct']);
+                check_gst();
+            }
+            
+            sticky_recommendations(); 
         });
         
-        
-        
-        
-        
+
         
         // Comparison accordions
         $('.treegrid .learn-more button').on('click', function(){
@@ -492,40 +554,68 @@ $(document).ready(function () {
 
         // Sidebar stickiness
         var sticky_recommendations = function() {
-            var sidebar_position = Math.round($('.recommendations-sidebar-wrapper').position().top);
-            var sidebar_width = $('.recommendations-sidebar-wrapper').width();
-            var sidebar_height = $('.recommendations-sidebar').height();
-            var footer_height = $('.bga-footer-example').height();
-            //console.log('Side bar position: ' + sidebar_position);
-            //console.log('Side bar width: ' + sidebar_width);
-            //console.log('Side bar width: ' + sidebar_width);
-            //console.log('Side bar height: ' + sidebar_height);
-            //console.log('Footer height: ' + footer_height);
-            
+            if ($('.recommendations-sidebar-wrapper').length) {
+                var sidebar_position = Math.round($('.recommendations-sidebar-wrapper').position().top);
+                var sidebar_width = $('.recommendations-sidebar-wrapper').width();
+                var sidebar_height = $('.recommendations-sidebar').height();
+                var footer_height = $('.bga-footer-example').height();
+                //console.log('Side bar position: ' + sidebar_position);
+                //console.log('Side bar width: ' + sidebar_width);
+                //console.log('Side bar width: ' + sidebar_width);
+                //console.log('Side bar height: ' + sidebar_height);
+                //console.log('Footer height: ' + footer_height);
+                
 
-            $('.recommendations-sidebar').css('width', sidebar_width);
+                $('.recommendations-sidebar').css('width', sidebar_width);
 
-            if ($(window).width() >= 768) {
-                $('.recommendations-sidebar').removeClass('mobile-hide');
-                $(window).scroll(function () {
-                    var unfix = $(document).height() - footer_height - sidebar_height;
-                    var scroll_position = $(window).scrollTop();
+                if ($(window).width() >= 768) {
+                    $('.recommendations-sidebar').removeClass('mobile-hide');
+                    $(window).scroll(function () {
+                        var unfix = $(document).height() - footer_height - sidebar_height;
+                        var scroll_position = $(window).scrollTop();
 
-                    if (scroll_position >= sidebar_position && scroll_position < unfix) {
-                        $('.recommendations-sidebar').addClass('fixed');
-                    } else {
-                        $('.recommendations-sidebar').removeClass('fixed');
-                    }
-                });
-            } else if ($(window).width() < 768) {
-                $('.recommendations-sidebar').addClass('mobile-hide');
-            }
+                        if (scroll_position >= sidebar_position && scroll_position < unfix) {
+                            $('.recommendations-sidebar').addClass('fixed');
+                        } else {
+                            $('.recommendations-sidebar').removeClass('fixed');
+                        }
+                    });
+                } else if ($(window).width() < 768) {
+                    $('.recommendations-sidebar').addClass('mobile-hide');
+                }
+            };
         };
         sticky_recommendations();
 
         $(window).resize(function () {
             sticky_recommendations();
         }); 
+
+
+
+        // Display results on results page
+        if ($('#help-me-decide-prototype').hasClass('results-page')) {
+
+            // Show business structure call out
+            var business_structure = sessionStorage.getItem('business-structure');
+            business_structure = business_structure.replace(' ', '-');
+            business_structure = business_structure.toLowerCase();
+            $('#' + business_structure + '.callout-business-structure').removeClass('d-none');
+
+            // Show registration items in accordion
+            var registrations = sessionStorage.getItem('registrations');
+            console.log(registrations);
+
+            $('.registrations-accordion .accordion-item').each(function(){
+                var registration = $(this).attr('id');
+                if (registrations.includes(registration)) {
+                    $(this).removeClass('d-none');
+                }
+            });
+
+
+        } // end results page
+
 
     }; // End Help me decide
 
