@@ -597,21 +597,46 @@ $(document).ready(function () {
         if ($('#help-me-decide-prototype').hasClass('results-page')) {
 
             // Show business structure call out
-            var business_structure = sessionStorage.getItem('business-structure');
+            var business_structure = sessionStorage.getItem('business-structure'), registrations = sessionStorage.getItem('registrations'),
+            answers = sessionStorage.getItem('answers');
+
             business_structure = business_structure.replace(' ', '-');
             business_structure = business_structure.toLowerCase();
             $('#' + business_structure + '.callout-business-structure').removeClass('d-none');
 
             // Show registration items in accordion
-            var registrations = sessionStorage.getItem('registrations');
-            console.log(registrations);
-
             $('.registrations-accordion .accordion-item').each(function(){
                 var registration = $(this).attr('id');
                 if (registrations.includes(registration)) {
                     $(this).removeClass('d-none');
                 }
             });
+
+            // Show answers in edit answers component
+            $('.edit-answers-component .answers p').each(function(){
+                var answer = $(this).attr('id');
+                if (answers.includes(answer)) {
+                    $(this).removeClass('d-none');
+                }
+            });
+
+            // Show list of registrations in next steps
+            $('.registrations-apply li').each(function(){
+                var registration = $(this).attr('data-value');
+                if (registrations.includes(registration)) {
+                    $(this).removeClass('d-none');
+                }
+            });
+            var other_registrations = ['individual-tfn', 'trade-mark', 'domain-name'];
+            
+            for (var i = 0; i < other_registrations.length; i++) {
+                if ( registrations.includes(other_registrations[i]) ) {
+                    console.log(other_registrations[i]);
+
+                    $('.other-registrations').removeClass('d-none');
+                    $('.other-registrations .' + other_registrations[i]).removeClass('d-none');
+                }
+            }
 
 
         } // end results page
