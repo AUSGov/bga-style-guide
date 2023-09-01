@@ -22,7 +22,37 @@
     {% include page-header.html
         classes="teal" %}
 
-            {{ content }}
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+       
+        <div class="stepped-navigation-wrapper remove-element-padding">
+
+            <h1 class="step-title" data-step="{{page.step-number}}">{{ page.stepped-nav-step }}</h1>
+    
+            <div class="mobile-stepped-nav remove-element-padding">
+                <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
+                <p>Step {{ page.step-number }} of 5: <strong>{{ page.stepped-nav-step }}</strong></p>
+            </div>
+    
+            {% include component-examples/stepped-navigation-example.html
+            step1="Business structure"
+            step2="Business name"
+            step3="Employees"
+            step4="Business taxes"
+            step5="Results"
+            classes=""
+            %}
+    
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+        {{ content }}
 
     {% include component-examples/bga-site-footer-example.html %}
 
