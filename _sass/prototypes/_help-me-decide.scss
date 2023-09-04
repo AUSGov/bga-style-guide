@@ -48,15 +48,40 @@
 
     .treegrid {
         width: 100%;
+        display: block;
 
+        thead, tbody {
+            display: block;
+            width: 100%;
+        }
+        th, td {
+            display: inline-flex;
+            width: calc(50% - 130px);
+
+            &:nth-child(2), &:nth-child(3) {
+                width: 25%;
+            }
+            &:nth-child(4) {
+                width: 130px;
+            }
+        }
+        tr {
+            border-bottom: 1px solid $bga-blue-black-dark;
+            display: flex;
+
+            &.more-info {
+                td {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
         th {
             background: $bga-teal-highlight-mid;
             font-weight: 600;
             padding: 16px 8px;
         }
-        tr {
-            border-bottom: 1px solid $bga-blue-black-dark;
-        }
+       
         td {
             padding: 16px 8px;
 
@@ -70,6 +95,15 @@
 
             &.learn-more {
                 background: $bga-teal-tool-light;
+
+                button {
+                    padding: 0;
+                    margin: 0;
+                    background: none;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
 
