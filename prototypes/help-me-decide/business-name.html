@@ -1,11 +1,14 @@
 ---
 
-layout: bga-inpage-tool
+layout: bga-inpage-tool-hmd
 title: Business registrations - help me decide
+step-number: 2
+stepped-nav-step: Business name
+page-id: business-name
 
 ---
 
-<div class="container page-content my-5" id="help-me-decide-prototype">
+<div class="container page-content my-5" data-page="{{ page.page-id }}" id="help-me-decide-prototype">
 
     <div class="row">
 
@@ -21,7 +24,7 @@ title: Business registrations - help me decide
                     <p>You need to register your business name if it’s different to your own name. For example, if your name is Joe Aaron Smith, and you want to use it (or a shortened form such as Joe Smith, J Smith, or J. A. Smith) as your business name, you don’t need to register it.</p>
                     <p>You need to register a business name if it's anything else ('Joe Smith Plumbing').</p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="business-name" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="business-name"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="business-name"
@@ -54,7 +57,7 @@ title: Business registrations - help me decide
                     <p>Registering your business name doesn't stop other businesses from using it for their products or services. You can protect your business name by applying for a trade mark.</p>
                     
                     
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="trade-mark"
+                    <div class="radios w-50 g-2 d-flex radio-flex-group"  id="trade-mark"
                         role="radiogroup">
 
                         <div class="radio-button w-50">
@@ -90,7 +93,7 @@ title: Business registrations - help me decide
                     <p>Website addresses are called domain names, for example, sarahsflowers.com.au or josephsmitharchitects.com.au.</p><p>If you're keen to have a domain name that reflects your business name, it's a good idea to register your domain name even if you're not quite ready to set up your website.</p>
                     
                     
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="domain-name"
+                    <div class="radios w-50 g-2 d-flex radio-flex-group"  id="domain-name"
                         role="radiogroup">
 
                         <div class="radio-button w-50">
@@ -132,10 +135,10 @@ title: Business registrations - help me decide
             <!-- BUTTON GROUP -->
             <div class="tool-button-group button-group">
 
-                <a class="bga-link bga-inline-link bkg-light" tabindex="0"
+                <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
                     href={{ 'prototypes/help-me-decide/business-structure.html' | relative_url }} role="button">Previous</a>
 
-                <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0"
                     href={{ 'prototypes/help-me-decide/employees.html' | relative_url }} role="button">Next</a>
 
             </div>

@@ -1,13 +1,14 @@
 ---
 
-layout: bga-inpage-tool
+layout: bga-inpage-tool-hmd
 title: Business registrations - help me decide
 step-number: 5
 stepped-nav-step: Results
+page-id: results
 
 ---
 
-<div class="container page-content results-page my-5" id="help-me-decide-prototype">
+<div class="container page-content results-page my-5" data-page="{{ page.page-id }}"  id="help-me-decide-prototype">
 
 
     <div class="row">
@@ -15,6 +16,17 @@ stepped-nav-step: Results
         <div class="remove-top-spaces col-lg-10 col-xl-9">
 
             <h2>Your results</h2>
+
+            <div class="error-notification-wrapper d-none">
+            {% include component-examples/notification-example.html
+                icon="'../../assets/icon-notification-circle-warning.svg' | relative_url "
+                title="It appears some questions are unanswered"
+                content="These have been marked as Unanswered in the ‘View and change your answers’ feature below. To see your recommendations edit and answer the remaining questions."
+                classes="warning"
+                %}
+            </div>
+
+            <div class="business-structure-wrapper d-none">
 
             <h3>Business structure</h3>
 
@@ -190,6 +202,10 @@ stepped-nav-step: Results
             </ul>"
             %}
 
+            </div>
+
+
+            <div class="registrations-wrapper d-none">
 
             <h3>Registrations</h3>
             <p><strong>Based on your selections the following registrations are recommended for your business.</strong>
@@ -476,6 +492,10 @@ stepped-nav-step: Results
                 </div>
             </div>
 
+            </div>
+
+
+            <div class="edit-answers-wrapper">
 
             <!-- EDIT ANSWERS -->
             <div class="bga-component-wrapper pb-0 mb-5">
@@ -515,10 +535,9 @@ stepped-nav-step: Results
                                 </div>
 
                                 <div class="answers remove-element-padding">
-                                    <p id="know-structure-yes" class="d-none">Do you know what business structure you
-                                        plan to use?<span>Yes</span></p>
-                                    <p id="know-structure-no" class="d-none">Do you know what business structure you
-                                        plan to use?<span>No</span></p>
+                                    <p id="know-structure-yes" class="d-none">Do you know what business structure you plan to use?<span>Yes</span></p>
+                                    <p id="know-structure-no" class="d-none">Do you know what business structure you plan to use?<span>No</span></p>
+                                    <p id="know-structure-unanswered" class="d-none">Do you know what business structure you plan to use?<span class="unanswered">Unanswered</span></p>
 
 
                                     <p id="sole-trader" class="d-none">What business structure will you use?<span>Sole
@@ -529,30 +548,26 @@ stepped-nav-step: Results
                                         use?<span>Company</span></p>
                                     <p id="trust" class="d-none">What business structure will you use?<span>Trust</span>
                                     </p>
-                                    <p id="superannuation" class="d-none">What business structure will you
-                                        use?<span>Superannuation</span></p>
+                                    <p id="superannuation" class="d-none">What business structure will you use?<span>Superannuation</span></p>
+                                    <p id="business-structure-unanswered" class="d-none">What business structure will you use?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="number-owners-one" class="d-none">How many owners will your business
-                                        have?<span>One (just me)</span></p>
-                                    <p id="number-owners-two" class="d-none">How many owners will your business
-                                        have?<span>Two or more</span></p>
+                                    <p id="number-owners-one" class="d-none">How many owners will your business have?<span>One (just me)</span></p>
+                                    <p id="number-owners-two" class="d-none">How many owners will your business have?<span>Two or more</span></p>
+                                    <p id="number-owners-unanswered" class="d-none">How many owners will your business have?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="hold-assets-yes" class="d-none">Will you hold and control an asset for the
-                                        benefit of others?<span>Yes</span></p>
-                                    <p id="hold-assets-no" class="d-none">Will you hold and control an asset for the
-                                        benefit of others?<span>No</span></p>
+                                    <p id="hold-assets-yes" class="d-none">Will you hold and control an asset for the benefit of others?<span>Yes</span></p>
+                                    <p id="hold-assets-no" class="d-none">Will you hold and control an asset for the benefit of others?<span>No</span></p>
+                                    <p id="hold-assets-unanswered" class="d-none">Will you hold and control an asset for the benefit of others?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="sole-trader-1" class="d-none">Which business structure would you
-                                        prefer?<span>Sole trader</span></p>
-                                    <p id="company-1" class="d-none">Which business structure would you
-                                        prefer?<span>Company</span></p>
-                                    <p id="partnership-2" class="d-none">Which business structure would you
-                                        prefer?<span>Partnership</span></p>
-                                    <p id="company-2" class="d-none">Which business structure would you
-                                        prefer?<span>Company</span></p>
+                                    <p id="sole-trader-1" class="d-none">Which business structure would you  prefer?<span>Sole trader</span></p>
+                                    <p id="company-1" class="d-none">Which business structure would you prefer?<span>Company</span></p>
+                                    <p id="partnership-2" class="d-none">Which business structure would you prefer?<span>Partnership</span></p>
+                                    <p id="company-2" class="d-none">Which business structure would you prefer?<span>Company</span></p>
+                                    <p id="sole-trader-v-company" class="d-none">Which business structure would you prefer?<span class="unanswered">Unanswered</span></p>
+                                    <p id="partnership-v-company-unanswered" class="d-none">Which business structure would you prefer?<span class="unanswered">Unanswered</span></p>
 
                                 </div>
 
@@ -579,22 +594,19 @@ stepped-nav-step: Results
                                 </div>
 
                                 <div class="answers remove-element-padding">
-                                    <p id="business-name-yes" class="d-none">Will you use your own name as your business
-                                        name?<span>Yes</span></p>
-                                    <p id="business-name-no" class="d-none">Will you use your own name as your business
-                                        name?<span>No</span></p>
+                                    <p id="business-name-yes" class="d-none">Will you use your own name as your business name?<span>Yes</span></p>
+                                    <p id="business-name-no" class="d-none">Will you use your own name as your business name?<span>No</span></p>
+                                    <p id="business-name-unanswered" class="d-none">Will you use your own name as your business name?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="trade-mark-yes" class="d-none">Do you want to protect your business name so
-                                        it is unique to your business?<span>Yes</span></p>
-                                    <p id="trade-mark-no" class="d-none">Do you want to protect your business name so it
-                                        is unique to your business?<span>No</span></p>
+                                    <p id="trade-mark-yes" class="d-none">Do you want to protect your business name so it is unique to your business?<span>Yes</span></p>
+                                    <p id="trade-mark-no" class="d-none">Do you want to protect your business name so it is unique to your business?<span>No</span></p>
+                                    <p id="trade-mark-unanswered" class="d-none">Do you want to protect your business name so it is unique to your business?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="number-owners-one" class="d-none">Do you plan to set up a business
-                                        website?<span>Yes</span></p>
-                                    <p id="number-owners-two" class="d-none">Do you plan to set up a business
-                                        website?<span>No</span></p>
+                                    <p id="domain-name-yes" class="d-none">Do you plan to set up a business website?<span>Yes</span></p>
+                                    <p id="domain-name-no" class="d-none">Do you plan to set up a business  website?<span>No</span></p>
+                                    <p id="domain-name-unanswered" class="d-none">Do you plan to set up a business  website?<span class="unanswered">Unanswered</span></p>
 
                                 </div>
 
@@ -623,13 +635,12 @@ stepped-nav-step: Results
                                 <div class="answers remove-element-padding">
                                     <p id="payg-yes" class="d-none">Will you take on employees?<span>Yes</span></p>
                                     <p id="payg-no" class="d-none">Will you take on employees?<span>No</span></p>
+                                    <p id="payg-unanswered" class="d-none">Will you take on employees?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="fbt-yes" class="d-none">Will you offer fringe benefits to your
-                                        employees?<span>Yes</span></p>
-                                    <p id="fbt-no" class="d-none">Will you offer fringe benefits to your
-                                        employees?<span>No</span></p>
-
+                                    <p id="fbt-yes" class="d-none">Will you offer fringe benefits to your employees?<span>Yes</span></p>
+                                    <p id="fbt-no" class="d-none">Will you offer fringe benefits to your employees?<span>No</span></p>
+                                    <p id="fbt-unanswered" class="d-none">Will you offer fringe benefits to your employees?<span class="unanswered">Unanswered</span></p>
 
 
                                 </div>
@@ -657,34 +668,29 @@ stepped-nav-step: Results
                                 </div>
 
                                 <div class="answers remove-element-padding">
-                                    <p id="business-turnover-yes" class="d-none">Do you expect to have business turnover
-                                        of $75,000 or more in your first year?<span>Yes</span></p>
-                                    <p id="business-turnover-no" class="d-none">Do you expect to have business turnover
-                                        of $75,000 or more in your first year?<span>No</span></p>
+                                    <p id="business-turnover-yes" class="d-none">Do you expect to have business turnover of $75,000 or more in your first year?<span>Yes</span></p>
+                                    <p id="business-turnover-no" class="d-none">Do you expect to have business turnover of $75,000 or more in your first year?<span>No</span></p>
+                                    <p id="business-turnover-unanswered" class="d-none">Do you expect to have business turnover of $75,000 or more in your first year?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="taxi-limousine-yes" class="d-none">Are you running a taxi business, limousine
-                                        hire business or providing a ride share service?<span>Yes</span></p>
-                                    <p id="taxi-limousine-no" class="d-none">Are you running a taxi business, limousine
-                                        hire business or providing a ride share service?<span>No</span></p>
+                                    <p id="taxi-limousine-yes" class="d-none">Are you running a taxi business, limousine hire business or providing a ride share service?<span>Yes</span></p>
+                                    <p id="taxi-limousine-no" class="d-none">Are you running a taxi business, limousine hire business or providing a ride share service?<span>No</span></p>
+                                    <p id="taxi-limousine-unanswered" class="d-none">Are you running a taxi business, limousine hire business or providing a ride share service?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="wet-yes" class="d-none">Will you wholesale or produce wine in Australia,
-                                        including cider, perry, mead, or sake?<span>Yes</span></p>
-                                    <p id="wet-no" class="d-none">Will you wholesale or produce wine in Australia,
-                                        including cider, perry, mead, or sake?<span>No</span></p>
+                                    <p id="wet-yes" class="d-none">Will you wholesale or produce wine in Australia, including cider, perry, mead, or sake?<span>Yes</span></p>
+                                    <p id="wet-no" class="d-none">Will you wholesale or produce wine in Australia, including cider, perry, mead, or sake?<span>No</span></p>
+                                    <p id="wet-unanswered" class="d-none">Will you wholesale or produce wine in Australia, including cider, perry, mead, or sake?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="ftc-yes" class="d-none">Will you use taxable fuels in factories, equipment,
-                                        machinery or heavy vehicles?<span>Yes</span></p>
-                                    <p id="ftc-no" class="d-none">Will you use taxable fuels in factories, equipment,
-                                        machinery or heavy vehicles?<span>No</span></p>
+                                    <p id="ftc-yes" class="d-none">Will you use taxable fuels in factories, equipment, machinery or heavy vehicles?<span>Yes</span></p>
+                                    <p id="ftc-no" class="d-none">Will you use taxable fuels in factories, equipment, machinery or heavy vehicles?<span>No</span></p>
+                                    <p id="ftc-unanswered" class="d-none">Will you use taxable fuels in factories, equipment, machinery or heavy vehicles?<span class="unanswered">Unanswered</span></p>
 
 
-                                    <p id="lct-yes" class="d-none">Will you import or sell luxury cars?<span>Yes</span>
-                                    </p>
-                                    <p id="lct-no" class="d-none">Will you import or sell luxury cars?<span>No</span>
-                                    </p>
+                                    <p id="lct-yes" class="d-none">Will you import or sell luxury cars?<span>Yes</span></p>
+                                    <p id="lct-no" class="d-none">Will you import or sell luxury cars?<span>No</span></p>
+                                    <p id="lct-unanswered" class="d-none">Will you import or sell luxury cars?<span class="unanswered">Unanswered</span></p>
 
 
 
@@ -702,6 +708,10 @@ stepped-nav-step: Results
                 </div>
             </div>
 
+            </div>
+
+
+            <div class="next-steps-wrapper d-none">
 
             <!-- NEXT STEPS -->
             <h2>Next steps</h2>
@@ -798,6 +808,8 @@ stepped-nav-step: Results
 
             <h3>3. Consider other registrations your business may need</h3>
             <p>We've covered the <strong>basic business and tax registrations</strong>. There are a number of registrations you may still need before you can start trading, including licences and permits from state or territory governments. To check, use the <a href="https://ablis.business.gov.au/"  target="_blank">Australian Business Licence and Information Service (ABLIS)</a>.</p>
+
+            </div>
 
         </div>
 

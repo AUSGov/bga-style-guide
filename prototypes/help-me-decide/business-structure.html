@@ -1,11 +1,14 @@
 ---
 
-layout: bga-inpage-tool
+layout: bga-inpage-tool-hmd
 title: Business registrations - help me decide
+step-number: 1
+stepped-nav-step: Business structure
+page-id: business-structure
 
 ---
 
-<div class="container page-content my-5" id="help-me-decide-prototype">
+<div class="container page-content my-5" data-page="{{ page.page-id }}" id="help-me-decide-prototype">
 
     <div class="row">
 
@@ -21,7 +24,7 @@ title: Business registrations - help me decide
                     <p class="">There are a number of structures that you can choose from when starting or expanding your business including <strong>sole trader</strong>, <strong>company</strong>, <strong>partnership</strong> and <strong>trust</strong>.
                     </p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="know-structure" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="know-structure"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="know-structure"
@@ -34,10 +37,9 @@ title: Business registrations - help me decide
                                 id="know-structure-no" data-value="know-structure-no">
                             <label class="form-check-label" for="know-structure-no">No</label>
                         </div>
-
-
-
+                    
                     </div>
+
                 </div>
                 
                 <hr class="section-divider my-5" />
@@ -54,7 +56,7 @@ title: Business registrations - help me decide
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="business-structure" class="form-label h3-font-size heading-color mb-3"><strong>What business structure will you use?</strong></h3>
 
-                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" id="business-structure"
+                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group"  id="business-structure"
                         role="radiogroup">
 
                         <div class="radio-button w-100">
@@ -120,7 +122,7 @@ title: Business registrations - help me decide
                     <h3 for="number-owners" class="form-label h3-font-size heading-color mb-3"><strong>How many owners will your business have?</strong></h3>
                     <p class="">A business owner is lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet odio pulvinar, rhoncus dui congue, semper purus.</p>
 
-                    <div class="radios w-50 d-flex dynamic-trigger radio-flex-group" id="number-owners" role="radiogroup">
+                    <div class="radios w-50 d-flex dynamic-trigger radio-flex-group" id="number-owners"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="number-owners" id="number-owners-one"
@@ -146,7 +148,7 @@ title: Business registrations - help me decide
                     <h3 for="hold-assets" class="form-label h3-font-size heading-color mb-3"><strong>Will you hold and control an asset for the benefit of others?</strong></h3>
                     <p class="">Assets are lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit ametodio pulvinar, rhoncus dui congue, semper purus.</p>
 
-                    <div class="radios w-50 g-2 d-flex dynamic-trigger radio-flex-group" id="hold-assets" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex dynamic-trigger radio-flex-group" id="hold-assets"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="hold-assets" id="hold-assets-yes"
@@ -386,7 +388,7 @@ title: Business registrations - help me decide
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="sole-trader-v-company" class="form-label h3-font-size heading-color mb-3"><strong>Which business structure would you prefer?</strong></h3>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="sole-trader-v-company" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="sole-trader-v-company"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="sole-trader-v-company" id="sole-trader-1" data-value="Sole trader">
@@ -625,10 +627,10 @@ title: Business registrations - help me decide
             <!-- BUTTON GROUP -->
             <div class="tool-button-group button-group">
 
-                <a class="bga-link bga-inline-link bkg-light" tabindex="0"
+                <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
                     href={{ 'prototypes/help-me-decide/landing.html' | relative_url }} role="button">Previous</a>
 
-                <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0"
                     href={{ 'prototypes/help-me-decide/business-name.html' | relative_url }} role="button">Next</a>
 
             </div>

@@ -1,11 +1,14 @@
 ---
 
-layout: bga-inpage-tool
+layout: bga-inpage-tool-hmd
 title: Business registrations - help me decide
+step-number: 4
+stepped-nav-step: Business taxes
+page-id: business-taxes
 
 ---
 
-<div class="container page-content my-5" id="help-me-decide-prototype">
+<div class="container page-content my-5" data-page="{{ page.page-id }}" id="help-me-decide-prototype">
 
     <div class="row">
 
@@ -20,7 +23,7 @@ title: Business registrations - help me decide
                     <h3 for="business-turnover" class="form-label h3-font-size heading-color mb-3"><strong>Do you expect to have business turnover of $75,000 or more in your first year?</strong></h3>
                     <p>Business turnover is your gross business income (not your profit).</p>
                     
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="business-turnover"
+                    <div class="radios w-50 g-2 d-flex radio-flex-group"  id="business-turnover"
                         role="radiogroup">
 
                         <div class="radio-button w-50">
@@ -59,7 +62,7 @@ title: Business registrations - help me decide
                         </ul>
                     <p>This <strong>doesn’t</strong> inlcude car hire  or limousine hire services where you don’t provide a driver.</p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="taxi-limousine" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="taxi-limousine"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="taxi-limousine"
@@ -91,7 +94,7 @@ title: Business registrations - help me decide
             
                     <p>This includes grape wine, grape wine products such as vermouth, fruit or vegetable wines, cider, perry, mead, or sake, that has more than 1.15% ethyl alcohol.</p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="wet" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="wet"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="wet"
@@ -123,7 +126,7 @@ title: Business registrations - help me decide
                 
                     <p>Heavy vehicles are any vehicle with a GVM (gross vehicle mass) greater than 4.5 tonnes.</p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="ftc" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="ftc"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="ftc"
@@ -154,7 +157,7 @@ title: Business registrations - help me decide
                     <h3 for="lct" class="form-label h3-font-size heading-color mb-3"><strong>Will you import or sell luxury cars?</strong></h3>
                     <p>Luxury cars are cars that are worth more than $64,132 (more than $75,526 for fuel-efficient vehicles).</p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="lct" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="lct"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="lct"
@@ -190,10 +193,10 @@ title: Business registrations - help me decide
             <!-- BUTTON GROUP -->
             <div class="tool-button-group button-group">
 
-                <a class="bga-link bga-inline-link bkg-light" tabindex="0"
+                <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
                     href={{ 'prototypes/help-me-decide/employees.html' | relative_url }} role="button">Previous</a>
 
-                <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0"
                     href={{ 'prototypes/help-me-decide/results.html' | relative_url }} role="button">Next</a>
 
             </div>

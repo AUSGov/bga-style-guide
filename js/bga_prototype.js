@@ -176,6 +176,92 @@ $(document).ready(function () {
     // Check page is Help me decide prototype
     if ($('#help-me-decide-prototype').length) {
 
+        // STEPPED NAV
+        // Stepped nav functionality
+        var stepped_nav_functionality = function(step_titles, path){
+       
+            var active_step = 'nav-step-' + $('#stepped-nav-inpage').attr('data-step'),
+            active_number = parseInt($('#stepped-nav-inpage').attr('data-step'));
+
+            $('#' + active_step).addClass('active');
+
+            sessionStorage.setItem(active_step, 'visited');
+
+            for (var step = 0; step < step_titles.length; step++) {
+                var step_number = step + 1,
+                    step_str = 'nav-step-' + step_number;
+                var state = sessionStorage.getItem(step_str);
+
+                if (step_number < active_number) {
+                    $('#' + step_str).addClass('completed').attr('href', path + step_titles[step]);
+                } else if ( step_number > active_number) {
+                    if (state == "visited" && !$('#' + step_str).hasClass('active')) {
+                            $('#' + step_str).addClass('completed').attr('href', path + step_titles[step]);
+                        }
+                }
+            }
+
+            var completed_number;
+            $('.stepped-navigation .step').each(function(index){
+                var step = index + 1,
+                visited_state = sessionStorage.getItem('nav-step-'+ step);
+                if (visited_state == 'visited') {
+                    completed_number = step;
+                } 
+            });
+            if (completed_number > active_number) {
+                $('.step.active').addClass('completed');
+                $('.step.completed').last().addClass('visited').removeClass('completed');
+            } else {
+                $('.step.active').removeClass('completed');
+            }
+
+        };
+
+        if ($('#stepped-nav-inpage').length) {
+            var path = '/bga-style-guide/prototypes/help-me-decide/';
+            stepped_nav_functionality(["business-structure.html", "business-name.html", "employees.html", "business-taxes.html", "results.html"], path);
+        }
+
+        // Check all visible radios on the page are answered before continuing 
+        var get_unanswered = function(target_q){
+ 
+            var host = window.location.hostname,
+            protocol = window.location.protocol,
+            path = $(target_q).attr('href'),
+            unanswered = sessionStorage.getItem('unanswered');
+
+            if (!unanswered) {
+                unanswered = "";
+            }
+            if (host == '127.0.0.1') {
+                    host = '127.0.0.1:4000'
+            };
+            
+            $('.radios:visible').each(function(){
+                var question = $(this).attr('id') + '-unanswered';
+               
+                if (!$(this).find('input').is(":checked")) {
+                    unanswered = unanswered + question + ', ';
+                } else {
+                    unanswered = unanswered.replace(question + ', ', '');
+                }
+            }); 
+            sessionStorage.setItem('unanswered', unanswered);
+    
+            window.location = (protocol + '//' + host + path);
+        };
+
+        $('.bga-btn.next').on('click', function(e){
+            e.preventDefault();
+            get_unanswered(this);
+        });
+        $('.stepped-navigation .step').on('click', function(e){
+            e.preventDefault();
+            get_unanswered(this);
+        });;
+        
+
         //Set recommendations sidebar on page load
         var get_recommendations = function(){
             var structure = sessionStorage.getItem('business-structure');
@@ -552,6 +638,94 @@ $(document).ready(function () {
             $(this).parents('tr').next('.more-info').slideToggle();
         });
 
+        
+
+
+
+        // Display results on results page
+        if ($('#help-me-decide-prototype').hasClass('results-page')) {
+
+            // Get results from sessionStorage
+            var business_structure = sessionStorage.getItem('business-structure'), 
+            registrations = sessionStorage.getItem('registrations'),
+            answers = sessionStorage.getItem('answers'),
+            unanswered = sessionStorage.getItem('unanswered');
+
+            if (!answers) {
+                answers = '';
+            }
+            if (!unanswered) {
+                unanswered = '';
+            };
+            if (!registrations) {
+                registrations = '';
+            }
+
+
+            // Checked what is answered and display results page accordingly
+            if (!business_structure) {
+                $(".error-notification-wrapper").removeClass('d-none');
+            } else if ( business_structure && unanswered !== '') { 
+                $('.business-structure-wrapper, .error-notification-wrapper').removeClass('d-none');
+
+                // Show business structure call out
+                business_structure = business_structure.replace(' ', '-');
+                business_structure = business_structure.toLowerCase();
+                $('#' + business_structure + '.callout-business-structure').removeClass('d-none');
+
+            } else {
+                $('.business-structure-wrapper, .registrations-wrapper, .next-steps-wrapper').removeClass('d-none');
+
+                // Show business structure call out
+                business_structure = business_structure.replace(' ', '-');
+                business_structure = business_structure.toLowerCase();
+                $('#' + business_structure + '.callout-business-structure').removeClass('d-none');
+
+                // Show registration items in accordion
+                $('.registrations-accordion .accordion-item').each(function(){
+                    var registration = $(this).attr('id');
+                    if (registrations.includes(registration)) {
+                        $(this).removeClass('d-none');
+                    }
+                });
+            }
+
+
+            // Show answers in edit answers component
+            $('.edit-answers-component .answers p').each(function(){
+                var answer = $(this).attr('id');
+            
+                if (answers.includes(answer)) {
+                    $(this).removeClass('d-none');
+                }
+                if (unanswered.includes(answer)) {
+                    $(this).removeClass('d-none');
+                }
+            });
+
+            // Show list of registrations in next steps
+            $('.registrations-apply li').each(function(){
+                var registration = $(this).attr('data-value');
+                if (registrations.includes(registration)) {
+                    $(this).removeClass('d-none');
+                }
+            });
+            var other_registrations = ['individual-tfn', 'trade-mark', 'domain-name'];
+            
+            for (var i = 0; i < other_registrations.length; i++) {
+                if ( registrations.includes(other_registrations[i]) ) {
+                    //console.log(other_registrations[i]);
+
+                    $('.other-registrations').removeClass('d-none');
+                    $('.other-registrations .' + other_registrations[i]).removeClass('d-none');
+                }
+            }
+
+
+        } // end results page
+        
+        
+        
         // Sidebar stickiness
         var sticky_recommendations = function() {
             if ($('.recommendations-sidebar-wrapper').length) {
@@ -590,56 +764,6 @@ $(document).ready(function () {
         $(window).resize(function () {
             sticky_recommendations();
         }); 
-
-
-
-        // Display results on results page
-        if ($('#help-me-decide-prototype').hasClass('results-page')) {
-
-            // Show business structure call out
-            var business_structure = sessionStorage.getItem('business-structure'), registrations = sessionStorage.getItem('registrations'),
-            answers = sessionStorage.getItem('answers');
-
-            business_structure = business_structure.replace(' ', '-');
-            business_structure = business_structure.toLowerCase();
-            $('#' + business_structure + '.callout-business-structure').removeClass('d-none');
-
-            // Show registration items in accordion
-            $('.registrations-accordion .accordion-item').each(function(){
-                var registration = $(this).attr('id');
-                if (registrations.includes(registration)) {
-                    $(this).removeClass('d-none');
-                }
-            });
-
-            // Show answers in edit answers component
-            $('.edit-answers-component .answers p').each(function(){
-                var answer = $(this).attr('id');
-                if (answers.includes(answer)) {
-                    $(this).removeClass('d-none');
-                }
-            });
-
-            // Show list of registrations in next steps
-            $('.registrations-apply li').each(function(){
-                var registration = $(this).attr('data-value');
-                if (registrations.includes(registration)) {
-                    $(this).removeClass('d-none');
-                }
-            });
-            var other_registrations = ['individual-tfn', 'trade-mark', 'domain-name'];
-            
-            for (var i = 0; i < other_registrations.length; i++) {
-                if ( registrations.includes(other_registrations[i]) ) {
-                    console.log(other_registrations[i]);
-
-                    $('.other-registrations').removeClass('d-none');
-                    $('.other-registrations .' + other_registrations[i]).removeClass('d-none');
-                }
-            }
-
-
-        } // end results page
 
 
     }; // End Help me decide
