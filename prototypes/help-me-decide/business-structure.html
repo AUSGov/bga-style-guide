@@ -908,66 +908,45 @@
     <div class="row">
         <div class="col-12">
        
-        <div class="stepped-navigation-wrapper remove-element-padding">
+        <div class="stepped-navigation-wrapper mt-5" data-step="1" id="stepped-nav-inpage">
 
-            <h1 class="step-title" data-step=""></h1>
-    
-            <div class="mobile-stepped-nav remove-element-padding">
+            <div class="mobile-stepped-nav">
                 <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
-                <p>Step  of 5: <strong></strong></p>
+                <p>Step 1 of 5: <strong>Business structure</strong></p>
             </div>
     
-            <div class="stepped-navigation-wrapper remove-element-padding ">
-    
-   
-    
-    
-    <div class="bga-component stepped-navigation">
+            <div class="stepped-navigation-wrapper remove-element-padding white">
 
-        
-        <a tabindex="1" id="nav-step-1" class="step  me-3">
-            <span class="step-number  mb-2">1</span>
-            <span class="step-name">Business structure</span>
-        </a>
-        
+                <div class="bga-component stepped-navigation">
+            
+                    <a tabindex="1" id="nav-step-1" class="step me-3">
+                        <span class="step-number  mb-2">1</span>
+                        <span class="step-name">Business structure</span>
+                    </a>
+            
+                    <a tabindex="1" id="nav-step-2" class="step me-3">
+                        <span class="step-number mb-2">2</span>
+                        <span class="step-name">Business name</span>
+                    </a>    
+            
+                    <a tabindex="1" id="nav-step-3" class="step me-3">
+                        <span class="step-number mb-2">3</span>
+                        <span class="step-name">Employees</span>
+                    </a>
+            
+                    <a tabindex="1" id="nav-step-4" class="step me-3">
+                        <span class="step-number mb-2">4</span>
+                        <span class="step-name">Business taxes</span>
+                    </a>
+            
+                    <a tabindex="1" id="nav-step-5" class="step me-3">
+                        <span class="step-number mb-2">5</span>
+                        <span class="step-name">Results</span>
+                    </a>
 
-        
-        <a tabindex="1" id="nav-step-2" class="step  me-3">
-            <span class="step-number mb-2">2</span>
-            <span class="step-name">Business name</span>
-        </a>    
-        
-
-        
-        <a tabindex="1" id="nav-step-3" class="step  me-3">
-            <span class="step-number mb-2">3</span>
-            <span class="step-name">Employees</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-4" class="step me-3">
-            <span class="step-number mb-2">4</span>
-            <span class="step-name">Business taxes</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-5" class="step me-3">
-            <span class="step-number mb-2">5</span>
-            <span class="step-name">Results</span>
-        </a>
-        
-
-        
-
-        
-
-        
-
-    </div>
-    
-</div>
+                </div>
+                
+            </div>
     
         </div>
 
@@ -977,7 +956,7 @@
 
 
 
-        <div class="container page-content my-5" id="help-me-decide-prototype">
+        <div class="container page-content my-5" data-page="business-structure" id="help-me-decide-prototype">
 
     <div class="row">
 
@@ -993,7 +972,7 @@
                     <p class="">There are a number of structures that you can choose from when starting or expanding your business including <strong>sole trader</strong>, <strong>company</strong>, <strong>partnership</strong> and <strong>trust</strong>.
                     </p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="know-structure" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="know-structure"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="know-structure"
@@ -1006,10 +985,9 @@
                                 id="know-structure-no" data-value="know-structure-no">
                             <label class="form-check-label" for="know-structure-no">No</label>
                         </div>
-
-
-
+                    
                     </div>
+
                 </div>
                 
                 <hr class="section-divider my-5" />
@@ -1026,7 +1004,7 @@
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="business-structure" class="form-label h3-font-size heading-color mb-3"><strong>What business structure will you use?</strong></h3>
 
-                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" id="business-structure"
+                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group"  id="business-structure"
                         role="radiogroup">
 
                         <div class="radio-button w-100">
@@ -1092,7 +1070,7 @@
                     <h3 for="number-owners" class="form-label h3-font-size heading-color mb-3"><strong>How many owners will your business have?</strong></h3>
                     <p class="">A business owner is lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet odio pulvinar, rhoncus dui congue, semper purus.</p>
 
-                    <div class="radios w-50 d-flex dynamic-trigger radio-flex-group" id="number-owners" role="radiogroup">
+                    <div class="radios w-50 d-flex dynamic-trigger radio-flex-group" id="number-owners"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="number-owners" id="number-owners-one"
@@ -1118,7 +1096,7 @@
                     <h3 for="hold-assets" class="form-label h3-font-size heading-color mb-3"><strong>Will you hold and control an asset for the benefit of others?</strong></h3>
                     <p class="">Assets are lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit ametodio pulvinar, rhoncus dui congue, semper purus.</p>
 
-                    <div class="radios w-50 g-2 d-flex dynamic-trigger radio-flex-group" id="hold-assets" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex dynamic-trigger radio-flex-group" id="hold-assets"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="hold-assets" id="hold-assets-yes"
@@ -1358,7 +1336,7 @@
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="sole-trader-v-company" class="form-label h3-font-size heading-color mb-3"><strong>Which business structure would you prefer?</strong></h3>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="sole-trader-v-company" role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="sole-trader-v-company"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="sole-trader-v-company" id="sole-trader-1" data-value="Sole trader">
@@ -1597,10 +1575,10 @@
             <!-- BUTTON GROUP -->
             <div class="tool-button-group button-group">
 
-                <a class="bga-link bga-inline-link bkg-light" tabindex="0"
+                <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
                     href=/bga-style-guide/prototypes/help-me-decide/landing.html role="button">Previous</a>
 
-                <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0"
                     href=/bga-style-guide/prototypes/help-me-decide/business-name.html role="button">Next</a>
 
             </div>
