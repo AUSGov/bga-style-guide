@@ -266,7 +266,8 @@ $(document).ready(function () {
         var get_recommendations = function(){
             var structure = sessionStorage.getItem('business-structure');
             if (structure) {
-                $('.recommendations-sidebar .chosen-structure').text(structure);
+                $('.recommendations-sidebar .chosen-structure span').text(structure);
+                $('.recommendations-sidebar .chosen-structure').addClass('completed');
             }
 
             var registrations = sessionStorage.getItem('registrations');
@@ -376,7 +377,7 @@ $(document).ready(function () {
             } else {
                 remove_registrations('registrations', [registration]);
             };
-            sticky_recommendations();
+            //sticky_recommendations();
         };
         
 
@@ -432,7 +433,8 @@ $(document).ready(function () {
             // Clear all business structure results
             remove_answers('answers', ['sole-trader', 'partnership', 'company', 'trust', 'superannuation', 'number-owners-one', 'number-owners', 'number-owners-two', 'hold-assets-no', 'hold-assets-yes', 'partnership-1', 'partnership-2', 'sole-trader-1', 'sole-trader-2', 'company-1']);
 
-            $('.recommendations-sidebar .chosen-structure').text("No chosen structure yet"); 
+            $('.recommendations-sidebar .chosen-structure span').text("No chosen structure yet"); 
+            $('.recommendations-sidebar .chosen-structure').removeClass('completed');
             sessionStorage.setItem('business-structure', '');
             
             remove_registrations('registrations', ['individual-tfn', 'business-tfn', 'abn', 'company']);
@@ -451,7 +453,7 @@ $(document).ready(function () {
                 $('.q-know-structure-no').removeClass('d-none');
                 remove_answers('answers', ['know-structure-yes']);
             }
-            sticky_recommendations();
+            //sticky_recommendations();
         });
         
         $('.q-know-structure-no .radio-button input').on('change', function(){
@@ -475,14 +477,15 @@ $(document).ready(function () {
                     $('.q-trust').removeClass('d-none');
                     
                     sessionStorage.setItem('business-structure', 'Trust');
-                    $('.recommendations-sidebar .chosen-structure').text('Trust');
+                    $('.recommendations-sidebar .chosen-structure span').text('Trust');
+                    $('.recommendations-sidebar .chosen-structure').addClass('completed');
                     $('.no-recommendations').removeClass('show');
 
                     add_registrations('registrations', ['business-tfn', 'abn']);
                     remove_registrations('registrations', ['individual-tfn']); 
                 } 
             };   
-            sticky_recommendations();
+            //sticky_recommendations();
         });
 
         // Employees page   
@@ -497,7 +500,7 @@ $(document).ready(function () {
             $('.question-section input.q-fbt').each(function(){
                 $(this).prop('checked', false);
             });
-            sticky_recommendations();
+            //sticky_recommendations();
         });
         
         // Store visibility of dynamic sections in sessionStorage
@@ -515,7 +518,7 @@ $(document).ready(function () {
                 $(this).prop('checked',false);
             });
 
-            sticky_recommendations
+            //sticky_recommendations
         });
 
         $('.q-know-structure-yes input, #sole-trader-v-company input, #partnership-v-company input').on('change', function(){
@@ -523,7 +526,8 @@ $(document).ready(function () {
 
             // business structure
             sessionStorage.setItem('business-structure', answer);
-            $('.recommendations-sidebar .chosen-structure').text(answer);
+            $('.recommendations-sidebar .chosen-structure span').text(answer);
+            $('.recommendations-sidebar .chosen-structure').addClass('completed');
             
             // recommendations
             $('.no-recommendations').removeClass('show');
@@ -538,7 +542,7 @@ $(document).ready(function () {
                 add_registrations('registrations', ['business-tfn', 'abn']);
                 remove_registrations('registrations', ['individual-tfn', 'company']); 
             }
-            sticky_recommendations();
+            //sticky_recommendations();
         });
 
 
@@ -591,7 +595,7 @@ $(document).ready(function () {
                 check_gst();
             }
     
-            sticky_recommendations(); 
+            //sticky_recommendations(); 
         });
 
         $('.q-wet input').on('change', function(){
@@ -603,7 +607,7 @@ $(document).ready(function () {
                 check_gst();
             }
             
-            sticky_recommendations(); 
+            //sticky_recommendations(); 
         });
 
         $('.q-ftc input').on('change', function(){
@@ -615,7 +619,7 @@ $(document).ready(function () {
                 check_gst();
             }
             
-            sticky_recommendations(); 
+            //sticky_recommendations(); 
         });
 
         $('.q-lct input').on('change', function(){
@@ -627,7 +631,7 @@ $(document).ready(function () {
                 check_gst();
             }
             
-            sticky_recommendations(); 
+            //sticky_recommendations(); 
         });
         
 
@@ -759,10 +763,10 @@ $(document).ready(function () {
                 }
             };
         };
-        sticky_recommendations();
+        //sticky_recommendations();
 
         $(window).resize(function () {
-            sticky_recommendations();
+            //sticky_recommendations();
         }); 
 
 
