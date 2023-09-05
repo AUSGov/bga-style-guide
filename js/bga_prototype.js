@@ -642,9 +642,6 @@ $(document).ready(function () {
             $(this).parents('tr').next('.more-info').slideToggle();
         });
 
-        
-
-
 
         // Display results on results page
         if ($('#help-me-decide-prototype').hasClass('results-page')) {
@@ -729,6 +726,11 @@ $(document).ready(function () {
         } // end results page
         
         
+        // Business structure cta on results page
+        $('.callout-business-structure .learn-more').on('click', function(){
+            $(this).next('.more-info').toggleClass('d-none');
+            $(this).toggleClass('open')
+        });
         
         // Sidebar stickiness
         var sticky_recommendations = function() {
