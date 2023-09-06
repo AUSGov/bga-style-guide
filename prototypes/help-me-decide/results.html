@@ -2,7 +2,7 @@
 
 layout: bga-inpage-tool-hmd
 title: Business registrations - help me decide
-step-number: 5
+step-number: 6
 stepped-nav-step: Results
 page-id: results
 
@@ -213,28 +213,26 @@ page-id: results
 
             <!-- REGISTRATIONS ACCORDION -->
             <div class="bga-component-wrapper pb-5">
-                <div class="bga-component bga-default-accordion registrations-accordion {{include.classes}} m-0">
+                <div class="bga-component bga-default-accordion yellow results-accordion m-0">
 
                     <div class="accordion">
 
                         <!-- Individual TFN -->
                         <div class="accordion-item d-none" id="individual-tfn" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#individual-tfn-collapseOne"
                                     aria-expanded="false" aria-controls="individual-tfn-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Individual Tax File Number (TFN)</strong></h5>
-                                    <p>You will need an individual TFN because you selected sole trader as your business
-                                        structure.</p>
+                                    <h4 class="mb-2 pe-4"><strong>Individual Tax File Number (TFN)</strong></h4>
+                                    <p>You will need an individual TFN because you selected sole trader as your business structure.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="individual-tfn-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="individual-tfn">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>Sole traders pay tax blah blah blah.</p>
+                                    <p>Sole traders use their individual Tax File Number (TFN) for both their personal and business dealings with the Australian Taxation Office (ATO).</p>
                                 </div>
                             </div>
                         </div>
@@ -242,22 +240,24 @@ page-id: results
 
                         <!-- Business TFN -->
                         <div class="accordion-item d-none" id="business-tfn" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#business-tfn-collapseOne"
                                     aria-expanded="false" aria-controls="business-tfn-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Business Tax File Number (TFN)</strong></h5>
+                                    <h4 class="mb-2 pe-4"><strong>Business Tax File Number (TFN)</strong></h4>
                                     <p>You will need a business TFN because you selected <span>company</span> as your
                                         business structure.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="business-tfn-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="business-tfn">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>Business tfn.....</p>
+                                    <p>All partnerships, companies and trusts need a business TFN to deal with the Australian Taxation Office (ATO), for example to report business income and deductions.</p>
+                                    <p>The good news is you <strong>don't need to register</strong>. The ATO will automatically issue a partnership, company or trust with a TFN (if one doesn't already exist).</p>
+                                    <p>Sole traders can use their individual TFN for both their personal and business matters.</p>
+                                    <p>Find out more about <a href="https://www.ato.gov.au/Business/Registration/Work-out-which-registrations-you-need/Taxation-registrations/Tax-file-number/" target="_blank">TFNs for businesses</a> on the ATO website.</p>
                                 </div>
                             </div>
                         </div>
@@ -265,20 +265,30 @@ page-id: results
 
                         <!-- ABN -->
                         <div class="accordion-item d-none" id="abn" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#abn-collapseOne"
                                     aria-expanded="false" aria-controls="abn-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Australian business number (ABN)</strong></h5>
+                                    <h4 class="mb-2 pe-4"><strong>Australian business number (ABN)</strong></h4>
                                     <p>It is recommended all Australian businesses register for an ABN.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="abn-collapseOne" class="accordion-collapse collapse" aria-labelledby="abn">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
 
-                                    <p>ABN.....</p>
+                                    <p>An ABN is a unique 11 digit number that identifies your business to the public, the Australian Taxation Office (ATO) and other government agencies.</p>
+                                    <p>Applying for an ABN is free, but not everyone is entitled to one.</p>
+                                    <h5>Why should I have an ABN?</h5>
+                                    <p>If you're running a business, you may need an ABN. Having an ABN means you can:</p>
+                                    <ul>
+                                    <li>confirm your business identity to others when ordering and invoicing</li>
+                                    <li>avoid having business clients withhold a percentage of any payments they make to you</li>
+                                    <li>register a business name</li>
+                                    <li>register a '.com.au', '.net.au', or '.org.au' domain name.</li>
+                                    </ul>
+                                    <p>You also need to have an ABN if you register for Goods and Services Tax (GST).</p>
                                 </div>
                             </div>
                         </div>
@@ -286,21 +296,37 @@ page-id: results
 
                         <!-- Company registration -->
                         <div class="accordion-item d-none" id="company" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#company-collapseOne"
                                     aria-expanded="false" aria-controls="company-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Company registration</strong></h5>
+                                    <h4 class="mb-2 pe-4"><strong>Company registration</strong></h4>
                                     <p>You will need a company registration becayse you selected company as your
                                         business structure.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="company-collapseOne" class="accordion-collapse collapse" aria-labelledby="company">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>Company registration.....</p>
+                                    <p>A company is a type of business structure. When you set up a company, you create a legal entity that's separate from you. To find out more about companies and how they're different from other business structures, read our <a href="https://www.business.gov.au/Planning/Business-structures-and-types/Business-structures" target="_blank">business structures</a> page.</p>
+                                    <h5>Company registration</h5>
+                                    <p>To set up a company, it must be registered under the <em>Corporations Act 2001</em>.</p>
+                                    <p>You can register these types of companies here:</p>
+                                    <ul>
+                                    <li>Proprietary limited companies (also known as private companies) - the most common company structure used by small businesses</li>
+                                    <li>Public companies limited by shares or guarantee</li>
+                                    <li>Public companies with no liability</li>
+                                    <li>Special purpose companies (not for profit, home unit/body corporate, superannuation trustee)</li>
+                                    </ul>
+                                    <blockquote>
+                                    <p>To register a private or public company that's <strong>unlimited</strong> (where the liability of shareholders is unlimited), you need to apply:</p>
+                                    <ul>
+                                    <li>by contacting the <a href="https://asic.gov.au/about-asic/contact-us/" target="_blank">Australian Securities &amp; Investments Commission (ASIC)</a>, or</li>
+                                    <li>through a business service provider.</li>
+                                    </ul>
+                                    <p>To find out more about these application options, see <strong>step 6</strong> of <a href="http://asic.gov.au/start-a-company" target="_blank">steps to register a company</a> on the ASIC website.</p>
+                                    </blockquote>
                                 </div>
                             </div>
                         </div>
@@ -308,22 +334,26 @@ page-id: results
 
                         <!-- Business name -->
                         <div class="accordion-item d-none" id="business-name" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#business-name-collapseOne"
                                     aria-expanded="false" aria-controls="business-name-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Buiness name registration</strong></h5>
+                                    <h4 class="mb-2 pe-4"><strong>Buiness name registration</strong></h4>
                                     <p>You will need to register your business name because you want to use a name other
                                         than your own name for your business.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="business-name-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="business-name">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>Business name registration.....</p>
+                                    <p>A business name is a name or title under which a person, or other legal entity, carries on business. It also helps customers and other businesses find, identify and connect with your business.</p>
+                                    <p>You need to register a business name if you conduct business under a name other than your own.</p>
+                                    <p>Discover more about <a href="http://www.asic.gov.au/bn-register" target="_blank">business names and when to register one</a> on the Australian Securities &amp; Investments Commission (ASIC) website.</p>
+                                    <h5>Registering a business name</h5>
+                                    <p>When you register a business name, you register it nationally with ASIC. This means you can operate your business in any state or territory in Australia.</p>
+                                    <p>See the <a href="https://asic.gov.au/for-business/registering-a-business-name/before-you-register-a-business-name/" target="_blank">things you need to consider before registering a business name</a> on the ASIC website.</p>
                                 </div>
                             </div>
                         </div>
@@ -331,22 +361,29 @@ page-id: results
 
                         <!-- Trade mark -->
                         <div class="accordion-item d-none" id="trade-mark" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#trade-mark-collapseOne"
                                     aria-expanded="false" aria-controls="trade-mark-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Buiness name trade mark</strong></h5>
+                                    <h4 class="mb-2 pe-4"><strong>Buiness name trade mark</strong></h4>
                                     <p>You will need to register for a trade mark because you want to stop other
                                         businesses using your business name.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="trade-mark-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="trade-mark">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
 
-                                    <p>Trademarks.....</p>
+                                    <p>Registering a business name doesn't stop others from using it! Before you register a business name, consider these steps:</p>
+                                    <ul>
+                                    <li><strong>Check existing names</strong>: Search to see if the business name is available using our <a href="https://help.register.business.gov.au/" target="_blank">Business name check</a>.</li>
+                                    <li><strong>Check existing trade marks: </strong>Make sure you're not infringing on someone else's intellectual property (IP). Visit the IP Australia website to find out about <a href="https://www.ipaustralia.gov.au/trade-marks/search-existing-trade-marks" target="_blank">searching for trade marks</a> in Australia and overseas.</li>
+                                    <li><strong>Apply for a trade mark:</strong> To protect your business name, <a href="https://www.ipaustralia.gov.au/trade-marks" target="_blank">apply for a trade mark</a> on the IP Australia website.</li>
+                                    </ul>
+                                    <p>Find out more about <a href="http://asic.gov.au/for-business/registering-a-business-name/before-you-register-a-business-name/what-is-a-business-name/" target="_blank">what is a business name</a> and the difference between a business name, trade mark, company name and domain name on the ASIC website.</p>
+                                    <p>Visit the <a href="https://www.ipaustralia.gov.au/" target="_blank">IP Australia</a> website for details on how to protect your name and other brands.</p>
                                 </div>
                             </div>
                         </div>
@@ -354,21 +391,22 @@ page-id: results
 
                         <!-- Domain name -->
                         <div class="accordion-item d-none" id="domain-name" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#domain-name-collapseOne"
                                     aria-expanded="false" aria-controls="domain-name-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Domain name registration</strong></h5>
-                                    <p>becuase you plan on setting up a business website</p>
+                                    <h4 class="mb-2 pe-4"><strong>Domain name registration</strong></h4>
+                                    <p>You should consider registering a domain name because you plan on setting up a business website.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="domain-name-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="domain-name">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>Domain name registration...</p>
+                                    <p>Website addresses are called domain names, for example, sarahsflowers.com.au or josephsmitharchitects.com.au.</p>
+                                    <p>If you're keen to have a domain name that reflects your business name, it's a good idea to register your domain name even if you're not quite ready to set up your website. Generally prices range from $10 to $100 AUD for a year's registration.</p>
+                                    <p>Read our <a href="https://business.gov.au/online/business-website/register-a-business-website" target="_blank">register a business website</a> page for more information.</p>
                                 </div>
                             </div>
                         </div>
@@ -376,20 +414,29 @@ page-id: results
 
                         <!-- PAYG -->
                         <div class="accordion-item d-none" id="payg" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#payg-collapseOne"
                                     aria-expanded="false" aria-controls="payg-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                        <h5 class="pe-4"><strong>Pay As You Go (PAYG) Withholding</strong></h5>
+                                        <h4 class="mb-2 pe-4"><strong>Pay As You Go (PAYG) Withholding</strong></h4>
                                     <p>You will need to register for PAYG because you are going to employ people.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="payg-collapseOne" class="accordion-collapse collapse" aria-labelledby="payg">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>PAYG info goes in here...</p>
+                                    <p>You must be registered for PAYG withholding before you need to withhold tax amounts from payments such as:</p>
+                                    <ul>
+                                    <li>the wage or salary payments you make to employees</li>
+                                    <li>payments to directors</li>
+                                    <li>payments to businesses that do not quote their ABN to you</li>
+                                    <li>royalty, dividend or interest payments to non-residents</li>
+                                    <li>investment income payments to Australian residents (if you're an investment body).</li>
+                                    </ul>
+                                    <p>You must then forward these tax amounts to the Australian Taxation Office (ATO).</p>
+                                    <p>PAYG withholding isn't a tax on your business - it's a tax on your employees' income that you help the ATO to collect.</p>
+                                    <p>Check to see <a href="https://www.ato.gov.au/Business/Registration/Work-out-which-registrations-you-need/Taxation-registrations/Pay-as-you-go-withholding/" target="_blank">if you need to register for PAYG withholding</a> on the ATO website.</p>
                                 </div>
                             </div>
                         </div>
@@ -397,21 +444,26 @@ page-id: results
 
                         <!-- FBT -->
                         <div class="accordion-item d-none" id="fbt" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#fbt-collapseOne"
                                     aria-expanded="false" aria-controls="fbt-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Fringe Benefits Tax (FBT)</strong></h5>
+                                    <h4 class="mb-2 pe-4"><strong>Fringe Benefits Tax (FBT)</strong></h4>
                                     <p>You will need to register for fringe benefits tax because you are going to offer
                                         your employees fringe benefits.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="fbt-collapseOne" class="accordion-collapse collapse" aria-labelledby="fbt">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>FBT info goes in here...</p>
+                                    <p>As an employer, if you give certain fringe benefits to your employees, you must pay tax on the value of the fringe benefits.</p>
+                                    <p>You'll need to register for FBT before you start providing these benefits.</p>
+                                    <p>Visit the Australian Taxation Office (ATO) website to:</p>
+                                    <ul>
+                                    <li>find out what <a href="https://www.ato.gov.au/General/fringe-benefits-tax-%28fbt%29/types-of-fringe-benefits/" target="_blank">types of fringe benefits</a> you must pay tax on</li>
+                                    <li><a href="https://www.ato.gov.au/Business/Registration/Work-out-which-registrations-you-need/Taxation-registrations/Fringe-benefits-tax/" target="_blank">check if you need to register for FBT</a>.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -419,23 +471,36 @@ page-id: results
 
                         <!-- GST -->
                         <div class="accordion-item d-none" id="gst" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#gst-collapseOne"
                                     aria-expanded="false" aria-controls="gst-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Goods and Services Tax (GST)</strong></h5>
-                                    <p>You will need to register for GST because you expect to have a business turnover
-                                        of $75,000 or more.</p>
-                                    <p>You also need to register for GST because you are going to use taxable fuels in
-                                        factories, equipment, machinery or heavy vehicles.</p>
+                                    <h4 class="mb-2 pe-4"><strong>Goods and Services Tax (GST)</strong></h4>
+                                    <p class="reason business-turnover-yes d-none">You need to register for GST because you expect to have a business turnover of $75,000 or more.</p>
+                                    <p class="reason taxi-limousine-yes d-none">You need to register for GST because you running a taxi business, limousine hire business or providing a ride share service.</p>
+                                    <p class="reason wet-yes d-none">You need to register for GST because you are going to wholesale or produce wine in Australia.</p>
+                                    <p class="reason ftc-yes d-none">You need to register for GST because you are going to use taxable fuels in factories, equipment, machinery or heavy vehicles.</p>
+                                    <p class="reason lct-yes d-none">You need to register for GST because you are going to import or sell luxury cars.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="gst-collapseOne" class="accordion-collapse collapse" aria-labelledby="gst">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>GST info goes in here...</p>
+                                    <p>Goods and services tax (GST) is a broad-based tax of 10% on most goods, services and other items sold or consumed in Australia.</p>
+                                    <h5>How GST works</h5>
+                                    <p>GST is a tax of 10% on most goods and services sold in Australia. Generally, businesses that are registered for GST:</p>
+                                    <ul>
+                                    <li>collect GST on the goods and services they sell and forward it to the ATO</li>
+                                    <li>claim credits for the GST included in the price of goods and services they buy for their business.</li>
+                                    </ul>
+                                    <p>Visit the Australian Taxation Office (ATO) website to:</p>
+                                    <ul>
+                                    <li>find out what <a href="https://www.ato.gov.au/Business/GST/Registering-for-GST/?anchor=WorkingoutyourGSTturnover1#WorkingoutyourGSTturnover1" target="_blank">GST turnover</a> means</li>
+                                    <li><a href="https://www.ato.gov.au/Business/GST/Registering-for-GST/#Whentoregister1" target="_blank">check if you need to register for GST</a>, if you're not sure</li>
+                                    <li>see how GST applies to <a href="https://www.ato.gov.au/General/The-sharing-economy-and-tax/Ride-sourcing/Reporting-and-paying-GST/" target="_blank">ride sharing services</a></li>
+                                    <li>find out more about <a href="https://www.ato.gov.au/business/gst/claiming-gst-credits/" target="_blank">claiming GST credits</a>.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -443,20 +508,28 @@ page-id: results
 
                         <!-- WET -->
                         <div class="accordion-item d-none" id="wet" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#wet-collapseOne"
                                     aria-expanded="false" aria-controls="wet-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Wine Equalisation Tax (WET)</strong></h5>
-                                    <p>You will need to register for WET because you will .....</p>
+                                    <h4 class="mb-2 pe-4"><strong>Wine Equalisation Tax (WET)</strong></h4>
+                                    <p>You will need to register for WET because you willwholesale or produce wine in Australia.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="wet-collapseOne" class="accordion-collapse collapse" aria-labelledby="wet">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
+                                    <p>WET is a tax on the consumption of wine in Australia, and it's usually applied to the last wholesale sale - this is usually the sale to the retailer. You collect the tax to give to the ATO.</p>
 
-                                    <p>WET info goes in here...</p>
+                                    <p>You must register for WET and GST if you produce or sell wholesale wines that WET applies to.</p>
+                                    <p>WET applies to grape wines, fruit wines, vegetable wines, cider, perry, mead, and sake (where they contain more than 1.15% by volume of ethyl alcohol).</p>
+                                    <p>Visit the Australian Taxation Office (ATO) website to:</p>
+                                    <ul>
+                                    <li>find out more about the <a href="https://www.ato.gov.au/Business/Wine-equalisation-tax/Products-WET-applies-to/" target="_blank">products WET applies to</a></li>
+                                    <li><a href="https://www.ato.gov.au/business/wine-equalisation-tax/registering-for-wet/" target="_blank">check if you need to register for WET</a>.</li>
+                                    </ul>
+
                                 </div>
                             </div>
                         </div>
@@ -464,20 +537,30 @@ page-id: results
 
                         <!-- FTC -->
                         <div class="accordion-item d-none" id="ftc" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#ftc-collapseOne"
                                     aria-expanded="false" aria-controls="ftc-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Fuel Tax Credits (FTC)</strong></h5>
-                                    <p>You can register for FTC because you will .....</p>
+                                    <h4 class="mb-2 pe-4"><strong>Fuel Tax Credits (FTC)</strong></h4>
+                                    <p>You can register for FTC because you will use taxable fuels in factories, equipment, machinery or heavy vehicles.</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="ftc-collapseOne" class="accordion-collapse collapse" aria-labelledby="ftc">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>FTC info goes in here...</p>
+                                    <p>If you register for FTC, you can claim credits for the fuel tax you pay on eligible fuels. The amount of FTC you can claim depends on the type of fuel you use and the business activity you use it in.</p>
+                                    <p>To be eligible, you must:</p>
+                                    <ul>
+                                    <li>be registered for GST</li>
+                                    <li>use eligible fuels in eligible business activities.</li>
+                                    </ul>
+                                    <p>Visit the Australian Taxation Office (ATO) website to:</p>
+                                    <ul>
+                                    <li>view <a href="https://www.ato.gov.au/Business/Fuel-schemes/Fuel-tax-credits---business/Eligibility/Eligible-fuels/" target="_blank">eligible liquid and gaseous fuels</a></li>
+                                    <li>view <a href="https://www.ato.gov.au/Business/Fuel-schemes/Fuel-tax-credits---business/Eligibility/Eligible-activities/" target="_blank">eligible business activities</a></li>
+                                    <li>use the <a href="https://www.ato.gov.au/calculators-and-tools/Host/?anchor=FTCEL&amp;anchor=FTCEL/#FTCEL/questions" target="_blank">FTC eligibility tool</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -486,20 +569,24 @@ page-id: results
 
                         <!-- LCT -->
                         <div class="accordion-item d-none" id="lct" tabindex="-1">
-                            <h5 class="accordion-header pt-0">
+                            <div class="accordion-header pt-0">
                                 <button tabindex="0" class="accordion-button collapsed remove-element-padding p-4"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#lct-collapseOne"
                                     aria-expanded="false" aria-controls="lct-collapseOne">
                                     <div class="registration-reason remove-element-padding">
-                                    <h5 class="pe-4"><strong>Luxary Car Tax (LTC)</strong></h5>
-                                    <p>You can register for LCT because you will .....</p>
+                                    <h4 class="mb-2 pe-4"><strong>Luxary Car Tax (LTC)</strong></h4>
+                                    <p>You can register for LCT because you will import or sell luxury cars</p>
                                     </div>
                                 </button>
-                            </h5>
+                            </div>
                             <div id="lct-collapseOne" class="accordion-collapse collapse" aria-labelledby="lct">
                                 <div class="accordion-body remove-element-padding pt-0 ps-4 pb-4 pe-4">
-
-                                    <p>LCT info goes in here...</p>
+                                    <p>LCT is a tax on the supply and import of cars that exceed the LCT threshold. You must register for LCT if you sell or import luxury cars. To register for LCT you must also be registered for Goods and Services Tax (GST).</p>
+                                    <p>Visit the Australian Taxation Office (ATO) website to:</p>
+                                    <ul>
+                                    <li><a href="https://www.ato.gov.au/Business/Luxury-car-tax/When-LCT-applies/" target="_blank">check if you need to register for LCT</a></li>
+                                    <li>find out this year's <a href="https://www.ato.gov.au/rates/luxury-car-tax-rate-and-thresholds/" target="_blank">LCT threshold</a>.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -536,7 +623,7 @@ page-id: results
                             <div class="answers-section pb-7 mb-4">
                                 <div class="title-area mb-2 remove-element-padding">
 
-                                    <h3 class="m-0">Business structure</h3>
+                                    <h4 class="m-0">Business structure</h4>
                                     <a tab-index="0" class="edit-btn p-0 ms-4"
                                         href={{ 'prototypes/help-me-decide/business-structure.html' | relative_url }}>
                                         <span>Edit</span>
@@ -595,7 +682,7 @@ page-id: results
                             <div class="answers-section pb-7 mb-4">
                                 <div class="title-area mb-2 remove-element-padding">
 
-                                    <h3 class="m-0">Business name</h3>
+                                    <h4 class="m-0">Business name</h4>
                                     <a tab-index="0" class="edit-btn p-0 ms-4"
                                         href={{ 'prototypes/help-me-decide/business-name.html' | relative_url }}>
                                         <span>Edit</span>
@@ -634,7 +721,7 @@ page-id: results
                             <div class="answers-section pb-7 mb-4">
                                 <div class="title-area mb-2 remove-element-padding">
 
-                                    <h3 class="m-0">Employees</h3>
+                                    <h4 class="m-0">Employees</h4>
                                     <a tab-index="0" class="edit-btn p-0 ms-4"
                                         href={{ 'prototypes/help-me-decide/employees.html' | relative_url }}>
                                         <span>Edit</span>
@@ -669,7 +756,7 @@ page-id: results
                             <div class="answers-section pb-7 mb-4">
                                 <div class="title-area mb-2 remove-element-padding">
 
-                                    <h3 class="m-0">Business taxes</h3>
+                                    <h4 class="m-0">Business taxes</h4>
                                     <a tab-index="0" class="edit-btn p-0 ms-4"
                                         href={{ 'prototypes/help-me-decide/business-taxes.html' | relative_url }}>
                                         <span>Edit</span>

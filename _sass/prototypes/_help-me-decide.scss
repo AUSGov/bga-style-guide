@@ -4,10 +4,16 @@
         column-gap: 8px;
     }
 
+    .recommendations-sidebar-wrapper {
+        position: sticky;
+        top: 32px;
+    }
     .recommendations-sidebar {
+        
         .sidebar {
             height: auto !important;
         }
+        
         .business-structure {
             .title {
                 background: $bga-blue-background-light;
@@ -64,8 +70,8 @@
             }
         }
         &.fixed {
-            position: fixed;
-            top: 32px;
+            position: sticky;
+            //top: 32px;
         }
         &.mobile-hide {
             display: none;
@@ -223,32 +229,67 @@
         }
     }
 
-    .registrations-accordion {
+    .results-accordion.yellow {
+        .accordion {
+            border-top: none;
+        }
 
         .accordion-item {
+            background: $bga-yellow-highlight-mid;
+            border-bottom: $bga-black solid 1px;
 
             .accordion-button {
                 background: $bga-yellow-highlight-light;
 
-                p, h5 {
+                p {
                     margin: 0;
                     padding: 0;
                     color: $bga-black;
+                    font-size: 0.875rem;
                 }
-                p:nth-child(3) {
+                p:nth-child(3),
+                p:nth-child(4),
+                p:nth-child(5),
+                p:nth-child(6){
                     padding-top: 8px;
                     margin-top: 8px;
                     border-top: $bga-black solid 1px;
                 }
 
                 &:hover {
-                    text-decoration:  none;
+                    text-decoration: none;
+                    background: $bga-yellow-highlight-mid;
                 }
+                &:focus-visible {
+                    background: $bga-yellow-highlight-mid;
+                }
+                &:not(.collapsed) {
+                    background-color: $bga-yellow-highlight-mid;
 
+                    &:hover {
+                        border-bottom: none;
+                        background-color: $bga-yellow-highlight-mid;
+                    }
+                }
+                &::after {
+                    margin-left: 24px;
+                }
             }
         }
     }
-      
+     
+    .edit-answers-component {
+        .edit-btn {
+            text-decoration: none;
+        }
+        span.unanswered {
+            background: $bga-white url('../assets/icon-warning-red.svg') no-repeat;
+            background-position: left 8px center;
+            border-radius: $bga-focus-radius;
+            padding: 4px 8px 4px 36px;
+            color: $bga-red-fail-dark;
+        }
+    }
 }
 #stepped-nav-inpage {
     background: none;
