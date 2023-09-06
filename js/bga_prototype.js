@@ -188,6 +188,7 @@ $(document).ready(function () {
             sessionStorage.setItem(active_step, 'visited');
 
             for (var step = 0; step < step_titles.length; step++) {
+                
                 var step_number = step + 1,
                     step_str = 'nav-step-' + step_number;
                 var state = sessionStorage.getItem(step_str);
@@ -220,8 +221,9 @@ $(document).ready(function () {
 
         if ($('#stepped-nav-inpage').length) {
             var path = '/bga-style-guide/prototypes/help-me-decide/';
-            stepped_nav_functionality(["business-structure.html", "business-name.html", "employees.html", "business-taxes.html", "results.html"], path);
+            stepped_nav_functionality(["business-or-hobby.html", "business-structure.html", "business-name.html", "employees.html", "business-taxes.html", "results.html"], path);
         }
+
 
         // Check all visible radios on the page are answered before continuing 
         var get_unanswered = function(target_q){
@@ -377,7 +379,6 @@ $(document).ready(function () {
             } else {
                 remove_registrations('registrations', [registration]);
             };
-            //sticky_recommendations();
         };
         
 
@@ -387,7 +388,6 @@ $(document).ready(function () {
             if (!dynamic_display) {
                 dynamic_display = '';
             }
-            //console.log(dynamic_display);
 
             $('.dynamic-section').each(function(){
                 var id = $(this).attr('id');
@@ -401,7 +401,6 @@ $(document).ready(function () {
                 }
                
             });
-            //console.log(dynamic_display);
             sessionStorage.setItem('dynamic_display', dynamic_display);
           
         };
@@ -427,6 +426,20 @@ $(document).ready(function () {
 
         // DYNAMIC QUESTIONS
         // Business structure page
+        $('.q-business-hobby .radio-button input').on('change', function(){
+            var answer = $(this).attr('id');
+
+            //Set dynamic section
+            if ( answer == 'business-hobby-unsure' && $(this).is(":checked")) {
+                $('.q-business-v-hobby').removeClass('d-none');
+                remove_answers('answers', ['business-hobby-no', 'business-hobby-yes']);
+                
+            } else {
+                $('.q-business-v-hobby').addClass('d-none');
+                remove_answers('answers', ['business-hobby-unsure']);
+            }
+        });
+
         $('.q-know-structure .radio-button input').on('change', function(){
             var answer = $(this).attr('id');
             
@@ -453,7 +466,6 @@ $(document).ready(function () {
                 $('.q-know-structure-no').removeClass('d-none');
                 remove_answers('answers', ['know-structure-yes']);
             }
-            //sticky_recommendations();
         });
         
         $('.q-know-structure-no .radio-button input').on('change', function(){
@@ -485,7 +497,6 @@ $(document).ready(function () {
                     remove_registrations('registrations', ['individual-tfn']); 
                 } 
             };   
-            //sticky_recommendations();
         });
 
         // Employees page   
@@ -500,7 +511,6 @@ $(document).ready(function () {
             $('.question-section input.q-fbt').each(function(){
                 $(this).prop('checked', false);
             });
-            //sticky_recommendations();
         });
         
         // Store visibility of dynamic sections in sessionStorage
@@ -517,8 +527,6 @@ $(document).ready(function () {
              $('.q-know-structure-yes .radio-button input, .q-know-structure-no .radio-button input').each(function(){
                 $(this).prop('checked',false);
             });
-
-            //sticky_recommendations
         });
 
         $('.q-know-structure-yes input, #sole-trader-v-company input, #partnership-v-company input').on('change', function(){
@@ -542,7 +550,6 @@ $(document).ready(function () {
                 add_registrations('registrations', ['business-tfn', 'abn']);
                 remove_registrations('registrations', ['individual-tfn', 'company']); 
             }
-            //sticky_recommendations();
         });
 
 
@@ -594,8 +601,6 @@ $(document).ready(function () {
             } else {
                 check_gst();
             }
-    
-            //sticky_recommendations(); 
         });
 
         $('.q-wet input').on('change', function(){
@@ -606,8 +611,6 @@ $(document).ready(function () {
                 remove_registrations('registrations', ['wet']);
                 check_gst();
             }
-            
-            //sticky_recommendations(); 
         });
 
         $('.q-ftc input').on('change', function(){
@@ -618,8 +621,6 @@ $(document).ready(function () {
                 remove_registrations('registrations', ['ftc']);
                 check_gst();
             }
-            
-            //sticky_recommendations(); 
         });
 
         $('.q-lct input').on('change', function(){
@@ -630,8 +631,7 @@ $(document).ready(function () {
                 remove_registrations('registrations', ['lct']);
                 check_gst();
             }
-            
-            //sticky_recommendations(); 
+
         });
         
 
@@ -683,7 +683,7 @@ $(document).ready(function () {
                 $('#' + business_structure + '.callout-business-structure').removeClass('d-none');
 
                 // Show registration items in accordion
-                $('.registrations-accordion .accordion-item').each(function(){
+                $('.results-accordion .accordion-item').each(function(){
                     var registration = $(this).attr('id');
                     if (registrations.includes(registration)) {
                         $(this).removeClass('d-none');
@@ -705,10 +705,19 @@ $(document).ready(function () {
             });
 
             // Show list of registrations in next steps
+            var gst_reasons = ['taxi-limousine-yes','business-turnover-yes', 'wet-yes', 'ftc-yes', 'lct-yes'];
             $('.registrations-apply li').each(function(){
                 var registration = $(this).attr('data-value');
                 if (registrations.includes(registration)) {
                     $(this).removeClass('d-none');
+
+                    if (registration == 'gst') {
+                        for (var i = 0; i < gst_reasons.length; i++) {
+                            if (answers.includes(gst_reasons[i])) {
+                                $('.reason.'+ gst_reasons[i]).removeClass('d-none');
+                            };
+                        }  
+                    }
                 }
             });
             var other_registrations = ['individual-tfn', 'trade-mark', 'domain-name'];
@@ -732,44 +741,6 @@ $(document).ready(function () {
             $(this).toggleClass('open')
         });
         
-        // Sidebar stickiness
-        var sticky_recommendations = function() {
-            if ($('.recommendations-sidebar-wrapper').length) {
-                var sidebar_position = Math.round($('.recommendations-sidebar-wrapper').position().top);
-                var sidebar_width = $('.recommendations-sidebar-wrapper').width();
-                var sidebar_height = $('.recommendations-sidebar').height();
-                var footer_height = $('.bga-footer-example').height();
-                //console.log('Side bar position: ' + sidebar_position);
-                //console.log('Side bar width: ' + sidebar_width);
-                //console.log('Side bar width: ' + sidebar_width);
-                //console.log('Side bar height: ' + sidebar_height);
-                //console.log('Footer height: ' + footer_height);
-                
-
-                $('.recommendations-sidebar').css('width', sidebar_width);
-
-                if ($(window).width() >= 768) {
-                    $('.recommendations-sidebar').removeClass('mobile-hide');
-                    $(window).scroll(function () {
-                        var unfix = $(document).height() - footer_height - sidebar_height;
-                        var scroll_position = $(window).scrollTop();
-
-                        if (scroll_position >= sidebar_position && scroll_position < unfix) {
-                            $('.recommendations-sidebar').addClass('fixed');
-                        } else {
-                            $('.recommendations-sidebar').removeClass('fixed');
-                        }
-                    });
-                } else if ($(window).width() < 768) {
-                    $('.recommendations-sidebar').addClass('mobile-hide');
-                }
-            };
-        };
-        //sticky_recommendations();
-
-        $(window).resize(function () {
-            //sticky_recommendations();
-        }); 
 
 
     }; // End Help me decide
