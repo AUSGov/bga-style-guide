@@ -678,10 +678,12 @@ $(document).ready(function () {
 
         // Display results on results page
         if ($('#help-me-decide-prototype').hasClass('results-page')) {
-
-            // Store result page loaded, for 'return to results' button.
-            sessionStorage.setItem('results', 'viewed');
-
+            
+            if ($('.results-viewed').length != 0){
+                // Store result page loaded, for 'return to results' button.
+                sessionStorage.setItem('results', 'viewed');
+            }
+            
             // Get results from sessionStorage
             var business_structure = sessionStorage.getItem('business-structure'), 
             registrations = sessionStorage.getItem('registrations'),
