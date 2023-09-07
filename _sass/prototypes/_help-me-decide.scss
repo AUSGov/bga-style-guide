@@ -77,6 +77,9 @@
             display: none;
         }
     }
+    &.business-hobby-page .recommendations-sidebar-wrapper {
+        display: none;
+    }
 
     .treegrid {
         width: 100%;
@@ -118,7 +121,7 @@
                 border-top: none;
 
                 td {
-                    padding: 24px 8px;
+                    padding: 16px 8px;
 
                     >*:last-child {
                         padding-bottom: 0;
@@ -246,14 +249,18 @@
                     padding: 0;
                     color: $bga-black;
                     font-size: 0.875rem;
-                }
-                p:nth-child(3),
-                p:nth-child(4),
-                p:nth-child(5),
-                p:nth-child(6){
-                    padding-top: 8px;
-                    margin-top: 8px;
-                    border-top: $bga-black solid 1px;
+                
+                    &.reason {
+                        padding-bottom: 8px;
+                        margin-bottom: 8px;
+                        border-bottom: $bga-black solid 1px;
+
+                        &.last {
+                            border-bottom: none;
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                        }
+                    }
                 }
 
                 &:hover {
