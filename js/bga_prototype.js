@@ -238,8 +238,10 @@ $(document).ready(function () {
             protocol = window.location.protocol,
             path = $(target_q).attr('href'),
             unanswered = sessionStorage.getItem('unanswered'),
-            structure = sessionStorage.getItem('business-structure');
-        
+            structure = sessionStorage.getItem('business-structure'),
+            page = $(target_q).parents('.button-group').attr('data-page'),
+            unvisited = sessionStorage.getItem('unvisited');
+            
             if (structure == "Hobby") {
                 path = '/bga-style-guide/prototypes/help-me-decide/hobby.html';
             }
@@ -260,6 +262,9 @@ $(document).ready(function () {
                 }
             }); 
             sessionStorage.setItem('unanswered', unanswered);
+            
+            unvisited = unvisited.replace(page + ', ', '');
+            sessionStorage.setItem('unvisited', unvisited);
     
             window.location = (protocol + '//' + host + path);
         };
@@ -432,12 +437,18 @@ $(document).ready(function () {
         // Clear tool on 'start now' click
         $('.start-component .bga-btn').on('click', function(){
             sessionStorage.clear();
+            sessionStorage.setItem('unvisited', 'business-hobby-page, business-structure-page, business-name-page, employees-page, business-taxes-page, ');
         });
 
         // DYNAMIC QUESTIONS
         // Business or hobby page
         $('.q-business-hobby .radio-button input').on('change', function(){
             var answer = $(this).attr('id');
+            sessionStorage.setItem('registrations', '');
+            sessionStorage.setItem('business-structure', '');
+            sessionStorage.setItem('answers', '');
+            sessionStorage.setItem('unanswered', '');
+            sessionStorage.setItem('dynamic_display','');
 
             //Set dynamic section
             if ( answer == 'business-hobby-unsure' && $(this).is(":checked")) {
@@ -461,7 +472,6 @@ $(document).ready(function () {
         });
         $('.q-business-v-hobby input').on('click', function(){
             var answer = $(this).attr('id');
-            console.log(answer);
 
             if(answer == "business-v-hobby-hobby") {
                 remove_answers('answers', ['business']);
@@ -477,7 +487,7 @@ $(document).ready(function () {
             var answer = $(this).attr('id');
             
             // Clear all business structure results
-            remove_answers('answers', ['sole-trader', 'partnership', 'company', 'trust', 'superannuation', 'number-owners-one', 'number-owners', 'number-owners-two', 'hold-assets-no', 'hold-assets-yes', 'partnership-1', 'partnership-2', 'sole-trader-1', 'sole-trader-2', 'company-1']);
+            remove_answers('answers', ['sole-trader-4', 'partnership-4', 'company-4', 'trust-4', 'superannuation', 'number-owners-one', 'number-owners', 'number-owners-two', 'hold-assets-no', 'hold-assets-yes', 'partnership-1', 'partnership-2', 'sole-trader-1', 'sole-trader-2', 'company-1']);
 
             $('.recommendations-sidebar .chosen-structure span').text("No chosen structure yet"); 
             $('.recommendations-sidebar .chosen-structure').removeClass('completed');
@@ -502,10 +512,21 @@ $(document).ready(function () {
         });
         
         $('.q-know-structure-no .radio-button input').on('change', function(){
-            var answer = $(this).attr('id');
+            var answer = $(this).attr('id'),
+            answered = sessionStorage.getItem('answers'),
+            unanswered = sessionStorage.getItem('unanswered');
+
+            // Add answered class to track questions required for dynamic display of comparison table sections.
             $(this).parents('.radios').addClass('answered');
 
-            if ( $('.q-know-structure-no .radios').length == $('.q-know-structure-no .radios.answered').length ) {
+            //Remove any unanswered questions from previously viewed questions
+            unanswered = unanswered.replace('partnership-v-company-unanswered, ',  '');
+            unanswered = unanswered.replace('sole-trader-v-company-unanswered, ',  '');
+            sessionStorage.setItem('unanswered', unanswered);
+           
+
+            if (answered.includes('number-owners') && answered.includes('hold-assets')) {
+                console.log('all checked');
                 if ( $('#number-owners-one').is(":checked") && $('#hold-assets-no').is(":checked")) { //Sole trader
                     $('.q-sole-trader-v-company').removeClass('d-none');
                     $('.q-partnership-v-company').addClass('d-none');
@@ -529,6 +550,7 @@ $(document).ready(function () {
                     add_registrations('registrations', ['business-tfn', 'abn']);
                     remove_registrations('registrations', ['individual-tfn']); 
                 } 
+                
             };   
         });
 
@@ -688,7 +710,8 @@ $(document).ready(function () {
             var business_structure = sessionStorage.getItem('business-structure'), 
             registrations = sessionStorage.getItem('registrations'),
             answers = sessionStorage.getItem('answers'),
-            unanswered = sessionStorage.getItem('unanswered');
+            unanswered = sessionStorage.getItem('unanswered'),
+            unvisited = sessionStorage.getItem('unvisited');
 
             if (!answers) {
                 answers = '';
@@ -702,6 +725,7 @@ $(document).ready(function () {
 
 
             // Checked what is answered and display results page accordingly
+
             if (!business_structure) {
                 $(".error-notification-wrapper").removeClass('d-none');
             } else if ( business_structure && unanswered !== '') { 
@@ -728,6 +752,7 @@ $(document).ready(function () {
                     }
                 });
             }
+           
 
 
             // Show answers in edit answers component
@@ -741,6 +766,34 @@ $(document).ready(function () {
                     $(this).removeClass('d-none');
                 }
             });
+            
+            // Check is any answers sections are empty because page wasn't visited
+            
+            $('.answers').each(function(){
+                var page = $(this).attr('data-page');
+
+                if ( (unvisited.includes(page) )) {
+                    if ( page == 'business-hobby-page') {
+                        $('.answers #business-hobby-unanswered').removeClass('d-none');
+                    } else if (page == 'business-structure-page' ) {
+                        $('.answers #know-structure-unanswered').removeClass('d-none');
+                    } else if (page == 'business-name-page' ) {
+                        $('.answers #business-name-unanswered').removeClass('d-none');
+                        $('.answers #trade-mark-unanswered').removeClass('d-none');
+                        $('.answers #domain-name-unanswered').removeClass('d-none');
+                    } else if (page == 'employees-page' ) {
+                        $('.answers #payg-unanswered').removeClass('d-none');
+                    } else if (page == 'business-taxes-page' ) {
+                        $('.answers #business-turnover-unanswered').removeClass('d-none');
+                        $('.answers #taxi-limousine-unanswered').removeClass('d-none');
+                        $('.answers #wet-unanswered').removeClass('d-none');
+                        $('.answers #ftc-unanswered').removeClass('d-none');
+                        $('.answers #lct-unanswered').removeClass('d-none');
+                    }   
+
+                }
+            });
+             
 
             // Show list of registrations in next steps
             var gst_reasons = ['taxi-limousine-yes','business-turnover-yes', 'wet-yes', 'ftc-yes', 'lct-yes'];
@@ -764,7 +817,6 @@ $(document).ready(function () {
             
             for (var i = 0; i < other_registrations.length; i++) {
                 if ( registrations.includes(other_registrations[i]) ) {
-                    //console.log(other_registrations[i]);
 
                     $('.other-registrations').removeClass('d-none');
                     $('.other-registrations .' + other_registrations[i]).removeClass('d-none');
