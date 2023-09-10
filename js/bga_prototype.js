@@ -444,11 +444,14 @@ $(document).ready(function () {
         // Business or hobby page
         $('.q-business-hobby .radio-button input').on('change', function(){
             var answer = $(this).attr('id');
+            
             sessionStorage.setItem('registrations', '');
             sessionStorage.setItem('business-structure', '');
             sessionStorage.setItem('answers', '');
             sessionStorage.setItem('unanswered', '');
             sessionStorage.setItem('dynamic_display','');
+
+            store_answers(this);
 
             //Set dynamic section
             if ( answer == 'business-hobby-unsure' && $(this).is(":checked")) {
@@ -693,8 +696,16 @@ $(document).ready(function () {
         
         // Comparison accordions
         $('.treegrid .learn-more button').on('click', function(){
-            $(this).parents('.learn-more').toggleClass('open');
-            $(this).parents('tr').next('.more-info').slideToggle();
+            
+            $('.treegrid .learn-more button').not(this).parents('.learn-more').removeClass('open');
+            $('.treegrid .learn-more button').not(this).parents('tr').next('.more-info').slideUp();
+            
+            var $this = $(this);
+            setTimeout(function () {
+                $this.parents('.learn-more').toggleClass('open');
+                $this.parents('tr').next('.more-info').slideToggle();
+            }, 300); 
+           
         });
 
 
