@@ -379,7 +379,7 @@ $(document).ready(function () {
                 $('.recommendations li').each(function(){
                     $(this).removeClass('heartbeat-trigger');
                 });
-            }, 2000);
+            }, 1000);
         };
         var remove_registrations = function(storage_item, old_regs) {
             var registrations = sessionStorage.getItem(storage_item);
@@ -565,7 +565,7 @@ $(document).ready(function () {
             
             setTimeout(function () {
                 $('.recommendations-sidebar .chosen-structure').removeClass('heartbeat-trigger');
-            }, 2000);
+            }, 1000);
         });
 
         // Employees page   
@@ -622,7 +622,7 @@ $(document).ready(function () {
 
             setTimeout(function () {
                 $('.recommendations-sidebar .chosen-structure').removeClass('heartbeat-trigger');
-            }, 2000);
+            }, 1000);
         });
 
 
