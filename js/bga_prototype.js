@@ -365,14 +365,21 @@ $(document).ready(function () {
             if (!registrations) {
                 registrations = "";
             }
-            
+
             for (var i = 0; i < new_regs.length; i++) {
+                $('.recommendations .' + new_regs[i]).addClass('show heartbeat-trigger');
+
                 if (!registrations.includes(new_regs[i])) {
-                    registrations = registrations + new_regs[i] + ', ';
-                    $('.recommendations .' + new_regs[i]).addClass('show');
+                    registrations = registrations + new_regs[i] + ', ';  
                 }
                 sessionStorage.setItem(storage_item, registrations);
             }
+            
+            setTimeout(function () {
+                $('.recommendations li').each(function(){
+                    $(this).removeClass('heartbeat-trigger');
+                });
+            }, 2000);
         };
         var remove_registrations = function(storage_item, old_regs) {
             var registrations = sessionStorage.getItem(storage_item);
@@ -515,7 +522,7 @@ $(document).ready(function () {
         });
         
         $('.q-know-structure-no .radio-button input').on('change', function(){
-            var answer = $(this).attr('id'),
+            //var answer = $(this).attr('id'),
             answered = sessionStorage.getItem('answers'),
             unanswered = sessionStorage.getItem('unanswered');
 
@@ -529,7 +536,7 @@ $(document).ready(function () {
            
 
             if (answered.includes('number-owners') && answered.includes('hold-assets')) {
-                console.log('all checked');
+            
                 if ( $('#number-owners-one').is(":checked") && $('#hold-assets-no').is(":checked")) { //Sole trader
                     $('.q-sole-trader-v-company').removeClass('d-none');
                     $('.q-partnership-v-company').addClass('d-none');
@@ -547,14 +554,18 @@ $(document).ready(function () {
                     
                     sessionStorage.setItem('business-structure', 'Trust');
                     $('.recommendations-sidebar .chosen-structure span').text('Trust');
-                    $('.recommendations-sidebar .chosen-structure').addClass('completed');
+                    $('.recommendations-sidebar .chosen-structure').addClass('completed heartbeat-trigger');
                     $('.no-recommendations').removeClass('show');
 
                     add_registrations('registrations', ['business-tfn', 'abn']);
                     remove_registrations('registrations', ['individual-tfn']); 
                 } 
                 
-            };   
+            };  
+            
+            setTimeout(function () {
+                $('.recommendations-sidebar .chosen-structure').removeClass('heartbeat-trigger');
+            }, 2000);
         });
 
         // Employees page   
@@ -593,7 +604,7 @@ $(document).ready(function () {
             // business structure
             sessionStorage.setItem('business-structure', answer);
             $('.recommendations-sidebar .chosen-structure span').text(answer);
-            $('.recommendations-sidebar .chosen-structure').addClass('completed');
+            $('.recommendations-sidebar .chosen-structure').addClass('completed heartbeat-trigger');
             
             // recommendations
             $('.no-recommendations').removeClass('show');
@@ -608,6 +619,10 @@ $(document).ready(function () {
                 add_registrations('registrations', ['business-tfn', 'abn']);
                 remove_registrations('registrations', ['individual-tfn', 'company']); 
             }
+
+            setTimeout(function () {
+                $('.recommendations-sidebar .chosen-structure').removeClass('heartbeat-trigger');
+            }, 2000);
         });
 
 
@@ -642,7 +657,6 @@ $(document).ready(function () {
             for (var i = 0; i < gst_inputs.length; i++) {
                  if ($(gst_inputs[i]).is(':checked')) {
                     gst_required = true;
-                    console.log('gst still required');
                     return;
                  }
             }
