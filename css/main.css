@@ -9440,6 +9440,8 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #help-me-decide-prototype .recommendations-sidebar .business-structure .chosen-structure.completed svg { display: block; flex-shrink: 0; margin-top: 6px; }
 
+#help-me-decide-prototype .recommendations-sidebar .business-structure .chosen-structure.heartbeat-trigger svg { -webkit-animation: heartbeat 1.5s ease-in-out both; animation: heartbeat 1.5s ease-in-out both; animation-duration: 500ms; animation-iteration-count: 1; }
+
 #help-me-decide-prototype .recommendations-sidebar .recommendations .title { background: #FFE491; padding: 16px 24px; }
 
 #help-me-decide-prototype .recommendations-sidebar .recommendations .content { background: #FFF3CD; padding: 16px 24px 8px 24px; }
@@ -9449,6 +9451,8 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 #help-me-decide-prototype .recommendations-sidebar .recommendations li.show { display: flex; align-items: flex-start; }
 
 #help-me-decide-prototype .recommendations-sidebar .recommendations li.show svg { flex-shrink: 0; margin-top: 6px; }
+
+#help-me-decide-prototype .recommendations-sidebar .recommendations li.heartbeat-trigger svg { -webkit-animation: heartbeat 1.5s ease-in-out both; animation: heartbeat 1.5s ease-in-out both; animation-duration: 500ms; animation-iteration-count: 1; }
 
 #help-me-decide-prototype .recommendations-sidebar .recommendations li::before { display: none; }
 
@@ -9541,6 +9545,29 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 #help-me-decide-prototype .edit-answers-component .edit-btn { text-decoration: none; }
 
 #help-me-decide-prototype .edit-answers-component span.unanswered { background: #ffffff url("../assets/icon-warning-red.svg") no-repeat; background-position: left 8px center; border-radius: 4px; padding: 4px 8px 4px 36px; color: #D2201E; }
+
+@keyframes heartbeat { from { -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  10% { -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  17% { -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  33% { -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  45% { -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; } }
 
 #stepped-nav-inpage { background: none; }
 
