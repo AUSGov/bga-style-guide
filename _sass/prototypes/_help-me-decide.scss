@@ -102,31 +102,33 @@
     .treegrid {
         width: 100%;
         display: block;
-        border-bottom: 1px solid $bga-blue-black-dark;
+        border-bottom: 1px solid $bga-blue-black-mid;
 
-        thead, tbody {
+        thead {
             display: block;
             width: 100%;
-        }
-        th, td {
-            display: inline-flex;
-            width: calc(50% - 120px);
 
-            &:nth-child(2), &:nth-child(3) {
-                width: 25%;
+            tr {
+                border-bottom: 4px solid $bga-blue-black-mid;
+                display: flex;
+                background: $bga-teal-tool-extra-light;
+                
             }
-            &:nth-child(4) {
-                width: 120px;
-            }
-            svg {
-                flex-shrink: 0;
-            }
+
+
         }
-        tr {
-            border-top: 1px solid $bga-blue-black-dark;
+        tbody {
+            display: block;
+            width: 100%;
+ 
+            tr {
+            border-top: 1px solid $bga-blue-black-mid;
             display: flex;
             background: $bga-teal-tool-extra-light;
             
+            &:first-of-type {
+                border-top: none;
+            }
             &:nth-child(1), &:nth-child(2), 
             &:nth-child(5), &:nth-child(6), 
             &:nth-child(9), &:nth-child(10),
@@ -166,6 +168,23 @@
                 }
             }
         }
+
+        }
+        th, td {
+            display: inline-flex;
+            width: calc(50% - 120px);
+
+            &:nth-child(2), &:nth-child(3) {
+                width: 25%;
+            }
+            &:nth-child(4) {
+                width: 120px;
+            }
+            svg {
+                flex-shrink: 0;
+            }
+        }
+       
         th {
             background: $bga-teal-highlight-mid;
             font-weight: 600;
