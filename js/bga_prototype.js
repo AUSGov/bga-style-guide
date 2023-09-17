@@ -241,32 +241,37 @@ $(document).ready(function () {
             structure = sessionStorage.getItem('business-structure'),
             page = $(target_q).parents('.button-group').attr('data-page'),
             unvisited = sessionStorage.getItem('unvisited');
-            
-            if (structure == "Hobby") {
-                path = '/bga-style-guide/prototypes/help-me-decide/hobby.html';
-            }
 
-            if (!unanswered) {
-                unanswered = "";
-            }
-            if (host == '127.0.0.1') {
-                    host = '127.0.0.1:4000'
-            };
-            $('.radios:visible').each(function(){
-                var question = $(this).attr('id') + '-unanswered';
-               
-                if (!$(this).find('input').is(":checked")) {
-                    unanswered = unanswered + question + ', ';
-                } else {
-                    unanswered = unanswered.replace(question + ', ', '');
-                }
-            }); 
-            sessionStorage.setItem('unanswered', unanswered);
+            console.log(path);
+            if (path) {
             
-            unvisited = unvisited.replace(page + ', ', '');
-            sessionStorage.setItem('unvisited', unvisited);
-    
-            window.location = (protocol + '//' + host + path);
+                if (structure == "Hobby") {
+                    path = '/bga-style-guide/prototypes/help-me-decide/hobby.html';
+                }
+
+                if (!unanswered) {
+                    unanswered = "";
+                }
+                if (host == '127.0.0.1') {
+                        host = '127.0.0.1:4000'
+                };
+                $('.radios:visible').each(function(){
+                    var question = $(this).attr('id') + '-unanswered';
+                
+                    if (!$(this).find('input').is(":checked")) {
+                        unanswered = unanswered + question + ', ';
+                    } else {
+                        unanswered = unanswered.replace(question + ', ', '');
+                    }
+                }); 
+                sessionStorage.setItem('unanswered', unanswered);
+                
+                unvisited = unvisited.replace(page + ', ', '');
+                sessionStorage.setItem('unvisited', unvisited);
+        
+                window.location = (protocol + '//' + host + path);
+
+            } 
         };
 
         $('.bga-btn.next').on('click', function(e){
