@@ -2,7 +2,7 @@
 
 layout: content-tagged
 title: Comparison accordion
-description: Provide users with at a glance comparisons between two items with the ability to dig deeper into the detail.
+description: Provide users with a quick, high level comparison between two items.
 updated: 15 September, 2023
 breadcrumb1: Components
 url1: /components.html
@@ -52,10 +52,11 @@ subsite-tag: true
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
-                    element-string="bga-accordion-example"
-                    sm-visibility="true"
+                    element-string="bga-comparison-accordion-example"
+                    lg-visibility="true"
+                    md-visibility="true"
                     final-visibility="true"
-                    breakpoint-final="576"
+                    breakpoint-final="768"
                     %}
 
                     <!-- Component example -->
@@ -65,24 +66,6 @@ subsite-tag: true
 
                             {% include component-examples/comparison-accordion-example.html
 
-                            layout-name="accordion"
-
-                            item1="true"
-                            item2="true"
-                            item3="true"
-
-                            title1="Accordion item title"
-                            title2=" Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-                            title3="Set your date to officially close your business. This step has a much longer title than the other items in this accordion"
-
-                            content1="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu, venenatis et nibh non, finibus vehicula leo. Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum. Fusce tempor sagittis fringilla. Sed sed dapibus est. Mauris ac arcu et ligula aliquet aliquet ac ac risus. <a tabindex='0'>In lobortis ornare ultricies.</a></p>"
-
-                            content2="<p>Praesent nec magna semper, pulvinar sapien sagittis, tempor urna. Praesent pretium finibus
-                                interdum:</p><ul><li>Quisque ut odio faucibus, iaculis augue vel, tempor nulla. </li><li> In rutrum risus id lectus consectetur volutpat. Donec a justo nec nunc consequat ultricies.</li></ul>"
-
-                            content3="<p>Phasellus venenatis nulla tempor quam egestas auctor.</p>
-                            <p>Cras sed tortor a dolor dictum tincidunt ut nec enim. Fusce vitae quam suscipit, suscipit leo at,
-                                efficitur turpis.</p>"
                             %}
 
                         </div>
@@ -95,10 +78,11 @@ subsite-tag: true
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
-                    element-string="nb-accordion-example"
-                    sm-visibility="true"
+                    element-string="nb-comparison-accordion-example"
+                    lg-visibility="true"
+                    md-visibility="true"
                     final-visibility="true"
-                    breakpoint-final="576"
+                    breakpoint-final="768"
                     %}
 
                     <!-- Component example -->
@@ -110,6 +94,10 @@ subsite-tag: true
                                 component="accordion"
                                 brand-elements="colours, borders and icons"
                             %}
+
+                            {% include component-examples/comparison-accordion-example.html
+                                classes="non-branded"
+                                %}
 
 
                         </div>
@@ -124,7 +112,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/d9e7436d-f593-44b5-a76a-03ba5a3ebc75'"
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/88ec84f7-6487-4fff-a5c3-394bdef15cf3/'"
         btn-text="View design specifications"
         %}
 

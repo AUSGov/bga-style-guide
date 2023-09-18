@@ -1,0 +1,337 @@
+.bga-component.comparison-accordion {
+    .treegrid {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid $bga-blue-black-mid;
+
+            thead {
+                display: block;
+                width: 100%;
+
+                tr {
+                    border-bottom: 4px solid $bga-blue-black-mid;
+                    display: flex;
+                    background: $bga-teal-tool-extra-light;
+                }
+            }
+
+            tbody {
+                display: block;
+                width: 100%;
+
+                tr {
+                    border-top: 1px solid $bga-blue-black-mid;
+                    display: flex;
+                    background: $bga-teal-tool-extra-light;
+
+                    &:first-of-type {
+                        border-top: none;
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(5),
+                    &:nth-child(6),
+                    &:nth-child(9),
+                    &:nth-child(10),
+                    &:nth-child(13),
+                    &:nth-child(14),
+                    &:nth-child(17),
+                    &:nth-child(18) {
+                        background: $bga-teal-highlight-light;
+                    }
+
+                    &:nth-child(even) {
+                        border-top: none;
+
+                        td {
+                            padding: 16px 8px;
+
+                            >*:last-child {
+                                padding-bottom: 0;
+                                margin-bottom: 0;
+
+                                >li:last-child {
+                                    padding-bottom: 0;
+                                    margin-bottom: 0;
+                                }
+                            }
+
+                            >*:first-child {
+                                padding-top: 0;
+                                margin-top: 0;
+                            }
+                        }
+                    }
+
+                    &.more-info {
+                        td {
+                            display: block;
+                            width: 100%;
+                            background: none;
+                        }
+                    }
+                }
+
+            }
+
+            th,
+            td {
+                display: inline-flex;
+                width: calc(50% - 120px);
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: 25%;
+                }
+
+                &:nth-child(4) {
+                    width: 120px;
+                }
+
+                svg {
+                    flex-shrink: 0;
+                }
+            }
+
+            th {
+                background: $bga-teal-highlight-mid;
+                font-weight: 600;
+                padding: 16px 8px;
+            }
+
+            td {
+                padding: 16px 8px;
+                background: $bga-white;
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5 {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    line-height: 1.75;
+                    margin: 0 0 16px 0;
+                }
+
+                p {
+                    margin: 0 0 16px 0;
+
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+
+                ul {
+                    padding-bottom: 0px;
+                }
+
+                &.learn-more {
+                    background: none;
+
+                    button {
+                        padding: 0;
+                        margin: 0;
+                        background: none;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        min-height: auto;
+                    }
+
+                    &.open {
+                        svg {
+                            transform: scaleY(-1);
+                        }
+                    }
+                    &:focus-visible, 
+                    &:hover {
+                        button {
+                            color: $bga-blue-links;
+                        }
+                    }
+                }
+
+            }
+
+            .hidden {
+                display: none;
+            }
+    }
+    &.non-branded {
+        .treegrid {
+            border-bottom: $bga-black solid 1px;
+
+            thead {
+                tr {
+                    border-bottom: 1px solid $bga-black;
+                    background: $nb-grey-mid;
+                }
+            }
+            tbody {
+                tr {
+                    border-top: 1px solid $bga-black;
+                    background: $nb-grey-light !important;
+
+                    &:first-of-type {
+                        border-top: none;
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(5),
+                    &:nth-child(6),
+                    &:nth-child(9),
+                    &:nth-child(10),
+                    &:nth-child(13),
+                    &:nth-child(14),
+                    &:nth-child(17),
+                    &:nth-child(18) {
+                        background: $nb-grey-lightest !important;
+                    }
+
+                    &:nth-child(even) {
+                        border-top: none;
+                    }
+                }
+            }
+            th {
+                background: $nb-grey-dark;
+            }
+            td {
+                &.learn-more {
+                    button {
+                        color: $nb-blue-links;
+
+                        svg path, svg {
+                            fill: $nb-blue-links;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mixins for media queries and smaller screen examples
+@mixin comparison-accordion-bp-768 () {
+    .bga-component.comparison-accordion {
+        .treegrid {
+            th,
+            td {
+                width: calc(44% - 80px);
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: 28%;
+                }
+
+                &:nth-child(4) {
+                    width: 80px;
+                } 
+            }
+            tbody tr.more-info {
+                td {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@mixin comparison-accordion-bp-below768 () {
+    .bga-component.comparison-accordion {
+        .treegrid {
+
+            thead,
+            tbody {
+                display: block;
+            }
+
+            th,
+            td {
+                display: inline-flex;
+                width: 40%;
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: 30%;
+                }
+
+                &:nth-child(4) {
+                    width: 100%;
+                }
+
+            }
+
+            tr {
+                display: flex;
+                flex-wrap: wrap;
+                background: $bga-teal-tool-extra-light !important;
+
+                &:nth-child(even) {
+                    td {
+                        padding: 8px;
+                    }
+                }
+
+                &.more-info {
+                    td {
+                        display: block;
+                        width: 100%;
+                        background: none;
+                    }
+                }
+            }
+
+            td {
+                padding: 8px;
+
+                &.learn-more {
+                    background: $bga-white;
+                    padding: 8px 8px 8px 8px;
+                }
+
+                &.mobile-hide {
+                    height: 0;
+                    padding: 0;
+                }
+            }
+
+            .hidden {
+                display: none;
+            }
+        }
+        &.non-branded {
+            .treegrid {
+                tr {
+                    background: $nb-grey-light !important;
+                }
+            }
+        }
+    }
+}
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.    
+.component-example.bp-768 {
+    @include comparison-accordion-bp-768();
+}
+
+.component-example.bp-below768 {
+    @include comparison-accordion-bp-768();
+    @include comparison-accordion-bp-below768();
+}
+
+
+// Media queries for HTML example pages
+@media (max-width: 992px) {
+   @include comparison-accordion-bp-768();
+}
+
+
+@media (max-width: 768px) {
+    @include comparison-accordion-bp-below768();
+}
+

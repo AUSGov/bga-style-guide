@@ -1,0 +1,95 @@
+.dynamic-sidebar {
+
+    .sidebar {
+        height: auto !important;
+    }
+
+    .business-structure {
+        .title {
+            background: $bga-blue-background-light;
+            padding: 16px 24px;
+        }
+
+        .content {
+            background: $bga-blue-background-extralight;
+            padding: 16px 24px;
+        }
+
+        .chosen-structure {
+            display: flex;
+            align-items: flex-start;
+
+            svg {
+                display: none;
+            }
+
+            &.completed {
+                svg {
+                    display: block;
+                    flex-shrink: 0;
+                    margin-top: 6px;
+                }
+            }
+
+            &.heartbeat-trigger {
+                svg {
+                    -webkit-animation: heartbeat 1.5s ease-in-out both;
+                    animation: heartbeat 1.5s ease-in-out both;
+                    animation-duration: 500ms;
+                    animation-iteration-count: 1;
+                }
+            }
+        }
+    }
+
+    .recommendations {
+        .title {
+            background: $bga-yellow-highlight-mid;
+            padding: 16px 24px;
+        }
+
+        .content {
+            background: $bga-yellow-highlight-light;
+            padding: 16px 24px 8px 24px;
+        }
+
+        li {
+            text-indent: 0;
+            display: none;
+            margin: 0;
+            margin-bottom: 8px;
+
+            &.show {
+                display: flex;
+                align-items: flex-start;
+
+                svg {
+                    flex-shrink: 0;
+                    margin-top: 6px;
+
+                }
+            }
+
+            &.heartbeat-trigger {
+                svg {
+                    -webkit-animation: heartbeat 1.5s ease-in-out both;
+                    animation: heartbeat 1.5s ease-in-out both;
+                    animation-duration: 500ms;
+                    animation-iteration-count: 1;
+                }
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &.fixed {
+        position: sticky;
+    }
+
+    &.mobile-hide {
+        display: none;
+    }
+}

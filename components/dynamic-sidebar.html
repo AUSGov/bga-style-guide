@@ -1,0 +1,266 @@
+---
+
+layout: content-tagged
+title: Dynamic sidebar
+description: Provide the user with immediate feedback in the form of a list of recommendations when they progress through a tool.
+updated: 23 August, 2023
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+    
+        <!-- DESIGN -->
+                    <h2 class="section-start" id="design">Design</h2>
+
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="bga-dynamic-sidebar"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                        <div class="row">
+                        
+                            <div class="col-8">
+
+                            <form>
+                                <p>Recommendations are added to the sidebar as the users selects answers in the tool.</p>
+
+                                <div class="form-element-wrapper checkboxes-wrapper no-flex mb-3">
+                                    <div>
+                                        <div class="checkboxes">
+                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
+                                            <label class="form-check-label" for="sole-trader">
+                                               Sole trader
+                                            </label>
+                                        </div>
+
+                                        <div class="checkboxes">
+                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
+                                            <label class="form-check-label" for="sole-trader">
+                                               Partnership
+                                            </label>
+                                        </div>
+
+                                        <div class="checkboxes">
+                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
+                                            <label class="form-check-label" for="sole-trader">
+                                               Company
+                                            </label>
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            </div>
+                        
+                            <div class="col-4">
+                            {% include component-examples/dynamic-sidebar-example.html
+                            classes=""
+                            %}
+                            </div>
+
+                        </div>
+ 
+
+                        </div>
+
+                    </div>
+
+                   
+
+                </div>
+
+                <div class="tab-section non-branded">
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="nb-dynamic-sidebar"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+
+                        <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+
+                            {% include non-branded-explanation.html
+                                component="sidebar"
+                                brand-elements="colours, borders and button styles"
+                            %}
+    
+
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/ac7d9d51-06fd-4242-8336-bfab5cd84e1a/'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Sidebars can be used in the<a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar alternate layout</a>. They should not be used in other layouts.</p>
+
+
+        {% include layouts-dropdown.html
+            two-col-rightsidebar-visibility="true"
+            two-col-rightsidebar-alt-visibility="true"
+            %}
+
+        <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar"
+
+            min1200-visibility="false"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+
+            min768-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>
+            "
+
+            example-link="'../html-examples/two-col-right-sidebar.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+        <div class="layout-example two-col-rightsidebar-alt mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="twocol-rightbar-alt"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min992-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min992.png' | relative_url "
+            min768-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-finalbp.png' | relative_url "
+
+            min992-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>"
+            
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Sidebars span 12 grid-columns and are fixed to the bottom of the screen.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>"
+
+            example-link="'../html-examples/two-col-right-sidebar-alternate.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h4>Purpose: </h4>
+        <p>The save your progress sidebar provides the ability to save and email a link recording the users progress though a process.</p>
+        <p>Clicking on the 'save your progress' button triggers a <a href={{ "components/modal.html" | relative_url }}>modal with email form</a>.</p>
+        <h4>When to use this component: </h4>
+        <ul>
+            <li>Used with the standard checklist.</li>
+            <li>In tools such as the lean business plan builder</li>
+        </ul>
+
+
+        <!-- VERSION HISTORY-->
+        <h2 class="section-start" id="version-history">Version history</h2>
+        <h4>23 August, 2023</h4>
+        <ul>
+            <li>Updated the sidebar breakpoints to reflect how it displays in two different layouts. The breakpoint for changing to the mobile display is different in the two different sidebar layouts.</li>
+        </ul>
+        <h4>4 August, 2023</h4>
+        <ul>
+            <li>Added two additional breakpoints to make button display at each breakpoint clearer.</li>
+            <li>Added a note about the sidebar fixed behaviour.</li>
+        </ul>
+       
+
+    </div>

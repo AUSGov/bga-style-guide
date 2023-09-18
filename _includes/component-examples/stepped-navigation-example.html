@@ -3,12 +3,30 @@
         <h1 class="step-title">{{ include.title }}</h1>
     {% endif %}
    
-    {% if include.mobile-title %}
+    {% if include.classes contains "in-page" %}
+   
+        <div class="mobile-stepped-nav remove-element-padding">
+            <button class="stepped-nav-toggle p-0" tabindex="0">
+                <span class="me-2">Step 3 of 6: <strong>{{ include.mobile-title }}</strong></span>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                    <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#333"></path>
+                  </svg>
+                  
+                  </button>
+        </div>
+
+    {% else if %} 
+    
         <div class="mobile-stepped-nav remove-element-padding">
             <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
-            <p>Step 3 of 7: <strong>{{ include.mobile-title }}</strong></p>
+            <p>Step 3 of 6: <strong>{{ include.mobile-title }}</strong></p>
         </div>
+
+
     {% endif %}
+
+
     
     <div class="bga-component stepped-navigation">
 
