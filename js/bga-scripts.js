@@ -1994,7 +1994,22 @@ $(document).ready(function () {
         $('.service-links-wrapper').slideToggle();
         $(this).toggleClass('open');
     });
-   
 
+
+    // COMPONENT EXAMPLE: Comparison accordions
+        $('.treegrid .learn-more button').on('click', function(){
+            
+            $('.treegrid .learn-more button').not(this).parents('.learn-more').removeClass('open');
+            $('.treegrid .learn-more button').not(this).parents('tr').next('.more-info').slideUp();
+            
+            var $this = $(this);
+            setTimeout(function () {
+                $this.parents('.learn-more').toggleClass('open');
+                $this.parents('tr').next('.more-info').slideToggle();
+            }, 300); 
+           
+        });
+   
+    
 
 }); //End doc ready

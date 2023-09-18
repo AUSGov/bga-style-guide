@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Stepped navigation</title>
+    <title>Dynamic sidebar</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -47,7 +47,7 @@
     <script src=/bga-style-guide/js/bga_prototype.js ></script>
 
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/stepped-navigation.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/dynamic-sidebar.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -190,7 +190,7 @@
                     
 
                     <li class="breadcrumb breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0">Stepped navigation</p>
+                        <p class="breadcrumb-location m-0 p-0">Dynamic sidebar</p>
                     </li>
                 </ul>
                 
@@ -210,15 +210,17 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Stepped navigation</h1>
-                        <p class="header-intro">Navigation for step-by-step processes such as those found in many online tools.</p>
+                        <h1>Dynamic sidebar</h1>
+                        <p class="header-intro">Provide the user with immediate feedback in the form of a list of recommendations when they progress through a tool.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
-                                <li class="me-2 mb-0 py-1 ps-5 pe-2 false">business.gov.au</li> 
+                                <li class="me-2 mb-0 py-1 ps-5 pe-2 true">business.gov.au</li> 
                                 <li class="m-0 mb-0 py-1 ps-5 pe-2 true">subsites</li>
                             </ul>
                         </div>
+                        
+                        <p class="updated pt-4 pb-0">Last updated: 23 August, 2023</p>
                         
                     </div>
                 </div>
@@ -252,7 +254,9 @@
         
             <li class="mb-3"><a tabindex="0" href="#guidelines-for-use">Guidelines for use</a></li>
              
-         
+        
+            <li class="mb-3"><a tabindex="0" href="#version-history">Version history</a></li>
+             
          
          
          
@@ -265,10 +269,10 @@
     </div>
 
     <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
-
-
+    
         <!-- DESIGN -->
-        <h2 class="section-start" id="design">Design</h2>
+                    <h2 class="section-start" id="design">Design</h2>
+
 
         <div class="tabs-select-wrapper">
     <div class="section-tabs d-none d-md-flex">
@@ -321,7 +325,7 @@
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="bga-stepped-navigation-group">
+        <fieldset id="bga-dynamic-sidebar-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -329,14 +333,11 @@
 
                 
                 
-                  
-                    <input tabindex=-1 type="radio" class="btn-check bp-lg true" name="bga-stepped-navigation-group" id="bga-stepped-navigation-bp-lg" autocomplete="off" data-breakpoint="bp-992">
-                    <label tabindex=0 class="btn btn-outline-primary bp-lg py-2 px-3 true" for="bga-stepped-navigation-bp-lg">≥992px (lg)</label>
                 
 
                       
-                    <input tabindex=-1 type="radio" class="btn-check bp-md true" name="bga-stepped-navigation-group" id="bga-stepped-navigation-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label tabindex=0 class="btn btn-outline-primary bp-md py-2 px-3 true" for="bga-stepped-navigation-bp-md">≥768px (md)</label>
+                    <input tabindex=-1 type="radio" class="btn-check bp-md true" name="bga-dynamic-sidebar-group" id="bga-dynamic-sidebar-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label tabindex=0 class="btn btn-outline-primary bp-md py-2 px-3 true" for="bga-dynamic-sidebar-bp-md">≥768px (md)</label>
                 
 
                 
@@ -344,8 +345,8 @@
                 
 
                     
-                <input tabindex=-1 type="radio" class="btn-check true" name="bga-stepped-navigation-group" id="bga-stepped-navigation-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 true" for="bga-stepped-navigation-bp-final">&lt;768px</label>
+                <input tabindex=-1 type="radio" class="btn-check true" name="bga-dynamic-sidebar-group" id="bga-dynamic-sidebar-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 true" for="bga-dynamic-sidebar-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -368,173 +369,170 @@
                     <!-- Component example -->
 
                     <div class="component-example m-0">
-                        <div class="component-wrapper remove-element-padding py-4">
 
-                            <h3 class="ms-4">Stepped navigation within a tool header</h3>
-                            
-                            <div class="page-header-wrapper tool-stepped-nav teal">
-                            <div class="stepped-navigation-wrapper remove-element-padding teal p-5 mb-5">
-    
-        <h1 class="step-title">Active step name</h1>
-    
-   
-     
-    
-        <div class="mobile-stepped-nav remove-element-padding">
-            <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
-            <p>Step 3 of 6: <strong>Active step name</strong></p>
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                        <div class="row">
+                        
+                            <div class="col-8">
+
+                            <form>
+                                <p>Recommendations are added to the sidebar as the users selects answers in the tool.</p>
+
+                                <div class="form-element-wrapper checkboxes-wrapper no-flex mb-3">
+                                    <div>
+                                        <div class="checkboxes">
+                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
+                                            <label class="form-check-label" for="sole-trader">
+                                               Sole trader
+                                            </label>
+                                        </div>
+
+                                        <div class="checkboxes">
+                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
+                                            <label class="form-check-label" for="sole-trader">
+                                               Partnership
+                                            </label>
+                                        </div>
+
+                                        <div class="checkboxes">
+                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
+                                            <label class="form-check-label" for="sole-trader">
+                                               Company
+                                            </label>
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            </div>
+                        
+                            <div class="col-4">
+                            <div class="sidebar-wrapper dynamic-sidebar mb-4 p-0 ">
+    <div class="bga-component sidebar m-0 p-0">
+        
+        
+        <div class="sidebar-section business-structure mb-4">
+            <div class="title remove-element-padding">
+                <p><strong>Business structure</strong></p>
+            </div>
+            <div class="content remove-element-padding">
+                <p class="chosen-structure">
+                    <svg  class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <g data-name="Group 20678" transform="translate(-441 -1259)">
+                          <g data-name="Group 20619" transform="translate(441 1259)">
+                            <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                          </g>
+                          <g data-name="Icon: Tick" transform="translate(445 1264)">
+                            <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>
+                      <span>No chosen structure yet</span></p>
+            </div>
         </div>
 
 
-    
-
-
-    
-    <div class="bga-component stepped-navigation">
-
-        
-        <a tabindex="1" id="nav-step-1" class="step completed me-3">
-            <span class="step-number  mb-2">1</span>
-            <span class="step-name">Completed step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-2" class="step completed me-3">
-            <span class="step-number mb-2">2</span>
-            <span class="step-name">One more completed step</span>
-        </a>    
-        
-
-        
-        <a tabindex="1" id="nav-step-3" class="step active me-3">
-            <span class="step-number mb-2">3</span>
-            <span class="step-name">Active step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-4" class="step me-3">
-            <span class="step-number mb-2">4</span>
-            <span class="step-name">Unvisited step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-5" class="step me-3">
-            <span class="step-number mb-2">5</span>
-            <span class="step-name">Ending employment</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-6" class="step me-3">
-            <span class="step-number mb-2">6</span>
-            <span class="step-name">Step six</span>
-        </a>
-        
-
-        
-
-        
-
-    </div>
-    
-</div>
-                            </div>
-
-                            <h3 class="ms-4">Stepped navigation in the context of a page.</h3>
-
-                            <div class="mx-4">
-                                <div class="stepped-navigation-wrapper remove-element-padding white in-page p-5">
-    
-   
-    
-   
-        <div class="mobile-stepped-nav remove-element-padding">
-            <button class="stepped-nav-toggle p-0" tabindex="0">
-                <span class="me-2">Step 3 of 6: <strong>Active step name</strong></span>
-                
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
-                    <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#333"></path>
-                  </svg>
-                  
-                  </button>
+        <div class="sidebar-section recommendations">
+            <div class="title remove-element-padding">
+                <p><strong>Recommended registrations</strong></p>
+            </div>
+            <div class="content remove-element-padding">
+                <ul  class="remove-element-padding m-0 p-0">
+                    <li class="show no-recommendations">No recommendations yet</li>
+                    
+                    <li class="abn" data-value="abn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <g data-name="Group 20678" transform="translate(-441 -1259)">
+                              <g data-name="Group 20619" transform="translate(441 1259)">
+                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                              </g>
+                              <g data-name="Icon: Tick" transform="translate(445 1264)">
+                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                              </g>
+                            </g>
+                          </svg>
+                          <span class="ms-2">Australian business number</span></li>
+                    <li class="company" data-value="company">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <g data-name="Group 20678" transform="translate(-441 -1259)">
+                              <g data-name="Group 20619" transform="translate(441 1259)">
+                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                              </g>
+                              <g data-name="Icon: Tick" transform="translate(445 1264)">
+                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                              </g>
+                            </g>
+                          </svg>
+                          <span class="ms-2">Company registration</span></li>
+                    
+                    <li class="payg" data-value="payg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <g data-name="Group 20678" transform="translate(-441 -1259)">
+                              <g data-name="Group 20619" transform="translate(441 1259)">
+                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                              </g>
+                              <g data-name="Icon: Tick" transform="translate(445 1264)">
+                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                              </g>
+                            </g>
+                          </svg>
+                          <span class="ms-2">Pay As You Go (PAYG) Withholding</span></li>
+                    <li class="fbt" data-value="fbt">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <g data-name="Group 20678" transform="translate(-441 -1259)">
+                              <g data-name="Group 20619" transform="translate(441 1259)">
+                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                              </g>
+                              <g data-name="Icon: Tick" transform="translate(445 1264)">
+                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                              </g>
+                            </g>
+                          </svg>
+                          <span class="ms-2">Fringe Benefits Tax (FBT)</span></li>
+                   
+                    
+                   
+                    
+                    
+                    
+                </ul>
+            </div>
         </div>
 
-    
-
-
-    
-    <div class="bga-component stepped-navigation">
-
-        
-        <a tabindex="1" id="nav-step-1" class="step completed me-3">
-            <span class="step-number  mb-2">1</span>
-            <span class="step-name">Completed step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-2" class="step completed me-3">
-            <span class="step-number mb-2">2</span>
-            <span class="step-name">One more completed step</span>
-        </a>    
-        
-
-        
-        <a tabindex="1" id="nav-step-3" class="step active me-3">
-            <span class="step-number mb-2">3</span>
-            <span class="step-name">Active step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-4" class="step me-3">
-            <span class="step-number mb-2">4</span>
-            <span class="step-name">Unvisited step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-5" class="step me-3">
-            <span class="step-number mb-2">5</span>
-            <span class="step-name">Ending employment</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-6" class="step me-3">
-            <span class="step-number mb-2">6</span>
-            <span class="step-name">Step six</span>
-        </a>
-        
-
-        
-
-        
 
     </div>
-    
 </div>
-                            </div>
 
+
+
+
+
+                            </div>
 
                         </div>
+ 
+
+                        </div>
+
                     </div>
+
+                   
 
                 </div>
 
-                <div class="tab-section non-branded ">
-
-                        <!-- Breakpoint radio buttons -->
-                        <div class="breakpoints m-0 p-4">
+                <div class="tab-section non-branded">
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
 
     
     <div class="larger-screens">
         <p class="pe-3 m-0">Breakpoints:</p>
 
-        <fieldset id="nb-stepped-navigation-group">
+        <fieldset id="nb-dynamic-sidebar-group">
 
             <div class="btn-toolbar" role="toolbar">
 
@@ -542,14 +540,11 @@
 
                 
                 
-                  
-                    <input tabindex=-1 type="radio" class="btn-check bp-lg true" name="nb-stepped-navigation-group" id="nb-stepped-navigation-bp-lg" autocomplete="off" data-breakpoint="bp-992">
-                    <label tabindex=0 class="btn btn-outline-primary bp-lg py-2 px-3 true" for="nb-stepped-navigation-bp-lg">≥992px (lg)</label>
                 
 
                       
-                    <input tabindex=-1 type="radio" class="btn-check bp-md true" name="nb-stepped-navigation-group" id="nb-stepped-navigation-bp-md" autocomplete="off" data-breakpoint="bp-768">
-                    <label tabindex=0 class="btn btn-outline-primary bp-md py-2 px-3 true" for="nb-stepped-navigation-bp-md">≥768px (md)</label>
+                    <input tabindex=-1 type="radio" class="btn-check bp-md true" name="nb-dynamic-sidebar-group" id="nb-dynamic-sidebar-bp-md" autocomplete="off" data-breakpoint="bp-768">
+                    <label tabindex=0 class="btn btn-outline-primary bp-md py-2 px-3 true" for="nb-dynamic-sidebar-bp-md">≥768px (md)</label>
                 
 
                 
@@ -557,8 +552,8 @@
                 
 
                     
-                <input tabindex=-1 type="radio" class="btn-check true" name="nb-stepped-navigation-group" id="nb-stepped-navigation-bp-final" autocomplete="off" data-breakpoint="bp-below768">
-                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 true" for="nb-stepped-navigation-bp-final">&lt;768px</label>
+                <input tabindex=-1 type="radio" class="btn-check true" name="nb-dynamic-sidebar-group" id="nb-dynamic-sidebar-bp-final" autocomplete="off" data-breakpoint="bp-below768">
+                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 true" for="nb-dynamic-sidebar-bp-final">&lt;768px</label>
 
                 </div>
 
@@ -577,109 +572,68 @@
 </div>
 
 
-    
-                        <!-- Component example -->
-    
-                        <div class="component-example m-0">
-                            <div class="component-wrapper remove-element-padding py-4">
-                                
-                                <p class="m-4">Apply your brand specific <strong>colours and borders</strong> to the base stepped navigation shown below.</p>
 
+                    <!-- Component example -->
 
-    
-                                <div class="stepped-navigation-wrapper remove-element-padding white p-5 non-branded">
-    
-   
-     
-    
-        <div class="mobile-stepped-nav remove-element-padding">
-            <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
-            <p>Step 3 of 6: <strong>Active step name</strong></p>
-        </div>
+                    <div class="component-example m-0">
+
+                        <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
+
+                            <p class="">Apply your brand specific <strong>colours, borders and button styles</strong> to the base sidebar shown below.</p>
 
 
     
 
+                            
 
-    
-    <div class="bga-component stepped-navigation">
-
-        
-        <a tabindex="1" id="nav-step-1" class="step completed me-3">
-            <span class="step-number  mb-2">1</span>
-            <span class="step-name">Completed step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-2" class="step completed me-3">
-            <span class="step-number mb-2">2</span>
-            <span class="step-name">One more completed step</span>
-        </a>    
-        
-
-        
-        <a tabindex="1" id="nav-step-3" class="step active me-3">
-            <span class="step-number mb-2">3</span>
-            <span class="step-name">Active step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-4" class="step me-3">
-            <span class="step-number mb-2">4</span>
-            <span class="step-name">Unvisited step</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-5" class="step me-3">
-            <span class="step-number mb-2">5</span>
-            <span class="step-name">Ending employment</span>
-        </a>
-        
-
-        
-        <a tabindex="1" id="nav-step-6" class="step me-3">
-            <span class="step-number mb-2">6</span>
-            <span class="step-name">Step six</span>
-        </a>
-        
-
-        
-
-        
-
-    </div>
-    
-</div>
-    
-    
-                            </div>
                         </div>
 
+                    </div>
                 </div>
 
             </div>
 
 
+
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/6fe930c4-f994-4408-b55c-0d828309d071' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/ac7d9d51-06fd-4242-8336-bfab5cd84e1a/' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Stepped navigation can be used on all <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>page layouts</a> except the two column - left filters layout.</p>
+        <p>Sidebars can be used in the<a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - right sidebar layout</a> and the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - right sidebar alternate layout</a>. They should not be used in other layouts.</p>
 
 
         <div class="layouts m-0 p-4">
     
     
-    <p class="pe-3 m-0 all-layouts">Layout: <strong>All layouts</strong></p>
+    
+    
+    <p class="pe-3 m-0">Layout:</p>
+    
+    <select class="form-select layouts-select ps-3" aria-label="Layout examples">
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        <option value="two-col-rightsidebar" class="true">Two column - right sidebar</option>
+        
+
+        
+        <option value="two-col-rightsidebar-alt" class="true">Two column - right sidebar alternate</option>
+        
+        
+    </select>
     
     
 
@@ -687,25 +641,70 @@
     
 </div>
 
-        <div class="layout-example show full-border mt-0 mb-5 p-4">
+        <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
 
             
-    
-    <div class="py-4">
-        
-        <h6>All breakpoints</h6>
-        
-        <div class="layouts-wrapper">
-        <div class="layout-image me-5">
-            <img src='../assets/layout-images/stepped-nav-allbp.png' | relative_url  alt="" />
+        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
+        <div class="accordion layout-accordion">
+
+                    
+
+
+                     
+
+
+                       
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-collapseThree" aria-expanded="false" aria-controls="twocol-rightbar-collapseThree">
+                                    Breakpoint ≥ 768px
+                                </button>
+                            </h2>
+                            <div id="twocol-rightbar-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-min768.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 8 grid-columns wide.</p>
+            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+
+
+                    
+
+
+
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-collapseFive" aria-expanded="false" aria-controls="twocol-rightbar-collapseFive">
+                                    Breakpoint &lt; 768px
+                                </button>
+                            </h2>
+                            <div id="twocol-rightbar-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                       <p>The content area is 12 grid-columns wide.</p>
+            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>
+            
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
         </div>
-        <div class="layout-rules">
-            <p>The content area is 12 grid-columns wide.</p>
-            <p>Stepped navigation components are 12 grid-columns wide.</p>
-            <p>Stepped navigation components should only appear once in a page. They can be placed in the header (for tools) or at the top of the page content area.</p>
-        </div>
-        </div>
-    </div>
+
 
     
 
@@ -713,7 +712,104 @@
 
 
     <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/ECB-content-page.html' | relative_url' role="button">View layout example</a>
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar.html' | relative_url' role="button">View layout example</a>
+    </div>
+
+
+
+        </div>
+
+        <div class="layout-example two-col-rightsidebar-alt mt-0 mb-5 px-4 py-0">
+
+            
+        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
+        <div class="accordion layout-accordion">
+
+                    
+
+
+                         
+                        <div class="accordion-item true ">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-alt-collapseTwo" aria-expanded="false" aria-controls="twocol-rightbar-alt-collapseTwo">
+                                    Breakpoint ≥ 992px
+                                </button>
+                            </h2>
+                            <div id="twocol-rightbar-alt-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                     <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min992.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 8 grid-columns wide.</p>
+            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+                       
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-alt-collapseThree" aria-expanded="false" aria-controls="twocol-rightbar-alt-collapseThree">
+                                    Breakpoint ≥ 768px
+                                </button>
+                            </h2>
+                            <div id="twocol-rightbar-alt-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min768.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 11 grid-columns wide.</p>
+            <p>Sidebars span 12 grid-columns and are fixed to the bottom of the screen.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+
+
+                    
+
+
+
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-alt-collapseFive" aria-expanded="false" aria-controls="twocol-rightbar-alt-collapseFive">
+                                    Breakpoint &lt; 768px
+                                </button>
+                            </h2>
+                            <div id="twocol-rightbar-alt-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-finalbp.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                       <p>The content area is 12 grid-columns wide.</p>
+            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+        </div>
+
+
+    
+
+
+
+
+    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
+        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar-alternate.html' | relative_url' role="button">View layout example</a>
     </div>
 
 
@@ -721,18 +817,34 @@
         </div>
 
 
+
+
+
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-        <h3>Purpose:</h3>
-        <p>Stepped navigation guides users through a process that is completed in a set order. It displays where the
-            user is up to and allows then to navigate back to previous steps.</p>
-        <p>Users cannot navigate forward to uncompleted steps using this component.</p>
-        <h3>When to use this component:</h3>
+        <h4>Purpose: </h4>
+        <p>The save your progress sidebar provides the ability to save and email a link recording the users progress though a process.</p>
+        <p>Clicking on the 'save your progress' button triggers a <a href=/bga-style-guide/components/modal.html>modal with email form</a>.</p>
+        <h4>When to use this component: </h4>
         <ul>
-            <li>Used in tools or forms that require the user to complete a series of steps.</li>
+            <li>Used with the standard checklist.</li>
+            <li>In tools such as the lean business plan builder</li>
         </ul>
 
+
+        <!-- VERSION HISTORY-->
+        <h2 class="section-start" id="version-history">Version history</h2>
+        <h4>23 August, 2023</h4>
+        <ul>
+            <li>Updated the sidebar breakpoints to reflect how it displays in two different layouts. The breakpoint for changing to the mobile display is different in the two different sidebar layouts.</li>
+        </ul>
+        <h4>4 August, 2023</h4>
+        <ul>
+            <li>Added two additional breakpoints to make button display at each breakpoint clearer.</li>
+            <li>Added a note about the sidebar fixed behaviour.</li>
+        </ul>
+       
 
     </div>
 

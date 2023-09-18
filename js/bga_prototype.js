@@ -242,7 +242,6 @@ $(document).ready(function () {
             page = $(target_q).parents('.button-group').attr('data-page'),
             unvisited = sessionStorage.getItem('unvisited');
 
-            console.log(path);
             if (path) {
             
                 if (structure == "Hobby") {
@@ -711,22 +710,6 @@ $(document).ready(function () {
 
         });
         
-
-        
-        // Comparison accordions
-        $('.treegrid .learn-more button').on('click', function(){
-            
-            $('.treegrid .learn-more button').not(this).parents('.learn-more').removeClass('open');
-            $('.treegrid .learn-more button').not(this).parents('tr').next('.more-info').slideUp();
-            
-            var $this = $(this);
-            setTimeout(function () {
-                $this.parents('.learn-more').toggleClass('open');
-                $this.parents('tr').next('.more-info').slideToggle();
-            }, 300); 
-           
-        });
-
 
         // Display results on results page
         if ($('#help-me-decide-prototype').hasClass('results-page')) {
