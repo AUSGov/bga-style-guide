@@ -112,4 +112,55 @@
             }
         }
     }
+
+    &.heartbeat-animation {
+        &.beat {
+                svg {
+                    -webkit-animation: heartbeat 1.5s ease-in-out both;
+                    animation: heartbeat 1.5s ease-in-out both;
+                    animation-duration: 500ms;
+                    animation-iteration-count: 1;
+                }
+            }
+        
+        @keyframes heartbeat { 
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform-origin: center center;
+                transform-origin: center center;
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+        
+            10% {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+        
+            17% {
+                -webkit-transform: scale(1.25);
+                transform: scale(1.25);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+        
+            33% {
+                -webkit-transform: scale(1.4);
+                transform: scale(1.4);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+        
+            45% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+        }
+        
+    }
 }

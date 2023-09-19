@@ -121,6 +121,11 @@
         display: block !important;
     }
 }
+
 .component-example.bp-below768 {
+    @include dynamic-sidebar-bp-below768();
+}
+
+@media(max-width: 768px) {
     @include dynamic-sidebar-bp-below768();
 }
