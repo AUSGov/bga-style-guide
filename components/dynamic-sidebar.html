@@ -220,7 +220,7 @@
                             </ul>
                         </div>
                         
-                        <p class="updated pt-4 pb-0">Last updated: 23 August, 2023</p>
+                        <p class="updated pt-4 pb-0">Last updated: 19 September, 2023</p>
                         
                     </div>
                 </div>
@@ -372,46 +372,50 @@
 
                         <div class="component-wrapper remove-element-padding p-4">
 
-                        <div class="row">
+                        <div class="row sidebar-mobile-hide">
                         
-                            <div class="col-8">
+                            <div class="col-7">
+                            
+                          
+                                <p>Recommendations are added to the sidebar as the users selects answers in a tool. Select an option below to see the sidebar behaviour.</p>
 
-                            <form>
-                                <p>Recommendations are added to the sidebar as the users selects answers in the tool.</p>
+                                <div class="mb-5 p-0 form-example remove-element-padding">
+                                   
+                                    <div class="radios w-50 d-flex flex-wrap radio-flex-group" id="dynamic-sidebar-q" role="radiogroup">
 
-                                <div class="form-element-wrapper checkboxes-wrapper no-flex mb-3">
-                                    <div>
-                                        <div class="checkboxes">
-                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
-                                            <label class="form-check-label" for="sole-trader">
-                                               Sole trader
+                                        <div class="radio-button w-100">
+                                            <input class="form-check-input m-0" type="radio" name="dynamic-sidebar-q" id="sole-trader" data-value="Sole trader">
+                                            <label class="form-check-label remove-element-padding" for="sole-trader">
+                                                <p>Sole trader</p>
                                             </label>
                                         </div>
-
-                                        <div class="checkboxes">
-                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
-                                            <label class="form-check-label" for="sole-trader">
-                                               Partnership
+                
+                                        <div class="radio-button w-100">
+                                            <input class="form-check-input m-0" type="radio" name="dynamic-sidebar-q" id="partnership" data-value="Partnership">
+                                            <label class="form-check-label remove-element-padding" for="partnership">
+                                                <p>Partnership</p>
                                             </label>
                                         </div>
-
-                                        <div class="checkboxes">
-                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
-                                            <label class="form-check-label" for="sole-trader">
-                                               Company
+                
+                                        <div class="radio-button w-100">
+                                            <input class="form-check-input m-0" type="radio" name="dynamic-sidebar-q" id="company" data-value="Company">
+                                            <label class="form-check-label remove-element-padding" for="company">
+                                                <p>Company</p>
                                             </label>
                                         </div>
-
-                                        
+            
+                
                                     </div>
                                 </div>
 
-                            </form>
+                 
+
 
                             </div>
                         
-                            <div class="col-4">
-                            <div class="sidebar-wrapper dynamic-sidebar mb-4 p-0 ">
+                            <div class="col-5">
+                    
+                            <div class="sidebar-wrapper dynamic-sidebar mb-4 p-0 sidebar-mobile-hide">
     <div class="bga-component sidebar m-0 p-0">
         
         
@@ -444,55 +448,54 @@
                 <ul  class="remove-element-padding m-0 p-0">
                     <li class="show no-recommendations">No recommendations yet</li>
                     
-                    <li class="abn" data-value="abn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <g data-name="Group 20678" transform="translate(-441 -1259)">
-                              <g data-name="Group 20619" transform="translate(441 1259)">
-                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
-                              </g>
-                              <g data-name="Icon: Tick" transform="translate(445 1264)">
-                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
-                              </g>
+                    <li class="individual-tfn" data-value="individual-tfn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g data-name="Group 20678" transform="translate(-441 -1259)">
+                        <g data-name="Group 20619" transform="translate(441 1259)">
+                          <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                        </g>
+                        <g data-name="Icon: Tick" transform="translate(445 1264)">
+                          <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <span class="ms-2">Individual tax file number</span></li>
+                  <li class="business-tfn" data-value="business-tfn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
                             </g>
-                          </svg>
-                          <span class="ms-2">Australian business number</span></li>
-                    <li class="company" data-value="company">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <g data-name="Group 20678" transform="translate(-441 -1259)">
-                              <g data-name="Group 20619" transform="translate(441 1259)">
-                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
-                              </g>
-                              <g data-name="Icon: Tick" transform="translate(445 1264)">
-                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
-                              </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
                             </g>
-                          </svg>
-                          <span class="ms-2">Company registration</span></li>
-                    
-                    <li class="payg" data-value="payg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <g data-name="Group 20678" transform="translate(-441 -1259)">
-                              <g data-name="Group 20619" transform="translate(441 1259)">
-                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
-                              </g>
-                              <g data-name="Icon: Tick" transform="translate(445 1264)">
-                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
-                              </g>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Business tax file number</span></li>
+                  <li class="abn" data-value="abn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
                             </g>
-                          </svg>
-                          <span class="ms-2">Pay As You Go (PAYG) Withholding</span></li>
-                    <li class="fbt" data-value="fbt">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <g data-name="Group 20678" transform="translate(-441 -1259)">
-                              <g data-name="Group 20619" transform="translate(441 1259)">
-                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
-                              </g>
-                              <g data-name="Icon: Tick" transform="translate(445 1264)">
-                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
-                              </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
                             </g>
-                          </svg>
-                          <span class="ms-2">Fringe Benefits Tax (FBT)</span></li>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Australian business number</span></li>
+                  <li class="company" data-value="company">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                            </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                            </g>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Company registration</span></li>
                    
                     
                    
@@ -513,6 +516,12 @@
 
                             </div>
 
+                        </div>
+
+                        <div class="row sidebar-mobile-explanation">
+                            <div class="col">
+                            <p><strong>This component is hidden on mobile screens.</strong></p>
+                            </div>
                         </div>
  
 
@@ -579,11 +588,61 @@
 
                         <div class="component-wrapper sidebar-example-container remove-element-padding p-4">
 
-                            <p class="">Apply your brand specific <strong>colours, borders and button styles</strong> to the base sidebar shown below.</p>
+                            <p class="">Apply your brand specific <strong>colours, borders and icon styles</strong> to the base sidebar shown below.</p>
 
 
     
+                            <div class="row sidebar-mobile-hide">
+                        
+                                <div class="col-5">
+                            
+                                    <div class="sidebar-wrapper nb-dynamic-sidebar mb-4 p-0 sidebar-mobile-hide">
+                                        <div class="bga-component sidebar m-0 p-0">
+                                            
+                                            
+                                            <div class="sidebar-section business-structure mb-4">
+                                                <div class="title remove-element-padding">
+                                                    <p><strong>Business structure</strong></p>
+                                                </div>
+                                                <div class="content remove-element-padding">
+                                                    <p class="chosen-structure">
+                                                        <span>Sole trader</span></p>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                            <div class="sidebar-section recommendations">
+                                                <div class="title remove-element-padding">
+                                                    <p><strong>Recommended registrations</strong></p>
+                                                </div>
+                                                <div class="content remove-element-padding">
+                                                    <ul class="remove-element-padding m-0 p-0">
+                                                    
+                                                
+                                                        <li class="individual-tfn show" data-value="individual-tfn">
+                                                        
+                                                        <span>Individual tax file number</span></li>
+                                                    
+                                                    <li class="abn show" data-value="abn"><span>Australian business number</span></li>
+                                                        
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                        </div>
+                                    </div>
 
+                                </div>
+
+                            </div>
+
+                            <div class="row sidebar-mobile-explanation">
+                                <div class="col">
+                                <p><strong>This component is hidden on mobile screens.</strong></p>
+                                </div>
+                            </div>
                             
 
                         </div>
@@ -598,42 +657,20 @@
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/ac7d9d51-06fd-4242-8336-bfab5cd84e1a/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/978be30f-ae71-45de-a6f4-d21a1207059a/' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Sidebars can be used in the<a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - right sidebar layout</a> and the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - right sidebar alternate layout</a>. They should not be used in other layouts.</p>
+        <p>Sidebars can be used in the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>two column - right sidebar layout</a>. They should not be used in other layouts.</p>
 
 
         <div class="layouts m-0 p-4">
     
     
-    
-    
-    <p class="pe-3 m-0">Layout:</p>
-    
-    <select class="form-select layouts-select ps-3" aria-label="Layout examples">
-        
-        
-        
-        
-        
-        
-        
-        
-
-        
-        <option value="two-col-rightsidebar" class="true">Two column - right sidebar</option>
-        
-
-        
-        <option value="two-col-rightsidebar-alt" class="true">Two column - right sidebar alternate</option>
-        
-        
-    </select>
+    <p class="pe-3 m-0 all-layouts">Layout: <strong>Two column - right sidebar</strong></p>
     
     
 
@@ -663,12 +700,12 @@
                             <div id="twocol-rightbar-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-min768.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/dynamic-sidebar-2col-rightsidebar-min768.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                         <p>The content area is 8 grid-columns wide.</p>
-            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>
+            <p>Dynamic sidebars sit to the right of the content area and span 4 grid-columns.</p>
                                     </div>
                                 </div>
                             </div>
@@ -690,12 +727,12 @@
                             <div id="twocol-rightbar-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
                                 <div class="accordion-body">
                                     <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
+                                    <img src='../assets/layout-images/dynamic-sidebar-2col-rightsidebar-finalbp.png' | relative_url  alt="" />
                                     </div>
 
                                     <div class="layout-rules">
                                        <p>The content area is 12 grid-columns wide.</p>
-            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>
+            <p> Dynamic sidebars are hidden.</p>
             
                                     </div>
                                 </div>
@@ -719,131 +756,27 @@
 
         </div>
 
-        <div class="layout-example two-col-rightsidebar-alt mt-0 mb-5 px-4 py-0">
-
-            
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-
-
-                         
-                        <div class="accordion-item true ">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-alt-collapseTwo" aria-expanded="false" aria-controls="twocol-rightbar-alt-collapseTwo">
-                                    Breakpoint ≥ 992px
-                                </button>
-                            </h2>
-                            <div id="twocol-rightbar-alt-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min992.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p>
-            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                       
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-alt-collapseThree" aria-expanded="false" aria-controls="twocol-rightbar-alt-collapseThree">
-                                    Breakpoint ≥ 768px
-                                </button>
-                            </h2>
-                            <div id="twocol-rightbar-alt-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min768.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 11 grid-columns wide.</p>
-            <p>Sidebars span 12 grid-columns and are fixed to the bottom of the screen.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    
-
-
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#twocol-rightbar-alt-collapseFive" aria-expanded="false" aria-controls="twocol-rightbar-alt-collapseFive">
-                                    Breakpoint &lt; 768px
-                                </button>
-                            </h2>
-                            <div id="twocol-rightbar-alt-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-finalbp.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p>
-            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-        </div>
-
-
-    
-
-
-
-
-    <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-        <a class="btn btn-primary" tabindex="0" href='../html-examples/two-col-right-sidebar-alternate.html' | relative_url' role="button">View layout example</a>
-    </div>
-
-
-
-        </div>
-
-
-
-
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h4>Purpose: </h4>
-        <p>The save your progress sidebar provides the ability to save and email a link recording the users progress though a process.</p>
-        <p>Clicking on the 'save your progress' button triggers a <a href=/bga-style-guide/components/modal.html>modal with email form</a>.</p>
+        <p>The dynamic sidebar provides the ability to create a dynamic list as users progress through a tool.</p>
+       
         <h4>When to use this component: </h4>
         <ul>
-            <li>Used with the standard checklist.</li>
-            <li>In tools such as the lean business plan builder</li>
+            <li>Used in tools where users are provided with a list of items, e.g a list of recommended registrations.</li>
+           
         </ul>
 
 
         <!-- VERSION HISTORY-->
         <h2 class="section-start" id="version-history">Version history</h2>
-        <h4>23 August, 2023</h4>
+        <h4>19 September, 2023</h4>
         <ul>
-            <li>Updated the sidebar breakpoints to reflect how it displays in two different layouts. The breakpoint for changing to the mobile display is different in the two different sidebar layouts.</li>
+            <li>Added the dynamic sidebar to the style guide (as a new component).</li>
         </ul>
-        <h4>4 August, 2023</h4>
-        <ul>
-            <li>Added two additional breakpoints to make button display at each breakpoint clearer.</li>
-            <li>Added a note about the sidebar fixed behaviour.</li>
-        </ul>
+       
        
 
     </div>
