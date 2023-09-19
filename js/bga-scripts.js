@@ -2009,7 +2009,54 @@ $(document).ready(function () {
             }, 300); 
            
         });
-   
+
+    // COMPONENT EXAMPLE: Results CTA
+    $('.callout-results .learn-more').on('click', function(){
+        $(this).next('.more-info').toggleClass('d-none');
+        $(this).toggleClass('open')
+    });
+
+
+    // COMPONENT EXAMPLE: Dynamic sidebar
+    $('#dynamic-sidebar-q input').on('click', function(){
+        var answer = $(this).attr('id');
+        $('.dynamic-sidebar .no-recommendations').removeClass('show');
+
+        if (answer == 'sole-trader') {
+            $('.dynamic-sidebar .chosen-structure span').text('Sole trader');
+            $('.dynamic-sidebar .chosen-structure').addClass('completed heartbeat-trigger');
+
+            $('.dynamic-sidebar li.individual-tfn').addClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.abn').addClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.business-tfn').removeClass('show');
+            $('.dynamic-sidebar li.company').removeClass('show');
+        } else if (answer == 'partnership') {
+            $('.dynamic-sidebar .chosen-structure span').text('Partnership');
+            $('.dynamic-sidebar .chosen-structure').addClass('completed heartbeat-trigger');
+
+            $('.dynamic-sidebar li.abn').addClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.business-tfn').addClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.individual-tfn').removeClass('show');
+            $('.dynamic-sidebar li.company').removeClass('show');
+        } else if (answer == 'company') {
+            $('.dynamic-sidebar .chosen-structure span').text('Company');
+            $('.dynamic-sidebar .chosen-structure').addClass('completed heartbeat-trigger');
+
+            $('.dynamic-sidebar li.business-tfn').addClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.individual-tfn').addClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.company').addClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.individual-tfn').removeClass('show');
+        }
+
+        setTimeout(function () {
+            $('.recommendations li').each(function(){
+                $(this).removeClass('heartbeat-trigger');
+            });
+            $('.dynamic-sidebar .chosen-structure').removeClass('heartbeat-trigger');
+
+        }, 1000);
+    });
+    
     
 
 }); //End doc ready

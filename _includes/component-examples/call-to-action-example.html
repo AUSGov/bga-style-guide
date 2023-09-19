@@ -8,6 +8,10 @@
                 <h2>{{ include.title }}</h2>
             {% endif %}
             
+            {% if include.h4title %}
+                <h4>{{ include.h4title }}</h4>
+            {% endif %}
+
           
             {% if include.text %}
                 {{ include.text }}
@@ -16,6 +20,22 @@
             {% if include.button %}
                  <div class="button-example">
                      <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href="" role="button">{{ include.button }}</button>
+                </div>
+            {% endif %}
+
+            {% if include.button-group %}
+            <div class="tool-button-group button-group">
+
+                <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button">Email results 
+                    <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
+                    <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
+                </svg></button>
+
+                <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button">Print results <svg id="Icon:_Print" data-name="Icon: Print" xmlns="http://www.w3.org/2000/svg" width="18" height="17.013" viewBox="0 0 18 17.013">
+                    <path id="Print" d="M15.664,17.013H2.3V13.1H0V4.6H2.3V7.587H15.864V4.6H18L17.951,13.1h-2.27l-.016,3.907h0ZM4.138,15.4h9.656v-2.07H4.138Zm0-9.656V0h9.886V5.748Z" fill="#333"></path>
+                  </svg>
+                  </button>
+    
                 </div>
             {% endif %}
             

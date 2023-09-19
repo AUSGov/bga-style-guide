@@ -49,6 +49,66 @@
             width: 100%;
         }
     }
+
+    &.yellow {
+        .accordion {
+            border-top: none;
+        }
+
+        .accordion-item {
+            background: $bga-yellow-highlight-mid;
+            border-bottom: $bga-black solid 1px;
+
+            .accordion-button {
+                background: $bga-yellow-highlight-light;
+
+                h4 {
+                    margin-bottom: 8px !important;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                    color: $bga-black;
+                    font-size: 0.875rem;
+
+                    &.reason {
+                        padding-bottom: 8px;
+                        margin-bottom: 8px;
+                        border-bottom: $bga-black solid 1px;
+
+                        &.last {
+                            border-bottom: none;
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    background: $bga-yellow-highlight-mid;
+                }
+
+                &:focus-visible {
+                    background: $bga-yellow-highlight-mid;
+                }
+
+                &:not(.collapsed) {
+                    background-color: $bga-yellow-highlight-mid;
+
+                    &:hover {
+                        border-bottom: none;
+                        background-color: $bga-yellow-highlight-mid;
+                    }
+                }
+
+                &::after {
+                    margin-left: 24px;
+                }
+            }
+        }
+    }
     &.non-branded {
         .accordion-item {
             &:hover, &.show {
@@ -250,6 +310,62 @@
     }
 }
 
+.callout-results {
+    background: $bga-blue-background-extralight;
+
+    .header-section {
+        background: $bga-blue-background-light;
+    }
+
+    .learn-more {
+        background: none;
+        border: none;
+        padding: 0 !important;
+        margin: 0;
+        font-size: 1rem !important;
+        color: $bga-blue-links;
+        transition: transform 0.2s ease-in-out;
+        min-height: auto !important;
+        display: flex;
+        align-items: center;
+
+        &:focus-visible {
+            border: $bga-text-focus-border;
+            border-radius: $bga-focus-radius;
+            background: none;
+        }
+        &:hover {
+            background: none;
+        }
+
+        &.open {
+            svg {
+                transform: scaleY(-1);
+            }
+        }
+    }
+
+    .more-info {
+        background: $bga-white;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &.non-branded {
+        background: $nb-grey-mid;
+
+        .header-section {
+            background: $nb-grey-light;
+        }
+        .learn-more {
+            color: $nb-blue-links;
+
+            svg, svg path {
+                fill: $nb-blue-links;
+            }
+        }
+    }
+}
+
 
 // Mixins for smaller screen sizes
 @mixin results-below576 () {
@@ -266,6 +382,7 @@
                 &::after {
                     height: 10px;
                     width: 16px;
+                    margin-left: 16px;
                 }
             }
             .accordion-body {

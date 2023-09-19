@@ -85,11 +85,42 @@
         }
     }
 
-    &.fixed {
-        position: sticky;
+    
+}
+.nb-dynamic-sidebar {
+    .sidebar {
+        height: auto !important;
     }
+    .title {
+        background: $nb-grey-mid;
+        padding: 16px 24px;
+    }
+    .content {
+        background: $nb-grey-light;
+        padding: 16px 24px;
 
-    &.mobile-hide {
-        display: none;
+        li {
+            text-indent: 0;
+            
+            &::before {
+                display: none;
+            }
+        }
     }
+}
+.sidebar-mobile-explanation {
+    display: none !important;
+}
+
+// Mixins for smaller screen sizes and media queries
+@mixin dynamic-sidebar-bp-below768 {
+    .sidebar-mobile-hide {
+        display: none !important;
+    }
+    .sidebar-mobile-explanation {
+        display: block !important;
+    }
+}
+.component-example.bp-below768 {
+    @include dynamic-sidebar-bp-below768();
 }

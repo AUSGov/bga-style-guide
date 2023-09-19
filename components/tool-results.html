@@ -3,7 +3,7 @@
 layout: content-tagged
 title: Tool results components
 description: Components for displaying, and editing, results at the end of a tool.
-updated: 18 August, 2023
+updated: 19 September, 2023
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -61,10 +61,35 @@ subsite-tag: true
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
                         
-                        <h3>Results accordion</h3>
+                        <h3>Results call out</h3>
+                        {% include component-examples/results-cta-example.html
+                            business-structure="Sole trader"
+                            id="sole-trader"
+                            why="Based on your selections the sole trader structure might suit your business needs."
+                
+                            description="<p>A sole trader is an individual and the <strong>sole owner of the business</strong>.</p>
+                            <p>The income your business makes belongs to you. You report the income on your individual tax return and pay tax on your business income at your <a href=''> income tax rate</a>.</p>
+                            <p>You're responsible for all decisions and losses in your business. This means you have complete control over your business, but it also means your personal assets are at risk if things go wrong.</p>
+                           "
+                
+                            more-info="<h4>Key facts for sole traders</h4>
+                            <ul>
+                                <li><strong>Cost</strong> - cheapest structure to set up and run</li>
+                                <li><strong>Setting up process</strong> - easy</li>
+                                <li><strong>Owner</strong> - you</li>
+                                <li><strong>Responsibility for business decisions</strong> - you</li>
+                                <li><strong>Responsibility for losses</strong> - you</li>
+                                
+                            </ul>"
+                            %}
+
+
+                        <hr />
+                        
+                        <h3>Results accordion - white</h3>
                         {% include component-examples/results-accordion-example.html
 
-                            layout-name="accordion"
+                            layout-name="accordion-white"
 
                             item1="true"
                             item2="true"
@@ -85,6 +110,49 @@ subsite-tag: true
 
                             %}
 
+                           
+                            <h3>Results accordion - yellow</h3>
+                            {% include component-examples/results-accordion-example.html
+    
+                                layout-name="accordion-yellow"
+    
+                                item1="true"
+                                item2="true"
+    
+                                title1="Pay As You Go (PAYG) Withholding"
+                                subtitle1="You will need to register for PAYG because you are going to employ people."
+                                
+                                content1="<p>You must be registered for PAYG withholding before you need to withhold tax amounts from payments such as:</p>
+                                <ul>
+                                <li>the wage or salary payments you make to employees</li>
+                                <li>payments to directors</li>
+                                <li>payments to businesses that do not quote their ABN to you</li>
+                                <li>royalty, dividend or interest payments to non-residents</li>
+                                <li>investment income payments to Australian residents (if you're an investment body).</li>
+                                </ul>
+                                <p>You must then forward these tax amounts to the Australian Taxation Office (ATO).</p>
+                                <p>PAYG withholding isn't a tax on your business - it's a tax on your employees' income that you help the ATO to collect.</p>
+                                <p>Check to see <a href=''>if you need to register for PAYG withholding</a> on the ATO website.</p>"
+                                
+                                title2="Fringe Benefits Tax (FBT)"
+                                subtitle2="You will need to register for fringe benefits tax because you are going to offer your employees fringe benefits."
+    
+                                content2="<p>As an employer, if you give certain fringe benefits to your employees, you must pay tax on the value of the fringe benefits.</p>
+                                <p>You'll need to register for FBT before you start providing these benefits.</p>
+                                <p>Visit the Australian Taxation Office (ATO) website to:</p>
+                                <ul>
+                                <li>find out what <a href=''>types of fringe benefits</a> you must pay tax on</li>
+                                <li><a href=''>check if you need to register for FBT</a>.</li>"
+
+                                classes="yellow"
+    
+                                %}
+
+
+
+
+                            <hr />
+
                         <h3>Edit answers component</h3>
                         {% include component-examples/edit-answers-example.html
                             title1="Investment approvals"
@@ -97,6 +165,9 @@ subsite-tag: true
                             content3="<p>Will your project involve importing or exporting goods?<span>No</span></p>"
 
                         %}
+
+
+                        <hr />
 
 
                         <h3>Combined results and edit component</h3>
@@ -132,6 +203,33 @@ subsite-tag: true
                             component="tool result components"
                             brand-elements="colours, borders and button styles"
                         %}
+                        
+                        
+                        <h3>Results call out</h3>
+                        {% include component-examples/results-cta-example.html
+                            business-structure="Sole trader"
+                            id="sole-trader"
+                            why="Based on your selections the sole trader structure might suit your business needs."
+                
+                            description="<p>A sole trader is an individual and the <strong>sole owner of the business</strong>.</p>
+                            <p>The income your business makes belongs to you. You report the income on your individual tax return and pay tax on your business income at your <a href=''> income tax rate</a>.</p>
+                            <p>You're responsible for all decisions and losses in your business. This means you have complete control over your business, but it also means your personal assets are at risk if things go wrong.</p>
+                           "
+                
+                            more-info="<h4>Key facts for sole traders</h4>
+                            <ul>
+                                <li><strong>Cost</strong> - cheapest structure to set up and run</li>
+                                <li><strong>Setting up process</strong> - easy</li>
+                                <li><strong>Owner</strong> - you</li>
+                                <li><strong>Responsibility for business decisions</strong> - you</li>
+                                <li><strong>Responsibility for losses</strong> - you</li>
+                                
+                            </ul>"
+
+                            classes="non-branded"
+                            %}
+                        
+                        
                         
                         <h3>Results accordion</h3>
                         {% include component-examples/results-accordion-example.html
@@ -258,6 +356,11 @@ subsite-tag: true
 
           <!-- VERSION HISTORY-->
           <h2 class="section-start" id="version-history">Version history</h2>
+          <h4>19 September, 2023</h4>
+          <ul>
+              <li>Added a new design pattern, the results call out.</li>
+              <li>Added an alternative colour version for the results accordion ('results accordion - yellow').</li>
+          </ul>
           <h4>18 August, 2023</h4>
           <ul>
               <li>Update all edit buttons from lowercase 'e' to uppercase 'E'.</li>

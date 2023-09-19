@@ -3,7 +3,7 @@
 layout: content-tagged
 title: Dynamic sidebar
 description: Provide the user with immediate feedback in the form of a list of recommendations when they progress through a tool.
-updated: 23 August, 2023
+updated: 19 September, 2023
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -62,50 +62,60 @@ subsite-tag: true
 
                         <div class="component-wrapper remove-element-padding p-4">
 
-                        <div class="row">
+                        <div class="row sidebar-mobile-hide">
                         
-                            <div class="col-8">
+                            <div class="col-7">
+                            
+                          
+                                <p>Recommendations are added to the sidebar as the users selects answers in a tool. Select an option below to see the sidebar behaviour.</p>
 
-                            <form>
-                                <p>Recommendations are added to the sidebar as the users selects answers in the tool.</p>
+                                <div class="mb-5 p-0 form-example remove-element-padding">
+                                   
+                                    <div class="radios w-50 d-flex flex-wrap radio-flex-group" id="dynamic-sidebar-q" role="radiogroup">
 
-                                <div class="form-element-wrapper checkboxes-wrapper no-flex mb-3">
-                                    <div>
-                                        <div class="checkboxes">
-                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
-                                            <label class="form-check-label" for="sole-trader">
-                                               Sole trader
+                                        <div class="radio-button w-100">
+                                            <input class="form-check-input m-0" type="radio" name="dynamic-sidebar-q" id="sole-trader" data-value="Sole trader">
+                                            <label class="form-check-label remove-element-padding" for="sole-trader">
+                                                <p>Sole trader</p>
                                             </label>
                                         </div>
-
-                                        <div class="checkboxes">
-                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
-                                            <label class="form-check-label" for="sole-trader">
-                                               Partnership
+                
+                                        <div class="radio-button w-100">
+                                            <input class="form-check-input m-0" type="radio" name="dynamic-sidebar-q" id="partnership" data-value="Partnership">
+                                            <label class="form-check-label remove-element-padding" for="partnership">
+                                                <p>Partnership</p>
                                             </label>
                                         </div>
-
-                                        <div class="checkboxes">
-                                            <input class="checkbox m-0" type="checkbox" value="" id="sole-trader">
-                                            <label class="form-check-label" for="sole-trader">
-                                               Company
+                
+                                        <div class="radio-button w-100">
+                                            <input class="form-check-input m-0" type="radio" name="dynamic-sidebar-q" id="company" data-value="Company">
+                                            <label class="form-check-label remove-element-padding" for="company">
+                                                <p>Company</p>
                                             </label>
                                         </div>
-
-                                        
+            
+                
                                     </div>
                                 </div>
 
-                            </form>
+                 
+
 
                             </div>
                         
-                            <div class="col-4">
+                            <div class="col-5">
+                    
                             {% include component-examples/dynamic-sidebar-example.html
-                            classes=""
+                            classes="sidebar-mobile-hide"
                             %}
                             </div>
 
+                        </div>
+
+                        <div class="row sidebar-mobile-explanation">
+                            <div class="col">
+                            <p><strong>This component is hidden on mobile screens.</strong></p>
+                            </div>
                         </div>
  
 
@@ -134,10 +144,60 @@ subsite-tag: true
 
                             {% include non-branded-explanation.html
                                 component="sidebar"
-                                brand-elements="colours, borders and button styles"
+                                brand-elements="colours, borders and icon styles"
                             %}
     
+                            <div class="row sidebar-mobile-hide">
+                        
+                                <div class="col-5">
+                            
+                                    <div class="sidebar-wrapper nb-dynamic-sidebar mb-4 p-0 sidebar-mobile-hide">
+                                        <div class="bga-component sidebar m-0 p-0">
+                                            
+                                            
+                                            <div class="sidebar-section business-structure mb-4">
+                                                <div class="title remove-element-padding">
+                                                    <p><strong>Business structure</strong></p>
+                                                </div>
+                                                <div class="content remove-element-padding">
+                                                    <p class="chosen-structure">
+                                                        <span>Sole trader</span></p>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                            <div class="sidebar-section recommendations">
+                                                <div class="title remove-element-padding">
+                                                    <p><strong>Recommended registrations</strong></p>
+                                                </div>
+                                                <div class="content remove-element-padding">
+                                                    <ul class="remove-element-padding m-0 p-0">
+                                                    
+                                                
+                                                        <li class="individual-tfn show" data-value="individual-tfn">
+                                                        
+                                                        <span>Individual tax file number</span></li>
+                                                    
+                                                    <li class="abn show" data-value="abn"><span>Australian business number</span></li>
+                                                        
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                        </div>
+                                    </div>
 
+                                </div>
+
+                            </div>
+
+                            <div class="row sidebar-mobile-explanation">
+                                <div class="col">
+                                <p><strong>This component is hidden on mobile screens.</strong></p>
+                                </div>
+                            </div>
                             
 
                         </div>
@@ -152,7 +212,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/ac7d9d51-06fd-4242-8336-bfab5cd84e1a/'"
+        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/978be30f-ae71-45de-a6f4-d21a1207059a/'"
         btn-text="View design specifications"
         %}
 
@@ -160,12 +220,12 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Sidebars can be used in the<a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar alternate layout</a>. They should not be used in other layouts.</p>
+        <p>Sidebars can be used in the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>two column - right sidebar layout</a>. They should not be used in other layouts.</p>
 
 
         {% include layouts-dropdown.html
-            two-col-rightsidebar-visibility="true"
-            two-col-rightsidebar-alt-visibility="true"
+            layout-name="Two column - right sidebar"
+            singlelayout="true"
             %}
 
         <div class="layout-example show two-col-rightsidebar mt-0 mb-5 px-4 py-0">
@@ -182,15 +242,15 @@ subsite-tag: true
             finalbp="Breakpoint &lt; 768px"
 
 
-            min768-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-finalbp.png' | relative_url "
+            min768-img="'../assets/layout-images/dynamic-sidebar-2col-rightsidebar-min768.png' | relative_url "
+            finalbp-img="'../assets/layout-images/dynamic-sidebar-2col-rightsidebar-finalbp.png' | relative_url "
 
 
             min768-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>"
+            <p>Dynamic sidebars sit to the right of the content area and span 4 grid-columns.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>
+            <p> Dynamic sidebars are hidden.</p>
             "
 
             example-link="'../html-examples/two-col-right-sidebar.html' | relative_url'"
@@ -200,67 +260,27 @@ subsite-tag: true
 
         </div>
 
-        <div class="layout-example two-col-rightsidebar-alt mt-0 mb-5 px-4 py-0">
-
-            {% include layouts-accordion.html
-            layout-name="twocol-rightbar-alt"
-
-            min1200-visibility="false"
-            min992-visibility="true"
-            min768-visibility="true"
-            min576-visibility="false"
-            finalbp-visibility="true"
-
-            finalbp="Breakpoint &lt; 768px"
-
-            min992-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min992.png' | relative_url "
-            min768-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-min768.png' | relative_url "
-            finalbp-img="'../assets/layout-images/progress-sidebar-2col-rightsidebar-alt-finalbp.png' | relative_url "
-
-            min992-rules="<p>The content area is 8 grid-columns wide.</p>
-            <p>Sidebars sit to the right of the content area and span 4 grid-columns.</p>"
-            
-            min768-rules="<p>The content area is 11 grid-columns wide.</p>
-            <p>Sidebars span 12 grid-columns and are fixed to the bottom of the screen.</p>"
-
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Sidebars span the full width of the content area and are fixed to the bottom of the screen.</p>"
-
-            example-link="'../html-examples/two-col-right-sidebar-alternate.html' | relative_url'"
-            example-link-text="View layout example"
-
-            %}
-
-        </div>
-
-
-
-
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h4>Purpose: </h4>
-        <p>The save your progress sidebar provides the ability to save and email a link recording the users progress though a process.</p>
-        <p>Clicking on the 'save your progress' button triggers a <a href={{ "components/modal.html" | relative_url }}>modal with email form</a>.</p>
+        <p>The dynamic sidebar provides the ability to create a dynamic list as users progress through a tool.</p>
+       
         <h4>When to use this component: </h4>
         <ul>
-            <li>Used with the standard checklist.</li>
-            <li>In tools such as the lean business plan builder</li>
+            <li>Used in tools where users are provided with a list of items, e.g a list of recommended registrations.</li>
+           
         </ul>
 
 
         <!-- VERSION HISTORY-->
         <h2 class="section-start" id="version-history">Version history</h2>
-        <h4>23 August, 2023</h4>
+        <h4>19 September, 2023</h4>
         <ul>
-            <li>Updated the sidebar breakpoints to reflect how it displays in two different layouts. The breakpoint for changing to the mobile display is different in the two different sidebar layouts.</li>
+            <li>Added the dynamic sidebar to the style guide (as a new component).</li>
         </ul>
-        <h4>4 August, 2023</h4>
-        <ul>
-            <li>Added two additional breakpoints to make button display at each breakpoint clearer.</li>
-            <li>Added a note about the sidebar fixed behaviour.</li>
-        </ul>
+       
        
 
     </div>

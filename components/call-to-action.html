@@ -3,7 +3,7 @@
 layout: content-tagged
 title: Call to action
 description: Promote a high-value call to action in an information page.
-updated: 8 August, 2023
+updated: 19 September, 2023
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -65,7 +65,7 @@ subsite-tag: true
                     <div class="component-wrapper remove-element-padding p-4">
 
                         <h4>Style note</h4>
-                        <p>Call to action titles can be either heading level 2 or 3 (H2 or H3).</p>
+                        <p>Call to action titles can be either heading level 2, 3 or 4 (H2, H3 or H4).</p>
 
                         <h3>Standard call to action</h3>
 
@@ -91,6 +91,30 @@ subsite-tag: true
                             venenatis et nibh non, finibus vehicula leo. Phasellus porta rhoncus ante, in sollicitudin
                             tellus. Suspendisse auctor libero a dui vehicula fermentum.</p>"
                         %}
+
+
+                        <h3>Tool call to action components</h3>
+
+                        {% include component-examples/call-to-action-example.html
+                        h4title="You can apply for most of your registrations with the Business Registration Service."
+                        text="<p>This includes applying for your:</p>
+                        <ul>
+                            <li>Business tax file number</li>
+                            <li>Australian business number</li>
+                            <li>Goods & Services Tax (GST)</li>
+                        </ul>"
+                        button="Register now"
+
+                        classes="teal"
+                        %}
+
+                        {% include component-examples/call-to-action-example.html
+                           
+                            text="<p>You can save your list of recommended regulations by printing or emailing them. This will help you remember what to include when you apply for your registrations.</p>"
+                            button-group="true"
+
+                            classes="teal"
+                            %}
 
 
                     </div>
@@ -346,10 +370,22 @@ subsite-tag: true
                     on a content page (usually a high priority task).</li>
             </ul>
 
+            <h3>Tool call to action components</h3>
+            <h4>Purpose: </h4>
+            <p>These components are used in business.gov.au tools only.</p>
+            <h4>When to use this component: </h4>
+            <ul>
+                <li>Generally used on tool results pages to highlight actions users can take after cusing the tool.</li>
+            </ul>
+
 
 
              <!-- VERSION HISTORY-->
             <h2 class="section-start" id="version-history">Version history</h2>
+            <h4>19 September, 2023</h4>
+            <ul>
+                <li>Added styling for call to actions used in tools. These call to action components use teal colouring.</li>
+            </ul>
             <h4>8 August, 2023</h4>
             <ul>
                 <li>Added an additional layout (the <strong>two column - right sidebar alternate</strong> layout).</li>
