@@ -3803,6 +3803,31 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-animation.highlight-animation span.highlight { background-color: #A0D1A0; }
 
+.bga-animation.heartbeat-animation.beat svg { -webkit-animation: heartbeat 1.5s ease-in-out both; animation: heartbeat 1.5s ease-in-out both; animation-duration: 500ms; animation-iteration-count: 1; }
+
+@keyframes heartbeat { from { -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  10% { -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  17% { -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  33% { -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  45% { -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; } }
+
 .map { background: #C8D9EE url(../assets/map-australia.jpg) no-repeat; background-size: cover; background-position: center center; position: relative; }
 
 .map.controls-group { min-height: 100px; }
@@ -8934,6 +8959,8 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 .component-example.bp-below768 .sidebar-mobile-hide { display: none !important; }
 
 .component-example.bp-below768 .sidebar-mobile-explanation { display: block !important; }
+
+@media (max-width: 768px) { .sidebar-mobile-hide { display: none !important; } .sidebar-mobile-explanation { display: block !important; } }
 
 .example.page-pattern { position: relative; }
 
