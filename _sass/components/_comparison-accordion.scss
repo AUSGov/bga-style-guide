@@ -11,7 +11,7 @@
                 tr {
                     border-bottom: 4px solid $bga-blue-black-mid;
                     display: flex;
-                    background: $bga-teal-tool-extra-light;
+                    background: $bga-blue-highlight-mid;
                 }
             }
 
@@ -22,7 +22,7 @@
                 tr {
                     border-top: 1px solid $bga-blue-black-mid;
                     display: flex;
-                    background: $bga-teal-tool-extra-light;
+                    background:$bga-blue-background-extralight;
 
                     &:first-of-type {
                         border-top: none;
@@ -38,7 +38,7 @@
                     &:nth-child(14),
                     &:nth-child(17),
                     &:nth-child(18) {
-                        background: $bga-teal-highlight-light;
+                        background:$bga-blue-background-light;
                     }
 
                     &:nth-child(even) {
@@ -95,7 +95,7 @@
             }
 
             th {
-                background: $bga-teal-highlight-mid;
+                background: $bga-blue-highlight-mid;
                 font-weight: 600;
                 padding: 16px 8px;
             }
@@ -159,6 +159,41 @@
                 display: none;
             }
     }
+    &.teal {
+        .treegrid {
+            thead {
+                tr {
+                    background: $bga-teal-tool-extra-light;
+                }
+            }
+
+            tbody {
+                tr {
+                    background: $bga-teal-tool-extra-light;
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(5),
+                    &:nth-child(6),
+                    &:nth-child(9),
+                    &:nth-child(10),
+                    &:nth-child(13),
+                    &:nth-child(14),
+                    &:nth-child(17),
+                    &:nth-child(18) {
+                        background: $bga-teal-highlight-light;
+                    }  
+                }
+
+            }
+
+            th {
+                background: $bga-teal-highlight-mid;
+            }
+           
+        }
+    }
+
     &.non-branded {
         .treegrid {
             border-bottom: $bga-black solid 1px;
