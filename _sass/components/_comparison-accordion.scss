@@ -297,13 +297,18 @@
                 &:nth-child(4) {
                     width: 100%;
                 }
+                &.mobile-hide {
+                    height: 0 !important;
+                    padding: 0;
+                    display: none;
+                }
 
             }
 
             tr {
                 display: flex;
                 flex-wrap: wrap;
-                background: $bga-teal-tool-extra-light !important;
+                background: $bga-blue-background-extralight !important; 
 
                 &:nth-child(even) {
                     td {
@@ -327,15 +332,17 @@
                     background: $bga-white;
                     padding: 8px 8px 8px 8px;
                 }
-
-                &.mobile-hide {
-                    height: 0;
-                    padding: 0;
-                }
             }
 
             .hidden {
                 display: none;
+            }
+        }
+        &.teal {
+            .treegrid {
+                tr {
+                    background: $bga-teal-tool-extra-light !important;
+                }
             }
         }
         &.non-branded {
