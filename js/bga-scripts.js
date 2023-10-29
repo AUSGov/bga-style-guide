@@ -1763,7 +1763,7 @@ $(document).ready(function () {
 
     // COMPONENT EXAMPLE: VIDEO & AUDIO PLAYER
     $('.media-player-transcript-toggle button').on('click', function () {
-        var parent = $(this).parents('.media-player'),
+        var parent = $(this).parents('.media-player-container'),
             transcript = parent.find('.media-player-transcript'),
             transcript_toggle = parent.find('.media-player-transcript-toggle');
 
