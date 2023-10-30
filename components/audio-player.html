@@ -3,7 +3,7 @@
 layout: content-tagged
 title: Audio player
 description: Display audio content with an automatic transcript.
-updated: 8 August, 2023
+updated: 30 October, 2023
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -60,14 +60,22 @@ subsite-tag: true
                         <div class="component-wrapper remove-element-padding p-4">
 
                             <h3>Default audio player</h3>
-                            {% include component-examples/audio-example.html %}
+                            {% include component-examples/audio-example.html 
+                                title="Podcast title"
+                                description="A short description promoting the podcast can be placed here."
+                                %}
 
                             <h3>Audio player with optional graphic</h3>
                             {% include component-examples/audio-example.html
                             classes="graphic"
                             graphic="'../assets/audio-player-placeholder.png' | relative_url"
+                            title="Podcast Episode 10: This title is much longer and wraps onto the next line"
+                            description="A short description lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                             %}
 
+                           
+
+                           
                         </div>
                     </div>
 
@@ -92,16 +100,19 @@ subsite-tag: true
                                 brand-elements="colours, borders, icons and images"
                             %}
 
-                            <h3>Default audio player</h3>
                             {% include component-examples/audio-example.html 
-                                classes="non-branded" 
+                                title="Podcast title"
+                                description="A short description promoting the podcast can be placed here."
+                                classes="non-branded"
                                 %}
 
-                            <h3>Audio player with optional graphic</h3>
-                            {% include component-examples/audio-example.html
-                            classes="graphic non-branded"
-                            graphic="'../assets/img-placeholder-1.svg' | relative_url"
-                            %}
+                                <h3>Audio player with optional graphic</h3>
+                                {% include component-examples/audio-example.html
+                                classes="graphic non-branded"
+                                graphic="'../assets/audio-player-placeholder.png' | relative_url"
+                                title="Podcast Episode 10: This title is much longer and wraps onto the next line"
+                                description="A short description lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                %}
 
                         </div>
                     </div>
@@ -332,6 +343,11 @@ subsite-tag: true
 
          <!-- VERSION HISTORY-->
          <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>30 October, 2023</h4>
+         <ul>
+             <li>Update the appearance of the audio player to incorporate the default appearance of the HTML audio tag controls.</li>
+             <li>Move podcast description from below the audio controls to above.</li>
+         </ul>
          <h4>8 August, 2023</h4>
          <ul>
              <li>Added an additional layout (the <strong>two column - right sidebar alternate</strong> layout).</li>

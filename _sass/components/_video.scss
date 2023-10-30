@@ -1,14 +1,15 @@
 .media-player-example {
 
-
     .media-player {
         -ms-flex: 1;
         -webkit-box-flex: 1;
         flex: 1;
         position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;height: auto;
-        
+        padding-bottom: 56.25%;
+        /* 16:9 */
+        height: 0;
+        height: auto;
+
         iframe {
             position: absolute;
             top: 0;
@@ -17,47 +18,13 @@
             height: 100%;
         }
     }
-    
-    .audio-player-banner {
-        background: $bga-blue-background-dark;
-        padding: 32px;
+    .audio-player {
+        background-color: $bga-blue-footer;
 
-        h2 {
-            color: $bga-white;
-            margin: 0;
-            padding: 0;
+        audio {
+            display: block;
+            width: 100%;
         }
-
-        &.graphic {
-            display: flex;
-            align-items: center;
-
-            .audio-player-title {
-                display: flex;
-                align-items: center;
-            }
-
-            img {
-                width: 132px;
-                height: 132px;
-                margin-right: 24px;
-                border-style: none;
-                flex-shrink: 0;
-
-                &.hide-image {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    .audio-player-player {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        cursor: pointer;
-        background-color: $bga-blue-black-mid;
     }
 
     .audio-player-controls-background {
@@ -315,12 +282,27 @@
 
     .media-player-info {
         background-color: $bga-blue-black-lightest;
-        //border-bottom: 0.125rem solid $bga-blue-black-light;
 
-        .media-player-info-date {
-            color: $bga-black;
-            font-size: 0.75rem;
-            margin-bottom: 8px;
+        &.audio {
+            background-color: $bga-blue-background-dark;
+
+            h2,
+            h3,
+            .media-player-info-detail {
+                color: $bga-white;
+                padding-top: 0;
+            }
+
+            .title {
+                display: flex;
+                column-gap: 24px;
+                align-items: center;
+
+                img {
+                    height: 132px;
+                    width: 132px;
+                }
+            }
         }
 
         .media-player-info-detail {
@@ -334,91 +316,51 @@
     }
 
     &.non-branded {
-        .audio-player-banner {
-            background: $nb-grey-extra-darkest;
-        }
-        .audio-player-controls-background {
-            background: $bga-black;
-        }
-
-
-        .media-transcript {
-            background-color: $nb-grey-lightest;
-            border-bottom: 1px solid $bga-black;
-    
-            .media-transcript-content {
-                &:before {
-                    background: -webkit-gradient(linear,
-                            left bottom,
-                            left top,
-                            from(hsla(0, 0%, 92.2%, 0)),
-                            to($nb-grey-lightest));
-                    background: linear-gradient(0deg, hsla(0, 0%, 92.2%, 0), $nb-grey-lightest);
-                }
-                &:after {
-                    background: -webkit-gradient(linear,
-                            left top,
-                            left bottom,
-                            from(hsla(0, 0%, 92.2%, 0)),
-                            to($nb-grey-lightest));
-                    background: linear-gradient(180deg, hsla(0, 0%, 92.2%, 0), $nb-grey-lightest);
-                }
-            }
-        }
-        .media-player {
-            .media-player-player {
-                background: $nb-grey-lightest url(../assets/img-placeholder-2.svg) no-repeat;
-                background-size: cover;
-                background-position: center center;
-    
-                &:hover {
-                    .media-player-button svg .playiconWrapper {
-                        fill: $bga-black;
-                    }
-                }  
-            }
-            .media-player-button {
-                &:focus {
-                    svg {
-                        .playiconWrapper {
-                            fill: $nb-blue-links;
-                        }
-                    }
-                }
-               
-            }
-            .media-player-transcript-toggle {
-                background-color: $nb-grey-lightest;
-                border-bottom: 1px solid $bga-black;
-    
-                button {
-                    &:focus-visible {
-                        border-color: $nb-blue-links;
-                    }
-                }
-            }
+       
+        .audio-player {
+            background-color: $bga-black;
         }
         .media-player-transcript {
             border-bottom: 1px solid $bga-black;
-    
+
             &.open {
                 border-bottom: 1px solid $bga-black;
             }
-        } 
+
+            .media-transcript {
+                background-color: $nb-grey-light;
+                border-bottom: 1px solid $bga-black;
+            }
+        }
+
+        .media-player-transcript-toggle {
+            background: $nb-grey-light;
+            button {
+                &:hover {
+                    background: none;
+                }
+            }
+        }
         .media-player-info {
-            background-color: $nb-grey-lightest;
+            background-color: $nb-grey-light;
             border-bottom: 1px solid $bga-black;
+
+            &.audio {
+                background-color: $nb-black-light;
+            }
         }
     }
 
 }
 
-@mixin audioplayer-below576 {
+@mixin audioplayer-below768 {
     .media-player-example {
-        .audio-player-banner {
-            &.graphic {
-                img {
-                    display: none;
+        .media-player-info {
+            &.audio {
+                .title {
+                    img {
+                        display: none;
+                    }
                 }
             }
         }
@@ -427,10 +369,10 @@
 
 // SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-below768 {
-    @include audioplayer-below576();
+    @include audioplayer-below768();
 }
 
 //Media queries
 @media (max-width: 768px) {
-    @include audioplayer-below576();    
+    @include audioplayer-below768();
 }
