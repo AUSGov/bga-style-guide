@@ -8374,19 +8374,13 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 @media (max-width: 576px) { .showing-header-wrapper .bga-secondary-btn svg { display: none; } }
 
-.media-player-example .audio-player-banner { background: #2E6CB9; padding: 32px; }
+.media-player-example .media-player { -ms-flex: 1; -webkit-box-flex: 1; flex: 1; position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0; height: auto; }
 
-.media-player-example .audio-player-banner h2, .media-player-example .audio-player-banner .h2 { color: #ffffff; margin: 0; padding: 0; }
+.media-player-example .media-player iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.media-player-example .audio-player-banner.graphic { display: flex; align-items: center; }
+.media-player-example .audio-player { background-color: #113869; }
 
-.media-player-example .audio-player-banner.graphic .audio-player-title { display: flex; align-items: center; }
-
-.media-player-example .audio-player-banner.graphic img { width: 132px; height: 132px; margin-right: 24px; border-style: none; flex-shrink: 0; }
-
-.media-player-example .audio-player-banner.graphic img.hide-image { display: none; }
-
-.media-player-example .audio-player-player { background-position: center; background-size: cover; background-repeat: no-repeat; position: relative; cursor: pointer; background-color: #788295; }
+.media-player-example .audio-player audio { display: block; width: 100%; }
 
 .media-player-example .audio-player-controls-background { background: #113869; height: 70px; display: flex; align-items: center; justify-content: stretch; }
 
@@ -8424,47 +8418,25 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .media-player-example .media-transcript .media-transcript-content .media-transcript-active p { background-color: #fff; }
 
-.media-player-example .media-player { -ms-flex: 1; -webkit-box-flex: 1; flex: 1; position: relative; }
+.media-player-example .media-player-transcript-toggle { -ms-flex-pack: end; -webkit-box-pack: end; background-color: #E4E6EA; border-bottom: 0.125rem solid #ABB1BD; height: 3.5rem; justify-content: flex-end; overflow: hidden; -ms-flex-align: center; -webkit-box-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.media-player-example .media-player .media-player-player { background-position: 50%; background-repeat: no-repeat; background-size: cover; cursor: pointer; padding-top: 56.25%; position: relative; background: #ABB1BD url(../assets/video-player-placeholder.jpg) no-repeat; background-size: cover; }
+.media-player-example .media-player-transcript-toggle button { display: -webkit-box; display: -ms-flexbox; display: flex; background: transparent; border: none; padding: 0; }
 
-.media-player-example .media-player .media-player-player:hover .media-player-button svg .playiconWrapper { -webkit-transition: fill 0.2s; cursor: pointer; fill: #2157AA; transition: fill 0.2s; }
+.media-player-example .media-player-transcript-toggle button:hover { cursor: pointer; }
 
-.media-player-example .media-player .media-player-player .media-player-player-youtube { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
+.media-player-example .media-player-transcript-toggle button:hover span { text-decoration: underline; }
 
-.media-player-example .media-player .media-player-initialImg:hover { cursor: pointer; }
+.media-player-example .media-player-transcript-toggle button:focus-visible { outline: none; border: 2px solid #2E6CB9; border-radius: 4px; }
 
-.media-player-example .media-player .media-player-button { -webkit-transform: translate(-50%, -50%); background: transparent; border: 0; left: 50%; margin: 0 auto; max-height: 6rem; padding: 0; position: absolute; top: 50%; transform: translate(-50%, -50%); z-index: 1; }
+.media-player-example .media-player-transcript-toggle button:focus-visible span { text-decoration: underline; }
 
-.media-player-example .media-player .media-player-button:focus { outline: none; }
+.media-player-example .media-player-transcript-toggle span { -webkit-transition: all 0.3s; color: #333333; font-size: 1rem; font-weight: 600; letter-spacing: normal; line-height: 1.5; margin-right: 0.5rem; transition: all 0.3s; font-size: 1rem; line-height: 24px; font-weight: 600; }
 
-.media-player-example .media-player .media-player-button:focus svg .playiconWrapper { -webkit-transition: fill 0.2s; fill: #4569a0; transition: fill 0.2s; }
+.media-player-example .media-player-transcript-toggle .iconAnimateWrapper svg { -webkit-transition: -webkit-transform 0.3s; fill: #333333; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
 
-.media-player-example .media-player .media-player-button svg .playiconWrapper { fill: rgba(51, 51, 51, 0.8); }
+.media-player-example .media-player-transcript-toggle .iconAnimateWrapper svg.open { transform: scaleY(-1); transition: transform 0.3s, -webkit-transform 0.3s; }
 
-.media-player-example .media-player .media-player-button svg .playicon { fill: #fff; }
-
-.media-player-example .media-player .media-player-button .media-player-button-icon { width: 7rem; max-width: 80px; }
-
-.media-player-example .media-player .media-player-transcript-toggle { -ms-flex-pack: end; -webkit-box-pack: end; background-color: #E4E6EA; border-bottom: 0.125rem solid #ABB1BD; height: 3.5rem; justify-content: flex-end; overflow: hidden; -ms-flex-align: center; -webkit-box-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; }
-
-.media-player-example .media-player .media-player-transcript-toggle button { display: -webkit-box; display: -ms-flexbox; display: flex; background: transparent; border: none; padding: 0; }
-
-.media-player-example .media-player .media-player-transcript-toggle button:hover { cursor: pointer; }
-
-.media-player-example .media-player .media-player-transcript-toggle button:hover span { text-decoration: underline; }
-
-.media-player-example .media-player .media-player-transcript-toggle button:focus-visible { outline: none; border: 2px solid #2E6CB9; border-radius: 4px; }
-
-.media-player-example .media-player .media-player-transcript-toggle button:focus-visible span { text-decoration: underline; }
-
-.media-player-example .media-player .media-player-transcript-toggle span { -webkit-transition: all 0.3s; color: #333333; font-size: 1rem; font-weight: 600; letter-spacing: normal; line-height: 1.5; margin-right: 0.5rem; transition: all 0.3s; font-size: 1rem; line-height: 24px; font-weight: 600; }
-
-.media-player-example .media-player .media-player-transcript-toggle .iconAnimateWrapper svg { -webkit-transition: -webkit-transform 0.3s; fill: #333333; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
-
-.media-player-example .media-player .media-player-transcript-toggle .iconAnimateWrapper svg.open { transform: scaleY(-1); transition: transform 0.3s, -webkit-transform 0.3s; }
-
-.media-player-example .media-player .media-player-transcript-toggle .active-expand svg { -webkit-transform: scaleY(-1); transform: scaleY(-1); }
+.media-player-example .media-player-transcript-toggle .active-expand svg { -webkit-transform: scaleY(-1); transform: scaleY(-1); }
 
 .media-player-example .media-player-transcript { -webkit-transition: height 0.6s; border-bottom: 0.125rem solid #ABB1BD; overflow: hidden; transition: height 0.6s; height: 0; border-bottom: none; }
 
@@ -8472,41 +8444,37 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .media-player-example .media-player-transcript.open .media-transcript { visibility: visible; transition: visibility 0.5s ease 1s; }
 
-.media-player-example .media-player-info { background-color: #E4E6EA; border-bottom: 0.125rem solid #ABB1BD; }
+.media-player-example .media-player-info { background-color: #E4E6EA; }
 
-.media-player-example .media-player-info .media-player-info-date { color: #333333; font-size: 0.75rem; margin-bottom: 8px; }
+.media-player-example .media-player-info.audio { background-color: #2E6CB9; }
+
+.media-player-example .media-player-info.audio h2, .media-player-example .media-player-info.audio .h2, .media-player-example .media-player-info.audio h3, .media-player-example .media-player-info.audio .h3, .media-player-example .media-player-info.audio .media-player-info-detail { color: #ffffff; padding-top: 0; }
+
+.media-player-example .media-player-info.audio .title { display: flex; column-gap: 24px; align-items: center; }
+
+.media-player-example .media-player-info.audio .title img { height: 132px; width: 132px; }
 
 .media-player-example .media-player-info .media-player-info-detail { color: #333333; font-size: 1rem; letter-spacing: 0.0125rem; line-height: 2; margin-bottom: 0; padding: 0; }
 
-.media-player-example.non-branded .audio-player-banner { background: #A8A8A8; }
-
-.media-player-example.non-branded .audio-player-controls-background { background: #333333; }
-
-.media-player-example.non-branded .media-transcript { background-color: #F8F8F8; border-bottom: 1px solid #333333; }
-
-.media-player-example.non-branded .media-transcript .media-transcript-content:before { background: -webkit-gradient(linear, left bottom, left top, from(rgba(235, 235, 235, 0)), to(#F8F8F8)); background: linear-gradient(0deg, rgba(235, 235, 235, 0), #F8F8F8); }
-
-.media-player-example.non-branded .media-transcript .media-transcript-content:after { background: -webkit-gradient(linear, left top, left bottom, from(rgba(235, 235, 235, 0)), to(#F8F8F8)); background: linear-gradient(180deg, rgba(235, 235, 235, 0), #F8F8F8); }
-
-.media-player-example.non-branded .media-player .media-player-player { background: #F8F8F8 url(../assets/img-placeholder-2.svg) no-repeat; background-size: cover; background-position: center center; }
-
-.media-player-example.non-branded .media-player .media-player-player:hover .media-player-button svg .playiconWrapper { fill: #333333; }
-
-.media-player-example.non-branded .media-player .media-player-button:focus svg .playiconWrapper { fill: mediumblue; }
-
-.media-player-example.non-branded .media-player .media-player-transcript-toggle { background-color: #F8F8F8; border-bottom: 1px solid #333333; }
-
-.media-player-example.non-branded .media-player .media-player-transcript-toggle button:focus-visible { border-color: mediumblue; }
+.media-player-example.non-branded .audio-player { background-color: #333333; }
 
 .media-player-example.non-branded .media-player-transcript { border-bottom: 1px solid #333333; }
 
 .media-player-example.non-branded .media-player-transcript.open { border-bottom: 1px solid #333333; }
 
-.media-player-example.non-branded .media-player-info { background-color: #F8F8F8; border-bottom: 1px solid #333333; }
+.media-player-example.non-branded .media-player-transcript .media-transcript { background-color: #E8E8E8; border-bottom: 1px solid #333333; }
 
-.component-example.bp-below768 .media-player-example .audio-player-banner.graphic img { display: none; }
+.media-player-example.non-branded .media-player-transcript-toggle { background: #E8E8E8; }
 
-@media (max-width: 768px) { .media-player-example .audio-player-banner.graphic img { display: none; } }
+.media-player-example.non-branded .media-player-transcript-toggle button:hover { background: none; }
+
+.media-player-example.non-branded .media-player-info { background-color: #E8E8E8; border-bottom: 1px solid #333333; }
+
+.media-player-example.non-branded .media-player-info.audio { background-color: #757373; }
+
+.component-example.bp-below768 .media-player-example .media-player-info.audio .title img { display: none; }
+
+@media (max-width: 768px) { .media-player-example .media-player-info.audio .title img { display: none; } }
 
 .guided-search-wrapper { background: linear-gradient(180deg, #9ed2d3 0%, #bfe2e2 100%); }
 
