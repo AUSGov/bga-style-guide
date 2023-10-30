@@ -27,34 +27,6 @@
         }
     }
 
-    .audio-player-controls-background {
-        background: $bga-blue-footer;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: stretch;
-
-        .mejs__play {
-            button {
-                &:hover {
-                    background: transparent url(../assets/mejs-controls.svg);
-                    border: 0;
-                    cursor: pointer;
-                    display: block;
-                    font-size: 0;
-                    height: 20px;
-                    line-height: 0;
-                    margin: 10px 6px;
-                    overflow: hidden;
-                    padding: 0;
-                    position: absolute;
-                    text-decoration: none;
-                    width: 20px;
-                }
-            }
-        }
-    }
-
     .media-transcript {
         background-color: $bga-blue-black-lightest;
         border-bottom: 0.125rem solid $bga-blue-black-light;
@@ -208,6 +180,7 @@
             background: transparent;
             border: none;
             padding: 0;
+            min-height: auto;
 
             &:hover {
                 cursor: pointer;
