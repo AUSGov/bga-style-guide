@@ -111,10 +111,11 @@
                 width: 48px;
                 height: 48px;
                 background: $bga-blue-footer;
-                border: solid $bga-white 2px;
+                //border: solid $bga-white 2px;
                 border-radius: 50%;
                 padding: 0;
                 flex-shrink: 0;
+                box-shadow: $bga-btn-boxshadow;
 
 
                 &::before {
@@ -351,8 +352,11 @@
             .footer-social {
                 li {
                     margin-right: 16px !important;
+                    height: 40px;
+                    width: 40px;
                 }
             }
+            
         }
         .subscribe-wrapper {
             button {
@@ -412,7 +416,7 @@
 }
 
 //Media queries for HTML example pages
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     @include bga-site-footer-bp-768();
 }
 
