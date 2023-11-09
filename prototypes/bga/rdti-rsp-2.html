@@ -822,10 +822,10 @@
     <div class="row">
             <div class="col-12 remove-element-padding showing-header">
 
-                <h2 class="showing-number">Showing <span>XXX</span> research providers</h2>
+                <h2 class="showing-number">Showing <span>XXX</span> providers</h2>
 
 
-                <div class="filter-toggle">
+                <div class="filter-toggle full-width">
                     <button class="d-flex align-items-center">Filters<span>0</span></button>
                 </div>
         
@@ -844,170 +844,285 @@
     <div class="row">
 
         <div class="filters-wrapper showing-page remove-top-spaces col-12 col-md-4">
-            
-<div class="filters checkboxes-secondary">
+            <div class="filters single-select-dynamic">
 
-    <div tabindex="0" class="filter-item pt-3 pb-2" id="research-field">
-        <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">Research field <span class="mobile-counter"></span></p>
+    <div class="filter-item pb-2" id="research-field">
+       
+        <label id="research-field-dropdown" class="mb-3" data-option="research-field" data-label="research-field" filter-type="research-field">Research field 
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
-                <g transform="translate(20 12.5) rotate(180)">
-                    <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
-                        fill="#333">
-                    </path>
-                </g>
-            </svg>
+            <g transform="translate(20 12.5) rotate(180)">
+                <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                </path>
+            </g>
+        </svg></label>
+            
+                <form>
+                    <select class="form-select" id="filter_stage" select-filter-type="research-field" filter-value="27">
+                        <option value="select-option">Select research area</option>
+                        <option class="select-option" value="agricultural-veterinary-and-food-sciences">Agricultural, veterinary and food sciences</option>
+                        <option class="select-option" value="biological-sciences">Biological sciences</option>
+                        <option class="select-option" value="biomedical-and-clinical-sciences">Biomedical and clinical sciences</option>
+                        <option class="select-option" value="built-environment-and-design">Built environment and design</option>
+                        <option class="select-option" value="chemical-sciences">Chemical sciences</option>
+                        <option class="select-option" value="commerce-management-tourism-and-services">Commerce, management, tourism and services</option>
+                        <option class="select-option" value="creative-arts-and-writing">Creative arts and writing</option>
+                        <option class="select-option" value="earth-sciences">Earth sciences</option>
+                        <option class="select-option" value="economics">Economics</option>
+                        <option class="select-option" value="education">Education</option>
+                        <option class="select-option" value="engineering">Engineering</option>
+                        <option class="select-option" value="environmental-sciences">Environmental sciences</option>
+                        <option class="select-option" value="health-sciences">Health sciences</option>
+                        <option class="select-option" value="history-heritage-and-archaeology">History, heritage and archaeology</option>
+                        <option class="select-option" value="human-society">Human society</option>
+                        <option class="select-option" value="indigenous-studies">Indigenous studies</option>
+                        <option class="select-option" value="information-and-computing-sciences">Information and computing sciences</option>
+                        <option class="select-option" value="language-communication-and-culture">Language, communication and culture</option>
+                        <option class="select-option" value="law-and-legal-studies">Law and legal studies</option>
+                        <option class="select-option" value="mathematical-sciences">Mathematical sciences</option>
+                        <option class="select-option" value="philosophy-and-religious-studies">Philosophy and religious studies</option>
+                        <option class="select-option" value="physical-sciences">Physical sciences</option>
+                        <option class="select-option" value="psychology">Psychology</option>
+
+                    </select>
+                </form>
+
+    </div>
+
+</div>
+
+
+<div class="filters checkboxes-dynamic">
+
+    <div class="active-filters dynamic-groups pt-2 multi-select">
+
+        <div class="visible-filters"></div>
+    
+        <div class="filter-group agricultural-veterinary-and-food-sciences" >
+        
+            <p class="filter-group-title agricultural-veterinary-and-food-sciences mb-1" data-filter-group="agricultural-veterinary-and-food-sciences">Agricultural, veterinary and food sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 agricultural-veterinary-and-food-sciences" data-filter-group="agricultural-veterinary-and-food-sciences" >
+                <li filter-type="research-field" filter-value="10" data-value="ag-3001">3001 Agricultural biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3002">3002 Agriculture, land and farm management</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3003">3003 Animal production</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3004">3004 Crop and pasture production</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3005">3005 Fisheries sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3006">3006 Food sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3007">3007 Forestry sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3008">3008 Horticultural production</li>
+                <li filter-type="research-field" filter-value="15"  data-value="ag-3009">3009 Veterinary sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3099">3099 Other agricultural, veterinary and food sciences</li>
+            </ul>
 
         </div>
-        <div class="active-filters pt-2 multi-select">
-            <ul class="m-0 p-0">
-                <li filter-type="research-field" data-value="agricultural-veterinary-and-food-sciences">Agricultural, veterinary and food sciences</li>
-                <li filter-type="research-field" data-value="biological-sciences">Biological sciences</li>
-                <li filter-type="research-field" data-value="biomedical-and-clinical-sciences">Biomedical and clinical sciences</li>
-                <li filter-type="research-field" data-value="built-environment-and-design">Built environment and design</li>
-                <li filter-type="research-field" data-value="chemical-sciences">Chemical sciences</li>
-                <li filter-type="research-field" data-value="commerce-management-tourism-and-services">Commerce, management, tourism and services</li>
-                <li filter-type="research-field" data-value="creative-arts-and-writing">Creative arts and writing</li>
-                <li filter-type="research-field" data-value="earth-sciences">Earth sciences</li>
-                <li filter-type="research-field" data-value="economics">Economics</li>
-                <li filter-type="research-field" data-value="education">Education</li>
-                <li filter-type="research-field" data-value="engineering">Engineering</li>
-                <li filter-type="research-field" data-value="environmental-sciences">Environmental sciences</li>
-                <li filter-type="research-field" data-value="health-sciences">Health sciences</li>
-                <li filter-type="research-field" data-value="history-heritage-and-archaeology">History, heritage and archaeology</li>
-                <li filter-type="research-field" data-value="human-society">Human society</li>
-                <li filter-type="research-field" data-value="indigenous-studies">Indigenous studies</li>
-                <li filter-type="research-field" data-value="information-and-computing-sciences">Information and computing sciences</li>
-                <li filter-type="research-field" data-value="language-communication-and-culture">Language, communication and culture</li>
-                <li filter-type="research-field" data-value="law-and-legal-studies">Law and legal studies</li>
-                <li filter-type="research-field" data-value="mathematical-sciences">Mathematical sciences</li>
-                <li filter-type="research-field" data-value="philosophy-and-religious-studies">Philosophy and religious studies</li>
-                <li filter-type="research-field" data-value="physical-sciences">Physical sciences</li>
-                <li filter-type="research-field" data-value="psychology">Psychology</li>
+
+        <div class="filter-group biological-sciences">
+        
+            <p class="filter-group-title biological-sciences mb-1" data-filter-group="biological-sciences">Biological sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 biological-sciences" data-filter-group="biological-sciences">
+                <li filter-type="research-field" filter-value="10" data-value="bio-3101">3101 Biochemistry and cell biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3102">3102 Bioinformatics and computational biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3103">3103 Ecology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3104">3104 Evolutionary biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3105">3105 Genetics</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3106">3106 Industrial biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3107">3107 Microbiology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3108">3108 Plant biology</li>
+                <li filter-type="research-field" filter-value="15"  data-value="bio-3109">3109 Zoology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3199">3199 Other biological sciences</li>
             </ul>
+
         </div>
-        <div class="filter-item-content">
+
+
+        <div class="filter-group biomedical-and-clinical-sciences">
+        
+            <p class="filter-group-title biomedical-and-clinical-sciences mb-1"  data-filter-group="biomedical-and-clinical-sciences">Biomedical and clinical sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 biomedical-and-clinical-sciences" data-filter-group="biomedical-and-clinical-sciences">
+                <li filter-type="research-field" filter-value="10" data-value="bio-3201">3201 Cardiovascular medicine and haematology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3202">3202 Clinical sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3203">3203 Dentistry</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3204">3204 Immunology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3205">3205 Medical biochemistry and metabolomics</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3206">3206 Medical biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3207">3207 Medical microbiology</li>
+               
+            </ul>
+
+        </div>
+    
+    
+    
+</div>
+
+    <div class="filter-item-content research-field" id="agricultural-veterinary-and-food-sciences">
 
             <form>
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="agricultural-veterinary-and-food-sciences">
-                    <label>Agricultural, veterinary and food sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3001">
+                    <label>3001 Agricultural biotechnology</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="biological-sciences">
-                    <label>Biological sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3002">
+                    <label>3002 Agriculture, land and farm management</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="biomedical-and-clinical-sciences">
-                    <label>Biomedical and clinical sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3003">
+                    <label>3003 Animal production</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="built-environment-and-design">
-                    <label>Built environment and design</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3004">
+                    <label>3004 Crop and pasture production</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="chemical-sciences">
-                    <label>Chemical sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3005">
+                    <label>3005 Fisheries sciences</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="commerce-management-tourism-and-services">
-                    <label>Commerce, management, tourism and services</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3006">
+                    <label>3006 Food sciences</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="creative-arts-and-writing">
-                    <label>Creative arts and writing</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3007">
+                    <label>3007 Forestry sciences</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="earth-sciences">
-                    <label>Earth sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3008">
+                    <label>3008 Horticultural production</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="economics">
-                    <label>Economics</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3009">
+                    <label>3009 Veterinary sciences</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="education">
-                    <label>Education</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3099">
+                    <label>3099 Other agricultural, veterinary and food sciences</label>
                 </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="engineering">
-                    <label>Engineering</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="environmental-sciences">
-                    <label>Environmental sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="health-sciences">
-                    <label>Health sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="history-heritage-and-archaeology">
-                    <label>History, heritage and archaeology</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="human-society">
-                    <label>Human society</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="indigenous-studies">
-                    <label>Indigenous studies</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="information-and-computing-sciences">
-                    <label>Information and computing sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="australian-capital-territory">
-                    <label>Language, communication and culture</label>  
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="law-and-legal-studies">
-                    <label>Law and legal studies</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="mathematical-sciences">
-                    <label>Mathematical sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="philosophy-and-religious-studies">
-                    <label>Philosophy and religious studies</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="physical-sciences">
-                    <label>Physical sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="psychology">
-                    <label>Psychology</label>
-                </div>
-            
-            </form>
+
+                            
+
+                </form>
             
         </div>
+
+
+    <div class="filter-item-content research-field" id="biological-sciences">
+
+            <form>
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3101">
+                    <label>3101 Biochemistry and cell biology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3102">
+                    <label>3102 Bioinformatics and computational biology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3103">
+                    <label>3103 Ecology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3104">
+                    <label>3104 Evolutionary biology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3105">
+                    <label>3105 Genetics</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3106">
+                    <label>3106 Industrial biotechnology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3107">
+                    <label>3107 Microbiology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3108">
+                    <label>3108 Plant biology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3109">
+                    <label>3109 Zoology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3199">
+                    <label>3199 Other biological sciences</label>
+                </div>
+            
+                            
+            
+                </form>
+            
+        </div>
+
+    <div class="filter-item-content research-field" id="biomedical-and-clinical-sciences">
+
+        <form>
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3201">
+                <label>3201 Cardiovascular medicine and haematology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3202">
+                <label>3202 Clinical sciences</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3203">
+                <label>3203 Dentistry</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3204">
+                <label>3204 Immunology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3205">
+                <label>3205 Medical biochemistry and metabolomics</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3206">
+                <label>3206 Medical biotechnology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3207">
+                <label>3207 Medical microbiology</label>
+            </div>
+    
+    
+            </form>
+        
     </div>
+
+</div>
+
+
+<div class="filters checkboxes-secondary">
 
     <div tabindex="0" class="filter-item pt-3 pb-2" id="location">
         <div class="filter-item-title remove-element-padding">
@@ -1093,81 +1208,82 @@
         </div>
     </div>
 
-    <div tabindex="0" class="filter-item pt-3 pb-2" id="provider-status">
-        <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">Provider status <span class="mobile-counter"></span></p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
-                <g transform="translate(20 12.5) rotate(180)">
-                    <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
-                        fill="#333">
-                    </path>
-                </g>
-            </svg>
-
-        </div>
-        <div class="active-filters pt-2 multi-select">
-            <ul class="m-0 p-0">
-                <li filter-type="provider-status" filter-value="30" data-value="registered">Registered</li>
-                <li filter-type="provider-status" filter-value="60" data-value="not-registered">Registered for 2021-2022
-                </li>
-
-
-            </ul>
-        </div>
-        <div class="filter-item-content">
-
-            <form>
-                <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="provider-status">
-                    <input type="checkbox" tabindex="-1" id="registered">
-                    <label for="registered">Registered</label>
-                </div>
-
-                <div tabindex="0" class="checkbox-item p-2" filter-value="60" filter-type="provider-status">
-                    <input type="checkbox" tabindex="-1" id="not-registered">
-                    <label for="not-registered">Registered for 2021-2022</label>
-                </div>
-
-
-            </form>
-
-        </div>
-    </div>
-
 </div>
 
 
-<div class="filters text-input-secondary">
 
-    <div tabindex="0" class="filter-item pt-3 pb-3" id="anzsrc">
-        <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">ANZSRC (FoR) code <span class="mobile-counter"></span></p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
-                <g transform="translate(20 12.5) rotate(180)">
-                    <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
-                        fill="#333">
-                    </path>
-                </g>
-            </svg>
-    
-        </div>
-    
-        <div class="filter-item-content">
-    
-            <div class="text-input-wrapper d-flex">
-    
-                <span class="clear-postcode" id="clear-postcode">Remove code</span>
-                <input class="form-control px-3" id="postcode-input" type="text"
-                    placeholder="Enter your 4 digit code">
-    
-                <button class="apply-postcode" id="apply-postcode" filter-type="postcode">Search code</button>
+            <div class="clear-filters clear-filters mt-4 mb-5">
+                <a href="" >Clear all filters</a>
+                <svg class="ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)"></path></svg>
             </div>
-    
-        </div>
-    
-          
-    </div>
-    
-    </div>
+
+
+            <div class="filters dynamic-list">
+
+                <div class="dynamic-list remove-element-padding p-4">
+                    <h4 class="mb-3">Filter providers by name</h4>
+            
+                    <div class="list-wrapper">
+
+                        <input type="text" placeholder="Start typing an organisation name" name="org" data-list="orgName" />
+                        
+                        <a id="list-toggle" tabindex="-1" title="Show All Items" class="p-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                            <path id="Path_11954" data-name="Path 11954" d="M493.83,465.778l-6.018-6.028-1.982,1.986,8,8.014,8-8.014-1.982-1.986Z" transform="translate(-485.83 -459.75)" fill="#333"/>
+                          </svg>
+                          </a>
+
+                        <ul id="orgName">
+                        <li value="Access Macquarie Limited">Access Macquarie Limited</li>
+                        <li value="Alexander S Richardson Pty Ltd">Alexander S Richardson Pty Ltd</li>
+                        <li value="Australian Hearing Services">Australian Hearing Services</li>
+                        <li value="Australian National University">Australian National University</li>
+                        <li value="Australian Nuclear Science and Technology Organisation (ANSTO)">Australian Nuclear Science and Technology Organisation (ANSTO)</li>
+                        <li value="Centre for Digestive Diseases Pty Ltd">Centre for Digestive Diseases Pty Ltd</li>
+                        <li value="Charles Sturt University">Charles Sturt University</li>
+                        <li value="Commonwealth Scientific and Industrial Research Organisation (CSIRO)">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</li>
+                        <li value="Datapharm Australia Pty Ltd">Datapharm Australia Pty Ltd</li>
+                        <li value="Department of Regional NSW">Department of Regional NSW</li>
+                        <li value="Design & Industry Pty Ltd">Design & Industry Pty Ltd</li>
+                        <li value="Design Momentum Pty Ltd">Design Momentum Pty Ltd</li>
+                        <li value="Diversity Arrays Technology Pty Limited">Diversity Arrays Technology Pty Limited</li>
+                        <li value="Electro Optic Systems Pty. Limited">Electro Optic Systems Pty. Limited</li>
+                        <li value="Eurofins Agroscience Services Pty Ltd">Eurofins Agroscience Services Pty Ltd</li>
+                        <li value="Fisheries Research & Development Corporation">Fisheries Research & Development Corporation</li>
+                        <li value="Genesys Electronics Design Pty Ltd">Genesys Electronics Design Pty Ltd</li>
+                        <li value="HD Designlink Pty Ltd">HD Designlink Pty Ltd</li>
+                        <li value="Health Language Analytics Pty Ltd">Health Language Analytics Pty Ltd</li>
+                        <li value="I C P - Firefly Pty Limited">I C P - Firefly Pty Limited</li>
+                        <li value="I D & E Pty Ltd">I D & E Pty Ltd</li>
+                        <li value="Ingenuity Design Group Pty Ltd">Ingenuity Design Group Pty Ltd</li>
+                        <li value="Macquarie University">Macquarie University</li>
+                        <li value="Meat & Livestock Australia Limited">Meat & Livestock Australia Limited</li>
+                        <li value="National Measurement Institute">National Measurement Institute</li>
+                        <li value="Neuroscience Research Australia">Neuroscience Research Australia</li>
+                        <li value="Newport Tek Pty Ltd">Newport Tek Pty Ltd</li>
+                        <li value="Newsouth Innovations Pty Limited">Newsouth Innovations Pty Limited</li>
+                        <li value="Ozdocs International Pty Ltd">Ozdocs International Pty Ltd</li>
+                        <li value="R&T Reliability Technologies Pty Ltd">R&T Reliability Technologies Pty Ltd</li>
+                        <li value="ResTech Pty Limited">ResTech Pty Limited</li>
+                        <li value="Rivalea (Australia) Pty Ltd">Rivalea (Australia) Pty Ltd</li>
+                        <li value="Robotic Systems Pty Ltd">Robotic Systems Pty Ltd</li>
+                        <li value="Romar Engineering Pty Ltd">Romar Engineering Pty Ltd</li>
+                        <li value="Royal Botanic Gardens and Domain Trust">Royal Botanic Gardens and Domain Trust</li>
+                        <li value="Sonic Clinical Trials Pty Limited">Sonic Clinical Trials Pty Limited</li>
+                        <li value="Southern Cross University">Southern Cross University</li>
+                        <li value="Southern Star Research Pty Ltd">Southern Star Research Pty Ltd</li>
+                        <li value="University of Canberra">University of Canberra</li>
+                        <li value="The University of New England">The University of New England</li>
+                        <li value="The University of Newcastle">The University of Newcastle</li>
+                        <li value="The University of Newcastle Research Associates Limited">The University of Newcastle Research Associates Limited</li>
+                        <li value="The University of Wollongong">The University of Wollongong</li>
+                        </ul>
+                      
+                    </div>
+                    
+                </div>
+            
+            
+            </div>
         </div>
         
 
@@ -1179,6 +1295,26 @@
     <div class="component-text p-4 remove-element-padding">
 
         <h3 class="tile-title pt-0">Australian National University</h3>
+        
+        <div class="tag-section-wrapper d-flex align-items-center ">
+
+                <div class="tag-wrapper remove-element-padding align-items-center d-flex mb-5">
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
+                                <path id="Path_12121" data-name="Path 12121" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
+                              </svg>
+                              <p>Registered RSP</p>
+                        </div> 
+                        <p><strong>Registered for the 2023-2024 financial year</strong></p>
+                    
+
+                    
+                </div>
+           
+        </div> 
+
+
         
         
         <p class="detail location"><strong>Address:</strong> 10 East Road, ACTON ACT 2601</p>
@@ -1192,24 +1328,22 @@
         <p class="detail phone"><strong>Phone:</strong> <a href="">(02) XXXX XXXX</a></p>
         
 
+        
+        <p class="detail website"><strong>Website:</strong>  <a href="">Australian National University</a></p>
          
      
         
 
        
+        <p class="mt-4 mb-2"><strong>RSP number:</strong> 03206</p>
+        
+
+        
+        <p class="mb-2"><strong>RSP category:</strong> Other R&D organisations</p>
+        
 
 
-        <div class="tag-section-wrapper d-flex align-items-center ">
-            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
-
-           
-                <div class="tag-wrapper align-items-center d-flex">
-                    
-
-                    
-                </div>
-           
-        </div> 
+        
         
         
     </div>
@@ -1235,6 +1369,26 @@
 
         <h3 class="tile-title pt-0">Electro Optic Systems Pty. Limited</h3>
         
+        <div class="tag-section-wrapper d-flex align-items-center ">
+
+                <div class="tag-wrapper remove-element-padding align-items-center d-flex mb-5">
+                    
+
+                    
+                        <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <path id="Shape" d="M8,16a8,8,0,1,1,8-8A8.009,8.009,0,0,1,8,16ZM2.948,4.08a6.393,6.393,0,0,0,8.971,8.972ZM8,1.6A6.347,6.347,0,0,0,4.08,2.948l8.972,8.971A6.343,6.343,0,0,0,14.4,8,6.407,6.407,0,0,0,8,1.6Z" fill="#c9201d"/>
+                              </svg>
+                              
+                            <p>Not registered</p>
+                        </div> <p><strong>This provider was registered for the 2022-2023 financial year</strong></p>
+                    
+                </div>
+           
+        </div> 
+
+
+        
         
         <p class="detail location"><strong>Address:</strong> Unit 1, 229 Great North Road, Five Dock, NSW 2046</p>
         
@@ -1247,24 +1401,22 @@
         <p class="detail phone"><strong>Phone:</strong> <a href="">(02) XXXX XXXX</a></p>
         
 
+        
+        <p class="detail website"><strong>Website:</strong>  <a href="">ElectroOptics.com</a></p>
          
      
         
 
        
+        <p class="mt-4 mb-2"><strong>RSP number:</strong> 11786</p>
+        
+
+        
+        <p class="mb-2"><strong>RSP category:</strong> Other R&D organisations</p>
+        
 
 
-        <div class="tag-section-wrapper d-flex align-items-center ">
-            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
-
-           
-                <div class="tag-wrapper align-items-center d-flex">
-                    
-
-                    
-                </div>
-           
-        </div> 
+        
         
         
     </div>
@@ -1290,6 +1442,26 @@
 
         <h3 class="tile-title pt-0">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</h3>
         
+        <div class="tag-section-wrapper d-flex align-items-center ">
+
+                <div class="tag-wrapper remove-element-padding align-items-center d-flex mb-5">
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
+                                <path id="Path_12121" data-name="Path 12121" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
+                              </svg>
+                              <p>Registered RSP</p>
+                        </div> 
+                        <p><strong>Registered for the 2023-2024 financial year</strong></p>
+                    
+
+                    
+                </div>
+           
+        </div> 
+
+
+        
         
         <p class="detail location"><strong>Address:</strong> Building 101, Clunies Ross Street, Black Mountain, ACT 26011</p>
         
@@ -1302,24 +1474,22 @@
         <p class="detail phone"><strong>Phone:</strong> <a href="">(02) XXXX XXXX</a></p>
         
 
+        
+        <p class="detail website"><strong>Website:</strong>  <a href="">Commonwealth Scientific and Industrial Research Organisation</a></p>
          
      
         
 
        
+        <p class="mt-4 mb-2"><strong>RSP number:</strong> 12601</p>
+        
+
+        
+        <p class="mb-2"><strong>RSP category:</strong> Publicly controlled organisation</p>
+        
 
 
-        <div class="tag-section-wrapper d-flex align-items-center ">
-            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
-
-           
-                <div class="tag-wrapper align-items-center d-flex">
-                    
-
-                    
-                </div>
-           
-        </div> 
+        
         
         
     </div>
@@ -1345,6 +1515,26 @@
 
         <h3 class="tile-title pt-0">Centre for Digestive Diseases Pty Ltd</h3>
         
+        <div class="tag-section-wrapper d-flex align-items-center ">
+
+                <div class="tag-wrapper remove-element-padding align-items-center d-flex mb-5">
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
+                                <path id="Path_12121" data-name="Path 12121" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
+                              </svg>
+                              <p>Registered RSP</p>
+                        </div> 
+                        <p><strong>Registered for the 2023-2024 financial year</strong></p>
+                    
+
+                    
+                </div>
+           
+        </div> 
+
+
+        
         
         <p class="detail location"><strong>Address:</strong> Unit 1, 229 Great North Road, Five Dock, NSW 2046</p>
         
@@ -1357,24 +1547,22 @@
         <p class="detail phone"><strong>Phone:</strong> <a href="">(02) XXXX XXXX</a></p>
         
 
+        
+        <p class="detail website"><strong>Website:</strong>  <a href="">lipsum lopsum</a></p>
          
      
         
 
        
+        <p class="mt-4 mb-2"><strong>RSP number:</strong> 25288</p>
+        
+
+        
+        <p class="mb-2"><strong>RSP category:</strong> Other R&D organisations</p>
+        
 
 
-        <div class="tag-section-wrapper d-flex align-items-center ">
-            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
-
-           
-                <div class="tag-wrapper align-items-center d-flex">
-                    
-
-                    
-                </div>
-           
-        </div> 
+        
         
         
     </div>
@@ -1395,6 +1583,133 @@
 </div>
     
 
+        <div class="bga-pagination  remove-element-padding mt-0 mb-5 p-0">
+
+    <div class="pagination-links">
+        <ul class="d-flex px-0 pt-0 pb-2 ">
+            <li class="first" data-position="first"><a href="">
+                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                        <g data-name="Icon / chevron double / right" transform="translate(12 12) rotate(180)">
+                            <path data-name="Chevron Double / Right"
+                                d="M4.5,10.513,9.021,6,4.5,1.487,5.989,0,12,6,5.989,12Zm-4.5,0L4.521,6,0,1.487,1.49,0,7.5,6,1.49,12Z" />
+                        </g>
+                    </svg>First</a></li>
+            <li class="previous" data-position="previous"><a href="">
+                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+                        <g data-name="Icon / right" transform="translate(7.5 12) rotate(180)">
+                            <path data-name="Chevron / Right" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" />
+                        </g>
+                    </svg>Previous</a></li>
+            <li class="number" data-position="1"><a href="">1</a></li>
+            <li class="number current" data-position="2"><a href="">2</a></li>
+            <li class="number" data-position="3"><a href="">3</a></li>
+            <li class="number" data-position="4"><a href="">4</a></li>
+            <li class="number" data-position="5"><a href="">5</a></li>
+            <li class="number hidden" data-position="6"><a href="">6</a></li>
+            <li class="number hidden" data-position="7"><a href="">7</a></li>
+            <li class="number hidden" data-position="8"><a href="">8</a></li>
+
+            <li class="next" data-position="next"><a href="">
+                    Next
+                    <svg class="ms-2" data-name="Icon / right" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12"
+                        viewBox="0 0 7.5 12">
+                        <path data-name="Chevron / Right" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" />
+                    </svg>
+                </a></li>
+            <li class="last" data-position="last"><a href="">
+                    Last
+                    <svg class="ms-2" data-name="Icon / chevron double / right" xmlns="http://www.w3.org/2000/svg" width="12"
+                        height="12" viewBox="0 0 12 12">
+                        <path data-name="Chevron Double / Right"
+                            d="M4.5,10.513,9.021,6,4.5,1.487,5.989,0,12,6,5.989,12Zm-4.5,0L4.521,6,0,1.487,1.49,0,7.5,6,1.49,12Z" />
+                    </svg>
+                </a></li>
+        </ul>   
+    </div>
+
+
+    <div class="below-pagination mt-2 d-flex">
+        <div class="page-number remove-element-padding">
+            <p>Page <span>2</span> of 8</p>
+        </div>
+        <div class="items-number d-flex">
+            <p class="m-0">Results per page</p>
+            <select id="results-per-page">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+    </div>
+
+
+</div>
+
+        <div class="bga-component utility-group justify-content-end d-flex mb-5">
+    <div class="utility-item me-5">
+        <div class="utility-icon me-2">
+            <svg aria-hidden="true" width="16" height="16">
+                <path fill="#2157AA" fill-rule="evenodd"
+                    d="M13.6 11.2a2.39 2.39 0 0 0-1.648.658L6.234 9.014a3.194 3.194 0 0 0 0-2.028l5.718-2.844A2.4 2.4 0 1 0 11.2 2.4c0 .108.01.214.024.318l-5.87 2.92A3.184 3.184 0 0 0 3.2 4.8a3.2 3.2 0 1 0 0 6.4c.83 0 1.584-.319 2.153-.838l5.87 2.92A2.4 2.4 0 1 0 13.6 11.2">
+                </path>
+            </svg>
+        </div>
+        <a role="button" class="share-popover" tabindex="0" class="utility-button utility-popover">Share</a>
+
+        <div class="share-container remove-element-padding p-2">
+            <span class="arrow"></span>
+            <div class="share-body">
+                
+                <div class="utility-item facebook mb-3">
+                    <svg class="me-2" id="Icon_facebook" data-name="Icon / facebook" xmlns="http://www.w3.org/2000/svg" width="7.466" height="16" viewBox="0 0 7.466 16">
+                        <path id="Mask" d="M4.964,16V8H7.173l.293-2.757h-2.5l0-1.38c0-.719.068-1.1,1.1-1.1H7.45V0H5.241C2.588,0,1.654,1.338,1.654,3.587V5.242H0V8H1.654v8Z" fill="#4569a0"/>
+                      </svg>
+                      
+                    <a href="">Facebook</a>
+                </div>
+
+                <div class="utility-item linkedin mb-3">
+                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="14.716" height="14.046" viewBox="0 0 14.716 14.046">
+                        <path id="Mask" d="M5.087,14.046s.041-8.588,0-9.477H8.241V5.911a3.132,3.132,0,0,1,2.843-1.565c2.075,0,3.632,1.354,3.632,4.266v5.433H11.561V8.976c0-1.273-.456-2.143-1.6-2.143A1.727,1.727,0,0,0,8.345,7.985a2.167,2.167,0,0,0-.1.769v5.293Zm-4.9,0V4.568H3.341v9.477ZM1.743,3.275A1.642,1.642,0,1,1,1.785,0a1.643,1.643,0,1,1-.021,3.275Z" fill="#0077b4"/>
+                      </svg>
+                         
+                    <a href="">LinkedIn</a>
+                </div>
+
+                <div class="utility-item twitter">
+                    <svg class="me-2" id="Icon_twitter" data-name="Icon / twitter" xmlns="http://www.w3.org/2000/svg" width="15.997" height="13.22" viewBox="0 0 15.997 13.22">
+                        <path id="Mask" d="M7.768,3.517l.035.572-.578-.07a9.4,9.4,0,0,1-5.5-2.707L.959.553l-.2.56A3.368,3.368,0,0,0,1.48,4.567c.462.49.358.56-.439.268A1.363,1.363,0,0,0,.5,4.707,4.181,4.181,0,0,0,.913,6.271,3.733,3.733,0,0,0,2.5,7.764l.566.268-.67.012c-.647,0-.67.012-.6.257a3.494,3.494,0,0,0,2.162,1.914l.717.245-.624.373a6.508,6.508,0,0,1-3.1.864A3.423,3.423,0,0,0,0,11.79a8.794,8.794,0,0,0,2.231,1.027,9.764,9.764,0,0,0,7.583-.864,10.148,10.148,0,0,0,3.849-4.528,12.037,12.037,0,0,0,.786-3.5c0-.537.035-.607.682-1.249a7.62,7.62,0,0,0,.809-.9c.116-.222.1-.222-.485-.023-.983.35-1.121.3-.636-.222A3.4,3.4,0,0,0,15.6.284c0-.035-.173.023-.37.128a6.449,6.449,0,0,1-1.017.4l-.624.2L13.027.623a4.7,4.7,0,0,0-.983-.513,3.949,3.949,0,0,0-2.023.047A3.341,3.341,0,0,0,7.768,3.517Z" fill="#1b94e0"/>
+                      </svg>
+                      
+                    <a href="">Twitter</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="utility-item me-5">
+        <div class="utility-icon me-2">
+            <svg aria-hidden="true" viewBox="0 0 16 16">
+                <path fill="#2157AA" fill-rule="evenodd"
+                    d="M15.333 1.5H.667c-.4 0-.667.26-.667.65v11.7c0 .39.267.65.667.65h14.666c.4 0 .667-.26.667-.65V2.15c0-.39-.267-.65-.667-.65zM13.8 4.7L8.467 9.367A1.236 1.236 0 0 1 8 9.5c-.133 0-.333-.067-.467-.133L2.2 4.7c-.267-.267-.333-.667-.067-.933.267-.267.667-.334.934-.067l4.866 4.267L12.8 3.7c.267-.267.667-.2.933.067.334.266.334.666.067.933z">
+                </path>
+            </svg>
+        </div>
+        <a role="button" tabindex="0" class="utility-button email-button">Email</a>
+    </div>
+    <div class="utility-item">
+        <div class="utility-icon me-2">
+            <svg aria-hidden="true" width="16" height="16">
+                <path fill="#2157AA" fill-rule="evenodd"
+                    d="M14.101 4.087v2.657H2.044V4.087H0v7.562h2.044v3.474h11.88l.015-3.474h2.018L16 4.087h-1.899zm-1.84 9.606H3.68v-1.84h8.583v1.84zm.205-9.552v.968H3.68V0h8.787v4.14z">
+                </path>
+            </svg>
+        </div>
+        <a role="button" tabindex="0" class="utility-button">Print</a>
+    </div>
+</div>
+
          
         
         </div>
@@ -1405,176 +1720,297 @@
 
 
 <!-- FILTERS MODAL -->
-<div id="showing-filters-modal" class="bga-component modal-example px-4 pb-4 pt-5">
+<div id="showing-filters-modal" class="bga-component modal-example no-scroll px-4 pb-4 pt-5">
 
     <button class="close m-0 p-0">Close</button>
 
     <div class="component-content mt-2">
 
-        
-<div class="filters checkboxes-secondary">
 
-    <div tabindex="0" class="filter-item pt-3 pb-2" id="research-field">
-        <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">Research field <span class="mobile-counter"></span></p>
+        <div class="scroll-wrapper">
+            <span class="scroll-separator scroll-separator--top"></span>
+
+            <div class="scrollable remove-element-padding">
+               
+               <div class="filters single-select-dynamic">
+
+    <div class="filter-item pb-2" id="research-field">
+       
+        <label id="research-field-dropdown" class="mb-3" data-option="research-field" data-label="research-field" filter-type="research-field">Research field 
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
-                <g transform="translate(20 12.5) rotate(180)">
-                    <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
-                        fill="#333">
-                    </path>
-                </g>
-            </svg>
+            <g transform="translate(20 12.5) rotate(180)">
+                <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                </path>
+            </g>
+        </svg></label>
+            
+                <form>
+                    <select class="form-select" id="filter_stage" select-filter-type="research-field" filter-value="27">
+                        <option value="select-option">Select research area</option>
+                        <option class="select-option" value="agricultural-veterinary-and-food-sciences">Agricultural, veterinary and food sciences</option>
+                        <option class="select-option" value="biological-sciences">Biological sciences</option>
+                        <option class="select-option" value="biomedical-and-clinical-sciences">Biomedical and clinical sciences</option>
+                        <option class="select-option" value="built-environment-and-design">Built environment and design</option>
+                        <option class="select-option" value="chemical-sciences">Chemical sciences</option>
+                        <option class="select-option" value="commerce-management-tourism-and-services">Commerce, management, tourism and services</option>
+                        <option class="select-option" value="creative-arts-and-writing">Creative arts and writing</option>
+                        <option class="select-option" value="earth-sciences">Earth sciences</option>
+                        <option class="select-option" value="economics">Economics</option>
+                        <option class="select-option" value="education">Education</option>
+                        <option class="select-option" value="engineering">Engineering</option>
+                        <option class="select-option" value="environmental-sciences">Environmental sciences</option>
+                        <option class="select-option" value="health-sciences">Health sciences</option>
+                        <option class="select-option" value="history-heritage-and-archaeology">History, heritage and archaeology</option>
+                        <option class="select-option" value="human-society">Human society</option>
+                        <option class="select-option" value="indigenous-studies">Indigenous studies</option>
+                        <option class="select-option" value="information-and-computing-sciences">Information and computing sciences</option>
+                        <option class="select-option" value="language-communication-and-culture">Language, communication and culture</option>
+                        <option class="select-option" value="law-and-legal-studies">Law and legal studies</option>
+                        <option class="select-option" value="mathematical-sciences">Mathematical sciences</option>
+                        <option class="select-option" value="philosophy-and-religious-studies">Philosophy and religious studies</option>
+                        <option class="select-option" value="physical-sciences">Physical sciences</option>
+                        <option class="select-option" value="psychology">Psychology</option>
+
+                    </select>
+                </form>
+
+    </div>
+
+</div>
+
+
+<div class="filters checkboxes-dynamic">
+
+    <div class="active-filters dynamic-groups pt-2 multi-select">
+
+        <div class="visible-filters"></div>
+    
+        <div class="filter-group agricultural-veterinary-and-food-sciences" >
+        
+            <p class="filter-group-title agricultural-veterinary-and-food-sciences mb-1" data-filter-group="agricultural-veterinary-and-food-sciences">Agricultural, veterinary and food sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 agricultural-veterinary-and-food-sciences" data-filter-group="agricultural-veterinary-and-food-sciences" >
+                <li filter-type="research-field" filter-value="10" data-value="ag-3001">3001 Agricultural biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3002">3002 Agriculture, land and farm management</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3003">3003 Animal production</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3004">3004 Crop and pasture production</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3005">3005 Fisheries sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3006">3006 Food sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3007">3007 Forestry sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3008">3008 Horticultural production</li>
+                <li filter-type="research-field" filter-value="15"  data-value="ag-3009">3009 Veterinary sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="ag-3099">3099 Other agricultural, veterinary and food sciences</li>
+            </ul>
 
         </div>
-        <div class="active-filters pt-2 multi-select">
-            <ul class="m-0 p-0">
-                <li filter-type="research-field" data-value="agricultural-veterinary-and-food-sciences">Agricultural, veterinary and food sciences</li>
-                <li filter-type="research-field" data-value="biological-sciences">Biological sciences</li>
-                <li filter-type="research-field" data-value="biomedical-and-clinical-sciences">Biomedical and clinical sciences</li>
-                <li filter-type="research-field" data-value="built-environment-and-design">Built environment and design</li>
-                <li filter-type="research-field" data-value="chemical-sciences">Chemical sciences</li>
-                <li filter-type="research-field" data-value="commerce-management-tourism-and-services">Commerce, management, tourism and services</li>
-                <li filter-type="research-field" data-value="creative-arts-and-writing">Creative arts and writing</li>
-                <li filter-type="research-field" data-value="earth-sciences">Earth sciences</li>
-                <li filter-type="research-field" data-value="economics">Economics</li>
-                <li filter-type="research-field" data-value="education">Education</li>
-                <li filter-type="research-field" data-value="engineering">Engineering</li>
-                <li filter-type="research-field" data-value="environmental-sciences">Environmental sciences</li>
-                <li filter-type="research-field" data-value="health-sciences">Health sciences</li>
-                <li filter-type="research-field" data-value="history-heritage-and-archaeology">History, heritage and archaeology</li>
-                <li filter-type="research-field" data-value="human-society">Human society</li>
-                <li filter-type="research-field" data-value="indigenous-studies">Indigenous studies</li>
-                <li filter-type="research-field" data-value="information-and-computing-sciences">Information and computing sciences</li>
-                <li filter-type="research-field" data-value="language-communication-and-culture">Language, communication and culture</li>
-                <li filter-type="research-field" data-value="law-and-legal-studies">Law and legal studies</li>
-                <li filter-type="research-field" data-value="mathematical-sciences">Mathematical sciences</li>
-                <li filter-type="research-field" data-value="philosophy-and-religious-studies">Philosophy and religious studies</li>
-                <li filter-type="research-field" data-value="physical-sciences">Physical sciences</li>
-                <li filter-type="research-field" data-value="psychology">Psychology</li>
+
+        <div class="filter-group biological-sciences">
+        
+            <p class="filter-group-title biological-sciences mb-1" data-filter-group="biological-sciences">Biological sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 biological-sciences" data-filter-group="biological-sciences">
+                <li filter-type="research-field" filter-value="10" data-value="bio-3101">3101 Biochemistry and cell biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3102">3102 Bioinformatics and computational biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3103">3103 Ecology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3104">3104 Evolutionary biology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3105">3105 Genetics</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3106">3106 Industrial biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3107">3107 Microbiology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3108">3108 Plant biology</li>
+                <li filter-type="research-field" filter-value="15"  data-value="bio-3109">3109 Zoology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3199">3199 Other biological sciences</li>
             </ul>
+
         </div>
-        <div class="filter-item-content">
+
+
+        <div class="filter-group biomedical-and-clinical-sciences">
+        
+            <p class="filter-group-title biomedical-and-clinical-sciences mb-1"  data-filter-group="biomedical-and-clinical-sciences">Biomedical and clinical sciences <span class="mobile-counter"></span></p>
+
+            <ul class="m-0 p-0 biomedical-and-clinical-sciences" data-filter-group="biomedical-and-clinical-sciences">
+                <li filter-type="research-field" filter-value="10" data-value="bio-3201">3201 Cardiovascular medicine and haematology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3202">3202 Clinical sciences</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3203">3203 Dentistry</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3204">3204 Immunology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3205">3205 Medical biochemistry and metabolomics</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3206">3206 Medical biotechnology</li>
+                <li filter-type="research-field" filter-value="15" data-value="bio-3207">3207 Medical microbiology</li>
+               
+            </ul>
+
+        </div>
+    
+    
+    
+</div>
+
+    <div class="filter-item-content research-field" id="agricultural-veterinary-and-food-sciences">
 
             <form>
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="agricultural-veterinary-and-food-sciences">
-                    <label>Agricultural, veterinary and food sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3001">
+                    <label>3001 Agricultural biotechnology</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="biological-sciences">
-                    <label>Biological sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3002">
+                    <label>3002 Agriculture, land and farm management</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="biomedical-and-clinical-sciences">
-                    <label>Biomedical and clinical sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3003">
+                    <label>3003 Animal production</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="built-environment-and-design">
-                    <label>Built environment and design</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3004">
+                    <label>3004 Crop and pasture production</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="chemical-sciences">
-                    <label>Chemical sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3005">
+                    <label>3005 Fisheries sciences</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="commerce-management-tourism-and-services">
-                    <label>Commerce, management, tourism and services</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3006">
+                    <label>3006 Food sciences</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="creative-arts-and-writing">
-                    <label>Creative arts and writing</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3007">
+                    <label>3007 Forestry sciences</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="earth-sciences">
-                    <label>Earth sciences</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3008">
+                    <label>3008 Horticultural production</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="economics">
-                    <label>Economics</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3009">
+                    <label>3009 Veterinary sciences</label>
                 </div>
-            
+
                 <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="education">
-                    <label>Education</label>
+                    <input type="checkbox" tabindex="-1" id="ag-3099">
+                    <label>3099 Other agricultural, veterinary and food sciences</label>
                 </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="engineering">
-                    <label>Engineering</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="environmental-sciences">
-                    <label>Environmental sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="health-sciences">
-                    <label>Health sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="history-heritage-and-archaeology">
-                    <label>History, heritage and archaeology</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="human-society">
-                    <label>Human society</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="indigenous-studies">
-                    <label>Indigenous studies</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="information-and-computing-sciences">
-                    <label>Information and computing sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="australian-capital-territory">
-                    <label>Language, communication and culture</label>  
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="law-and-legal-studies">
-                    <label>Law and legal studies</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="mathematical-sciences">
-                    <label>Mathematical sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="philosophy-and-religious-studies">
-                    <label>Philosophy and religious studies</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="physical-sciences">
-                    <label>Physical sciences</label>
-                </div>
-            
-                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
-                    <input type="checkbox" tabindex="-1" id="psychology">
-                    <label>Psychology</label>
-                </div>
-            
-            </form>
+
+                            
+
+                </form>
             
         </div>
+
+
+    <div class="filter-item-content research-field" id="biological-sciences">
+
+            <form>
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3101">
+                    <label>3101 Biochemistry and cell biology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3102">
+                    <label>3102 Bioinformatics and computational biology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3103">
+                    <label>3103 Ecology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3104">
+                    <label>3104 Evolutionary biology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3105">
+                    <label>3105 Genetics</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3106">
+                    <label>3106 Industrial biotechnology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3107">
+                    <label>3107 Microbiology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3108">
+                    <label>3108 Plant biology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3109">
+                    <label>3109 Zoology</label>
+                </div>
+            
+                <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                    <input type="checkbox" tabindex="-1" id="bio-3199">
+                    <label>3199 Other biological sciences</label>
+                </div>
+            
+                            
+            
+                </form>
+            
+        </div>
+
+    <div class="filter-item-content research-field" id="biomedical-and-clinical-sciences">
+
+        <form>
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3201">
+                <label>3201 Cardiovascular medicine and haematology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3202">
+                <label>3202 Clinical sciences</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3203">
+                <label>3203 Dentistry</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3204">
+                <label>3204 Immunology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3205">
+                <label>3205 Medical biochemistry and metabolomics</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3206">
+                <label>3206 Medical biotechnology</label>
+            </div>
+    
+            <div tabindex="0" class="checkbox-item p-2" filter-type="research-field" filter-value="15">
+                <input type="checkbox" tabindex="-1" id="bio-3207">
+                <label>3207 Medical microbiology</label>
+            </div>
+    
+    
+            </form>
+        
     </div>
+
+</div>
+
+
+<div class="filters checkboxes-secondary">
 
     <div tabindex="0" class="filter-item pt-3 pb-2" id="location">
         <div class="filter-item-title remove-element-padding">
@@ -1661,8 +2097,9 @@
     </div>
 
     <div tabindex="0" class="filter-item pt-3 pb-2" id="provider-status">
+       
         <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">Provider status <span class="mobile-counter"></span></p>
+            <p class="mb-0">Provider registration status <span class="mobile-counter"></span></p>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                 <g transform="translate(20 12.5) rotate(180)">
                     <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
@@ -1672,11 +2109,11 @@
             </svg>
 
         </div>
+
         <div class="active-filters pt-2 multi-select">
             <ul class="m-0 p-0">
-                <li filter-type="provider-status" filter-value="30" data-value="registered">Registered</li>
-                <li filter-type="provider-status" filter-value="60" data-value="not-registered">Registered for 2021-2022
-                </li>
+                <li filter-type="provider-status" filter-value="30" data-value="registered">Registered for 2022 - 2023</li>
+                <li filter-type="provider-status" filter-value="60" data-value="not-registered">Registered for 2021 - 2022</li>
 
 
             </ul>
@@ -1686,12 +2123,12 @@
             <form>
                 <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="provider-status">
                     <input type="checkbox" tabindex="-1" id="registered">
-                    <label for="registered">Registered</label>
+                    <label for="registered">Registered for current financial year (2022 - 2023)</label>
                 </div>
 
                 <div tabindex="0" class="checkbox-item p-2" filter-value="60" filter-type="provider-status">
                     <input type="checkbox" tabindex="-1" id="not-registered">
-                    <label for="not-registered">Registered for 2021-2022</label>
+                    <label for="not-registered">Registered for previous financial year (2021 - 2022)</label>
                 </div>
 
 
@@ -1703,52 +2140,44 @@
 </div>
 
 
-<div class="filters text-input-secondary">
-
-    <div tabindex="0" class="filter-item pt-3 pb-3" id="anzsrc">
-        <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">ANZSRC (FoR) code <span class="mobile-counter"></span></p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
-                <g transform="translate(20 12.5) rotate(180)">
-                    <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
-                        fill="#333">
-                    </path>
-                </g>
-            </svg>
-    
-        </div>
-    
-        <div class="filter-item-content">
-    
-            <div class="text-input-wrapper d-flex">
-    
-                <span class="clear-postcode" id="clear-postcode">Remove code</span>
-                <input class="form-control px-3" id="postcode-input" type="text"
-                    placeholder="Enter your 4 digit code">
-    
-                <button class="apply-postcode" id="apply-postcode" filter-type="postcode">Search code</button>
             </div>
-    
+            <span class="scroll-separator scroll-separator--bottom"></span>
         </div>
-    
-          
-    </div>
-    
-    </div>
 
-        <div class="filter-control-group d-flex align-items-center justify-content-left mt-5">
-    
-            <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center view-results" tabindex="0" href="" role="button">View results</button>
-
-            <div class="clear-filters ms-4">
-                <a href="" >Clear all filters</a>
-                <svg class="ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)"></path></svg>
-            </div>
-
+       
+        <div class="bottom-content">
            
-            <div>
-               
+            <div class="filter-control-group d-flex align-items-center justify-content-left mt-5">
+        
+                <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center view-results" tabindex="0" href="" role="button">View results</button>
+
+                <div class="clear-filters ms-4">
+                    <a href="" >Clear all filters</a>
+                    <svg class="ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)"></path></svg>
+                </div>
+
             </div>
+
+            <div class="filters search-box">
+
+                <div class="name-search remove-element-padding p-4">
+                    <h4 class="mb-3">Filter providers <span>by ANZSRC (FoR) code</span></h4>
+            
+                    <div class="search-wrapper">
+                        <input type="search" placeholder="Enter 4 digit code">
+                        <button class="name-search-btn">
+                            <svg width="20" height="20">
+                                <path fill-rule="evenodd" d="M15.27 12.815l-.409.409-1.706-1.706c2.052-2.838 1.802-6.836-.753-9.39A7.218 7.218 0 0 0 7.264 0a7.22 7.22 0 0 0-5.139 2.128c-2.833 2.833-2.833 7.443 0 10.276a7.22 7.22 0 0 0 5.139 2.128c1.549 0 3.023-.483 4.253-1.375l1.706 1.705-.41.41L17.543 20 20 17.543l-4.73-4.728zm-11.507-2.05a4.955 4.955 0 0 1 0-6.999 4.918 4.918 0 0 1 3.5-1.45c1.323 0 2.566.515 3.5 1.45a4.955 4.955 0 0 1 0 7 4.919 4.919 0 0 1-3.5 1.449 4.92 4.92 0 0 1-3.5-1.45z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                </div>
+            
+            
+            </div>
+
         </div>
 
     </div>
