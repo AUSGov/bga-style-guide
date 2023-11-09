@@ -1760,6 +1760,47 @@ $(document).ready(function () {
         }
     });
 
+    // dynamic list 
+    $('a#list-toggle').on('click', function(){
+        $(this).parents('.list-wrapper').find('ul').toggleClass('open');
+    });
+    $('.dynamic-list input').on('input', function(){
+        var input = $(this).val(),
+        input_lower_case = input.toLowerCase();
+        input_span = '<span>'+input+'</span>',
+        list_id = $(this).parents('.list-wrapper').find('ul').attr('id');
+
+        if(input) {
+            $('ul#'+ list_id).addClass('open');
+            
+            $('ul#'+ list_id + ' li').each(function(){
+                var str = $(this).text(),
+                str_lower_case = str.toLowerCase();
+
+                if (str_lower_case.includes(input_lower_case)) {
+                    $(this).removeClass('hidden');
+                } else { 
+                    $(this).addClass('hidden');
+                }
+            });
+
+            /*if ($('.dynamic_list li').not(".hidden").length == 0) {
+                console.log('nothing to see here');
+            }*/
+            
+        } else {
+            $('ul#'+ list_id).removeClass('open');
+        }
+    });
+    $('.dynamic-list li').on('click', function(){
+        var list_item = $(this).text();
+        $(this).parents('.list-wrapper').find('input').val(list_item);
+        $('.dynamic-list li.hidden').each(function(){
+            $(this).removeClass('hidden')
+        });
+        $(this).parents('ul').removeClass('open');
+    });
+
 
     // COMPONENT EXAMPLE: VIDEO & AUDIO PLAYER
     $('.media-player-transcript-toggle button').on('click', function () {
