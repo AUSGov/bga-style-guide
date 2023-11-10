@@ -12,7 +12,7 @@
     }
     .tag-wrapper {
         p {
-            font-size: 14px;
+            font-size: 12px;
         }
     }
     .tag {
@@ -75,30 +75,25 @@
     }
 }
 
-@mixin rsp-tiles-below576 () {
+@mixin rsp-tiles-below991() {
     .search-tile.rsp-tile {
-        .tag-section-wrapper {
+        .tag-wrapper {
             flex-wrap: wrap;
-
-            .registration {
+            
+            p {
                 width: 100%;
             }
-            .tag-wrapper {
-                flex-wrap: wrap;
-            }
-            .tag {
-                margin-top: 8px;
-            }
+        }
+        .tag {
+            margin-bottom: 8px;
+
+           
         }
     }
 }
 
-// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576 {
-    @include rsp-tiles-below576();
-}
 
 // Media queries for HTML example pages
-@media (max-width: 576px) {
-    @include rsp-tiles-below576();
+@media (max-width: 991px) {
+    @include rsp-tiles-below991();
 }

@@ -2,7 +2,7 @@
 
     <div class="component-text p-4 remove-element-padding">
 
-        <h3 class="tile-title pt-0">{{ include.title }}</h3>
+        <h3 class="tile-title pt-0 mb-3">{{ include.title }}</h3>
         
         <div class="tag-section-wrapper d-flex align-items-center ">
 
@@ -12,7 +12,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
                                 <path id="Path_12121" data-name="Path 12121" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
                               </svg>
-                              <p>Registered RSP</p>
+                              <p>Registered Provider</p>
                         </div> 
                         <p><strong>Registered for the 2023-2024 financial year</strong></p>
                     {% endif %}
@@ -58,9 +58,10 @@
         <p class="mb-2"><strong>RSP category:</strong> {{ include.rsp-category }}</p>
         {% endif %}
 
+        {% if include.abn %}
+        <p class="mb-0"><strong>ABN:</strong> {{ include.abn }}</p>
+        {% endif %}
 
-        
-        
         
     </div>
 
