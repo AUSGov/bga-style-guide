@@ -494,16 +494,25 @@
            
         }
 
-        a#list-toggle {
+        a#list-toggle, a#list-close {
             position: absolute;
             right: 0;
+            top: 0;
             z-index: 5000;
             background: none;
 
             &:hover {
                 cursor: pointer;
             }
-        } 
+        }
+        a#list-close {
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+
 
         ul {
             max-height: 400px;

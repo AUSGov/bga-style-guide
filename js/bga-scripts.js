@@ -1773,9 +1773,10 @@ $(document).ready(function () {
 
         if(input) {
             $('ul#'+ list_id).addClass('open');
+            $(this).parents('.dynamic-list').find('a#list-close').addClass('show');
+
             var list_len = $('ul#'+ list_id + ' li').length;
             var hidden_count = 0;
-            
             
             $('ul#'+ list_id + ' li').each(function(){
                 var str = $(this).text(),
@@ -1789,7 +1790,9 @@ $(document).ready(function () {
                 }
             });
         } else {
-            $('ul#'+ list_id).removeClass('open');  
+            $('ul#'+ list_id).removeClass('open');
+            $(this).parents('.dynamic-list').find('a#list-close').removeClass('show');
+  
         }
 
         if (list_len == hidden_count) {
@@ -1809,7 +1812,12 @@ $(document).ready(function () {
         });
         $(this).parents('ul').removeClass('open');
     });
-
+    $('a#list-close').on('click', function(){
+        $(this).parents('.dynamic-list').find('.no-result').removeClass('show');
+        $(this).parents('.dynamic-list').find('input').val('');
+        $(this).parents('.dynamic-list').find('ul').removeClass('open'); 
+        $(this).removeClass('show');
+    });
 
     // COMPONENT EXAMPLE: VIDEO & AUDIO PLAYER
     $('.media-player-transcript-toggle button').on('click', function () {

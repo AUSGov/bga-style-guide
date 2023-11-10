@@ -1,17 +1,17 @@
 <div class="filters dynamic-list {{include.classes}}">
 
     <div class="dynamic-list remove-element-padding p-4">
-        <h4 class="mb-3">Filter grants by name</h4>
+        <h4 class="mb-3">Filter providers by name</h4>
 
         <div class="list-wrapper">
 
-            <input type="text" placeholder="Start typing a grant name" name="org" data-list="{{include.id}}" />
+            <input type="text" placeholder="Start typing an organisation name" name="org" data-list="{{include.id}}" />
             
-            <a href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
-              </svg></a>
-              
-   
+            <a id="list-toggle" tabindex="-1" title="Show All Items" class="p-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <path id="Path_11954" data-name="Path 11954" d="M493.83,465.778l-6.018-6.028-1.982,1.986,8,8.014,8-8.014-1.982-1.986Z" transform="translate(-485.83 -459.75)" fill="#333"/>
+              </svg>
+              </a>
+
             <ul id="{{include.id}}">
             <li tabindex="0" value="Access Macquarie Limited">Access Macquarie Limited</li>
             <li tabindex="0"value="Alexander S Richardson Pty Ltd">Alexander S Richardson Pty Ltd</li>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="no-result error m-0 remove-element-padding">
-            <p>No grant or program with this name.</p>
+            <p>No provider with this name.</p>
         </div>
         
     </div>
