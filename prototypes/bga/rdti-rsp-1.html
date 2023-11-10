@@ -1208,47 +1208,6 @@
         </div>
     </div>
 
-    <div tabindex="0" class="filter-item pt-3 pb-2" id="provider-status">
-       
-        <div class="filter-item-title remove-element-padding">
-            <p class="mb-0">Provider registration status <span class="mobile-counter"></span></p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
-                <g transform="translate(20 12.5) rotate(180)">
-                    <path data-name="Chevron / Up" d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z"
-                        fill="#333">
-                    </path>
-                </g>
-            </svg>
-
-        </div>
-
-        <div class="active-filters pt-2 multi-select">
-            <ul class="m-0 p-0">
-                <li filter-type="provider-status" filter-value="30" data-value="registered">Registered for 2022 - 2023</li>
-                <li filter-type="provider-status" filter-value="60" data-value="not-registered">Registered for 2021 - 2022</li>
-
-
-            </ul>
-        </div>
-        <div class="filter-item-content">
-
-            <form>
-                <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="provider-status">
-                    <input type="checkbox" tabindex="-1" id="registered">
-                    <label for="registered">Registered for current financial year (2022 - 2023)</label>
-                </div>
-
-                <div tabindex="0" class="checkbox-item p-2" filter-value="60" filter-type="provider-status">
-                    <input type="checkbox" tabindex="-1" id="not-registered">
-                    <label for="not-registered">Registered for previous financial year (2021 - 2022)</label>
-                </div>
-
-
-            </form>
-
-        </div>
-    </div>
-
 </div>
 
 
@@ -1259,25 +1218,77 @@
             </div>
 
 
-            <div class="filters search-box">
+            <div class="filters dynamic-list ">
 
-                <div class="name-search remove-element-padding p-4">
-                    <h4 class="mb-3">Filter providers <span>by name</span></h4>
+    <div class="dynamic-list remove-element-padding p-4">
+        <h4 class="mb-3">Filter providers by name</h4>
+
+        <div class="list-wrapper">
+
+            <input type="text" placeholder="Start typing an organisation name" name="org" data-list="orgName" />
             
-                    <div class="search-wrapper">
-                        <input type="search" placeholder="Enter provider name">
-                        <button class="name-search-btn">
-                            <svg width="20" height="20">
-                                <path fill-rule="evenodd" d="M15.27 12.815l-.409.409-1.706-1.706c2.052-2.838 1.802-6.836-.753-9.39A7.218 7.218 0 0 0 7.264 0a7.22 7.22 0 0 0-5.139 2.128c-2.833 2.833-2.833 7.443 0 10.276a7.22 7.22 0 0 0 5.139 2.128c1.549 0 3.023-.483 4.253-1.375l1.706 1.705-.41.41L17.543 20 20 17.543l-4.73-4.728zm-11.507-2.05a4.955 4.955 0 0 1 0-6.999 4.918 4.918 0 0 1 3.5-1.45c1.323 0 2.566.515 3.5 1.45a4.955 4.955 0 0 1 0 7 4.919 4.919 0 0 1-3.5 1.449 4.92 4.92 0 0 1-3.5-1.45z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                    
-                </div>
-            
-            
-            </div>
+            <a id="list-toggle" tabindex="-1" title="Show All Items" class="p-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <path id="Path_11954" data-name="Path 11954" d="M493.83,465.778l-6.018-6.028-1.982,1.986,8,8.014,8-8.014-1.982-1.986Z" transform="translate(-485.83 -459.75)" fill="#333"/>
+              </svg>
+              </a>
+
+            <ul id="orgName">
+            <li tabindex="0" value="Access Macquarie Limited">Access Macquarie Limited</li>
+            <li tabindex="0"value="Alexander S Richardson Pty Ltd">Alexander S Richardson Pty Ltd</li>
+            <li tabindex="0" value="Australian Hearing Services">Australian Hearing Services</li>
+            <li tabindex="0" value="Australian National University">Australian National University</li>
+            <li tabindex="0" value="Australian Nuclear Science and Technology Organisation (ANSTO)">Australian Nuclear Science and Technology Organisation (ANSTO)</li>
+            <li tabindex="0" value="Centre for Digestive Diseases Pty Ltd">Centre for Digestive Diseases Pty Ltd</li>
+            <li tabindex="0" value="Charles Sturt University">Charles Sturt University</li>
+            <li tabindex="0" value="Commonwealth Scientific and Industrial Research Organisation (CSIRO)">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</li>
+            <li tabindex="0" value="Datapharm Australia Pty Ltd">Datapharm Australia Pty Ltd</li>
+            <li tabindex="0" value="Department of Regional NSW">Department of Regional NSW</li>
+            <li tabindex="0" value="Design & Industry Pty Ltd">Design & Industry Pty Ltd</li>
+            <li tabindex="0" value="Design Momentum Pty Ltd">Design Momentum Pty Ltd</li>
+            <li tabindex="0" value="Diversity Arrays Technology Pty Limited">Diversity Arrays Technology Pty Limited</li>
+            <li tabindex="0" value="Electro Optic Systems Pty. Limited">Electro Optic Systems Pty. Limited</li>
+            <li tabindex="0" value="Eurofins Agroscience Services Pty Ltd">Eurofins Agroscience Services Pty Ltd</li>
+            <li tabindex="0" value="Fisheries Research & Development Corporation">Fisheries Research & Development Corporation</li>
+            <li tabindex="0" value="Genesys Electronics Design Pty Ltd">Genesys Electronics Design Pty Ltd</li>
+            <li tabindex="0" value="HD Designlink Pty Ltd">HD Designlink Pty Ltd</li>
+            <li tabindex="0" value="Health Language Analytics Pty Ltd">Health Language Analytics Pty Ltd</li>
+            <li tabindex="0" value="I C P - Firefly Pty Limited">I C P - Firefly Pty Limited</li>
+            <li tabindex="0" value="I D & E Pty Ltd">I D & E Pty Ltd</li>
+            <li tabindex="0" value="Ingenuity Design Group Pty Ltd">Ingenuity Design Group Pty Ltd</li>
+            <li tabindex="0" value="Macquarie University">Macquarie University</li>
+            <li tabindex="0" value="Meat & Livestock Australia Limited">Meat & Livestock Australia Limited</li>
+            <li tabindex="0" value="National Measurement Institute">National Measurement Institute</li>
+            <li tabindex="0" value="Neuroscience Research Australia">Neuroscience Research Australia</li>
+            <li tabindex="0" value="Newport Tek Pty Ltd">Newport Tek Pty Ltd</li>
+            <li tabindex="0" value="Newsouth Innovations Pty Limited">Newsouth Innovations Pty Limited</li>
+            <li tabindex="0" value="Ozdocs International Pty Ltd">Ozdocs International Pty Ltd</li>
+            <li tabindex="0" value="R&T Reliability Technologies Pty Ltd">R&T Reliability Technologies Pty Ltd</li>
+            <li tabindex="0" value="ResTech Pty Limited">ResTech Pty Limited</li>
+            <li tabindex="0" value="Rivalea (Australia) Pty Ltd">Rivalea (Australia) Pty Ltd</li>
+            <li tabindex="0" value="Robotic Systems Pty Ltd">Robotic Systems Pty Ltd</li>
+            <li tabindex="0" value="Romar Engineering Pty Ltd">Romar Engineering Pty Ltd</li>
+            <li tabindex="0" value="Royal Botanic Gardens and Domain Trust">Royal Botanic Gardens and Domain Trust</li>
+            <li tabindex="0" value="Sonic Clinical Trials Pty Limited">Sonic Clinical Trials Pty Limited</li>
+            <li tabindex="0" value="Southern Cross University">Southern Cross University</li>
+            <li tabindex="0" value="Southern Star Research Pty Ltd">Southern Star Research Pty Ltd</li>
+            <li tabindex="0" value="University of Canberra">University of Canberra</li>
+            <li tabindex="0" value="The University of New England">The University of New England</li>
+            <li tabindex="0" value="The University of Newcastle">The University of Newcastle</li>
+            <li tabindex="0" value="The University of Newcastle Research Associates Limited">The University of Newcastle Research Associates Limited</li>
+            <li tabindex="0" value="The University of Wollongong">The University of Wollongong</li>
+            </ul>
+          
+        </div>
+
+        <div class="no-result error m-0 remove-element-padding">
+            <p>No provider with this name.</p>
+        </div>
+        
+    </div>
+
+
+</div>
+
         </div>
         
 
@@ -1288,7 +1299,27 @@
 
     <div class="component-text p-4 remove-element-padding">
 
-        <h3 class="tile-title pt-0">Australian National University</h3>
+        <h3 class="tile-title pt-0 mb-3">Australian National University</h3>
+        
+        <div class="tag-section-wrapper d-flex align-items-center ">
+
+                <div class="tag-wrapper remove-element-padding align-items-center d-flex mb-5">
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
+                                <path id="Path_12121" data-name="Path 12121" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
+                              </svg>
+                              <p>Registered Provider</p>
+                        </div> 
+                        <p><strong>Registered for the 2023-2024 financial year</strong></p>
+                    
+
+                    
+                </div>
+           
+        </div> 
+
+
         
         
         <p class="detail location"><strong>Address:</strong> 10 East Road, ACTON ACT 2601</p>
@@ -1302,6 +1333,8 @@
         <p class="detail phone"><strong>Phone:</strong> <a href="">(02) XXXX XXXX</a></p>
         
 
+        
+        <p class="detail website"><strong>Website:</strong>  <a href="">Australian National University</a></p>
          
      
         
@@ -1310,23 +1343,14 @@
         <p class="mt-4 mb-2"><strong>RSP number:</strong> 03206</p>
         
 
-
-        <div class="tag-section-wrapper d-flex align-items-center ">
-            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
-
-           
-                <div class="tag-wrapper align-items-center d-flex">
-                    
-                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
-                        <p><strong>Current financial year</strong> (2022-2023)</p>
-                        </div> 
-                    
-
-                    
-                </div>
-           
-        </div> 
         
+        <p class="mb-2"><strong>RSP category:</strong> Other R&D organisations</p>
+        
+
+        
+        <p class="mb-0"><strong>ABN:</strong> XX XXX XXX XXX</p>
+        
+
         
     </div>
 
@@ -1349,7 +1373,27 @@
 
     <div class="component-text p-4 remove-element-padding">
 
-        <h3 class="tile-title pt-0">Electro Optic Systems Pty. Limited</h3>
+        <h3 class="tile-title pt-0 mb-3">Electro Optic Systems Pty. Limited</h3>
+        
+        <div class="tag-section-wrapper d-flex align-items-center ">
+
+                <div class="tag-wrapper remove-element-padding align-items-center d-flex mb-5">
+                    
+
+                    
+                        <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <path id="Shape" d="M8,16a8,8,0,1,1,8-8A8.009,8.009,0,0,1,8,16ZM2.948,4.08a6.393,6.393,0,0,0,8.971,8.972ZM8,1.6A6.347,6.347,0,0,0,4.08,2.948l8.972,8.971A6.343,6.343,0,0,0,14.4,8,6.407,6.407,0,0,0,8,1.6Z" fill="#c9201d"/>
+                              </svg>
+                              
+                            <p>Not registered</p>
+                        </div> <p><strong>This provider was registered for the 2022-2023 financial year</strong></p>
+                    
+                </div>
+           
+        </div> 
+
+
         
         
         <p class="detail location"><strong>Address:</strong> Unit 1, 229 Great North Road, Five Dock, NSW 2046</p>
@@ -1363,6 +1407,8 @@
         <p class="detail phone"><strong>Phone:</strong> <a href="">(02) XXXX XXXX</a></p>
         
 
+        
+        <p class="detail website"><strong>Website:</strong>  <a href="">ElectroOptics.com</a></p>
          
      
         
@@ -1371,23 +1417,14 @@
         <p class="mt-4 mb-2"><strong>RSP number:</strong> 11786</p>
         
 
-
-        <div class="tag-section-wrapper d-flex align-items-center ">
-            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
-
-           
-                <div class="tag-wrapper align-items-center d-flex">
-                    
-
-                    
-                        <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
-                            <p><strong>Past financial year</strong> (2021-2022)</p>
-                        </div> 
-                    
-                </div>
-           
-        </div> 
         
+        <p class="mb-2"><strong>RSP category:</strong> Other R&D organisations</p>
+        
+
+        
+        <p class="mb-0"><strong>ABN:</strong> XX XXX XXX XXX</p>
+        
+
         
     </div>
 
@@ -1410,7 +1447,27 @@
 
     <div class="component-text p-4 remove-element-padding">
 
-        <h3 class="tile-title pt-0">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</h3>
+        <h3 class="tile-title pt-0 mb-3">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</h3>
+        
+        <div class="tag-section-wrapper d-flex align-items-center ">
+
+                <div class="tag-wrapper remove-element-padding align-items-center d-flex mb-5">
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
+                                <path id="Path_12121" data-name="Path 12121" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
+                              </svg>
+                              <p>Registered Provider</p>
+                        </div> 
+                        <p><strong>Registered for the 2023-2024 financial year</strong></p>
+                    
+
+                    
+                </div>
+           
+        </div> 
+
+
         
         
         <p class="detail location"><strong>Address:</strong> Building 101, Clunies Ross Street, Black Mountain, ACT 26011</p>
@@ -1424,6 +1481,8 @@
         <p class="detail phone"><strong>Phone:</strong> <a href="">(02) XXXX XXXX</a></p>
         
 
+        
+        <p class="detail website"><strong>Website:</strong>  <a href="">Commonwealth Scientific and Industrial Research Organisation</a></p>
          
      
         
@@ -1432,27 +1491,14 @@
         <p class="mt-4 mb-2"><strong>RSP number:</strong> 12601</p>
         
 
-
-        <div class="tag-section-wrapper d-flex align-items-center ">
-            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
-
-           
-                <div class="tag-wrapper align-items-center d-flex">
-                    
-                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
-                        <p><strong>Current financial year</strong> (2022-2023)</p>
-                        </div> 
-                    
-
-                    
-                        <div class="tag not-registered d-inline-flex align-items-center remove-element-padding me-3">
-                            <p><strong>Past financial year</strong> (2021-2022)</p>
-                        </div> 
-                    
-                </div>
-           
-        </div> 
         
+        <p class="mb-2"><strong>RSP category:</strong> Publicly controlled organisation</p>
+        
+
+        
+        <p class="mb-0"><strong>ABN:</strong> XX XXX XXX XXX</p>
+        
+
         
     </div>
 
@@ -1475,7 +1521,27 @@
 
     <div class="component-text p-4 remove-element-padding">
 
-        <h3 class="tile-title pt-0">Centre for Digestive Diseases Pty Ltd</h3>
+        <h3 class="tile-title pt-0 mb-3">Centre for Digestive Diseases Pty Ltd</h3>
+        
+        <div class="tag-section-wrapper d-flex align-items-center ">
+
+                <div class="tag-wrapper remove-element-padding align-items-center d-flex mb-5">
+                    
+                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.657" viewBox="0 0 16 12.657">
+                                <path id="Path_12121" data-name="Path 12121" d="M30-1250.078l1.9-1.931,3.347,3.355,8.842-8.837,1.914,1.9-10.756,10.756Z" transform="translate(-30 1257.491)" fill="#299f28" fill-rule="evenodd"/>
+                              </svg>
+                              <p>Registered Provider</p>
+                        </div> 
+                        <p><strong>Registered for the 2023-2024 financial year</strong></p>
+                    
+
+                    
+                </div>
+           
+        </div> 
+
+
         
         
         <p class="detail location"><strong>Address:</strong> Unit 1, 229 Great North Road, Five Dock, NSW 2046</p>
@@ -1489,6 +1555,8 @@
         <p class="detail phone"><strong>Phone:</strong> <a href="">(02) XXXX XXXX</a></p>
         
 
+        
+        <p class="detail website"><strong>Website:</strong>  <a href="">lipsum lopsum</a></p>
          
      
         
@@ -1497,23 +1565,14 @@
         <p class="mt-4 mb-2"><strong>RSP number:</strong> 25288</p>
         
 
-
-        <div class="tag-section-wrapper d-flex align-items-center ">
-            <p class="registration mb-0 me-2"><strong>Registered for:</strong></p>
-
-           
-                <div class="tag-wrapper align-items-center d-flex">
-                    
-                        <div class="tag registered d-inline-flex align-items-center remove-element-padding me-3">   
-                        <p><strong>Current financial year</strong> (2022-2023)</p>
-                        </div> 
-                    
-
-                    
-                </div>
-           
-        </div> 
         
+        <p class="mb-2"><strong>RSP category:</strong> Other R&D organisations</p>
+        
+
+        
+        <p class="mb-0"><strong>ABN:</strong> XX XXX XXX XXX</p>
+        
+
         
     </div>
 
@@ -2108,25 +2167,78 @@
 
             </div>
 
-            <div class="filters search-box">
+            
 
-                <div class="name-search remove-element-padding p-4">
-                    <h4 class="mb-3">Filter providers <span>by ANZSRC (FoR) code</span></h4>
+            <div class="filters dynamic-list ">
+
+    <div class="dynamic-list remove-element-padding p-4">
+        <h4 class="mb-3">Filter providers by name</h4>
+
+        <div class="list-wrapper">
+
+            <input type="text" placeholder="Start typing an organisation name" name="org" data-list="orgName-2" />
             
-                    <div class="search-wrapper">
-                        <input type="search" placeholder="Enter 4 digit code">
-                        <button class="name-search-btn">
-                            <svg width="20" height="20">
-                                <path fill-rule="evenodd" d="M15.27 12.815l-.409.409-1.706-1.706c2.052-2.838 1.802-6.836-.753-9.39A7.218 7.218 0 0 0 7.264 0a7.22 7.22 0 0 0-5.139 2.128c-2.833 2.833-2.833 7.443 0 10.276a7.22 7.22 0 0 0 5.139 2.128c1.549 0 3.023-.483 4.253-1.375l1.706 1.705-.41.41L17.543 20 20 17.543l-4.73-4.728zm-11.507-2.05a4.955 4.955 0 0 1 0-6.999 4.918 4.918 0 0 1 3.5-1.45c1.323 0 2.566.515 3.5 1.45a4.955 4.955 0 0 1 0 7 4.919 4.919 0 0 1-3.5 1.449 4.92 4.92 0 0 1-3.5-1.45z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                    
-                </div>
-            
-            
-            </div>
+            <a id="list-toggle" tabindex="-1" title="Show All Items" class="p-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <path id="Path_11954" data-name="Path 11954" d="M493.83,465.778l-6.018-6.028-1.982,1.986,8,8.014,8-8.014-1.982-1.986Z" transform="translate(-485.83 -459.75)" fill="#333"/>
+              </svg>
+              </a>
+
+            <ul id="orgName-2">
+            <li tabindex="0" value="Access Macquarie Limited">Access Macquarie Limited</li>
+            <li tabindex="0"value="Alexander S Richardson Pty Ltd">Alexander S Richardson Pty Ltd</li>
+            <li tabindex="0" value="Australian Hearing Services">Australian Hearing Services</li>
+            <li tabindex="0" value="Australian National University">Australian National University</li>
+            <li tabindex="0" value="Australian Nuclear Science and Technology Organisation (ANSTO)">Australian Nuclear Science and Technology Organisation (ANSTO)</li>
+            <li tabindex="0" value="Centre for Digestive Diseases Pty Ltd">Centre for Digestive Diseases Pty Ltd</li>
+            <li tabindex="0" value="Charles Sturt University">Charles Sturt University</li>
+            <li tabindex="0" value="Commonwealth Scientific and Industrial Research Organisation (CSIRO)">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</li>
+            <li tabindex="0" value="Datapharm Australia Pty Ltd">Datapharm Australia Pty Ltd</li>
+            <li tabindex="0" value="Department of Regional NSW">Department of Regional NSW</li>
+            <li tabindex="0" value="Design & Industry Pty Ltd">Design & Industry Pty Ltd</li>
+            <li tabindex="0" value="Design Momentum Pty Ltd">Design Momentum Pty Ltd</li>
+            <li tabindex="0" value="Diversity Arrays Technology Pty Limited">Diversity Arrays Technology Pty Limited</li>
+            <li tabindex="0" value="Electro Optic Systems Pty. Limited">Electro Optic Systems Pty. Limited</li>
+            <li tabindex="0" value="Eurofins Agroscience Services Pty Ltd">Eurofins Agroscience Services Pty Ltd</li>
+            <li tabindex="0" value="Fisheries Research & Development Corporation">Fisheries Research & Development Corporation</li>
+            <li tabindex="0" value="Genesys Electronics Design Pty Ltd">Genesys Electronics Design Pty Ltd</li>
+            <li tabindex="0" value="HD Designlink Pty Ltd">HD Designlink Pty Ltd</li>
+            <li tabindex="0" value="Health Language Analytics Pty Ltd">Health Language Analytics Pty Ltd</li>
+            <li tabindex="0" value="I C P - Firefly Pty Limited">I C P - Firefly Pty Limited</li>
+            <li tabindex="0" value="I D & E Pty Ltd">I D & E Pty Ltd</li>
+            <li tabindex="0" value="Ingenuity Design Group Pty Ltd">Ingenuity Design Group Pty Ltd</li>
+            <li tabindex="0" value="Macquarie University">Macquarie University</li>
+            <li tabindex="0" value="Meat & Livestock Australia Limited">Meat & Livestock Australia Limited</li>
+            <li tabindex="0" value="National Measurement Institute">National Measurement Institute</li>
+            <li tabindex="0" value="Neuroscience Research Australia">Neuroscience Research Australia</li>
+            <li tabindex="0" value="Newport Tek Pty Ltd">Newport Tek Pty Ltd</li>
+            <li tabindex="0" value="Newsouth Innovations Pty Limited">Newsouth Innovations Pty Limited</li>
+            <li tabindex="0" value="Ozdocs International Pty Ltd">Ozdocs International Pty Ltd</li>
+            <li tabindex="0" value="R&T Reliability Technologies Pty Ltd">R&T Reliability Technologies Pty Ltd</li>
+            <li tabindex="0" value="ResTech Pty Limited">ResTech Pty Limited</li>
+            <li tabindex="0" value="Rivalea (Australia) Pty Ltd">Rivalea (Australia) Pty Ltd</li>
+            <li tabindex="0" value="Robotic Systems Pty Ltd">Robotic Systems Pty Ltd</li>
+            <li tabindex="0" value="Romar Engineering Pty Ltd">Romar Engineering Pty Ltd</li>
+            <li tabindex="0" value="Royal Botanic Gardens and Domain Trust">Royal Botanic Gardens and Domain Trust</li>
+            <li tabindex="0" value="Sonic Clinical Trials Pty Limited">Sonic Clinical Trials Pty Limited</li>
+            <li tabindex="0" value="Southern Cross University">Southern Cross University</li>
+            <li tabindex="0" value="Southern Star Research Pty Ltd">Southern Star Research Pty Ltd</li>
+            <li tabindex="0" value="University of Canberra">University of Canberra</li>
+            <li tabindex="0" value="The University of New England">The University of New England</li>
+            <li tabindex="0" value="The University of Newcastle">The University of Newcastle</li>
+            <li tabindex="0" value="The University of Newcastle Research Associates Limited">The University of Newcastle Research Associates Limited</li>
+            <li tabindex="0" value="The University of Wollongong">The University of Wollongong</li>
+            </ul>
+          
+        </div>
+
+        <div class="no-result error m-0 remove-element-padding">
+            <p>No provider with this name.</p>
+        </div>
+        
+    </div>
+
+
+</div>
 
         </div>
 
