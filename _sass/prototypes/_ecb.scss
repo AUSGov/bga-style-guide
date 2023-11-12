@@ -250,11 +250,18 @@ html.ecb-prototype {
         .cta-title {
             width: 100%;
             background: $bga-teal-highlight-mid;
+            display: flex;
+            column-gap: 16px;
+            align-items: center;
+
+            h3 {
+                padding: 0;
+            }
         }
         .cta-content {
             flex-wrap: wrap;
-            height: calc(100% - 145px);
-            align-content: space-around;
+            height: calc(100% - 80px);
+            align-content: space-between;
         }
     }
 
@@ -264,6 +271,24 @@ html.ecb-prototype {
         #page-header.fixed {
             .header-content {
                 padding: 24px 0 !important;
+            }
+        }
+        .call-to-action.finalise {
+            flex-wrap: wrap;
+            
+            .cta-container {
+                width: 100% !important;   
+            }
+            .cta-title {
+                width: 100%; 
+            }
+            .cta-content {
+                height: auto;
+
+                p {
+                    width: 100%;
+                    margin: 0 0 16px 0;
+                }
             }
         }
     }
@@ -309,6 +334,13 @@ html.ecb-prototype {
 
         .toggle-wrapper {
             padding-right: 0px !important;
+        }
+
+        .save-footer {
+            .button-wrapper {
+                justify-content: flex-start !important; 
+                margin-top: 24px;
+            }
         }
     }
 
