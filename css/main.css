@@ -9563,13 +9563,15 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ecb-prototype .call-to-action.finalise .cta-container { background: #ffffff; flex-wrap: wrap; width: calc(33.33% - 16px); }
 
-#ecb-prototype .call-to-action.finalise .cta-title { width: 100%; background: #8BCACA; }
+#ecb-prototype .call-to-action.finalise .cta-title { width: 100%; background: #8BCACA; display: flex; column-gap: 16px; align-items: center; }
 
-#ecb-prototype .call-to-action.finalise .cta-content { flex-wrap: wrap; height: calc(100% - 145px); align-content: space-around; }
+#ecb-prototype .call-to-action.finalise .cta-title h3, #ecb-prototype .call-to-action.finalise .cta-title .h3 { padding: 0; }
 
-@media (max-width: 992px) { #ecb-prototype #page-header.fixed .header-content { padding: 24px 0 !important; } }
+#ecb-prototype .call-to-action.finalise .cta-content { flex-wrap: wrap; height: calc(100% - 80px); align-content: space-between; }
 
-@media (max-width: 768px) { #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation-wrapper { padding: 0 !important; } #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation { padding: 16px 0 0 0 !important; } #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation .step { width: auto; } #ecb-prototype #page-header.fixed .header-content { padding: 0 !important; } #ecb-prototype #page-header.fixed .step-name { height: 21px; text-overflow: unset; width: auto; } #ecb-prototype .page-content.fixed { padding-top: 60px !important; } #ecb-prototype .modal-example { top: 1rem; left: 16px; width: calc(100% - 32px); max-width: none; } #ecb-prototype .toggle-wrapper { padding-right: 0px !important; } }
+@media (max-width: 992px) { #ecb-prototype #page-header.fixed .header-content { padding: 24px 0 !important; } #ecb-prototype .call-to-action.finalise { flex-wrap: wrap; } #ecb-prototype .call-to-action.finalise .cta-container { width: 100% !important; } #ecb-prototype .call-to-action.finalise .cta-title { width: 100%; } #ecb-prototype .call-to-action.finalise .cta-content { height: auto; } #ecb-prototype .call-to-action.finalise .cta-content p { width: 100%; margin: 0 0 16px 0; } }
+
+@media (max-width: 768px) { #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation-wrapper { padding: 0 !important; } #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation { padding: 16px 0 0 0 !important; } #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation .step { width: auto; } #ecb-prototype #page-header.fixed .header-content { padding: 0 !important; } #ecb-prototype #page-header.fixed .step-name { height: 21px; text-overflow: unset; width: auto; } #ecb-prototype .page-content.fixed { padding-top: 60px !important; } #ecb-prototype .modal-example { top: 1rem; left: 16px; width: calc(100% - 32px); max-width: none; } #ecb-prototype .toggle-wrapper { padding-right: 0px !important; } #ecb-prototype .save-footer .button-wrapper { justify-content: flex-start !important; margin-top: 24px; } }
 
 @media (max-width: 576px) { #ecb-prototype .call-to-action.teal .button-group a { font-size: 0.875rem; } #ecb-prototype .ecb-button-group a { font-size: 0.875rem; } #ecb-prototype #email-form { flex-wrap: wrap; } #ecb-prototype #email-form input { width: 100%; margin-bottom: 24px !important; margin-right: 0 !important; } }
 
