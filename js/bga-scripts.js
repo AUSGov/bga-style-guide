@@ -24,7 +24,6 @@ $(document).ready(function () {
     };
 
     //FILTER ITEMS ON COMPONENTS PAGE
-
     var filter_items = function (filter_states, i) {
         $(filter_states[i]).each(function () {
             $(this).addClass('show');
@@ -51,7 +50,6 @@ $(document).ready(function () {
 
     };
     
-
     $('.filter-item').on('click', function () {
         calc_loading_position();
         $('.tiles-wrapper').addClass('inactive');
@@ -61,7 +59,7 @@ $(document).ready(function () {
             //Clear filter classes from nav-tiles.
             reset_nav_tiles();
             
-            $('#component_name').val('');
+            $('#style-guide-inpage-filter input').val('');
 
             var filter_states = [];
 
@@ -101,6 +99,58 @@ $(document).ready(function () {
         $('#showing-filters-modal, .modal-overlay').removeClass('show');
     });
 
+    // Filter by name dropdown
+    $("#style-guide-inpage-filter ul li").on('click', function(){
+    
+        calc_loading_position();
+        $('.tiles-wrapper').addClass('inactive');
+        $('.tiles-loading').addClass('show'); 
+        
+        //clear checkboxes
+        $('.filter-item input').each(function () {
+            $(this).prop('checked', false);
+        });
+        
+        list_item = $(this).text();
+
+        setTimeout(function () {
+            reset_nav_tiles();
+            
+            $('.nav-tile-wrapper a.tile-title').each(function(){
+                var tile = $(this).text();
+
+                if (tile == list_item) {
+                    $(this).parents('.nav-tile-wrapper').addClass('filters_on show');
+                } else {
+                    $(this).parents('.nav-tile-wrapper').addClass('filters_on').removeClass('show');
+                }
+            });
+
+            get_component_number();
+            $('.tiles-loading').removeClass('show');
+            $('.tiles-wrapper').removeClass('inactive');
+
+        }, 400);
+
+    });
+    // Clear filters when name dropdown is empty 
+    $("#style-guide-inpage-filter input").on('input', function(){
+        var input = $(this).val();
+
+        if (!input) {
+            reset_nav_tiles();
+            get_component_number();
+        }
+    });
+    $('#style-guide-inpage-filter a#list-close').on('click', function(){
+        reset_nav_tiles();
+        get_component_number();
+
+        $('.filter-item input').each(function () {
+            $(this).prop('checked', false);
+        });
+    });
+
 
     // PAGE PATTERNS - click on hotspots to go to rules
     $('.spot a').on('click', function () {
@@ -133,8 +183,10 @@ $(document).ready(function () {
 
 
     // SEARCH COMPONENTS BY NAME
+
     var components_list = ['bga-hero-pathway-list', 'bga-standard-pathway-list', 'bga-light-pathway-list', 'bga-feature-image-pathway', 'bga-image-pathway-list', 'bga-inline-pathway-list', 'bga-page-headers', 'bga-call-to-action', 'bga-email-download-contract-call-to-action', 'bga-call-out-box', 'bga-contact-us-call-out-box', 'bga-event-registration-call-to-action', 'bga-call-out-link', 'bga-feature-box', 'bga-accordion', 'bga-mini-list', 'bga-table', 'bga-list-group', 'bga-image', 'bga-video-player', 'bga-audio-player', 'bga-download-list', 'bga-grant-status-indicator', 'bga-pull-quote', 'bga-notifications', 'bga-modal-dialog', 'bga-disclaimer-alerts', 'bga-global-alert', 'bga-site-header', 'bga-global-pathway-to-services', 'bga-site-footer', 'bga-anchor-menu', 'bga-breacdrumbs', 'bga-pagination', 'bga-print-and-share-utilities', 'bga-chat-button', 'bga-in-page-feedback', 'bga-subscribe', 'bga-subsite-header', 'bga-subsite-footer', 'bga-guided-search', 'bga-stepped-navigation', 'bga-progress-bar', 'bga-save-your-progress-sidebar', 'bga-information-sidebar', 'bga-tool-start-component', 'bga-site-search-result-tiles', 'bga-finder-tool-result-tiles', 'bga-toast-notification', 'bga-form-field-group', 'bga-tool-results', 'bga-clause-regulation-box', 'bga-breadcrumbs', 'bga-tile-filters', 'bga-grant-rounds-accordion', 'bga-pathway-accordions', 'bga-lightweight-checklist-accordion', 'bga-standard-checklist-accordion', 'bga-home-page-banner', 'bga-category-page', 'bga-topic-page', 'bga-guide-page', 'bga-transaction-action-page', 'bga-101-page', 'bga-tutorial-page', 'bga-resource-article-page', 'bga-internal-grants-landing-page', 'bga-grant-recipients-page', 'bga-customer-stories-landing-page', 'bga-customer-story-page', 'bga-adviser-detail-page', 'bga-event-page', 'bga-tiled-page-with-filters', 'bga-site-search-page', 'bga-tiled-page-with-guided-search', 'bga-standard-checklist', 'bga-lightweight-checklist', 'bga-colour', 'bga-grid-and-page-layouts', 'bga-typography', 'bga-buttons-and-links', 'bga-text-inputs', 'bga-dropdown-select', 'bga-checkboxes-and-radio-buttons', 'bga-radio-buttons', 'bga-checkboxes', 'bga-datepicker', 'bga-contextual-help', 'bga-form-fields', 'bga-form-groups', 'bga-icons', 'bga-iconography', 'bga-logos', 'bga-illustrations', 'bga-infographics', 'bga-maintenance', 'bga-error', 'bga-tiled-page-with-guided-search', 'bga-internal-q-and-a-tools ', 'bga-question-and-answer-tools', 'bga-external-grants-landing-page', 'bga-branded-question-and-answer-tools', 'bga-external-bga-branded-q-and-a-tools', 'bga-tooltip', 'bga-cookie-notification', 'bga-animations', 'bga-tools-and-templates-tiles', 'bga-action-tiles', 'bga-in-page-tabs', 'bga-relevant-support-links', 'bga-map-elements', 'bga-tags', 'bga-dynamic-sidebar', 'bga-comparison-accordion'];
 
+    /*  
     var name_search = function(input){
         var str = $(input).val();
         str = str.toLowerCase();
@@ -143,7 +195,7 @@ $(document).ready(function () {
         calc_loading_position();
         $('.tiles-wrapper').addClass('inactive');
         $('.tiles-loading').addClass('show');
-
+x   
         setTimeout(function () {
         
             // Create list of components with str in their name
@@ -184,6 +236,9 @@ $(document).ready(function () {
         name_search('#component_name');
     });
 
+    */
+    
+
 
 
      // Checkboxes & radios selected on 'enter' keypress
@@ -207,7 +262,7 @@ $(document).ready(function () {
         reset_nav_tiles();
 
         // Reset search input field
-        $('#component_name').val('');
+        $('#style-guide-inpage-filter input').val('');
 
         // Reset checkboxes
         $('.filter-item input').each(function () {
@@ -1792,7 +1847,6 @@ $(document).ready(function () {
         } else {
             $('ul#'+ list_id).removeClass('open');
             $(this).parents('.dynamic-list').find('a#list-close').removeClass('show');
-  
         }
 
         if (list_len == hidden_count) {
@@ -1810,6 +1864,7 @@ $(document).ready(function () {
         $('.dynamic-list li.hidden').each(function(){
             $(this).removeClass('hidden')
         });
+        $('a#list-close').addClass('show');
         $(this).parents('ul').removeClass('open');
     });
     $('a#list-close').on('click', function(){
@@ -1817,6 +1872,10 @@ $(document).ready(function () {
         $(this).parents('.dynamic-list').find('input').val('');
         $(this).parents('.dynamic-list').find('ul').removeClass('open'); 
         $(this).removeClass('show');
+
+        $(this).parents('.dynamic-list').find('ul li.hidden').each(function(){
+            $(this).removeClass('hidden')
+        });
     });
 
     // COMPONENT EXAMPLE: VIDEO & AUDIO PLAYER

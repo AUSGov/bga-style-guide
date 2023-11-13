@@ -8202,7 +8202,7 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .filters .dynamic-list h4, .filters .dynamic-list .h4 { color: #333333; }
 
-.filters .dynamic-list input { border: solid #333333 1px; width: 100%; padding: 12px 48px 12px 16px; font-size: 1rem; line-height: 1.75; height: 56px; background: #ffffff; z-index: 4000; text-overflow: ellipsis; }
+.filters .dynamic-list input { border: solid #333333 1px; width: calc(100% - 56px); padding: 12px 48px 12px 16px; font-size: 1rem; line-height: 1.75; height: 56px; background: #ffffff; z-index: 4000; text-overflow: ellipsis; }
 
 .filters .dynamic-list input::placeholder { color: #333333; }
 
@@ -8210,13 +8210,25 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .filters .dynamic-list input:focus, .filters .dynamic-list input:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; }
 
-.filters .dynamic-list a#list-toggle, .filters .dynamic-list a#list-close { position: absolute; right: 0; top: 0; z-index: 5000; background: none; }
+.filters .dynamic-list a#list-close { display: flex; justify-content: center; align-items: center; position: absolute; right: 56px; height: 56px; top: 0; z-index: 5000; background: none; display: none; }
 
-.filters .dynamic-list a#list-toggle:hover, .filters .dynamic-list a#list-close:hover { cursor: pointer; }
+.filters .dynamic-list a#list-close svg { display: block; }
 
-.filters .dynamic-list a#list-close { display: none; }
+.filters .dynamic-list a#list-close:hover { cursor: pointer; }
 
-.filters .dynamic-list a#list-close.show { display: block; }
+.filters .dynamic-list a#list-close.show { display: flex; }
+
+.filters .dynamic-list a#list-toggle { display: flex; justify-content: center; align-items: center; position: absolute; right: 0; top: 0; z-index: 5000; width: 56px; box-sizing: border-box; height: 56px; border: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px; background: #2E6CB9; }
+
+.filters .dynamic-list a#list-toggle svg { display: block; }
+
+.filters .dynamic-list a#list-toggle:focus, .filters .dynamic-list a#list-toggle:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; background: #C8D9EE; }
+
+.filters .dynamic-list a#list-toggle:focus svg, .filters .dynamic-list a#list-toggle:focus svg path, .filters .dynamic-list a#list-toggle:focus-visible svg, .filters .dynamic-list a#list-toggle:focus-visible svg path { fill: #2E6CB9; }
+
+.filters .dynamic-list a#list-toggle:hover, .filters .dynamic-list a#list-toggle:active { background: #2157AA; }
+
+.filters .dynamic-list a#list-toggle:hover svg, .filters .dynamic-list a#list-toggle:hover svg path, .filters .dynamic-list a#list-toggle:active svg, .filters .dynamic-list a#list-toggle:active svg path { fill: #ffffff; }
 
 .filters .dynamic-list ul { max-height: 400px; overflow-y: scroll; background: #ffffff; border: #333333 1px solid; border-top: none; padding: 0; margin: 0; display: none; }
 
@@ -8237,6 +8249,10 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 .filters .dynamic-list .no-result.show { display: block; }
 
 .filters .dynamic-list .no-result p { color: #C9201D; }
+
+.filters.list .dynamic-list input { width: 100%; }
+
+.filters.list .dynamic-list a#list-close { right: 0px; }
 
 .filters .filter-item.open { padding-bottom: 8px !important; }
 
