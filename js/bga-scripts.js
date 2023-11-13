@@ -1818,7 +1818,9 @@ $(document).ready(function () {
     // dynamic list 
     $('a#list-toggle').on('click', function(){
         $(this).parents('.list-wrapper').find('ul').toggleClass('open');
+        $(this).parents('.list-wrapper').find('ul li').find("span").contents().unwrap();
     });
+   
     $('.dynamic-list input').on('input', function(){
         
         var input = $(this).val(),

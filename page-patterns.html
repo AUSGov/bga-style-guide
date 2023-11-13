@@ -231,8 +231,9 @@
 <div class="row">
 
 
-    <div class="col-12 col-md-4 col-xl-3  d-none d-md-block">
+    <div class="col-12 col-md-4 col-xl-4  d-none d-md-block">
 
+        <!--
         <div class="nav-tile-search p-4 mb-4">
             <label class="mb-3" for="component_name ">Search by pattern name</label>
             <div class="input-wrapper">
@@ -240,10 +241,72 @@
                 <button type="submit">Submit</button>
             </div>
         </div>
+    -->
+
+    <div id="style-guide-inpage-filter" class="filters dynamic-list dropdown">
+
+        <div class="dynamic-list remove-element-padding p-4 mb-4">
+            <h4 class="mb-3">Filter components by name</h4>
+    
+            <div class="list-wrapper">
+    
+                <input type="text" placeholder="Type a pattern name" name="foundations" data-list="page-pattern-list" />
+
+                <a tabindex="0" href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
+                  </svg></a>
+
+                
+                <a id="list-toggle" tabindex="-1" title="Show All Items" class="p-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+<path data-name="Path 11954" d="M495.83,467.285l-7.522-7.535-2.478,2.482,10,10.018,10-10.018-2.477-2.482Z" transform="translate(-485.83 -459.75)" fill="#fff"/>
+</svg>
+
+                  </a>
+                  
+                <ul id="page-pattern-list">
+                    <li tabindex="0" value="101 page">101 page</li>
+                    <li tabindex="0" value="Adviser page">Adviser page</li>
+                    <li tabindex="0" value="Category page">Category page</li> 
+                    <li tabindex="0" value="Customer stories landing page">Customer stories landing page</li>
+                    <li tabindex="0" value="Customer story page">Customer story page</li>
+                    <li tabindex="0" value="Error page">Error page</li> 
+                    <li tabindex="0" value="Event page">Event page</li>
+                    <li tabindex="0" value="External BGA branded Q&A tools">External BGA branded Q&A tools</li> 
+                    <li tabindex="0" value="External grants landing page">External grants landing page</li>
+                    <li tabindex="0" value="Grant recipients page">Grant recipients page</li>
+                    <li tabindex="0" value="Guide page">Guide page</li>
+                    <li tabindex="0" value="Internal grants landing page">Internal grants landing page</li>
+                    <li tabindex="0" value="Internal Q&A tools">Internal Q&A tools</li>
+                    <li tabindex="0" value="Lightweight checklist">Lightweight checklist</li>
+                    <li tabindex="0" value="Maintenance page">Maintenance page</li>
+                    <li tabindex="0" value="Resource article page">Resource article page</li>
+                    <li tabindex="0" value="Site search page">Site search page</li> 
+                    <li tabindex="0" value="Standard checklist">Standard checklist</li>
+                    <li tabindex="0" value="Tiled page with filters">Tiled page with filters</li>
+                    <li tabindex="0" value="Tiled page with guided search">Tiled page with guided search</li>
+                    <li tabindex="0" value="Topic page">Topic page</li> 
+                    <li tabindex="0" value="Transaction action page">Transaction action page</li>
+                    <li tabindex="0" value="Tutorial page">Tutorial page</li>
+                    
+ 
+                </ul>
+              
+            </div>
+    
+            <div class="no-result error m-0 remove-element-padding">
+                <p>No foundations with this name.</p>
+            </div>
+            
+        </div>
+    
+    
+    </div>
+
 
 
         <div class="nav-tile-filters filter-component-type mt-0 mb-2 p-0">
-            <h5>Filter page patterns</h5>
+            
+            <h4>Page pattern type</h4>
 
             <fieldset>
                 <div class="filter-item">
@@ -287,7 +350,7 @@
 
 
 
-    <div class="col-12 col-md-8 col-xl-9">
+    <div class="col-12 col-md-8 col-xl-8">
 
         <div class="row tiles-wrapper remove-element-padding">
 
@@ -943,7 +1006,7 @@
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
-            <a class="tile-title stretched-link mb-4" href=/bga-style-guide/page-patterns/bga-maintenance-page.html >business.gov.au maintenance page</a>
+            <a class="tile-title stretched-link mb-4" href=/bga-style-guide/page-patterns/bga-maintenance-page.html >Maintenance page</a>
 
             <p class="tile-description mb-0"></p>
             
@@ -973,7 +1036,7 @@
         
         <div class="nav-body position-relative pt-4 px-4 pb-9 remove-element-padding">
 
-            <a class="tile-title stretched-link mb-4" href=/bga-style-guide/page-patterns/bga-error-page.html >business.gov.au error page</a>
+            <a class="tile-title stretched-link mb-4" href=/bga-style-guide/page-patterns/bga-error-page.html >Error page</a>
 
             <p class="tile-description mb-0"></p>
             
