@@ -726,7 +726,7 @@
                 }
             }
         }
-        .name-search, .dynamic-list {
+        .name-search {
             background: $nb-grey-mid;
            
             input {
@@ -750,6 +750,35 @@
     
             }
         }
+        .dynamic-list {
+            background: $nb-grey-mid;
+           
+            input {
+                &:focus, &:focus-visible {
+                    border-color: $nb-blue-links;
+                }
+            }
+            a#list-toggle {
+                background-color: $bga-black;
+
+                &:focus, &:focus-visible {
+                    border-color: $nb-blue-links;
+
+                    svg, svg path {
+                        fill: $bga-white;
+                    }
+                }
+                &:hover {
+                    svg, svg path {
+                        fill: $bga-white;
+                    }
+                }
+            }
+            ul li span {
+                background: $nb-grey-mid;
+            }
+        }
+
     }
 }
 .clear-filters {
