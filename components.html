@@ -16,14 +16,117 @@ description: A modular system of parts which form the building blocks of the sit
 
 <div class="row">
 
-    <div class="col-12 col-md-4 col-xl-3  d-none d-md-block">
+    <div class="col-12 col-md-4 col-xl-4  d-none d-md-block">
 
+    <!--  
         <div class="nav-tile-search p-4 mb-4">
             <label class="mb-3" for="component_name ">Search by component name</label>
             <div class="input-wrapper">
                 <input type="text" id="component_name" name="component_name">
                 <button type="submit">Submit</button>
             </div>
+        </div>
+    -->
+
+        <div id="style-guide-inpage-filter" class="filters dynamic-list dropdown">
+
+            <div class="dynamic-list remove-element-padding p-4">
+                <h4 class="mb-3">Filter components by name</h4>
+        
+                <div class="list-wrapper">
+        
+                    <input type="text" placeholder="Type a component name" name="components" data-list="component-list" />
+
+                    <a tabindex="0" href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
+                      </svg></a>
+
+                    
+                    <a id="list-toggle" tabindex="-1" title="Show All Items" class="p-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+  <path data-name="Path 11954" d="M495.83,467.285l-7.522-7.535-2.478,2.482,10,10.018,10-10.018-2.477-2.482Z" transform="translate(-485.83 -459.75)" fill="#fff"/>
+</svg>
+
+                      </a>
+                      
+           
+                    <ul id="component-list">
+                    <li tabindex="0" value="Hero pathway list">Hero pathway list</li>
+                    <li tabindex="0" value="Standard pathway list">Standard pathway list</li>
+                    <li tabindex="0" value="Light pathway list">Light pathway list</li>
+                    <li tabindex="0" value="Feature image pathway">Feature image pathway</li>
+                    <li tabindex="0" value="Image pathway list">Image pathway list</li>
+                    <li tabindex="0" value="Inline pathway list">Inline pathway list</li>
+                    <li tabindex="0" value="Relevant support links">Relevant support links</li>
+                    <li tabindex="0" value="Page headers">Page headers</li>
+                    <li tabindex="0" value="Home page banner">Home page banner</li>
+                    <li tabindex="0" value="Call to action">Call to action</li>
+                    <li tabindex="0" value="Call out box">Call out box</li>
+                    <li tabindex="0" value="Contact us call out box">Contact us call out box</li>
+                    <li tabindex="0" value="Email / download call to action">Email / download call to action</li>
+                    <li tabindex="0" value="Event registration call to action">Event registration call to action</li>
+                    <li tabindex="0" value="Call out link">Call out link</li>
+                    <li tabindex="0" value="Feature box">Feature box</li>
+                    <li tabindex="0" value="Clause / regulation box">Clause / regulation box</li>
+                    <li tabindex="0" value="Accordion">Accordion</li>
+                    <li tabindex="0" value="Mini-list">Mini-list</li>
+                    <li tabindex="0" value="Table">Table</li>
+                    <li tabindex="0" value="List group">List group</li>
+                    <li tabindex="0" value="Image">Image</li>
+                    <li tabindex="0" value="Video player">Video player</li>
+                    <li tabindex="0" value="Audio player">Audio player</li>
+                    <li tabindex="0" value="Download list">Download list</li>
+                    <li tabindex="0" value="Grant status indicator">Grant status indicator</li>
+                    <li tabindex="0" value="Grant rounds accordion">Grant rounds accordion</li>
+                    <li tabindex="0" value="Pathway accordion">Pathway accordion</li>
+                    <li tabindex="0" value="Pull quote">Pull quote</li>
+                    <li tabindex="0" value="Notifications">Notifications</li>
+                    <li tabindex="0" value="Modal dialog">Modal dialog</li>
+                    <li tabindex="0" value="Toast notification">Toast notification</li>
+                    <li tabindex="0" value="Cookie notification">Cookie notification</li>
+                    <li tabindex="0" value="Disclaimer alerts">Disclaimer alerts</li>
+                    <li tabindex="0" value="Global alert">Global alert</li>
+                    <li tabindex="0" value="Global pathway to services">Global pathway to services</li>
+                    <li tabindex="0" value="business.gov.au site header">business.gov.au site header</li>
+                    <li tabindex="0" value="business.gov.au site footer">business.gov.au site footer</li>
+                    <li tabindex="0" value="Anchor menu">Anchor menu</li>
+                    <li tabindex="0" value="Breadcrumbs">Breadcrumbs</li>
+                    <li tabindex="0" value="In page tabs">In page tabs</li>
+                    <li tabindex="0" value="Pagination">Pagination</li>
+                    <li tabindex="0" value="Print and share utilities">Print and share utilities</li>
+                    <li tabindex="0" value="Subscribe">Subscribe</li>
+                    <li tabindex="0" value="Chat button">Chat button</li>
+                    <li tabindex="0" value="Tooltip">Tooltip</li>
+                    <li tabindex="0" value="In page feedback">In page feedback</li>
+                    <li tabindex="0" value="Subsite header">Subsite header</li>
+                    <li tabindex="0" value="Subsite footer">Subsite footer</li>
+                    <li tabindex="0" value="Tool start component">Tool start component</li>
+                    <li tabindex="0" value="Guided search">Guided search</li>
+                    <li tabindex="0" value="Stepped navigation">Stepped navigation</li>
+                    <li tabindex="0" value="Progress bar">Progress bar</li>
+                    <li tabindex="0" value="Save your progress sidebar">Save your progress sidebar</li>
+                    <li tabindex="0" value="Dynamic sidebar">Dynamic sidebar</li>
+                    <li tabindex="0" value="Lightweight checklist accordion">Lightweight checklist accordion</li>
+                    <li tabindex="0" value="Standard checklist accordion">Standard checklist accordion</li>
+                    <li tabindex="0" value="Comparison accordion">Comparison accordion</li>
+                    <li tabindex="0" value="Information sidebar">Information sidebar</li>
+                    <li tabindex="0" value="Site search result tiles">Site search result tiles</li>
+                    <li tabindex="0" value="Finder tool result tiles">Finder tool result tiles</li>
+                    <li tabindex="0" value="Tools and templates tiles">Tools and templates tiles</li>
+                    <li tabindex="0" value="Action tiles">Action tiles</li>
+                    <li tabindex="0" value="Tile filters">Tile filters</li>
+                    <li tabindex="0" value="Tool results components">Tool results components</li>
+                    
+                    </ul>
+                  
+                </div>
+        
+                <div class="no-result error m-0 remove-element-padding">
+                    <p>No component with this name.</p>
+                </div>
+                
+            </div>
+        
+        
         </div>
 
 
@@ -93,7 +196,7 @@ description: A modular system of parts which form the building blocks of the sit
 
     </div>
 
-    <div class="col-12 col-md-8 col-xl-9">
+    <div class="col-12 col-md-8 col-xl-8">
 
         <div class="row tiles-wrapper remove-element-padding">
 
@@ -158,7 +261,7 @@ description: A modular system of parts which form the building blocks of the sit
             classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper link-to-internal-pages
             link-to-external-pages bga-inline-pathway-list"
             tile-url="components/inline-pathway.html"
-            tile-title="Inline pathway list "
+            tile-title="Inline pathway list"
             tile-tag1="Link to internal pages"
             tile-tag2="Link to external pages"
             tile-image="assets/nav-images/nav-tile-inlinepathway.svg"
