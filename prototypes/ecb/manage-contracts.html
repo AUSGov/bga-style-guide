@@ -1,0 +1,84 @@
+---
+
+layout: ecb
+title: Employment Contract Tool
+description: Build your own employment contract, for an employee under Australia's Fair Work System, that is tailored to your business needs.
+
+---
+
+<div class="container page-content page-manage-contracts my-5">
+
+    <div class="row">
+
+        <div class="remove-top-spaces col-12">
+            <div class="remove-top-spaces content-wrapper">
+
+                <h2>Your saved employment contracts</h2>
+
+
+                <div class="contracts-list mb-5">
+                    
+                    {% include prototypes/ecb-contract-actions.html
+                        position="Sales assistant"
+                        expiry="seven days"
+                        %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                        position="Manager"
+                        expiry="seven days"
+                        %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                        position="Senior dog walker and personal care attendant"
+                        expiry="1 day"
+                        %}
+                    
+                   
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-12 col-md-11 col-lg-9 col-xl-8">
+
+            <div class="remove-top-spaces content-wrapper">
+
+                <div class="no-contract">
+                    {% include component-examples/notification-example.html
+                    icon="'../../assets/icon-notification-circle-info.svg' | relative_url "
+                    title="You don't currently have any saved contracts."
+                    classes="information no-contract"
+                    %}
+                </div>
+
+
+                <h3>Start a new contract</h3>
+
+                {% include component-examples/inline-pathway-example.html
+                link1="Start a new contract"
+                page1="Employment contract tool"
+                icon1="'../../assets/icon-arrow-right-blue.svg' | relative_url "
+
+                %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

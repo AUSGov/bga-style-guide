@@ -21,6 +21,7 @@ html.ecb-prototype {
             max-width: 100px;
         }
     }
+
     .ecb-button-group {
         flex-wrap: wrap;
         row-gap: 24px;
@@ -122,14 +123,17 @@ html.ecb-prototype {
                     left: 12px;
                 }
             }
+
             .error-msg {
                 display: none;
             }
+
             &.error {
                 .code-inputs {
                     box-shadow: 0 0 0 8px $bga-red-fail-mid;
                     background: $bga-red-fail-mid;
                 }
+
                 input {
                     background: $bga-red-fail-light;
                     border-bottom-color: $bga-red-fail-dark;
@@ -137,28 +141,29 @@ html.ecb-prototype {
 
                 .error-msg {
                     display: block;
-                    
+
                     p {
                         color: $bga-red-fail-dark;
                     }
                 }
             }
         }
+
         .resend {
             display: flex;
-    
+
             a.sent {
                 color: $bga-green-success-background;
                 text-decoration: none;
                 cursor: default;
-    
+
                 &:hover {
                     background: transparent;
                 }
             }
         }
     }
-    
+
     #ecb-modal-email {
         .step {
             display: none;
@@ -168,6 +173,7 @@ html.ecb-prototype {
             }
         }
     }
+
     #email-form {
         input {
             width: auto;
@@ -190,6 +196,7 @@ html.ecb-prototype {
             display: block;
         }
     }
+
     .testing-msg {
         display: none;
         background: $bga-orange-highlight-light;
@@ -197,10 +204,11 @@ html.ecb-prototype {
         font-family: 'Times New Roman', Times, serif;
         font-size: 1.2rem;
         letter-spacing: 0.1;
-        
+
         strong {
             font-size: 1.6rem;
         }
+
         &.show {
             display: inline-block;
         }
@@ -247,6 +255,7 @@ html.ecb-prototype {
             flex-wrap: wrap;
             width: calc(33.33% - 16px);
         }
+
         .cta-title {
             width: 100%;
             background: $bga-teal-highlight-mid;
@@ -258,6 +267,7 @@ html.ecb-prototype {
                 padding: 0;
             }
         }
+
         .cta-content {
             flex-wrap: wrap;
             height: calc(100% - 80px);
@@ -265,23 +275,128 @@ html.ecb-prototype {
         }
     }
 
+}
 
-    // Media queries
-    @media (max-width: 992px) {
+.grey-bkg {
+    background: $bga-blue-black-light;
+}
+
+#dummy-modal {
+    background: $bga-white;
+    box-shadow: $bga-btn-boxshadow;
+    height: auto;
+
+    .pretend-bga-link {
+        color: $bga-blue-links;
+        font-weight: 600;
+        text-decoration: underline;
+        font-size: 1rem;
+        line-height: 1.75;
+        display: inline-block;
+    }
+
+    .pretend-bga-btn {
+        display: inline-flex;
+        align-items: center;
+        border: solid 3px $bga-yellow-highlight-shadow;
+        border-radius: 100px;
+        background: $bga-yellow-highlight-dark;
+        color: $bga-blue-black-dark;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 8px 32px;
+        min-height: 56px;
+        box-shadow: $bga-btn-boxshadow;
+        justify-content: center;
+        text-decoration: none !important;
+    }
+}
+//End #ecb-prototype
+
+.contracts-list {
+
+    .contract {
+        border-bottom: solid 1px $bga-blue-black-mid;
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contract-details {
+        display: flex;
+        align-items: center;
+
+        .contract-name {
+            margin-right: 24px;
+            font-size: 18px;
+        }
+    }
+    .contract-actions {
+        min-width: 380px;
+        a {
+            margin-left: 24px;
+            text-decoration: none;
+            border-bottom: 1px solid $bga-blue-links;
+            padding-bottom: 4px;
+            display: inline-flex;
+            align-items: flex-end;
+            line-height: 1;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom-color: $bga-blue-footer;
+
+                svg path {
+                    fill: $bga-blue-footer;
+                }
+            }
+        }
+        svg {
+            margin-left: 8px;
+        }
+    }
+}
+.no-contract{
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
+// Media queries
+@media (max-width: 1200px) {
+    .contracts-list {
+        .contract-details {
+            flex-wrap: wrap;
+        }
+        .contract-name {
+            width: 100%;
+        }
+        .expiry {
+            margin-top: 8px;
+        }
+    }
+}
+@media (max-width: 992px) {
+    #ecb-prototype {
         #page-header.fixed {
             .header-content {
                 padding: 24px 0 !important;
             }
         }
+
         .call-to-action.finalise {
             flex-wrap: wrap;
-            
+
             .cta-container {
-                width: 100% !important;   
+                width: 100% !important;
             }
+
             .cta-title {
-                width: 100%; 
+                width: 100%;
             }
+
             .cta-content {
                 height: auto;
 
@@ -292,8 +407,10 @@ html.ecb-prototype {
             }
         }
     }
+}
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
+    #ecb-prototype {
         #page-header.stepped-nav .stepped-navigation-wrapper {
 
             .stepped-navigation-wrapper {
@@ -338,13 +455,30 @@ html.ecb-prototype {
 
         .save-footer {
             .button-wrapper {
-                justify-content: flex-start !important; 
+                justify-content: flex-start !important;
                 margin-top: 24px;
             }
         }
     }
+    .contracts-list {
+        .contract {
+            flex-wrap: wrap;
+        }
+        .contract-actions {
+            min-width: auto;
+            margin-top: 16px;
 
-    @media (max-width: 576px) {
+            a {
+                &:first-of-type {
+                    margin-left: 0;
+                }    
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #ecb-prototype {
         .call-to-action.teal {
             .button-group {
                 a {
@@ -352,9 +486,11 @@ html.ecb-prototype {
                 }
             }
         }
+
         .ecb-button-group a {
             font-size: 0.875rem;
         }
+
         #email-form {
             flex-wrap: wrap;
 
@@ -364,10 +500,23 @@ html.ecb-prototype {
                 margin-right: 0 !important;
             }
         }
-        
     }
+    .contracts-list {
+        .contract-actions {
+            a {
+                display: inline-block;
+                margin: 0 16px 16px 0;
+                
+                &:last-of-type {
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+    }
+}
 
-    @media (max-width: 350px) {
+@media (max-width: 350px) {
+    #ecb-prototype {
         .call-to-action.teal {
             .button-group {
                 flex-wrap: wrap;
@@ -378,18 +527,21 @@ html.ecb-prototype {
                 }
             }
         }
+
         .modal-example {
             .number-code {
                 input {
                     width: 40px;
                 }
+
                 .success-icon {
                     margin-left: 16px !important;
                 }
             }
         }
 
-        .ecb-button-group, .two-button-group {
+        .ecb-button-group,
+        .two-button-group {
             flex-wrap: wrap;
 
             a {
@@ -399,41 +551,4 @@ html.ecb-prototype {
             }
         }
     }
-
-
 }
-.grey-bkg {
-    background: $bga-blue-black-light;
-}
-#dummy-modal {
-    background: $bga-white;
-    box-shadow: $bga-btn-boxshadow;
-    height: auto;
-
-    .pretend-bga-link {
-        color: $bga-blue-links;
-        font-weight: 600;
-        text-decoration: underline;
-        font-size: 1rem;
-        line-height: 1.75;
-        display: inline-block;
-    }
-    .pretend-bga-btn {
-        display: inline-flex;
-        align-items: center;
-        border: solid 3px $bga-yellow-highlight-shadow;
-        border-radius: 100px;
-        background: $bga-yellow-highlight-dark;
-        color: $bga-blue-black-dark;
-        font-weight: 600;
-        font-size: 1rem;
-        line-height: 1.5;
-        padding: 8px 32px;
-        min-height: 56px;
-        box-shadow: $bga-btn-boxshadow;
-        justify-content: center;
-        text-decoration: none !important;
-    }
-}
-
-//End #ecb-prototype
