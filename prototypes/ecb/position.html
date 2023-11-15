@@ -11,11 +11,11 @@ step-number: 1
 
 
     <!-- POSITION TITLE -->
-    <div id="section-position-title"class="row remove-element-padding">
+    <div id="section-position-title"class="row remove-element-padding"> 
 
         <h2>Position title</h2>
 
-        <div class="col-12 col-md-8 col-xl-7">
+        <div class="col-12 col-md-8 col-xl-7">  
             <div class="question-section remove-element-padding">
                
                     <div class="mb-5 p-0 form-example clause-box-include">
@@ -29,7 +29,6 @@ step-number: 1
                     </div>
 
           
-
                 <div class="bga-component-wrapper mb-5">
                     
                     {% include component-examples/clause-box-example.html
@@ -57,6 +56,137 @@ step-number: 1
             classes="inpage teal"
             %}
 
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+    <!-- DUTIES -->
+    <div id="section-duties" class="row remove-element-padding">
+
+        <h2>Duties</h2>
+
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+                <p>You should provide your new employee with a description or outline of their duties and responsibilities so they understand what they're being employed to do.</p>
+                <p class="mb-3">You may attach your employee's duties and responsibilities in a separate position description, or outline them here within the contract.</p>
+
+                <div class="mb-4 p-0 ">
+                    <div class="form-element-wrapper no-flex mb-3">
+                        <div class="clause-box-radios radios mb-4" id="duties" role="radiogroup">
+                            
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="duties" id="duties-later" data-value="duties described in the attached position description as required.">
+                                <label class="form-check-label" for="duties-later">
+                                    <strong>I will attach the position description later</strong>
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" type="radio" name="duties" id="duties-now" data-value="following duties as required:">
+                                <label class="form-check-label" for="duties-now">
+                                    <strong>I will outline the duties and responsibilities now</strong> 
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <label for="duties-text" class="form-label mb-3"><strong>Outline the duties and responsibilities of your employee’s role</strong></label>
+                        
+                        <textarea class="form-control clause-box-input mb-4" id="duties-textarea" value="" required></textarea>
+                        
+                    </div>
+
+                </div>
+
+                <div class="bga-component-wrapper">
+                    
+                    {% include component-examples/clause-box-example.html
+                        title="Duties clause"
+                        tag="Included"
+                        tag-type="mandatory"
+                        content="<p>You will perform the <span class='regular'></span></p>
+                        <div class='duties-textarea'></div>
+                        <p>We may also assign you other duties, where reasonable for your position, training and experience.</p>"
+                        id="duties"
+                    %}
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Duties / Position description"
+            text="<p>If you provided a position (or job) description during your recruitment process, you can use this. If you don't have a position description yet, you can download the job description  template from the Fair Work Ombudsman website and fill it in later.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+     <!-- AWARD -->
+     <div id="section-award" class="row remove-element-padding">
+
+        <h2>Award for your employee</h2>
+
+        <div class="col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+               
+                    <div class="p-0 mb-4 form-example clause-box-include">
+                        <label for="award" class="form-label mb-3"><strong>
+                            What is the name of the award that applies to your employee?
+                            </strong></label>
+                            <p class="mb-3">If you're not sure which one applies, use the Fair Work Ombudsman's <a href="https://services.fairwork.gov.au/find-my-award/" target="_blank" rel="noopener noreferrer">Find my award tool- external site</a>.</p>
+
+                        <select class="form-select" id="award" aria-label="Default select example">
+                            <option class="default-option" value="">Select your award</option>
+                            <option value="individual sole trader">Individual sole trader</option>
+                            <option value="company with sole director">Company with sole director</option>
+                            <option value="company with more than one director">Company with more than one director
+                            </option>
+                            <option value="partnership or association">Partnership or association</option>
+                            <option value="authorised representative">Authorised representative</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                    </div>
+
+                    <div class="bga-component-wrapper">
+                    
+                        {% include component-examples/clause-box-example.html
+                            title="Employment terms and conditions clause"
+                            tag="Included"
+                            tag-type="dynamic"
+                            content="Your employment terms and conditions are those set out in this contract, the <span>[award name]</span> and applicable legislation. This includes the National Employment Standards- external site in the Fair Work Act 2009."
+                            id="award"
+                        %}
+                        
+                    </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="What's an award?"
+            text=" <p>The award sets the minimum terms and conditions for your employee. Keep in mind that you can always provide more generous conditions.</p>
+            <p>Your employee's pay and other entitlements will depend on their classification level in the award and their employment type. Awards are regularly updated, so make sure you keep up to date with your employee's entitlements.</p>
+            <p><a href='https://www.fairwork.gov.au/about-us/contact-us/subscribe-to-email-updates' target='_blank'>Subscribe to email updates- external site</a> from the Fair Work Ombudsman to stay up to date with any changes to your award.</p>
+            <p>If you're not sure which one applies, use the Fair Work Ombudsman's <a href='https://services.fairwork.gov.au/find-my-award/' target='_blank' >Find my award tool- external site</a>.</p>"
+            classes="inpage teal"
+            %}
         </div>
 
     </div>
