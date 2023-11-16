@@ -812,26 +812,26 @@
 
 
     <!-- POSITION TITLE -->
-    <div id="section-position-title"class="row remove-element-padding"> 
+    <div id="section-position-title" class="row remove-element-padding">
 
         <h2>Position title</h2>
 
-        <div class="col-12 col-md-8 col-xl-7">  
+        <div class="col-12 col-md-8 col-xl-7">
             <div class="question-section remove-element-padding">
-               
-                    <div class="mb-5 p-0 form-example clause-box-include">
-                        <label for="position-title" class="form-label mb-3"><strong>What is the employee's position title?</strong></label>
-                        <p class="mb-3">e.g. Accounts manager, Sales assistant</p>
-                        <input type="text" class="form-control clause-box-input mb-4" id="position-title" value=""
-                            required>
 
-                        <p>Click anywhere outside the input field to update the clause preview box below.</p>
+                <div class="mb-5 p-0 form-example clause-box-include">
+                    <label for="position-title" class="form-label mb-3"><strong>What is the employee's position
+                            title?</strong></label>
+                    <p class="mb-3">e.g. Accounts manager, Sales assistant</p>
+                    <input type="text" class="form-control clause-box-input mb-4" id="position-title" value="" required>
 
-                    </div>
+                    <p>Click anywhere outside the input field to update the clause preview box below.</p>
 
-          
+                </div>
+
+
                 <div class="bga-component-wrapper mb-5">
-                    
+
                     <div class="bga-component-wrapper">
     <div class="bga-component clause-box  position-title m-0">
 
@@ -871,7 +871,7 @@
 
     </div>
 </div>
-                   
+
                 </div>
 
                 <p>Clauses marked as "Included" will be added to your employment contract.</p>
@@ -927,39 +927,48 @@
         <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
 
             <div class="question-section remove-element-padding">
-                <p>You should provide your new employee with a description or outline of their duties and responsibilities so they understand what they're being employed to do.</p>
-                <p class="mb-3">You may attach your employee's duties and responsibilities in a separate position description, or outline them here within the contract.</p>
+                <p>You should provide your new employee with a description or outline of their duties and
+                    responsibilities so they understand what they're being employed to do.</p>
+                <p class="mb-3">You may attach your employee's duties and responsibilities in a separate position
+                    description, or outline them here within the contract.</p>
 
                 <div class="mb-4 p-0 ">
                     <div class="form-element-wrapper no-flex mb-3">
                         <div class="clause-box-radios radios mb-4" id="duties" role="radiogroup">
-                            
+
                             <div class="radio-button alternate pb-1">
-                                <input class="form-check-input m-0" type="radio" name="duties" id="duties-later" data-value="duties described in the attached position description as required.">
+                                <input class="dynamic-hide form-check-input m-0" type="radio" name="duties"
+                                    id="duties-later"
+                                    data-value="duties described in the attached position description as required.">
                                 <label class="form-check-label" for="duties-later">
                                     <strong>I will attach the position description later</strong>
                                 </label>
                             </div>
 
                             <div class="radio-button alternate pb-1">
-                                <input class="form-check-input m-0" type="radio" name="duties" id="duties-now" data-value="following duties as required:">
+                                <input class="dynamic-show form-check-input m-0" type="radio" name="duties"
+                                    id="duties-now" data-value="following duties as required:">
                                 <label class="form-check-label" for="duties-now">
-                                    <strong>I will outline the duties and responsibilities now</strong> 
+                                    <strong>I will outline the duties and responsibilities now</strong>
                                 </label>
                             </div>
 
                         </div>
 
-                        <label for="duties-text" class="form-label mb-3"><strong>Outline the duties and responsibilities of your employee’s role</strong></label>
-                        
-                        <textarea class="form-control clause-box-input mb-4" id="duties-textarea" value="" required></textarea>
-                        
+                        <div class="dynamic-display duties-textarea d-none">
+                            <label for="duties-text" class="form-label mb-3"><strong>Outline the duties and
+                                    responsibilities of your employee’s role</strong></label>
+
+                            <textarea class="form-control clause-box-input mb-4" id="duties-textarea" value=""
+                                required></textarea>
+                        </div>
+
                     </div>
 
                 </div>
 
                 <div class="bga-component-wrapper">
-                    
+
                     <div class="bga-component-wrapper">
     <div class="bga-component clause-box  duties m-0">
 
@@ -990,9 +999,10 @@
             <div class="component-text remove-element-padding">
 
                 
-                    <p>You will perform the <span class='regular'></span></p>
-                        <div class='duties-textarea'></div>
-                        <p>We may also assign you other duties, where reasonable for your position, training and experience.</p>
+                    <p>You will perform the <span class='no-highlight'>[duties description]</span></p>
+                    <div class='duties-textarea textarea-input'></div>
+                    <p>We may also assign you other duties, where reasonable for your position, training and experience.
+                    </p>
                 
 
             </div>
@@ -1001,7 +1011,7 @@
 
     </div>
 </div>
-                    
+
                 </div>
 
             </div>
@@ -1020,7 +1030,9 @@
             
             
             
-                <p>If you provided a position (or job) description during your recruitment process, you can use this. If you don't have a position description yet, you can download the job description  template from the Fair Work Ombudsman website and fill it in later.</p>
+                <p>If you provided a position (or job) description during your recruitment process, you can use this.
+                If you don't have a position description yet, you can download the job description template from the
+                Fair Work Ombudsman website and fill it in later.</p>
             
             
         </div>
@@ -1045,37 +1057,39 @@
     <hr class="section-divider my-5" />
 
 
-     <!-- AWARD -->
-     <div id="section-award" class="row remove-element-padding">
+    <!-- AWARD -->
+    <div id="section-award" class="row remove-element-padding">
 
         <h2>Award for your employee</h2>
 
         <div class="col-12 col-md-8 col-xl-7">
 
             <div class="question-section remove-element-padding">
-               
-                    <div class="p-0 mb-4 form-example clause-box-include">
-                        <label for="award" class="form-label mb-3"><strong>
+
+                <div class="p-0 mb-4 form-example clause-box-include">
+                    <label for="award" class="form-label mb-3"><strong>
                             What is the name of the award that applies to your employee?
-                            </strong></label>
-                            <p class="mb-3">If you're not sure which one applies, use the Fair Work Ombudsman's <a href="https://services.fairwork.gov.au/find-my-award/" target="_blank" rel="noopener noreferrer">Find my award tool- external site</a>.</p>
+                        </strong></label>
+                    <p class="mb-3">If you're not sure which one applies, use the Fair Work Ombudsman's <a
+                            href="https://services.fairwork.gov.au/find-my-award/" target="_blank"
+                            rel="noopener noreferrer">Find my award tool- external site</a>.</p>
 
-                        <select class="form-select" id="award" aria-label="Default select example">
-                            <option class="default-option" value="">Select your award</option>
-                            <option value="individual sole trader">Individual sole trader</option>
-                            <option value="company with sole director">Company with sole director</option>
-                            <option value="company with more than one director">Company with more than one director
-                            </option>
-                            <option value="partnership or association">Partnership or association</option>
-                            <option value="authorised representative">Authorised representative</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <select class="form-select" id="award" aria-label="Default select example">
+                        <option class="default-option" value="">Select your award</option>
+                        <option value="individual sole trader">Individual sole trader</option>
+                        <option value="company with sole director">Company with sole director</option>
+                        <option value="company with more than one director">Company with more than one director
+                        </option>
+                        <option value="partnership or association">Partnership or association</option>
+                        <option value="authorised representative">Authorised representative</option>
+                        <option value="other">Other</option>
+                    </select>
 
-                    </div>
+                </div>
+
+                <div class="bga-component-wrapper">
 
                     <div class="bga-component-wrapper">
-                    
-                        <div class="bga-component-wrapper">
     <div class="bga-component clause-box  award m-0">
 
         <div class="p-4 component-content h-100">
@@ -1105,7 +1119,9 @@
             <div class="component-text remove-element-padding">
 
                 
-                    Your employment terms and conditions are those set out in this contract, the <span>[award name]</span> and applicable legislation. This includes the National Employment Standards- external site in the Fair Work Act 2009.
+                    Your employment terms and conditions are those set out in this contract, the <span>[award
+                        name]</span> and applicable legislation. This includes the National Employment Standards-
+                    external site in the Fair Work Act 2009.
                 
 
             </div>
@@ -1114,8 +1130,8 @@
 
     </div>
 </div>
-                        
-                    </div>
+
+                </div>
 
 
             </div>
@@ -1135,10 +1151,17 @@
             
             
             
-                 <p>The award sets the minimum terms and conditions for your employee. Keep in mind that you can always provide more generous conditions.</p>
-            <p>Your employee's pay and other entitlements will depend on their classification level in the award and their employment type. Awards are regularly updated, so make sure you keep up to date with your employee's entitlements.</p>
-            <p><a href='https://www.fairwork.gov.au/about-us/contact-us/subscribe-to-email-updates' target='_blank'>Subscribe to email updates- external site</a> from the Fair Work Ombudsman to stay up to date with any changes to your award.</p>
-            <p>If you're not sure which one applies, use the Fair Work Ombudsman's <a href='https://services.fairwork.gov.au/find-my-award/' target='_blank' >Find my award tool- external site</a>.</p>
+                 <p>The award sets the minimum terms and conditions for your employee. Keep in mind that you can
+                always provide more generous conditions.</p>
+            <p>Your employee's pay and other entitlements will depend on their classification level in the award and
+                their employment type. Awards are regularly updated, so make sure you keep up to date with your
+                employee's entitlements.</p>
+            <p><a href='https://www.fairwork.gov.au/about-us/contact-us/subscribe-to-email-updates'
+                    target='_blank'>Subscribe to email updates- external site</a> from the Fair Work Ombudsman to stay
+                up to date with any changes to your award.</p>
+            <p>If you're not sure which one applies, use the Fair Work Ombudsman's <a
+                    href='https://services.fairwork.gov.au/find-my-award/' target='_blank'>Find my award tool- external
+                    site</a>.</p>
             
             
         </div>
@@ -1171,28 +1194,29 @@
         <div class="col-12 col-md-8 col-xl-7">
 
             <div class="question-section remove-element-padding">
-               
-                    <div class="p-0 form-example clause-box-include">
-                        <label for="business-structure" class="form-label mb-3"><strong>What is your business
-                                structure?</strong></label>
-                        <p class="mb-3">
-                            We need to know your business structure to determine the signature fields to include in your
-                            contract. This information is not shared with any other agency, for more information see our privacy page.
-                        </p>
 
-                        <select class="form-select" id="business-structure" aria-label="Default select example">
-                            <option class="default-option" value="">Select your business structure</option>
-                            <option value="individual sole trader">Individual sole trader</option>
-                            <option value="company with sole director">Company with sole director</option>
-                            <option value="company with more than one director">Company with more than one director
-                            </option>
-                            <option value="partnership or association">Partnership or association</option>
-                            <option value="authorised representative">Authorised representative</option>
-                            <option value="other">Other</option>
-                        </select>
+                <div class="p-0 form-example clause-box-include">
+                    <label for="business-structure" class="form-label mb-3"><strong>What is your business
+                            structure?</strong></label>
+                    <p class="mb-3">
+                        We need to know your business structure to determine the signature fields to include in your
+                        contract. This information is not shared with any other agency, for more information see our
+                        privacy page.
+                    </p>
 
-                    </div>
-            
+                    <select class="form-select" id="business-structure" aria-label="Default select example">
+                        <option class="default-option" value="">Select your business structure</option>
+                        <option value="individual sole trader">Individual sole trader</option>
+                        <option value="company with sole director">Company with sole director</option>
+                        <option value="company with more than one director">Company with more than one director
+                        </option>
+                        <option value="partnership or association">Partnership or association</option>
+                        <option value="authorised representative">Authorised representative</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                </div>
+
             </div>
 
 
@@ -1237,6 +1261,273 @@
     <hr class="section-divider my-5" />
 
 
+    <!-- WORKPLACE -->
+    <div id="section-workplace" class="row remove-element-padding">
+
+        <h2>Workplace</h2>
+
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+                <h3 class="mb-3"><strong>Where is the employee’s main place of work?</strong></h3>
+                <p class="mb-3">You may fill in the employee's workplace address here and it will appear in the
+                    contract. Or, insert the workplace address later by editing the contract.</p>
+
+                <div class="mb-4 p-0 ">
+                    <div class="form-element-wrapper no-flex mb-3">
+                        <div class="clause-box-radios radios mb-4" id="workplace" role="radiogroup">
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="dynamic-hide form-check-input m-0" type="radio" name="workplace"
+                                    id="workplace-later" data-value="">
+                                <label class="form-check-label" for="workplace-later">
+                                    <strong>I will insert the workplace address later</strong>
+                                </label>
+                            </div>
+
+                            <div class="radio-button alternate pb-1">
+                                <input class="dynamic-show form-check-input m-0" type="radio" name="workplace"
+                                    id="workplace-now" data-value="">
+                                <label class="form-check-label" for="workplace-now">
+                                    <strong>I will enter the workplace address here</strong>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="dynamic-display workplace d-none">
+                            <h3>Where is the employee’s main place of work?</h3>
+
+                            <fieldset class="border border-secondary remove-element-padding p-4 mb-4" id="address1">
+                                <h3>Workplace address</h3>
+                                
+                                    <div class="address-fields">
+                                        <div class="formtool-field question reset-first" id="Q_16_1_1"
+                                            data-question-id="0da66b09115440f1b7a9de222ff9eaa1_1" data-sequenceid="8">
+                                            <label for="var_Q_16_1_1" class="h4 text-utility-blueblack-600 p-0 mb-6">
+                                                Address
+                                            </label>
+
+                                            <div class="text-control reset-last">
+
+
+                                                <div class="field-container">
+                                                    <input name="var_Q_16_1_1" id="var_Q_16_1_1" data-key="key_Q_16_1_1"
+                                                        type="text" maxlength="100" inputmode="text"
+                                                        class="text-question" aria-required="true" placeholder=""
+                                                        aria-errormessage="errors-Q_16_1_1">
+
+                                                </div>
+
+                                               
+                                            </div>
+
+                                        </div>
+                                        <div class="formtool-field question reset-first" id="Q_16_2_1"
+                                            data-question-id="06cd60b5169346f2860c2dae3765ba4c_1" data-sequenceid="9">
+                                            <label for="var_Q_16_2_1" class="h4 text-utility-blueblack-600 p-0 mb-6">
+                                                City/Suburb
+                                            </label>
+
+                                            <div class="text-control reset-last">
+
+
+                                                <div class="field-container">
+                                                    <input name="var_Q_16_2_1" id="var_Q_16_2_1" data-key="key_Q_16_2_1"
+                                                        type="text" maxlength="100" inputmode="text"
+                                                        class="text-question" aria-required="true" placeholder=""
+                                                        aria-errormessage="errors-Q_16_2_1">
+
+                                                </div>
+
+                                                <div id="errors-Q_16_2_1" class="error-message-container">
+
+
+
+                                                    <p id="error-msg-Q_16_2_1"
+                                                        class="error-message required d-none text-utility-red-300 mb-0 pt-6">
+                                                        Enter a city/suburb</p>
+
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="formtool-field question reset-first" id="Q_16_3_1"
+                                            data-question-id="d5c1492c0a4d4a6b9c88424dd5581d9d_1" data-sequenceid="10">
+                                            <label for="var_Q_16_3_1" class="h4 text-utility-blueblack-600 p-0 mb-6">
+                                                State/Territory
+                                            </label>
+                                            <div class="dropdown-control reset-last">
+                                                <div class="field-container">
+                                                    <select class="dropdown-question tool-dropdown" name="var_Q_16_3_1"
+                                                        id="var_Q_16_3_1" autocomplete="off" data-key="key_Q_16_3_1"
+                                                        aria-required="true" aria-errormessage="errors-Q_16_3_1">
+                                                        <option class="default-option" value="">Select a state or
+                                                            territory</option>
+
+                                                        <option id="b781090a9f464dfbbd4387b81f36afb6"
+                                                            value="Australian Capital Territory">Australian Capital
+                                                            Territory</option>
+                                                        <option id="7931a61533a242578986cea77163e4dc"
+                                                            value="New South Wales">New South Wales</option>
+                                                        <option id="4db4e5c128d544b9814859fd26e51a2d"
+                                                            value="Northern Territory">Northern Territory</option>
+                                                        <option id="7191d58801834a0da305775e0fe8ca82"
+                                                            value="Queensland">Queensland</option>
+                                                        <option id="618f80e70aa0486e8247f3ac2768223f"
+                                                            value="South Australia">South Australia</option>
+                                                        <option id="ce3f7d6ee6fd4660ae0e80a2f47c0b64" value="Tasmania">
+                                                            Tasmania</option>
+                                                        <option id="0328c449993d46bfb8f54f29342bed3a" value="Victoria">
+                                                            Victoria</option>
+                                                        <option id="f0355522a6ed48399e7fb7fbdb8fdccf"
+                                                            value="Western Australia">Western Australia</option>
+
+                                                    </select>
+                                                </div>
+                                                <div id="errors-Q_16_3_1" class="error-message-container">
+                                                    <p id="error-msg-Q_16_3_1"
+                                                        class="error-message required d-none text-utility-red-300 mb-0 pt-6">
+                                                        Select state or territory</p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="formtool-field question col-lg-4 reset-first" id="Q_16_4_1"
+                                            data-question-id="b132e07958b04b6d98fdcac5f5954a68_1" data-sequenceid="11">
+                                            <label for="var_Q_16_4_1" class="h4 text-utility-blueblack-600 p-0 mb-6">
+                                                Postcode
+                                            </label>
+
+                                            <div class="text-control reset-last">
+
+
+                                                <div class="field-container input-short">
+                                                    <input name="var_Q_16_4_1" id="var_Q_16_4_1" data-key="key_Q_16_4_1"
+                                                        type="number" maxlength="4" inputmode="numeric"
+                                                        class="text-question" aria-required="true" placeholder=""
+                                                        aria-errormessage="errors-Q_16_4_1">
+
+                                                </div>
+
+                                                <div id="errors-Q_16_4_1" class="error-message-container">
+
+
+
+                                                    <p id="error-msg-Q_16_4_1"
+                                                        class="error-message required d-none text-utility-red-300 mb-0 pt-6">
+                                                        Enter a postcode</p>
+
+                                                    <p data-error="Enter a whole number."
+                                                        class="error-message whole-number d-none text-utility-red-300 m-0 pt-6">
+                                                        Enter a whole number.</p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <button id="include-address1" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button">Include address</button>
+                               
+                            </fieldset>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="bga-component-wrapper">
+
+                    <div class="bga-component-wrapper">
+    <div class="bga-component clause-box  workplace m-0">
+
+        <div class="p-4 component-content h-100">
+
+            
+
+            <div class="header mb-4">
+
+                <div class="title remove-element-padding me-4">
+                    <div class="icon-wrapper me-3"><img src=/bga-style-guide/assets/icon-document-blueblack.svg alt="" /></div>
+
+                    
+                    <p><strong>Workplace clause</strong></p>
+                    
+
+                </div>
+
+                
+                <div class="tag mandatory"><span>Included</span>
+                    <svg class="ms-1" data-name="Icon: Tick" xmlns="http://www.w3.org/2000/svg" width="15" height="11.866" viewBox="0 0 15 11.866">
+                    <path d="M0,6.95,1.779,5.14,4.916,8.285,13.206,0,15,1.783,4.916,11.866Z" fill="#fff"/>
+                  </svg>
+                  </div>
+                
+            </div>
+
+            <div class="component-text remove-element-padding">
+
+                
+                    <p>You will be required to work at</p>
+                    <p><span>[workplace address]</span></p>
+                    <p>You may also be required to work at other locations where reasonable.</p>
+                
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            <div class="bga-component-wrapper sidebar-wrapper fullheight inpage teal">
+<div class="bga-component sidebar information-sidebar m-0">
+
+    <div class="p-4 component-content">
+
+        <div class="component-text pb-4 remove-element-padding">
+            
+                <h3>Duties / Position description</h3>
+            
+            
+            
+                <p>If you provided a position (or job) description during your recruitment process, you can use this.
+                If you don't have a position description yet, you can download the job description template from the
+                Fair Work Ombudsman website and fill it in later.</p>
+            
+            
+        </div>
+
+        <button tabindex="0" class="more-info-toggle hide m-0 p-0">
+            <span class="pe-2">Read more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                <g id="Icon:_Chevron_right" data-name="Icon: Chevron right" transform="translate(16) rotate(90)">
+                  <path id="Chevron_Right" data-name="Chevron / Right" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" fill="#2157aa"/>
+                </g>
+              </svg>
+              </button>
+    
+
+    </div>
+
+</div>
+</div>
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
     <!-- EMPLOYMENT TYPE -->
     <div id="section-employment-type" class="row remove-element-padding">
 
@@ -1247,30 +1538,35 @@
             <div class="question-section remove-element-padding">
                 <h3 class="mb-3"><strong>Select the type of employee you're hiring</strong></h3>
 
-                <p class="mb-3">It's important you get this right. The pay rates, leave and other entitlements for each type can differ, so it will change what you need to include in your contract.</p>
+                <p class="mb-3">It's important you get this right. The pay rates, leave and other entitlements for each
+                    type can differ, so it will change what you need to include in your contract.</p>
 
                 <div class="mb-4 p-0 ">
                     <div class="form-element-wrapper no-flex mb-3">
                         <div class="clause-box-radios radios" id="employment-type" role="radiogroup">
-                            
+
                             <div class="radio-button alternate pb-1">
-                                <input class="form-check-input m-0" type="radio" name="employment-type" id="fulltime" data-value="full time">
+                                <input class="form-check-input m-0" type="radio" name="employment-type" id="fulltime"
+                                    data-value="full time">
                                 <label class="form-check-label" for="fulltime">
                                     <strong>Full-time</strong> – usually 38 hours of work per week
                                 </label>
                             </div>
 
                             <div class="radio-button alternate pb-1">
-                                <input class="form-check-input m-0" type="radio" name="employment-type" id="parttime" data-value="part time">
+                                <input class="form-check-input m-0" type="radio" name="employment-type" id="parttime"
+                                    data-value="part time">
                                 <label class="form-check-label" for="parttime">
                                     <strong>Part-time</strong> – usually less than 38 hours of work per week
                                 </label>
                             </div>
 
                             <div class="radio-button alternate pb-1">
-                                <input class="form-check-input m-0" type="radio" name="employment-type" id="casual" data-value="casual">
+                                <input class="form-check-input m-0" type="radio" name="employment-type" id="casual"
+                                    data-value="casual">
                                 <label class="form-check-label" for="casual">
-                                    <strong>Casual</strong> – no firm advance commitment to continuing and indefinite work according to an agreed pattern of work
+                                    <strong>Casual</strong> – no firm advance commitment to continuing and indefinite
+                                    work according to an agreed pattern of work
                                 </label>
                             </div>
 
@@ -1280,7 +1576,7 @@
                 </div>
 
                 <div class="bga-component-wrapper">
-                    
+
                     <div class="bga-component-wrapper">
     <div class="bga-component clause-box  employment-type m-0">
 
@@ -1320,7 +1616,7 @@
 
     </div>
 </div>
-                    
+
                 </div>
 
             </div>
@@ -1339,7 +1635,9 @@
             
             
             
-                <p>If you provided a position (or job) description during your recruitment process, you can use this. If you don't have a position description yet, you can download the job description  template from the Fair Work Ombudsman website and fill it in later.</p>
+                <p>If you provided a position (or job) description during your recruitment process, you can use this.
+                If you don't have a position description yet, you can download the job description template from the
+                Fair Work Ombudsman website and fill it in later.</p>
             
             
         </div>
@@ -1375,7 +1673,8 @@
         <a class="bga-link bga-inline-link bkg-light" tabindex="0" href=/bga-style-guide/prototypes/ecb/landing.html role="button">Previous</a>
 
 
-        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href=/bga-style-guide/prototypes/ecb/hours.html role="button">Next</a>
+        <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href=/bga-style-guide/prototypes/ecb/hours.html
+            role="button">Next</a>
 
     </div>
 
@@ -1392,7 +1691,8 @@
             <div class="col-12 col-md-8 col-lg-9 col-xl-10">
                 <div class="save-footer-content remove-element-padding">
                     <h3>Don't have time to finish your contract now?</h3>
-                    <p>You can save you progress in this tool and return within the next seven days. We’ll email you a link that you can use to return and finish your contract.</p> 
+                    <p>You can save you progress in this tool and return within the next seven days. We’ll email you a link that you
+can use to return and finish your contract.</p> 
                 </div>
             </div>
        

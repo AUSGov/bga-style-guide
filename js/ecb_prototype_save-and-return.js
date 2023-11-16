@@ -126,25 +126,28 @@ $(document).ready(function () {
             }
         });
     }
-
+    
     // Variables to store multiple contracts
-    var contracts = JSON.parse(localStorage.getItem('contracts'));
-    if (!contracts) {   
-        contracts = {
-            contract0 : {},
-            contract1 : {},
-            contract2 : {},
-            contract3 : {},
-            contract4 : {}
+    if($('#ecb-prototype').length) {
+        var contracts = JSON.parse(localStorage.getItem('contracts'));
+        if (!contracts) {   
+            contracts = {
+                contract0 : {},
+                contract1 : {},
+                contract2 : {},
+                contract3 : {},
+                contract4 : {}
+            };
         };
-    };
-    console.log(contracts);
+        console.log(contracts);
 
-    var current_contract = localStorage.getItem('current contract');
-    if (!current_contract) {   
-        current_contract = "contract0";
-    };
-    console.log('current contract: ' + current_contract);
+        var current_contract = localStorage.getItem('current contract');
+        if (!current_contract) {   
+            current_contract = "contract0";
+        };
+        console.log('current contract: ' + current_contract);
+    }
+
 
     // Function to save individual response to contracts object
     var save_response_to_contracts = function(current_contract, input_field, input_value){
@@ -160,7 +163,7 @@ $(document).ready(function () {
     });
 
     var populate_inputs_and_selects = function () {
-        $('input[type="text"], select').each(function(){ 
+        $('#ecb-prototype input[type="text"], #ecb-prototype select').each(function(){ 
             var input_field = $(this).attr('id'),
             input_value = contracts[current_contract][input_field];
             
@@ -190,7 +193,7 @@ $(document).ready(function () {
         }
     });
     var populate_checkboxes = function () {
-        $('input[type="checkbox"]').each(function(){
+        $('#ecb-prototype input[type="checkbox"]').each(function(){
             var input_field = $(this).attr('id'),
             input_value = contracts[current_contract][input_field];
             
@@ -206,14 +209,14 @@ $(document).ready(function () {
     // Save radio answers and re-populate on page load
     $('#ecb-prototype input[type=radio]').on('change', function () {
         var input_field = $(this).parents('.radios').attr('id'),
-            input_value = $(this).attr('id');
+            input_value = $(this).attr('id'),
             field_text = $(this).attr('data-value');
        
         save_response_to_contracts(current_contract, input_field, input_value);
         save_response_to_contracts(current_contract, input_field + '-text', field_text);
     });
     var populate_radios = function (){
-        $('input[type="radio"]').each(function(){
+        $('#ecb-prototype input[type="radio"]').each(function(){
             var input_field = $(this).parents('.radios').attr('id'),
             input_value = contracts[current_contract][input_field],
             field_text = contracts[current_contract][input_field + '-text'];
@@ -227,6 +230,37 @@ $(document).ready(function () {
     };
     populate_radios();
 
+
+    // Textareas
+    $('#ecb-prototype textarea').on('blur', function(){  
+        var input_field = $(this).attr('id'),
+            input_value = $(this).val();
+        save_response_to_contracts(current_contract, input_field, input_value);
+        
+        if (input_value) {
+        $('.clause-box .' + input_field).empty().append('<strong class="mb-4">' + input_value + '</strong>');
+        } else {
+            $('.clause-box .' + input_field).empty();
+        }
+    });
+    
+    var populate_textareas = function(){
+        $('#ecb-prototype textarea').each(function(){
+            var input_field = $(this).attr('id'),
+            input_value = contracts[current_contract][input_field]; 
+            
+            if (input_value) {
+                $('.clause-box .' + input_field).empty().append('<strong class="mb-4">' + input_value + '</strong>');
+                $('textarea#'+ input_field).val(input_value);
+                } else {
+                    $('textarea#'+ input_field).val("");
+                    $('.clause-box .' + input_field).empty();
+                }
+        });
+    };  
+    populate_textareas();
+
+
     // Change PAY UNITS on radio button selection (pay page)
     $('#ecb-prototype #pay-rate-units input').on('change', function () {
         var pay_text = $(this).attr('data-value');
@@ -234,6 +268,41 @@ $(document).ready(function () {
         $('.pay-unit').text(pay_text);
         $('.pay-units').text(pay_text);
         });
+
+    // Duties update textarea based on radio selection.
+    $('#ecb-prototype #duties input[type=radio]').on('change', function () {
+        if ($(this).hasClass('dynamic-hide')) {
+            $(this).parents('.question-section').find('.clause-box .textarea-input').text('');
+            save_response_to_contracts(current_contract, 'duties-textarea', '');
+        } else if ($(this).hasClass('dynamic-show')) {
+            var textarea_input = $('textarea#duties-textarea').val()
+            $(this).parents('.question-section').find('.clause-box .textarea-input').empty().append('<strong class="mb-4">' + textarea_input + '</strong>');
+            save_response_to_contracts(current_contract, 'duties-textarea', textarea_input);
+        }
+    });
+
+
+
+    // Show hide part two of dynamic sections.
+    $('#ecb-prototype .dynamic-hide').on('click', function () {
+        $(this).parents('.question-section').find('.dynamic-display').addClass('d-none');
+    });
+    $('#ecb-prototype .dynamic-show').on('click', function () {
+        $(this).parents('.question-section').find('.dynamic-display').removeClass('d-none');
+    });
+
+    var display_dynamic_on_load = function () {
+        $("#ecb-prototype input[type=radio].dynamic-show").each(function(){
+            if ($(this).is(':checked')) {
+                $(this).parents('.question-section').find('.dynamic-display').removeClass('d-none');
+            }
+        });
+           
+    };
+    display_dynamic_on_load();
+
+
+
   
     // Populate edit boxes on review page with user answers
     if ($('.review-page').length) {
@@ -257,7 +326,11 @@ $(document).ready(function () {
             }
         });
         
+        if( contracts[current_contract]['duties-textarea']) {
+            $('.results-edit-answers-component .duties-textarea').append('<strong class="mb-4">' + contracts[current_contract]['duties-textarea'] + '</strong>')
+        }
     }
+
     
 
     // Track button clicks with URL fragments
