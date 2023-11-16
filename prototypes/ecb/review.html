@@ -29,6 +29,16 @@ step-number: 7
             %}
 
             {% include component-examples/results-and-edit-example.html
+                title="Duties"
+                href="'position.html#section-duties' | relative_url "
+                content="<p>You will perform the <span data-value='duties-text'></span></p>
+                <div class='duties-textarea textarea'></div>
+                <p>We may also assign you other duties, where reasonable for your position, training and experience.</p>"
+                classes="dynamic"
+                id="duties-text"
+                %}
+
+            {% include component-examples/results-and-edit-example.html
             title="Business structure"
             href="'position.html#section-business-structure' | relative_url "
             content="<p>Your business structure is <strong><span data-value='business-structure'>[business structure]</span></strong>.</p>"

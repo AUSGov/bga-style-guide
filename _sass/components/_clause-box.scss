@@ -104,6 +104,13 @@
             }
             
         }
+        .textarea-input {
+            white-space: pre-wrap;
+
+            strong {
+                display: block;
+            }
+        }
     }
 
     &.added {
@@ -127,6 +134,10 @@
                 -webkit-transition: background-color 800ms linear;
                 -ms-transition: background-color 800ms linear;
             }
+            span.no-highlight {
+                font-weight: 400;
+                background-color: transparent !important;
+            }
         }
 
         &.highlight {
@@ -138,6 +149,9 @@
             .component-text {
                 span {
                     background-color: $bga-green-success-mid;
+                }
+                span.no-highlight {
+                    background-color: transparent !important;
                 }
             }
         }
