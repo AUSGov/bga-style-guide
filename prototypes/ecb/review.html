@@ -47,6 +47,16 @@ step-number: 7
             %}
 
             {% include component-examples/results-and-edit-example.html
+            title="Workplace"
+            href="'position.html#section-workplace' | relative_url "
+            content="<p>You will be required to work at</p>
+            <div class='address1'></div>
+            <p>You may also be required to work at other locations where reasonable.</p>"
+            classes="dynamic"
+            id="workplace"
+            %}
+
+            {% include component-examples/results-and-edit-example.html
             title="Employment type"
             href="'position.html#section-employment-type' | relative_url "
             content="<p>You are being employed on a <strong><span data-value='employment-type'>[employment type]</span></strong> basis.</p> "
@@ -70,6 +80,28 @@ step-number: 7
             content="<p>You may have a right to make a written request for flexible working arrangements under the National Employment Standards, including for when to start and end work each day or your location of work. We may refuse your request in writing, but only if we have reasonable business grounds.</p>"
             classes="optional d-none"
             id="flexible-hours"
+            %}
+
+            {% include component-examples/results-and-edit-example.html
+            title="Averaging hours over more than a week"
+            href="'hours.html#section-averaging-hours' | relative_url "
+            content="<p>Your hours per week may be averaged over more than one week in accordance with the award.</p>"
+            classes="optional d-none"
+            id="averaging-hours"
+            %}
+
+            {% include component-examples/results-and-edit-example.html
+            title="On call or stand-by"
+            href="'hours.html#stand-by' | relative_url "
+            content="<p>We may require you to be on call (on stand-by) for work outside your normal hours.</p>
+            <p>Your on call or stand-by conditions will be in accordance with the award, including:</p>
+            <ul>
+            <li>rostering to be on call</li>
+            <li>pay rates or allowances when on call</li>
+            <li>pay rates if you are called out to work while on call.</li>
+            </ul>"
+            classes="optional d-none"
+            id="stand-by"
             %}
 
             {% include component-examples/results-and-edit-example.html

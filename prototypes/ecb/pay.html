@@ -55,6 +55,14 @@ step-number: 3
     
                         </div>
                     </div>
+
+                
+                    {% include component-examples/notification-example.html
+                    icon="'../../assets/icon-notification-circle-info.svg' | relative_url "
+                    title="Award minimum rate"
+                    content="Enter an amount that, at least, covers the minimum award rate that applies to your employee's classification. Award minimum rates for juniors, apprentices, trainees or employees on a supported wage may be lower."
+                    classes="information"
+                    %}
     
 
                 <div class="bga-component-wrapper">
@@ -88,13 +96,14 @@ step-number: 3
 
     <!-- PAYMENT METHOD -->
 
-    <div id="section-payment-method" class="row remove-element-padding">
+    <div id="section-payment" class="row remove-element-padding">
 
         <h2>Payment method</h2>
 
         <div class="col-12 col-md-8 col-xl-7">
 
-            <div class="question-section remove-element-padding">
+            <!-- PAY FREQUENCY -->
+            <div class="question-section remove-element-padding mb-5">
                 
                     <div class="mb-5 p-0 form-example clause-box-include">
                         
@@ -131,15 +140,55 @@ step-number: 3
                   
                     </div>
 
-                {% include component-examples/clause-box-example.html
-                    title="Payment method clause"
-                    tag="Included"
-                    tag-type="mandatory"
-                    content="<p>We will pay you <span>[frequency]</span> into your nominated bank account.</p>"
-                    id="pay-frequency"
-                %}
-
             </div>
+
+            <!-- PAY METHOD -->
+            <div class="question-section remove-element-padding">
+               
+                <div class="mb-5 p-0 form-example clause-box-include">
+                    
+                    <label for="pay-method" class="form-label mb-3"><strong>How will you pay your employee?</strong></label>
+                    
+                    <p>It's up to you which method you use, but record keeping might be easier if you pay electronically into a bank account.</p>
+                    
+                    <div class="clause-box-radios radios mb-5" id="pay-method" role="radiogroup">
+                        
+                        <div class="radio-button alternate pb-1">
+                            <input class="form-check-input m-0" type="radio" name="pay-method" id="bank-account" data-value="into your nominated bank account">
+                            <label class="form-check-label" for="bank-account">
+                                <strong>into the employee's nominated bank account</strong>
+                            </label>
+                        </div>
+
+                        <div class="radio-button alternate pb-1">
+                            <input class="form-check-input m-0" type="radio" name="pay-method" id="cash" data-value="in cash">
+                            <label class="form-check-label" for="cash">
+                                <strong>in cash</strong>
+                            </label>
+                        </div>
+
+                        <div class="radio-button alternate pb-1">
+                            <input class="form-check-input m-0" type="radio" name="pay-method" id="cheque" data-value="by cheque">
+                            <label class="form-check-label" for="cheque">
+                                <strong>by cheque</strong>
+                            </label>
+                        </div>
+
+
+                    </div>
+
+              
+                </div>
+
+            {% include component-examples/clause-box-example.html
+                title="Payment method clause"
+                tag="Included"
+                tag-type="mandatory"
+                content="<p>We will pay you <span class='pay-frequency'>[frequency]</span> <span class='pay-method'>[pay method]</span></p>"
+                id="pay-frequency"
+            %}
+
+        </div>
 
 
         </div>

@@ -936,22 +936,26 @@ $(document).ready(function () {
     var clause_boxes = {}
    
     $('.clause-box-input').each(function () {
-       
         var clause = $(this).attr('id'),
-        original_text = $('.' + clause).find('.component-text span').text();
+        original_text = $('.' + clause).find('.component-text span.'+clause).text();
         clause_boxes[clause] = original_text;
     });
+
     $('.clause-box-radios').each(function () {
         var clause = $(this).attr('id'),
-            original_text = $('.' + clause).find('.component-text span').text();
-            clause_boxes[clause] = original_text;
+        original_text = $('.' + clause).find('.component-text span.'+clause).text();
+        clause_boxes[clause] = original_text;
+        //console.log('clause: ' +clause);
+        //console.log($('.' + clause));
+        //console.log(original_text);
     });
+    console.log(clause_boxes);
 
     $('.clause-box-input').change(function () {
-
         var clause = $(this).attr('id'),
             original_text = clause_boxes[clause],
             added_text;
+            console.log(clause);
 
         // Text input
         if ($(this).attr('type') == "text") {
@@ -992,19 +996,20 @@ $(document).ready(function () {
         var clause = $(this).parents('.clause-box-radios').attr('id'),
             original_text = clause_boxes[clause],
             added_text;
+            console.log(clause);
 
         // Text input
         added_text = $(this).attr('data-value');
 
         if (added_text != "") {
-            $('.' + clause).addClass('added highlight').find('.component-text span').text(added_text);
+            $('.' + clause).addClass('added highlight').find('.component-text span.'+clause).text(added_text);
 
             setTimeout(function () {
                 $('.highlight').removeClass('highlight');
             }, 800);
 
         } else {
-            $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
+            $('.' + clause).removeClass('added').find('.component-text span.'+clause).text(original_text);
         }
     });
 

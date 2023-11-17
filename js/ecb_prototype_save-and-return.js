@@ -139,15 +139,17 @@ $(document).ready(function () {
                 contract4 : {}
             };
         };
-        console.log(contracts);
+        //console.log(contracts);
 
         var current_contract = localStorage.getItem('current contract');
         if (!current_contract) {   
             current_contract = "contract0";
         };
-        console.log('current contract: ' + current_contract);
+        //console.log('current contract: ' + current_contract);
     }
 
+    // Populate clause boxes with user answers is in bga-scripts.js
+    
 
     // Function to save individual response to contracts object
     var save_response_to_contracts = function(current_contract, input_field, input_value){
@@ -223,7 +225,7 @@ $(document).ready(function () {
 
             if (input_value) {
                 $('#' + input_value).prop('checked', true);
-                $('.clause-box.' + input_field).addClass('added').find('.component-text span').text(field_text);
+                $('.clause-box.' + input_field).addClass('added').find('.component-text span.' + input_field).text(field_text);
             };
 
         });
@@ -280,7 +282,36 @@ $(document).ready(function () {
             save_response_to_contracts(current_contract, 'duties-textarea', textarea_input);
         }
     });
+    // Workplace update clause box with workplace
+    $('#ecb-prototype button.workplace').on('click', function(){
+        var street = contracts[current_contract].street1,
+        city = contracts[current_contract].city1,
+        state = contracts[current_contract].state1,
+        postcode = contracts[current_contract].postcode1;
 
+        $('.clause-box .address1').empty().append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
+    }); 
+    $('#ecb-prototype #workplace input[type=radio]').on('change', function () {
+        if ($(this).hasClass('dynamic-hide')) {
+            $('.clause-box .address1').addClass('d-none');
+            $('.clause-box .no-answer').removeClass('d-none');
+
+        } else {
+            $('.clause-box .address1').removeClass('d-none');
+            $('.clause-box .no-answer').addClass('d-none');
+        }
+    });
+    // Workplace repopulate on page load
+    if ($('.clause-box.workplace').length) {
+        if (contracts[current_contract]['workplace'] == 'workplace-now') {
+            var street = contracts[current_contract].street1,
+            city = contracts[current_contract].city1,
+            state = contracts[current_contract].state1,
+            postcode = contracts[current_contract].postcode1;
+
+            $('.clause-box .address1').empty().append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
+        }
+    }
 
 
     // Show hide part two of dynamic sections.
@@ -326,9 +357,23 @@ $(document).ready(function () {
             }
         });
         
+        // Add duties description
         if( contracts[current_contract]['duties-textarea']) {
             $('.results-edit-answers-component .duties-textarea').append('<strong class="mb-4">' + contracts[current_contract]['duties-textarea'] + '</strong>')
         }
+        // Add workplace
+        if( contracts[current_contract]['workplace'] == 'workplace-now') {
+            var street = contracts[current_contract].street1,
+            city = contracts[current_contract].city1,
+            state = contracts[current_contract].state1,
+            postcode = contracts[current_contract].postcode1;
+
+            $('.results-edit-answers-component .address1').append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
+        } else {
+            $('.results-edit-answers-component .address1').append('<p><strong>[Workplace address]</strong></p>');
+        };
+
+
     }
 
     
