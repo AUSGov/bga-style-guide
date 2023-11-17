@@ -856,6 +856,32 @@
     
                         </div>
                     </div>
+
+                
+                    <div class="bga-component-wrapper pb-5">
+    <div class="bga-component notification information m-0">
+
+        <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
+            
+
+            <div class="icon-wrapper me-4"><img src='../../assets/icon-notification-circle-info.svg' | relative_url  alt="" />
+            </div>
+
+            <div class="component-content remove-element-padding">
+                
+                <h4>Award minimum rate</h4>
+                
+
+                
+                <p>Enter an amount that, at least, covers the minimum award rate that applies to your employee's classification. Award minimum rates for juniors, apprentices, trainees or employees on a supported wage may be lower.</p>
+                
+
+                
+            </div>
+        </div>
+
+    </div>
+</div>
     
 
                 <div class="bga-component-wrapper">
@@ -945,13 +971,14 @@
 
     <!-- PAYMENT METHOD -->
 
-    <div id="section-payment-method" class="row remove-element-padding">
+    <div id="section-payment" class="row remove-element-padding">
 
         <h2>Payment method</h2>
 
         <div class="col-12 col-md-8 col-xl-7">
 
-            <div class="question-section remove-element-padding">
+            <!-- PAY FREQUENCY -->
+            <div class="question-section remove-element-padding mb-5">
                 
                     <div class="mb-5 p-0 form-example clause-box-include">
                         
@@ -988,7 +1015,47 @@
                   
                     </div>
 
-                <div class="bga-component-wrapper">
+            </div>
+
+            <!-- PAY METHOD -->
+            <div class="question-section remove-element-padding">
+               
+                <div class="mb-5 p-0 form-example clause-box-include">
+                    
+                    <label for="pay-method" class="form-label mb-3"><strong>How will you pay your employee?</strong></label>
+                    
+                    <p>It's up to you which method you use, but record keeping might be easier if you pay electronically into a bank account.</p>
+                    
+                    <div class="clause-box-radios radios mb-5" id="pay-method" role="radiogroup">
+                        
+                        <div class="radio-button alternate pb-1">
+                            <input class="form-check-input m-0" type="radio" name="pay-method" id="bank-account" data-value="into your nominated bank account">
+                            <label class="form-check-label" for="bank-account">
+                                <strong>into the employee's nominated bank account</strong>
+                            </label>
+                        </div>
+
+                        <div class="radio-button alternate pb-1">
+                            <input class="form-check-input m-0" type="radio" name="pay-method" id="cash" data-value="in cash">
+                            <label class="form-check-label" for="cash">
+                                <strong>in cash</strong>
+                            </label>
+                        </div>
+
+                        <div class="radio-button alternate pb-1">
+                            <input class="form-check-input m-0" type="radio" name="pay-method" id="cheque" data-value="by cheque">
+                            <label class="form-check-label" for="cheque">
+                                <strong>by cheque</strong>
+                            </label>
+                        </div>
+
+
+                    </div>
+
+              
+                </div>
+
+            <div class="bga-component-wrapper">
     <div class="bga-component clause-box  pay-frequency m-0">
 
         <div class="p-4 component-content h-100">
@@ -1018,7 +1085,7 @@
             <div class="component-text remove-element-padding">
 
                 
-                    <p>We will pay you <span>[frequency]</span> into your nominated bank account.</p>
+                    <p>We will pay you <span class='pay-frequency'>[frequency]</span> <span class='pay-method'>[pay method]</span></p>
                 
 
             </div>
@@ -1028,7 +1095,7 @@
     </div>
 </div>
 
-            </div>
+        </div>
 
 
         </div>

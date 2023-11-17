@@ -1275,11 +1275,12 @@
 
                 <div class="mb-4 p-0 ">
                     <div class="form-element-wrapper no-flex mb-3">
+
                         <div class="clause-box-radios radios mb-4" id="workplace" role="radiogroup">
 
                             <div class="radio-button alternate pb-1">
                                 <input class="dynamic-hide form-check-input m-0" type="radio" name="workplace"
-                                    id="workplace-later" data-value="">
+                                    id="workplace-later" data-value="[workplace address]">
                                 <label class="form-check-label" for="workplace-later">
                                     <strong>I will insert the workplace address later</strong>
                                 </label>
@@ -1295,6 +1296,7 @@
 
                         </div>
 
+
                         <div class="dynamic-display workplace d-none">
                             <h3>Where is the employee’s main place of work?</h3>
 
@@ -1302,135 +1304,41 @@
                                 <h3>Workplace address</h3>
                                 
                                     <div class="address-fields">
-                                        <div class="formtool-field question reset-first" id="Q_16_1_1"
-                                            data-question-id="0da66b09115440f1b7a9de222ff9eaa1_1" data-sequenceid="8">
-                                            <label for="var_Q_16_1_1" class="h4 text-utility-blueblack-600 p-0 mb-6">
-                                                Address
-                                            </label>
-
-                                            <div class="text-control reset-last">
-
-
-                                                <div class="field-container">
-                                                    <input name="var_Q_16_1_1" id="var_Q_16_1_1" data-key="key_Q_16_1_1"
-                                                        type="text" maxlength="100" inputmode="text"
-                                                        class="text-question" aria-required="true" placeholder=""
-                                                        aria-errormessage="errors-Q_16_1_1">
-
-                                                </div>
-
-                                               
-                                            </div>
-
+                              
+                                        <div class="d-flex flex-wrap mb-5">
+                                            <label for="street" class="h4 w-100 p-0 mb-3">Address</label>
+                                            <input type="text" name="street" class="form-control address-input" id="street1">
                                         </div>
-                                        <div class="formtool-field question reset-first" id="Q_16_2_1"
-                                            data-question-id="06cd60b5169346f2860c2dae3765ba4c_1" data-sequenceid="9">
-                                            <label for="var_Q_16_2_1" class="h4 text-utility-blueblack-600 p-0 mb-6">
-                                                City/Suburb
-                                            </label>
 
-                                            <div class="text-control reset-last">
-
-
-                                                <div class="field-container">
-                                                    <input name="var_Q_16_2_1" id="var_Q_16_2_1" data-key="key_Q_16_2_1"
-                                                        type="text" maxlength="100" inputmode="text"
-                                                        class="text-question" aria-required="true" placeholder=""
-                                                        aria-errormessage="errors-Q_16_2_1">
-
-                                                </div>
-
-                                                <div id="errors-Q_16_2_1" class="error-message-container">
-
-
-
-                                                    <p id="error-msg-Q_16_2_1"
-                                                        class="error-message required d-none text-utility-red-300 mb-0 pt-6">
-                                                        Enter a city/suburb</p>
-
-
-                                                </div>
-                                            </div>
-
+                                        <div class="d-flex flex-wrap mb-5">
+                                            <label for="city" class="h4 w-100 p-0 mb-2">City/Suburb</label>
+                                            <input type="text" name="city" class="form-control address-input" id="city1">
                                         </div>
-                                        <div class="formtool-field question reset-first" id="Q_16_3_1"
-                                            data-question-id="d5c1492c0a4d4a6b9c88424dd5581d9d_1" data-sequenceid="10">
-                                            <label for="var_Q_16_3_1" class="h4 text-utility-blueblack-600 p-0 mb-6">
-                                                State/Territory
-                                            </label>
-                                            <div class="dropdown-control reset-last">
-                                                <div class="field-container">
-                                                    <select class="dropdown-question tool-dropdown" name="var_Q_16_3_1"
-                                                        id="var_Q_16_3_1" autocomplete="off" data-key="key_Q_16_3_1"
-                                                        aria-required="true" aria-errormessage="errors-Q_16_3_1">
-                                                        <option class="default-option" value="">Select a state or
-                                                            territory</option>
 
-                                                        <option id="b781090a9f464dfbbd4387b81f36afb6"
-                                                            value="Australian Capital Territory">Australian Capital
-                                                            Territory</option>
-                                                        <option id="7931a61533a242578986cea77163e4dc"
-                                                            value="New South Wales">New South Wales</option>
-                                                        <option id="4db4e5c128d544b9814859fd26e51a2d"
-                                                            value="Northern Territory">Northern Territory</option>
-                                                        <option id="7191d58801834a0da305775e0fe8ca82"
-                                                            value="Queensland">Queensland</option>
-                                                        <option id="618f80e70aa0486e8247f3ac2768223f"
-                                                            value="South Australia">South Australia</option>
-                                                        <option id="ce3f7d6ee6fd4660ae0e80a2f47c0b64" value="Tasmania">
-                                                            Tasmania</option>
-                                                        <option id="0328c449993d46bfb8f54f29342bed3a" value="Victoria">
-                                                            Victoria</option>
-                                                        <option id="f0355522a6ed48399e7fb7fbdb8fdccf"
-                                                            value="Western Australia">Western Australia</option>
-
-                                                    </select>
-                                                </div>
-                                                <div id="errors-Q_16_3_1" class="error-message-container">
-                                                    <p id="error-msg-Q_16_3_1"
-                                                        class="error-message required d-none text-utility-red-300 mb-0 pt-6">
-                                                        Select state or territory</p>
-
-                                                </div>
-                                            </div>
-
+                                        <div class="d-flex flex-wrap mb-5">
+                                            <label for="state" class="h4 w-100 p-0 mb-2">State/Territory</label>
+                                            <select class="form-select address-input" id="state1" name="state">
+                                                <option class="default-option" value="">Select a state or
+                                                    territory</option>
+                                                <option value="Australian Capital Territory">Australian Capital
+                                                    Territory</option>
+                                                <option value="New South Wales">New South Wales</option>
+                                                <option value="Northern Territory">Northern Territory</option>
+                                                <option value="Queensland">Queensland</option>
+                                                <option value="South Australia">South Australia</option>
+                                                <option value="Tasmania">Tasmania</option>
+                                                <option value="Victoria">Victoria</option>
+                                                <option value="Western Australia">Western Australia</option>
+                                                </select>
                                         </div>
-                                        <div class="formtool-field question col-lg-4 reset-first" id="Q_16_4_1"
-                                            data-question-id="b132e07958b04b6d98fdcac5f5954a68_1" data-sequenceid="11">
-                                            <label for="var_Q_16_4_1" class="h4 text-utility-blueblack-600 p-0 mb-6">
-                                                Postcode
-                                            </label>
 
-                                            <div class="text-control reset-last">
-
-
-                                                <div class="field-container input-short">
-                                                    <input name="var_Q_16_4_1" id="var_Q_16_4_1" data-key="key_Q_16_4_1"
-                                                        type="number" maxlength="4" inputmode="numeric"
-                                                        class="text-question" aria-required="true" placeholder=""
-                                                        aria-errormessage="errors-Q_16_4_1">
-
-                                                </div>
-
-                                                <div id="errors-Q_16_4_1" class="error-message-container">
-
-
-
-                                                    <p id="error-msg-Q_16_4_1"
-                                                        class="error-message required d-none text-utility-red-300 mb-0 pt-6">
-                                                        Enter a postcode</p>
-
-                                                    <p data-error="Enter a whole number."
-                                                        class="error-message whole-number d-none text-utility-red-300 m-0 pt-6">
-                                                        Enter a whole number.</p>
-
-                                                </div>
-                                            </div>
-
+                                        <div class="d-flex flex-wrap mb-5">
+                                            <label for="postcode" class="h4 w-100 p-0 mb-2">Postcode</label>
+                                            <input type="text" name="postcode" id="postcode1" class="form-control address-input w-50">
                                         </div>
                                     </div>
 
-                                    <button id="include-address1" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button">Include address</button>
+                                    <button id="include-address1" class="bga-btn bga-secondary-btn bkg-light py-2 workplace" tabindex="0" role="button">Include address</button>
                                
                             </fieldset>
                         </div>
@@ -1472,7 +1380,8 @@
 
                 
                     <p>You will be required to work at</p>
-                    <p><span>[workplace address]</span></p>
+                    <p class='no-answer'>[Workplace address]</p>
+                    <div class='address1'></div>
                     <p>You may also be required to work at other locations where reasonable.</p>
                 
 
@@ -1501,9 +1410,7 @@
             
             
             
-                <p>If you provided a position (or job) description during your recruitment process, you can use this.
-                If you don't have a position description yet, you can download the job description template from the
-                Fair Work Ombudsman website and fill it in later.</p>
+                <p>If you provided a position (or job) description during your recruitment process, you can use this. If you don't have a position description yet, you can download the job description template from the Fair Work Ombudsman website and fill it in later.</p>
             
             
         </div>
@@ -1565,8 +1472,7 @@
                                 <input class="form-check-input m-0" type="radio" name="employment-type" id="casual"
                                     data-value="casual">
                                 <label class="form-check-label" for="casual">
-                                    <strong>Casual</strong> – no firm advance commitment to continuing and indefinite
-                                    work according to an agreed pattern of work
+                                    <strong>Casual</strong> – no firm advance commitment to continuing and indefinite work according to an agreed pattern of work
                                 </label>
                             </div>
 
