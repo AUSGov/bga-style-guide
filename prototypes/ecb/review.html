@@ -23,7 +23,7 @@ step-number: 7
             {% include component-examples/results-and-edit-example.html
             title="Position title"
             href="'position.html#section-position-title' | relative_url "
-            content="<p>You are being employed in the position of <strong><span data-value='position-title'>[position title]</span></strong>.</p>"
+            content="<p>You are being employed in the position of <strong><span class='answer' id='position-title'>[position title]</span></strong>.</p>"
             classes="dynamic"
             id="position-title"
             %}
@@ -31,7 +31,7 @@ step-number: 7
             {% include component-examples/results-and-edit-example.html
                 title="Duties"
                 href="'position.html#section-duties' | relative_url "
-                content="<p>You will perform the <span data-value='duties-text'></span></p>
+                content="<p>You will perform the <span class='answer' id='duties-text'></span></p>
                 <div class='duties-textarea textarea'></div>
                 <p>We may also assign you other duties, where reasonable for your position, training and experience.</p>"
                 classes="dynamic"
@@ -41,7 +41,7 @@ step-number: 7
             {% include component-examples/results-and-edit-example.html
             title="Business structure"
             href="'position.html#section-business-structure' | relative_url "
-            content="<p>Your business structure is <strong><span data-value='business-structure'>[business structure]</span></strong>.</p>"
+            content="<p>Your business structure is <strong><span class='answer' id='business-structure'>[business structure]</span></strong>.</p>"
             classes="dynamic"
             id="business-structure"
             %}
@@ -59,7 +59,7 @@ step-number: 7
             {% include component-examples/results-and-edit-example.html
             title="Employment type"
             href="'position.html#section-employment-type' | relative_url "
-            content="<p>You are being employed on a <strong><span data-value='employment-type'>[employment type]</span></strong> basis.</p> "
+            content="<p>You are being employed on a <strong><span class='answer' id='employment-type-text'>[employment type]</span></strong> basis.</p> "
             classes="dynamic"
             id="employment-type-text"
             %}
@@ -69,7 +69,7 @@ step-number: 7
             {% include component-examples/results-and-edit-example.html
             title="Hours of work"
             href="'hours.html#section-hours-of-work' | relative_url "
-            content="<p>You are expected to work <strong><span data-value='hours-worked'>[number]</span> ordinary hour(s) per week</strong>. We may also request or require you to work additional hours if the additional hours are reasonable.</p>"
+            content="<p>You are expected to work <strong><span class='answer' id='hours-worked'>[number]</span> ordinary hour(s) per week</strong>. We may also request or require you to work additional hours if the additional hours are reasonable.</p>"
             classes="dynamic"
             id="hours-worked"
             %}
@@ -116,7 +116,7 @@ step-number: 7
             {% include component-examples/results-and-edit-example.html
             title="Pay rate"
             href="'pay.html#section-pay-rate' | relative_url "
-            content="<p>You will be paid <strong>$<span data-value='pay-rate'>[amount]</span></strong> <strong class='pay-units'>per hour</strong>. This pay rate does not include superannuation, we'll pay this separately.</p>"
+            content="<p>You will be paid <strong>$<span class='answer' id='pay-amount'>[amount]</span></strong> <strong class='answer pay-units'>per hour</strong>. This pay rate does not include superannuation, we'll pay this separately.</p>"
             classes="dynamic"
             id="pay-rate"
             %}
@@ -124,7 +124,7 @@ step-number: 7
             {% include component-examples/results-and-edit-example.html
             title="Payment method"
             href="'pay.html#section-payment-method' | relative_url "
-            content="<p>We will pay you <strong><span data-value='pay-frequency'>[frequency]</span> into your nominated bank account</strong>.</p>"
+            content="<p>We will pay you <strong><span class='answer' id='pay-frequency-text'>[frequency]</span> <span class='answer' id='pay-method-text'>[pay-method]</span></strong>.</p>"
             classes="dynamic"
             id="pay-frequency-text"
             %}

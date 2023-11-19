@@ -139,7 +139,7 @@ $(document).ready(function () {
                 contract4 : {}
             };
         };
-        //console.log(contracts);
+        console.log(contracts);
 
         var current_contract = localStorage.getItem('current contract');
         if (!current_contract) {   
@@ -148,7 +148,7 @@ $(document).ready(function () {
         //console.log('current contract: ' + current_contract);
     }
 
-    // Populate clause boxes with user answers is in bga-scripts.js
+    // !!! Populating clause boxes with user answers after input is in bga-scripts.js
     
 
     // Function to save individual response to contracts object
@@ -173,12 +173,6 @@ $(document).ready(function () {
                 $(this).val(input_value);
                 $('.clause-box.' + input_field).addClass('added').find('.component-text span').text(input_value);
             };
-
-            if (input_field == 'pay-rate') {
-                var pay_rate_units = contracts[current_contract]['pay-rate-units-text'];
-                console.log(pay_rate_units);
-                $('.pay-unit, .pay-units').text(pay_rate_units);
-            }
         });
     };
     populate_inputs_and_selects();
@@ -266,9 +260,7 @@ $(document).ready(function () {
     // Change PAY UNITS on radio button selection (pay page)
     $('#ecb-prototype #pay-rate-units input').on('change', function () {
         var pay_text = $(this).attr('data-value');
-        $('#pay-rate-units label span').text(pay_text);
         $('.pay-unit').text(pay_text);
-        $('.pay-units').text(pay_text);
         });
 
     // Duties update textarea based on radio selection.
@@ -338,14 +330,11 @@ $(document).ready(function () {
     // Populate edit boxes on review page with user answers
     if ($('.review-page').length) {
         
-        $('.results-edit-answers-component.dynamic').each(function () {
+        $('.results-edit-answers-component.dynamic .answer').each(function () {
             var id = $(this).attr('id');
             answer_text = contracts[current_contract][id];
-            $(this).find('.answers span').text(answer_text);
+            $(this).text(answer_text);
 
-            if (id == 'pay-rate') {
-                $('.pay-units').text(contracts[current_contract]['pay-rate-units-text']);
-            }
         });
 
         $('.results-edit-answers-component.optional').each(function () {

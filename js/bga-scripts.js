@@ -937,19 +937,23 @@ $(document).ready(function () {
    
     $('.clause-box-input').each(function () {
         var clause = $(this).attr('id'),
-        original_text = $('.' + clause).find('.component-text span.'+clause).text();
+        original_text = $('.clause-box span.'+ clause).text();
         clause_boxes[clause] = original_text;
+        //console.log(clause);
+        //console.log(original_text);
     });
 
     $('.clause-box-radios').each(function () {
         var clause = $(this).attr('id'),
-        original_text = $('.' + clause).find('.component-text span.'+clause).text();
+        original_text = $('.clause-box span.' + clause).text();
         clause_boxes[clause] = original_text;
+        //console.log(clause);
+        //console.log($('.clause-box span.' + clause));
         //console.log('clause: ' +clause);
         //console.log($('.' + clause));
         //console.log(original_text);
     });
-    console.log(clause_boxes);
+    //console.log(clause_boxes);
 
     $('.clause-box-input').change(function () {
         var clause = $(this).attr('id'),
@@ -962,21 +966,19 @@ $(document).ready(function () {
             added_text = $(this).val();
 
             if (added_text != "") {
-                $('.' + clause).addClass('added highlight').find('.component-text span').text(added_text);
+                $('.clause-box span.'+clause).text(added_text).parents('.clause-box').addClass('added highlight');
 
                 setTimeout(function () {
-                    $('.highlight').removeClass('highlight');
+                    $('.clause-box span.'+clause).parents('.clause-box').removeClass('highlight');
                 }, 800);
 
             } else {
                 $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
             }
 
-            // Checkbox
+        // Checkbox
         } else if ($(this).attr('type') == "checkbox") {
-
             if ($(this).is(":checked")) {
-                added_text = "3 month";
                 $('.' + clause).addClass('added highlight').find('.component-text span').text(added_text);
                 $('.' + clause).find('.tag span').text('Included');
 
@@ -987,7 +989,6 @@ $(document).ready(function () {
                 $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
                 $('.' + clause).find('.tag span').text('Optional to include');
             }
-
         }
     });
 
@@ -996,20 +997,19 @@ $(document).ready(function () {
         var clause = $(this).parents('.clause-box-radios').attr('id'),
             original_text = clause_boxes[clause],
             added_text;
-            console.log(clause);
 
         // Text input
-        added_text = $(this).attr('data-value');
+        added_text = $(this).attr('data-value'); 
 
         if (added_text != "") {
-            $('.' + clause).addClass('added highlight').find('.component-text span.'+clause).text(added_text);
+            $('.clause-box span.'+clause).text(added_text).parents('.clause-box').addClass('added highlight');
 
             setTimeout(function () {
-                $('.highlight').removeClass('highlight');
+                $('.clause-box span.'+clause).parents('.clause-box').removeClass('highlight');
             }, 800);
 
         } else {
-            $('.' + clause).removeClass('added').find('.component-text span.'+clause).text(original_text);
+            $('.clause-box span.'+clause).text(original_text).parents('.clause-box').removeClass('added');
         }
     });
 
