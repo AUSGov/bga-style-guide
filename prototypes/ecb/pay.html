@@ -826,8 +826,8 @@
                         
                         <p>Select an hourly or a weekly rate of pay.</p>
    
-                        <div class="radios" id="pay-rate-units">
-                        <div class="mb-5"  role="radiogroup">
+                        <div class="clause-box-radios radios" id="pay-rate-units">
+                        <div class="mb-5" role="radiogroup">
                             
                             <div class="radio-button alternate pb-1">
                                 <input class="form-check-input m-0" type="radio" name="pay-rate-units" id="hourly" data-value="per hour">
@@ -845,17 +845,16 @@
 
                         </div>
 
-                        
-                        <label for="pay-rate" class="form-label mb-3"><strong>Enter the <span>hourly</span> pay rate</strong></label>
+                        </div>
+                    </div> 
+                    
+                    <label for="pay-rate" class="form-label mb-3"><strong>Enter the <span>hourly</span> pay rate</strong></label>
                         
                         <div class="textbox-units form-element-wrapper mb-3">
                             <p class="m-0">$AUD</p>
-                            <input type="text" class="form-control clause-box-input m-0 sm-width" id="pay-rate" value="" required >
+                            <input type="text" class="form-control clause-box-input m-0 sm-width" id="pay-amount" value="" required >
                             <p class="m-0 pay-unit">per hour</p>
                         </div>
-    
-                        </div>
-                    </div>
 
                 
                     <div class="bga-component-wrapper pb-5">
@@ -916,7 +915,7 @@
             <div class="component-text remove-element-padding">
 
                 
-                    <p>You will be paid <strong>$</strong><span>[amount]</span> <strong class='pay-units'>per hour</strong>. This pay rate does not include superannuation, we'll pay this separately.</p>
+                    <p>You will be paid <strong>$<span class='pay-amount'>[amount]</span> <span class='pay-rate-units'>[per hour]</span></strong>. This pay rate does not include superannuation, we'll pay this separately.</p>
                 
 
             </div>
