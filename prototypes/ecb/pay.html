@@ -205,6 +205,103 @@ step-number: 3
     <hr class="section-divider my-5" />
 
 
+     <!-- SUPERANNUATION -->
+     <div id="superannuation" class="row remove-element-padding">
+
+        <h2>Superannuation</h2>
+
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+
+                <p>To avoid the superannuation guarantee charge (SGC), you must pay super guarantee (SG) contributions for eligible employees:</p>
+                <ul>
+                <li>at the correct amount in full</li>
+                <li>on time (by the quarterly due dates)</li>
+                <li>into a fund that meets the choice of fund rules.</li>
+                </ul>
+
+                {% include component-examples/clause-box-example.html
+                    title="Superannuation clause"
+                    tag="Included"
+                    tag-type="mandatory"
+                    content="<p>If you are eligible for the super guarantee (SG), we will pay the contributions on your behalf in accordance with legislation and your award. We will pay contributions into a super fund of your choice.</p>
+                    <p>If you do not tell us your choice of fund, we may need to contact the ATO to find out if you have a 'stapled' super fund to make your SG contributions into.</p>
+                    <p>If you do not tell us your choice of fund and the ATO confirms you don't have a stapled super fund, we will pay your SG contributions to our default fund or another fund that meets the choice of fund rules.</p>"
+                    id="superannuation"
+                    classes="pre-included"
+                %}
+            </div>
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Breaks vary between awards"
+            text="<p>Awards have different rules for rest breaks and meal breaks, including:</p><ul><li>the length of the breaks</li><li>when they need to be taken</li><li>the rules about payment.</li><li>what happens if you don't provide a break.</li></ul><p>Find out more about breaks in your industry on the Fair Work Ombudsman website. If your award isn't listed, choose 'Other' then find it in the linked list of awards.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+    <!-- ADDITIONAL SUPERANNUATION -->
+    <div id="section-additional-superannuation" class="row remove-element-padding">
+
+        <h3>Additional superannuation</h3>
+
+        <div class="col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+               
+                <p>Select this clause if the <a href="https://www.fairwork.gov.au/pay/tax-and-superannuation#" target="_blank">award requires additional super- external site</a> on top of the super guarantee (SG). If your award isn't listed, choose 'Other' then find it in the linked list of awards. If the award does not require additional super, you can choose whether to pay extra as an incentive to your employee.</p>
+
+                <div class="dynamic-display d-none">
+                    
+                    <div class="mb-5 p-0 form-example clause-box-include">
+                        <label for="additional-superannuation" class="form-label mb-3"><strong>How much extra super will you contribute? Enter as a percentage of your employee's base pay.</strong></label>
+
+                        <div class="textbox-units form-element-wrapper mb-4">
+                            <input type="text" class="form-control clause-box-input optional-clause m-0 sm-width" id="additional-superannuation" value="" required="" data-value="[number]" data-np-intersection-state="visible">
+                            <p class="m-0">%</p>
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                {% include component-examples/clause-box-example.html
+                    title="Additional superannuation clause"
+                    tag="Optional to include"
+                    tag-type="optional"
+                    input-label="Include Additional superannuation clause (optional)"
+                    content="<p>In addition to the SG, we will contribute <strong><span class='additional-superannuation'>[number]</span> percent</strong> of your base salary into super.</p>"
+                    id="additional-superannuation-clause"
+                    dynamic-toggle=true
+                %}
+
+            </div>
+
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Why provide flexible hours?"
+            text="<p>Flexible hours can help support a positive employment relationship. For example, you might allow your employee to start and finish work earlier on some days to pick their child up from school.</p><p>Some employees are legally entitled to request flexible working arrangements (including flexible hours and patterns of work). You can only refuse these requests if you have a good business reason.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+
 
     <!-- BUTTON GROUP -->
     <div class="ecb-button-group">

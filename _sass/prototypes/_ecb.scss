@@ -283,6 +283,171 @@ html.ecb-prototype {
         }
     }
 
+    // Dynamic dropdown
+    .dynamic-list.inpage {
+        margin-top: 16px;
+
+        .list-wrapper {
+            position: relative;
+        }
+
+        h4 {
+            color: $bga-black;
+        }
+
+        input {
+            border: solid $bga-black 1px;
+            width: calc(100% - 56px);
+            padding: 12px 48px 12px 16px;
+            font-size: 1rem;
+            line-height: 1.75;
+            height: 56px;
+            background: $bga-white;
+            z-index: 4000;
+            text-overflow: ellipsis;
+
+            &::placeholder {
+                color: $bga-black;
+            }
+            &::-webkit-calendar-picker-indicator {
+                display: none !important;
+              }
+
+            &:focus, &:focus-visible {
+                border: $bga-text-focus-border;
+                border-radius: $bga-focus-radius;
+                outline: none;
+            }
+
+           
+        }
+
+        a#list-close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 56px;
+            height: 56px;
+            top: 0;
+            z-index: 5000;
+            background: none;
+            
+            svg {
+                display: block;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+            display: none;
+
+            &.show {
+                display: flex;
+            }
+        }
+        a#list-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 5000;
+            width: 56px;
+            box-sizing: border-box;
+            height: 56px;
+            border: none;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            background: $bga-blue-background-dark;
+
+            svg {
+                display: block;
+            }
+
+            &:focus, &:focus-visible {
+                border: $bga-text-focus-border;
+                border-radius: $bga-focus-radius;
+                background: $bga-blue-highlight-light;
+
+                svg, svg path {
+                    fill: $bga-blue-background-dark;
+                }
+            }
+
+            &:hover, &:active {
+                background: $bga-blue-links;
+
+                svg, svg path {
+                    fill: $bga-white;
+                }
+            }
+
+        }
+
+        ul {
+            max-height: 400px;
+            overflow-y: scroll;
+            background: $bga-white;
+            border: $bga-black 1px solid;
+            border-top: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            
+            &.open {
+                display: block;
+            }
+
+            li {
+                list-style: none;
+                padding: 12px 16px;
+                margin: 0;
+                display: block;
+                text-indent: 0;
+
+                &::before {
+                    display: none;
+                }
+
+                &.hidden {
+                    display: none;
+                }
+
+                span {
+                    font-weight: 700;
+                    background: $bga-blue-background-light;
+                }
+
+                &:hover {
+                    background: $bga-blue-background-dark;
+                    color: $bga-white;
+
+                    span {
+                        background: $bga-blue-background-dark;
+                    }
+                }
+            }
+        }
+        .no-result {
+            background: $bga-red-fail-light;
+            border: 1px solid $bga-red-fail-dark;
+            border-top: none;
+            display: none;
+            padding: 12px 16px;
+
+            &.show {
+                display: block;
+            }
+
+            p {
+                color: $bga-red-fail-dark;
+            }
+        }
+  
+    }
+
 }
 
 .grey-bkg {

@@ -6,7 +6,7 @@
             {% if include.tag-type == "optional" %}
             <form class="mb-4">
                 <div class="col-12 p-0 form-example checkboxes clause-box-include">
-                    <input class="checkbox clause-box-input m-0" type="checkbox" role="checkbox"
+                    <input class="checkbox clause-box-input m-0 {% if include.dynamic-toggle %}dynamic-toggle {% endif %}" type="checkbox" role="checkbox"
                     aria-checked="false"
                     tabindex="0" aria-labelledby="{{ include.id }}" id="{{ include.id }}">
                     <label for="{{ include.id }}" class="form-label mb-3">{{ include.input-label }}</label> 
