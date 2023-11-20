@@ -161,7 +161,15 @@ $(document).ready(function () {
     $('#ecb-prototype input[type=text], #ecb-prototype select').on('change', function () {
         var input_field = $(this).attr('id'),
         input_value = $(this).val();
-        save_response_to_contracts(current_contract, input_field, input_value);
+        console.log(input_value);
+
+        if ($(this).hasClass('optional-clause') && !input_value) {
+            input_value = $(this).attr('data-value');
+            console.log(input_value);
+            save_response_to_contracts(current_contract, input_field, '');
+        } else {
+            save_response_to_contracts(current_contract, input_field, input_value);
+        }
     });
 
     var populate_inputs_and_selects = function () {
@@ -178,16 +186,29 @@ $(document).ready(function () {
     populate_inputs_and_selects();
     
     // Save checkbox answers and re-populate on page load
+    
     $('#ecb-prototype input[type=checkbox]').on('change', function () {
-        var input_field = $(this).attr('id');
-        if ($(this).is(":checked")) {
-            input_value = $(this).parents('.checkboxes').find('label').text();
+        
+        // Checkboxes to include optional clauses
+        if ($(this).parents('.clause-box')) {
+            
+            var input_checkbox = $(this).attr('id'),
+            input_field = input_checkbox.substring(0, input_checkbox.length - 7),
+            input_value = contracts[current_contract][input_field],
+            original_text = $('input#' + input_field).attr('data-value');
 
-            save_response_to_contracts(current_contract, input_field, input_value);
-        } else {
-            save_response_to_contracts(current_contract, input_field, "");
+            if ($(this).is(":checked")) {
+                save_response_to_contracts(current_contract, input_checkbox, 'checked');
+                $('span.' + input_field).text(input_value);
+
+            } else {
+                save_response_to_contracts(current_contract, input_checkbox, "");
+                $('span.' + input_field).text(original_text);
+            }
         }
+
     });
+    
     var populate_checkboxes = function () {
         $('#ecb-prototype input[type="checkbox"]').each(function(){
             var input_field = $(this).attr('id'),
@@ -200,7 +221,7 @@ $(document).ready(function () {
         });
     };
     populate_checkboxes();
-
+    
 
     // Save radio answers and re-populate on page load
     $('#ecb-prototype input[type=radio]').on('change', function () {
@@ -225,6 +246,23 @@ $(document).ready(function () {
         });
     };
     populate_radios();
+
+    
+    // Save dynamic list response and re-populate on page load
+    $('.clause-box-dynamic-list li').on('click', function () {
+        var input_field = $(this).parents('ul').attr('id'),
+        input_value = $(this).text();
+        save_response_to_contracts(current_contract, input_field, input_value);
+    });
+    $('#ecb-prototype input.dynamic-list-input').each(function(){
+        var input_field = $(this).attr('data-list'),
+            input_value = contracts[current_contract][input_field];
+            
+            if (input_value) {
+                $(this).val(input_value);
+                $('.clause-box.' + input_field).addClass('added').find('.component-text span').text(input_value);
+            };
+    });
 
 
     // Textareas
@@ -256,8 +294,15 @@ $(document).ready(function () {
     };  
     populate_textareas();
 
+    // Change optional tags to 'included' if they have been added by the user.
+    $('.clause-box .tag span').each(function(){
+        if ($(this).parents('.clause-box').hasClass('added')) {
+            $(this).text('Included');
+        }
+    });
 
-    // Change PAY UNITS on radio button selection (pay page)
+
+    // Change PAY UNITS next to input on radio button selection (pay page)
     $('#ecb-prototype #pay-rate-units input').on('change', function () {
         var pay_text = $(this).attr('data-value');
         $('.pay-unit').text(pay_text);
@@ -313,11 +358,25 @@ $(document).ready(function () {
     $('#ecb-prototype .dynamic-show').on('click', function () {
         $(this).parents('.question-section').find('.dynamic-display').removeClass('d-none');
     });
+    $('#ecb-prototype .dynamic-toggle').on('click', function () {
+        $(this).parents('.question-section').find('.dynamic-display').toggleClass('d-none');
+    });
 
     var display_dynamic_on_load = function () {
         $("#ecb-prototype input[type=radio].dynamic-show").each(function(){
             if ($(this).is(':checked')) {
                 $(this).parents('.question-section').find('.dynamic-display').removeClass('d-none');
+            }
+        });
+        $("#ecb-prototype input.dynamic-toggle").each(function(){
+            var input_field = $(this).attr('id');
+                input_field = input_field.substring(0, input_field.length - 7);
+
+                var input_value = contracts[current_contract][input_field];
+    
+            if ($(this).is(':checked')) {
+                $(this).parents('.question-section').find('.dynamic-display').removeClass('d-none');
+                $('.clause-box span.' + input_field).text(input_value);
             }
         });
            
@@ -334,7 +393,6 @@ $(document).ready(function () {
             var id = $(this).attr('id');
             answer_text = contracts[current_contract][id];
             $(this).text(answer_text);
-
         });
 
         $('.results-edit-answers-component.optional').each(function () {

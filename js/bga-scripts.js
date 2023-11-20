@@ -934,47 +934,34 @@ $(document).ready(function () {
 
     // COMPONENT EXAMPLE: CLAUSE / REGULATION BOXES
     var clause_boxes = {}
+    var highlight_change = function(clause, added_text, original_text){
+        if (added_text != "") {
+            $('.clause-box span.'+clause).text(added_text).parents('.clause-box').addClass('added highlight');
+
+            setTimeout(function () {
+                $('.clause-box span.'+clause).parents('.clause-box').removeClass('highlight');
+            }, 800);
+
+        } else {
+            $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
+        }
+    };
    
     $('.clause-box-input').each(function () {
         var clause = $(this).attr('id'),
         original_text = $('.clause-box span.'+ clause).text();
         clause_boxes[clause] = original_text;
-        //console.log(clause);
-        //console.log(original_text);
-    });
-
-    $('.clause-box-radios').each(function () {
-        var clause = $(this).attr('id'),
-        original_text = $('.clause-box span.' + clause).text();
-        clause_boxes[clause] = original_text;
-        //console.log(clause);
-        //console.log($('.clause-box span.' + clause));
-        //console.log('clause: ' +clause);
-        //console.log($('.' + clause));
-        //console.log(original_text);
-    });
-    //console.log(clause_boxes);
+    }); 
 
     $('.clause-box-input').change(function () {
         var clause = $(this).attr('id'),
             original_text = clause_boxes[clause],
             added_text;
-            console.log(clause);
 
         // Text input
         if ($(this).attr('type') == "text") {
             added_text = $(this).val();
-
-            if (added_text != "") {
-                $('.clause-box span.'+clause).text(added_text).parents('.clause-box').addClass('added highlight');
-
-                setTimeout(function () {
-                    $('.clause-box span.'+clause).parents('.clause-box').removeClass('highlight');
-                }, 800);
-
-            } else {
-                $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
-            }
+            highlight_change(clause, added_text, original_text);
 
         // Checkbox
         } else if ($(this).attr('type') == "checkbox") {
@@ -990,6 +977,47 @@ $(document).ready(function () {
                 $('.' + clause).find('.tag span').text('Optional to include');
             }
         }
+        
+    });
+
+
+    $('.clause-box-select').each(function () {
+        var clause = $(this).attr('id'),
+        original_text = $('.clause-box span.'+ clause).text();
+        clause_boxes[clause] = original_text;
+    });
+
+    $('.clause-box-select').on('change', function () {
+        var clause = $(this).attr('id'),
+            original_text = clause_boxes[clause],
+            added_text;
+
+        added_text = $(this).val();
+        highlight_change(clause, added_text, original_text);
+    });
+
+
+    $('.clause-box-dynamic-dropdown').each(function () {
+        var clause = $(this).attr('id'),
+        original_text = $('.clause-box span.'+ clause).text();
+        clause_boxes[clause] = original_text;
+    }); 
+
+    $('.clause-box-dynamic-list li').on('click', function () {
+        var clause = $(this).parents('ul').attr('id'),
+            original_text = clause_boxes[clause],
+            added_text;
+
+        added_text = $(this).text();
+        highlight_change(clause, added_text, original_text);
+
+    });
+
+
+    $('.clause-box-radios').each(function () {
+        var clause = $(this).attr('id'),
+        original_text = $('.clause-box span.' + clause).text();
+        clause_boxes[clause] = original_text;
     });
 
     $('.clause-box-radios input').on('click', function () {
@@ -998,19 +1026,9 @@ $(document).ready(function () {
             original_text = clause_boxes[clause],
             added_text;
 
-        // Text input
         added_text = $(this).attr('data-value'); 
+        highlight_change(clause, added_text, original_text);
 
-        if (added_text != "") {
-            $('.clause-box span.'+clause).text(added_text).parents('.clause-box').addClass('added highlight');
-
-            setTimeout(function () {
-                $('.clause-box span.'+clause).parents('.clause-box').removeClass('highlight');
-            }, 800);
-
-        } else {
-            $('.clause-box span.'+clause).text(original_text).parents('.clause-box').removeClass('added');
-        }
     });
 
 
@@ -1852,7 +1870,6 @@ $(document).ready(function () {
                     $(this).removeClass('hidden');
 
                     var case_str = str.slice(str_start_pos, str_end_pos),
-                    str_split = str.split(case_str),
                     str_1 = str.slice(0, str_start_pos),
                     str_2 = str.slice(str_end_pos);
 
