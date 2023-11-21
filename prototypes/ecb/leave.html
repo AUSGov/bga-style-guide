@@ -10,111 +10,25 @@ step-number: 4
 <div class="container page-content prototype-default-state leave-page my-5">
 
 
-    <!-- HOURS WORKED -->
-    <div id="section-hours-of-work" class="row remove-element-padding">
+    <!-- ANNUAL LEAVE -->
+    <div id="section-annual-leave" class="row remove-element-padding">
 
-        <h2 >Hours of work</h2>
-
-        <div class="col-12 col-md-8 col-xl-7">
-            <div class="question-section remove-element-padding">
-            
-                    <div class="mb-5 p-0 form-example clause-box-include">
-                        <label for="hours-worked" class="form-label mb-3"><strong>How many ordinary hours per week will the employee work?</strong></label>
-                        <p>The maximum ordinary hours can vary between awards. Check the maximum ordinary hours allowed per week by selecting the award on the hours of work page. If your award isn't listed, choose 'Other' then find it in the linked list of awards.</p>
-                        <p>Full-time employees usually work an average of 38 ordinary hours per week, part-time employees work less.</p>
-   
-                        <div class="textbox-units form-element-wrapper mb-3">
-                            <input type="text" class="form-control clause-box-input m-0 sm-width" id="hours-worked" value="" required >
-                            <p class="m-0">hour(s) per week</p>
-                        </div>
-    
-                  
-                    </div>
-            
-                <div class="bga-component-wrapper">
-
-                    {% include component-examples/clause-box-example.html
-                        title="Hours of work clause"
-                        tag="Included"
-                        tag-type="mandatory"
-                        content="<p>You are expected to work <span>[number]</span> <strong>ordinary hour(s) per week</strong>. We may also request or require you to work additional hours if the additional hours are reasonable.</p>"
-                        id="hours-worked"
-                    %}
-                   
-                </div>
-            </div>
-        </div>
-
-        <div class="h-100 col-12 col-md-4 offset-xl-1">
-
-            {% include component-examples/info-sidebar-example.html
-                title="Check the award for hours"
-                text="<p>The award sets out the:</p><ul><li>maximum ordinary hours your employee can work in a period (e.g. in a day, week or month)</li><li>minimum hours per shift</li><li>times ordinary hours can be worked (e.g. between 7am to 7pm) – the spread of hours.</li></ul><p>There are also state and territory work health and safety (WHS) rules around work hours to protect employee safety (e.g. to manage fatigue). You can check these with yourlocal WHS regulator.</p><p>If your employee works outside ordinary hours, you may have to pay them extra, e.g. overtime or penalty rates.</p><p>Ordinary hours can be averaged over a roster cycle and don’t need to be the same number of hours each week, for example a 2 week or 4 week roster cycle.</p>"
-                classes="inpage teal"
-            %}
-
-        </div>
-
-    </div>
-
-    <hr class="section-divider my-5" />
-
-
-    <!-- FLEXIBLE HOURS -->
-    <div id="section-flexible-hours" class="row remove-element-padding">
-
-        <h2>Flexible hours</h2>
-
-        <div class="col-12 col-md-8 col-xl-7">
-
-            <div class="question-section remove-element-padding">
-               
-                <p>Include this clause to provide for employee requests to work flexible hours.</p>
-
-                {% include component-examples/clause-box-example.html
-                    title="Flexible hours clause"
-                    tag="Optional to include"
-                    tag-type="optional"
-                    input-label="Include Flexible hours clause (optional)"
-                    content="<p>You may have a right to make a written request for flexible working arrangements under the National Employment Standards, including for when to start and end work each day or your location of work. We may refuse your request in writing, but only if we have reasonable business grounds</p>"
-                    id="flexible-hours"
-                %}
-
-            </div>
-
-
-        </div>
-
-        <div class="h-100 col-12 col-md-4  offset-xl-1">
-            {% include component-examples/info-sidebar-example.html
-            title="Why provide flexible hours?"
-            text="<p>Flexible hours can help support a positive employment relationship. For example, you might allow your employee to start and finish work earlier on some days to pick their child up from school.</p><p>Some employees are legally entitled to request flexible working arrangements (including flexible hours and patterns of work). You can only refuse these requests if you have a good business reason.</p>"
-            classes="inpage teal"
-            %}
-        </div>
-
-    </div>
-
-    <hr class="section-divider my-5" />
-
-
-    <!-- BREAKS -->
-    <div id="breaks" class="row remove-element-padding">
-
-        <h2 >Breaks</h2>
+        <h2>Annual leave</h2>
 
         <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
 
             <div class="question-section remove-element-padding">
 
-                <p class="mb-5">This provides a general clause in your employment contract about your employee's entitlement to breaks. Entitlements to breaks vary between awards, so check the award for details.</p>
+                <p class="mb-5">This sets out your employee's entitlement to annual leave in your employment contract.</p>
 
                 {% include component-examples/clause-box-example.html
-                    title="Breaks clause"
+                    title="Annual leave clause"
                     tag="Included"
                     tag-type="mandatory"
-                    content="<p>Depending on the number of hours you work, you may be entitled to meal breaks. The award sets out:</p><ul><li>the length of the breaks</li><li>when they need to be taken</li><li>the rules about payment.</li></ul><p>You may also be entitled to rest breaks.</p>"
-                    id="breaks"
+                    content="<p>You are entitled to 4 weeks of paid annual leave each year, based on your ordinary hours of work per week.</p>
+                    <p>We will provide any applicable annual leave loading entitlements in accordance with your award.</p>
+                    <p>Annual leave accumulates during the year. Any unused annual leave will roll over from year to year.</p>"
+                    id="annual-leave"
                     classes="pre-included"
                 %}
             </div>
@@ -123,8 +37,11 @@ step-number: 4
 
         <div class="h-100 col-12 col-md-4  offset-xl-1">
             {% include component-examples/info-sidebar-example.html
-            title="Breaks vary between awards"
-            text="<p>Awards have different rules for rest breaks and meal breaks, including:</p><ul><li>the length of the breaks</li><li>when they need to be taken</li><li>the rules about payment.</li><li>what happens if you don't provide a break.</li></ul><p>Find out more about breaks in your industry on the Fair Work Ombudsman website. If your award isn't listed, choose 'Other' then find it in the linked list of awards.</p>"
+            title="How much annual leave?"
+            text="<p>You must give your employee at least 4 weeks of paid annual leave, based on their ordinary hours of work. Annual leave accumulates gradually during the year (pro-rata for part-time employees).</p>
+            <p>So if your employee works full-time, they'll accumulate 4 full weeks of leave over a year.</p>
+            <p>If they work 20 ordinary hours a week as a part-time employee, they'll accumulate 80 hours of annual leave per year (the equivalent of 4 weeks of work).</p>
+            <p>Find out more about annual leave on the Fair Work Ombudsman website.</p>"
             classes="inpage teal"
             %}
         </div>
@@ -134,7 +51,282 @@ step-number: 4
     <hr class="section-divider my-5" />
 
 
+        <!-- PARENTAL LEAVE -->
+        <div id="section-parental-leave" class="row remove-element-padding">
 
+            <h2>Parental leave</h2>
+    
+            <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+    
+                <div class="question-section remove-element-padding">
+    
+                    <p class="mb-5">Your employee may be entitled to 12 months of unpaid parental leave after working for you for a year.</p>
+    
+                    {% include component-examples/clause-box-example.html
+                        title="Parental leave clause"
+                        tag="Included"
+                        tag-type="mandatory"
+                        content="<p>After you have been working for us for 12 months or more, you are entitled to take unpaid parental leave from your position for 12 months.</p>
+                        <p>You may also:</p>
+                        <ul>
+                        <li>request up to an extra 12 months of unpaid leave</li>
+                        <li>be entitled to Parental Leave Pay from the Australian Government, administered by Services Australia.</li>
+                        </ul>"
+                        id="parental-leave"
+                        classes="pre-included"
+                    %}
+                </div>
+    
+            </div>
+    
+            <div class="h-100 col-12 col-md-4  offset-xl-1">
+                {% include component-examples/info-sidebar-example.html
+                title="Who gets parental leave"
+                text="<p>The parental leave entitlement applies to full and part-time employees. Casual employees may also get parental leave if they:</p>
+                <ul>
+                <li>have worked for you on a regular and systematic basis for 12 months or more</li>
+                <li>had a reasonable expectation of continuing this regular work had it not been for the birth or adoption of a child.</li>
+                </ul>
+                <p>Find out more about parental leave on the Fair Work Ombudsman website.</p>"
+                classes="inpage teal"
+                %}
+            </div>
+    
+        </div>
+    
+        <hr class="section-divider my-5" />
+
+
+        <!-- ADDITIONAL PARENTAL LEAVE -->
+    <div id="section-additional-parental-leave" class="row remove-element-padding">
+
+        <h3>Additional parental leave</h3>
+
+        <div class="col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+               
+                <p>You can choose whether to provide additional paid leave (on top of the above parental leave) as an incentive.</p>
+
+                <div class="dynamic-display d-none">
+                    
+                    <div class="mb-5 p-0 form-example clause-box-include">
+                        <label for="additional-parental-leave" class="form-label mb-3"><strong>How many weeks of paid parental leave will you provide?</strong></label>
+
+                        <div class="textbox-units form-element-wrapper mb-4">
+                            <input type="text" class="form-control clause-box-input optional-clause m-0 sm-width" id="additional-parental-leave" value="" required="" data-value="[number]" data-np-intersection-state="visible">
+                            <p class="m-0">week(s)</p>
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                {% include component-examples/clause-box-example.html
+                    title="Include Additional parental leave"
+                    tag="Optional to include"
+                    tag-type="optional"
+                    input-label="Include Additional parental leave clause (optional)"
+                    content="<p>In addition to the above parental leave, we will provide you with <strong><span data-answer='additional-parental-leave'>[number]</span> week(s)</strong> paid parental leave.</p>"
+                    id="additional-parental-leave-clause"
+                    dynamic-toggle=true
+                %}
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+     <!-- PERSONAL LEAVE -->
+     <div id="section-personal-leave" class="row remove-element-padding">
+
+        <h2>Personal/carer's leave</h2>
+
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+
+                <p class="mb-5">This sets out your employee's entitlement to personal and carer's leave in your employment contract. Casual employees are entitled to unpaid carer’s leave.</p>
+
+                {% include component-examples/clause-box-example.html
+                    title="Personal/carer's leave clause"
+                    tag="Included"
+                    tag-type="mandatory"
+                    content="<p>You are entitled to 10 days paid personal/carer's leave (pro-rata for part-time employees) per year based on your ordinary hours of work. This is calculated as 1/26 of your ordinary hours of work in a year.</p>
+                    <p>You can take personal/carer's leave when you can't work because you are sick or injured. You can also use it to care for a member of your immediate family or household who requires care or support because of:</p>
+                    <ul>
+                    <li>personal injury</li>
+                    <li>personal illness</li>
+                    <li>an unexpected emergency.</li>
+                    </ul>
+                    <p>Your personal/carer's leave accrues throughout the year and from year to year. You must give us notice as soon as possible to take personal/carer's leave. We may also require evidence (such as a medical certificate).</p>
+                    <p>You are also entitled to 2 days unpaid carer's leave (in accordance with the National Employment Standards). This is available each time an immediate family member or household member needs your care or support. You can only take unpaid carer's leave if you do not have any paid carer's leave left.</p>"
+                    id="personal-leave"
+                    classes="pre-included"
+                %}
+            </div>
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Personal, carer's and sick leave"
+            text="<p>Personal/carer's leave (sometimes called sick and carer's leave) is for when your employee cannot work because:</p>
+            <ul>
+            <li>they're sick or injured, or</li>
+            <li>a member of their immediate family or household needs their care or support for an injury, sickness or unexpected emergency.</li>
+            </ul>
+            <p>Find out more about personal/carer's leave on the Fair Work Ombudsman website.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+    <!-- COMPASSIONATE LEAVE -->
+    <div id="section-compassionate-leave" class="row remove-element-padding">
+
+        <h2>Compassionate leave</h2>
+
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+
+                <p class="mb-5">This sets out compassionate leave entitlements in your employment contract.</p>
+
+                {% include component-examples/clause-box-example.html
+                    title="Compassionate leave clause"
+                    tag="Included"
+                    tag-type="mandatory"
+                    content="<p>You are entitled to 2 days paid compassionate leave (in accordance with the National Employment Standards) each time:</p>
+                    <ul>
+                    <li>a member of your immediate family or household dies, or has a life threatening illness or injury</li>
+                    <li>a child is stillborn, that would have been a member of your immediate family or household if born alive</li>
+                    <li>you or your current spouse or de facto partner has a miscarriage.</li>
+                    </ul>"
+                    id="compassionate-leave"
+                    classes="pre-included"
+                %}
+            </div>
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Paid or unpaid?"
+            text="<ul>
+            <li>Full and part-time employees get paid compassionate leave.</li>
+            <li>Casual employees get unpaid compassionate leave.</li>
+            </ul>
+            <p>Find out more about compassionate and bereavement leave on the Fair Work Ombudsman website.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+        <!-- PUBLIC HOLIDAYS -->
+        <div id="section-compassionate-leave" class="row remove-element-padding">
+
+            <h2>Public holidays</h2>
+    
+            <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+    
+                <div class="question-section remove-element-padding">
+    
+                    <p class="mb-5">This sets out the work and pay rules for public holidays in your employment contract.</p>
+    
+                    {% include component-examples/clause-box-example.html
+                        title="Public holiday clause"
+                        tag="Included"
+                        tag-type="mandatory"
+                        content="<p>You have a right to be absent from work on a public holiday.</p>
+                        <p>We may ask you to work on a public holiday. You may refuse our request to work if:</p>
+                        <ul>
+                        <li>your refusal is reasonable, or</li>
+                        <li>our request is unreasonable according to the <em>Fair Work Act 2009</em>.</li>
+                        </ul>
+                        <p>If you work on a public holiday, you are entitled to any additional entitlements under your award, such as public holiday penalty rates.</p>
+                        <p>If you do not work on a public holiday, and it falls on a day you would normally work, you are entitled to be paid your base rate of pay.</p>"
+                        id="public-holidays"
+                        classes="pre-included"
+                    %}
+                </div>
+    
+            </div>
+    
+            <div class="h-100 col-12 col-md-4  offset-xl-1">
+                {% include component-examples/info-sidebar-example.html
+                title="Work on a public holiday"
+                text="<ul>
+                <li>You can ask an employee to work on a public holiday – if it's reasonable.</li>
+                <li>If they do work, you'll need to pay them at least the award rates for public holidays.</li>
+                </ul>
+                <p>Find out more about public holidays on the Fair Work Ombudsman website</p>"
+                classes="inpage teal"
+                %}
+            </div>
+    
+        </div>
+    
+        <hr class="section-divider my-5" />
+
+
+          <!-- LONG SERVICE LEAVE -->
+          <div id="section-compassionate-leave" class="row remove-element-padding">
+
+            <h2>Long service leave</h2>
+    
+            <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+    
+                <div class="question-section remove-element-padding">
+    
+                    <p class="mb-5">This sets out the work and pay rules for public holidays in your employment contract.</p>
+    
+                    {% include component-examples/clause-box-example.html
+                        title="Long service leave clause"
+                        tag="Included"
+                        tag-type="mandatory"
+                        content="<p>This provides an overview of long service leave in your employment contract.</p><p>Long service leave rules differ between states and territories, as well as between industries, so specific details are not provided here.</p>"
+                        id="long-service-leave"
+                        classes="pre-included"
+                    %}
+                </div>
+    
+            </div>
+    
+            <div class="h-100 col-12 col-md-4  offset-xl-1">
+                {% include component-examples/info-sidebar-example.html
+                title="Long service leave laws"
+                text="<p>State and territory laws (and in some cases long service leave terms under pre-modern awards which have been preserved under the National Employment Standards) set out how:</p>
+                <ul>
+                <li>long your employee has to be working for you to get long service leave (e.g. after 10 years)</li>
+                <li>much long service leave they get.</li>
+                </ul>
+                <p>In some states and territories:</p>
+                <ul>
+                <li>long serving casuals get long service leave</li>
+                <li>employees in security, community services, building and construction, coal mining and contract cleaning can get portable long service leave. This means they can take their long service leave entitlements from job to job.</li>
+                </ul>
+                <p>Find out more about long service leave on the Fair Work Ombudsman website.</p>"
+                classes="inpage teal"
+                %}
+            </div>
+    
+        </div>
+    
+        <hr class="section-divider my-5" />
 
 
 

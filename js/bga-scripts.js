@@ -934,16 +934,17 @@ $(document).ready(function () {
 
     // COMPONENT EXAMPLE: CLAUSE / REGULATION BOXES
     var clause_boxes = {}
-    var highlight_change = function(clause, added_text, original_text){
+    var highlight_change = function(answer, added_text, original_text){
         if (added_text != "") {
-            $('.clause-box span.'+clause).text(added_text).parents('.clause-box').addClass('added highlight');
+            $('.clause-box span[data-answer="' + answer +'"]').text(added_text).parents('.clause-box').addClass('added highlight');
 
             setTimeout(function () {
-                $('.clause-box span.'+clause).parents('.clause-box').removeClass('highlight');
+                $('.clause-box span[data-answer="' + answer +'"]').parents('.clause-box').removeClass('highlight');
             }, 800);
 
         } else {
-            $('.' + clause).removeClass('added').find('.component-text span').text(original_text);
+            $('.clause-box span[data-answer="' + answer +'"]').text(original_text).parents('.clause-box').removeClass('added highlight');
+
         }
     };
    
@@ -957,6 +958,7 @@ $(document).ready(function () {
         var clause = $(this).attr('id'),
             original_text = clause_boxes[clause],
             added_text;
+
 
         // Text input
         if ($(this).attr('type') == "text") {
@@ -1009,6 +1011,7 @@ $(document).ready(function () {
             added_text;
 
         added_text = $(this).text();
+
         highlight_change(clause, added_text, original_text);
 
     });
@@ -1026,7 +1029,10 @@ $(document).ready(function () {
             original_text = clause_boxes[clause],
             added_text;
 
-        added_text = $(this).attr('data-value'); 
+        added_text = $(this).attr('data-value');  
+        
+        console.log(clause);
+        console.log(added_text);
         highlight_change(clause, added_text, original_text);
 
     });

@@ -9,112 +9,52 @@ step-number: 6
 
 <div class="container page-content prototype-default-state ending-employment-page my-5">
 
+    <!-- DISMISSAL NOTICE -->
+    <div id="section-dismissal-notice" class="row remove-element-padding">
 
-    <!-- HOURS WORKED -->
-    <div id="section-hours-of-work" class="row remove-element-padding">
-
-        <h2 >Hours of work</h2>
-
-        <div class="col-12 col-md-8 col-xl-7">
-            <div class="question-section remove-element-padding">
-            
-                    <div class="mb-5 p-0 form-example clause-box-include">
-                        <label for="hours-worked" class="form-label mb-3"><strong>How many ordinary hours per week will the employee work?</strong></label>
-                        <p>The maximum ordinary hours can vary between awards. Check the maximum ordinary hours allowed per week by selecting the award on the hours of work page. If your award isn't listed, choose 'Other' then find it in the linked list of awards.</p>
-                        <p>Full-time employees usually work an average of 38 ordinary hours per week, part-time employees work less.</p>
-   
-                        <div class="textbox-units form-element-wrapper mb-3">
-                            <input type="text" class="form-control clause-box-input m-0 sm-width" id="hours-worked" value="" required >
-                            <p class="m-0">hour(s) per week</p>
-                        </div>
-    
-                  
-                    </div>
-            
-                <div class="bga-component-wrapper">
-
-                    {% include component-examples/clause-box-example.html
-                        title="Hours of work clause"
-                        tag="Included"
-                        tag-type="mandatory"
-                        content="<p>You are expected to work <span>[number]</span> <strong>ordinary hour(s) per week</strong>. We may also request or require you to work additional hours if the additional hours are reasonable.</p>"
-                        id="hours-worked"
-                    %}
-                   
-                </div>
-            </div>
-        </div>
-
-        <div class="h-100 col-12 col-md-4 offset-xl-1">
-
-            {% include component-examples/info-sidebar-example.html
-                title="Check the award for hours"
-                text="<p>The award sets out the:</p><ul><li>maximum ordinary hours your employee can work in a period (e.g. in a day, week or month)</li><li>minimum hours per shift</li><li>times ordinary hours can be worked (e.g. between 7am to 7pm) – the spread of hours.</li></ul><p>There are also state and territory work health and safety (WHS) rules around work hours to protect employee safety (e.g. to manage fatigue). You can check these with yourlocal WHS regulator.</p><p>If your employee works outside ordinary hours, you may have to pay them extra, e.g. overtime or penalty rates.</p><p>Ordinary hours can be averaged over a roster cycle and don’t need to be the same number of hours each week, for example a 2 week or 4 week roster cycle.</p>"
-                classes="inpage teal"
-            %}
-
-        </div>
-
-    </div>
-
-    <hr class="section-divider my-5" />
-
-
-    <!-- FLEXIBLE HOURS -->
-    <div id="section-flexible-hours" class="row remove-element-padding">
-
-        <h2>Flexible hours</h2>
-
-        <div class="col-12 col-md-8 col-xl-7">
-
-            <div class="question-section remove-element-padding">
-               
-                <p>Include this clause to provide for employee requests to work flexible hours.</p>
-
-                {% include component-examples/clause-box-example.html
-                    title="Flexible hours clause"
-                    tag="Optional to include"
-                    tag-type="optional"
-                    input-label="Include Flexible hours clause (optional)"
-                    content="<p>You may have a right to make a written request for flexible working arrangements under the National Employment Standards, including for when to start and end work each day or your location of work. We may refuse your request in writing, but only if we have reasonable business grounds</p>"
-                    id="flexible-hours"
-                %}
-
-            </div>
-
-
-        </div>
-
-        <div class="h-100 col-12 col-md-4  offset-xl-1">
-            {% include component-examples/info-sidebar-example.html
-            title="Why provide flexible hours?"
-            text="<p>Flexible hours can help support a positive employment relationship. For example, you might allow your employee to start and finish work earlier on some days to pick their child up from school.</p><p>Some employees are legally entitled to request flexible working arrangements (including flexible hours and patterns of work). You can only refuse these requests if you have a good business reason.</p>"
-            classes="inpage teal"
-            %}
-        </div>
-
-    </div>
-
-    <hr class="section-divider my-5" />
-
-
-    <!-- BREAKS -->
-    <div id="breaks" class="row remove-element-padding">
-
-        <h2 >Breaks</h2>
+        <h2>Dismissal notice</h2>
 
         <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
 
             <div class="question-section remove-element-padding">
 
-                <p class="mb-5">This provides a general clause in your employment contract about your employee's entitlement to breaks. Entitlements to breaks vary between awards, so check the award for details.</p>
+                <p class="mb-5">If you dismiss an employee, you must provide specific minimum notice periods or the equivalent pay (unless they're in the list of employees that do not get notice). You should also check the minimum notice in the award – some have longer notice periods. If your award isn't listed, choose 'Other' then find it in the linked list of awards.</p>
 
                 {% include component-examples/clause-box-example.html
-                    title="Breaks clause"
+                    title="Dismissal notice clause"
                     tag="Included"
                     tag-type="mandatory"
-                    content="<p>Depending on the number of hours you work, you may be entitled to meal breaks. The award sets out:</p><ul><li>the length of the breaks</li><li>when they need to be taken</li><li>the rules about payment.</li></ul><p>You may also be entitled to rest breaks.</p>"
-                    id="breaks"
+                    content="<p>You are entitled to the following minimum notice periods (or payment in lieu of notice) if we end your employment. This does not apply if we end your employment for serious misconduct.</p>
+                    <table class='table'>
+                    <thead>
+                    <tr>
+                    <th>Continuous employment with us</th>
+                    <th>Minimum notice period</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>1 year or less</td>
+                    <td><strong>1 week</strong></td>
+                    </tr>
+                    <tr>
+                    <td>More than 1 year to 3 years</td>
+                    <td><strong>2 weeks</strong></td>
+                    </tr>
+                    <tr>
+                    <td>More than 3 years to 5 years</td>
+                    <td><strong>3 weeks</strong></td>
+                    </tr>
+                    <tr>
+                    <td>More than 5 years</td>
+                    <td><strong>4 weeks</strong></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    
+                    <p>You may be entitled to a longer minimum notice period under your award.</p>
+                    <p>You will get an extra week of notice if you're older than 45 years and have worked for us for at least 2 years.</p>"
+                    id="dismissal-notice"
                     classes="pre-included"
                 %}
             </div>
@@ -123,8 +63,67 @@ step-number: 6
 
         <div class="h-100 col-12 col-md-4  offset-xl-1">
             {% include component-examples/info-sidebar-example.html
-            title="Breaks vary between awards"
-            text="<p>Awards have different rules for rest breaks and meal breaks, including:</p><ul><li>the length of the breaks</li><li>when they need to be taken</li><li>the rules about payment.</li><li>what happens if you don't provide a break.</li></ul><p>Find out more about breaks in your industry on the Fair Work Ombudsman website. If your award isn't listed, choose 'Other' then find it in the linked list of awards.</p>"
+            title="Some employees do not get notice"
+            text="<p>Exclusions apply. For example, employees do not get notice if their employment is terminated:</p>
+            <ul>
+            <li>at the end of a fixed term contract</li>
+            <li>at the end of a seasonal worker arrangement</li>
+            <li>as a casual employee</li>
+            <li>due to serious misconduct.</li>
+            </ul>
+            <p>Check for other exclusions on the Fair Work Ombudsman website.</p>
+            <h3>Payment in lieu of notice</h3>
+            <p>Instead of them working through the notice period you may pay your employee the equivalent amount.</p>
+            <h3>Unfair dismissal</h3>
+            <p>If you dismiss an employee and they think the dismissal is unfair, they may be able to challenge it through the Fair Work Commission. Learn more about ending employment and unfair dismissal on the Fair Work Ombudsman’s Ending employment page</p>
+            <p> </p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+    <!-- REDUNDANCY -->
+    <div id="section-redundancy" class="row remove-element-padding">
+
+        <h2>Redundancy</h2>
+
+        <div class="remove-top-spaces col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+
+                <p class="mb-5">Redundancy can occur when you either no longer need an employee's job to be done by anyone (e.g. you get technology that replaces the job), or you become insolvent or bankrupt.</p>
+
+                {% include component-examples/clause-box-example.html
+                    title="Redundancy clause"
+                    tag="Included"
+                    tag-type="mandatory"
+                    content="<p>Depending on the number of hours you work, you may be entitled to meal breaks. The award sets out:</p><ul><li>the length of the breaks</li><li>when they need to be taken</li><li>the rules about payment.</li></ul><p>You may also be entitled to rest breaks.</p>"
+                    id="redundancy"
+                    classes="pre-included"
+                %}
+            </div>
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Redundancy pay"
+            text="<p>When an employee's job is made redundant, you may have to provide redundancy pay if:</p>
+            <ul>
+            <li>they've been working for you for at least a year</li>
+            <li>your business has at least 15 employees when they're made redundant.</li>
+            </ul>
+            <p>You'll also need to know the rules around:</p>
+            <ul>
+            <li>consultation – if you make workplace changes that are likely to cause redundancies</li>
+            <li>giving notice</li>
+            <li>notifying Services Australia if you're making 15 or more employees redundant.</li>
+            </ul>
+            <p>Find more information on notice and redundancy pay, including exclusions, on the Fair Work Ombudsman website. You should also check the award.</p>"
             classes="inpage teal"
             %}
         </div>
@@ -135,6 +134,63 @@ step-number: 6
 
 
 
+
+    <!-- MISCONDUCT -->
+    <div id="section-misconduct" class="row remove-element-padding">
+
+        <h2>Misconduct</h2>
+
+        <div class="col-12 col-md-8 col-xl-7">
+
+            <div class="question-section remove-element-padding">
+               
+                <p>This sets out that you can dismiss (fire) the employee for serious misconduct without notice.</p>
+
+                {% include component-examples/clause-box-example.html
+                    title="Misconduct clause clause"
+                    tag="Optional to include"
+                    tag-type="optional"
+                    input-label="Include Misconduct clause clause (optional)"
+                    content="<p>We may terminate your employment without notice, or payment in lieu of notice, if you engage in serious misconduct.</p>
+                    <p>Serious misconduct is when an employee:</p>
+                    <ul>
+                    <li>causes serious and imminent risk to the health and safety of another person or to the reputation, viability or profits of their employer's business, or</li>
+                    <li>wilfully or deliberately behaves in a way that's inconsistent with continuing their employment.</li>
+                    </ul>
+                    <p>Examples of serious misconduct include:</p>
+                    <ul>
+                    <li>theft</li>
+                    <li>fraud</li>
+                    <li>violence/assault</li>
+                    <li>sexual harassment</li>
+                    <li>serious breaches of health and safety requirements</li>
+                    <li>being drunk or affected by drugs at work</li>
+                    <li>refusing to carry out work duties.</li>
+                    </ul>"
+                    id="misconduct"
+                %}
+
+            </div>
+
+
+        </div>
+
+        <div class="h-100 col-12 col-md-4  offset-xl-1">
+            {% include component-examples/info-sidebar-example.html
+            title="Serious misconduct"
+            text="<p>To dismiss an employee without notice, you must believe that their conduct is serious enough to justify immediate dismissal.</p>
+            <p>It's a good idea to document the misconduct, in case your employee makes an unfair dismissal claim. Be careful dismissing an employee this way. If the dismissal is found to be unfair, you may have to pay compensation, lost wages and/or give the employee their job back.</p>
+            <p>Check the Fair Work Ombudsman's website for more information on serious misconduct.</p>"
+            classes="inpage teal"
+            %}
+        </div>
+
+    </div>
+
+    <hr class="section-divider my-5" />
+
+
+   
 
 
 
