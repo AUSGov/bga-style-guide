@@ -1011,9 +1011,7 @@ $(document).ready(function () {
             added_text;
 
         added_text = $(this).text();
-
         highlight_change(clause, added_text, original_text);
-
     });
 
 
@@ -1028,11 +1026,9 @@ $(document).ready(function () {
         var clause = $(this).parents('.clause-box-radios').attr('id'),
             original_text = clause_boxes[clause],
             added_text;
+            
 
         added_text = $(this).attr('data-value');  
-        
-        console.log(clause);
-        console.log(added_text);
         highlight_change(clause, added_text, original_text);
 
     });
