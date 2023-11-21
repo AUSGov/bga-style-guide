@@ -179,7 +179,7 @@ $(document).ready(function () {
             
             if (input_value) {
                 $(this).val(input_value);
-                $('.clause-box.' + input_field).addClass('added').find('.component-text span').text(input_value);
+                $('.clause-box span[data-answer="' + input_field +'"]').parents('.clause-box').addClass('added');
             };
         });
     };
@@ -216,7 +216,7 @@ $(document).ready(function () {
             
             if (input_value) {
                 $(this).prop('checked', true);
-                $('.clause-box.' + input_field).addClass('added');
+                $('.clause-box span[data-answer="' + input_field +'"]').parents('.clause-box').addClass('added');
             };
         });
     };
@@ -225,22 +225,19 @@ $(document).ready(function () {
 
     // Save radio answers and re-populate on page load
     $('#ecb-prototype input[type=radio]').on('change', function () {
-        var input_field = $(this).parents('.radios').attr('id'),
-            input_value = $(this).attr('id'),
-            field_text = $(this).attr('data-value');
+        var input_field = $(this).parents('.radios').attr('id');
+            input_value = $(this).attr('data-value');
        
         save_response_to_contracts(current_contract, input_field, input_value);
-        save_response_to_contracts(current_contract, input_field + '-text', field_text);
     });
     var populate_radios = function (){
         $('#ecb-prototype input[type="radio"]').each(function(){
             var input_field = $(this).parents('.radios').attr('id'),
-            input_value = contracts[current_contract][input_field],
-            field_text = contracts[current_contract][input_field + '-text'];
+            input_value = contracts[current_contract][input_field];
 
             if (input_value) {
-                $('#' + input_value).prop('checked', true);
-                $('.clause-box.' + input_field).addClass('added').find('.component-text span.' + input_field).text(field_text);
+                $('input[data-value="' + input_value + '"]').prop('checked', true);
+                $('.clause-box span[data-answer="' + input_field +'"]').text(input_value).parents('.clause-box').addClass('added');
             };
 
         });
@@ -254,13 +251,15 @@ $(document).ready(function () {
         input_value = $(this).text();
         save_response_to_contracts(current_contract, input_field, input_value);
     });
+
     $('#ecb-prototype input.dynamic-list-input').each(function(){
         var input_field = $(this).attr('data-list'),
             input_value = contracts[current_contract][input_field];
             
             if (input_value) {
                 $(this).val(input_value);
-                $('.clause-box.' + input_field).addClass('added').find('.component-text span').text(input_value);
+                //$('.clause-box.' + input_field).addClass('added').find('.component-text span').text(input_value);
+                $('.clause-box span[data-answer="' + input_field +'"]').text(input_value).parents('.clause-box').addClass('added');
             };
     });
 
@@ -294,6 +293,13 @@ $(document).ready(function () {
     };  
     populate_textareas();
 
+    // Populate clause boxes with answers on page reload
+    $('.clause-box span').each(function(){
+        var answer = contracts[current_contract][$(this).attr('data-answer')];
+        $(this).text(answer);
+
+    });
+
     // Change optional tags to 'included' if they have been added by the user.
     $('.clause-box .tag span').each(function(){
         if ($(this).parents('.clause-box').hasClass('added')) {
@@ -303,10 +309,19 @@ $(document).ready(function () {
 
 
     // Change PAY UNITS next to input on radio button selection (pay page)
+    if ($('#ecb-prototype .pay-unit').length) {
+        var pay_units = contracts[current_contract]['pay-rate-units'];
+
+        console.log('pay units');
+        if (pay_units) {
+            $('#ecb-prototype .pay-unit').text(pay_units);
+        }
+    }
     $('#ecb-prototype #pay-rate-units input').on('change', function () {
         var pay_text = $(this).attr('data-value');
         $('.pay-unit').text(pay_text);
         });
+    
 
     // Duties update textarea based on radio selection.
     $('#ecb-prototype #duties input[type=radio]').on('change', function () {
@@ -401,6 +416,7 @@ $(document).ready(function () {
 
             if (answer_text) {
                 $(this).removeClass('d-none');
+                $('.answer#'+id).text(answer_text);
             }
         });
         
