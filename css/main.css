@@ -9579,9 +9579,9 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ecb-prototype .modal-example .resend a.sent:hover { background: transparent; }
 
-#ecb-prototype #ecb-modal-email .step { display: none; }
+#ecb-prototype #ecb-modal-email .step, #ecb-prototype #ecb-modal-save .step { display: none; }
 
-#ecb-prototype #ecb-modal-email .step.show { display: block; }
+#ecb-prototype #ecb-modal-email .step.show, #ecb-prototype #ecb-modal-save .step.show { display: block; }
 
 #ecb-prototype #email-form input { width: auto; flex-grow: 1; }
 
@@ -9689,7 +9689,7 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 .contracts-list .contract-details { display: flex; align-items: center; }
 
-.contracts-list .contract-details .contract-name { margin-right: 24px; font-size: 18px; }
+.contracts-list .contract-details .contract-name { margin-right: 24px; font-size: 18px; cursor: pointer; }
 
 .contracts-list .contract-actions { min-width: 380px; }
 
@@ -9700,10 +9700,6 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 .contracts-list .contract-actions a:hover svg path { fill: #113869; }
 
 .contracts-list .contract-actions svg { margin-left: 8px; }
-
-.no-contract { display: none; }
-
-.no-contract.show { display: block; }
 
 @media (max-width: 1200px) { .contracts-list .contract-details { flex-wrap: wrap; } .contracts-list .contract-name { width: 100%; } .contracts-list .expiry { margin-top: 8px; } }
 

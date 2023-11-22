@@ -716,26 +716,17 @@
 
                             <h1 class="step-title" data-step="2">Hours</h1>
 
-                            <div class="mobile-stepped-nav remove-element-padding">
-                                <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
-                                <p>Step 2 of 5: <strong>Hours</strong></p>
-                            </div>
 
-                            <div class="stepped-navigation-wrapper remove-element-padding teal">
+                           <div class="stepped-navigation-wrapper remove-element-padding teal">
     
    
-     
-    
+   
+
         <div class="mobile-stepped-nav remove-element-padding">
             <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
-            <p>Step 3 of 6: <strong></strong></p>
+            <p>Step 2 of 8: <strong>Hours</strong></p>
         </div>
 
-
-    
-
-
-    
     <div class="bga-component stepped-navigation">
 
         
@@ -797,6 +788,16 @@
     </div>
     
 </div>
+
+                           
+
+
+                           
+
+
+
+
+
 
                         </div>
                     </div>
@@ -1361,7 +1362,7 @@
             </div>
        
             <div class="col-12 col-md-4 col-lg-3 col-xl-2 d-flex align-items-center justify-content-end button-wrapper">  
-                <button id="ecb-save-exit" class="bga-btn bga-secondary-btn bkg-light flex-shrink-0" tabindex="0" role="button">Save and exit</button>
+                <button data-modal="ecb-modal-save" id="ecb-save-exit" class="bga-btn bga-secondary-btn bkg-light flex-shrink-0 modal-trigger" tabindex="0" role="button">Save and exit</button>
             </div>
         </div>
 
@@ -1369,6 +1370,109 @@
     </div>
 
 </div>
+
+
+<!-- SAVE AND EXIT MODAL -->
+<div id="ecb-modal-save" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text p-0 remove-element-padding">
+
+                <div id="step-save-email-address" data-id="ecb" class="step remove-element-padding show">
+                    <h4>Enter your email address to save your progress in this tool</h4>
+
+                    <p>We will send you a link so you can return and work on your contract later. You will have <strong>seven days</strong> to continue working on your contract.</p>
+                    <p>We will first send a code to your email to verify that it's you.</p>
+
+                    <form id="email-form" class="d-flex mb-4">
+                        <input type="text" class="form-control mb-0 me-3" value="">
+                        <div class="button-example">
+                            <button class="bga-btn bga-primary-btn bkg-light progress-step" tabindex="0" href="" role="button">Email <svg
+                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                    height="15.429" viewBox="0 0 18 15.429">
+                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                                </svg></button>
+                        </div>
+                    </form>
+
+                    <p class="mini">This site is protected by reCAPTCHA and the <a href="" class="external">Google Privacy Policy</a> and <a href="" class="external">Terms of Service</a> apply</p>
+
+                </div>
+
+                <div id="step-save-verify-email" data-id="ecb" class="step remove-element-padding">
+                    <h4>Verify your email address</h4>
+
+                    <p>We’ve sent a 4 digit code to <strong><span class="user-email">user@emailaddress.com.au</span></strong>.</p>
+                    <p>Enter the code below to verify your email address.
+                    </p>
+
+                    <form id="verify-form" data-id="ecb" >
+                    <fieldset class='number-code'>
+                        <div class="d-inline-flex code-inputs">
+                            <input name='code' class='code-input py-2 me-2' required/>
+                            <input name='code' class='code-input py-2 me-2' required/>
+                            <input name='code' class='code-input py-2 me-2' required/>
+                            <input name='code' class='code-input py-2' required/>   
+                            
+                        <div class="success-icon ms-4">
+                       
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+                            <circle cx="22" cy="22" r="20" />
+                          </svg>
+
+                          <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="18.857" height="14.918" viewBox="0 0 18.857 14.918">
+                            <path d="M0,8.737,2.236,6.461l3.945,3.954L16.6,0l2.256,2.241L6.181,14.918Z" fill="#ffffff"/>
+                          </svg>
+                          
+                          
+                        </div>
+
+
+                        </div> 
+                        <div class="error-msg mt-3 mb-0">
+                            <p>Incorrect code. Please enter the code sent to your email address.</p>
+                        </div> 
+                       
+                        <div class="resend remove-element-padding mt-3 mb-5">
+                            <p class="mini me-2 mb-0">Didn’t receive the code?</p>
+                            <a href="" class="mini">Resend code</a> 
+                        </div>
+
+
+                        </fieldset>
+                        
+                        <div class="button-example">
+                            <button class="bga-btn bga-primary-btn bkg-light progress-step" id="verify-btn" tabindex="0" href="" role="button">Email link and exit tool  <svg
+                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                    height="15.429" viewBox="0 0 18 15.429">
+                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                                </svg></button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            <!--
+                <div id="step-email-success" data-id="ecb" class="step remove-element-padding">
+                    <h4 class="d-flex align-items-center">Success - we’ve saved your progress in this tool</h4>
+
+                    <p>Check your inbox. We’ve emailed you a link for returning to your contract at a later date.</p>
+
+                    <div class="button-example">
+                        <button class="bga-btn bga-primary-btn bkg-light success-scroll" tabindex="0" href="" role="button">Next steps</button>
+                    </div>
+                </div>
+            -->
+
+        </div>
+    </div>
+</div>
+
+
 
 
 
@@ -1407,6 +1511,9 @@
     <!-- LOOP11 TEST SCRIPT -->
     <script type=“text/javascript”>window.loop11_pp = [100, 98392];</script>
     <script src="//cdn.loop11.com/embed.js" type="text/javascript" async="async"></script>
+
+    <div class="modal-overlay"></div>
+
 
 </body>
 
