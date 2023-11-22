@@ -1,0 +1,73 @@
+<div class="stepped-navigation-wrapper remove-element-padding {{ include.classes }}">
+    {% if include.title %}
+        <h1 class="step-title">{{ include.title }}</h1>
+    {% endif %}
+   
+   
+
+        <div class="mobile-stepped-nav remove-element-padding">
+            <button class="stepped-nav-toggle me-3 p-0" tabindex=0>Menu</button>
+            <p>Step {{ page.step-number }} of 8: <strong>{{ page.stepped-nav-step }}</strong></p>
+        </div>
+
+    <div class="bga-component stepped-navigation">
+
+        {% if include.step1 %}
+        <a tabindex="1" id="nav-step-1" class="step {{include.step1-stage}} me-3">
+            <span class="step-number  mb-2">1</span>
+            <span class="step-name">{{ include.step1 }}</span>
+        </a>
+        {% endif %}
+
+        {% if include.step2 %}
+        <a tabindex="1" id="nav-step-2" class="step {{include.step2-stage}} me-3">
+            <span class="step-number mb-2">2</span>
+            <span class="step-name">{{ include.step2 }}</span>
+        </a>    
+        {% endif %}
+
+        {% if include.step3 %}
+        <a tabindex="1" id="nav-step-3" class="step {{include.step3-stage}} me-3">
+            <span class="step-number mb-2">3</span>
+            <span class="step-name">{{ include.step3 }}</span>
+        </a>
+        {% endif %}
+
+        {% if include.step4 %}
+        <a tabindex="1" id="nav-step-4" class="step me-3">
+            <span class="step-number mb-2">4</span>
+            <span class="step-name">{{ include.step4 }}</span>
+        </a>
+        {% endif %}
+
+        {% if include.step5 %}
+        <a tabindex="1" id="nav-step-5" class="step me-3">
+            <span class="step-number mb-2">5</span>
+            <span class="step-name">{{ include.step5 }}</span>
+        </a>
+        {% endif %}
+
+        {% if include.step6 %}
+        <a tabindex="1" id="nav-step-6" class="step me-3">
+            <span class="step-number mb-2">6</span>
+            <span class="step-name">{{ include.step6 }}</span>
+        </a>
+        {% endif %}
+
+        {% if include.step7 %}
+        <a tabindex="1" id="nav-step-7" class="step me-3">
+            <span class="step-number mb-2">7</span>
+            <span class="step-name">{{ include.step7 }}</span>
+        </a>
+        {% endif %}
+
+        {% if include.step8 %}
+        <a tabindex="1" id="nav-step-8" class="step me-3">
+            <span class="step-number mb-2">8</span>
+            <span class="step-name">{{ include.step8 }}</span>
+        </a>
+        {% endif %}
+
+    </div>
+    
+</div>

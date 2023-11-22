@@ -17,31 +17,80 @@ description: Build your own employment contract, for an employee under Australia
 
 
                 <div class="contracts-list mb-5">
-                    
-                    {% include prototypes/ecb-contract-actions.html
-                        position="Sales assistant"
-                        expiry="seven days"
-                        %}
 
                     {% include prototypes/ecb-contract-actions.html
-                        position="Manager"
-                        expiry="seven days"
-                        %}
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract0"
+                    %}
 
                     {% include prototypes/ecb-contract-actions.html
-                        position="Senior dog walker and personal care attendant"
-                        expiry="1 day"
-                        %}
-                    
-                   
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract1"
+                    %}
 
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract2"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract3"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract4"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract5"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract6"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract7"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract8"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract9"
+                    %}
 
 
 
                 </div>
-
-
-
 
             </div>
 
@@ -57,7 +106,7 @@ description: Build your own employment contract, for an employee under Australia
 
             <div class="remove-top-spaces content-wrapper">
 
-                <div class="no-contract">
+                <div class="no-contract d-none">
                     {% include component-examples/notification-example.html
                     icon="'../../assets/icon-notification-circle-info.svg' | relative_url "
                     title="You don't currently have any saved contracts."
@@ -68,12 +117,22 @@ description: Build your own employment contract, for an employee under Australia
 
                 <h3>Start a new contract</h3>
 
-                {% include component-examples/inline-pathway-example.html
-                link1="Start a new contract"
-                page1="Employment contract tool"
-                icon1="'../../assets/icon-arrow-right-blue.svg' | relative_url "
+                <div class="bga-component-wrapper pb-5">
+                    <div class="bga-component inline-pathway m-0">
 
-                %}
+                        <a href="" class="mb-1 ecb_new_contract">
+                            <div class="link-wrapper remove-element-padding p-4 ">
+                                <p class="link mb-3"><strong>Start a new contract</strong></p>
+                                <p class="page mini">
+                                    <img class="me-2" src={{"/assets/icon-arrow-right-blue.svg" | relative_url }}
+                                        alt="">
+                                    <span>Employment contract tool</span>
+                                </p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
 
             </div>
 

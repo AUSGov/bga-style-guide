@@ -5,6 +5,38 @@ $(document).ready(function () {
 
     //ECB REVISED FLOW PROTOTYPE
 
+    // Variables to store multiple contracts
+    if($('#ecb-prototype').length) {
+        var contracts = JSON.parse(localStorage.getItem('contracts'));
+        if (!contracts) {   
+            contracts = {
+                contract0 : {},
+                contract1 : {},
+                contract2 : {},
+                contract3 : {},
+                contract4 : {},
+                contract5 : {},
+                contract6 : {},
+                contract7 : {},
+                contract8 : {},
+                contract9 : {}
+            };
+        };
+        console.log(contracts);
+
+        var current_contract = localStorage.getItem('current contract');
+        if (!current_contract) {   
+            current_contract = "contract0";
+        };
+    }
+
+    // Function to save individual item to contracts object
+    var save_response_to_contracts = function(current_contract, input_field, input_value){
+        contracts[current_contract][input_field] = input_value;
+        localStorage.setItem('contracts', JSON.stringify(contracts));
+    };
+
+
     // Stepped nav functionality
     var stepped_nav_functionality = function(path){
         
@@ -13,14 +45,14 @@ $(document).ready(function () {
 
         $('#' + active_step).addClass('active');
 
-        sessionStorage.setItem(active_step, 'visited');
+        save_response_to_contracts(current_contract, active_step, 'visited');
 
         var step_titles = ["position.html", "hours.html", "pay.html", "leave.html", "obligations.html", "ending-employment", "review.html", "finalise.html"];
 
         for (var step = 0; step < step_titles.length; step++) {
             var step_number = step + 1,
                 step_str = 'nav-step-' + step_number;
-            var state = sessionStorage.getItem(step_str);
+            var state = contracts[current_contract][step_str];
 
             if (step_number < active_number) {
                 $('#' + step_str).addClass('completed').attr('href', path + step_titles[step]);
@@ -34,7 +66,7 @@ $(document).ready(function () {
         var completed_number;
         $('.stepped-navigation .step').each(function(index){
             var step = index + 1,
-            visited_state = sessionStorage.getItem('nav-step-'+ step);
+            visited_state = contracts[current_contract]['nav-step-'+ step];
             if (visited_state == 'visited') {
                completed_number = step;
             } 
@@ -47,7 +79,7 @@ $(document).ready(function () {
         }
 
     };
-
+    
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
 
         var location = window.location.href,
@@ -66,43 +98,7 @@ $(document).ready(function () {
         stepped_nav_functionality(path);
 
     }
-
-    // Reset tool on "Create new contract"
-   $('#ecb-prototype .clear-tool').on('click', function(e) {
-        e.preventDefault();
-        
-        var location = $(this).attr('href'),
-        fragment = sessionStorage.getItem('fragment'),
-        current_task = sessionStorage.getItem('current_task'),
-        task1 =  sessionStorage.getItem('task1'),
-        task2 =sessionStorage.getItem('task2'),
-        task3 = sessionStorage.getItem('task3'),
-        task4 = sessionStorage.getItem('task4');
-        
-        sessionStorage.clear();
-
-        if(fragment) {
-            sessionStorage.setItem('fragment', fragment);
-        };
-        if (current_task) {
-            sessionStorage.setItem('current_task', current_task);
-        }
-        if (task1) {
-            sessionStorage.setItem('task1', task1);
-        }
-        if (task2) {
-            sessionStorage.setItem('task2', task2);
-        }
-        if (task3) {
-            sessionStorage.setItem('task3', task3);
-        }
-        if (task4) {
-            sessionStorage.setItem('task4', task4);
-        }
-        sessionStorage.setItem('ecb-link-clicked','true');
-
-        window.location = location;
-    });
+    
 
     // Sticky stepped nav behaviour
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
@@ -126,36 +122,9 @@ $(document).ready(function () {
             }
         });
     }
-    
-    // Variables to store multiple contracts
-    if($('#ecb-prototype').length) {
-        var contracts = JSON.parse(localStorage.getItem('contracts'));
-        if (!contracts) {   
-            contracts = {
-                contract0 : {},
-                contract1 : {},
-                contract2 : {},
-                contract3 : {},
-                contract4 : {}
-            };
-        };
-        console.log(contracts);
 
-        var current_contract = localStorage.getItem('current contract');
-        if (!current_contract) {   
-            current_contract = "contract0";
-        };
-        //console.log('current contract: ' + current_contract);
-    }
 
-    // !!! Populating clause boxes with user answers after input is in bga-scripts.js
-    
-
-    // Function to save individual response to contracts object
-    var save_response_to_contracts = function(current_contract, input_field, input_value){
-        contracts[current_contract][input_field] = input_value;
-        localStorage.setItem('contracts', JSON.stringify(contracts));
-    };
+    // !!! DON'T FORGET - populating clause boxes with user answers after input is in bga-scripts.js
 
     // Save text input & select answers and re-populate on page load
     $('#ecb-prototype input[type=text], #ecb-prototype select').on('change', function () {
@@ -215,7 +184,6 @@ $(document).ready(function () {
             if (input_value) {
                 $(this).prop('checked', true);
                 $(this).parents('.clause-box').addClass('added');
-                //console.log($('.clause-box span[data-answer="' + input_field +'"]').parents('.clause-box'));
             };
         });
     };
@@ -448,97 +416,157 @@ $(document).ready(function () {
 
     }
 
+
+    // Open & close modals
+    $('.modal-trigger').on('click', function () {
+        var modal = $(this).attr('data-modal');
+        
+        if ( modal.includes('modal-save') ) { 
+            $('#step-save-email-address').addClass('show');
+            $('#step-save-verify-email .success-icon').removeClass('show'); 
+            $('#step-save-verify-email input').each(function(){
+                $(this).val('');
+            });
+        } 
+    });
     
-
-    // Track button clicks with URL fragments
-    /*
-    $('#verify-btn').on('click', function(){
-        if (sessionStorage.current_task == "task1") {
-            set_fragment("T1-email");
-        }
+    // Show hide content within email modal
+    $('#step-save-email-address .progress-step').on('click', function () {
+        var id = $(this).parents('.step').attr('data-id'),
+        email_address = $('#step-save-email-address[data-id=' + id + '] input').val();
+        
+        $('#step-save-email-address[data-id=' + id + ']').removeClass('show');
+        $('#step-save-verify-email[data-id=' + id + ']').addClass('show');
+        if ( email_address.length ) {
+            $('#step-save-verify-email[data-id=' + id + '] .user-email').text(email_address);
+        } 
     });
- 
-    $('#ecb-prototype .stepped-navigation .step').on('click', function(e){
-       
-        if ($(this).hasClass('active')) {
-            e.preventDefault();
-        } else {
-            e.preventDefault();
-            sessionStorage.setItem('ecb-link-clicked','true');
-            var href = $(this).attr('href');
+    
+        // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
+    var inputElements = [...document.querySelectorAll('input.code-input')]
 
-            if (sessionStorage.current_task == "task2") {
-                set_fragment("T2-nav"); 
-            } else if (sessionStorage.current_task == "task4") {
-                set_fragment("T4-nav");
-            } 
+    inputElements.forEach((ele, index) => {
+        ele.addEventListener('keydown', (e) => {
+            // if the keycode is backspace & the current field is empty
+            // focus the input before the current. Then the event happens
+            // which will clear the "before" input box.
+            if (e.keyCode === 8 && e.target.value === '') inputElements[Math.max(0, index - 1)].focus();
+        })
+        ele.addEventListener('input', (e) => {
+            // take the first character of the input
+            // this actually breaks if you input an emoji
+            // but I'm willing to overlook insane security code practices.
+            var [first, ...rest] = e.target.value;
+            e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
+            var lastInputBox = index === inputElements.length - 1;
+            var didInsertContent = first !== undefined;
+            if (didInsertContent && !lastInputBox) {
+                // continue to input the rest of the string
+                inputElements[index + 1].focus();
+                inputElements[index + 1].value = rest.join('');
+                inputElements[index + 1].dispatchEvent(new Event('input'));
+            }
+        })
+    })
+   
+    
+    $('#step-save-verify-email #verify-btn').on('click', function(){
+        var code = inputElements.map(({ value }) => value).join(''),
+        id = $(this).parents('.step').attr('data-id');
+
+        if (code == '1234' ) {
+            $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
+            $('#step-save-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+            $(this).prop('disabled', true).addClass('disabled');
             
-            window.location = href;
+            setTimeout(function () {
+                
+                $('#step-save-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
+                $('#step-save-verify-email[data-id=' + id + '] .success-icon').addClass('show');
+                $('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );
+                
+            }, 1000);
+
+            setTimeout(function () {
+                $('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').hide();
+                $('#step-save-verify-email[data-id=' + id + '] .success-icon').removeClass('show');
+                $('#step-save-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+            }, 5000);
+
+            setTimeout(function () {
+                localStorage.setItem('current contract', current_contract);
+                window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
+            }, 5200);
+
+        } else {
+            $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
         }
 
     });
+    
+    // Display contracts on manage contracts page
 
-    $('.ecb-button-group .prev, .ecb-button-group .next').on('click', function(e){     
-        e.preventDefault();
-        sessionStorage.setItem('ecb-link-clicked','true'); 
-        var href = $(this).attr('href');
-
-        if (sessionStorage.current_task == "task2") {
-            set_fragment("T2-bottom"); 
-        } else if (sessionStorage.current_task == "task4") {
-            set_fragment("T4-bottom"); 
+    var count_contracts = function(contracts){
+        contracts_count = [];
+       
+        for (var contract in contracts) {
+            if (Object.keys(contracts[contract]).length != 0) {
+                contracts_count.push(contract);
+            }
         }
-        window.location = href
+        return contracts_count;
+    };
 
+    if ($('.page-manage-contracts').length) {
+    
+        // Show /hide contracts in contact list
+        var active_contracts = count_contracts(contracts);
+
+        for (var i = 0; i < active_contracts.length; i++) { 
+            var position = contracts[active_contracts[i]]['position-title'];
+            $('.contract#' + active_contracts[i]).removeClass('d-none').find('.contract-name span').text(position);
+        } 
+        
+        // Show no contracts msg if no contracts are saved.
+        if (active_contracts.length == 0) {
+            $('.no-contract').removeClass('d-none');
+        } else {
+            $('.no-contract').addClass('d-none');
+        } 
+
+        // Contract links
+        $('a.contract-name,  a.edit').on('click', function(){
+            var steps = ['nav-step-1', 'nav-step-2', 'nav-step-3', 'nav-step-4', 'nav-step-5', 'nav-step-6', 'nav-step-7', 'nav-step-8'];
+
+            var pages = ['position', 'hours', 'pay', 'leave', 'obligations', 'ending-employment', 'review',  'finalise'];
+
+            // reset current contract
+            var contract = $(this).parents('.contract').attr('id');
+            localStorage.setItem('current contract', contract);
+
+            // get furthest page visited in nav and redirect to that page
+            var page = 'position';
+            for (var j = 0; j < steps.length; j++) {
+                var last_step = contracts[contract][steps[j]];
+                if (last_step) {
+                    page =  pages[j];
+                } 
+            }
+            window.location.pathname = "/bga-style-guide/prototypes/ecb/" + page;
+        });
+        
+    } 
+
+    // Set new contract 
+    $('.ecb_new_contract').on('click', function(e){
+        var active_contracts = count_contracts(contracts),
+        new_contract =  active_contracts.length,
+        new_contract = 'contract' + new_contract.toString();
+        localStorage.setItem('current contract', new_contract);
+        
+        window.location.pathname = "/bga-style-guide/prototypes/ecb/landing";
     });
-
-
-    $('.checklist-item-title, .checklist-toggle').on('click', function(){
-        if (sessionStorage.current_task == "task3") {
-            set_fragment("T3-openitem");
-        }
-    });
-
-    $('.new-contract').on('click', function(e){     
-        e.preventDefault();
-        sessionStorage.setItem('ecb-link-clicked','true');
-
-        if (sessionStorage.current_task == "task4") {
-            set_fragment("T4-createbtn");
-        }
-    });
-
-    $('.edit-btn').on('click', function(){
-        e.preventDefault();
-        sessionStorage.setItem('ecb-link-clicked','true');
-        var href = $(this).attr('href');
-        window.location = href
-    });
-    */
-
-    // On page unload add page location to sessionStorage in 'prev_location' item
-    /*
-    $(window).on('beforeunload', function () {
-        var location = window.location.pathname;
-        sessionStorage.setItem('prev-location', location);     
-    });  
-
-     // Load existing URL fragments on page load.
-     var existing_fragment = sessionStorage.getItem('fragment');
-     if (existing_fragment) {
-         window.location.hash = existing_fragment;
-     };
-     */
     
 
 }); //End doc ready
 
-// Ensure URL fragments are added to the url (this catches back button clicks that)
-/*
-window.onhashchange = function() {
-    var existing_fragment = sessionStorage.getItem('fragment');
-    if (existing_fragment) {
-        window.location.hash = existing_fragment;
-    };
-}
-*/
