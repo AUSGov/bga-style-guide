@@ -531,6 +531,15 @@ html.ecb-prototype {
         }
     }
 }
+.subsite-footer #reset-prototype {
+    color: $bga-white;
+    font-size: 10px;
+    text-decoration: underline;
+
+    &:hover {
+        background: none;
+    }
+}
 
 // Media queries
 @media (max-width: 1200px) {
@@ -543,6 +552,14 @@ html.ecb-prototype {
         }
         .expiry {
             margin-top: 8px;
+        }
+    }
+    #ecb-prototype {
+        .save-footer {
+            .button-wrapper {
+                justify-content: flex-start !important;
+                margin-top: 24px;
+            }
         }
     }
 }
@@ -621,12 +638,7 @@ html.ecb-prototype {
             padding-right: 0px !important;
         }
 
-        .save-footer {
-            .button-wrapper {
-                justify-content: flex-start !important;
-                margin-top: 24px;
-            }
-        }
+        
     }
     .contracts-list {
         .contract {

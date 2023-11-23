@@ -22,56 +22,7 @@ description: Build your own employment contract, for an employee under Australia
                     position=""
                     expiry="seven days"
                     classes="d-none"
-                    contract_number="contract0"
-                    %}
-
-                    {% include prototypes/ecb-contract-actions.html
-                    position=""
-                    expiry="seven days"
-                    classes="d-none"
-                    contract_number="contract1"
-                    %}
-
-                    {% include prototypes/ecb-contract-actions.html
-                    position=""
-                    expiry="seven days"
-                    classes="d-none"
-                    contract_number="contract2"
-                    %}
-
-                    {% include prototypes/ecb-contract-actions.html
-                    position=""
-                    expiry="seven days"
-                    classes="d-none"
-                    contract_number="contract3"
-                    %}
-
-                    {% include prototypes/ecb-contract-actions.html
-                    position=""
-                    expiry="seven days"
-                    classes="d-none"
-                    contract_number="contract4"
-                    %}
-
-                    {% include prototypes/ecb-contract-actions.html
-                    position=""
-                    expiry="seven days"
-                    classes="d-none"
-                    contract_number="contract5"
-                    %}
-
-                    {% include prototypes/ecb-contract-actions.html
-                    position=""
-                    expiry="seven days"
-                    classes="d-none"
-                    contract_number="contract6"
-                    %}
-
-                    {% include prototypes/ecb-contract-actions.html
-                    position=""
-                    expiry="seven days"
-                    classes="d-none"
-                    contract_number="contract7"
+                    contract_number="contract9"
                     %}
 
                     {% include prototypes/ecb-contract-actions.html
@@ -85,7 +36,56 @@ description: Build your own employment contract, for an employee under Australia
                     position=""
                     expiry="seven days"
                     classes="d-none"
-                    contract_number="contract9"
+                    contract_number="contract7"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract6"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract5"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract4"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract3"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract2"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract1"
+                    %}
+
+                    {% include prototypes/ecb-contract-actions.html
+                    position=""
+                    expiry="seven days"
+                    classes="d-none"
+                    contract_number="contract0"
                     %}
 
 
@@ -140,4 +140,36 @@ description: Build your own employment contract, for an employee under Australia
 
     </div>
 
+</div>
+
+
+
+<!-- DELETE CONTRACT MODAL -->
+<div id="modal-delete-contract" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text confirm-delete p-0 remove-element-padding">
+
+            <h4>You are about to delete your <span class="contract-name"><strong></strong></span> contract.</h4>
+
+            <p>This contract will be permanently deleted. Are you sure you want to proceed?</p>
+
+            <div class="ecb-button-group">
+               
+                <div class="button-example">
+                    <button id="delete-contract-btn" class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" data-contract-num="" role="button">Yes, delete contract</button>
+                </div> 
+
+                <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+            </div>
+
+        </div>
+
+        <div class="component-text success-delete d-none p-0 remove-element-padding">
+            <h4>Success - we have deleted your <span class="contract-name"><strong></strong></span> contract.</h4>
+        </div>
+    </div>
 </div>
