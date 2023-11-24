@@ -644,10 +644,11 @@ $(document).ready(function () {
 
         if (response == 'no') {
             $('.save-no').removeClass('d-none');
-            $('.save-yes').addClass('d-none');
+            
         } else if (response == 'yes') {
             $('.save-no').addClass('d-none');
-            $('.save-yes').removeClass('d-none');
+            $('#ecb-modal-save').addClass('show');
+            $('#modal-new-contract').removeClass('show');
         }
     });
 
