@@ -760,18 +760,62 @@ step-number: 8
 
         <div class="component-text p-0 remove-element-padding">
 
-            <h4>Remove your data and restart?</h4>
+            <h4>Save this contract before starting again?</h4>
 
-            <p>To start a new contract, any information you have already entered will be removed.</p>
-            <p>If you want to make changes to your current contract, click cancel to go back into the tool.</p>
 
-            <div class="ecb-button-group">
-               
-                <div class="button-example">
-                    <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Yes, start a new contract</a>
-                </div> 
+            <div class="save-contract">
+              
+                <div class="radios" id="save-contract-radios">
+                    <div class="" role="radiogroup">
 
-                <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                        <div class="radio-button alternate pb-1">
+                            <input class="form-check-input m-0" value="yes" type="radio" name="save-contract-radios" id="save-yes">
+                            <label class="form-check-label" for="save-yes">Yes, save this contract</label>
+                        </div>
+
+                        <div class="radio-button alternate pb-1">
+                            <input class="form-check-input m-0" value="no" id="save-no" type="radio" name="save-contract-radios">
+                            <label class="form-check-label" for="save-no">No, don't save</label>
+                        </div>
+
+                    </div>
+
+                </div>
+              
+
+            </div>
+
+
+            <div class="save-yes d-none">
+                <h4>Enter your email address to save your progress in this tool</h4>
+                <p>To start a new contract, any information you have already entered will be removed.</p>
+                <p>If you want to make changes to your current contract, click cancel to go back into the tool.</p>
+                
+                <div class="ecb-button-group">
+                    
+                        <div class="button-example">
+                        <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Yes, start a new contract</a>
+                        </div> 
+
+                        <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                        
+                    </div>
+            </div>
+
+
+            <div class="save-no d-none">
+              
+                <p class="mt-4">Any information you have already entered will be removed.</p>
+                
+                <div class="ecb-button-group">
+                    
+                        <div class="button-example">
+                        <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Create new contract</a>
+                        </div> 
+
+                        <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                        
+                    </div>
             </div>
 
         </div>

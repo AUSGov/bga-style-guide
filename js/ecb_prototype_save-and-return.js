@@ -419,6 +419,7 @@ $(document).ready(function () {
 
     }
 
+    // SAVING CONTRACT
     // Function to get a empty contract to place the temp contract in (used in the save process).
     var save_temp_contract = function(){
         
@@ -534,6 +535,7 @@ $(document).ready(function () {
 
             setTimeout(function () {
                 localStorage.setItem('current contract', 'contracttemp');
+                localStorage.setItem('saved new', 'true');
                 window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
             }, 5200);
 
@@ -558,7 +560,15 @@ $(document).ready(function () {
 
     if ($('.page-manage-contracts').length) {
         current_contract = 'contracttemp';
-        localStorage.setItem('current contract', 'contracttemp')
+        localStorage.setItem('current contract', 'contracttemp');
+        var new_contract = localStorage.getItem('saved new');
+
+        if (new_contract == 'true') {
+            $('.modal-overlay').addClass('show');
+            $('#new-contract-notification').addClass('show');
+            //$('#new-contract-notification').removeClass('d-none');
+            localStorage.setItem('saved new', '');
+        } 
 
         // Show /hide contracts in contact list
         var active_contracts = count_contracts(contracts);
@@ -611,7 +621,8 @@ $(document).ready(function () {
                 $('.contracts-list #' + deleted_contract).addClass('d-none');
                 
                 // Display the no contracts msg if there are no contracts left.
-                if ( $(".contract:visible").length > 0 ) {
+                console.log( $(".contract:visible").length);
+                if ( $(".contract:visible").length == 0 ) {
                     $('.no-contract').removeClass('d-none');
                 };
                
@@ -621,19 +632,32 @@ $(document).ready(function () {
         
     } 
 
-    // Set new contract 
+    // Set new contract from link on manage contracts page
     $('.ecb_new_contract').on('click', function(e){
         localStorage.setItem('current contract', 'contracttemp');
         window.location.pathname = "/bga-style-guide/prototypes/ecb/landing";
     });
 
+    //Set new contract from 'create new contract' link on finalise page
+    $('#save-contract-radios input').on('change', function(){
+        var response = $(this).val();
 
-    // Change 'save' component to 'manage contracts' component.
+        if (response == 'no') {
+            $('.save-no').removeClass('d-none');
+            $('.save-yes').addClass('d-none');
+        } else if (response == 'yes') {
+            $('.save-no').addClass('d-none');
+            $('.save-yes').removeClass('d-none');
+        }
+    });
+
+
+    // Change 'save' component to 'manage contracts' component when user returns to the contract.
     if ( current_contract != 'contracttemp' ) {
         console.log('already saved');
 
-        $('#ecb-prototype .save-footer-content.save-content').addClass('d-none');
-        $('#ecb-prototype .save-footer-content.manage-contracts-content').removeClass('d-none');
+        $('#ecb-prototype .save-content').addClass('d-none');
+        $('#ecb-prototype .manage-contracts-content').removeClass('d-none');
         $('#ecb-prototype button#ecb-save-exit').addClass('d-none');
         $('#ecb-prototype a#ecb-manage-contracts').removeClass('d-none');
     }
@@ -643,6 +667,10 @@ $(document).ready(function () {
         localStorage.setItem('contracts', JSON.stringify(contracts));
         window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
     });
+
+
+    // Extend deadline link
+
 
     // Reset prototype
     $('#reset-prototype').on('click', function(){
