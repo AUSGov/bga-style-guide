@@ -456,9 +456,10 @@
         }
     }
     //Dyamic list and dynamic dropdown
-    .dynamic-list {
+    &.dynamic-list {
         background: $bga-blue-black-lightest;
-        margin-top: 16px;
+    }
+    .dynamic-list { 
 
         .list-wrapper {
             position: relative;
@@ -562,6 +563,7 @@
         ul {
             max-height: 400px;
             overflow-y: scroll;
+            overflow-y: auto;
             background: $bga-white;
             border: $bga-black 1px solid;
             border-top: none;
@@ -593,8 +595,13 @@
                     background: $bga-blue-background-light;
                 }
 
-                &:hover {
+                &:focus {
                     background: $bga-blue-background-dark;
+                    color: $bga-white;
+                }
+
+                &:hover {
+                    background: $bga-blue-footer;
                     color: $bga-white;
 
                     span {
@@ -966,6 +973,7 @@
             }
         }
         .dynamic-list {
+            
             h4 {
                 margin-bottom: 8px !important;
                 font-size: .875rem;
@@ -1066,6 +1074,7 @@
         
         .scrollable {
             max-height: none;
+            background: $bga-blue-background-dark;
         }
 
         .bottom-content {
