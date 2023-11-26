@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dropdown select</title>
+    <title>Dropdowns and dynamic lists</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -185,7 +185,7 @@
                     
 
                     <li class="breadcrumb breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0">Dropdown select</p>
+                        <p class="breadcrumb-location m-0 p-0">Dropdowns and dynamic lists</p>
                     </li>
                 </ul>
                 
@@ -205,7 +205,7 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Dropdown select</h1>
+                        <h1>Dropdowns and dynamic lists</h1>
                         <p class="header-intro">Styling for dropdown selects</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
@@ -230,7 +230,7 @@
         <section class="body-content my-5">
 
             <div class="row">
-    
+
     <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
 
         <div class="anchor-menu in-page remove-element-padding mt-0 mb-2 p-0">
@@ -242,10 +242,14 @@
             <li class="mb-3"><a tabindex="0" href="#dropdown-select">Dropdown select</a></li>
              
         
+            <li class="mb-3"><a tabindex="0" href="#dynamic-dropdown">Dynamic dropdown</a></li>
+             
+        
+            <li class="mb-3"><a tabindex="0" href="#dynamic-list">Dynamic list</a></li>
+             
+        
             <li class="mb-3"><a tabindex="0" href="#design-specifications">Design specifications</a></li>
              
-         
-         
          
          
          
@@ -256,16 +260,18 @@
 </div>
 
     </div>
-    
+
     <div class="anchored-content remove-top-spaces col-12 col-lg-9 col-xl-8">
-   
-          
-        <!--DROPDOWN -->     
-        <h2 class="section-start" id="dropdown-select">Dropdown select</h2>
+
         <h3>Style notes</h3>
-        <p>Default styling for form labels is the standard paragraph style. Bold paragraph styles or lower level heading styles can also be used for labels when appropriate.</p>
-        <p>Text elements in forms have a bottom margin of 16px instead of the 24px used elsewhere on business.gov.au.</p>
-        
+        <p>Default styling for form labels is the standard paragraph style. Bold paragraph styles or lower level heading
+            styles can also be used for labels when appropriate.</p>
+        <p>Text elements in forms have a bottom margin of 16px instead of the 24px used elsewhere on business.gov.au.
+        </p>
+
+        <!--DROPDOWN -->
+        <h2 class="section-start" id="dropdown-select">Dropdown select</h2>
+
         <div class="breakpoints m-0 p-4">
 
     
@@ -279,104 +285,309 @@
 
         <div class="component-example mb-5">
             <div class="component-wrapper remove-element-padding p-4">
-                
-                
+
+
                 <div class="row g-0">
                     <div class="col-12 col-sm-8 mb-2 p-0 form-example">
                         <label class="mb-3">Dropdown label</label>
                         <p class="mb-3">To view error state select 'error' from the dropdown list.</p>
                         <div class="form-element-wrapper mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option value="" disabled selected>Select an option</option>
-                            <option>Dropdown option one</option>
-                            <option>Dropdown option two is a fair bit longer</option>
-                            <option value="error">Error</option>
-                        </select>
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="" disabled selected>Select an option</option>
+                                <option>Dropdown option one</option>
+                                <option>Dropdown option two is a fair bit longer</option>
+                                <option value="error">Error</option>
+                            </select>
                         </div>
                         <p class="error-feedback mb-3">Descriptive error message</p>
                     </div>
                 </div>
 
+            </div>
+
+            <div class="element-state-wrapper p-4">
+
+                <div class="row ">
+
+                    <div class="col-12 col-sm-6">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Default state</p>
+                            <div class="form-element-wrapper mb-3">
+                                <div class="bga-text-input dropdown-example select default mb-0"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Focus state</p>
+                            <div class="form-element-wrapper mb-3">
+                                <div class="bga-text-input dropdown-example select focus mb-0"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error state</p>
+                            <div class="form-element-wrapper mb-3 error">
+                                <div class="bga-text-input dropdown-example select error mb-0"></div>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Error and focus state</p>
+                            <div class="form-element-wrapper mb-3 error">
+                                <div class="bga-text-input dropdown-example select error focus mb-0"></div>
+                            </div>
+                            <p class="error-feedback show mb-3">Descriptive error message</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6">
+                        <div class="bga-input-state-example pb-2">
+                            <p class="mb-3 label">Disabled state</p>
+                            <div class="form-element-wrapper mb-3">
+                                <div class="bga-text-input dropdown-example select disabled mb-0"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
-                <div class="element-state-wrapper p-4">
-                
-                    <div class="row ">
-                        
-                        <div class="col-12 col-sm-6">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Default state</p>
-                                <div class="form-element-wrapper mb-3">
-                                    <div class="bga-text-input dropdown-example select default mb-0"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Focus state</p>
-                                <div class="form-element-wrapper mb-3">
-                                    <div class="bga-text-input dropdown-example select focus mb-0"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error state</p>
-                                <div class="form-element-wrapper mb-3 error">
-                                    <div class="bga-text-input dropdown-example select error mb-0"></div>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-
-                        
-                        <div class="col-12 col-sm-6">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Error and focus state</p>
-                                <div class="form-element-wrapper mb-3 error">
-                                    <div class="bga-text-input dropdown-example select error focus mb-0"></div>
-                                </div>
-                                <p class="error-feedback show mb-3">Descriptive error message</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-12 col-sm-6">
-                            <div class="bga-input-state-example pb-2">
-                                <p class="mb-3 label">Disabled state</p>
-                                <div class="form-element-wrapper mb-3">
-                                    <div class="bga-text-input dropdown-example select disabled mb-0"></div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        
             </div>
-                    
-            </div>
-            
+
         </div>
 
+
+        <!--DYNAMIC DROPDOWN -->
+        <h2 class="section-start" id="dynamic-dropdown">Dynamic dropdown</h2>
+
+        <div class="breakpoints m-0 p-4">
+
+    
+    <p class="pe-3 m-0">All breakpoints</p>
+    
+    
+
+</div>
+
+
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+
+
+                <div class="row g-0">
+                    <div class="col-12 col-sm-8 mb-2 p-0 form-example">
+                        <div class="dynamic-list remove-element-padding example dropdown">
+
+    <div class="dynamic-list remove-element-padding">
+        <h4 class="mb-3">Filter providers by name</h4>
+
+        <div class="list-wrapper">
+
+            <input tabindex="0" type="text" placeholder="Start typing an organisation name" name="org" data-list="orgname" />
+
+            <a tabindex="0" href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
+              </svg></a>
+            
+            <a tabindex="0" id="list-toggle" tabindex="-1" title="Show All Items" class="p-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                <path data-name="Path 11954" d="M495.83,467.285l-7.522-7.535-2.478,2.482,10,10.018,10-10.018-2.477-2.482Z" transform="translate(-485.83 -459.75)" fill="#fff"/>
+              </svg>
+              
+              </a>
+
+            <ul id="orgname">
+            <li tabindex="0" value="Access Macquarie Limited">Access Macquarie Limited</li>
+            <li tabindex="0"value="Alexander S Richardson Pty Ltd">Alexander S Richardson Pty Ltd</li>
+            <li tabindex="0" value="Australian Hearing Services">Australian Hearing Services</li>
+            <li tabindex="0" value="Australian National University">Australian National University</li>
+            <li tabindex="0" value="Australian Nuclear Science and Technology Organisation (ANSTO)">Australian Nuclear Science and Technology Organisation (ANSTO)</li>
+            <li tabindex="0" value="Centre for Digestive Diseases Pty Ltd">Centre for Digestive Diseases Pty Ltd</li>
+            <li tabindex="0" value="Charles Sturt University">Charles Sturt University</li>
+            <li tabindex="0" value="Commonwealth Scientific and Industrial Research Organisation (CSIRO)">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</li>
+            <li tabindex="0" value="Datapharm Australia Pty Ltd">Datapharm Australia Pty Ltd</li>
+            <li tabindex="0" value="Department of Regional NSW">Department of Regional NSW</li>
+            <li tabindex="0" value="Design & Industry Pty Ltd">Design & Industry Pty Ltd</li>
+            <li tabindex="0" value="Design Momentum Pty Ltd">Design Momentum Pty Ltd</li>
+            <li tabindex="0" value="Diversity Arrays Technology Pty Limited">Diversity Arrays Technology Pty Limited</li>
+            <li tabindex="0" value="Electro Optic Systems Pty. Limited">Electro Optic Systems Pty. Limited</li>
+            <li tabindex="0" value="Eurofins Agroscience Services Pty Ltd">Eurofins Agroscience Services Pty Ltd</li>
+            <li tabindex="0" value="Fisheries Research & Development Corporation">Fisheries Research & Development Corporation</li>
+            <li tabindex="0" value="Genesys Electronics Design Pty Ltd">Genesys Electronics Design Pty Ltd</li>
+            <li tabindex="0" value="HD Designlink Pty Ltd">HD Designlink Pty Ltd</li>
+            <li tabindex="0" value="Health Language Analytics Pty Ltd">Health Language Analytics Pty Ltd</li>
+            <li tabindex="0" value="I C P - Firefly Pty Limited">I C P - Firefly Pty Limited</li>
+            <li tabindex="0" value="I D & E Pty Ltd">I D & E Pty Ltd</li>
+            <li tabindex="0" value="Ingenuity Design Group Pty Ltd">Ingenuity Design Group Pty Ltd</li>
+            <li tabindex="0" value="Macquarie University">Macquarie University</li>
+            <li tabindex="0" value="Meat & Livestock Australia Limited">Meat & Livestock Australia Limited</li>
+            <li tabindex="0" value="National Measurement Institute">National Measurement Institute</li>
+            <li tabindex="0" value="Neuroscience Research Australia">Neuroscience Research Australia</li>
+            <li tabindex="0" value="Newport Tek Pty Ltd">Newport Tek Pty Ltd</li>
+            <li tabindex="0" value="Newsouth Innovations Pty Limited">Newsouth Innovations Pty Limited</li>
+            <li tabindex="0" value="Ozdocs International Pty Ltd">Ozdocs International Pty Ltd</li>
+            <li tabindex="0" value="R&T Reliability Technologies Pty Ltd">R&T Reliability Technologies Pty Ltd</li>
+            <li tabindex="0" value="ResTech Pty Limited">ResTech Pty Limited</li>
+            <li tabindex="0" value="Rivalea (Australia) Pty Ltd">Rivalea (Australia) Pty Ltd</li>
+            <li tabindex="0" value="Robotic Systems Pty Ltd">Robotic Systems Pty Ltd</li>
+            <li tabindex="0" value="Romar Engineering Pty Ltd">Romar Engineering Pty Ltd</li>
+            <li tabindex="0" value="Royal Botanic Gardens and Domain Trust">Royal Botanic Gardens and Domain Trust</li>
+            <li tabindex="0" value="Sonic Clinical Trials Pty Limited">Sonic Clinical Trials Pty Limited</li>
+            <li tabindex="0" value="Southern Cross University">Southern Cross University</li>
+            <li tabindex="0" value="Southern Star Research Pty Ltd">Southern Star Research Pty Ltd</li>
+            <li tabindex="0" value="University of Canberra">University of Canberra</li>
+            <li tabindex="0" value="The University of New England">The University of New England</li>
+            <li tabindex="0" value="The University of Newcastle">The University of Newcastle</li>
+            <li tabindex="0" value="The University of Newcastle Research Associates Limited">The University of Newcastle Research Associates Limited</li>
+            <li tabindex="0" value="The University of Wollongong">The University of Wollongong</li>
+            </ul>
+          
+        </div>
+
+        <div class="no-result error m-0 remove-element-padding">
+            <p>No provider with this name.</p>
+        </div>
         
+    </div>
+
+
+</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <!--DYNAMIC LIST -->
+        <h2 class="section-start" id="dynamic-list">Dynamic list</h2>
+
+        <div class="breakpoints m-0 p-4">
+
+    
+    <p class="pe-3 m-0">All breakpoints</p>
+    
+    
+
+</div>
+
+
+
+        <div class="component-example mb-5">
+            <div class="component-wrapper remove-element-padding p-4">
+
+
+                <div class="row g-0">
+                    <div class="col-12 col-sm-8 mb-2 p-0 form-example">
+                        <div class="dynamic-list remove-element-padding example list">
+
+    <div class="dynamic-list remove-element-padding">
+        <h4 class="mb-3">Filter grants by name</h4>
+
+        <div class="list-wrapper">
+
+            <input type="text" placeholder="Start typing a grant name" name="org" data-list="grantName" />
+            
+            <a href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
+              </svg></a>
+              
+   
+            <ul id="grantName">
+            <li tabindex="0" value="Access Macquarie Limited">Access Macquarie Limited</li>
+            <li tabindex="0"value="Alexander S Richardson Pty Ltd">Alexander S Richardson Pty Ltd</li>
+            <li tabindex="0" value="Australian Hearing Services">Australian Hearing Services</li>
+            <li tabindex="0" value="Australian National University">Australian National University</li>
+            <li tabindex="0" value="Australian Nuclear Science and Technology Organisation (ANSTO)">Australian Nuclear Science and Technology Organisation (ANSTO)</li>
+            <li tabindex="0" value="Centre for Digestive Diseases Pty Ltd">Centre for Digestive Diseases Pty Ltd</li>
+            <li tabindex="0" value="Charles Sturt University">Charles Sturt University</li>
+            <li tabindex="0" value="Commonwealth Scientific and Industrial Research Organisation (CSIRO)">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</li>
+            <li tabindex="0" value="Datapharm Australia Pty Ltd">Datapharm Australia Pty Ltd</li>
+            <li tabindex="0" value="Department of Regional NSW">Department of Regional NSW</li>
+            <li tabindex="0" value="Design & Industry Pty Ltd">Design & Industry Pty Ltd</li>
+            <li tabindex="0" value="Design Momentum Pty Ltd">Design Momentum Pty Ltd</li>
+            <li tabindex="0" value="Diversity Arrays Technology Pty Limited">Diversity Arrays Technology Pty Limited</li>
+            <li tabindex="0" value="Electro Optic Systems Pty. Limited">Electro Optic Systems Pty. Limited</li>
+            <li tabindex="0" value="Eurofins Agroscience Services Pty Ltd">Eurofins Agroscience Services Pty Ltd</li>
+            <li tabindex="0" value="Fisheries Research & Development Corporation">Fisheries Research & Development Corporation</li>
+            <li tabindex="0" value="Genesys Electronics Design Pty Ltd">Genesys Electronics Design Pty Ltd</li>
+            <li tabindex="0" value="HD Designlink Pty Ltd">HD Designlink Pty Ltd</li>
+            <li tabindex="0" value="Health Language Analytics Pty Ltd">Health Language Analytics Pty Ltd</li>
+            <li tabindex="0" value="I C P - Firefly Pty Limited">I C P - Firefly Pty Limited</li>
+            <li tabindex="0" value="I D & E Pty Ltd">I D & E Pty Ltd</li>
+            <li tabindex="0" value="Ingenuity Design Group Pty Ltd">Ingenuity Design Group Pty Ltd</li>
+            <li tabindex="0" value="Macquarie University">Macquarie University</li>
+            <li tabindex="0" value="Meat & Livestock Australia Limited">Meat & Livestock Australia Limited</li>
+            <li tabindex="0" value="National Measurement Institute">National Measurement Institute</li>
+            <li tabindex="0" value="Neuroscience Research Australia">Neuroscience Research Australia</li>
+            <li tabindex="0" value="Newport Tek Pty Ltd">Newport Tek Pty Ltd</li>
+            <li tabindex="0" value="Newsouth Innovations Pty Limited">Newsouth Innovations Pty Limited</li>
+            <li tabindex="0" value="Ozdocs International Pty Ltd">Ozdocs International Pty Ltd</li>
+            <li tabindex="0" value="R&T Reliability Technologies Pty Ltd">R&T Reliability Technologies Pty Ltd</li>
+            <li tabindex="0" value="ResTech Pty Limited">ResTech Pty Limited</li>
+            <li tabindex="0" value="Rivalea (Australia) Pty Ltd">Rivalea (Australia) Pty Ltd</li>
+            <li tabindex="0" value="Robotic Systems Pty Ltd">Robotic Systems Pty Ltd</li>
+            <li tabindex="0" value="Romar Engineering Pty Ltd">Romar Engineering Pty Ltd</li>
+            <li tabindex="0" value="Royal Botanic Gardens and Domain Trust">Royal Botanic Gardens and Domain Trust</li>
+            <li tabindex="0" value="Sonic Clinical Trials Pty Limited">Sonic Clinical Trials Pty Limited</li>
+            <li tabindex="0" value="Southern Cross University">Southern Cross University</li>
+            <li tabindex="0" value="Southern Star Research Pty Ltd">Southern Star Research Pty Ltd</li>
+            <li tabindex="0" value="University of Canberra">University of Canberra</li>
+            <li tabindex="0" value="The University of New England">The University of New England</li>
+            <li tabindex="0" value="The University of Newcastle">The University of Newcastle</li>
+            <li tabindex="0" value="The University of Newcastle Research Associates Limited">The University of Newcastle Research Associates Limited</li>
+            <li tabindex="0" value="The University of Wollongong">The University of Wollongong</li>
+            </ul>
+          
+        </div>
+
+        <div class="no-result error m-0 remove-element-padding">
+            <p>No grant or program with this name.</p>
+        </div>
+        
+    </div>
+
+
+</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
         <!-- Design specifications link -->
         <h2 class="section-start" id="design-specifications">Design specifications</h2>
-        
+
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
 <a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/9db09e8e-828b-42eb-925f-10782a7a38e2' role="button">View design specifications</a>
 </div>
 
-            
-        </div>
-    
-        
-    
-</div>
 
+    </div>
+
+
+
+</div>
 
         </section>
     </div>
