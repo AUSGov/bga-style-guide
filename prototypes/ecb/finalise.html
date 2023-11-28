@@ -760,10 +760,11 @@ step-number: 8
 
         <div class="component-text p-0 remove-element-padding">
 
-            <h4>Save this contract before starting again?</h4>
+            <div class="not-saved">
 
-
-            <div class="save-contract">
+            <div class="save-contract"> 
+                
+                <h4>Save this contract before starting again?</h4>
               
                 <div class="radios" id="save-contract-radios">
                     <div class="" role="radiogroup">
@@ -791,14 +792,32 @@ step-number: 8
                 
                 <div class="ecb-button-group">
                     
-                        <div class="button-example">
-                        <a class="bga-btn bga-primary-btn bkg-light clear-tool" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Create new contract</a>
-                        </div> 
+                    <div class="button-example">
+                    <a class="bga-btn bga-primary-btn bkg-light ecb_new_contract" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Create new contract</a>
+                    </div> 
 
-                        <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                    <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
                         
-                    </div>
-            </div>   
+                </div>
+            </div> 
+            
+            </div>
+
+            <div class="already-saved d-none">
+                <h4>You are starting a new contract</h4>
+                <p>You have alread saved your current contract. You can return to it for another X days using the link we emailed you.</p>
+
+                <div class="ecb-button-group">
+                    
+                    <div class="button-example">
+                    <a class="bga-btn bga-primary-btn bkg-light ecb_new_contract" tabindex="0" href={{ "prototypes/ecb/landing.html" | relative_url }} role="button">Create new contract</a>
+                    </div> 
+
+                    <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                        
+                </div>
+
+            </div>
 
         </div>
     </div>
