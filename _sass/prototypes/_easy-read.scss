@@ -74,7 +74,13 @@
     }
 
     &.standalone {
-        border-bottom: solid 2px $bga-blue-border;
+        border-bottom: solid 2px $bga-blue-background-dark;
+
+        &.img-border {
+            img {
+                border: solid 2px $bga-blue-background-dark;
+            }
+        }
 
         .component-image {
             width: 20%;
@@ -85,10 +91,8 @@
 #easy-read {
 
     h2 {
-        //padding: 48px 0 0 0;
-        //margin: 0 0 48px 0;
+        padding: 64px 0 40px;
     }
-
     &.standalone {
         h2 {
             padding: 64px 0 0 0;
@@ -98,7 +102,7 @@
 
 }
 .easy-read-group {
-    border-top: solid 2px $bga-blue-border;
+    border-top: solid 2px $bga-blue-background-dark;
 }
 
 

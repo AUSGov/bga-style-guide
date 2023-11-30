@@ -17,12 +17,29 @@ url1: /prototypes/bga/registrations.html
         <div class="col-12 col-md-11 col-lg-9 col-xl-8">
             <div class="remove-top-spaces content-wrapper">
 
-                {% include component-examples/callout-link-example.html
-                    link="View the easy read version of this content"
-                    href="'../../prototypes/bga/easy-read-inpage.html' | relative_url"
-                    icon="'../../assets/icon-easy-read-white.svg' | relative_url "
-                    classes="easy-read"
-                    %}
+               
+                <div class="bga-component relevant-support-links p-0 mb-5 easy-read">
+
+                    <a href={{ 'prototypes/bga/easy-read-inpage.html' | relative_url }} class="mb-2 d-block easy-read">
+                    
+                        <div class="link-wrapper d-flex remove-element-padding">
+                
+                            <div class="icon-wrapper py-6 d-flex remove-element-padding px-3 py-3">
+                                
+                                <div class="icon p-0">
+                                    <img class="m-0 p-0" src={{ "assets/icon-easy-read.svg" | relative_url }} alt="" />
+                                </div>
+                                <p class="ms-2">Easy read</p>
+                             
+                            </div>
+                
+                            <p class="link-text px-4 py-6 d-block"><strong>View the easy read version of this content</strong></p>
+                
+                        </div>
+                
+                    </a>
+
+                </div>
 
 
                 <h2>ABNs explained</h2>
