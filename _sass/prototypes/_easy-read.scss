@@ -310,6 +310,13 @@
 
 .bga-component.relevant-support-links.easy-read {
     a {
+        .icon-wrapper, .link-text {
+            padding: 48px 24px;
+        }
+        .link-wrapper {
+            align-items: center;
+        }
+
         .icon-wrapper {
             background: $bga-green-highlight-light;
             border-left: 8px solid $bga-green-highlight-mid;
@@ -318,8 +325,8 @@
             min-width: 200px;
 
             p {
-                font-size: 1.2rem;
-                line-height: 1.75;
+                font-size: 1.1875rem;
+                line-height: 2;
             }
         }
 
@@ -328,8 +335,8 @@
         }
 
         p {
-            font-size: 1.2rem;
-            line-height: 1.75;
+            font-size: 1.1875rem;
+            line-height: 2;
         }
 
         &:focus-visible,
@@ -431,7 +438,7 @@
 
 }
 
-@media (max-width: 567px) {
+@media (max-width: 576px) {
     .easy-read-header {
         .left-wrapper, .right-wrapper {
             padding: 0 !important;
@@ -450,14 +457,25 @@
         a {
             .icon-wrapper {
                 min-width: auto;
+                padding: 16px 0 16px 16px !important;
+                display: flex;
+
                 .icon {
                     background:$bga-green-highlight-light;
-                    padding: 16px !important;
-                    width: 80px;
-                    height: 80px;
+                    padding: 8px;
+                    width: 48px;
+                    height: 48px;
                     border-radius: 50px;
                     display: flex;
+                    
                 }
+                p {
+                    font-size: 1rem;
+                }
+            }
+            p {
+                font-size: 1rem;
+                line-height: 2;
             }
         }
     }
