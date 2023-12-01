@@ -10,7 +10,9 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        row-gap: 16px;
+        align-content: center;
+        row-gap: 24px;
+        padding: 32px 0;
 
         img {
             max-width: 100%;
@@ -21,11 +23,17 @@
     .component-text {
         display: flex;
         flex-wrap: wrap;
-        align-content: center;
+        align-content: center; 
+        padding: 32px;
 
         p {
             font-size: 1.2rem;
             line-height: 2;
+            margin-bottom: 32px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         strong {
@@ -43,6 +51,12 @@
         ul {
             margin: 0 0 0 64px;
             padding: 0;
+
+            &:last-child {
+                li:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         li {
@@ -50,14 +64,15 @@
             line-height: 2;
             display: list-item;
             text-indent: -32px;
+            margin-bottom: 24px;
 
             &::before {
                 background: $bga-blue-black-dark;
                 border-radius: 8px;
                 content: "";
                 display: inline-block;
-                height: 9px;
-                width: 9px;
+                height: 8px;
+                width: 8px;
                 margin-right: 24px;
                 padding: 0;
                 vertical-align: middle;
@@ -81,6 +96,7 @@
         &.img-border {
             img {
                 border: solid 2px $bga-blue-background-dark;
+                border-radius: $bga-focus-radius;
             }
         }
         .component-image {
@@ -92,7 +108,8 @@
 #easy-read {
 
     h2 {
-        padding: 64px 0 40px;
+        margin: 48px 0 16px;
+        padding: 0;
     }
     &.standalone {
         h2 {
@@ -103,7 +120,7 @@
 
 }
 .easy-read-group {
-    border-top: solid 2px $bga-blue-background-dark;
+    padding-bottom: 32px;
 }
 
 
@@ -310,23 +327,27 @@
 
 .bga-component.relevant-support-links.easy-read {
     a {
-        .icon-wrapper, .link-text {
-            padding: 48px 24px;
+        .link-text {
+            padding: 0 24px;
         }
         .link-wrapper {
             align-items: center;
+            border-left: 8px solid $bga-green-highlight-mid;
         }
 
         .icon-wrapper {
             background: $bga-green-highlight-light;
-            border-left: 8px solid $bga-green-highlight-mid;
+            border-left: none;
             border-top-right-radius: 100px;
             border-bottom-right-radius: 100px;
-            min-width: 200px;
+            flex-shrink: 0;
+            padding: 48px 24px;
+            flex-wrap: nowrap;
 
             p {
-                font-size: 1.1875rem;
+                font-size: 1.375rem;
                 line-height: 2;
+                flex-shrink: 0;
             }
         }
 
@@ -343,9 +364,13 @@
         &:hover {
             background: $bga-green-highlight-light;
 
+            .link-wrapper {
+                border-left: 8px solid $bga-green-highlight-shadow;
+            }
+
             .icon-wrapper {
                 background: $bga-green-highlight-mid;
-                border-left: 8px solid $bga-green-highlight-shadow;
+                border-left: none;
             }
         }
     }
@@ -391,22 +416,17 @@
     }
     .bga-component.easy-read {
         .component-text {
+            padding: 24px;
             p {
                 font-size: 1rem;
             }
             li {
                 font-size: 1rem;
-
-                &:before {
-                    width: 6px;
-                    height: 6px;
-                }
             }
         }
-    }
-
-    .bga-component.easy-read.standalone .component-image {
-        width: 30%;
+        .component-image {
+            padding: 24px 0;
+        }
     }
 
     .bga-component.easy-read.in-page {
@@ -435,13 +455,39 @@
             line-height: 1.5rem;
         }
     }
-
 }
 
 @media (max-width: 576px) {
     .easy-read-header {
         .left-wrapper, .right-wrapper {
             padding: 0 !important;
+        }
+    }
+    .bga-component.easy-read {
+        .component-image {
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+        .component-text {
+            align-items: flex-start;
+            align-content: flex-start;
+            
+            p {
+                margin-bottom: 16px;
+            }
+            ul {
+                margin-left: 24px;
+                li {
+                    margin-bottom: 16px;
+                    margin-left: 16px;
+                    text-indent: -24px;
+
+                    &:before {
+                        margin-right: 16px;
+                    }
+                    
+                }
+            }
         }
     }
     .easy-read-header {
@@ -467,7 +513,10 @@
                     height: 48px;
                     border-radius: 50px;
                     display: flex;
-                    
+                    justify-content: center;
+                }
+                img {
+                    width: 32px;
                 }
                 p {
                     font-size: 1rem;
@@ -486,6 +535,11 @@
         .section {
             display: none;
        }
+    }
+}
+@media (max-width: 350px) {
+    .icon-wrapper {
+        display: none !important;
     }
 }
 
