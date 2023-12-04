@@ -1,0 +1,240 @@
+---
+
+layout: content-tagged
+title: Easy read content block
+description: Combine text with imagery to simplify and explain information. Intended for users who are not familiar with English, have low literacy or a learning disability.
+updated: 4 December, 2023
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper ">
+    
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-easy-read"
+                    md-visibility="true"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper p-4" id="easy-read">
+
+                            <h2>Section heading</h2>
+
+                            <div class="easy-read-group">
+
+                                {% include component-examples/easy-read-content-block.html
+                                    image="'../assets/easy-read-computer-lock.png' | relative_url"
+                                    text="<p>Lorem ipsum dolor sit amet, <a href=''>link example</a> adipiscing elit. Aenean feugiat gravida ligula, at iaculis urna.</p>"
+                                    classes="img-border"
+                                    %}
+
+                                {% include component-examples/easy-read-content-block.html
+                                    image="'../assets/easy-read-ABN-bluebkg.png' | relative_url"
+                                    text="<p>An Australian business number is a <strong>unique</strong> 11 digit number.</p>
+                                    <p><strong>Unique</strong> means something that is one of a kind.</p>"
+                                    classes="img-border"
+                                    %}
+
+                                {% include component-examples/easy-read-content-block.html
+                                    image="'../assets/easy-read-calculator.png' | relative_url"
+                                    image2="'../assets/easy-read-person-computer.png' | relative_url"
+                                    image3="'../assets/easy-read-handshake.png' | relative_url"
+                                    text="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <ul>
+                                        <li>Aenean feugiat gravida ligula, at iaculis urna.</li>
+                                        <li>Proin at libero nunc.</li>
+                                        <li>Aliquam erat volutpat.</li>
+                                    </ul>"
+                                    classes="img-border"
+                                    %}
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="tab-section non-branded">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="nb-easy-read"
+                    md-visibility="true"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include non-branded-explanation.html
+                                component="support links"
+                                brand-elements="colours, borders and images"
+                            %}
+
+                            <h2>Section heading</h2>
+
+                            <div class="easy-read-group">
+
+                                {% include component-examples/easy-read-content-block.html
+                                    image="'../assets/img-placeholder-1.svg' | relative_url"
+                                    text="<p>Lorem ipsum dolor sit amet, <a href=''>link example</a> adipiscing elit. Aenean feugiat gravida ligula, at iaculis urna.</p>"
+                                    classes="non-branded"
+                                    %}
+
+                                {% include component-examples/easy-read-content-block.html
+                                    image="'../assets/img-placeholder-1.svg' | relative_url"
+                                    text="<p>An Australian business number is a <strong>unique</strong> 11 digit number.</p>
+                                    <p><strong>Unique</strong> means something that is one of a kind.</p>"
+                                    classes="non-branded"
+                                    %}
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Design specifications link -->
+
+            {% include design-specs-link.html
+            btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/3fec398a-2212-46dc-bb80-6b1fe9beb594/'"
+            btn-text="View design specifications"
+            %}
+
+
+            <!-- LAYOUTS -->
+            <h2 class="section-start" id="layouts">Layouts</h2>
+
+            <p>Standard pathways can be used in <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - two thirds width layouts</a>. It should not be used in other layouts.</p>
+         
+
+            {% include layouts-dropdown.html
+                layout-name="Single column - two thirds width"
+                singlelayout="true"
+                %}
+
+
+            <div class="layout-example single-col-twothirdswidth show mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="onecol-twothirdsw"
+
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+
+                finalbp="Breakpoint &lt; 768px"
+
+                min1200-img="'../assets/layout-images/onecol-ttw-1200px-fullwidthcomponent.png' | relative_url "
+                min992-img="'../assets/layout-images/onecol-ttw-992px-fullwidthcomponent.png' | relative_url "
+                min768-img="'../assets/layout-images/onecol-ttw-768px-fullwidthcomponent.png' | relative_url "
+                finalbp-img="'../assets/layout-images/onecol-ttw-finalbp-fullwidthcomponent.png' | relative_url "
+
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Easy read content blocks span the full width of the content area.</p>"
+
+                min992-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Easy read content blocks span the full width of the content area.</p>"
+
+                min768-rules="<p>The content area is 11 grid-columns wide.</p>
+                <p>Easy read content blocks span the full width of the content area.</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Easy read content blocks span the full width of the content area.</p>"
+
+                example-link="'../html-examples/easy-read.html' | relative_url'"
+                example-link-text="View layout example"
+
+                %}
+
+            </div>
+
+
+
+            <!-- GUIDELINES -->
+            <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+            <h3>Purpose:</h3>
+            <p>The aim of Easy Read is to give more people access to information.</p>
+            <p>Easy Read is a way to present information for people who are not familiar with English, or who have low literacy or learning disability.</p>
+            <p>Easy Read’s unique layout and style presents information so it’s easy to understand. The content can explain complex information about law, policy or obligations.</p>
+            <p> Easy Read often involves using images to complement the text. It can be a good basis for translating content into other languages. Refer to the <a href="https://www.stylemanual.gov.au/content-types/easy-read"> Australian Government Style Manual</a> for more information.</p>
+
+
+
+            <!-- VERSION HISTORY-->
+            <h2 class="section-start" id="version-history">Version history</h2>
+            <h4>4 December, 2023</h4>
+            <ul>
+                <li>Easy read content block added to the style guide.</li>
+            </ul>
+
+
+
+    </div>
+</div>

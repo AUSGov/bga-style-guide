@@ -1,0 +1,343 @@
+// EASY READ CONTENT BLOCK
+.bga-component.easy-read {
+    border-bottom: solid 2px $bga-blue-background-dark;
+    height: auto !important;
+
+    .component-content {
+        display: flex;
+    }
+
+    .component-image {
+        background: $bga-white;
+        flex-shrink: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        row-gap: 24px;
+        padding: 32px 0;
+        width: 25%;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .component-text {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center; 
+        padding: 32px;
+
+        p {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 32px;
+
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        strong {
+            font-weight: 700;
+            color: #DD3608;
+
+            &.pink {
+                color: #DB0084;
+            }
+            &.purple {
+                color: #662D91;
+            }
+        }
+
+        ul {
+            margin: 0 0 0 64px;
+            padding: 0;
+
+            &:last-child {
+                li:last-of-type {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+
+        li {
+            font-size: 1.2rem;
+            line-height: 2;
+            display: list-item;
+            text-indent: -32px;
+            margin-bottom: 24px;
+           
+            &::before {
+                background: $bga-blue-black-dark;
+                border-radius: 8px;
+                content: "";
+                display: inline-block;
+                height: 8px;
+                width: 8px;
+                margin-right: 24px;
+                padding: 0;
+                vertical-align: middle;
+            }
+        }
+    } 
+
+    &.img-border {
+        img {
+            border: solid 2px $bga-blue-background-dark;
+            border-radius: $bga-focus-radius;
+        }
+    } 
+    &.non-branded {
+        border-bottom: solid 2px $bga-black;
+
+        .component-text {
+            strong {
+                color: $bga-black;
+            }
+        }
+    }
+}
+.easy-read-group {
+    padding-bottom: 32px;
+}
+
+// EASY READ SECTION HEADINGS
+#easy-read {
+    h2 {
+        margin: 48px 0 16px;
+        padding: 0;
+    }
+}
+
+// EASY READ PATHWAY LINK
+.bga-component.relevant-support-links.easy-read {
+    border-bottom: none;
+    a { 
+        cursor: pointer;
+        .link-text {
+            padding: 0 24px;
+        }
+        .link-wrapper {
+            align-items: center;
+            border-left: 8px solid $bga-green-highlight-mid;
+        }
+
+        .icon-wrapper {
+            background: $bga-green-highlight-light;
+            border-left: none;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            flex-shrink: 0;
+            padding: 48px 24px;
+            flex-wrap: nowrap;
+
+            p {
+                font-size: 1.375rem;
+                line-height: 2;
+                flex-shrink: 0;
+            }
+        }
+
+        img {
+            width: 48px;
+        }
+
+        p {
+            font-size: 1.1875rem;
+            line-height: 2;
+        }
+
+        &:focus-visible,
+        &:hover {
+            background: $bga-green-highlight-light;
+
+            .link-wrapper {
+                border-left: 8px solid $bga-green-highlight-shadow;
+            }
+
+            .icon-wrapper {
+                background: $bga-green-highlight-mid;
+                border-left: none;
+            }
+        }
+    }
+
+    &.non-branded {
+        a {
+            border: 1px solid $nb-grey-dark;
+
+            .link-wrapper {
+                border: none;
+            }
+            
+            .icon-wrapper {
+                background: $nb-grey-light;
+                border-left: none;
+                border-radius: 0;
+
+                .icon {
+                    background: $nb-grey-light url(../assets/Img-icon-placeholder.svg) no-repeat !important;
+                    background-size: 48px 48px !important;
+                    height: 48px;
+                    width: 48px;
+                }
+
+                img {
+                    display: none;
+                }
+                
+            }
+            &:focus-visible, &:hover {
+                background: none;
+
+                .icon-wrapper {
+                    p {
+                        color: $bga-black;
+                    }
+                }
+                p {
+                    color: $nb-blue-links;
+                }
+            }
+        }
+    }
+}
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin easy-read-bp-576 {
+    .bga-component.easy-read {
+        .component-text {
+            padding: 24px;
+            p {
+                font-size: 1rem;
+                margin-bottom: 24px;
+            }
+            li {
+                font-size: 1rem;
+                margin-bottom: 16px;
+            }
+        }
+        .component-image {
+            padding: 24px 0;
+        }
+    }
+}
+
+@mixin easy-read-bp-350 {
+    .bga-component.easy-read {
+        .component-image {
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+        .component-text {
+            align-items: flex-start;
+            align-content: flex-start;
+            
+            ul {
+                margin-left: 32px;
+                li {
+                    text-indent: -24px;
+
+                    &:before {
+                        margin-right: 16px;
+                    }
+                    
+                }
+            }
+        }
+    }
+    .bga-component.relevant-support-links.easy-read {
+        a {
+            .icon-wrapper {
+                min-width: auto;
+                padding: 16px 0 16px 16px !important;
+                display: flex;
+
+                .icon {
+                    background:$bga-green-highlight-light;
+                    padding: 8px;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                }
+                img {
+                    width: 32px;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+            p {
+                font-size: 1rem;
+                line-height: 2;
+            }
+        }
+        &.non-branded {
+            a .icon {
+                background: $nb-grey-light url(../assets/Img-icon-placeholder.svg) no-repeat !important;
+                border-radius: 0;
+
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@mixin easy-read-bp-below350 {
+    .bga-component.easy-read {
+        .component-image {
+            display: none !important;
+        }
+        .component-text {
+            padding: 24px 0 !important;
+        }
+    }
+    .bga-component.relevant-support-links.easy-read {
+        a { 
+            .icon-wrapper {
+               display: none !important;
+            }
+        }
+    }
+}
+
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576 {
+    @include easy-read-bp-576();
+}
+
+.component-example.bp-350 {
+    @include easy-read-bp-576();
+    @include easy-read-bp-350();
+}
+
+.component-example.bp-below350 {
+    @include easy-read-bp-576();
+    @include easy-read-bp-350();
+    @include easy-read-bp-below350();
+}
+
+// media queries for HTML demo pages
+@media (max-width: 768px) {
+    @include easy-read-bp-576();
+}
+
+@media (max-width: 576px) {
+    @include easy-read-bp-350();
+}
+@media (max-width: 350px) {
+    @include easy-read-bp-below350();
+}
+
+
+

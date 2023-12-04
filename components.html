@@ -18,15 +18,6 @@ description: A modular system of parts which form the building blocks of the sit
 
     <div class="col-12 col-md-4 col-xl-4  d-none d-md-block">
 
-    <!--  
-        <div class="nav-tile-search p-4 mb-4">
-            <label class="mb-3" for="component_name ">Search by component name</label>
-            <div class="input-wrapper">
-                <input type="text" id="component_name" name="component_name">
-                <button type="submit">Submit</button>
-            </div>
-        </div>
-    -->
 
         <div id="style-guide-inpage-filter" class="filters dynamic-list dropdown">
 
@@ -60,6 +51,7 @@ description: A modular system of parts which form the building blocks of the sit
                         <li tabindex="0" value="Call out box">Call out box</li> 
                         <li tabindex="0" value="Call out link">Call out link</li>
                         <li tabindex="0" value="Call to action">Call to action</li>
+                       
                         <li tabindex="0" value="Chat button">Chat button</li> 
                         <li tabindex="0" value="Clause / regulation box">Clause / regulation box</li>
                         <li tabindex="0" value="Comparison accordion">Comparison accordion</li>
@@ -67,7 +59,9 @@ description: A modular system of parts which form the building blocks of the sit
                         <li tabindex="0" value="Cookie notification">Cookie notification</li> 
                         <li tabindex="0" value="Disclaimer alerts">Disclaimer alerts</li>
                         <li tabindex="0" value="Download list">Download list</li>
-                        <li tabindex="0" value="Dynamic sidebar">Dynamic sidebar</li>
+                        <li tabindex="0" value="Dynamic sidebar">Dynamic sidebar</li> 
+                        <li tabindex="0" value="Easy read content block">Easy read content block</li>
+                        <li tabindex="0" value="Easy read pathway link">Easy read pathway link</li>
                         <li tabindex="0" value="Email / download call to action">Email / download call to action</li>
                         <li tabindex="0" value="Event registration call to action">Event registration call to action</li>
                         <li tabindex="0" value="Feature box">Feature box</li>
@@ -268,14 +262,23 @@ description: A modular system of parts which form the building blocks of the sit
             tile-image="assets/nav-images/nav-tile-inlinepathway.svg"
             %}
 
-             <!-- Relevant support links -->
-             {% include nav-image-tile.html
-                classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper link-to-internal-pages bga-relevant-support-links"
-                tile-url="components/relevant-support-links.html"
-                tile-title="Relevant support links"
-                tile-tag1="Link to internal pages"
-                tile-image="assets/nav-images/nav-tile-relevant-support.svg"
-                %}
+            <!-- Relevant support links -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper link-to-internal-pages bga-relevant-support-links"
+            tile-url="components/relevant-support-links.html"
+            tile-title="Relevant support links"
+            tile-tag1="Link to internal pages"
+            tile-image="assets/nav-images/nav-tile-relevant-support.svg"
+            %}
+
+            <!-- Easy read pathway link -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper link-to-internal-pages"
+            tile-url="components/easy-read-pathway-link.html"
+            tile-title="Easy read pathway link"
+            tile-tag1="Link to internal pages"
+            tile-image="assets/nav-images/nav-tile-easy-read-pathway.svg"
+            %}
 
 
             <!--<h2>Content components</h2>-->
@@ -334,15 +337,15 @@ description: A modular system of parts which form the building blocks of the sit
 
             <!-- Get contract call to action -->
             {% include nav-image-tile.html
-                classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper highlight-information feedback-user-interaction download-files bga-email-download-contract-call-to-action"
-                tile-url="components/email-download-cta.html"
-                tile-title="Email / download call to action"
-                tile-tag1="Highlight information"
-                tile-tag2="Feedback / user interaction"
-                tile-tag3="Download files"
-                tile-image="assets/nav-images/nav-tile-getcontract.svg"
-                %}
-    
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper highlight-information feedback-user-interaction download-files bga-email-download-contract-call-to-action"
+            tile-url="components/email-download-cta.html"
+            tile-title="Email / download call to action"
+            tile-tag1="Highlight information"
+            tile-tag2="Feedback / user interaction"
+            tile-tag3="Download files"
+            tile-image="assets/nav-images/nav-tile-getcontract.svg"
+            %}
+
 
             <!-- Event registration - call to action-->
             {% include nav-image-tile.html
@@ -384,6 +387,15 @@ description: A modular system of parts which form the building blocks of the sit
             tile-tag1="Highlight information"
             tile-tag1="Tool specific components"
             tile-image="assets/nav-images/nav-tile-clausebox.svg"
+            %}
+
+            <!-- Easy read content block -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper highlight-information"
+            tile-url="components/easy-read-content-block.html"
+            tile-title="Easy read content block"
+            tile-tag1="Highlight information"
+            tile-image="assets/nav-images/nav-tile-easy-read-content-block.svg"
             %}
 
 

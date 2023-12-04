@@ -1,0 +1,274 @@
+---
+
+layout: content-tagged
+title: Easy read pathway link
+description: Provide a link pathway to easy read content related to the content of the current page.
+updated: 4 December, 2023
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper ">
+    
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-callout"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include component-examples/easy-read-pathway-link.html %}
+                            
+
+                        </div>
+                    </div>
+
+
+                    <div class="component-example">
+                        <div class="component-wrapper coloured-section remove-element-padding p-4">
+                           
+                                <h3>Coloured background sections</h3>
+
+                                {% include component-examples/easy-read-pathway-link.html %}
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="tab-section non-branded">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="nb-support-links"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include non-branded-explanation.html
+                                component="support links"
+                                brand-elements="colours, borders and icons"
+                            %}
+
+                            {% include component-examples/easy-read-pathway-link.html
+                                classes="non-branded"
+                                %}
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Design specifications link -->
+
+            {% include design-specs-link.html
+            btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/4576c4d9-e8d2-4c64-be02-8b9ee8b2876c'"
+            btn-text="View design specifications"
+            %}
+
+
+            <!-- LAYOUTS -->
+            <h2 class="section-start" id="layouts">Layouts</h2>
+
+            <p>Easy read pathway links can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>single column - full width, single column - two thirds width and two column - left side menu </a> layouts.</p>
+
+
+                {% include layouts-dropdown.html
+                single-col-fullwidth-visibility="true"
+                single-col-twothirds-visibility="true"
+                two-col-leftmenu-visibility="true"
+                %}
+
+
+            <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="onecol-fw"
+
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="false"
+                min576-visibility="false"
+                finalbp-visibility="true"
+
+                finalbp="Breakpoint &lt; 992px"
+
+                min1200-img="'../assets/layout-images/onecol-fw-1200px-contentwidthcomponent.png' | relative_url "
+                min992-img="'../assets/layout-images/onecol-fw-992px-contentwidthcomponent.png' | relative_url "
+                finalbp-img="'../assets/layout-images/onecol-fw-finalbp-contentwidthcomponent.png' | relative_url "
+
+
+                min1200-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Easy read pathway links span 8 grid-columns each.</p>"
+
+                min992-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Easy read pathway links span 9 grid-columns each.</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Easy read pathway links span 12 grid-columns each.</p>"
+
+                example-link="'../html-examples/single-col-full-width.html#easy-read-pathway-example' | relative_url'"
+                example-link-text="View layout example"
+
+                %}
+
+
+            </div>
+
+
+            <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="onecol-twothirdsw"
+
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+
+                finalbp="Breakpoint &lt; 768px"
+
+                min1200-img="'../assets/layout-images/onecol-ttw-1200px-fullwidthcomponent.png' | relative_url "
+                min992-img="'../assets/layout-images/onecol-ttw-992px-fullwidthcomponent.png' | relative_url "
+                min768-img="'../assets/layout-images/onecol-ttw-768px-fullwidthcomponent.png' | relative_url "
+                finalbp-img="'../assets/layout-images/onecol-ttw-finalbp-fullwidthcomponent.png' | relative_url "
+
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Easy read pathway links span the full width of the content area.</p>"
+
+                min992-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Easy read pathway links span the full width of the content area.</p>"
+
+                min768-rules="<p>The content area is 11 grid-columns wide.</p>
+                <p>Easy read pathway links span the full width of the content area.</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Easy read pathway links span the full width of the content area.</p>"
+
+                example-link="'../html-examples/single-col-two-thirds-width.html#easy-read-pathway-example' | relative_url'"
+                example-link-text="View layout example"
+
+                %}
+
+            </div>
+
+
+            <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="twocol-leftmenu"
+
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+
+                finalbp="Breakpoint &lt; 576px"
+
+                min1200-img="'../assets/layout-images/twocol-lsb-1200px-fullwidthcomponent.png' | relative_url "
+                min576-img="'../assets/layout-images/twocol-lsb-576px-fullwidthcomponent.png' | relative_url "
+                finalbp-img="'../assets/layout-images/twocol-lsb-finalbp-fullwidthcomponent.png' | relative_url "
+
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Easy read pathway links span the full width of the content area.</p>"
+
+                min576-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Easy read pathway links span the full width of the content area.</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Easy read pathway links span the full width of the content area.</p>"
+
+                example-link="'../html-examples/two-col-left-side-menu.html#easy-read-pathway-example' | relative_url'"
+                example-link-text="View layout example"
+
+                %}
+
+            </div>
+
+
+
+            <!-- GUIDELINES -->
+            <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+            <h3>Purpose:</h3>
+            <p>Provide a styled link to easy read content.</p>
+            <h3>When to use this component:</h3>
+            <ul>
+                <li>Use on information pages to link to related easy read content.</li>
+            </ul>
+
+
+            <!-- VERSION HISTORY-->
+            <h2 class="section-start" id="version-history">Version history</h2>
+            <h4>4 December, 2023</h4>
+            <ul>
+                <li>Added easy read pathway link to the style guide.</li>
+            </ul>
+
+
+
+    </div>
+</div>
