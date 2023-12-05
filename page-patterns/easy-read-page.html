@@ -1,0 +1,113 @@
+---
+
+layout: content-tagged
+title: Easy read page
+description: A page that combines text with imagery to simplify and explain information. Intended for users who are not familiar with English, have low literacy or a learning disability.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Page anatomy" link-id-1="#page-anatomy"
+            link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+            link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2>
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                classes="easy-read-page-container"
+                img="'../assets/page-patterns/easy-read-page.png' | relative_url"
+
+                spot1="Heading (page title)"
+                spot2="Header description"
+                spot3="H2 sub-headings"
+                spot4="Easy read content block image"
+                spot5="Easy read content block text"
+                spot6="Hard word"
+                %}
+
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+
+                item1="Heading (page title)"
+                content1="<p>A direct, short title focused on the main action the user will complete on the page. The title should include the words 'easy read'.</p><ul><li>Maximum character limit of 50.</li><li>Start with &ldquo;Register for&hellip;&rdquo;&nbsp; or &ldquo;Search for..&rdquo;</li></ul>"
+
+                item2="Header description"
+                content2="<p>A short paragraph that expands on what the main action on the page is and why it is important.</p><p><strong>Rules for long description:</strong></p><ul><li>The supporting text should explain who the page is for, what the user will learn and the benefit of the page.</li><li>Maximum character limit of 350.</li></ul><p><strong>Rules for short description:</strong></p><ul><li>The short description will not appear on page, it is used for the topic page tile description (populated from metadata).</li><li>The supporting text always following the format of [intro phrase] [sub-topic], [sub-topic] and [sub-topic], so you can [user outcome].</li><li>Use one of these three intro phrases: “learn how to”, “understand” or “find out”.</li><li>Include the top three keywords for the page.</li><li>Maximum character limit of 90.</li></ul>"
+
+                item3="H2 sub-headings"
+                content3="<p>Short titles used to break up the content into sub-topics. </p><ul><li>Maximum length of one line.</li><li>Don’t hyperlink the headings.</li><li>Avoid replicating the page title.</li></ul>"
+
+                item4="Easy read content block image"
+                content4="<p>Images are used to aid understanding of the corresponding text, they should always illustrate the text and are not used for decorative purposes.</p><p><strong>Rules for images:</strong></p><ul><li>Images are illustrations (not photographs).</li> 
+                    <li>Images are styled using <a href='../brand-foundations/illustrations.html' >business.gov.au illustration guidelines</a>. Easy read illustrations are smaller than the standard illustations so they are not required to include the background fill and background lines.</li><li>Maximum image width is 190px. Image height can vary although a square shape is recommended.</li><li>Multiple images can be used in one content block to illustrate bullet points.</li><li>Images are optional.</li></ul>"
+
+                item5="Easy read content block text"
+                content5="<p>Rules for content block text:</p><ul><li>8-15 words maximum.</li><li>No stand-alone bullet lists.</li><li>No nested lists.</li><li>Paragraphs and bullet lists only, no headings.</li></ul>"
+
+                item6="Hard word"
+                content6="<p>Bold and orange(?) means hard word. This word should be further explained in the same content block.</p></ul>"
+
+                %}
+
+
+            </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        
+        <h3>It should always include:</h3>
+        <ul>
+            <li></li>
+        </ul>
+        <h3>It can also include:</h3>
+        <ul>
+            <li></li>
+        </ul>
+        <h3>It must NOT include:</h3>
+        <ul>
+            <li></li>
+        </ul>
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Information page header</a></li>
+            <li><a href={{ "/components/easy-read-content-block.html" | relative_url }}>Easy read content block</a></li>
+            <li><a href={{ "/brand-foundations.html" | relative_url }}>Illustrations</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+
+
+    </div>
