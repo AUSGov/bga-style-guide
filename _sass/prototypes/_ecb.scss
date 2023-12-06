@@ -19,6 +19,22 @@ html.ecb-prototype {
     #subsite-header .bga-link-strap {
         min-height: 54px;
     }
+    #landing-page {
+        #subsite-header .secondary-links {
+            display: block;
+            a {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                color: $bga-white;
+                text-decoration: none;
+
+                &:focus, &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 
     input {
         &.sm-width {
@@ -481,6 +497,25 @@ html.ecb-prototype {
 
     &:hover {
         background: none;
+    }
+}
+.subsite-footer .saved-contracts-link {
+    display: none;
+}
+#landing-page .subsite-footer .saved-contracts-link {
+    display: block;
+
+    a {
+        display: flex;
+        align-items: center;
+        color: $bga-white;
+        text-decoration: none;
+        font-weight: 400;
+
+        &:focus, &:hover {
+            text-decoration: underline;
+            background: none;
+        }
     }
 }
 
