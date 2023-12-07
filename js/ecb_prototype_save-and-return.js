@@ -1,8 +1,8 @@
 /*jshint browser: true, devel: true, jquery: true*/
 
-
 $(document).ready(function () {
 
+   
     //ECB REVISED FLOW PROTOTYPE
 
     // Variables to store multiple contracts
@@ -29,6 +29,7 @@ $(document).ready(function () {
             localStorage.setItem('contracts', JSON.stringify(contracts));
         } 
     };
+    
 
     // Stepped nav functionality
     var stepped_nav_functionality = function(path){
@@ -564,9 +565,9 @@ $(document).ready(function () {
         } 
     });
     
-        // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
-    var inputElements = [...document.querySelectorAll('input.code-input')]
-
+    // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
+    var inputElements = [...document.querySelectorAll('input.ecb-code-input')]
+   
     inputElements.forEach((ele, index) => {
         ele.addEventListener('keydown', (e) => {
             // if the keycode is backspace & the current field is empty
@@ -590,13 +591,13 @@ $(document).ready(function () {
             }
         })
     })
-   
-    
-    $('#step-save-verify-email #verify-btn').on('click', function(){
+
+    $('#step-save-verify-email #ecb-verify-btn').on('click', function(){
+        
         var code = inputElements.map(({ value }) => value).join(''),
         id = $(this).parents('.step').attr('data-id');
 
-        if (code == '1234' || code == 'RGAE') {
+        if (code == '1234'|| code == 'RGAE') {
            
             $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
             $('#step-save-verify-email[data-id=' + id + '] .loading-animation').addClass('show');

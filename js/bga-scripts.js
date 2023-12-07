@@ -1334,6 +1334,7 @@ $(document).ready(function () {
     // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
     var inputElements = [...document.querySelectorAll('input.code-input')]
 
+
     inputElements.forEach((ele, index) => {
         ele.addEventListener('keydown', (e) => {
             // if the keycode is backspace & the current field is empty
