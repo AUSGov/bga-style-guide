@@ -906,40 +906,19 @@
             }
         }
         &.single-select-dynamic {
-            label {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                cursor: pointer;
-
-                svg {
-                    width: 16px;
-                    height: 10px;
-                    display: block;
-                }
-            }
             select {
-                display: none;
                 margin-top: 8px;
                 font-size: .875rem;
                 padding: 8px 32px 8px 8px;
                 background-position: right 8px center;
                 min-height: 35px;
-                border-color: $bga-black;
+                border-color: $bga-black; 
+                height: 35px;
+                    padding: 0 32px 0 8px;
+                    background-color: transparent;
 
                 &:focus, &:focus-visible {
                     border-color: $bga-blue-focus;
-                }
-            }
-            &.open {
-                select {
-                    display: block;
-                    height: 35px;
-                    padding: 0 32px 0 8px;
-                    background-color: transparent;
-                }
-                label svg {
-                    transform: scaleY(-1);
                 }
             }
         }
@@ -1026,7 +1005,8 @@
             .mobile-counter {
                 background: $bga-black;
             }
-        }    
+        }  
+
     }
     .filters-wrapper {
         display: none;
@@ -1034,6 +1014,7 @@
         &#showing-filters-modal {
             display: block !important; //Show on the filter example page but not in modal examples.
 
+            
         }
     }
 
@@ -1074,7 +1055,6 @@
         
         .scrollable {
             max-height: none;
-            //background: $bga-blue-background-dark;
         }
 
         .bottom-content {
@@ -1083,6 +1063,10 @@
             left: 0;
             width: 100%;
             background-color: $bga-white;
+            
+        }
+        .lightgrey-bkg {
+            background: $bga-blue-black-lightest;    
         }
         .filter-control-group {
             margin-top: 0 !important;
