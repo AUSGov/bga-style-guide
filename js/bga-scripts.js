@@ -1637,7 +1637,7 @@ $(document).ready(function () {
         $('.filters-wrapper.dynamic').removeAttr('id');
     });
     // Open / close parent accordion of dynamic filter on mobile only.
-    $( "body" ).on( "click", "#showing-filters-modal .single-select-dynamic .filter-item label", function() {
+    /*$( "body" ).on( "click", "#showing-filters-modal .single-select-dynamic .filter-item label", function() {
         $(this).parents('.single-select-dynamic').toggleClass('open').find('.single-select-dynamic select').slideToggle();
 
         if ( !$(this).parents('.single-select-dynamic').hasClass('open')) {
@@ -1651,7 +1651,7 @@ $(document).ready(function () {
                 }
             });
         };
-    });
+    });*/
    
     // filter bubbles
     $('.active-filters li').on('click', function () {
@@ -1822,7 +1822,7 @@ $(document).ready(function () {
                 detect_overflowing($('#showing-filters-modal'), ".scrollable");
             }, 400);
         }
-
+        
     });
 
     // toggle switch
