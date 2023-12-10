@@ -244,6 +244,7 @@
             margin: 0 8px 8px 0;
             text-indent: 0;
             font-size: .8125rem;
+            line-height: 1.5;
 
             &.selected {
                 display: inline-block;
@@ -356,6 +357,7 @@
             display: block;
             height: 1px;
             background: $bga-blue-black-light;
+            margin-top: 8px;
         }
        
         .checkbox-item {
@@ -947,6 +949,9 @@
             }
         }
         &.checkboxes-dynamic {
+            &::after {
+                margin-top: 0px;
+            }
             p.filter-group-title {
                 margin-bottom: 4px !important;
             }
