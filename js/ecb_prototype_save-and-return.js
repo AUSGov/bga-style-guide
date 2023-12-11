@@ -1,8 +1,20 @@
 /*jshint browser: true, devel: true, jquery: true*/
 
 $(document).ready(function () {
-
    
+    // Reset prototype
+    $('#reset-prototype').on('click', function(){
+        localStorage.clear();
+
+        if ( $('.page-manage-contracts').length ) {
+            $('.no-contract').removeClass('d-none');
+            $('.contract').addClass('d-none');
+        }
+
+        window.location.pathname = "/bga-style-guide/prototypes/ecb/landing.html";
+        
+    });
+    
     //ECB REVISED FLOW PROTOTYPE
 
     // Variables to store multiple contracts
@@ -76,10 +88,10 @@ $(document).ready(function () {
     
     if ($('#ecb-prototype .stepped-navigation-wrapper').length) {
 
-        var location = window.location.href,
-        path;
+        //var location = window.location.href,
+        var path = '/bga-style-guide/prototypes/ecb/';
 
-        if(location.includes('tasks')) {
+       /* if(location.includes('tasks')) {
             if (location.includes('mobile')) {
                 path = '/bga-style-guide/prototypes/ecb/tasks-mobile/';
             } else {
@@ -87,7 +99,7 @@ $(document).ready(function () {
             }
         } else {
             path = '/bga-style-guide/prototypes/ecb/';
-        }
+        }*/
         
         stepped_nav_functionality(path);
 
@@ -362,8 +374,23 @@ $(document).ready(function () {
         state = contracts[current_contract].state1,
         postcode = contracts[current_contract].postcode1;
 
+       
+        if (!street) {
+            street="";
+        }
+        if (!city) {
+            city="";
+        }
+        if (!state) {
+            state="";
+        }
+        if (!postcode) {
+            postcode="";
+        }
+
         $('.clause-box .address1').empty().append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
     }); 
+
     $('#ecb-prototype #workplace input[type=radio]').on('change', function () {
         if ($(this).hasClass('dynamic-hide')) {
             $('.clause-box .address1').addClass('d-none');
@@ -384,6 +411,19 @@ $(document).ready(function () {
             city = contracts[current_contract].city1,
             state = contracts[current_contract].state1,
             postcode = contracts[current_contract].postcode1;
+
+            if (!street) {
+                street="";
+            }
+            if (!city) {
+                city="";
+            }
+            if (!state) {
+                state="";
+            }
+            if (!postcode) {
+                postcode="";
+            }
 
             $('.clause-box .address1').empty().append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
 
@@ -463,6 +503,19 @@ $(document).ready(function () {
             city = contracts[current_contract].city1,
             state = contracts[current_contract].state1,
             postcode = contracts[current_contract].postcode1;
+
+            if (!street) {
+                street="";
+            }
+            if (!city) {
+                city="";
+            }
+            if (!state) {
+                state="";
+            }
+            if (!postcode) {
+                postcode="";
+            }
 
             $('.results-edit-answers-component .address1').append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
         } else {
