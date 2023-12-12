@@ -42,14 +42,7 @@
 
         strong {
             font-weight: 700;
-            color: #DD3608;
-
-            &.pink {
-                color: #DB0084;
-            }
-            &.purple {
-                color: #662D91;
-            }
+            color: $bga-purple-highlight-shadow;   
         }
 
         ul {
@@ -227,7 +220,7 @@
     }
 }
 
-@mixin easy-read-bp-350 {
+@mixin easy-read-bp-below576 {
     .bga-component.easy-read {
         .component-image {
             align-items: flex-start;
@@ -291,24 +284,6 @@
     }
 }
 
-@mixin easy-read-bp-below350 {
-    .bga-component.easy-read {
-        .component-image {
-            display: none !important;
-        }
-        .component-text {
-            padding: 24px 0 !important;
-        }
-    }
-    .bga-component.relevant-support-links.easy-read {
-        a { 
-            .icon-wrapper {
-               display: none !important;
-            }
-        }
-    }
-}
-
 
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
@@ -316,16 +291,11 @@
     @include easy-read-bp-576();
 }
 
-.component-example.bp-350 {
+.component-example.bp-below576 {
     @include easy-read-bp-576();
-    @include easy-read-bp-350();
+    @include easy-read-bp-below576();
 }
 
-.component-example.bp-below350 {
-    @include easy-read-bp-576();
-    @include easy-read-bp-350();
-    @include easy-read-bp-below350();
-}
 
 // media queries for HTML demo pages
 @media (max-width: 768px) {
@@ -333,10 +303,7 @@
 }
 
 @media (max-width: 576px) {
-    @include easy-read-bp-350();
-}
-@media (max-width: 350px) {
-    @include easy-read-bp-below350();
+    @include easy-read-bp-below576();
 }
 
 
