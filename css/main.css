@@ -7562,6 +7562,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.bga-default-accordion.results-accordion .accordion-body p { width: 100%; }
 
+.bga-component.bga-default-accordion.results-accordion.yellow .accordion-toggle { display: none; }
+
 .bga-component.bga-default-accordion.results-accordion.yellow .accordion { border-top: none; }
 
 .bga-component.bga-default-accordion.results-accordion.yellow .accordion-item { background: #FFE491; border-bottom: #333333 solid 1px; }
@@ -7583,8 +7585,6 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .bga-component.bga-default-accordion.results-accordion.yellow .accordion-item .accordion-button:not(.collapsed) { background-color: #FFE491; }
 
 .bga-component.bga-default-accordion.results-accordion.yellow .accordion-item .accordion-button:not(.collapsed):hover { border-bottom: none; background-color: #FFE491; }
-
-.bga-component.bga-default-accordion.results-accordion.yellow .accordion-item .accordion-button::after { margin-left: 24px; }
 
 .bga-component.bga-default-accordion.results-accordion.non-branded .accordion-item:hover, .bga-component.bga-default-accordion.results-accordion.non-branded .accordion-item.show { border-bottom: #333333 solid 1px; }
 
@@ -7690,9 +7690,11 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; }
 
-.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; margin-left: 16px; }
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; }
 
 .component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; }
+
+.component-example.bp-below576 .bga-default-accordion.bga-default-accordion.results-accordion.yellow .accordion-header .registration-reason { padding-right: 16px !important; }
 
 .component-example.bp-below576 .edit-answers-component .component-content { padding: 16px !important; }
 
@@ -7724,7 +7726,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 768px) { .edit-answers-component .edit-btn { font-size: 1.125rem !important; } }
 
-@media (max-width: 576px) { .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; margin-left: 16px; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } .edit-answers-component .component-content { padding: 16px !important; } .edit-answers-component .edit-answers-toggle { padding: 16px !important; } .edit-answers-component .edit-answers-toggle h3, .edit-answers-component .edit-answers-toggle .h3 { font-size: 1.125rem; } .edit-answers-component .answers-section { padding-bottom: 48px !important; margin-bottom: 16px !important; } .edit-answers-component .answers-section:last-of-type { padding-bottom: 24px !important; margin-bottom: 0 !important; } .edit-answers-component .title-area h3, .edit-answers-component .title-area .h3 { font-size: 1.125rem; } .edit-answers-component .answers p { flex-wrap: wrap; } .edit-answers-component .answers p span { margin: 8px 0 0 0 !important; width: 100%; text-align: left; } .edit-answers-component .edit-btn { min-height: auto; } .results-edit-answers-component .edit-btn { font-size: 1.125rem !important; } .results-edit-answers-component .title-area { padding: 16px !important; flex-wrap: wrap; } .results-edit-answers-component .title-area h3, .results-edit-answers-component .title-area .h3 { width: 100%; } .results-edit-answers-component .edit-btn { margin: 16px 0 0 0 !important; } .results-edit-answers-component .component-content { padding: 16px !important; } }
+@media (max-width: 576px) { .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion.yellow .accordion-header .registration-reason { padding-right: 16px !important; } .edit-answers-component .component-content { padding: 16px !important; } .edit-answers-component .edit-answers-toggle { padding: 16px !important; } .edit-answers-component .edit-answers-toggle h3, .edit-answers-component .edit-answers-toggle .h3 { font-size: 1.125rem; } .edit-answers-component .answers-section { padding-bottom: 48px !important; margin-bottom: 16px !important; } .edit-answers-component .answers-section:last-of-type { padding-bottom: 24px !important; margin-bottom: 0 !important; } .edit-answers-component .title-area h3, .edit-answers-component .title-area .h3 { font-size: 1.125rem; } .edit-answers-component .answers p { flex-wrap: wrap; } .edit-answers-component .answers p span { margin: 8px 0 0 0 !important; width: 100%; text-align: left; } .edit-answers-component .edit-btn { min-height: auto; } .results-edit-answers-component .edit-btn { font-size: 1.125rem !important; } .results-edit-answers-component .title-area { padding: 16px !important; flex-wrap: wrap; } .results-edit-answers-component .title-area h3, .results-edit-answers-component .title-area .h3 { width: 100%; } .results-edit-answers-component .edit-btn { margin: 16px 0 0 0 !important; } .results-edit-answers-component .component-content { padding: 16px !important; } }
 
 .global-alert { background: #FFD964; position: relative; }
 
@@ -9092,9 +9094,29 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .sidebar-mobile-explanation { display: none !important; }
 
+.component-example.bp-768 .dynamic-sidebar .business-structure .title, .component-example.bp-768 .dynamic-sidebar .recommendations .title { padding: 16px; }
+
+.component-example.bp-768 .dynamic-sidebar .business-structure .content, .component-example.bp-768 .dynamic-sidebar .recommendations .content { padding: 16px; }
+
+.component-example.bp-768 .dynamic-sidebar .business-structure span, .component-example.bp-768 .dynamic-sidebar .business-structure li, .component-example.bp-768 .dynamic-sidebar .business-structure p, .component-example.bp-768 .dynamic-sidebar .recommendations span, .component-example.bp-768 .dynamic-sidebar .recommendations li, .component-example.bp-768 .dynamic-sidebar .recommendations p { font-size: .875rem; }
+
+.component-example.bp-768 .dynamic-sidebar .recommendations .content { padding: 16px 16px 8px 16px; }
+
+.component-example.bp-768 .dynamic-sidebar .recommendations li.show svg { margin-top: 4px; }
+
+.component-example.bp-768 .nb-dynamic-sidebar .title { background: #D8D8D8; padding: 16px 24px; }
+
+.component-example.bp-768 .nb-dynamic-sidebar .content { background: #E8E8E8; padding: 16px 24px; }
+
+.component-example.bp-768 .nb-dynamic-sidebar .content li { text-indent: 0; }
+
+.component-example.bp-768 .nb-dynamic-sidebar .content li::before { display: none; }
+
 .component-example.bp-below768 .sidebar-mobile-hide { display: none !important; }
 
 .component-example.bp-below768 .sidebar-mobile-explanation { display: block !important; }
+
+@media (max-width: 992px) { .dynamic-sidebar .business-structure .title, .dynamic-sidebar .recommendations .title { padding: 16px; } .dynamic-sidebar .business-structure .content, .dynamic-sidebar .recommendations .content { padding: 16px; } .dynamic-sidebar .business-structure span, .dynamic-sidebar .business-structure li, .dynamic-sidebar .business-structure p, .dynamic-sidebar .recommendations span, .dynamic-sidebar .recommendations li, .dynamic-sidebar .recommendations p { font-size: .875rem; } .dynamic-sidebar .recommendations .content { padding: 16px 16px 8px 16px; } .dynamic-sidebar .recommendations li.show svg { margin-top: 4px; } .nb-dynamic-sidebar .title { background: #D8D8D8; padding: 16px 24px; } .nb-dynamic-sidebar .content { background: #E8E8E8; padding: 16px 24px; } .nb-dynamic-sidebar .content li { text-indent: 0; } .nb-dynamic-sidebar .content li::before { display: none; } }
 
 @media (max-width: 768px) { .sidebar-mobile-hide { display: none !important; } .sidebar-mobile-explanation { display: block !important; } }
 
@@ -10597,7 +10619,7 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #stepped-nav-inpage { background: none; }
 
-@media (max-width: 992px) { #help-me-decide-prototype .recommendations-sidebar .business-structure .title, #help-me-decide-prototype .recommendations-sidebar .recommendations .title { padding: 16px; } #help-me-decide-prototype .recommendations-sidebar .business-structure .content, #help-me-decide-prototype .recommendations-sidebar .recommendations .content { padding: 16px; } #help-me-decide-prototype .recommendations-sidebar .business-structure span, #help-me-decide-prototype .recommendations-sidebar .business-structure li, #help-me-decide-prototype .recommendations-sidebar .business-structure p, #help-me-decide-prototype .recommendations-sidebar .recommendations span, #help-me-decide-prototype .recommendations-sidebar .recommendations li, #help-me-decide-prototype .recommendations-sidebar .recommendations p { font-size: .875rem; } #help-me-decide-prototype .recommendations-sidebar .recommendations .content { padding: 16px 16px 8px 16px; } }
+@media (max-width: 992px) { #help-me-decide-prototype .recommendations-sidebar .business-structure .title, #help-me-decide-prototype .recommendations-sidebar .recommendations .title { padding: 16px; } #help-me-decide-prototype .recommendations-sidebar .business-structure .content, #help-me-decide-prototype .recommendations-sidebar .recommendations .content { padding: 16px; } #help-me-decide-prototype .recommendations-sidebar .business-structure span, #help-me-decide-prototype .recommendations-sidebar .business-structure li, #help-me-decide-prototype .recommendations-sidebar .business-structure p, #help-me-decide-prototype .recommendations-sidebar .recommendations span, #help-me-decide-prototype .recommendations-sidebar .recommendations li, #help-me-decide-prototype .recommendations-sidebar .recommendations p { font-size: .875rem; } #help-me-decide-prototype .recommendations-sidebar .recommendations .content { padding: 16px 16px 8px 16px; } #help-me-decide-prototype .recommendations-sidebar .recommendations li.show svg { margin-top: 4px; } }
 
 @media (max-width: 767px) { #help-me-decide-prototype .recommendations-sidebar { display: none !important; } #stepped-nav-inpage { background: #EFF0F2; padding: 16px !important; margin-bottom: 0 !important; } #stepped-nav-inpage .stepped-navigation-wrapper { padding: 0 !important; } #stepped-nav-inpage .stepped-navigation { padding: 32px 0 0 0 !important; } #stepped-nav-inpage .stepped-nav-toggle { background: none; width: 100%; height: auto; text-indent: 0; display: flex; font-weight: 400; font-size: 1rem; color: #333333; justify-content: space-between; align-items: center; text-align: left; } #stepped-nav-inpage .stepped-nav-toggle strong { font-weight: 600; } #stepped-nav-inpage .stepped-nav-toggle.open svg { transform: scaleY(-1); } }
 
