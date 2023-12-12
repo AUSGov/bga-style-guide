@@ -173,6 +173,11 @@ $(document).ready(function () {
 
 
     // HELP ME DECIDE
+    // Reset prototype button
+    $('#hmd-reset-prototype').on('click', function(){
+        sessionStorage.clear();
+        window.location.pathname = "/bga-style-guide/prototypes/help-me-decide/landing.html";
+    });
     // Check page is Help me decide prototype
     if ($('#help-me-decide-prototype').length) {
 
