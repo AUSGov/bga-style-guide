@@ -51,6 +51,9 @@
     }
 
     &.yellow {
+        .accordion-toggle {
+            display: none;
+        }
         .accordion {
             border-top: none;
         }
@@ -103,9 +106,6 @@
                     }
                 }
 
-                &::after {
-                    margin-left: 24px;
-                }
             }
         }
     }
@@ -390,11 +390,15 @@
                 &::after {
                     height: 10px;
                     width: 16px;
-                    margin-left: 16px;
                 }
             }
             .accordion-body {
                 padding: 0 16px 16px 16px !important;
+            }
+        }
+        &.yellow {
+            .accordion-header .registration-reason {
+                padding-right: 16px !important;
             }
         }
     }
