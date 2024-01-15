@@ -454,6 +454,8 @@ html.ecb-prototype {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        
     }
     .contract-details {
         display: flex;
@@ -482,6 +484,20 @@ html.ecb-prototype {
 
                 svg path {
                     fill: $bga-blue-footer;
+                }
+            }
+            &.inactive {
+                opacity: 65%;
+                cursor: default;
+
+                &:hover {
+                    background: none;
+                    border-bottom: 1px solid $bga-blue-links;
+                    color: $bga-blue-links;
+
+                    svg path {
+                        fill: $bga-blue-links;
+                    }
                 }
             }
         }

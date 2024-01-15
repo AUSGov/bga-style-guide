@@ -168,6 +168,7 @@ $(document).ready(function () {
         return diffDays;
     };
 
+    
     // Check is user is returning to a saved contract
     if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
         var returning = localStorage.getItem('returning'),
@@ -711,14 +712,15 @@ $(document).ready(function () {
             localStorage.setItem('saved new', '');
         } 
         
-
+       
         // Show /hide contracts in contact list
         var active_contracts = count_contracts(contracts);
         
         for (var i = 0; i < active_contracts.length; i++) { 
             var position = contracts[active_contracts[i]]['position-title'],
             id = active_contracts[i],
-            expiry = contracts[active_contracts[i]]['expiry date'];
+            expiry = contracts[active_contracts[i]]['expiry date'],
+            extend_classes = 'extend modal-trigger active';
 
             if (!position) {
                 position = '';
@@ -726,8 +728,11 @@ $(document).ready(function () {
             if (!expiry) {
                 expiry = "in seven days";
             }
+            if ( get_remaining_days(expiry) > 7) {
+                extend_classes = 'extend inactive';
+            }
 
-            $('.contracts-list').append('<div class="contract" id='+ id +'><div class="contract-details remove-element-padding"><a class="contract-name edit"><span>' + position + '</span> contract</a><p>Expires <span class="expiry">' + expiry + '</span></p></div><div class="contract-actions"><a class="edit">Edit<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.68223 15.516L6.74726 16.451L0.442295 17.9485L1.94069 11.6444L2.83642 10.6702L7.68223 15.516ZM10.6005 2.90609L15.408 7.71352L8.62244 14.4991L3.815 9.69162L10.6005 2.90609ZM13.5136 0.00871828L18.3202 4.81528L16.3822 6.75326L11.5756 1.94669L13.5136 0.00871828Z" fill="#2157AA"/></svg></a><a class="extend modal-trigger" data-modal="modal-extend-deadline">Extend deadline<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C4.03738 18 0 13.9626 0 9C0 4.03738 4.03738 0 9 0C13.9626 0 18 4.03738 18 9C18 13.9626 13.9626 18 9 18ZM9 2.24975C5.27789 2.24975 2.24975 5.27789 2.24975 9C2.24975 12.7221 5.27789 15.7502 9 15.7502C12.7221 15.7502 15.7502 12.7221 15.7502 9C15.7502 5.27789 12.7221 2.24975 9 2.24975ZM13.4995 11.2497H13.4984H7.87512V5.62538H10.1249V9H13.4995V11.2486V11.2497Z" fill="#2157AA"/></svg></a><a class="delete modal-trigger" data-modal="modal-delete-contract">Delete<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#2157AA"/></svg></a></div></div>');
+            $('.contracts-list').append('<div class="contract" id='+ id +'><div class="contract-details remove-element-padding"><a class="contract-name edit"><span>' + position + '</span> contract</a><p>Expires <span class="expiry">' + expiry + '</span></p></div><div class="contract-actions"><a class="edit">Edit<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.68223 15.516L6.74726 16.451L0.442295 17.9485L1.94069 11.6444L2.83642 10.6702L7.68223 15.516ZM10.6005 2.90609L15.408 7.71352L8.62244 14.4991L3.815 9.69162L10.6005 2.90609ZM13.5136 0.00871828L18.3202 4.81528L16.3822 6.75326L11.5756 1.94669L13.5136 0.00871828Z" fill="#2157AA"/></svg></a><a class="' + extend_classes + '" data-modal="modal-extend-deadline">Extend deadline<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C4.03738 18 0 13.9626 0 9C0 4.03738 4.03738 0 9 0C13.9626 0 18 4.03738 18 9C18 13.9626 13.9626 18 9 18ZM9 2.24975C5.27789 2.24975 2.24975 5.27789 2.24975 9C2.24975 12.7221 5.27789 15.7502 9 15.7502C12.7221 15.7502 15.7502 12.7221 15.7502 9C15.7502 5.27789 12.7221 2.24975 9 2.24975ZM13.4995 11.2497H13.4984H7.87512V5.62538H10.1249V9H13.4995V11.2486V11.2497Z" fill="#2157AA"/></svg></a><a class="delete modal-trigger" data-modal="modal-delete-contract">Delete<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#2157AA"/></svg></a></div></div>');
         } 
         
         // Show no contracts msg if no contracts are saved.
@@ -785,7 +790,7 @@ $(document).ready(function () {
     } 
 
     // Extend a saved contract
-    $('.extend.modal-trigger').on('click', function(){
+    $('.extend.modal-trigger.active').on('click', function(){
         var extended_contract = $(this).parents('.contract').attr('id');
         var date_str = contracts[extended_contract]['date str'];
         var extended_date = get_date(7, date_str);
@@ -794,6 +799,10 @@ $(document).ready(function () {
         $('.contract#' + extended_contract + ' .expiry').text(extended_date[1]);
         save_response_to_contracts(extended_contract, 'date str', extended_date[0]);
         save_response_to_contracts(extended_contract, 'expiry date', extended_date[1]);
+
+        $('#modal-extend-deadline').addClass('show');
+
+         $(this).removeClass('modal-trigger active').addClass('inactive');
 
     });
 
