@@ -226,7 +226,7 @@ $(document).ready(function () {
 
         if ($('#stepped-nav-inpage').length) {
             var path = '/bga-style-guide/prototypes/help-me-decide/';
-            stepped_nav_functionality(["business-or-hobby.html", "business-structure.html", "business-name.html", "employees.html", "business-taxes.html", "results.html"], path);
+            stepped_nav_functionality(["business-structure.html", "business-name.html", "employees.html", "business-taxes.html", "results.html"], path);
         }
 
         // Check if 'return to results button' should display
@@ -243,15 +243,16 @@ $(document).ready(function () {
             protocol = window.location.protocol,
             path = $(target_q).attr('href'),
             unanswered = sessionStorage.getItem('unanswered'),
-            structure = sessionStorage.getItem('business-structure'),
+            //structure = sessionStorage.getItem('business-structure'),
             page = $(target_q).parents('.button-group').attr('data-page'),
             unvisited = sessionStorage.getItem('unvisited');
 
             if (path) {
             
-                if (structure == "Hobby") {
+                /*if (structure == "Hobby") {
                     path = '/bga-style-guide/prototypes/help-me-decide/hobby.html';
                 }
+                */
 
                 if (!unanswered) {
                     unanswered = "";
@@ -453,12 +454,13 @@ $(document).ready(function () {
         // Clear tool on 'start now' click
         $('.start-component .bga-btn').on('click', function(){
             sessionStorage.clear();
-            sessionStorage.setItem('unvisited', 'business-hobby-page, business-structure-page, business-name-page, employees-page, business-taxes-page, ');
+            sessionStorage.setItem('unvisited', 'business-structure-page, business-name-page, employees-page, business-taxes-page, ');
         });
 
         // DYNAMIC QUESTIONS
         // Business or hobby page
-        $('.q-business-hobby .radio-button input').on('change', function(){
+       /*
+       $('.q-business-hobby .radio-button input').on('change', function(){
             var answer = $(this).attr('id');
             
             sessionStorage.setItem('registrations', '');
@@ -500,6 +502,7 @@ $(document).ready(function () {
                 sessionStorage.setItem('business-structure', '');
             }
         });
+        */
         
         // Business structure page
         $('.q-know-structure .radio-button input').on('change', function(){
@@ -534,6 +537,10 @@ $(document).ready(function () {
             //var answer = $(this).attr('id'),
             answered = sessionStorage.getItem('answers'),
             unanswered = sessionStorage.getItem('unanswered');
+
+            if ( !unanswered) {
+                unanswered = '';
+            }
 
             // Add answered class to track questions required for dynamic display of comparison table sections.
             $(this).parents('.radios').addClass('answered');
