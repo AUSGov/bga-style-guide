@@ -509,7 +509,7 @@ $(document).ready(function () {
             var answer = $(this).attr('id');
             
             // Clear all business structure results
-            remove_answers('answers', ['sole-trader-4', 'partnership-4', 'company-4', 'trust-4', 'superannuation', 'number-owners-one', 'number-owners', 'number-owners-two', 'hold-assets-no', 'hold-assets-yes', 'partnership-1', 'partnership-2', 'sole-trader-1', 'sole-trader-2', 'company-1']);
+            remove_answers('answers', ['sole-trader-4', 'partnership-4', 'company-4', 'trust-4', 'superannuation', 'number-owners-one', 'number-owners', 'number-owners-two', 'hold-assets-no', 'hold-assets-yes', 'partnership-1', 'partnership-2', 'sole-trader-1', 'sole-trader-2', 'company-1', 'info-sole-trader', 'info-company', 'info-company-1', '.info-partnership']);
 
             $('.recommendations-sidebar .chosen-structure span').text("No chosen structure yet"); 
             $('.recommendations-sidebar .chosen-structure').removeClass('completed');
@@ -523,7 +523,7 @@ $(document).ready(function () {
             //Set dynamic section
             if ( answer == 'know-structure-yes' && $(this).is(":checked")) {
                 $('.q-know-structure-yes').removeClass('d-none');
-                $('.q-know-structure-no, .q-sole-trader-v-company, .q-partnership-v-company, .q-trust').addClass('d-none');
+                $('.q-know-structure-no, .q-sole-trader-v-company, .q-partnership-v-company, .q-trust, .info-sole-trader, .info-company, .info-company-1 .info-partnership').addClass('d-none');
                 remove_answers('answers', ['know-structure-no']);
                 
             } else if ( answer == 'know-structure-no' && $(this).is(":checked")) {
@@ -535,7 +535,7 @@ $(document).ready(function () {
         
         $('.q-know-structure-no .radio-button input').on('change', function(){
             //var answer = $(this).attr('id'),
-            answered = sessionStorage.getItem('answers'),
+            var answered = sessionStorage.getItem('answers'),
             unanswered = sessionStorage.getItem('unanswered');
 
             if ( !unanswered) {
@@ -582,6 +582,40 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.recommendations-sidebar .chosen-structure').removeClass('heartbeat-trigger');
             }, 1000);
+        });
+
+        $('.q-sole-trader-v-company .radio-button input').on('change', function(){
+            var answer = $(this).attr('id');
+
+            // Display dynamic business structure info
+            if ( answer == 'sole-trader-1' && $(this).is(":checked")) {
+               $('.info-company, info-company-1, info-partnership').addClass('d-none');
+               $('.info-sole-trader').removeClass('d-none');
+               remove_answers('answers', ['info-company, info-company-1, info-partnership']);
+                
+            } else if ( answer == 'company-1' && $(this).is(":checked")) {
+                $('.info-company').removeClass('d-none');
+                $('.info-sole-trader, info-company-1, info-partnership').addClass('d-none');
+                remove_answers('answers', ['info-sole-trader, info-company-1, info-partnership']);
+            }
+
+        });
+
+        $('.q-partnership-v-company .radio-button input').on('change', function(){
+            var answer = $(this).attr('id');
+
+            // Display dynamic business structure info
+            if ( answer == 'partnership-2' && $(this).is(":checked")) {
+               $('.info-company-1, info-company, info-sole-trader').addClass('d-none');
+               $('.info-partnership').removeClass('d-none');
+               remove_answers('answers', ['info-company-1, info-company, info-sole-trader']);
+                
+            } else if ( answer == 'company-2' && $(this).is(":checked")) {
+                $('.info-company-1').removeClass('d-none');
+                $('.info-partnership, info-company, info-sole-trader').addClass('d-none');
+                remove_answers('answers', ['info-partnership, info-company, info-sole-trader']);
+            }
+
         });
 
         // Employees page   
