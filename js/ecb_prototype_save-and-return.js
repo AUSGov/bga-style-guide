@@ -139,7 +139,6 @@ $(document).ready(function () {
         } else {
             date =  new Date(start_date);
         }
-        
         date_array.push(date);
         
         date.setDate(date.getDate() + future_day);
@@ -147,11 +146,12 @@ $(document).ready(function () {
         var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        var day = date.getDay(),
-            month = date.getMonth();
-            year = date.getFullYear();
+        var date_num = date.getDate(date),
+            day = date.getDay(date),
+            month = date.getMonth(date);
+            year = date.getFullYear(date);
 
-        var save_date = dayNames[day] + ' ' + day.toString() + ' ' + monthNames[month] + ', ' + year.toString();
+        var save_date = dayNames[day] + ' ' + date_num.toString() + ' ' + monthNames[month] + ', ' + year.toString();
         date_array.push(save_date);
 
         console.log(date_array);
