@@ -619,6 +619,7 @@ $(document).ready(function () {
     
     // Show hide content within email modal
     $('#step-save-email-address .progress-step').on('click', function () {
+        console.log('clicked');
         var id = $(this).parents('.step').attr('data-id'),
         email_address = $('#step-save-email-address[data-id=' + id + '] input').val();
         
@@ -657,9 +658,17 @@ $(document).ready(function () {
     })
 
     $('#step-save-verify-email #ecb-verify-btn').on('click', function(){
+
+        var btn_location;
+        if ($(this).hasClass('in-page')) {
+            btn_location = 'in-page';
+        } else {
+            btn_location = 'modal';
+        }
         
         var code = inputElements.map(({ value }) => value).join(''),
         id = $(this).parents('.step').attr('data-id');
+        console.log(id);
 
         if (code == '1234'|| code == 'RGAE') {
            
@@ -667,10 +676,12 @@ $(document).ready(function () {
             $('#step-save-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
             $(this).prop('disabled', true).addClass('disabled');
 
-            var date_array = get_date(7);
-            save_response_to_contracts(current_contract, 'expiry date', date_array[1]);
-            save_response_to_contracts(current_contract, 'date str', date_array[0]);
-            save_temp_contract(); 
+            if ( btn_location == 'modal') {
+                var date_array = get_date(7);
+                save_response_to_contracts(current_contract, 'expiry date', date_array[1]);
+                save_response_to_contracts(current_contract, 'date str', date_array[0]);
+                save_temp_contract(); 
+            }
             
             setTimeout(function () { 
                 $('#step-save-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
@@ -685,9 +696,15 @@ $(document).ready(function () {
             }, 3000);
 
             setTimeout(function () {
-                localStorage.setItem('current contract', 'contracttemp');
-                localStorage.setItem('saved new', 'true');
-                window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
+                if ( btn_location == 'in-page') {
+                   window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
+                } else if ( btn_location == 'modal') {
+                    localStorage.setItem('current contract', 'contracttemp');
+                    localStorage.setItem('saved new', 'true');
+                    window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
+                }
+                    
+
             }, 3200);
 
         } else {
