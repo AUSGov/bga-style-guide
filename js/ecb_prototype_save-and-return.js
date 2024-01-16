@@ -804,7 +804,8 @@ $(document).ready(function () {
     } 
 
     // Extend a saved contract
-    $('.extend.modal-trigger.active').on('click', function(){
+    $('body').on('click', '.extend.modal-trigger.active', function() {
+       
         var extended_contract = $(this).parents('.contract').attr('id');
         var date_str = contracts[extended_contract]['date str'];
         var extended_date = get_date(7, date_str);
