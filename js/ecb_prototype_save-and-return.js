@@ -866,6 +866,10 @@ $(document).ready(function () {
         $('#ecb-prototype button#ecb-save-exit').addClass('d-none');
         $('#ecb-prototype a#ecb-manage-contracts').removeClass('d-none');
         $('#ecb-prototype a#ecb-new-contract').removeClass('d-none');
+
+        var expiry = contracts[current_contract]['date str'],
+        remaining_days = get_remaining_days(expiry);
+        $('.manage-contracts-content span.remaining-days').text(remaining_days);
     }
     $('#ecb-manage-contracts').on('click', function(){
         localStorage.setItem('current contract', 'contracttemp');
