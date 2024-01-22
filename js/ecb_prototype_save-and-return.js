@@ -2,8 +2,6 @@
 
 $(document).ready(function () {
 
-    console.log('hello world');
-
     // Reset prototype
     $('#reset-prototype').on('click', function(){
         localStorage.clear();
@@ -104,7 +102,6 @@ $(document).ready(function () {
         console.log(prev_page);
 
         if (prev_page.includes("manage-contracts")) {
-            console.log('Come from manage contracts');
             if ( current_contract == 'contracttemp') {
 
                 console.log(current_contract);
@@ -113,8 +110,6 @@ $(document).ready(function () {
                 localStorage.setItem('current contract', current_contract);
 
             }
-        } else {
-            //console.log('not feeling contracty');
         }
         console.log(current_contract);
     }
@@ -212,43 +207,26 @@ $(document).ready(function () {
         localStorage.setItem('last visited', current_contract);
     }
 
-    // Reset verification modal state on page load 
-    // function to reset verification modal
-    var reset_verification_modal = function(){
-        $('#ecb-modal-save').removeClass('show');
-        $('#step-save-email-address').removeClass('show');
-        $('#step-save-verify-email').removeClass('show');   
-        $('#step-save-verify-email .number-code').removeClass('error');
-        $('#step-save-verify-email .success-icon').removeClass('show'); 
-        $('#step-save-verify-email input').each(function(){
-            $(this).val('');
-        });
-        $('#ecb-verify-btn').removeClass('disabled');
-        $('.modal-overlay').removeClass('show');
-    };
+      
+      /*if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
+      window.addEventListener('popstate', event => {
+        if (event.state?.verification1) {
+            console.log('verification1');
 
-    if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
-        reset_verification_modal();
-
-        window.addEventListener('popstate', event => {
-            if (event.state?.verification1) {
-              console.log('verification1');
-
-              reset_verification_modal();
-              check_last_viewed();
-              change_save_to_manage();
+            reset_verification_modal();
+           
 
 
-            } else if (event.state?.verification2) {
-                console.log('verification2');
-                
-                reset_verification_modal();
-                check_last_viewed();
-                change_save_to_manage();
+        } else if (event.state?.verification2) {
+            console.log('verification2');
+            
+            reset_verification_modal();
+            check_last_viewed();
+            change_save_to_manage();
 
-              } 
-        });
-};
+            } 
+    });*/
+    
     
     // Check is user is returning to a saved contract and display returning modal
     if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
@@ -265,7 +243,7 @@ $(document).ready(function () {
         } 
     };
 
-    // Check if user has visited the review page 
+    // Check if user has visited the review page and display 'return to review' button
     if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
         var review_pg = contracts[current_contract]['nav-step-7'];
 
@@ -647,28 +625,22 @@ $(document).ready(function () {
     };
    
 
-    // Open modals
-    $("body").on("click", ".modal-trigger", function(){
-
-        var modal = $(this).attr('data-modal'); 
-       
+    // Open modals - general function
+    var open_modal = function(trigger){
+        var modal = $(trigger).attr('data-modal'); 
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
-        
-        if ( modal.includes('modal-save') ) { 
-           
-            window.history.pushState( { verification1: true }, "", '#verification-step1');
+    };
+    
+    // Open modal and push state to History function
+    var open_modal_with_history = function(trigger) {
+        open_modal(trigger);
+        history.pushState({ modalOpen: true }, document.title, '#modal');
+    };
 
-            $('#step-save-email-address').addClass('show');
-            $('#step-save-verify-email').removeClass('show');   
-            $('#step-save-verify-email .number-code').removeClass('error');
-            $('#step-save-verify-email .success-icon').removeClass('show'); 
-            $('#step-save-verify-email input').each(function(){
-                $(this).val('');
-            });
-            $('#ecb-verify-btn').removeClass('disabled');
-
-        }
+    // Open general modals
+    $("body").on("click", ".modal-trigger", function(){
+        open_modal($(this));
 
         if ( $(this).hasClass('delete')) {
             $('#modal-delete-contract .confirm-delete').removeClass('d-none');
@@ -685,7 +657,7 @@ $(document).ready(function () {
             $('#modal-delete-contract button').attr('data-contract-num', contract);
         }
 
-        if (modal.includes('new-contract')) {
+        if ($(this).hasClass('ecb_new_contract')) {
             if (current_contract != 'contracttemp') {
                 $('.not-saved').addClass('d-none');
                 $('.already-saved').removeClass('d-none');
@@ -697,14 +669,43 @@ $(document).ready(function () {
         }
     });
 
+    // Open verification modal
+    $("body").on("click", ".modal-trigger-verify", function(){
+
+        open_modal_with_history($(this));
+
+        $('#step-save-email-address').addClass('show');
+        $('#step-save-verify-email').removeClass('show');   
+        $('#step-save-verify-email .number-code').removeClass('error');
+        $('#step-save-verify-email .success-icon').removeClass('show'); 
+        $('#step-save-verify-email input').each(function(){
+            $(this).val('');
+        });
+        $('#ecb-verify-btn').removeClass('disabled');
+    });
     
-    // Close verification modal
+    // Close & reset verification modal
+    var reset_verification_modal = function(){
+        console.log('modal closed');
+        $('#ecb-modal-save').removeClass('show');
+        $('#step-save-email-address').removeClass('show');
+        $('#step-save-verify-email').removeClass('show');   
+        $('#step-save-verify-email .number-code').removeClass('error');
+        $('#step-save-verify-email .success-icon').removeClass('show'); 
+        $('#step-save-verify-email input').each(function(){
+            $(this).val('');
+        });
+        $('#ecb-verify-btn').removeClass('disabled');
+        $('.modal-overlay').removeClass('show');
+    };
+
     
     
     // Show hide content within email modal
     $('#step-save-email-address .progress-step').on('click', function () {
-        //console.log('clicked email code button');
-        window.history.pushState( { verification2: true }, "", '#verification-step2');
+        
+        history.pushState({ modalOpen: true }, document.title, '#modal');
+
         var id = $(this).parents('.step').attr('data-id'),
         email_address = $('#step-save-email-address[data-id=' + id + '] input').val();
         
@@ -743,6 +744,8 @@ $(document).ready(function () {
     })
 
     $('#step-save-verify-email #ecb-verify-btn').on('click', function(){
+        
+        history.pushState({ modalOpen: true }, document.title, '#modal');
 
         var btn_location;
         if ($(this).hasClass('in-page')) {
@@ -785,6 +788,7 @@ $(document).ready(function () {
                 } else if ( btn_location == 'modal') {
                     localStorage.setItem('current contract', 'contracttemp');
                     localStorage.setItem('saved new', 'true');
+                    reset_verification_modal();
                     window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
                 }
                     
@@ -797,6 +801,14 @@ $(document).ready(function () {
 
     });
     
+    
+    $(window).on('popstate', function(event) {
+        // Close the modal when the user navigates back
+        reset_verification_modal();
+        check_last_viewed();
+        change_save_to_manage();
+    });
+
 
     // Display contracts on manage contracts page
     var count_contracts = function(contracts){
