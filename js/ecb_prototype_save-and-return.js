@@ -2,18 +2,17 @@
 
 $(document).ready(function () {
 
+    console.log('hello world');
+
     // Reset prototype
     $('#reset-prototype').on('click', function(){
         localStorage.clear();
-        sessionStorage.clear();
 
         if ( $('.page-manage-contracts').length ) {
             $('.no-contract').removeClass('d-none');
             $('.contract').addClass('d-none');
         }
-
         window.location.pathname = "/bga-style-guide/prototypes/ecb/landing.html";
-        
     });
     
     //ECB REVISED FLOW PROTOTYPE
@@ -33,25 +32,100 @@ $(document).ready(function () {
             current_contract = "contracttemp";
         };
         
-        // Check if user came from the 'manage contracts' page and set current contract to last visited contract
-        if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
-            
-            var prev_page = sessionStorage.getItem('prev-location');
-            console.log(prev_page);
+    };
 
-            if (prev_page.includes("manage-contracts")) {
-                if ( current_contract == 'contracttemp') {
 
-                    console.log(current_contract);
+    // Functions to set expiry dates and calulate days to expiry
+    var get_date = function(future_day, start_date){ 
+        
+        var date,
+        date_array = [];
 
-                    current_contract = sessionStorage.getItem('last visited');
-                    localStorage.setItem('current contract', current_contract);
-                }
-            } 
+        if (start_date === undefined) {
+            date = new Date();
+        } else {
+            date =  new Date(start_date);
+        }
+        date_array.push(date);
+        
+        date.setDate(date.getDate() + future_day);
+
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        var date_num = date.getDate(date),
+            day = date.getDay(date),
+            month = date.getMonth(date);
+            year = date.getFullYear(date);
+
+        var save_date = dayNames[day] + ' ' + date_num.toString() + ' ' + monthNames[month] + ', ' + year.toString();
+        date_array.push(save_date);
+
+        console.log(date_array);
+      
+        return date_array;
+    };
+   
+    var get_remaining_days = function(expiry_date){
+        var date1 = new Date(expiry_date);
+        var date2 = new Date();
+        var diffTime = Math.abs(date2 - date1);
+        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+
+        return diffDays;
+    };
+
+
+    // Function to change 'save' component to 'manage contracts' component when user returns to the contract.
+    var change_save_to_manage = function(){
+        if ( current_contract != 'contracttemp' ) {
+            $('#ecb-prototype .save-content').addClass('d-none');
+            $('#ecb-prototype .manage-contracts-content').removeClass('d-none');
+            $('#ecb-prototype button#ecb-save-exit').addClass('d-none');
+            $('#ecb-prototype a#ecb-manage-contracts').removeClass('d-none');
+            $('#ecb-prototype a#ecb-new-contract').removeClass('d-none');
+
+            var expiry = contracts[current_contract]['date str'],
+            remaining_days = get_remaining_days(expiry);
+            $('.manage-contracts-content span.remaining-days').text(remaining_days);
+        }
+        $('#ecb-manage-contracts').on('click', function(){
+            localStorage.setItem('current contract', 'contracttemp');
+            contracts['contracttemp'] = {};
+            localStorage.setItem('contracts', JSON.stringify(contracts));
+            window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
+        });
+    };
+
+
+    // Check if user came from the 'manage contracts' page and set current contract to last visited contract
+    var check_last_viewed = function(){
+        var prev_page = localStorage.getItem('prev-location');
+        console.log(prev_page);
+
+        if (prev_page.includes("manage-contracts")) {
+            console.log('Come from manage contracts');
+            if ( current_contract == 'contracttemp') {
+
+                console.log(current_contract);
+
+                current_contract = localStorage.getItem('last visited');
+                localStorage.setItem('current contract', current_contract);
+
+            }
+        } else {
+            //console.log('not feeling contracty');
         }
         console.log(current_contract);
     }
+
     
+    if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
+        check_last_viewed();   
+        change_save_to_manage();   
+    }
+       
+
     // Function to save individual item to contracts object
     var save_response_to_contracts = function(current_contract, input_field, input_value){   
         if (input_field) {
@@ -132,52 +206,49 @@ $(document).ready(function () {
         });
     }
 
-     // Functions to set expiry dates and calulate days to expiry
-     var get_date = function(future_day, start_date){ 
-        
-        var date,
-        date_array = [];
-
-        if (start_date === undefined) {
-            date = new Date();
-        } else {
-            date =  new Date(start_date);
-        }
-        date_array.push(date);
-        
-        date.setDate(date.getDate() + future_day);
-
-        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-        var date_num = date.getDate(date),
-            day = date.getDay(date),
-            month = date.getMonth(date);
-            year = date.getFullYear(date);
-
-        var save_date = dayNames[day] + ' ' + date_num.toString() + ' ' + monthNames[month] + ', ' + year.toString();
-        date_array.push(save_date);
-
-        console.log(date_array);
-      
-        return date_array;
-    };
-   
-    var get_remaining_days = function(expiry_date){
-        var date1 = new Date(expiry_date);
-        var date2 = new Date();
-        var diffTime = Math.abs(date2 - date1);
-        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-
-        return diffDays;
-    };
 
     // If current contract has been saved add to last visited variable in session storage
     if (current_contract != 'contracttemp') {
-        sessionStorage.setItem('last visited', current_contract);
+        localStorage.setItem('last visited', current_contract);
     }
 
-    
+    // Reset verification modal state on page load 
+    // function to reset verification modal
+    var reset_verification_modal = function(){
+        $('#ecb-modal-save').removeClass('show');
+        $('#step-save-email-address').removeClass('show');
+        $('#step-save-verify-email').removeClass('show');   
+        $('#step-save-verify-email .number-code').removeClass('error');
+        $('#step-save-verify-email .success-icon').removeClass('show'); 
+        $('#step-save-verify-email input').each(function(){
+            $(this).val('');
+        });
+        $('#ecb-verify-btn').removeClass('disabled');
+        $('.modal-overlay').removeClass('show');
+    };
+
+    if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
+        reset_verification_modal();
+
+        window.addEventListener('popstate', event => {
+            if (event.state?.verification1) {
+              console.log('verification1');
+
+              reset_verification_modal();
+              check_last_viewed();
+              change_save_to_manage();
+
+
+            } else if (event.state?.verification2) {
+                console.log('verification2');
+                
+                reset_verification_modal();
+                check_last_viewed();
+                change_save_to_manage();
+
+              } 
+        });
+};
     
     // Check is user is returning to a saved contract and display returning modal
     if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
@@ -187,6 +258,7 @@ $(document).ready(function () {
         var remaining_days = get_remaining_days(expiry);
 
         if ( returning == 'true' ) {
+            console.log('returning');
             $('#modal-returning, .modal-overlay').addClass('show');
             localStorage.setItem('returning', 'false');
             $('.days-left').text(remaining_days);
@@ -200,18 +272,6 @@ $(document).ready(function () {
         if ( review_pg == 'visited' ) {
            $('a.return-to-review').removeClass('d-none');
         } 
-    };
-
-    // Reset verification modal state on page load 
-    if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
-            $('#step-save-email-address').removeClass('show');
-            $('#step-save-verify-email').removeClass('show');   
-            $('#step-save-verify-email .number-code').removeClass('error');
-            $('#step-save-verify-email .success-icon').removeClass('show'); 
-            $('#step-save-verify-email input').each(function(){
-                $(this).val('');
-            });
-            $('#ecb-verify-btn').removeClass('disabled');
     };
 
     // !!! DON'T FORGET - populating clause boxes with user answers after input is in bga-scripts.js
@@ -583,18 +643,22 @@ $(document).ready(function () {
         contracts['contracttemp'] = {};
         localStorage.setItem('contracts', JSON.stringify(contracts));   
         localStorage.setItem('last saved', 'contract' + new_contract_position); 
-        sessionStorage.setItem('last visited', 'contract' + new_contract_position);
+        localStorage.setItem('last visited', 'contract' + new_contract_position);
     };
    
 
-    // Open & close modals
+    // Open modals
     $("body").on("click", ".modal-trigger", function(){
 
         var modal = $(this).attr('data-modal'); 
+       
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
         
         if ( modal.includes('modal-save') ) { 
+           
+            window.history.pushState( { verification1: true }, "", '#verification-step1');
+
             $('#step-save-email-address').addClass('show');
             $('#step-save-verify-email').removeClass('show');   
             $('#step-save-verify-email .number-code').removeClass('error');
@@ -632,10 +696,15 @@ $(document).ready(function () {
             }
         }
     });
+
+    
+    // Close verification modal
+    
     
     // Show hide content within email modal
     $('#step-save-email-address .progress-step').on('click', function () {
-        console.log('clicked email code button');
+        //console.log('clicked email code button');
+        window.history.pushState( { verification2: true }, "", '#verification-step2');
         var id = $(this).parents('.step').attr('data-id'),
         email_address = $('#step-save-email-address[data-id=' + id + '] input').val();
         
@@ -684,7 +753,6 @@ $(document).ready(function () {
         
         var code = inputElements.map(({ value }) => value).join(''),
         id = $(this).parents('.step').attr('data-id');
-        //console.log(id);
 
         if (code == '1234'|| code == 'RGAE') {
            
@@ -874,27 +942,6 @@ $(document).ready(function () {
         }
     });
 
-
-    // Change 'save' component to 'manage contracts' component when user returns to the contract.
-    if ( current_contract != 'contracttemp' ) {
-        $('#ecb-prototype .save-content').addClass('d-none');
-        $('#ecb-prototype .manage-contracts-content').removeClass('d-none');
-        $('#ecb-prototype button#ecb-save-exit').addClass('d-none');
-        $('#ecb-prototype a#ecb-manage-contracts').removeClass('d-none');
-        $('#ecb-prototype a#ecb-new-contract').removeClass('d-none');
-
-        var expiry = contracts[current_contract]['date str'],
-        remaining_days = get_remaining_days(expiry);
-        $('.manage-contracts-content span.remaining-days').text(remaining_days);
-    }
-    $('#ecb-manage-contracts').on('click', function(){
-        localStorage.setItem('current contract', 'contracttemp');
-        contracts['contracttemp'] = {};
-        localStorage.setItem('contracts', JSON.stringify(contracts));
-        window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
-    });
-
-
     // Add position and dates to emails
     if ($('#ecb-prototype.ecb-email').length) {
 
@@ -916,7 +963,6 @@ $(document).ready(function () {
     // Reset prototype
     $('#reset-prototype').on('click', function(){
         localStorage.clear();
-        sessionStorage.clear();
 
         if ( $('.page-manage-contracts').length ) {
             $('.no-contract').removeClass('d-none');
@@ -928,10 +974,10 @@ $(document).ready(function () {
     });
 
 
-    // On page unload add page location to sessionStorage in 'prev_location' item
+    // On page unload add page location to localStorage in 'prev_location' item
     $(window).on('beforeunload', function () {
         var location = window.location.pathname;
-        sessionStorage.setItem('prev-location', location);     
+        localStorage.setItem('prev-location', location);     
     });
 
 }); //End doc ready
