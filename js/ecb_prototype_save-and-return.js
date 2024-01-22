@@ -202,6 +202,18 @@ $(document).ready(function () {
         } 
     };
 
+    // Reset verification modal state on page load 
+    if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
+            $('#step-save-email-address').removeClass('show');
+            $('#step-save-verify-email').removeClass('show');   
+            $('#step-save-verify-email .number-code').removeClass('error');
+            $('#step-save-verify-email .success-icon').removeClass('show'); 
+            $('#step-save-verify-email input').each(function(){
+                $(this).val('');
+            });
+            $('#ecb-verify-btn').removeClass('disabled');
+    };
+
     // !!! DON'T FORGET - populating clause boxes with user answers after input is in bga-scripts.js
     // Save text input & select answers and re-populate on page load
     $('#ecb-prototype input[type=text], #ecb-prototype select').on('change', function () {
@@ -584,10 +596,14 @@ $(document).ready(function () {
         
         if ( modal.includes('modal-save') ) { 
             $('#step-save-email-address').addClass('show');
+            $('#step-save-verify-email').removeClass('show');   
+            $('#step-save-verify-email .number-code').removeClass('error');
             $('#step-save-verify-email .success-icon').removeClass('show'); 
             $('#step-save-verify-email input').each(function(){
                 $(this).val('');
             });
+            $('#ecb-verify-btn').removeClass('disabled');
+
         }
 
         if ( $(this).hasClass('delete')) {
@@ -619,7 +635,7 @@ $(document).ready(function () {
     
     // Show hide content within email modal
     $('#step-save-email-address .progress-step').on('click', function () {
-        console.log('clicked');
+        console.log('clicked email code button');
         var id = $(this).parents('.step').attr('data-id'),
         email_address = $('#step-save-email-address[data-id=' + id + '] input').val();
         
@@ -668,7 +684,7 @@ $(document).ready(function () {
         
         var code = inputElements.map(({ value }) => value).join(''),
         id = $(this).parents('.step').attr('data-id');
-        console.log(id);
+        //console.log(id);
 
         if (code == '1234'|| code == 'RGAE') {
            
