@@ -207,27 +207,6 @@ $(document).ready(function () {
         localStorage.setItem('last visited', current_contract);
     }
 
-      
-      /*if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
-      window.addEventListener('popstate', event => {
-        if (event.state?.verification1) {
-            console.log('verification1');
-
-            reset_verification_modal();
-           
-
-
-        } else if (event.state?.verification2) {
-            console.log('verification2');
-            
-            reset_verification_modal();
-            check_last_viewed();
-            change_save_to_manage();
-
-            } 
-    });*/
-    
-    
     // Check is user is returning to a saved contract and display returning modal
     if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
         var returning = localStorage.getItem('returning'),
@@ -700,7 +679,6 @@ $(document).ready(function () {
     };
 
     
-    
     // Show hide content within email modal
     $('#step-save-email-address .progress-step').on('click', function () {
         
@@ -801,7 +779,7 @@ $(document).ready(function () {
 
     });
     
-    
+    // Use popstate to close verification modal when user navigates with the back button.
     $(window).on('popstate', function(event) {
         // Close the modal when the user navigates back
         reset_verification_modal();
@@ -809,6 +787,18 @@ $(document).ready(function () {
         change_save_to_manage();
     });
 
+    // Create extra contracts (for multiple contracts task in user testing)
+    var create_extra_contract = function(contract_array, contract_name, position){
+        contract_array.unshift(contract_name);
+        contracts[contract_name] = {};
+        contracts[contract_name]['position-title'] = position;
+        localStorage.setItem('contracts', JSON.stringify(contracts));
+        var date_array = get_date(7);
+        save_response_to_contracts(contract_name, 'expiry date', date_array[1]);
+        save_response_to_contracts(contract_name, 'date str', date_array[0]);
+        
+        console.log(contracts);
+    };
 
     // Display contracts on manage contracts page
     var count_contracts = function(contracts){
@@ -819,6 +809,19 @@ $(document).ready(function () {
                 contracts_count.unshift(contract);
             }
         }
+       
+        if ($('.page-manage-contracts').hasClass('add-two-contracts')) {
+            console.log('adding two');
+
+            if (!contracts_count.includes('contracta')) {
+                create_extra_contract(contracts_count, 'contracta', 'Manager');
+            }
+            if (!contracts_count.includes('contractb')) {
+                create_extra_contract(contracts_count, 'contractb', 'Sales assistant');
+            }
+           
+        }
+
         return contracts_count;
     };
 
@@ -827,10 +830,9 @@ $(document).ready(function () {
         current_contract = 'contracttemp';
         localStorage.setItem('current contract', 'contracttemp');
         
-        
-       var new_contract = localStorage.getItem('saved new');
+        var new_contract = localStorage.getItem('saved new');
 
-       if (new_contract == 'true') {
+        if (new_contract == 'true') {
             $('.modal-overlay').addClass('show');
             $('#new-contract-notification').addClass('show');
             localStorage.setItem('saved new', '');
@@ -840,7 +842,7 @@ $(document).ready(function () {
         }
         
        
-        // Show /hide contracts in contact list
+        // Add contracts to contract list
         var active_contracts = count_contracts(contracts);
         
         for (var i = 0; i < active_contracts.length; i++) { 
