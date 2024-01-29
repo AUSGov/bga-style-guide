@@ -10,28 +10,32 @@
     
     <select class="form-select layouts-select ps-3" aria-label="Layout examples">
         
-        {% if include.single-col-fullwidth-visibility == "true" %}
-            <option value="single-col-fullwidth" class="{{include.single-col-fullwidth-visibility}}" selected>Single column - full width</option>
+        {% if include.single-col-navpage-visibility == "true" %}
+            <option value="single-col-navpage" class="{{include.single-col-navpage-visibility}}" selected>Single column - navigation page</option>
         {% endif %}
         
-        {% if include.single-col-twothirds-visibility == "true" %}
-            <option value="single-col-twothirdswidth" class="{{include.single-col-twothirds-visibility}}">Single column - 2/3 width</option>
-        {% endif %}
-        
-        {% if include.two-col-leftmenu-visibility == "true" %}
-            <option value="two-col-leftmenu" class="{{include.two-col-leftmenu-visibility}}">Two column - left side menu</option>
-        {% endif %}
-        
-        {% if include.two-col-leftfilter-visibility == "true" %}
-            <option value="two-col-leftfilter" class="{{include.two-col-leftfilter-visibility}}">Two column - left filter</option>
+        {% if include.single-col-infopage-visibility == "true" %}
+            <option value="single-col-infopage" class="{{include.single-col-infopage-visibility}}">Single column - information page</option>
         {% endif %}
 
-        {% if include.two-col-rightsidebar-visibility == "true" %}
-        <option value="two-col-rightsidebar" class="{{include.two-col-rightsidebar-visibility}}">Two column - right sidebar</option>
+        {% if include.single-col-toolpage-visibility == "true" %}
+            <option value="single-col-toolpage" class="{{include.single-col-toolpage-visibility}}">Single column - tool page</option>
+        {% endif %}
+        
+        {% if include.two-col-infopage-visibility == "true" %}
+            <option value="two-col-infopage" class="{{include.two-col-infopage-visibility}}">Two column - information page</option>
+        {% endif %}
+        
+        {% if include.two-col-filterpage-visibility == "true" %}
+            <option value="two-col-filterpage" class="{{include.two-col-filterpage-visibility}}">Two column - filter page</option>
         {% endif %}
 
-        {% if include.two-col-rightsidebar-alt-visibility == "true" %}
-        <option value="two-col-rightsidebar-alt" class="{{include.two-col-rightsidebar-alt-visibility}}">Two column - right sidebar alternate</option>
+        {% if include.two-col-toolpage-visibility == "true" %}
+        <option value="two-col-toolpage" class="{{include.two-col-toolpage-visibility}}">Two column - tool page</option>
+        {% endif %}
+
+        {% if include.two-col-toolpage-alt-visibility == "true" %}
+        <option value="two-col-toolpage-alt" class="{{include.two-col-toolpage-alt-visibility}}">Two column - tool page alternate</option>
         {% endif %}
         
     </select>

@@ -157,21 +157,21 @@ classes="in-page"
         <!-- LAYOUTS -->   
         <h2 class="section-start" id="layouts">Layouts</h2>
         
-        <p>Inline pathway lists can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >page layouts</a> except the two column - left filters layout.</p> 
+        <p>Inline pathway lists can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >page layouts</a> except the Two column - filter page layout.</p> 
        
        
         {% include layouts-dropdown.html 
-            single-col-fullwidth-visibility="true"
-            single-col-twothirds-visibility="true" 
-            two-col-leftmenu-visibility="true" 
-            two-col-rightsidebar-visibility="true" 
+            single-col-navpage-visibility="true"
+            single-col-infopage-visibility="true" 
+            two-col-infopage-visibility="true" 
+            two-col-toolpage-visibility="true" 
         %}
         
         
-        <div class="layout-example single-col-fullwidth mt-0 mb-5 px-4 py-0">
+        <div class="layout-example single-col-navpage mt-0 mb-5 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="onecol-fw"
+                layout-name="single-col-navpage"
             
                 min1200-visibility="true"
                 min992-visibility="true"
@@ -192,7 +192,7 @@ classes="in-page"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span 12 grid-columns each.</p>"
             
-                example-link="'../html-examples/single-col-full-width.html#inline-pathway-example' | relative_url'"
+                example-link="'../html-examples/single-col-navpage.html#inline-pathway-example' | relative_url'"
                 example-link-text="View layout example"
                 
             %}
@@ -201,10 +201,10 @@ classes="in-page"
         </div>
         
         
-        <div class="layout-example single-col-twothirdswidth mt-0 mb-5 px-4 py-0">
+        <div class="layout-example single-col-infopage mt-0 mb-5 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="onecol-twothirdsw"    
+                layout-name="single-col-infopage"    
             
                 min1200-visibility="true"
                 min992-visibility="true"
@@ -227,7 +227,7 @@ classes="in-page"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>"
             
-                example-link="'../html-examples/single-col-two-thirds-width.html#inline-pathway-example' | relative_url'"
+                example-link="'../html-examples/single-col-infopage.html#inline-pathway-example' | relative_url'"
                 example-link-text="View layout example"
                 
             %}
@@ -235,10 +235,10 @@ classes="in-page"
         </div>
         
         
-        <div class="layout-example two-col-leftmenu mt-0 mb-5 px-4 py-0">
+        <div class="layout-example two-col-infopage mt-0 mb-5 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="twocol-leftmenu"
+                layout-name="two-col-infopage"
                 
                 min1200-visibility="true"
                 min992-visibility="false"
@@ -258,7 +258,7 @@ classes="in-page"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>"
             
-                example-link="'../html-examples/two-col-left-side-menu.html#inline-pathway-example' | relative_url'"
+                example-link="'../html-examples/two-col-infopage.html#inline-pathway-example' | relative_url'"
                 example-link-text="View layout example"
                 
             %}
@@ -266,10 +266,10 @@ classes="in-page"
         </div>
         
         
-        <div class="layout-example two-col-rightsidebar mt-0 mb-5 px-4 py-0">
+        <div class="layout-example two-col-toolpage mt-0 mb-5 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="twocol-rightbar"
+                layout-name="two-col-toolpage"
             
                 min1200-visibility="false"
                 min992-visibility="false"
@@ -288,7 +288,7 @@ classes="in-page"
             
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Inline pathway tiles span the full width of the content area.</p>"
             
-                example-link="'../html-examples/two-col-right-sidebar.html#inline-pathway-example' | relative_url'"
+                example-link="'../html-examples/two-col-toolpage.html#inline-pathway-example' | relative_url'"
                 example-link-text="View layout example"
 
             %}

@@ -89,7 +89,7 @@ subsite-tag: false
         <h2 class="section-start" id="page-layouts">Page layouts</h2>
 
         
-        <h3>Single column - full width layout</h3>
+        <h3>Single column - navigation page layout</h3>
         <p>This layout is typically used for navigation pages. Page patterns that use this layout include:</p>
         <ul>
             <li>Home page</li>
@@ -104,8 +104,8 @@ subsite-tag: false
         </ul>
         
 
-        <!-- Single column - full width -->
-        <div class="layout-example full-border show single-col-fullwidth m-0 p-4">
+        <!-- Single column - navigation page layout -->
+        <div class="layout-example full-border show single-col-navpage m-0 p-4">
             
            {% include layouts-accordion.html
                 singlelayout="true"
@@ -116,14 +116,14 @@ subsite-tag: false
         </div>
         
         {% include design-specs-link.html 
-            btn-link="'../html-examples/single-col-full-width.html' | relative_url"
-            btn-text="View html example of the single column - full width layout"
+            btn-link="'../html-examples/single-col-navpage.html' | relative_url"
+            btn-text="View html example of the Single column - navigation page layout"
             %}
         
 
         
-        <!-- Single column - two thirds width -->
-        <h3>Single column - two thirds width layout</h3>
+        <!-- Single column - information page -->
+        <h3>Single column - information page layout</h3>
         <p>This layout is typically used for information pages. Page patterns that use this layout include:</p>
         <ul>
             <li>Resource article page</li>
@@ -137,10 +137,10 @@ subsite-tag: false
             </ul>
         
 
-        <div class="layout-example full-border show single-col-twothirdswidth m-0 px-4 py-0">
+        <div class="layout-example full-border show single-col-infopage m-0 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="onecol-twothirdsw"
+                layout-name="single-col-infopage"
             
                 min1200-visibility="true"
                 min992-visibility="true"
@@ -175,14 +175,63 @@ subsite-tag: false
         </div>
         
         {% include design-specs-link.html 
-            btn-link="'../html-examples/single-col-two-thirds-width.html' | relative_url"
-            btn-text="View html example of the single column - two thirds width layout"
+            btn-link="'../html-examples/single-col-infopage.html' | relative_url"
+            btn-text="View html example of the Single column - information page layout"
             %}
+
+
+        
+        <!-- Single column - tool page -->
+        <h3>Single column - tool page layout</h3>
+        <p>This layout is typically used for information pages in tools that require more width than standard information pages. Page patterns that use this layout include:</p>
+        <ul>
+            <li>Tool landing page</li>
+            <li>Tool review / finalise page</li>
+        </ul>
+
+        <h4>Bootstrap classes</h4>
+            <ul>
+                <li>Body content: <strong>.col-12 .col-lg-10 .col-xl-9</strong></li>
+            </ul>
+        
+
+        <div class="layout-example full-border show single-col-toolpage m-0 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="single-col-toolpage"
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                finalbp-visibility="true"  
+                finalbp="Breakpoint &lt; 992px"
+            
+                min1200-img="'../assets/layout-images/onecol-toolpage-min1200.png' | relative_url "
+                
+                min992-img="'../assets/layout-images/onecol-toolpage-min992.png' | relative_url "
+            
+                finalbp-img="'../assets/layout-images/onecol-toolpage-finalbp.png' | relative_url "
+            
+                min1200-rules="<p>The content area is 9 grid-columns wide. The content area is aligned to the left side of the page.</p><p>The content area has a 32px margin above and below.</p><p>The first element within the content area has zero margin and padding above (regardless of what element it is).</p><p>The content area has left and right padding of 32px.</p>"
+            
+                min992-rules="<p>The content area is 10 grid-columns wide. The content area is aligned to the left side of the page.</p><p>The content area has a 32px margin above and below.</p><p>The first element within the content area has zero margin and padding above (regardless of what element it is).</p><p>The content area has left and right padding of 32px.</p>"
+                
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The content area has a 32px margin above and below.</p><p>The first element within the content area has zero margin and padding above (regardless of what element it is).</p><p>The content area has no padding left or right.</p>"
+                
+            %}
+            
+        </div>
+        
+        {% include design-specs-link.html 
+            btn-link="'../html-examples/single-col-tool-page.html' | relative_url"
+            btn-text="View html example of the Single column - tool page layout"
+            %}
+
+
+
         
         
-        
-        <!-- Two column - left side menu -->
-        <h3>Two column - left side menu layout</h3>
+        <!-- Two column - information page -->
+        <h3>Two column - information page layout</h3>
         <p>This layout is typically used for information pages. Page patterns that use this layout include:</p>
         <ul>
             <li>101 page</li>
@@ -195,10 +244,10 @@ subsite-tag: false
                 <li>Body content: <strong>.col-12 .col-sm-9 .col-xl-8</strong></li>
             </ul>
 
-        <div class="layout-example full-border show two-col-leftmenu m-0 px-4 py-0">
+        <div class="layout-example full-border show two-col-infopage m-0 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="twocol-lefftmenu"
+                layout-name="two-col-infopage"
             
                 min1200-visibility="true"
                 min992-visibility="false"
@@ -225,14 +274,14 @@ subsite-tag: false
         </div>
         
         {% include design-specs-link.html 
-            btn-link="'../html-examples/two-col-left-side-menu.html' | relative_url"
-            btn-text="View html example of the two column - left side menu layout"
+            btn-link="'../html-examples/two-col-infopage.html' | relative_url"
+            btn-text="View html example of the Two column - information page layout"
             %}
 
 
         
-            <!-- Two column - left filters -->
-            <h3>Two column - left filters layout</h3>
+            <!-- Two column - filter page -->
+            <h3>Two column - filter page layout</h3>
             <p>This layout is used for search and finder tool result pages including:</p>
             <ul>
                 <li>business.gov.au search results page</li>
@@ -247,10 +296,10 @@ subsite-tag: false
                 <li>Body content: <strong>.col-12 .col-md-8 .col-xl-7</strong></li>
             </ul>
             
-            <div class="layout-example full-border show two-col-leftfilters m-0 px-4 py-0">
+            <div class="layout-example full-border show two-col-filterpage m-0 px-4 py-0">
                 
                 {% include layouts-accordion.html 
-                    layout-name="twocol-leftfilters"
+                    layout-name="two-col-filterpage"
                 
                     min1200-visibility="false"
                     min992-visibility="false"
@@ -277,14 +326,14 @@ subsite-tag: false
             </div>
             
             {% include design-specs-link.html 
-                btn-link="'../html-examples/two-col-left-filters.html' | relative_url"
-                btn-text="View html example of the two column - left filters layout"
+                btn-link="'../html-examples/two-col-filterpage.html' | relative_url"
+                btn-text="View html example of the Two column - filter page layout"
                 %}
         
         
         
-        <!-- Two column - right sidebar -->
-        <h3>Two column - right sidebar layout</h3>
+        <!-- Two column - tool page -->
+        <h3>Two column - tool page layout</h3>
         <p>This layout is only used for pages that require a sidebar such as checklists and tools. It should not be used for general information pages or nagivation pages.</p>
 
         <h4>Bootstrap classes</h4>
@@ -293,10 +342,10 @@ subsite-tag: false
             <li>Right sidebar: <strong>.col-12 .col-md-4</strong></li>
         </ul>
         
-        <div class="layout-example full-border show two-col-rightsidebar m-0 px-4 py-0">
+        <div class="layout-example full-border show two-col-toolpage m-0 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="twocol-rightbar"
+                layout-name="two-col-toolpage"
             
                 min1200-visibility="false"
                 min992-visibility="false"
@@ -322,13 +371,13 @@ subsite-tag: false
         </div>
         
         {% include design-specs-link.html 
-            btn-link="'../html-examples/two-col-right-sidebar.html' | relative_url"
-            btn-text="View html example of the two column - right sidebar layout"
+            btn-link="'../html-examples/two-col-toolpage.html' | relative_url"
+            btn-text="View html example of the Two column - tool page layout"
             %}
 
 
-        <!-- Alternate two column - right sidebar -->
-        <h3>Two column - right sidebar alternate layout</h3>
+        <!-- Alternate Two column - tool page -->
+        <h3>Two column - tool page alternate layout</h3>
         <p>This layout is only used for pages that require a sidebar such as checklists and tools. It should not be used for general information pages or nagivation pages.</p>
 
         <h4>Bootstrap classes</h4>
@@ -337,10 +386,10 @@ subsite-tag: false
             <li>Right sidebar: <strong>.col-12 .col-lg-4</strong></li>
         </ul>
         
-        <div class="layout-example full-border show two-col-rightsidebar m-0 px-4 py-0">
+        <div class="layout-example full-border show two-col-toolpage-alt m-0 px-4 py-0">
             
             {% include layouts-accordion.html 
-                layout-name="twocol-rightbar"
+                layout-name="two-col-toolpage-alt"
             
                 min1200-visibility="false"
                 min992-visibility="true"
@@ -366,8 +415,8 @@ subsite-tag: false
         </div>
         
         {% include design-specs-link.html 
-            btn-link="'../html-examples/two-col-right-sidebar-alternate.html' | relative_url"
-            btn-text="View html example of the two column - right sidebar alternate layout"
+            btn-link="'../html-examples/two-col-toolpage-alt.html' | relative_url"
+            btn-text="View html example of the Two column - tool page alternate layout"
             %}
         
 
@@ -375,7 +424,7 @@ subsite-tag: false
         <!-- PAGE SECTIONS -->
         <h2 class="section-start" id="coloured-background-sections">Coloured background sections</h2>
         
-        <p><strong>Single column - full width layout pages</strong> can have sections with a light blue background (#C7D9EE). Coloured background sections should not be used in any other page layouts.</p>
+        <p><strong>Single column - navigation page layout pages</strong> can have sections with a light blue background (#C7D9EE). Coloured background sections should not be used in any other page layouts.</p>
         <p>Coloured background sections should always have a heading (usually a h2 level heading).</p>
         <p>These sections should have 32px padding top and bottom as well as 32px margin top and bottom. The blue background colour extends left and right to the edge of the viewport.</p>
         <p>Margin and padding elements within the coloured background sections remain the same as in the rest of the content.</p>
@@ -387,7 +436,7 @@ subsite-tag: false
             </div>
         </div>
         {% include design-specs-link.html 
-            btn-link="'../html-examples/single-col-full-width.html' | relative_url"
+            btn-link="'../html-examples/single-col-navpage.html' | relative_url"
             btn-text="View html example of the coloured background section"
             %}
         
@@ -399,7 +448,7 @@ subsite-tag: false
           <h2 class="section-start" id="version-history">Version history</h2>
           <h4>8 August, 2023</h4>
           <ul>
-              <li>Added an additional layout, the <strong>two column - right sidebar alternate</strong> layout. This layout will be used for the Lean business plan builder.</li>
+              <li>Added an additional layout, the <strong>Two column - tool page alternate</strong> layout. This layout will be used for the Lean business plan builder.</li>
           </ul>
 
 
