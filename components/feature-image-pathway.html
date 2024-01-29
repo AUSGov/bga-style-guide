@@ -163,6 +163,7 @@ classes="in-page"
         {% include layouts-dropdown.html 
             single-col-navpage-visibility="true" 
             single-col-infopage-visibility="true" 
+            single-col-toolpage-visibility="true" 
             two-col-infopage-visibility="true" 
             two-col-toolpage-visibility="true"
             two-col-toolpage-alt-visibility="true" 
@@ -220,6 +221,38 @@ classes="in-page"
             %}
             
         </div>
+
+        <div class="layout-example single-col-toolpage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="single-col-toolpage"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+            min1200-img="'../assets/layout-images/onecol-toolpage-1200px-fullwidthcomponent.png' | relative_url "
+            min992-img="'../assets/layout-images/onecol-toolpage-992px-fullwidthcomponent.png' | relative_url "
+            finalbp-img="'../assets/layout-images/onecol-toolpage-finalbp-fullwidthcomponent.png' | relative_url "
+
+            min1200-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Feature image components span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 10 grid-columns wide.</p>
+            <p>Feature image components span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Feature image components span the full width of the content area.</p>"
+
+            example-link="'../html-examples/single-col-toolpage.html#feature-example' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
         
         
         <div class="layout-example two-col-infopage mt-0 mb-5 px-4 py-0">
