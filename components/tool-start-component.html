@@ -164,10 +164,11 @@ classes="in-page"
         singlelayout="true"
         %}
 
-        <div class="layout-example show full-border mt-0 mb-5 p-4">
+        <div class="layout-example-static show full-border mt-0 mb-5 p-4">
 
             {% include layouts-accordion.html
 
+                layout-name="all-layouts"
                 singlelayout="true"
                 
                 allbp-img="'../assets/layout-images/start-component-header-allbp.png' | relative_url "
@@ -183,14 +184,34 @@ classes="in-page"
 
         <h3>Start components within page content</h3>
         
-        <p>Start components within page content can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >Single column - information page layout</a>.</p> 
+        <p>Start components within page content can be used all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >single column page layouts</a>.</p> 
        
-        {% include layouts-dropdown.html
-            layout-name="Single column - information page"
-            singlelayout="true"
-            %}
+        {% include layouts-dropdown.html 
+            single-col-navpage-visibility="true"
+            single-col-infopage-visibility="true" 
+            single-col-toolpage-visibility="true" 
+        %}
+
+
+        <div class="layout-example show single-col-navpage mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="single-col-navpage"
+            
+                singlelayout="true"
+                
+                allbp-img="'../assets/layout-images/onecol-navpage-allbp-1across-toolstart.png' | relative_url "
+            
+                allbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool start components are full width spanning 12 grid-columns each.</p>"
         
-        <div class="layout-example show single-col-infopage mt-0 mb-5 px-4 py-0">
+                
+            %}
+            
+            
+        </div>
+
+        
+        <div class="layout-example single-col-infopage mt-0 mb-5 px-4 py-0">
             
             {% include layouts-accordion.html 
                 layout-name="single-col-infopage"    
@@ -220,6 +241,36 @@ classes="in-page"
             
         </div>
         
+
+        <div class="layout-example single-col-toolpage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="single-col-toolpage"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+            min1200-img="'../assets/layout-images/onecol-toolpage-1200px-toolstart.png' | relative_url "
+            min992-img="'../assets/layout-images/onecol-toolpage-992px-toolstart.png' | relative_url "
+            finalbp-img="'../assets/layout-images/onecol-toolpage-finalbp-toolstart.png' | relative_url "
+
+            min1200-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Tool start components span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 10 grid-columns wide.</p>
+            <p>Tool start components span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Tool start components span the full width of the content area.</p>"
+
+
+            %}
+
+        </div>
+
 
 
         <!-- GUIDELINES -->

@@ -159,12 +159,12 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Progress bars can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>Single column - information page layout</a>.</p>
-
-
-        {% include layouts-dropdown.html
-        layout-name="Single column - information page"
-        singlelayout="true"
+        <p>Progress bars can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >Single column - information page layout</a>, the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}> Single column - tool page layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>Two column - tool page alternate layout</a>.</p>
+        
+        {% include layouts-dropdown.html 
+            single-col-infopage-visibility="true" 
+            single-col-toolpage-visibility="true" 
+            two-col-toolpage-alt-visibility="true" 
         %}
 
         <div class="layout-example show single-col-infopage mt-0 mb-5 px-4 py-0">
@@ -196,6 +196,68 @@ subsite-tag: true
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
             <p>Progress bars span the full width of the content area.</p>"
+            %}
+
+        </div>
+
+
+        <div class="layout-example single-col-toolpage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="single-col-toolpage"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+            min1200-img="'../assets/layout-images/onecol-toolpage-1200px-progressbar.png' | relative_url "
+            min992-img="'../assets/layout-images/onecol-toolpage-992px-progressbar.png' | relative_url "
+            finalbp-img="'../assets/layout-images/onecol-toolpage-finalbp-progressbar.png' | relative_url "
+
+            min1200-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>The progress bar spas the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 10 grid-columns wide.</p>
+            <p>The progress bar spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The progress bar spans the full width of the content area.</p>"
+
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-toolpage-alt mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="two-col-toolpage-alt"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min992-img="'../assets/layout-images/twocol-toolpagealt-992px-progressbar.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-toolpagealt-768px-progressbar.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-toolpagealt-finalpb-progressbar.png' | relative_url "
+
+            min992-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>The progress bar spans the full width of the content area.</p>"
+            
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>The progress bar spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>The progress bar spans the full width of the content area.</p>"
+
+
             %}
 
         </div>
