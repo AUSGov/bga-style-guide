@@ -218,6 +218,49 @@
             padding: 24px 0;
         }
     }
+
+    /*
+    .bga-component.relevant-support-links.easy-read {
+        border-bottom: none;
+        a { 
+            cursor: pointer;
+            .link-text {
+                padding: 0 24px;
+            }
+            .link-wrapper {
+                align-items: center;
+                border-left: 8px solid $bga-green-highlight-mid;
+            }
+    
+            .icon-wrapper {
+                background: $bga-green-highlight-light;
+                border-left: none;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+                flex-shrink: 0;
+                padding: 48px 24px;
+                flex-wrap: nowrap;
+    
+                p {
+                    font-size: 1.375rem;
+                    line-height: 2;
+                    flex-shrink: 0;
+                }
+            }
+    
+            img {
+                width: 48px;
+            }
+    
+            p {
+                font-size: 1.1875rem;
+                line-height: 2;
+            }
+    
+
+        }
+    }
+    */
 }
 
 @mixin easy-read-bp-below576 {
@@ -243,6 +286,10 @@
             }
         }
     }
+    
+}
+
+@mixin relevant-support-easy-read-bp-350 {
     .bga-component.relevant-support-links.easy-read {
         a {
             .icon-wrapper {
@@ -284,9 +331,20 @@
     }
 }
 
+@mixin relevant-support-easy-read-below350 {
+    .bga-component.relevant-support-links.easy-read {
+        a {
+            .icon-wrapper {
+                display: none !important;
+            }
+        }
+    }
+}
 
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+
+//Easy read content block
 .component-example.bp-576 {
     @include easy-read-bp-576();
 }
@@ -296,15 +354,26 @@
     @include easy-read-bp-below576();
 }
 
+// Easy read relevant support link
+.component-example.bp-350 {
+    @include relevant-support-easy-read-bp-350();
+}
+
+.component-example.bp-below350 {
+    @include relevant-support-easy-read-bp-350();
+    @include relevant-support-easy-read-below350();
+}
 
 // media queries for HTML demo pages
 @media (max-width: 768px) {
     @include easy-read-bp-576();
+    @include relevant-support-easy-read-bp-350();
 }
 
 @media (max-width: 576px) {
     @include easy-read-bp-below576();
 }
 
-
-
+@media (max-width: 350px) {
+    @include relevant-support-easy-read-below350();
+}
