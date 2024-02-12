@@ -294,8 +294,9 @@
         a {
             .icon-wrapper {
                 min-width: auto;
-                padding: 16px 0 16px 16px !important;
+                padding: 16px 0 16px 16px;
                 display: flex;
+                background: none;
 
                 .icon {
                     background:$bga-green-highlight-light;
@@ -310,7 +311,8 @@
                     width: 32px;
                 }
                 p {
-                    font-size: 1rem;
+                    //font-size: 1rem ;
+                    display: none;
                 }
             }
             p {
@@ -319,14 +321,19 @@
             }
         }
         &.non-branded {
-            a .icon {
-                background: $nb-grey-light url(../assets/Img-icon-placeholder.svg) no-repeat !important;
-                border-radius: 0;
-
-                img {
-                    display: none;
+            a {
+                .icon-wrapper {
+                     padding: 16px 0 16px 16px;
                 }
+                .icon {
+                    background: $nb-grey-light url(../assets/Img-icon-placeholder.svg) no-repeat !important;
+                    border-radius: 0;
+
+                    img {
+                        display: none;
+                    }
             }
+        }
         }
     }
 }
