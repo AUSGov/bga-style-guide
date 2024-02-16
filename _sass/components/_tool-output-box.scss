@@ -1,4 +1,4 @@
-.bga-component.clause-box {
+.bga-component.tool-output-box {
 
     form {
         border-bottom: solid 1px $bga-blue-black-mid;
@@ -264,8 +264,8 @@
 }
 
 // Mixins for media queries and smaller screen examples
-@mixin clausebox-below576 () {
-    .clause-box {
+@mixin outputbox-below576 () {
+    .tool-output-box {
         .icon-wrapper {
             display: none;
         }
@@ -283,10 +283,10 @@
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-below576,
 .component-example.small-screen {
-    @include clausebox-below576();
+    @include outputbox-below576();
 }
 
 // Media queries for HTML example pages
 @media (max-width: 576px) {
-    @include clausebox-below576();
+    @include outputbox-below576();
 }

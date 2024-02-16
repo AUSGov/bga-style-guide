@@ -1,12 +1,12 @@
 <div class="bga-component-wrapper">
-    <div class="bga-component clause-box {{include.classes}} {{include.id}} m-0">
+    <div class="bga-component tool-output-box {{include.classes}} {{include.id}} m-0">
 
         <div class="p-4 component-content h-100">
 
             {% if include.tag-type == "optional" %}
             <form class="mb-4">
-                <div class="col-12 p-0 form-example checkboxes clause-box-include">
-                    <input class="checkbox clause-box-input m-0 {% if include.dynamic-toggle %}dynamic-toggle {% endif %}" type="checkbox" role="checkbox"
+                <div class="col-12 p-0 form-example checkboxes tool-output-box-include">
+                    <input class="checkbox tool-output-box-input m-0 {% if include.dynamic-toggle %}dynamic-toggle {% endif %}" type="checkbox" role="checkbox"
                     aria-checked="false"
                     tabindex="0" aria-labelledby="{{ include.id }}" id="{{ include.id }}">
                     <label for="{{ include.id }}" class="form-label mb-3">{{ include.input-label }}</label> 

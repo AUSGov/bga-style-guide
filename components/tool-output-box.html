@@ -1,9 +1,9 @@
 ---
 
 layout: content-tagged
-title: Clause / regulation box
-description: Highlight regulations or legal clauses with an accompanying icon.
-updated: 8 August, 2023
+title: Tool output box
+description: Highlight tailored information in a tool such as regulations or legal clauses.
+updated: 16 February, 2024
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -52,7 +52,7 @@ classes="in-page"
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html 
-                        element-string="bga-clause-box"
+                        element-string="bga-tool-output-box"
                         sm-visibility="true"
                         final-visibility="true"
                         breakpoint-final="576"
@@ -63,28 +63,28 @@ classes="in-page"
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                            <h3>Default clause /regulation box</h3>
+                            <h3>Default tool output box</h3>
                             
                             <div class="pb-5">
-                                {% include component-examples/clause-box-example.html
+                                {% include component-examples/tool-output-box-example.html
                                 title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
                                 content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
                                 classes="teal"
                             %}
                             </div>
 
-                            <h3>Clause / regulation box with mandatory include tag</h3>
+                            <h3>Tool output box with mandatory include tag</h3>
                             
                             <div class="pb-5">
                                 <form>
-                                    <div class="col-12 mb-5 p-0 form-example clause-box-include">
+                                    <div class="col-12 mb-5 p-0 form-example tool-output-box-include">
                                         <label for="{{include.id}}" class="form-label mb-3">What is the employee's position title?</label>
                                         <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
-                                        <input type="text" class="form-control clause-box-input mb-0" id="position-title">
+                                        <input type="text" class="form-control tool-output-box-input mb-0" id="position-title">
                                         
                                     </div>
                                 </form>
-                            {% include component-examples/clause-box-example.html
+                            {% include component-examples/tool-output-box-example.html
                                 title="Position title clause"
                                 tag="Included"
                                 tag-type="mandatory"
@@ -93,10 +93,10 @@ classes="in-page"
                             %}
                             </div>
 
-                            <h3>Clause / regulation box with optional include tag</h3>
+                            <h3>Tool output box with optional include tag</h3>
 
                             <div class="pb-5">
-                            {% include component-examples/clause-box-example.html
+                            {% include component-examples/tool-output-box-example.html
                                 title="Probation period clause"
                                 tag="Optional to include"
                                 tag-type="optional"
@@ -134,7 +134,7 @@ classes="in-page"
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html 
-                        element-string="nb-clause-box"
+                        element-string="nb-tool-output-box"
                         sm-visibility="true"
                         final-visibility="true"
                         breakpoint-final="576"
@@ -146,32 +146,32 @@ classes="in-page"
                         <div class="component-wrapper remove-element-padding p-4">
 
                             {% include non-branded-explanation.html
-                                component="clause / regulation boxes"
+                                component="tool output boxes"
                                 brand-elements="colours, borders and icons"
                             %}
 
-                            <h3>Default clause /regulation box</h3>
+                            <h3>Default tool output box</h3>
                             
                             <div class="pb-5">
-                                {% include component-examples/clause-box-example.html
+                                {% include component-examples/tool-output-box-example.html
                                 title="Applicable regulation: <em>Foreign Acquisitions and Takeovers Act 1975</em>"
                                 content="<p>Foreign investments of a certain kind within defined thresholds require approvals from the Foreign Investment Review Board. Approvals are subject to national interest concerns.</p><p>For more information <a tabindex='0'>see the fact sheet</a>.</p>"
                                 classes="non-branded nb-background"
                             %}
                             </div>
 
-                            <h3>Clause / regulation box with mandatory include tag</h3>
+                            <h3>Tool output box with mandatory include tag</h3>
                             
                             <div class="pb-5">
                                 <form>
-                                    <div class="col-12 mb-5 p-0 form-example clause-box-include">
+                                    <div class="col-12 mb-5 p-0 form-example tool-output-box-include">
                                         <label for="{{include.id}}" class="form-label mb-3">What is the employee's position title?</label>
                                         <p class="help-text mb-3">e.g. Accounts manager, Sales assistant</p>   
-                                        <input type="text" class="form-control clause-box-input mb-0" id="position-title-2">
+                                        <input type="text" class="form-control tool-output-box-input mb-0" id="position-title-2">
                                         
                                     </div>
                                 </form>
-                            {% include component-examples/clause-box-example.html
+                            {% include component-examples/tool-output-box-example.html
                                 title="Position title clause"
                                 tag="Included"
                                 tag-type="mandatory"
@@ -181,10 +181,10 @@ classes="in-page"
                             %}
                             </div>
 
-                            <h3>Clause / regulation box with optional include tag</h3>
+                            <h3>Tool output box with optional include tag</h3>
 
                             <div class="pb-5">
-                            {% include component-examples/clause-box-example.html
+                            {% include component-examples/tool-output-box-example.html
                                 title="Probation period clause"
                                 tag="Optional to include"
                                 tag-type="optional"
@@ -215,7 +215,7 @@ classes="in-page"
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Clause / regulation boxes can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >page layouts</a> except the Single column - navigation page layout.</p> 
+        <p>Tool output boxes can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >page layouts</a> except the Single column - navigation page layout.</p> 
 
         {% include layouts-dropdown.html 
             single-col-infopage-visibility="true" 
@@ -238,18 +238,18 @@ classes="in-page"
                 
                 finalbp="Breakpoint &lt; 768px"
             
-                min1200-img="'../assets/layout-images/clausebox-1col2thirdswidth-min1200.png' | relative_url "
-                min992-img="'../assets/layout-images/clausebox-1col2thirdswidth-min992.png' | relative_url "
-                min768-img="'../assets/layout-images/clausebox-1col2thirdswidth-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/clausebox-1col2thirdswidth-finalbp.png' | relative_url "
+                min1200-img="'../assets/layout-images/onecol-ttw-1200px-fullwidthcomponent.png' | relative_url "
+                min992-img="'../assets/layout-images/onecol-ttw-992px-fullwidthcomponent.png' | relative_url "
+                min768-img="'../assets/layout-images/onecol-ttw-768px-fullwidthcomponent.png' | relative_url "
+                finalbp-img="'../assets/layout-images/onecol-ttw-finalbp-fullwidthcomponent.png' | relative_url "
                 
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
-                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
-                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
                 example-link="'../html-examples/single-col-infopage.html#clausebox-example' | relative_url'"
                 example-link-text="View layout example"
@@ -275,13 +275,13 @@ classes="in-page"
             finalbp-img="'../assets/layout-images/onecol-toolpage-finalbp-fullwidthcomponent.png' | relative_url "
 
             min1200-rules="<p>The content area is 9 grid-columns wide.</p>
-            <p>Clause / regulation boxes span the full width of the content area.</p>"
+            <p>Tool output boxes span the full width of the content area.</p>"
 
             min992-rules="<p>The content area is 10 grid-columns wide.</p>
-            <p>Clause / regulation boxes span the full width of the content area.</p>"
+            <p>Tool output boxes span the full width of the content area.</p>"
 
             finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Clause / regulation boxes span the full width of the content area.</p>"
+            <p>Tool output boxes span the full width of the content area.</p>"
 
             example-link="'../html-examples/single-col-toolpage.html#clausebox-example' | relative_url'"
             example-link-text="View layout example"
@@ -306,15 +306,15 @@ classes="in-page"
                 
                 finalbp="Breakpoint &lt; 576px"
             
-                min1200-img="'../assets/layout-images/clausebox-2col-leftmenu-min1200.png' | relative_url "
-                min576-img="'../assets/layout-images/clausebox-2col-leftmenu-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/clausebox-2col-leftmenu-finalbp.png' | relative_url "
+                min1200-img="'../assets/layout-images/twocol-lsb-1200px-fullwidthcomponent.png' | relative_url "
+                min576-img="'../assets/layout-images/twocol-lsb-576px-fullwidthcomponent.png' | relative_url "
+                finalbp-img="'../assets/layout-images/twocol-lsb-finalbp-fullwidthcomponent.png' | relative_url "
                 
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
-                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                min576-rules="<p>The content area is 9 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
                 example-link="'../html-examples/two-col-infopage.html#clausebox-example' | relative_url'"
                 example-link-text="View layout example"
@@ -338,13 +338,13 @@ classes="in-page"
                 finalbp="Breakpoint &lt; 768px"
             
 
-                min768-img="'../assets/layout-images/clausebox-2col-rightsidebar-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/clausebox-2col-rightsidebar-finalbp.png' | relative_url "
+                min768-img="'../assets/layout-images/twocol-toolpage-768px-1across.png' | relative_url "
+                finalbp-img="'../assets/layout-images/twocol-toolpagealt-finalbp-1across.png' | relative_url "
             
         
-                min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Clause / regulation boxes span the full width of the content area.</p>"
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
                 example-link="'../html-examples/two-col-toolpage.html#clausebox-example' | relative_url'"
                 example-link-text="View layout example"
@@ -366,15 +366,15 @@ classes="in-page"
                 
                 finalbp="Breakpoint &lt; 768px"
             
-                min992-img="'../assets/layout-images/clausebox-2col-rightsidebar-alt-min992.png' | relative_url "
-                min768-img="'../assets/layout-images/clausebox-2col-rightsidebar-alt-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/clausebox-2col-rightsidebar-alt-finalbp.png' | relative_url "
+                min992-img="'../assets/layout-images/twocol-toolpagealt-992px-1across.png' | relative_url "
+                min768-img="'../assets/layout-images/twocol-toolpagealt-768px-1across.png' | relative_url "
+                finalbp-img="'../assets/layout-images/twocol-toolpagealt-finalpb-1across.png' | relative_url "
             
-                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Clause boxes span the full width of the content area.</p>"
+                min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
 
-                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Clause boxes span the full width of the content area.</p>"
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Clause boxes span the full width of the content area.</p>"
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool output boxes span the full width of the content area.</p>"
             
                 example-link="'../html-examples/two-col-toolpage-alt.html#clausebox-example' | relative_url'"
                 example-link-text="View layout example"
@@ -389,7 +389,7 @@ classes="in-page"
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Displays information about regulations or legal clauses. When used in tools clause / regulation boxes can incorporate an "included" tag to indicate that the user has included the clause in their process.</p>
+        <p>Displays information about regulations or legal clauses. Tool output boxes can incorporate an "included" tag to indicate that the user has included the clause in their process.</p>
         <h3>When to use this component:</h3>
         <ul>
             <li>Primarily used in tools to highlight legal information.</li>
@@ -398,6 +398,11 @@ classes="in-page"
 
          <!-- VERSION HISTORY-->
          <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>16 February, 2024</h4>
+         <ul>
+             <li>Updated the component name from clause /regulation box to 'tool output box'.</li>
+         </ul>
+         
          <h4>22 August, 2023</h4>
          <ul>
              <li>Updated the padding and corner radius on tile tags. Corner radius is 4px. Padding is 4px above and below and 8px on the left and right. Padding measurements include border widths when tags have a visible border.</li>

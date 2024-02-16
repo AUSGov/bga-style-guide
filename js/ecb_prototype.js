@@ -199,7 +199,7 @@ $(document).ready(function () {
         }
     });
     // Change PAY UNITS on text input change (pay page)
-    $('.clause-box-input#pay-rate').on('change', function () {
+    $('.tool-output-box-input#pay-rate').on('change', function () {
         var pay_units = sessionStorage.getItem('pay-rate-units');
 
         if (pay_units == 'hourly') {
