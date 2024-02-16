@@ -252,7 +252,7 @@ $(document).ready(function () {
             
             if (input_value) {
                 $(this).val(input_value);
-                $('.clause-box span[data-answer="' + input_field +'"]').parents('.clause-box').addClass('added');
+                $('.tool-output-box span[data-answer="' + input_field +'"]').parents('.tool-output-box').addClass('added');
             };
         });
     };
@@ -263,7 +263,7 @@ $(document).ready(function () {
     $('#ecb-prototype input[type=checkbox]').on('change', function () {
         
         // Checkboxes to include optional clauses
-        if ($(this).parents('.clause-box')) {
+        if ($(this).parents('.tool-output-box')) {
             
             var input_checkbox = $(this).attr('id'),
             input_field = input_checkbox.substring(0, input_checkbox.length - 7),
@@ -289,7 +289,7 @@ $(document).ready(function () {
             
             if (input_value) {
                 $(this).prop('checked', true);
-                $(this).parents('.clause-box').addClass('added');
+                $(this).parents('.tool-output-box').addClass('added');
             };
         });
     };
@@ -310,7 +310,7 @@ $(document).ready(function () {
 
             if (input_value) {
                 $('input[data-value="' + input_value + '"]').prop('checked', true);
-                $('.clause-box span[data-answer="' + input_field +'"]').text(input_value).parents('.clause-box').addClass('added');
+                $('.tool-output-box span[data-answer="' + input_field +'"]').text(input_value).parents('.tool-output-box').addClass('added');
             };
 
         });
@@ -319,7 +319,7 @@ $(document).ready(function () {
 
     
     // Save dynamic list response and re-populate on page load
-    $('.clause-box-dynamic-list li').on('click', function () {
+    $('.tool-output-box-dynamic-list li').on('click', function () {
         var input_field = $(this).parents('ul').attr('id'),
         input_value = $(this).text();
         save_response_to_contracts(current_contract, input_field, input_value);
@@ -331,7 +331,7 @@ $(document).ready(function () {
             
             if (input_value) {
                 $(this).val(input_value);
-                $('.clause-box span[data-answer="' + input_field +'"]').text(input_value).parents('.clause-box').addClass('added');
+                $('.tool-output-box span[data-answer="' + input_field +'"]').text(input_value).parents('.tool-output-box').addClass('added');
             };
     });
 
@@ -343,9 +343,9 @@ $(document).ready(function () {
         save_response_to_contracts(current_contract, input_field, input_value);
         
         if (input_value) {
-        $('.clause-box .' + input_field).empty().append('<strong class="mb-4">' + input_value + '</strong>');
+        $('.tool-output-box .' + input_field).empty().append('<strong class="mb-4">' + input_value + '</strong>');
         } else {
-            $('.clause-box .' + input_field).empty();
+            $('.tool-output-box .' + input_field).empty();
         }
     });
     
@@ -355,26 +355,26 @@ $(document).ready(function () {
             input_value = contracts[current_contract][input_field]; 
             
             if (input_value) {
-                $('.clause-box .' + input_field).empty().append('<strong class="mb-4">' + input_value + '</strong>');
+                $('.tool-output-box .' + input_field).empty().append('<strong class="mb-4">' + input_value + '</strong>');
                 $('textarea#'+ input_field).val(input_value);
                 } else {
                     $('textarea#'+ input_field).val("");
-                    $('.clause-box .' + input_field).empty();
+                    $('.tool-output-box .' + input_field).empty();
                 }
         });
     };  
     populate_textareas();
 
     // Populate clause boxes with answers on page reload
-    $('.clause-box span').each(function(){
+    $('.tool-output-box span').each(function(){
         var answer = contracts[current_contract][$(this).attr('data-answer')];
         $(this).text(answer);
 
     });
 
     // Change optional tags to 'included' if they have been added by the user.
-    $('.clause-box .tag span').each(function(){
-        if ($(this).parents('.clause-box').hasClass('added')) {
+    $('.tool-output-box .tag span').each(function(){
+        if ($(this).parents('.tool-output-box').hasClass('added')) {
             $(this).text('Included');
         }
     });
@@ -397,11 +397,11 @@ $(document).ready(function () {
     // Duties update textarea based on radio selection.
     $('#ecb-prototype #duties input[type=radio]').on('change', function () {
         if ($(this).hasClass('dynamic-hide')) {
-            $(this).parents('.question-section').find('.clause-box .textarea-input').text('');
+            $(this).parents('.question-section').find('.tool-output-box .textarea-input').text('');
             save_response_to_contracts(current_contract, 'duties-textarea', '');
         } else if ($(this).hasClass('dynamic-show')) {
             var textarea_input = $('textarea#duties-textarea').val()
-            $(this).parents('.question-section').find('.clause-box .textarea-input').empty().append('<strong class="mb-4">' + textarea_input + '</strong>');
+            $(this).parents('.question-section').find('.tool-output-box .textarea-input').empty().append('<strong class="mb-4">' + textarea_input + '</strong>');
             save_response_to_contracts(current_contract, 'duties-textarea', textarea_input);
         }
     });
@@ -427,22 +427,22 @@ $(document).ready(function () {
             postcode="";
         }
 
-        $('.clause-box .address1').empty().append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
+        $('.tool-output-box .address1').empty().append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
     }); 
 
     $('#ecb-prototype #workplace input[type=radio]').on('change', function () {
         if ($(this).hasClass('dynamic-hide')) {
-            $('.clause-box .address1').addClass('d-none');
-            $('.clause-box .workplace').removeClass('d-none');
+            $('.tool-output-box .address1').addClass('d-none');
+            $('.tool-output-box .workplace').removeClass('d-none');
 
         } else {
-            $('.clause-box .address1').removeClass('d-none');
-            $('.clause-box .workplace').addClass('d-none');
+            $('.tool-output-box .address1').removeClass('d-none');
+            $('.tool-output-box .workplace').addClass('d-none');
         }
-        $('.clause-box.workplace').addClass('added');
+        $('.tool-output-box.workplace').addClass('added');
     });
     // Workplace repopulate on page load
-    if ($('.clause-box.workplace').length) {
+    if ($('.tool-output-box.workplace').length) {
         var workplace_answer = contracts[current_contract]['workplace'];
 
         if (workplace_answer == 'workplace-now') {
@@ -464,14 +464,14 @@ $(document).ready(function () {
                 postcode="";
             }
 
-            $('.clause-box .address1').empty().append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
+            $('.tool-output-box .address1').empty().append('<p class="mb-0"><strong>'+street+'</strong></p><p class="mb-0"><strong>'+city+'</strong></p><p class="mb-0"><strong>'+state+'</strong></p><p><strong>'+postcode+'</strong></p>');
 
-            $('.clause-box .workplace').addClass('d-none'); 
-            $('.clause-box.workplace').addClass('added');
+            $('.tool-output-box .workplace').addClass('d-none'); 
+            $('.tool-output-box.workplace').addClass('added');
 
         }  else if (workplace_answer == '[workplace address]'){
-            $('.clause-box .address1').addClass('d-none');
-            $('.clause-box.workplace').addClass('added');
+            $('.tool-output-box .address1').addClass('d-none');
+            $('.tool-output-box.workplace').addClass('added');
         }
     }
 
@@ -501,7 +501,7 @@ $(document).ready(function () {
     
             if ($(this).is(':checked')) {
                 $(this).parents('.question-section').find('.dynamic-display').removeClass('d-none');
-                $('.clause-box span.' + input_field).text(input_value);
+                $('.tool-output-box span.' + input_field).text(input_value);
             }
         });
            

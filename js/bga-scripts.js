@@ -936,25 +936,25 @@ $(document).ready(function () {
     var clause_boxes = {}
     var highlight_change = function(answer, added_text, original_text){
         if (added_text != "") {
-            $('.clause-box span[data-answer="' + answer +'"]').text(added_text).parents('.clause-box').addClass('added highlight');
+            $('.tool-output-box span[data-answer="' + answer +'"]').text(added_text).parents('.tool-output-box').addClass('added highlight');
 
             setTimeout(function () {
-                $('.clause-box span[data-answer="' + answer +'"]').parents('.clause-box').removeClass('highlight');
+                $('.tool-output-box span[data-answer="' + answer +'"]').parents('.tool-output-box').removeClass('highlight');
             }, 800);
 
         } else {
-            $('.clause-box span[data-answer="' + answer +'"]').text(original_text).parents('.clause-box').removeClass('added highlight');
+            $('.tool-output-box span[data-answer="' + answer +'"]').text(original_text).parents('.tool-output-box').removeClass('added highlight');
 
         }
     };
    
-    $('.clause-box-input').each(function () {
+    $('.tool-output-box-input').each(function () {
         var clause = $(this).attr('id'),
-        original_text = $('.clause-box span.'+ clause).text();
+        original_text = $('.tool-output-box span.'+ clause).text();
         clause_boxes[clause] = original_text;
     }); 
 
-    $('.clause-box-input').change(function () {
+    $('.tool-output-box-input').change(function () {
         var clause = $(this).attr('id'),
             original_text = clause_boxes[clause],
             added_text;
@@ -983,13 +983,13 @@ $(document).ready(function () {
     });
 
 
-    $('.clause-box-select').each(function () {
+    $('.tool-output-box-select').each(function () {
         var clause = $(this).attr('id'),
-        original_text = $('.clause-box span.'+ clause).text();
+        original_text = $('.tool-output-box span.'+ clause).text();
         clause_boxes[clause] = original_text;
     });
 
-    $('.clause-box-select').on('change', function () {
+    $('.tool-output-box-select').on('change', function () {
         var clause = $(this).attr('id'),
             original_text = clause_boxes[clause],
             added_text;
@@ -999,13 +999,13 @@ $(document).ready(function () {
     });
 
 
-    $('.clause-box-dynamic-dropdown').each(function () {
+    $('.tool-output-box-dynamic-dropdown').each(function () {
         var clause = $(this).attr('id'),
-        original_text = $('.clause-box span.'+ clause).text();
+        original_text = $('.tool-output-box span.'+ clause).text();
         clause_boxes[clause] = original_text;
     }); 
 
-    $('.clause-box-dynamic-list li').on('click', function () {
+    $('.tool-output-box-dynamic-list li').on('click', function () {
         var clause = $(this).parents('ul').attr('id'),
             original_text = clause_boxes[clause],
             added_text;
@@ -1015,15 +1015,15 @@ $(document).ready(function () {
     });
 
 
-    $('.clause-box-radios').each(function () {
+    $('.tool-output-box-radios').each(function () {
         var clause = $(this).attr('id'),
-        original_text = $('.clause-box span.' + clause).text();
+        original_text = $('.tool-output-box span.' + clause).text();
         clause_boxes[clause] = original_text;
     });
 
-    $('.clause-box-radios input').on('click', function () {
+    $('.tool-output-box-radios input').on('click', function () {
 
-        var clause = $(this).parents('.clause-box-radios').attr('id'),
+        var clause = $(this).parents('.tool-output-box-radios').attr('id'),
             original_text = clause_boxes[clause],
             added_text;
             
