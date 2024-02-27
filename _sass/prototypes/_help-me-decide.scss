@@ -13,13 +13,13 @@
 
         .business-structure {
             .title {
-                background: $bga-blue-background-light;
-                padding: 16px 24px;
+                background: $bga-blue-highlight-mid;
+                padding: 8px 16px;
             }
 
             .content {
                 background: $bga-blue-background-extralight;
-                padding: 16px 24px;
+                padding: 8px 16px;
             }
 
             .chosen-structure {
@@ -51,20 +51,20 @@
 
         .recommendations {
             .title {
-                background: $bga-yellow-highlight-mid;
-                padding: 16px 24px;
+                background: $bga-yellow-highlight-dark;
+                padding: 8px 16px;
             }
 
             .content {
                 background: $bga-yellow-highlight-light;
-                padding: 16px 24px 8px 24px;
+                padding: 8px 16px 0px 16px;
             }
 
             li {
                 text-indent: 0;
                 display: none;
                 margin: 0;
-                margin-bottom: 8px;
+                padding-bottom: 8px;
 
                 &.show {
                     display: flex;
@@ -88,6 +88,15 @@
 
                 &::before {
                     display: none;
+                }
+            }
+
+            &.teal {
+                .title {
+                    background: $bga-teal-highlight-mid;
+                }
+                .content {
+                    background: $bga-teal-highlight-light;
                 }
             }
         }

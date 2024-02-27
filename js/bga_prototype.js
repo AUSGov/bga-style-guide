@@ -226,7 +226,7 @@ $(document).ready(function () {
 
         if ($('#stepped-nav-inpage').length) {
             var path = '/bga-style-guide/prototypes/help-me-decide/';
-            stepped_nav_functionality(["business-structure.html", "business-name.html", "employees.html", "business-taxes.html", "results.html"], path);
+            stepped_nav_functionality(["business-structure.html", "business-name.html", "employees.html", "intellectual-property.html","business-taxes.html", "results.html"], path);
         }
 
         // Check if 'return to results button' should display
@@ -248,11 +248,6 @@ $(document).ready(function () {
             unvisited = sessionStorage.getItem('unvisited');
 
             if (path) {
-            
-                /*if (structure == "Hobby") {
-                    path = '/bga-style-guide/prototypes/help-me-decide/hobby.html';
-                }
-                */
 
                 if (!unanswered) {
                     unanswered = "";
@@ -458,69 +453,25 @@ $(document).ready(function () {
         });
 
         // DYNAMIC QUESTIONS
-        // Business or hobby page
-       /*
-       $('.q-business-hobby .radio-button input').on('change', function(){
-            var answer = $(this).attr('id');
-            
-            sessionStorage.setItem('registrations', '');
-            sessionStorage.setItem('business-structure', '');
-            sessionStorage.setItem('answers', '');
-            sessionStorage.setItem('unanswered', '');
-            sessionStorage.setItem('dynamic_display','');
 
-            store_answers(this);
-
-            //Set dynamic section
-            if ( answer == 'business-hobby-unsure' && $(this).is(":checked")) {
-                $('.q-business-v-hobby').removeClass('d-none');
-                remove_answers('answers', ['business-hobby-no', 'business-hobby-yes']);
-                sessionStorage.setItem('business-structure', '');
-                
-            } else if ( answer == 'business-hobby-no' && $(this).is(":checked")){
-                $('.q-business-v-hobby').addClass('d-none');
-                remove_answers('answers', ['business-hobby-unsure, business-hobby-yes']);
-                sessionStorage.setItem('business-structure', 'Hobby');
-            } else {
-                $('.q-business-v-hobby').addClass('d-none');
-                remove_answers('answers', ['business-hobby-unsure, business-hobby-no']);
-                sessionStorage.setItem('business-structure', '');
-            }
-            
-            $('.dynamic-section.q-business-v-hobby input').each(function(){
-                $(this).prop('checked', false);
-            });
-        });
-        $('.q-business-v-hobby input').on('click', function(){
-            var answer = $(this).attr('id');
-
-            if(answer == "business-v-hobby-hobby") {
-                remove_answers('answers', ['business']);
-                sessionStorage.setItem('business-structure', 'Hobby');
-            } else {
-                remove_answers('answers', ['Hobby']);
-                sessionStorage.setItem('business-structure', '');
-            }
-        });
-        */
-        
         // Business structure page
         $('.q-know-structure .radio-button input').on('change', function(){
             var answer = $(this).attr('id');
             
             // Clear all business structure results
-            remove_answers('answers', ['sole-trader-4', 'partnership-4', 'company-4', 'trust-4', 'superannuation', 'number-owners-one', 'number-owners', 'number-owners-two', 'hold-assets-no', 'hold-assets-yes', 'partnership-1', 'partnership-2', 'sole-trader-1', 'sole-trader-2', 'company-1', 'info-sole-trader', 'info-company', 'info-company-1', '.info-partnership']);
+            remove_answers('answers', ['sole-trader-4', 'partnership-4', 'company-4', 'trust-4', 'superannuation', 'number-owners-one', 'number-owners', 'number-owners-two', 'hold-assets-no', 'hold-assets-yes', 'partnership-1', 'partnership-2', 'sole-trader-1', 'sole-trader-2', 'company-1', 'info-sole-trader', 'info-company', 'info-company-1', '.info-partnership', 'indigenous-business-yes']);
 
             $('.recommendations-sidebar .chosen-structure span').text("No chosen structure yet"); 
             $('.recommendations-sidebar .chosen-structure').removeClass('completed');
             sessionStorage.setItem('business-structure', '');
             
-            remove_registrations('registrations', ['individual-tfn', 'business-tfn', 'abn', 'company']);
+            remove_registrations('registrations', ['individual-tfn', 'business-tfn', 'abn', 'company', 'director-id', 'online-services-for-business', 'online-services-for-sole-traders', 'supply-nation-supplier']);
             if($('.recommendations li.show').length == 0) {
                 $('.recommendations li.no-recommendations').addClass('show');
             };
 
-            //Set dynamic section
+            //Set dynamic sections
+            $('.q-indigenous-business').addClass('d-none');
             if ( answer == 'know-structure-yes' && $(this).is(":checked")) {
                 $('.q-know-structure-yes').removeClass('d-none');
                 $('.q-know-structure-no, .q-sole-trader-v-company, .q-partnership-v-company, .q-trust, .info-sole-trader, .info-company, .info-company-1 .info-partnership').addClass('d-none');
@@ -531,10 +482,10 @@ $(document).ready(function () {
                 $('.q-know-structure-no').removeClass('d-none');
                 remove_answers('answers', ['know-structure-yes']);
             }
+            
         });
         
         $('.q-know-structure-no .radio-button input').on('change', function(){
-            //var answer = $(this).attr('id'),
             var answered = sessionStorage.getItem('answers'),
             unanswered = sessionStorage.getItem('unanswered');
 
@@ -637,6 +588,7 @@ $(document).ready(function () {
             dynamic_display();
         });
 
+
         // RECOMMENDATIONS SIDEBAR
         // Business structure page add / remove recommendations
          $('.q-know-structure input#know-structure-no, .q-know-structure input#know-structure-yes').on('change', function(){
@@ -660,14 +612,21 @@ $(document).ready(function () {
             $('.no-recommendations').removeClass('show');
            
             if (answer == 'Sole trader') {
-                add_registrations('registrations', ['individual-tfn', 'abn']);
-                remove_registrations('registrations', ['business-tfn', 'company']); 
+                add_registrations('registrations', ['individual-tfn', 'abn', 'online-services-for-sole-traders']);
+                remove_registrations('registrations', ['business-tfn', 'company', 'director-id', 'online-services-for-business']); 
+                $('#q-indigenous-business').removeClass('d-none');
             } else if (answer == 'Company') {
-                add_registrations('registrations', ['business-tfn', 'abn', 'company']);
-                remove_registrations('registrations', ['individual-tfn']); 
+                add_registrations('registrations', ['business-tfn', 'abn', 'company', 'director-id', 'online-services-for-business']);
+                remove_registrations('registrations', ['individual-tfn', 'online-services-for-sole-traders']); 
+                $('#q-indigenous-business').removeClass('d-none');
+            } else if (answer == 'Partnership') {
+                add_registrations('registrations', ['business-tfn', 'abn', 'online-services-for-business']);
+                remove_registrations('registrations', ['individual-tfn', 'company', 'director-id', 'online-services-for-sole-traders']);
+                $('#q-indigenous-business').removeClass('d-none'); 
             } else {
-                add_registrations('registrations', ['business-tfn', 'abn']);
-                remove_registrations('registrations', ['individual-tfn', 'company']); 
+                add_registrations('registrations', ['business-tfn', 'abn', 'online-services-for-business']);
+                remove_registrations('registrations', ['individual-tfn', 'company', 'director-id', 'online-services-for-sole-traders','supply-nation-supplier']);
+                $('#q-indigenous-business').addClass('d-none'); 
             }
 
             setTimeout(function () {
@@ -675,10 +634,20 @@ $(document).ready(function () {
             }, 1000);
         });
 
+        $('.q-indigenous-business input').on('change', function(){
+            single_registration_q(this, 'supply-nation-supplier');  
+        });
 
         // Business name page add / remove recommendations
         $('.q-business-name input').on('change', function(){
-            single_registration_q(this, 'business-name');  
+            var answer = $(this).attr('data-value');
+            if (answer == 'business-name') {
+                add_registrations('registrations', ['business-name', 'trade-mark']);
+            } else {
+                add_registrations('registrations', ['trade-mark']);
+                remove_registrations('registrations', ['business-name']);
+            }
+            
         });
 
         $('.q-trade-mark input').on('change', function(){
@@ -785,18 +754,19 @@ $(document).ready(function () {
 
             // Checked what is answered and display results page accordingly
 
-            if (!business_structure) {
-                $(".error-notification-wrapper").removeClass('d-none');
+           /* if (!business_structure) {
+                //$(".error-notification-wrapper").removeClass('d-none');
             } else if ( business_structure && unanswered !== '') { 
-                $('.business-structure-wrapper, .error-notification-wrapper').removeClass('d-none');
-
+                //$('.business-structure-wrapper, .error-notification-wrapper').removeClass('d-none');
+                $('.business-structure-wrapper').removeClass('d-none');
+                
                 // Show business structure call out
                 business_structure = business_structure.replace(' ', '-');
                 business_structure = business_structure.toLowerCase();
                 $('#' + business_structure + '.callout-business-structure').removeClass('d-none');
 
-            } else {
-                $('.business-structure-wrapper, .registrations-wrapper, .next-steps-wrapper').removeClass('d-none');
+            } else {*/
+                //$('.business-structure-wrapper, .registrations-wrapper, .next-steps-wrapper').removeClass('d-none');
 
                 // Show business structure call out
                 business_structure = business_structure.replace(' ', '-');
@@ -810,7 +780,7 @@ $(document).ready(function () {
                         $(this).removeClass('d-none');
                     }
                 });
-            }
+            //}
            
 
 
