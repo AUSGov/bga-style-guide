@@ -907,7 +907,7 @@
 
             <div class="mobile-stepped-nav">
                 <button class="stepped-nav-toggle p-0" tabindex=0>
-                    <span class="me-2">Step 2 of 5: <strong>Business name</strong></span>
+                    <span class="me-2">Step 2 of 6: <strong>Business name</strong></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                         <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#333"/>
                       </svg>
@@ -933,14 +933,19 @@
                         <span class="step-number mb-2">3</span>
                         <span class="step-name">Employees</span>
                     </a>
-            
+
                     <a tabindex="1" id="nav-step-4" class="step me-3">
                         <span class="step-number mb-2">4</span>
-                        <span class="step-name">Business taxes</span>
+                        <span class="step-name">Intellectual property</span>
                     </a>
             
                     <a tabindex="1" id="nav-step-5" class="step me-3">
                         <span class="step-number mb-2">5</span>
+                        <span class="step-name">Business taxes</span>
+                    </a>
+            
+                    <a tabindex="1" id="nav-step-6" class="step me-3">
+                        <span class="step-number mb-2">6</span>
                         <span class="step-name">Results</span>
                     </a>
 
@@ -968,21 +973,22 @@
             <div class="question-section q-business-name remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="business-name" class="form-label h3-font-size heading-color mb-4"><strong>Will you use your own name as your business name?</strong></h3>
-                    <p>You need to register your business name if it’s different to your own name. For example, if your name is Joe Aaron Smith, and you want to use it (or a shortened form such as Joe Smith, J Smith, or J. A. Smith) as your business name, you don’t need to register it.</p>
-                    <p>You need to register a business name if it's anything else ('Joe Smith Plumbing').</p>
+                    <h3 for="business-name" class="form-label h3-font-size heading-color mb-4"><strong>Is your business name different to your personal name? </strong></h3>
+                    <p>You do not need to register your business name if it’s your personal name (Joe Aaron Smith) or a shortened form (Joe Smith, J Smith or J A Smith). You do need to register it if it's anything else (Joe Smith Plumbing).</p>  
+
+                    <p>It’s a good idea to register a trade mark for your business name even if it’s the same as your own name. A trade mark gives you exclusive rights to your business name.</p>
 
                     <div class="radios w-50 g-2 d-flex radio-flex-group" id="business-name"  role="radiogroup">
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="business-name"
-                                id="business-name-yes" data-value="">
+                                id="business-name-yes" data-value="business-name">
                             <label class="form-check-label" for="business-name-yes">Yes</label>
                         </div>
 
                         <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="business-name"
-                                id="business-name-no" data-value="business-name">
+                                id="business-name-no" data-value="">
                             <label class="form-check-label" for="business-name-no">No</label>
                         </div>
 
@@ -996,49 +1002,13 @@
 
             </div>
 
-
-            <!-- trade-mark -->
-            <div class="question-section q-trade-mark remove-element-padding">
-
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="trade-mark" class="form-label h3-font-size heading-color mb-4"><strong>Do you want to protect your business name so it is unique to your business?</strong></h3>
-                    <p>Registering your business name doesn't stop other businesses from using it for their products or services. You can protect your business name by applying for a trade mark.</p>
-                    
-                    
-                    <div class="radios w-50 g-2 d-flex radio-flex-group"  id="trade-mark"
-                        role="radiogroup">
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="trade-mark" id="trade-mark-yes" data-value="trade-mark">
-                            <label class="form-check-label remove-element-padding" for="trade-mark-yes">
-                                <p>Yes</p>
-                            </label>
-                        </div>
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="trade-mark" id="trade-mark-no" data-value="">
-                            <label class="form-check-label remove-element-padding" for="trade-mark-no">
-                                <p>No</p>
-                            </label>
-                        </div>
-
-                       
-                    </div>
-                    
-                    <hr class="section-divider my-5" />
-
-                </div> 
-
-            </div>
-
-
-
+            
              <!-- domain-name -->
              <div class="question-section q-domain-name remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="domain-name" class="form-label h3-font-size heading-color mb-4"><strong>Do you plan to set up a business website?</strong></h3>
-                    <p>Website addresses are called domain names, for example, sarahsflowers.com.au or josephsmitharchitects.com.au.</p><p>If you're keen to have a domain name that reflects your business name, it's a good idea to register your domain name even if you're not quite ready to set up your website.</p>
+                    <h3 for="domain-name" class="form-label h3-font-size heading-color mb-4"><strong>Do you want a business website?</strong></h3>
+                    <p>You can register a website address (domain name) even if you're not ready to set up your website. It gives you a better chance of securing a domain name that reflects your business name.</p>
                     
                     
                     <div class="radios w-50 g-2 d-flex radio-flex-group"  id="domain-name"
@@ -1104,7 +1074,7 @@
     <div class="bga-component sidebar m-0 p-0">
         
         
-        <div class="sidebar-section business-structure mb-4">
+        <div class="sidebar-section business-structure mb-3">
             <div class="title remove-element-padding">
                 <p><strong>Business structure</strong></p>
             </div>
@@ -1124,10 +1094,10 @@
             </div>
         </div>
 
-
-        <div class="sidebar-section recommendations">
+        <!--  REQUIRED REGISTRATIONS -->
+        <div class="sidebar-section recommendations mb-3">
             <div class="title remove-element-padding">
-                <p><strong>Recommended registrations</strong></p>
+                <p><strong>Required registrations</strong></p>
             </div>
             <div class="content remove-element-padding">
                 <ul  class="remove-element-padding m-0 p-0">
@@ -1144,6 +1114,7 @@
                         </g>
                       </svg>
                       <span class="ms-2">Individual tax file number</span></li>
+
                     <li class="business-tfn" data-value="business-tfn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1156,6 +1127,7 @@
                             </g>
                           </svg>
                           <span class="ms-2">Business tax file number</span></li>
+
                     <li class="abn" data-value="abn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1168,6 +1140,7 @@
                             </g>
                           </svg>
                           <span class="ms-2">Australian business number</span></li>
+
                     <li class="company" data-value="company">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1180,6 +1153,20 @@
                             </g>
                           </svg>
                           <span class="ms-2">Company registration</span></li>
+
+                    <li class="director-id" data-value="director-id">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                            </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                            </g>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Director ID</span></li>  
+
                     <li class="business-name" data-value="business-name">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1192,30 +1179,7 @@
                             </g>
                           </svg>
                           <span class="ms-2">Business name registration</span></li>
-                    <li class="trade-mark" data-value="trade-mark">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <g data-name="Group 20678" transform="translate(-441 -1259)">
-                              <g data-name="Group 20619" transform="translate(441 1259)">
-                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
-                              </g>
-                              <g data-name="Icon: Tick" transform="translate(445 1264)">
-                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
-                              </g>
-                            </g>
-                          </svg>
-                          <span class="ms-2">Business name trade mark</span></li>
-                    <li class="domain-name" data-value="domain-name">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <g data-name="Group 20678" transform="translate(-441 -1259)">
-                              <g data-name="Group 20619" transform="translate(441 1259)">
-                                <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
-                              </g>
-                              <g data-name="Icon: Tick" transform="translate(445 1264)">
-                                <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
-                              </g>
-                            </g>
-                          </svg>
-                          <span class="ms-2">Domain name registration</span></li>
+                    
                     <li class="payg" data-value="payg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1228,6 +1192,20 @@
                             </g>
                           </svg>
                           <span class="ms-2">Pay As You Go (PAYG) Withholding</span></li>
+                          
+                    <li class="working-holiday-employer" data-value="working-holiday-employer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <g data-name="Group 20678" transform="translate(-441 -1259)">
+                          <g data-name="Group 20619" transform="translate(441 1259)">
+                            <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                          </g>
+                          <g data-name="Icon: Tick" transform="translate(445 1264)">
+                            <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>
+                      <span class="ms-2">Working holiday maker employer</span></li>
+
                     <li class="fbt" data-value="fbt">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1240,6 +1218,8 @@
                             </g>
                           </svg>
                           <span class="ms-2">Fringe Benefits Tax (FBT)</span></li>
+
+
                     <li class="gst" data-value="gst">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1252,6 +1232,7 @@
                             </g>
                           </svg>
                           <span class="ms-2">Goods & Services Tax (GST)</span></li>
+
                     <li class="wet" data-value="wet">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1264,6 +1245,7 @@
                             </g>
                           </svg>
                           <span class="ms-2">Wine Equalisation Tax (WET)</span></li>
+
                     <li class="ftc" data-value="ftc">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1276,6 +1258,7 @@
                             </g>
                           </svg>
                           <span class="ms-2">Fuel Tax Credits (FTC)</span></li>
+
                     <li class="lct" data-value="lct">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <g data-name="Group 20678" transform="translate(-441 -1259)">
@@ -1293,6 +1276,123 @@
                 </ul>
             </div>
         </div>
+
+
+        <!-- RECOMMENDED REGISTRATIONS -->
+        <div class="sidebar-section recommendations teal">
+          <div class="title remove-element-padding">
+              <p><strong>Recommended registrations</strong></p>
+          </div>
+          <div class="content remove-element-padding">
+              <ul  class="remove-element-padding m-0 p-0">
+                  <li class="show no-recommendations">No recommendations yet</li>
+                 
+                  <li class="online-services-for-business" data-value="online-services-for-business">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g data-name="Group 20678" transform="translate(-441 -1259)">
+                        <g data-name="Group 20619" transform="translate(441 1259)">
+                          <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                        </g>
+                        <g data-name="Icon: Tick" transform="translate(445 1264)">
+                          <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <span class="ms-2">Online services for business</span></li>
+                  
+                  <li class="online-services-for-sole-traders" data-value="online-services-for-sole-traders">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <g data-name="Group 20678" transform="translate(-441 -1259)">
+                          <g data-name="Group 20619" transform="translate(441 1259)">
+                            <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                          </g>
+                          <g data-name="Icon: Tick" transform="translate(445 1264)">
+                            <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>
+                      <span class="ms-2">Online services for sole traders</span></li>
+
+                  <li class="supply-nation-supplier" data-value="supply-nation-supplier">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <g data-name="Group 20678" transform="translate(-441 -1259)">
+                          <g data-name="Group 20619" transform="translate(441 1259)">
+                            <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                          </g>
+                          <g data-name="Icon: Tick" transform="translate(445 1264)">
+                            <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>
+                      <span class="ms-2">Supply nation supplier</span></li>
+                
+                  <li class="trade-mark" data-value="trade-mark">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                            </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                            </g>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Trade mark</span></li>
+
+                  <li class="domain-name" data-value="domain-name">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                            </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                            </g>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Domain name registration</span></li>
+                        
+                  <li class="patent" data-value="patent">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                            </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                            </g>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Patent</span></li>
+
+                  <li class="design-right" data-value="design-right">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                            </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                            </g>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Design right</span></li>
+
+                  <li class="plant-breeders" data-value="plant-breeders">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                          <g data-name="Group 20678" transform="translate(-441 -1259)">
+                            <g data-name="Group 20619" transform="translate(441 1259)">
+                              <circle id="Ellipse_460" data-name="Ellipse 460" cx="8" cy="8" r="8" transform="translate(0)" fill="#2e3e5a"/>
+                            </g>
+                            <g data-name="Icon: Tick" transform="translate(445 1264)">
+                              <path d="M0,3.572l.949-.93L2.622,4.258,7.043,0,8,.916,2.622,6.1Z" fill="#fff"/>
+                            </g>
+                          </g>
+                        </svg>
+                        <span class="ms-2">Plant breeder's right</span></li>  
+              </ul>
+          </div>
+      </div>
 
 
     </div>

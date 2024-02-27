@@ -42,7 +42,7 @@
     <script src=/bga-style-guide/js/bga_prototype.js ></script>
 
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/help-me-decide/business-structure.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/help-me-decide/intellectual-property.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -903,11 +903,11 @@
     <div class="row">
         <div class="col-12">
        
-        <div class="stepped-navigation-wrapper my-5" data-step="1" id="stepped-nav-inpage">
+        <div class="stepped-navigation-wrapper my-5" data-step="4" id="stepped-nav-inpage">
 
             <div class="mobile-stepped-nav">
                 <button class="stepped-nav-toggle p-0" tabindex=0>
-                    <span class="me-2">Step 1 of 6: <strong>Business structure</strong></span>
+                    <span class="me-2">Step 4 of 6: <strong>Intellectual property</strong></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                         <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#333"/>
                       </svg>
@@ -961,38 +961,39 @@
 
 
 
-        <div class="container page-content my-5" data-page="business-structure" id="help-me-decide-prototype">
+        <div class="container page-content my-5" data-page="intellectual-property" id="help-me-decide-prototype">
 
     <div class="row">
 
         <div class="remove-top-spaces col-12 col-md-8">
 
-            <h2>Business structure</h2>
+            <h2>Intellectual property</h2>
 
-            <!-- know-structure -->
-            <div class="question-section dynamic-trigger q-know-structure remove-element-padding" id="q-know-structure">
+            <!-- business-name -->
+            <div class="question-section q-business-name remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="know-structure" class="form-label h3-font-size heading-color mb-4"><strong>Do you know which business structure is right for you?</strong></h3>
-                    <p class="">The 4 most popular business structures are <strong>sole trader</strong>, <strong>company</strong>, <strong>partnership</strong> and <strong>trust</strong>.
-                    </p>
+                    <h3 for="business-name" class="form-label h3-font-size heading-color mb-4"><strong>Will you use your own name as your business name?</strong></h3>
+                    <p>You need to register your business name if it’s different to your own name. For example, if your name is Joe Aaron Smith, and you want to use it (or a shortened form such as Joe Smith, J Smith, or J. A. Smith) as your business name, you don’t need to register it.</p>
+                    <p>You need to register a business name if it's anything else ('Joe Smith Plumbing').</p>
 
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="know-structure"  role="radiogroup">
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="business-name"  role="radiogroup">
 
                         <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="know-structure"
-                                id="know-structure-yes" data-value="know-structure-yes">
-                            <label class="form-check-label" for="know-structure-yes">Yes</label>
+                            <input class="form-check-input m-0" type="radio" name="business-name"
+                                id="business-name-yes" data-value="">
+                            <label class="form-check-label" for="business-name-yes">Yes</label>
                         </div>
 
                         <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="know-structure"
-                                id="know-structure-no" data-value="know-structure-no">
-                            <label class="form-check-label" for="know-structure-no">No</label>
+                            <input class="form-check-input m-0" type="radio" name="business-name"
+                                id="business-name-no" data-value="business-name">
+                            <label class="form-check-label" for="business-name-no">No</label>
                         </div>
-                    
+
+
+
                     </div>
-
                 </div>
                 
                 <hr class="section-divider my-5" />
@@ -1001,713 +1002,99 @@
             </div>
 
 
-            <!-- IF YES -->
-
-            <!-- business-structure -->
-            <div class="question-section dynamic-section q-know-structure-yes remove-element-padding d-none" id="q-know-structure-yes">
+            <!-- trade-mark -->
+            <div class="question-section q-trade-mark remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="business-structure" class="form-label h3-font-size heading-color mb-4"><strong>Which business structure is right for you?</strong></h3>
-
-                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group"  id="business-structure"
+                    <h3 for="trade-mark" class="form-label h3-font-size heading-color mb-4"><strong>Do you want to protect your business name so it is unique to your business?</strong></h3>
+                    <p>Registering your business name doesn't stop other businesses from using it for their products or services. You can protect your business name by applying for a trade mark.</p>
+                    
+                    
+                    <div class="radios w-50 g-2 d-flex radio-flex-group"  id="trade-mark"
                         role="radiogroup">
 
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="sole-trader-4" data-value="Sole trader">
-                            <label class="form-check-label remove-element-padding" for="sole-trader-4">
-                                <p><strong>Sole trader</strong> - one person owns and runs the business. They keep the profits and are responsible for any losses.</p>
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="trade-mark" id="trade-mark-yes" data-value="trade-mark">
+                            <label class="form-check-label remove-element-padding" for="trade-mark-yes">
+                                <p>Yes</p>
                             </label>
                         </div>
 
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="partnership-4" data-value="Partnership">
-                            <label class="form-check-label remove-element-padding" for="partnership-4">
-                                <p><strong>Partnership</strong> - at least 2 people (called partners) own the business. They run it together and share profits and losses.</p>
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="trade-mark" id="trade-mark-no" data-value="">
+                            <label class="form-check-label remove-element-padding" for="trade-mark-no">
+                                <p>No</p>
                             </label>
                         </div>
 
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="company-4"  data-value="Company" >
-                            <label class="form-check-label remove-element-padding" for="company-4">
-                                <p><strong>Company</strong> - the business is a separate legal entity. One or more shareholders own it and at least one director runs it.</p>
-                            </label>
-                        </div>
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="business-structure" id="trust-4"  data-value="Trust">
-                            <label class="form-check-label remove-element-padding" for="trust-4">
-                                <p><strong>Trust</strong> - a person or company (called the trustee) runs the business. They hold assets for the benefit of others.</p>
-                            </label>
-                        </div>
-
-
+                       
                     </div>
                     
                     <hr class="section-divider my-5" />
 
                 </div> 
-                
-                
 
             </div>
 
-           
-
-            <!-- IF NO -->
-           
-            <div class="question-section dynamic-section q-know-structure-no remove-element-padding d-none" id="q-know-structure-no">
-                
-                <!-- number-owners -->
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="number-owners" class="form-label h3-font-size heading-color mb-4"><strong>How many owners will your business have?</strong></h3>
-                    <p class="">A business owner is someone who controls your business. They get the final say in decisions about money.</p>
-
-                    <div class="radios w-50 d-flex dynamic-trigger radio-flex-group flex-wrap" id="number-owners"  role="radiogroup">
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="number-owners" id="number-owners-one"
-                                data-value="number-owners-one">
-                            <label class="form-check-label" for="number-owners-one">One (just me)</label>
-                        </div>
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="number-owners" id="number-owners-two"
-                                data-value="number-owners-two">
-                            <label class="form-check-label" for="number-owners-two">Two or more</label>
-                        </div>
 
 
-
-                    </div>
-                </div> 
-                
-                <hr class="section-divider my-5" />
-
-                <!-- hold-assets -->
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="hold-assets" class="form-label h3-font-size heading-color mb-4"><strong>Will you hold an asset for others?</strong></h3>
-                    <p class="">Assets can include cash, securities, real estate and valuable personal property. </p>
-
-                    <div class="radios w-50 g-2 d-flex dynamic-trigger radio-flex-group" id="hold-assets"  role="radiogroup">
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="hold-assets" id="hold-assets-yes"
-                                data-value="hold-assets-yes">
-                            <label class="form-check-label" for="hold-assets-yes">Yes</label>
-                        </div>
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="hold-assets" id="hold-assets-no"
-                                data-value="hold-assets-no">
-                            <label class="form-check-label" for="hold-assets-no">No</label>
-                        </div>
-
-
-
-                    </div>
-                </div>
-                
-                <hr class="section-divider my-5" />
-
-            </div>
-
-           
-
-
-
-            <!-- COMPARISON TABLES -->
-
-            <!-- sole-trader-v-company -->
-            <div class="question-section dynamic-section q-sole-trader-v-company remove-element-padding d-none" id="q-sole-trader-v-company">
-                <h3>Choose your business structure</h3>
-                <p class="">Based on your answers the <strong>sole trader</strong> or <strong>company</strong> structure may be right for you.</p>
-                <p>Compare the list of considerations below to help you decide which business you would prefer to set
-                    up.</p>
-
-
-                <div class="bga-component comparison-accordion teal">
-                
-                <table id="treegrid-stvc" class="w-100 treegrid mb-5" role="treegrid"
-                    aria-label="Sole trader versus company">
-                    <colgroup>
-                        <col id="treegrid-stvc-col1">
-                        <col id="treegrid-stvc-col2">
-                        <col id="treegrid-stvc-col3">
-                        <col id="treegrid-stvc-col3">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">Consideration</th>
-                            <th scope="col">Sole trader</th>
-                            <th scope="col">Company</th>
-                            <th class="mobile-hide" scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                            tabindex="0">
-                            <td role="gridcell"><strong>Business decisions are made by:</strong></td>
-                            <td role="gridcell">Sole trader</td>
-                            <td role="gridcell">Directors</td>
-                            <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>As a sole trader, you're responsible for all business decisions.</p>
-                                <p>In a company, the directors are responsible for business decisions and must make a
-                                    record of certain decisions. If you're the only director, you have full control.</p>
-                                <p>If there is more than one director, the way the company will be run (including how
-                                    decisions are made) will follow certain rules. These rules are usually set out in
-                                    the company's <a
-                                        href="http://www.asic.gov.au/for-business/starting-a-company/constitution-and-replaceable-rules/"
-                                        target="_blank">constitution or replaceable rules</a>.</p>
-                            </td>
-                        </tr>
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                            tabindex="0">
-                            <td role="gridcell"><strong>Setting up your business will cost:</strong></td>
-                            <td role="gridcell">$42+</td>
-                            <td role="gridcell">$576+</td>
-                            <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <h5>Cost of setting up as a sole trader</h5>
-                                <p>The cost of setting up a sole trader depends on the type of business you want to set
-                                    up. Sole trader start-up costs can include:</p>
-                                <ul>
-                                    <li>Registering a <a
-                                            href="http://www.asic.gov.au/for-business/your-business/small-business/starting-a-small-business/small-business-registering-a-business-name/"
-                                            target="_blank">business name</a> (if you need
-                                        one) - $42 for one year or $98 for three years.</li>
-                                    <li><a href="https://ablis.business.gov.au/" target="_blank">Licences and
-                                            permits</a> (you may not need any &mdash; this
-                                        depends on the industry you're in)</li>
-                                    <li><a href="https://www.business.gov.au/Marketing/Online-presence/Register-a-business-website"
-                                            target="_blank">Domain name</a> and web hosting
-                                        (if you want a business website)</li>
-                                </ul>
-                                <p>See our <a
-                                        href="https://www.business.gov.au/Planning/New-businesses/Calculate-the-start-up-costs-of-your-business"
-                                        target="_blank">Start-up costing sheet</a> for
-                                    examples of other costs that are common in the first year of a business.</p>
-                                <h5>Cost of setting up a company</h5>
-                                <p>The cost of setting up a company is much higher compared to a sole trader. Company
-                                    start-up costs include:</p>
-                                <ul>
-                                    <li><a href="http://www.asic.gov.au/for-business/starting-a-company/how-to-start-a-company/"
-                                            target="_blank">Company registration</a> - $576
-                                        for a proprietary limited company. With an annual review fee of $310.</li>
-                                    <li><a href="http://www.asic.gov.au/for-business/your-business/small-business/starting-a-small-business/small-business-registering-a-business-name/"
-                                            target="_blank">Business name registration</a> (if
-                                        you need one) - $42 for one year or $98 for three years.</li>
-                                    <li><a href="https://ablis.business.gov.au/" target="_blank">Licences and
-                                            permits</a> (you may not need any &mdash; this
-                                        depends on the industry you're in).</li>
-                                    <li><a href="https://www.business.gov.au/Marketing/Online-presence/Register-a-business-website"
-                                            target="_blank">Domain name</a> and web hosting
-                                        (if you want your business to have a website).</li>
-                                </ul>
-                                <p>See our <a
-                                        href="https://www.business.gov.au/Planning/New-businesses/Calculate-the-start-up-costs-of-your-business"
-                                        target="_blank">Start-up costing sheet</a> for a list
-                                    of examples of some of the other costs typical in the first year of a business.</p>
-                            </td>
-                        </tr>
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>Setting up your business will be:</strong></td>
-                        <td role="gridcell">Easy</td>
-                        <td role="gridcell">More complex</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <h5>Setting up as a sole trader</h5>
-                                <p>Setting up a sole trader structure is relatively easy. Generally, you're ready to go once you get your Australian Business Number (ABN) and register for any taxes, licences and permits. It's recommended you set up a separate bank account, but it's not necessary.</p>
-                                <h5>Setting up as a company</h5>
-                                <p>Setting up a company is more complicated, and you must understand your legal and tax obligations before registering. On top of the typical business and tax registrations, licences and permits you'll also need to set up a separate bank account and ensure the company has a <a href="https://asic.gov.au/for-business/changes-to-your-company/changing-company-addresses/#address_types" target="_blank">registered office and principal place of business</a>.</p>
-                                <p>Find out more about the <a href="https://www.business.gov.au/Change-and-Growth/Restructuring/Difference-between-a-sole-trader-and-a-company" target="_blank">volume of paperwork</a> and legal requirements for a company.</p>
-                            </td>
-                        </tr>
-
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>Switching business structures will be:</strong></td>
-                        <td role="gridcell">Easy</td>
-                        <td role="gridcell">More difficult</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>A sole trader can easily switch to a partnership or company.</p>
-                                <p>A company can't easily change business structures. To change, you need to:</p>
-                                <ol>
-                                <li>deregister the company so that it is no longer a legal entity. To do this, you either <a href="http://asic.gov.au/for-business/closing-your-company/deregistration/voluntarily-deregistering-a-company/" target="_blank">voluntarily deregister the company</a> (if it has net assets worth less than $1000) or <a href="http://asic.gov.au/for-business/closing-your-company/deregistration/winding-up-a-solvent-company/" target="_blank">wind up the company</a> (if it has net assets worth more than $1000). Winding up a company can be quite complicated</li>
-                                <li>register your business in the new structure.</li>
-                                </ol>
-                            </td>
-                        </tr>
-
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>The money earned belongs to:</strong></td>
-                        <td role="gridcell">You</td>
-                        <td role="gridcell">Company</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>As a sole trader you own the money earned through the business. The money is treated as income on your personal tax return. You also own losses.</p>
-                                <p>In a company structure, the money belongs to the company. There are rules about how money is transferred to directors and shareholders. The money must be kept in a separate bank account and can't be used for personal expenses. All money flowing in and out of a company must be documented and properly accounted for.</p>
-                                <p>Seek professional advice from a lawyer, accountant or financial adviser to find out more about handling earnings and the rules around how companies can transfer money.</p>
-                            </td>
-                        </tr>
-
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>Losses are the responsibility of:</strong></td>
-                        <td role="gridcell">Sole trader</td>
-                        <td role="gridcell">Company & directors</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>As a sole trader you are personally responsible for all payments, taxes, liabilities and losses. Your personal assets can be used to help pay for any business debts.</p>
-                                <p>In a company structure, the company is responsible for all payments, taxes, liabilities and losses. The personal assets of directors and shareholders are separate from the company, so they can't be used to pay company debts. In certain cases where directors breach their duties, they may be held personally responsible for company losses. Find out <a href="https://www.business.gov.au/Change-and-growth/Restructuring/Difference-between-a-sole-trader-and-a-company" target="_blank">who is liable for business debts</a> and what that means for your business.</p>
-                            </td>
-                        </tr>
-
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>The risk to my personal assets are:</strong></td>
-                        <td role="gridcell">High</td>
-                        <td role="gridcell">Low (Shareholders) to Medium (Directors)</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>As a sole trader, your liability is unlimited. This means all personal assets in your name can be used to pay business debts including if the business is sued. Find out more about <a href="https://www.business.gov.au/Change-and-growth/Restructuring/Difference-between-a-sole-trader-and-a-company" target="_blank">who is liable for business debts</a>.</p>
-                                <p>In a company structure, shareholders' personal assets aren't at risk. However, directors may be personally liable for company losses in certain circumstances or where they have breached their duties.</p>
-                            </td>
-                        </tr>
-
-
-                         <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>The tax rate that applies to income is:</strong></td>
-                        <td role="gridcell">Individual tax rate</td>
-                        <td role="gridcell">30%, Small business (27.5%)</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>As a sole trader, all the money your business earns is treated as personal income on your tax return. All of your income, including money earned through your business, will be taxed at your individual tax rate. If your total income is $18,200 or less, you don't pay any tax. This is called the 'tax-free threshold'. Anything above that amount will be taxed according to the amount of money you have earned.</p>
-                                <p>Companies with a turnover of less than $25 million are taxed at 27.5%. All other companies are taxed at 30%. There is no tax-free threshold for a company business structure. Work out your tax rate from our <a href="https://www.business.gov.au/Change-and-Growth/Restructuring/Tax-differences-between-a-sole-trader-and-a-company" target="_blank">Tax differences between a sole trader and a company</a> page.</p>
-                            </td>
-                        </tr>
-
-
-                    </tbody>
-                </table>
-
-                </div>
-
-
+             <!-- domain-name -->
+             <div class="question-section q-domain-name remove-element-padding">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="sole-trader-v-company" class="form-label h3-font-size heading-color mb-4"><strong>Which business structure would you prefer?</strong></h3>
-
-                    <div class="radios w-50 g-2 d-flex radio-flex-group flex-wrap dynamic-trigger" id="sole-trader-v-company"  role="radiogroup">
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="sole-trader-v-company" id="sole-trader-1" data-value="Sole trader">
-                            <label class="form-check-label" for="sole-trader-1">Sole trader</label>
-                        </div>
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="sole-trader-v-company" id="company-1" data-value="Company">
-                            <label class="form-check-label" for="company-1">Company</label>
-                        </div>
-
-               
-                    </div>
-                </div>
-
-                    <div class="info-sole-trader dynamic-section d-none" id="info-sole-trader">
-                        <h3>Sole trader</h3>
-
-                        <p>Based on your selections the <strong>sole trader</strong> structure may be right for you.</p>
-
-                        <p>A sole trader is the simplest form of business structure and can be inexpensive and easy set up.</p>
-                        <p>As a sole trader you’re responsible for everything in your business including debts, losses and day-to-day decisions. You can employ people too.</p>
-
+                    <h3 for="domain-name" class="form-label h3-font-size heading-color mb-4"><strong>Do you plan to set up a business website?</strong></h3>
+                    <p>Website addresses are called domain names, for example, sarahsflowers.com.au or josephsmitharchitects.com.au.</p><p>If you're keen to have a domain name that reflects your business name, it's a good idea to register your domain name even if you're not quite ready to set up your website.</p>
                     
+                    
+                    <div class="radios w-50 g-2 d-flex radio-flex-group"  id="domain-name"
+                        role="radiogroup">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="domain-name" id="domain-name-yes" data-value="domain-name">
+                            <label class="form-check-label remove-element-padding" for="domain-name-yes">
+                                <p>Yes</p>
+                            </label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="domain-name" id="domain-name-no" data-value="">
+                            <label class="form-check-label remove-element-padding" for="domain-name-no">
+                                <p>No</p>
+                            </label>
+                        </div>
+
+                       
                     </div>
+                    
+                    <hr class="section-divider my-5" />
 
-                    <div class="info-company dynamic-section d-none" id="info-company">
-                        <h3>Company</h3>
-
-                        <p>Based on your selections the <strong>company</strong> structure may be right for you.</p>
-
-                        <p>Companies can be expensive and complex to set up and run. They tend to suit people who: </p>
-                        <ul>
-                        <li>expect their business income to be unpredictable </li>
-                        <li>want to limit the risk of losing personal assets such as their home. </li>
-                        </ul>
-                        <p>A company means your business is a separate legal entity from you. It has a least one owner (shareholder) and one director. You can be both. </p>
-                    </div>
-                
-                <hr class="section-divider my-5" />
+                </div> 
 
             </div>
 
-            <!-- partnership-v-company -->
-            <div class="question-section dynamic-section q-partnership-v-company remove-element-padding d-none" id="q-partnership-v-company">
-                <h3>Choose your business structure</h3>
-                <p class="">Based on your answers the <strong>partnership</strong> or <strong>company</strong> structure may be right for you.</p>
-                <p>Compare the list of considerations below to help you decide which business you would prefer to set up.</p>
 
+            
 
-                <div class="bga-component comparison-accordion teal">
-
-                <table id="treegrid-stvc" class="w-100 treegrid mb-5" role="treegrid"
-                    aria-label="Sole trader versus company">
-                    <colgroup>
-                        <col id="treegrid-stvc-col1">
-                        <col id="treegrid-stvc-col2">
-                        <col id="treegrid-stvc-col3">
-                        <col id="treegrid-stvc-col3">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">Consideration</th>
-                            <th scope="col">Partnership</th>
-                            <th scope="col">Company</th>
-                            <th class="mobile-hide" scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                            tabindex="0">
-                            <td role="gridcell"><strong>Business decisions are made by:</strong></td>
-                            <td role="gridcell">Partners</td>
-                            <td role="gridcell">Directors</td>
-                            <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>In a partnership structure, all partners share the business decisions equally. If a 'formal partnership agreement' or legal agreement is drawn up, decisions must follow what was agreed to in the partnership agreement.</p>
-                                <p>In a company, the directors are responsible for business decisions and must make a record of certain decisions. If you're the only director, you have full control.</p>
-                                <p>If there is more than one director, the way the company will be run (including how decisions are made) will follow certain rules. These rules are usually set out in the company's <a href="http://www.asic.gov.au/for-business/starting-a-company/constitution-and-replaceable-rules/" target="_blank">constitution or replaceable rules</a>.</p>
-                            </td>
-                        </tr>
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                            tabindex="0">
-                            <td role="gridcell"><strong>Setting up your business will cost:</strong></td>
-                            <td role="gridcell">$42+</td>
-                            <td role="gridcell">$576+</td>
-                            <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <h5>Cost of setting up a partnership</h5>
-                                <p>The cost of setting up a partnership depends on the type of business you want to set up. Partnership set up costs can include:</p>
-                                <ul>
-                                <li>Registering a  <a href="http://www.asic.gov.au/for-business/your-business/small-business/starting-a-small-business/small-business-registering-a-business-name/" target="_blank"> business name </a>  (if you need one) - one year ($42) or three years ($98)</li>
-                                <li>Formal partnership agreement (if the partners want one)</li>
-                                <li><a href="https://ablis.business.gov.au/" target="_blank"> Licences and permits </a>  (if applicable)</li>
-                                <li><a href="https://www.business.gov.au/Marketing/Online-presence/Register-a-business-website" target="_blank"> Domain name </a>  and web hosting (if you want a business website).</li>
-                                </ul>
-                                <p>See our  <a href="https://www.business.gov.au/Planning/New-businesses/Calculate-the-start-up-costs-of-your-business" target="_blank"> Start-up costing sheet </a>  for examples of other costs that are common in the first year of a business.</p>
-                                <h5>Cost of setting up a company</h5>
-                                <p>The cost of setting up a company is much higher compared to a sole trader. Company set up costs:</p>
-                                <ul>
-                                <li><a href="http://www.asic.gov.au/for-business/starting-a-company/how-to-start-a-company/" target="_blank"> Company registration </a>  - $576 for a proprietary limited company. With an annual review fee of $310.</li>
-                                <li><a href="http://www.asic.gov.au/for-business/your-business/small-business/starting-a-small-business/small-business-registering-a-business-name/" target="_blank"> Business name registration </a>  (if you need one) - $42 for one year or $98 for three years.</li>
-                                <li><a href="https://ablis.business.gov.au/" target="_blank"> Licences and permits </a>  (if applicable, this depends on your industry)</li>
-                                <li><a href="https://www.business.gov.au/Marketing/Online-presence/Register-a-business-website" target="_blank"> Domain name </a>  and web hosting (if you want your business to have a website).</li>
-                                </ul>
-                                <p>See our  <a href="https://www.business.gov.au/Planning/New-businesses/Calculate-the-start-up-costs-of-your-business" target="_blank"> Start-up costing sheet </a>  for examples of other costs that are common in the first year of business.</p>
-                            </td>
-                        </tr>
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>Setting up your business will be:</strong></td>
-                        <td role="gridcell">Easy</td>
-                        <td role="gridcell">More complex</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>Setting up a partnership structure is relatively easy. On top of the typical business and tax registrations, and licences and permits, you will also need to set up a separate bank account.</p>
-                                <p>Setting up a company is more complicated, and you must understand your legal and tax obligations before registering. On top of the typical business and tax registrations, licences and permits you'll also need to set up a separate bank account and ensure the company has a <a href="https://asic.gov.au/for-business/changes-to-your-company/changing-company-addresses/#address_types" target="_blank">registered office and principal place of business</a>.</p>
-                                <p>Find out more about the <a href="https://www.business.gov.au/Change-and-Growth/Restructuring/Difference-between-a-sole-trader-and-a-company" target="_blank">volume of paperwork</a> and legal requirements for a company.</p>
-                            </td>
-                        </tr>
-
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>Switching business structures will be:</strong></td>
-                        <td role="gridcell">Easy</td>
-                        <td role="gridcell">More difficult</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>Partnerships can generally switch to a different business structure quite easily, as long as all partners agree.</p>
-                                <p>A company can't easily change business structures. To change, you need to:</p>
-                                <ol>
-                                <li>deregister the company so that it is no longer a legal entity. To do this, you either <a href="http://asic.gov.au/for-business/closing-your-company/deregistration/voluntarily-deregistering-a-company/" target="_blank">voluntarily deregister the company</a> (if it has net assets worth less than $1000) or <a href="http://asic.gov.au/for-business/closing-your-company/deregistration/winding-up-a-solvent-company/" target="_blank">wind up the company</a> (if it has net assets worth more than $1000). Winding up a company can be quite complicated</li>
-                                <li>register your business in the new structure.</li>
-                                </ol>
-                            </td>
-                        </tr>
-
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>The money earned belongs to:</strong></td>
-                        <td role="gridcell">Partners</td>
-                        <td role="gridcell">Company</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>In a partnership, the money earned is usually shared among the partners equally. Partners also equally own losses. If a 'formal partnership agreement' or legal agreement is drawn up, earnings and losses must be shared according to what was agreed to.</p>
-                                <p>In a company structure, the money belongs to the company. There are rules about how money is transferred to directors and shareholders. The money must be kept in a separate bank account and can't be used for personal expenses. All money flowing in and out of a company must be documented and properly accounted for.</p>
-                                <p>Seek professional advice from a lawyer, accountant or financial adviser to find out more about handling earnings and the rules around how companies can transfer money.</p>
-                            </td>
-                        </tr>
-
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>Losses are the responsibility of:</strong></td>
-                        <td role="gridcell">Partners</td>
-                        <td role="gridcell">Company & directors</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>Partners keep their share of income earned through the business, but are also personally responsible for all payments, taxes, liabilities and losses. The personal assets of partners can also be used to help pay for any business debts. Partners who have an unequal share of the partnership can have a 'formal partnership agreement' written up to detail the percentage of income paid to each partner as well as the percentage of losses each partner must pay.</p>
-                                <p>In a company structure, the company pays for all payments, taxes, liabilities and losses. As a director and shareholder your personal assets are separate from the company so can't be used to pay company debts. In certain cases where directors breach their duties, they may be held personally responsible for company losses. Discover more about <a href="https://www.business.gov.au/Change-and-Growth/Restructuring/Difference-between-a-sole-trader-and-a-company" target="_blank">who is liable for business debts</a> and what that means for your business.</p>
-                            </td>
-                        </tr>
-
-
-                        <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>The risk to my personal assets are:</strong></td>
-                        <td role="gridcell">High</td>
-                        <td role="gridcell">Low (Shareholders) to Medium (Directors)</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>The liability of each partner is unlimited. This means all personal assets in your name can be used to pay business debts including if the business is sued. Your home and other assets could potentially be used to pay off the debt, even if the debt was incurred by another partner.</p>
-                                <p>A limited partnership structure can limit the risk to assets in certain cases, for example to protect silent partners who don't make decisions or run the business.</p>
-                                <p>As a shareholder of a company there is no risk to your personal assets. However, directors may be personally liable for company losses in certain circumstances or where they have breached their duties.</p>
-                            </td>
-                        </tr>
-
-
-                         <tr role="row" aria-level="1" aria-posinset="1" aria-setsize="1" aria-expanded="false"
-                        tabindex="0">
-                        <td role="gridcell"><strong>The tax rate that applies to income is:</strong></td>
-                        <td role="gridcell">Individual tax rate</td>
-                        <td role="gridcell">30%, Small business (27.5%)</td>
-                        <td role="gridcell" class="learn-more help-text"><button><span class="me-2">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                                <path id="Chevron_Down" data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" transform="translate(16) rotate(90)" fill="#2157aa"/>
-                              </svg>
-                              </button></td>
-                        </tr>
-                        <tr role="row" aria-level="2" aria-posinset="1" aria-setsize="1" tabindex="-1"
-                            class="hidden more-info">
-                            <td colspan="4" role="gridcell">
-                                <p>As a partner in a partnership, all the money you earn from the partnership is treated as personal income on your individual tax return. All of your income including money earned through your business will be taxed at your individual tax rate. If your total income is $18,200 or less, you don't pay any tax. This is called the 'tax-free threshold'. Anything above that amount will be taxed according to the amount of money you have earned. Although the partnership must also lodge a tax return, the partnership doesn't pay tax separately.</p>
-                                <p>Companies with a turnover of less than $25 million are taxed at 27.5%. All other companies are taxed at 30%. There is no tax-free threshold for a company business structure. To work out your tax rate, see the <a href="https://www.business.gov.au/Change-and-Growth/Restructuring/Tax-differences-between-a-sole-trader-and-a-company" target="_blank">tax differences between a sole trader and a company</a>.</p>
-                            </td>
-                        </tr>
-
-
-                    </tbody>
-                </table>
-
-                </div>
-
-
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="partnership-v-company" class="form-label h3-font-size heading-color mb-4"><strong>Which business structure would you prefer?</strong></h3>
-
-                    <div class="radios w-50 g-2 d-flex radio-flex-group flex-wrap dynamic-trigger" id="partnership-v-company" role="radiogroup">
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="partnership-v-company" id="partnership-2" data-value="Partnership">
-                            <label class="form-check-label" for="partnership-2">Partnership</label>
-                        </div>
-
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="partnership-v-company" id="company-2" data-value="Company">
-                            <label class="form-check-label" for="company-2">Company</label>
-                        </div>
-
-               
-                    </div>
-                </div>
-                
-              
-                    <div class="info-partnership dynamic-section d-none" id="info-partnership">
-                        <h3>Partnership</h3>
-
-                        <p>Based on your selections the <strong>partnership</strong> structure may be right for you.</p>
-
-                        <p>A partnership can be inexpensive and easy set up. It’s made up of 2 or more people (the partners) who distribute income or losses between themselves. </p>
-                        <p>It can become difficult if partners disagree about business decisions. It’s a good idea to have a partnership agreement—a legal document that sets out the terms of your business and protects the interests of you and your partners. </p>
-
-                    </div>
-
-                    <div class="info-company-1 dynamic-section d-none" id="info-company-1">
-                        <h3>Company</h3>
-
-                        <p>Based on your selections the <strong>company</strong> structure may be right for you.</p>
-
-                        <p>Companies can be expensive and complex to set up and run. They tend to suit people who: </p>
-                        <ul>
-                        <li>expect their business income to be unpredictable </li>
-                        <li>want to limit the risk of losing personal assets such as their home. </li>
-                        </ul>
-                        <p>A company means your business is a separate legal entity from you. It has a least one owner (shareholder) and one director. You can be both. </p>
-                    </div>
            
 
 
-                <hr class="section-divider my-5" />
-            </div>
-
-            <!-- trust -->
-            <div class="question-section dynamic-section q-trust remove-element-padding d-none" id="q-trust">
-                <h3>Recommended business structure - Trust</h3>
-                <p class="">Based on your answers the <strong>trust</strong> structure may be right for you.</p>
-                <p>Trust structures can be expensive and complex to set up. They’re often for protecting assets such as property for others (the beneficiaries).</p><p>Trustees are responsible for everything in the trust including income and losses. People or companies can be trustees.</p>
-                
-
-                <hr class="section-divider my-5" />
-            </div>
 
 
-
-            <!-- INDIGENOUS BUSINESS -->
-            <div class="question-section dynamic-section q-indigenous-business remove-element-padding d-none" id="q-indigenous-business">
-
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="fbt" class="form-label h3-font-size heading-color mb-4"><strong>Is your business an Indigenous business? </strong></h3>
-                    <p>A First Nations person owns at least half your business.</p>
-
-                    <div class="radios w-50 g-2 d-flex radio-flex-group" id="indigenous-business"  role="radiogroup">
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="indigenous-business"
-                                id="indigenous-business-yes" data-value="supply-nation-supplier">
-                            <label class="form-check-label" for="indigenous-business-yes">Yes</label>
-                        </div>
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="indigenous-business"
-                                id="indigenous-business-no" data-value="">
-                            <label class="form-check-label" for="indigenous-business-no">No</label>
-                        </div>
+            
 
 
-
-                    </div>
-                </div>
-                
-                <hr class="section-divider my-5" />
-
-
-            </div>
 
 
             <!-- BUTTON GROUP -->
-            <div class="tool-button-group button-group" data-page='business-structure-page'>
+            <div class="tool-button-group button-group" data-page='intellectual-property-page'>
 
                 <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
-                    href=/bga-style-guide/prototypes/help-me-decide/landing.html role="button">Previous</a>
+                    href=/bga-style-guide/prototypes/help-me-decide/employees.html role="button">Previous</a>
 
                 <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0"
-                    href=/bga-style-guide/prototypes/help-me-decide/business-name.html role="button">Next</a>
+                    href=/bga-style-guide/prototypes/help-me-decide/business-taxes.html role="button">Next</a>
 
-                <a class="bga-btn bga-primary-btn bkg-light next results d-none" tabindex="0"
+                    <a class="bga-btn bga-primary-btn bkg-light next results d-none" tabindex="0"
                     href=/bga-style-guide/prototypes/help-me-decide/results.html role="button">Return to results</a>
 
             </div>
