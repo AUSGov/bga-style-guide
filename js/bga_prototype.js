@@ -574,11 +574,11 @@ $(document).ready(function () {
             var answer = $(this).attr('id');
 
             if ( answer == 'payg-yes' && $(this).is(":checked")) {
-                $('.q-fbt').removeClass('d-none');
+                $('.q-working-holiday-employer, .q-fbt').removeClass('d-none');
             } else {
-                $('.q-fbt').addClass('d-none');
+                $('.q-working-holiday-employer, .q-fbt').addClass('d-none');
             }
-            $('.question-section input.q-fbt').each(function(){
+            $('.question-section input.q-fbt, .question-section input.q-working-holiday-employer').each(function(){
                 $(this).prop('checked', false);
             });
         });
@@ -665,6 +665,10 @@ $(document).ready(function () {
             single_registration_q(this, 'payg');
         });
 
+        $('.q-working-holiday-employer input').on('change', function(){
+            single_registration_q(this, 'working-holiday-employer');
+        });
+
         $('.q-fbt input').on('change', function(){
             single_registration_q(this, 'fbt');
         });
@@ -683,6 +687,17 @@ $(document).ready(function () {
                 remove_registrations('registrations', ['gst']);
             }
         };
+
+        //Intellectual property
+        $('.q-patent input').on('change', function(){
+            single_registration_q(this, 'patent');
+        });
+        $('.q-design-right input').on('change', function(){
+            single_registration_q(this, 'design-right');
+        });
+        $('.q-plant-breeders input').on('change', function(){
+            single_registration_q(this, 'plant-breeders');
+        });
 
         //Business taxes page add / remove recommendations
         $('.q-business-turnover input, .q-taxi-limousine input').on('change', function(){
@@ -753,20 +768,6 @@ $(document).ready(function () {
 
 
             // Checked what is answered and display results page accordingly
-
-           /* if (!business_structure) {
-                //$(".error-notification-wrapper").removeClass('d-none');
-            } else if ( business_structure && unanswered !== '') { 
-                //$('.business-structure-wrapper, .error-notification-wrapper').removeClass('d-none');
-                $('.business-structure-wrapper').removeClass('d-none');
-                
-                // Show business structure call out
-                business_structure = business_structure.replace(' ', '-');
-                business_structure = business_structure.toLowerCase();
-                $('#' + business_structure + '.callout-business-structure').removeClass('d-none');
-
-            } else {*/
-                //$('.business-structure-wrapper, .registrations-wrapper, .next-steps-wrapper').removeClass('d-none');
 
                 // Show business structure call out
                 business_structure = business_structure.replace(' ', '-');
