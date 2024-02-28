@@ -843,15 +843,20 @@ $(document).ready(function () {
             });
             $('.results-accordion #gst .reason:visible:last').addClass('last');
 
-            var other_registrations = ['individual-tfn', 'trade-mark', 'domain-name'];
+            var other_registrations = ['individual-tfn', 'domain-name', 'online-services-for-business', 'online-services-for-sole-traders', 'supply-nation-supplier', 'working-holiday-employer'];
             
             for (var i = 0; i < other_registrations.length; i++) {
                 if ( registrations.includes(other_registrations[i]) ) {
-
                     $('.other-registrations').removeClass('d-none');
                     $('.other-registrations .' + other_registrations[i]).removeClass('d-none');
                 }
             }
+
+            // Show payroll tax content
+            if ( sessionStorage.getItem('answers').includes('payg-yes')) {
+                $('.payroll-tax').removeClass('d-none');
+            };
+
 
 
         } // end results page
