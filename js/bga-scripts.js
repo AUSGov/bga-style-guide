@@ -2198,6 +2198,10 @@ $(document).ready(function () {
             $('.dynamic-sidebar li.abn').addClass('show heartbeat-trigger');
             $('.dynamic-sidebar li.business-tfn').removeClass('show');
             $('.dynamic-sidebar li.company').removeClass('show');
+
+            $('.dynamic-sidebar li.online-services-for-sole-traders').addClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.online-services-for-business').removeClass('show');
+
         } else if (answer == 'partnership') {
             $('.dynamic-sidebar .chosen-structure span').text('Partnership');
             $('.dynamic-sidebar .chosen-structure').addClass('completed heartbeat-trigger');
@@ -2206,6 +2210,10 @@ $(document).ready(function () {
             $('.dynamic-sidebar li.business-tfn').addClass('show heartbeat-trigger');
             $('.dynamic-sidebar li.individual-tfn').removeClass('show');
             $('.dynamic-sidebar li.company').removeClass('show');
+
+            $('.dynamic-sidebar li.online-services-for-sole-traders').removeClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.online-services-for-business').addClass('show');
+
         } else if (answer == 'company') {
             $('.dynamic-sidebar .chosen-structure span').text('Company');
             $('.dynamic-sidebar .chosen-structure').addClass('completed heartbeat-trigger');
@@ -2214,6 +2222,9 @@ $(document).ready(function () {
             $('.dynamic-sidebar li.individual-tfn').addClass('show heartbeat-trigger');
             $('.dynamic-sidebar li.company').addClass('show heartbeat-trigger');
             $('.dynamic-sidebar li.individual-tfn').removeClass('show');
+
+            $('.dynamic-sidebar li.online-services-for-sole-traders').removeClass('show heartbeat-trigger');
+            $('.dynamic-sidebar li.online-services-for-business').addClass('show');
         }
 
         setTimeout(function () {
