@@ -6,13 +6,13 @@
 
     .business-structure {
         .title {
-            background: $bga-blue-background-light;
-            padding: 16px 24px;
+            background: $bga-blue-highlight-mid;
+            padding: 8px 16px;
         }
 
         .content {
             background: $bga-blue-background-extralight;
-            padding: 16px 24px;
+            padding: 8px 16px;
         }
 
         .chosen-structure {
@@ -45,19 +45,19 @@
     .recommendations {
         .title {
             background: $bga-yellow-highlight-mid;
-            padding: 16px 24px;
+            padding: 8px 16px;
         }
 
         .content {
             background: $bga-yellow-highlight-light;
-            padding: 16px 24px 8px 24px;
+            padding: 8px 16px 0px 16px;
         }
 
         li {
             text-indent: 0;
             display: none;
             margin: 0;
-            margin-bottom: 8px;
+            padding-bottom: 8px !important;
 
             &.show {
                 display: flex;
@@ -81,6 +81,16 @@
 
             &::before {
                 display: none;
+            }
+
+            
+        }
+        &.grey {
+            .title {
+                background: $bga-blue-black-lightest;
+            }
+            .content {
+                background: $bga-blue-black-background-lightest;
             }
         }
     }
@@ -121,14 +131,6 @@
     .dynamic-sidebar {
         .business-structure,
         .recommendations {
-            .title {
-                padding: 16px;
-            }
-
-            .content {
-                padding: 16px;
-            }
-
             span,
             li,
             p {
@@ -137,10 +139,6 @@
         }
 
         .recommendations {
-            .content {
-                padding: 16px 16px 8px 16px;
-            }
-
             li.show {
                 svg {
                     margin-top: 4px;
@@ -151,12 +149,10 @@
     .nb-dynamic-sidebar {
         .title {
             background: $nb-grey-mid;
-            padding: 16px 24px;
         }
     
         .content {
             background: $nb-grey-light;
-            padding: 16px 24px;
     
             li {
                 text-indent: 0;
