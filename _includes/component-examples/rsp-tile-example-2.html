@@ -51,15 +51,19 @@
         
 
        {% if include.rsp-number %}
-        <p class="mt-4 mb-2"><strong>RSP number:</strong> {{ include.rsp-number }}</p>
+        <p class="detail rsp-number mt-4 mb-2"><strong>RSP number:</strong> {{ include.rsp-number }}</p>
         {% endif %}
 
         {% if include.rsp-category %}
-        <p class="mb-2"><strong>RSP category:</strong> {{ include.rsp-category }}</p>
+        <p class="detail rsp-category mb-2"><strong>RSP category:</strong> {{ include.rsp-category }}</p>
         {% endif %}
 
         {% if include.abn %}
-        <p class="mb-0"><strong>ABN:</strong> {{ include.abn }}</p>
+        <p class="detail abn mb-2"><strong>ABN:</strong> {{ include.abn }}</p>
+        {% endif %}
+
+        {% if include.legal-name %}
+        <p class="detail legal-name mb-0"><strong>Legal name:</strong> {{ include.legal-name }}</p>
         {% endif %}
 
         
