@@ -291,8 +291,10 @@ html.ecb-prototype {
 
     // Finalise component
     .call-to-action.finalise {
-        row-gap: 24px;
-        column-gap: 24px;
+        .finalise-ctas {
+            row-gap: 24px;
+            column-gap: 24px;
+        }
 
         .cta-container {
             background: $bga-white;
@@ -594,10 +596,17 @@ html.ecb-prototype {
         }
 
         .call-to-action.finalise {
-            flex-wrap: wrap;
+            .finalise-ctas {
+                flex-wrap: wrap;
+            }
 
             .cta-container {
                 width: 100% !important;
+            }
+            .cta-content {
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 24px;
             }
 
             .cta-title {
@@ -606,10 +615,25 @@ html.ecb-prototype {
 
             .cta-content {
                 height: auto;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+            
 
                 p {
-                    width: 100%;
                     margin: 0 0 16px 0;
+
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+                .explanation {
+                     display: block;
+                    flex: 1; 
+                }
+                .button-example {
+                    flex: 0 1 auto;    
+                    overflow: hidden;
                 }
             }
         }
@@ -709,6 +733,35 @@ html.ecb-prototype {
         .contract-actions {
             row-gap: 16px;
             flex-direction: column;
+        }
+    }
+
+    .call-to-action.finalise {
+        .finalise-ctas {
+            flex-wrap: wrap;
+        }
+
+        .cta-content {
+            flex-direction: column;
+            align-items: flex-start !important;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            row-gap: 16px;
+            p {
+                margin: 0 0 16px 0;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+            .explanation {
+                display: block;
+                flex: 1; 
+            }
+            .button-example {
+                flex: 0 1 auto;    
+            }
         }
     }
 }
