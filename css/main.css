@@ -9800,11 +9800,11 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ecb-prototype #subsite-header .bga-link-strap { min-height: 54px; }
 
-#ecb-prototype #landing-page #subsite-header .secondary-links { display: block; }
+#ecb-prototype #subsite-header .secondary-links { display: block; }
 
-#ecb-prototype #landing-page #subsite-header .secondary-links a { display: flex; justify-content: flex-end; align-items: center; color: #ffffff; text-decoration: none; }
+#ecb-prototype #subsite-header .secondary-links a { display: flex; justify-content: flex-end; align-items: center; color: #ffffff; text-decoration: none; }
 
-#ecb-prototype #landing-page #subsite-header .secondary-links a:focus, #ecb-prototype #landing-page #subsite-header .secondary-links a:hover { text-decoration: underline; }
+#ecb-prototype #subsite-header .secondary-links a:focus, #ecb-prototype #subsite-header .secondary-links a:hover { text-decoration: underline; }
 
 #ecb-prototype input.sm-width { max-width: 100px; }
 
@@ -9925,6 +9925,8 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ecb-prototype.ecb-email .email-banner-strap { background: #C8D9EE; margin: 0 -16px; width: calc(100% + 32px); padding: 8px 16px; }
 
+#ecb-prototype.ecb-email .email-privacy-info { background: #E4E6EA; margin: 0 -16px; width: calc(100% + 32px); padding: 32px 16px; }
+
 #ecb-prototype.ecb-email .email-footer { background: #113869; margin: 0 -16px; width: calc(100% + 32px); padding: 32px 16px; }
 
 #ecb-prototype.ecb-email .email-footer p { color: #ffffff; }
@@ -9949,15 +9951,15 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ecb-prototype.ecb-email .email-footer .social-links-wrapper .footer-social li:hover svg { fill: #113869; }
 
-.contracts-list .contract { border-bottom: solid 1px #788295; padding: 24px 0; display: flex; justify-content: space-between; align-items: center; }
+.contracts-list .contract { border-bottom: solid 1px #788295; padding: 24px 0; display: flex; justify-content: space-between; align-items: flex-end; }
 
-.contracts-list .contract-details { display: flex; align-items: center; }
+.contracts-list .contract-details { display: flex; align-items: flex-start; flex-direction: column; }
 
 .contracts-list .contract-details .contract-name { margin-right: 24px; font-size: 18px; font-weight: 600; }
 
-.contracts-list .contract-actions { min-width: 380px; }
+.contracts-list .contract-actions { min-width: 380px; display: flex; justify-content: flex-end; column-gap: 24px; }
 
-.contracts-list .contract-actions a { margin-left: 24px; text-decoration: none; border-bottom: 1px solid #2157AA; padding-bottom: 4px; display: inline-flex; align-items: flex-end; line-height: 1; }
+.contracts-list .contract-actions a { text-decoration: none; border-bottom: 1px solid #2157AA; padding-bottom: 4px; margin-bottom: 8px; display: inline-flex; align-items: flex-end; line-height: 1; }
 
 .contracts-list .contract-actions a:hover { cursor: pointer; border-bottom-color: #113869; }
 
@@ -9975,21 +9977,19 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 .subsite-footer #reset-prototype:hover, #reset-prototype-verification:hover { background: none; }
 
-.subsite-footer .saved-contracts-link { display: none; }
+.subsite-footer .saved-contracts-link { display: block; }
 
-#landing-page .subsite-footer .saved-contracts-link { display: block; }
+.subsite-footer .saved-contracts-link a { display: flex; align-items: center; color: #ffffff; text-decoration: none; font-weight: 400; }
 
-#landing-page .subsite-footer .saved-contracts-link a { display: flex; align-items: center; color: #ffffff; text-decoration: none; font-weight: 400; }
-
-#landing-page .subsite-footer .saved-contracts-link a:focus, #landing-page .subsite-footer .saved-contracts-link a:hover { text-decoration: underline; background: none; }
+.subsite-footer .saved-contracts-link a:focus, .subsite-footer .saved-contracts-link a:hover { text-decoration: underline; background: none; }
 
 @media (max-width: 1200px) { .contracts-list .contract-details { flex-wrap: wrap; } .contracts-list .contract-name { width: 100%; } .contracts-list .expiry { margin-top: 8px; } #ecb-prototype .save-footer .button-wrapper { justify-content: flex-start !important; margin-top: 24px; } }
 
 @media (max-width: 992px) { #ecb-prototype #page-header.fixed .header-content { padding: 24px 0 !important; } #ecb-prototype .call-to-action.finalise { flex-wrap: wrap; } #ecb-prototype .call-to-action.finalise .cta-container { width: 100% !important; } #ecb-prototype .call-to-action.finalise .cta-title { width: 100%; } #ecb-prototype .call-to-action.finalise .cta-content { height: auto; } #ecb-prototype .call-to-action.finalise .cta-content p { width: 100%; margin: 0 0 16px 0; } }
 
-@media (max-width: 768px) { #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation-wrapper { padding: 0 !important; } #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation { padding: 16px 0 0 0 !important; } #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation .step { width: auto; } #ecb-prototype #page-header.fixed .header-content { padding: 0 !important; } #ecb-prototype #page-header.fixed .step-name { height: 21px; text-overflow: unset; width: auto; } #ecb-prototype .page-content.fixed { padding-top: 60px !important; } #ecb-prototype .modal-example { top: 1rem; left: 16px; width: calc(100% - 32px); max-width: none; } #ecb-prototype .toggle-wrapper { padding-right: 0px !important; } .contracts-list .contract { flex-wrap: wrap; } .contracts-list .contract-actions { min-width: auto; margin-top: 16px; } .contracts-list .contract-actions a:first-of-type { margin-left: 0; } }
+@media (max-width: 768px) { #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation-wrapper { padding: 0 !important; } #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation { padding: 16px 0 0 0 !important; } #ecb-prototype #page-header.stepped-nav .stepped-navigation-wrapper .stepped-navigation .step { width: auto; } #ecb-prototype #page-header.fixed .header-content { padding: 0 !important; } #ecb-prototype #page-header.fixed .step-name { height: 21px; text-overflow: unset; width: auto; } #ecb-prototype .page-content.fixed { padding-top: 60px !important; } #ecb-prototype .modal-example { top: 1rem; left: 16px; width: calc(100% - 32px); max-width: none; } #ecb-prototype .toggle-wrapper { padding-right: 0px !important; } .contracts-list .contract { flex-wrap: wrap; } .contracts-list .contract-actions { min-width: auto; margin-top: 16px; padding: 0; } .contracts-list .contract-actions a { justify-content: flex-start; margin-bottom: 0; } }
 
-@media (max-width: 576px) { #ecb-prototype .call-to-action.teal .button-group a { font-size: 0.875rem; } #ecb-prototype .ecb-button-group a { font-size: 0.875rem; } #ecb-prototype #email-form { flex-wrap: wrap; } #ecb-prototype #email-form input { width: 100%; margin-bottom: 24px !important; margin-right: 0 !important; } .contracts-list .contract-actions a { display: inline-block; margin: 0 16px 16px 0; } .contracts-list .contract-actions a:last-of-type { margin: 0 0 0 0; } }
+@media (max-width: 576px) { #ecb-prototype .call-to-action.teal .button-group a { font-size: 0.875rem; } #ecb-prototype .ecb-button-group a { font-size: 0.875rem; } #ecb-prototype #email-form { flex-wrap: wrap; } #ecb-prototype #email-form input { width: 100%; margin-bottom: 24px !important; margin-right: 0 !important; } .contracts-list { align-items: flex-start; } .contracts-list .contract-actions { row-gap: 16px; flex-direction: column; } }
 
 @media (max-width: 350px) { #ecb-prototype .call-to-action.teal .button-group { flex-wrap: wrap; } #ecb-prototype .call-to-action.teal .button-group a { font-size: 0.875rem; width: 100%; } #ecb-prototype .modal-example .number-code input { width: 40px; } #ecb-prototype .modal-example .number-code .success-icon { margin-left: 16px !important; } #ecb-prototype .ecb-button-group, #ecb-prototype .two-button-group { flex-wrap: wrap; } #ecb-prototype .ecb-button-group a, #ecb-prototype .two-button-group a { font-size: 0.875rem; width: 100%; text-align: center; } }
 
