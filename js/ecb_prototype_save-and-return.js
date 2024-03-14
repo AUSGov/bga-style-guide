@@ -12,6 +12,15 @@ $(document).ready(function () {
         }
         window.location.pathname = "/bga-style-guide/prototypes/ecb/landing.html";
     });
+    $('#reset-prototype-verification').on('click', function(){
+        localStorage.removeItem('verified');
+        location.reload();
+    });
+
+    // Add known user variable when user clicks on the return link in an email
+    $('#return-to-contract').on('click', function(){
+        localStorage.setItem('verified', 'incomplete');
+    });
     
     //ECB REVISED FLOW PROTOTYPE
 
@@ -761,16 +770,49 @@ $(document).ready(function () {
             }, 3000);
 
             setTimeout(function () {
+                localStorage.setItem('verified', 'complete');
                 if ( btn_location == 'in-page') {
-                   window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
+                    console.log('verified');
+                    
+                    $('#ecb-cta-verify, #ecb-cta-verify-known').addClass('d-none');
+                    $('.contracts-container').removeClass('d-none');
+
+                    // Add contracts to contract list
+                    var active_contracts = count_contracts(contracts);
+                    
+                    for (var i = 0; i < active_contracts.length; i++) { 
+                        var position = contracts[active_contracts[i]]['position-title'],
+                        id = active_contracts[i],
+                        expiry = contracts[active_contracts[i]]['expiry date'],
+                        extend_classes = 'extend modal-trigger active';
+
+                        if (!position) {
+                            position = '';
+                        }
+                        if (!expiry) {
+                            expiry = "in seven days";
+                        }
+                        if ( get_remaining_days(expiry) > 7) {
+                            extend_classes = 'extend inactive';
+                        }
+
+                        $('.contracts-list').append('<div class="contract" id='+ id +'><div class="contract-details remove-element-padding"><p class="contract-name mb-0"><span>' + position + '</span> contract</p><p>Expires <span class="expiry">' + expiry + '</span></p></div><div class="contract-actions"><a class="edit">Edit<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.68223 15.516L6.74726 16.451L0.442295 17.9485L1.94069 11.6444L2.83642 10.6702L7.68223 15.516ZM10.6005 2.90609L15.408 7.71352L8.62244 14.4991L3.815 9.69162L10.6005 2.90609ZM13.5136 0.00871828L18.3202 4.81528L16.3822 6.75326L11.5756 1.94669L13.5136 0.00871828Z" fill="#2157AA"/></svg></a><a class="' + extend_classes + '" data-modal="modal-extend-deadline">Extend deadline<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C4.03738 18 0 13.9626 0 9C0 4.03738 4.03738 0 9 0C13.9626 0 18 4.03738 18 9C18 13.9626 13.9626 18 9 18ZM9 2.24975C5.27789 2.24975 2.24975 5.27789 2.24975 9C2.24975 12.7221 5.27789 15.7502 9 15.7502C12.7221 15.7502 15.7502 12.7221 15.7502 9C15.7502 5.27789 12.7221 2.24975 9 2.24975ZM13.4995 11.2497H13.4984H7.87512V5.62538H10.1249V9H13.4995V11.2486V11.2497Z" fill="#2157AA"/></svg></a><a class="delete modal-trigger" data-modal="modal-delete-contract">Delete<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#2157AA"/></svg></a></div></div>');
+                    } 
+                    
+                    // Show no contracts msg if no contracts are saved.
+                    if (active_contracts.length == 0) {
+                        $('.no-contract').removeClass('d-none');
+                    } else {
+                        $('.no-contract').addClass('d-none');
+                    }
+
+                   //window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
                 } else if ( btn_location == 'modal') {
                     localStorage.setItem('current contract', 'contracttemp');
                     localStorage.setItem('saved new', 'true');
                     reset_verification_modal();
                     window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
                 }
-                    
-
             }, 3200);
 
         } else {
@@ -826,7 +868,8 @@ $(document).ready(function () {
     };
 
     if ($('.page-manage-contracts').length) {
-        
+        var verified = localStorage.getItem('verified');
+
         current_contract = 'contracttemp';
         localStorage.setItem('current contract', 'contracttemp');
         
@@ -841,38 +884,58 @@ $(document).ready(function () {
             localStorage.setItem('contracts', JSON.stringify(contracts));
         }
         
-       
-        // Add contracts to contract list
-        var active_contracts = count_contracts(contracts);
-        
-        for (var i = 0; i < active_contracts.length; i++) { 
-            var position = contracts[active_contracts[i]]['position-title'],
-            id = active_contracts[i],
-            expiry = contracts[active_contracts[i]]['expiry date'],
-            extend_classes = 'extend modal-trigger active';
+        // Show/hide verification components
+        if ( verified == 'complete') {
+            console.log('verification complete');
+            $('#ecb-cta-verify').addClass('d-none');
+            $('#ecb-cta-verify-known').addClass('d-none');
+            $('.contracts-container').removeClass('d-none');
 
-            if (!position) {
-                position = '';
-            }
-            if (!expiry) {
-                expiry = "in seven days";
-            }
-            if ( get_remaining_days(expiry) > 7) {
-                extend_classes = 'extend inactive';
-            }
+            // Add contracts to contract list
+            var active_contracts = count_contracts(contracts);
+            
+            for (var i = 0; i < active_contracts.length; i++) { 
+                var position = contracts[active_contracts[i]]['position-title'],
+                id = active_contracts[i],
+                expiry = contracts[active_contracts[i]]['expiry date'],
+                extend_classes = 'extend modal-trigger active';
 
-            $('.contracts-list').append('<div class="contract" id='+ id +'><div class="contract-details remove-element-padding"><p class="contract-name mb-0"><span>' + position + '</span> contract</p><p>Expires <span class="expiry">' + expiry + '</span></p></div><div class="contract-actions"><a class="edit">Edit<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.68223 15.516L6.74726 16.451L0.442295 17.9485L1.94069 11.6444L2.83642 10.6702L7.68223 15.516ZM10.6005 2.90609L15.408 7.71352L8.62244 14.4991L3.815 9.69162L10.6005 2.90609ZM13.5136 0.00871828L18.3202 4.81528L16.3822 6.75326L11.5756 1.94669L13.5136 0.00871828Z" fill="#2157AA"/></svg></a><a class="' + extend_classes + '" data-modal="modal-extend-deadline">Extend deadline<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C4.03738 18 0 13.9626 0 9C0 4.03738 4.03738 0 9 0C13.9626 0 18 4.03738 18 9C18 13.9626 13.9626 18 9 18ZM9 2.24975C5.27789 2.24975 2.24975 5.27789 2.24975 9C2.24975 12.7221 5.27789 15.7502 9 15.7502C12.7221 15.7502 15.7502 12.7221 15.7502 9C15.7502 5.27789 12.7221 2.24975 9 2.24975ZM13.4995 11.2497H13.4984H7.87512V5.62538H10.1249V9H13.4995V11.2486V11.2497Z" fill="#2157AA"/></svg></a><a class="delete modal-trigger" data-modal="modal-delete-contract">Delete<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#2157AA"/></svg></a></div></div>');
-        } 
-        
-        // Show no contracts msg if no contracts are saved.
-        if (active_contracts.length == 0) {
-            $('.no-contract').removeClass('d-none');
+                if (!position) {
+                    position = '';
+                }
+                if (!expiry) {
+                    expiry = "in seven days";
+                }
+                if ( get_remaining_days(expiry) > 7) {
+                    extend_classes = 'extend inactive';
+                }
+
+                $('.contracts-list').append('<div class="contract" id='+ id +'><div class="contract-details remove-element-padding"><p class="contract-name mb-0"><span>' + position + '</span> contract</p><p>Expires <span class="expiry">' + expiry + '</span></p></div><div class="contract-actions"><a class="edit">Edit<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.68223 15.516L6.74726 16.451L0.442295 17.9485L1.94069 11.6444L2.83642 10.6702L7.68223 15.516ZM10.6005 2.90609L15.408 7.71352L8.62244 14.4991L3.815 9.69162L10.6005 2.90609ZM13.5136 0.00871828L18.3202 4.81528L16.3822 6.75326L11.5756 1.94669L13.5136 0.00871828Z" fill="#2157AA"/></svg></a><a class="' + extend_classes + '" data-modal="modal-extend-deadline">Extend deadline<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C4.03738 18 0 13.9626 0 9C0 4.03738 4.03738 0 9 0C13.9626 0 18 4.03738 18 9C18 13.9626 13.9626 18 9 18ZM9 2.24975C5.27789 2.24975 2.24975 5.27789 2.24975 9C2.24975 12.7221 5.27789 15.7502 9 15.7502C12.7221 15.7502 15.7502 12.7221 15.7502 9C15.7502 5.27789 12.7221 2.24975 9 2.24975ZM13.4995 11.2497H13.4984H7.87512V5.62538H10.1249V9H13.4995V11.2486V11.2497Z" fill="#2157AA"/></svg></a><a class="delete modal-trigger" data-modal="modal-delete-contract">Delete<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#2157AA"/></svg></a></div></div>');
+            }
+            
+            // Show no contracts msg if no contracts are saved.
+            if (active_contracts.length == 0) {
+                $('.no-contract').removeClass('d-none');
+            } else {
+                $('.no-contract').addClass('d-none');
+            } 
+
+
+        } else if ( verified == 'incomplete') {
+            $('#ecb-cta-verify').addClass('d-none');
+            $('.contracts-container').addClass('d-none');
+            $('#ecb-cta-verify-known').removeClass('d-none');
+            console.log('verification incomplete');
         } else {
-            $('.no-contract').addClass('d-none');
-        } 
+            $('#ecb-cta-verify').removeClass('d-none');
+            $('#ecb-cta-verify-known').addClass('d-none');
+            $('.contracts-container').addClass('d-none');
+            console.log('unverified');
+        }
 
         // Display links to saved contracts
-        $('a.contract-name,  a.edit').on('click', function(){
+        $('body').on('click', 'a.edit', function(){
+            console.log('clicked');
             var steps = ['nav-step-1', 'nav-step-2', 'nav-step-3', 'nav-step-4', 'nav-step-5', 'nav-step-6', 'nav-step-7', 'nav-step-8'];
             var pages = ['position', 'hours', 'pay', 'leave', 'obligations', 'ending-employment', 'review',  'finalise'];
             localStorage.setItem('returning', 'true');
