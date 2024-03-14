@@ -75,7 +75,7 @@ html.ecb-prototype {
             display: block;
         }
     }
-    .modal-example, #ecb-cta-verify {
+    .modal-example, #ecb-cta-verify, #ecb-cta-verify-known {
 
         .icon-wrapper {
             background: $bga-green-success-dark;
@@ -149,6 +149,20 @@ html.ecb-prototype {
                     position: absolute;
                     top: 20px;
                     left: 12px;
+                    animation: tick-display 2s linear infinite;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                }
+                @keyframes tick-display {
+                    0% {
+                       opacity: 0;
+                    }
+                    50% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
                 }
             }
 
@@ -514,7 +528,7 @@ html.ecb-prototype {
         }
     }
 }
-.subsite-footer #reset-prototype {
+.subsite-footer #reset-prototype, #reset-prototype-verification {
     color: $bga-white;
     font-size: 10px;
     text-decoration: underline;
