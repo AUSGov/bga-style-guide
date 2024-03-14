@@ -19,19 +19,17 @@ html.ecb-prototype {
     #subsite-header .bga-link-strap {
         min-height: 54px;
     }
-    #landing-page {
-        #subsite-header .secondary-links {
-            display: block;
-            a {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                color: $bga-white;
-                text-decoration: none;
+    #subsite-header .secondary-links {
+        display: block;
+        a {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: $bga-white;
+            text-decoration: none;
 
-                &:focus, &:hover {
-                    text-decoration: underline;
-                }
+            &:focus, &:hover {
+                text-decoration: underline;
             }
         }
     }
@@ -391,6 +389,12 @@ html.ecb-prototype {
         width: calc(100% + 32px);
         padding: 8px 16px;
     }
+    .email-privacy-info {
+        background: $bga-blue-black-lightest;
+        margin: 0 -16px;
+        width: calc(100% + 32px);
+        padding: 32px 16px;
+    }
     .email-footer {
         background: $bga-blue-footer;
         margin: 0 -16px;
@@ -475,13 +479,14 @@ html.ecb-prototype {
         padding: 24px 0;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
 
         
     }
     .contract-details {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        flex-direction: column;
 
         .contract-name {
             margin-right: 24px;
@@ -491,11 +496,15 @@ html.ecb-prototype {
     }
     .contract-actions {
         min-width: 380px;
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 24px;
+
         a {
-            margin-left: 24px;
             text-decoration: none;
             border-bottom: 1px solid $bga-blue-links;
             padding-bottom: 4px;
+            margin-bottom: 8px;
             display: inline-flex;
             align-items: flex-end;
             line-height: 1;
@@ -538,9 +547,6 @@ html.ecb-prototype {
     }
 }
 .subsite-footer .saved-contracts-link {
-    display: none;
-}
-#landing-page .subsite-footer .saved-contracts-link {
     display: block;
 
     a {
@@ -663,11 +669,11 @@ html.ecb-prototype {
         .contract-actions {
             min-width: auto;
             margin-top: 16px;
+            padding: 0;
 
             a {
-                &:first-of-type {
-                    margin-left: 0;
-                }    
+                justify-content: flex-start;   
+                margin-bottom: 0;
             }
         }
     }
@@ -698,15 +704,11 @@ html.ecb-prototype {
         }
     }
     .contracts-list {
+        align-items: flex-start;
+
         .contract-actions {
-            a {
-                display: inline-block;
-                margin: 0 16px 16px 0;
-                
-                &:last-of-type {
-                    margin: 0 0 0 0;
-                }
-            }
+            row-gap: 16px;
+            flex-direction: column;
         }
     }
 }
