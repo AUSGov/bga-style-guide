@@ -206,9 +206,31 @@ html.ecb-prototype {
         .success-green {
             background: $bga-green-success-light;
         }
+        .confirm-yellow {
+            background: $bga-yellow-highlight-light;
+        }
+        .modal-icon-title-primary, .modal-icon-title-secondary {
+            column-gap: 16px;
+            align-items: center;
+
+            svg {
+                flex-shrink: 0;
+                flex-grow: 0;
+            }
+        }
+        .ecb-button-group {
+            column-gap: 24px;
+            row-gap: 24px;
+            align-items: center;
+            
+            a {
+                flex-shrink: 0;
+                flex-grow: 0;
+            }
+        }
     }
 
-    #ecb-modal-email, #ecb-modal-save, #ecb-cta-verify {
+    #ecb-modal-email, #ecb-modal-save, #ecb-cta-verify, #ecb-extend-modal {
         .step {
             display: none;
 
@@ -306,7 +328,7 @@ html.ecb-prototype {
             width: 100%;
             background: $bga-teal-highlight-mid;
             display: flex;
-            column-gap: 16px;
+            column-gap: 8px;
             align-items: center;
 
             h3 {
@@ -611,6 +633,11 @@ html.ecb-prototype {
 
             .cta-title {
                 width: 100%;
+
+                svg {
+                    width: 40px;
+                    height: 40px;
+                }
             }
 
             .cta-content {
@@ -684,7 +711,34 @@ html.ecb-prototype {
             padding-right: 0px !important;
         }
 
-        
+        .call-to-action.finalise {
+            .finalise-ctas {
+                flex-wrap: wrap;
+            }
+    
+            .cta-content {
+                flex-direction: column;
+                align-items: flex-start !important;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+    
+                row-gap: 16px;
+                p {
+                    margin: 0 0 16px 0;
+    
+                    &:last-of-type {
+                        margin: 0;
+                    }
+                }
+                .explanation {
+                    display: block;
+                    flex: 1; 
+                }
+                .button-example {
+                    flex: 0 1 auto;    
+                }
+            }
+        }
     }
     .contracts-list {
         .contract {
@@ -726,6 +780,20 @@ html.ecb-prototype {
                 margin-right: 0 !important;
             }
         }
+        .modal-example .modal-icon-title-primary {
+            column-gap: 8px;
+            align-items: flex-start;
+            
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+       .modal-example .modal-icon-title-secondary {
+            svg {
+                display: none;
+            }
+        }
     }
     .contracts-list {
         align-items: flex-start;
@@ -735,35 +803,13 @@ html.ecb-prototype {
             flex-direction: column;
         }
     }
-
+    
     .call-to-action.finalise {
-        .finalise-ctas {
-            flex-wrap: wrap;
-        }
-
-        .cta-content {
-            flex-direction: column;
-            align-items: flex-start !important;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-
-            row-gap: 16px;
-            p {
-                margin: 0 0 16px 0;
-
-                &:last-of-type {
-                    margin: 0;
-                }
-            }
-            .explanation {
-                display: block;
-                flex: 1; 
-            }
-            .button-example {
-                flex: 0 1 auto;    
-            }
+        .cta-title {
+            padding: 8px 16px !important;
         }
     }
+    
 }
 
 @media (max-width: 350px) {
@@ -800,6 +846,18 @@ html.ecb-prototype {
                 width: 100%;
                 text-align: center
             }
+        }
+        
+        .call-to-action.finalise {
+            .cta-title {
+                svg {
+                    display: none;
+                }
+            }
+        }
+        .modal-example .modal-icon-title-primary {
+            row-gap: 8px;
+            flex-direction: column;
         }
     }
 }
