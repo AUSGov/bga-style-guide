@@ -983,8 +983,13 @@ $(document).ready(function () {
 
     // Extend a saved contract
     $('body').on('click', '.extend.modal-trigger.active', function() {
-       
+        $('#ecb-extend-modal').addClass('show');
+        $(this).removeClass('modal-trigger active').addClass('inactive');
         var extended_contract = $(this).parents('.contract').attr('id');
+        sessionStorage.setItem('Extending contract', extended_contract);
+    });
+    $('body').on('click', '.extend-confirm', function() {
+        var extended_contract = sessionStorage.getItem('Extending contract');
         var date_str = contracts[extended_contract]['date str'];
         var extended_date = get_date(7, date_str);
 
@@ -992,11 +997,10 @@ $(document).ready(function () {
         $('.contract#' + extended_contract + ' .expiry').text(extended_date[1]);
         save_response_to_contracts(extended_contract, 'date str', extended_date[0]);
         save_response_to_contracts(extended_contract, 'expiry date', extended_date[1]);
+        sessionStorage.removeItem('Extending contract');
 
-        $('#modal-extend-deadline').addClass('show');
-
-         $(this).removeClass('modal-trigger active').addClass('inactive');
-
+        $('#step-confirm').removeClass('show');
+        $('#step-success').addClass('show');
     });
 
     // Set new contract from link on manage contracts page
