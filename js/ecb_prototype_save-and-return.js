@@ -882,9 +882,10 @@ $(document).ready(function () {
         current_contract = 'contracttemp';
         localStorage.setItem('current contract', 'contracttemp');
         
-        var new_contract = localStorage.getItem('saved new');
+        var new_contract = localStorage.getItem('saved new'),
+        success_viewed = sessionStorage.getItem('success viewed');
 
-        if (new_contract == 'true') {
+        if (new_contract == 'true' && !success_viewed) {
             $('.modal-overlay').addClass('show');
             $('#new-contract-notification').addClass('show');
             localStorage.setItem('saved new', '');
@@ -892,6 +893,7 @@ $(document).ready(function () {
             contracts['contracttemp'] = {};
             localStorage.setItem('contracts', JSON.stringify(contracts));
         }
+        sessionStorage.removeItem('success viewed');
         
         // Show/hide verification components
         if ( verified == 'complete') {
@@ -1041,8 +1043,13 @@ $(document).ready(function () {
         if (saved_previous == 'true') {
             $('#save-prompt-step-3, .modal-overlay').addClass('show');
             sessionStorage.removeItem('saved_prompt');
+
+            
         }
     }
+    $('.success-viewed').on('click', function(){
+        sessionStorage.setItem('success viewed', 'true');
+    });
 
     // Set new contract from 'create new contract' link on finalise page
     $('#save-contract-radios input').on('change', function(){
