@@ -737,9 +737,13 @@ $(document).ready(function () {
         var btn_location;
         if ($(this).hasClass('in-page')) {
             btn_location = 'in-page';
+        } else if ($(this).hasClass('in-saved-contracts')) {
+            btn_location = 'in-saved-contracts';
+            
         } else {
-            btn_location = 'modal';
+            btn_location = 'in-modal';
         }
+        console.log(btn_location);
         
         var code = inputElements.map(({ value }) => value).join(''),
         id = $(this).parents('.step').attr('data-id');
@@ -750,7 +754,7 @@ $(document).ready(function () {
             $('#step-save-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
             $(this).prop('disabled', true).addClass('disabled');
 
-            if ( btn_location == 'modal') {
+            if ( btn_location == 'in-modal' ||  btn_location == 'in-saved-contracts') {
                 var date_array = get_date(7);
                 save_response_to_contracts(current_contract, 'expiry date', date_array[1]);
                 save_response_to_contracts(current_contract, 'date str', date_array[0]);
@@ -805,13 +809,18 @@ $(document).ready(function () {
                     } else {
                         $('.no-contract').addClass('d-none');
                     }
-
-                   //window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
-                } else if ( btn_location == 'modal') {
+                } else if ( btn_location == 'in-modal') {
                     localStorage.setItem('current contract', 'contracttemp');
                     localStorage.setItem('saved new', 'true');
                     reset_verification_modal();
-                    window.location = '/bga-style-guide/prototypes/ecb/manage-contracts';
+                    window.location = '/bga-style-guide/prototypes/ecb/manage-contracts.html';
+                } 
+                else if ( btn_location == 'in-saved-contracts') {
+                    localStorage.setItem('current contract', 'contracttemp');
+                    localStorage.setItem('saved new', 'true');
+                    sessionStorage.setItem('saved_prompt', 'true');
+                    reset_verification_modal();
+                    window.location = '/bga-style-guide/prototypes/ecb/position.html';
                 }
             }, 3200);
 
@@ -1009,19 +1018,46 @@ $(document).ready(function () {
         window.location.pathname = "/bga-style-guide/prototypes/ecb/landing";
     });
 
-    //Set new contract from 'create new contract' link on finalise page
+    // Show Save prompt modal on manage saved contracts click IF user is in an unsaved contract.
+    $('.modal-save-prompt-trigger').on('click', function(){
+        $('#save-contract-radios input').each(function(){
+               $(this).checked = false;
+        });
+        if (current_contract == 'contracttemp') { 
+            $('.modal-overlay, #ecb-modal-save-prompt').addClass('show');
+            $()
+        } else {
+            window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
+        }
+    });
+    $('#prompt-verification-trigger').on('click', function(){
+        $('#step-save-prompt-initial').addClass('d-none');
+        $('#step-save-email-address.step').addClass('show');
+    });
+    // Show save prompt success message on return to position page.
+    if ($('body.category-Position')) {
+        var saved_previous = sessionStorage.getItem('saved_prompt');
+
+        if (saved_previous == 'true') {
+            $('#save-prompt-step-3, .modal-overlay').addClass('show');
+            sessionStorage.removeItem('saved_prompt');
+        }
+    }
+
+    // Set new contract from 'create new contract' link on finalise page
     $('#save-contract-radios input').on('change', function(){
         var response = $(this).val();
 
         if (response == 'no') {
             $('.save-no').removeClass('d-none');
+            $('.save-yes').addClass('d-none');
             
         } else if (response == 'yes') {
             $('.save-no').addClass('d-none');
-            $('#ecb-modal-save').addClass('show');
-            $('#modal-new-contract').removeClass('show');
+            $('.save-yes').removeClass('d-none');
         }
     });
+
 
     // Add position and dates to emails
     if ($('#ecb-prototype.ecb-email').length) {
