@@ -568,13 +568,26 @@ html.ecb-prototype {
         }
     }
 }
-.subsite-footer #reset-prototype, #reset-prototype-verification {
-    color: $bga-white;
-    font-size: 10px;
-    text-decoration: underline;
+.subsite-footer .reset-links {
+    background: #CA0CC1;
 
-    &:hover {
-        background: none;
+    .reset-links-container {
+        display: flex;
+        row-gap: 24px;
+        column-gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    h4 {
+        color: $bga-white;
+    }
+    #reset-prototype, .reset-verification {
+        color: $bga-white;
+        text-decoration: underline;
+
+        &:hover {
+            background: none;
+        }
     }
 }
 .subsite-footer .saved-contracts-link {
