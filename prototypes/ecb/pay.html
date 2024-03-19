@@ -79,7 +79,7 @@
                             <div class="col-6 secondary-links">
                                 
                                 <ul class="p-0 m-0">
-                                    <li class="p-0 m-0"><a class="success-viewed modal-save-prompt-trigger" data-modal="ecb-modal-save-prompt" tabindex="0" href=""><svg class="me-2" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <li class="p-0 m-0"><a class="success-viewed modal-save-saved-contracts-trigger" data-modal="modal-save-saved-contracts" tabindex="0" href=""><svg class="me-2" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M16.3479 0.96875H2.48023C1.19747 0.96875 0.168945 2.00883 0.168945 3.28004V19.459C0.168945 20.7302 1.19747 21.7703 2.48023 21.7703H18.6592C19.9304 21.7703 20.9705 20.7302 20.9705 19.459V5.59132L16.3479 0.96875ZM10.5697 19.459C8.65137 19.459 7.1028 17.9105 7.1028 15.9921C7.1028 14.0737 8.65137 12.5252 10.5697 12.5252C12.4881 12.5252 14.0367 14.0737 14.0367 15.9921C14.0367 17.9105 12.4881 19.459 10.5697 19.459ZM14.0367 7.90261H2.48023V3.28004H14.0367V7.90261Z" fill="white"/>
                                         </svg>Saved contracts</a></li>
                                 </ul>
@@ -1613,7 +1613,7 @@
                     </div>
 
                     <div class="saved-contracts-link my-5">
-                        <a class="modal-save-prompt-trigger success-viewed" data-modal="ecb-modal-save-prompt" tabindex="0" href="" | relative_url }}><svg class="me-2" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a class="modal-save-saved-contracts-trigger success-viewed" data-modal="modal-save-saved-contracts" tabindex="0" href="" | relative_url }}><svg class="me-2" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.3479 0.96875H2.48023C1.19747 0.96875 0.168945 2.00883 0.168945 3.28004V19.459C0.168945 20.7302 1.19747 21.7703 2.48023 21.7703H18.6592C19.9304 21.7703 20.9705 20.7302 20.9705 19.459V5.59132L16.3479 0.96875ZM10.5697 19.459C8.65137 19.459 7.1028 17.9105 7.1028 15.9921C7.1028 14.0737 8.65137 12.5252 10.5697 12.5252C12.4881 12.5252 14.0367 14.0737 14.0367 15.9921C14.0367 17.9105 12.4881 19.459 10.5697 19.459ZM14.0367 7.90261H2.48023V3.28004H14.0367V7.90261Z" fill="white"/>
                                     </svg>Saved contracts</a>
                         </div>
@@ -1679,7 +1679,8 @@
     </div>
 </div>
 
-<div id="ecb-modal-save-prompt" class="bga-component modal-example px-4 pb-4 pt-5">
+<!-- SAVE PROMPT MODAL triggered by 'SAVE CONTRACTS' LINK -->
+<div id="modal-save-saved-contracts" class="bga-component modal-example px-4 pb-4 pt-5">
 
     <button class="close m-0 p-0">Close</button>
 
@@ -1717,7 +1718,7 @@
                         <div class="ecb-button-group">
                             
                             <div class="button-example">
-                            <a class="bga-btn bga-primary-btn bkg-light ecb_new_contract" tabindex="0" href=/bga-style-guide/prototypes/ecb/position.html role="button">Create new contract</a>
+                            <a class="bga-btn bga-primary-btn bkg-light ecb_new_contract" tabindex="0" href=/bga-style-guide/prototypes/ecb/manage-contracts.html role="button">Continue to saved contracts</a>
                             </div> 
         
                             <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
@@ -1821,9 +1822,153 @@
     </div>
 </div>
 
+<!-- SAVE PROMPT MODAL triggered by 'NEW CONTRACTS' LINK -->
+<div id="modal-save-new-contract" class="bga-component modal-example px-4 pb-4 pt-5">
 
-<!-- SAVE PROMPT - STEP 3 MODAL -->
-<div id="save-prompt-step-3" class="bga-component modal-example px-4 pb-4 pt-5">
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text p-0 remove-element-padding">
+
+                <div id="step-save-prompt-initial">
+                    
+                    <h4>You are about to leave this contract. Would you like to save your progress?</h4>
+
+
+                    <div class="radios" id="new-contract-radios">
+                        <div class="" role="radiogroup">
+    
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" value="yes" type="radio" name="new-contract-radios" id="new-save-yes">
+                                <label class="form-check-label" for="new-save-yes">Yes, save this contract</label>
+                            </div>
+    
+                            <div class="radio-button alternate pb-1">
+                                <input class="form-check-input m-0" value="no" id="new-save-no" type="radio" name="new-contract-radios">
+                                <label class="form-check-label" for="new-save-no">No, don't save</label>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+
+
+                    <div class="new-save-no d-none">
+              
+                        <p class="mt-4">Any information you have already entered will be removed.</p>
+                        
+                        <div class="ecb-button-group">
+                            
+                            <div class="button-example">
+                            <a class="bga-btn bga-primary-btn bkg-light ecb_new_contract" tabindex="0" href=/bga-style-guide/prototypes/ecb/position.html role="button">Create new contract</a>
+                            </div> 
+        
+                            <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                                
+                        </div>
+                    
+                    </div>
+        
+
+                    <div class="new-save-yes d-none">
+                        <p>You will be asked to provide and verify your email address to save your progress.</p>
+        
+                        <div class="ecb-button-group">
+                            
+                            <button data-modal="ecb-modal-save" id="prompt-verification-trigger" class="bga-btn bga-primary-btn bkg-light flex-shrink-0 save-prompt" tabindex="0" role="button">Save for later</button>
+        
+                            <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                                
+                        </div>
+        
+                    </div>
+    
+                </div>
+
+                <div id="step-save-email-address" data-id="ecb" class="step remove-element-padding">
+                    <h4>Enter your email address to save your progress in this tool</h4>
+
+                    <p>We will send you a link so you can return and work on your contract later. You will have <strong>seven days</strong> to continue working on your contract.</p>
+                    <p>We will first send a code to your email to verify that it's you.</p>
+
+                    <form id="email-form" class="d-flex mb-4">
+                        <input type="text" class="form-control mb-0 me-3" value="">
+                        <div class="button-example">
+                            <button class="bga-btn bga-primary-btn bkg-light progress-step" tabindex="0" href="" role="button">Email <svg
+                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                    height="15.429" viewBox="0 0 18 15.429">
+                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                                </svg></button>
+                        </div>
+                    </form>
+
+                    <p class="mini">This site is protected by reCAPTCHA and the <a href="" class="external">Google Privacy Policy</a> and <a href="" class="external">Terms of Service</a> apply</p>
+
+                </div>
+
+                <div id="step-save-verify-email" data-id="ecb" class="step remove-element-padding">
+                    <h4>Verify your email address</h4>
+
+                    <p>We’ve sent a 4 digit code to <strong><span class="user-email">user@emailaddress.com.au</span></strong>.</p>
+                    <p>Enter the code below to verify your email address.
+                    </p>
+
+                    <form id="verify-form" data-id="ecb" >
+                    <fieldset class='number-code'>
+                        <div class="d-inline-flex code-inputs">
+                            <input name='code' class='ecb-code-input py-2 me-2' required/>
+                            <input name='code' class='ecb-code-input py-2 me-2' required/>
+                            <input name='code' class='ecb-code-input py-2 me-2' required/>
+                            <input name='code' class='ecb-code-input py-2' required/>   
+                            
+                        <div class="success-icon ms-4">
+                       
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+                            <circle cx="22" cy="22" r="20" />
+                          </svg>
+
+                          <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="18.857" height="14.918" viewBox="0 0 18.857 14.918">
+                            <path d="M0,8.737,2.236,6.461l3.945,3.954L16.6,0l2.256,2.241L6.181,14.918Z" fill="#ffffff"/>
+                          </svg>
+                          
+                          
+                        </div>
+
+
+                        </div> 
+                        <div class="error-msg mt-3 mb-0">
+                            <p>Incorrect code. Please enter the code sent to your email address.</p>
+                        </div> 
+                       
+                        <div class="resend remove-element-padding mt-3 mb-5">
+                            <p class="mini me-2 mb-0">Didn’t receive the code?</p>
+                            <a href="" class="mini">Resend code</a> 
+                        </div>
+
+
+                        </fieldset>
+                        
+                        <div class="button-example">
+                            <button class="bga-btn bga-primary-btn bkg-light in-new-contract progress-step" id="ecb-verify-btn" tabindex="0" href="" role="button">Save contract <svg
+                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                    height="15.429" viewBox="0 0 18 15.429">
+                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                                </svg></button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- SUCCESS MESSAGE MODAL - triggered in SAVE PROMPT FROM 'NEW CONTRACTS' LINK -->
+<div id="success-message-new-contracts" class="bga-component modal-example px-4 pb-4 pt-5">
 
     <button class="close m-0 p-0">Close</button>
 
@@ -1873,6 +2018,8 @@
 
     </div>
 </div>
+
+
 
 
 
