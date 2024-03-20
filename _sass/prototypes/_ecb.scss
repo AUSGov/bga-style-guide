@@ -246,6 +246,84 @@ html.ecb-prototype {
             }
         }
     }
+    #step-already-verified {
+        .success-message {
+            display: none;
+            column-gap: 8px;
+            
+            p {
+                color: $bga-green-success-dark;
+                margin: 0;
+            }
+            
+            &.show {
+                display: flex;
+                align-items: center;
+                
+            }
+        }
+        .success-icon {
+            display: none;
+            position: relative;
+
+            &.show {
+                display: flex;
+                align-items: center;
+            }
+
+            circle {
+                fill: $bga-green-success-dark;
+                stroke: $bga-green-success-dark;
+                stroke-width: 4px;
+                stroke-dasharray: 126;
+                animation: success-animation 2s linear infinite;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                transform: rotate(-90deg);
+                transform-origin: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            @keyframes success-animation {
+                0% {
+                    stroke-dashoffset: 126;
+                    fill: transparent;
+                }
+
+                50% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                }
+
+                100% {
+                    stroke-dashoffset: 0;
+                    fill: $bga-green-success-dark;
+                }
+            }
+
+            .tick {
+                position: absolute;
+                top: 15px;
+                left: 12px;
+                animation: tick-display 2s linear infinite;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+            }
+            @keyframes tick-display {
+                0% {
+                   opacity: 0;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 
     #email-form {
         input {
