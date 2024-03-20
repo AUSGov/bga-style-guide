@@ -880,6 +880,13 @@ $(document).ready(function () {
                 save_response_to_contracts(current_contract, 'date str', date_array[0]);
                 save_temp_contract(); 
             }
+
+            setTimeout(function () { 
+                $('#step-already-verified .success-message').addClass('show');
+                $('#step-already-verified .success-message .success-icon').addClass('show');
+                //$('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );  
+            }, 400);
+
             
             setTimeout(function () {
                 if ( btn_location == 'in-page') {
@@ -926,14 +933,15 @@ $(document).ready(function () {
                     localStorage.setItem('saved new', 'true');
                     reset_verification_modal();
                     window.location = '/bga-style-guide/prototypes/ecb/manage-contracts.html';
-                }  else if ( btn_location == 'in-new-contract') {
+                }  
+                else if ( btn_location == 'in-new-contract') {
                     localStorage.setItem('current contract', 'contracttemp');
                     localStorage.setItem('saved new', 'true');
                     sessionStorage.setItem('saved_prompt', 'true');
                     reset_verification_modal();
                     window.location = '/bga-style-guide/prototypes/ecb/position.html';
                 }
-            }, 400);
+            }, 3000);
 
 
 
