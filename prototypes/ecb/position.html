@@ -1958,11 +1958,10 @@
                         </fieldset>
                         
                         <div class="button-example">
-                            <button class="bga-btn bga-primary-btn bkg-light in-modal progress-step" id="ecb-verify-btn" tabindex="0" href="" role="button">Save contract <svg
-                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
-                                    height="15.429" viewBox="0 0 18 15.429">
-                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
-                                </svg></button>
+                            <button class="bga-btn bga-primary-btn bkg-light in-modal progress-step" id="ecb-verify-btn" tabindex="0" href="" role="button">Save contract <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.2901 0H1.75573C0.7813 0 0 0.790079 0 1.75573V14.0458C0 15.0115 0.7813 15.8016 1.75573 15.8016H14.0458C15.0115 15.8016 15.8016 15.0115 15.8016 14.0458V3.51146L12.2901 0ZM7.90079 14.0458C6.44353 14.0458 5.26719 12.8695 5.26719 11.4122C5.26719 9.95499 6.44353 8.77865 7.90079 8.77865C9.35804 8.77865 10.5344 9.95499 10.5344 11.4122C10.5344 12.8695 9.35804 14.0458 7.90079 14.0458ZM10.5344 5.26719H1.75573V1.75573H10.5344V5.26719Z" fill="#333333"/>
+                                </svg>
+                                </button>
                         </div>
 
                     </form>
@@ -1978,11 +1977,10 @@
                     <div class="ecb-button-group">
                             
                         <div class="button-example">
-                            <button class="bga-btn bga-primary-btn bkg-light in-modal progress-step" id="ecb-no-verify-btn" tabindex="0" href="" role="button">Save contract <svg
-                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
-                                    height="15.429" viewBox="0 0 18 15.429">
-                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
-                                </svg></button>
+                            <button class="bga-btn bga-primary-btn bkg-light in-modal progress-step" id="ecb-no-verify-btn" tabindex="0" href="" role="button">Save contract <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.2901 0H1.75573C0.7813 0 0 0.790079 0 1.75573V14.0458C0 15.0115 0.7813 15.8016 1.75573 15.8016H14.0458C15.0115 15.8016 15.8016 15.0115 15.8016 14.0458V3.51146L12.2901 0ZM7.90079 14.0458C6.44353 14.0458 5.26719 12.8695 5.26719 11.4122C5.26719 9.95499 6.44353 8.77865 7.90079 8.77865C9.35804 8.77865 10.5344 9.95499 10.5344 11.4122C10.5344 12.8695 9.35804 14.0458 7.90079 14.0458ZM10.5344 5.26719H1.75573V1.75573H10.5344V5.26719Z" fill="#333333"/>
+                                </svg>
+                                </button>
                         </div>
     
                         <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
@@ -2095,7 +2093,7 @@
 
                 <div id="step-save-prompt-initial">
                     
-                    <h4>You are about to leave this contract. Would you like to save your progress?</h4>
+                    <h4>Save your progress before leaving this contract?</h4>
 
 
                     <div class="radios" id="save-contract-radios">
@@ -2135,7 +2133,7 @@
 
                     <div class="dynamic-info save-yes d-none">
 
-                        <div class="unverified-content">
+                        <div class="unverified-content d-none">
                              <p>You will be asked to provide and verify your email address to save your progress.</p>
              
                              <div class="ecb-button-group">
@@ -2146,6 +2144,18 @@
                                      
                              </div>
                         </div>
+
+                        <div class="verified-content d-none">
+                            <p>We will email a link to your saved contract.</p>
+            
+                            <div class="ecb-button-group">
+                                
+                                <button data-modal="ecb-modal-save" id="prompt-verification-trigger" class="bga-btn bga-primary-btn bkg-light flex-shrink-0 save-prompt" tabindex="0" role="button">Save for later</button>
+            
+                                <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                                    
+                            </div>
+                       </div>
  
                      
                      </div>
@@ -2229,22 +2239,20 @@
 
 
                 <div id="step-already-verified" class="step remove-element-padding ">
-                    <h4>You are saving this contract</h4>
+                    <h4>We will send your saved contract link to <strong>user@emailadress.com.au</strong></h4>
 
-                    <p>You have already verified your email address in this session. We will send a link to <strong>user@emailaddress.com.au</strong> so you can return and work on your contract later. </p>
+                    <p>You will need to verify this email address if you return to your contract later.</p>
                     <p>You will have <strong>seven days</strong> to continue working on your contract.</p>
 
                     <div class="ecb-button-group">
                             
                         <div class="button-example">
-                            <button class="bga-btn bga-primary-btn bkg-light in-saved-contracts progress-step" id="ecb-no-verify-btn" tabindex="0" href="" role="button">Save contract <svg
-                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
-                                    height="15.429" viewBox="0 0 18 15.429">
-                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
-                                </svg></button>
+                            <button class="bga-btn bga-primary-btn bkg-light in-saved-contracts progress-step" id="ecb-no-verify-btn" tabindex="0" href="" role="button">Save contract <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.2901 0H1.75573C0.7813 0 0 0.790079 0 1.75573V14.0458C0 15.0115 0.7813 15.8016 1.75573 15.8016H14.0458C15.0115 15.8016 15.8016 15.0115 15.8016 14.0458V3.51146L12.2901 0ZM7.90079 14.0458C6.44353 14.0458 5.26719 12.8695 5.26719 11.4122C5.26719 9.95499 6.44353 8.77865 7.90079 8.77865C9.35804 8.77865 10.5344 9.95499 10.5344 11.4122C10.5344 12.8695 9.35804 14.0458 7.90079 14.0458ZM10.5344 5.26719H1.75573V1.75573H10.5344V5.26719Z" fill="#333333"/>
+                                </svg>
+                                </button>
                         </div>
-    
-                        <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+
                             
                     </div>
 
@@ -2266,7 +2274,7 @@
 
                 <div id="step-save-prompt-initial">
                     
-                    <h4>Would you like to save your progress before leaving this contract?</h4>
+                    <h4>Save your progress before leaving this contract?</h4>
 
                     <div class="radios" id="new-contract-radios">
                         <div class="" role="radiogroup">
@@ -2305,7 +2313,7 @@
 
                     <div class="dynamic-info new-save-yes d-none">
 
-                       <div class="unverified-content">
+                       <div class="unverified-content d-none">
                             <p>You will be asked to provide and verify your email address to save your progress.</p>
             
                             <div class="ecb-button-group">
@@ -2316,6 +2324,19 @@
                                     
                             </div>
                        </div>
+
+
+                       <div class="verified-content d-none">
+                        <p>We will email a link to your saved contract.</p>
+        
+                        <div class="ecb-button-group">
+                            
+                            <button data-modal="ecb-modal-save" id="prompt-verification-trigger" class="bga-btn bga-primary-btn bkg-light flex-shrink-0 save-prompt" tabindex="0" role="button">Save for later</button>
+        
+                            <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
+                                
+                        </div>
+                   </div>
 
                     
                     </div>
@@ -2398,22 +2419,20 @@
                 </div>
 
                 <div id="step-already-verified" class="step remove-element-padding ">
-                    <h4>You are saving this contract</h4>
+                    <h4>We will send your saved contract link to <strong>user@emailadress.com.au</strong></h4>
 
-                    <p>You have already verified your email address in this session. We will send a link to <strong>user@emailaddress.com.au</strong> so you can return and work on your contract later. </p>
+                    <p>You will need to verify this email address if you return to your contract later.</p>
                     <p>You will have <strong>seven days</strong> to continue working on your contract.</p>
 
                     <div class="ecb-button-group">
                             
                         <div class="button-example">
-                            <button class="bga-btn bga-primary-btn bkg-light in-new-contract progress-step" id="ecb-no-verify-btn" tabindex="0" href="" role="button">Save contract <svg
-                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
-                                    height="15.429" viewBox="0 0 18 15.429">
-                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
-                                </svg></button>
+                            <button class="bga-btn bga-primary-btn bkg-light in-new-contract progress-step" id="ecb-no-verify-btn" tabindex="0" href="" role="button">Save contract <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.2901 0H1.75573C0.7813 0 0 0.790079 0 1.75573V14.0458C0 15.0115 0.7813 15.8016 1.75573 15.8016H14.0458C15.0115 15.8016 15.8016 15.0115 15.8016 14.0458V3.51146L12.2901 0ZM7.90079 14.0458C6.44353 14.0458 5.26719 12.8695 5.26719 11.4122C5.26719 9.95499 6.44353 8.77865 7.90079 8.77865C9.35804 8.77865 10.5344 9.95499 10.5344 11.4122C10.5344 12.8695 9.35804 14.0458 7.90079 14.0458ZM10.5344 5.26719H1.75573V1.75573H10.5344V5.26719Z" fill="#333333"/>
+                                </svg>
+                                </button>
                         </div>
     
-                        <a class="bga-link me-4 bga-inline-link bkg-light cancel" tabindex="0" href="" role="button">Cancel</a>
                             
                     </div>
 
