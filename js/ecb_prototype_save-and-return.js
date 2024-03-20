@@ -2,50 +2,9 @@
 
 $(document).ready(function () {
 
-    // Reset prototype
-    $('#reset-prototype').on('click', function(){
-        localStorage.clear();
-
-        if ( $('.page-manage-contracts').length ) {
-            $('.no-contract').removeClass('d-none');
-            $('.contract').addClass('d-none');
-        }
-        window.location.pathname = "/bga-style-guide/prototypes/ecb/landing.html";
-    });
-    $('.reset-verification').on('click', function(){
-        var user_status = $(this).attr('data-status'),
-        verification_status = $(this).attr('data-verification');
-        localStorage.setItem('user status', user_status);
-        localStorage.setItem('verification status', verification_status);
-
-        window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
-    });
-
-    
-    // Set user verification states
-    var user_status = localStorage.getItem('user status'),
-    verification_status = localStorage.getItem('verification status');
-
-    if (!user_status) {
-        user_status = 'unknown';
-        localStorage.setItem('user status', user_status);
-    }
-    if (!verification_status) {
-        verification_status = 'unverified';
-        localStorage.setItem('verification status', 'unverified');
-    }
-    console.log(user_status);
-    console.log(verification_status);
-
-    // Add known user variable when user clicks on the return link in an email
-    $('#return-to-contract').on('click', function(){
-        localStorage.setItem('verification status', 'unverified');
-        localStorage.setItem('user status', 'known  ');
-    });
-    
     //ECB REVISED FLOW PROTOTYPE
 
-    // Variables to store multiple contracts
+    // Variables to store multiple contracts AND set user verification status
     if($('#ecb-prototype').length) {
         var contracts = JSON.parse(localStorage.getItem('contracts'));
         if (!contracts) {   
@@ -58,8 +17,23 @@ $(document).ready(function () {
         var current_contract = localStorage.getItem('current contract');
         if (!current_contract) {   
             current_contract = "contracttemp";
+            localStorage.setItem('current contract', current_contract);
         };
-        
+        console.log(current_contract);
+
+        var user_status = localStorage.getItem('user status'); 
+        if (!user_status) {
+            user_status = 'unknown';
+            localStorage.setItem('user status', user_status);
+        }
+        console.log(user_status);
+
+        var verification_status = localStorage.getItem('verification status');
+        if (!verification_status) {
+            verification_status = 'unverified';
+            localStorage.setItem('verification status', 'unverified');
+        }
+        console.log(verification_status);
     };
 
 
@@ -116,6 +90,7 @@ $(document).ready(function () {
             var expiry = contracts[current_contract]['date str'],
             remaining_days = get_remaining_days(expiry);
             $('.manage-contracts-content span.remaining-days').text(remaining_days);
+
         }
         $('#ecb-manage-contracts').on('click', function(){
             localStorage.setItem('current contract', 'contracttemp');
@@ -146,7 +121,7 @@ $(document).ready(function () {
 
     
     if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
-        check_last_viewed();   
+        //check_last_viewed();   
         change_save_to_manage();   
     }
        
@@ -1027,34 +1002,24 @@ $(document).ready(function () {
         current_contract = 'contracttemp';
         localStorage.setItem('current contract', 'contracttemp');
         
-        var new_contract = localStorage.getItem('saved new'),
-        success_viewed = sessionStorage.getItem('success viewed');
+        var new_contract = localStorage.getItem('saved new');
+        //success_viewed = sessionStorage.getItem('success viewed');
 
         //Manage success message modal display
         if (new_contract == 'true') {
-            if (!success_viewed) {
-                $('.modal-overlay').addClass('show');
-                $('#new-contract-notification').addClass('show');
-                localStorage.setItem('saved new', '');
-            } else {
-                contracts['contracttemp'] = {};
-                localStorage.setItem('contracts', JSON.stringify(contracts));
-            }
+            $('.modal-overlay').addClass('show');
+            $('#new-contract-notification').addClass('show');
+            localStorage.setItem('saved new', '');
         } else {
             contracts['contracttemp'] = {};
             localStorage.setItem('contracts', JSON.stringify(contracts));
         }
         
-        sessionStorage.removeItem('success viewed');
-        
-       
+        //sessionStorage.removeItem('success viewed');
+    
 
-        // Show/hide verification components 
-        console.log(verification_status);
-        console.log(user_status);
-
+        // Show/hide verification components on manage contracts page
         if ( verification_status == 'verified') {
-            console.log('verified');
             $('#ecb-cta-verify').addClass('d-none');
             $('#ecb-cta-verify-known').addClass('d-none');
             $('.contracts-container').removeClass('d-none');
@@ -1091,14 +1056,10 @@ $(document).ready(function () {
         } else if ( verification_status == 'unverified') {
 
             if (user_status == 'unknown') {
-                console.log('unknown and unverified');
                 $('#ecb-cta-verify').removeClass('d-none');
-                //$('#ecb-cta-verify-known').addClass('d-none');
                 $('.contracts-container').addClass('d-none');
 
             } else {
-                console.log('known but unverified');
-                //$('#ecb-cta-verify').addClass('d-none');
                 $('#ecb-cta-verify-known').removeClass('d-none');
                 $('.contracts-container').addClass('d-none');
 
@@ -1182,79 +1143,74 @@ $(document).ready(function () {
     });
 
     // Show Save prompt modal triggered by saved contracts link click IF user is in an unsaved contract.
-    $('.modal-save-saved-contracts-trigger').on('click', function(){
-        var modal_id = $(this).attr('data-modal');
-        $('#save-contract-radios input').each(function(){
-               $(this).checked = false;
-        });
+    
+    // Function to reset and open save prompt modals IS the user is in an unsaved contract.
+    var trigger_save_prompt = function(element){
+        var modal_id = $(element).attr('data-modal');
+
         if (current_contract == 'contracttemp') { 
             $('.modal-overlay, #' + modal_id).addClass('show');
+            
+            $('#' + modal_id + ' .radios input').each(function(){
+                $(this).prop('checked',false);
+            });
+
+            $('#' + modal_id + ' #step-save-prompt-initial').removeClass('d-none');
+            $('#' + modal_id + ' .dynamic-info').each(function(){
+                $(this).addClass('d-none');
+            });
+            
+            $('#' + modal_id + ' .step').each(function(){
+                $(this).removeClass('show');
+            });
+
         } else {
-            window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
+            if (modal_id == "modal-save-saved-contracts" ) {
+                window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
+            }
         }
+    };
+    $('.modal-save-saved-contracts-trigger').on('click', function(){
+        trigger_save_prompt($(this), '.save-yes', '.save-no');
     });
     // Show Save prompt modal triggered by new contract link click IF user is in an unsaved contract.
     $('.modal-save-new-contract-trigger').on('click', function(){
-        var modal_id = $(this).attr('data-modal');
-        $('#save-contract-radios-2 input').each(function(){
-               $(this).checked = false;
-        });
-        if (current_contract == 'contracttemp') { 
-            $('.modal-overlay, #' + modal_id).addClass('show');
-        }
+        trigger_save_prompt($(this), '.new-save-yes', '.new-save-no');
     });
 
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //  FIX Known user - unverified. When 'yes' option is selected .save-yes option isn't showing up.
-
-     // Dynamic display of questions in save prompts
-    $('#save-contract-radios input').on('change', function(){
-        var response = $(this).val();
-        console.log(response);
+    // Fucntion for dynamic display of questions in save prompts
+    var save_prompt_dynamic_display = function(element, yes_rsp, no_rsp){
+        var response = $(element).val();
 
         if (response == 'no') {
-            $('.save-no').removeClass('d-none');
-            $('.save-yes').addClass('d-none');
+            $(no_rsp).removeClass('d-none');
+            $(yes_rsp).addClass('d-none');
             
         } else if (response == 'yes') {
-            $('.save-no').addClass('d-none');
+            $(no_rsp).addClass('d-none');
             
             if (verification_status == 'unverified') {
-                ///////////////// PROBLEM HERE /////////////////
-                $('.save-yes').removeClass('d-none');
+                $(yes_rsp).removeClass('d-none');
             } else {
-                $(this).parents('.modal-example').find('#step-already-verified.step').addClass('show');
-                $(this).parents('.modal-example').find('#step-save-prompt-initial').addClass('d-none');
+                $(element).parents('.modal-example').find('#step-already-verified.step').addClass('show');
+                $(element).parents('.modal-example').find('#step-save-prompt-initial').addClass('d-none');
             }
         }
+    };
+    // Saved contracts link
+    $('#save-contract-radios input').on('change', function(){
+       save_prompt_dynamic_display($(this), '.save-yes', '.save-no');
     }); 
     
+    // New contract link
     $('#new-contract-radios input').on('change', function(){
-        var response = $(this).val();
-        console.log('I am ' + verification_status);
-
-        if (response == 'no') {
-            $('.new-save-no').removeClass('d-none');
-            $('.new-save-yes').addClass('d-none');
-            
-        } else if (response == 'yes') {
-            $('.new-save-no').addClass('d-none');
-            
-            if (verification_status == 'unverified') {
-                $('.new-save-yes').removeClass('d-none');
-            } else {
-                $(this).parents('.modal-example').find('#step-already-verified.step').addClass('show');
-                $(this).parents('.modal-example').find('#step-save-prompt-initial').addClass('d-none');
-            }
-        }
-    });
+        save_prompt_dynamic_display($(this), '.new-save-yes', '.new-save-no');
+     }); 
 
     $('body').on('click', '#prompt-verification-trigger', function(){
         
-        var parent = $(this).parents('.modal-example')
+        var parent = $(this).parents('.modal-example');
 
         parent.find('#step-save-prompt-initial').addClass('d-none');
         parent.find('#step-save-email-address.step').addClass('show');
@@ -1267,12 +1223,10 @@ $(document).ready(function () {
         if (sessionStorage.getItem('saved_prompt') == 'true') {
             $('#success-message-new-contracts, .modal-overlay').addClass('show');
             sessionStorage.removeItem('saved_prompt');
+
+            localStorage.setItem('saved new', '');
         }
     }
-    $('.success-viewed').on('click', function(){
-        sessionStorage.setItem('success viewed', 'true');
-    });
-
     
 
 
@@ -1305,6 +1259,42 @@ $(document).ready(function () {
     $(window).on('beforeunload', function () {
         var location = window.location.pathname;
         localStorage.setItem('prev-location', location);     
+    });
+
+
+    // PROTOTYPE RESETS
+
+    // Reset prototype
+
+    $('#reset-prototype').on('click', function(){
+        localStorage.clear();
+        window.location.pathname = "/bga-style-guide/prototypes/ecb/landing.html";
+    });
+
+    $('.reset-verification').on('click', function(){
+    
+        var user_status = $(this).attr('data-status'),
+        verification_status = $(this).attr('data-verification');
+
+        localStorage.setItem('user status', user_status);
+        localStorage.setItem('verification status', verification_status);
+
+        if (verification_status == 'unverified') {
+            var current_contract = "contracttemp";
+            localStorage.setItem('current contract', current_contract);
+        }
+        location.reload();
+
+    });
+
+    
+    // Add known user variable when user clicks on the return link in an email
+    $('#return-to-contract').on('click', function(){
+        localStorage.setItem('verification status', 'unverified');
+        localStorage.setItem('user status', 'known  ');
+        
+        var current_contract = "contracttemp";
+        localStorage.setItem('current contract', current_contract);
     });
 
 }); //End doc ready
