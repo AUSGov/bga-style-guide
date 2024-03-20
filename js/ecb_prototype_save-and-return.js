@@ -880,19 +880,7 @@ $(document).ready(function () {
                 save_response_to_contracts(current_contract, 'date str', date_array[0]);
                 save_temp_contract(); 
             }
-            /* Disable animations - DO WE WANT THESE IN THE MODAL STILL ???
-            setTimeout(function () { 
-                $('#step-save-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
-                $('#step-save-verify-email[data-id=' + id + '] .success-icon').addClass('show');
-                $('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );  
-            }, 400);
-
-            setTimeout(function () {
-                $('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').hide();
-                $('#step-save-verify-email[data-id=' + id + '] .success-icon').removeClass('show');
-                $('#step-save-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
-            }, 3000);
-            */
+            
             setTimeout(function () {
                 if ( btn_location == 'in-page') {
                     
@@ -1014,9 +1002,6 @@ $(document).ready(function () {
             contracts['contracttemp'] = {};
             localStorage.setItem('contracts', JSON.stringify(contracts));
         }
-        
-        //sessionStorage.removeItem('success viewed');
-    
 
         // Show/hide verification components on manage contracts page
         if ( verification_status == 'verified') {
@@ -1189,12 +1174,14 @@ $(document).ready(function () {
             
         } else if (response == 'yes') {
             $(no_rsp).addClass('d-none');
+            $(yes_rsp).removeClass('d-none');
             
             if (verification_status == 'unverified') {
-                $(yes_rsp).removeClass('d-none');
+                $(element).parents('.modal-example').find('.unverified-content').removeClass('d-none');
+                $(element).parents('.modal-example').find('.verified-content').addClass('d-none');
             } else {
-                $(element).parents('.modal-example').find('#step-already-verified.step').addClass('show');
-                $(element).parents('.modal-example').find('#step-save-prompt-initial').addClass('d-none');
+                $(element).parents('.modal-example').find('.unverified-content').addClass('d-none');
+                $(element).parents('.modal-example').find('.verified-content').removeClass('d-none');
             }
         }
     };
@@ -1211,9 +1198,14 @@ $(document).ready(function () {
     $('body').on('click', '#prompt-verification-trigger', function(){
         
         var parent = $(this).parents('.modal-example');
-
+        
         parent.find('#step-save-prompt-initial').addClass('d-none');
-        parent.find('#step-save-email-address.step').addClass('show');
+        
+        if (verification_status == "unverified") {
+            parent.find('#step-save-email-address.step').addClass('show');
+        } else {
+            parent.find('#step-already-verified.step').addClass('show');
+        }
     });
 
 
@@ -1281,10 +1273,14 @@ $(document).ready(function () {
 
         if (verification_status == 'unverified') {
             var current_contract = "contracttemp";
-            localStorage.setItem('current contract', current_contract);
+            localStorage.setItem('current contract', current_contract);  
         }
-        location.reload();
+        if (user_status == 'known' && verification_status == 'unverified') {
+            window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
+        } else {
+            location.reload();
 
+        }
     });
 
     
