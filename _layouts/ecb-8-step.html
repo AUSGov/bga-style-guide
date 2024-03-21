@@ -668,6 +668,7 @@
 
     <!-- PAGE HEADER -->
     <div id="page-header" tabindex="-1" class="teal stepped-nav">
+
         <div class="container">
 
             <div class="row inner-wrapper pt-5 mx-0">
@@ -676,7 +677,7 @@
 
                     <div class="col-12 remove-element-padding">
 
-                        <div  class="stepped-navigation-wrapper remove-element-padding {{ include.classes }}">
+                        <div  class="stepped-navigation-wrapper include-mini-toast remove-element-padding {{ include.classes }}">
 
                             <h1  class="step-title" data-step="{{page.step-number}}">{{ page.stepped-nav-step }}</h1>
 
@@ -691,25 +692,32 @@
                                 step7="Review"
                                 step8="Finalise"
                                 classes="teal"
+                            %} 
+                            
+                            
+                            <!-- MINI-TOAST -->
+                            {% include prototypes/mini-toast.html 
+                                text="Changes to this contract are being autosaved."
+                                classes=""
                             %}
 
-                           
 
 
-                           
-
-
-
-
-
-
-                        </div>
+                        </div> 
+                        
+                       
                     </div>
 
                 </div>
             </div>
-        </div>
+        </div>    
+        
+       
+
     </div>
+
+
+
 
 
 
@@ -859,8 +867,6 @@
 
     </div>
 </div>
-
-
 
 
 

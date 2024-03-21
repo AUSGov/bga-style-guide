@@ -1077,6 +1077,11 @@ $(document).ready(function () {
         $('#inpage-cta-toast').css('display', 'none');
     });
 
+    // COMPONENT EXAMPLE: MINI-TOAST
+    $('.mini-toast-trigger').on('click', function () {
+        $('.mini-toast').slideDown('slow');
+    });
+
 
     // COMPONENT EXAMPLE: COOKIE NOTIFICATION
     $('#cookie-trigger').on('click', function () {

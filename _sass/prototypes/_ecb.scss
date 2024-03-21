@@ -16,6 +16,10 @@ html.ecb-prototype {
 #ecb-prototype {
     overflow-x: hidden;
 
+    .page-content {
+        position: relative;
+    }
+
     #subsite-header .bga-link-strap {
         min-height: 54px;
     }
@@ -366,6 +370,9 @@ html.ecb-prototype {
     }
 
     //Sticky header 
+    #page-header .include-mini-toast {
+        position: relative;
+    }
     #page-header.fixed {
         position: fixed;
         top: 0;
@@ -685,6 +692,43 @@ html.ecb-prototype {
     }
 }
 
+.bga-component.mini-toast {
+    display: none;
+    background: $bga-white;
+    background: $bga-yellow-highlight-mid;
+    border: solid 1px $bga-green-success-dark;
+    border: solid 1px $bga-yellow-highlight-shadow;
+    border-left-width: 8px;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: $bga-btn-boxshadow;
+    z-index: 9000;
+
+    .component-content {
+        display: flex;
+        column-gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    &.show {
+        display: block;
+        animation: mini-toast-animation 1s ease-in-out forwards;
+        position: absolute;
+        bottom: -106.5px; // To sit 24px below the header.
+        right: -32px;
+    }
+    @keyframes mini-toast-animation {
+        from {
+            opacity: 0;
+            bottom: -82.5px;
+        }
+        to {
+            opacity: 1;
+            bottom: -106.5px; // To sit 24px below the header.
+        }
+    }
+}
+
 // Media queries
 @media (max-width: 1200px) {
     .contracts-list {
@@ -853,6 +897,26 @@ html.ecb-prototype {
             }
         }
     }
+    .bga-component.mini-toast {
+        &.show {
+            display: block;
+            animation: mini-toast-animation 1s ease-in-out forwards;
+            position: absolute;
+            bottom: -82.5px; // To sit 24px below the header.
+            right: -0px;
+        }
+        @keyframes mini-toast-animation {
+            from {
+                opacity: 0;
+                bottom: -58.5px;
+            }
+            to {
+                opacity: 1;
+                bottom: -82.5px; // To sit 24px below the header.
+            }
+        }
+    }
+    
 }
 
 @media (max-width: 576px) {
