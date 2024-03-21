@@ -248,6 +248,14 @@ $(document).ready(function () {
         } else {
             save_response_to_contracts(current_contract, input_field, input_value);
         }
+
+        if (current_contract != 'contracttemp' ) {
+            $('#ecb-save-mini-toast').addClass('show');
+
+            setTimeout(function () { 
+                $('#ecb-save-mini-toast').removeClass('show');
+            }, 6000);            
+        }
     });
 
     var populate_inputs_and_selects = function () {
@@ -1106,6 +1114,8 @@ $(document).ready(function () {
             }, 400);
         }); 
     } 
+
+    // Show mini-toast when user returns to saved contract and makes a change.
 
     // Extend a saved contract
     $('body').on('click', '.extend.modal-trigger.active', function() {
