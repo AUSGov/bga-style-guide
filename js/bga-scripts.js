@@ -1276,23 +1276,40 @@ $(document).ready(function () {
     // Open & close modals
     
     $('.modal-trigger').on('click', function () {
+        
+        var user_status = localStorage.getItem('user status');
+        if (!user_status) {
+            user_status = "unknown";
+        }
+        
         var modal = $(this).attr('data-modal');
-        var id= "bga";
-            if (modal.includes('ecb')) {
-                id='ecb'
-            } else if (modal.includes('nb')) {
-                id='nb'
-            } 
+        var id;
+        
+        if (modal.includes('ecb')) {
+            id='ecb';
+        } else if (modal.includes('nb')) {
+            id='nb'
+            user_status = "unknown";
+        } else {
+            id= "bga";
+            user_status = "unknown";
+        }
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
 
         if ( modal.includes('modal-email') ) { 
-
-            $('#step-email-address').addClass('show');
             $('#step-verify-email, #step-email-success, .success-icon').removeClass('show'); 
             $('#step-verify-email input').each(function(){
                 $(this).val('');
             });
+
+            if ( user_status == "unknown") {
+                $('#step-email-address').addClass('show'); 
+                $('#step-email-already-verified').removeClass('show');
+            } else {
+                $('#step-email-already-verified').addClass('show');
+                $('#step-email-address').removeClass('show'); 
+            };
 
         } else if ( modal.includes('modal-download') ) {
             console.log('download');
@@ -1312,6 +1329,16 @@ $(document).ready(function () {
                 });
             }, 4000);
         }
+    });
+    $('#ecb-no-verify-email-btn').on('click', function(){
+        setTimeout(function () { 
+            $('#step-email-already-verified .success-message').addClass('show');
+            $('#step-email-already-verified .success-message .success-icon').addClass('show');
+        }, 400);
+        setTimeout(function () {
+            $('#step-email-already-verified').removeClass('show');
+            $('#step-email-success').addClass('show');
+        }, 3000);
     });
 
     $('.modal-example .close, #ecb-prototype .modal-example .cancel').on('click', function () {
@@ -1374,7 +1401,6 @@ $(document).ready(function () {
             $(this).prop('disabled', true).addClass('disabled');
             
            setTimeout(function () {
-               
                 $('#step-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
                 $('#step-verify-email[data-id=' + id + '] .success-icon').addClass('show');
                 $('#step-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );
