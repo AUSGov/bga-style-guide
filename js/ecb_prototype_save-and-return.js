@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    //ECB REVISED FLOW PROTOTYPE
+    //ECB SAVE AND RETURN PROTOTYPE
 
     // Variables to store multiple contracts AND set user verification status
     if($('#ecb-prototype').length) {
@@ -892,7 +892,6 @@ $(document).ready(function () {
             setTimeout(function () { 
                 $('#step-already-verified .success-message').addClass('show');
                 $('#step-already-verified .success-message .success-icon').addClass('show');
-                //$('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );  
             }, 400);
 
             
