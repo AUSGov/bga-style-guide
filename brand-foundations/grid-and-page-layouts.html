@@ -88,8 +88,8 @@ subsite-tag: false
         <!-- PAGE LAYOUTS -->   
         <h2 class="section-start" id="page-layouts">Page layouts</h2>
 
-        
-        <h3>Single column - navigation page layout</h3>
+         <!-- Single column - navigation page layout -->
+        <h3 id="layout-singlecol-nav">Single column - navigation page layout</h3>
         <p>This layout is typically used for navigation pages. Page patterns that use this layout include:</p>
         <ul>
             <li>Home page</li>
@@ -104,7 +104,7 @@ subsite-tag: false
         </ul>
         
 
-        <!-- Single column - navigation page layout -->
+       
         <div class="layout-example full-border show single-col-navpage m-0 p-4">
             
            {% include layouts-accordion.html
@@ -123,7 +123,7 @@ subsite-tag: false
 
         
         <!-- Single column - information page -->
-        <h3>Single column - information page layout</h3>
+        <h3  id="layout-singlecol-info">Single column - information page layout</h3>
         <p>This layout is typically used for information pages. Page patterns that use this layout include:</p>
         <ul>
             <li>Resource article page</li>
@@ -182,7 +182,7 @@ subsite-tag: false
 
         
         <!-- Single column - tool page -->
-        <h3>Single column - tool page layout</h3>
+        <h3  id="layout-singlecol-tool">Single column - tool page layout</h3>
         <p>This layout is typically used for information pages in tools that require more width than standard information pages. Page patterns that use this layout include:</p>
         <ul>
             <li>Tool landing page</li>
@@ -231,7 +231,7 @@ subsite-tag: false
         
         
         <!-- Two column - information page -->
-        <h3>Two column - information page layout</h3>
+        <h3 id="layout-twocol-info">Two column - information page layout</h3>
         <p>This layout is typically used for information pages. Page patterns that use this layout include:</p>
         <ul>
             <li>101 page</li>
@@ -280,60 +280,60 @@ subsite-tag: false
 
 
         
-            <!-- Two column - filter page -->
-            <h3>Two column - filter page layout</h3>
-            <p>This layout is used for search and finder tool result pages including:</p>
-            <ul>
-                <li>business.gov.au search results page</li>
-                <li>Grants and programs finder tool</li>
-                <li>Adviser finder tool</li>
-                <li>Events finder tool</li>
-            </ul>
+        <!-- Two column - filter page -->
+        <h3 id="layout-twocol-filter">Two column - filter page layout</h3>
+        <p>This layout is used for search and finder tool result pages including:</p>
+        <ul>
+            <li>business.gov.au search results page</li>
+            <li>Grants and programs finder tool</li>
+            <li>Adviser finder tool</li>
+            <li>Events finder tool</li>
+        </ul>
 
-            <h4>Bootstrap classes</h4>
-            <ul>
-                <li>Left filters: <strong>.col-12 .col-md-4</strong></li>
-                <li>Body content: <strong>.col-12 .col-md-8 .col-xl-7</strong></li>
-            </ul>
+        <h4>Bootstrap classes</h4>
+        <ul>
+            <li>Left filters: <strong>.col-12 .col-md-4</strong></li>
+            <li>Body content: <strong>.col-12 .col-md-8 .col-xl-7</strong></li>
+        </ul>
+        
+        <div class="layout-example full-border show two-col-filterpage m-0 px-4 py-0">
             
-            <div class="layout-example full-border show two-col-filterpage m-0 px-4 py-0">
-                
-                {% include layouts-accordion.html 
-                    layout-name="two-col-filterpage"
-                
-                    min1200-visibility="false"
-                    min992-visibility="false"
-                    min768-visibility="true"
-                    min576-visibility="false"
-                    finalbp-visibility="true"
-                    
-                    finalbp="Breakpoint &lt; 768px"
-                   
-                    min1200-img="'../assets/layout-images/2col-leftfilters-min1200.png' | relative_url "
-                
-                    min768-img="'../assets/layout-images/2col-leftfilters-min768.png' | relative_url "
-    
-                    finalbp-img="'../assets/layout-images/2col-leftfilters-finalbp.png' | relative_url "
-    
-                    min1200-rules="<p>The left filter area is 4 grid-columns wide. The content area is 7 grid-columns wide.</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
-                    
-                    min768-rules="<p>The left filter area is 4 grid-columns wide. The content area is 8 grid-columns wide</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
-                    
-                    finalbp-rules="<p>The content area and the filter area are both 12 grid-columns wide.</p><p>Filter visibility can be turned on and off with a mobile filter button.</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
-                    
-                %}
-                
-            </div>
+            {% include layouts-accordion.html 
+                layout-name="two-col-filterpage"
             
-            {% include design-specs-link.html 
-                btn-link="'../html-examples/two-col-filterpage.html' | relative_url"
-                btn-text="View html example of the Two column - filter page layout"
-                %}
+                min1200-visibility="false"
+                min992-visibility="false"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+                
+                min1200-img="'../assets/layout-images/2col-leftfilters-min1200.png' | relative_url "
+            
+                min768-img="'../assets/layout-images/2col-leftfilters-min768.png' | relative_url "
+
+                finalbp-img="'../assets/layout-images/2col-leftfilters-finalbp.png' | relative_url "
+
+                min1200-rules="<p>The left filter area is 4 grid-columns wide. The content area is 7 grid-columns wide.</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
+                
+                min768-rules="<p>The left filter area is 4 grid-columns wide. The content area is 8 grid-columns wide</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
+                
+                finalbp-rules="<p>The content area and the filter area are both 12 grid-columns wide.</p><p>Filter visibility can be turned on and off with a mobile filter button.</p><p>The areas containing the filters and the content have a 32px margin above and below.</p><p>The first elements within the content and filter areas have zero margin and padding above (regardless of what element it is).</p>"
+                
+            %}
+            
+        </div>
+        
+        {% include design-specs-link.html 
+            btn-link="'../html-examples/two-col-filterpage.html' | relative_url"
+            btn-text="View html example of the Two column - filter page layout"
+            %}
         
         
         
         <!-- Two column - tool page -->
-        <h3>Two column - tool page layout</h3>
+        <h3 id="layout-twocol-tool">Two column - tool page layout</h3>
         <p>This layout is only used for pages that require a sidebar such as checklists and tools. It should not be used for general information pages or nagivation pages.</p>
 
         <h4>Bootstrap classes</h4>
@@ -377,7 +377,7 @@ subsite-tag: false
 
 
         <!-- Alternate Two column - tool page -->
-        <h3>Two column - tool page alternate layout</h3>
+        <h3 id="layout-twocol-toolalt">Two column - tool page alternate layout</h3>
         <p>This layout is only used for pages that require a sidebar such as checklists and tools. It should not be used for general information pages or nagivation pages.</p>
 
         <h4>Bootstrap classes</h4>
