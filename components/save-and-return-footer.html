@@ -1,0 +1,123 @@
+---
+
+layout: content-tagged
+title: Save and return footer
+description: A footer component that enables users to save their progress in a tool.
+breadcrumb1: Components
+url1: /components.html
+bga-tag: false
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+        element-string="bga-save-and-return-footer"
+        xl-visibility="true"
+        sm-visibility="true"
+        xs-visibility="true"
+        breakpoint-final="350"
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example pt-4 m-0">
+            <div class="component-wrapper remove-element-padding pb-4">
+
+                <h3 class="ps-4">Unsaved progress</h3>
+
+                {% include component-examples/save-return-footer-example.html
+                    title="Don't have time to finish your contract now?" 
+                    text="You can save you progress in this tool and return within the next seven days. We’ll email you a link that you can use to return and finish your contract."
+                    button="Save for later"
+                    classes="mb-5"
+                    
+                    %}
+
+                    <h3 class="ps-4">Saved progress</h3>
+
+                    {% include component-examples/save-return-footer-example.html
+                        title="We are saving this contract for another X days." 
+                        text="If you need more time you can <a href=''>extend your deadline by a further seven days</a> on the saved contracts page."
+                        button="Manage saved contracts"
+                        secondary-link="Create a new contract"
+                        classes="mb-5"
+                        
+                        %}
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://www.figma.com/file/uFWfZ09nO1dHFugQc8vsy0/ECB-Save-and-return---FA?type=design&node-id=17%3A1934&mode=dev&t=SdDq3UHgyFPbhuNc-1'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>The site footer can be used on any page layout. It spans the full width of the screen.</p>
+
+
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 p-4">
+            {% include layouts-accordion.html
+            singlelayout="true"
+            allbp-img="'../assets/layout-images/subsite-footer-allbp.png' | relative_url "
+            allbp-rules="<p>The subsite footer is 12 grid-columns wide.</p>"
+
+            %}
+
+        </div>
+        {% include design-specs-link.html
+            btn-link="'../html-examples/ECB-content-page.html' | relative_url'"
+            btn-text="View layout example"
+            %}
+
+
+
+
+
+
+
+         <!-- GUIDELINES -->
+         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>The save and return footer is used in business.gov.au tools to provide a lightweight way to save progress in a tool without an account. It allows users to save their progress against a verified email address.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used in tool category pages. When a tool has the save and return footer it should be placed on every category page to allow users to save their progress at any point while they are working through the process.</li>
+        </ul>
+
+
+    </div>

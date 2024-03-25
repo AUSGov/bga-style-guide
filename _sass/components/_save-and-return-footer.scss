@@ -1,0 +1,111 @@
+.save-and-return-footer-wrapper {
+    background: $bga-yellow-highlight-mid;
+    margin: 0 -9999px;
+    padding: 0 9999px;
+
+}
+.save-and-return-footer {
+    background: $bga-yellow-highlight-mid;
+    padding: 24px 32px;
+    //max-width: 1320px;
+    width: 100%;
+
+    &.in-page {
+        padding: 24px 0 !important;
+    }
+
+    .content-container {
+        column-gap: 32px;
+        row-gap: 24px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .button-wrapper {
+        row-gap: 24px;
+        column-gap: 24px;
+        flex-shrink: 0;
+        flex-direction: column;
+    }
+
+
+}
+
+
+// Mixins for smaller screen sizes
+@mixin save-return-footer-bp-576 () {
+    .save-and-return-footer {
+        &.in-page {
+            padding: 24px 32px;
+        }
+        .content-container {
+            flex-wrap: wrap;
+        }
+        .button-wrapper {
+            flex-direction: row;
+            flex-shrink: 1;
+        }
+    
+    }
+}
+@mixin save-return-footer-bp-350 () {
+    .save-and-return-footer {
+        padding: 24px;
+       
+        .button-wrapper {
+            button {
+                font-size: .875rem;
+                line-height: 1.125rem;
+                padding: 8px 24px;
+                min-height: 48px;
+            }
+            .bga-link {
+                font-size: .875rem;
+                line-height: 1.125rem;
+            }
+        }
+    }
+
+}
+@mixin save-return-footer-bp-below350 () {
+    .save-and-return-footer {
+        .button-wrapper {
+            flex-grow: 1;
+            justify-content: center;
+
+            button {
+                width: 100%; 
+                min-width: auto;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576 {
+    @include save-return-footer-bp-576();
+}
+
+.component-example.bp-350 {
+    @include save-return-footer-bp-576();
+    @include save-return-footer-bp-350();
+}
+
+.component-example.bp-below350 {
+    @include save-return-footer-bp-576();
+    @include save-return-footer-bp-350();
+    @include save-return-footer-bp-below350();
+}
+
+@media (max-width: 1200px) {
+    @include save-return-footer-bp-576();
+}
+@media (max-width: 576px) {
+    @include save-return-footer-bp-576();
+    @include save-return-footer-bp-350();
+}
+@media (max-width: 350px) {
+    @include save-return-footer-bp-576();
+    @include save-return-footer-bp-350();
+    @include save-return-footer-bp-below350();
+}
