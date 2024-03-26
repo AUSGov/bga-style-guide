@@ -10,9 +10,9 @@
                     {% endif %}
                 </div>
         
-                <div class="d-flex align-items-center justify-content-center button-wrapper flex-wrap">
+                <div data-id="bga" class="d-flex align-items-center justify-content-center button-wrapper step flex-wrap">
                     {% if include.button %} 
-                    <button class="bga-btn bga-secondary-btn bkg-light flex-shrink-0" tabindex="0" role="button">{{ include.button }}</button>
+                    <button data-modal="bga-modal-save" class="bga-btn bga-secondary-btn bkg-light flex-shrink-0 bga-example {{include.button-classes}}" tabindex="0" role="button">{{ include.button }}</button>
                     {% endif %}
 
                     {% if include.secondary-link %}

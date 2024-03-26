@@ -3,6 +3,7 @@
 layout: content-tagged
 title: Save and return footer
 description: A footer component that enables users to save their progress in a tool.
+updated: 25 March, 2024
 breadcrumb1: Components
 url1: /components.html
 bga-tag: false
@@ -21,6 +22,7 @@ classes="in-page"
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
         %}
 
     </div>
@@ -51,6 +53,7 @@ classes="in-page"
                     title="Don't have time to finish your contract now?" 
                     text="You can save you progress in this tool and return within the next seven days. We’ll email you a link that you can use to return and finish your contract."
                     button="Save for later"
+                    button-classes="modal-trigger"
                     classes="mb-5"
                     
                     %}
@@ -58,7 +61,7 @@ classes="in-page"
                     <h3 class="ps-4">Saved progress</h3>
 
                     {% include component-examples/save-return-footer-example.html
-                        title="We are saving this contract for another X days." 
+                        title="We are saving this contract for another X days." 
                         text="If you need more time you can <a href=''>extend your deadline by a further seven days</a> on the saved contracts page."
                         button="Manage saved contracts"
                         secondary-link="Create a new contract"
@@ -81,7 +84,7 @@ classes="in-page"
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The site footer can be used on any page layout. It spans the full width of the screen.</p>
+        <p>The save and return footer can be used on any page layout. It spans the full width of the screen.</p>
 
 
         {% include layouts-dropdown.html
@@ -92,8 +95,8 @@ classes="in-page"
         <div class="layout-example show full-border mt-0 p-4">
             {% include layouts-accordion.html
             singlelayout="true"
-            allbp-img="'../assets/layout-images/subsite-footer-allbp.png' | relative_url "
-            allbp-rules="<p>The subsite footer is 12 grid-columns wide.</p>"
+            allbp-img="'../assets/layout-images/onecol-navpage-allbp-1across-footer.png' | relative_url "
+            allbp-rules="<p>The save and return footer is 12 grid-columns wide. The background colour extends left and right to the edge of the viewport.</p>"
 
             %}
 
@@ -116,8 +119,157 @@ classes="in-page"
         <p>The save and return footer is used in business.gov.au tools to provide a lightweight way to save progress in a tool without an account. It allows users to save their progress against a verified email address.</p>
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used in tool category pages. When a tool has the save and return footer it should be placed on every category page to allow users to save their progress at any point while they are working through the process.</li>
+            <li>Used in the Employment Contract Tool category pages.</li>
+            <li>This component could be adapted for other tools. When used in a tool it should be placed on every category page to allow users to save their progress at any point while they are working through a process.</li>
         </ul>
 
 
+        <!-- VERSION HISTORY-->
+        <h2 class="section-start" id="version-history">Version history</h2>
+        <h4>25 March, 2024</h4>
+        <ul>
+            <li>Added the save and return footer to the style guide.</li>
+        </ul>
+    
+
+
     </div>
+
+
+
+<!-- MODALS -->
+
+<!-- SAVE MODAL -->
+
+<div id="bga-modal-save" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close clear-modal m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text p-0 remove-element-padding">
+
+                <div id="step-save-email-address" data-id="ecb" class="step remove-element-padding show">
+                    <h4>Enter your email address to save your progress in this tool</h4>
+
+                    <p>We will send you a link so you can return and work on your contract later. You will have <strong>seven days</strong> to continue working on your contract.</p>
+                    <p>We will first send a code to your email to verify that it's you.</p>
+
+                    <form id="email-form" class="d-flex mb-4">
+                        <input type="text" class="form-control mb-0 me-3" value="">
+                        <div class="button-example">
+                            <button class="bga-btn bga-primary-btn bkg-light progress-step" tabindex="0" href="" role="button">Email <svg
+                                    id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                    height="15.429" viewBox="0 0 18 15.429">
+                                    <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                                </svg></button>
+                        </div>
+                    </form>
+
+                    <p class="mini">This site is protected by reCAPTCHA and the <a href="" class="external">Google Privacy Policy</a> and <a href="" class="external">Terms of Service</a> apply</p>
+
+                </div>
+
+                <div id="step-save-verify-email" data-id="ecb" class="step remove-element-padding">
+                    <h4>Verify your email address</h4>
+
+                    <p>We’ve sent a 4 digit code to <strong><span class="user-email">user@emailaddress.com.au</span></strong>.</p>
+                    <p>Enter the code below to verify your email address.
+                    </p>
+
+                    <form id="verify-form" data-id="ecb" >
+                    <fieldset class='number-code'>
+                        <div class="d-inline-flex code-inputs">
+                            <input name='code' class='ecb-code-input py-2 me-2' required/>
+                            <input name='code' class='ecb-code-input py-2 me-2' required/>
+                            <input name='code' class='ecb-code-input py-2 me-2' required/>
+                            <input name='code' class='ecb-code-input py-2' required/>   
+                            
+                        <div class="success-icon ms-4">
+                       
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+                            <circle cx="22" cy="22" r="20" />
+                          </svg>
+
+                          <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="18.857" height="14.918" viewBox="0 0 18.857 14.918">
+                            <path d="M0,8.737,2.236,6.461l3.945,3.954L16.6,0l2.256,2.241L6.181,14.918Z" fill="#ffffff"/>
+                          </svg>
+                          
+                          
+                        </div>
+
+
+                        </div> 
+                        <div class="error-msg mt-3 mb-0">
+                            <p>Incorrect code. Please enter the code sent to your email address.</p>
+                        </div> 
+                       
+                        <div class="resend remove-element-padding mt-3 mb-5">
+                            <p class="mini me-2 mb-0">Didn’t receive the code?</p>
+                            <a href="" class="mini">Resend code</a> 
+                        </div>
+
+
+                        </fieldset>
+                        
+                        <div class="button-example">
+                            <button class="bga-btn bga-primary-btn bkg-light in-modal progress-step" id="bga-save-verify-btn" tabindex="0" href="" role="button">Save contract <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.2901 0H1.75573C0.7813 0 0 0.790079 0 1.75573V14.0458C0 15.0115 0.7813 15.8016 1.75573 15.8016H14.0458C15.0115 15.8016 15.8016 15.0115 15.8016 14.0458V3.51146L12.2901 0ZM7.90079 14.0458C6.44353 14.0458 5.26719 12.8695 5.26719 11.4122C5.26719 9.95499 6.44353 8.77865 7.90079 8.77865C9.35804 8.77865 10.5344 9.95499 10.5344 11.4122C10.5344 12.8695 9.35804 14.0458 7.90079 14.0458ZM10.5344 5.26719H1.75573V1.75573H10.5344V5.26719Z" fill="#333333"/>
+                                </svg>
+                                </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- SAVED CONTRACT SUCCESS MODAL -->
+<div id="bga-modal-save-success" class="bga-component modal-example px-4 pb-4 pt-5">
+
+    <button class="close clear-modal m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+        <div class="component-text p-0 remove-element-padding">
+
+           <div class="d-flex">
+            <svg class="me-3" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.5625 44.5752C34.7128 44.5752 44.5625 34.7255 44.5625 22.5752C44.5625 10.4249 34.7128 0.575195 22.5625 0.575195C10.4122 0.575195 0.5625 10.4249 0.5625 22.5752C0.5625 34.7255 10.4122 44.5752 22.5625 44.5752Z" fill="#299F28"/>
+                <path d="M12.9375 24.6172L15.2205 22.2982L19.2475 26.3302L29.8845 15.6982L32.1845 17.9862L19.2465 30.9272L12.9375 24.6172Z" fill="white"/>
+                </svg><h4>Success - we’ve saved your contract</h4>
+           </div>
+
+            <p>Check your inbox. We’ve emailed you a link for returning to this page so you can work on your contract at a later date.</p>
+
+            <div class="success-green remove-element-padding p-4">
+               <div class="d-flex">
+                <svg class="me-2" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_239_9136)">
+                    <path d="M22.1211 0.0717773C17.7699 0.0717773 13.5164 1.36205 9.89856 3.77944C6.28068 6.19683 3.46089 9.63276 1.79576 13.6527C0.13063 17.6727 -0.305049 22.0962 0.543826 26.3638C1.3927 30.6313 3.48801 34.5514 6.56476 37.6281C9.64152 40.7049 13.5615 42.8002 17.8291 43.6491C22.0967 44.4979 26.5202 44.0622 30.5401 42.3971C34.5601 40.732 37.996 37.9122 40.4134 34.2943C42.8308 30.6764 44.1211 26.423 44.1211 22.0718C44.1144 16.2391 41.7945 10.6471 37.6701 6.52277C33.5457 2.39841 27.9538 0.0784319 22.1211 0.0717773ZM22.1211 39.9978C17.3668 39.9978 12.8073 38.1092 9.44547 34.7474C6.08368 31.3856 4.19503 26.8261 4.19503 22.0718C4.19503 17.3175 6.08368 12.7579 9.44547 9.39613C12.8073 6.03434 17.3668 4.1457 22.1211 4.1457C26.8754 4.1457 31.4349 6.03434 34.7967 9.39613C38.1585 12.7579 40.0472 17.3175 40.0472 22.0718C40.0472 26.8261 38.1585 31.3856 34.7967 34.7474C31.4349 38.1092 26.8754 39.9978 22.1211 39.9978Z" fill="#2E3E5A"/>
+                    <path d="M24.2997 14.5347H20.3711V26.7132H32.5497V22.7847H24.2997V14.5347Z" fill="#2E3E5A"/>
+                    </g>
+                    <defs>
+                    <clipPath>
+                    <rect width="44" height="44" fill="white" transform="translate(0.121094 0.0717773)"/>
+                    </clipPath>
+                    </defs>
+                    </svg><h4>Your progress will be saved for seven days</h4>
+               </div>
+    
+                <p>For privacy reasons we will delete your saved data after this date. You will no longer be able to access your saved contract after this time.</p>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+</div>
+
+        
+<div class="modal-overlay"></div>

@@ -1,0 +1,422 @@
+.call-to-action.tool-finalise {
+    .finalise-ctas {
+        row-gap: 24px;
+        column-gap: 24px;
+    }
+
+    .cta-container {
+        background: $bga-white;
+        flex-wrap: wrap;
+        width: calc(33.33% - 16px);
+    }
+
+    .cta-title {
+        width: 100%;
+        background: $bga-teal-highlight-mid;
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+
+        h3 {
+            padding: 0;
+        }
+    }
+
+    .cta-content {
+        flex-wrap: wrap;
+        height: calc(100% - 80px);
+        align-content: space-between;
+    }
+
+    &.non-branded {
+        .cta-title {
+            background: $nb-grey-darkest;
+        }
+    }
+}
+
+.modal-example {
+    max-height: none;
+    height: auto;
+    position: fixed;
+    top: 5rem;
+    z-index: 9000;
+    left: calc(50% - 320px);
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
+
+.modal-example, #ecb-cta-verify, #ecb-cta-verify-known {
+    .icon-wrapper {
+        background: $bga-green-success-dark;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+
+        img {
+            width: 18px;
+        }
+    }
+
+    .number-code {
+        align-items: center;
+
+        input {
+            width: 56px;
+            border: none;
+            border-bottom: solid 4px $bga-blue-black-dark;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            color: $bga-blue-black-dark;
+        }
+
+        .success-icon {
+            display: none;
+            position: relative;
+
+            &.show {
+                display: flex;
+                align-items: center;
+            }
+
+            circle {
+                fill: $bga-green-success-dark;
+                stroke: $bga-green-success-dark;
+                stroke-width: 4px;
+                stroke-dasharray: 126;
+                animation: success-animation 2s linear infinite;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                transform: rotate(-90deg);
+                transform-origin: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            @keyframes success-animation {
+                0% {
+                    stroke-dashoffset: 126;
+                    fill: transparent;
+                }
+
+                50% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                }
+
+                100% {
+                    stroke-dashoffset: 0;
+                    fill: $bga-green-success-dark;
+                }
+            }
+
+            .tick {
+                position: absolute;
+                top: 20px;
+                left: 12px;
+                animation: tick-display 2s linear infinite;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+            }
+            @keyframes tick-display {
+                0% {
+                   opacity: 0;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .error-msg {
+            display: none;
+        }
+
+        &.error {
+            .code-inputs {
+                box-shadow: 0 0 0 8px $bga-red-fail-mid;
+                background: $bga-red-fail-mid;
+            }
+
+            input {
+                background: $bga-red-fail-light;
+                border-bottom-color: $bga-red-fail-dark;
+            }
+
+            .error-msg {
+                display: block;
+
+                p {
+                    color: $bga-red-fail-dark;
+                }
+            }
+        }
+    }
+
+    .resend {
+        display: flex;
+
+        a.sent {
+            color: $bga-green-success-background;
+            text-decoration: none;
+            cursor: default;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+
+    .success-green {
+        background: $bga-green-success-light;
+    }
+    .confirm-yellow {
+        background: $bga-yellow-highlight-light;
+    }
+    .modal-icon-title-primary, .modal-icon-title-secondary {
+        column-gap: 16px;
+        align-items: center;
+
+        svg {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+    }
+    .ecb-button-group {
+        column-gap: 24px;
+        row-gap: 24px;
+        align-items: center;
+        
+        a {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+    }
+}
+
+#bga-modal-email, #bga-modal-save, #bga-modal-download, #bga-modal-save-success {
+    .step {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+}
+#step-already-verified, #step-email-already-verified {
+    .success-message {
+        display: none;
+        column-gap: 8px;
+        
+        p {
+            color: $bga-green-success-dark;
+            margin: 0;
+        }
+        
+        &.show {
+            display: flex;
+            align-items: center;
+            
+        }
+    }
+    .success-icon {
+        display: none;
+        position: relative;
+
+        &.show {
+            display: flex;
+            align-items: center;
+        }
+
+        circle {
+            fill: $bga-green-success-dark;
+            stroke: $bga-green-success-dark;
+            stroke-width: 4px;
+            stroke-dasharray: 126;
+            animation: success-animation 2s linear infinite;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            transform: rotate(-90deg);
+            transform-origin: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes success-animation {
+            0% {
+                stroke-dashoffset: 126;
+                fill: transparent;
+            }
+
+            50% {
+                stroke-dashoffset: 0;
+                fill: transparent;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+                fill: $bga-green-success-dark;
+            }
+        }
+
+        .tick {
+            position: absolute;
+            top: 15px;
+            left: 12px;
+            animation: tick-display 2s linear infinite;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        @keyframes tick-display {
+            0% {
+               opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#email-form {
+    input {
+        width: auto;
+        flex-grow: 1;
+    }
+}
+
+
+// Mixins for smaller screen sizes
+@mixin tool-finalise-cta-bp-768 () {
+    .call-to-action.tool-finalise {
+        .finalise-ctas {
+            flex-wrap: wrap;
+        }
+
+        .cta-container {
+            width: 100% !important;
+        }
+        .cta-content {
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 16px;
+        }
+
+        .cta-title {
+            width: 100%;
+
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .cta-content {
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        
+
+            p {
+                margin: 0 0 16px 0;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+            .explanation {
+                 display: block;
+                flex: 1; 
+            }
+            .button-example {
+                flex: 0 1 auto;
+            }
+        }
+    }
+}
+
+@mixin tool-finalise-cta-bp-576 () {
+    .call-to-action.tool-finalise {
+        .finalise-ctas {
+            flex-wrap: wrap;
+        }
+
+        .cta-content {
+            flex-direction: column;
+            align-items: flex-start !important;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            row-gap: 16px;
+        }
+    }
+}
+
+@mixin tool-finalise-cta-bp-350 () {
+    .call-to-action.tool-finalise {
+        .cta-title {
+            padding: 8px 16px !important;
+        }
+    }
+}
+
+@mixin tool-finalise-cta-bp-below350 () {
+    .call-to-action.tool-finalise {
+        .cta-title {
+            svg {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-768 {
+    @include tool-finalise-cta-bp-768();
+}
+.component-example.bp-576, .component-example.bp-350 {
+    @include tool-finalise-cta-bp-768();
+    @include tool-finalise-cta-bp-576();
+}
+.component-example.bp-350 {
+    @include tool-finalise-cta-bp-768();
+    @include tool-finalise-cta-bp-576();
+    @include tool-finalise-cta-bp-350();
+}
+.component-example.bp-below350 {
+    @include tool-finalise-cta-bp-768();
+    @include tool-finalise-cta-bp-576();
+    @include tool-finalise-cta-bp-350();
+    @include tool-finalise-cta-bp-below350();
+}
+
+// Media queries for example pages.
+@media (max-width: 992px) {
+    @include tool-finalise-cta-bp-768();
+}
+
+@media (max-width: 768px) {
+    @include tool-finalise-cta-bp-576();
+}
+
+@media (max-width: 350px) {
+    @include tool-finalise-cta-bp-below350();
+}
+
