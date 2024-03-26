@@ -1,0 +1,140 @@
+.contract-action-item {
+    border-bottom: solid 1px $bga-blue-black-mid;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 24px;
+    row-gap: 24px;
+
+    .contract {
+        border-bottom: solid 1px $bga-blue-black-mid;
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .contract-details {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 8px;
+
+        .title-tag {
+            column-gap: 8px;
+            row-gap: 8px;
+            align-items: center;
+        }
+
+        .contract-name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .contract-actions {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 24px;
+        min-width: 330px;
+
+        a {
+            text-decoration: none;
+            border-bottom: 1px solid $bga-blue-links;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+            display: inline-flex;
+            align-items: flex-end;
+            line-height: 1;
+            width: fit-content;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom-color: $bga-blue-footer;
+
+                svg path {
+                    fill: $bga-blue-footer;
+                }
+            }
+            &.inactive {
+                opacity: 65%;
+                cursor: default;
+
+                &:hover {
+                    background: none;
+                    border-bottom: 1px solid $bga-blue-links;
+                    color: $bga-blue-links;
+
+                    svg path {
+                        fill: $bga-blue-links;
+                    }
+                }
+            }
+        }
+        svg {
+            margin-left: 8px;
+        }
+    }
+}
+
+
+// Mixins for smaller screen sizes
+@mixin contract-actions-bp-576 () {
+    .contract-action-item {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .contract {
+            flex-wrap: wrap;
+        }
+        .title-tag {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .contract-actions {
+            min-width: auto;
+            padding: 0;
+
+            a {
+                justify-content: flex-start;   
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@mixin contract-actions-bp-below576 () {
+    .contract-action-item {
+        align-items: flex-start;
+
+        .contract-actions {
+            row-gap: 16px;
+            flex-direction: column;
+        }
+        .contract-details {
+            .title-tag {
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576 {
+    @include contract-actions-bp-576();
+}
+.component-example.bp-below576 {
+    @include contract-actions-bp-576();
+    @include contract-actions-bp-below576();
+}
+
+// Media queries
+@media (max-width: 768px) {
+    @include contract-actions-bp-576();
+}
+
+@media (max-width: 576px) {
+    @include contract-actions-bp-below576();
+}

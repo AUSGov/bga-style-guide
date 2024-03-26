@@ -596,13 +596,15 @@ html.ecb-prototype {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-
-        
+        column-gap: 24px;
+        row-gap: 24px;
+    
     }
     .contract-details {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
+        row-gap: 8px;
 
         .contract-name {
             margin-right: 24px;
@@ -611,15 +613,15 @@ html.ecb-prototype {
         }
     }
     .contract-actions {
-        min-width: 380px;
         display: flex;
         justify-content: flex-end;
         column-gap: 24px;
+        min-width: 330px;
 
         a {
             text-decoration: none;
             border-bottom: 1px solid $bga-blue-links;
-            padding-bottom: 4px;
+            padding-bottom: 2px;
             margin-bottom: 8px;
             display: inline-flex;
             align-items: flex-end;
