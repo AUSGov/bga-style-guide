@@ -1,8 +1,8 @@
 ---
 
 layout: content-tagged
-title: Tool finalise call to action
-description: Provide users with a number of options on the final page of a tool. Options could include emailing, downloading or saving progress in the tool. 
+title: Contract actions component
+description: Provide users with the ability to edit, extend or delete a contract in a tool such as the Employment Contract Builder. 
 updated: 26 March, 2024
 breadcrumb1: Components
 url1: /components.html
@@ -52,13 +52,11 @@ classes="in-page"
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html 
-                        element-string="bga-contract-callout-box"
-                        lg-visibility="true"
+                        element-string="bga-contract-actions"
                         md-visibility="true"
                         sm-visibility="true"
-                        xs-visibility="true"
                         final-visibility="true"
-                        breakpoint-final="350"
+                        breakpoint-final="576"
                     %}
 
                     <!-- Component example -->
@@ -66,11 +64,11 @@ classes="in-page"
                     <div class="component-example narrow m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                        <p><strong>Email verification code: 1234</strong></p>
+                     
                     
-                        {% include component-examples/tool_finalise_component_example.html
-                            classes="teal"
-                            id-prefix="bga"
+                        {% include component-examples/contract-actions-example.html
+                            position="Sales assistant"
+                            expiry="Tuesday 2 April, 2024, 11:59 pm AEST"
                         %}
 
                        
@@ -86,13 +84,11 @@ classes="in-page"
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html 
-                        element-string="nb-contract-callout-box"
-                        lg-visibility="true"
+                        element-string="nb-contract-actions"
                         md-visibility="true"
                         sm-visibility="true"
-                        xs-visibility="true"
                         final-visibility="true"
-                        breakpoint-final="350"
+                        breakpoint-final="576"
                     %}
 
                     <!-- Component example -->
@@ -107,9 +103,8 @@ classes="in-page"
                         
                         <p><strong>Email verification code: 1234</strong></p>
 
-                       {% include component-examples/tool_finalise_component_example.html
+                       {% include component-examples/contract-actions-example.html
                             classes="non-branded nb-background"
-                            id-prefix="nb"
                         %}
                       
                             
@@ -129,7 +124,7 @@ classes="in-page"
         <!-- Design specifications link -->
 
         {% include design-specs-link.html 
-            btn-link="'https://www.figma.com/file/uFWfZ09nO1dHFugQc8vsy0/ECB-Save-and-return---FA?type=design&node-id=51%3A41&mode=design&t=YmOHs7hslPVeEou2-1'"
+            btn-link="'https://www.figma.com/file/uFWfZ09nO1dHFugQc8vsy0/ECB-Save-and-return---FA?type=design&node-id=87%3A463&mode=design&t=YmOHs7hslPVeEou2-1'"
             btn-text="View design specifications"
             %}
 
