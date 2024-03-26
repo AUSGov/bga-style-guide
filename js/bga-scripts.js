@@ -1268,15 +1268,15 @@ $(document).ready(function () {
     }); 
     
 
-     
-
-
-
-    // GET CONTRACT MODALS
-    // Open & close modals
     
+
+
+
+    // GET CONTRACT MODALS & TOOL FINALISE CTA
+    // Open & close modals
+
+    // Open modals - general function
     $('.modal-trigger').on('click', function () {
-        
         var user_status = localStorage.getItem('user status');
         if (!user_status) {
             user_status = "unknown";
@@ -1284,7 +1284,7 @@ $(document).ready(function () {
         
         var modal = $(this).attr('data-modal');
         var id;
-        
+       
         if (modal.includes('ecb')) {
             id='ecb';
         } else if (modal.includes('nb')) {
@@ -1294,6 +1294,8 @@ $(document).ready(function () {
             id= "bga";
             user_status = "unknown";
         }
+        console.log(id);
+
         $('#' + modal).addClass('show');
         $('.modal-overlay').addClass('show');
 
@@ -1344,6 +1346,13 @@ $(document).ready(function () {
     $('.modal-example .close, #ecb-prototype .modal-example .cancel').on('click', function () {
         $(this).parents('.modal-example').removeClass('show');
         $('.modal-overlay').removeClass('show');
+
+        if($(this).hasClass('clear-modal')) {
+            location.reload();
+        }
+    });
+    $(".modal-example .clear-modal").on('click', function(){
+        location.reload();
     });
 
     // Stop forms in email modal from reloading the page
@@ -1363,67 +1372,102 @@ $(document).ready(function () {
         } 
     });
 
-    // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
-    var inputElements = [...document.querySelectorAll('input.code-input')]
+    
 
+    // Download / email /save examples
+    $('#step-verify-email #verify-btn, #step-verify-email #bga-email-verify-btn, #bga-save-verify-btn, #bga-save-verify-footer-btn').on('click', function(){
+        // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
+        var inputElements = [...document.querySelectorAll('input.ecb-code-input')]
+        console.log(inputElements);
 
-    inputElements.forEach((ele, index) => {
-        ele.addEventListener('keydown', (e) => {
-            // if the keycode is backspace & the current field is empty
-            // focus the input before the current. Then the event happens
-            // which will clear the "before" input box.
-            if (e.keyCode === 8 && e.target.value === '') inputElements[Math.max(0, index - 1)].focus();
+        inputElements.forEach((ele, index) => {
+            console.log('input elements triggered');
+
+            ele.addEventListener('keydown', (e) => {
+                // if the keycode is backspace & the current field is empty
+                // focus the input before the current. Then the event happens
+                // which will clear the "before" input box.
+                if (e.keyCode === 8 && e.target.value === '') inputElements[Math.max(0, index - 1)].focus();
+            })
+            ele.addEventListener('input', (e) => {
+                // take the first character of the input
+                // this actually breaks if you input an emoji
+                // but I'm willing to overlook insane security code practices.
+                var [first, ...rest] = e.target.value;
+                e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
+                var lastInputBox = index === inputElements.length - 1;
+                var didInsertContent = first !== undefined;
+                if (didInsertContent && !lastInputBox) {
+                    // continue to input the rest of the string
+                    inputElements[index + 1].focus();
+                    inputElements[index + 1].value = rest.join('');
+                    inputElements[index + 1].dispatchEvent(new Event('input'));
+                }
+            })
         })
-        ele.addEventListener('input', (e) => {
-            // take the first character of the input
-            // this actually breaks if you input an emoji
-            // but I'm willing to overlook insane security code practices.
-            var [first, ...rest] = e.target.value;
-            e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
-            var lastInputBox = index === inputElements.length - 1;
-            var didInsertContent = first !== undefined;
-            if (didInsertContent && !lastInputBox) {
-                // continue to input the rest of the string
-                inputElements[index + 1].focus();
-                inputElements[index + 1].value = rest.join('');
-                inputElements[index + 1].dispatchEvent(new Event('input'));
-            }
-        })
-    })
-
-    $('#step-verify-email #verify-btn').on('click', function(){
+    
         var code = inputElements.map(({ value }) => value).join(''),
         id = $(this).parents('.step').attr('data-id');
+        console.log(code);
 
         if (code == '1234' ) {
-            $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
-            $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
-            $(this).prop('disabled', true).addClass('disabled');
-            
-           setTimeout(function () {
-                $('#step-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
-                $('#step-verify-email[data-id=' + id + '] .success-icon').addClass('show');
-                $('#step-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );
-                
-            }, 1000);
+            console.log('code is good');
 
-           setTimeout(function () {
-                $('#step-verify-email[data-id=' + id + '] .success-icon .msg').hide();
-                $('#step-verify-email[data-id=' + id + '] .success-icon').removeClass('show');
+            if ($(this).attr('id').includes('email')) {
+                $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
                 $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
-            }, 4000);
-
-            setTimeout(function () {
-                $('#step-verify-email[data-id=' + id + ']').removeClass('show');
-                $('#step-email-success[data-id=' + id + ']').addClass('show');
+                $(this).prop('disabled', true).addClass('disabled');
                 
-            }, 6000);
+                setTimeout(function () {
+                    $('#step-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
+                    $('#step-verify-email[data-id=' + id + '] .success-icon').addClass('show');
+                    $('#step-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );
+                    
+                }, 1000);
+
+                setTimeout(function () {
+                    $('#step-verify-email[data-id=' + id + '] .success-icon .msg').hide();
+                    $('#step-verify-email[data-id=' + id + '] .success-icon').removeClass('show');
+                    $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+                }, 4000);
+
+                setTimeout(function () {
+                    $('#step-verify-email[data-id=' + id + ']').removeClass('show');
+                    $('#step-email-success[data-id=' + id + ']').addClass('show');
+                    
+                }, 6000);
+            } 
+            else if ($(this).attr('id').includes('save')) {
+                $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
+                $('#step-save-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+                $(this).prop('disabled', true).addClass('disabled');
+                
+                setTimeout(function () { 
+                    $('#step-save-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
+                    $('#step-save-verify-email[data-id=' + id + '] .success-icon').addClass('show');
+                    $('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );  
+                }, 400);
+
+                setTimeout(function () {
+                    $('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').hide();
+                    $('#step-save-verify-email[data-id=' + id + '] .success-icon').removeClass('show');
+                    $('#step-save-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+                }, 3000);
+
+                setTimeout(function () {
+                    $('#bga-modal-save').removeClass('show');
+                    $('#bga-modal-save-success').addClass('show');
+
+                }, 3200);
+                }
 
         } else {
+            console.log('did not verify');
             $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
         }
 
     });
+
 
     $('.resend a').on('click', function(){
         $(this).text('Code sent').addClass('sent');
@@ -1487,6 +1531,7 @@ $(document).ready(function () {
         }
     });
 
+    
 
     //Toggle modal form on mobile screens
     $('.mobile-form-toggle').on('click', function () {
