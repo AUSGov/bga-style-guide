@@ -2,6 +2,52 @@
 
 $(document).ready(function () {
 
+    // PROTOTYPE RESETS
+    // Reset prototype
+
+    $('#reset-prototype').on('click', function(){
+        localStorage.clear();
+        window.location.pathname = "/bga-style-guide/prototypes/ecb/landing.html";
+    });
+
+    // Set verification status
+    $('.reset-verification').on('click', function(){
+    
+        var user_status = $(this).attr('data-status'),
+        verification_status = $(this).attr('data-verification');
+
+        localStorage.setItem('user status', user_status);
+        localStorage.setItem('verification status', verification_status);
+
+        if (verification_status == 'unverified') {
+            var current_contract = "contracttemp";
+            localStorage.setItem('current contract', current_contract);  
+
+            if (user_status == 'known') {
+                location.reload();
+                window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
+                
+            } else {
+                location.reload();
+            }
+        }
+        else {
+            location.reload();
+        }
+    });
+
+    
+    // Add known user variable when user clicks on the return link in an email
+    $('#return-to-contract').on('click', function(){
+        localStorage.setItem('verification status', 'unverified');
+        localStorage.setItem('user status', 'known  ');
+        
+        var current_contract = "contracttemp";
+        localStorage.setItem('current contract', current_contract);
+    });
+
+
+
     //ECB SAVE AND RETURN PROTOTYPE
 
     // Variables to store multiple contracts AND set user verification status
@@ -714,9 +760,11 @@ $(document).ready(function () {
             $('#step-save-verify-email[data-id=' + id + '] .user-email').text(email_address);
         } 
     });
+
     
     // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
     var inputElements = [...document.querySelectorAll('input.ecb-code-input')]
+    //console.log(inputElements);
    
     inputElements.forEach((ele, index) => {
         ele.addEventListener('keydown', (e) => {
@@ -742,7 +790,8 @@ $(document).ready(function () {
         })
     })
 
-    $('#step-save-verify-email #ecb-verify-btn').on('click', function(){
+    // Save with verification
+    $('#step-save-verify-email #ecb-verify-btn, #ecb-email-contract-btn').on('click', function(){
         
         history.pushState({ modalOpen: true }, document.title, '#modal');
 
@@ -753,15 +802,20 @@ $(document).ready(function () {
             btn_location = 'in-saved-contracts'; 
         } else if ($(this).hasClass('in-new-contract')) {
             btn_location = 'in-new-contract'; 
-        } else {
+        } else if ($(this).hasClass('email-contract')) {
+            btn_location = 'email-contract';
+        }
+        else {
             btn_location = 'in-modal';
         }
         console.log(btn_location);
         
         var code = inputElements.map(({ value }) => value).join(''),
         id = $(this).parents('.step').attr('data-id');
+        //console.log(code);
 
         if (code == '1234'|| code == 'RGAE') {
+            console.log('code is good');
            
             user_status = "known";
             verification_status = "verified";
@@ -780,6 +834,7 @@ $(document).ready(function () {
             }
             
             setTimeout(function () { 
+                console.log('first setTimeout');
                 $('#step-save-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
                 $('#step-save-verify-email[data-id=' + id + '] .success-icon').addClass('show');
                 $('#step-save-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );  
@@ -794,37 +849,37 @@ $(document).ready(function () {
             setTimeout(function () {
                 if ( btn_location == 'in-page') {
                     
-                    $('#ecb-cta-verify, #ecb-cta-verify-known').addClass('d-none');
-                    $('.contracts-container').removeClass('d-none');
+                $('#ecb-cta-verify, #ecb-cta-verify-known').addClass('d-none');
+                $('.contracts-container').removeClass('d-none');
 
-                    // Add contracts to contract list
-                    var active_contracts = count_contracts(contracts);
-                    
-                    for (var i = 0; i < active_contracts.length; i++) { 
-                        var position = contracts[active_contracts[i]]['position-title'],
-                        id = active_contracts[i],
-                        expiry = contracts[active_contracts[i]]['expiry date'],
-                        extend_classes = 'extend modal-trigger active';
+                // Add contracts to contract list
+                var active_contracts = count_contracts(contracts);
+                
+                for (var i = 0; i < active_contracts.length; i++) { 
+                    var position = contracts[active_contracts[i]]['position-title'],
+                    id = active_contracts[i],
+                    expiry = contracts[active_contracts[i]]['expiry date'],
+                    extend_classes = 'extend modal-trigger active';
 
-                        if (!position) {
-                            position = '';
-                        }
-                        if (!expiry) {
-                            expiry = "in seven days";
-                        }
-                        if ( get_remaining_days(expiry) > 7) {
-                            extend_classes = 'extend inactive';
-                        }
-
-                        $('.contracts-list').append('<div class="contract" id='+ id +'><div class="contract-details remove-element-padding"><p class="contract-name mb-0"><span>' + position + '</span> contract</p><p>Expires <span class="expiry">' + expiry + '</span></p></div><div class="contract-actions"><a class="edit">Edit<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.68223 15.516L6.74726 16.451L0.442295 17.9485L1.94069 11.6444L2.83642 10.6702L7.68223 15.516ZM10.6005 2.90609L15.408 7.71352L8.62244 14.4991L3.815 9.69162L10.6005 2.90609ZM13.5136 0.00871828L18.3202 4.81528L16.3822 6.75326L11.5756 1.94669L13.5136 0.00871828Z" fill="#2157AA"/></svg></a><a class="' + extend_classes + '" data-modal="modal-extend-deadline">Extend deadline<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C4.03738 18 0 13.9626 0 9C0 4.03738 4.03738 0 9 0C13.9626 0 18 4.03738 18 9C18 13.9626 13.9626 18 9 18ZM9 2.24975C5.27789 2.24975 2.24975 5.27789 2.24975 9C2.24975 12.7221 5.27789 15.7502 9 15.7502C12.7221 15.7502 15.7502 12.7221 15.7502 9C15.7502 5.27789 12.7221 2.24975 9 2.24975ZM13.4995 11.2497H13.4984H7.87512V5.62538H10.1249V9H13.4995V11.2486V11.2497Z" fill="#2157AA"/></svg></a><a class="delete modal-trigger" data-modal="modal-delete-contract">Delete<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#2157AA"/></svg></a></div></div>');
-                    } 
-                    
-                    // Show no contracts msg if no contracts are saved.
-                    if (active_contracts.length == 0) {
-                        $('.no-contract').removeClass('d-none');
-                    } else {
-                        $('.no-contract').addClass('d-none');
+                    if (!position) {
+                        position = '';
                     }
+                    if (!expiry) {
+                        expiry = "in seven days";
+                    }
+                    if ( get_remaining_days(expiry) > 7) {
+                        extend_classes = 'extend inactive';
+                    }
+
+                    $('.contracts-list').append('<div class="contract" id='+ id +'><div class="contract-details remove-element-padding"><p class="contract-name mb-0"><span>' + position + '</span> contract</p><p>Expires <span class="expiry">' + expiry + '</span></p></div><div class="contract-actions"><a class="edit">Edit<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.68223 15.516L6.74726 16.451L0.442295 17.9485L1.94069 11.6444L2.83642 10.6702L7.68223 15.516ZM10.6005 2.90609L15.408 7.71352L8.62244 14.4991L3.815 9.69162L10.6005 2.90609ZM13.5136 0.00871828L18.3202 4.81528L16.3822 6.75326L11.5756 1.94669L13.5136 0.00871828Z" fill="#2157AA"/></svg></a><a class="' + extend_classes + '" data-modal="modal-extend-deadline">Extend deadline<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C4.03738 18 0 13.9626 0 9C0 4.03738 4.03738 0 9 0C13.9626 0 18 4.03738 18 9C18 13.9626 13.9626 18 9 18ZM9 2.24975C5.27789 2.24975 2.24975 5.27789 2.24975 9C2.24975 12.7221 5.27789 15.7502 9 15.7502C12.7221 15.7502 15.7502 12.7221 15.7502 9C15.7502 5.27789 12.7221 2.24975 9 2.24975ZM13.4995 11.2497H13.4984H7.87512V5.62538H10.1249V9H13.4995V11.2486V11.2497Z" fill="#2157AA"/></svg></a><a class="delete modal-trigger" data-modal="modal-delete-contract">Delete<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM3.46 8.88L4.87 7.47L7 9.59L9.12 7.47L10.53 8.88L8.41 11L10.53 13.12L9.12 14.53L7 12.41L4.88 14.53L3.47 13.12L5.59 11L3.46 8.88ZM10.5 1L9.5 0H4.5L3.5 1H0V3H14V1H10.5Z" fill="#2157AA"/></svg></a></div></div>');
+                } 
+                
+                // Show no contracts msg if no contracts are saved.
+                if (active_contracts.length == 0) {
+                    $('.no-contract').removeClass('d-none');
+                } else {
+                    $('.no-contract').addClass('d-none');
+                }
                 } else if ( btn_location == 'in-modal') {
                     localStorage.setItem('current contract', 'contracttemp');
                     localStorage.setItem('saved new', 'true');
@@ -836,16 +891,24 @@ $(document).ready(function () {
                     localStorage.setItem('saved new', 'true');
                     reset_verification_modal();
                     window.location = '/bga-style-guide/prototypes/ecb/manage-contracts.html';
-                }  else if ( btn_location == 'in-new-contract') {
+                }  
+                else if ( btn_location == 'in-new-contract') {
                     localStorage.setItem('current contract', 'contracttemp');
                     localStorage.setItem('saved new', 'true');
                     sessionStorage.setItem('saved_prompt', 'true');
                     reset_verification_modal();
                     window.location = '/bga-style-guide/prototypes/ecb/position.html';
+                } 
+                else if (btn_location == 'email-contract') {
+                    $('#ecb-modal-email #step-verify-email').removeClass('show');
+                    $('#ecb-modal-email #step-email-success').addClass('show');   
+                    console.log('saved');
                 }
+                    
             }, 3200);
 
         } else {
+            console.log('did not verify');
             $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
         }
 
@@ -1278,49 +1341,6 @@ $(document).ready(function () {
     });
 
 
-    // PROTOTYPE RESETS
-
-    // Reset prototype
-
-    $('#reset-prototype').on('click', function(){
-        localStorage.clear();
-        window.location.pathname = "/bga-style-guide/prototypes/ecb/landing.html";
-    });
-
-    $('.reset-verification').on('click', function(){
-    
-        var user_status = $(this).attr('data-status'),
-        verification_status = $(this).attr('data-verification');
-
-        localStorage.setItem('user status', user_status);
-        localStorage.setItem('verification status', verification_status);
-
-        if (verification_status == 'unverified') {
-            var current_contract = "contracttemp";
-            localStorage.setItem('current contract', current_contract);  
-
-            if (user_status == 'known') {
-                location.reload();
-                window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
-                
-            } else {
-                location.reload();
-            }
-        }
-        else {
-            location.reload();
-        }
-    });
-
-    
-    // Add known user variable when user clicks on the return link in an email
-    $('#return-to-contract').on('click', function(){
-        localStorage.setItem('verification status', 'unverified');
-        localStorage.setItem('user status', 'known  ');
-        
-        var current_contract = "contracttemp";
-        localStorage.setItem('current contract', current_contract);
-    });
 
 }); //End doc ready
 
