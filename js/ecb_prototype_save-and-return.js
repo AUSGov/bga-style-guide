@@ -1060,8 +1060,15 @@ $(document).ready(function () {
                 $('.contracts-container').addClass('d-none');
 
             } else {
-                $('#ecb-cta-verify-known').removeClass('d-none');
+                $('#ecb-cta-verify-known, #ecb-cta-verify-known #step-trigger-code').removeClass('d-none');
+                $('#ecb-cta-verify-known #step-save-verify-email').addClass('d-none');
+
                 $('.contracts-container').addClass('d-none');
+
+                $('#step-trigger-code .progress-step').on('click', function(){
+                    $(this).parents('#step-trigger-code').addClass('d-none');
+                    $(this).parents('#step-trigger-code').next('.step').removeClass('d-none');
+                });
 
             }
         } 
@@ -1291,12 +1298,17 @@ $(document).ready(function () {
         if (verification_status == 'unverified') {
             var current_contract = "contracttemp";
             localStorage.setItem('current contract', current_contract);  
-        }
-        if (user_status == 'known' && verification_status == 'unverified') {
-            window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
-        } else {
-            location.reload();
 
+            if (user_status == 'known') {
+                location.reload();
+                window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
+                
+            } else {
+                location.reload();
+            }
+        }
+        else {
+            location.reload();
         }
     });
 
