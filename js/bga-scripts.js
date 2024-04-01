@@ -1374,7 +1374,7 @@ $(document).ready(function () {
 
     
 
-    // Download / email /save examples
+    // Download / email /save examples (finalise cta)
     $('#step-verify-email #verify-btn, #step-verify-email #bga-email-verify-btn, #bga-save-verify-btn, #bga-save-verify-footer-btn').on('click', function(){
         // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
         var inputElements = [...document.querySelectorAll('input.ecb-code-input')]
@@ -1467,6 +1467,81 @@ $(document).ready(function () {
         }
 
     });
+
+    // Verification cta (no save, just verification step)
+    $('.bga-example-verify-btn').on('click', function(){
+
+        var status = $(this).parents('#verification-cta').attr('data-status'),
+        code_input = status + '-code-input';
+        console.log(code_input);
+
+        // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
+        var inputElements = [...document.querySelectorAll('input.' + code_input)]
+        console.log(inputElements);
+
+        inputElements.forEach((ele, index) => {
+
+            ele.addEventListener('keydown', (e) => {
+                // if the keycode is backspace & the current field is empty
+                // focus the input before the current. Then the event happens
+                // which will clear the "before" input box.
+                if (e.keyCode === 8 && e.target.value === '') inputElements[Math.max(0, index - 1)].focus();
+            })
+            ele.addEventListener('input', (e) => {
+                // take the first character of the input
+                // this actually breaks if you input an emoji
+                // but I'm willing to overlook insane security code practices.
+                console.log(inputElements);
+                var [first, ...rest] = e.target.value;
+                e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
+                var lastInputBox = index === inputElements.length - 1;
+                var didInsertContent = first !== undefined;
+                if (didInsertContent && !lastInputBox) {
+                    // continue to input the rest of the string
+                    inputElements[index + 1].focus();
+                    inputElements[index + 1].value = rest.join('');
+                    inputElements[index + 1].dispatchEvent(new Event('input'));
+                }
+            })
+        })
+    
+        var code = inputElements.map(({ value }) => value).join(''),
+        id = $(this).parents('.step').attr('data-id');
+        console.log(code);
+
+        if (code == '1234' ) {
+            console.log('code is good');
+
+                $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
+                $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+                $(this).prop('disabled', true).addClass('disabled');
+                
+                setTimeout(function () {
+                    $('#step-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
+                    $('#step-verify-email[data-id=' + id + '] .success-icon').addClass('show');
+                    $('#step-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );
+                    
+                }, 1000);
+
+                setTimeout(function () {
+                    $('#step-verify-email[data-id=' + id + '] .success-icon .msg').hide();
+                    $('#step-verify-email[data-id=' + id + '] .success-icon').removeClass('show');
+                    $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+                }, 4000);
+
+                setTimeout(function () {
+                    $('#step-verify-email[data-id=' + id + ']').removeClass('show');
+                    $('#step-email-success[data-id=' + id + ']').addClass('show');
+                    
+                }, 6000);
+
+        } else {
+            console.log('did not verify');
+            $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
+        }
+
+    });
+
 
 
     $('.resend a').on('click', function(){

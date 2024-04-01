@@ -1,0 +1,358 @@
+---
+
+layout: content-tagged
+title: Verification call to action
+description: Provide users with a way to verify their email address in order to see saved content.
+updated: 2 April, 2024
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+        tab1="business.gov.au branding"
+        tab1value="bga-branded"
+
+        tab2="No branding"
+        tab2value="non-branded"
+
+        %}
+
+
+        <div class="tab-sections-wrapper ">
+
+
+            <div class="tab-section bga-branded selected">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                    element-string="bga-cta"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                %}
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper remove-element-padding p-4">
+
+                        <h3>Unknown user</h3>
+
+
+                        {% include component-examples/verification-cta-example.html
+                            status="unknown"
+                        %}
+
+                        <h3>Known user</h3>
+
+                        {% include component-examples/verification-cta-example.html
+                            status="known"
+                        %}
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tab-section non-branded">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                    element-string="nb-cta"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                    %}
+    
+                    <!-- Component example -->
+    
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            {% include non-branded-explanation.html
+                                component="call to action components"
+                                brand-elements="colours and borders"
+                            %}
+    
+                            
+    
+    
+                        </div>
+    
+                    </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+            <!-- Design specifications link -->
+
+            {% include design-specs-link.html
+            btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/0de8291b-d75a-42c7-a123-67fafbbe2b84/'"
+            btn-text="View design specifications"
+            %}
+
+
+            <!-- LAYOUTS -->
+            <h2 class="section-start" id="layouts">Layouts</h2>
+
+            <p>Call to action components can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" |
+                    relative_url }}>page layouts</a> except the Single column - navigation page layout and the two column.
+            </p>
+
+
+            {% include layouts-dropdown.html
+            single-col-infopage-visibility="true"
+            single-col-toolpage-visibility="true"
+            two-col-infopage-visibility="true"
+            two-col-toolpage-visibility="true"
+            two-col-toolpage-alt-visibility="true"
+            %}
+
+            <div class="layout-example single-col-infopage mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="single-col-infopage"
+
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+
+                finalbp="Breakpoint &lt; 768px"
+
+                min1200-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/calltoaction-1col2thirdswidth-finalbp.png' | relative_url "
+
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                min992-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                min768-rules="<p>The content area is 11 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                example-link="'../html-examples/single-col-infopage.html#calltoaction-example' | relative_url'"
+                example-link-text="View layout example"
+
+                %}
+
+            </div>
+
+            <div class="layout-example single-col-toolpage mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="single-col-toolpage"
+    
+                min1200-visibility="true"
+                min992-visibility="true"
+                finalbp-visibility="true"
+    
+                finalbp="Breakpoint &lt; 992px"
+    
+                min1200-img="'../assets/layout-images/onecol-toolpage-1200px-fullwidthcomponent.png' | relative_url "
+                min992-img="'../assets/layout-images/onecol-toolpage-992px-fullwidthcomponent.png' | relative_url "
+                finalbp-img="'../assets/layout-images/onecol-toolpage-finalbp-fullwidthcomponent.png' | relative_url "
+    
+                min1200-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+    
+                min992-rules="<p>The content area is 10 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+    
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+    
+                example-link="'../html-examples/single-col-toolpage.html#calltoaction-example' | relative_url'"
+                example-link-text="View layout example"
+    
+                %}
+    
+            </div>
+
+
+
+            <div class="layout-example two-col-infopage mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="two-col-infopage"
+
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="false"
+                min576-visibility="true"
+                finalbp-visibility="true"
+
+                finalbp="Breakpoint &lt; 576px"
+
+                min1200-img="'../assets/layout-images/calltoaction-2col-leftmenu-min1200.png' | relative_url "
+                min576-img="'../assets/layout-images/calltoaction-2col-leftmenu-min576.png' | relative_url "
+                finalbp-img="'../assets/layout-images/calltoaction-2col-leftmenu-finalbp.png' | relative_url "
+
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                min576-rules="<p>The content area is 9 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                example-link="'../html-examples/two-col-infopage.html#calltoaction-example' | relative_url'"
+                example-link-text="View layout example"
+
+                %}
+
+            </div>
+
+
+            <div class="layout-example two-col-toolpage mt-0 mb-5 px-4 py-0">
+
+                {% include layouts-accordion.html
+                layout-name="two-col-toolpage"
+
+                min1200-visibility="false"
+                min992-visibility="false"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+
+                finalbp="Breakpoint &lt; 768px"
+
+
+                min768-img="'../assets/layout-images/calltoaction-2col-rightsidebar-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/calltoaction-2col-rightsidebar-finalbp.png' | relative_url "
+
+
+                min768-rules="<p>The content area is 8 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Call to action components span the full width of the content area.</p>"
+
+                example-link="'../html-examples/two-col-toolpage.html#calltoaction-example' | relative_url'"
+                example-link-text="View layout example"
+
+                %}
+
+            </div>
+
+            <div class="layout-example two-col-toolpage-alt mt-0 mb-5 px-4 py-0">
+            
+                {% include layouts-accordion.html 
+                    layout-name="two-col-toolpage-alt"
+                
+                    min1200-visibility="false"
+                    min992-visibility="true"
+                    min768-visibility="true"
+                    min576-visibility="false"
+                    finalbp-visibility="true"
+                    
+                    finalbp="Breakpoint &lt; 768px"
+                
+                    min992-img="'../assets/layout-images/calltoaction-2col-rightsidebar-alt-min992.png' | relative_url "
+                    min768-img="'../assets/layout-images/calltoaction-2col-rightsidebar-alt-min768.png' | relative_url "
+                    finalbp-img="'../assets/layout-images/calltoaction-2col-rightsidebar-alt-finalbp.png' | relative_url "
+                
+                    min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call to action tiles span the full width of the content area.</p>"
+    
+                    min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Call to action tiles span the full width of the content area.</p>"
+                
+                    finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call to action tiles span the full width of the content area.</p>"
+                
+                    example-link="'../html-examples/two-col-toolpage-alt.html#calltoaction-example' | relative_url'"
+                    example-link-text="View layout example"
+    
+                %}
+                
+            </div>
+
+
+
+
+
+            <!-- GUIDELINES -->
+            <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+            <h3>Standard call to action (CTA)</h3>
+            <h4>Purpose:</h4>
+            <p>The CTA component is used for the single main action on a page.  </p>
+            <p>It includes a summary of the action, an optional list of prerequisites and a button to complete the
+                action. </p>
+            <h4>When to use this component: </h4>
+            <ul>
+                <li>The standard CTA component is typically used on transaction pages (e.g. for registrations) or
+                    internal program pages (to apply for a grant). </li>
+                <li>Use the standard CTA when the user must complete an important high priority task.</li>
+            </ul>
+            <h4>Content rules: </h4>
+            <ul>
+                <li>Only one per page. </li>
+                <li>Must include description text so users know what they need to do. </li>
+                <li>Can use bullet points or ticks for prerequisites, should limited to 3. </li>
+                <li>Button text is an action, e.g. “Register a trade mark” or “Apply now” (4 word maximum). </li>
+            </ul>
+            <h3>Download call to action </h3>
+            <h4>Purpose: </h4>
+            <p>The download call to action promotes important downloadable files in a call to action box. It allows for
+                different versions of the same file (e.g. DOCX and PDF) as well as related files (such as a template and
+                related guide). This component includes a text field to describe the resource.      </p>
+            <h4>When to use this component: </h4>
+            <ul>
+                <li>The download call to action is typically used when the file download is the single high value action
+                    on a content page (usually a high priority task).</li>
+            </ul>
+
+
+             <!-- VERSION HISTORY-->
+            <h2 class="section-start" id="version-history">Version history</h2>
+            <h4>2 April, 2024</h4>
+            <ul>
+                <li>Added the verification call to action to the style guide.</li>
+            </ul>
+
+        </div>

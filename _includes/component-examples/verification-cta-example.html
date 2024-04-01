@@ -1,0 +1,176 @@
+{% if include.status == "unknown" %}    
+<div class="bga-component callout-box call-to-action mb-5" id="verification-cta" data-status="unknown">
+
+    <div class="p-4 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+
+
+            <div id="step-save-email-address" data-id="ecb" class="step remove-element-padding show">
+                <h3>Enter your email address to see your saved contracts.</h3>
+                
+                <p>If you have saved a contract in the last seven days it will be displayed here.</p>
+
+                <p>We will send a code to your email to verify that it's you.</p>
+
+                <form id="email-form" class="d-flex mb-4">
+                    <input type="text" class="form-control mb-0 me-3" value="">
+                    <div class="button-example">
+                        <button class="bga-btn bga-primary-btn bkg-light progress-step" tabindex="0" href="" role="button">Email <svg
+                                id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="15.429" viewBox="0 0 18 15.429">
+                                <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                            </svg></button>
+                    </div>
+                </form>
+
+                <p class="mini">This site is protected by reCAPTCHA and the <a href="" class="external">Google Privacy Policy</a> and <a href="" class="external">Terms of Service</a> apply</p>
+
+            </div>
+
+            <div id="step-save-verify-email" data-id="ecb" class="step remove-element-padding">
+                <h4>Verify your email address</h4>
+
+                <p>We’ve sent a 4 digit code to <strong><span class="user-email">user@emailaddress.com.au</span></strong>.</p>
+                <p>Enter the code below to verify your email address.
+                </p>
+
+                <form id="verify-form" data-id="ecb" >
+                <fieldset class='number-code'>
+                    <div class="d-inline-flex code-inputs">
+                        <input name='code' class='unknown-code-input code-input py-2 me-2' required/>
+                        <input name='code' class='unknown-code-input code-input py-2 me-2' required/>
+                        <input name='code' class='unknown-code-input code-input py-2 me-2' required/>
+                        <input name='code' class='unknown-code-input code-input py-2' required/>   
+                        
+                    <div class="success-icon ms-4">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+                        <circle cx="22" cy="22" r="20" />
+                        </svg>
+
+                        <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="18.857" height="14.918" viewBox="0 0 18.857 14.918">
+                        <path d="M0,8.737,2.236,6.461l3.945,3.954L16.6,0l2.256,2.241L6.181,14.918Z" fill="#ffffff"/>
+                        </svg>
+                        
+                        
+                    </div>
+
+
+                    </div> 
+                    <div class="error-msg mt-3 mb-0">
+                        <p>Incorrect code. Please enter the code sent to your email address.</p>
+                    </div> 
+                    
+                    <div class="resend remove-element-padding mt-3 mb-5">
+                        <p class="mini me-2 mb-0">Didn’t receive the code?</p>
+                        <a href="" class="mini">Resend code</a> 
+                    </div>
+
+
+                    </fieldset>
+                    
+                    <div class="button-example">
+                        <button class="bga-btn bga-primary-btn bkg-light progress-step bga-example-verify-btn" tabindex="0" href="" role="button">View my contracts</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            
+        </div>
+
+    </div>
+
+</div>
+{% endif %}
+
+
+{% if include.status == "known" %}    
+<!-- UNVERIFIED / KNOWN USER -->
+
+<div class="bga-component callout-box call-to-action mb-5" id="verification-cta" data-status="known">
+
+    <div class="p-4 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+
+            <div id="step-trigger-code" data-id="ecb" class="step remove-element-padding">
+                <h3>Verify your email address to see your saved contracts</h3>
+                
+                <p>We will send a code to <strong>user@emailaddress.com.au</strong> to verify that it’s you.</p>
+                <p>If you have saved a contract in the last seven days it will be displayed here.</p>
+                
+
+                <form id="verify-form" data-id="ecb" >
+                    
+                    <div class="button-example">
+                        <button class="bga-btn bga-primary-btn bkg-light progress-step" tabindex="0" href="" role="button">Email my code<svg
+                                id="Icon:_Send" data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="15.429" viewBox="0 0 18 15.429">
+                                <path id="Path" d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333" />
+                            </svg></button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div id="step-save-verify-email" data-id="ecb" class="step  remove-element-padding">
+                <h3>Verify your email address</h3>
+
+                <p>We’ve sent a 4 digit code to <strong><span>user@emailaddress.com.au</span></strong>.</p>
+                <p>Enter the code below to view your saved contracts.
+                </p>
+
+                <form id="verify-form" data-id="ecb" >
+                <fieldset class='number-code'>
+                    <div class="d-inline-flex code-inputs">
+                        <input name='code' class='known-code-input code-input py-2 me-2' required/>
+                        <input name='code' class='known-code-input code-input py-2 me-2' required/>
+                        <input name='code' class='known-code-input code-input py-2 me-2' required/>
+                        <input name='code' class='known-code-input code-input py-2' required/>   
+                        
+                    <div class="success-icon ms-4">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+                        <circle cx="22" cy="22" r="20" />
+                        </svg>
+
+                        <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="18.857" height="14.918" viewBox="0 0 18.857 14.918">
+                        <path d="M0,8.737,2.236,6.461l3.945,3.954L16.6,0l2.256,2.241L6.181,14.918Z" fill="#ffffff"/>
+                        </svg>
+                        
+                        
+                    </div>
+
+
+                    </div> 
+                    <div class="error-msg mt-3 mb-0">
+                        <p>Incorrect code. Please enter the code sent to your email address.</p>
+                    </div> 
+                    
+                    <div class="resend remove-element-padding mt-3 mb-5">
+                        <p class="mini me-2 mb-0">Didn’t receive the code?</p>
+                        <a href="" class="mini">Resend code</a> 
+                    </div>
+
+
+                    </fieldset>
+                    
+                    <div class="button-example">
+                        <button class="bga-btn bga-primary-btn bkg-light progress-step bga-example-verify-btn" tabindex="0" href="" role="button">View my contracts</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            
+        </div>
+
+    </div>
+
+</div>
+{% endif %}
