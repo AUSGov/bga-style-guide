@@ -13,6 +13,7 @@ $(document).ready(function () {
     // Set verification status
     $('.reset-verification').on('click', function(){
     
+        console.log('resetting status');
         var user_status = $(this).attr('data-status'),
         verification_status = $(this).attr('data-verification');
 
@@ -21,19 +22,16 @@ $(document).ready(function () {
 
         if (verification_status == 'unverified') {
             var current_contract = "contracttemp";
-            localStorage.setItem('current contract', current_contract);  
-
+            localStorage.setItem('current contract', current_contract);    
+        }
+        
+        setTimeout(function () { 
             if (user_status == 'known') {
-                location.reload();
-                window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
-                
+                window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";    
             } else {
                 location.reload();
             }
-        }
-        else {
-            location.reload();
-        }
+        }, 600);            
     });
 
     
