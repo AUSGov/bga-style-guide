@@ -63,9 +63,9 @@ subsite-tag: true
 
                 <div class="component-example m-0">
                     <div class="component-wrapper remove-element-padding p-4">
+                        <p><strong>Verification code: 1234</strong></p>
 
                         <h3>Unknown user</h3>
-
 
                         {% include component-examples/verification-cta-example.html
                             status="unknown"
@@ -106,9 +106,22 @@ subsite-tag: true
                                 component="call to action components"
                                 brand-elements="colours and borders"
                             %}
+
+                            <h3>Unknown user</h3>
+
+                            {% include component-examples/verification-cta-example.html
+                                status="unknown"
+                                classes="non-branded nb-background"
+                                id="nb"
+                            %}
     
-                            
+                            <h3>Known user</h3>
     
+                            {% include component-examples/verification-cta-example.html
+                                status="known"
+                                classes="non-branded nb-background"
+                                id="nb"
+                            %}
     
                         </div>
     
@@ -125,7 +138,7 @@ subsite-tag: true
             <!-- Design specifications link -->
 
             {% include design-specs-link.html
-            btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/0de8291b-d75a-42c7-a123-67fafbbe2b84/'"
+            btn-link="'https://www.figma.com/file/uFWfZ09nO1dHFugQc8vsy0/ECB-Save-and-return---FA?type=design&node-id=109%3A325&mode=design&t=mAyZMMfP4XBtGK2S-1'"
             btn-text="View design specifications"
             %}
 
@@ -133,220 +146,63 @@ subsite-tag: true
             <!-- LAYOUTS -->
             <h2 class="section-start" id="layouts">Layouts</h2>
 
-            <p>Call to action components can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" |
-                    relative_url }}>page layouts</a> except the Single column - navigation page layout and the two column.
+            <p>Verification call to action components can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-singlecol-nav" | relative_url }}> the single column - navigation page layout</a>.
             </p>
 
 
-            {% include layouts-dropdown.html
-            single-col-infopage-visibility="true"
-            single-col-toolpage-visibility="true"
-            two-col-infopage-visibility="true"
-            two-col-toolpage-visibility="true"
-            two-col-toolpage-alt-visibility="true"
-            %}
+             <!-- Breakpoint radio buttons -->
+             {% include layouts-dropdown.html
+                layout-name="Single column - navigation page layout"
+                singlelayout="true"
+                %}
 
-            <div class="layout-example single-col-infopage mt-0 mb-5 px-4 py-0">
+            <div class="layout-example single-col-navpage show mt-0 mb-5 px-4 py-0">
 
                 {% include layouts-accordion.html
                 layout-name="single-col-infopage"
 
                 min1200-visibility="true"
                 min992-visibility="true"
-                min768-visibility="true"
-                min576-visibility="false"
                 finalbp-visibility="true"
 
-                finalbp="Breakpoint &lt; 768px"
-
-                min1200-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min1200.png' | relative_url "
-                min992-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min992.png' | relative_url "
-                min768-img="'../assets/layout-images/calltoaction-1col2thirdswidth-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/calltoaction-1col2thirdswidth-finalbp.png' | relative_url "
-
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-
-                min992-rules="<p>The content area is 9 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-
-                min768-rules="<p>The content area is 11 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-
-                example-link="'../html-examples/single-col-infopage.html#calltoaction-example' | relative_url'"
-                example-link-text="View layout example"
-
-                %}
-
-            </div>
-
-            <div class="layout-example single-col-toolpage mt-0 mb-5 px-4 py-0">
-
-                {% include layouts-accordion.html
-                layout-name="single-col-toolpage"
-    
-                min1200-visibility="true"
-                min992-visibility="true"
-                finalbp-visibility="true"
-    
                 finalbp="Breakpoint &lt; 992px"
-    
-                min1200-img="'../assets/layout-images/onecol-toolpage-1200px-fullwidthcomponent.png' | relative_url "
-                min992-img="'../assets/layout-images/onecol-toolpage-992px-fullwidthcomponent.png' | relative_url "
-                finalbp-img="'../assets/layout-images/onecol-toolpage-finalbp-fullwidthcomponent.png' | relative_url "
-    
-                min1200-rules="<p>The content area is 9 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-    
-                min992-rules="<p>The content area is 10 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-    
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-    
-                example-link="'../html-examples/single-col-toolpage.html#calltoaction-example' | relative_url'"
-                example-link-text="View layout example"
-    
-                %}
-    
-            </div>
 
+                min1200-img="'../assets/layout-images/onecol-fw-1200px-fullwidthcomponent.png' | relative_url "
+                min992-img="'../assets/layout-images/onecol-fw-992px-fullwidthcomponent.png' | relative_url "
+                finalbp-img="'../assets/layout-images/onecol-fw-finalbp-fullwidthcomponent.png' | relative_url "
 
+                min1200-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Verification call to action components span 8 grid-columns.</p>"
 
-            <div class="layout-example two-col-infopage mt-0 mb-5 px-4 py-0">
+                min992-rules="<p>The content area is 12 grid-columns wide.</p>
+                <p>Verification call to action components span the 9 grid-columns.</p>"
 
-                {% include layouts-accordion.html
-                layout-name="two-col-infopage"
-
-                min1200-visibility="true"
-                min992-visibility="false"
-                min768-visibility="false"
-                min576-visibility="true"
-                finalbp-visibility="true"
-
-                finalbp="Breakpoint &lt; 576px"
-
-                min1200-img="'../assets/layout-images/calltoaction-2col-leftmenu-min1200.png' | relative_url "
-                min576-img="'../assets/layout-images/calltoaction-2col-leftmenu-min576.png' | relative_url "
-                finalbp-img="'../assets/layout-images/calltoaction-2col-leftmenu-finalbp.png' | relative_url "
-
-                min1200-rules="<p>The content area is 8 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-
-                min576-rules="<p>The content area is 9 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
 
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
+                <p>Verification call to action components span the full width of the content area.</p>"
 
-                example-link="'../html-examples/two-col-infopage.html#calltoaction-example' | relative_url'"
+                example-link="'../html-examples/single-col-navpage.html#verification-cta-example' | relative_url'"
                 example-link-text="View layout example"
 
                 %}
 
             </div>
 
-
-            <div class="layout-example two-col-toolpage mt-0 mb-5 px-4 py-0">
-
-                {% include layouts-accordion.html
-                layout-name="two-col-toolpage"
-
-                min1200-visibility="false"
-                min992-visibility="false"
-                min768-visibility="true"
-                min576-visibility="false"
-                finalbp-visibility="true"
-
-                finalbp="Breakpoint &lt; 768px"
-
-
-                min768-img="'../assets/layout-images/calltoaction-2col-rightsidebar-min768.png' | relative_url "
-                finalbp-img="'../assets/layout-images/calltoaction-2col-rightsidebar-finalbp.png' | relative_url "
-
-
-                min768-rules="<p>The content area is 8 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-
-                finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
-                <p>Call to action components span the full width of the content area.</p>"
-
-                example-link="'../html-examples/two-col-toolpage.html#calltoaction-example' | relative_url'"
-                example-link-text="View layout example"
-
-                %}
-
-            </div>
-
-            <div class="layout-example two-col-toolpage-alt mt-0 mb-5 px-4 py-0">
-            
-                {% include layouts-accordion.html 
-                    layout-name="two-col-toolpage-alt"
-                
-                    min1200-visibility="false"
-                    min992-visibility="true"
-                    min768-visibility="true"
-                    min576-visibility="false"
-                    finalbp-visibility="true"
-                    
-                    finalbp="Breakpoint &lt; 768px"
-                
-                    min992-img="'../assets/layout-images/calltoaction-2col-rightsidebar-alt-min992.png' | relative_url "
-                    min768-img="'../assets/layout-images/calltoaction-2col-rightsidebar-alt-min768.png' | relative_url "
-                    finalbp-img="'../assets/layout-images/calltoaction-2col-rightsidebar-alt-finalbp.png' | relative_url "
-                
-                    min992-rules="<p>The content area is 8 grid-columns wide.</p><p>Call to action tiles span the full width of the content area.</p>"
-    
-                    min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Call to action tiles span the full width of the content area.</p>"
-                
-                    finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Call to action tiles span the full width of the content area.</p>"
-                
-                    example-link="'../html-examples/two-col-toolpage-alt.html#calltoaction-example' | relative_url'"
-                    example-link-text="View layout example"
-    
-                %}
-                
-            </div>
-
-
-
-
+           
 
             <!-- GUIDELINES -->
             <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-            <h3>Standard call to action (CTA)</h3>
-            <h4>Purpose:</h4>
-            <p>The CTA component is used for the single main action on a page.  </p>
-            <p>It includes a summary of the action, an optional list of prerequisites and a button to complete the
-                action. </p>
-            <h4>When to use this component: </h4>
+            
+            <h3>Purpose:</h3>
+            <p>The verification call to action component is used to allow users to verify their email address.</p>
+            <p>It consists of a two-step process where a user enters their email address and then enters a code that has been sent to that email address. If the users' email address is already known they are asked to send themselves the code without having to enter their email address.</p>
+           
+            <h4>When to use this component: </h4>
             <ul>
-                <li>The standard CTA component is typically used on transaction pages (e.g. for registrations) or
-                    internal program pages (to apply for a grant). </li>
-                <li>Use the standard CTA when the user must complete an important high priority task.</li>
+                <li>Used in the Employment Contract Tool to allow users to save their progress in the tool for seven days at a time.</li>
             </ul>
-            <h4>Content rules: </h4>
-            <ul>
-                <li>Only one per page. </li>
-                <li>Must include description text so users know what they need to do. </li>
-                <li>Can use bullet points or ticks for prerequisites, should limited to 3. </li>
-                <li>Button text is an action, e.g. “Register a trade mark” or “Apply now” (4 word maximum). </li>
-            </ul>
-            <h3>Download call to action </h3>
-            <h4>Purpose: </h4>
-            <p>The download call to action promotes important downloadable files in a call to action box. It allows for
-                different versions of the same file (e.g. DOCX and PDF) as well as related files (such as a template and
-                related guide). This component includes a text field to describe the resource.      </p>
-            <h4>When to use this component: </h4>
-            <ul>
-                <li>The download call to action is typically used when the file download is the single high value action
-                    on a content page (usually a high priority task).</li>
-            </ul>
-
+            
 
              <!-- VERSION HISTORY-->
             <h2 class="section-start" id="version-history">Version history</h2>
