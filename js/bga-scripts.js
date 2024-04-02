@@ -1372,16 +1372,12 @@ $(document).ready(function () {
         } 
     });
 
-    
-
-    // Download / email /save examples (finalise cta)
-    $('#step-verify-email #verify-btn, #step-verify-email #bga-email-verify-btn, #bga-save-verify-btn, #bga-save-verify-footer-btn').on('click', function(){
+    // Function to autofill verification code inputs (as user types)
+    var autofill_code_inputs = function(input){
         // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
-        var inputElements = [...document.querySelectorAll('input.ecb-code-input')]
-        console.log(inputElements);
+        var inputElements = [...document.querySelectorAll(input)]
 
         inputElements.forEach((ele, index) => {
-            console.log('input elements triggered');
 
             ele.addEventListener('keydown', (e) => {
                 // if the keycode is backspace & the current field is empty
@@ -1404,11 +1400,27 @@ $(document).ready(function () {
                     inputElements[index + 1].dispatchEvent(new Event('input'));
                 }
             })
+           
         })
+    };
     
-        var code = inputElements.map(({ value }) => value).join(''),
-        id = $(this).parents('.step').attr('data-id');
-        console.log(code);
+    // Function to validate verification code
+    var validate_code = function(input_class){
+        var inputElements = [...document.querySelectorAll(input_class)]
+        var code = inputElements.map(({ value }) => value).join('');
+    
+        return code;
+    };
+
+    // Download / email /save examples (finalise cta)
+    autofill_code_inputs('.ecb-code-input');
+
+    $('#step-verify-email #verify-btn, #step-verify-email #bga-email-verify-btn, #bga-save-verify-btn, #bga-save-verify-footer-btn').on('click', function(){
+        
+        code = validate_code('.ecb-code-input');
+
+        var id = $(this).parents('.step').attr('data-id');
+        console.log(id);
 
         if (code == '1234' ) {
             console.log('code is good');
@@ -1469,78 +1481,60 @@ $(document).ready(function () {
     });
 
     // Verification cta (no save, just verification step)
+    autofill_code_inputs('.unknown-code-input');
+    autofill_code_inputs('.known-code-input');
+    autofill_code_inputs('.nbunknown-code-input');
+    autofill_code_inputs('.nbknown-code-input');
+
+    $('#verification-cta .progress-step').on('click', function(){ 
+        if ($(this).hasClass('get-email')) {
+            var email_address = $('#email-form input').val();
+            console.log(email_address);
+        }
+        $(this).parents('.step').removeClass('show').next('.step').addClass('show');
+        $('.user-email').text(email_address);
+       
+    });
+
     $('.bga-example-verify-btn').on('click', function(){
-
         var status = $(this).parents('#verification-cta').attr('data-status'),
-        code_input = status + '-code-input';
-        console.log(code_input);
-
-        // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
-        var inputElements = [...document.querySelectorAll('input.' + code_input)]
-        console.log(inputElements);
-
-        inputElements.forEach((ele, index) => {
-
-            ele.addEventListener('keydown', (e) => {
-                // if the keycode is backspace & the current field is empty
-                // focus the input before the current. Then the event happens
-                // which will clear the "before" input box.
-                if (e.keyCode === 8 && e.target.value === '') inputElements[Math.max(0, index - 1)].focus();
-            })
-            ele.addEventListener('input', (e) => {
-                // take the first character of the input
-                // this actually breaks if you input an emoji
-                // but I'm willing to overlook insane security code practices.
-                console.log(inputElements);
-                var [first, ...rest] = e.target.value;
-                e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
-                var lastInputBox = index === inputElements.length - 1;
-                var didInsertContent = first !== undefined;
-                if (didInsertContent && !lastInputBox) {
-                    // continue to input the rest of the string
-                    inputElements[index + 1].focus();
-                    inputElements[index + 1].value = rest.join('');
-                    inputElements[index + 1].dispatchEvent(new Event('input'));
-                }
-            })
-        })
-    
-        var code = inputElements.map(({ value }) => value).join(''),
-        id = $(this).parents('.step').attr('data-id');
-        console.log(code);
+        code_input = '.' + status + '-code-input';
+        
+        code = validate_code(code_input);
+        console.log(status);
 
         if (code == '1234' ) {
             console.log('code is good');
-
-                $('#verify-form[data-id=' + id + '] .number-code').removeClass('error');
-                $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+                $('.status-' + status + ' .number-code').removeClass('error');
+                $('.status-' + status + ' .loading-animation').addClass('show');
                 $(this).prop('disabled', true).addClass('disabled');
                 
                 setTimeout(function () {
-                    $('#step-verify-email[data-id=' + id + '] .loading-animation').removeClass('show');
-                    $('#step-verify-email[data-id=' + id + '] .success-icon').addClass('show');
-                    $('#step-verify-email[data-id=' + id + '] .success-icon .msg').fadeIn( 2000 );
+                    $('.status-' + status + ' .loading-animation').removeClass('show');
+                    $('.status-' + status + ' .success-icon').addClass('show');
+                    $('.status-' + status + ' .success-icon .msg').fadeIn( 2000 );
                     
                 }, 1000);
 
                 setTimeout(function () {
-                    $('#step-verify-email[data-id=' + id + '] .success-icon .msg').hide();
-                    $('#step-verify-email[data-id=' + id + '] .success-icon').removeClass('show');
-                    $('#step-verify-email[data-id=' + id + '] .loading-animation').addClass('show');
+                    $('.status-' + status + ' .success-icon .msg').hide();
+                    $('.status-' + status + ' .success-icon').removeClass('show');
+                    $('.status-' + status + ' .loading-animation').addClass('show');
                 }, 4000);
 
                 setTimeout(function () {
-                    $('#step-verify-email[data-id=' + id + ']').removeClass('show');
-                    $('#step-email-success[data-id=' + id + ']').addClass('show');
+                    $('#verification-cta.status-' + status).addClass('d-none');
+                    $('#' + status + '-page-content').removeClass('d-none');
                     
-                }, 6000);
+                }, 4600);
 
         } else {
             console.log('did not verify');
-            $('#verify-form[data-id=' + id + '] .number-code').addClass('error');
+            $('.status-' + status + ' .number-code').addClass('error');
         }
 
     });
+   
 
 
 
@@ -1559,11 +1553,14 @@ $(document).ready(function () {
         $('.modal-overlay').removeClass('show');
 
         if ($("html").hasClass('ecb-prototype')) {
+            console.log('should scroll soon');
+            
             setTimeout(function () {
 
                 var window_width = window.innerWidth,
                     anchor = $("#next-steps"),
                     extra_padding;
+                console.log(anchor);
 
                 if (window_width <= 768) {
                     extra_padding = 60;
@@ -1572,7 +1569,8 @@ $(document).ready(function () {
                 }
 
                 $('html,body').animate({ scrollTop: anchor.offset().top - extra_padding }, 'fast');
-            }, 200);
+                
+            }, 600);
         }
 
     });

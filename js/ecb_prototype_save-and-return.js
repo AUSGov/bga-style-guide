@@ -10,7 +10,7 @@ $(document).ready(function () {
         window.location.pathname = "/bga-style-guide/prototypes/ecb/landing.html";
     });
 
-    // Set verification status
+    // Reset verification status links at bottom of prototype
     $('.reset-verification').on('click', function(){
     
         console.log('resetting status');
@@ -24,7 +24,7 @@ $(document).ready(function () {
             var current_contract = "contracttemp";
             localStorage.setItem('current contract', current_contract);    
         }
-        
+
         setTimeout(function () { 
             if (user_status == 'known') {
                 window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";    
@@ -759,38 +759,51 @@ $(document).ready(function () {
         } 
     });
 
-    
-    // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
-    var inputElements = [...document.querySelectorAll('input.ecb-code-input')]
-    //console.log(inputElements);
-   
-    inputElements.forEach((ele, index) => {
-        ele.addEventListener('keydown', (e) => {
-            // if the keycode is backspace & the current field is empty
-            // focus the input before the current. Then the event happens
-            // which will clear the "before" input box.
-            if (e.keyCode === 8 && e.target.value === '') inputElements[Math.max(0, index - 1)].focus();
+
+    // Function to autofill verification code inputs (as user types)
+    var autofill_code_inputs = function(input){
+        // Verify email code. THANK YOU - https://codepen.io/RobertAron/pen/gOLLXLo 
+        var inputElements = [...document.querySelectorAll(input)]
+
+        inputElements.forEach((ele, index) => {
+
+            ele.addEventListener('keydown', (e) => {
+                // if the keycode is backspace & the current field is empty
+                // focus the input before the current. Then the event happens
+                // which will clear the "before" input box.
+                if (e.keyCode === 8 && e.target.value === '') inputElements[Math.max(0, index - 1)].focus();
+            })
+            ele.addEventListener('input', (e) => {
+                // take the first character of the input
+                // this actually breaks if you input an emoji
+                // but I'm willing to overlook insane security code practices.
+                var [first, ...rest] = e.target.value;
+                e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
+                var lastInputBox = index === inputElements.length - 1;
+                var didInsertContent = first !== undefined;
+                if (didInsertContent && !lastInputBox) {
+                    // continue to input the rest of the string
+                    inputElements[index + 1].focus();
+                    inputElements[index + 1].value = rest.join('');
+                    inputElements[index + 1].dispatchEvent(new Event('input'));
+                }
+            })
+            
         })
-        ele.addEventListener('input', (e) => {
-            // take the first character of the input
-            // this actually breaks if you input an emoji
-            // but I'm willing to overlook insane security code practices.
-            var [first, ...rest] = e.target.value;
-            e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
-            var lastInputBox = index === inputElements.length - 1;
-            var didInsertContent = first !== undefined;
-            if (didInsertContent && !lastInputBox) {
-                // continue to input the rest of the string
-                inputElements[index + 1].focus();
-                inputElements[index + 1].value = rest.join('');
-                inputElements[index + 1].dispatchEvent(new Event('input'));
-            }
-        })
-    })
+    };
+    autofill_code_inputs('.ecb-code-input');
+
+     // Function to validate verification code
+     var validate_code = function(input_class){
+        var inputElements = [...document.querySelectorAll(input_class)]
+        var code = inputElements.map(({ value }) => value).join('');
+
+        return code;
+    };
 
     // Save with verification
     $('#step-save-verify-email #ecb-verify-btn, #ecb-email-contract-btn').on('click', function(){
-        
+
         history.pushState({ modalOpen: true }, document.title, '#modal');
 
         var btn_location;
@@ -807,10 +820,10 @@ $(document).ready(function () {
             btn_location = 'in-modal';
         }
         console.log(btn_location);
+
+        code = validate_code('.ecb-code-input');
         
-        var code = inputElements.map(({ value }) => value).join(''),
-        id = $(this).parents('.step').attr('data-id');
-        //console.log(code);
+        var id = $(this).parents('.step').attr('data-id');
 
         if (code == '1234'|| code == 'RGAE') {
             console.log('code is good');
@@ -930,7 +943,6 @@ $(document).ready(function () {
         }
         console.log(btn_location);
         
-        //var code = inputElements.map(({ value }) => value).join(''),
         id = $(this).parents('.step').attr('data-id');
         console.log(id);
 
