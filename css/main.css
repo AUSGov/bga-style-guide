@@ -6821,7 +6821,9 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #subsite-header .bga-link-strap .secondary-links { text-align: right; }
 
-#subsite-header .bga-link-strap .secondary-links a { margin: 12px 0; }
+#subsite-header .bga-link-strap .secondary-links a { margin: 12px 0; color: #ffffff; text-decoration: none; }
+
+#subsite-header .bga-link-strap .secondary-links a:focus-visible, #subsite-header .bga-link-strap .secondary-links a:hover { color: #ffffff; text-decoration: underline; }
 
 #subsite-header .main-header { background: #2E6CB9; }
 
@@ -6831,15 +6833,31 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 #subsite-header .main-header .subsite-logo span { max-width: 200px; }
 
-.component-example.bp-below576 #subsite-header .main-header, .component-example.small-screen #subsite-header .main-header { padding: 16px 32px !important; }
+.component-example.bp-350 #subsite-header .bga-link-strap .secondary-links svg { display: none; }
 
-.component-example.bp-below576 #subsite-header .main-header .subsite-logo a, .component-example.small-screen #subsite-header .main-header .subsite-logo a { font-size: 1rem; }
+.component-example.bp-350 #subsite-header .main-header { padding: 16px 24px !important; }
 
-.component-example.bp-below576 #subsite-header .main-header .subsite-logo svg, .component-example.small-screen #subsite-header .main-header .subsite-logo svg { height: 48px; padding-right: 8px !important; }
+.component-example.bp-350 #subsite-header .main-header .subsite-logo a { font-size: 1rem; line-height: 1.75; }
 
-.component-example.bp-below576 #subsite-header .main-header .subsite-logo span, .component-example.small-screen #subsite-header .main-header .subsite-logo span { max-width: 140px; padding-left: 8px !important; }
+.component-example.bp-350 #subsite-header .main-header .subsite-logo svg { height: 48px; padding-right: 8px !important; }
 
-@media (max-width: 576px) { #subsite-header .main-header { padding: 16px 32px !important; } #subsite-header .main-header .subsite-logo a { font-size: 1rem; } #subsite-header .main-header .subsite-logo svg { height: 48px; padding-right: 8px !important; } #subsite-header .main-header .subsite-logo span { max-width: 140px; padding-left: 8px !important; } }
+.component-example.bp-350 #subsite-header .main-header .subsite-logo span { max-width: 140px; padding-left: 8px !important; }
+
+.component-example.bp-below350 #subsite-header .bga-link-strap .secondary-links svg { display: none; }
+
+.component-example.bp-below350 #subsite-header .main-header { padding: 16px 24px !important; }
+
+.component-example.bp-below350 #subsite-header .main-header .subsite-logo a { font-size: 1rem; line-height: 1.75; }
+
+.component-example.bp-below350 #subsite-header .main-header .subsite-logo svg { height: 48px; padding-right: 8px !important; }
+
+.component-example.bp-below350 #subsite-header .main-header .subsite-logo span { max-width: 140px; padding-left: 8px !important; }
+
+.component-example.bp-below350 #subsite-header .bga-link-strap .secondary-links { display: none; }
+
+@media (max-width: 576px) { #subsite-header .bga-link-strap .secondary-links svg { display: none; } #subsite-header .main-header { padding: 16px 24px !important; } #subsite-header .main-header .subsite-logo a { font-size: 1rem; line-height: 1.75; } #subsite-header .main-header .subsite-logo svg { height: 48px; padding-right: 8px !important; } #subsite-header .main-header .subsite-logo span { max-width: 140px; padding-left: 8px !important; } }
+
+@media (max-width: 350px) { #subsite-header .bga-link-strap .secondary-links { display: none; } }
 
 #subsite-header.pathway-to-services .strap-wrapper { display: flex; flex-wrap: wrap; justify-content: flex-end; position: relative; }
 
@@ -6913,17 +6931,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .subsite-footer .copyright p { font-size: .875rem; line-height: 1.715; }
 
-.component-example.bp-below576 .subsite-footer .phone, .component-example.small-screen .subsite-footer .phone { margin-bottom: 16px !important; }
+.component-example.bp-below576 .subsite-footer, .component-example.small-screen .subsite-footer { padding: 48px 24px !important; }
 
-.component-example.bp-below576 .subsite-footer .links, .component-example.small-screen .subsite-footer .links { margin-bottom: 16px !important; }
-
-.component-example.bp-below576 .subsite-footer .links ul li, .component-example.small-screen .subsite-footer .links ul li { font-size: .875rem; line-height: 1.715; margin-right: 16px !important; }
-
-.component-example.bp-below576 .subsite-footer .copyright, .component-example.small-screen .subsite-footer .copyright { padding: 0 !important; }
+.component-example.bp-below576 .subsite-footer .links ul li, .component-example.small-screen .subsite-footer .links ul li { font-size: .875rem; line-height: 1.715; }
 
 .component-example.bp-below576 .subsite-footer .copyright p, .component-example.small-screen .subsite-footer .copyright p { font-size: 0.75rem; line-height: 1.5rem; }
 
-@media (max-width: 576px) { .subsite-footer .phone { margin-bottom: 16px !important; } .subsite-footer .links { margin-bottom: 16px !important; } .subsite-footer .links ul li { font-size: .875rem; line-height: 1.715; margin-right: 16px !important; } .subsite-footer .copyright { padding: 0 !important; } .subsite-footer .copyright p { font-size: 0.75rem; line-height: 1.5rem; } }
+@media (max-width: 576px) { .subsite-footer { padding: 48px 24px !important; } .subsite-footer .links ul li { font-size: .875rem; line-height: 1.715; } .subsite-footer .copyright p { font-size: 0.75rem; line-height: 1.5rem; } }
 
 .bga-component.notification { background: #E3ECF6; border-left: solid 8px #96B7DF; text-decoration: none; }
 
