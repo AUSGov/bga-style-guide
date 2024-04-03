@@ -58,6 +58,13 @@
 
             a {
                 margin: 12px 0;
+                color: $bga-white;
+                text-decoration: none;
+
+                &:focus-visible, &:hover {
+                    color: $bga-white;
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -87,13 +94,21 @@
     }
 }
 
-@mixin subsite-header-below576(){
+@mixin subsite-header-bp-350(){
     #subsite-header {
+        .bga-link-strap {
+            .secondary-links {
+                svg {
+                    display: none;
+                }
+            }
+        }
         .main-header {
-            padding: 16px 32px !important;
+            padding: 16px 24px !important;
             .subsite-logo {
                 a {
                     font-size: 1rem;
+                    line-height: 1.75;
                 }
                 svg {
                     height: 48px;
@@ -107,14 +122,30 @@
         }
     }
 }
+@mixin subsite-header-bp-below350(){
+    #subsite-header {
+        .bga-link-strap {
+            .secondary-links {
+                display: none;
+            }
+        }
+    }
+}
 
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576, .component-example.small-screen {
-    @include subsite-header-below576();
+.component-example.bp-350{
+    @include subsite-header-bp-350();
+}
+.component-example.bp-below350{
+    @include subsite-header-bp-350();
+    @include subsite-header-bp-below350();
 }
 
 // Media queries for HTML examples
 @media (max-width: 576px) {
-   @include subsite-header-below576();
+   @include subsite-header-bp-350();
+}
+@media (max-width: 350px) {
+    @include subsite-header-bp-below350();
 }

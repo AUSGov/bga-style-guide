@@ -33,20 +33,26 @@ classes="in-page"
 
         <!-- Breakpoint radio buttons -->
         {% include breakpoints.html
-        element-string="subsite-header"
-        sm-visibility="true"
-        breakpoint-final="576"
-        %}
+            element-string="subsite-header"
+            sm-visibility="true"
+            xs-visibility="true"
+            breakpoint-final="350"
+            %}
 
         <!-- Component example -->
 
         <div class="component-example m-0">
             <div class="component-wrapper remove-element-padding pb-4">
 
+                <div class="xl-explanation remove-element-padding p-4">
+                    <p>When the breakpoint ≥ 1320px wide the content is a maximum 1256px wide. The background colour fills the rest of the screen to the left and right.</p>
+                </div>
 
                 {% include component-examples/subsite-header-example.html 
                     secondary-links = "true"
                     %}
+                
+                
 
 
             </div>
@@ -56,7 +62,7 @@ classes="in-page"
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/b7cf7b89-f8d4-40a6-ad4e-790ad0924148/'"
+        btn-link="'https://www.figma.com/file/uFWfZ09nO1dHFugQc8vsy0/ECB-Save-and-return---FA?type=design&node-id=201%3A5380&mode=design&t=MYyPc4AaGRcQEhuS-1'"
         btn-text="View design specifications"
         %}
 
