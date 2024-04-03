@@ -1,0 +1,168 @@
+---
+
+layout: content-tagged
+title: Mini toast notification
+description: Push notifications to users with a small, temporary message that slides down from the top of the screen.
+updated: 3 April, 2024
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper">
+    
+    
+                <div class="tab-section bga-branded selected">
+        
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                    element-string="bga-toast"
+                    sm-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding px-4 py-4">
+
+                           
+                            {% include component-examples/mini-toast-example.html 
+                            text="Changes to this contract are being autosaved."
+                            classes="example show"
+                            %}
+
+                            <h4 class="mt-5">View the mini toast in page</h4>
+                            <div class="button-example mb-4">
+                                <button id="mini-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                                    role="button">Trigger mini toast</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="nb-toast"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding px-4 py-4">
+    
+                                {% include non-branded-explanation.html
+                                    component="toast notifications"
+                                    brand-elements="colour and icon styles"
+                                %}
+                                
+                                {% include component-examples/mini-toast-example.html 
+                                    text="Changes to this contract are being autosaved."
+                                    classes="example show non-branded nb-background"
+                                    %}
+    
+                                
+    
+                            </div>
+    
+                        </div>
+                </div>
+
+            </div>
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://www.figma.com/file/uFWfZ09nO1dHFugQc8vsy0/ECB-Save-and-return---FA?type=design&node-id=2%3A1947&mode=design&t=M38lBJrZ0mDg5jgV-1'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Toast notifications can be used on all page layouts.</p>
+
+
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+            {% include layouts-accordion.html
+            singlelayout="true"
+            allbp-img="'../assets/layout-images/mini-toast-allbp.png' | relative_url "
+            allbp-rules="<p>Mini toasts are placed at the top of the screen. The are right aligned with the grid.</p><p>Mini toasts sit 24px from the top of the screen. When a sticky header is present they sit 24px below the sticky header.</p>"
+            %}
+
+        </div>
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>business.gov.au mini toasts are lightweight notifications that are fixed at the top of the screen.</p>
+        <p>Unlike modal notifications, mini toast notifications do not stop the user from viewing and using the page. They are temporary notifications that only appear for a short period and as such do not have a close button.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used to display hints the user may find helpful with minimal disruption to the process.</li>
+            <li>Used in the Employment Contract Builder to inform users a contract is autosaving.</li>
+        </ul>
+
+
+        <!-- VERSION HISTORY-->
+        <h2 class="section-start" id="version-history">Version history</h2>
+        <h4>3 April, 2024</h4>
+        <ul>
+            <li>Added the mini toast notification to the style guide.</li>
+        </ul>
+
+
+    </div>
+

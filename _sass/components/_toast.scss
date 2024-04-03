@@ -1,3 +1,4 @@
+// TOAST NOTIFICATION
 .callout-box.toast-example {
     border-left: none;
     background: $bga-blue-black-lightest;
@@ -35,8 +36,79 @@
     display: none;
 }
 
+// MINI TOAST NOTIFICATION
+.bga-component.mini-toast-notification {
+    display: none;
+    background: $bga-white;
+    background: $bga-yellow-highlight-mid;
+    border: solid 1px $bga-green-success-dark;
+    border: solid 1px $bga-yellow-highlight-shadow;
+    border-left-width: 8px;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: $bga-btn-boxshadow;
+    z-index: 9000;
+
+    .component-content {
+        display: flex;
+        column-gap: 8px;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        svg {
+            height: 20px;
+            width: 20px;
+            flex-shrink: 0;
+        }
+    }
+    &.show.example {
+        display: block;
+        position: relative;
+    }
+
+    &.inpage {
+        display: none;
+        //top: -24px;
+        
+        &.show {
+            display: block;
+            animation: mini-toast-2-animation 1s ease-in-out forwards;
+            position: fixed;
+            top: 24px; // To sit 24px below the header.
+            
+            @keyframes mini-toast-2-animation {
+                from {
+                    opacity: 0;
+                    top: -60px;
+                }
+                to {
+                    opacity: 1;
+                    top: 24px; // To sit 24px below the header.
+                }
+            }
+        }
+    }
+    
+}
+
 
 // Mixins for smaller screen sizes and media queries
+@mixin mini-toast-bp-below576 () {
+    .bga-component.mini-toast-notification {
+        padding: 8px !important;
+
+        &.show.inpage {
+            right: 24px;
+        }
+
+        .component-content {
+            p.mini {
+                font-size: .75rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
 @mixin toast-bp-350 () {
     .callout-box.toast-example {
         width: 100%;
@@ -56,11 +128,15 @@
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include mini-toast-bp-below576();
+}
 .component-example.bp-350, .component-example.bp-below350 {
     @include toast-bp-350();
 }
 
 // Media queries for HTML page examples
 @media (max-width: 575px) {
+    @include mini-toast-bp-below576();
     @include toast-bp-350();
 }

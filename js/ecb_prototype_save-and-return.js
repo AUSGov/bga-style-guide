@@ -1194,8 +1194,6 @@ $(document).ready(function () {
         }); 
     } 
 
-    // Show mini-toast when user returns to saved contract and makes a change.
-
     // Extend a saved contract
     $('body').on('click', '.extend.modal-trigger.active', function() {
         $('#ecb-extend-modal').addClass('show');

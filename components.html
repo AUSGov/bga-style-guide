@@ -84,6 +84,7 @@ description: A modular system of parts which form the building blocks of the sit
                         <li tabindex="0" value="Lightweight checklist accordion">Lightweight checklist accordion</li>
                         <li tabindex="0" value="List group">List group</li>
                         <li tabindex="0" value="Mini-list">Mini-list</li> 
+                        <li tabindex="0" value="Mini toast notification">Mini toast notification</li> 
                         <li tabindex="0" value="Modal dialog">Modal dialog</li>
                         <li tabindex="0" value="Notifications">Notifications</li>
                         <li tabindex="0" value="Page headers">Page headers</li> 
@@ -105,10 +106,12 @@ description: A modular system of parts which form the building blocks of the sit
                         <li tabindex="0" value="Table">Table</li>
                         <li tabindex="0" value="Tile filters">Tile filters</li>
                         <li tabindex="0" value="Toast notification">Toast notification</li>
+                        <li tabindex="0" value="Tool finalise call to action">Tool finalise call to action</li>
                         <li tabindex="0" value="Tool results components">Tool results components</li>
                         <li tabindex="0" value="Tools and templates tiles">Tools and templates tiles</li> 
                         <li tabindex="0" value="Tool start component">Tool start component</li> 
                         <li tabindex="0" value="Tooltip">Tooltip</li>  
+                        <li tabindex="0" value="Verification call to action">Verification call to action</li>
                         <li tabindex="0" value="Video player">Video player</li>
                      
                     </ul>
@@ -538,21 +541,30 @@ description: A modular system of parts which form the building blocks of the sit
             <!-- Toast -->
             {% include nav-image-tile.html
             classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper warnings-and-notifications
-            bga-toast-notification tool-specific-components"
+            bga-toast-notification"
             tile-url="components/toast-notification.html"
             tile-title="Toast notification"
             tile-tag1="Warnings and notifications"
             tile-image="assets/nav-images/nav-tile-toast.svg"
             %}
 
+             <!-- Mini toast -->
+             {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper warnings-and-notifications"
+            tile-url="components/mini-toast-notification.html"
+            tile-title="Mini toast notification"
+            tile-tag1="Warnings and notifications"
+            tile-image="assets/nav-images/nav-tile-mini-toast.svg"
+            %}
+
              <!-- Cookie notification -->
              {% include nav-image-tile.html
-                classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper warnings-and-notifications bga-cookie-notification"
-                tile-url="components/cookie-notification.html"
-                tile-title="Cookie notification"
-                tile-tag1="Warnings and notifications"
-                tile-image="assets/nav-images/nav-tile-cookie-notification.svg"
-                %}
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper warnings-and-notifications bga-cookie-notification"
+            tile-url="components/cookie-notification.html"
+            tile-title="Cookie notification"
+            tile-tag1="Warnings and notifications"
+            tile-image="assets/nav-images/nav-tile-cookie-notification.svg"
+            %}
 
             <!-- Disclaimer alerts -->
             {% include nav-image-tile.html
@@ -576,14 +588,14 @@ description: A modular system of parts which form the building blocks of the sit
 
              <!-- Global pathway to services -->
              {% include nav-image-tile.html
-                classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper
-                navigation-links headers-and-footers bga-global-pathway-to-services"
-                tile-url="components/pathway-to-services.html"
-                tile-title="Global pathway to services"
-                tile-tag2="Navigation links"
-                tile-tag1="Headers and footers"
-                tile-image="assets/nav-images/nav-tile-pathwaytoservices.svg"
-                %}
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper
+            navigation-links headers-and-footers bga-global-pathway-to-services"
+            tile-url="components/pathway-to-services.html"
+            tile-title="Global pathway to services"
+            tile-tag2="Navigation links"
+            tile-tag1="Headers and footers"
+            tile-image="assets/nav-images/nav-tile-pathwaytoservices.svg"
+            %}
 
             <!--<h2>Navigation components</h2>-->
 
@@ -721,6 +733,16 @@ description: A modular system of parts which form the building blocks of the sit
             tile-image="assets/nav-images/nav-tile-bgasubsitefooter.svg"
             %}
 
+            <!-- Verification call to action -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-specific-components feedback-user-interaction"
+            tile-url="components/verification-cta.html"
+            tile-title="Verification call to action"
+            tile-tag1="Tool specific components"
+            tile-tag1="Feedback / user interaction"
+            tile-image="assets/nav-images/nav-tile-verification-cta.svg"
+            %}
+
             <!-- Tool start component -->
             {% include nav-image-tile.html
             classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-specific-components
@@ -733,13 +755,24 @@ description: A modular system of parts which form the building blocks of the sit
 
             <!-- Save and return footer -->
             {% include nav-image-tile.html
-                classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper headers-and-footers tool-specific-components bga-save-and-return-footer"
-                tile-url="components/save-and-return-footer.html"
-                tile-title="Save and return footer"
-                tile-tag1="Tool specific components"
-                tile-tag2="Headers and Footers"
-                tile-image="assets/nav-images/nav-tile-save-return-footer.svg"
-                %}
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper headers-and-footers tool-specific-components bga-save-and-return-footer"
+            tile-url="components/save-and-return-footer.html"
+            tile-title="Save and return footer"
+            tile-tag1="Tool specific components"
+            tile-tag2="Headers and Footers"
+            tile-image="assets/nav-images/nav-tile-save-return-footer.svg"
+            %}
+
+            <!-- Tool finalise component -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper feedback-user-interaction tool-specific-components download-files"
+            tile-url="components/tool-finalise-cta.html"
+            tile-title="Tool finalise call to action"
+            tile-tag1="Tool specific components"
+            tile-tag2="Feedback / user interaction"
+            tile-tag2="Download files"
+            tile-image="assets/nav-images/nav-tile-finalise-cta.svg"
+            %}
 
 
             <!-- Guided search -->
@@ -818,14 +851,14 @@ description: A modular system of parts which form the building blocks of the sit
 
             <!-- Comparison accordion -->
             {% include nav-image-tile.html
-                classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-specific-components
-                minimise-information bga-comparison-accordion"
-                tile-url="components/comparison-accordion.html"
-                tile-title="Comparison accordion"
-                tile-tag1="Tool specific components"
-                tile-tag2="Minimise information"
-                tile-image="assets/nav-images/nav-tile-comparisonaccordion.svg"
-                %}
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-specific-components
+            minimise-information bga-comparison-accordion"
+            tile-url="components/comparison-accordion.html"
+            tile-title="Comparison accordion"
+            tile-tag1="Tool specific components"
+            tile-tag2="Minimise information"
+            tile-image="assets/nav-images/nav-tile-comparisonaccordion.svg"
+            %}
 
             <!-- More information sidebar -->
             {% include nav-image-tile.html
@@ -861,14 +894,14 @@ description: A modular system of parts which form the building blocks of the sit
 
             <!-- Tools templates tiles -->
             {% include nav-image-tile.html
-                classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-specific-components
-                link-to-internal-pages bga-tools-and-templates-tiles"
-                tile-url="components/tools-and-templates-tiles.html"
-                tile-title="Tools and templates tiles"
-                tile-tag1="Tool specific components"
-                tile-tag2="Link to internal pages"
-                tile-image="assets/nav-images/nav-tile-toolstemplates.svg"
-                %}
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-specific-components
+            link-to-internal-pages bga-tools-and-templates-tiles"
+            tile-url="components/tools-and-templates-tiles.html"
+            tile-title="Tools and templates tiles"
+            tile-tag1="Tool specific components"
+            tile-tag2="Link to internal pages"
+            tile-image="assets/nav-images/nav-tile-toolstemplates.svg"
+            %}
 
              <!-- Action tiles-->
              {% include nav-image-tile.html
