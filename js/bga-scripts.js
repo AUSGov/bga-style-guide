@@ -1078,10 +1078,17 @@ $(document).ready(function () {
     });
 
     // COMPONENT EXAMPLE: MINI-TOAST
-    $('.mini-toast-trigger').on('click', function () {
-        $('.mini-toast').slideDown('slow');
-    });
+    $('#mini-toast-trigger').on('click', function () {
+        var header_width = $('#page-header .header-content').outerWidth(),
+            viewport_width = $(window).width(),
+            toast_right = (viewport_width - header_width)/2;    
 
+        $('.mini-toast-notification.inpage').css('right', toast_right + 'px').addClass('show');
+
+            setTimeout(function () { 
+                $('.mini-toast-notification.inpage').removeClass('show');
+            }, 6000);
+    });
 
     // COMPONENT EXAMPLE: COOKIE NOTIFICATION
     $('#cookie-trigger').on('click', function () {

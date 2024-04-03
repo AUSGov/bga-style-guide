@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Progress bar</title>
+    <title>Mini toast notification</title>
     <meta name="description" content="Brand guidance for business.gov.au">
  
     <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
@@ -42,7 +42,7 @@
     <script src=/bga-style-guide/js/bga_prototype.js ></script>
 
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/progress-bar.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/mini-toast-notification.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -185,7 +185,7 @@
                     
 
                     <li class="breadcrumb breadcrumb-current">
-                        <p class="breadcrumb-location m-0 p-0">Progress bar</p>
+                        <p class="breadcrumb-location m-0 p-0">Mini toast notification</p>
                     </li>
                 </ul>
                 
@@ -205,8 +205,8 @@
             <div class="header-content col">
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
-                        <h1>Progress bar</h1>
-                        <p class="header-intro">Show users how far they have progressed through a process.</p>
+                        <h1>Mini toast notification</h1>
+                        <p class="header-intro">Push notifications to users with a small, temporary message that slides down from the top of the screen.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
@@ -214,6 +214,8 @@
                                 <li class="m-0 mb-0 py-1 ps-5 pe-2 true">subsites</li>
                             </ul>
                         </div>
+                        
+                        <p class="updated pt-4 pb-0">Last updated: 3 April, 2024</p>
                         
                     </div>
                 </div>
@@ -305,84 +307,84 @@
 
 </div>
     
+    
             <div class="tab-sections-wrapper">
-                
+    
+    
                 <div class="tab-section bga-branded selected">
-
+        
                     <!-- Breakpoint radio buttons -->
-                    <div class="layouts m-0 p-4">
-    
-    
-    <p class="pe-3 m-0 all-layouts">Layout: <strong>All layouts</strong></p>
-    
-    
-
+                    <div class="breakpoints m-0 p-4">
 
     
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="bga-toast-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input tabindex=-1 type="radio" class="btn-check bp-sm true" name="bga-toast-group" id="bga-toast-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label tabindex=0 class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-toast-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input tabindex=-1 type="radio" class="btn-check true" name="bga-toast-group" id="bga-toast-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 true" for="bga-toast-bp-final">&lt;576px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
 </div>
+
+
 
                     <!-- Component example -->
 
                     <div class="component-example m-0">
-                        <div class="component-wrapper remove-element-padding p-4">
+                        <div class="component-wrapper remove-element-padding px-4 py-4">
 
-                            <h3>Un-named steps</h3>
-                            <div class="bga-progress-bar ">
-    
-    <p class="progress-label mb-2"><strong>75% complete</strong></p>
-    
-    <div class="progress mb-5">
-        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-            aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
+                           
+                            <div id="bga-mini-toast" class="bga-component mini-toast-notification example show p-3">
+
+        <div class="component-content p-0 remove-element-padding">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4012 0H2.20017C0.979078 0 0 0.990079 0 2.20017V17.6014C0 18.8115 0.979078 19.8016 2.20017 19.8016H17.6014C18.8115 19.8016 19.8016 18.8115 19.8016 17.6014V4.40035L15.4012 0ZM9.90079 17.6014C8.07464 17.6014 6.60053 16.1273 6.60053 14.3011C6.60053 12.475 8.07464 11.0009 9.90079 11.0009C11.7269 11.0009 13.2011 12.475 13.2011 14.3011C13.2011 16.1273 11.7269 17.6014 9.90079 17.6014ZM13.2011 6.60053H2.20017V2.20017H13.2011V6.60053Z" fill="#333333"/>
+                </svg>
+            
+            <p class="mini"><strong>Changes to this contract are being autosaved.</strong></p>
+        </div>
+
 </div>
 
 
-                            <h3>Named steps</h3>
-                            <div class="bga-progress-bar ">
-    
-    <p class="progress-label mb-2"><strong>Step name:</strong> 50% complete</p>
-    
-    <div class="progress mb-5">
-        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
-            aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-</div>
-
-
-                        </div>
-
-                    </div>
-                    <div class="component-example m-0">
-                        <div class="component-wrapper remove-element-padding p-4">
-
-                            <h3>Colour variations</h3>
-                            <div class="row">
-                                <div class="col-12 col-sm-6">
-                                    <h4>Blue</h4>
-                                    <div class="bga-progress-bar ">
-    
-    <div class="progress mb-5">
-        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-            aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-</div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <h4>Teal</h4>
-                                    <div class="bga-progress-bar teal">
-    
-    <div class="progress mb-5">
-        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-            aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-</div>
-                                </div>
+                            <h4 class="mt-5">View the mini toast in page</h4>
+                            <div class="button-example mb-4">
+                                <button id="mini-toast-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
+                                    role="button">Trigger mini toast</button>
                             </div>
-
-
-
-
 
                         </div>
 
@@ -391,56 +393,82 @@
                 </div>
 
                 <div class="tab-section non-branded ">
-                    
+
                     <!-- Breakpoint radio buttons -->
-                    <div class="layouts m-0 p-4">
-    
-    
-    <p class="pe-3 m-0 all-layouts">Layout: <strong>All layouts</strong></p>
-    
-    
-
+                    <div class="breakpoints m-0 p-4">
 
     
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-toast-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input tabindex=-1 type="radio" class="btn-check bp-sm true" name="nb-toast-group" id="nb-toast-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label tabindex=0 class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-toast-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input tabindex=-1 type="radio" class="btn-check true" name="nb-toast-group" id="nb-toast-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 true" for="nb-toast-bp-final">&lt;576px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
 </div>
+
+
     
                         <!-- Component example -->
     
                         <div class="component-example m-0">
-                            <div class="component-wrapper remove-element-padding p-4">
+                            <div class="component-wrapper remove-element-padding px-4 py-4">
     
-                                <p class="">Apply your brand specific <strong>colours</strong> to the base progress bars shown below.</p>
+                                <p class="">Apply your brand specific <strong>colour and icon styles</strong> to the base toast notifications shown below.</p>
 
 
                                 
-                                <h3>Un-named steps</h3>
-                                <div class="bga-progress-bar non-branded">
-    
-    <p class="progress-label mb-2"><strong>75% complete</strong></p>
-    
-    <div class="progress mb-5">
-        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-            aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
+                                <div id="bga-mini-toast" class="bga-component mini-toast-notification example show non-branded nb-background p-3">
+
+        <div class="component-content p-0 remove-element-padding">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4012 0H2.20017C0.979078 0 0 0.990079 0 2.20017V17.6014C0 18.8115 0.979078 19.8016 2.20017 19.8016H17.6014C18.8115 19.8016 19.8016 18.8115 19.8016 17.6014V4.40035L15.4012 0ZM9.90079 17.6014C8.07464 17.6014 6.60053 16.1273 6.60053 14.3011C6.60053 12.475 8.07464 11.0009 9.90079 11.0009C11.7269 11.0009 13.2011 12.475 13.2011 14.3011C13.2011 16.1273 11.7269 17.6014 9.90079 17.6014ZM13.2011 6.60053H2.20017V2.20017H13.2011V6.60053Z" fill="#333333"/>
+                </svg>
+            
+            <p class="mini"><strong>Changes to this contract are being autosaved.</strong></p>
+        </div>
+
 </div>
+
     
-    
-                                <h3>Named steps</h3>
-                                <div class="bga-progress-bar non-branded">
-    
-    <p class="progress-label mb-2"><strong>Step name:</strong> 50% complete</p>
-    
-    <div class="progress mb-5">
-        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
-            aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-</div>
-    
+                                
     
                             </div>
     
                         </div>
-
                 </div>
 
             </div>
@@ -450,45 +478,20 @@
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://xd.adobe.com/view/9698488f-f1e5-4dc8-9e0d-01c4a4d1cb46-c3cb/screen/e1bbc668-f5b5-4923-96ce-ba85a881d833/' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://www.figma.com/file/uFWfZ09nO1dHFugQc8vsy0/ECB-Save-and-return---FA?type=design&node-id=2%3A1947&mode=design&t=M38lBJrZ0mDg5jgV-1' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Progress bars can be used on the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html >Single column - information page layout</a>, the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html> Single column - tool page layout</a> and the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>Two column - tool page alternate layout</a>.</p>
-        
+        <p>Toast notifications can be used on all page layouts.</p>
+
+
         <div class="layouts m-0 p-4">
     
     
-    
-    
-    <p class="pe-3 m-0">Layout:</p>
-    
-    <select class="form-select layouts-select ps-3" aria-label="Layout examples">
-        
-        
-        
-        
-            <option value="single-col-infopage" class="true">Single column - information page</option>
-        
-
-        
-            <option value="single-col-toolpage" class="true">Single column - tool page</option>
-        
-        
-        
-        
-        
-
-        
-
-        
-        <option value="two-col-toolpage-alt" class="true">Two column - tool page alternate</option>
-        
-        
-    </select>
+    <p class="pe-3 m-0 all-layouts">Layout: <strong>All layouts</strong></p>
     
     
 
@@ -496,110 +499,22 @@
     
 </div>
 
-        <div class="layout-example show single-col-infopage mt-0 mb-5 px-4 py-0">
-
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
             
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min1200">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-infopage-collapseOne" aria-expanded="true" aria-controls="single-col-infopage-collapseOne">
-                                   Breakpoint ≥ 1200px
-                                </button>
-                            </h2>
-                            <div id="single-col-infopage-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/progress-bar-1col2thirdswidth-min1200.png' | relative_url  alt="" />
-
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p>
-            <p>Progress bars span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                         
-                        <div class="accordion-item true ">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-infopage-collapseTwo" aria-expanded="false" aria-controls="single-col-infopage-collapseTwo">
-                                    Breakpoint ≥ 992px
-                                </button>
-                            </h2>
-                            <div id="single-col-infopage-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/progress-bar-1col2thirdswidth-min992.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 9 grid-columns wide.</p>
-            <p>Progress bars span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                       
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-infopage-collapseThree" aria-expanded="false" aria-controls="single-col-infopage-collapseThree">
-                                    Breakpoint ≥ 768px
-                                </button>
-                            </h2>
-                            <div id="single-col-infopage-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/progress-bar-1col2thirdswidth-min768.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 11 grid-columns wide.</p>
-            <p>Progress bars span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    
-
-
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-infopage-collapseFive" aria-expanded="false" aria-controls="single-col-infopage-collapseFive">
-                                    Breakpoint &lt; 768px
-                                </button>
-                            </h2>
-                            <div id="single-col-infopage-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/progress-bar-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p>
-            <p>Progress bars span the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
+    
+    <div class="py-4">
+        
+        <h6>All breakpoints</h6>
+        
+        <div class="layouts-wrapper">
+        <div class="layout-image me-5">
+            <img src='../assets/layout-images/mini-toast-allbp.png' | relative_url  alt="" />
         </div>
-
+        <div class="layout-rules">
+            <p>Mini toasts are placed at the top of the screen. The are right aligned with the grid.</p><p>Mini toasts sit 24px from the top of the screen. When a sticky header is present they sit 24px below the sticky header.</p>
+        </div>
+        </div>
+    </div>
 
     
 
@@ -609,209 +524,32 @@
 
 
         </div>
-
-
-        <div class="layout-example single-col-toolpage mt-0 mb-5 px-4 py-0">
-
-            
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min1200">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-toolpage-collapseOne" aria-expanded="true" aria-controls="single-col-toolpage-collapseOne">
-                                   Breakpoint ≥ 1200px
-                                </button>
-                            </h2>
-                            <div id="single-col-toolpage-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/onecol-toolpage-1200px-progressbar.png' | relative_url  alt="" />
-
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 9 grid-columns wide.</p>
-            <p>The progress bar spas the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                         
-                        <div class="accordion-item true ">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-toolpage-collapseTwo" aria-expanded="false" aria-controls="single-col-toolpage-collapseTwo">
-                                    Breakpoint ≥ 992px
-                                </button>
-                            </h2>
-                            <div id="single-col-toolpage-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/onecol-toolpage-992px-progressbar.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 10 grid-columns wide.</p>
-            <p>The progress bar spans the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                    
-
-
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-toolpage-collapseFive" aria-expanded="false" aria-controls="single-col-toolpage-collapseFive">
-                                    Breakpoint &lt; 992px
-                                </button>
-                            </h2>
-                            <div id="single-col-toolpage-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/onecol-toolpage-finalbp-progressbar.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p>
-            <p>The progress bar spans the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-        </div>
-
-
-    
-
-
-
-
-
-
-        </div>
-
-
-        <div class="layout-example two-col-toolpage-alt mt-0 mb-5 px-4 py-0">
-
-            
-        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
-        <div class="accordion layout-accordion">
-
-                    
-
-
-                         
-                        <div class="accordion-item true ">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#two-col-toolpage-alt-collapseTwo" aria-expanded="false" aria-controls="two-col-toolpage-alt-collapseTwo">
-                                    Breakpoint ≥ 992px
-                                </button>
-                            </h2>
-                            <div id="two-col-toolpage-alt-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                     <img src='../assets/layout-images/twocol-toolpagealt-992px-progressbar.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 8 grid-columns wide.</p>
-            <p>The progress bar spans the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-
-                       
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#two-col-toolpage-alt-collapseThree" aria-expanded="false" aria-controls="two-col-toolpage-alt-collapseThree">
-                                    Breakpoint ≥ 768px
-                                </button>
-                            </h2>
-                            <div id="two-col-toolpage-alt-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/twocol-toolpagealt-768px-progressbar.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                        <p>The content area is 11 grid-columns wide.</p>
-            <p>The progress bar spans the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    
-
-
-                    
-
-
-
-                        <div class="accordion-item true">
-                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#two-col-toolpage-alt-collapseFive" aria-expanded="false" aria-controls="two-col-toolpage-alt-collapseFive">
-                                    Breakpoint &lt; 768px
-                                </button>
-                            </h2>
-                            <div id="two-col-toolpage-alt-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
-                                <div class="accordion-body">
-                                    <div class="layout-image me-5">
-                                    <img src='../assets/layout-images/twocol-toolpagealt-finalpb-progressbar.png' | relative_url  alt="" />
-                                    </div>
-
-                                    <div class="layout-rules">
-                                       <p>The content area is 12 grid-columns wide.</p>
-            <p>The progress bar spans the full width of the content area.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-        </div>
-
-
-    
-
-
-
-
-
-
-        </div>
-
 
 
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>The progress bar visually shows the user how far they have progressed through a process. Progress bars are <strong>not</strong> used for navigation.</p>
+        <p>business.gov.au mini toasts are lightweight notifications that are fixed at the top of the screen.</p>
+        <p>Unlike modal notifications, mini toast notifications do not stop the user from viewing and using the page. They are temporary notifications that only appear for a short period and as such do not have a close button.</p>
         <h3>When to use this component:</h3>
-        <h4>Un-named steps progress bar</h4>
-        <p>This is the default progress bar and shows progress through an entire process.</p>
-        <h4>Named steps progress bar</h4>
-        <p>This progress bar shows the progress of sub-steps within a larger process. Naming each step makes it clear the progress refers to a particular step, rather than the whole process.</p>
+        <ul>
+            <li>Used to display hints the user may find helpful with minimal disruption to the process.</li>
+            <li>Used in the Employment Contract Builder to inform users a contract is autosaving.</li>
+        </ul>
+
+
+        <!-- VERSION HISTORY-->
+        <h2 class="section-start" id="version-history">Version history</h2>
+        <h4>3 April, 2024</h4>
+        <ul>
+            <li>Added the mini toast notification to the style guide.</li>
+        </ul>
+
 
     </div>
+
+
 
         </section>
     </div>
