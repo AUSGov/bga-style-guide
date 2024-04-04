@@ -66,11 +66,22 @@ classes="in-page"
                     <div class="component-example narrow m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                        <p><strong>Email verification code: 1234</strong></p>
+                        <h3>Unsaved contract</h3>
+                        <p><strong>Verification code: 1234</strong></p>
                     
                         {% include component-examples/tool_finalise_component_example.html
                             classes="teal"
                             id-prefix="bga"
+                            contract-status="unsaved"
+                        %}
+
+                        <h3>Saved contract</h3>
+                        <p><strong>Verification code: 1234</strong></p>
+                    
+                        {% include component-examples/tool_finalise_component_example.html
+                            classes="teal"
+                            id-prefix="bga"
+                            contract-status="saved"
                         %}
 
                        
@@ -110,6 +121,7 @@ classes="in-page"
                        {% include component-examples/tool_finalise_component_example.html
                             classes="non-branded nb-background"
                             id-prefix="nb"
+                            contract-status="unsaved"
                         %}
                       
                             

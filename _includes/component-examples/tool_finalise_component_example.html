@@ -48,8 +48,11 @@
 
     </div>
 
-    <!-- Save and return -->
+    
     <div class="cta-container">
+
+        <!-- Save and return -->
+        {% if include.contract-status == "unsaved" %}
         
         <div class="save-content">
         <div class="cta-title remove-element-padding p-3">
@@ -69,10 +72,12 @@
             </div>
         </div>
         </div>
+        {% endif %}
 
-    <!-- Manage saved contracts content -->
-    <!--
-        <div class="manage-contracts-content d-none">
+        <!-- Manage saved contracts content -->
+        {% if include.contract-status == "saved" %}
+    
+        <div class="manage-contracts-content">
             <div class="cta-title remove-element-padding p-3">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="24" fill="white"/>
@@ -87,11 +92,12 @@
                 <p>You can extend this deadline by a further seven days on the saved contracts page.</p></div>
             
                 <div class="button-example">
-                    <a id="ecb-manage-contracts" href="" class="d-none bga-btn bga-primary-btn bkg-light flex-shrink-0" tabindex="0" role="button">Manage saved contracts</a>
+                    <a id="ecb-manage-contracts" href="" class="bga-btn bga-primary-btn bkg-light flex-shrink-0" tabindex="0" role="button">Manage saved contracts</a>
                 </div>
             </div>
         </div>
-    -->
+        {% endif %}
+    
     
 
     </div>
