@@ -181,7 +181,6 @@
             }
         }
     }
-
     .resend {
         display: flex;
 
@@ -219,6 +218,18 @@
         a {
             flex-shrink: 0;
             flex-grow: 0;
+        }
+    }
+    .icon-title-container {
+        column-gap: 16px;
+        align-items: center;
+
+        svg {
+            flex-shrink: 0;
+        }
+
+        h4 {
+            padding-top: 0;
         }
     }
 }
@@ -312,6 +323,8 @@
 }
 
 #email-form {
+    row-gap: 24px;
+    column-gap: 16px;
     input {
         width: auto;
         flex-grow: 1;
@@ -366,7 +379,7 @@
                 flex: 0 1 auto;
             }
         }
-    }
+    } 
 }
 
 @mixin tool-finalise-cta-bp-576 () {
@@ -382,6 +395,10 @@
             flex-wrap: nowrap;
             row-gap: 16px;
         }
+    } 
+    .modal-example {
+        width: calc(100% - 64px);
+        left: 32px;
     }
 }
 
@@ -391,6 +408,63 @@
             padding: 8px 16px !important;
         }
     }
+    .modal-example {
+        width: calc(100% - 48px);
+        left: 24px;
+
+        #email-form {
+            flex-direction: column;
+            row-gap: 24px;  
+        }
+        .number-code {
+            input {
+                width: 40px;
+            }
+            .success-icon {
+                margin-left: 8px !important;
+                svg {
+                    width: 32px;
+                    height: 32px;
+                }
+                circle {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .tick {
+                    width: 14.5px;
+                    height: 11.5px;
+                    position: absolute;
+                    top: 22px;
+                    left: 8px;
+                }
+                
+                .msg {
+                    display: none !important;
+                }
+            }
+        }
+        .resend {
+            display: block;
+        }
+        .icon-title-container {
+            column-gap: 8px;
+            align-items: flex-start;
+            
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+
+            &.mobile-no-icon {
+                svg {
+                    display: none;
+                }
+            }
+            
+        }
+    }
+   
 }
 
 @mixin tool-finalise-cta-bp-below350 () {
@@ -399,6 +473,17 @@
             svg {
                 display: none;
             }
+        }
+    }
+    .button-example {
+        button {
+            width: 100%;
+        }
+    }
+    .modal-example {
+        .icon-title-container {
+            row-gap: 8px;
+            flex-direction: column;
         }
     }
 }
@@ -434,7 +519,10 @@
     @include tool-finalise-cta-bp-576();
 }
 
+@media (max-width: 576px) {
+    @include tool-finalise-cta-bp-350();
+}
+
 @media (max-width: 350px) {
     @include tool-finalise-cta-bp-below350();
 }
-

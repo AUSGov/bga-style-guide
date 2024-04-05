@@ -276,6 +276,7 @@ html.ecb-prototype {
             &.show {
                 display: flex;
                 align-items: center;
+                column-gap: 8px;
             }
 
             circle {
@@ -961,7 +962,6 @@ html.ecb-prototype {
 
             input {
                 width: 100%;
-                margin-bottom: 24px !important;
                 margin-right: 0 !important;
             }
         }
@@ -986,19 +986,58 @@ html.ecb-prototype {
                 }
 
                 .success-icon {
-                    margin-left: 16px !important;
-
+                    margin-left: 8px !important;
                     svg {
                         width: 32px;
                         height: 32px;
-                        flex-shrink: 0;
                     }
+                    circle {
+                        width: 32px;
+                        height: 32px;
+                    }
+    
+                    .tick {
+                        width: 14.5px;
+                        height: 11.5px;
+                        position: absolute;
+                        top: 22px;
+                        left: 8px;
+                    }
+                    
                     .msg {
                         display: none !important;
                     }
                 }
             }
         }
+        #step-already-verified, #step-email-already-verified {
+            .button-group {
+                column-gap: 8px;
+            }
+            .success-message {  
+                margin-left: 8px !important;
+                    svg {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    circle {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    .tick {
+                        width: 14.5px;
+                        height: 11.5px;
+                        position: absolute;
+                        top: 10.5px;
+                        left: 8.5px;
+                    }
+                
+                    .msg {
+                        display: none !important;
+                    }
+            }
+        }
+        
     }
     .contracts-list {
         align-items: flex-start;
