@@ -1,0 +1,266 @@
+#sab-prototype {
+    
+    // Set component colouring to grey for low-fi testing
+    h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, li {
+        color: $nb-black;
+    }
+    #page-header {
+        background: $nb-black-light;
+
+        .header-content {
+            background: $nb-grey-dark;
+        }
+    }
+    .bga-site-header {
+        #header-strap .search-container {
+        button, button:focus-visible, button:focus, button:hover {
+            border: $nb-black solid 1px;
+            background-color: $nb-black;
+            cursor: default;
+            }
+        }
+        .nav li {
+            &:focus, &:focus-visible, &:hover {
+                background: none;
+            }
+            a, a:focus, a:focus-visible, a:hover  {
+                color: $nb-black;
+                cursor: default;
+                background: none;
+            }
+        }
+    }
+    .bga-footer-example {
+            background: $nb-black-mid;
+
+        .footer-links {
+            h3 {
+                color: $bga-white;
+            }
+        }
+        .social-links-wrapper .footer-social {
+            li, li:focus, li:focus-visible, li:hover {
+                background: $nb-black;
+                cursor: default;
+
+                svg {
+                    fill: #ffffff;
+                }
+            }
+        }
+        .bga-btn {
+            background: $nb-grey-lightest;
+            border-color: $nb-black;
+        }
+    } 
+    .copyright {
+        display: none;
+    }
+
+
+    // SAB menu - concept 1
+    #sab-menu {
+        
+        .sab-menu-item { 
+            position: relative;
+
+            .sab-menu-item-title {
+                align-items: center;
+                column-gap: 8px;
+                
+                h4 {
+                    display: flex;
+                    align-items: flex-start;
+                    margin: 0;
+                    padding: 0;
+                    column-gap: 8px;
+                    
+                    span {
+                        display: flex;
+                        width: 32px;
+                        height: 32px;
+                        margin: 8px 0 0 0;
+                        flex-shrink: 0;
+                        border-radius: 50px;
+                        justify-content: center;
+                        align-items: center;
+                        border: $nb-black solid 2px;
+                        
+                        &:after {
+                            content: " ";
+                            position: absolute;
+                            z-index: 0;
+                            left: 15px;
+                            top: 40px;
+                            height: calc(100% - 32px);
+                            background: $nb-black;
+                            width: 3px;
+                        }
+                    }
+
+                    a {
+                        color: $nb-black;
+                        padding: 8px 8px 8px 8px;
+                        display: block;
+                        width: calc(100% - 40px);
+                        background: none;
+
+                        &:hover {
+                            background: none;
+                        }
+                    }
+                }
+            }
+            &.show {
+                .sab-menu-item-title {
+                    h4 {
+                        a {
+                            background: $nb-grey-mid;
+                        }
+                    }
+                }
+            }
+            &.current {
+                h4 span {
+                    background: $nb-black;
+                    color: $bga-white;
+                }
+            }
+            &:last-of-type {
+                h4 span:after {
+                    display: none;
+                }
+            }
+
+        }
+        
+    }
+
+    .sab-sub-item {
+        margin: 0 0 0 40px;
+        padding: 0 8px 8px 8px;
+
+        
+        .submenu-toggle {
+            button {
+                background: none;
+                border: none;
+                padding: 0;
+                display: flex;
+                column-gap: 8px;
+                align-items: center;
+                font-size: .875rem;
+                font-weight: 400;
+                color: $nb-black;
+                margin: 0;
+
+                svg {
+                    margin-top: 2px;
+                }
+            }
+        }
+
+        .sab-submenu {
+            display: none;
+        }
+        ul {
+            margin: 0;
+            padding: 16px 0 0 0;
+        }
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 16px 0; 
+            text-indent: 0;
+
+            &:last-of-type {
+                margin: 0;
+            }
+            
+            &:before {
+                display: none;
+            }
+
+            a {
+                color: $nb-black;
+                text-decoration: underline;
+                font-size: .875rem;
+                line-height: 1.5;
+                font-weight: 400;
+                display: block;
+
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+
+        &.show {
+            background: $nb-grey-mid;
+
+            .sab-submenu {
+                display: block;
+            }
+        }
+    }
+
+    .sab-tile.concept1 {
+        border: 1px solid $nb-black;
+        
+        .content {
+            padding: 24px;
+        }
+        .learn-more {
+           
+            a {
+                display: flex;
+                column-gap: 8px;
+                align-items: center;
+                color: $nb-black;
+
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    .action-checklist {
+        padding: 24px;
+        background: $nb-grey-mid;
+
+        .action-checkbox {
+            padding: 0 0 16px 0;
+
+            &:last-of-type {
+                padding: 0;
+            }
+            label {
+                font-weight: 400;
+                background: transparent;
+                width: 100%;
+                padding: 8px;
+                display: inline-flex;
+                align-items: center;
+
+                &::before {
+                    content: "";
+                    display: inline-flex;
+                    height: 28px;
+                    width: 28px;
+                    margin-right: 8px;
+                    border-radius: 0;
+                    border: solid 2px $nb-black;
+                    background: $bga-white;
+                    cursor: default;
+                    flex-shrink: 0;
+                }
+                
+            }
+            input[type="checkbox"] {
+                display: none;
+            }
+        }
+    }
+    
+}
