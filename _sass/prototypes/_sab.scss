@@ -1,9 +1,23 @@
 #sab-prototype {
-    
+
     // Set component colouring to grey for low-fi testing
-    h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p, li {
+    h6,
+    .h6,
+    h5,
+    .h5,
+    h4,
+    .h4,
+    h3,
+    .h3,
+    h2,
+    .h2,
+    h1,
+    .h1,
+    p,
+    li {
         color: $nb-black;
     }
+
     #page-header {
         background: $nb-black-light;
 
@@ -11,35 +25,54 @@
             background: $nb-grey-dark;
         }
     }
+
     .bga-site-header {
         #header-strap .search-container {
-        button, button:focus-visible, button:focus, button:hover {
-            border: $nb-black solid 1px;
-            background-color: $nb-black;
-            cursor: default;
+
+            button,
+            button:focus-visible,
+            button:focus,
+            button:hover {
+                border: $nb-black solid 1px;
+                background-color: $nb-black;
+                cursor: default;
             }
         }
+
         .nav li {
-            &:focus, &:focus-visible, &:hover {
+
+            &:focus,
+            &:focus-visible,
+            &:hover {
                 background: none;
             }
-            a, a:focus, a:focus-visible, a:hover  {
+
+            a,
+            a:focus,
+            a:focus-visible,
+            a:hover {
                 color: $nb-black;
                 cursor: default;
                 background: none;
             }
         }
     }
+
     .bga-footer-example {
-            background: $nb-black-mid;
+        background: $nb-black-mid;
 
         .footer-links {
             h3 {
                 color: $bga-white;
             }
         }
+
         .social-links-wrapper .footer-social {
-            li, li:focus, li:focus-visible, li:hover {
+
+            li,
+            li:focus,
+            li:focus-visible,
+            li:hover {
                 background: $nb-black;
                 cursor: default;
 
@@ -48,11 +81,13 @@
                 }
             }
         }
+
         .bga-btn {
             background: $nb-grey-lightest;
             border-color: $nb-black;
         }
-    } 
+    }
+
     .copyright {
         display: none;
     }
@@ -60,21 +95,21 @@
 
     // SAB menu - concept 1
     #sab-menu {
-        
-        .sab-menu-item { 
+
+        .sab-menu-item {
             position: relative;
 
             .sab-menu-item-title {
                 align-items: center;
                 column-gap: 8px;
-                
+
                 h4 {
                     display: flex;
                     align-items: flex-start;
                     margin: 0;
                     padding: 0;
                     column-gap: 8px;
-                    
+
                     span {
                         display: flex;
                         width: 32px;
@@ -85,7 +120,7 @@
                         justify-content: center;
                         align-items: center;
                         border: $nb-black solid 2px;
-                        
+
                         &:after {
                             content: " ";
                             position: absolute;
@@ -111,6 +146,7 @@
                     }
                 }
             }
+
             &.show {
                 .sab-menu-item-title {
                     h4 {
@@ -120,27 +156,63 @@
                     }
                 }
             }
+
             &.current {
                 h4 span {
                     background: $nb-black;
                     color: $bga-white;
                 }
             }
+
             &:last-of-type {
                 h4 span:after {
                     display: none;
                 }
             }
 
+            &.inactive {
+                .sab-menu-item-title h4 {
+                    a {
+                        color: $nb-black-lightest;
+                        cursor: default;
+                    }
+
+                    span {
+                        border-color: $nb-grey-extra-darkest;
+                        color: $nb-black-lightest;
+
+                        &:after {
+                            background: $nb-grey-extra-darkest;
+                        }
+                    }
+
+                }
+
+                .sab-sub-item li a {
+                    color: $nb-black-lightest;
+                    cursor: default;
+                }
+
+                &.show {
+                    .sab-menu-item-title h4 a {
+                        background: $nb-grey-light;
+                    }
+
+                    .sab-sub-item {
+                        background: $nb-grey-light;
+                    }
+                }
+            }
+
         }
-        
+
     }
 
     .sab-sub-item {
         margin: 0 0 0 40px;
         padding: 0 8px 8px 8px;
 
-        
+
         .submenu-toggle {
             button {
                 background: none;
@@ -163,20 +235,22 @@
         .sab-submenu {
             display: none;
         }
+
         ul {
             margin: 0;
             padding: 16px 0 0 0;
         }
+
         li {
             list-style-type: none;
             padding: 0;
-            margin: 0 0 16px 0; 
+            margin: 0 0 16px 0;
             text-indent: 0;
 
             &:last-of-type {
                 margin: 0;
             }
-            
+
             &:before {
                 display: none;
             }
@@ -201,17 +275,25 @@
             .sab-submenu {
                 display: block;
             }
+
+            .submenu-toggle {
+                svg {
+                    transform: scaleY(-1);
+                }
+            }
+
         }
     }
 
     .sab-tile.concept1 {
         border: 1px solid $nb-black;
-        
+
         .content {
             padding: 24px;
         }
+
         .learn-more {
-           
+
             a {
                 display: flex;
                 column-gap: 8px;
@@ -235,6 +317,7 @@
             &:last-of-type {
                 padding: 0;
             }
+
             label {
                 font-weight: 400;
                 background: transparent;
@@ -255,12 +338,271 @@
                     cursor: default;
                     flex-shrink: 0;
                 }
-                
+
             }
+
             input[type="checkbox"] {
                 display: none;
             }
         }
     }
+
+
+    // SAB accordions - concept 2
+    .bga-pathway-accordion.sab-concept-2 {
+        .accordion-item {
+            background: $nb-grey-light;
+            border: none;
+            border-left: $nb-grey-darkest solid 8px;
+
+            &:hover {
+                border-bottom: none;
+                background: $nb-grey-dark;
+            }
+
+            &.show {
+                border-bottom: none;
+            }
+
+            .accordion-button {
+                color: $bga-black;
+                background: $nb-grey-light;
+
+                .img-wrapper {
+                    background: none !important;
+                }
+
+                .chevron-wrapper {
+                    background: $nb-grey-dark;
+                }
+
+                &:focus-visible {
+                    border-color: $nb-blue-links;
+                }
+
+                &:hover {
+                    background: $nb-grey-dark;
+                }
+
+                &:not(.collapsed) {
+                    background: $nb-grey-dark;
+                    border-bottom: none;
+
+                    &:hover {
+                        background: $nb-grey-dark;
+                    }
+                }
+            }
+
+            .accordion-body {
+                background: $nb-grey-dark;
+                padding: 0;
+
+                a {
+                    color: $nb-blue-links;
+                }
+            }
+
+            .sab2-tile-wrapper {
+                padding: 0 24px 24px 250px;
+                width: 100%;
+            }
+
+            .sab2-tile {
+                background: $bga-white;
+                width: 100%;
+                margin-bottom: 16px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .title {
+                    padding: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+
+                    h3 {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                }
+
+                .content {
+                    padding: 0 16px 16px 16px;
+                    display: none;
+
+
+                }
+
+                &.show {
+                    .title {
+                        svg {
+                            transform: scaleY(-1);
+                        }
+                    }
+
+                    .content {
+                        display: block;
+                    }
+                }
+            }
+            
+            &.inactive {
+                .sab2-tile {
+                    .title {
+                        cursor: default;
     
+                        h3 {
+                            color: $nb-black-lightest;
+                        }
+                        svg, svg path {
+                            fill: $nb-black-lightest;
+                        }
+    
+                    }
+                }
+            }
+        }
+
+
+    }
+    
+    .showing-header-wrapper.sab2 {
+        .bga-btn.bga-secondary-btn.non-branded {
+            border: $nb-black 3px solid;
+
+            &:focus, &:focus-visible, &:hover {
+                background: $nb-black;
+            }
+        }
+        &.fixed {
+            background: $nb-black-lightest;
+            z-index: 7000;
+        }
+    }
+    .sab2-checklist-panel {
+        position: fixed;
+        background: $bga-white;
+        width: 80%;
+        max-width: 1000px;
+        top: 0;
+        left: 0;
+        z-index: 8000;
+        height: 100%;
+        box-shadow: 5px 0px 4px -1px rgba(79,79,79,0.75);
+        -webkit-box-shadow: 5px 0px 4px -1px rgba(79,79,79,0.75);
+        -moz-box-shadow: 5px 0px 4px -1px rgba(79,79,79,0.75);
+       
+        .close {
+            text-indent: -9999px;
+            background: transparent url(../assets/icon-close-black.svg) no-repeat;
+            background-size: 24px 24px;
+            border: none;
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            top: 24px;  
+            right: 24px;
+        }
+
+        .sab2-checklist-wrapper {
+            height: 100%;
+            overflow-y: scroll;
+        }
+
+        
+        .checklist-wrapper.lightweight.sab {
+            .sab-checkbox {
+                padding: 0 0 16px 0;
+    
+                &:last-of-type {
+                    padding: 0;
+                }
+    
+                label {
+                    font-weight: 400;
+                    background: transparent;
+                    width: 100%;
+                    padding: 8px;
+                    display: inline-flex;
+                    align-items: center;
+    
+                    &::before {
+                        content: "";
+                        display: inline-flex;
+                        height: 28px;
+                        width: 28px;
+                        margin-right: 8px;
+                        border-radius: 0;
+                        border: solid 2px $nb-black;
+                        background: $bga-white;
+                        cursor: default;
+                        flex-shrink: 0;
+                    }
+    
+                }
+
+                input[type="checkbox"] {
+                    display: none;
+                }
+            }
+        }
+    
+    }
+
+    .checklist-underlay {
+        position: fixed;
+        z-index: 7500;
+        height: 100%;
+        width: 100%;
+        background: $nb-black;
+        opacity: .45;
+    }
+    .checklist-item.inactive {
+        &:after {
+            background: $nb-grey-extra-darkest;
+        }
+    }
+    .checklist-item-title-inactive {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 24px 24px 24px;
+        margin-left: 64px;
+        cursor: default;
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 26px;
+            color: $nb-black-lightest;
+
+            span {
+                position: absolute;
+                top: 20px;
+                left: -64px;
+                border-radius: 50%;
+                height: 48px;
+                width: 48px;
+                text-align: center;
+                line-height: 38px;
+                z-index: 100;
+                background: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: $nb-grey-extra-darkest solid 3px;
+                color: $nb-black-lightest;
+            }
+        }
+        svg, svg path {
+            fill: $nb-black-lightest;
+        }
+    }
+
 }

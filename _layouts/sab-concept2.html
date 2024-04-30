@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" id="sab-prototype" class="concept1">
+
+{% include sab-head.html %}
+
+<body {% if page.id %} id="{{page.id}}" {% endif %}>
+   
+
+<!-- CHECKLIST PANEL  -->
+<div class="sab2-checklist-panel d-none px-5 pt-8 bp-5">
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="sab2-checklist-wrapper">
+    
+        <h2>Starting a business checklist</h2>
+
+        {% include prototypes/sab-checklist.html %}
+
+    </div>
+       
+</div>
+<div class="checklist-underlay d-none"></div>
+    
+
+
+
+
+<!-- PAGE CONTENT -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="header-wrapper mt-5 mb-4">
+                    {% include prototypes/bga-site-header-inactive.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% include page-header.html %}
+
+            {{ content }}
+    
+            <div id="footer">
+                {% include component-examples/bga-site-footer-example.html %}
+            </div>
+    
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!-- ITEM -->
+<div class="accordion-item {{include.id}} {{include.classes}} mb-5" tabindex="-1">
+
+    <!-- Item header -->
+    <h5 class="accordion-header pt-0" id="{{include.item-number}}">
+        <button tabindex="0" class="accordion-button collapsed remove-element-padding" type="button"
+            data-bs-toggle="collapse" data-bs-target="#{{include.item-number=}}-collapseOne"
+            aria-expanded="false" aria-controls="{{include.item-number=}}-collapseOne">
+            <div class="img-wrapper">
+                <img src={{include.img}} alt="" />
+            </div>
+            <div class="title-wrapper remove-element-padding p-4">
+                <h2 class="pe-4 m-0">{{include.title}}</h2>
+                <p>{{include.description}}</p>
+            </div>
+            <div class="chevron-wrapper px-5">
+                <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="18" viewBox="0 0 28 18">
+                    <path data-name="Chevron / Down" d="M10.851,14,0,24.531,3.575,28,18,14,3.575,0,0,3.469Z"
+                        transform="translate(28) rotate(90)" fill="#333" />
+                </svg>
+
+            </div>
+        </button>
+    </h5>
+
+    <!-- Item body-->
+    <div id="{{include.item-number}}-collapseOne" class="accordion-collapse collapse"
+        aria-labelledby="{{include.item-number}}">
+        <div class="accordion-body remove-element-padding">
+
+            
+
+            <div class="sab2-tile-wrapper">
+
+            <!-- Subitem 1-->
+            {% if include.sub1-title %}
+                <div class="sab2-tile remove-element-padding">
+
+                    <div class="title remove-element-padding">
+                    <h3>{{include.sub1-title}}</h3>
+                    <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="18" viewBox="0 0 28 18">
+                    <path data-name="Chevron / Down" d="M10.851,14,0,24.531,3.575,28,18,14,3.575,0,0,3.469Z"
+                        transform="translate(28) rotate(90)" fill="#333" />
+                </svg>
+                    </div>
+
+                    {% if include.sub1-content %}
+                    <div class="content remove-element-padding">
+                        {{ include.sub1-content }}
+                    </div>
+                    {% endif %}
+                     
+                </div>
+            {% endif %}
+
+
+             <!-- Subitem 2-->
+             {% if include.sub2-title %}
+             <div class="sab2-tile remove-element-padding">
+
+                    <div class="title remove-element-padding">
+                    <h3>{{include.sub2-title}}</h3>
+                    <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="18" viewBox="0 0 28 18">
+                    <path data-name="Chevron / Down" d="M10.851,14,0,24.531,3.575,28,18,14,3.575,0,0,3.469Z"
+                        transform="translate(28) rotate(90)" fill="#333" />
+                </svg>
+                    </div>
+
+                    {% if include.sub2-content %}
+                    <div class="content remove-element-padding">
+                        {{ include.sub2-content }}
+                    </div>
+                    {% endif %}
+                    
+                </div>
+            {% endif %}
+
+
+            <!-- Subitem 3-->
+            {% if include.sub3-title %}
+            <div class="sab2-tile remove-element-padding">
+
+                <div class="title remove-element-padding">
+                <h3>{{include.sub3-title}}</h3>
+                <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="18" viewBox="0 0 28 18">
+                    <path data-name="Chevron / Down" d="M10.851,14,0,24.531,3.575,28,18,14,3.575,0,0,3.469Z"
+                        transform="translate(28) rotate(90)" fill="#333" />
+                </svg>
+                </div>
+
+                {% if include.sub3-content %}
+                <div class="content remove-element-padding">
+                    {{ include.sub3-content }}
+                </div>
+                {% endif %}
+                
+                </div>
+            {% endif %}
+
+                <!-- Subitem 4-->
+                {% if include.sub4-title %}
+                <div class="sab2-tile remove-element-padding">
+
+                    <div class="title remove-element-padding">
+                    <h3>{{include.sub4-title}}</h3>
+                    <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="18" viewBox="0 0 28 18">
+                    <path data-name="Chevron / Down" d="M10.851,14,0,24.531,3.575,28,18,14,3.575,0,0,3.469Z"
+                        transform="translate(28) rotate(90)" fill="#333" />
+                </svg>
+                    </div>
+
+                    {% if include.sub4-content %}
+                    <div class="content remove-element-padding">
+                        {{ include.sub4-content }}
+                    </div>
+                    {% endif %}
+                        
+                </div>
+            {% endif %}
+
+                <!-- Subitem 5-->
+                {% if include.sub5-title %}
+                <div class="sab2-tile remove-element-padding">
+
+                    <div class="title remove-element-padding">
+                    <h3>{{include.sub5-title}}</h3>
+                    <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="18" viewBox="0 0 28 18">
+                    <path data-name="Chevron / Down" d="M10.851,14,0,24.531,3.575,28,18,14,3.575,0,0,3.469Z"
+                        transform="translate(28) rotate(90)" fill="#333" />
+                </svg>
+                    </div>
+
+                    {% if include.sub5-content %}
+                    <div class="content remove-element-padding">
+                        {{ include.sub5-content }}
+                    </div>
+                    {% endif %}
+                    
+                </div>
+            {% endif %}
+
+            <!-- Subitem 3-->
+            {% if include.sub6-title %}
+            <div class="sab2-tile remove-element-padding">
+
+                <div class="title remove-element-padding">
+                <h3>{{include.sub6-title}}</h3>
+                <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="18" viewBox="0 0 28 18">
+                    <path data-name="Chevron / Down" d="M10.851,14,0,24.531,3.575,28,18,14,3.575,0,0,3.469Z"
+                        transform="translate(28) rotate(90)" fill="#333" />
+                </svg>
+                </div>
+
+                {% if include.sub6-content %}
+                <div class="content remove-element-padding">
+                    {{ include.sub6-content }}
+                </div>
+                {% endif %}
+                
+            </div>
+            {% endif %}
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

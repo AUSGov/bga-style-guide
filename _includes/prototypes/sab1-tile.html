@@ -1,15 +1,15 @@
-<div class="sab-tile concept1 mb-5" id="{{include.id}}">
+<div class="sab-tile concept1 mb-5" id="{{include.id}}" class="{{include.classes}}">
    
     <div class="content remove-element-padding">
 
-        <h2>{{include.title}}</h2>
+        <h3>{{include.title}}</h3>
         
         <div class="description">
             {{include.description}}
         </div>
 
         <div class="learn-more">
-            <h3 class="mb-2 p-0">Learn more</h3>
+            <h4 class="p-0">Learn more</h4>
             <a href=""><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.3636 9.98417H0V6.98911H11.362L7.13939 2.84672L9.08127 0.928223L16.273 8.48664L9.08127 16.0466L7.13939 14.1406L11.3636 9.98417Z" fill="#333333"/>
                 </svg>{{include.learn-more}}</a>
@@ -17,7 +17,7 @@
     </div>
 
     <div class="action-checklist remove-element-padding">
-        <h3 class="mb-2">Action checklist</h3>
+        <h4 class="mb-2">Action checklist</h4>
         
         {% if include.checkbox1 %}
         <div class="action-checkbox">
