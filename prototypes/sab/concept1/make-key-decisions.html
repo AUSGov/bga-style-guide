@@ -19,8 +19,9 @@ id: make-key-decisions
         </div>
 
         <div class="remove-top-spaces col-12 col-sm-9 col-xl-8">
+            <div class="sab1-tiles-wrapper remove-element-padding">
 
-            <h2>Make key decisions</h2>
+            <h2>1. Make key decisions</h2>
             <p class="header-intro">The decisions you make early on can affect many areas of your business, including the licences you need, how much tax you pay and the volume of paperwork required.</p>
 
             <!-- Decide on a business structure -->
@@ -31,10 +32,10 @@ id: make-key-decisions
                 
                 description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p><p>Vivamus vestibulum lobortis nunc id placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vel felis rutrum, tincidunt libero vel, malesuada sapien.</p>"
 
-                learn-more="Develop your business plan"
+                learn-more="Business structures"
 
-                checkbox1="Description of action checklist item"
-                checkbox2="Description of action checklist item"
+                checkbox1="I have chosen a business structure for my business."
+                checkbox2="I have sought advice from a professional business adviser, lawyer or accountant to ensure I have chosen the appropriate business structure."
             
                 %}
 
@@ -43,37 +44,45 @@ id: make-key-decisions
             {% include prototypes/sab1-tile-customisable.html 
                 id="employee-or-contractor"
                 
-                title="Employee or contractor"
+                title="Know if you are an employee or contractor"
                 
                 description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p>"
 
-                learn-more="Are you an employee or contractor?"
+                learn-more="Employee or contractor?"
 
                 select1="Employees"
                 select2="Contractors"
 
-                select1-checkbox1="I have done a thing"
-                select1-checkbox2="I have done another thing"
+                select1-checkbox2="I understand my rights as an employee"
+                select1-checkbox1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
 
-                select2-checkbox1="I have considering contributing to my own superanniation"
+                select2-checkbox3="I have considering contributing to my own superanniation"
                 select2-checkbox2="I understand my tax obligations as a contractor"
-                select2-checkbox3="I understand my rights as a contractor"
+                select2-checkbox1="I understand my rights as a contractor"
             
                 %}
 
 
             <!-- Choose your business location -->
-            {% include prototypes/sab1-tile.html 
+            {% include prototypes/sab1-tile-customisable.html 
                 id="choose-your-business-location"
                 
                 title="Choose your business location"
                 
                 description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p>"
 
-                learn-more="Are you an employee or contractor?"
+                learn-more="Choose your business location"
 
-                checkbox1="Description of action checklist item"
-                checkbox2="Description of action checklist item"
+                select1="Home-based businesses"
+                select2="Businesses in rental premises"
+
+                select1-checkbox1="I have registered for home-based business licences and permits."
+                select1-checkbox2="I have made sure my insurance covers home-based businesses."
+                select1-checkbox3="I understand how running a home-based business affects my tax."
+
+                select2-checkbox1="I have found appropriate premises to run my business from."
+                select2-checkbox2="I have checked the rental contract to ensure I understand my rights."
+    
             
                 %}
 
@@ -85,13 +94,26 @@ id: make-key-decisions
                 
                 description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p>"
 
-                learn-more="Are you an employee or contractor?"
+                learn-more="Choose a business name"
 
-                checkbox1="Description of action checklist item"
-                checkbox2="Description of action checklist item"
+                checkbox1="I have chosen my business name"
+                checkbox2="I have checked to see if my business name is already taken"
+                checkbox3="I have registered my business name with ASIC"
+                checkbox4="I have registered my domain name"
             
                 %}
 
+
+                <div class="sab-bottom-nav first-page">
+                    <a class="next" href={{ "prototypes/sab/concept1/plan-your-business.html" | relative_url }}>2. Plan your business<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.52295 6L0.00195312 10.513L1.49095 12L7.50195 6L1.49095 0L0.00195312 1.487L4.52295 6Z" fill="black"/>
+                        </svg>
+                        </a>
+                   
+                </div>
+                
+
+            </div>
 
         </div>
 

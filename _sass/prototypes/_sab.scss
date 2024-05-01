@@ -301,8 +301,13 @@
         }
     }
 
+    .sab1-tiles-wrapper {
+        padding: 24px;
+        background: $nb-grey-mid;
+    }
     .sab-tile.concept1 {
         border: 1px solid $nb-black;
+        background: $bga-white;
 
         .content {
             padding: 24px;
@@ -325,7 +330,7 @@
 
     .action-checklist {
         padding: 24px;
-        background: $nb-grey-mid;
+        background: $nb-grey-light;
 
         .dropdown-wrapper {
             display: flex;
@@ -374,6 +379,32 @@
 
             input[type="checkbox"] {
                 display: none;
+            }
+        }
+    }
+    .sab-bottom-nav {
+        display: flex;
+        justify-content: space-between;
+
+        &.first-page {
+            justify-content: flex-end;
+        }
+        a {
+            color: $nb-black;
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+
+            &:focus-visible, &:hover {
+                background: none;
+            }
+
+            &.inactive {
+                color: $nb-black-lightest;
+
+                svg, svg path {
+                    fill: $nb-black-lightest; 
+                }
             }
         }
     }
@@ -471,7 +502,10 @@
                     padding: 0 16px 16px 16px;
                     display: none;
 
-
+                    a {
+                        color: $nb-black;
+                        text-decoration: underline;
+                    }
                 }
 
                 &.show {
@@ -561,6 +595,9 @@
                 &:first-of-type {
                     margin-top: 0;
                 }
+            }
+            h5 {
+                margin: 0;
             }
         }
         .sab-checkbox {
