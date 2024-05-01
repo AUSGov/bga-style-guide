@@ -1,0 +1,101 @@
+<div class="sab-tile concept1 mb-5" id="{{include.id}}" class="{{include.classes}}">
+   
+    <div class="content remove-element-padding">
+
+        <h3>{{include.title}}</h3>
+        
+        <div class="description">
+            {{include.description}}
+        </div>
+
+        <div class="learn-more">
+            <h4 class="p-0">Learn more</h4>
+            <a href=""><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.3636 9.98417H0V6.98911H11.362L7.13939 2.84672L9.08127 0.928223L16.273 8.48664L9.08127 16.0466L7.13939 14.1406L11.3636 9.98417Z" fill="#333333"/>
+                </svg>{{include.learn-more}}</a>
+        </div>
+    </div>
+
+    <div class="action-checklist remove-element-padding">
+       <div class="dropdown-wrapper mb-3">
+            <h4 class="m-0 p-0">Action checklist for</h4>
+            <div class="form-element-wrapper">
+                <select class="form-select action-select-options" aria-label="Default select example">
+                    <option value="{{include.select1}}" selected>{{ include.select1 }}</option>
+                    <option value="{{include.select2}}">{{ include.select2 }}</option>
+                </select>
+            </div>
+       </div>
+        
+        <div class="select1-actions actions" data-value="{{include.select1}}">
+            {% if include.select1-checkbox1 %}
+            <div class="action-checkbox">
+                <input class="checkbox" type="checkbox">
+                <label>{{include.select1-checkbox1}}</label><br>
+            </div>
+            {% endif %}
+
+            
+            {% if include.select1-checkbox2 %}
+            <div class="action-checkbox">
+                <input type="checkbox">
+                <label>{{include.select1-checkbox2}}</label><br>
+            </div>
+            {% endif %}
+
+            
+            {% if include.select1-checkbox3 %}
+            <div class="action-checkbox">
+                <input type="checkbox">
+                <label>{{include.select1-checkbox3}}</label><br>
+            </div>
+            {% endif %}
+
+            
+            {% if include.select1-checkbox4 %}
+            <div class="action-checkbox">
+                <input type="checkbox">
+                <label>{{include.select1-checkbox4}}</label><br>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="select2-actions actions d-none" data-value="{{include.select2}}">
+            {% if include.select2-checkbox1 %}
+            <div class="action-checkbox">
+                <input class="checkbox" type="checkbox">
+                <label>{{include.select2-checkbox1}}</label><br>
+            </div>
+            {% endif %}
+
+            
+            {% if include.select2-checkbox2 %}
+            <div class="action-checkbox">
+                <input type="checkbox">
+                <label>{{include.select2-checkbox2}}</label><br>
+            </div>
+            {% endif %}
+
+            
+            {% if include.select2-checkbox3 %}
+            <div class="action-checkbox">
+                <input type="checkbox">
+                <label>{{include.select2-checkbox3}}</label><br>
+            </div>
+            {% endif %}
+
+            
+            {% if include.select2-checkbox4 %}
+            <div class="action-checkbox">
+                <input type="checkbox">
+                <label>{{include.select2-checkbox4}}</label><br>
+            </div>
+            {% endif %}
+        </div>
+
+
+
+    </div>
+
+
+</div>

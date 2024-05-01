@@ -18,6 +18,14 @@
         color: $nb-black;
     }
 
+    .bga-btn.bga-secondary-btn.non-branded {
+        border: $nb-black 3px solid;
+
+        &:focus, &:focus-visible, &:hover {
+            background: $nb-black;
+        }
+    }
+
     #page-header {
         background: $nb-black-light;
 
@@ -207,6 +215,14 @@
         }
 
     }
+    .email-download-wrapper {
+        border-top: 2px solid $nb-black;
+        border-bottom: 2px solid $nb-black;
+
+        .bga-btn.bga-secondary-btn.non-branded {
+            width: 100%;
+        }
+    }
 
     .sab-sub-item {
         margin: 0 0 0 40px;
@@ -311,12 +327,27 @@
         padding: 24px;
         background: $nb-grey-mid;
 
-        .action-checkbox {
-            padding: 0 0 16px 0;
+        .dropdown-wrapper {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
 
-            &:last-of-type {
-                padding: 0;
+            .form-select {
+                padding: 4px 48px 4px 8px;
+                min-height: auto;
+                min-width: 250px;
+                font-size: 1.1875rem;
+                font-weight: 600;
+                background-color: $nb-grey-mid;
+
+                &:focus {
+                    background-color: $nb-grey-mid !important;
+                }
             }
+        }
+
+        .action-checkbox {
+            padding: 0;
 
             label {
                 font-weight: 400;
@@ -349,6 +380,11 @@
 
 
     // SAB accordions - concept 2
+    .print-download-wrapper {
+        display: flex;
+        column-gap: 24px;
+    }
+
     .bga-pathway-accordion.sab-concept-2 {
         .accordion-item {
             background: $nb-grey-light;
@@ -472,13 +508,7 @@
     }
     
     .showing-header-wrapper.sab2 {
-        .bga-btn.bga-secondary-btn.non-branded {
-            border: $nb-black 3px solid;
-
-            &:focus, &:focus-visible, &:hover {
-                background: $nb-black;
-            }
-        }
+        
         &.fixed {
             background: $nb-black-lightest;
             z-index: 7000;
@@ -514,41 +544,53 @@
             overflow-y: scroll;
         }
 
-        
         .checklist-wrapper.lightweight.sab {
-            .sab-checkbox {
-                padding: 0 0 16px 0;
-    
-                &:last-of-type {
-                    padding: 0;
+            .checklist-item.open {
+                .checklist-item-title {
+                    background: $bga-white;
                 }
-    
-                label {
-                    font-weight: 400;
-                    background: transparent;
-                    width: 100%;
-                    padding: 8px;
+            }
+        }
+
+        .checklist-sub-item .checklist-item-content {
+            background: $bga-white;
+
+            h4 {
+                margin: 16px 0 8px;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+        .sab-checkbox {
+            padding: 0;
+
+            label {
+                font-weight: 400;
+                background: transparent;
+                width: 100%;
+                padding: 8px;
+                display: inline-flex;
+                align-items: flex-start;
+
+                &::before {
+                    content: "";
                     display: inline-flex;
-                    align-items: center;
-    
-                    &::before {
-                        content: "";
-                        display: inline-flex;
-                        height: 28px;
-                        width: 28px;
-                        margin-right: 8px;
-                        border-radius: 0;
-                        border: solid 2px $nb-black;
-                        background: $bga-white;
-                        cursor: default;
-                        flex-shrink: 0;
-                    }
-    
+                    height: 28px;
+                    width: 28px;
+                    margin-right: 8px;
+                    border-radius: 0;
+                    border: solid 2px $nb-black;
+                    background: $bga-white;
+                    cursor: default;
+                    flex-shrink: 0;
                 }
 
-                input[type="checkbox"] {
-                    display: none;
-                }
+            }
+
+            input[type="checkbox"] {
+                display: none;
             }
         }
     
