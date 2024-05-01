@@ -5,7 +5,6 @@ $(document).ready(function () {
 
     if ( $("#sab-prototype ")) {
 
-
         var page_id = $('body').attr('id');
         console.log(page_id);
        
@@ -23,7 +22,17 @@ $(document).ready(function () {
             } else {
                 $(this).find('span').text('Show');
             }
-        
+        });
+
+        $('.action-select-options').on('change', function(){
+            var option = $(this).val(),
+                parent = $(this).parents('.action-checklist');
+            
+            parent.find('.actions').each(function(){
+                $(this).addClass('d-none');
+            });
+
+            $('.actions[data-value="' + option + '"]').removeClass('d-none');
         });
 
         //Concept 2
@@ -47,7 +56,6 @@ $(document).ready(function () {
         });
 
         $('.sab-checklist-trigger').on('click', function(){
-            console.log('clicked');
             $('.sab2-checklist-panel').removeClass('d-none');
             $('.checklist-underlay').removeClass('d-none');
         });

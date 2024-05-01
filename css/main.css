@@ -11232,6 +11232,10 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #sab-prototype h6, #sab-prototype .h6, #sab-prototype h5, #sab-prototype .h5, #sab-prototype h4, #sab-prototype .h4, #sab-prototype h3, #sab-prototype .h3, #sab-prototype h2, #sab-prototype .h2, #sab-prototype h1, #sab-prototype .h1, #sab-prototype p, #sab-prototype li { color: #000000; }
 
+#sab-prototype .bga-btn.bga-secondary-btn.non-branded { border: #000000 3px solid; }
+
+#sab-prototype .bga-btn.bga-secondary-btn.non-branded:focus, #sab-prototype .bga-btn.bga-secondary-btn.non-branded:focus-visible, #sab-prototype .bga-btn.bga-secondary-btn.non-branded:hover { background: #000000; }
+
 #sab-prototype #page-header { background: #7d7d7d; }
 
 #sab-prototype #page-header .header-content { background: #C8C8C8; }
@@ -11286,6 +11290,10 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #sab-prototype #sab-menu .sab-menu-item.inactive.show .sab-sub-item { background: #E8E8E8; }
 
+#sab-prototype .email-download-wrapper { border-top: 2px solid #000000; border-bottom: 2px solid #000000; }
+
+#sab-prototype .email-download-wrapper .bga-btn.bga-secondary-btn.non-branded { width: 100%; }
+
 #sab-prototype .sab-sub-item { margin: 0 0 0 40px; padding: 0 8px 8px 8px; }
 
 #sab-prototype .sab-sub-item .submenu-toggle button { background: none; border: none; padding: 0; display: flex; column-gap: 8px; align-items: center; font-size: .875rem; font-weight: 400; color: #000000; margin: 0; }
@@ -11322,15 +11330,21 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #sab-prototype .action-checklist { padding: 24px; background: #D8D8D8; }
 
-#sab-prototype .action-checklist .action-checkbox { padding: 0 0 16px 0; }
+#sab-prototype .action-checklist .dropdown-wrapper { display: flex; align-items: center; column-gap: 8px; }
 
-#sab-prototype .action-checklist .action-checkbox:last-of-type { padding: 0; }
+#sab-prototype .action-checklist .dropdown-wrapper .form-select { padding: 4px 48px 4px 8px; min-height: auto; min-width: 250px; font-size: 1.1875rem; font-weight: 600; background-color: #D8D8D8; }
+
+#sab-prototype .action-checklist .dropdown-wrapper .form-select:focus { background-color: #D8D8D8 !important; }
+
+#sab-prototype .action-checklist .action-checkbox { padding: 0; }
 
 #sab-prototype .action-checklist .action-checkbox label { font-weight: 400; background: transparent; width: 100%; padding: 8px; display: inline-flex; align-items: center; }
 
 #sab-prototype .action-checklist .action-checkbox label::before { content: ""; display: inline-flex; height: 28px; width: 28px; margin-right: 8px; border-radius: 0; border: solid 2px #000000; background: #ffffff; cursor: default; flex-shrink: 0; }
 
 #sab-prototype .action-checklist .action-checkbox input[type="checkbox"] { display: none; }
+
+#sab-prototype .print-download-wrapper { display: flex; column-gap: 24px; }
 
 #sab-prototype .bga-pathway-accordion.sab-concept-2 .accordion-item { background: #E8E8E8; border: none; border-left: #B8B8B8 solid 8px; }
 
@@ -11378,10 +11392,6 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #sab-prototype .bga-pathway-accordion.sab-concept-2 .accordion-item.inactive .sab2-tile .title svg, #sab-prototype .bga-pathway-accordion.sab-concept-2 .accordion-item.inactive .sab2-tile .title svg path { fill: #8b8b8b; }
 
-#sab-prototype .showing-header-wrapper.sab2 .bga-btn.bga-secondary-btn.non-branded { border: #000000 3px solid; }
-
-#sab-prototype .showing-header-wrapper.sab2 .bga-btn.bga-secondary-btn.non-branded:focus, #sab-prototype .showing-header-wrapper.sab2 .bga-btn.bga-secondary-btn.non-branded:focus-visible, #sab-prototype .showing-header-wrapper.sab2 .bga-btn.bga-secondary-btn.non-branded:hover { background: #000000; }
-
 #sab-prototype .showing-header-wrapper.sab2.fixed { background: #8b8b8b; z-index: 7000; }
 
 #sab-prototype .sab2-checklist-panel { position: fixed; background: #ffffff; width: 80%; max-width: 1000px; top: 0; left: 0; z-index: 8000; height: 100%; box-shadow: 5px 0px 4px -1px rgba(79, 79, 79, 0.75); -webkit-box-shadow: 5px 0px 4px -1px rgba(79, 79, 79, 0.75); -moz-box-shadow: 5px 0px 4px -1px rgba(79, 79, 79, 0.75); }
@@ -11390,15 +11400,21 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #sab-prototype .sab2-checklist-panel .sab2-checklist-wrapper { height: 100%; overflow-y: scroll; }
 
-#sab-prototype .sab2-checklist-panel .checklist-wrapper.lightweight.sab .sab-checkbox { padding: 0 0 16px 0; }
+#sab-prototype .sab2-checklist-panel .checklist-wrapper.lightweight.sab .checklist-item.open .checklist-item-title { background: #ffffff; }
 
-#sab-prototype .sab2-checklist-panel .checklist-wrapper.lightweight.sab .sab-checkbox:last-of-type { padding: 0; }
+#sab-prototype .sab2-checklist-panel .checklist-sub-item .checklist-item-content { background: #ffffff; }
 
-#sab-prototype .sab2-checklist-panel .checklist-wrapper.lightweight.sab .sab-checkbox label { font-weight: 400; background: transparent; width: 100%; padding: 8px; display: inline-flex; align-items: center; }
+#sab-prototype .sab2-checklist-panel .checklist-sub-item .checklist-item-content h4, #sab-prototype .sab2-checklist-panel .checklist-sub-item .checklist-item-content .h4 { margin: 16px 0 8px; }
 
-#sab-prototype .sab2-checklist-panel .checklist-wrapper.lightweight.sab .sab-checkbox label::before { content: ""; display: inline-flex; height: 28px; width: 28px; margin-right: 8px; border-radius: 0; border: solid 2px #000000; background: #ffffff; cursor: default; flex-shrink: 0; }
+#sab-prototype .sab2-checklist-panel .checklist-sub-item .checklist-item-content h4:first-of-type, #sab-prototype .sab2-checklist-panel .checklist-sub-item .checklist-item-content .h4:first-of-type { margin-top: 0; }
 
-#sab-prototype .sab2-checklist-panel .checklist-wrapper.lightweight.sab .sab-checkbox input[type="checkbox"] { display: none; }
+#sab-prototype .sab2-checklist-panel .sab-checkbox { padding: 0; }
+
+#sab-prototype .sab2-checklist-panel .sab-checkbox label { font-weight: 400; background: transparent; width: 100%; padding: 8px; display: inline-flex; align-items: flex-start; }
+
+#sab-prototype .sab2-checklist-panel .sab-checkbox label::before { content: ""; display: inline-flex; height: 28px; width: 28px; margin-right: 8px; border-radius: 0; border: solid 2px #000000; background: #ffffff; cursor: default; flex-shrink: 0; }
+
+#sab-prototype .sab2-checklist-panel .sab-checkbox input[type="checkbox"] { display: none; }
 
 #sab-prototype .checklist-underlay { position: fixed; z-index: 7500; height: 100%; width: 100%; background: #000000; opacity: .45; }
 
