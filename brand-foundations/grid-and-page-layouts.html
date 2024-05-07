@@ -3,7 +3,7 @@
 layout: content-tagged
 title: Grids and page layouts
 description: Grid and spacing guidelines for business.gov.au
-updated: 8 August, 2023
+updated: 7 May, 2024
 breadcrumb1: Brand foundations
 url1: /brand-foundations.html
 bga-tag: true
@@ -23,7 +23,8 @@ subsite-tag: false
             link-1="Vertical grid" link-id-1="#vertical-grid"
             link-2="Page layouts" link-id-2="#page-layouts" 
             link-3="Coloured background sections" link-id-3="#coloured-background-sections" 
-            link-4="Version history" link-id-4="#version-history" 
+            link-4="Tool sections" link-id-4="#tool-sections" 
+            link-5="Version history" link-id-5="#version-history" 
         %}
         
     </div>
@@ -440,12 +441,48 @@ subsite-tag: false
             btn-text="View html example of the coloured background section"
             %}
         
+
+        <!-- TOOL SECTIONS -->
+        <h2 class="section-start" id="tool-sections">Tool sections</h2>
+        <div class="colour-wrapper p-4 mb-5 full-border">
+            <h3>Section Divider example</h3>
+            <p class="m-0">Section content</p>
+            <hr class="my-5 section-divider" />
+            <h3 class="p-0">Title for next section</h3>
+        </div>
         
-    
+        <p>The first element in a section has zero <strong>top</strong> padding/margins applied. The last element in a section has zero <strong>bottom</strong> padding/margins applied.</p> <p>The sections have 32px margin top and bottom so there is a 32px space above and below each section divider.</p>
+             
+        <p>Tools use sections to help users understand how questions and content is grouped. There are three patterns for section divider use.</p>
+       
+       <h3>Sections at the question level.</h3> 
+       <p>Use section dividers between questions when a tool is structured with one topic per page. Generally there will only be one H2 level title on each page. Note that questions that contain a lot of information, or include dynamic information are still one question in this scenario.</p>
+        <p>The section divider width equals the content area width in these tools.</p>
+        <img class="responsive-img mb-5" src={{ "assets/layout-images/divider-question-level.png" | relative_url }} alt="Diagram depicting the section divider layout." />
+
+       
+
+        <h3>Sections at the topic level - no sidebar.</h3> 
+        <p>Use section dividers between topics (some of which may contain multiple questions) in tools that have more than one topic per page. Often there will be multiple H2 titles on these pages, one for each section. </p>
+        <p>The section divider width equals the content area width in these tools.</p> 
+
+        <img class="responsive-img mb-5" src={{ "assets/layout-images/divider-topic-level.png" | relative_url }} alt="Diagram depicting the section divider layout." />
+      
+            
+        <h3>Sections at the topic level -  with information sidebar</h3> 
+        <p>Use section dividers between topics(some of which may contain multiple questions) in tools that have more than one topic per page. Often there will be multiple H2 titles on these pages, one for each section.</p>
+        <p>When sections have corresponding information sidebars the section divider width equals the full page width.</p>
+
+        <img class="responsive-img mb-5" src={{ "assets/layout-images/divider-topic-level-sidebar.png" | relative_url }} alt="Diagram depicting the section divider layout." />
+     
 
 
           <!-- VERSION HISTORY-->
           <h2 class="section-start" id="version-history">Version history</h2>
+          <h4>7 May, 2024</h4>
+          <ul>
+              <li>Added tool section information.</li>
+          </ul>
           <h4>8 August, 2023</h4>
           <ul>
               <li>Added an additional layout, the <strong>Two column - tool page alternate</strong> layout. This layout will be used for the Lean business plan builder.</li>
