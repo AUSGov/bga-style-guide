@@ -11,6 +11,18 @@
             
             </div>
             {% endif %}
+
+            {% if include.expiring %}
+            <div class="tag-wrapper">
+                <div class="tag d-inline-flex align-items-center px-2 py-1 remove-element-padding base dark-red">
+                    <div class="icon d-flex me-2">
+                        <img src={{ "assets/icon-warning-white.svg" | relative_url }} alt="" />
+                    </div>
+                    <p><strong>{{include.expiring}}</strong></p>
+                </div>
+            
+            </div>
+            {% endif %}
         </div>
         <p>Expires <span class="expiry">{{include.expiry}}</p>
     </div>
