@@ -12,6 +12,13 @@
     position: relative;
     z-index: 9000;
 
+    &.inpage-example {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
     &.extra-wide {
         max-width: 900px;
     }
@@ -26,6 +33,7 @@
         width: 16px;
         top: 16px;  
         right: 16px;
+        display: block !important;
     }
 
     .modal-utilities-button-group {
@@ -174,7 +182,7 @@
             padding: 0;
         }
 
-        li:has(> h3) {
+        li:has(>h3) {
             &:before {
                 font-weight: 600;
                 color: $bga-blue-black-dark;
@@ -183,7 +191,7 @@
             }
         }
 
-        li:has(> h4) {
+        li:has(>h4) {
             &:before {
                 font-weight: 600;
                 color: $bga-blue-black-dark;
