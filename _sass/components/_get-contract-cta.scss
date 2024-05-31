@@ -217,8 +217,8 @@
             }
         }
         svg {
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             animation: fa-spin 2s linear infinite;
         }
 
@@ -256,18 +256,34 @@
 
             input {
                 width: 100%;
-                margin-bottom: 24px !important;
                 margin-right: 0 !important;
+
             }
         }
-        .modal-example {
-            .number-code {
-                input {
-                    width: 24%;
-                    max-width: 56px;
-                    padding: 8px 0px !important;
-                }
+        .number-code {
+            .loading-animation {
+                margin-left: 8px !important; 
             }
+            .success-icon .tick {
+                width: 14.5px;
+                height: 11.5px;
+                position: absolute;
+                top: 22px;
+                left: 8px;
+            }
+        }   
+    }
+    #bga-modal-download, #nb-modal-download, #modal-download, #ecb-modal-download {
+        .animation-wrapper {
+            column-gap: 8px;
+            row-gap: 8px;
+        }
+        .loading-animation {
+            svg {
+                width: 32px;
+                height: 32px; 
+            }
+    
         }
     }
 }
@@ -322,6 +338,15 @@
             
             .bga-animation {
                 margin-right: calc(100% - 60px);
+            }
+        }
+    }
+    #bga-modal-download, #nb-modal-download, #modal-download, #ecb-modal-download {
+        .animation-wrapper {
+            flex-wrap: wrap;
+
+            h4 {
+                width: 100%;
             }
         }
     }

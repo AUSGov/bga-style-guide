@@ -52,6 +52,8 @@
         }
 
         .success-icon {
+            width: 40px;
+            height: 40px;
             display: flex;
             position: relative;
             justify-content: center;
@@ -162,5 +164,30 @@
             }
         }
         
+    }
+}
+
+@media (max-width: 576px) {
+    .bga-animation {
+    
+        &.loading-animation {
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    
+        &.success-animation {
+            .success-icon {
+                width: 32px;
+                height: 32px;
+
+                .tick {
+                    width: 14px;
+                    height: 11px;
+                }
+            } 
+        }
+    
     }
 }
