@@ -3853,7 +3853,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 @keyframes tick-fadein { 0% { opacity: 0; }
   100% { opacity: 1; } }
 
-.bga-animation.success-animation .success-icon { display: flex; position: relative; justify-content: center; align-items: center; }
+.bga-animation.success-animation .success-icon { width: 40px; height: 40px; display: flex; position: relative; justify-content: center; align-items: center; }
 
 .bga-animation.success-animation .success-icon circle { fill: #299F28; stroke: #299F28; stroke-width: 4px; stroke-dasharray: 126; position: absolute; top: 0; left: 0; z-index: 1000; }
 
@@ -3893,6 +3893,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out; } }
+
+@media (max-width: 576px) { .bga-animation.loading-animation svg { width: 32px; height: 32px; } .bga-animation.success-animation .success-icon { width: 32px; height: 32px; } .bga-animation.success-animation .success-icon .tick { width: 14px; height: 11px; } }
 
 .map { background: #C8D9EE url(../assets/map-australia.jpg) no-repeat; background-size: cover; background-position: center center; position: relative; }
 
@@ -5542,7 +5544,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 @keyframes fa-spin { 0% { transform: rotate(0deg); }
   to { transform: rotate(1turn); } }
 
-#bga-modal-download .loading-animation svg, #nb-modal-download .loading-animation svg, #modal-download .loading-animation svg, #ecb-modal-download .loading-animation svg { width: 44px; height: 44px; animation: fa-spin 2s linear infinite; }
+#bga-modal-download .loading-animation svg, #nb-modal-download .loading-animation svg, #modal-download .loading-animation svg, #ecb-modal-download .loading-animation svg { width: 40px; height: 40px; animation: fa-spin 2s linear infinite; }
 
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 8500; background-color: #333333; opacity: .6; display: none; }
 
@@ -5552,9 +5554,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-350 .get-contract-modal.modal-example #email-form, .component-example.bp-below350 .get-contract-modal.modal-example #email-form { flex-wrap: wrap; }
 
-.component-example.bp-350 .get-contract-modal.modal-example #email-form input, .component-example.bp-below350 .get-contract-modal.modal-example #email-form input { width: 100%; margin-bottom: 24px !important; margin-right: 0 !important; }
+.component-example.bp-350 .get-contract-modal.modal-example #email-form input, .component-example.bp-below350 .get-contract-modal.modal-example #email-form input { width: 100%; margin-right: 0 !important; }
 
-.component-example.bp-350 .get-contract-modal.modal-example .modal-example .number-code input, .component-example.bp-below350 .get-contract-modal.modal-example .modal-example .number-code input { width: 24%; max-width: 56px; padding: 8px 0px !important; }
+.component-example.bp-350 .get-contract-modal.modal-example .number-code .loading-animation, .component-example.bp-below350 .get-contract-modal.modal-example .number-code .loading-animation { margin-left: 8px !important; }
+
+.component-example.bp-350 .get-contract-modal.modal-example .number-code .success-icon .tick, .component-example.bp-below350 .get-contract-modal.modal-example .number-code .success-icon .tick { width: 14.5px; height: 11.5px; position: absolute; top: 22px; left: 8px; }
+
+.component-example.bp-350 #bga-modal-download .animation-wrapper, .component-example.bp-350 #nb-modal-download .animation-wrapper, .component-example.bp-350 #modal-download .animation-wrapper, .component-example.bp-350 #ecb-modal-download .animation-wrapper, .component-example.bp-below350 #bga-modal-download .animation-wrapper, .component-example.bp-below350 #nb-modal-download .animation-wrapper, .component-example.bp-below350 #modal-download .animation-wrapper, .component-example.bp-below350 #ecb-modal-download .animation-wrapper { column-gap: 8px; row-gap: 8px; }
+
+.component-example.bp-350 #bga-modal-download .loading-animation svg, .component-example.bp-350 #nb-modal-download .loading-animation svg, .component-example.bp-350 #modal-download .loading-animation svg, .component-example.bp-350 #ecb-modal-download .loading-animation svg, .component-example.bp-below350 #bga-modal-download .loading-animation svg, .component-example.bp-below350 #nb-modal-download .loading-animation svg, .component-example.bp-below350 #modal-download .loading-animation svg, .component-example.bp-below350 #ecb-modal-download .loading-animation svg { width: 32px; height: 32px; }
 
 .component-example.bp-350 .get-contract-modal.modal-example, .component-example.bp-below350 .get-contract-modal.modal-example { max-width: 400px; left: calc(50% - 288px); }
 
@@ -5562,9 +5570,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below350 .get-contract-modal.modal-example #email-form { flex-wrap: wrap; }
 
-.component-example.bp-below350 .get-contract-modal.modal-example #email-form input { width: 100%; margin-bottom: 24px !important; margin-right: 0 !important; }
+.component-example.bp-below350 .get-contract-modal.modal-example #email-form input { width: 100%; margin-right: 0 !important; }
 
-.component-example.bp-below350 .get-contract-modal.modal-example .modal-example .number-code input { width: 24%; max-width: 56px; padding: 8px 0px !important; }
+.component-example.bp-below350 .get-contract-modal.modal-example .number-code .loading-animation { margin-left: 8px !important; }
+
+.component-example.bp-below350 .get-contract-modal.modal-example .number-code .success-icon .tick { width: 14.5px; height: 11.5px; position: absolute; top: 22px; left: 8px; }
+
+.component-example.bp-below350 #bga-modal-download .animation-wrapper, .component-example.bp-below350 #nb-modal-download .animation-wrapper, .component-example.bp-below350 #modal-download .animation-wrapper, .component-example.bp-below350 #ecb-modal-download .animation-wrapper { column-gap: 8px; row-gap: 8px; }
+
+.component-example.bp-below350 #bga-modal-download .loading-animation svg, .component-example.bp-below350 #nb-modal-download .loading-animation svg, .component-example.bp-below350 #modal-download .loading-animation svg, .component-example.bp-below350 #ecb-modal-download .loading-animation svg { width: 32px; height: 32px; }
 
 .component-example.bp-below350 .get-contract-modal.modal-example .number-code input { width: 40px; }
 
@@ -5588,13 +5602,17 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below350 .get-contract-modal.modal-example #step-success-animation .animation-wrapper .bga-animation { margin-right: calc(100% - 60px); }
 
+.component-example.bp-below350 #bga-modal-download .animation-wrapper, .component-example.bp-below350 #nb-modal-download .animation-wrapper, .component-example.bp-below350 #modal-download .animation-wrapper, .component-example.bp-below350 #ecb-modal-download .animation-wrapper { flex-wrap: wrap; }
+
+.component-example.bp-below350 #bga-modal-download .animation-wrapper h4, .component-example.bp-below350 #bga-modal-download .animation-wrapper .h4, .component-example.bp-below350 #nb-modal-download .animation-wrapper h4, .component-example.bp-below350 #nb-modal-download .animation-wrapper .h4, .component-example.bp-below350 #modal-download .animation-wrapper h4, .component-example.bp-below350 #modal-download .animation-wrapper .h4, .component-example.bp-below350 #ecb-modal-download .animation-wrapper h4, .component-example.bp-below350 #ecb-modal-download .animation-wrapper .h4 { width: 100%; }
+
 .component-example.bp-below350 .get-contract-modal.modal-example { max-width: 350px; left: calc(50% - 175px); }
 
 @media (max-width: 768px) { .get-contract-modal.modal-example { top: 1rem; left: 16px; width: calc(100% - 32px); max-width: none; } }
 
-@media (max-width: 576px) { .get-contract-modal.modal-example #email-form { flex-wrap: wrap; } .get-contract-modal.modal-example #email-form input { width: 100%; margin-bottom: 24px !important; margin-right: 0 !important; } .get-contract-modal.modal-example .modal-example .number-code input { width: 24%; max-width: 56px; padding: 8px 0px !important; } }
+@media (max-width: 576px) { .get-contract-modal.modal-example #email-form { flex-wrap: wrap; } .get-contract-modal.modal-example #email-form input { width: 100%; margin-right: 0 !important; } .get-contract-modal.modal-example .number-code .loading-animation { margin-left: 8px !important; } .get-contract-modal.modal-example .number-code .success-icon .tick { width: 14.5px; height: 11.5px; position: absolute; top: 22px; left: 8px; } #bga-modal-download .animation-wrapper, #nb-modal-download .animation-wrapper, #modal-download .animation-wrapper, #ecb-modal-download .animation-wrapper { column-gap: 8px; row-gap: 8px; } #bga-modal-download .loading-animation svg, #nb-modal-download .loading-animation svg, #modal-download .loading-animation svg, #ecb-modal-download .loading-animation svg { width: 32px; height: 32px; } }
 
-@media (max-width: 350px) { .get-contract-modal.modal-example .number-code input { width: 40px; } .get-contract-modal.modal-example .number-code .loading-animation svg { width: 32px; height: auto; } .get-contract-modal.modal-example .number-code .success-icon { margin-left: 16px !important; } .get-contract-modal.modal-example .number-code .success-icon svg { width: 32px; height: auto; } .get-contract-modal.modal-example .number-code .success-icon svg.tick { width: 15px; top: 22px; left: 8px; } .get-contract-modal.modal-example #step-email-success .heading-wrapper { display: block !important; } .get-contract-modal.modal-example #step-email-success .heading-wrapper .success-icon-static { padding-bottom: 16px; } .get-contract-modal.modal-example #step-download-generate .animation-wrapper { justify-content: flex-start; flex-wrap: wrap; } .get-contract-modal.modal-example #step-download-generate .animation-wrapper svg { margin-right: calc(100% - 60px); } .get-contract-modal.modal-example #step-success-animation .animation-wrapper { justify-content: flex-start; flex-wrap: wrap; } .get-contract-modal.modal-example #step-success-animation .animation-wrapper .bga-animation { margin-right: calc(100% - 60px); } }
+@media (max-width: 350px) { .get-contract-modal.modal-example .number-code input { width: 40px; } .get-contract-modal.modal-example .number-code .loading-animation svg { width: 32px; height: auto; } .get-contract-modal.modal-example .number-code .success-icon { margin-left: 16px !important; } .get-contract-modal.modal-example .number-code .success-icon svg { width: 32px; height: auto; } .get-contract-modal.modal-example .number-code .success-icon svg.tick { width: 15px; top: 22px; left: 8px; } .get-contract-modal.modal-example #step-email-success .heading-wrapper { display: block !important; } .get-contract-modal.modal-example #step-email-success .heading-wrapper .success-icon-static { padding-bottom: 16px; } .get-contract-modal.modal-example #step-download-generate .animation-wrapper { justify-content: flex-start; flex-wrap: wrap; } .get-contract-modal.modal-example #step-download-generate .animation-wrapper svg { margin-right: calc(100% - 60px); } .get-contract-modal.modal-example #step-success-animation .animation-wrapper { justify-content: flex-start; flex-wrap: wrap; } .get-contract-modal.modal-example #step-success-animation .animation-wrapper .bga-animation { margin-right: calc(100% - 60px); } #bga-modal-download .animation-wrapper, #nb-modal-download .animation-wrapper, #modal-download .animation-wrapper, #ecb-modal-download .animation-wrapper { flex-wrap: wrap; } #bga-modal-download .animation-wrapper h4, #bga-modal-download .animation-wrapper .h4, #nb-modal-download .animation-wrapper h4, #nb-modal-download .animation-wrapper .h4, #modal-download .animation-wrapper h4, #modal-download .animation-wrapper .h4, #ecb-modal-download .animation-wrapper h4, #ecb-modal-download .animation-wrapper .h4 { width: 100%; } }
 
 .persistent-cta-wrapper { background: #FDE6D0; }
 
@@ -9405,6 +9423,8 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .modal-example .number-code input, #ecb-cta-verify .number-code input, #ecb-cta-verify-known .number-code input { width: 56px; border: none; border-bottom: solid 4px #2E3E5A; font-size: 1.5rem; font-weight: 600; text-align: center; color: #2E3E5A; }
 
+.modal-example .number-code .loading-animation svg, #ecb-cta-verify .number-code .loading-animation svg, #ecb-cta-verify-known .number-code .loading-animation svg { width: 44px; height: 44px; }
+
 .modal-example .number-code .success-icon, #ecb-cta-verify .number-code .success-icon, #ecb-cta-verify-known .number-code .success-icon { display: none; position: relative; }
 
 .modal-example .number-code .success-icon.show, #ecb-cta-verify .number-code .success-icon.show, #ecb-cta-verify-known .number-code .success-icon.show { display: flex; align-items: center; }
@@ -9575,7 +9595,7 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .component-example.bp-350 .modal-example #email-form { flex-direction: column; row-gap: 24px; }
 
-.component-example.bp-350 .modal-example .number-code input { width: 40px; }
+.component-example.bp-350 .modal-example .number-code input { width: 40px !important; }
 
 .component-example.bp-350 .modal-example .number-code .success-icon { margin-left: 8px !important; }
 
@@ -9586,6 +9606,8 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 .component-example.bp-350 .modal-example .number-code .success-icon .tick { width: 14.5px; height: 11.5px; position: absolute; top: 22px; left: 8px; }
 
 .component-example.bp-350 .modal-example .number-code .success-icon .msg { display: none !important; }
+
+.component-example.bp-350 .modal-example .number-code .loading-animation svg { width: 32px !important; height: 32px !important; }
 
 .component-example.bp-350 .modal-example .resend { display: block; }
 
@@ -9627,7 +9649,7 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .component-example.bp-below350 .modal-example #email-form { flex-direction: column; row-gap: 24px; }
 
-.component-example.bp-below350 .modal-example .number-code input { width: 40px; }
+.component-example.bp-below350 .modal-example .number-code input { width: 40px !important; }
 
 .component-example.bp-below350 .modal-example .number-code .success-icon { margin-left: 8px !important; }
 
@@ -9638,6 +9660,8 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 .component-example.bp-below350 .modal-example .number-code .success-icon .tick { width: 14.5px; height: 11.5px; position: absolute; top: 22px; left: 8px; }
 
 .component-example.bp-below350 .modal-example .number-code .success-icon .msg { display: none !important; }
+
+.component-example.bp-below350 .modal-example .number-code .loading-animation svg { width: 32px !important; height: 32px !important; }
 
 .component-example.bp-below350 .modal-example .resend { display: block; }
 
@@ -9657,7 +9681,7 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 @media (max-width: 768px) { .call-to-action.tool-finalise .finalise-ctas { flex-wrap: wrap; } .call-to-action.tool-finalise .cta-content { flex-direction: column; align-items: flex-start !important; justify-content: space-between; flex-wrap: nowrap; row-gap: 16px; } .modal-example { width: calc(100% - 64px); left: 32px; } }
 
-@media (max-width: 576px) { .call-to-action.tool-finalise .cta-title { padding: 8px 16px !important; } .modal-example { width: calc(100% - 48px); left: 24px; } .modal-example #email-form { flex-direction: column; row-gap: 24px; } .modal-example .number-code input { width: 40px; } .modal-example .number-code .success-icon { margin-left: 8px !important; } .modal-example .number-code .success-icon svg { width: 32px; height: 32px; } .modal-example .number-code .success-icon circle { width: 32px; height: 32px; } .modal-example .number-code .success-icon .tick { width: 14.5px; height: 11.5px; position: absolute; top: 22px; left: 8px; } .modal-example .number-code .success-icon .msg { display: none !important; } .modal-example .resend { display: block; } .modal-example .icon-title-container { column-gap: 8px; align-items: flex-start; } .modal-example .icon-title-container svg { width: 32px; height: 32px; } .modal-example .icon-title-container.mobile-no-icon svg { display: none; } }
+@media (max-width: 576px) { .call-to-action.tool-finalise .cta-title { padding: 8px 16px !important; } .modal-example { width: calc(100% - 48px); left: 24px; } .modal-example #email-form { flex-direction: column; row-gap: 24px; } .modal-example .number-code input { width: 40px !important; } .modal-example .number-code .success-icon { margin-left: 8px !important; } .modal-example .number-code .success-icon svg { width: 32px; height: 32px; } .modal-example .number-code .success-icon circle { width: 32px; height: 32px; } .modal-example .number-code .success-icon .tick { width: 14.5px; height: 11.5px; position: absolute; top: 22px; left: 8px; } .modal-example .number-code .success-icon .msg { display: none !important; } .modal-example .number-code .loading-animation svg { width: 32px !important; height: 32px !important; } .modal-example .resend { display: block; } .modal-example .icon-title-container { column-gap: 8px; align-items: flex-start; } .modal-example .icon-title-container svg { width: 32px; height: 32px; } .modal-example .icon-title-container.mobile-no-icon svg { display: none; } }
 
 @media (max-width: 350px) { .call-to-action.tool-finalise .cta-title svg { display: none; } .button-example button { width: 100%; } .modal-example .icon-title-container { row-gap: 8px; flex-direction: column; } }
 
