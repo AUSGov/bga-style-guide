@@ -6,7 +6,6 @@ $(document).ready(function () {
     if ( $("#sab-prototype ")) {
 
         var page_id = $('body').attr('id');
-        console.log(page_id);
        
         //Concept 1
         $('.sab-menu-item.'+page_id).addClass('current');

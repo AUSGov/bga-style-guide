@@ -1,8 +1,8 @@
 ---
 
 layout: content-tagged
-title: Call to action
-description: Promote a high-value call to action in an information page.
+title: Tool call to action
+description: Promote a high-value call to action in a tool page.
 updated: 5 June, 2024
 breadcrumb1: Components
 url1: /components.html
@@ -69,16 +69,26 @@ subsite-tag: true
 
 
                         {% include component-examples/call-to-action-example.html
-                        title="Register for lorem ipsum dolor sit amet"
-                        text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu,
-                            venenatis et nibh non, finibus vehicula leo. Phasellus porta rhoncus ante, in sollicitudin
-                            tellus. Suspendisse auctor libero a dui vehicula fermentum.</p>
-                        <ul class='bullet-tick'>
-                            <li>Suspendisse auctor libero a dui vehicula fermentum.</li>
-                            <li>Suspendisse auctor ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        h4title="You can apply for most of your registrations with the Business Registration Service."
+                        text="<p>This includes applying for your:</p>
+                        <ul>
+                            <li>Business tax file number</li>
+                            <li>Australian business number</li>
+                            <li>Goods & Services Tax (GST)</li>
                         </ul>"
-                        button="Register for lorem"
+                        button="Register now"
+
+                        classes="teal"
                         %}
+
+                        {% include component-examples/call-to-action-example.html
+                           
+                            text="<p>You can save your list of recommended regulations by printing or emailing them. This will help you remember what to include when you apply for your registrations.</p>"
+                            button-group="true"
+
+                            classes="teal"
+                            %}
+
 
                     </div>
 
@@ -107,18 +117,21 @@ subsite-tag: true
                                 component="call to action components"
                                 brand-elements="colours and borders"
                             %}
-    
-                            <h3>Call to action</h3>
-    
-    
-                            {% include component-examples/call-to-action-example.html
-                            title="Register for lorem ipsum dolor sit amet"
-                            text="<p>Title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer erat arcu,
-                                venenatis et nibh non, finibus vehicula leo. Phasellus porta rhoncus ante, in sollicitudin tellus. Suspendisse auctor libero a dui vehicula fermentum.</p><ul class='bullet-tick'><li>Suspendisse auctor libero a dui vehicula fermentum.</li><li>Suspendisse auctor ipsum dolor sit amet, consectetur adipiscing elit.</li></ul>"
-                                button="Register for lorem"
-                                classes="non-branded nb-background"
-                            %}
 
+                            {% include component-examples/call-to-action-example.html
+                                h4title="You can apply for most of your registrations with the Business Registration Service."
+                                text="<p>This includes applying for your:</p>
+                                <ul>
+                                    <li>Business tax file number</li>
+                                    <li>Australian business number</li>
+                                    <li>Goods & Services Tax (GST)</li>
+                                </ul>"
+                                button="Register now"
+        
+                                classes="non-branded nb-background"
+                                %}
+    
+    
                         </div>
     
                     </div>
@@ -134,7 +147,7 @@ subsite-tag: true
             <!-- Design specifications link -->
 
             {% include design-specs-link.html
-            btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=727-3771&t=B6goCx0k42hfFwBN-1'"
+            btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=731-5838&t=B6goCx0k42hfFwBN-1'"
             btn-text="View design specifications"
             %}
 
@@ -327,24 +340,15 @@ subsite-tag: true
             <!-- GUIDELINES -->
             <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
-            <h4>Purpose:</h4>
-            <p>The CTA component is used for the single main action on a page.  </p>
-            <p>It includes a summary of the action, an optional list of prerequisites and a button to complete the
-                action. </p>
+            <h4>Purpose: </h4>
+            <p>These components are used in business.gov.au tools only.</p>
             <h4>When to use this component: </h4>
             <ul>
-                <li>The standard CTA component is typically used on transaction pages (e.g. for registrations) or
-                    internal program pages (to apply for a grant). </li>
-                <li>Use the standard CTA when the user must complete an important high priority task.</li>
+                <li>Generally used on tool results pages to highlight actions users can take after cusing the tool.</li>
             </ul>
-            <h4>Content rules: </h4>
-            <ul>
-                <li>Only one per page. </li>
-                <li>Must include description text so users know what they need to do. </li>
-                <li>Can use bullet points or ticks for prerequisites, should limited to 3. </li>
-                <li>Button text is an action, e.g. “Register a trade mark” or “Apply now” (4 word maximum). </li>
-            </ul>
-            
+
+
+
              <!-- VERSION HISTORY-->
             <h2 class="section-start" id="version-history">Version history</h2>
             <h4>5 June, 2024</h4>
