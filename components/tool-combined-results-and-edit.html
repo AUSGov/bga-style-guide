@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tool combined results and edit component</title>
+    <meta name="description" content="Brand guidance for business.gov.au">
+ 
+    <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700, 700i&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href=/bga-style-guide/favicon.ico>
+    
+
+    <!-- Style guide specific CSS -->
+    <link rel="stylesheet" href=/bga-style-guide/css/main.css>
+    
+    <!-- jQuery -->   
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script src=/bga-style-guide/js/bootstrap-datepicker.js></script>
+    
+    <!-- Textarea highlight -->
+    <script src=/bga-style-guide/js/jquery.highlight-within-textarea.js ></script>
+    
+    <!-- Style Guide JS -->
+    <script src=/bga-style-guide/js/bga-scripts.js ></script>
+
+    <!-- Prototypes JS -->
+    <script src=/bga-style-guide/js/ecb_prototype_save-and-return.js ></script>
+    <script src=/bga-style-guide/js/bga_prototype.js ></script>
+    <script src=/bga-style-guide/js/sab_prototype.js ></script>
+
+    
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/components/tool-combined-results-and-edit.html">
+    <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
+
+</head>
+
+
+
+<body>
+
+    <header>
+
+    <div class="container">
+        <div id="header-strap" class="my-5">
+            <div class="row">
+
+                <div class="col-8 site-name position-relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="176.416" height="57.389" viewBox="0 0 176.416 57.389">
+                        <g id="Group_21744" data-name="Group 21744" transform="translate(-799.482 -560.61)">
+                          <path id="Path_11142" data-name="Path 11142" d="M104.746,34.617V1.946h11.23q6.212,0,9.3,2.2a7.312,7.312,0,0,1,3.085,6.337,7.339,7.339,0,0,1-1.289,4.339,9.663,9.663,0,0,1-4.541,3.1,10.816,10.816,0,0,1,3.287,1.3,6.889,6.889,0,0,1,2.022,1.875,6.777,6.777,0,0,1,1.017,2.248,10.3,10.3,0,0,1,.294,2.462q0,4.474-3.106,6.643t-9.614,2.169Zm5.491-18.752H116.9a9.946,9.946,0,0,0,2.237-.249,6.453,6.453,0,0,0,1.966-.79,4.131,4.131,0,0,0,1.412-1.446,4.254,4.254,0,0,0,.531-2.191,4.079,4.079,0,0,0-1.864-3.672A8.643,8.643,0,0,0,116.4,6.307h-6.168Zm0,14.369h6.258a9.207,9.207,0,0,0,5.276-1.254,4.149,4.149,0,0,0,1.8-3.627,4.443,4.443,0,0,0-.881-2.835,5.182,5.182,0,0,0-2.4-1.66,9.977,9.977,0,0,0-3.389-.542h-6.664Z" transform="translate(694.736 558.664)" fill="#2e3e5a"/>
+                          <path id="Path_11143" data-name="Path 11143" d="M134.6,32.7a10.813,10.813,0,0,1-3.31-.508,9.145,9.145,0,0,1-2.858-1.491,7.028,7.028,0,0,1-2.756-5.8V8.887h5.512V24.274a4.245,4.245,0,0,0,1.208,3.117,4.929,4.929,0,0,0,3.649,1.22,5.2,5.2,0,0,0,3.547-1.164,4.215,4.215,0,0,0,1.333-3.354V8.887h5.468V32.249h-4.225l-.61-4.564a6.1,6.1,0,0,1-1.5,3.016,5.963,5.963,0,0,1-2.508,1.548,9.74,9.74,0,0,1-2.948.452" transform="translate(701.877 561.031)" fill="#2e3e5a"/>
+                          <path id="Path_11144" data-name="Path 11144" d="M153.6,32.816a13.637,13.637,0,0,1-4.62-.779,8.715,8.715,0,0,1-3.66-2.452,8.1,8.1,0,0,1-1.864-4.315h4.835a4.429,4.429,0,0,0,1.119,2.1,4.784,4.784,0,0,0,1.91,1.186,7.761,7.761,0,0,0,5.66-.35,2.39,2.39,0,0,0,1.3-2.237,2.261,2.261,0,0,0-.723-1.761,4.976,4.976,0,0,0-2.3-.994L150.8,22.2a10.9,10.9,0,0,1-4.756-2.169,5.334,5.334,0,0,1-1.819-4.27,6.489,6.489,0,0,1,1.039-3.7,7.1,7.1,0,0,1,3.162-2.566,12.752,12.752,0,0,1,5.2-.937,10.776,10.776,0,0,1,6.552,1.819,6.23,6.23,0,0,1,2.531,5.186h-4.677a3.484,3.484,0,0,0-1.423-2.362,5.1,5.1,0,0,0-3.05-.848,6.124,6.124,0,0,0-3.187.746,2.481,2.481,0,0,0-1.243,2.283,1.9,1.9,0,0,0,.95,1.672,9.175,9.175,0,0,0,2.847,1.038l4.2,1.018a9.471,9.471,0,0,1,2.96,1.219A6.876,6.876,0,0,1,161.89,22a5.863,5.863,0,0,1,.915,1.875,6.849,6.849,0,0,1,.26,1.774,6.355,6.355,0,0,1-1.164,3.852,7.375,7.375,0,0,1-3.287,2.452,13.369,13.369,0,0,1-5.016.858" transform="translate(707.942 560.916)" fill="#2e3e5a"/>
+                          <path id="Path_11145" data-name="Path 11145" d="M166.7,7.16h-5.445v-5.2H166.7Zm-.068,27.451h-5.287V11.249h5.287Z" transform="translate(714.015 558.67)" fill="#2e3e5a"/>
+                          <path id="Path_11146" data-name="Path 11146" d="M169.446,32.318V8.956h5.377V12.3A7.629,7.629,0,0,1,176.3,10.56,7.334,7.334,0,0,1,178.62,9.2a9.146,9.146,0,0,1,3.231-.519,9.52,9.52,0,0,1,4.033.858,6.891,6.891,0,0,1,3,2.689,8.8,8.8,0,0,1,1.141,4.722V32.318h-5.512V17.609a4.335,4.335,0,0,0-1.266-3.423,4.633,4.633,0,0,0-3.185-1.119,7.015,7.015,0,0,0-2.485.44,4.45,4.45,0,0,0-1.91,1.333,3.389,3.389,0,0,0-.735,2.226v15.25Z" transform="translate(716.811 560.963)" fill="#2e3e5a"/>
+                          <path id="Path_11147" data-name="Path 11147" d="M193.023,21.948a8.66,8.66,0,0,0,.633,3.525,5.353,5.353,0,0,0,1.943,2.406,5.556,5.556,0,0,0,3.185.87,6.386,6.386,0,0,0,3.378-.87,4.229,4.229,0,0,0,1.908-2.654h5.037a7.958,7.958,0,0,1-1.942,4.133,10.006,10.006,0,0,1-3.716,2.576,12.63,12.63,0,0,1-10.484-.554,10.035,10.035,0,0,1-4-4.1,13.225,13.225,0,0,1-1.434-6.349,14.854,14.854,0,0,1,1.309-6.383,10.373,10.373,0,0,1,3.785-4.4,12.048,12.048,0,0,1,11.771-.135,9.249,9.249,0,0,1,3.57,4.1,14.639,14.639,0,0,1,1.208,6.156v1.672Zm0-3.412h10.959a7.685,7.685,0,0,0-.589-3.062,4.834,4.834,0,0,0-1.8-2.169,5.392,5.392,0,0,0-3.039-.8,5.139,5.139,0,0,0-3.05.881,5.557,5.557,0,0,0-1.875,2.271,6.627,6.627,0,0,0-.61,2.881" transform="translate(722.981 560.916)" fill="#2e3e5a"/>
+                          <path id="Path_11148" data-name="Path 11148" d="M215.49,32.816a13.636,13.636,0,0,1-4.62-.779,8.715,8.715,0,0,1-3.66-2.452,8.1,8.1,0,0,1-1.864-4.315h4.835a4.429,4.429,0,0,0,1.119,2.1,4.784,4.784,0,0,0,1.91,1.186,7.761,7.761,0,0,0,5.66-.35,2.39,2.39,0,0,0,1.3-2.237,2.261,2.261,0,0,0-.723-1.761,4.976,4.976,0,0,0-2.3-.994L212.688,22.2a10.9,10.9,0,0,1-4.756-2.169,5.334,5.334,0,0,1-1.819-4.27,6.489,6.489,0,0,1,1.039-3.7,7.1,7.1,0,0,1,3.162-2.566,12.752,12.752,0,0,1,5.2-.937,10.776,10.776,0,0,1,6.552,1.819,6.23,6.23,0,0,1,2.531,5.186h-4.677a3.484,3.484,0,0,0-1.423-2.362,5.1,5.1,0,0,0-3.05-.848,6.124,6.124,0,0,0-3.187.746,2.481,2.481,0,0,0-1.243,2.283,1.9,1.9,0,0,0,.95,1.672,9.175,9.175,0,0,0,2.847,1.038l4.2,1.018a9.471,9.471,0,0,1,2.96,1.219A6.876,6.876,0,0,1,223.782,22a5.862,5.862,0,0,1,.915,1.875,6.848,6.848,0,0,1,.26,1.774,6.356,6.356,0,0,1-1.164,3.852,7.376,7.376,0,0,1-3.287,2.452,13.369,13.369,0,0,1-5.016.858" transform="translate(729.058 560.916)" fill="#2e3e5a"/>
+                          <path id="Path_11149" data-name="Path 11149" d="M231.806,32.816a13.637,13.637,0,0,1-4.62-.779,8.715,8.715,0,0,1-3.66-2.452,8.1,8.1,0,0,1-1.864-4.315H226.5a4.429,4.429,0,0,0,1.119,2.1,4.784,4.784,0,0,0,1.91,1.186,7.761,7.761,0,0,0,5.66-.35,2.39,2.39,0,0,0,1.3-2.237,2.261,2.261,0,0,0-.723-1.761,4.976,4.976,0,0,0-2.3-.994L229,22.2a10.9,10.9,0,0,1-4.756-2.169,5.334,5.334,0,0,1-1.819-4.27,6.489,6.489,0,0,1,1.039-3.7,7.1,7.1,0,0,1,3.162-2.566,12.752,12.752,0,0,1,5.2-.937,10.776,10.776,0,0,1,6.552,1.819,6.23,6.23,0,0,1,2.531,5.186h-4.677a3.484,3.484,0,0,0-1.423-2.362,5.1,5.1,0,0,0-3.05-.848,6.124,6.124,0,0,0-3.187.746,2.481,2.481,0,0,0-1.243,2.283,1.9,1.9,0,0,0,.95,1.672,9.175,9.175,0,0,0,2.847,1.038l4.2,1.018a9.471,9.471,0,0,1,2.96,1.219A6.876,6.876,0,0,1,240.1,22a5.862,5.862,0,0,1,.915,1.875,6.849,6.849,0,0,1,.26,1.774,6.355,6.355,0,0,1-1.164,3.852,7.375,7.375,0,0,1-3.287,2.452,13.369,13.369,0,0,1-5.016.858" transform="translate(734.625 560.916)" fill="#2e3e5a"/>
+                          <path id="Path_11150" data-name="Path 11150" d="M109.452,46a3.7,3.7,0,0,1-1.3-.2,2.682,2.682,0,0,1-1.431-1.188,4.375,4.375,0,0,1-.3-.652l-.2,1.867h-1.418V32.735h1.9V38.1a2.57,2.57,0,0,1,.366-.51,2.925,2.925,0,0,1,.608-.511,3.424,3.424,0,0,1,.85-.388,3.662,3.662,0,0,1,1.092-.149,3.332,3.332,0,0,1,2.7,1.2,5.317,5.317,0,0,1,1,3.487,6.714,6.714,0,0,1-.432,2.515,3.607,3.607,0,0,1-1.29,1.664,3.669,3.669,0,0,1-2.135.594m-.37-1.418a2.083,2.083,0,0,0,1.7-.81,4.145,4.145,0,0,0,.656-2.606,3.913,3.913,0,0,0-.612-2.37,2.071,2.071,0,0,0-1.766-.818,2.293,2.293,0,0,0-1.348.365,2.091,2.091,0,0,0-.76,1.078,5.621,5.621,0,0,0-.252,1.745,4.658,4.658,0,0,0,.565,2.619,2.076,2.076,0,0,0,1.823.8" transform="translate(694.752 569.168)" fill="#2e3e5a"/>
+                          <path id="Path_11151" data-name="Path 11151" d="M115.916,44.984a4.64,4.64,0,0,1-1.312-.2,3.4,3.4,0,0,1-1.115-.581,2.838,2.838,0,0,1-.775-.96,2.94,2.94,0,0,1-.286-1.33V35.7h1.894v6.006a1.8,1.8,0,0,0,.511,1.33,2.091,2.091,0,0,0,1.54.511,2.207,2.207,0,0,0,1.5-.49,1.789,1.789,0,0,0,.563-1.431V35.7h1.876v9.107h-1.463l-.211-1.762A2.262,2.262,0,0,1,117.1,44.8a3.527,3.527,0,0,1-1.184.181" transform="translate(697.357 570.18)" fill="#2e3e5a"/>
+                          <path id="Path_11152" data-name="Path 11152" d="M123.586,45.029a5.245,5.245,0,0,1-1.782-.3,3.28,3.28,0,0,1-1.392-.943,3.1,3.1,0,0,1-.7-1.647h1.682a1.773,1.773,0,0,0,.436.86,1.973,1.973,0,0,0,.775.5,2.851,2.851,0,0,0,.972.162,2.742,2.742,0,0,0,1.4-.312,1.04,1.04,0,0,0,.532-.964,1,1,0,0,0-.286-.748,1.81,1.81,0,0,0-.9-.413l-1.815-.432a4.248,4.248,0,0,1-1.805-.841,2.029,2.029,0,0,1-.687-1.616,2.592,2.592,0,0,1,.4-1.427,2.672,2.672,0,0,1,1.194-.982,4.812,4.812,0,0,1,1.972-.355,4.075,4.075,0,0,1,2.474.687,2.4,2.4,0,0,1,.968,1.989h-1.628a1.424,1.424,0,0,0-.567-.982,2.073,2.073,0,0,0-1.265-.357,2.485,2.485,0,0,0-1.329.322,1.075,1.075,0,0,0-.52.982.819.819,0,0,0,.38.709,3.311,3.311,0,0,0,1.136.426l1.725.432a3.633,3.633,0,0,1,1.1.463,2.554,2.554,0,0,1,.679.629,2.226,2.226,0,0,1,.347.714,2.657,2.657,0,0,1,.1.7,2.478,2.478,0,0,1-.436,1.474,2.772,2.772,0,0,1-1.242.943,5.041,5.041,0,0,1-1.915.33" transform="translate(699.842 570.137)" fill="#2e3e5a"/>
+                          <path id="Path_11153" data-name="Path 11153" d="M128.866,34.863h-1.894V33h1.894Zm-.035,10.866h-1.815V36.624h1.815Z" transform="translate(702.319 569.26)" fill="#2e3e5a"/>
+                          <path id="Path_11154" data-name="Path 11154" d="M130.452,44.837V35.732h1.84v1.312a2.892,2.892,0,0,1,.594-.695,2.94,2.94,0,0,1,.925-.528,3.655,3.655,0,0,1,1.271-.2,3.7,3.7,0,0,1,1.581.338,2.687,2.687,0,0,1,1.167,1.058,3.5,3.5,0,0,1,.44,1.854v5.97h-1.884V39.07a1.867,1.867,0,0,0-.524-1.454,1.934,1.934,0,0,0-1.351-.476,3.071,3.071,0,0,0-1.058.185,1.867,1.867,0,0,0-.809.561,1.418,1.418,0,0,0-.308.937v6.014Z" transform="translate(703.507 570.152)" fill="#2e3e5a"/>
+                          <path id="Path_11155" data-name="Path 11155" d="M139.633,40.741a3.783,3.783,0,0,0,.268,1.466,2.259,2.259,0,0,0,.814,1.022,2.348,2.348,0,0,0,1.357.374,2.605,2.605,0,0,0,1.4-.37,1.744,1.744,0,0,0,.779-1.1H146a3.094,3.094,0,0,1-.744,1.585,3.734,3.734,0,0,1-1.414.982,4.636,4.636,0,0,1-1.734.33,4.543,4.543,0,0,1-2.281-.559,3.869,3.869,0,0,1-1.536-1.6,5.216,5.216,0,0,1-.551-2.474,5.925,5.925,0,0,1,.5-2.505,3.96,3.96,0,0,1,1.454-1.7,4.616,4.616,0,0,1,4.513-.052,3.572,3.572,0,0,1,1.369,1.581,5.706,5.706,0,0,1,.467,2.4v.625Zm0-1.224h4.614a3.3,3.3,0,0,0-.247-1.3,2.032,2.032,0,0,0-.752-.925,2.245,2.245,0,0,0-1.271-.339,2.156,2.156,0,0,0-1.3.38,2.34,2.34,0,0,0-.779.968,2.987,2.987,0,0,0-.26,1.215" transform="translate(705.992 570.137)" fill="#2e3e5a"/>
+                          <path id="Path_11156" data-name="Path 11156" d="M148.935,45.029a5.245,5.245,0,0,1-1.782-.3,3.28,3.28,0,0,1-1.392-.943,3.1,3.1,0,0,1-.7-1.647h1.682a1.773,1.773,0,0,0,.436.86,1.973,1.973,0,0,0,.775.5,2.851,2.851,0,0,0,.972.162,2.742,2.742,0,0,0,1.4-.312,1.04,1.04,0,0,0,.532-.964,1,1,0,0,0-.286-.748,1.81,1.81,0,0,0-.9-.413l-1.815-.432a4.248,4.248,0,0,1-1.805-.841,2.029,2.029,0,0,1-.687-1.616,2.592,2.592,0,0,1,.4-1.427,2.672,2.672,0,0,1,1.194-.982,4.812,4.812,0,0,1,1.972-.355,4.075,4.075,0,0,1,2.474.687,2.4,2.4,0,0,1,.968,1.989H150.74a1.424,1.424,0,0,0-.567-.982,2.073,2.073,0,0,0-1.265-.357,2.485,2.485,0,0,0-1.329.322,1.075,1.075,0,0,0-.52.982.819.819,0,0,0,.38.709,3.311,3.311,0,0,0,1.136.426l1.725.432a3.633,3.633,0,0,1,1.1.463,2.554,2.554,0,0,1,.679.629,2.226,2.226,0,0,1,.347.714,2.657,2.657,0,0,1,.1.7,2.478,2.478,0,0,1-.436,1.474,2.772,2.772,0,0,1-1.242.943,5.041,5.041,0,0,1-1.915.33" transform="translate(708.49 570.137)" fill="#2e3e5a"/>
+                          <path id="Path_11157" data-name="Path 11157" d="M155.593,45.029a5.245,5.245,0,0,1-1.782-.3,3.28,3.28,0,0,1-1.392-.943,3.1,3.1,0,0,1-.7-1.647H153.4a1.773,1.773,0,0,0,.436.86,1.973,1.973,0,0,0,.775.5,2.851,2.851,0,0,0,.972.162,2.742,2.742,0,0,0,1.4-.312,1.04,1.04,0,0,0,.532-.964,1,1,0,0,0-.286-.748,1.81,1.81,0,0,0-.9-.413l-1.815-.432a4.248,4.248,0,0,1-1.805-.841,2.029,2.029,0,0,1-.687-1.616,2.592,2.592,0,0,1,.4-1.427,2.672,2.672,0,0,1,1.194-.982,4.812,4.812,0,0,1,1.972-.355,4.075,4.075,0,0,1,2.474.687,2.4,2.4,0,0,1,.968,1.989H157.4a1.424,1.424,0,0,0-.567-.982,2.073,2.073,0,0,0-1.265-.357,2.485,2.485,0,0,0-1.329.322,1.075,1.075,0,0,0-.52.982.819.819,0,0,0,.38.709,3.311,3.311,0,0,0,1.136.426l1.725.432a3.633,3.633,0,0,1,1.1.463,2.553,2.553,0,0,1,.679.629,2.226,2.226,0,0,1,.347.714,2.657,2.657,0,0,1,.1.7,2.478,2.478,0,0,1-.436,1.474,2.772,2.772,0,0,1-1.242.943,5.041,5.041,0,0,1-1.915.33" transform="translate(710.762 570.137)" fill="#2e3e5a"/>
+                          <rect id="Rectangle_6441" data-name="Rectangle 6441" width="2.175" height="2.272" transform="translate(871.753 612.717)" fill="#2e3e5a"/>
+                          <path id="Path_11158" data-name="Path 11158" d="M166.387,47.911a7.706,7.706,0,0,1-3.435-.621,1.906,1.906,0,0,1-1.215-1.73,1.415,1.415,0,0,1,.233-.823,2.118,2.118,0,0,1,.555-.559,4.255,4.255,0,0,1,.594-.347,3.393,3.393,0,0,0,.351-.181l-.382-.224a1.508,1.508,0,0,1-.418-.37.955.955,0,0,1-.185-.612,1.089,1.089,0,0,1,.418-.815,2.706,2.706,0,0,1,1.255-.55,3.145,3.145,0,0,1-1.281-1.092,2.605,2.605,0,0,1-.455-1.462,2.432,2.432,0,0,1,.5-1.537,3.115,3.115,0,0,1,1.412-.99,6.065,6.065,0,0,1,2.145-.343,4.829,4.829,0,0,1,1.5.2,4.236,4.236,0,0,1,1.119.565c.113-.042.271-.1.476-.189s.433-.178.683-.278.487-.2.714-.291l.55-.228-.008,1.638-1.585.29a3.143,3.143,0,0,1,.2.581,2.649,2.649,0,0,1,.074.582,2.614,2.614,0,0,1-.432,1.457,2.961,2.961,0,0,1-1.293,1.062,5.175,5.175,0,0,1-2.158.4c-.083,0-.188,0-.318,0a2.85,2.85,0,0,1-.325-.023,2.868,2.868,0,0,0-1.128.19c-.205.107-.308.227-.308.357,0,.164.133.276.4.334a9.827,9.827,0,0,0,1.3.15q.324.026.832.052c.337.017.712.04,1.123.07a3.845,3.845,0,0,1,2.285.75,2.17,2.17,0,0,1,.787,1.752,2.408,2.408,0,0,1-1.136,2.048,6.041,6.041,0,0,1-3.451.8m.326-1.153a3.77,3.77,0,0,0,1.819-.347,1.124,1.124,0,0,0,.612-1.035,1.035,1.035,0,0,0-.4-.837,2.053,2.053,0,0,0-1.179-.378L165.136,44a1.452,1.452,0,0,0-.718.16,1.616,1.616,0,0,0-.589.488,1.131,1.131,0,0,0-.233.692,1.144,1.144,0,0,0,.76,1.051,5.721,5.721,0,0,0,2.356.366m-.335-6.472a2.31,2.31,0,0,0,1.475-.444,1.544,1.544,0,0,0,.559-1.282,1.65,1.65,0,0,0-.559-1.334,2.222,2.222,0,0,0-1.475-.471,2.247,2.247,0,0,0-1.493.476,1.639,1.639,0,0,0-.567,1.329,1.565,1.565,0,0,0,.542,1.267,2.278,2.278,0,0,0,1.518.459" transform="translate(714.18 570.088)" fill="#2e3e5a"/>
+                          <path id="Path_11159" data-name="Path 11159" d="M174.074,45.029a4.4,4.4,0,0,1-2.232-.55,3.71,3.71,0,0,1-1.479-1.6,5.634,5.634,0,0,1-.524-2.536,5.921,5.921,0,0,1,.5-2.509,3.8,3.8,0,0,1,1.448-1.67,4.73,4.73,0,0,1,4.526-.035,3.73,3.73,0,0,1,1.462,1.628,5.887,5.887,0,0,1,.52,2.586,5.747,5.747,0,0,1-.49,2.438,3.781,3.781,0,0,1-1.427,1.651,4.21,4.21,0,0,1-2.3.6m.009-1.454a2.039,2.039,0,0,0,1.3-.409,2.453,2.453,0,0,0,.789-1.153,5.151,5.151,0,0,0,.264-1.722,5.5,5.5,0,0,0-.233-1.651,2.482,2.482,0,0,0-.754-1.184,2.035,2.035,0,0,0-1.364-.44,2.118,2.118,0,0,0-1.321.4,2.411,2.411,0,0,0-.8,1.136,5.052,5.052,0,0,0-.268,1.738,5.345,5.345,0,0,0,.237,1.638,2.534,2.534,0,0,0,.766,1.2,2.063,2.063,0,0,0,1.383.448" transform="translate(716.944 570.135)" fill="#2e3e5a"/>
+                          <path id="Path_11160" data-name="Path 11160" d="M184.97,35.7l-3.311,9.105h-1.593L176.746,35.7h1.742l2.308,6.719h.123l2.307-6.719Z" transform="translate(719.301 570.18)" fill="#2e3e5a"/>
+                          <rect id="Rectangle_6442" data-name="Rectangle 6442" width="2.175" height="2.272" transform="translate(904.686 612.717)" fill="#2e3e5a"/>
+                          <path id="Path_11161" data-name="Path 11161" d="M189.227,45.029a3.657,3.657,0,0,1-1.562-.317,2.485,2.485,0,0,1-1.07-.916,2.907,2.907,0,0,1,.687-3.707,6.325,6.325,0,0,1,3.425-.793l1.5-.044v-.66a1.628,1.628,0,0,0-.467-1.233,1.974,1.974,0,0,0-1.435-.441,2.5,2.5,0,0,0-1.3.335,1.62,1.62,0,0,0-.744,1.1h-1.638a2.726,2.726,0,0,1,.523-1.528,2.887,2.887,0,0,1,1.3-.937,5.446,5.446,0,0,1,1.946-.317,5.267,5.267,0,0,1,2.043.339,2.453,2.453,0,0,1,1.194.99,3.034,3.034,0,0,1,.392,1.585v6.367h-1.593l-.15-1.674a3.038,3.038,0,0,1-1.29,1.448,3.775,3.775,0,0,1-1.757.4m.59-1.312a2.468,2.468,0,0,0,.854-.154,2.763,2.763,0,0,0,.766-.422,2.282,2.282,0,0,0,.55-.6,1.349,1.349,0,0,0,.216-.687V40.344l-1.233.027a6.086,6.086,0,0,0-1.6.194,2.056,2.056,0,0,0-1,.571,1.486,1.486,0,0,0-.347,1.031,1.379,1.379,0,0,0,.51,1.14,2,2,0,0,0,1.286.409" transform="translate(722.528 570.137)" fill="#2e3e5a"/>
+                          <path id="Path_11162" data-name="Path 11162" d="M197.277,44.984a4.64,4.64,0,0,1-1.312-.2,3.4,3.4,0,0,1-1.115-.581,2.819,2.819,0,0,1-.774-.96,2.923,2.923,0,0,1-.287-1.33V35.7h1.894v6.006a1.8,1.8,0,0,0,.511,1.33,2.091,2.091,0,0,0,1.54.511,2.207,2.207,0,0,0,1.5-.49,1.789,1.789,0,0,0,.563-1.431V35.7h1.876v9.107h-1.463L200,43.046a2.262,2.262,0,0,1-1.537,1.757,3.527,3.527,0,0,1-1.184.181" transform="translate(725.115 570.18)" fill="#2e3e5a"/>
+                        </g>
+                      </svg>
+                      
+                    
+                    <a href=/bga-style-guide/index.html class="h-100 stretched-link ms-3 ps-3">Style Guide</a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div id="nav" class="design-system-nav mb-4">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container g-0">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+            
+                                <li class="nav-item">
+                                    <a class="nav-link" href=/bga-style-guide/brand-foundations.html >Brand foundations</a>
+                                </li>
+                                
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href=/bga-style-guide/components.html>Components</a>
+                                </li>
+                                
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href=/bga-style-guide/page-patterns.html>Page patterns</a>
+                                </li>
+                                
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href=/bga-style-guide/resources.html>Resources</a>
+                                </li>
+                               
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+        
+        
+    </div>
+
+</header>
+
+
+    <div id="breadcrumbs" class="">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+
+                
+                <div class="mobile-breadcrumb px-0">
+                    <a href=/bga-style-guide/index.html>
+                        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="22" height="16.5"
+                            viewBox="0 0 22 16.5">
+                            <path
+                                d="M5.4,10.75l3.483,3.483L6.867,16.25-.1,9.375,6.775,2.5,8.792,4.517,5.4,8H21.9v2.75Zm13.75,0H21.9V19H19.15Zm-5.5,5.5h5.5V19h-5.5Z"
+                                transform="translate(0.1 -2.5)" fill="#fff" />
+                        </svg>Home</a>
+                </div>
+
+                <ul class="m-0 breadcrumbs px-0">
+                    <li class="breadcrumb breadcrumb-link breadcrumb-home">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href=/bga-style-guide/index.html
+                            class="breadcrumb-link">Home<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    
+                    <li class="breadcrumb breadcrumb-link">
+                        <a class="py-0 ps-0 m-0" tabindex=0 href="/bga-style-guide/components.html" class="breadcrumb-link">Components<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path data-name="Chevron / Right" d="M3.014,4,0,7.009.993,8,5,4,.993,0,0,.991Z"
+                                    fill="#fff" />
+                            </svg></a>
+                    </li>
+                    
+
+                    
+
+                    <li class="breadcrumb breadcrumb-current">
+                        <p class="breadcrumb-location m-0 p-0">Tool combined results and edit component</p>
+                    </li>
+                </ul>
+                
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <div id="page-header">
+    <div class="container">
+
+        <div class="row pt-5 mx-0">
+            <div class="header-content col">
+                <div class="row g-0">
+                    <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
+                        <h1>Tool combined results and edit component</h1>
+                        <p class="header-intro">Display a single result in a tool page along with a link to return to the question page and edit the answer.</p>
+                        <div class="use-tags m-0 p-0 remove-element-padding">
+                            <p class="pt-1 me-2 mb-0">Use on:</p>
+                            <ul class="p-0 m-0">
+                                <li class="me-2 mb-0 py-1 ps-5 pe-2 true">business.gov.au</li> 
+                                <li class="m-0 mb-0 py-1 ps-5 pe-2 true">subsites</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="updated pt-4 pb-0">Last updated: 6 June, 2024</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+    <div class="container">
+        <section class="body-content my-5">
+
+            <div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        <div class="anchor-menu in-page remove-element-padding mt-0 mb-2 p-0">
+ 
+    <h5 class="mb-3">On this page</h5>
+    
+    <ul id="anchor-menu" class="p-0">
+        
+            <li class="mb-3"><a tabindex="0" href="#design">Design</a></li>
+             
+        
+            <li class="mb-3"><a tabindex="0" href="#layouts">Layouts</a></li>
+             
+        
+            <li class="mb-3"><a tabindex="0" href="#guidelines-for-use">Guidelines for use</a></li>
+             
+        
+            <li class="mb-3"><a tabindex="0" href="#version-history">Version history</a></li>
+             
+         
+         
+         
+         
+        
+    </ul>
+
+</div>
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        <div class="tabs-select-wrapper">
+    <div class="section-tabs d-none d-md-flex">
+        
+        <div class="tab py-2 px-3 me-2 remove-element-padding selected" data-tab="bga-branded"><p>business.gov.au branding</p></div>
+        
+
+                
+        <div class="tab py-2 px-3 me-2 remove-element-padding"  data-tab="non-branded"><p>No branding</p></div>
+        
+
+                
+        
+        
+
+        
+
+    </div>
+
+    <div class="tabs-select d-block d-md-none p-4">
+        <select class="form-select">
+            
+            
+            <option value="bga-branded">business.gov.au branding</option>
+            
+
+            
+            <option value="non-branded">No branding</option>
+            
+
+            
+
+            
+
+            
+
+        </select>
+    </div>
+
+</div>
+    
+            <div class="tab-sections-wrapper">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="bga-tools-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input tabindex=-1 type="radio" class="btn-check bp-sm true" name="bga-tools-group" id="bga-tools-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label tabindex=0 class="btn btn-outline-primary bp-sm py-2 px-3 true" for="bga-tools-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input tabindex=-1 type="radio" class="btn-check true" name="bga-tools-group" id="bga-tools-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 true" for="bga-tools-bp-final">&lt;576px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                        
+
+                        <h3>Combined results and edit component</h3>
+                            <div class="bga-component-wrapper pb-5">
+    <div class="bga-component results-edit-answers-component  m-0" >
+
+        <div class="title-area py-3 px-4 remove-element-padding">
+
+            <h3 class="m-0">Our competitors</h3>
+            <a tabindex="0"  class="edit-btn p-0 ms-4">
+                <span>Edit</span>
+                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
+                  </svg>
+                  
+                </a>
+
+        </div>
+
+        <div class="p-4 component-content">
+
+            <div class="component-text p-0 remove-element-padding">
+
+
+                <div class="answers-section">
+
+
+                    <div class="answers remove-element-padding">
+                        <h4>Competitor 1</h4><p>Lorem ipsum dolor sit amet, consetetur</p><h4>What they do well</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p><h4>What we do differently</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+                            
+                    
+            
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     <div class="breakpoints m-0 p-4">
+
+    
+    <div class="larger-screens">
+        <p class="pe-3 m-0">Breakpoints:</p>
+
+        <fieldset id="nb-tools-group">
+
+            <div class="btn-toolbar" role="toolbar">
+
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                
+                
+                
+
+                
+
+                      
+                    <input tabindex=-1 type="radio" class="btn-check bp-sm true" name="nb-tools-group" id="nb-tools-bp-sm" autocomplete="off" data-breakpoint="bp-576">
+                    <label tabindex=0 class="btn btn-outline-primary bp-sm py-2 px-3 true" for="nb-tools-bp-sm">≥576px (sm)</label>
+                
+
+                
+
+                    
+                <input tabindex=-1 type="radio" class="btn-check true" name="nb-tools-group" id="nb-tools-bp-final" autocomplete="off" data-breakpoint="bp-below576">
+                <label tabindex=0 class="btn btn-outline-primary py-2 px-3 true" for="nb-tools-bp-final">&lt;576px</label>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="smaller-screens remove-element-padding">
+        <h4>Currently displaying the mobile design.</h4>
+        <p>To see designs for other breakpoints please view this page on a larger screen.</p>
+    </div>
+
+    
+
+</div>
+
+
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                        <p class="">Apply your brand specific <strong>colours, borders and button styles</strong> to the base tool result components shown below.</p>
+
+
+                    
+                            <div class="bga-component-wrapper pb-5">
+    <div class="bga-component results-edit-answers-component non-branded nb-border m-0" >
+
+        <div class="title-area py-3 px-4 remove-element-padding">
+
+            <h3 class="m-0">Our competitors</h3>
+            <a tabindex="0"  class="edit-btn p-0 ms-4">
+                <span>Edit</span>
+                <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <path d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z" transform="translate(22 5.238) rotate(135)" fill="#2157aa"/>
+                  </svg>
+                  
+                </a>
+
+        </div>
+
+        <div class="p-4 component-content">
+
+            <div class="component-text p-0 remove-element-padding">
+
+
+                <div class="answers-section">
+
+
+                    <div class="answers remove-element-padding">
+                        <h4>Competitor 1</h4><p>Lorem ipsum dolor sit amet, consetetur</p><h4>What they do well</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p><h4>What we do differently</h4><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+                            
+                    
+            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+
+        <!-- Design specifications link -->
+
+        <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
+<a class="btn btn-primary" tabindex="0" href='https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=74-3591&t=EbQfj55ebI8UJ4gB-1' role="button">View design specifications</a>
+</div>
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Tool result components can be used on the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html >Single column - information page layout</a>, the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html> Single column - tool page layout</a> and the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html>Two column - tool page alternate layout</a>.</p> 
+       
+       
+        <div class="layouts m-0 p-4">
+    
+    
+    
+    
+    <p class="pe-3 m-0">Layout:</p>
+    
+    <select class="form-select layouts-select ps-3" aria-label="Layout examples">
+        
+        
+        
+        
+            <option value="single-col-infopage" class="true">Single column - information page</option>
+        
+
+        
+            <option value="single-col-toolpage" class="true">Single column - tool page</option>
+        
+        
+        
+        
+        
+
+        
+
+        
+        <option value="two-col-toolpage-alt" class="true">Two column - tool page alternate</option>
+        
+        
+    </select>
+    
+    
+
+
+    
+</div>
+        
+        <div class="layout-example show single-col-infopage mt-0 mb-5 px-4 py-0">
+            
+            
+        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
+        <div class="accordion layout-accordion">
+
+                    
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min1200">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-infopage-collapseOne" aria-expanded="true" aria-controls="single-col-infopage-collapseOne">
+                                   Breakpoint ≥ 1200px
+                                </button>
+                            </h2>
+                            <div id="single-col-infopage-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/tool-results-1col2thirdswidth-min1200.png' | relative_url  alt="" />
+
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 8 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+                         
+                        <div class="accordion-item true ">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-infopage-collapseTwo" aria-expanded="false" aria-controls="single-col-infopage-collapseTwo">
+                                    Breakpoint ≥ 992px
+                                </button>
+                            </h2>
+                            <div id="single-col-infopage-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                     <img src='../assets/layout-images/tool-results-1col2thirdswidth-min992.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 9 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+                       
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-infopage-collapseThree" aria-expanded="false" aria-controls="single-col-infopage-collapseThree">
+                                    Breakpoint ≥ 768px
+                                </button>
+                            </h2>
+                            <div id="single-col-infopage-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/tool-results-1col2thirdswidth-min768.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 11 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+
+
+                    
+
+
+
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-infopage-collapseFive" aria-expanded="false" aria-controls="single-col-infopage-collapseFive">
+                                    Breakpoint &lt; 768px
+                                </button>
+                            </h2>
+                            <div id="single-col-infopage-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/tool-results-1col2thirdswidth-finalbp.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                       <p>The content area is 12 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+        </div>
+
+
+    
+
+
+
+
+
+            
+        </div>
+
+
+        <div class="layout-example single-col-toolpage mt-0 mb-5 px-4 py-0">
+
+            
+        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
+        <div class="accordion layout-accordion">
+
+                    
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min1200">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-toolpage-collapseOne" aria-expanded="true" aria-controls="single-col-toolpage-collapseOne">
+                                   Breakpoint ≥ 1200px
+                                </button>
+                            </h2>
+                            <div id="single-col-toolpage-collapseOne" class="accordion-collapse collapse show" aria-labelledby="layout-bp-min1200" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/onecol-toolpage-1200px-fullwidthcomponent.png' | relative_url  alt="" />
+
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 9 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+                         
+                        <div class="accordion-item true ">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-toolpage-collapseTwo" aria-expanded="false" aria-controls="single-col-toolpage-collapseTwo">
+                                    Breakpoint ≥ 992px
+                                </button>
+                            </h2>
+                            <div id="single-col-toolpage-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                     <img src='../assets/layout-images/onecol-toolpage-992px-fullwidthcomponent.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 10 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+                    
+
+
+                    
+
+
+
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#single-col-toolpage-collapseFive" aria-expanded="false" aria-controls="single-col-toolpage-collapseFive">
+                                    Breakpoint &lt; 992px
+                                </button>
+                            </h2>
+                            <div id="single-col-toolpage-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/onecol-toolpage-finalbp-fullwidthcomponent.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                       <p>The content area is 12 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+        </div>
+
+
+    
+
+
+
+
+
+
+        </div>
+
+
+        <div class="layout-example two-col-toolpage-alt mt-0 mb-5 px-4 py-0">
+
+            
+        <button class="accordion-toggle pt-4 pb-0 px-0"><span>Open all</span></button>
+        <div class="accordion layout-accordion">
+
+                    
+
+
+                         
+                        <div class="accordion-item true ">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min992">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#two-col-toolpage-alt-collapseTwo" aria-expanded="false" aria-controls="two-col-toolpage-alt-collapseTwo">
+                                    Breakpoint ≥ 992px
+                                </button>
+                            </h2>
+                            <div id="two-col-toolpage-alt-collapseTwo" class="accordion-collapse collapse" aria-labelledby="layout-bp-min992" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                     <img src='../assets/layout-images/twocol-toolpagealt-992px-1across.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 8 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+                       
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-min768">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#two-col-toolpage-alt-collapseThree" aria-expanded="false" aria-controls="two-col-toolpage-alt-collapseThree">
+                                    Breakpoint ≥ 768px
+                                </button>
+                            </h2>
+                            <div id="two-col-toolpage-alt-collapseThree" class="accordion-collapse collapse" aria-labelledby="layout-bp-min768">
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/twocol-toolpagealt-768px-1across.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                        <p>The content area is 11 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+
+
+                    
+
+
+
+                        <div class="accordion-item true">
+                            <h2 class="accordion-header pt-0" id="layout-bp-mobile">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#two-col-toolpage-alt-collapseFive" aria-expanded="false" aria-controls="two-col-toolpage-alt-collapseFive">
+                                    Breakpoint &lt; 768px
+                                </button>
+                            </h2>
+                            <div id="two-col-toolpage-alt-collapseFive" class="accordion-collapse collapse" aria-labelledby="layout-bp-mobile" >
+                                <div class="accordion-body">
+                                    <div class="layout-image me-5">
+                                    <img src='../assets/layout-images/twocol-toolpagealt-finalpb-1across.png' | relative_url  alt="" />
+                                    </div>
+
+                                    <div class="layout-rules">
+                                       <p>The content area is 12 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+        </div>
+
+
+    
+
+
+
+
+
+
+        </div>
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Results components allow the user to review and edit results from a process or tool they have stepped through. Edit links return the user to the appropriate page in a tool so they can change their answer.</p>
+        <h3>When to use these components:</h3>
+        <ul>
+            <li>Used at the end of business.gov.au tools</li>
+        </ul>
+
+          <!-- VERSION HISTORY-->
+          <h2 class="section-start" id="version-history">Version history</h2>
+          <h4>6 June, 2024</h4>
+          <ul>
+              <li>Split the tool results components page into 4 separate pages.</li>
+          </ul>
+          <h4>5 March, 2024</h4>
+          <ul>
+              <li>Removed the 'learn more' section from the results call out.</li>
+          </ul>
+          <h4>19 September, 2023</h4>
+          <ul>
+              <li>Added a new design pattern, the results call out.</li>
+              <li>Added an alternative colour version for the results accordion ('results accordion - yellow').</li>
+          </ul>
+          <h4>18 August, 2023</h4>
+          <ul>
+              <li>Update all edit buttons from lowercase 'e' to uppercase 'E'.</li>
+          </ul>
+
+
+    </div>
+        
+
+
+        </section>
+    </div>
+
+
+    
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding py-5">
+                    <h2>Contact Us</h2>
+                    <p> Branding elements in this style guide are for business.gov.au digital products only. Please email <a href="mailto:bgastrategicmanagement@industry.gov.au">bgastrategicmanagement@industry.gov.au</a> for more information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="indigenous-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding pt-5 pb-6">
+                    <p>© Commonwealth of Australia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<div id="inpage-cta-toast">
+    <div class="bga-component-wrapper">
+<div class="bga-component callout-box toast-example cta-toast">
+
+    
+
+    <div class="py-4 ps-4 pe-6 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+            
+                <h4>Call to action toast notification</h4>
+            
+            
+          
+            
+                <p>Pops up like cooked bread in a toaster.</p>
+    <p>Toasts can be left aligned or centered depending on the page context.</p>
+            
+
+            
+            
+            
+                 <div class="button-example">
+                     <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Close toast  </button>
+                </div>
+            
+
+        </div>
+    
+
+    </div>
+
+</div>
+</div>
+
+</div>
+<div id="inpage-toast">
+    <div class="bga-component-wrapper">
+<div class="bga-component callout-box toast-example default">
+
+    
+            <button class="close m-0 p-0">Close</button>
+            
+
+    <div class="py-4 ps-4 pe-6 component-content">
+
+        <div class="component-text p-0 remove-element-padding">
+            
+                <h4>Toast notification</h4>
+            
+            
+          
+            
+                <p>Pops up like cooked bread in a toaster.</p>
+    <p>Toasts can be left aligned or centered depending on the page context.</p>
+            
+
+            
+            
+            
+
+        </div>
+    
+
+    </div>
+
+</div>
+</div>
+</div>
+
+<div id="inpage-cookie">
+    <div class="bga-component-wrapper">
+<div class="bga-component cookie-notification in-page">
+
+    <div class="py-3 px-4 component-content">
+
+        <div class="component-text p-0 me-5 remove-element-padding">
+          
+            
+                <p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consec adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>
+            
+
+        </div>
+
+        <div class="component-links p-0 remove-element-padding">
+            
+                 <div class="button-example">
+                     <button class="cookie-link bga-btn bga-secondary-btn bga-btn-pill me-3" tabindex="0" href="" role="button">Accept all cookies</button>
+                </div>
+            
+
+            
+               <a href="" class="cookie-link">Customise cookies</a>
+            
+        </div>
+    
+
+    </div>
+
+</div>
+</div>
+</div>
+
+<!-- In page example -->
+<div id="inpage-mini-toast">
+<div id="bga-mini-toast" class="bga-component mini-toast-notification inpage p-3">
+
+        <div class="component-content p-0 remove-element-padding">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4012 0H2.20017C0.979078 0 0 0.990079 0 2.20017V17.6014C0 18.8115 0.979078 19.8016 2.20017 19.8016H17.6014C18.8115 19.8016 19.8016 18.8115 19.8016 17.6014V4.40035L15.4012 0ZM9.90079 17.6014C8.07464 17.6014 6.60053 16.1273 6.60053 14.3011C6.60053 12.475 8.07464 11.0009 9.90079 11.0009C11.7269 11.0009 13.2011 12.475 13.2011 14.3011C13.2011 16.1273 11.7269 17.6014 9.90079 17.6014ZM13.2011 6.60053H2.20017V2.20017H13.2011V6.60053Z" fill="#333333"/>
+                </svg>
+            
+            <p class="mini"><strong>Changes to this contract are being autosaved.</strong></p>
+        </div>
+
+</div>
+
+</div>
+
+</html>
