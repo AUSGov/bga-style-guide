@@ -6989,13 +6989,19 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.notification.non-branded .icon-wrapper { height: 44px; background: transparent; }
 
-.component-example.bp-below576 .bga-component.notification .notification-wrapper { flex-wrap: wrap; justify-content: center; }
+.component-example.bp-576 .bga-component.notification.no-close .notification-wrapper { padding-right: 24px !important; }
+
+.component-example.bp-below576 .bga-component.notification.no-close .notification-wrapper { padding-right: 24px !important; }
+
+.component-example.bp-below576 .bga-component.notification .notification-wrapper { flex-wrap: wrap; justify-content: center; padding-right: 24px !important; }
 
 .component-example.bp-below576 .bga-component.notification .icon-wrapper { margin: 0 0 16px 0 !important; }
 
 .component-example.bp-below576 .bga-component.notification.warning .icon-wrapper { width: 44px; height: 44px; }
 
-@media (max-width: 576px) { .bga-component.notification .notification-wrapper { flex-wrap: wrap; justify-content: center; } .bga-component.notification .icon-wrapper { margin: 0 0 16px 0 !important; } .bga-component.notification.warning .icon-wrapper { width: 44px; height: 44px; } }
+@media (max-width: 768px) { .bga-component.notification.no-close .notification-wrapper { padding-right: 24px !important; } }
+
+@media (max-width: 576px) { .bga-component.notification .notification-wrapper { flex-wrap: wrap; justify-content: center; padding-right: 24px !important; } .bga-component.notification .icon-wrapper { margin: 0 0 16px 0 !important; } .bga-component.notification.warning .icon-wrapper { width: 44px; height: 44px; } }
 
 .grant-status-indicator .component-content { background: #D4EDD4; border-left: solid 8px #85CB85; }
 
