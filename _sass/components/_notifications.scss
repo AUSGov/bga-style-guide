@@ -83,11 +83,21 @@
 }
 
 // Mixins for smaller screen sizes and media queries
+@mixin notification-bp576 () {
+    .bga-component.notification.no-close {
+        .notification-wrapper {
+            padding-right: 24px !important;
+        }
+    }
+}
+
+// Mixins for smaller screen sizes and media queries
 @mixin notification-below576 () {
     .bga-component.notification {
         .notification-wrapper {
             flex-wrap: wrap;
             justify-content: center;
+            padding-right: 24px !important;
         }
 
         .icon-wrapper {
@@ -106,11 +116,19 @@
 
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576 {
+    @include notification-bp576();
+}
+
 .component-example.bp-below576 {
+    @include notification-bp576();
     @include notification-below576();
 }
 
 // Media queries for HTML demo pages
+@media (max-width: 768px) {
+    @include notification-bp576();
+}
 @media (max-width: 576px) {
     @include notification-below576();
 }
