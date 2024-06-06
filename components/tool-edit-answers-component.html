@@ -1,0 +1,278 @@
+---
+
+layout: content-tagged
+title: Tool edit answers component
+description: Display results in a tool page along with edit links to return to the question page and edit the answer.
+updated: 6 June, 2024
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+            link-4="Version history" link-id-4="#version-history"
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="bga-tools"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                        {% include component-examples/edit-answers-example.html
+                            title1="Investment approvals"
+                            content1="<p>Will your project involve foreign investors?<span>No</span></p><p>Will your project involve capital expenditure over AUD $500 million?<span>Yes</span></p>"
+
+                            title2="Location"
+                            content2="<p>Where will your project take place?<span>Both on land and at sea</span></p>"
+
+                            title3="Import and export"
+                            content3="<p>Will your project involve importing or exporting goods?<span>No</span></p>"
+
+                        %}
+
+            
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                     <!-- Breakpoint radio buttons -->
+                     {% include breakpoints.html 
+                        element-string="nb-tools"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                        {% include non-branded-explanation.html
+                            component="tool result components"
+                            brand-elements="colours, borders and button styles"
+                        %}
+                        
+                        {% include component-examples/edit-answers-example.html
+                            title1="Investment approvals"
+                            content1="<p>Will your project involve foreign investors?<span>No</span></p><p>Will your project involve capital expenditure over AUD $500 million?<span>Yes</span></p>"
+
+                            title2="Location"
+                            content2="<p>Where will your project take place?<span>Both on land and at sea</span></p>"
+
+                            title3="Import and export"
+                            content3="<p>Will your project involve importing or exporting goods?<span>No</span></p>"
+
+                            classes="non-branded"
+
+                        %}
+
+
+                       
+                    
+            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=67-4048&t=EbQfj55ebI8UJ4gB-1'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->   
+        <h2 class="section-start" id="layouts">Layouts</h2>
+        
+        <p>Tool result components can be used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }} >Single column - information page layout</a>, the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}> Single column - tool page layout</a> and the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>Two column - tool page alternate layout</a>.</p> 
+       
+       
+        {% include layouts-dropdown.html 
+            single-col-infopage-visibility="true" 
+            single-col-toolpage-visibility="true" 
+            two-col-toolpage-alt-visibility="true" 
+        %}
+        
+        <div class="layout-example show single-col-infopage mt-0 mb-5 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="single-col-infopage"    
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+            
+                min1200-img="'../assets/layout-images/tool-results-1col2thirdswidth-min1200.png' | relative_url "
+                min992-img="'../assets/layout-images/tool-results-1col2thirdswidth-min992.png' | relative_url "
+                min768-img="'../assets/layout-images/tool-results-1col2thirdswidth-min768.png' | relative_url "
+                finalbp-img="'../assets/layout-images/tool-results-1col2thirdswidth-finalbp.png' | relative_url "
+                
+                min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>"
+            
+                min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>"
+            
+                min768-rules="<p>The content area is 11 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>"
+            
+                finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Tool result components span the full width of the content area.</p>"
+                            
+            %}
+            
+        </div>
+
+
+        <div class="layout-example single-col-toolpage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="single-col-toolpage"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 992px"
+
+            min1200-img="'../assets/layout-images/onecol-toolpage-1200px-fullwidthcomponent.png' | relative_url "
+            min992-img="'../assets/layout-images/onecol-toolpage-992px-fullwidthcomponent.png' | relative_url "
+            finalbp-img="'../assets/layout-images/onecol-toolpage-finalbp-fullwidthcomponent.png' | relative_url "
+
+            min1200-rules="<p>The content area is 9 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 10 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>"
+
+
+            %}
+
+        </div>
+
+
+        <div class="layout-example two-col-toolpage-alt mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="two-col-toolpage-alt"
+
+            min1200-visibility="false"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min992-img="'../assets/layout-images/twocol-toolpagealt-992px-1across.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-toolpagealt-768px-1across.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-toolpagealt-finalpb-1across.png' | relative_url "
+
+            min992-rules="<p>The content area is 8 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>"
+            
+            min768-rules="<p>The content area is 11 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Tool result components span the full width of the content area.</p>"
+
+
+            %}
+
+        </div>
+
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Results components allow the user to review and edit results from a process or tool they have stepped through. Edit links return the user to the appropriate page in a tool so they can change their answer.</p>
+        <h3>When to use these components:</h3>
+        <ul>
+            <li>Used at the end of business.gov.au tools</li>
+        </ul>
+
+          <!-- VERSION HISTORY-->
+          <h2 class="section-start" id="version-history">Version history</h2>
+          <h4>6 June, 2024</h4>
+          <ul>
+              <li>Split the tool results components page into 4 separate pages.</li>
+          </ul>
+          <h4>5 March, 2024</h4>
+          <ul>
+              <li>Removed the 'learn more' section from the results call out.</li>
+          </ul>
+          <h4>19 September, 2023</h4>
+          <ul>
+              <li>Added a new design pattern, the results call out.</li>
+              <li>Added an alternative colour version for the results accordion ('results accordion - yellow').</li>
+          </ul>
+          <h4>18 August, 2023</h4>
+          <ul>
+              <li>Update all edit buttons from lowercase 'e' to uppercase 'E'.</li>
+          </ul>
+
+
+    </div>
+        
