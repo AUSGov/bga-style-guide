@@ -2391,7 +2391,41 @@ $(document).ready(function () {
 
         }, 1000);
     });
+
+    // COMPONENT EXAMPLE: Guide tile dropdown
+    $('.guide-select-options').on('change', function(){
+        var option = $(this).val(),
+            parent = $(this).parents('.action-checklist');
+            console.log(option);
+            console.log(parent);
+        
+        parent.find('ul').each(function(){
+            $(this).addClass('d-none');
+        });
+
+        parent.find('ul.' + option).removeClass('d-none');
+    });
     
+    // COMPONENT EXAMPLE: Guide vertical nav
+    if ($('#guide-vertical-nav')) {
+        console.log('guide nav is present');
+
+        var page_id = $('.guide-section').attr('id');
+        $('.guide-nav-item.' + page_id).addClass('current');
+
+        $('#guide-vertical-nav .submenu-toggle').on('click', function(){
+            var parentItem =  $(this).parents('.guide-nav-item');
+
+            parentItem.toggleClass('show');
+            $(this).parents('.guide-sub-item').toggleClass('show');
+
+            if (parentItem.hasClass('show')) {
+                $(this).find('span').text('Hide');
+            } else {
+                $(this).find('span').text('Show');
+            }
+        });
+    }
     
 
 }); //End doc ready

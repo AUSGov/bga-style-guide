@@ -1,0 +1,109 @@
+.guide-section {
+    padding: 24px;
+    background: $bga-teal-highlight-light;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+}
+
+.guide-section-header {
+    display: flex;
+    column-gap: 24px;
+
+    .illustration {
+        
+
+        img {
+            width: 200px;
+            background: $bga-white;
+        }
+    }
+}
+.guide-tiles-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+}
+
+.guide-tile {
+    border: 1px solid $bga-black;
+    background: $bga-white;
+
+    .content {
+        padding: 24px;
+    }
+
+    .learn-more {
+
+        a {
+            display: flex;
+            column-gap: 8px;
+            align-items: center;
+            color: $bga-blue-links;
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+
+    .action-checklist {
+        padding: 24px;
+        background: $bga-teal-highlight-mid;
+
+        .dropdown-wrapper {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+
+            .form-select {
+                padding: 4px 48px 4px 8px;
+                min-height: auto;
+                min-width: 250px;
+                font-size: 1.1875rem;
+                font-weight: 600;
+                color: $bga-blue-black-dark;
+                background-color: $bga-teal-highlight-light;
+
+                &:focus {
+                    background-color: $bga-teal-highlight-light !important;
+                }
+            }
+        }
+
+        ul {
+            li {
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }      
+    }
+}
+
+.sab-bottom-nav {
+    display: flex;
+    justify-content: space-between;
+
+    &.first-page {
+        justify-content: flex-end;
+    }
+    a {
+        color: $nb-black;
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+
+        &:focus-visible, &:hover {
+            background: none;
+        }
+
+        &.inactive {
+            color: $nb-black-lightest;
+
+            svg, svg path {
+                fill: $nb-black-lightest; 
+            }
+        }
+    }
+}
