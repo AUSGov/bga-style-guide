@@ -4,6 +4,22 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 24px;
+
+    &.blue {
+        background: $bga-blue-highlight-light;
+    }
+    &.purple {
+        background: $bga-purple-highlight-light;
+    }
+    &.green {
+        background: $bga-green-highlight-light;
+    }
+    &.yellow {
+        background: $bga-yellow-highlight-light;
+    }
+    &.orange {
+        background: $bga-orange-highlight-light;
+    }
 }
 
 .guide-section-header {
@@ -23,6 +39,22 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 32px;
+}
+
+@mixin guide-tile-colour ($colour-mid, $colour-light) {
+    .action-checklist {
+        background: $colour-mid;
+
+        .dropdown-wrapper {
+            .form-select {
+                background-color: $colour-light;
+
+                &:focus {
+                    background-color: $colour-light !important;
+                }
+            }
+        }
+    }
 }
 
 .guide-tile {
@@ -72,21 +104,53 @@
         }
 
         ul {
+            padding: 0 0 8px 24px;
+
             li {
+                &::before {
+                    content: "";
+                    height: 22px;
+                    width: 18px;
+                    margin-right: 8px;
+                    margin-top: 6px;
+                    background: url(../assets/icon-tick-black.svg) no-repeat;
+                    background-position: center;
+                    display:inline-block; 
+                }
+
                 &:last-of-type {
                     margin-bottom: 0;
                 }
             }
         }      
     }
+
+    &.blue {
+        @include guide-tile-colour($bga-blue-highlight-mid, $bga-blue-highlight-light);
+    }
+    &.purple {
+        @include guide-tile-colour($bga-purple-highlight-mid, $bga-purple-highlight-light);
+    }
+    &.green {
+        @include guide-tile-colour($bga-green-highlight-mid, $bga-green-highlight-light);
+    }
+    &.yellow {
+        @include guide-tile-colour($bga-yellow-highlight-mid, $bga-yellow-highlight-light);
+    }
+    &.orange {
+        @include guide-tile-colour($bga-orange-highlight-mid, $bga-orange-highlight-light);
+    }
 }
 
-.sab-bottom-nav {
+.guide-bottom-nav {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
     &.first-page {
         justify-content: flex-end;
+    }&.last-page {
+        justify-content: flex-start;
     }
     a {
         color: $nb-black;

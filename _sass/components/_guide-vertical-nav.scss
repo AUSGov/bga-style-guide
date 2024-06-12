@@ -1,3 +1,18 @@
+@mixin guide-nav-colour ($colour) {
+    &.show {
+        .guide-nav-item-title {
+            h4 {
+                a {
+                    background: $colour;
+                }
+            }
+        }
+        .guide-sub-item {
+            background: $colour;
+        }
+    }
+}
+
 #guide-vertical-nav {
 
     .guide-nav-item {
@@ -51,15 +66,7 @@
             }
         }
 
-        &.show {
-            .guide-nav-item-title {
-                h4 {
-                    a {
-                        background: $bga-teal-highlight-light;
-                    }
-                }
-            }
-        }
+        @include guide-nav-colour($bga-teal-highlight-light);
 
         &.current {
             h4 span {
@@ -75,92 +82,111 @@
             }
         }
 
+
+        .guide-sub-item {
+            margin: 0 0 0 48px;
+            padding: 0 8px 8px 8px;
+
+
+            .submenu-toggle {
+                button {
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    display: flex;
+                    column-gap: 4px;
+                    align-items: center;
+                    font-size: .875rem;
+                    line-height: 1.285;
+                    font-weight: 400;
+                    color: $bga-black;
+                    margin: 0;
+
+                }
+            }
+
+            .guide-submenu {
+                display: none;
+            }
+
+            ul {
+                margin: 0 0 8px 0;
+                padding: 16px 0 0 0;
+            }
+
+            li {
+                list-style-type: none;
+                padding: 0;
+                margin: 0 0 16px 0;
+                text-indent: 0;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+
+                &:before {
+                    display: none;
+                }
+
+                a {
+                    color: $bga-black;
+                    text-decoration: underline;
+                    font-size: .875rem;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    display: block;
+
+                    &:hover {
+                        background: none;
+                    }
+                }
+            }
+
+            &.show {
+                background: $bga-teal-highlight-light;
+
+                .guide-submenu {
+                    display: block;
+                }
+
+                .submenu-toggle {
+                    svg {
+                        transform: scaleY(-1);
+                    }
+                }
+
+            }
+        }
+        
+        &.blue {
+            @include guide-nav-colour($bga-blue-highlight-light);
+        }
+        &.purple {
+            @include guide-nav-colour($bga-purple-highlight-light);
+        }
+        &.green {
+            @include guide-nav-colour($bga-green-highlight-light);
+        }
+        &.yellow {
+            @include guide-nav-colour($bga-yellow-highlight-light);
+        }
+        &.orange {
+            @include guide-nav-colour($bga-orange-highlight-light);
+        }
+
     }
 
 }
-.email-download-wrapper {
+
+.guide-email-download-wrapper {
     border-top: solid 2px $bga-black;
     border-bottom: solid 2px $bga-black;
     padding: 24px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
 
     .bga-btn.bga-secondary-btn {
         width: 100%;
-    }
-}
-
-.guide-sub-item {
-    margin: 0 0 0 48px;
-    padding: 0 8px 8px 8px;
-
-
-    .submenu-toggle {
-        button {
-            background: none;
-            border: none;
-            padding: 0;
-            display: flex;
-            column-gap: 4px;
-            align-items: center;
-            font-size: .875rem;
-            line-height: 1.285;
-            font-weight: 400;
-            color: $bga-black;
-            margin: 0;
-
-        }
-    }
-
-    .guide-submenu {
-        display: none;
-    }
-
-    ul {
-        margin: 0 0 8px 0;
-        padding: 16px 0 0 0;
-    }
-
-    li {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 0 16px 0;
-        text-indent: 0;
-
-        &:last-of-type {
-            margin: 0;
-        }
-
-        &:before {
-            display: none;
-        }
-
-        a {
-            color: $bga-black;
-            text-decoration: underline;
-            font-size: .875rem;
-            line-height: 1.5;
-            font-weight: 400;
-            display: block;
-
-            &:hover {
-                background: none;
-            }
-        }
-    }
-
-    &.show {
-        background: $bga-teal-highlight-light;
-
-        .guide-submenu {
-            display: block;
-        }
-
-        .submenu-toggle {
-            svg, svg path {
-                width: 14px;
-                height: auto;
-                transform: scaleY(-1);
-            }
-        }
-
     }
 }

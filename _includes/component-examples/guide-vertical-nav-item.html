@@ -1,0 +1,44 @@
+
+<div class="guide-nav-item {{include.classes}} {{include.id}}">
+    <div class="guide-nav-item-title">
+        <h4><span>{{include.step-number}}</span><a href={{include.page-link}}>{{include.page-title}}</a></h4>
+    </div>
+
+    <div class="guide-sub-item">
+        
+        <div class="submenu-toggle">
+            <button><span>Show</span><svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.13695 6.15325L1.76887 0.625L0.00045767 2.44618L7.13695 9.79561L14.2734 2.44618L12.505 0.625L7.13695 6.15325Z" fill="#333333"/>
+                </svg>
+                </button>
+        </div>
+
+        <div class="guide-submenu">
+            <ul>
+                {% if include.sub1-link %}
+                    <li data-anchor="{{include.id}}"><a href={{include.sub1-link}}>{{include.sub1-title}}</a></li>  
+                {% endif %}
+
+                {% if include.sub2-link %}
+                    <li data-anchor="{{include.id}}"><a href={{include.sub2-link}}>{{include.sub2-title}}</a></li>  
+                {% endif %}
+
+                {% if include.sub3-link %}
+                    <li data-anchor="{{include.id}}"><a href={{include.sub3-link}}>{{include.sub3-title}}</a></li>  
+                {% endif %}
+
+                {% if include.sub4-link %}
+                    <li data-anchor="{{include.id}}"><a href={{include.sub4-link}}>{{include.sub4-title}}</a></li>  
+                {% endif %}
+
+                {% if include.sub5-link %}
+                    <li data-anchor="{{include.id}}"><a href={{include.sub5-link}}>{{include.sub5-title}}</a></li>  
+                {% endif %}
+
+               
+            </ul>
+        </div>
+
+    </div>
+   
+</div>
