@@ -16,23 +16,23 @@
 
                 span {
                     display: flex;
-                    width: 32px;
-                    height: 32px;
-                    margin: 8px 0 0 0;
+                    width: 40px;
+                    height: 40px;
+                    margin: 3px 0 0 0;
                     flex-shrink: 0;
                     border-radius: 50px;
                     justify-content: center;
                     align-items: center;
-                    border: $bga-black solid 2px;
+                    border: $bga-blue-black-light solid 3px;
 
                     &:after {
                         content: " ";
                         position: absolute;
                         z-index: 0;
-                        left: 15px;
-                        top: 40px;
-                        height: calc(100% - 32px);
-                        background: $bga-black;
+                        left: 18.5px;
+                        top: 43px;
+                        height: calc(100% - 40px);
+                        background: $bga-blue-black-light;
                         width: 3px;
                     }
                 }
@@ -64,6 +64,7 @@
         &.current {
             h4 span {
                 background: $bga-black;
+                border-color: $bga-black;
                 color: $bga-white;
             }
         }
@@ -78,8 +79,9 @@
 
 }
 .email-download-wrapper {
-    background: $bga-yellow-highlight-mid;
-    padding: 24px;
+    border-top: solid 2px $bga-black;
+    border-bottom: solid 2px $bga-black;
+    padding: 24px 0px;
 
     .bga-btn.bga-secondary-btn {
         width: 100%;
@@ -87,7 +89,7 @@
 }
 
 .guide-sub-item {
-    margin: 0 0 0 40px;
+    margin: 0 0 0 48px;
     padding: 0 8px 8px 8px;
 
 
@@ -97,16 +99,14 @@
             border: none;
             padding: 0;
             display: flex;
-            column-gap: 8px;
+            column-gap: 4px;
             align-items: center;
             font-size: .875rem;
+            line-height: 1.285;
             font-weight: 400;
             color: $bga-black;
             margin: 0;
 
-            svg {
-                margin-top: 2px;
-            }
         }
     }
 
@@ -115,7 +115,7 @@
     }
 
     ul {
-        margin: 0;
+        margin: 0 0 8px 0;
         padding: 16px 0 0 0;
     }
 
@@ -155,7 +155,9 @@
         }
 
         .submenu-toggle {
-            svg {
+            svg, svg path {
+                width: 14px;
+                height: auto;
                 transform: scaleY(-1);
             }
         }
