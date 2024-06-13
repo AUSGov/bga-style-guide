@@ -22,7 +22,18 @@
     {% include page-header.html 
         classes="yellow" %}
 
-            {{ content }}
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="guide-mobile-nav-trigger">
+                        <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center" tabindex="0" href="" role="button">Guide menu</button>
+                        <p class="guide-step mini m-0">Step <span>{{page.step-number}}</span> of 6: <strong class="step-title">{{page.step}}</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{ content }}
 
     {% include component-examples/bga-site-footer-example.html %}
 
@@ -30,9 +41,7 @@
 
 
 
-    <!-- LOOP11 TEST SCRIPT -->
-    <script src="//cdn.loop11.com/embed.js" type="text/javascript" async="async"></script>
-    
+
 </body>
 </html>
 

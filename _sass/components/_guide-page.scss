@@ -1,3 +1,6 @@
+.guide-mobile-nav-trigger {
+    display: none;
+}
 .guide-section {
     padding: 24px;
     background: $bga-teal-highlight-light;
@@ -25,10 +28,12 @@
 .guide-section-header {
     display: flex;
     column-gap: 24px;
+    flex-wrap: no-wrap;
+    position: relative;
 
-    .illustration {
+    .section-illustration {
+        width: 200px;
         
-
         img {
             width: 200px;
             background: $bga-white;
@@ -87,15 +92,19 @@
             display: flex;
             align-items: center;
             column-gap: 8px;
+            
+            h4 {
+                white-space: nowrap; 
+            }
 
             .form-select {
                 padding: 4px 48px 4px 8px;
                 min-height: auto;
-                min-width: 250px;
                 font-size: 1.1875rem;
-                font-weight: 600;
+                font-weight: 400;
                 color: $bga-blue-black-dark;
                 background-color: $bga-teal-highlight-light;
+                text-overflow: ellipsis;  
 
                 &:focus {
                     background-color: $bga-teal-highlight-light !important;
@@ -107,6 +116,7 @@
             padding: 0 0 8px 24px;
 
             li {
+                text-indent: -24px;
                 &::before {
                     content: "";
                     height: 22px;
@@ -157,17 +167,95 @@
         display: flex;
         align-items: center;
         column-gap: 8px;
+        color: $bga-blue-links;
 
-        &:focus-visible, &:hover {
-            background: none;
+        svg, svg path {
+            fill: $bga-blue-links; 
         }
+    }
+}
 
-        &.inactive {
-            color: $nb-black-lightest;
 
-            svg, svg path {
-                fill: $nb-black-lightest; 
+@media (max-width: 992px) {
+    .guide-section-header { 
+        h2 {
+            font-size: 1.75rem;
+        } 
+        .section-illustration {
+            width: 140px;    
+            img {
+                width: 140px;
             }
+        }   
+    }
+    .guide-tile {
+        .action-checklist {
+            .dropdown-wrapper {
+                row-gap: 8px;
+                flex-wrap: wrap;
+
+                .form-element-wrapper {
+                    width: 100%;
+                }
+
+                .form-select {
+                    width: 100%;
+                }
+            }
+     
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .guide-section-header {
+        .section-illustration {
+            display: none;
+        }   
+    }
+    .guide-mobile-nav-trigger {
+        background: $bga-yellow-highlight-dark;
+        margin: 0 -9999px;
+        padding: 16px 9999px;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+    
+        button {
+            flex-shrink: 0;
+            height: 48px;
+        }
+        .step-title {
+            white-space: nowrap;
+        }
+    }
+    .guide-menu-wrapper {
+        position: absolute;
+        background: white;
+        top: 16px;
+        left: 16px;
+        width: calc(100% - 32px);
+        height: calc(100% - 32px);
+        z-index: 8000;
+        padding: 24px;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    
+}
+@media (max-width: 350px) {
+    .guide-mobile-nav-trigger {
+        button {
+            width: 100%;
+        }
+        .guide-step {
+            display: none;
         }
     }
 }
