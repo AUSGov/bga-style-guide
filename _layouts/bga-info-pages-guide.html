@@ -27,7 +27,7 @@
                 <div class="col-12">
                     <div class="guide-mobile-nav-trigger">
                         <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center" tabindex="0" href="" role="button">Guide menu</button>
-                        <p class="guide-step mini m-0">Step <span>{{page.step-number}}</span> of 6: <strong class="step-title">{{page.step}}</strong></p>
+                        <p class="guide-step m-0">Step <span>{{page.step-number}}</span> of 6: <strong class="step-title">{{page.step}}</strong></p>
                     </div>
                 </div>
             </div>
@@ -35,13 +35,15 @@
 
     {{ content }}
 
+    {% include component-examples/chat-button-example.html
+        button-state="open"
+        %}
+
+
     {% include component-examples/bga-site-footer-example.html %}
 
-    {% include prototypes/inactive-feature-modal.html %}
 
-
-
-
+<div class="modal-overlay"></div>
 </body>
 </html>
 
