@@ -2407,7 +2407,7 @@ $(document).ready(function () {
     });
     
     // COMPONENT EXAMPLE: Guide vertical nav
-    if ($('#guide-vertical-nav')) {
+    if ($('#guide-vertical-nav').length) {
         console.log('guide nav is present');
 
         var page_id = $('.guide-section').attr('id');
@@ -2425,7 +2425,42 @@ $(document).ready(function () {
                 $(this).find('span').text('Show');
             }
         });
-    }
+        
+        // Guide vertical nav sticky mobile trigger
+        if ($('.guide-mobile-nav-trigger').length) {
+            var guidenav_position = function(){
+                var sticky_position = $('.guide-mobile-nav-trigger').offset();
+                return sticky_position.top;
+            };
+            var sticky_position = guidenav_position();
+
+            $(window).resize(function () {
+                sticky_position = guidenav_position();
+            });
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > sticky_position) {
+                    $('.guide-mobile-nav-trigger').addClass('fixed');
+                   
+                } else {
+                    $('.guide-mobile-nav-trigger').removeClass('fixed');
+                   
+                }
+            });
+        };
+
+        $('.guide-mobile-nav-trigger button').on('click', function(){
+            $('.guide-menu-wrapper, .modal-overlay').addClass('show');
+            $('body').addClass('no-scroll');
+        });
+
+        $('.guide-nav-close button').on('click', function(){
+            $('.guide-menu-wrapper, .modal-overlay').removeClass('show');
+            $('body').removeClass('no-scroll');
+        });
+
+    };
+    
     
 
 }); //End doc ready
