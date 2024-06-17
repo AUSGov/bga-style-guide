@@ -1792,22 +1792,6 @@ $(document).ready(function () {
     $('#bga-filters-bp-md').on('click', function(){
         $('.filters-wrapper.dynamic').removeAttr('id');
     });
-    // Open / close parent accordion of dynamic filter on mobile only.
-    /*$( "body" ).on( "click", "#showing-filters-modal .single-select-dynamic .filter-item label", function() {
-        $(this).parents('.single-select-dynamic').toggleClass('open').find('.single-select-dynamic select').slideToggle();
-
-        if ( !$(this).parents('.single-select-dynamic').hasClass('open')) {
-            $('.filter-item-content').removeClass('show');
-            $(this).parents('.single-select-dynamic').find('select').val('select-option');
-            
-            $('.filter-group-title').each(function(){
-                var counter = $(this).find('.mobile-counter');             
-                if (!counter.hasClass('not-empty')) {
-                    $(this).removeClass('show');
-                }
-            });
-        };
-    });*/
    
     // filter bubbles
     $('.active-filters li').on('click', function () {
@@ -2424,7 +2408,9 @@ $(document).ready(function () {
             } else {
                 $(this).find('span').text('Show');
             }
-        });
+        }); 
+        
+       
         
         // Guide vertical nav sticky mobile trigger
         if ($('.guide-mobile-nav-trigger').length) {
@@ -2447,19 +2433,42 @@ $(document).ready(function () {
                    
                 }
             });
+        }; 
+        
+        // Set height of scrollable area in mobile nav
+        var nav_scrollable_height = function(){
+            var nav_footer_height = $('.guide-menu-wrapper.show .guide-email-download-wrapper').outerHeight(),
+            guide_nav_bottom = nav_footer_height + 24;
+            $('.guide-menu-wrapper.show').css('padding-bottom', guide_nav_bottom + 'px');            
         };
 
+        //Open guide mobile nav
         $('.guide-mobile-nav-trigger button').on('click', function(){
-            $('.guide-menu-wrapper, .modal-overlay').addClass('show');
+            $('.guide-menu-wrapper, .mobile-nav-overlay').addClass('show');
+            nav_scrollable_height();
             $('body').addClass('no-scroll');
         });
 
         $('.guide-nav-close button').on('click', function(){
-            $('.guide-menu-wrapper, .modal-overlay').removeClass('show');
+            $('.guide-menu-wrapper, .mobile-nav-overlay').removeClass('show');
+            $('.guide-menu-wrapper.show').css('padding-bottom', '16px');
             $('body').removeClass('no-scroll');
         });
 
+        // Click on Guide nav anchor links
+        $('.guide-submenu a').on('click', function(e){
+            e.preventDefault();
+            var destination = $(this).attr('href');
+            $('.guide-menu-wrapper, .mobile-nav-overlay').removeClass('show');
+            $('.guide-menu-wrapper.show').css('padding-bottom', '16px');
+            $('body').removeClass('no-scroll');
+
+            window.location = destination;
+        });
+
     };
+
+   
     
     
 

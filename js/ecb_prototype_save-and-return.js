@@ -124,48 +124,51 @@ $(document).ready(function () {
 
     // Function to change 'save' component to 'manage contracts' component when user returns to the contract.
     var change_save_to_manage = function(){
-        if ( current_contract != 'contracttemp' ) {
-            $('#ecb-prototype .save-content').addClass('d-none');
-            $('#ecb-prototype .manage-contracts-content').removeClass('d-none');
-            $('#ecb-prototype button#ecb-save-exit').addClass('d-none');
-            $('#ecb-prototype a#ecb-manage-contracts').removeClass('d-none');
-            $('#ecb-prototype a#ecb-new-contract').removeClass('d-none');
+        if ($('#ecb-prototype').length) {
+            if ( current_contract != 'contracttemp' ) {
+                $('#ecb-prototype .save-content').addClass('d-none');
+                $('#ecb-prototype .manage-contracts-content').removeClass('d-none');
+                $('#ecb-prototype button#ecb-save-exit').addClass('d-none');
+                $('#ecb-prototype a#ecb-manage-contracts').removeClass('d-none');
+                $('#ecb-prototype a#ecb-new-contract').removeClass('d-none');
 
-            var expiry = contracts[current_contract]['date str'],
-            remaining_days = get_remaining_days(expiry);
-            $('.manage-contracts-content span.remaining-days').text(remaining_days);
+                var expiry = contracts[current_contract]['date str'],
+                remaining_days = get_remaining_days(expiry);
+                $('.manage-contracts-content span.remaining-days').text(remaining_days);
 
-        }
-        $('#ecb-manage-contracts').on('click', function(){
-            localStorage.setItem('current contract', 'contracttemp');
-            contracts['contracttemp'] = {};
-            localStorage.setItem('contracts', JSON.stringify(contracts));
-            window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
-        });
+            }
+            $('#ecb-manage-contracts').on('click', function(){
+                localStorage.setItem('current contract', 'contracttemp');
+                contracts['contracttemp'] = {};
+                localStorage.setItem('contracts', JSON.stringify(contracts));
+                window.location.pathname = "/bga-style-guide/prototypes/ecb/manage-contracts.html";
+            });
+        };
     };
 
 
     // Check if user came from the 'manage contracts' page and set current contract to last visited contract
     var check_last_viewed = function(){
-        var prev_page = localStorage.getItem('prev-location');
-        console.log(prev_page);
+        if ($('#ecb-prototype').length) {
+            var prev_page = localStorage.getItem('prev-location');
+            console.log(prev_page);
 
-        if (prev_page.includes("manage-contracts")) {
-            if ( current_contract == 'contracttemp') {
+            if (prev_page.includes("manage-contracts")) {
+                if ( current_contract == 'contracttemp') {
 
-                console.log(current_contract);
+                    console.log(current_contract);
 
-                current_contract = localStorage.getItem('last visited');
-                localStorage.setItem('current contract', current_contract);
+                    current_contract = localStorage.getItem('last visited');
+                    localStorage.setItem('current contract', current_contract);
 
+                }
             }
-        }
-        console.log(current_contract);
+            console.log(current_contract);
+        };
     }
 
     
-    if ( $('#ecb-prototype #page-header.stepped-nav').length ) {
-        //check_last_viewed();   
+    if ( $('#ecb-prototype #page-header.stepped-nav').length ) {    
         change_save_to_manage();   
     }
        
@@ -730,7 +733,6 @@ $(document).ready(function () {
     
     // Close & reset verification modal
     var reset_verification_modal = function(){
-        console.log('modal closed');
         $('#ecb-modal-save').removeClass('show');
         $('#step-save-email-address').removeClass('show');
         $('#step-save-verify-email').removeClass('show');   
