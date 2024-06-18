@@ -149,6 +149,10 @@
     }
 }
 
+.inpage-email-download-wrapper {
+    display: none;
+}
+
 .guide-bottom-nav {
     display: flex;
     justify-content: space-between;
@@ -217,6 +221,29 @@
             display: none;
         }   
     }
+    .inpage-email-download-wrapper {
+        display: block;
+        background: $bga-yellow-highlight-mid;
+        border: none;
+        padding: 24px;
+        width: 100%;
+
+        &.white {
+            background: $bga-white;
+        }
+
+        p {
+            font-weight: 600;
+        }
+    
+        .button-group {
+            flex-wrap: wrap;
+        }
+        .bga-btn.bga-secondary-btn {
+            width: auto;
+            flex-shrink: 0;
+        }
+    }
     .guide-bottom-nav {
         flex-direction: column;
         row-gap: 16px;
@@ -227,5 +254,14 @@
 @media (max-width: 576px) {
     .guide-section {
         margin: -32px -24px 0 -24px;
+    }
+}
+
+@media (max-width: 350px) {
+    .inpage-email-download-wrapper {
+       
+        .bga-btn.bga-secondary-btn {
+            width: 100%;
+        }
     }
 }
