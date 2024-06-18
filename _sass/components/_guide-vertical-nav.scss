@@ -313,22 +313,6 @@ body.no-scroll {
         background: $bga-white;
         height: 100%;
 
-        /*
-        .scroll-separator {
-            width: 100%;
-            height: 8px;
-            min-height: 8px;
-            z-index: 99;
-
-            &.scroll-separator--bottom {
-                margin-top: -8px;
-                background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .15) 100%);
-                display: block;
-                position: absolute;
-            }
-        }
-        */
-
         .scrollable {
             height: 100%;
             padding: 0px;
@@ -348,46 +332,6 @@ body.no-scroll {
 
             &::-webkit-scrollbar-track {
                 background: $bga-blue-black-lightest;
-            }
-        }
-
-        &.scrolling {
-            .scroll-separator {
-                &.scroll-separator--top {
-                    margin-bottom: -8px;
-                    background: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, .15) 100%);
-                    display: block;
-                    position: absolute;
-                }
-            }
-        }
-
-        &.scroll-done {
-            .scroll-separator {
-                &.scroll-separator--top {
-                    margin-bottom: -8px;
-                    background: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, .15) 100%);
-                    display: block;
-                    position: absolute;
-                }
-
-                &.scroll-separator--bottom {
-                    background: none;
-                }
-            }
-        }
-
-        &.no-scroll {
-            .scroll-wrapper {
-                .scroll-separator {
-                    display: none;
-                }
-
-                .scrollable {
-                    &::-webkit-scrollbar-track {
-                        background: transparent;
-                    }
-                }
             }
         }
     }
@@ -423,16 +367,28 @@ body.no-scroll {
     #guide-vertical-nav {
         padding: 0 8px 0 0;
             
-        .guide-nav-item.show {
+        .guide-nav-item {
            
             .guide-nav-item-title {
-                h4 a {
-                    background: none !important;
+                h4 {
+                    a {
+                        background: none !important;
+                        padding: 8px 8px 8px 0px;
+                    }
+                    span {
+                        margin: 4px 0 0 0; 
+
+                        &:after {
+                            top: 36px;
+                            height: calc(100% - 32px);
+                        }
+                    }
                 }
             }
 
             .guide-sub-item {
                 background: none !important;
+                margin: 0 0 0 32px;
             }
         }
     }
