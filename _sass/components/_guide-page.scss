@@ -74,10 +74,8 @@
             column-gap: 8px;
             align-items: center;
             color: $bga-blue-links;
+            width: fit-content;
 
-            &:hover {
-                background: none;
-            }
         }
     }
 
@@ -95,16 +93,18 @@
             }
 
             .form-select {
-                padding: 4px 48px 4px 8px;
+                padding: 4px 32px 4px 8px;
+                background-position: right 8px center;
                 min-height: auto;
                 font-size: 1.1875rem;
                 font-weight: 400;
-                color: $bga-blue-black-dark;
                 background-color: $bga-teal-highlight-light;
                 text-overflow: ellipsis;  
+                border-color: $bga-black;
 
                 &:focus {
                     background-color: $bga-teal-highlight-light !important;
+                    border-color: $bga-blue-background-dark;
                 }
             }
         }
@@ -205,6 +205,7 @@
                 .form-select {
                     width: 100%;
                     font-size: 1rem;
+                    line-height: 1.75;
                 }
             }
      
