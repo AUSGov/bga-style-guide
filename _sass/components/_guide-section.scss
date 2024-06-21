@@ -30,9 +30,10 @@
 
     .section-illustration {
         width: 200px;
+        flex-shrink: 0;
         
         img {
-            width: 200px;
+            width: 100%;
             background: $bga-white;
         }
     }
@@ -41,6 +42,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 32px;
+    margin-bottom: 8px;
 }
 
 @mixin guide-tile-colour ($colour-mid, $colour-light) {
@@ -68,7 +70,6 @@
     }
 
     .learn-more {
-
         a {
             display: flex;
             column-gap: 8px;
@@ -169,6 +170,8 @@
         align-items: center;
         column-gap: 8px;
         color: $bga-blue-links;
+        font-size: 1.1875rem;
+        line-height: 1.5;
 
         svg, svg path {
             fill: $bga-blue-links; 
@@ -179,18 +182,23 @@
     }
 }
 
-
 @media (max-width: 992px) {
     .guide-section-header { 
-        h2 {
-            font-size: 1.75rem;
-        } 
+         
         .section-illustration {
-            width: 140px;    
-            img {
-                width: 140px;
+            width: 140px;  
+            position: absolute;  
+        }  
+        .content {
+            width: 100%;
+
+            h2 {
+                margin-left: 164px;
+                min-height: 112px;
+                display: inline-flex;
+                align-items: center;
             }
-        }   
+        } 
     }
     .guide-tile {
         .action-checklist {
@@ -211,15 +219,30 @@
      
         }
     }
+    .guide-bottom-nav {
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center;
+    }   
 }
 
 @media (max-width: 768px) {
     .guide-section {
         margin: -32px -32px 0 -32px;
+        padding: 24px 32px;
     }
     .guide-section-header {
         .section-illustration {
             display: none;
+        } 
+        .content {
+            width: 100%;
+
+            h2 {
+                margin-left: 0px;
+                min-height: auto;
+                display: block;
+            }
         }   
     }
     .inpage-email-download-wrapper {
@@ -245,16 +268,12 @@
             flex-shrink: 0;
         }
     }
-    .guide-bottom-nav {
-        flex-direction: column;
-        row-gap: 16px;
-        align-items: center;
-    }
 }
 
 @media (max-width: 576px) {
     .guide-section {
         margin: -32px -24px 0 -24px;
+        padding: 24px;
     }
 }
 
