@@ -9846,11 +9846,11 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .guide-section-header { display: flex; column-gap: 24px; flex-wrap: no-wrap; position: relative; }
 
-.guide-section-header .section-illustration { width: 200px; }
+.guide-section-header .section-illustration { width: 200px; flex-shrink: 0; }
 
-.guide-section-header .section-illustration img { width: 200px; background: #ffffff; }
+.guide-section-header .section-illustration img { width: 100%; background: #ffffff; }
 
-.guide-tiles-wrapper { display: flex; flex-wrap: wrap; row-gap: 32px; }
+.guide-tiles-wrapper { display: flex; flex-wrap: wrap; row-gap: 32px; margin-bottom: 8px; }
 
 .guide-tile { border: 1px solid #333333; background: #ffffff; }
 
@@ -9914,17 +9914,17 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .guide-bottom-nav.last-page { justify-content: flex-start; }
 
-.guide-bottom-nav a { color: #000000; display: flex; align-items: center; column-gap: 8px; color: #2157AA; }
+.guide-bottom-nav a { color: #000000; display: flex; align-items: center; column-gap: 8px; color: #2157AA; font-size: 1.1875rem; line-height: 1.5; }
 
 .guide-bottom-nav a svg, .guide-bottom-nav a svg path { fill: #2157AA; }
 
 .guide-bottom-nav a.next { text-align: right; }
 
-@media (max-width: 992px) { .guide-section-header h2, .guide-section-header .h2 { font-size: 1.75rem; } .guide-section-header .section-illustration { width: 140px; } .guide-section-header .section-illustration img { width: 140px; } .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; } .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; } .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; } }
+@media (max-width: 992px) { .guide-section-header .section-illustration { width: 140px; position: absolute; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 164px; min-height: 112px; display: inline-flex; align-items: center; } .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; } .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; } .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; } .guide-bottom-nav { flex-direction: column; row-gap: 24px; align-items: center; } }
 
-@media (max-width: 768px) { .guide-section { margin: -32px -32px 0 -32px; } .guide-section-header .section-illustration { display: none; } .inpage-email-download-wrapper { display: block; background: #FFE491; border: none; padding: 24px; width: 100%; } .inpage-email-download-wrapper.white { background: #ffffff; } .inpage-email-download-wrapper p { font-weight: 600; } .inpage-email-download-wrapper .button-group { flex-wrap: wrap; } .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; flex-shrink: 0; } .guide-bottom-nav { flex-direction: column; row-gap: 16px; align-items: center; } }
+@media (max-width: 768px) { .guide-section { margin: -32px -32px 0 -32px; padding: 24px 32px; } .guide-section-header .section-illustration { display: none; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 0px; min-height: auto; display: block; } .inpage-email-download-wrapper { display: block; background: #FFE491; border: none; padding: 24px; width: 100%; } .inpage-email-download-wrapper.white { background: #ffffff; } .inpage-email-download-wrapper p { font-weight: 600; } .inpage-email-download-wrapper .button-group { flex-wrap: wrap; } .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; flex-shrink: 0; } }
 
-@media (max-width: 576px) { .guide-section { margin: -32px -24px 0 -24px; } }
+@media (max-width: 576px) { .guide-section { margin: -32px -24px 0 -24px; padding: 24px; } }
 
 @media (max-width: 350px) { .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: 100%; } }
 
