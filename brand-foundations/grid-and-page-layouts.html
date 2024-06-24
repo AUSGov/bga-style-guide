@@ -279,6 +279,51 @@ subsite-tag: false
             btn-text="View html example of the Two column - information page layout"
             %}
 
+        
+        <!-- Two column - guide page -->
+        <h3 id="layout-twocol-guide">Two column - guide page layout</h3>
+        <p>This layout is typically used for guide pages.</p>
+        
+        <h4>Bootstrap classes</h4>
+            <ul>
+                <li>Left side menu: <strong>.col-12 .col-md-4 .col-xl-3</strong></br></li>
+                <li>Body content: <strong>.col-12 .col-md-8</strong></li>
+            </ul>
+
+        <div class="layout-example full-border show two-col-infopage m-0 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="two-col-guidepage"
+            
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+               
+                min1200-img="'../assets/layout-images/twocol-guidepage-min1200.png' | relative_url "
+            
+                min768-img="'../assets/layout-images/twocol-guidepage-min768.png' | relative_url "
+
+                finalbp-img="'../assets/layout-images/twocol-guidepage-finalbp.png' | relative_url "
+
+                min1200-rules="<p>The left side menu is 3 grid-columns wide. The content area is 8 grid-columns wide.</p><p>The area containing the side menu and the content has a 32px margin above and below.</p><p>The first element within the content area and the side menu have zero margin and padding above (regardless of what element it is).</p>"
+                
+                min768-rules="<p>The left side menu is 4 grid-columns wide. The content area is 8 grid-columns wide</p><p>The area containing the side menu and the content has a 32px margin above and below.</p><p>The first element within the content area and the side menu have zero margin and padding above (regardless of what element it is).</p>"
+                
+                finalbp-rules="<p>The content area and the left side menu are both 12 grid-columns wide.</p><p>The area containing the side menu and the content has a 32px margin above and below.</p><p>The first element within the content area and the side menu have zero margin and padding above (regardless of what element it is).</p>"
+                
+            %}
+            
+        </div>
+        
+        {% include design-specs-link.html 
+            btn-link="'../prototypes/sab/make-key-decisions.html' | relative_url"
+            btn-text="View html example of the Two column - guide page layout"
+            %}
+
 
         
         <!-- Two column - filter page -->
