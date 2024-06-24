@@ -2444,23 +2444,27 @@ $(document).ready(function () {
 
         //Open guide mobile nav
         $('.guide-mobile-nav-trigger button').on('click', function(){
-            $('.guide-menu-wrapper, .mobile-nav-overlay').addClass('show');
+            $('.mobile-nav-overlay').addClass('show');
+            $('.guide-prototype body').addClass('no-scroll'); 
+            $('.guide-menu-wrapper').animate({left: '0'}, 400);
+            
             nav_scrollable_height();
-            $('body').addClass('no-scroll');
         });
 
+        // Close guide mobile nav
         $('.guide-nav-close button').on('click', function(){
-            $('.guide-menu-wrapper, .mobile-nav-overlay').removeClass('show');
-            $('.guide-menu-wrapper.show').css('padding-bottom', '16px');
-            $('body').removeClass('no-scroll');
+            $('.guide-menu-wrapper').animate({left: '-90%'}, 400);
+            $('.mobile-nav-overlay').removeClass('show');
+            $('.guide-prototype body').removeClass('no-scroll');
+
         });
 
         // Click on Guide nav anchor links
         $('.guide-submenu a').on('click', function(e){
             e.preventDefault();
             var destination = $(this).attr('href');
-            $('.guide-menu-wrapper, .mobile-nav-overlay').removeClass('show');
-            $('.guide-menu-wrapper.show').css('padding-bottom', '16px');
+            $('.mobile-nav-overlay').removeClass('show');
+            $('.guide-menu-wrapper').animate({left: '-90%'}, 400);
             $('body').removeClass('no-scroll');
 
             window.location = destination;
