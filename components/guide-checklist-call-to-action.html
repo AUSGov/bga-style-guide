@@ -1,0 +1,188 @@
+---
+
+layout: content-tagged
+title: Guide checklist call to action
+description: Provide a call to action for downloading or emailing a checklist connected to a business.gov.au guide.
+updated: 25 June, 2024
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+        tab1="business.gov.au branding"
+        tab1value="bga-branded"
+
+        tab2="No branding"
+        tab2value="non-branded"
+
+        %}
+
+
+        <div class="tab-sections-wrapper ">
+
+
+            <div class="tab-section bga-branded selected">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                    element-string="bga-checklist-cta"
+                    md-visibility="true"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                %}
+
+                <!-- Component example -->
+
+                <div class="component-example m-0">
+                    <div class="component-wrapper p-4">
+
+                        {% include component-examples/guide-checklist-cta-example.html
+                            classes="style-guide-example"
+                        %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tab-section non-branded">
+
+                <!-- Breakpoint radio buttons -->
+                {% include breakpoints.html
+                    element-string="nb-checklist-cta"
+                    md-visibility="true"
+                    sm-visibility="true"
+                    xs-visibility="true"
+                    final-visibility="true"
+                    breakpoint-final="350"
+                    %}
+    
+                    <!-- Component example -->
+    
+                    <div class="component-example m-0">
+                        <div class="component-wrapper p-4">
+
+                            {% include non-branded-explanation.html
+                                component="guide checklist call to action"
+                                brand-elements="colours, borders and button"
+                            %}
+    
+                            {% include component-examples/guide-checklist-cta-example.html
+                                classes="style-guide-example non-branded"
+                            %}
+
+                        </div>
+    
+                    </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+            <!-- Design specifications link -->
+
+            {% include design-specs-link.html
+            btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=767-26634&t=jeDiHTjVKEALvT9f-1'"
+            btn-text="View design specifications"
+            %}
+
+
+            <!-- LAYOUTS -->
+            <h2 class="section-start" id="layouts">Layouts</h2>
+
+            <p>The guide checklist call to action is used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>Two column - information page layout</a>.</p>
+
+            {% include layouts-dropdown.html
+            layout-name="Two column - information page"
+            singlelayout="true"
+            %}
+    
+    
+            <div class="layout-example show two-col-infopage mt-0 mb-5 px-4 py-0">
+    
+                {% include layouts-accordion.html
+                layout-name="two-col-guidepage"
+    
+                min1200-visibility="true"
+                min992-visibility="false"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+    
+                finalbp="Breakpoint &lt; 768px"
+    
+                min1200-img="'../assets/layout-images/twocol-guide-1200px-checklistcta.png' | relative_url "
+                min768-img="'../assets/layout-images/twocol-guide-768px-checklistcta.png' | relative_url "
+                finalbp-img="'../assets/layout-images/twocol-guide-finalbp-checklistcta.png' | relative_url "
+    
+                min1200-rules="<p>The guide checklist call to action sits to the left of the content (underneath the guide navigation) and is 3 grid-columns wide.</p>"
+    
+                min768-rules="<p>The guide checklist call to action sits to the left of the content (underneath the guide navigation) and is 4 grid-columns wide.</p>"
+    
+                finalbp-rules="<p>The guide checklist call to action sits at the bottom of the page (underneath the guide section).</p>"
+    
+                example-link="'../prototypes/sab/make-key-decisions.html' | relative_url'"
+                example-link-text="View layout example"
+    
+                %}
+    
+            </div>
+
+
+
+
+            <!-- GUIDELINES -->
+            <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+            <h4>Purpose:</h4>
+            <p>The Guide checklist CTA component is used  to provide the user with access to a checklist version of business.gov.au guide content.  </p>
+            <p>Users can choose to email or download the checklist.</p>
+            <h4>When to use this component: </h4>
+            <ul>
+                <li>Used exclusively on business.gov.au guide pages. </li>
+            </ul>
+        
+            
+             <!-- VERSION HISTORY-->
+            <h2 class="section-start" id="version-history">Version history</h2>
+            <h4>25 June, 2024</h4>
+            <ul>
+                <li>Created the guide checklist call to action page.</li>
+            </ul>
+            
+        </div>

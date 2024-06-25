@@ -221,22 +221,6 @@ body.no-scroll {
     }
 }
 
-.guide-email-download-wrapper {
-    border-top: solid 2px $bga-blue-black-light;
-    border-bottom: solid 2px $bga-blue-black-light;
-    padding: 24px 0px;
-
-    .button-group {
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 24px;
-        column-gap: 24px;
-    }
-
-    .bga-btn.bga-secondary-btn {
-        width: 100%;
-    }
-}
 
 // Mixin for smaller screen examples and media queries
 @mixin guide-nav-bp-768 {
@@ -270,7 +254,7 @@ body.no-scroll {
     }
 }
 
-@mixin guide-nav-bp-below768 {
+@mixin guide-nav-bp-576 {
     .guide-mobile-nav-trigger {
         background: $bga-yellow-highlight-dark;
         margin: 0px -32px 0 -32px;
@@ -431,48 +415,9 @@ body.no-scroll {
             }
         }
     }
-    .guide-email-download-wrapper {
-        margin-top: 0 !important;
-        background: $bga-yellow-highlight-mid;
-        border: none;
-        padding: 24px;
-        position: absolute;
-        bottom: 0;
-        left:0;
-        width: 100%;
-
-        p {
-            font-weight: 600;
-        }
-    
-        .bga-btn.bga-secondary-btn {
-            width: auto;
-        }
-    }
 }
 
-.component-example.bp-768 {
-    @include guide-nav-bp-768();
-}
-.component-example.bp-below768 {
-    @include guide-nav-bp-768();
-    @include guide-nav-bp-below768();
-}
-
-
-// MEDIA Queries
-@media(max-width: 1200px) {
-    @include guide-nav-bp-768();
-}
-
-@media (max-width: 768px) {
-    html.guide-prototype {
-        scroll-padding-top: 100px !important;
-    }
-    @include guide-nav-bp-below768();
-}
-
-@media (max-width: 576px) {
+@mixin guide-nav-bp-350 {
     .guide-mobile-nav-trigger {
         margin: 0px -24px 0 -24px;
         padding: 16px 24px;
@@ -487,50 +432,70 @@ body.no-scroll {
             font-size: .875rem;
             line-height: 1.5;
         }
-    }
-    .guide-email-download-wrapper {
-        padding: 16px;
-        p {
-            margin-bottom: 16px;
-            font-size: .875rem;
-            line-height: 1.5;
-        }
-    
-        .button-group {
-            row-gap: 16px;
-            column-gap: 16px;
-        }
-    
         .bga-btn.bga-secondary-btn {
             width: auto;
             font-size: .875rem;
             padding: 8px 16px !important;
             min-height: auto;
-
-            svg {
-                display: none;
-            }
         }
     }
 }
-
-@media (max-width: 350px) {
+@mixin guide-nav-bp-below350 {
     .guide-mobile-nav-trigger {
+        margin: 0px -24px 0 -24px;
+        padding: 16px 24px;
+        width: calc(100% + 48px);
 
-        button {
-           width: 100%
-        }
         &.fixed {
-            w
-            button {
-            width: calc(100% - 48px);
+            margin: 0;
+            width: 100%
         }
+        .bga-btn.bga-secondary-btn {
+            width: 100%
         }
-
-       
-
         .guide-step {
             display: none;
         }
+        
     }
+}
+
+.component-example.bp-768 {
+    @include guide-nav-bp-768();
+}
+.component-example.bp-576 {
+    @include guide-nav-bp-768();
+    @include guide-nav-bp-576();
+}
+.component-example.bp-350 {
+    @include guide-nav-bp-768();
+    @include guide-nav-bp-576();
+    @include guide-nav-bp-350();
+}
+.component-example.bp-below350 {
+    @include guide-nav-bp-768();
+    @include guide-nav-bp-576();
+    @include guide-nav-bp-350();
+    @include guide-nav-bp-below350();
+}
+
+// MEDIA Queries
+@media(max-width: 1200px) {
+    @include guide-nav-bp-768();
+}
+
+@media (max-width: 768px) {
+    html.guide-prototype {
+        scroll-padding-top: 100px !important;
+    }
+    @include guide-nav-bp-576();
+}
+
+@media (max-width: 576px) {
+    @include guide-nav-bp-350();
+    
+}
+
+@media (max-width: 350px) {
+    @include guide-nav-bp-below350();
 }

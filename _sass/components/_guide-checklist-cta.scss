@@ -1,0 +1,102 @@
+.guide-email-download-wrapper {
+    border-top: solid 2px $bga-blue-black-light;
+    border-bottom: solid 2px $bga-blue-black-light;
+    padding: 24px 0px;
+
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        column-gap: 24px;
+    }
+
+    .bga-btn.bga-secondary-btn {
+        width: 100%;
+    }
+
+    &.style-guide-example {
+        max-width: 300px;
+    }
+    &.non-branded {
+        .bga-btn.bga-secondary-btn svg {
+            display: none;
+        }
+    }
+}
+
+// Mixin for smaller screen examples and media queries
+@mixin guide-checklist-bp-576 {
+    .guide-email-download-wrapper {
+        margin-top: 0 !important;
+        background: $bga-yellow-highlight-mid;
+        border: none;
+        padding: 24px;
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 100%;
+
+        p {
+            font-weight: 600;
+        }
+    
+        .bga-btn.bga-secondary-btn {
+            width: auto;
+        }
+
+        &.style-guide-example {
+            position: relative;
+            bottom: auto;
+            left: auto;
+            max-width: none;
+        }
+        &.non-branded {
+            background: $nb-grey-mid;
+        }
+    }
+}
+
+@mixin guide-checklist-bp-350 {
+    .guide-email-download-wrapper {
+        .bga-btn.bga-secondary-btn {
+            width: auto;
+            font-size: .875rem;
+            padding: 8px 16px !important;
+            min-height: auto;
+        }
+    }
+}
+
+@mixin guide-checklist-bp-below350 {
+    .guide-email-download-wrapper {
+        .bga-btn.bga-secondary-btn {
+            width: 100%;
+        }
+    }
+}
+
+.component-example.bp-576 {
+    @include guide-checklist-bp-576();
+}
+.component-example.bp-350 {
+    @include guide-checklist-bp-576();
+    @include guide-checklist-bp-350();
+}
+.component-example.bp-below350 {
+    @include guide-checklist-bp-576();
+    @include guide-checklist-bp-350();
+    @include guide-checklist-bp-below350();
+}
+
+
+// MEDIA Queries
+@media (max-width: 768px) {
+    @include guide-checklist-bp-576();
+}
+
+@media (max-width: 576px) {
+    @include guide-checklist-bp-350();
+}
+@media (max-width: 350px) {
+
+}
