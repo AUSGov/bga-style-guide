@@ -90,31 +90,28 @@ subsite-tag: true
                         <!-- Component example -->
     
                         <div class="component-example m-0">
-                            <div class="component-wrapper remove-element-padding py-4">
-                                
+                            <div class="component-wrapper guide-inpage-example non-branded p-4">
+
                                 {% include non-branded-explanation.html
-                                    component="stepped navigation"
-                                    brand-elements="colours and borders"
-                                    classes="m-4"
+                                    component="guide vertical navigation"
+                                    brand-elements="colours, borders and button styles"
                                 %}
     
-                                {% include component-examples/stepped-navigation-example.html
-                                    mobile-title="Active step name"
-                                    step1="Completed step"
-                                    step1-stage="completed"
-                                    step2="One more completed step"
-                                    step2-stage="completed"
-                                    step3="Active step"
-                                    step3-stage="active"
-                                    step4="Unvisited step"
-                                    step5="Ending employment"
-                                    step6="Step six"
-                                    classes="white p-5 non-branded"
-                                %}
+                                <div class="guide-mobile-nav-trigger style-guide-example">
+                                    <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center" tabindex="0" href="" role="button">Guide menu</button>
+                                    <p class="guide-step m-0">Step <span>1</span> of 6: <strong class="step-title">Make key decisions</strong></p>
+                                </div>
     
+                                {% include component-examples/guide-vertical-nav.html 
+                                    %}
+    
+                                <div class="mobile-nav-overlay"></div>
     
                             </div>
                         </div>
+    
+                   
+    
 
                 </div>
 
@@ -124,35 +121,45 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=625-12308&t=Y0RG7T4JJjmDsKJf-1'"
+        btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=767-26666&t=jeDiHTjVKEALvT9f-1'"
         btn-text="View design specifications"
         %}
 
 
-        <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Guide vertical navigation is used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-guide" | relative_url }}>Two column - guide page layout</a>.</p>
-
+        <p>Anchor menus are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>Two column - information page layout</a>.</p>
 
         {% include layouts-dropdown.html
-        layout-name="All layouts"
+        layout-name="Two column - information page"
         singlelayout="true"
         %}
 
-        <div class="layout-example show full-border mt-0 mb-5 p-4">
+
+        <div class="layout-example show two-col-infopage mt-0 mb-5 px-4 py-0">
 
             {% include layouts-accordion.html
+            layout-name="two-col-guidepage"
 
-            singlelayout="true"
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
 
-            allbp-img="'../assets/layout-images/stepped-nav-allbp.png' | relative_url "
+            finalbp="Breakpoint &lt; 768px"
 
-            allbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Stepped navigation components are 12 grid-columns wide.</p>
-            <p>Stepped navigation components should only appear once in a page. They can be placed in the header (for tools) or at the top of the page content area.</p>"
+            min1200-img="'../assets/layout-images/twocol-guide-1200px-navigation.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-guide-768px-navigation.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-navigation.png' | relative_url "
 
-            example-link="'../html-examples/ECB-content-page.html' | relative_url'"
+            min1200-rules="<p>The guide naivgation sits to the left of the content and is 3 grid-columns wide.</p>"
+
+            min768-rules="<p>The guide navigation sits to the left of the content and is 4 grid-columns wide.</p>"
+
+            finalbp-rules="<p>The guide navigation is not visible on screen. It is accessed through a trigger button located above the page content. The trigger has sticky behaviour and is fixed to the top of the screen on scroll.</p><p>When triggered the navigation slides in from the left filling 90% of the screen width.</p>"
+
+            example-link="'../prototypes/sab/make-key-decisions.html' | relative_url'"
             example-link-text="View layout example"
 
             %}
@@ -164,12 +171,11 @@ subsite-tag: true
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Stepped navigation guides users through a process that is completed in a set order. It displays where the
-            user is up to and allows then to navigate back to previous steps.</p>
-        <p>Users cannot navigate forward to uncompleted steps using this component.</p>
+        <p>Guide vertical navigation is used to guide users through series of connected pages or steps. It displays where the user is up to and provides links to other connected pages. It provides a high level overview of all associated information through links to content presented in a series of accordions. </p>
+       
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used in tools or forms that require the user to complete a series of steps.</li>
+            <li>Used in the business.gov.au guide pattern</li>
         </ul>
 
 

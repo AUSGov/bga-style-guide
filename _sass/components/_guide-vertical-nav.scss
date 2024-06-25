@@ -199,6 +199,27 @@ body.no-scroll {
 
     }
 }
+.component-wrapper.guide-inpage-example.non-branded {
+    #guide-vertical-nav {
+        .guide-nav-item {
+            .guide-nav-item-title h4 span {
+                border: solid 3px $nb-grey-darkest;
+                background: $nb-grey-lightest;
+
+                &:after {
+                    background-color: $nb-grey-darkest;
+                }
+            }
+
+            @include guide-nav-colour($nb-grey-light);   
+        }  
+    }
+    .guide-email-download-wrapper {
+        .bga-btn.bga-secondary-btn svg {
+            display: none;
+        }
+    }
+}
 
 .guide-email-download-wrapper {
     border-top: solid 2px $bga-blue-black-light;
@@ -283,6 +304,9 @@ body.no-scroll {
                 box-shadow: none;
             }
        }
+    }
+    .component-wrapper.guide-inpage-example.non-branded .guide-mobile-nav-trigger {
+        background: $nb-grey-mid;
     }
     .mobile-nav-overlay {
         position: fixed;
