@@ -182,24 +182,8 @@
     }
 }
 
-@media (max-width: 992px) {
-    .guide-section-header { 
-         
-        .section-illustration {
-            width: 140px;  
-            position: absolute;  
-        }  
-        .content {
-            width: 100%;
-
-            h2 {
-                margin-left: 164px;
-                min-height: 112px;
-                display: inline-flex;
-                align-items: center;
-            }
-        } 
-    }
+// Mixin for smaller screen examples and media queries
+@mixin guide-tile-bp-below992 {
     .guide-tile {
         .action-checklist {
             .dropdown-wrapper {
@@ -219,11 +203,36 @@
      
         }
     }
+}
+.component-example.bp-below992 {
+    @include guide-tile-bp-below992();
+}
+
+
+@media (max-width: 992px) {
+    .guide-section-header { 
+         
+        .section-illustration {
+            width: 140px;  
+            position: absolute;  
+        }  
+        .content {
+            width: 100%;
+
+            h2 {
+                margin-left: 164px;
+                min-height: 112px;
+                display: inline-flex;
+                align-items: center;
+            }
+        } 
+    }
     .guide-bottom-nav {
         flex-direction: column;
         row-gap: 24px;
         align-items: center;
-    }   
+    }  
+    @include guide-tile-bp-below992();
 }
 
 @media (max-width: 768px) {
@@ -244,29 +253,6 @@
                 display: block;
             }
         }   
-    }
-    .inpage-email-download-wrapper {
-        display: block;
-        background: $bga-yellow-highlight-mid;
-        border: none;
-        padding: 24px;
-        width: 100%;
-
-        &.white {
-            background: $bga-white;
-        }
-
-        p {
-            font-weight: 600;
-        }
-    
-        .button-group {
-            flex-wrap: wrap;
-        }
-        .bga-btn.bga-secondary-btn {
-            width: auto;
-            flex-shrink: 0;
-        }
     }
 }
 

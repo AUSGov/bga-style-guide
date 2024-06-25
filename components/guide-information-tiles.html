@@ -1,0 +1,363 @@
+---
+
+layout: content-tagged
+title: Guide information tiles
+description: Provide the user with a information about a specific topic accompanied with a list of actionable checklist items.
+updated: 25 June, 2024
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="bga-guide-navigation"
+                        lg-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="992"
+                    %}
+
+                    <!-- Component example -->
+                    <div class="component-example m-0">
+                        <div class="component-wrapper p-4">
+
+                            {% include component-examples/guide-tile.html 
+                                id="decide-on-a-business-structure"
+                                classes="teal mb-5"
+                                
+                                title="Decide on a business structure"
+                                
+                                description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p><p>Vivamus vestibulum lobortis nunc id placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vel felis rutrum, tincidunt libero vel, malesuada sapien.</p>"
+                
+                                learn-more="Business structures"
+                
+                                select="false"
+                
+                                list1="I have chosen a business structure for my business."
+                                list2="I have sought advice from a professional business adviser, lawyer or accountant to ensure I have chosen the appropriate business structure."
+                            
+                                %}
+
+                            {% include component-examples/guide-tile.html 
+                                id="employee-or-contractor"
+                                classes="teal mb-5"
+                                
+                                title="Know if you are an employee or contractor"
+                                
+                                description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p>"
+                
+                                learn-more="Employee or contractor?"
+                
+                                select="true"
+                
+                                select1="Employees"
+                                select2="Contractors"
+                
+                                select1-val="employees"
+                                select2-val="contractors"
+                
+                                select1-list1="I understand my rights as an employee"
+                                select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                
+                                select2-list1="I have considering contributing to my own superanniation"
+                                select2-list2="I understand my tax obligations as a contractor"
+                                select2-list3="I understand my rights as a contractor"
+                            
+                                    %}
+
+                        </div>
+                    </div>
+
+                    <!-- Checklist colours -->
+                    <div class="component-example m-0">
+                        <div class="component-wrapper p-4">
+
+                            <h3>Approved colours</h3>
+                            <p>Checklist colours are matched to the guide section colour.</p>
+
+                            <h4>Teal</h4>
+
+                            {% include component-examples/guide-tile-checklist.html 
+                                id="employee-or-contractor"
+                                classes="teal mb-5"
+
+                                select1="Employees"
+                                select2="Contractors"
+                
+                                select1-val="employees"
+                                select2-val="contractors"
+                
+                                select1-list1="I understand my rights as an employee"
+                                select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                
+                                select2-list1="I have considering contributing to my own superanniation"
+                                select2-list2="I understand my tax obligations as a contractor"
+                                select2-list3="I understand my rights as a contractor"
+                            
+                                %}
+
+                            <h4>Blue</h4>
+
+                            {% include component-examples/guide-tile-checklist.html 
+                                id="employee-or-contractor"
+                                classes="blue mb-5"
+
+                                select1="Employees"
+                                select2="Contractors"
+                
+                                select1-val="employees"
+                                select2-val="contractors"
+                
+                                select1-list1="I understand my rights as an employee"
+                                select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                
+                                select2-list1="I have considering contributing to my own superanniation"
+                                select2-list2="I understand my tax obligations as a contractor"
+                                select2-list3="I understand my rights as a contractor"
+                            
+                                %} 
+
+                            <h4>Purple</h4>
+                                
+                            {% include component-examples/guide-tile-checklist.html 
+                                id="employee-or-contractor"
+                                classes="purple mb-5"
+
+                                select1="Employees"
+                                select2="Contractors"
+                
+                                select1-val="employees"
+                                select2-val="contractors"
+                
+                                select1-list1="I understand my rights as an employee"
+                                select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                
+                                select2-list1="I have considering contributing to my own superanniation"
+                                select2-list2="I understand my tax obligations as a contractor"
+                                select2-list3="I understand my rights as a contractor"
+                            
+                                %} 
+                                
+                            <h4>Green</h4>
+
+                            {% include component-examples/guide-tile-checklist.html 
+                                id="employee-or-contractor"
+                                classes="green mb-5"
+
+                                select1="Employees"
+                                select2="Contractors"
+                
+                                select1-val="employees"
+                                select2-val="contractors"
+                
+                                select1-list1="I understand my rights as an employee"
+                                select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                
+                                select2-list1="I have considering contributing to my own superanniation"
+                                select2-list2="I understand my tax obligations as a contractor"
+                                select2-list3="I understand my rights as a contractor"
+                            
+                                %}
+
+                            <h4>Yellow</h4>
+
+                            {% include component-examples/guide-tile-checklist.html 
+                                id="employee-or-contractor"
+                                classes="yellow mb-5"
+
+                                select1="Employees"
+                                select2="Contractors"
+                
+                                select1-val="employees"
+                                select2-val="contractors"
+                
+                                select1-list1="I understand my rights as an employee"
+                                select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                
+                                select2-list1="I have considering contributing to my own superanniation"
+                                select2-list2="I understand my tax obligations as a contractor"
+                                select2-list3="I understand my rights as a contractor"
+                            
+                                %} 
+
+                            <h4>Orange</h4>
+                                
+                            {% include component-examples/guide-tile-checklist.html 
+                                id="employee-or-contractor"
+                                classes="orange mb-5"
+
+                                select1="Employees"
+                                select2="Contractors"
+                
+                                select1-val="employees"
+                                select2-val="contractors"
+                
+                                select1-list1="I understand my rights as an employee"
+                                select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                
+                                select2-list1="I have considering contributing to my own superanniation"
+                                select2-list2="I understand my tax obligations as a contractor"
+                                select2-list3="I understand my rights as a contractor"
+                            
+                                %}
+                        
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                        <!-- Breakpoint radio buttons -->
+                        {% include breakpoints.html
+                            element-string="nb-guide-navigation"
+                            xl-visibility="true"
+                            md-visibility="true"
+                            sm-visibility="true"
+                            xs-visibility="true"
+                            final-visibility="true"
+                            breakpoint-final="350"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper guide-inpage-example non-branded p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="guide vertical navigation"
+                                    brand-elements="colours, borders and button styles"
+                                %}
+    
+                                <div class="guide-mobile-nav-trigger style-guide-example">
+                                    <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center" tabindex="0" href="" role="button">Guide menu</button>
+                                    <p class="guide-step m-0">Step <span>1</span> of 6: <strong class="step-title">Make key decisions</strong></p>
+                                </div>
+    
+                                {% include component-examples/guide-vertical-nav.html 
+                                    %}
+    
+                                <div class="mobile-nav-overlay"></div>
+    
+                            </div>
+                        </div>
+    
+                   
+    
+
+                </div>
+
+            </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=767-27432&t=jeDiHTjVKEALvT9f-1'"
+        btn-text="View design specifications"
+        %}
+
+
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Guide information tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>Two column - information page layout</a>.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Two column - information page"
+        singlelayout="true"
+        %}
+
+
+        <div class="layout-example show two-col-infopage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="two-col-guidepage"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/twocol-guide-1200px-navigation.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-guide-768px-navigation.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-navigation.png' | relative_url "
+
+            min1200-rules="<p>The guide navigation sits to the left of the content and is 3 grid-columns wide.</p>"
+
+            min768-rules="<p>The guide navigation sits to the left of the content and is 4 grid-columns wide.</p>"
+
+            finalbp-rules="<p>The guide navigation is not visible on screen. It is accessed through a trigger button located above the page content. The trigger has sticky behaviour and is fixed to the top of the screen on scroll.</p><p>When triggered the navigation slides in from the left filling 90% of the screen width.</p>"
+
+            example-link="'../prototypes/sab/make-key-decisions.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Guide vertical navigation is used to guide users through series of connected pages or steps. It displays where the user is up to and provides links to other connected pages. It provides a high level overview of all associated information through links to content presented in a series of accordions. </p>
+       
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used in the business.gov.au guide pattern</li>
+        </ul>
+
+
+
+         <!-- VERSION HISTORY-->
+         <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>25 June, 2024</h4>
+         <ul>
+             <li>Created the guide information tiles component page.</li>
+         </ul>
+        
+
+
+    </div>

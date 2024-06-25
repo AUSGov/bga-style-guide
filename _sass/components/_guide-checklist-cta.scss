@@ -26,15 +26,18 @@
 
 // Mixin for smaller screen examples and media queries
 @mixin guide-checklist-bp-576 {
-    .guide-email-download-wrapper {
-        margin-top: 0 !important;
-        background: $bga-yellow-highlight-mid;
+    .inpage-email-download-wrapper {
+        display: block;
+        margin-top: 32px !important;
+    }
+    .guide-email-download-wrapper, 
+    .inpage-email-download-wrapper {
+        margin-top: 0;
+        background: $bga-yellow-highlight-mid; 
         border: none;
         padding: 24px;
-        position: absolute;
-        bottom: 0;
-        left:0;
         width: 100%;
+        max-width: none;
 
         p {
             font-weight: 600;
@@ -43,13 +46,6 @@
         .bga-btn.bga-secondary-btn {
             width: auto;
         }
-
-        &.style-guide-example {
-            position: relative;
-            bottom: auto;
-            left: auto;
-            max-width: none;
-        }
         &.non-branded {
             background: $nb-grey-mid;
         }
@@ -57,7 +53,7 @@
 }
 
 @mixin guide-checklist-bp-350 {
-    .guide-email-download-wrapper {
+    .guide-email-download-wrapper, .inpage-email-download-wrapper {
         .bga-btn.bga-secondary-btn {
             width: auto;
             font-size: .875rem;
@@ -68,7 +64,7 @@
 }
 
 @mixin guide-checklist-bp-below350 {
-    .guide-email-download-wrapper {
+    .guide-email-download-wrapper, .inpage-email-download-wrapper {
         .bga-btn.bga-secondary-btn {
             width: 100%;
         }
@@ -98,5 +94,5 @@
     @include guide-checklist-bp-350();
 }
 @media (max-width: 350px) {
-
+    @include guide-checklist-bp-below350();
 }

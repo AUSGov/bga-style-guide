@@ -1,0 +1,76 @@
+<div id="{{include.id}}" class="guide-tile remove-element-padding {{include.classes}}">
+
+    <div class="action-checklist remove-element-padding">
+        <div class="dropdown-wrapper mb-4">
+             <h4 class="m-0 p-0">Action checklist for</h4>
+             
+             <div class="form-element-wrapper">
+                 <select class="form-select guide-select-options" aria-label="Default select example">
+                     <option value="{{include.select1-val}}" selected>{{ include.select1 }}</option>
+                     <option value="{{include.select2-val}}">{{ include.select2 }}</option>
+                 </select>
+             </div>
+        </div>
+         
+         
+        <ul class="pb-0 {{include.select1-val}}">
+        
+            {% if include.select1-list1 %}
+            <li>{{include.select1-list1}}</li>
+            {% endif %}
+
+            {% if include.select1-list2 %}
+            <li>{{include.select1-list2}}</li>
+            {% endif %}
+
+            {% if include.select1-list3 %}
+            <li>{{include.select1-list3}}</li>
+            {% endif %}
+
+            {% if include.select1-list4 %}
+            <li>{{include.select1-list4}}</li>
+            {% endif %}
+
+            {% if include.select1-list5 %}
+            <li>{{include.select1-list5}}</li>
+            {% endif %}
+
+            {% if include.select1-list6 %}
+            <li>{{include.select1-list6}}</li>
+            {% endif %}
+
+        </ul>
+
+        <ul class="pb-0 {{include.select2-val}} d-none">
+        
+            {% if include.select2-list1 %}
+            <li>{{include.select2-list1}}</li>
+            {% endif %}
+
+            {% if include.select2-list2 %}
+            <li>{{include.select2-list2}}</li>
+            {% endif %}
+
+            {% if include.select2-list3 %}
+            <li>{{include.select2-list3}}</li>
+            {% endif %}
+
+            {% if include.select2-list4 %}
+            <li>{{include.select2-list4}}</li>
+            {% endif %}
+
+            {% if include.select2-list5 %}
+            <li>{{include.select2-list5}}</li>
+            {% endif %}
+
+            {% if include.select2-list6 %}
+            <li>{{include.select2-list6}}</li>
+            {% endif %}
+
+        </ul>
+ 
+ 
+    </div>
+
+
+</div>

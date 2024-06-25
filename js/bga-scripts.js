@@ -2376,7 +2376,7 @@ $(document).ready(function () {
         }, 1000);
     });
 
-    // COMPONENT EXAMPLE: Guide tile dropdown
+    // COMPONENT EXAMPLE: Guide tile dropdown to select an action checklist
     $('.guide-select-options').on('change', function(){
         var option = $(this).val(),
             parent = $(this).parents('.action-checklist');
@@ -2392,8 +2392,6 @@ $(document).ready(function () {
     
     // COMPONENT EXAMPLE: Guide vertical nav
     if ($('#guide-vertical-nav').length) {
-        console.log('guide nav is present');
-
         var page_id = $('.guide-section').attr('id');
         $('.guide-nav-item.' + page_id).addClass('current');
 
@@ -2467,8 +2465,21 @@ $(document).ready(function () {
             $('.guide-menu-wrapper').animate({left: '-90%'}, 400);
             $('body').removeClass('no-scroll');
 
-            window.location = destination;
+            if  ($('html.guide-prototype').length) {
+                console.log('guide prototype');
+                window.location = destination;
+            }
         });
+
+        // GUIDE NAVIGATION - current page. Set link to 'current' state when clicked on
+        $('.guide-inpage-example .guide-nav-item-title a').on('click', function(){
+            //var parent_nav = $(this).parents('.guide-vertical-nav');
+            $(this).parents('.guide-vertical-nav').find('.guide-nav-item').each(function(){
+                $(this).removeClass('current');
+            });
+            $(this).parents('.guide-nav-item').addClass('current');
+        });
+
 
     };
 

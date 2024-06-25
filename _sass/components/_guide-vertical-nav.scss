@@ -210,6 +210,12 @@ body.no-scroll {
                     background-color: $nb-grey-darkest;
                 }
             }
+            &.current {
+                .guide-nav-item-title h4 span {
+                    border: solid 3px $bga-black;
+                    background: $bga-black;
+                }
+            }
 
             @include guide-nav-colour($nb-grey-light);   
         }  
@@ -320,6 +326,7 @@ body.no-scroll {
 
         &.style-guide-example {
             position: absolute;
+            max-width: none;
         }
         &.guide-modal-nav {
             top: 16px;
