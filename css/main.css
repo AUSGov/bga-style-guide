@@ -9920,9 +9920,15 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .guide-bottom-nav a.next { text-align: right; }
 
-@media (max-width: 992px) { .guide-section-header .section-illustration { width: 140px; position: absolute; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 164px; min-height: 112px; display: inline-flex; align-items: center; } .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; } .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; } .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; } .guide-bottom-nav { flex-direction: column; row-gap: 24px; align-items: center; } }
+.component-example.bp-below992 .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; }
 
-@media (max-width: 768px) { .guide-section { margin: -32px -32px 0 -32px; padding: 24px 32px; } .guide-section-header .section-illustration { display: none; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 0px; min-height: auto; display: block; } .inpage-email-download-wrapper { display: block; background: #FFE491; border: none; padding: 24px; width: 100%; } .inpage-email-download-wrapper.white { background: #ffffff; } .inpage-email-download-wrapper p { font-weight: 600; } .inpage-email-download-wrapper .button-group { flex-wrap: wrap; } .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; flex-shrink: 0; } }
+.component-example.bp-below992 .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; }
+
+.component-example.bp-below992 .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; }
+
+@media (max-width: 992px) { .guide-section-header .section-illustration { width: 140px; position: absolute; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 164px; min-height: 112px; display: inline-flex; align-items: center; } .guide-bottom-nav { flex-direction: column; row-gap: 24px; align-items: center; } .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; } .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; } .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; } }
+
+@media (max-width: 768px) { .guide-section { margin: -32px -32px 0 -32px; padding: 24px 32px; } .guide-section-header .section-illustration { display: none; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 0px; min-height: auto; display: block; } }
 
 @media (max-width: 576px) { .guide-section { margin: -32px -24px 0 -24px; padding: 24px; } }
 
@@ -10006,6 +10012,8 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 
 .component-wrapper.guide-inpage-example.non-branded #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 span:after, .component-wrapper.guide-inpage-example.non-branded #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 span:after { background-color: #B8B8B8; }
 
+.component-wrapper.guide-inpage-example.non-branded #guide-vertical-nav .guide-nav-item.current .guide-nav-item-title h4 span, .component-wrapper.guide-inpage-example.non-branded #guide-vertical-nav .guide-nav-item.current .guide-nav-item-title .h4 span { border: solid 3px #333333; background: #333333; }
+
 .component-wrapper.guide-inpage-example.non-branded #guide-vertical-nav .guide-nav-item.show .guide-nav-item-title h4 a, .component-wrapper.guide-inpage-example.non-branded #guide-vertical-nav .guide-nav-item.show .guide-nav-item-title .h4 a { background: #E8E8E8; }
 
 .component-wrapper.guide-inpage-example.non-branded #guide-vertical-nav .guide-nav-item.show .guide-sub-item { background: #E8E8E8; }
@@ -10052,7 +10060,7 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 
 .component-example.bp-576 .guide-menu-wrapper { position: fixed; background: white; z-index: 9500; padding: 32px 16px 24px 16px; }
 
-.component-example.bp-576 .guide-menu-wrapper.style-guide-example { position: absolute; }
+.component-example.bp-576 .guide-menu-wrapper.style-guide-example { position: absolute; max-width: none; }
 
 .component-example.bp-576 .guide-menu-wrapper.guide-modal-nav { top: 16px; left: 16px; width: calc(100% - 32px); height: calc(100% - 32px); }
 
@@ -10114,7 +10122,7 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 
 .component-example.bp-350 .guide-menu-wrapper { position: fixed; background: white; z-index: 9500; padding: 32px 16px 24px 16px; }
 
-.component-example.bp-350 .guide-menu-wrapper.style-guide-example { position: absolute; }
+.component-example.bp-350 .guide-menu-wrapper.style-guide-example { position: absolute; max-width: none; }
 
 .component-example.bp-350 .guide-menu-wrapper.guide-modal-nav { top: 16px; left: 16px; width: calc(100% - 32px); height: calc(100% - 32px); }
 
@@ -10184,7 +10192,7 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 
 .component-example.bp-below350 .guide-menu-wrapper { position: fixed; background: white; z-index: 9500; padding: 32px 16px 24px 16px; }
 
-.component-example.bp-below350 .guide-menu-wrapper.style-guide-example { position: absolute; }
+.component-example.bp-below350 .guide-menu-wrapper.style-guide-example { position: absolute; max-width: none; }
 
 .component-example.bp-below350 .guide-menu-wrapper.guide-modal-nav { top: 16px; left: 16px; width: calc(100% - 32px); height: calc(100% - 32px); }
 
@@ -10234,7 +10242,7 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 
 @media (max-width: 1200px) { #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 { font-size: 1rem; } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 span, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 span { width: 32px; height: 32px; } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 span:after, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 span:after { top: 35px; left: 14.5px; height: calc(100% - 32px); } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 a, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 a { width: calc(100% - 32px); } #guide-vertical-nav .guide-nav-item .guide-sub-item { margin: 0 0 0 40px; } }
 
-@media (max-width: 768px) { html.guide-prototype { scroll-padding-top: 100px !important; } .guide-mobile-nav-trigger { background: #FFD964; margin: 0px -32px 0 -32px; padding: 16px 32px; width: calc(100% + 64px); display: flex; align-items: center; column-gap: 16px; } .guide-mobile-nav-trigger button { flex-shrink: 0; height: 48px; } .guide-mobile-nav-trigger.fixed { position: fixed; margin: 0; left: 0; top: 0; z-index: 7500; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); transition: top 1s linear; } .guide-mobile-nav-trigger.style-guide-example { margin: 0; width: 100%; } .guide-mobile-nav-trigger.style-guide-example.fixed { position: relative; top: auto; left: auto; box-shadow: none; } .component-wrapper.guide-inpage-example.non-branded .guide-mobile-nav-trigger { background: #D8D8D8; } .mobile-nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9200; background-color: #333333; opacity: .6; display: none; } .mobile-nav-overlay.show { display: block; } .component-wrapper.guide-inpage-example .mobile-nav-overlay { position: absolute; } .guide-menu-wrapper { position: fixed; background: white; z-index: 9500; padding: 32px 16px 24px 16px; } .guide-menu-wrapper.style-guide-example { position: absolute; } .guide-menu-wrapper.guide-modal-nav { top: 16px; left: 16px; width: calc(100% - 32px); height: calc(100% - 32px); } .guide-menu-wrapper.guide-panel-nav { top: 0px; left: 0px; left: -90%; width: 90%; height: 100%; } .guide-menu-wrapper.guide-panel-nav .guide-email-download-wrapper { display: none !important; } .guide-nav-close { display: block; width: 100%; display: flex; justify-content: flex-end; } .guide-nav-close button { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; border: none; position: absolute; height: 16px; width: 16px; top: 16px; right: 16px; display: block !important; } .guide-scroll-wrapper { margin-top: 8px; position: relative; background: #ffffff; height: 100%; } .guide-scroll-wrapper .scrollable { height: 100%; padding: 0px; overflow-y: auto; } .guide-scroll-wrapper .scrollable::-webkit-scrollbar { -webkit-appearance: none; width: 8px; height: 8px; } .guide-scroll-wrapper .scrollable::-webkit-scrollbar-thumb { background-color: #788295; border-radius: 4px; z-index: 99; } .guide-scroll-wrapper .scrollable::-webkit-scrollbar-track { background: #E4E6EA; } #guide-vertical-nav { padding: 0 8px 0 0; } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 a, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 a { background: none !important; padding: 8px 8px 8px 0px; } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 span, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 span { margin: 4px 0 0 0; } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 span:after, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 span:after { top: 36px; height: calc(100% - 32px); } #guide-vertical-nav .guide-nav-item .guide-sub-item { background: none !important; margin: 0 0 0 32px; } }
+@media (max-width: 768px) { html.guide-prototype { scroll-padding-top: 100px !important; } .guide-mobile-nav-trigger { background: #FFD964; margin: 0px -32px 0 -32px; padding: 16px 32px; width: calc(100% + 64px); display: flex; align-items: center; column-gap: 16px; } .guide-mobile-nav-trigger button { flex-shrink: 0; height: 48px; } .guide-mobile-nav-trigger.fixed { position: fixed; margin: 0; left: 0; top: 0; z-index: 7500; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); transition: top 1s linear; } .guide-mobile-nav-trigger.style-guide-example { margin: 0; width: 100%; } .guide-mobile-nav-trigger.style-guide-example.fixed { position: relative; top: auto; left: auto; box-shadow: none; } .component-wrapper.guide-inpage-example.non-branded .guide-mobile-nav-trigger { background: #D8D8D8; } .mobile-nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9200; background-color: #333333; opacity: .6; display: none; } .mobile-nav-overlay.show { display: block; } .component-wrapper.guide-inpage-example .mobile-nav-overlay { position: absolute; } .guide-menu-wrapper { position: fixed; background: white; z-index: 9500; padding: 32px 16px 24px 16px; } .guide-menu-wrapper.style-guide-example { position: absolute; max-width: none; } .guide-menu-wrapper.guide-modal-nav { top: 16px; left: 16px; width: calc(100% - 32px); height: calc(100% - 32px); } .guide-menu-wrapper.guide-panel-nav { top: 0px; left: 0px; left: -90%; width: 90%; height: 100%; } .guide-menu-wrapper.guide-panel-nav .guide-email-download-wrapper { display: none !important; } .guide-nav-close { display: block; width: 100%; display: flex; justify-content: flex-end; } .guide-nav-close button { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; border: none; position: absolute; height: 16px; width: 16px; top: 16px; right: 16px; display: block !important; } .guide-scroll-wrapper { margin-top: 8px; position: relative; background: #ffffff; height: 100%; } .guide-scroll-wrapper .scrollable { height: 100%; padding: 0px; overflow-y: auto; } .guide-scroll-wrapper .scrollable::-webkit-scrollbar { -webkit-appearance: none; width: 8px; height: 8px; } .guide-scroll-wrapper .scrollable::-webkit-scrollbar-thumb { background-color: #788295; border-radius: 4px; z-index: 99; } .guide-scroll-wrapper .scrollable::-webkit-scrollbar-track { background: #E4E6EA; } #guide-vertical-nav { padding: 0 8px 0 0; } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 a, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 a { background: none !important; padding: 8px 8px 8px 0px; } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 span, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 span { margin: 4px 0 0 0; } #guide-vertical-nav .guide-nav-item .guide-nav-item-title h4 span:after, #guide-vertical-nav .guide-nav-item .guide-nav-item-title .h4 span:after { top: 36px; height: calc(100% - 32px); } #guide-vertical-nav .guide-nav-item .guide-sub-item { background: none !important; margin: 0 0 0 32px; } }
 
 @media (max-width: 576px) { .guide-mobile-nav-trigger { margin: 0px -24px 0 -24px; padding: 16px 24px; width: calc(100% + 48px); } .guide-mobile-nav-trigger.fixed { margin: 0; width: 100%; } .guide-mobile-nav-trigger .guide-step { font-size: .875rem; line-height: 1.5; } .guide-mobile-nav-trigger .bga-btn.bga-secondary-btn { width: auto; font-size: .875rem; padding: 8px 16px !important; min-height: auto; } }
 
@@ -10250,45 +10258,47 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 
 .guide-email-download-wrapper.non-branded .bga-btn.bga-secondary-btn svg { display: none; }
 
-.component-example.bp-576 .guide-email-download-wrapper { margin-top: 0 !important; background: #FFE491; border: none; padding: 24px; position: absolute; bottom: 0; left: 0; width: 100%; }
+.component-example.bp-576 .inpage-email-download-wrapper { display: block; margin-top: 32px !important; }
 
-.component-example.bp-576 .guide-email-download-wrapper p { font-weight: 600; }
+.component-example.bp-576 .guide-email-download-wrapper, .component-example.bp-576 .inpage-email-download-wrapper { margin-top: 0; background: #FFE491; border: none; padding: 24px; width: 100%; max-width: none; }
 
-.component-example.bp-576 .guide-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; }
+.component-example.bp-576 .guide-email-download-wrapper p, .component-example.bp-576 .inpage-email-download-wrapper p { font-weight: 600; }
 
-.component-example.bp-576 .guide-email-download-wrapper.style-guide-example { position: relative; bottom: auto; left: auto; max-width: none; }
+.component-example.bp-576 .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .component-example.bp-576 .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; }
 
-.component-example.bp-576 .guide-email-download-wrapper.non-branded { background: #D8D8D8; }
+.component-example.bp-576 .guide-email-download-wrapper.non-branded, .component-example.bp-576 .inpage-email-download-wrapper.non-branded { background: #D8D8D8; }
 
-.component-example.bp-350 .guide-email-download-wrapper { margin-top: 0 !important; background: #FFE491; border: none; padding: 24px; position: absolute; bottom: 0; left: 0; width: 100%; }
+.component-example.bp-350 .inpage-email-download-wrapper { display: block; margin-top: 32px !important; }
 
-.component-example.bp-350 .guide-email-download-wrapper p { font-weight: 600; }
+.component-example.bp-350 .guide-email-download-wrapper, .component-example.bp-350 .inpage-email-download-wrapper { margin-top: 0; background: #FFE491; border: none; padding: 24px; width: 100%; max-width: none; }
 
-.component-example.bp-350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; }
+.component-example.bp-350 .guide-email-download-wrapper p, .component-example.bp-350 .inpage-email-download-wrapper p { font-weight: 600; }
 
-.component-example.bp-350 .guide-email-download-wrapper.style-guide-example { position: relative; bottom: auto; left: auto; max-width: none; }
+.component-example.bp-350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .component-example.bp-350 .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; }
 
-.component-example.bp-350 .guide-email-download-wrapper.non-branded { background: #D8D8D8; }
+.component-example.bp-350 .guide-email-download-wrapper.non-branded, .component-example.bp-350 .inpage-email-download-wrapper.non-branded { background: #D8D8D8; }
 
-.component-example.bp-350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; font-size: .875rem; padding: 8px 16px !important; min-height: auto; }
+.component-example.bp-350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .component-example.bp-350 .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; font-size: .875rem; padding: 8px 16px !important; min-height: auto; }
 
-.component-example.bp-below350 .guide-email-download-wrapper { margin-top: 0 !important; background: #FFE491; border: none; padding: 24px; position: absolute; bottom: 0; left: 0; width: 100%; }
+.component-example.bp-below350 .inpage-email-download-wrapper { display: block; margin-top: 32px !important; }
 
-.component-example.bp-below350 .guide-email-download-wrapper p { font-weight: 600; }
+.component-example.bp-below350 .guide-email-download-wrapper, .component-example.bp-below350 .inpage-email-download-wrapper { margin-top: 0; background: #FFE491; border: none; padding: 24px; width: 100%; max-width: none; }
 
-.component-example.bp-below350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; }
+.component-example.bp-below350 .guide-email-download-wrapper p, .component-example.bp-below350 .inpage-email-download-wrapper p { font-weight: 600; }
 
-.component-example.bp-below350 .guide-email-download-wrapper.style-guide-example { position: relative; bottom: auto; left: auto; max-width: none; }
+.component-example.bp-below350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .component-example.bp-below350 .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; }
 
-.component-example.bp-below350 .guide-email-download-wrapper.non-branded { background: #D8D8D8; }
+.component-example.bp-below350 .guide-email-download-wrapper.non-branded, .component-example.bp-below350 .inpage-email-download-wrapper.non-branded { background: #D8D8D8; }
 
-.component-example.bp-below350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; font-size: .875rem; padding: 8px 16px !important; min-height: auto; }
+.component-example.bp-below350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .component-example.bp-below350 .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; font-size: .875rem; padding: 8px 16px !important; min-height: auto; }
 
-.component-example.bp-below350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn { width: 100%; }
+.component-example.bp-below350 .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .component-example.bp-below350 .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: 100%; }
 
-@media (max-width: 768px) { .guide-email-download-wrapper { margin-top: 0 !important; background: #FFE491; border: none; padding: 24px; position: absolute; bottom: 0; left: 0; width: 100%; } .guide-email-download-wrapper p { font-weight: 600; } .guide-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; } .guide-email-download-wrapper.style-guide-example { position: relative; bottom: auto; left: auto; max-width: none; } .guide-email-download-wrapper.non-branded { background: #D8D8D8; } }
+@media (max-width: 768px) { .inpage-email-download-wrapper { display: block; margin-top: 32px !important; } .guide-email-download-wrapper, .inpage-email-download-wrapper { margin-top: 0; background: #FFE491; border: none; padding: 24px; width: 100%; max-width: none; } .guide-email-download-wrapper p, .inpage-email-download-wrapper p { font-weight: 600; } .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; } .guide-email-download-wrapper.non-branded, .inpage-email-download-wrapper.non-branded { background: #D8D8D8; } }
 
-@media (max-width: 576px) { .guide-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; font-size: .875rem; padding: 8px 16px !important; min-height: auto; } }
+@media (max-width: 576px) { .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: auto; font-size: .875rem; padding: 8px 16px !important; min-height: auto; } }
+
+@media (max-width: 350px) { .guide-email-download-wrapper .bga-btn.bga-secondary-btn, .inpage-email-download-wrapper .bga-btn.bga-secondary-btn { width: 100%; } }
 
 .example.page-pattern { position: relative; }
 
