@@ -49,7 +49,7 @@ subsite-tag: true
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
-                        element-string="bga-guide-navigation"
+                        element-string="bga-guide-info-tiles"
                         lg-visibility="true"
                         final-visibility="true"
                         breakpoint-final="992"
@@ -57,24 +57,7 @@ subsite-tag: true
 
                     <!-- Component example -->
                     <div class="component-example m-0">
-                        <div class="component-wrapper p-4">
-
-                            {% include component-examples/guide-tile.html 
-                                id="decide-on-a-business-structure"
-                                classes="teal mb-5"
-                                
-                                title="Decide on a business structure"
-                                
-                                description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p><p>Vivamus vestibulum lobortis nunc id placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vel felis rutrum, tincidunt libero vel, malesuada sapien.</p>"
-                
-                                learn-more="Business structures"
-                
-                                select="false"
-                
-                                list1="I have chosen a business structure for my business."
-                                list2="I have sought advice from a professional business adviser, lawyer or accountant to ensure I have chosen the appropriate business structure."
-                            
-                                %}
+                        <div class="component-wrapper remove-element-padding p-4">
 
                             {% include component-examples/guide-tile.html 
                                 id="employee-or-contractor"
@@ -101,14 +84,33 @@ subsite-tag: true
                                 select2-list2="I understand my tax obligations as a contractor"
                                 select2-list3="I understand my rights as a contractor"
                             
-                                    %}
+                                %}
+                                
+                            
+                            {% include component-examples/guide-tile.html 
+                                id="decide-on-a-business-structure"
+                                classes="teal mb-5"
+                                
+                                title="Decide on a business structure"
+                                
+                                description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p><p>Vivamus vestibulum lobortis nunc id placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vel felis rutrum, tincidunt libero vel, malesuada sapien.</p>"
+                
+                                learn-more="Business structures"
+                
+                                select="false"
+                
+                                list1="I have chosen a business structure for my business."
+                                list2="I have sought advice from a professional business adviser, lawyer or accountant to ensure I have chosen the appropriate business structure."
+                            
+                                %}
+
 
                         </div>
                     </div>
 
                     <!-- Checklist colours -->
                     <div class="component-example m-0">
-                        <div class="component-wrapper p-4">
+                        <div class="component-wrapper remove-element-padding p-4">
 
                             <h3>Approved colours</h3>
                             <p>Checklist colours are matched to the guide section colour.</p>
@@ -249,13 +251,10 @@ subsite-tag: true
 
                         <!-- Breakpoint radio buttons -->
                         {% include breakpoints.html
-                            element-string="nb-guide-navigation"
-                            xl-visibility="true"
-                            md-visibility="true"
-                            sm-visibility="true"
-                            xs-visibility="true"
+                            element-string="nb-guide-info-tiles"
+                            lg-visibility="true"
                             final-visibility="true"
-                            breakpoint-final="350"
+                            breakpoint-final="992"
                         %}
     
                         <!-- Component example -->
@@ -268,15 +267,50 @@ subsite-tag: true
                                     brand-elements="colours, borders and button styles"
                                 %}
     
-                                <div class="guide-mobile-nav-trigger style-guide-example">
-                                    <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center" tabindex="0" href="" role="button">Guide menu</button>
-                                    <p class="guide-step m-0">Step <span>1</span> of 6: <strong class="step-title">Make key decisions</strong></p>
-                                </div>
-    
-                                {% include component-examples/guide-vertical-nav.html 
+                                {% include component-examples/guide-tile.html 
+                                    id="employee-or-contractor"
+                                    classes="non-branded mb-5"
+                                    
+                                    title="Know if you are an employee or contractor"
+                                    
+                                    description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p>"
+                    
+                                    learn-more="Employee or contractor?"
+                    
+                                    select="true"
+                    
+                                    select1="Employees"
+                                    select2="Contractors"
+                    
+                                    select1-val="employees"
+                                    select2-val="contractors"
+                    
+                                    select1-list1="I understand my rights as an employee"
+                                    select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                    
+                                    select2-list1="I have considering contributing to my own superanniation"
+                                    select2-list2="I understand my tax obligations as a contractor"
+                                    select2-list3="I understand my rights as a contractor"
+                                
                                     %}
-    
-                                <div class="mobile-nav-overlay"></div>
+                                    
+                                
+                                {% include component-examples/guide-tile.html 
+                                    id="decide-on-a-business-structure"
+                                    classes="non-branded mb-5"
+                                    
+                                    title="Decide on a business structure"
+                                    
+                                    description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur felis ac consequat fermentum. Fusce sed malesuada tortor, eu volutpat risus. Nam aliquet massa ac semper vestibulum. Fusce condimentum molestie sodales. Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p><p>Vivamus vestibulum lobortis nunc id placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vel felis rutrum, tincidunt libero vel, malesuada sapien.</p>"
+                    
+                                    learn-more="Business structures"
+                    
+                                    select="false"
+                    
+                                    list1="I have chosen a business structure for my business."
+                                    list2="I have sought advice from a professional business adviser, lawyer or accountant to ensure I have chosen the appropriate business structure."
+                                
+                                    %}
     
                             </div>
                         </div>
@@ -320,15 +354,15 @@ subsite-tag: true
 
             finalbp="Breakpoint &lt; 768px"
 
-            min1200-img="'../assets/layout-images/twocol-guide-1200px-navigation.png' | relative_url "
-            min768-img="'../assets/layout-images/twocol-guide-768px-navigation.png' | relative_url "
-            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-navigation.png' | relative_url "
+            min1200-img="'../assets/layout-images/twocol-guide-1200px-fullwidthcomponent.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-guide-768px-fullwidthcomponent.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-fullwidthcomponent.png' | relative_url "
 
-            min1200-rules="<p>The guide navigation sits to the left of the content and is 3 grid-columns wide.</p>"
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Guide information tile components components span the full width of the content area.</p>"
 
-            min768-rules="<p>The guide navigation sits to the left of the content and is 4 grid-columns wide.</p>"
+            min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Guide information tile components components span the full width of the content area.</p>"
 
-            finalbp-rules="<p>The guide navigation is not visible on screen. It is accessed through a trigger button located above the page content. The trigger has sticky behaviour and is fixed to the top of the screen on scroll.</p><p>When triggered the navigation slides in from the left filling 90% of the screen width.</p>"
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Guide information tile components components span the full width of the content area.</p>"
 
             example-link="'../prototypes/sab/make-key-decisions.html' | relative_url'"
             example-link-text="View layout example"
@@ -342,11 +376,12 @@ subsite-tag: true
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Guide vertical navigation is used to guide users through series of connected pages or steps. It displays where the user is up to and provides links to other connected pages. It provides a high level overview of all associated information through links to content presented in a series of accordions. </p>
+        <p>Guide information tiles provide the users with a information about a specific topic accompanied with a list of actionable checklist items.</p>
        
         <h3>When to use this component:</h3>
         <ul>
-            <li>Used in the business.gov.au guide pattern</li>
+            <li>Used in the business.gov.au guide pattern.</li>
+            <li>Each tile contains introductory information on a specific task with links to further information.</li>
         </ul>
 
 
