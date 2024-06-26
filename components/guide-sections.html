@@ -1,0 +1,369 @@
+---
+
+layout: content-tagged
+title: Guide sections
+description: Provide the user with a collection of actionable information tiles relating to a specific topic within the context of a business.gov.au guide.
+updated: 26 June, 2024
+breadcrumb1: Components
+url1: /components.html
+bga-tag: true
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="bga-guide-sections"
+                        lg-visibility="true"
+                        md-visibility="true"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+                    <div class="component-example m-0">
+                        <div class="component-wrapper p-4">
+
+                            <div class="guide-section teal style-guide-example" id="make-key-decisions">
+
+
+                                <!-- Guide section header -->
+                                {% include component-examples/guide-section-header.html 
+                                    title="1. Make key decisions"
+                                    description=" <p>The decisions you make early on can affect many areas of your business, including the licences you need, how much tax you pay and the volume of paperwork required.</p>"
+                                    img="'../assets/refresh-illustrations/signpost.svg' | relative_url"
+                                    %}
+                    
+                                <!-- Guide tiles -->
+                                <div class="guide-tiles-wrapper">
+                    
+                                <!-- Employee or contractor -->
+                                {% include component-examples/guide-tile.html 
+                                    id="employee-or-contractor"
+                                    classes="teal"
+                                    
+                                    title="Know if you are an employee or contractor"
+                                    
+                                    description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+                    
+                                    learn-more="Employee or contractor?"
+                    
+                                    select="true"
+                    
+                                    select1="Employees"
+                                    select2="Contractors"
+                    
+                                    select1-val="employees"
+                                    select2-val="contractors"
+                    
+                                    select1-list1="I understand my rights as an employee"
+                                    select1-list1="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                    
+                                    select2-list1="I have considering contributing to my own superanniation"
+                                    select2-list2="I understand my tax obligations as a contractor"
+                                    select2-list3="I understand my rights as a contractor"
+                                
+                                    %}
+                    
+                    
+                                
+                    
+                                <!-- Choose a business name-->
+                                {% include component-examples/guide-tile.html 
+                                    id="choose-a-business-name"
+                                    classes="teal"
+                                    
+                                    title="Choose a business name"
+                                    
+                                    description="<p>Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p>"
+                    
+                                    learn-more="Choose a business name"
+                    
+                                    select="false"
+                    
+                                    list1="I have chosen my business name"
+                                    list2="I have checked to see if my business name is already taken"
+                                    list3="I have registered my business name with ASIC"
+                                    list4="I have registered my domain name"
+                                
+                                    %}
+                                    
+                    
+                                </div>
+                    
+                    
+                                <div class="guide-bottom-nav">
+                                    <a class="prev" href=""><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.97177 8.5L10 14.5176L8.01411 16.5L0 8.5L8.01411 0.5L10 2.48239L3.97177 8.5Z" fill="#2157AA"/>
+                                        </svg>1. Previous guide section</a>
+                                    <a class="next" href="">3. Next guide section<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.02823 8.5L0 14.5176L1.98589 16.5L10 8.5L1.98589 0.5L0 2.48239L6.02823 8.5Z" fill="#2157AA"/>
+                                        </svg>
+                                        </a>
+                                   
+                                </div>
+                                    
+                    
+                                </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Section colours colours -->
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>Approved section background colours</h3>
+                            <p>Section background colours are matched to the guide information tile colours.</p>
+
+                            <h4>Teal</h4>
+
+                            
+
+                            <h4>Blue</h4>
+
+                            
+
+                            <h4>Purple</h4>
+                                
+                            
+                                
+                            <h4>Green</h4>
+
+                            
+
+                            <h4>Yellow</h4>
+
+                            
+
+                            <h4>Orange</h4>
+                                
+                            
+                        
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                        <!-- Breakpoint radio buttons -->
+                        {% include breakpoints.html
+                            element-string="nb-guide-sections"
+                            lg-visibility="true"
+                            md-visibility="true"
+                            sm-visibility="true"
+                            final-visibility="true"
+                            breakpoint-final="576"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper guide-inpage-example non-branded p-4">
+
+                                {% include non-branded-explanation.html
+                                    component="guide vertical navigation"
+                                    brand-elements="colours, borders and button styles"
+                                %}
+    
+                                <div class="guide-section non-branded style-guide-example mt-4" id="make-key-decisions-2">
+
+
+                                    <!-- Guide section header -->
+                                    {% include component-examples/guide-section-header.html 
+                                        title="1. Make key decisions"
+                                        description=" <p>The decisions you make early on can affect many areas of your business, including the licences you need, how much tax you pay and the volume of paperwork required.</p>"
+                                        img="'../assets/img-placeholder-1.svg' | relative_url"
+                                        %}
+                        
+                                    <!-- Guide tiles -->
+                                    <div class="guide-tiles-wrapper">
+                        
+                                    <!-- Employee or contractor -->
+                                    {% include component-examples/guide-tile.html 
+                                        id="employee-or-contractor"
+                                        classes="non-branded"
+                                        
+                                        title="Know if you are an employee or contractor"
+                                        
+                                        description="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+                        
+                                        learn-more="Employee or contractor?"
+                        
+                                        select="true"
+                        
+                                        select1="Employees"
+                                        select2="Contractors"
+                        
+                                        select1-val="employees"
+                                        select2-val="contractors"
+                        
+                                        select1-list1="I understand my rights as an employee"
+                                        select1-list2="I have checked my employment contract with a professional to ensure I am an employee, not a contractor"
+                        
+                                        select2-list1="I have considering contributing to my own superanniation"
+                                       
+                                    
+                                        %}
+                        
+                        
+                                    
+                        
+                                    <!-- Choose a business name-->
+                                    {% include component-examples/guide-tile.html 
+                                        id="choose-a-business-name"
+                                        classes="non-branded"
+                                        
+                                        title="Choose a business name"
+                                        
+                                        description="<p>Nunc molestie sed turpis sit amet dapibus. Nullam sit amet sapien lorem. Sed vestibulum ante eu sapien gravida cursus.</p>"
+                        
+                                        learn-more="Choose a business name"
+                        
+                                        select="false"
+                        
+                                        list1="I have chosen my business name"
+                                        list2="I have checked to see if my business name is already taken"
+                                    
+                                        %}
+                                        
+                        
+                                    </div>
+                        
+                        
+                                    <div class="guide-bottom-nav">
+                                        <a class="prev" href=""><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.97177 8.5L10 14.5176L8.01411 16.5L0 8.5L8.01411 0.5L10 2.48239L3.97177 8.5Z" fill="#2157AA"/>
+                                            </svg>1. Previous guide section</a>
+                                        <a class="next" href="">3. Next guide section<svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.02823 8.5L0 14.5176L1.98589 16.5L10 8.5L1.98589 0.5L0 2.48239L6.02823 8.5Z" fill="#2157AA"/>
+                                            </svg>
+                                            </a>
+                                       
+                                    </div>
+                                        
+                        
+                                    </div>
+    
+                            </div>
+                        </div>
+    
+                   
+    
+
+                </div>
+
+            </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=767-27432&t=jeDiHTjVKEALvT9f-1'"
+        btn-text="View design specifications"
+        %}
+
+
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Guide information tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>Two column - information page layout</a>.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Two column - information page"
+        singlelayout="true"
+        %}
+
+
+        <div class="layout-example show two-col-infopage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="two-col-guidepage"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/twocol-guide-1200px-fullwidthcomponent.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-guide-768px-fullwidthcomponent.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-fullwidthcomponent.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Guide information tile components components span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Guide information tile components components span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Guide information tile components components span the full width of the content area.</p>"
+
+            example-link="'../prototypes/sab/make-key-decisions.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Guide sections are used to present a set of information tiles relating to a specific topic. A business.gov.au guide consists of a number of sections outlining information needed for completing a specific user journey such as starting a business.</p>
+       
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used in the business.gov.au guide pattern.</li>
+        </ul>
+
+
+
+         <!-- VERSION HISTORY-->
+         <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>26 June, 2024</h4>
+         <ul>
+             <li>Created the guide sections page.</li>
+         </ul>
+        
+
+
+    </div>

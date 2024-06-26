@@ -21,7 +21,7 @@
         background: $bga-orange-highlight-light;
     }
     &.non-branded {
-        background: $nb-grey-mid;
+        background: $nb-grey-light;
     }
 }
 
@@ -156,10 +156,6 @@
     }
 }
 
-.inpage-email-download-wrapper {
-    display: none;
-}
-
 .guide-bottom-nav {
     display: flex;
     justify-content: space-between;
@@ -210,12 +206,8 @@
         }
     }
 }
-.component-example.bp-below992 {
-    @include guide-tile-bp-below992();
-}
 
-
-@media (max-width: 992px) {
+@mixin guide-section-bp-768 {
     .guide-section-header { 
          
         .section-illustration {
@@ -238,13 +230,16 @@
         row-gap: 24px;
         align-items: center;
     }  
-    @include guide-tile-bp-below992();
 }
 
-@media (max-width: 768px) {
+@mixin guide-section-bp-576 {
     .guide-section {
         margin: -32px -32px 0 -32px;
         padding: 24px 32px;
+
+        &.style-guide-example {
+            margin: -24px -24px 0 -24px;
+        }
     }
     .guide-section-header {
         .section-illustration {
@@ -262,18 +257,46 @@
     }
 }
 
-@media (max-width: 576px) {
+@mixin guide-section-bp-below576 {
     .guide-section {
         margin: -32px -24px 0 -24px;
         padding: 24px;
+
+        h2 {
+            font-size: 1.75rem;
+        }
     }
 }
 
-@media (max-width: 350px) {
-    .inpage-email-download-wrapper {
-       
-        .bga-btn.bga-secondary-btn {
-            width: 100%;
-        }
-    }
+.component-example.bp-below992 {
+    @include guide-tile-bp-below992();
+}
+.component-example.bp-768 {
+    @include guide-tile-bp-below992(); 
+    @include guide-section-bp-768();
+}
+.component-example.bp-576 {
+    @include guide-tile-bp-below992(); 
+    @include guide-section-bp-768();
+    @include guide-section-bp-576();
+}
+.component-example.bp-below576 {
+    @include guide-tile-bp-below992(); 
+    @include guide-section-bp-768();
+    @include guide-section-bp-576();
+    @include guide-section-bp-below576();
+}
+
+// MEDIA QUERIES
+@media (max-width: 992px) {
+    @include guide-tile-bp-below992();
+    @include guide-section-bp-768();
+}
+
+@media (max-width: 768px) {
+   @include guide-section-bp-576();
+}
+
+@media (max-width: 576px) {
+    @include guide-section-bp-below576();
 }
