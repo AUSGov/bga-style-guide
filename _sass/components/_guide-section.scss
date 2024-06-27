@@ -24,6 +24,11 @@
         background: $nb-grey-light;
     }
 }
+.guide-colour-examples {
+    .guide-section {
+        margin: 0 !important;
+    }
+}
 
 .guide-section-header {
     display: flex;
@@ -67,6 +72,7 @@
 .guide-tile {
     border: 1px solid $bga-black;
     background: $bga-white;
+    width: 100%;
 
     .content {
         padding: 24px;
@@ -154,6 +160,9 @@
     &.non-branded {
         @include guide-tile-colour($nb-grey-mid, $nb-grey-light);
     }
+}
+.guide-colour-examples .guide-tile {
+    width: auto;
 }
 
 .guide-bottom-nav {

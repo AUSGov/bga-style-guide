@@ -2380,8 +2380,6 @@ $(document).ready(function () {
     $('.guide-select-options').on('change', function(){
         var option = $(this).val(),
             parent = $(this).parents('.action-checklist');
-            console.log(option);
-            console.log(parent);
         
         parent.find('ul').each(function(){
             $(this).addClass('d-none');
