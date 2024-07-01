@@ -3,7 +3,7 @@
 layout: content-tagged
 title: In page feedback form
 description: A simple form for gathering feedback on business.gov.au pages.
-updated: 8 August, 2023
+updated: 1 July, 2024
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -121,6 +121,7 @@ subsite-tag: true
             single-col-infopage-visibility="true" 
             single-col-toolpage-visibility="true"
             two-col-infopage-visibility="true" 
+            two-col-guidepage-visibility="true" 
             two-col-toolpage-visibility="true"
             two-col-toolpage-alt-visibility="true" 
             two-col-filterpage-visibility="true"
@@ -255,6 +256,38 @@ subsite-tag: true
             %}
             
         </div>
+
+
+        <div class="layout-example two-col-guidepage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="two-col-guidepage"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/twocol-guide-1200px-inpage-feedback.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-guide-768px-inpage-feedback.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-inpage-feedback.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>The in page feedback component spans the full width of the content area.</p>"
+
+            example-link="'../prototypes/sab/make-key-decisions.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
         
         
         <div class="layout-example two-col-filterpage mt-0 mb-5 px-4 py-0">
@@ -369,6 +402,10 @@ subsite-tag: true
 
          <!-- VERSION HISTORY-->
          <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>1 July, 2024</h4>
+          <ul>
+              <li>Added an additional layout (the <strong>Two column - guide page</strong> layout).</li>
+          </ul>
          <h4>8 August, 2023</h4>
          <ul>
              <li>Added an additional layout (the <strong>Two column - tool page alternate</strong> layout).</li>
