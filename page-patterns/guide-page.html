@@ -2,7 +2,7 @@
 
 layout: content-tagged
 title: Guide page
-description: Guides on BGA are a navigation pattern that pull together information from different areas of the site. They link to site content, not external content.
+description: Guides on business.gov.au are used for presenting an end to end journey in logical steps.
 breadcrumb1: Page patterns
 url1: /page-patterns.html
 bga-tag: true
@@ -32,10 +32,10 @@ classes="in-page"
         <!-- DESIGN -->
         <h2 class="section-start" id="page-anatomy">Page anatomy</h2> 
         
-        <p>Each guide consists of a single landing page with a series of numbered accordions that open to reveal pathway tiles linking to BGA information pages.</p>
+        <p>The guide pattern consists of information tiles spread across a number of sub-pages or sections. The sections are accessed through navigation links located on the left side of the page.</p>
 
         <h3>Page layout</h3>
-        <p>The guide page uses the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-singlecol-nav" | relative_url }}>single column - navigation page layout</a>.
+        <p>The guide page uses the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-guide" | relative_url }}>two column - guide page layout</a>.
 
        
        
@@ -43,14 +43,20 @@ classes="in-page"
             <div class="component-wrapper remove-element-padding p-4">
 
                 {% include page-pattern-example.html
-                    classes="guides-page-container"
-                    img="'../assets/page-patterns/guide-page.png' | relative_url"
+                    classes="guides-page-2024-container"
+                    img="'../assets/page-patterns/guide-page-2024.png' | relative_url"
 
                     spot1="Heading (guide title)"
                     spot2="Header description"
-                    spot3="Mini list"
-                    spot4="Pathway accordion"
-                    spot5="Pathway accordion tile"
+                    spot3="Numbered section link"
+                    spot4="Information tile link"
+                    spot5="Checklist CTA"
+                    spot6="Section title"
+                    spot7="Section description"
+                    spot8="Guide information tile"
+                    spot9="Action checklist"
+                    spot10="Action checklist audience dropdown"
+                    spot11="Next/previous section links"
                 %}
                 
             </div>
@@ -62,20 +68,40 @@ classes="in-page"
                 {% include page-pattern-rules.html
                     
                     item1="Heading (guide title)"
-                    content1="<p>A direct, short title focused on the main topic the user will learn about.</p><ul><li>Maximum character limit of 50.</li><li>Page title starts with 'Guide to ...'</li></ul>"
+                    content1="<p>A direct, short title focused on the main topic the user will learn about in the guide.</p><ul><li>Maximum character limit of 50.</li><li>All section pages within a guide have the same heading.</li></ul>"
 
                     item2="Header description"
-                    content2="<p>A short paragraph that expands on what the guide is about what journey it is for.</p><ul><li>Maximum character limit of 90.</li><li>Include the top three keywords for the page.</li></ul><p>The supporting text should always start with on of the following:</p><ul><li>The problem you are trying to solve.</li><li>How the guide can help/what they will be able to do.</li></ul>"
+                    content2="<p>A short paragraph that expands on what journey the guide will help users undertake.</p><ul><li>Maximum character limit of 350.</li><li>Maximum 2 sentences.</li><li>Include the top three keywords for the page.</li><li>All section pages within a guide have the same header description.</li></ul>"
 
-                    item3="Mini list"
-                    content3="<p>A mini-list used to highlight information or actions the usr needs to consider before using the guide.</p><ul><li>The 'before you get started' sub heading is optional.</li></ul>"
+                    item3="Numbered section link"
+                    content3="<p>Links to the different sections of the guide.</p><ul><li>Sections are presented as numbered steps.</li><li>Link text is the title of the corresponding section.</li><li>Maximum character limit of 30.</li><li>Maximum of 10 sections and numbered section links per guide.</li></ul>"
 
 
-                    item4="Pathway accordion"
-                    content4="<p>Accordions with numbered steps. They should contain:</p><ul><li>A unique heading.</li><li>Short descriptions with only a few sentences which highlight the accordions content.</li><li>An image with colours matching the accordion background colour.</li></ul>"
+                    item4="Information tile link"
+                    content4="<p>Links to guide information tiles.</p><ul><li>Link text is the title of the information tile.</li><li>Information tile links are hidden by default. They are accessed through a show/hide link.</li></ul>"
 
-                    item5="Pathway accordion tile"
-                    content5="<p>A list of pathway tiles. Tiles should:</p><ul><li>Not be numbered.</li><li>Be tagged as recommended or required.</li><li>Be ordered based on tag type, required tiles listed first, then recommended.</li><li>Contain an action oriented title.</li><li>Contain a short description which is contextual to the guide content.</li><li>Contain labels reflecting the title of the linked page.</li></ul>    "
+                    item5="Checklist CTA"
+                    content5="<p>Provides user with the ability to email or download a checklist version of the guide. The checklist document should:</p><ul><li>Have a title that matches the guide title to ensure the connection between the two is clear. For example, the 'Guide to starting a business' could have a checklist with the title 'Starting a business checklist'.</li><li>Contain checklist items and no other guide content.</li><li>Mirror the section structure and checklist items presented in the checklists in the guide sections.</li></ul>"
+
+                    item6="Section title"
+                    content6="<p>A direct, short title focused on the main topic the user will learn about in the section.</p><ul><li>Maximum character limit of 30.</li><li>Section titles are numbered.</li></ul>"
+
+                    item7="Section description"
+                    content7="<p>A short paragraph that expands on what the section is about.</p><ul><li>Maximum character limit of 350.</li><li>Maximum 3 sentences.</li></ul>"
+
+                    item8="Guide information tile"
+                    content8="<p>Guide information tiles should focus on a single activity or action, e.g 'Develop your business plan'. Tiles should:</p><ul><li>Not be numbered.</li><li>Contain an action oriented title.</li><li>Contain a short description of the activity.</li><li>Contain links to further information (where appropriate)</li>
+                    <li>May include an optional 'Learn more' section with a maximum of 2 links.</li></ul><p> A guide section ideally contains 3 - 4 information tiles with a maximum of 6 tiles in one section. If a section requires more than 6 tiles consider splitting it into 2 sections.</p><p>Guide information tiles cannot have other components, such as inline pathway links, nested within them.</p>"
+
+                    item9="Checklist"
+                    content9="<p>A checklist of actions the user can do to achieve the action/activity discussed in the information tile. Checklist items should be:</p><ul><li>An individual action the user can undertake.</li><li>A single sentence.</li></ul>
+                    <p>A single checklist should have 1 - 5 items with a maximum of 6.</p>"
+
+                    item10="Checklist audience dropdown (optional)"
+                    content10="<p>An optional dropdown that allows users to select the intended audience for the checklist items.</p><ul><li>Use the dropdown when different groups of users have clearly different actions to undertake.</li></ul>"
+
+                    item11="Next/previous section links"
+                    content11="<p>Navigation links that point to the previous and next sections in the guide.</p><ul><li>Link text is the title of the corresponding section.</li></ul>"
                 %}
 
             
@@ -87,18 +113,18 @@ classes="in-page"
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose</h3>
-        <p>Guides on BGA are a navigation pattern that pull together information from different areas of the site. They link to site content, not external content.</p>
-        <h3>General rules:</h3>
-        <ul>
-        <li>Guides should have a clearly defined purpose for a specific audience.</li>
-        <li>Guides often address a particular business scenario/business life event. For example starting a business or closing a business.</li>
-        <li>Guides present information that is intended to be read sequentially (i.e. a step by step process).</li>
-        <li>If establishing a new guide, all content pages need to follow BGA content principles.</li>
-        <li>New guide pages should not duplicate information already in current business.gov.au content.</li>
-        <li>Guides should aim to contain no more than 20 BGA information pages. If guides are much larger than 20 pages, consider breaking them into smaller journeys.</li>
-        <li>Guide tiles should only lead to information pages, not further navigational pages. (A possible exception may be linking to information that differs for different individuals in the intended audience, e.g. linking to industry specific legal information).</li>
-        </ul>
-
+        <div class="page-pattern-rules">
+            <p>Guides on business.gov.au are used for an end to end journey, for example starting a business. This pattern should include task/action based content only. It is useful for breaking down large journeys into a series of steps to help people understand how to progress.</p>
+            <h3>General rules:</h3>
+            <ul>
+            <li>Guides should have a clearly defined purpose for a specific audience.</li>
+            <li>Guides often address a particular business scenario/business life event. For example starting a business or closing a business.</li>
+            <li>Guides present information that is helpful to be read sequentially.</li>
+            <li>If establishing a new guide, all content pages need to follow BGA content principles.</li>
+            <li>Guides should aim to contain no more than 10 sections. If guides are larger than 10 sections, consider breaking them into smaller journeys.</li>
+            <li>Guide tiles should only lead to information pages, not further navigational pages. (A possible exception may be linking to information that differs for different individuals in the intended audience, e.g. linking to industry specific legal information).</li>
+            </ul>
+        </div>
        
 
         <!-- RELATED COMPONENTS -->
@@ -107,8 +133,10 @@ classes="in-page"
             <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
             <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
             <li><a href={{ "components/page-headers.html" | relative_url }}>Topic page header (yellow)</a></li>
-            <li><a href={{ "/components/mini-list.html" | relative_url }}>Mini-list (yellow)</a></li>
-            <li><a href={{ "/components/pathway-accordion.html" | relative_url }}>Pathway accordion</a></li>
+            <li><a href={{ "/components/guide-vertical-navigation.html" | relative_url }}>Guide vertical navigation</a></li>
+            <li><a href={{ "/components/guide-sections.html" | relative_url }}>Guide sections</a></li>
+            <li><a href={{ "/components/guide-information-tiles.html" | relative_url }}>Guide information tiles</a></li>
+            <li><a href={{ "/components/guide-checklist-call-to-action.html" | relative_url }}>Guide checklist call to action</a></li>
             <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
         </ul>
       

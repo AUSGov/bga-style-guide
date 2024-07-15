@@ -1,0 +1,116 @@
+---
+
+layout: content-tagged
+title: Guide page
+description: Guides on BGA are a navigation pattern that pull together information from different areas of the site. They link to site content, not external content.
+breadcrumb1: Page patterns
+url1: /page-patterns.html
+bga-tag: true
+subsite-tag: false
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+classes="in-page"
+
+        link-1="Page anatomy" link-id-1="#page-anatomy"
+        link-2="Guidelines for use" link-id-2="#guidelines-for-use"
+        link-3="Related components" link-id-3="#related-components"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="page-anatomy">Page anatomy</h2> 
+        
+        <p>Each guide consists of a single landing page with a series of numbered accordions that open to reveal pathway tiles linking to BGA information pages.</p>
+
+        <h3>Page layout</h3>
+        <p>The guide page uses the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-singlecol-nav" | relative_url }}>single column - navigation page layout</a>.
+
+       
+       
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                {% include page-pattern-example.html
+                    classes="guides-page-container"
+                    img="'../assets/page-patterns/guide-page.png' | relative_url"
+
+                    spot1="Heading (guide title)"
+                    spot2="Header description"
+                    spot3="Mini list"
+                    spot4="Pathway accordion"
+                    spot5="Pathway accordion tile"
+                %}
+                
+            </div>
+        </div>
+
+        <div class="component-example mb-5">
+            <div class="page-pattern-rules p-4">
+
+                {% include page-pattern-rules.html
+                    
+                    item1="Heading (guide title)"
+                    content1="<p>A direct, short title focused on the main topic the user will learn about.</p><ul><li>Maximum character limit of 50.</li><li>Page title starts with 'Guide to ...'</li></ul>"
+
+                    item2="Header description"
+                    content2="<p>A short paragraph that expands on what the guide is about what journey it is for.</p><ul><li>Maximum character limit of 90.</li><li>Include the top three keywords for the page.</li></ul><p>The supporting text should always start with on of the following:</p><ul><li>The problem you are trying to solve.</li><li>How the guide can help/what they will be able to do.</li></ul>"
+
+                    item3="Mini list"
+                    content3="<p>A mini-list used to highlight information or actions the usr needs to consider before using the guide.</p><ul><li>The 'before you get started' sub heading is optional.</li></ul>"
+
+
+                    item4="Pathway accordion"
+                    content4="<p>Accordions with numbered steps. They should contain:</p><ul><li>A unique heading.</li><li>Short descriptions with only a few sentences which highlight the accordions content.</li><li>An image with colours matching the accordion background colour.</li></ul>"
+
+                    item5="Pathway accordion tile"
+                    content5="<p>A list of pathway tiles. Tiles should:</p><ul><li>Not be numbered.</li><li>Be tagged as recommended or required.</li><li>Be ordered based on tag type, required tiles listed first, then recommended.</li><li>Contain an action oriented title.</li><li>Contain a short description which is contextual to the guide content.</li><li>Contain labels reflecting the title of the linked page.</li></ul>    "
+                %}
+
+            
+        </div>
+        </div>
+
+
+        <!-- GUIDELINES FOR USE -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose</h3>
+        <p>Guides on BGA are a navigation pattern that pull together information from different areas of the site. They link to site content, not external content.</p>
+        <h3>General rules:</h3>
+        <ul>
+        <li>Guides should have a clearly defined purpose for a specific audience.</li>
+        <li>Guides often address a particular business scenario/business life event. For example starting a business or closing a business.</li>
+        <li>Guides present information that is intended to be read sequentially (i.e. a step by step process).</li>
+        <li>If establishing a new guide, all content pages need to follow BGA content principles.</li>
+        <li>New guide pages should not duplicate information already in current business.gov.au content.</li>
+        <li>Guides should aim to contain no more than 20 BGA information pages. If guides are much larger than 20 pages, consider breaking them into smaller journeys.</li>
+        <li>Guide tiles should only lead to information pages, not further navigational pages. (A possible exception may be linking to information that differs for different individuals in the intended audience, e.g. linking to industry specific legal information).</li>
+        </ul>
+
+       
+
+        <!-- RELATED COMPONENTS -->
+        <h2 class="section-start" id="related-components">Related components</h2>
+        <ul>
+            <li><a href={{ "components/bga-site-header.html" | relative_url }}>Business.gov.au site header</a></li>
+            <li><a href={{ "components/breadcrumbs.html" | relative_url }}>Breadcrumbs</a></li>
+            <li><a href={{ "components/page-headers.html" | relative_url }}>Topic page header (yellow)</a></li>
+            <li><a href={{ "/components/mini-list.html" | relative_url }}>Mini-list (yellow)</a></li>
+            <li><a href={{ "/components/pathway-accordion.html" | relative_url }}>Pathway accordion</a></li>
+            <li><a href={{ "components/bga-site-footer.html" | relative_url }}>Business.gov.au site footer</a></li>
+        </ul>
+      
+
+    </div>

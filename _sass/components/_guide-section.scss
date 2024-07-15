@@ -82,10 +82,19 @@
         a {
             display: flex;
             column-gap: 8px;
-            align-items: center;
+            align-items: flex-start;
             color: $bga-blue-links;
             width: fit-content;
+            margin-bottom: 16px;
 
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            svg {
+                flex-shrink: 0;
+                margin-top: 4px;
+            }
         }
     }
 
@@ -194,28 +203,6 @@
 }
 
 // Mixin for smaller screen examples and media queries
-@mixin guide-tile-bp-below992 {
-    .guide-tile {
-        .action-checklist {
-            .dropdown-wrapper {
-                row-gap: 8px;
-                flex-wrap: wrap;
-
-                .form-element-wrapper {
-                    width: 100%;
-                }
-
-                .form-select {
-                    width: 100%;
-                    font-size: 1rem;
-                    line-height: 1.75;
-                }
-            }
-     
-        }
-    }
-}
-
 @mixin guide-section-bp-768 {
     .guide-section-header { 
          
@@ -275,22 +262,34 @@
             font-size: 1.75rem;
         }
     }
-}
+    .guide-tile {
+        .action-checklist {
+            .dropdown-wrapper {
+                row-gap: 8px;
+                flex-wrap: wrap;
 
-.component-example.bp-below992 {
-    @include guide-tile-bp-below992();
+                .form-element-wrapper {
+                    width: 100%;
+                }
+
+                .form-select {
+                    width: 100%;
+                    font-size: 1rem;
+                    line-height: 1.75;
+                }
+            }
+     
+        }
+    }
 }
 .component-example.bp-768 {
-    @include guide-tile-bp-below992(); 
     @include guide-section-bp-768();
 }
 .component-example.bp-576 {
-    @include guide-tile-bp-below992(); 
     @include guide-section-bp-768();
     @include guide-section-bp-576();
 }
 .component-example.bp-below576 {
-    @include guide-tile-bp-below992(); 
     @include guide-section-bp-768();
     @include guide-section-bp-576();
     @include guide-section-bp-below576();
@@ -298,7 +297,6 @@
 
 // MEDIA QUERIES
 @media (max-width: 992px) {
-    @include guide-tile-bp-below992();
     @include guide-section-bp-768();
 }
 
