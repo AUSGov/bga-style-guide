@@ -9862,7 +9862,11 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .guide-tile .content { padding: 24px; }
 
-.guide-tile .learn-more a { display: flex; column-gap: 8px; align-items: center; color: #2157AA; width: fit-content; }
+.guide-tile .learn-more a { display: flex; column-gap: 8px; align-items: flex-start; color: #2157AA; width: fit-content; margin-bottom: 16px; }
+
+.guide-tile .learn-more a:last-of-type { margin-bottom: 0; }
+
+.guide-tile .learn-more a svg { flex-shrink: 0; margin-top: 4px; }
 
 .guide-tile .action-checklist { padding: 24px; background: #8BCACA; }
 
@@ -9932,18 +9936,6 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .guide-bottom-nav a.next { text-align: right; }
 
-.component-example.bp-below992 .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; }
-
-.component-example.bp-below992 .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; }
-
-.component-example.bp-below992 .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; }
-
-.component-example.bp-768 .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; }
-
-.component-example.bp-768 .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; }
-
-.component-example.bp-768 .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; }
-
 .component-example.bp-768 .guide-section-header .section-illustration { width: 140px; position: absolute; }
 
 .component-example.bp-768 .guide-section-header .content { width: 100%; }
@@ -9951,12 +9943,6 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 .component-example.bp-768 .guide-section-header .content h2, .component-example.bp-768 .guide-section-header .content .h2 { margin-left: 164px; min-height: 112px; display: inline-flex; align-items: center; }
 
 .component-example.bp-768 .guide-bottom-nav { flex-direction: column; row-gap: 24px; align-items: center; }
-
-.component-example.bp-576 .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; }
-
-.component-example.bp-576 .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; }
-
-.component-example.bp-576 .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; }
 
 .component-example.bp-576 .guide-section-header .section-illustration { width: 140px; position: absolute; }
 
@@ -9975,12 +9961,6 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 .component-example.bp-576 .guide-section-header .content { width: 100%; }
 
 .component-example.bp-576 .guide-section-header .content h2, .component-example.bp-576 .guide-section-header .content .h2 { margin-left: 0px; min-height: auto; display: block; }
-
-.component-example.bp-below576 .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; }
-
-.component-example.bp-below576 .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; }
-
-.component-example.bp-below576 .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; }
 
 .component-example.bp-below576 .guide-section-header .section-illustration { width: 140px; position: absolute; }
 
@@ -10004,11 +9984,17 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .component-example.bp-below576 .guide-section h2, .component-example.bp-below576 .guide-section .h2 { font-size: 1.75rem; }
 
-@media (max-width: 992px) { .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; } .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; } .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; } .guide-section-header .section-illustration { width: 140px; position: absolute; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 164px; min-height: 112px; display: inline-flex; align-items: center; } .guide-bottom-nav { flex-direction: column; row-gap: 24px; align-items: center; } }
+.component-example.bp-below576 .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; }
+
+.component-example.bp-below576 .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; }
+
+.component-example.bp-below576 .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; }
+
+@media (max-width: 992px) { .guide-section-header .section-illustration { width: 140px; position: absolute; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 164px; min-height: 112px; display: inline-flex; align-items: center; } .guide-bottom-nav { flex-direction: column; row-gap: 24px; align-items: center; } }
 
 @media (max-width: 768px) { .guide-section { margin: -32px -32px 0 -32px; padding: 24px 32px; } .guide-section.style-guide-example { margin: -24px -24px 0 -24px; } .guide-section-header .section-illustration { display: none; } .guide-section-header .content { width: 100%; } .guide-section-header .content h2, .guide-section-header .content .h2 { margin-left: 0px; min-height: auto; display: block; } }
 
-@media (max-width: 576px) { .guide-section { margin: -32px -24px 0 -24px; padding: 24px; } .guide-section h2, .guide-section .h2 { font-size: 1.75rem; } }
+@media (max-width: 576px) { .guide-section { margin: -32px -24px 0 -24px; padding: 24px; } .guide-section h2, .guide-section .h2 { font-size: 1.75rem; } .guide-tile .action-checklist .dropdown-wrapper { row-gap: 8px; flex-wrap: wrap; } .guide-tile .action-checklist .dropdown-wrapper .form-element-wrapper { width: 100%; } .guide-tile .action-checklist .dropdown-wrapper .form-select { width: 100%; font-size: 1rem; line-height: 1.75; } }
 
 body.no-scroll { height: 100%; overflow-y: hidden; }
 
