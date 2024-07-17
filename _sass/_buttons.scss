@@ -130,6 +130,30 @@
         opacity: .65;
         cursor: default;
     }
+    &.in-progress {
+        background-color: $bga-yellow-highlight-light;
+        border-color: $bga-yellow-highlight-light;
+        box-shadow: none;
+
+        .in-progress-animation {
+            animation: fa-spin 2s linear infinite;
+        }
+
+        &.bga-secondary-btn {
+            background-color: $bga-blue-background-extralight;
+            border-color: $bga-blue-background-extralight;
+        }
+
+        svg {
+            display: none;
+
+            &.in-progress-animation {
+                display: block;
+                animation: fa-spin 2s linear infinite;
+            }
+        }
+
+    }
 }
 
 .bga-btn-state {
@@ -223,6 +247,21 @@
 
         &.bkg-dark {
             color: $bga-black;
+        }
+    }
+
+    &.in-progress {
+        background-color: $bga-yellow-highlight-light;
+        border-color: $bga-yellow-highlight-light;
+        box-shadow: none;
+
+        .in-progress-animation {
+            animation: fa-spin 2s linear infinite;
+        }
+
+        &.bga-secondary-btn {
+            background-color: $bga-blue-background-extralight;
+            border-color: $bga-blue-background-extralight;
         }
     }
 }
