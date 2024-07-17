@@ -3244,6 +3244,16 @@ strong { font-weight: 600; }
 
 .bga-btn.disabled { opacity: .65; cursor: default; }
 
+.bga-btn.in-progress { background-color: #FFF3CD; border-color: #FFF3CD; box-shadow: none; }
+
+.bga-btn.in-progress .in-progress-animation { animation: fa-spin 2s linear infinite; }
+
+.bga-btn.in-progress.bga-secondary-btn { background-color: #E3ECF6; border-color: #E3ECF6; }
+
+.bga-btn.in-progress svg { display: none; }
+
+.bga-btn.in-progress svg.in-progress-animation { display: block; animation: fa-spin 2s linear infinite; }
+
 .bga-btn-state.default.bkg-dark { color: #333333; }
 
 .bga-btn-state.focus { border-color: #2E6CB9; background: #FFCF3B; outline: none; }
@@ -3279,6 +3289,12 @@ strong { font-weight: 600; }
 .bga-btn-state.disabled { opacity: .65; }
 
 .bga-btn-state.disabled.bkg-dark { color: #333333; }
+
+.bga-btn-state.in-progress { background-color: #FFF3CD; border-color: #FFF3CD; box-shadow: none; }
+
+.bga-btn-state.in-progress .in-progress-animation { animation: fa-spin 2s linear infinite; }
+
+.bga-btn-state.in-progress.bga-secondary-btn { background-color: #E3ECF6; border-color: #E3ECF6; }
 
 .bga-link, .bga-link-state { color: #2157AA; font-weight: 600; text-decoration: underline; font-size: 1rem; line-height: 1.75; display: inline-block; /* &.bkg-dark { color: $bga-white; } */ }
 
