@@ -2,9 +2,11 @@
     border-top: solid 1px $bga-blue-border;
 }
 
-.bga-primary-btn, .bga-secondary-btn {
+.bga-primary-btn,
+.bga-secondary-btn {
     min-width: 120px;
 }
+
 .bga-btn,
 .bga-btn-state {
     display: inline-flex;
@@ -21,7 +23,7 @@
     box-shadow: $bga-btn-boxshadow;
     justify-content: center;
     text-decoration: none !important;
-    
+
     svg {
         margin-left: 8px;
         margin-bottom: 0;
@@ -56,16 +58,17 @@
 
             background: $bga-blue-links;
             color: $bga-white;
-            
-            svg, svg path {
+
+            svg,
+            svg path {
                 fill: $bga-white;
             }
         }
-        
+
         &.bkg-dark {
             background: $bga-white;
             border-color: $bga-yellow-links-background;
-            
+
             &.bga-secondary-btn {
                 color: $bga-white;
                 background: $bga-blue-links;
@@ -84,19 +87,20 @@
             border-color: $bga-blue-background-dark;
             background: $bga-blue-background-dark;
             color: $bga-white;
-            
-            svg, svg path {
+
+            svg,
+            svg path {
                 fill: $bga-white;
             }
         }
-        
+
         &.bkg-dark {
             color: $bga-black;
-            
+
             &.bga-secondary-btn {
                 border-color: $bga-white;
                 color: $bga-white;
-                 background: $bga-blue-links;
+                background: $bga-blue-links;
             }
         }
     }
@@ -109,16 +113,17 @@
             border-color: $bga-blue-footer;
             background: $bga-blue-footer;
             color: $bga-white;
-            
-            svg, svg path {
+
+            svg,
+            svg path {
                 fill: $bga-white;
             }
         }
-        
+
         &.bkg-dark {
             border-color: $bga-yellow-highlight-shadow;
             background: $bga-yellow-highlight-shadow;
-            
+
             &.bga-secondary-btn {
                 border-color: $bga-white;
                 background: $bga-blue-footer;
@@ -126,33 +131,68 @@
             }
         }
     }
+
     &.disabled {
         opacity: .65;
         cursor: default;
     }
+
     &.in-progress {
-        background-color: $bga-yellow-highlight-light;
-        border-color: $bga-yellow-highlight-light;
-        box-shadow: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 400px;
+        
+        transition: max-width 5s ease;
 
-        .in-progress-animation {
-            animation: fa-spin 2s linear infinite;
-        }
-
-        &.bga-secondary-btn {
-            background-color: $bga-blue-background-extralight;
-            border-color: $bga-blue-background-extralight;
-        }
-
-        svg {
+        .in-progress-animation { 
             display: none;
-
-            &.in-progress-animation {
-                display: block;
-                animation: fa-spin 2s linear infinite;
-            }
         }
 
+        &.active {
+            max-width: 448px;
+            background-color: $bga-yellow-highlight-light;
+            border: none;
+            color: $bga-black;
+            box-shadow: none;
+
+            .in-progress-animation { 
+                path {
+                    fill: $bga-yellow-highlight-light;
+                }
+                display: block;
+
+                &.recolour {
+                    animation: fa-spin 2s linear infinite;
+                    path {
+                        fill: $bga-black;
+                    }
+                }
+            }
+
+            &.bga-secondary-btn {
+                background-color: $bga-blue-background-extralight;
+                color: $bga-black;
+
+                .in-progress-animation {
+                    path {
+                        fill: $bga-blue-background-extralight;
+                    }
+                    &.recolour {
+                        animation: fa-spin 2s linear infinite;
+                        path {
+                            fill: $bga-black;
+                        }
+                    }
+                }
+            }
+
+            svg {
+                display: none;
+            }
+            
+       
+        }
     }
 }
 
@@ -172,17 +212,18 @@
             border-color: $bga-blue-links;
             background: $bga-blue-links;
             color: $bga-white;
-            
-            svg, svg path {
+
+            svg,
+            svg path {
                 fill: $bga-white;
             }
         }
-        
+
         &.bkg-dark {
             background: $bga-white;
             border-color: $bga-yellow-links-background;
             color: $bga-black;
-            
+
             &.bga-secondary-btn {
                 color: $bga-white;
                 background: $bga-blue-links;
@@ -200,15 +241,16 @@
             border-color: $bga-blue-background-dark;
             background: $bga-blue-background-dark;
             color: $bga-white;
-            
-            svg, svg path {
+
+            svg,
+            svg path {
                 fill: $bga-white;
             }
         }
-        
+
         &.bkg-dark {
             color: $bga-black;
-            
+
             &.bga-secondary-btn {
                 border-color: $bga-white;
                 color: $bga-white;
@@ -224,16 +266,17 @@
         &.bga-secondary-btn {
             border-color: $bga-blue-footer;
             background: $bga-blue-footer;
-            color: $bga-white; 
-            
-            svg, svg path {
+            color: $bga-white;
+
+            svg,
+            svg path {
                 fill: $bga-white;
             }
         }
-        
+
         &.bkg-dark {
             color: $bga-black;
-            
+
             &.bga-secondary-btn {
                 border-color: $bga-white;
                 background: $bga-blue-footer;
@@ -274,13 +317,8 @@
     font-size: 1rem;
     line-height: 1.75;
     display: inline-block;
-    
-    /*
-    &.bkg-dark {
-        color: $bga-white;
-    }
-    */
 
+   
     &.bga-tertiary-link {
         font-size: 1.125rem;
         line-height: 2rem;
@@ -288,29 +326,20 @@
         background-position: left 0 top 0;
         padding-left: 40px;
         text-decoration: none;
-        
+
         &.plus-icon {
             background: url(../assets/plus-circle-right-blue.svg) no-repeat;
             background-position: left 0 top 0;
         }
-        /*
-        &.bkg-dark {
-            background: url(../assets/icon-tertiary-arrow-darkbg.svg) no-repeat;
-            background-position: left - top 0;
-            
-            &.plus-icon {
-                background: url(../assets/plus-circle-right-lightblue.svg) no-repeat;
-                background-position: left 0 top 0;
-            }
-        }
-        */
+
+     
     }
 }
 
 .bga-link {
     &:focus {
         border: $bga-text-focus-border;
-        background:$bga-blue-hover;
+        background: $bga-blue-hover;
         border-radius: $bga-focus-radius;
         outline: none;
         color: $bga-blue-footer;
@@ -319,12 +348,13 @@
             background: url(../assets/icon-tertiary-arrow-hover.svg) no-repeat;
             background-position: left 0 top 0;
             color: $bga-blue-footer;
-            
+
             &.plus-icon {
                 background: url(../assets/plus-circle-right-drkblue.svg) no-repeat;
                 background-position: left 0 top 0;
             }
         }
+
         /*
         &.bkg-dark {
             color: $bga-blue-links;
@@ -354,12 +384,13 @@
             background: url(../assets/icon-tertiary-arrow-hover.svg) no-repeat;
             background-position: left 0 top 0;
             color: $bga-blue-footer;
-            
+
             &.plus-icon {
                 background: url(../assets/plus-circle-darkestblue.svg) no-repeat;
                 background-position: left 0 top 0;
             }
         }
+
         /*
         &.bkg-dark {
             color: $bga-blue-footer;
@@ -386,12 +417,13 @@
         &.bga-tertiary-link {
             background: url(../assets/icon-tertiary-arrow-active.svg) no-repeat;
             background-position: left 0 top 0;
-            
+
             &.plus-icon {
                 background: url(../assets/plus-circle-reverse.svg) no-repeat;
                 background-position: left 0 top 0;
             }
         }
+
         /*
         &.bkg-dark {
             color: $bga-blue-footer;
@@ -424,6 +456,7 @@
             background-position: left 0 top 0;
             color: $bga-blue-footer;
         }
+
         /*
         &.bkg-dark {
             color: $bga-blue-footer;
@@ -448,6 +481,7 @@
             background-position: left 0 top 0;
             color: $bga-blue-footer;
         }
+
         /*
         &.bkg-dark {
             color: $bga-blue-links;
@@ -469,6 +503,7 @@
             background: url(../assets/icon-tertiary-arrow-active.svg) no-repeat;
             background-position: left 0 top 0;
         }
+
         /*
         &.bkg-dark {
             color: $bga-blue-links;
@@ -526,20 +561,23 @@
     }
 }
 
-.btn-check:checked + .btn-primary:focus,
-.btn-check:active + .btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-check:active+.btn-primary:focus,
 .btn-primary:active:focus,
 .btn-primary.active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
+.show>.btn-primary.dropdown-toggle:focus {
     box-shadow: none;
 }
 
 
 // Mixins for smaller screen sizes and media queries
 @mixin button-below576 {
-    .bga-primary-btn, .bga-secondary-btn {
+
+    .bga-primary-btn,
+    .bga-secondary-btn {
         min-width: 80px;
     }
+
     .bga-btn,
     button,
     .bga-btn-state {
@@ -548,7 +586,9 @@
         padding: 8px 24px;
         min-height: 48px;
     }
-    .bga-link, .bga-link-state {
+
+    .bga-link,
+    .bga-link-state {
         &.bga-tertiary-link {
             font-size: .875rem;
             line-height: 1.125rem;
@@ -572,6 +612,6 @@
 
 @media (max-width: 350px) {
     .button-example {
-        width: 100%; 
+        width: 100%;
     }
 }

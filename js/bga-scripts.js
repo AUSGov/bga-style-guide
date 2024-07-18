@@ -606,6 +606,25 @@ $(document).ready(function () {
 
     });
 
+    // FOUNDATION EXAMPLE - IN PROGRESS BUTTON STATE
+    $('button.bga-btn.in-progress').on('click', function(){
+        
+        var loading_svg = $(this).find('.in-progress-animation'),
+        that = $(this),
+        button_text = $(this).find('span').text();
+
+        $(this).addClass('active').find('span').text('In progress...');
+
+        setTimeout(function () {
+           loading_svg.addClass('recolour');
+        }, 400);
+
+        setTimeout(function () {
+            that.removeClass('active').find('span').text(button_text);
+            loading_svg.removeClass('recolour');
+         }, 10000);
+    });
+
     // FORM EXAMPLES
 
     $('.form-example input').on('change', function () {
