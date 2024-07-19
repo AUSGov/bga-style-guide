@@ -2,10 +2,10 @@
     border-bottom: solid 1px $bga-blue-black-mid;
     padding: 24px 0;
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
     column-gap: 24px;
-    row-gap: 24px;
+    row-gap: 8px;
+    flex-wrap: wrap;
 
     .contract {
         border-bottom: solid 1px $bga-blue-black-mid;
@@ -14,16 +14,28 @@
         justify-content: space-between;
         align-items: flex-end;
     }
+    .expiry-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
     .contract-details {
         display: flex;
-        align-items: flex-start;
+        justify-content: flex-start;
         flex-direction: column;
         row-gap: 8px;
+        width: 100%;
+        flex-shrink: 0;
 
         .title-tag {
             column-gap: 8px;
             row-gap: 8px;
             align-items: center;
+            align-items: flex-start;
+        }
+        
+        .tag-wrapper {
+            flex-shrink: 0;
+            margin-top: 2px;
         }
 
         .contract-name {
@@ -99,6 +111,10 @@
                 justify-content: flex-start;   
                 margin-bottom: 0;
             }
+        }
+        .expiry-actions {
+            flex-wrap: wrap;
+            row-gap: 24px;
         }
     }
 }
