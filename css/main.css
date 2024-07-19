@@ -9723,13 +9723,17 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 @media (max-width: 350px) { .call-to-action.tool-finalise .cta-title svg { display: none; } .button-example button { width: 100%; } .modal-example .icon-title-container { row-gap: 8px; flex-direction: column; } }
 
-.contract-action-item { border-bottom: solid 1px #788295; padding: 24px 0; display: flex; justify-content: space-between; align-items: flex-end; column-gap: 24px; row-gap: 24px; }
+.contract-action-item { border-bottom: solid 1px #788295; padding: 24px 0; display: flex; align-items: flex-end; column-gap: 24px; row-gap: 8px; flex-wrap: wrap; }
 
 .contract-action-item .contract { border-bottom: solid 1px #788295; padding: 24px 0; display: flex; justify-content: space-between; align-items: flex-end; }
 
-.contract-action-item .contract-details { display: flex; align-items: flex-start; flex-direction: column; row-gap: 8px; }
+.contract-action-item .expiry-actions { width: 100%; justify-content: space-between; }
 
-.contract-action-item .contract-details .title-tag { column-gap: 8px; row-gap: 8px; align-items: center; }
+.contract-action-item .contract-details { display: flex; justify-content: flex-start; flex-direction: column; row-gap: 8px; width: 100%; flex-shrink: 0; }
+
+.contract-action-item .contract-details .title-tag { column-gap: 8px; row-gap: 8px; align-items: center; align-items: flex-start; }
+
+.contract-action-item .contract-details .tag-wrapper { flex-shrink: 0; margin-top: 2px; }
 
 .contract-action-item .contract-details .contract-name { font-size: 18px; font-weight: 600; }
 
@@ -9759,6 +9763,8 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .component-example.bp-576 .contract-action-item .contract-actions a { justify-content: flex-start; margin-bottom: 0; }
 
+.component-example.bp-576 .contract-action-item .expiry-actions { flex-wrap: wrap; row-gap: 24px; }
+
 .component-example.bp-below576 .contract-action-item { justify-content: flex-start; align-items: flex-start; flex-direction: column; }
 
 .component-example.bp-below576 .contract-action-item .contract { flex-wrap: wrap; }
@@ -9769,13 +9775,15 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .component-example.bp-below576 .contract-action-item .contract-actions a { justify-content: flex-start; margin-bottom: 0; }
 
+.component-example.bp-below576 .contract-action-item .expiry-actions { flex-wrap: wrap; row-gap: 24px; }
+
 .component-example.bp-below576 .contract-action-item { align-items: flex-start; }
 
 .component-example.bp-below576 .contract-action-item .contract-actions { row-gap: 16px; flex-direction: column; }
 
 .component-example.bp-below576 .contract-action-item .contract-details .title-tag { flex-wrap: wrap; flex-direction: column; align-items: flex-start; }
 
-@media (max-width: 768px) { .contract-action-item { justify-content: flex-start; align-items: flex-start; flex-direction: column; } .contract-action-item .contract { flex-wrap: wrap; } .contract-action-item .title-tag { flex-direction: column; align-items: flex-start; } .contract-action-item .contract-actions { min-width: auto; padding: 0; } .contract-action-item .contract-actions a { justify-content: flex-start; margin-bottom: 0; } }
+@media (max-width: 768px) { .contract-action-item { justify-content: flex-start; align-items: flex-start; flex-direction: column; } .contract-action-item .contract { flex-wrap: wrap; } .contract-action-item .title-tag { flex-direction: column; align-items: flex-start; } .contract-action-item .contract-actions { min-width: auto; padding: 0; } .contract-action-item .contract-actions a { justify-content: flex-start; margin-bottom: 0; } .contract-action-item .expiry-actions { flex-wrap: wrap; row-gap: 24px; } }
 
 @media (max-width: 576px) { .contract-action-item { align-items: flex-start; } .contract-action-item .contract-actions { row-gap: 16px; flex-direction: column; } .contract-action-item .contract-details .title-tag { flex-wrap: wrap; flex-direction: column; align-items: flex-start; } }
 
