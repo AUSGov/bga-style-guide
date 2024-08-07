@@ -477,33 +477,35 @@ url2: /brand-foundations/grid-and-page-layouts.html
                 
 
 
-            <div class="inpage-feedback-wrapper">
-                {% include component-examples/inpage-feedback-example.html
-                    classes="col-12" %}
-                </div>
-           
-
 
         </div>
 
 
-
-        <div class="col-12 col-lg-4">
+        <!-- Save your progress sidebar -->
+        <div class="col-12 col-md-11 col-lg-4">
             {% include component-examples/progress-sidebar-example.html
                 title="Save your progress."
-                text="<p>Save your checklist and get a link to it – you’ll be able to continue on from where you were.</p>"
-                classes="yellow in-page alternate"
+                text="<p>If you can’t complete your plan in one session, download or email it before you go.</p>"
+                secondary-btn="Get your plan"
+                classes="yellow mb-0"
                 %}
-        </div>
+        </div> 
+        
+        
+        <!-- Inpage feedback-->
+        <div class="col-12 col-md-11 col-lg-8 inpage-feedback-wrapper">
+            {% include component-examples/inpage-feedback-example.html
+                    classes="col-12" %}
+            </div>
 
 
-        <div class="row">
+
             <div class="col-12" id="utilities-example">
                 <div class="d-flex justify-content-end">
                     {% include component-examples/print-share-example.html %}
                     </div>
             </div>
-        </div>
+ 
 
     </div>
 
