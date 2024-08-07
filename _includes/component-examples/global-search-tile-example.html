@@ -2,19 +2,22 @@
 
     <div class="component-text p-4 remove-element-padding">
 
-        {% if include.label %}
+        
         <div class="top-section">
-            <p class="label"><strong>{{ include.label }}</strong></p>
+             {% if include.title %}
+                <h3 class="tile-title pt-0"><a href="">{{ include.title }}</a></h3>
+                {% endif %}
 
             {% if include.shortlist %}
-            <button class="shortlist-btn">Add to shortlist</button>
-            {% endif %}
-        </div>
-        {% endif %}
+                <button class="shortlist-btn">Add to shortlist</button>
+                {% endif %}
 
-        {% if include.title %}
-        <h3 class="tile-title pt-0"><a href="">{{ include.title }}</a></h3>
-        {% endif %}
+        </div>
+       
+        {% if include.label %}
+            <p class="label"><strong>{{ include.label }}</strong></p>
+            {% endif %}
+       
 
         {% if include.description %}
         <p class="description">{{ include.description }}</p>
@@ -25,7 +28,11 @@
         {% endif %}
 
         {% if include.cost %}
-            <p class="cost"><strong>Cost:</strong> {{ include.cost }}</p>
+            <p class="detail"><strong>Cost:</strong> {{ include.cost }}</p>
+        {% endif %}
+
+        {% if include.provider-type %}
+            <p class="detail"><strong>Provider type:</strong> {{ include.provider-type }}</p>
         {% endif %}
 
 
@@ -49,16 +56,14 @@
 
     {% if include.apply %}
     <div class="apply-details">
+        <button class="apply-btn p-4">Who can apply?
+            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6.52823L1.98239 0.5L9.53674e-07 2.48589L8 10.5L16 2.48589L14.0176 0.5L8 6.52823Z" fill="#333333"/></svg>                 
+        </button>
+        
         <div class="apply-details-content p-4 remove-element-padding">
             {{ include.apply }}
         </div>
-        <button class="apply-btn p-4">Who can apply?
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                <path data-name="Path 9539" d="M614-1182.972,607.982-1189,606-1187.014l8,8.014,8-8.014L620.018-1189Z" transform="translate(622 -1179) rotate(180)" fill="#333" fill-rule="evenodd"/>
-              </svg>
-              
-              
-        </button>
+        
     </div>
     {% endif %}
 

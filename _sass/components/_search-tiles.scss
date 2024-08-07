@@ -28,8 +28,15 @@
     }
     .description,
     .services, 
-    .cost {
+    .detail {
         font-size: 0.875rem;
+    }
+    .detail {
+        margin-bottom: 8px;
+
+        &:last-of-type {
+            margin-bottom: 24px;
+        }
     }
 
     .tag {
@@ -110,6 +117,8 @@
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
+            row-gap: 16px;
+            column-gap: 24px;
 
             .label {
                 margin-right: 48px;

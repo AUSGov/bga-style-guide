@@ -71,14 +71,15 @@
 
     {% if include.codes %}
     <div class="codes">
+        <button class="codes-btn p-4">Supported ANZSRC codes
+            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6.52823L1.98239 0.5L9.53674e-07 2.48589L8 10.5L16 2.48589L14.0176 0.5L8 6.52823Z" fill="#333333"/></svg>       
+        </button>
+        
         <div class="codes-content p-4 remove-element-padding">
             {{ include.codes }}
         </div>
-        <button class="codes-btn p-4">Supported ANZSRC codes
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                <path data-name="Path 11396" d="M614-1182.972,607.982-1189,606-1187.014l8,8.014,8-8.014L620.018-1189Z" transform="translate(-606 1189)" fill="#333" fill-rule="evenodd"/>
-              </svg>       
-        </button>
+        
+        
     </div>
     {% endif %}
 
