@@ -4,20 +4,24 @@
     max-width: 500px;
     display: block;
 
-    &:focus,
-    &:hover {
-        color: $bga-black;
-        background: $bga-blue-background-extralight;
-    }
-    &:active {
-       border: 1px solid $bga-blue-border !important; 
+   a.title-wrapper  {
+        text-decoration: underline;
+        width: 100%;
+        color: $bga-blue-links;
+
+        &:focus-visible,
+        &:hover {
+            background: $bga-blue-background-extralight;
+            text-decoration-color: $bga-blue-links; 
+        }
+
     }
 
     .component-content {
         border-left: 8px solid $bga-blue-background-dark;
         display: flex;
         flex-wrap: wrap;
-        align-content: space-between;
+        align-content: flex-start;
 
         p {
             font-weight: 400;
@@ -40,8 +44,19 @@
         }
     }
     &.non-branded {
-        &:hover {
-            background: $nb-grey-lightest;
+        
+        a.title-wrapper  {
+            color: $nb-blue-links;
+
+            .arrow-icon {
+                width: 32px;
+            }
+    
+            &:focus-visible,
+            &:hover {
+                background: $nb-grey-light;
+                text-decoration-color: $nb-blue-links; 
+            }
         }
     }
 }

@@ -4,7 +4,7 @@
     background: $bga-white;
 
     .tag-wrapper .tag {
-        background: $bga-blue-highlight-light;
+        background: $bga-blue-background-extralight;
     }
     
     &.border-purple {
@@ -75,8 +75,10 @@
     }
     
     a.title-wrapper {
-        &:focus, &:hover {
-            color: $bga-black;
+        color: $bga-blue-links;
+
+        &:focus-visible, &:hover {
+            color: $bga-blue-links;
             background: $bga-teal-tool-extra-light;
             text-decoration-color: $bga-blue-links;
         }
@@ -93,9 +95,14 @@
     
     &.non-branded {
 
-        &:focus, &:hover {
-           color: $bga-black;
-           background: $nb-grey-lightest;
+        a.title-wrapper  {
+            color: $nb-blue-links;
+    
+            &:focus-visible,
+            &:hover {
+                background: $nb-grey-light;
+                text-decoration-color: $nb-blue-links; 
+            }
         }
 
         .icon-wrapper {
