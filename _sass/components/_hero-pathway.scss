@@ -3,46 +3,8 @@
     display: flex;
     background: $bga-white;
 
-    .icon-wrapper {
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
- 
-        
-        .external-site {
-            background: $bga-blue-background-extralight;
-            min-height: 48px;
-            border-radius: 50px;
-            padding: 0;
-            margin-left: -48px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-        p {  
-            padding-top: 4px;
-            padding-bottom: 4px;
-            font-size: .88rem;
-            line-height: 18px;
-            font-weight: 600;
-            word-wrap: break-word;
-        }
-    }
-    .arrow-icon {
-        width: 48px;
-        height: 48px;
-        background: $bga-blue-highlight-mid;
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        z-index: 10;
-
-        img {
-            width: 16px;
-            height: auto;    
-        }
+    .tag-wrapper .tag {
+        background: $bga-blue-highlight-light;
     }
     
     &.border-purple {
@@ -60,13 +22,40 @@
     &.border-teal {
         @include hero-color($bga-teal-highlight-dark, $bga-teal-highlight-mid, $bga-teal-highlight-light);
     }
-    
+
+    .icon-wrapper {
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+    }
+    .arrow-icon {
+        width: 48px;
+        height: 48px;
+        background: $bga-blue-highlight-mid;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 10;
+
+        img {
+            width: 16px;
+            height: auto;    
+        }
+    }
+
     .component-content {
         width: 50%;
         display: flex;
         flex-wrap: wrap;
-        align-content: space-between;
+        align-content: flex-start;
+        row-gap: 16px;
         border-left: 16px solid $bga-blue-border;
+    }
+    .title-wrapper {
+        text-decoration: underline;
+        width: 100%;
     }
     .component-text {
         width: 100%;
@@ -85,14 +74,11 @@
         }
     }
     
-    &:focus, &:hover {
-        color: $bga-black;
-        background: $bga-teal-tool-extra-light;
-        
-        .icon-wrapper {
-            .external-site {
-                background: $bga-white;
-            }
+    a.title-wrapper {
+        &:focus, &:hover {
+            color: $bga-black;
+            background: $bga-teal-tool-extra-light;
+            text-decoration-color: $bga-blue-links;
         }
     }
     
@@ -135,6 +121,10 @@
         
         .component-content {
             width: 100%;
+
+            .title-wrapper {
+                text-decoration: none;
+            }
         }
     }
 }
