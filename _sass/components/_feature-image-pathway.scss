@@ -3,9 +3,33 @@
     background: $bga-blue-background-dark;
     color: $bga-white;
     
+    a.title-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        
+        &:focus-visible, &:hover {
+            background: $bga-blue-background-light;
+            
+            .tile-title {
+                text-decoration-color: $bga-blue-links;
+                color: $bga-blue-links;    
+            }
+
+            .arrow-icon {
+                background: $bga-blue-background-dark;
+                
+                svg, svg path {
+                    fill: $bga-white;
+                }
+            }
+        } 
+    }
+
     .tile-title {
         color: $bga-white;
-        font-size: 1.625rem;
+        font-size: $h3-font-size;
+        text-decoration: underline;
+        text-decoration-color: $bga-white;
     }
     .tile-description {
         font-size: 1rem;
@@ -22,7 +46,7 @@
         position:absolute;
         left: 0;
         
-        img {
+        svg {
             width: 16px;
             height: auto;    
         }
@@ -38,10 +62,10 @@
     }
     .component-content {
         width: 50%;
-        padding: 24px;
         display: flex;
         flex-wrap: wrap;
-        align-content: space-between;
+        row-gap: 16px;
+        align-content: flex-start;
     }
     
     .component-image {
@@ -55,32 +79,32 @@
             height: 100%;
         }
     }
-    &:focus-visible {
-        background: $bga-blue-background-light;
-        color: $bga-black;
-        
-        .tile-title {
-            color: $bga-blue-links;
-        }
-    }
-    &:hover {
-        color: $bga-white;
-        background: $bga-blue-links;
-        
-        .tile-title {
-            color: $bga-white;
-        }
-    }
-
+   
     &.non-branded {
         background: $nb-grey-light;
         color: $bga-black;
 
-        &:hover {
-            background: $nb-grey-mid;
-        }
         .tile-title {
-            color: $bga-black;
+            color: $nb-blue-links;
+            text-decoration-color: $nb-blue-links;
+        }
+
+        a.title-wrapper {
+            &:focus-visible, &:hover {
+                background: $nb-grey-mid; 
+                
+                .tile-title {
+                    color: $nb-blue-links;
+                }
+                .arrow-icon {
+                    background: none;
+                    
+                    svg, svg path {
+                        fill: $bga-black;
+                    }
+                }
+            }
+           
         }
     }
 }
@@ -100,9 +124,9 @@
             .tile-description {
                 font-size: 1.125rem;
             }
-        }
-        .component-content {
-            padding: 32px;
+            .component-content {
+                padding: 24px !important;
+            }
         }
     }
 }
@@ -111,13 +135,13 @@
 @mixin feature-pathway-bp-768 {
     .feature-pathway {
         .tile-title {
-            font-size: 1.625rem !important;
+            font-size: $h3-font-size !important;
         }
         .tile-description {
             font-size: 1rem;
         }
         .component-content {
-            padding: 24px !important;
+            padding: 16px !important;
         }
     }
 }
@@ -129,7 +153,7 @@
         flex-flow: column-reverse;
 
         .tile-title {
-            font-size: 1.625rem;
+            font-size: $h3-font-size;
         }
 
         .component-content {

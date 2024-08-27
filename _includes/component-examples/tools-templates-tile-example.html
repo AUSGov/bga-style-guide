@@ -1,32 +1,34 @@
 <div class="bga-component-wrapper h-100 pb-5">
-    <a href="" tabindex="0" class="bga-component tools-templates-tile m-0 {{ include.classes }}">
+    
+    <div class="bga-component tools-templates-tile m-0 {{ include.classes }}">
 
-        <div class="p-4 component-content h-100">
-
-            <div class="component-text p-0 remove-element-padding">
-
+        <div class="p-3 component-content h-100">
+            
+            <div class="component-text">  
                 {% if include.title %}
-                <h3 class="tile-title pt-0">{{ include.title }}</h3>
+                    <a class="title-wrapper p-2 remove-element-padding" href="">
+                        <h3 class="tile-title pt-0">{{ include.title }}</h3>  
+                    </a>
                 {% endif %}
 
                 {% if include.description %}
-                <p class="description mini pb-4">{{ include.description }}</p>
+                <p class="description mini p-2 mb-2">{{ include.description }}</p>
                 {% endif %}
 
-            </div>
-
+            </div> 
+            
             {% if include.tag %}
-            <div class="tag-wrapper align-items-center d-flex">
-                <div class="tag d-inline-flex align-items-cente remove-element-padding me-3">
-                    <div class="icon d-flex me-2"><img src={{ include.icon }} alt="" /></div>
-                    <p>{{ include.tag }}</p>
+                <div class="tag-wrapper p-2 align-items-center d-flex">
+                    <div class="tag d-inline-flex align-items-cente remove-element-padding">
+                        <div class="icon d-flex me-2"><img src={{ include.icon }} alt="" /></div>
+                        <p>{{ include.tag }}</p>
+                    </div>
                 </div>
-            </div>
             {% endif %}
-
+            
            
         </div>
 
+    </div>
 
-    </a>
 </div>
