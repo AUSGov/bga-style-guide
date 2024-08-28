@@ -232,7 +232,7 @@
             column-gap: 24px;
             background: darken($bga-teal-highlight-light, 5%);
 
-            .guide-tile {
+            .pathway-accordion-tile {
                 background: $bga-white;
                 flex: 0 0 auto;
                 width: calc(33.33333333% - 16px);
@@ -240,34 +240,50 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-content: space-between;
-                cursor: pointer;
-
-                &:focus-visible {
-                    border: $bga-component-focus-border;
-                    border-radius: $bga-focus-radius;
-                    outline: none;
-
-                    h4 {
-                        text-decoration: underline;
+                cursor: default;
+                border: none;
+                row-gap: 8px;
+                
+                .content {
+                    p {
+                        padding: 8px;
+                        margin-top: 8px;
                     }
-                }
+                    a {
+                        cursor: pointer;
+                        width: 100%;
+                        display: flex;
+                        
+                        h4 {
+                            color: $bga-blue-links;
+                            text-decoration: underline;
+                            margin: 0;
+                            padding: 8px;
+                        }
 
-                &:hover {
-                    h4 {
-                        text-decoration: underline;
+                        &:focus-visible {
+                            border: $bga-component-focus-border;
+                            border-radius: $bga-focus-radius;
+                            background: $bga-blue-background-extralight;  
+                        }
+
+                        &:hover {
+                            background: $bga-blue-background-extralight;
+                        }
                     }
                 }
             }
 
             .tile-content-wrapper {
                 display: flex;
-                align-content: space-between;
+                align-content: flex-start;
                 flex-wrap: wrap;
-                margin-bottom: 24px;
+                row-gap: 8px;
             }
 
             .content {
                 height: 100% !important;
+                padding: 0;
             }
 
             .tag {
@@ -293,16 +309,10 @@
                 display: flex;
                 align-items: center;
 
-                a {
+               p {
                     font-size: .75rem;
-                    font-weight: 400;
-                    text-decoration: none;
+                    font-weight: 600;
                     color: $bga-black;
-                    display: flex;
-                    
-                    &:hover {
-                        background: none;
-                    }
                 }
                 
             }
@@ -366,6 +376,22 @@
                     border-radius: 0;
                     border: none;
                 }
+                .pathway-accordion-tile {
+                    .content {
+                        a {
+                            h4 {
+                                color: $nb-blue-links; 
+                            }
+                            &:focus-visible {
+                                background: $nb-grey-light;
+                                border-color: $nb-blue-links;  
+                            }
+                            &:hover {
+                                background: $nb-grey-light;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -376,7 +402,7 @@
     .bga-pathway-accordion {  
         .accordion-item  { 
             .accordion-body {
-                .guide-tile {
+                .pathway-accordion-tile {
                     width: calc(50% - 12px);
                 }
             }
@@ -407,7 +433,7 @@
                 }
             }
             .accordion-body {
-                .guide-tile {
+                .pathway-accordion-tile {
                     width: 100%;
                 }
             }
