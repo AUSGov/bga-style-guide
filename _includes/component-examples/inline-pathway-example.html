@@ -1,57 +1,74 @@
 <div class="bga-component-wrapper pb-5">
-<div class="bga-component inline-pathway {{include.classes}} m-0">
+
+    <div class="inline-pathway-wrapper m-0">
    
             {% if include.link1 %}
-                
-                <a href="" class="mb-1">
-                    <div class="link-wrapper remove-element-padding p-4 ">
-                    <p class="link mb-3"><strong>{{ include.link1 }}</strong></p>
-                    <p class="page mini"> 
-                        <img class="me-2" src={{ include.icon1 }} alt="" />
-                        <span>{{ include.page1 }}</span></p> 
+                <div class="bga-component inline-pathway {{include.classes}}">
+                <div class=" content remove-element-padding p-4 mb-1">
+                    {% if include.link1 %}
+                    <div class="content-wrapper">
+                            <a href={{include.href}} class="link"><strong>{{ include.link1 }}</strong></a>
+
+                            <p class="page p-0 m-0 mini"> 
+                                <img class="me-2" src={{ include.icon1 }} alt="" />
+                                <span>{{ include.page1 }}</span></p>
                     </div>
-                </a>
+                    {% endif %}
+                </div>
+            </div>
                 
             {% endif %}
             
             {% if include.link2  %}
-            
-            <a href="" class="mb-1">
-                <div class="link-wrapper remove-element-padding p-4 ">
-                    <p class="link mb-3"><strong>{{ include.link2 }}</strong></p>
-                    <p class="page mini"> 
-                        <img class="me-2" src={{ include.icon2 }} alt="" />
-                        <span>{{ include.page2 }}</span></p>
+            <div class="bga-component inline-pathway {{include.classes}}">
+                <div class="content remove-element-padding p-4 mb-1">
+                    {% if include.link2 %}
+                    <div class="content-wrapper">
+                            <a href={{include.href}} class="link"><strong>{{ include.link2 }}</strong></a>
+
+                            <p class="page p-0 m-0 mini"> 
+                                <img class="me-2" src={{ include.icon1 }} alt="" />
+                                <span>{{ include.page2 }}</span></p>
                     </div>
-                </a>
+                    {% endif %}
+                </div>
+            </div>
       
             {% endif %}
             
             {% if include.link3 %}
-           
-            <a href="" class="mb-1">
-                <div class="link-wrapper remove-element-padding p-4 ">
-                    <p class="link mb-3"><strong>{{ include.link3 }}</strong></p>
-                    <p class="page mini"> 
-                       <img class="me-2" src={{ include.icon3 }} alt="" />
-                        <span>{{ include.page3 }}</span></p>
+            <div class="bga-component inline-pathway {{include.classes}}">
+                <div class="content remove-element-padding p-4 mb-1">
+                    {% if include.link3 %}
+                    <div class="content-wrapper">
+                            <a href={{include.href}} class="link"><strong>{{ include.link3 }}</strong></a>
+
+                            <p class="page p-0 m-0 mini"> 
+                                <img class="me-2" src={{ include.icon1 }} alt="" />
+                                <span>{{ include.page3 }}</span></p>
                     </div>
-                </a>
+                    {% endif %}
+                </div>
+            </div>
             
             {% endif %}
             
             {% if include.link4 %}
-        
-            <a href="" class="mb-1">
-                <div class="link-wrapper remove-element-padding p-4 ">
-                    <p class="link mb-3"><strong>{{ include.link4 }}</strong></p>
-                    <p class="page mini"> 
-                        <img class="me-2" src={{ include.icon4 }} alt="" />
-                        <span>{{ include.page4 }}</span></p>
+            <div class="bga-component inline-pathway {{include.classes}}">
+                <div class="content remove-element-padding p-4 mb-1">
+                    {% if include.link4 %}
+                    <div class="content-wrapper">
+                            <a href={{include.href}} class="link"><strong>{{ include.link4 }}</strong></a>
+
+                            <p class="page p-0 m-0 mini"> 
+                                <img class="me-2" src={{ include.icon1 }} alt="" />
+                                <span>{{ include.page4 }}</span></p>
                     </div>
-                </a>
+                    {% endif %}
+                </div>
+            </div>
           
             {% endif %}
 
-</div>
+    </div>
 </div>
