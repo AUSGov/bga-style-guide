@@ -1,32 +1,12 @@
-<div class="bga-component hero-pathway hero-color external m-0 {{ include.hero-classes }}">
-
-    <div class="p-3 component-content">
-
-        <div class="p-2 title-wrapper remove-element-padding d-flex align-items-center">
-
-        <div class="icon-wrapper mb-0 me-4">
-            <div class="arrow-icon">
-                <img src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
-            </div>
-        </div>  
-        
-        <p> {{ include.external-link }} </p> 
-        
-    </div>
-
-        
-        <div class="component-text remove-element-padding p-2">
-           
-            {% if include.external-link %}
-            <div class="tag-wrapper">
-                <div class="tag d-inline-flex align-items-center px-2 py-1 remove-element-padding">
-                    <p><strong>External link Label</strong></p>
-                </div>
-            
-            </div>
-            {% endif %}
-
+<div class="bga-component hero-pathway hero-color external mt-0 mx-0 mb-5 {{ include.hero-classes }}">
+    <div class="p-4 component-content">
+    <div class="icon-wrapper">
+        <div class="arrow-icon">
+            <img src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
         </div>
-
+        <div class="external-site ps-7 remove-element-padding">
+            <p class="pe-5">{{ include.external-link }}</p>
+        </div>
+    </div>
     </div>
 </div>
