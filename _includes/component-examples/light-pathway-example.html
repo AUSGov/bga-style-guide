@@ -1,50 +1,45 @@
 <div class="bga-component-wrapper h-100 {{ include.bottom }} ">
+<a href={{ include.link }} tabindex="0" class="bga-component light-pathway {{ include.classes }} m-0">
 
-<div class="bga-component light-pathway {{ include.classes }} m-0">
-    <div class="p-3 component-content h-100">
+    <div class="p-4 component-content h-100">
 
-        <a {% if include.link %} href={{include.link}} {% else %} href="" {% endif %} class="p-2 title-wrapper remove-element-padding" >
-
-            {% if include.top-icon %}
-            <div class="icon-wrapper icon-lrg">
-                <img class="top-icon" src={{ include.top-icon }} alt="" />
-            </div>
-                
-            {% elsif include.classes contains "final" %}
-            <div class="icon-wrapper approved">
-                <img class="top-icon" src={{ "assets/icon-approved.svg" | relative_url }} alt="" />
-            </div>
-
-            {% elsif include.classes contains "in-progress" %}
-            <div class="icon-wrapper in-progress">    
-                <img class="top-icon" src={{ "assets/icon-in-progress.svg" | relative_url }} alt="" />
-            </div>
-
-            {% else %}
-            <div class="icon-wrapper">
-                <img class="top-icon" src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
-            </div>
-            {% endif %}
-    
-
-            <h4 class="tile-title p-0">{{ include.title }}</h4>   
-            
-        </a>
-
-
-        {% if include.external-link %}
-            <div class="component-label remove-element-padding mt-2 p-2">
-                <div class="tag-wrapper">
-                    <div class="tag d-inline-flex align-items-center px-2 py-1 remove-element-padding">
-                        <p><strong>{{ include.external-link }}</strong></p>
-                    </div>
-                </div>
+        <div class="top-wrapper">
+        {% if include.top-icon %}
+            <div class="top-icon mb-4">
+                <img src={{ include.top-icon }} alt="" />
             </div>
         {% endif %}
         
+        <div class="component-text mb-4">
+            <h4 class="tile-title pt-0">{{ include.title }}</h4>
+        </div>
+        </div>
+
+        <div class="icon-wrapper {{include.classes}} ">
+            {% if include.classes contains "final" %} 
+            <div class="bottom-icon">
+               <img src={{ "assets/icon-approved.svg" | relative_url }} alt="" />
+             </div>
+
+            {% elsif include.classes contains "in-progress" %}
+            <div class="bottom-icon">
+                <img src={{ "assets/icon-in-progress.svg" | relative_url }} alt="" />
+              </div>
+
+            {% else %}
+             <div class="bottom-icon">
+                <img src={{ "assets/icon-arrow-right-black.svg" | relative_url }} alt="" />
+            </div>
+            {% endif %}
+             
+             {% if include.external-link %}
+             <div class="external-site remove-element-padding">
+                 <p class="pe-3">{{ include.external-link }}</p>
+             </div>
+             {% endif %}
+         </div>
+
     </div>
-    
 
-</div>
-
+</a>
 </div>

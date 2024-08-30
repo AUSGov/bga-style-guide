@@ -2,15 +2,12 @@
     .component-content {
         border-left-color: $border-colour;
     }
-    
     .tag {
         background: $tag-hover-colour;
     }
-    .title-wrapper {
-        &:focus-visible,
-        &:hover {
-            background: $tag-hover-colour;  
-        }
+    &:focus,
+    &:hover {
+        background: $tag-hover-colour;  
     }
 }
 
@@ -19,25 +16,6 @@
         border: 1px solid $bga-blue-border;
         background: $bga-white;
         display: block;
-
-        .title-wrapper {
-            width: 100%;
-            display: flex;
-
-            h3 {
-                color: $bga-blue-links;
-                text-decoration: underline;
-                text-decoration-color: $bga-blue-links;
-            }
-
-            &:focus-visible,
-            &:hover {
-                background: $bga-blue-background-light;
-            }
-            &:active {
-                border: none !important; 
-            }
-        }
     
         .component-content {
             border-left: 8px solid $bga-blue-highlight-shadow;
@@ -51,14 +29,25 @@
         }
         .component-text {
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            align-content: flex-start;
-            row-gap: 8px;
         }
 
         .tile-title {
             font-size: 1.125rem;
+    
+            a {
+                text-decoration: underline;
+    
+                &:focus-visible {
+                    color: $bga-blue-links;
+                    background: $bga-blue-background-light;
+                    border: $bga-text-focus-border;
+                    border-radius: $bga-focus-radius;
+                }
+                &:hover {
+                    color: $bga-blue-links;
+                    background: $bga-blue-background-light;
+                }
+            }
         }
     
         .tag {
@@ -75,7 +64,18 @@
             }
         } 
         
-        
+        &:focus,
+        &:hover {
+            color: $bga-black;
+            background: $bga-blue-background-light;
+
+            .tag {
+                background: $bga-white !important;
+            }
+        }
+        &:active {
+           border: 1px solid $bga-blue-border !important; 
+        }
 
         &.tile-template {
             @include templates-tools-colour ($bga-blue-highlight-shadow, $bga-blue-background-light);
