@@ -4,24 +4,20 @@
     max-width: 500px;
     display: block;
 
-   a.title-wrapper  {
-        text-decoration: underline;
-        width: 100%;
-        color: $bga-blue-links;
-
-        &:focus-visible,
-        &:hover {
-            background: $bga-blue-background-extralight;
-            text-decoration-color: $bga-blue-links; 
-        }
-
+    &:focus,
+    &:hover {
+        color: $bga-black;
+        background: $bga-blue-background-extralight;
+    }
+    &:active {
+       border: 1px solid $bga-blue-border !important; 
     }
 
     .component-content {
         border-left: 8px solid $bga-blue-background-dark;
         display: flex;
         flex-wrap: wrap;
-        align-content: flex-start;
+        align-content: space-between;
 
         p {
             font-weight: 400;
@@ -44,19 +40,8 @@
         }
     }
     &.non-branded {
-        
-        a.title-wrapper  {
-            color: $nb-blue-links;
-
-            .arrow-icon {
-                width: 32px;
-            }
-    
-            &:focus-visible,
-            &:hover {
-                background: $nb-grey-light;
-                text-decoration-color: $nb-blue-links; 
-            }
+        &:hover {
+            background: $nb-grey-lightest;
         }
     }
 }

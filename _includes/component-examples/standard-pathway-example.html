@@ -1,26 +1,22 @@
 <div class="bga-component-wrapper h-100 pb-5">
+<a  {% if include.link %} 
+href={{include.link}} 
+{% else %} href="" 
+{% endif %}  
+tabindex="0" class="bga-component standard-pathway m-0 {{ include.classes }}">
 
-    <div class="bga-component standard-pathway m-0 {{ include.classes }}">
+    <div class="p-4 component-content h-100">
 
-        <div class="p-3 component-content h-100">
+        <div class="component-text p-0">
+            <h3 class="tile-title pt-0">{{ include.title }}</h3>
+            <p class="mb-4">{{ include.description }}</p>
+        </div>
 
-            <a class="p-2 title-wrapper remove-element-padding" {% if include.link %} 
-            href={{include.link}} {% else %} href="" {% endif %} >
-            
-                <div class="arrow-icon mb-4">
-                    <img src={{ include.icon1 }} />
-                </div>
-                
-                <h3 class="tile-title pt-0">{{ include.title }}</h3>
-                
-            </a>
-
-            
-            <div class="component-text remove-element-padding p-2">
-                <p>{{ include.description }}</p>
-            </div>
-
+        <div class="arrow-icon">
+            <img src={{ include.icon1 }} />
         </div>
 
     </div>
+
+</a>
 </div>
