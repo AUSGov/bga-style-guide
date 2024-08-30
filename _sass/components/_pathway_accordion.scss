@@ -232,7 +232,7 @@
             column-gap: 24px;
             background: darken($bga-teal-highlight-light, 5%);
 
-            .guide-tile {
+            .pathway-accordion-tile {
                 background: $bga-white;
                 flex: 0 0 auto;
                 width: calc(33.33333333% - 16px);
@@ -376,7 +376,7 @@
     .bga-pathway-accordion {  
         .accordion-item  { 
             .accordion-body {
-                .guide-tile {
+                .pathway-accordion-tile {
                     width: calc(50% - 12px);
                 }
             }
@@ -407,7 +407,7 @@
                 }
             }
             .accordion-body {
-                .guide-tile {
+                .pathway-accordion-tile {
                     width: 100%;
                 }
             }
@@ -421,6 +421,7 @@
 }
 
 .component-example.bp-below768 {
+    @include pathway-accordion-bp-768();
     @include pathway-accordion-below768();
 }
 
