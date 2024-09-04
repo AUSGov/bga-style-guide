@@ -4901,6 +4901,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.hero-pathway { border: 1px solid #96B7DF; display: flex; background: #ffffff; }
 
+.bga-component.hero-pathway .tile-title { color: #2157AA; text-decoration: underline; }
+
 .bga-component.hero-pathway .icon-wrapper { border-radius: 50px; display: flex; align-items: center; }
 
 .bga-component.hero-pathway .icon-wrapper .external-site { background: #E3ECF6; min-height: 48px; border-radius: 50px; padding: 0; margin-left: -48px; width: 100%; display: flex; align-items: center; }
@@ -4977,6 +4979,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .standard-pathway { border: 1px solid #96B7DF; background: #ffffff; max-width: 500px; display: block; }
 
+.standard-pathway .tile-title { color: #2157AA; text-decoration: underline; }
+
 .standard-pathway:focus, .standard-pathway:hover { color: #333333; background: #E3ECF6; }
 
 .standard-pathway:active { border: 1px solid #96B7DF !important; }
@@ -4992,6 +4996,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .standard-pathway.non-branded:hover { background: #F8F8F8; }
 
 .light-pathway { border: 1px solid #96B7DF; background: #ffffff; display: block; }
+
+.light-pathway .tile-title { color: #2157AA; text-decoration: underline; }
 
 .light-pathway:focus, .light-pathway:hover { color: #333333; background: #E3ECF6; }
 
@@ -5065,9 +5071,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .feature-pathway { display: flex; background: #2E6CB9; color: #ffffff; }
 
-.feature-pathway .tile-title { color: #ffffff; font-size: 1.625rem; }
-
-.feature-pathway .tile-description { font-size: 1rem; }
+.feature-pathway .tile-title { color: #ffffff; text-decoration: underline; }
 
 .feature-pathway .arrow-icon { width: 48px; height: 48px; display: flex; background: #ffffff; border-radius: 50px; display: flex; align-items: center; justify-content: center; position: absolute; left: 0; }
 
@@ -5105,23 +5109,27 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .feature-example-wrapper.full-width-layout .component-content { padding: 32px; }
 
-.component-example.bp-768 .feature-pathway .tile-title { font-size: 1.625rem !important; }
+.component-example.bp-768 .feature-pathway .tile-title { font-size: 1.375rem !important; }
 
 .component-example.bp-768 .feature-pathway .tile-description { font-size: 1rem; }
 
 .component-example.bp-768 .feature-pathway .component-content { padding: 24px !important; }
 
-.component-example.bp-below768 .feature-pathway, .component-example.small-screen .feature-pathway { display: flex; flex-wrap: wrap; flex-flow: column-reverse; }
+.component-example.bp-below768 .feature-pathway .tile-title, .component-example.small-screen .feature-pathway .tile-title { font-size: 1.375rem !important; }
 
-.component-example.bp-below768 .feature-pathway .tile-title, .component-example.small-screen .feature-pathway .tile-title { font-size: 1.625rem; }
+.component-example.bp-below768 .feature-pathway .tile-description, .component-example.small-screen .feature-pathway .tile-description { font-size: 1rem; }
+
+.component-example.bp-below768 .feature-pathway .component-content, .component-example.small-screen .feature-pathway .component-content { padding: 24px !important; }
+
+.component-example.bp-below768 .feature-pathway, .component-example.small-screen .feature-pathway { display: flex; flex-wrap: wrap; flex-flow: column-reverse; }
 
 .component-example.bp-below768 .feature-pathway .component-content, .component-example.small-screen .feature-pathway .component-content { width: 100%; }
 
 .component-example.bp-below768 .feature-pathway .component-image, .component-example.small-screen .feature-pathway .component-image { width: 100%; }
 
-@media (max-width: 1200px) { .feature-pathway .tile-title { font-size: 1.625rem !important; } .feature-pathway .tile-description { font-size: 1rem; } .feature-pathway .component-content { padding: 24px !important; } }
+@media (max-width: 1200px) { .feature-pathway .tile-title { font-size: 1.375rem !important; } .feature-pathway .tile-description { font-size: 1rem; } .feature-pathway .component-content { padding: 24px !important; } }
 
-@media (max-width: 768px) { .feature-pathway { display: flex; flex-wrap: wrap; flex-flow: column-reverse; } .feature-pathway .tile-title { font-size: 1.625rem; } .feature-pathway .component-content { width: 100%; } .feature-pathway .component-image { width: 100%; } }
+@media (max-width: 768px) { .feature-pathway { display: flex; flex-wrap: wrap; flex-flow: column-reverse; } .feature-pathway .component-content { width: 100%; } .feature-pathway .component-image { width: 100%; } }
 
 .inline-pathway a { background: #E3ECF6; text-decoration: none; display: flex; }
 
@@ -5300,6 +5308,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 @media (max-width: 350px) { .callout-box.blue.subscribe .button-group { flex-wrap: wrap; align-content: flex-start; } .callout-box.blue.subscribe .button-group a { text-align: center; width: 100%; } .callout-box.blue.subscribe .button-group .button-example { width: 100%; } .callout-box.blue.subscribe .button-group button { width: 100%; } }
 
 .standard-pathway.image-pathway .component-image { height: 240px; }
+
+.standard-pathway.image-pathway .component-image .tile-title { color: #2157AA; text-decoration: underline; }
 
 .standard-pathway.image-pathway .component-image img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -6366,6 +6376,8 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 .bga-component.bga-pathway-accordion .accordion-item .accordion-body { display: flex; flex-wrap: wrap; column-gap: 24px; background: #bde4e4; }
 
 .bga-component.bga-pathway-accordion .accordion-item .accordion-body .pathway-accordion-tile { background: #ffffff; flex: 0 0 auto; width: calc(33.33333333% - 16px); margin-bottom: 24px; display: flex; flex-wrap: wrap; align-content: space-between; cursor: pointer; }
+
+.bga-component.bga-pathway-accordion .accordion-item .accordion-body .pathway-accordion-tile h4, .bga-component.bga-pathway-accordion .accordion-item .accordion-body .pathway-accordion-tile .h4 { text-decoration: underline; color: #2157AA; }
 
 .bga-component.bga-pathway-accordion .accordion-item .accordion-body .pathway-accordion-tile:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; }
 
@@ -8033,7 +8045,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.tools-templates-tile .component-text { width: 100%; }
 
-.bga-component.tools-templates-tile .tile-title { font-size: 1.125rem; }
+.bga-component.tools-templates-tile .tile-title { font-size: 1.125rem; text-decoration: underline; }
 
 .bga-component.tools-templates-tile .tile-title a { text-decoration: underline; }
 
