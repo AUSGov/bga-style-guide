@@ -5,10 +5,7 @@
     
     .tile-title {
         color: $bga-white;
-        font-size: 1.625rem;
-    }
-    .tile-description {
-        font-size: 1rem;
+        text-decoration: underline;
     }
     .arrow-icon {
         width: 48px;
@@ -111,7 +108,7 @@
 @mixin feature-pathway-bp-768 {
     .feature-pathway {
         .tile-title {
-            font-size: 1.625rem !important;
+            font-size: $h3-font-size !important;
         }
         .tile-description {
             font-size: 1rem;
@@ -128,10 +125,6 @@
         flex-wrap: wrap;
         flex-flow: column-reverse;
 
-        .tile-title {
-            font-size: 1.625rem;
-        }
-
         .component-content {
             width: 100%;
         }
@@ -147,6 +140,7 @@
 }
 
 .component-example.bp-below768, .component-example.small-screen {
+    @include feature-pathway-bp-768();
     @include feature-pathway-below768();
 }
 
