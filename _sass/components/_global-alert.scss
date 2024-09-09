@@ -3,15 +3,22 @@
     display: flex;
     column-gap: 16px;
     justify-content: space-between;
+    padding-left: 48px;
 
     .component-content {
-        max-width: 1320px;
-        margin: 0 auto;
-        padding: 0 0 0 40px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    } 
+    .component-text {
+        max-width: 1256px;
+        padding: 0;
+        display: flex;
+
         p {
             text-align: center;
-            
-        }
+        } 
     }
 
     .close {
@@ -46,14 +53,14 @@
 // Mixins for smaller screen sizes and media queries
 @mixin global-alert-bp-576 {
     .global-alert {
-        .component-content {
-            padding: 0;
-        }
+        padding-left: 32px;
     }
 }
 @mixin global-alert-below576 () {
     .global-alert {
+        padding-left: 24px;
         column-gap: 8px;
+   
     }
 }
 

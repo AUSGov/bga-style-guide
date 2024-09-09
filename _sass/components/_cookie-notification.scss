@@ -2,16 +2,25 @@
     background: $bga-yellow-highlight-light;
     display: flex;
     column-gap: 16px;
+    justify-content: space-between;
+    padding-left: 48px;
 
 
     .component-content {
-        max-width: 1320px;
-        margin: 0 auto;
-        padding: 0 0 0 40px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
         
-        p {
-            text-align: center; 
-            font-weight: 600;
+        .component-text {
+            max-width: 1256px;
+            padding: 0;
+            display: flex;
+            
+            p {
+                text-align: center; 
+                font-weight: 600;
+            }
         }
     }
 
@@ -24,6 +33,7 @@
         height: 16px;
         width: 16px;
         min-height: auto !important;
+        min-width: auto !important;
         flex-shrink: 0;
 
         &:focus-visible {
@@ -46,14 +56,13 @@
 // Mixins for smaller screen sizes and media queries
 @mixin cookie-notification-bp-576 {
     .cookie-notification {
-        .component-content {
-            padding: 0;
-        }
+        padding-left: 32px;
     }
 }
 
 @mixin cookie-notification-below576 () {
     .cookie-notification {
+        padding-left: 24px;
         column-gap: 8px;
     }
 }
