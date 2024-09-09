@@ -2,9 +2,10 @@
 
 layout: content-tagged
 title: Cookie notification
-description: A popup notification that alerts users to the use of cookies on business.gov.au.
+description: A notification that alerts users to the use of cookies on business.gov.au.
 breadcrumb1: Components
 url1: /components.html
+updated: 9 September, 2024
 bga-tag: true
 subsite-tag: true
 
@@ -22,6 +23,7 @@ classes="in-page"
         link-1="Design" link-id-1="#design"
         link-2="Layouts" link-id-2="#layouts"
         link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
         %}
 
     </div>
@@ -51,8 +53,9 @@ classes="in-page"
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
                         element-string="bga-cookie"
-                        md-visibility="true"
-                        breakpoint-final="768"
+                        xl-visibility="true"
+                        sm-visibility="true"
+                        breakpoint-final="576"
                     %}
 
                     <!-- Component example -->
@@ -61,18 +64,10 @@ classes="in-page"
                         <div class="component-wrapper remove-element-padding px-4 py-4">
 
                             {% include component-examples/cookie-example.html
-                                text="<p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consec adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
-                                button="Accept all cookies"
-                                link="Customise cookies"
+                                text="<p class='mini'>We use cookies to give you a better experience on our website. Learn more about <a href=''>how we use cookies</a> and how you can select your preferences.</p>"
                                 classes="default"
                             %}
 
-                            <h3 class="mt-5">View the cookie notification in page</h3>
-                            <div class="button-example mb-4">
-                                <button id="cookie-trigger" class="bga-btn bga-secondary-btn bkg-light" tabindex="0" href=""
-                                    role="button">Trigger cookie notification</button>
-                            </div>
-                            
 
                         </div>
 
@@ -85,8 +80,9 @@ classes="in-page"
                      <!-- Breakpoint radio buttons -->
                      {% include breakpoints.html
                         element-string="nb-cookie"
-                        md-visibility="true"
-                        breakpoint-final="768"
+                        xl-visibility="true"
+                        sm-visibility="true"
+                        breakpoint-final="576"
                     %}
 
                     <!-- Component example -->
@@ -100,10 +96,8 @@ classes="in-page"
                             %}
 
                             {% include component-examples/cookie-example.html
-                                text="<p>We use essential cookies to make this website work. We also use ipsum dolor sit amet, consec adipiscing elit. Suspendisse non leo quis metus dictum cursus.</p>"
-                                button="Accept all cookies"
-                                link="Customise cookies"
-                                classes="default non-branded nb-background-dark"
+                                text="<p class='mini'>We use cookies to give you a better experience on our website. Learn more about <a href=''>how we use cookies</a> and how you can select your preferences.</p>"
+                                classes="default non-branded nb-background"
                             %}
 
                         </div>
@@ -129,7 +123,7 @@ classes="in-page"
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The cookie notificaiton appears on all page layouts.</p>
+        <p>The cookie notification appears on all page layouts.</p>
 
         {% include layouts-dropdown.html
         layout-name="All layouts"
@@ -140,8 +134,7 @@ classes="in-page"
             {% include layouts-accordion.html
             singlelayout="true"
             allbp-img="'../assets/layout-images/cookie-notification-allbp.png' | relative_url "
-            allbp-rules="<p>The cookie notification is placed at the bottom of the screen. It stretches full width of the screen.</p>
-            <p>The cookie notification pushes the business.gov.au chat button up when it appears.</p>"
+            allbp-rules="<p>The cookie notification is placed at the top of the screen. It stretches full width of the screen.</p>"
             %}
 
         </div>
@@ -151,19 +144,21 @@ classes="in-page"
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>The cookie notification is displayed at the bottom of the screen when users first visit business.gov.au.</p>
-        <p>This notification does not stop the user from viewing and using the pages on business.gov.au. The notification remains in place until the users clicks on either "Accept all cookies" or "Customise cookies". Once the user has clicked on one of these links they do not see the cookie notification again.</p>
-        <p>The "Customise cookies" link leads to a page on business.gov.au about cookies. The page should include the ability to turn off optional cookies. Ensure users can access this page from elsewhere  where on the site , e.g. a link in the footer.</p>
+        <p>The cookie notification is displayed at the top of the screen when users first visit business.gov.au.</p>
+       
+        <p>The "how we use cookies" link leads to a page on business.gov.au about cookies. The page should include the ability to turn off optional cookies. Ensure users can access this page from elsewhere  where on the site , e.g. a link in the footer.</p> 
+        
+        <p>The notification remains in place until the user clicks on the close ('X') button. Once the user has dismissed the notification they do not see it again.</p>
 
         <h3>When to use this component:</h3>
-        <ul>
-            <li>Used on all pages of business.gov.au for users that have not seen and actioned the cookie notification before.</li>
-        </ul>
+        <p>Used on all pages of business.gov.au for users that have not seen and actioned the cookie notification before.</p>
 
-        <h3>When not to use this component:</h3>
-        <ul>
-            <li>Not used for any purpose on business.gov.au other than conveying information about cookies. If a pop up notification is required for other reasons use the <a href={{ "components/toast-notification.html" | relative_url }} >toast notification</a>.</li>
-        </ul>
+
+         <!-- VERSION HISTORY-->
+         <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>9 September, 2024</h4>
+         <p>Redesigned the cookie notification so it is no longer a popup at the bottom of the screen. The revised notification is placed at the top of the screen (and does not have 'sticky' behaviour).</p> <p>This change was made to help meet accessibility requirements, the sticky notificaiton was causing issues when users zoomed in.</p>
+
 
 
     </div>

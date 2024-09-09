@@ -1,30 +1,10 @@
-<div class="bga-component-wrapper">
-<div class="bga-component cookie-notification {{include.classes}}">
-
-    <div class="py-3 px-4 component-content">
-
-        <div class="component-text p-0 me-5 remove-element-padding">
-          
-            {% if include.text %}
-                {{ include.text }}
-            {% endif %}
-
+<div class="bga-component cookie-notification py-3 ps-4 pe-3 {{ include.classes }}">
+    <div class="component-content">
+        <div class="component-text remove-element-padding">
+            {{ include.text }}
         </div>
-
-        <div class="component-links p-0 remove-element-padding">
-            {% if include.button %}
-                 <div class="button-example">
-                     <button class="cookie-link bga-btn bga-secondary-btn bga-btn-pill me-3" tabindex="0" href="" role="button">{{ include.button }}</button>
-                </div>
-            {% endif %}
-
-            {% if include.link %}
-               <a href="" class="cookie-link">{{ include.link }}</a>
-            {% endif %}
-        </div>
-    
-
     </div>
+    
+    <button class="close p-0">Close</button>
 
-</div>
 </div>

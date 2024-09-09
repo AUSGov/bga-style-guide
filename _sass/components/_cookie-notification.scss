@@ -1,97 +1,77 @@
-.bga-component.cookie-notification {
-    background-color: rgba(46, 62, 90, .9);
-    box-shadow: 2px -2px 3px 0px rgba(51, 51, 51, 0.2);
-    
-    .component-content {
-        display: flex;
-        align-items: center;
+.cookie-notification {
+    background: $bga-yellow-highlight-light;
+    display: flex;
+    column-gap: 16px;
 
-        p, a {
-            color: $bga-white;
-            font-size: .875rem;
+
+    .component-content {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 0 0 40px;
+        
+        p {
+            text-align: center; 
             font-weight: 600;
         }
     }
-    .component-text {
-        max-width: 640px;
-    }
-    .component-links {
-        display: flex;
-        min-width: 330px;
-        align-items: center;
 
-        p, a {
-            color: $bga-white;
-            font-size: .875rem;
-            font-weight: 600;   
-        }
-        a {
-            &:focus-visible {
-                background: none;
-                border: $bga-white solid 2px;
-                border-radius: $bga-focus-radius;
-            }
-            &:hover {
-                background: none;
-            }
+    .close {
+        text-indent: -9999px;
+        background: transparent url(../assets/icon-close-black.svg) no-repeat;
+        background-size: 16px 16px;
+        background-position: center center;
+        border: none;
+        height: 16px;
+        width: 16px;
+        min-height: auto !important;
+        flex-shrink: 0;
 
-        }
-    }
-    .bga-btn-pill {
-        font-size: .875rem;
-        padding: 8px 16px !important;
-        min-height: auto;
-
-        &:focus-visible, &:hover, &:active {
-            border-color: $bga-white;
+        &:focus-visible {
+            border: $bga-text-focus-border;
+            border-radius: $bga-focus-radius;
         }
     }
 
-    &.non-branded {
-        .component-text p {
-            color: $bga-white;
+    a {
+        white-space: nowrap;
+        
+        &:active {
+            border: none;
         }
-        .component-links a {
-            color: $bga-white;
 
-            &:hover, &:focus-visible {
-                color: $bga-white;
-            }
-            &:focus-visible {
-                border-color: $bga-white;
-            }
-        }
     }
 }
 
-#inpage-cookie {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: none;
-}
 
-
-// Mixins for media queries and smaller screen examples
-@mixin cookies-below768 () {
+// Mixins for smaller screen sizes and media queries
+@mixin cookie-notification-bp-576 {
     .cookie-notification {
         .component-content {
-            flex-wrap: wrap;
+            padding: 0;
         }
-        .component-text {
-            margin: 0 0 16px 0 !important;
-            max-width: 100%;
-        }
+    }
+}
+
+@mixin cookie-notification-below576 () {
+    .cookie-notification {
+        column-gap: 8px;
     }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below768,
-.component-example.small-screen {
-    @include cookies-below768();
+.component-example.bp-576 {
+    @include cookie-notification-bp-576()
+}
+.component-example.bp-below576 {
+    @include cookie-notification-bp-576();
+    @include cookie-notification-below576();
 }
 
-// Media queries for HTML example pages
-@media (max-width: 768px) {
-    @include cookies-below768();
+
+// MEDIA Queries for HTML demo pages.
+@media (max-width: 1400px) {
+    @include cookie-notification-bp-576()
+}
+@media(max-width: 576px) {
+    @include cookie-notification-below576();
 }

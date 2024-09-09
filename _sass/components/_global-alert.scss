@@ -1,11 +1,17 @@
 .global-alert {
     background: $bga-yellow-highlight-dark;
-    position: relative;
+    display: flex;
+    column-gap: 16px;
+    justify-content: space-between;
 
     .component-content {
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: center;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 0 0 40px;
+        p {
+            text-align: center;
+            
+        }
     }
 
     .close {
@@ -14,11 +20,11 @@
         background-size: 16px 16px;
         background-position: center center;
         border: none;
-        position: absolute;
         height: 16px;
         width: 16px;
-        top: 20px;
-        right: 16px;
+        min-height: auto !important;
+        min-width: auto !important;
+        flex-shrink: 0;
 
         &:focus-visible {
             border: $bga-text-focus-border;
@@ -38,24 +44,33 @@
 
 
 // Mixins for smaller screen sizes and media queries
-@mixin global-alert-below576 () {
+@mixin global-alert-bp-576 {
     .global-alert {
         .component-content {
-            padding: 0 8px 0 0 !important;
+            padding: 0;
         }
-        .close {
-            min-height: auto;
-        }
+    }
+}
+@mixin global-alert-below576 () {
+    .global-alert {
+        column-gap: 8px;
     }
 }
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576 {
+    @include global-alert-bp-576()
+}
 .component-example.bp-below576 {
+    @include global-alert-bp-576();
     @include global-alert-below576();
 }
 
 
 // MEDIA Queries for HTML demo pages.
+@media (max-width: 1400px) {
+    @include global-alert-bp-576()
+}
 @media(max-width: 576px) {
     @include global-alert-below576();
 }
