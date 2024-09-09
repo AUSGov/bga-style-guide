@@ -2868,7 +2868,7 @@ table.table { margin-bottom: 32px; }
 
 .illustration-example button.copied:hover { background: #D4EDD4; color: #068905; border-color: #068905; }
 
-@media (max-width: 991px) { #nav.design-system-nav { margin-bottom: 16px !important; } #nav.design-system-nav .navbar { padding: 0 0 0 16px; } #nav.design-system-nav .navbar .container { margin-top: -15px; } #nav.design-system-nav .navbar .nav-item { background: #C8D9EE; border-bottom: solid 1px #fff; } #nav.design-system-nav .navbar .nav-item .nav-link { padding: 12px 16px; } #nav.design-system-nav .navbar .nav-item .nav-link:focus { background: #C8D9EE; } #nav.design-system-nav .navbar .nav-item .nav-link:hover { background: #C8D9EE; } #nav.design-system-nav .navbar-toggler { background: #C8D9EE url(../assets/icon-close.svg) no-repeat; background-position: center center; height: 48px; width: 56px; border-radius: 6px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; position: absolute; right: 0; top: -64px; outline-style: none !important; box-shadow: none !important; } #nav.design-system-nav .navbar-toggler[aria-expanded="false"] { background: #2E6CB9 url(../assets/icon-menu.svg) no-repeat; background-position: center center; border-radius: 6px; } }
+@media (max-width: 991px) { #nav.design-system-nav { margin-bottom: 16px !important; } #nav.design-system-nav .navbar { padding: 0 0 0 16px; } #nav.design-system-nav .navbar .container { margin-top: -15px; } #nav.design-system-nav .navbar .nav-item { background: #C8D9EE; border-bottom: solid 1px #fff; } #nav.design-system-nav .navbar .nav-item .nav-link { padding: 12px 16px; } #nav.design-system-nav .navbar .nav-item .nav-link:focus { background: #C8D9EE; } #nav.design-system-nav .navbar .nav-item .nav-link:hover { background: #C8D9EE; } #nav.design-system-nav .navbar-toggler { background: #C8D9EE url(../assets/icon-close.svg) no-repeat; background-position: center center; height: 48px; width: 56px; min-width: auto; border-radius: 6px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; position: absolute; right: 0; top: -64px; outline-style: none !important; box-shadow: none !important; } #nav.design-system-nav .navbar-toggler[aria-expanded="false"] { background: #2E6CB9 url(../assets/icon-menu.svg) no-repeat; background-position: center center; border-radius: 6px; } }
 
 @media (max-width: 768px) { .breakpoints .larger-screens { display: none; } .breakpoints .smaller-screens { display: block; } .typography.breakpoints { flex-wrap: wrap; } .typography.breakpoints .element-name { width: 100%; } .typography.breakpoints .breakpoint-wrapper { margin: 0; padding-top: 8px; width: 100%; } .typography.breakpoints .smaller-screens { display: none; } .component-example.bp-mobile { padding-right: 24px !important; } }
 
@@ -7797,11 +7797,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 576px) { .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion.yellow .accordion-header .registration-reason { padding-right: 16px !important; } .edit-answers-component .component-content { padding: 16px !important; } .edit-answers-component .edit-answers-toggle { padding: 16px !important; } .edit-answers-component .edit-answers-toggle h3, .edit-answers-component .edit-answers-toggle .h3 { font-size: 1.125rem; } .edit-answers-component .answers-section { padding-bottom: 48px !important; margin-bottom: 16px !important; } .edit-answers-component .answers-section:last-of-type { padding-bottom: 24px !important; margin-bottom: 0 !important; } .edit-answers-component .title-area h3, .edit-answers-component .title-area .h3 { font-size: 1.125rem; } .edit-answers-component .answers p { flex-wrap: wrap; } .edit-answers-component .answers p span { margin: 8px 0 0 0 !important; width: 100%; text-align: left; } .edit-answers-component .edit-btn { min-height: auto; } .results-edit-answers-component .edit-btn { font-size: 1.125rem !important; } .results-edit-answers-component .title-area { padding: 16px !important; flex-wrap: wrap; } .results-edit-answers-component .title-area h3, .results-edit-answers-component .title-area .h3 { width: 100%; } .results-edit-answers-component .edit-btn { margin: 16px 0 0 0 !important; } .results-edit-answers-component .component-content { padding: 16px !important; } }
 
-.global-alert { background: #FFD964; display: flex; column-gap: 16px; justify-content: space-between; }
+.global-alert { background: #FFD964; display: flex; column-gap: 16px; justify-content: space-between; padding-left: 48px; }
 
-.global-alert .component-content { max-width: 1320px; margin: 0 auto; padding: 0 0 0 40px; }
+.global-alert .component-content { width: 100%; padding: 0; display: flex; justify-content: center; }
 
-.global-alert .component-content p { text-align: center; }
+.global-alert .component-text { max-width: 1256px; padding: 0; display: flex; }
+
+.global-alert .component-text p { text-align: center; }
 
 .global-alert .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; background-position: center center; border: none; height: 16px; width: 16px; min-height: auto !important; min-width: auto !important; flex-shrink: 0; }
 
@@ -7811,15 +7813,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .global-alert a:active { border: none; }
 
-.component-example.bp-576 .global-alert .component-content { padding: 0; }
+.component-example.bp-576 .global-alert { padding-left: 32px; }
 
-.component-example.bp-below576 .global-alert .component-content { padding: 0; }
+.component-example.bp-below576 .global-alert { padding-left: 32px; }
 
-.component-example.bp-below576 .global-alert { column-gap: 8px; }
+.component-example.bp-below576 .global-alert { padding-left: 24px; column-gap: 8px; }
 
-@media (max-width: 1400px) { .global-alert .component-content { padding: 0; } }
+@media (max-width: 1400px) { .global-alert { padding-left: 32px; } }
 
-@media (max-width: 576px) { .global-alert { column-gap: 8px; } }
+@media (max-width: 576px) { .global-alert { padding-left: 24px; column-gap: 8px; } }
 
 .bga-pagination .pagination-links { width: 100%; }
 
@@ -8045,7 +8047,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .bga-component.tools-templates-tile { border: 1px solid #96B7DF; background: #ffffff; display: block; }
 
-.bga-component.tools-templates-tile .component-content { border-left: 8px solid #708DAF; display: flex; flex-wrap: wrap; align-content: space-between; }
+.bga-component.tools-templates-tile .component-content { border-left: 8px solid #708DAF; display: flex; flex-wrap: wrap; align-content: space-between; background: pink; }
 
 .bga-component.tools-templates-tile .component-content p { font-weight: 400; }
 
@@ -8921,13 +8923,15 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 @media (max-width: 576px) { .bga-inpage-feedback .initial-question { flex-wrap: wrap; } .bga-inpage-feedback .initial-question P { width: 100%; margin-bottom: 16px !important; } }
 
-.cookie-notification { background: #FFF3CD; display: flex; column-gap: 16px; }
+.cookie-notification { background: #FFF3CD; display: flex; column-gap: 16px; justify-content: space-between; padding-left: 48px; }
 
-.cookie-notification .component-content { max-width: 1320px; margin: 0 auto; padding: 0 0 0 40px; }
+.cookie-notification .component-content { width: 100%; padding: 0; display: flex; justify-content: center; }
 
-.cookie-notification .component-content p { text-align: center; font-weight: 600; }
+.cookie-notification .component-content .component-text { max-width: 1256px; padding: 0; display: flex; }
 
-.cookie-notification .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; background-position: center center; border: none; height: 16px; width: 16px; min-height: auto !important; flex-shrink: 0; }
+.cookie-notification .component-content .component-text p { text-align: center; font-weight: 600; }
+
+.cookie-notification .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; background-position: center center; border: none; height: 16px; width: 16px; min-height: auto !important; min-width: auto !important; flex-shrink: 0; }
 
 .cookie-notification .close:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
 
@@ -8935,15 +8939,15 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .cookie-notification a:active { border: none; }
 
-.component-example.bp-576 .cookie-notification .component-content { padding: 0; }
+.component-example.bp-576 .cookie-notification { padding-left: 32px; }
 
-.component-example.bp-below576 .cookie-notification .component-content { padding: 0; }
+.component-example.bp-below576 .cookie-notification { padding-left: 32px; }
 
-.component-example.bp-below576 .cookie-notification { column-gap: 8px; }
+.component-example.bp-below576 .cookie-notification { padding-left: 24px; column-gap: 8px; }
 
-@media (max-width: 1400px) { .cookie-notification .component-content { padding: 0; } }
+@media (max-width: 1400px) { .cookie-notification { padding-left: 32px; } }
 
-@media (max-width: 576px) { .cookie-notification { column-gap: 8px; } }
+@media (max-width: 576px) { .cookie-notification { padding-left: 24px; column-gap: 8px; } }
 
 .bga-component.non-branded, .non-branded { border: none; }
 

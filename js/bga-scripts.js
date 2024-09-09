@@ -1109,14 +1109,6 @@ $(document).ready(function () {
             }, 6000);
     });
 
-    // COMPONENT EXAMPLE: COOKIE NOTIFICATION
-    $('#cookie-trigger').on('click', function () {
-        $('#inpage-cookie').slideDown('slow');
-    });
-    $('#inpage-cookie .cookie-link').on('click', function () {
-        $('#inpage-cookie').css('display', 'none');
-    });
-
 
     // COMPONENT EXAMPLE: INFORMATION SIDEBAR
     // Set height of sidebars
