@@ -7797,11 +7797,13 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 576px) { .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button .title-area { padding-right: 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button p { padding-right: 0 !important; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-button::after { height: 10px; width: 16px; } .bga-default-accordion.bga-default-accordion.results-accordion .accordion-item .accordion-body { padding: 0 16px 16px 16px !important; } .bga-default-accordion.bga-default-accordion.results-accordion.yellow .accordion-header .registration-reason { padding-right: 16px !important; } .edit-answers-component .component-content { padding: 16px !important; } .edit-answers-component .edit-answers-toggle { padding: 16px !important; } .edit-answers-component .edit-answers-toggle h3, .edit-answers-component .edit-answers-toggle .h3 { font-size: 1.125rem; } .edit-answers-component .answers-section { padding-bottom: 48px !important; margin-bottom: 16px !important; } .edit-answers-component .answers-section:last-of-type { padding-bottom: 24px !important; margin-bottom: 0 !important; } .edit-answers-component .title-area h3, .edit-answers-component .title-area .h3 { font-size: 1.125rem; } .edit-answers-component .answers p { flex-wrap: wrap; } .edit-answers-component .answers p span { margin: 8px 0 0 0 !important; width: 100%; text-align: left; } .edit-answers-component .edit-btn { min-height: auto; } .results-edit-answers-component .edit-btn { font-size: 1.125rem !important; } .results-edit-answers-component .title-area { padding: 16px !important; flex-wrap: wrap; } .results-edit-answers-component .title-area h3, .results-edit-answers-component .title-area .h3 { width: 100%; } .results-edit-answers-component .edit-btn { margin: 16px 0 0 0 !important; } .results-edit-answers-component .component-content { padding: 16px !important; } }
 
-.global-alert { background: #FFD964; position: relative; }
+.global-alert { background: #FFD964; display: flex; column-gap: 16px; justify-content: space-between; }
 
-.global-alert .component-content { justify-content: space-between; align-items: flex-start; text-align: center; }
+.global-alert .component-content { max-width: 1320px; margin: 0 auto; padding: 0 0 0 40px; }
 
-.global-alert .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; background-position: center center; border: none; position: absolute; height: 16px; width: 16px; top: 20px; right: 16px; }
+.global-alert .component-content p { text-align: center; }
+
+.global-alert .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; background-position: center center; border: none; height: 16px; width: 16px; min-height: auto !important; min-width: auto !important; flex-shrink: 0; }
 
 .global-alert .close:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
 
@@ -7809,11 +7811,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .global-alert a:active { border: none; }
 
-.component-example.bp-below576 .global-alert .component-content { padding: 0 8px 0 0 !important; }
+.component-example.bp-576 .global-alert .component-content { padding: 0; }
 
-.component-example.bp-below576 .global-alert .close { min-height: auto; }
+.component-example.bp-below576 .global-alert .component-content { padding: 0; }
 
-@media (max-width: 576px) { .global-alert .component-content { padding: 0 8px 0 0 !important; } .global-alert .close { min-height: auto; } }
+.component-example.bp-below576 .global-alert { column-gap: 8px; }
+
+@media (max-width: 1400px) { .global-alert .component-content { padding: 0; } }
+
+@media (max-width: 576px) { .global-alert { column-gap: 8px; } }
 
 .bga-pagination .pagination-links { width: 100%; }
 
@@ -8915,41 +8921,29 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 @media (max-width: 576px) { .bga-inpage-feedback .initial-question { flex-wrap: wrap; } .bga-inpage-feedback .initial-question P { width: 100%; margin-bottom: 16px !important; } }
 
-.bga-component.cookie-notification { background-color: rgba(46, 62, 90, 0.9); box-shadow: 2px -2px 3px 0px rgba(51, 51, 51, 0.2); }
+.cookie-notification { background: #FFF3CD; display: flex; column-gap: 16px; }
 
-.bga-component.cookie-notification .component-content { display: flex; align-items: center; }
+.cookie-notification .component-content { max-width: 1320px; margin: 0 auto; padding: 0 0 0 40px; }
 
-.bga-component.cookie-notification .component-content p, .bga-component.cookie-notification .component-content a { color: #ffffff; font-size: .875rem; font-weight: 600; }
+.cookie-notification .component-content p { text-align: center; font-weight: 600; }
 
-.bga-component.cookie-notification .component-text { max-width: 640px; }
+.cookie-notification .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; background-position: center center; border: none; height: 16px; width: 16px; min-height: auto !important; flex-shrink: 0; }
 
-.bga-component.cookie-notification .component-links { display: flex; min-width: 330px; align-items: center; }
+.cookie-notification .close:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
 
-.bga-component.cookie-notification .component-links p, .bga-component.cookie-notification .component-links a { color: #ffffff; font-size: .875rem; font-weight: 600; }
+.cookie-notification a { white-space: nowrap; }
 
-.bga-component.cookie-notification .component-links a:focus-visible { background: none; border: #ffffff solid 2px; border-radius: 4px; }
+.cookie-notification a:active { border: none; }
 
-.bga-component.cookie-notification .component-links a:hover { background: none; }
+.component-example.bp-576 .cookie-notification .component-content { padding: 0; }
 
-.bga-component.cookie-notification .bga-btn-pill { font-size: .875rem; padding: 8px 16px !important; min-height: auto; }
+.component-example.bp-below576 .cookie-notification .component-content { padding: 0; }
 
-.bga-component.cookie-notification .bga-btn-pill:focus-visible, .bga-component.cookie-notification .bga-btn-pill:hover, .bga-component.cookie-notification .bga-btn-pill:active { border-color: #ffffff; }
+.component-example.bp-below576 .cookie-notification { column-gap: 8px; }
 
-.bga-component.cookie-notification.non-branded .component-text p { color: #ffffff; }
+@media (max-width: 1400px) { .cookie-notification .component-content { padding: 0; } }
 
-.bga-component.cookie-notification.non-branded .component-links a { color: #ffffff; }
-
-.bga-component.cookie-notification.non-branded .component-links a:hover, .bga-component.cookie-notification.non-branded .component-links a:focus-visible { color: #ffffff; }
-
-.bga-component.cookie-notification.non-branded .component-links a:focus-visible { border-color: #ffffff; }
-
-#inpage-cookie { position: fixed; bottom: 0; width: 100%; display: none; }
-
-.component-example.bp-below768 .cookie-notification .component-content, .component-example.small-screen .cookie-notification .component-content { flex-wrap: wrap; }
-
-.component-example.bp-below768 .cookie-notification .component-text, .component-example.small-screen .cookie-notification .component-text { margin: 0 0 16px 0 !important; max-width: 100%; }
-
-@media (max-width: 768px) { .cookie-notification .component-content { flex-wrap: wrap; } .cookie-notification .component-text { margin: 0 0 16px 0 !important; max-width: 100%; } }
+@media (max-width: 576px) { .cookie-notification { column-gap: 8px; } }
 
 .bga-component.non-branded, .non-branded { border: none; }
 
