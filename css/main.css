@@ -5403,6 +5403,10 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .callout-box ul.indented li span:last-of-type { margin-bottom: 0; }
 
+.callout-box ul.indented-events li { list-style-type: none; text-indent: 0 !important; margin-bottom: 24px; }
+
+.callout-box ul.indented-events li::before { display: none; }
+
 .callout-box.non-branded.blue .header-section, .callout-box.non-branded.blue .footer-section { background: #D8D8D8; }
 
 .callout-box.non-branded .accordion.event-sessions { border-bottom: 1px solid #333333; }
@@ -5421,7 +5425,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .accordion.event-sessions .accordion-item:first-of-type .accordion-button { border-radius: 0; }
 
-.accordion.event-sessions .accordion-header .accordion-button { padding: 16px; background: none; border-top: 1px solid #788295; }
+.accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; background: none; border-top: 1px solid #788295; }
 
 .accordion.event-sessions .accordion-header .accordion-button p { padding-right: 16px; }
 
@@ -5435,7 +5439,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .accordion.event-sessions .accordion-header .accordion-button:hover { text-decoration: underline; background: #ffffff; }
 
-.accordion.event-sessions .accordion-body { padding: 0 16px 16px 16px; background: #ffffff; border: none; }
+.accordion.event-sessions .accordion-body { padding: 0 8px 16px 8px; background: #ffffff; border: none; }
 
 .accordion.event-sessions .accordion-body p { margin-bottom: 16px; }
 
@@ -5449,17 +5453,25 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below768 .callout-box ul.indented span, .component-example.small-screen .callout-box ul.indented span { width: 100%; margin-bottom: 0; }
 
-.component-example.bp-below768 .accordion.event-sessions .accordion-header .accordion-button, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; }
+.component-example.bp-350 .accordion.event-sessions .accordion-header .accordion-button, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; }
 
-.component-example.bp-below768 .accordion.event-sessions .accordion-header .accordion-button p, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.75; padding-right: 8px; }
+.component-example.bp-350 .accordion.event-sessions .accordion-header .accordion-button p, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.75; padding-right: 8px; }
 
-.component-example.bp-below768 .accordion.event-sessions .accordion-body, .component-example.small-screen .accordion.event-sessions .accordion-body { padding: 0 32px 16px 8px; }
+.component-example.bp-350 .registration-link-wrapper, .component-example.small-screen .registration-link-wrapper { display: block; }
 
-.component-example.bp-below768 .registration-link-wrapper, .component-example.small-screen .registration-link-wrapper { display: block; }
+.component-example.bp-350 .registration-link-wrapper .form-select, .component-example.small-screen .registration-link-wrapper .form-select { margin-bottom: 24px; }
 
-.component-example.bp-below768 .registration-link-wrapper .form-select, .component-example.small-screen .registration-link-wrapper .form-select { margin-bottom: 24px; }
+.component-example.bp-below350 .accordion.event-sessions .accordion-header .accordion-button, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; }
 
-@media (max-width: 768px) { .callout-box ul.indented li { display: block; } .callout-box ul.indented strong { min-width: unset; width: 100%; margin-bottom: 0px; } .callout-box ul.indented span { width: 100%; margin-bottom: 0; } .accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; } .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.75; padding-right: 8px; } .accordion.event-sessions .accordion-body { padding: 0 32px 16px 8px; } .registration-link-wrapper { display: block; } .registration-link-wrapper .form-select { margin-bottom: 24px; } }
+.component-example.bp-below350 .accordion.event-sessions .accordion-header .accordion-button p, .component-example.small-screen .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.75; padding-right: 8px; }
+
+.component-example.bp-below350 .registration-link-wrapper, .component-example.small-screen .registration-link-wrapper { display: block; }
+
+.component-example.bp-below350 .registration-link-wrapper .form-select, .component-example.small-screen .registration-link-wrapper .form-select { margin-bottom: 24px; }
+
+@media (max-width: 768px) { .callout-box ul.indented li { display: block; } .callout-box ul.indented strong { min-width: unset; width: 100%; margin-bottom: 0px; } .callout-box ul.indented span { width: 100%; margin-bottom: 0; } }
+
+@media (max-width: 576px) { .accordion.event-sessions .accordion-header .accordion-button { padding: 16px 8px; } .accordion.event-sessions .accordion-header .accordion-button p { font-size: 1rem; line-height: 1.75; padding-right: 8px; } .registration-link-wrapper { display: block; } .registration-link-wrapper .form-select { margin-bottom: 24px; } }
 
 .callout-box.call-to-action .download-link-wrapper a { background: #ffffff; display: flex; flex-wrap: wrap; text-decoration: none; }
 
