@@ -6,29 +6,73 @@
         <div class="component-text p-0 remove-element-padding">
     
         {% if include.singlesession == "true" %}
-            <ul class="indented p-0">
+            <ul class="indented-events p-0">
+                {% if include.event-type %}
+                <li><strong>Type of event:</strong> {{ include.event-type }}</li>
+                {% endif %}
+
+                {% if include.audience %}
+                <li><strong>Who it is for:</strong> {{ include.audience }}</li>
+                {% endif %}
+
+                {% if include.speaker %}
+                <li><strong>Speaker:</strong> {{ include.speaker }}</li>
+                {% endif %}
+                
+                {% if include.sponsor %}
+                <li><strong>Event sponsor:</strong> {{ include.sponsor }}</li>
+                {% endif %}
+
+                {% if include.organiser %}
+                <li><strong>Event organiser:</strong> {{ include.organiser }}</li>
+                {% endif %}
+                
                 {% if include.cost %}
-                <li><strong>Cost:</strong>{{ include.cost }}</li>
+                <li><strong>Cost:</strong> {{ include.cost }}</li>
                 {% endif %}
                 
                 {% if include.date %}
-                <li><strong>Date:</strong>{{ include.date }}</li>
+                <li><strong>Date:</strong> {{ include.date }}</li>
                 {% endif %}
                 
                 {% if include.time %}
-                <li><strong>Time:</strong>{{ include.time }}</li>
+                <li><strong>Time:</strong> {{ include.time }}</li>
                 {% endif %}
                 
                 {% if include.location %}
-                <li><strong>Location:</strong>{{ include.location }}</li>
+                <li><strong>Location:</strong> {{ include.location }}</li>
                 {% endif %}
                  
             </ul>
             
         {% else %}
-                {% if include.cost %}
-                <p><strong>Cost:</strong> {{ include.cost }}</p>
+                
+            <ul class="indented-events p-0">
+                {% if include.event-type %}
+                <li><strong>Type of event:</strong> {{ include.event-type }}</li>
                 {% endif %}
+
+                {% if include.audience %}
+                <li><strong>Who it is for:</strong> {{ include.audience }}</li>
+                {% endif %}
+
+                {% if include.speaker %}
+                <li><strong>Speaker:</strong> {{ include.speaker }}</li>
+                {% endif %}
+                
+                {% if include.sponsor %}
+                <li><strong>Event sponsor:</strong> {{ include.sponsor }}</li>
+                {% endif %}
+
+                {% if include.organiser %}
+                <li><strong>Event organiser:</strong> {{ include.organiser }}</li>
+                {% endif %}
+                
+                {% if include.cost %}
+                <li><strong>Cost:</strong> {{ include.cost }}</li>
+                {% endif %}
+
+            </ul>
             
                 <div class="accordion event-sessions">
                 

@@ -3,7 +3,7 @@
 layout: content-tagged
 title: Event registration call to action
 description: Highlight registration information within the context of an events page.
-updated: 8 August, 2023
+updated: 27 September, 2024
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -53,9 +53,10 @@ classes="in-page"
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html 
                         element-string="contact-call-to-action"
-                        md-visibility="true"
+                        sm-visibility="true"
+                        xs-visibility="true"
                         final-visibility="true"
-                        breakpoint-final="768"
+                        breakpoint-final="350"
                     %}
 
                     <!-- Component example -->
@@ -68,6 +69,11 @@ classes="in-page"
                         {% include component-examples/event-callout-box-example.html
                             singlesession="true"
                             title="Register for this event through the Australian Taxation Office"
+                            event-type="Workshop"
+                            audience="NSW businesses"
+                            speaker="Jane Citizen"
+                            sponsor="Sponsor organisation"
+                            organiser="XX Government"
                             cost="Free"
                             time="10:00 - 11:00 am AEST"
                             date="Thu 30 Jun 2022"
@@ -79,6 +85,11 @@ classes="in-page"
                         {% include component-examples/event-callout-box-example.html
                             example-name="multiple-one-link"
                             title="Register for this event through the Australian Taxation Office"
+                            event-type="Workshop"
+                            audience="NSW businesses"
+                            speaker="Jane Citizen"
+                            sponsor="Sponsor organisation"
+                            organiser="XX Government"
                             cost="Free"
                             item1-label="<strong>Online: </strong>Thursday 13 Nov 2021"
                             item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
@@ -93,6 +104,11 @@ classes="in-page"
                             dropdown="true"
                             example-name="multiple-many-links"
                             title="Register for this event through the Australian Taxation Office"
+                            event-type="Workshop"
+                            audience="NSW businesses"
+                            speaker="Jane Citizen"
+                            sponsor="Sponsor organisation"
+                            organiser="XX Government"
                             cost="Free"
                             item1-label="<strong>Shepparton, VIC: </strong>Thursday 13 Nov 2021"
                             item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
@@ -116,9 +132,10 @@ classes="in-page"
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html 
                         element-string="nb-contact-call-to-action"
-                        md-visibility="true"
+                        sm-visibility="true"
+                        xs-visibility="true"
                         final-visibility="true"
-                        breakpoint-final="768"
+                        breakpoint-final="350"
                     %}
 
                     <!-- Component example -->
@@ -135,6 +152,11 @@ classes="in-page"
                         {% include component-examples/event-callout-box-example.html
                             singlesession="true"
                             title="Register for this event through the Australian Taxation Office"
+                            event-type="Workshop"
+                            audience="NSW businesses"
+                            speaker="Jane Citizen"
+                            sponsor="Sponsor organisation"
+                            organiser="XX Government"
                             cost="Free"
                             time="10:00 - 11:00 am AEST"
                             date="Thu 30 Jun 2022"
@@ -147,6 +169,11 @@ classes="in-page"
                         {% include component-examples/event-callout-box-example.html
                             example-name="multiple-one-link"
                             title="Register for this event through the Australian Taxation Office"
+                            event-type="Workshop"
+                            audience="NSW businesses"
+                            speaker="Jane Citizen"
+                            sponsor="Sponsor organisation"
+                            organiser="XX Government"
                             cost="Free"
                             item1-label="<strong>Online: </strong>Thursday 13 Nov 2021"
                             item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
@@ -162,6 +189,11 @@ classes="in-page"
                             dropdown="true"
                             example-name="multiple-many-links"
                             title="Register for this event through the Australian Taxation Office"
+                            event-type="Workshop"
+                            audience="NSW businesses"
+                            speaker="Jane Citizen"
+                            sponsor="Sponsor organisation"
+                            organiser="XX Government"
                             cost="Free"
                             item1-label="<strong>Shepparton, VIC: </strong>Thursday 13 Nov 2021"
                             item1-content="<strong>Time: </strong>10:00 - 11:00 AM AEST"
@@ -387,11 +419,16 @@ classes="in-page"
 
         <!-- VERSION HISTORY-->
         <h2 class="section-start" id="version-history">Version history</h2>
-        <h4>8 August, 2023</h4>
+        <h4>27 September, 2024</h4>
+        <p>Content and style updates have been made including:</p>
         <ul>
-            <li>Added an additional layout (the <strong>Two column - tool page alternate</strong> layout).</li>
+            <li>Event type, audience, speaker, sponsor and organiser have all been added as list items. These items are all optional and will not appear on every call to action.</li>
+            <li>Changes to the text spacing in event detail items. The space between the colon and the text following it has been removed to accommodate longer names before some of the colons.</li>
+            <li>Revised breakpoints due to the removal of the spacing within the list item text.</li>
+            <li>A hover state has been added to the accordion items.</li>
         </ul>
-
-            
+        <h4>8 August, 2023</h4>
+        <p>Added an additional layout (the <strong>Two column - tool page alternate</strong> layout).</p>
+        
         </div>
         

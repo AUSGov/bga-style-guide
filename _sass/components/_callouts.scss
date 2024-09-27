@@ -43,6 +43,17 @@
         }
         
     }
+    ul.indented-events {
+        li {
+            list-style-type: none;
+            text-indent: 0 !important;
+            margin-bottom: 24px;
+            
+            &::before {
+                display: none;
+            }
+        }  
+    }
 
     &.non-branded {
         &.blue {
@@ -91,7 +102,7 @@
     }
     .accordion-header {
         .accordion-button {
-            padding: 16px;
+            padding: 16px 8px;
             background: none;
             border-top: 1px solid $bga-blue-black-mid;
             
@@ -128,7 +139,7 @@
         }
     }
     .accordion-body {
-        padding: 0 16px 16px 16px;
+        padding: 0 8px 16px 8px;
         background: $bga-white;
         border: none;
         
@@ -163,7 +174,9 @@
             }
         }
     }
+}
 
+@mixin callout-bp350 {
     .accordion.event-sessions {
         .accordion-header {
              .accordion-button {
@@ -175,9 +188,7 @@
                 }
             }
         }
-        .accordion-body {
-            padding: 0 32px 16px 8px;
-        }
+        
     }
     
     .registration-link-wrapper {
@@ -189,12 +200,37 @@
     }
 }
 
+@mixin callout-bp-below350 {
+    .callout-box.blue {
+        .footer-section {
+            button {
+                background: pink !important;
+            }
+        }
+    }
+}
+
+
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
 .component-example.bp-below768, .component-example.small-screen {
-    @include callout-below768();
+    @include callout-below768();    
 }
+
+.component-example.bp-350, .component-example.small-screen {
+    @include callout-bp350();
+}
+
+.component-example.bp-below350, .component-example.small-screen {
+    @include callout-bp350();
+    //@include callout-bp-below350();
+}
+
 
 // Media queries for HTML example pages.
 @media (max-width: 768px) {
     @include callout-below768();
+}
+
+@media (max-width: 576px) {
+    @include callout-bp350();
 }
