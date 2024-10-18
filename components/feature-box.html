@@ -3,7 +3,7 @@
 layout: content-tagged
 title: Feature box
 description: Feature boxes highlight certain information in the context of a page.
-updated: 8 August, 2023
+updated: 18 October, 2024
 breadcrumb1: Components
 url1: /components.html
 bga-tag: true
@@ -78,6 +78,13 @@ subsite-tag: true
                         classes="full-width-layout purple"
                         %}
 
+                        {% include component-examples/featurebox-example.html
+                            h2title="Announcement title"
+                            content="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed dolor sed ipsum dapibus viverra at in enim. Quisque quam sapien, molestie a nibh at, commodo tincidunt urna. Aliquam erat volutpat.</p>"
+                        icon="'../assets/icon-announcements-blueblack.svg' | relative_url "
+                        classes="full-width-layout orange"
+                        %}
+
                         <h3>Layouts: Single column - 2/3 width layout and two column layouts</h3>
 
                         {% include component-examples/featurebox-example.html
@@ -91,6 +98,13 @@ subsite-tag: true
                         </ul>"
                         icon="'../assets/icon-casestudy-blueblack.svg' | relative_url "
                         classes="two-col-layout green"
+                        %}
+
+                        {% include component-examples/featurebox-example.html
+                            h2title="Announcement title"
+                            content="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed dolor sed ipsum dapibus viverra at in enim. Quisque quam sapien, molestie a nibh at, commodo tincidunt urna. Aliquam erat volutpat.</p>"
+                        icon="'../assets/icon-announcements-blueblack.svg' | relative_url "
+                        classes="two-col-layout purple"
                         %}
 
                     </div>
@@ -192,7 +206,15 @@ subsite-tag: true
                                 %}
                             </div>
 
+                            <div class="col-6 col-md-4 mb-4">
+                                {% include icon-example.html
+                                src="'../assets/icon-announcements-blueblack.svg' | relative_url "
+                                title="Announcements"
+                                classes=""
+                                %}
+                            </div>
 
+                    
 
                         </div>
                     </div>
@@ -479,6 +501,7 @@ subsite-tag: true
         <h3>When to use this component: </h3>
         <p>Used to highlight examples or latest news that may be of interest to the user. Typical uses can include:</p>
         <ul>
+            <li>Announcements</li>
             <li>Latest news</li>
             <li>Examples and case studies</li>
             <li>Tips</li>
@@ -487,10 +510,13 @@ subsite-tag: true
 
           <!-- VERSION HISTORY-->
           <h2 class="section-start" id="version-history">Version history</h2>
+          
+          <h4>18 October, 2024</h4>
+          <p>Added an additional icon for announcements.</p>
+
           <h4>8 August, 2023</h4>
-          <ul>
-              <li>Added an additional layout (the <strong>Two column - tool page alternate</strong> layout).</li>
-          </ul>
+          <p>Added an additional layout (the <strong>Two column - tool page alternate</strong> layout).</p>
+          
 
 
     </div>
