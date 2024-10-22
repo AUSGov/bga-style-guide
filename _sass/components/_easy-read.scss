@@ -47,7 +47,7 @@
         }
 
         ul {
-            margin: 0 0 0 64px;
+            margin: 0 0 0 56px;
             padding: 0;
 
             &:last-child {
@@ -55,13 +55,26 @@
                     margin-bottom: 0 !important;
                 }
             }
+           
         }
+        
+        ol {
+            margin: 0 0 0 48px;
+            padding: 0;           
+            list-style-position: outside;
+            li {
+                text-indent: 0px;
+                &::before {
+                    display: none;
+                }
+            }
+        } 
 
         li {
             font-size: 1.2rem;
             line-height: 2;
             display: list-item;
-            text-indent: -32px;
+            text-indent: -24px;
             margin-bottom: 24px;
            
             &::before {
@@ -69,14 +82,14 @@
                 border-radius: 8px;
                 content: "";
                 display: inline-block;
-                height: 8px;
-                width: 8px;
-                margin-right: 24px;
+                height: 6px;
+                width: 6px;
+                margin-right: 16px;
                 padding: 0;
                 vertical-align: middle;
             }
         }
-    } 
+}
 
     &.img-border {
         img {
@@ -220,48 +233,6 @@
         }
     }
 
-    /*
-    .bga-component.relevant-support-links.easy-read {
-        border-bottom: none;
-        a { 
-            cursor: pointer;
-            .link-text {
-                padding: 0 24px;
-            }
-            .link-wrapper {
-                align-items: center;
-                border-left: 8px solid $bga-green-highlight-mid;
-            }
-    
-            .icon-wrapper {
-                background: $bga-green-highlight-light;
-                border-left: none;
-                border-top-right-radius: 100px;
-                border-bottom-right-radius: 100px;
-                flex-shrink: 0;
-                padding: 48px 24px;
-                flex-wrap: nowrap;
-    
-                p {
-                    font-size: 1.375rem;
-                    line-height: 2;
-                    flex-shrink: 0;
-                }
-            }
-    
-            img {
-                width: 48px;
-            }
-    
-            p {
-                font-size: 1.1875rem;
-                line-height: 2;
-            }
-    
-
-        }
-    }
-    */
 }
 
 @mixin easy-read-bp-below576 {
@@ -275,10 +246,19 @@
             align-content: flex-start;
             
             ul {
-                margin-left: 32px;
+                margin-left: 24px;
                 li {
-                    text-indent: -24px;
+                    text-indent: -16px;
 
+                    &:before {
+                        margin-right: 8px;
+                    }
+                    
+                }
+            }
+            ol {
+                margin-left: 24px;
+                li {
                     &:before {
                         margin-right: 16px;
                     }
