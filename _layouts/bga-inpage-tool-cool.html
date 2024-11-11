@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body {% if page.id %} id="{{page.id}}" {% endif %}>
+    
+    {% include component-examples/pathway-to-services-example.html %}
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="header-wrapper mt-5 mb-4">
+                    {% include prototypes/bga-site-header-example.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include prototypes/breadcrumbs-example.html %}
+    
+    {% include page-header.html
+        classes="teal" %}
+
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+       
+        <div class="stepped-navigation-wrapper my-5" data-step="{{ page.step-number }}" id="stepped-nav-inpage">
+
+            <div class="mobile-stepped-nav">
+                <button class="stepped-nav-toggle p-0" tabindex=0>
+                    <span class="me-2">Step {{ page.step-number }} of 5 : <strong>{{ page.stepped-nav-step }}</strong></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                        <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#333"/>
+                      </svg>
+                      
+                      </button>
+            </div>
+    
+            <div class="stepped-navigation-wrapper remove-element-padding white">
+
+                <div class="bga-component stepped-navigation">
+
+                    <a tabindex="1" id="nav-step-1" class="step me-3">
+                        <span class="step-number  mb-2">1</span>
+                        <span class="step-name">Place of sale</span>
+                    </a>
+            
+                    <a tabindex="1" id="nav-step-2" class="step me-3">
+                        <span class="step-number mb-2">2</span>
+                        <span class="step-name">Packaging</span>
+                    </a>    
+            
+                    <a tabindex="1" id="nav-step-3" class="step me-3">
+                        <span class="step-number mb-2">3</span>
+                        <span class="step-name">Country or origin</span>
+                    </a>
+
+                    <a tabindex="1" id="nav-step-4" class="step me-3">
+                        <span class="step-number mb-2">4</span>
+                        <span class="step-name">Overseas processing</span>
+                    </a>
+            
+                    <a tabindex="1" id="nav-step-6" class="step me-3">
+                        <span class="step-number mb-2">5</span>
+                        <span class="step-name">Results</span>
+                    </a>
+
+                </div>
+                
+            </div>
+    
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+        {{ content }}
+
+    <footer>    
+
+    {% include component-examples/bga-site-footer-example.html %}
+
+    </footer>
+
+    <div class="hmd-reset-wrapper footer-wrapper py-4 m-0">
+        <div class="container ">
+            <div class="row">
+                <div class="remove-element-padding">
+                    <a href="" id="cool-reset-prototype">Reset prototype</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--{% include prototypes/inactive-feature-modal.html %}-->
+
+
+
+    <!-- LOOP11 TEST SCRIPT -->
+    <!--<script src="//cdn.loop11.com/embed.js" type="text/javascript" async="async"></script>-->
+    
+</body>
+</html>
+
+
+

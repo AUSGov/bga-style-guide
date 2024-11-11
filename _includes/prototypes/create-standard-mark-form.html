@@ -1,0 +1,146 @@
+<div class="callout-box call-to-action create-standard-mark-cta remove-element-padding {{include.classes}} p-4 mb-5">
+
+    <h3>Create your standard mark</h3>
+    <p>You will be able to download this mark as a PDF or png file.</p>
+
+    <div class="fieldset-wrapper">
+       
+        <!-- Step 1-->
+        <div class="form-step form-step-1 p-4  remove-element-padding">
+            <h4 class="h3-font-size">Add your food product details</h4>
+            
+
+            <fieldset>
+                <label for="percentage" class="form-label mb-3 h4-font-size">Enter the minimum percentage of Australian ingredients in your product *</label>
+                
+                <p class="mb-3">Enter a number between 1 - 99</p>
+
+                <div class="textbox-units form-element-wrapper mb-5">
+                    <input type="text" class="form-control m-0" id="percentage" value="">
+                    <p class="decimals m-0">%</p>
+                </div>
+
+
+                <label for="processing" class="form-label mb-3 h4-font-size">Provide information on processing that occurred outside Australia *</label>
+                
+                <p class="mb-3">Describe the minor processing that occurred outside Australia (up to 80 characters).</p>
+                <p class="mb-3">For example: <em>‘canned in Thailand’ or ‘sliced and packed in Indonesia’</em></p>
+                
+                <input type="text" class="form-control mb-5" id="processing" value="">
+
+
+                <label for="ingredients" class="form-label mb-3 h4-font-size">Highlight ingredients and their country of origin (optional)</label>
+                
+                <p class="mb-3">Provide a description (up to 80 characters) to highlight one or more ingredients of the food product and name their country of origin.</p>
+                <p class="mb-3">For example: <em>‘Australian macadamias and Belgian chocolate’</em></p>
+                
+                <input type="text" class="form-control mb-5" id="ingredients" value="">
+
+
+                <div class="button-example">
+                    <a class="bga-btn bga-secondary-btn bkg-light" id="add-product-details" tabindex="0" href="" role="button">Add product details</a>
+                </div>
+
+            </fieldset>
+            
+        </div>
+
+
+        <!-- Step 2-->
+        <div class="form-step form-step-2 d-none p-4 remove-element-padding">
+            <h4 class="h3-font-size">Choose your wording option</h4>
+            
+
+            <fieldset>
+               
+                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="wording-options">
+
+                    <div class="radio-button w-100 percentage_under_10">
+                        <input class="form-check-input m-0" type="radio" name="wording-options"
+                            id="option1" data-value="option1">
+                        <label class="form-check-label" for="option1"><div>Made in Australia from less than 10% Australian ingredients (<span class="processing"></span>)</div></label>
+                    </div>
+
+                    <div class="radio-button w-100 percentage_under_10 ingredients_included">
+                        <input class="form-check-input m-0" type="radio" name="wording-options"
+                            id="option2" data-value="option2">
+                        <label class="form-check-label" for="option2"><div>Made in Australia from less than 10% Australian ingredients with <span class="ingredients"></span> (<span class="processing"></span>)</div></label>
+                    </div>
+
+                    <div class="radio-button w-100">
+                        <input class="form-check-input m-0" type="radio" name="wording-options"
+                            id="option3" data-value="option3">
+                        <label class="form-check-label" for="option3"><div>Made in Australia from at least  <span class="percentage"></span>% Australian ingredients  (<span class="processing"></span>)</div></label>
+                    </div>
+
+                    <div class="radio-button w-100 ingredients_included">
+                        <input class="form-check-input m-0" type="radio" name="wording-options"
+                            id="option4" data-value="option4">
+                        <label class="form-check-label" for="option4"><div>Made in Australia from at least  <span class="percentage"></span>% Australian ingredients with <span class="ingredients"></span> (<span class="processing"></span>)</div></label>
+                    </div>
+                
+                </div>
+               
+
+            </fieldset>
+            
+        </div>
+
+
+
+        <!-- Step 3-->
+        <div class="form-step form-step-3 d-none p-4 remove-element-padding">
+            <h4 class="h3-font-size">Choose the orientation of your standard mark</h4>
+
+            <fieldset>
+                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="orientation">
+
+                    <div class="radio-button w-100">
+                        <input class="form-check-input m-0" type="radio" name="orientation"
+                            id="orientation1" data-value="orientation1">
+                        <label class="form-check-label" for="orientation1">Landscape</label>
+                    </div>
+
+                    <div class="radio-button w-100">
+                        <input class="form-check-input m-0" type="radio" name="orientation"
+                            id="orientation2" data-value="orientation2">
+                        <label class="form-check-label" for="orientation2">Portrait</label>
+                    </div>
+
+                
+                
+                </div>
+               
+
+            </fieldset>
+            
+        </div>
+
+
+
+        <!-- Step 4-->
+        <div class="form-step form-step-4 d-none p-4 remove-element-padding">
+        <h4 class="h3-font-size">Your download your standard mark</h4>
+        <p>Your customised mark:</p>
+
+        <div class="mark-preview mb-5">
+            <img src={{ "assets/standard-mark-landscape.png"/ | relative_url }} alt=""/>
+        </div>
+        
+        <div class="tool-button-group button-group">
+
+            <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                href="" role="button">Download PDF</a>
+
+            <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                href="" role="button">Download PNG</a>
+
+        </div>
+       
+            
+        </div>
+   
+
+    </div>
+
+</div>

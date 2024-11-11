@@ -1,0 +1,48 @@
+#cool-prototype {
+
+    .radios.error {
+        box-shadow: 0 0 0 8px $bga-red-fail-mid;
+        background: $bga-red-fail-mid;
+    
+        .radio-button {
+            label {
+                border:  none;
+                box-shadow: $bga-error-boxshadow;
+                border-radius: $bga-focus-radius;
+            }
+    
+            input:focus-visible {
+                + label {
+                    box-shadow: $bga-focus-boxshadow;
+                    border-radius: $bga-focus-radius;
+                }
+            }
+        }
+    }
+
+    .error-message {
+        color: $bga-red-fail-dark;
+    }
+
+    .call-to-action.create-standard-mark-cta {
+        .fieldset-wrapper  {
+            border: none;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 24px;
+        }
+        .form-step {
+            background: $bga-white;
+            width: 100%;
+        }
+        #percentage {
+            width: 60px;
+            text-align: center;
+        }
+
+        
+
+    }
+
+} // End #cool-prototype
+    

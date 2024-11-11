@@ -19,7 +19,7 @@
 
                 <div class="button-example">
                     {% if include.link %} 
-                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{include.link}}>Start now</a>
+                    <a class="bga-btn bga-primary-btn bkg-light" id="start-now" tabindex="0" href={{include.link}}>Start now</a>
                     {% else %}
                     <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Start now</a>
                     {% endif %}
@@ -42,6 +42,12 @@
               <h3>Time to complete</h3>
 
               <p>{{ include.time }}</p>
+
+              {% if include.privacy %}
+              <h3>Privacy</h3>
+
+              {{ include.privacy }}
+              {% endif %}
 
               <div class="button-example mb-0">
                 {% if include.link %} 
