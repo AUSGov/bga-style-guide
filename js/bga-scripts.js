@@ -1741,7 +1741,7 @@ $(document).ready(function () {
 
     // CONTEXTUAL HELP {
     $('.complex-question').on('click', function () {
-        $('.complex-answer').slideToggle();
+        $(this).next('.complex-answer').slideToggle();
         $(this).parents('.complex').toggleClass('open');
     });
 
