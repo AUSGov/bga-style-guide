@@ -26,8 +26,7 @@
 
 
 
-    .create-standard-mark-cta {
-        background: $bga-yellow-highlight-light;
+    .create-standard-mark-cta, .create-coo-cta {
         background: $bga-blue-background-extralight;
 
         .title-area {
@@ -40,13 +39,29 @@
             flex-wrap: wrap;
             row-gap: 24px;
         }
-        .form-step {
+        .form-step, .coo-example {
             background: $bga-white;
             width: 100%;
         }
         #percentage {
             width: 60px;
             text-align: center;
+        }
+
+        .coo-example {
+            p {
+                margin-bottom: 16px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            .example-border {
+                display: inline-block;
+                padding: 8px;
+                border: solid $bga-black 2px;
+            }
         }
 
     }
