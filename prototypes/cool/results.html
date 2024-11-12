@@ -8,7 +8,7 @@ page-id: results
 
 ---
 
-<div class="container page-content results-page results-viewed my-5" data-page="{{ page.page-id }}"  id="cool-prototype">
+<div class="container page-content results-page my-5" data-page="{{ page.page-id }}"  id="cool-prototype">
 
 
     <div class="row">
@@ -16,8 +16,8 @@ page-id: results
         <div class="remove-top-spaces col-lg-10 col-xl-9">
 
             <h2>Results</h2>
+            <h3>Your labelling requirements</h3>
 
-            <h3>Three component standard mark</h3>
             <p>Based on your answers a <strong>three component standard mark</strong> can be used on your food product.</p>
 
             <p>These standard marks are for food products that were last substantially transformed in Australia AND have Australian and imported ingredients AND were exported to an overseas country for minor processing without the further addition of non-Australian ingredients before being re-imported to Australia.</p>
@@ -25,8 +25,7 @@ page-id: results
             <p>The standard mark will have the kangaroo logo, bar chart and text.</p>
 
             {% include prototypes/create-standard-mark-form.html 
-                classes="teal"
-            
+                classes=""
             %}
 
 
@@ -50,13 +49,13 @@ page-id: results
 
                         <div class="component-text p-0 remove-element-padding">
 
-                            <!-- business structure answers -->
+                            <!-- place of sale -->
                             <div class="answers-section pb-7 mb-4">
                                 <div class="title-area mb-2 remove-element-padding">
 
-                                    <h4 class="m-0">Business structure</h4>
+                                    <h4 class="m-0">Place of sale</h4>
                                     <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href={{ 'prototypes/help-me-decide/business-structure.html' | relative_url }}>
+                                        href={{ 'prototypes/cool/place-of-sale.html' | relative_url }}>
                                         <span>Edit</span>
                                         <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
                                             height="22" viewBox="0 0 22 22">
@@ -69,222 +68,103 @@ page-id: results
 
                                 </div>
 
-                                <div class="answers remove-element-padding" data-page="business-structure-page">
-                                    <p id="know-structure-yes" class="d-none">Do you know which business structure is right for you?<span>Yes</span></p>
-                                    <p id="know-structure-no" class="d-none">Do you know which business structure is right for you?<span>No</span></p>
-                                    <p id="know-structure-unanswered" class="d-none">Do you know which business structure is right for you?<span class="unanswered">Unanswered</span></p>
+                                <div class="answers remove-element-padding">
+                                    <p>Question lorem ipsum dolor sit amet?<span>at a physical store or market, online or from a vending machine</span></p>
+
+                                    <p>Question lorem ipsum dolor sit amet?<span>in different premises to where it has been grown, produced, made and packed</span></p>
+                                </div>
+
+                            </div>
 
 
-                                    <p id="sole-trader-4" class="d-none">Which business structure is right for you?<span>Sole
-                                            trader</span></p>
-                                    <p id="partnership-4" class="d-none">What business structure will you
-                                        use?<span>Partnership</span></p>
-                                    <p id="company-4" class="d-none">What business structure will you
-                                        use?<span>Company</span></p>
-                                    <p id="trust-4" class="d-none">Which business structure is right for you?<span>Trust</span>
-                                    </p>
-                                    <p id="superannuation" class="d-none">Which business structure is right for you?<span>Superannuation</span></p>
-                                    <p id="business-structure-unanswered" class="d-none">Which business structure is right for you?<span class="unanswered">Unanswered</span></p>
+                            <!-- packaging -->
+                            <div class="answers-section pb-7 mb-4">
+                                <div class="title-area mb-2 remove-element-padding">
+
+                                    <h4 class="m-0">Packaging</h4>
+                                    <a tab-index="0" class="edit-btn p-0 ms-4"
+                                        href={{ 'prototypes/cool/packaging.html' | relative_url }}>
+                                        <span>Edit</span>
+                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
+                                            height="22" viewBox="0 0 22 22">
+                                            <path
+                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
+                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
+                                        </svg>
+
+                                    </a>
+
+                                </div>
+
+                                <div class="answers remove-element-padding">
+                                    <p>Question lorem ipsum dolor sit amet? <span>was packed in Australia</span></p>
+                                    <p>This packed or packaged food product is: <span>not listed above</span></p>
+                                    <p>Is this product fresh fruit and vegetables in transparent packaging? <span>No</span></p>
+
+                                </div>
+
+                            </div>
 
 
-                                    <p id="number-owners-one" class="d-none">How many people will own your business?<span>One (just me)</span></p>
-                                    <p id="number-owners-two" class="d-none">How many people will own your business?<span>Two or more</span></p>
-                                    <p id="number-owners-unanswered" class="d-none">How many people will own your business?<span class="unanswered">Unanswered</span></p>
+                            <!-- country of origin -->
+                            <div class="answers-section pb-7 mb-4">
+                                <div class="title-area mb-2 remove-element-padding">
+
+                                    <h4 class="m-0">Country of origin</h4>
+                                    <a tab-index="0" class="edit-btn p-0 ms-4"
+                                        href={{ 'prototypes/cool/country-of-origin.html' | relative_url }}>
+                                        <span>Edit</span>
+                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
+                                            height="22" viewBox="0 0 22 22">
+                                            <path
+                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
+                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
+                                        </svg>
+
+                                    </a>
+
+                                </div>
+
+                                <div class="answers remove-element-padding">
+                                    <p>Was this food product grown OR produced OR made in Australia? <span>Yes</span></p>
+                                    <p>Does this food product contain Australian ingredients?<span>Yes</span></p>
+                                    <p>Nullam eu ante ac arcu facilisis finibus? <span>in two or more countries (can include Australia)</span></p>
+                                    <p>Is this food product or its ingredients 100% Australian? <span>Yes</span></p>
+                                    <p>Does this food product contain a consistent proportion of Australian ingredients? <span>Yes</span></p>
+
+                                </div>
+
+                            </div>
 
 
-                                    <p id="hold-assets-yes" class="d-none">Will you hold an asset for others? <span>Yes</span></p>
-                                    <p id="hold-assets-no" class="d-none">Will you hold an asset for others? <span>No</span></p>
-                                    <p id="hold-assets-unanswered" class="d-none">Will you hold an asset for others? <span class="unanswered">Unanswered</span></p>
+                            <!-- overseas processing -->
+                            <div class="answers-section pb-7 mb-4">
+                                <div class="title-area mb-2 remove-element-padding">
 
+                                    <h4 class="m-0">Overseas processing</h4>
+                                    <a tab-index="0" class="edit-btn p-0 ms-4"
+                                        href={{ 'prototypes/cool/overseas-processing.html' | relative_url }}>
+                                        <span>Edit</span>
+                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
+                                            height="22" viewBox="0 0 22 22">
+                                            <path
+                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
+                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
+                                        </svg>
 
-                                    <p id="sole-trader-1" class="d-none">Which business structure do you want to use? <span>Sole trader</span></p>
-                                    <p id="company-1" class="d-none">Which business structure do you want to use? <span>Company</span></p>
-                                    <p id="partnership-2" class="d-none">Which business structure do you want to use? <span>Partnership</span></p>
-                                    <p id="company-2" class="d-none">Which business structure do you want to use? <span>Company</span></p>
-                                    <p id="sole-trader-v-company" class="d-none">Which business structure do you want to use? <span class="unanswered">Unanswered</span></p>
-                                    <p id="partnership-v-company-unanswered" class="d-none">Which business structure do you want to use? <span class="unanswered">Unanswered</span></p>
+                                    </a>
 
-                                    <p id="indigenous-business-yes" class="d-none">Is your business an Indigenous business?<span>Yes</span></p>
-                                    <p id="indigenous-business-no" class="d-none">Is your business an Indigenous business?<span>No</span></p>
-                                    <p id="indigenous-business-unanswered" class="d-none">Is your business an Indigenous business?<span class="unanswered">Unanswered</span></p>
+                                </div>
+
+                                <div class="answers remove-element-padding">
                                     
+                                    <p>Was this food product exported to an overseas country for processing before being re-imported to Australia? <span>Yes</span></p>
+                                    <p>What kind of overseas processing was conducted on this food product before being re-imported to Australia? <span>minor processing with no non-Australian ingredients added to the food</span></p>
+                                    <p>Nullam eu ante ac arcu facilisis finibus? <span>Yes</span></p>
 
                                 </div>
 
                             </div>
-
-
-                            <!-- business name answers -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Business name</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href={{ 'prototypes/help-me-decide/business-name.html' | relative_url }}>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding" data-page="business-name-page">
-                                    <p id="business-name-yes" class="d-none">Is your business name different to your personal name? <span>Yes</span></p>
-                                    <p id="business-name-no" class="d-none">Is your business name different to your personal name? <span>No</span></p>
-                                    <p id="business-name-unanswered" class="d-none">Is your business name different to your personal name? <span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="domain-name-yes" class="d-none">Do you want a business website?<span>Yes</span></p>
-                                    <p id="domain-name-no" class="d-none">Do you want a business website?<span>No</span></p>
-                                    <p id="domain-name-unanswered" class="d-none">Do you want a business website?<span class="unanswered">Unanswered</span></p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- employees answers -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Employees</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href={{ 'prototypes/help-me-decide/employees.html' | relative_url }}>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding" data-page="employees-page">
-                                    <p id="payg-yes" class="d-none">Will you hire employees?<span>Yes</span></p>
-                                    <p id="payg-no" class="d-none">Will you hire employees?<span>No</span></p>
-                                    <p id="payg-unanswered" class="d-none">Will you hire employees?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="working-holiday-employer-yes" class="d-none">Will you employ working holiday makers?<span>Yes</span></p>
-                                    <p id="working-holiday-employer-no" class="d-none">Will you employ working holiday makers?<span>No</span></p>
-                                    <p id="working-holiday-employer-unanswered" class="d-none">Will you employ working holiday makers?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="fbt-yes" class="d-none">Will you pay for benefits for your employees? <span>Yes</span></p>
-                                    <p id="fbt-no" class="d-none">Will you pay for benefits for your employees? <span>No</span></p>
-                                    <p id="fbt-unanswered" class="d-none">Will you pay for benefits for your employees? <span class="unanswered">Unanswered</span></p>
-
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- intellectual property answers -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Intellectual property</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href={{ 'prototypes/help-me-decide/employees.html' | relative_url }}>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding" data-page="employees-page">
-                                    
-                                    <p id="trade-mark-yes" class="d-none">Will you create a brand?<span>Yes</span></p>
-                                    <p id="trade-mark-no" class="d-none">Will you create a brand?<span>No</span></p>
-                                    <p id="trade-mark-unanswered" class="d-none">Will you create a brand?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="patent-yes" class="d-none">Have you invented something?<span>Yes</span></p>
-                                    <p id="patent-no" class="d-none">Have you invented something?<span>No</span></p>
-                                    <p id="patent-unanswered" class="d-none">Have you invented something?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="design-right-yes" class="d-none">Do you have a product with a unique design?<span>Yes</span></p>
-                                    <p id="design-right-no" class="d-none">Do you have a product with a unique design?<span>No</span></p>
-                                    <p id="design-right-unanswered" class="d-none">Do you have a product with a unique design?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="plant-breeders-yes" class="d-none">Are you growing a new plant variety?<span>Yes</span></p>
-                                    <p id="plant-breeders-no" class="d-none">Are you growing a new plant variety?<span>No</span></p>
-                                    <p id="plant-breeders-unanswered" class="d-none">Are you growing a new plant variety?<span class="unanswered">Unanswered</span></p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- business taxes answers -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Business taxes</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href={{ 'prototypes/help-me-decide/business-taxes.html' | relative_url }}>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding" data-page="business-taxes-page">
-                                    <p id="business-turnover-yes" class="d-none">Do you expect a turnover of $75,000 or more in your first year?<span>Yes</span></p>
-                                    <p id="business-turnover-no" class="d-none">Do you expect a turnover of $75,000 or more in your first year?<span>No</span></p>
-                                    <p id="business-turnover-unanswered" class="d-none">Do you expect a turnover of $75,000 or more in your first year?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="taxi-limousine-yes" class="d-none">Will you provide taxi, limousine or rideshare travel for passengers?<span>Yes</span></p>
-                                    <p id="taxi-limousine-no" class="d-none">Will you provide taxi, limousine or rideshare travel for passengers?<span>No</span></p>
-                                    <p id="taxi-limousine-unanswered" class="d-none">Will you provide taxi, limousine or rideshare travel for passengers?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="wet-yes" class="d-none">Will you wholesale or produce wine?<span>Yes</span></p>
-                                    <p id="wet-no" class="d-none">Will you wholesale or produce wine?<span>No</span></p>
-                                    <p id="wet-unanswered" class="d-none">Will you wholesale or produce wine?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="ftc-yes" class="d-none">Will you use taxable fuels in factories, equipment, machinery or heavy vehicles (more than 4.5 tonnes)?<span>Yes</span></p>
-                                    <p id="ftc-no" class="d-none">Will you use taxable fuels in factories, equipment, machinery or heavy vehicles (more than 4.5 tonnes)?<span>No</span></p>
-                                    <p id="ftc-unanswered" class="d-none">Will you use taxable fuels in factories, equipment, machinery or heavy vehicles (more than 4.5 tonnes)?<span class="unanswered">Unanswered</span></p>
-
-
-                                    <p id="lct-yes" class="d-none">Will you import or sell luxury cars?<span>Yes</span></p>
-                                    <p id="lct-no" class="d-none">Will you import or sell luxury cars?<span>No</span></p>
-                                    <p id="lct-unanswered" class="d-none">Will you import or sell luxury cars?<span class="unanswered">Unanswered</span></p>
-
-
-
-                                </div>
-
-                            </div>
-
-
-
 
 
                         </div>
@@ -292,6 +172,52 @@ page-id: results
                     </div>
                 </div>
             </div>
+
+
+            </div>
+            
+            <!-- SAVE RESULTS -->
+            
+        
+            <div class="bga-component-wrapper">
+                <div class="bga-component callout-box teal m-0">
+                    <div class="p-4 component-content">
+                        <div class="component-text p-0 remove-element-padding">
+                        
+                        <h3>Save your results.</h3>
+                        <p>Email a link to this page so you can return to these results at a later date.</p>
+
+                        <div class="tool-button-group button-group">
+
+                        <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Email results 
+                            <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
+                            <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
+                        </svg></button>
+
+
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+              
+            <hr class="section-divider my-5" />
+
+
+
+             <!-- BUTTON GROUP -->
+             <div class="tool-button-group button-group">
+
+                <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
+                    href={{ 'prototypes/cool/overseas-processing.html' | relative_url }} role="button">Previous</a>
+                
+                <!--<button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Save results</button>-->
+
+                <a class="bga-btn bga-secondary-btn bkg-light" tabindex="0" id="modal-trigger-restart" role="button">Create new label</a>
+
 
             </div>
 

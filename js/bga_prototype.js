@@ -1003,7 +1003,7 @@ $(document).ready(function () {
             sessionStorage.setItem('answers', answers);
         };
         
-        $('.radios .radio-button input').on('change', function () {
+        $('.question-page .radios .radio-button input').on('change', function () {
             store_answers(this);
         });
 
@@ -1035,17 +1035,20 @@ $(document).ready(function () {
         });
 
 
-        // Generate standard mark form
+        // Generate standard mark form & results actions
         if ($('.create-standard-mark-cta').length ) {
             var form_entries = {};
 
+            // STEP 1 - ADD PRODUCT DETAILS
             $('#add-product-details').on('click', function(){
+                // Get input values
                 form_entries.percentage = $('#percentage').val();
                 form_entries.processing = $('#processing').val();
                 form_entries.ingredients = $('#ingredients').val();
 
                 console.log(form_entries);
 
+                // Add input values to wording options
                 $('span.percentage').each(function(){
                     $(this).text(form_entries.percentage);
                 });
@@ -1056,11 +1059,12 @@ $(document).ready(function () {
                     $(this).text(form_entries.ingredients);
                 });
 
-
+                // Hide invalid wording options
                 var percentage_numberical = parseFloat(form_entries.percentage)
                 
-                $('.form-step-2 .radio-button').each(function(){
+                $('#wording-options .radio-button').each(function(){
                     $(this).removeClass('d-none');
+                    $(this).find('input').prop('checked', false);
                 });
 
                 if (percentage_numberical > 10 ) {
@@ -1071,20 +1075,82 @@ $(document).ready(function () {
                     $('.ingredients_included').addClass('d-none');
                 }
 
+                // Update wording on option count
+                var options_count = $('#wording-options .radio-button:not(.d-none').length;
+                $('span.option-count').text(options_count);
+                if (options_count > 1) {
+                    $('span.plural').text('s');
+                } else {
+                    $('span.plural').text('');
+                }
+
+                
+                // Show step 2
                 $('.form-step-2').removeClass('d-none');
+                $('.form-step-3').addClass('d-none');
+
+                $('html, body').animate({
+                    scrollTop: $(".form-step-2").offset().top
+                  }, 500);
 
             });
+            
+            
+            // STEP 2 - GENERATE MARK
+            $('#generate-mark').on('click', function(){
+                
+                // Get and display the correct orientation
+                form_entries.orientation = $('#orientation input:checked').val();
+                console.log(form_entries.orientation);
 
-            $('.wording-options .radio-button input').on('click', function(){
+                if ( form_entries.orientation == 'landscape') {
+                    $('img.standard-mark-preview.landscape').removeClass('d-none');
+                    $('img.standard-mark-preview.portrait').addClass('d-none');
+                } else if ( form_entries.orientation == 'portrait') {
+                    $('img.standard-mark-preview.portrait').removeClass('d-none');
+                    $('img.standard-mark-preview.landscape').addClass('d-none');
+                }
+                
                 $('.form-step-3').removeClass('d-none');
+
+                $('html, body').animate({
+                    scrollTop: $(".form-step-3").offset().top
+                  }, 500);
             });
 
-            $('.orientation .radio-button input').on('click', function(){
-                $('.form-step-4').removeClass('d-none');
+            
+            // STEP 3 - EMAIL OR DOWNLOAD
+            $('#modal-trigger-email-mark').on('click', function(){
+                $('#modal-email-standard-mark').addClass('show');
+                $(".modal-overlay").addClass("show");
+            });
+            $('#modal-trigger-download-mark').on('click', function(){
+                $('#modal-download-standard-mark').addClass('show');
+                $(".modal-overlay").addClass("show");
             });
 
+            // SAVE RESULTS LINK
+            $('#modal-trigger-save-results').on('click', function(){
+                $('#modal-save-results').addClass('show');
+                $(".modal-overlay").addClass("show");
+            });
 
-        }
+       
+
+        };
+
+        $('#modal-trigger-restart').on('click', function(){
+            $('#modal-restart').addClass('show');
+            $(".modal-overlay").addClass("show");
+        });
+        $('#modal-restart .cancel').on('click', function(){
+            $('#modal-restart').removeClass('show');
+            $(".modal-overlay").removeClass("show");
+        });
+        $('#modal-restart .restart-tool').on('click', function () {
+            sessionStorage.clear();
+            window.location.pathname = "/bga-style-guide/prototypes/cool/place-of-sale.html";
+        });
 
 
     }; // End CoOL tool
