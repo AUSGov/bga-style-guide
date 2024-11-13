@@ -43,7 +43,7 @@
     <script src=/bga-style-guide/js/sab_prototype.js ></script>
 
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/cool/results.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/cool2/results-coo-and-mark.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -904,7 +904,7 @@
     <div class="row">
         <div class="col-12">
        
-        <div class="stepped-navigation-wrapper my-5" data-step="5" id="stepped-nav-inpage">
+        <div class="stepped-navigation-wrapper cool2 my-5" data-step="5" id="stepped-nav-inpage">
 
             <div class="mobile-stepped-nav">
                 <button class="stepped-nav-toggle p-0" tabindex=0>
@@ -957,7 +957,7 @@
 
 
 
-        <div class="container page-content results-page my-5" data-page="results"  id="cool-prototype">
+        <div class="container page-content cool2-results results-page my-5" data-page="results"  id="cool-prototype">
 
 
     <div class="row">
@@ -965,96 +965,97 @@
         <div class="remove-top-spaces col-lg-10 col-xl-9">
 
             <h2>Results</h2>
-            <h3>Your labelling requirements</h3>
 
-            <p>Based on your answers a <strong>three component standard mark</strong> can be used on your food product.</p>
 
-            <p>These standard marks are for food products that were last substantially transformed in Australia AND have Australian and imported ingredients AND were exported to an overseas country for minor processing without the further addition of non-Australian ingredients before being re-imported to Australia.</p>
+            <div class="mark-or-coo-cta p-4 mb-5">
+                
+                <h3>Your labelling requirements</h3>
 
-            <p>The standard mark will have the kangaroo logo, bar chart and text.</p>
+                <p>Based on your answers you are required to indicate country of origin information on your product. You have two options for your label:</p>
 
-            <div class="create-standard-mark-cta remove-element-padding  p-4 mb-5">
+                <div class="ctas-wrapper d-flex">
+            
+                    <div class="cta-container">
+                        
+                        <div class="cta-title remove-element-padding p-3">    
+                        <h4 class="pt-0">Standard mark</h4>
+                        </div>
+                        
+                        <div class="cta-content d-flex remove-element-padding p-3">
+                            <div class="explanation">
+                                <p>You can use an optional <strong>three component standard mark</strong>.</p>
+                            <p>This standard mark will have the kangaroo logo, bar chart and text.</p></div>
+                        
+                            <div class="button-example">
+                                <button class="bga-btn bga-primary-btn bkg-light" id="show-standard-mark-cta" tabindex="0" href="" role="button">Create standard mark</button>
+                            </div>
+                        </div>
+                
+                    </div>
+                
+                    <div class="cta-container">
+                        
+                        <div class="cta-title remove-element-padding p-3">  
+                            <h4 class="pt-0">Country of origin statement</h4>
+                        </div>
+                        
+                        <div class="cta-content d-flex remove-element-padding p-3">
+                            <div class="explanation">
+                                <p>If you do not use the standard mark you must provide a <strong>country of origin statement</strong> instead.</p>
+                                <p>The tool will not generate the country of origin statement for you.</p>
+                            </div>
+                        
+                            <div class="button-example">
+                                    <button class="bga-btn bga-primary-btn bkg-light bga-example" id="show-create-coo" tabindex="0" href="" role="button">Learn more</button>
+                            </div>
+                        </div>
+                
+                    </div>
+                
+                
+                    </div>
 
-    <h2>Create your standard mark</h2>
+            </div>
+
+
+            
+            <div class="standard-mark-cta remove-element-padding d-none p-4 mb-5">
+
+    <h3>Create your standard mark</h3>
     <p>You will be able to download or email this mark as a PDF or png file.</p>
 
     <div class="fieldset-wrapper">
-       
-        <!-- Step 1-->
-        <div class="form-step form-step-1 remove-element-padding">
-            <div class="title-area py-3 px-4 remove-element-padding">
-            <h3 >Add your food product details</h3>
-            </div>
-            
-
+        
+        <div class="form-step form-step-1 d-none remove-element-padding">
             <fieldset class="p-4">
-                <label for="percentage" class="form-label mb-3 h4-font-size">Enter the minimum percentage of Australian ingredients in your product *</label>
-                
-                <p class="mb-3">Enter a number between 1 - 99</p>
-
-                <div class="textbox-units form-element-wrapper mb-5">
-                    <input type="text" class="form-control m-0" id="percentage" value="">
-                    <p class="decimals m-0">%</p>
-                </div>
-
-
-                <label for="processing" class="form-label mb-3 h4-font-size">Provide information on processing that occurred outside Australia *</label>
-                
-                <p class="mb-3">Describe the minor processing that occurred outside Australia (up to 80 characters).</p>
-                <p class="mb-3">For example: <em>‘canned in Thailand’ or ‘sliced and packed in Indonesia’</em></p>
-                
-                <input type="text" class="form-control mb-5" id="processing" value="">
-
-
-                <label for="ingredients" class="form-label mb-3 h4-font-size">Highlight ingredients and their country of origin (optional)</label>
-                
-                <p class="mb-3">Provide a description (up to 80 characters) to highlight one or more ingredients of the food product and name their country of origin.</p>
-                <p class="mb-3">For example: <em>‘Australian macadamias and Belgian chocolate’</em></p>
-                
-                <input type="text" class="form-control mb-5" id="ingredients" value="">
-
-
-                <div class="button-example">
-                    <a class="bga-btn bga-secondary-btn bkg-light" id="add-product-details" tabindex="0" href="" role="button">Add product details</a>
-                </div>
-
-            </fieldset>
-            
-        </div>
-
-
-        <!-- Step 2-->
-        <div class="form-step form-step-2 d-none remove-element-padding">
-            <div class="title-area py-3 px-4 remove-element-padding">
-            <h3>Generate your standard mark</h3>
-            </div>
-
-            
-
-            <fieldset class="p-4">
-                <h4>You have <span class="option-count"></span> wording option<span class="plural"></span> to choose from. *</h4>
                
-                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group mb-5" role="radiogroup" id="wording-options">
+               
+                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="wording-options"> 
+                    
+                <div class="remove-element-padding mb-3">
+                <h4>Select your label wording</h4>
+                <p>You have <span class="option-count"></span> wording option<span class="plural"></span> to choose from.</p>
+                </div>
 
-                    <div class="radio-button w-100 percentage_under_10">
+                    <div class="radio-button alternate w-100 percentage_under_10">
                         <input class="form-check-input m-0" type="radio" name="wording-options"
                             id="option1" data-value="option1">
                         <label class="form-check-label" for="option1"><div>Made in Australia from less than 10% Australian ingredients (<span class="processing"></span>)</div></label>
                     </div>
 
-                    <div class="radio-button w-100 percentage_under_10 ingredients_included">
+                    <div class="radio-button alternate w-100 percentage_under_10 ingredients_included">
                         <input class="form-check-input m-0" type="radio" name="wording-options"
                             id="option2" data-value="option2">
                         <label class="form-check-label" for="option2"><div>Made in Australia from less than 10% Australian ingredients with <span class="ingredients"></span> (<span class="processing"></span>)</div></label>
                     </div>
 
-                    <div class="radio-button w-100">
+                    <div class="radio-button alternate w-100">
                         <input class="form-check-input m-0" type="radio" name="wording-options"
                             id="option3" data-value="option3">
                         <label class="form-check-label" for="option3"><div>Made in Australia from at least  <span class="percentage"></span>% Australian ingredients  (<span class="processing"></span>)</div></label>
                     </div>
 
-                    <div class="radio-button w-100 ingredients_included">
+                    <div class="radio-button w-100 alternate ingredients_included">
                         <input class="form-check-input m-0" type="radio" name="wording-options"
                             id="option4" data-value="option4">
                         <label class="form-check-label" for="option4"><div>Made in Australia from at least  <span class="percentage"></span>% Australian ingredients with <span class="ingredients"></span> (<span class="processing"></span>)</div></label>
@@ -1062,17 +1063,19 @@
                 
                 </div>
 
-                <h4>Choose the orientation of your standard mark *</h4>
 
-                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group mb-5" role="radiogroup" id="orientation">
+                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group5" role="radiogroup" id="orientation">
+                    <div class="remove-element-padding mb-3">
+                    <h4>Choose the orientation of your standard mark</h4>
+                    </div>
 
-                    <div class="radio-button w-100">
+                    <div class="radio-button alternate w-100">
                         <input class="form-check-input m-0" type="radio" name="orientation"
                             id="landscape" value="landscape">
                         <label class="form-check-label" for="landscape">Landscape</label>
                     </div>
 
-                    <div class="radio-button w-100">
+                    <div class="radio-button alternate w-100">
                         <input class="form-check-input m-0" type="radio" name="orientation"
                             id="portrait" value="portrait">
                         <label class="form-check-label" for="portrait">Portrait</label>
@@ -1080,230 +1083,244 @@
 
                 </div>
 
-                <div class="button-example">
-                    <a class="bga-btn bga-secondary-btn bkg-light" id="generate-mark" tabindex="0" href="" role="button">Generate standard mark</a>
+
+                <div class="form-step form-step-2 d-none remove-element-padding">
+                    
+                    <h4 class="mb-3">Your standard mark</h4>
+
+                    <div class="content">
+                    
+                        <div class="mark-preview mb-5">
+                            <img class="standard-mark-preview landscape d-none" src=/bga-style-guide/assets/standard-mark-landscape.png alt=""/>
+                            <img class="standard-mark-preview portrait d-none" src=/bga-style-guide/assets/standard-mark-portrait.png alt=""/>
+                        </div>
+                    
+                        <div class="tool-button-group button-group">
+
+                            <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                                href="" role="button" id="modal-trigger-email-mark">Email standard mark <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
+                                    <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
+                                </svg></a>
+
+                            <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                                href="" role="button" id="modal-trigger-download-mark">Download standard mark <svg id="Icon:_Print" data-name="Icon: Print" xmlns="http://www.w3.org/2000/svg" width="18" height="17.013" viewBox="0 0 18 17.013">
+                                    <path id="Print" d="M15.664,17.013H2.3V13.1H0V4.6H2.3V7.587H15.864V4.6H18L17.951,13.1h-2.27l-.016,3.907h0ZM4.138,15.4h9.656v-2.07H4.138Zm0-9.656V0h9.886V5.748Z" fill="#333"/>
+                                </svg></a>
+
+                        </div>
+
+                    </div>
+                    
                 </div>
-               
+
+
 
             </fieldset>
             
         </div>
 
 
-
+        
+   
        
 
-
-        <!-- Step 3 -->
-        <div class="form-step form-step-3 d-none remove-element-padding">
-            <div class="title-area py-3 px-4 remove-element-padding">
-                <h3>Your standard mark</h3>
-            </div>
-
-            <div class="content p-4">
-            
-                <div class="mark-preview mb-5">
-                    <img class="standard-mark-preview landscape d-none" src=/bga-style-guide/assets/standard-mark-landscape.png alt=""/>
-                    <img class="standard-mark-preview portrait d-none" src=/bga-style-guide/assets/standard-mark-portrait.png alt=""/>
-                </div>
-            
-                <div class="tool-button-group button-group">
-
-                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
-                        href="" role="button" id="modal-trigger-email-mark">Email standard mark <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
-                            <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
-                        </svg></a>
-
-                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
-                        href="" role="button" id="modal-trigger-download-mark">Download standard mark <svg id="Icon:_Print" data-name="Icon: Print" xmlns="http://www.w3.org/2000/svg" width="18" height="17.013" viewBox="0 0 18 17.013">
-                            <path id="Print" d="M15.664,17.013H2.3V13.1H0V4.6H2.3V7.587H15.864V4.6H18L17.951,13.1h-2.27l-.016,3.907h0ZM4.138,15.4h9.656v-2.07H4.138Zm0-9.656V0h9.886V5.748Z" fill="#333"/>
-                        </svg></a>
-
-                </div>
-
-            </div>
-            
-        </div>
-   
 
     </div>
 
 </div>
+            
+            
 
+            <div class="create-coo-cta-2 d-none p-4 remove-element-padding  mb-5">
 
-            <div class="edit-answers-wrapper">
+                <h3>Guidelines for creating your country of origin statement</h3>
 
-            <!-- EDIT ANSWERS -->
-            <div class="bga-component-wrapper pb-0 mb-5">
-                <div class="bga-component edit-answers-component m-0">
-
-                    <div class="edit-answers-toggle p-4 remove-element-padding" role="button">
-                        <h3 class="m-0">View and change your answers</h3>
-                        <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16" height="10"
-                            viewBox="0 0 16 10">
-                            <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z"
-                                transform="translate(16) rotate(90)" fill="#333" />
-                        </svg>
-
+                    <p>If the country of origin statement will be printed or glued on the packaging, the statement must be in a clearly defined box.</p>
+                
+                    <div class="coo-example p-4 mb-5">
+                        <p>For example:</p>
+                        <p><span class="example-border"><strong>Grown in &lt;country&gt;</strong></span></p>
+                        <p><span class="example-border"><strong>Produced in &lt;country&gt;</strong></span></p>
+                        <p><span class="example-border"><strong>Made in &lt;country&gt;</strong></span></p>
                     </div>
 
-                    <div class="px-4 pt-4 pb-0 component-content">
-
-                        <div class="component-text p-0 remove-element-padding">
-
-                            <!-- place of sale -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Place of sale</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href=/bga-style-guide/prototypes/cool/place-of-sale.html>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding">
-                                    <p>Question lorem ipsum dolor sit amet?<span>at a physical store or market, online or from a vending machine</span></p>
-
-                                    <p>Question lorem ipsum dolor sit amet?<span>in different premises to where it has been grown, produced, made and packed</span></p>
-                                </div>
-
-                            </div>
+                    <p>If the country of origin statement will be on display at the point of sale, no defined text box or formatting is required (this only applies to fresh fruit and vegetables in transparent packaging).</p>
+                    
+                    <div class="coo-example p-4">
+                        <p>For example:</p>
+                        <p><strong>Grown in &lt;country&gt;</strong></p>
+                        <p><strong>Produced in &lt;country&gt;</strong></p>
+                        <p><strong>Made in &lt;country&gt;</strong></p>
+                    </div>
+            
+            </div>
 
 
-                            <!-- packaging -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Packaging</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href=/bga-style-guide/prototypes/cool/packaging.html>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding">
-                                    <p>Question lorem ipsum dolor sit amet? <span>was packed in Australia</span></p>
-                                    <p>This packed or packaged food product is: <span>not listed above</span></p>
-                                    <p>Is this product fresh fruit and vegetables in transparent packaging? <span>No</span></p>
-
-                                </div>
-
-                            </div>
 
 
-                            <!-- country of origin -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Country of origin</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href=/bga-style-guide/prototypes/cool/country-of-origin.html>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding">
-                                    <p>Was this food product grown OR produced OR made in Australia? <span>Yes</span></p>
-                                    <p>Does this food product contain Australian ingredients?<span>Yes</span></p>
-                                    <p>Nullam eu ante ac arcu facilisis finibus? <span>in two or more countries (can include Australia)</span></p>
-                                    <p>Is this food product or its ingredients 100% Australian? <span>Yes</span></p>
-                                    <p>Does this food product contain a consistent proportion of Australian ingredients? <span>Yes</span></p>
-
-                                </div>
-
-                            </div>
 
 
-                            <!-- overseas processing -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Overseas processing</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href=/bga-style-guide/prototypes/cool/overseas-processing.html>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding">
-                                    
-                                    <p>Was this food product exported to an overseas country for processing before being re-imported to Australia? <span>Yes</span></p>
-                                    <p>What kind of overseas processing was conducted on this food product before being re-imported to Australia? <span>minor processing with no non-Australian ingredients added to the food</span></p>
-                                    <p>Nullam eu ante ac arcu facilisis finibus? <span>Yes</span></p>
-
-                                </div>
-
-                            </div>
 
 
+
+
+
+            <div class="edit-answers-wrapper d-none">
+
+                <!-- EDIT ANSWERS -->
+                <div class="bga-component-wrapper pb-0 mb-5">
+                    <div class="bga-component edit-answers-component m-0">
+    
+                        <div class="edit-answers-toggle p-4 remove-element-padding" role="button">
+                            <h3 class="m-0">View and change your answers</h3>
+                            <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16" height="10"
+                                viewBox="0 0 16 10">
+                                <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z"
+                                    transform="translate(16) rotate(90)" fill="#333" />
+                            </svg>
+    
                         </div>
-
+    
+                        <div class="px-4 pt-4 pb-0 component-content">
+    
+                            <div class="component-text p-0 remove-element-padding">
+    
+                                <!-- place of sale -->
+                                <div class="answers-section pb-7 mb-4">
+                                    <div class="title-area mb-2 remove-element-padding">
+    
+                                        <h4 class="m-0">Place of sale</h4>
+                                        <a tab-index="0" class="edit-btn p-0 ms-4"
+                                            href=/bga-style-guide/prototypes/cool/place-of-sale.html>
+                                            <span>Edit</span>
+                                            <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
+                                                height="22" viewBox="0 0 22 22">
+                                                <path
+                                                    d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
+                                                    transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
+                                            </svg>
+    
+                                        </a>
+    
+                                    </div>
+    
+                                    <div class="answers remove-element-padding">
+                                        <p>Question lorem ipsum dolor sit amet?<span>at a physical store or market, online or from a vending machine</span></p>
+    
+                                        <p>Question lorem ipsum dolor sit amet?<span>in different premises to where it has been grown, produced, made and packed</span></p>
+                                    </div>
+    
+                                </div>
+    
+    
+                                <!-- packaging -->
+                                <div class="answers-section pb-7 mb-4">
+                                    <div class="title-area mb-2 remove-element-padding">
+    
+                                        <h4 class="m-0">Packaging</h4>
+                                        <a tab-index="0" class="edit-btn p-0 ms-4"
+                                            href=/bga-style-guide/prototypes/cool/packaging.html>
+                                            <span>Edit</span>
+                                            <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
+                                                height="22" viewBox="0 0 22 22">
+                                                <path
+                                                    d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
+                                                    transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
+                                            </svg>
+    
+                                        </a>
+    
+                                    </div>
+    
+                                    <div class="answers remove-element-padding">
+                                        <p>Question lorem ipsum dolor sit amet? <span>was packed in Australia</span></p>
+                                        <p>This packed or packaged food product is: <span>not listed above</span></p>
+                                        <p>Is this product fresh fruit and vegetables in transparent packaging? <span>No</span></p>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+                                <!-- country of origin -->
+                                <div class="answers-section pb-7 mb-4">
+                                    <div class="title-area mb-2 remove-element-padding">
+    
+                                        <h4 class="m-0">Country of origin</h4>
+                                        <a tab-index="0" class="edit-btn p-0 ms-4"
+                                            href=/bga-style-guide/prototypes/cool/country-of-origin.html>
+                                            <span>Edit</span>
+                                            <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
+                                                height="22" viewBox="0 0 22 22">
+                                                <path
+                                                    d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
+                                                    transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
+                                            </svg>
+    
+                                        </a>
+    
+                                    </div>
+    
+                                    <div class="answers remove-element-padding">
+                                        <p>Was this food product grown OR produced OR made in Australia? <span>Yes</span></p>
+                                        <p>Does this food product contain Australian ingredients?<span>Yes</span></p>
+                                        <p>What is the minimum percentage of Australia ingredients in your product?<span class="percentage"></span></p>
+                                        <p>Where was the food or its ingredients grown or produced? <span>in two or more countries (can include Australia)</span></p>
+                                        <p>What are the main ingredient/s and their country of origin?<span class="ingredients"></span></p>
+                                        <p>Is this food product or its ingredients 100% Australian? <span>Yes</span></p>
+                                        <p>Does this food product contain a consistent proportion of Australian ingredients? <span>Yes</span></p>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+                                <!-- overseas processing -->
+                                <div class="answers-section pb-7 mb-4">
+                                    <div class="title-area mb-2 remove-element-padding">
+    
+                                        <h4 class="m-0">Overseas processing</h4>
+                                        <a tab-index="0" class="edit-btn p-0 ms-4"
+                                            href=/bga-style-guide/prototypes/cool/overseas-processing.html>
+                                            <span>Edit</span>
+                                            <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
+                                                height="22" viewBox="0 0 22 22">
+                                                <path
+                                                    d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
+                                                    transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
+                                            </svg>
+    
+                                        </a>
+    
+                                    </div>
+    
+                                    <div class="answers remove-element-padding">
+                                        
+                                        <p>Was this food product exported to an overseas country for processing before being re-imported to Australia? <span>Yes</span></p>
+                                        <p>What kind of overseas processing was conducted on this food product before being re-imported to Australia? <span>minor processing with no non-Australian ingredients added to the food</span></p>
+                                        <p>What is the minor processing that occurred outside Australia? <span class="processing"></span></p>
+                                        <p>Was the food last substantially transformed in Australia? <span>Yes</span></p>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+                            </div>
+    
+                        </div>
                     </div>
                 </div>
-            </div>
+    
+    
+                </div>
+                
+    
 
 
             </div>
             
-            <!-- SAVE RESULTS -->
-            <!--
-        
-            <div class="bga-component-wrapper">
-                <div class="bga-component callout-box teal m-0">
-                    <div class="p-4 component-content">
-                        <div class="component-text p-0 remove-element-padding">
-                        
-                        <h3>Save your results.</h3>
-                        <p>Email a link to this page so you can return to these results at a later date.</p>
 
-                        <div class="tool-button-group button-group">
-
-                        <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Email results 
-                            <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
-                            <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
-                        </svg></button>
-
-
-                        </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        -->
 
               
             <hr class="section-divider my-5" />
@@ -1314,7 +1331,7 @@
              <div class="tool-button-group button-group">
 
                 <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
-                    href=/bga-style-guide/prototypes/cool/overseas-processing.html role="button">Previous</a>
+                    href=/bga-style-guide/prototypes/cool2/overseas-processing.html role="button">Previous</a>
                 
                 <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Save results</button>
 
@@ -1471,7 +1488,7 @@
         <div class="container ">
             <div class="row">
                 <div class="remove-element-padding">
-                    <a href="" id="cool-reset-prototype">Reset prototype</a>
+                    <a href="" id="cool-reset-prototype" class="cool2">Reset prototype</a>
                 </div>
             </div>
         </div>
@@ -1646,7 +1663,7 @@
                 
                     <div class="tool-button-group button-group">
                         <div class="button-example">
-                            <button class="bga-btn bga-primary-btn bkg-light restart-tool" tabindex="0" href="" role="button">Yes, start over</button>
+                            <button class="bga-btn bga-primary-btn bkg-light restart-tool cool2" tabindex="0" href="" role="button">Yes, start over</button>
                         </div>
                     
                         <a class="bga-link bga-inline-link bkg-light cancel" tabindex="0" role="button">Cancel</a>

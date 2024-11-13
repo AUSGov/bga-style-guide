@@ -876,7 +876,11 @@ $(document).ready(function () {
     // CoOL TOOL
     $('#cool-reset-prototype').on('click', function () {
         sessionStorage.clear();
-        window.location.pathname = "/bga-style-guide/prototypes/cool/landing.html";
+        if ( $(this).hasClass('cool2') ) {
+            window.location.pathname = "/bga-style-guide/prototypes/cool2/landing.html";
+        } else {
+            window.location.pathname = "/bga-style-guide/prototypes/cool/landing.html";
+        }
     });
 
     if ($('#cool-prototype').length) {
@@ -930,9 +934,17 @@ $(document).ready(function () {
         };
 
         if ($('#stepped-nav-inpage').length) {
-            var path = '/bga-style-guide/prototypes/cool/';
+            if ($('#stepped-nav-inpage').hasClass('cool2') ) {
+                console.log('cool2');
+                var path = '/bga-style-guide/prototypes/cool2/';
+            } else {
+                console.log('cool1');
+                var path = '/bga-style-guide/prototypes/cool/';
+            }
             stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "overseas-processing.html", "results.html"], path);
         }
+
+        
 
         // Check if 'return to results button' should display
         var results_viewed = sessionStorage.getItem('results');
@@ -1035,7 +1047,7 @@ $(document).ready(function () {
         });
 
 
-        // Generate standard mark form & results actions
+        // GENERATE MARK CTA -  COOL 1
         if ($('.create-standard-mark-cta').length ) {
             var form_entries = {};
 
@@ -1118,8 +1130,102 @@ $(document).ready(function () {
                   }, 500);
             });
 
+        }; 
+
+        // GENERATE MARK - COOL 2
+        
+        // Collect input values for wording options throughout the form
+        $('input#percentage').on('change', function(){
+            var percentage = $(this).val();
+            sessionStorage.setItem('percentage', percentage);
+            console.log(sessionStorage.getItem('percentage'));
+        });
+        $('input#ingredients').on('change', function(){
+            var ingredients = $(this).val();
+            sessionStorage.setItem('ingredients', ingredients);
+            console.log(sessionStorage.getItem('ingredients'));
+        });
+        $('input#processing').on('change', function(){
+            var processing = $(this).val();
+            sessionStorage.setItem('processing', processing);
+            console.log(sessionStorage.getItem('processing'));
+        });
+
+        // Add values to form
+
+            //STEP 1
+            // Get input values
+            var percentage = sessionStorage.getItem('percentage');
+            var percentage_numerical = parseFloat(percentage);
+            var processing = sessionStorage.getItem('processing');
+            var ingredients = sessionStorage.getItem('ingredients');
             
-            // STEP 3 - EMAIL OR DOWNLOAD
+            console.log(percentage);
+            console.log(processing);
+            console.log(ingredients);
+
+            // Add input values to wording options
+            $('span.percentage').each(function(){
+                $(this).text(percentage);
+            });
+            $('span.processing').each(function(){
+                $(this).text(processing);
+            });
+            $('span.ingredients').each(function(){
+                $(this).text(ingredients);
+            });
+
+
+            // Hide invalid wording options
+            $('#wording-options .radio-button').each(function(){
+                $(this).removeClass('d-none');
+                $(this).find('input').prop('checked', false);
+            });
+
+            if (percentage_numerical > 10 ) {
+                $('.percentage_under_10').addClass('d-none');
+            }
+
+            if ( ingredients == "" ) {
+                $('.ingredients_included').addClass('d-none');
+            }
+
+            // Update wording on option count
+            var options_count = $('#wording-options .radio-button:not(.d-none').length;
+            $('span.option-count').text(options_count);
+            if (options_count > 1) {
+                $('span.plural').text('s');
+            } else {
+                $('span.plural').text('');
+            }
+
+            // Show valid options
+            $('.form-step-1').removeClass('d-none');
+
+            
+            // STEP 2 - GENERATE MARK
+            $('#orientation input').on('change', function(){
+                
+                // Get and display the correct orientation
+                var orientation = $('#orientation input:checked').val();
+                console.log(orientation);
+
+                if ( orientation == 'landscape') {
+                    $('img.standard-mark-preview.landscape').removeClass('d-none');
+                    $('img.standard-mark-preview.portrait').addClass('d-none');
+                } else if ( orientation == 'portrait') {
+                    $('img.standard-mark-preview.portrait').removeClass('d-none');
+                    $('img.standard-mark-preview.landscape').addClass('d-none');
+                }
+                
+                $('.form-step-2').removeClass('d-none');
+
+            });
+
+        
+
+
+        // STEP 3 - EMAIL OR DOWNLOAD
             $('#modal-trigger-email-mark').on('click', function(){
                 $('#modal-email-standard-mark').addClass('show');
                 $(".modal-overlay").addClass("show");
@@ -1129,16 +1235,27 @@ $(document).ready(function () {
                 $(".modal-overlay").addClass("show");
             });
 
-            // SAVE RESULTS LINK
-            $('#modal-trigger-save-results').on('click', function(){
-                $('#modal-save-results').addClass('show');
-                $(".modal-overlay").addClass("show");
-            });
+        // ON PAGE WITH BOTH STANDARD MARK AND COO
+        $('#show-standard-mark-cta').on('click', function(){
+            $('.standard-mark-cta').removeClass('d-none');
+            $('.edit-answers-wrapper').removeClass('d-none');
+            $('.create-coo-cta-2').addClass('d-none');
 
-       
+        });
+        $('#show-create-coo').on('click', function(){
+            $('.standard-mark-cta').addClass('d-none');
+            $('.edit-answers-wrapper').removeClass('d-none');
+            $('.create-coo-cta-2').removeClass('d-none');
+        });
 
-        };
 
+        // SAVE RESULTS LINK
+        $('#modal-trigger-save-results').on('click', function(){
+            $('#modal-save-results').addClass('show');
+            $(".modal-overlay").addClass("show");
+        });
+
+        // Restart tool modal
         $('#modal-trigger-restart').on('click', function(){
             $('#modal-restart').addClass('show');
             $(".modal-overlay").addClass("show");
@@ -1149,7 +1266,12 @@ $(document).ready(function () {
         });
         $('#modal-restart .restart-tool').on('click', function () {
             sessionStorage.clear();
-            window.location.pathname = "/bga-style-guide/prototypes/cool/place-of-sale.html";
+            if ( $(this).hasClass('cool2') ) {
+                window.location.pathname = "/bga-style-guide/prototypes/cool2/place-of-sale.html";
+            } else {
+                window.location.pathname = "/bga-style-guide/prototypes/cool/place-of-sale.html";
+            }
+            
         });
 
 

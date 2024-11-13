@@ -43,7 +43,7 @@
     <script src=/bga-style-guide/js/sab_prototype.js ></script>
 
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/cool/results.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/cool2/country-of-origin.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -904,11 +904,11 @@
     <div class="row">
         <div class="col-12">
        
-        <div class="stepped-navigation-wrapper my-5" data-step="5" id="stepped-nav-inpage">
+        <div class="stepped-navigation-wrapper cool2 my-5" data-step="3" id="stepped-nav-inpage">
 
             <div class="mobile-stepped-nav">
                 <button class="stepped-nav-toggle p-0" tabindex=0>
-                    <span class="me-2">Step 5 of 5 : <strong>Results</strong></span>
+                    <span class="me-2">Step 3 of 5 : <strong>Country of origin</strong></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                         <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#333"/>
                       </svg>
@@ -957,373 +957,308 @@
 
 
 
-        <div class="container page-content results-page my-5" data-page="results"  id="cool-prototype">
-
+        <div class="container page-content question-page my-5" data-page="country-of-origin" id="cool-prototype">
 
     <div class="row">
 
-        <div class="remove-top-spaces col-lg-10 col-xl-9">
+        <div class="remove-top-spaces col-12 col-md-8">
 
-            <h2>Results</h2>
-            <h3>Your labelling requirements</h3>
+            <h2>Country of origin</h2>
 
-            <p>Based on your answers a <strong>three component standard mark</strong> can be used on your food product.</p>
+              <!-- Question 1 -->
+              <div class="question dynamic-trigger remove-element-padding" id="country-of-origin-question1" >
 
-            <p>These standard marks are for food products that were last substantially transformed in Australia AND have Australian and imported ingredients AND were exported to an overseas country for minor processing without the further addition of non-Australian ingredients before being re-imported to Australia.</p>
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="country-of-origin-q1" class="form-label h3-font-size heading-color mb-4"><strong>Was this food product grown OR produced OR made in Australia?</strong></h3>
 
-            <p>The standard mark will have the kangaroo logo, bar chart and text.</p>
+                    <div class="help-wrapper complex mb-4" tabindex="0">
+    <p class="mb-3 complex-question">
+        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
+          </svg><span>What is the meaning of 'grown in Australia' AND 'produced in Australia'?</span></p>
+    <div class="complex-answer mb-3 remove-element-padding">
+        <p>a food or ingredient is considered to be grown OR produced in Australia if it was grown in Australia and virtually all of its processing occurred in Australia. The main difference between ‘produced in’ and ‘grown in’ is that ‘produced’ covers both food that is grown and food that is not grown, for example milk, eggs and water. For more details on this subject refer to our help topics page.</p>
+        </ul>
+    </div>
+</div>
 
-            <div class="create-standard-mark-cta remove-element-padding  p-4 mb-5">
+                    <div class="help-wrapper complex mb-4" tabindex="0">
+    <p class="mb-3 complex-question">
+        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
+          </svg><span>What is the meaning of 'made in Australia'?</span></p>
+    <div class="complex-answer mb-3 remove-element-padding">
+        <ul><li class='mb-3'>a food or ingredient is considered to be made in Australia if it underwent its last substantial transformation in Australia.</li><li>a food is considered to have been substantially transformed if the end product is something fundamentally different from its ingredients. For example, a cake (final product) is made up of ingredients (flour, sugar, eggs, spices, yeast) that are fundamentally different from the finished product. For more details on this subject refer to our help topics page.</li><li>minor processes that merely change the form or appearance of a food or ingredient such as cleaning, shelling, slicing, freezing, canning, bottling, crumbing, reconstituting, roasting, packing, packaging and re-packaging ARE NOT considered to be substantial transformation.</li></ul>
+        </ul>
+    </div>
+</div>
 
-    <h2>Create your standard mark</h2>
-    <p>You will be able to download or email this mark as a PDF or png file.</p>
 
-    <div class="fieldset-wrapper">
-       
-        <!-- Step 1-->
-        <div class="form-step form-step-1 remove-element-padding">
-            <div class="title-area py-3 px-4 remove-element-padding">
-            <h3 >Add your food product details</h3>
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" role="radiogroup" id="country-of-origin-q1">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q1"
+                                id="country-of-origin-q1a" data-value="country-of-origin-q1a">
+                            <label class="form-check-label" for="country-of-origin-q1a">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q1"
+                                id="country-of-origin-q1b" data-value="country-of-origin-q1b">
+                            <label class="form-check-label" for="country-of-origin-q1b">No</label>
+                        </div>
+                                         
+                    
+                    </div>
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
             </div>
             
+         
 
-            <fieldset class="p-4">
-                <label for="percentage" class="form-label mb-3 h4-font-size">Enter the minimum percentage of Australian ingredients in your product *</label>
+
+            <!-- Question 2 -->
+            <div class="question dynamic-trigger remove-element-padding d-none" id="country-of-origin-question2">
+
                 
-                <p class="mb-3">Enter a number between 1 - 99</p>
 
-                <div class="textbox-units form-element-wrapper mb-5">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="country-of-origin-q2" class="form-label h3-font-size heading-color mb-4"><strong>Does this food product contain Australian ingredients?</strong></h3>
+                    
+                    <div class="help-wrapper complex mb-4" tabindex="0">
+    <p class="mb-3 complex-question">
+        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
+          </svg><span>What is the meaning of 'Australian ingredient'?</span></p>
+    <div class="complex-answer mb-3 remove-element-padding">
+        <p>an ingredient that was exclusively grown or produced in Australia. For more details on this subject refer to our help topics page.</p>
+        </ul>
+    </div>
+</div>
+
+
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" role="radiogroup" id="country-of-origin-q2">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q2"
+                                id="country-of-origin-q2a" data-value="country-of-origin-q2a">
+                            <label class="form-check-label" for="country-of-origin-q2a">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q2"
+                                id="country-of-origin-q2b" data-value="country-of-origin-q2b">
+                            <label class="form-check-label" for="country-of-origin-q2b">No</label>
+                        </div>
+                                         
+                    
+                    </div>
+                  
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
+                </div>
+                
+            </div>
+
+
+            <!-- Question 3 -->
+            <div class="question dynamic-trigger remove-element-padding d-none" id="country-of-origin-question3">
+
+                <!-- Question 2b -->
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="country-of-origin-q2b" class="form-label h3-font-size heading-color mb-4"><strong>What is the minimum percentage of Australia ingredients in your product?</strong></h3>
+                    
+                    <p>Enter a number between 1 - 99</p>
+
+                    <div class="textbox-units form-element-wrapper mb-5">
                     <input type="text" class="form-control m-0" id="percentage" value="">
                     <p class="decimals m-0">%</p>
                 </div>
 
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
 
-                <label for="processing" class="form-label mb-3 h4-font-size">Provide information on processing that occurred outside Australia *</label>
+                </div>
                 
-                <p class="mb-3">Describe the minor processing that occurred outside Australia (up to 80 characters).</p>
-                <p class="mb-3">For example: <em>‘canned in Thailand’ or ‘sliced and packed in Indonesia’</em></p>
-                
-                <input type="text" class="form-control mb-5" id="processing" value="">
+                <hr class="section-divider my-5" />
 
 
-                <label for="ingredients" class="form-label mb-3 h4-font-size">Highlight ingredients and their country of origin (optional)</label>
-                
-                <p class="mb-3">Provide a description (up to 80 characters) to highlight one or more ingredients of the food product and name their country of origin.</p>
-                <p class="mb-3">For example: <em>‘Australian macadamias and Belgian chocolate’</em></p>
-                
-                <input type="text" class="form-control mb-5" id="ingredients" value="">
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="country-of-origin-q3" class="form-label h3-font-size heading-color mb-4"><strong>Where was the food or its ingredients grown or produced?</strong></h3>
 
-
-                <div class="button-example">
-                    <a class="bga-btn bga-secondary-btn bkg-light" id="add-product-details" tabindex="0" href="" role="button">Add product details</a>
-                </div>
-
-            </fieldset>
-            
-        </div>
-
-
-        <!-- Step 2-->
-        <div class="form-step form-step-2 d-none remove-element-padding">
-            <div class="title-area py-3 px-4 remove-element-padding">
-            <h3>Generate your standard mark</h3>
-            </div>
-
-            
-
-            <fieldset class="p-4">
-                <h4>You have <span class="option-count"></span> wording option<span class="plural"></span> to choose from. *</h4>
-               
-                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group mb-5" role="radiogroup" id="wording-options">
-
-                    <div class="radio-button w-100 percentage_under_10">
-                        <input class="form-check-input m-0" type="radio" name="wording-options"
-                            id="option1" data-value="option1">
-                        <label class="form-check-label" for="option1"><div>Made in Australia from less than 10% Australian ingredients (<span class="processing"></span>)</div></label>
-                    </div>
-
-                    <div class="radio-button w-100 percentage_under_10 ingredients_included">
-                        <input class="form-check-input m-0" type="radio" name="wording-options"
-                            id="option2" data-value="option2">
-                        <label class="form-check-label" for="option2"><div>Made in Australia from less than 10% Australian ingredients with <span class="ingredients"></span> (<span class="processing"></span>)</div></label>
-                    </div>
-
-                    <div class="radio-button w-100">
-                        <input class="form-check-input m-0" type="radio" name="wording-options"
-                            id="option3" data-value="option3">
-                        <label class="form-check-label" for="option3"><div>Made in Australia from at least  <span class="percentage"></span>% Australian ingredients  (<span class="processing"></span>)</div></label>
-                    </div>
-
-                    <div class="radio-button w-100 ingredients_included">
-                        <input class="form-check-input m-0" type="radio" name="wording-options"
-                            id="option4" data-value="option4">
-                        <label class="form-check-label" for="option4"><div>Made in Australia from at least  <span class="percentage"></span>% Australian ingredients with <span class="ingredients"></span> (<span class="processing"></span>)</div></label>
-                    </div>
-                
-                </div>
-
-                <h4>Choose the orientation of your standard mark *</h4>
-
-                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group mb-5" role="radiogroup" id="orientation">
-
-                    <div class="radio-button w-100">
-                        <input class="form-check-input m-0" type="radio" name="orientation"
-                            id="landscape" value="landscape">
-                        <label class="form-check-label" for="landscape">Landscape</label>
-                    </div>
-
-                    <div class="radio-button w-100">
-                        <input class="form-check-input m-0" type="radio" name="orientation"
-                            id="portrait" value="portrait">
-                        <label class="form-check-label" for="portrait">Portrait</label>
-                    </div>
-
-                </div>
-
-                <div class="button-example">
-                    <a class="bga-btn bga-secondary-btn bkg-light" id="generate-mark" tabindex="0" href="" role="button">Generate standard mark</a>
-                </div>
-               
-
-            </fieldset>
-            
-        </div>
-
-
-
-       
-
-
-        <!-- Step 3 -->
-        <div class="form-step form-step-3 d-none remove-element-padding">
-            <div class="title-area py-3 px-4 remove-element-padding">
-                <h3>Your standard mark</h3>
-            </div>
-
-            <div class="content p-4">
-            
-                <div class="mark-preview mb-5">
-                    <img class="standard-mark-preview landscape d-none" src=/bga-style-guide/assets/standard-mark-landscape.png alt=""/>
-                    <img class="standard-mark-preview portrait d-none" src=/bga-style-guide/assets/standard-mark-portrait.png alt=""/>
-                </div>
-            
-                <div class="tool-button-group button-group">
-
-                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
-                        href="" role="button" id="modal-trigger-email-mark">Email standard mark <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
-                            <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
-                        </svg></a>
-
-                    <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
-                        href="" role="button" id="modal-trigger-download-mark">Download standard mark <svg id="Icon:_Print" data-name="Icon: Print" xmlns="http://www.w3.org/2000/svg" width="18" height="17.013" viewBox="0 0 18 17.013">
-                            <path id="Print" d="M15.664,17.013H2.3V13.1H0V4.6H2.3V7.587H15.864V4.6H18L17.951,13.1h-2.27l-.016,3.907h0ZM4.138,15.4h9.656v-2.07H4.138Zm0-9.656V0h9.886V5.748Z" fill="#333"/>
-                        </svg></a>
-
-                </div>
-
-            </div>
-            
-        </div>
-   
-
+                    <div class="help-wrapper complex mb-4" tabindex="0">
+    <p class="mb-3 complex-question">
+        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
+          </svg><span>What is the meaning of 'grown in'?</span></p>
+    <div class="complex-answer mb-3 remove-element-padding">
+        <ul><li class='mb-3'>unprocessed fruit or vegetables, whole or cut that is contained in transparent packaging. For example a transparent plastic bag, net or tray. For more details on this subject refer to our help topics page.</li><li>the standard mark OR country of origin statement for prepacked fresh fruit and vegetables in transparent packaging can either be on its packaging or displayed at the point of sale.</li></ul>
+        </ul>
     </div>
-
 </div>
 
 
-            <div class="edit-answers-wrapper">
+                    <div class="radios w-50 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="country-of-origin-q3">
 
-            <!-- EDIT ANSWERS -->
-            <div class="bga-component-wrapper pb-0 mb-5">
-                <div class="bga-component edit-answers-component m-0">
-
-                    <div class="edit-answers-toggle p-4 remove-element-padding" role="button">
-                        <h3 class="m-0">View and change your answers</h3>
-                        <svg data-name="Icon / chevron / down" xmlns="http://www.w3.org/2000/svg" width="16" height="10"
-                            viewBox="0 0 16 10">
-                            <path data-name="Chevron / Down" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z"
-                                transform="translate(16) rotate(90)" fill="#333" />
-                        </svg>
-
-                    </div>
-
-                    <div class="px-4 pt-4 pb-0 component-content">
-
-                        <div class="component-text p-0 remove-element-padding">
-
-                            <!-- place of sale -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Place of sale</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href=/bga-style-guide/prototypes/cool/place-of-sale.html>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding">
-                                    <p>Question lorem ipsum dolor sit amet?<span>at a physical store or market, online or from a vending machine</span></p>
-
-                                    <p>Question lorem ipsum dolor sit amet?<span>in different premises to where it has been grown, produced, made and packed</span></p>
-                                </div>
-
-                            </div>
-
-
-                            <!-- packaging -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Packaging</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href=/bga-style-guide/prototypes/cool/packaging.html>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding">
-                                    <p>Question lorem ipsum dolor sit amet? <span>was packed in Australia</span></p>
-                                    <p>This packed or packaged food product is: <span>not listed above</span></p>
-                                    <p>Is this product fresh fruit and vegetables in transparent packaging? <span>No</span></p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- country of origin -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Country of origin</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href=/bga-style-guide/prototypes/cool/country-of-origin.html>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding">
-                                    <p>Was this food product grown OR produced OR made in Australia? <span>Yes</span></p>
-                                    <p>Does this food product contain Australian ingredients?<span>Yes</span></p>
-                                    <p>Nullam eu ante ac arcu facilisis finibus? <span>in two or more countries (can include Australia)</span></p>
-                                    <p>Is this food product or its ingredients 100% Australian? <span>Yes</span></p>
-                                    <p>Does this food product contain a consistent proportion of Australian ingredients? <span>Yes</span></p>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- overseas processing -->
-                            <div class="answers-section pb-7 mb-4">
-                                <div class="title-area mb-2 remove-element-padding">
-
-                                    <h4 class="m-0">Overseas processing</h4>
-                                    <a tab-index="0" class="edit-btn p-0 ms-4"
-                                        href=/bga-style-guide/prototypes/cool/overseas-processing.html>
-                                        <span>Edit</span>
-                                        <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
-                                            height="22" viewBox="0 0 22 22">
-                                            <path
-                                                d="M16.311,0H17.74L23.7,3.675,17.74,7.348l-1.429.06ZM4.441,7.408V.059H14.815V7.408ZM0,7.4V.048H2.963V7.4Z"
-                                                transform="translate(22 5.238) rotate(135)" fill="#2157aa" />
-                                        </svg>
-
-                                    </a>
-
-                                </div>
-
-                                <div class="answers remove-element-padding">
-                                    
-                                    <p>Was this food product exported to an overseas country for processing before being re-imported to Australia? <span>Yes</span></p>
-                                    <p>What kind of overseas processing was conducted on this food product before being re-imported to Australia? <span>minor processing with no non-Australian ingredients added to the food</span></p>
-                                    <p>Nullam eu ante ac arcu facilisis finibus? <span>Yes</span></p>
-
-                                </div>
-
-                            </div>
-
-
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q3"
+                                id="country-of-origin-q3a" data-value="country-of-origin-q3a">
+                            <label class="form-check-label" for="country-of-origin-q3a">in Australia only</label>
                         </div>
 
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q3"
+                                id="country-of-origin-q3b" data-value="country-of-origin-q3b">
+                            <label class="form-check-label" for="country-of-origin-q3b">in two or more countries (can include Australia)</label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q3"
+                                id="country-of-origin-q3c" data-value="country-of-origin-q3c">
+                            <label class="form-check-label" for="country-of-origin-q3c">in an overseas country (not Australia)</label>
+                        </div>
+                    
                     </div>
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
                 </div>
-            </div>
+                
 
 
             </div>
-            
-            <!-- SAVE RESULTS -->
-            <!--
-        
-            <div class="bga-component-wrapper">
-                <div class="bga-component callout-box teal m-0">
-                    <div class="p-4 component-content">
-                        <div class="component-text p-0 remove-element-padding">
-                        
-                        <h3>Save your results.</h3>
-                        <p>Email a link to this page so you can return to these results at a later date.</p>
-
-                        <div class="tool-button-group button-group">
-
-                        <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Email results 
-                            <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
-                            <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
-                        </svg></button>
 
 
-                        </div>
-                            
-                        </div>
-                    </div>
+            <!-- Question 4 -->
+            <div class="question dynamic-trigger remove-element-padding d-none" id="country-of-origin-question4">
+
+                <!-- Question 3b -->
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="country-of-origin-q3b" class="form-label h3-font-size heading-color mb-4"><strong>What are the main ingredient/s and their country of origin?</strong></h3>
+                    
+                    <p class="mb-3">Provide a description (up to 80 characters) to highlight one or more ingredients of the food product and name their country of origin.</p>
+                <p class="mb-3">For example: <em>‘Australian macadamias and Belgian chocolate’</em></p>
+
+                <input type="text" class="form-control mb-5" id="ingredients" value="">
+
                 </div>
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="country-of-origin-q4" class="form-label h3-font-size heading-color mb-4"><strong>Is this food product or its ingredients 100% Australian?</strong></h3>
+                    
+                    <div class="help-wrapper complex mb-4" tabindex="0">
+    <p class="mb-3 complex-question">
+        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
+          </svg><span>Another relevant help question?</span></p>
+    <div class="complex-answer mb-3 remove-element-padding">
+        <p>an ingredient that was exclusively grown or produced in Australia. For more details on this subject refer to our help topics page.</p>
+        </ul>
+    </div>
+</div>
+
+
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" role="radiogroup" id="country-of-origin-q4">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q4"
+                                id="country-of-origin-q4a" data-value="country-of-origin-q4a">
+                            <label class="form-check-label" for="country-of-origin-q4a">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q4"
+                                id="country-of-origin-q4b" data-value="country-of-origin-q4b">
+                            <label class="form-check-label" for="country-of-origin-q4b">No</label>
+                        </div>
+                                         
+                    
+                    </div>
+                  
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
             </div>
-        -->
-
-              
-            <hr class="section-divider my-5" />
 
 
+            <!-- Question 5 -->
+            <div class="question dynamic-trigger remove-element-padding d-none" id="country-of-origin-question5">
 
-             <!-- BUTTON GROUP -->
-             <div class="tool-button-group button-group">
+               
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="country-of-origin-q5" class="form-label h3-font-size heading-color mb-4"><strong>Does this food product contain a consistent proportion of Australian ingredients?</strong></h3>
+
+
+                    <div class="radios w-50 g-2 d-flex radio-flex-group" role="radiogroup" id="country-of-origin-q5">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q5"
+                                id="country-of-origin-q5a" data-value="country-of-origin-q5a">
+                            <label class="form-check-label" for="country-of-origin-q5a">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q5"
+                                id="country-of-origin-q5b" data-value="country-of-origin-q5b">
+                            <label class="form-check-label" for="country-of-origin-q5b">No</label>
+                        </div>
+                                         
+                    
+                    </div>
+                  
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
+            </div>
+
+
+
+
+
+            <!-- BUTTON GROUP -->
+            <div class="tool-button-group button-group">
 
                 <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
-                    href=/bga-style-guide/prototypes/cool/overseas-processing.html role="button">Previous</a>
-                
-                <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Save results</button>
+                    href=/bga-style-guide/prototypes/cool2/packaging.html role="button">Previous</a>
 
-                <a class="bga-btn bga-secondary-btn bkg-light" tabindex="0" id="modal-trigger-restart" role="button">Create new label</a>
+                <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0"
+                    href=/bga-style-guide/prototypes/cool2/overseas-processing.html role="button">Next</a>
 
+                <a class="bga-btn bga-primary-btn bkg-light next results d-none" tabindex="0"
+                    href=/bga-style-guide/prototypes/cool2/results.html role="button">Return to results</a>
 
             </div>
 
+
         </div>
+
+
+       
 
     </div>
 
@@ -1471,7 +1406,7 @@
         <div class="container ">
             <div class="row">
                 <div class="remove-element-padding">
-                    <a href="" id="cool-reset-prototype">Reset prototype</a>
+                    <a href="" id="cool-reset-prototype" class="cool2">Reset prototype</a>
                 </div>
             </div>
         </div>
@@ -1646,7 +1581,7 @@
                 
                     <div class="tool-button-group button-group">
                         <div class="button-example">
-                            <button class="bga-btn bga-primary-btn bkg-light restart-tool" tabindex="0" href="" role="button">Yes, start over</button>
+                            <button class="bga-btn bga-primary-btn bkg-light restart-tool cool2" tabindex="0" href="" role="button">Yes, start over</button>
                         </div>
                     
                         <a class="bga-link bga-inline-link bkg-light cancel" tabindex="0" role="button">Cancel</a>
