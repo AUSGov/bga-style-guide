@@ -1,0 +1,109 @@
+<div class="standard-mark-cta remove-element-padding {{include.classes}} p-4 mb-5">
+
+    <h3>Create your standard mark</h3>
+    <p>You will be able to download or email this mark as a PDF or png file.</p>
+
+    <div class="fieldset-wrapper">
+        
+        <div class="form-step form-step-1 d-none remove-element-padding">
+            <fieldset class="p-4">
+               
+               
+                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="wording-options"> 
+                    
+                <div class="remove-element-padding mb-3">
+                <h4>Select your label wording</h4>
+                <p>You have <span class="option-count"></span> wording option<span class="plural"></span> to choose from.</p>
+                </div>
+
+                    <div class="radio-button alternate w-100 percentage_under_10">
+                        <input class="form-check-input m-0" type="radio" name="wording-options"
+                            id="option1" data-value="option1">
+                        <label class="form-check-label" for="option1"><div>Made in Australia from less than 10% Australian ingredients (<span class="processing"></span>)</div></label>
+                    </div>
+
+                    <div class="radio-button alternate w-100 percentage_under_10 ingredients_included">
+                        <input class="form-check-input m-0" type="radio" name="wording-options"
+                            id="option2" data-value="option2">
+                        <label class="form-check-label" for="option2"><div>Made in Australia from less than 10% Australian ingredients with <span class="ingredients"></span> (<span class="processing"></span>)</div></label>
+                    </div>
+
+                    <div class="radio-button alternate w-100">
+                        <input class="form-check-input m-0" type="radio" name="wording-options"
+                            id="option3" data-value="option3">
+                        <label class="form-check-label" for="option3"><div>Made in Australia from at least  <span class="percentage"></span>% Australian ingredients  (<span class="processing"></span>)</div></label>
+                    </div>
+
+                    <div class="radio-button w-100 alternate ingredients_included">
+                        <input class="form-check-input m-0" type="radio" name="wording-options"
+                            id="option4" data-value="option4">
+                        <label class="form-check-label" for="option4"><div>Made in Australia from at least  <span class="percentage"></span>% Australian ingredients with <span class="ingredients"></span> (<span class="processing"></span>)</div></label>
+                    </div>
+                
+                </div>
+
+
+                <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group5" role="radiogroup" id="orientation">
+                    <div class="remove-element-padding mb-3">
+                    <h4>Choose the orientation of your standard mark</h4>
+                    </div>
+
+                    <div class="radio-button alternate w-100">
+                        <input class="form-check-input m-0" type="radio" name="orientation"
+                            id="landscape" value="landscape">
+                        <label class="form-check-label" for="landscape">Landscape</label>
+                    </div>
+
+                    <div class="radio-button alternate w-100">
+                        <input class="form-check-input m-0" type="radio" name="orientation"
+                            id="portrait" value="portrait">
+                        <label class="form-check-label" for="portrait">Portrait</label>
+                    </div>
+
+                </div>
+
+
+                <div class="form-step form-step-2 d-none remove-element-padding">
+                    
+                    <h4 class="mb-3">Your standard mark</h4>
+
+                    <div class="content">
+                    
+                        <div class="mark-preview mb-5">
+                            <img class="standard-mark-preview landscape d-none" src={{ "assets/standard-mark-landscape.png"/ | relative_url }} alt=""/>
+                            <img class="standard-mark-preview portrait d-none" src={{ "assets/standard-mark-portrait.png"/ | relative_url }} alt=""/>
+                        </div>
+                    
+                        <div class="tool-button-group button-group">
+
+                            <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                                href="" role="button" id="modal-trigger-email-mark">Email standard mark <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
+                                    <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
+                                </svg></a>
+
+                            <a class="bga-btn bga-primary-btn bkg-light" tabindex="0"
+                                href="" role="button" id="modal-trigger-download-mark">Download standard mark <svg id="Icon:_Print" data-name="Icon: Print" xmlns="http://www.w3.org/2000/svg" width="18" height="17.013" viewBox="0 0 18 17.013">
+                                    <path id="Print" d="M15.664,17.013H2.3V13.1H0V4.6H2.3V7.587H15.864V4.6H18L17.951,13.1h-2.27l-.016,3.907h0ZM4.138,15.4h9.656v-2.07H4.138Zm0-9.656V0h9.886V5.748Z" fill="#333"/>
+                                </svg></a>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+
+
+            </fieldset>
+            
+        </div>
+
+
+        
+   
+       
+
+
+    </div>
+
+</div>

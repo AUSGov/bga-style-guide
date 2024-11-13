@@ -24,7 +24,10 @@
         color: $bga-red-fail-dark;
     }
 
-
+    input#percentage {
+        width: 60px;
+        text-align: center;
+    }
 
     .create-standard-mark-cta, .create-coo-cta {
         background: $bga-blue-background-extralight;
@@ -43,11 +46,6 @@
             background: $bga-white;
             width: 100%;
         }
-        #percentage {
-            width: 60px;
-            text-align: center;
-        }
-
         .coo-example {
             p {
                 margin-bottom: 16px;
@@ -66,9 +64,68 @@
 
     }
 
-   img.standard-mark-preview {
-    max-height: 240px;
-   }
+    .standard-mark-cta, .create-coo-cta-2 {
+        
+        background: $bga-teal-highlight-light;
+        border-left: solid 8px $bga-teal-highlight-dark;
+
+        .fieldset-wrapper  {
+            border: none;
+        }
+
+        fieldset {
+            row-gap: 24px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form-step {
+            background: $bga-white;
+            width: 100%;
+        }
+        .coo-example {
+            background: $bga-white;
+            p {
+                margin-bottom: 16px;
+                
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            .example-border {
+                display: inline-block;
+                padding: 8px;
+                border: solid $bga-black 2px;
+            }
+        }
+    }
+
+    .mark-or-coo-cta {
+        background: $bga-blue-background-extralight;
+        border-left: solid 8px $bga-blue-border;
+
+        .ctas-wrapper {
+            flex-wrap: nowrap;
+            column-gap: 24px;
+        }
+
+        .cta-container {
+            background: $bga-white;
+            display: flex;
+            flex-direction: column;
+        }
+        .cta-title {
+            background: $bga-blue-highlight-mid;
+        }
+        .cta-content {
+            flex-wrap: wrap;
+        }
+    }
+
+
+    img.standard-mark-preview {
+        max-height: 240px;
+    }
 
 
 

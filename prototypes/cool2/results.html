@@ -1,6 +1,6 @@
 ---
 
-layout: bga-inpage-tool-cool
+layout: bga-inpage-tool-cool2
 title: Country of origin labelling tool
 step-number: 5
 stepped-nav-step: Results
@@ -8,7 +8,7 @@ page-id: results
 
 ---
 
-<div class="container page-content results-page my-5" data-page="{{ page.page-id }}"  id="cool-prototype">
+<div class="container page-content cool2-results results-page my-5" data-page="{{ page.page-id }}"  id="cool-prototype">
 
 
     <div class="row">
@@ -24,9 +24,12 @@ page-id: results
 
             <p>The standard mark will have the kangaroo logo, bar chart and text.</p>
 
-            {% include prototypes/create-standard-mark-form.html 
+            
+            {% include prototypes/standard-mark-cta.html 
                 classes=""
             %}
+            
+            
 
 
             <div class="edit-answers-wrapper">
@@ -128,7 +131,9 @@ page-id: results
                                 <div class="answers remove-element-padding">
                                     <p>Was this food product grown OR produced OR made in Australia? <span>Yes</span></p>
                                     <p>Does this food product contain Australian ingredients?<span>Yes</span></p>
-                                    <p>Nullam eu ante ac arcu facilisis finibus? <span>in two or more countries (can include Australia)</span></p>
+                                    <p>What is the minimum percentage of Australia ingredients in your product?<span class="percentage"></span></p>
+                                    <p>Where was the food or its ingredients grown or produced? <span>in two or more countries (can include Australia)</span></p>
+                                    <p>What are the main ingredient/s and their country of origin?<span class="ingredients"></span></p>
                                     <p>Is this food product or its ingredients 100% Australian? <span>Yes</span></p>
                                     <p>Does this food product contain a consistent proportion of Australian ingredients? <span>Yes</span></p>
 
@@ -160,7 +165,8 @@ page-id: results
                                     
                                     <p>Was this food product exported to an overseas country for processing before being re-imported to Australia? <span>Yes</span></p>
                                     <p>What kind of overseas processing was conducted on this food product before being re-imported to Australia? <span>minor processing with no non-Australian ingredients added to the food</span></p>
-                                    <p>Nullam eu ante ac arcu facilisis finibus? <span>Yes</span></p>
+                                    <p>What is the minor processing that occurred outside Australia? <span class="processing"></span></p>
+                                    <p>Was the food last substantially transformed in Australia? <span>Yes</span></p>
 
                                 </div>
 
@@ -176,32 +182,7 @@ page-id: results
 
             </div>
             
-            <!-- SAVE RESULTS -->
-            <!--
-        
-            <div class="bga-component-wrapper">
-                <div class="bga-component callout-box teal m-0">
-                    <div class="p-4 component-content">
-                        <div class="component-text p-0 remove-element-padding">
-                        
-                        <h3>Save your results.</h3>
-                        <p>Email a link to this page so you can return to these results at a later date.</p>
 
-                        <div class="tool-button-group button-group">
-
-                        <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Email results 
-                            <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="18" height="15.429" viewBox="0 0 18 15.429">
-                            <path d="M.009,15.429,18,7.714.009,0,0,6,12.857,7.714,0,9.429Z" fill="#333"></path>
-                        </svg></button>
-
-
-                        </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        -->
 
               
             <hr class="section-divider my-5" />
@@ -212,7 +193,7 @@ page-id: results
              <div class="tool-button-group button-group">
 
                 <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
-                    href={{ 'prototypes/cool/overseas-processing.html' | relative_url }} role="button">Previous</a>
+                    href={{ 'prototypes/cool2/overseas-processing.html' | relative_url }} role="button">Previous</a>
                 
                 <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Save results</button>
 
