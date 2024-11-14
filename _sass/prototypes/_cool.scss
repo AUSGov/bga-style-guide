@@ -122,6 +122,107 @@
         }
     }
 
+    .beefy-radio-options {
+        background: $bga-teal-highlight-light;
+        border: none;
+        border-left: solid 8px $bga-teal-highlight-mid;
+
+        form {
+            display: flex;
+            row-gap: 24px;
+            background: none;
+            flex-wrap: wrap;
+        }
+        .form-step {
+            background: $bga-white;
+            width: 100%;
+        }
+
+        .radios.beefy-radios {
+            row-gap: 16px;
+
+            .radio-edit-buttons-wrapper {
+                display: flex;
+                column-gap: 24px;
+            }
+
+            .radio-button {
+                label {
+                    border: none;
+                    padding: 0;
+
+                    span {
+                        color: $bga-blue-black-mid-dark;
+                        //background: $bga-yellow-highlight-mid;
+                    }
+
+                    &::before {
+                        margin-top: 4px;
+                    }
+                }
+
+                [type="radio"]:checked + label {
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .edit-button-wrapper {
+                background: $bga-blue-black-lightest;
+            }
+            .edit-button {
+                max-width: 120px;
+            }
+
+            .edit-option-form {
+                background: $bga-blue-black-lightest;
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 32px;
+            }
+            
+            .wording-option {
+                border: solid 1px $bga-black; 
+                width: 100%;
+
+                &.edited {
+                    .radio-button {
+                        label {
+                            span {
+                                color: $bga-black;
+                                font-weight: 600;
+                            
+                                    &.highlight { 
+                                        //background-color: $bga-white;
+                                        transition: background-color 800ms linear;
+                                        -moz-transition: background-color 800ms linear;
+                                        -webkit-transition: background-color 800ms linear;
+                                        -ms-transition: background-color 800ms linear;
+                                        background-color: $bga-green-success-mid;
+                                    } 
+                            }
+                        } 
+                        [type="radio"]:checked + label {
+                            span {
+                                color: $bga-blue-links;
+
+                            }
+                        }  
+                    }
+                }
+
+                &.open {
+                    .edit-button {
+                        svg {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
     img.standard-mark-preview {
         max-height: 240px;

@@ -1132,100 +1132,88 @@ $(document).ready(function () {
 
         }; 
 
-        // GENERATE MARK - COOL 2
-        
-        // Collect input values for wording options throughout the form
-        $('input#percentage').on('change', function(){
-            var percentage = $(this).val();
-            sessionStorage.setItem('percentage', percentage);
-            console.log(sessionStorage.getItem('percentage'));
-        });
-        $('input#ingredients').on('change', function(){
-            var ingredients = $(this).val();
-            sessionStorage.setItem('ingredients', ingredients);
-            console.log(sessionStorage.getItem('ingredients'));
-        });
-        $('input#processing').on('change', function(){
-            var processing = $(this).val();
-            sessionStorage.setItem('processing', processing);
-            console.log(sessionStorage.getItem('processing'));
-        });
 
-        // Add values to form
+        // GENERATE MARK - BEEFY RADIOS
+        if ($('.beefy-radio-options').length) {
+            var form_entries = {};
 
-            //STEP 1
-            // Get input values
-            var percentage = sessionStorage.getItem('percentage');
-            var percentage_numerical = parseFloat(percentage);
-            var processing = sessionStorage.getItem('processing');
-            var ingredients = sessionStorage.getItem('ingredients');
-            
-            console.log(percentage);
-            console.log(processing);
-            console.log(ingredients);
+            // Open and close edit form on edit button click
+            $('.beefy-radios .edit-button').on('click', function(){
+    
+                if (!$(this).parents('.wording-option').hasClass('open') ) {
+                    $('.beefy-radios .edit-button').each(function(){
+                        $(this).parents('.wording-option').removeClass('open');
+                        $(this).parents('.wording-option').find('.edit-option-form').addClass('d-none');
+                        $(this).find('span').text('Edit');
+                    });
+                    
+                    $(this).parents('.wording-option').find('.edit-option-form').removeClass('d-none');
+                    $(this).parents('.wording-option').addClass('open').removeClass('closed');
+                    $(this).find('span').text('Close');
 
-            // Add input values to wording options
-            $('span.percentage').each(function(){
-                $(this).text(percentage);
-            });
-            $('span.processing').each(function(){
-                $(this).text(processing);
-            });
-            $('span.ingredients').each(function(){
-                $(this).text(ingredients);
-            });
-
-
-            // Hide invalid wording options
-            $('#wording-options .radio-button').each(function(){
-                $(this).removeClass('d-none');
-                $(this).find('input').prop('checked', false);
-            });
-
-            if (percentage_numerical > 10 ) {
-                $('.percentage_under_10').addClass('d-none');
-            }
-
-            if ( ingredients == "" ) {
-                $('.ingredients_included').addClass('d-none');
-            }
-
-            // Update wording on option count
-            var options_count = $('#wording-options .radio-button:not(.d-none').length;
-            $('span.option-count').text(options_count);
-            if (options_count > 1) {
-                $('span.plural').text('s');
-            } else {
-                $('span.plural').text('');
-            }
-
-            // Show valid options
-            $('.form-step-1').removeClass('d-none');
-
-            
-            // STEP 2 - GENERATE MARK
-            $('#orientation input').on('change', function(){
-                
-                // Get and display the correct orientation
-                var orientation = $('#orientation input:checked').val();
-                console.log(orientation);
-
-                if ( orientation == 'landscape') {
-                    $('img.standard-mark-preview.landscape').removeClass('d-none');
-                    $('img.standard-mark-preview.portrait').addClass('d-none');
-                } else if ( orientation == 'portrait') {
-                    $('img.standard-mark-preview.portrait').removeClass('d-none');
-                    $('img.standard-mark-preview.landscape').addClass('d-none');
+                } else if ( $(this).parents('.wording-option').hasClass('open') ) {
+                    $(this).parents('.wording-option').find('.edit-option-form').addClass('d-none');
+                    $(this).parents('.wording-option').removeClass('open');
+                    $(this).find('span').text('Edit');
                 }
-                
-                $('.form-step-2').removeClass('d-none');
 
             });
 
-        
+            // Add input values to radio text
+            $('.add-details').on('click', function(){
+
+                // Get input values
+                form_entries.percentage = $(this).parents('.edit-option-form').find('#percentage').val();
+                form_entries.processing = $(this).parents('.edit-option-form').find('#processing').val();
+                form_entries.ingredients = $(this).parents('.edit-option-form').find('#ingredients').val();
+
+                console.log(form_entries);
+
+                // Add input values to wording options
+                $(this).parents('.wording-option').addClass('edited');
+                
+                $(this).parents('.wording-option').find('span.percentage').text(form_entries.percentage).addClass('highlight');
+                $(this).parents('.wording-option').find('span.processing').text(form_entries.processing).addClass('highlight');
+                $(this).parents('.wording-option').find('span.ingredients').text(form_entries.ingredients).addClass('highlight');
+
+                setTimeout(function () {
+                    $('.wording-option span.percentage').removeClass('highlight');
+                    $('.wording-option span.processing').removeClass('highlight');
+                    $('.wording-option span.ingredients').removeClass('highlight');
+                }, 2000);
+                
+               
+                //$(this).parents('.wording-option').find('.edit-button span').text('Edit');
+                //$(this).parents('.edit-option-form').addClass('d-none');
+
+            });
+
+        }; // end beefy radios
+
+        // PREVIEW MARK
+        $('#preview-mark').on('click', function(){
+                
+            // Get and display the correct orientation
+            form_entries.orientation = $('#orientation input:checked').val();
+            console.log(form_entries.orientation);
+
+            if ( form_entries.orientation == 'landscape') {
+                $('img.standard-mark-preview.landscape').removeClass('d-none');
+                $('img.standard-mark-preview.portrait').addClass('d-none');
+            } else if ( form_entries.orientation == 'portrait') {
+                $('img.standard-mark-preview.portrait').removeClass('d-none');
+                $('img.standard-mark-preview.landscape').addClass('d-none');
+            }
+
+            $('.form-step-3').removeClass('d-none');
+
+            $('html, body').animate({
+                scrollTop: $(".form-step-3").offset().top
+              }, 500);
+        });
 
 
-        // STEP 3 - EMAIL OR DOWNLOAD
+        // STEP 3 - EMAIL OR DOWNLOAD BUTTONS
             $('#modal-trigger-email-mark').on('click', function(){
                 $('#modal-email-standard-mark').addClass('show');
                 $(".modal-overlay").addClass("show");
