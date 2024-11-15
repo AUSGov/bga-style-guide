@@ -1137,26 +1137,47 @@ $(document).ready(function () {
         if ($('.beefy-radio-options').length) {
             var form_entries = {};
 
+            // Functions for opening and closing forms
+            var open_form = function(trigger){
+                console.log(trigger);
+                trigger.parents('.wording-option').find('.edit-option-form').removeClass('d-none');
+                trigger.parents('.wording-option').addClass('open').removeClass('closed');
+                trigger.find('span').text('Close');
+            };
+            var close_form = function(trigger){
+                console.log(trigger);
+                trigger.parents('.wording-option').find('.edit-option-form').addClass('d-none');
+                trigger.parents('.wording-option').removeClass('open');
+                trigger.find('span').text('Edit');
+            };
+
+            var close_all_forms = function(){
+                $('.beefy-radios .wording-option').each(function(trigger){
+                    $(this).removeClass('open');
+                    $(this).find('.edit-option-form').addClass('d-none');
+                    $(this).find('.edit-button span').text('Edit');
+                });
+            };
+            
+
             // Open and close edit form on edit button click
             $('.beefy-radios .edit-button').on('click', function(){
-    
+
                 if (!$(this).parents('.wording-option').hasClass('open') ) {
-                    $('.beefy-radios .edit-button').each(function(){
-                        $(this).parents('.wording-option').removeClass('open');
-                        $(this).parents('.wording-option').find('.edit-option-form').addClass('d-none');
-                        $(this).find('span').text('Edit');
-                    });
-                    
-                    $(this).parents('.wording-option').find('.edit-option-form').removeClass('d-none');
-                    $(this).parents('.wording-option').addClass('open').removeClass('closed');
-                    $(this).find('span').text('Close');
-
-                } else if ( $(this).parents('.wording-option').hasClass('open') ) {
-                    $(this).parents('.wording-option').find('.edit-option-form').addClass('d-none');
-                    $(this).parents('.wording-option').removeClass('open');
-                    $(this).find('span').text('Edit');
+                    close_all_forms();
+                    open_form($(this));
+                } 
+                else if ( $(this).parents('.wording-option').hasClass('open') ) {
+                    close_form($(this));
+                };
+    
+            });  
+            
+            // Close all other forms on radio button click
+            $('.beefy-radios .radio-button input').on('click', function(){
+                if ( !$(this).parents('.wording-option').hasClass('open') ) {
+                    close_all_forms();
                 }
-
             });
 
             // Add input values to radio text
@@ -1176,15 +1197,19 @@ $(document).ready(function () {
                 $(this).parents('.wording-option').find('span.processing').text(form_entries.processing).addClass('highlight');
                 $(this).parents('.wording-option').find('span.ingredients').text(form_entries.ingredients).addClass('highlight');
 
+                var that = $(this);
                 setTimeout(function () {
-                    $('.wording-option span.percentage').removeClass('highlight');
-                    $('.wording-option span.processing').removeClass('highlight');
-                    $('.wording-option span.ingredients').removeClass('highlight');
+                    that.parents('.wording-option').find('span.percentage').removeClass('highlight');
+                    that.parents('.wording-option').find('span.processing').removeClass('highlight');
+                    that.parents('.wording-option').find('span.ingredients').removeClass('highlight');
+
+                    //that.parents('.wording-option').find('.edit-button span').text('Edit');
+                    //that.parents('.edit-option-form').addClass('d-none');
+
                 }, 2000);
                 
                
-                //$(this).parents('.wording-option').find('.edit-button span').text('Edit');
-                //$(this).parents('.edit-option-form').addClass('d-none');
+                
 
             });
 
