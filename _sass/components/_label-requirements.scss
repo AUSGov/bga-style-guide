@@ -1,0 +1,68 @@
+.label-requirements-cta {
+    background: $bga-blue-background-extralight;
+    border-left: solid 8px $bga-blue-border;
+    width: 100%;
+
+    .ctas-wrapper {
+        flex-wrap: nowrap;
+        column-gap: 24px;
+    }
+
+    .cta-container {
+        background: $bga-white;
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 12px);
+    }
+    .cta-title {
+        background: $bga-blue-highlight-mid;
+    }
+    .cta-content {
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 100%;
+    }
+}
+
+// Mixins for smaller screen sizes
+@mixin label-requirements-bp-576 () {
+    .label-requirements-cta {
+        .ctas-wrapper {
+            flex-direction: column;
+            row-gap: 24px;
+        }
+        .cta-container {
+            width: 100%;
+        }
+    }
+}
+@mixin label-requirements-bp-below350 {
+    .label-requirements-cta {
+        .cta-content .bga-btn {
+            width: 100%;
+        }
+    }
+}
+
+.component-example.bp-576 {
+    @include label-requirements-bp-576();
+}
+.component-example.bp-350 {
+    @include label-requirements-bp-576();
+}
+.component-example.bp-below350 {
+    @include label-requirements-bp-576();
+    @include label-requirements-bp-below350();
+}
+
+
+
+
+//Media queries
+@media (max-width: 768px) {
+    @include label-requirements-bp-576();
+}
+
+@media (max-width: 350px) {
+    @include label-requirements-bp-below350();
+}

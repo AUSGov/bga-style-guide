@@ -1,0 +1,202 @@
+.create-label-cta {
+    border: none;
+    background: $bga-teal-highlight-light;
+    border-left: solid 8px $bga-teal-highlight-mid;
+    width: 100%;
+
+    form {
+        display: flex;
+        row-gap: 24px;
+        background: none;
+        flex-wrap: wrap;
+    }
+    .form-step {
+        width: 100%;
+    }
+
+    .radios.radio-edit-combo-group {
+        row-gap: 8px;
+        margin-bottom: 32px;
+
+        .radio-edit-buttons-wrapper {
+            display: flex; 
+            background: $bga-white; 
+        }
+
+        .radio-button {
+            label {
+                border: none;
+                padding: 0;
+
+                span {
+                    color: $bga-blue-black-mid-dark;
+                }
+
+                &::before {
+                    margin-top: 4px;
+                }
+            }
+
+            [type="radio"]:checked + label {
+                color: $bga-blue-links;
+                span {
+                    font-weight: 400;
+                    color: $bga-blue-links;
+                }
+            }
+        }
+
+        .edit-button-wrapper {
+            background: $bga-yellow-highlight-mid;
+            display: flex;
+            align-items: center;
+        }
+
+        .question-input {
+            width: 100%;
+        }
+        input#percentage {
+            width: 60px;
+            text-align: center;
+        }
+
+        .mini-button {
+            min-height: 44px !important;
+            height: 44px !important;
+            padding: 0 16px;
+            width: 100%;
+            min-width: 120px;
+        }
+
+        .edit-option-form {
+            background: $bga-yellow-highlight-light;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 32px;
+        }
+        
+        .wording-option {
+            border: solid 1px $bga-black; 
+            width: 100%;
+
+            &.edited {
+                .radio-button {
+                    label {
+                        span {
+                            color: $bga-black;
+                            font-weight: 600;
+                        
+                                &.highlight { 
+                                    transition: background-color 800ms linear;
+                                    -moz-transition: background-color 800ms linear;
+                                    -webkit-transition: background-color 800ms linear;
+                                    -ms-transition: background-color 800ms linear;
+                                    background-color: $bga-green-success-mid;
+                                } 
+                        }
+                    } 
+                    [type="radio"]:checked + label {
+                        span {
+                            color: $bga-blue-links;
+
+                        }
+                    }  
+                }
+            }
+        }
+        
+    }
+
+    .mark-preview {
+        background: white;
+        padding: 16px;
+        overflow-x: auto;
+        width: 100%;
+
+        img {
+            &.landscape {
+                width: 100%;
+                min-width:300px;
+                max-width: 500px;
+                height: auto;
+            }
+            &.portrait {
+                max-height: 300px;
+                min-height: 200px;
+                width: auto;
+            }
+        } 
+       
+    }
+    .coo-example {
+        background: $bga-white;
+        width: 100%;
+
+        p {
+            margin-bottom: 16px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .example-border {
+            display: inline-block;
+            padding: 8px;
+            border: solid $bga-black 2px;
+        }
+    }
+}
+
+// Mixins for smaller screen sizes
+@mixin create-label-cta-bp-350 () {
+    .create-label-cta {
+        .radios.radio-edit-combo-group {
+            
+            .mini-button {
+                font-size: .875rem;
+                line-height: 1.125rem;
+            }
+
+            .radio-edit-buttons-wrapper {
+                flex-direction: column;
+            }
+           
+        }
+
+        .bga-btn {
+            font-size: .875rem;
+            line-height: 1.125rem;
+            padding: 0px 24px;
+            min-height: 48px;
+        }
+        .radios#orientation {
+            width: 100% !important;
+        }
+
+    }
+}
+
+@mixin create-label-cta-bp-below350 {
+    .create-label-cta {
+        .bga-btn {
+            width: 100%;
+        }
+    }
+}
+
+.component-example.bp-350 {
+    @include create-label-cta-bp-350();
+}
+.component-example.bp-below350 {
+    @include create-label-cta-bp-350();
+    @include create-label-cta-bp-below350();
+}
+
+// media queries
+@media (max-width: 576px) {
+    @include create-label-cta-bp-350();
+}
+@media (max-width: 350px) {
+    @include create-label-cta-bp-below350();
+}

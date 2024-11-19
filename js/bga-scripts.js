@@ -1186,6 +1186,119 @@ $(document).ready(function () {
     });
 
 
+    // COMPONENT EXAMPLE: CREATE LABEL CTA
+    if ($('.create-label-cta').length) {
+        var form_entries = {};
+
+        // Functions for opening and closing forms
+        var open_form = function(trigger){
+            console.log(trigger);
+            trigger.parents('.wording-option').find('.edit-option-form').removeClass('d-none');
+            trigger.parents('.wording-option').addClass('open').removeClass('closed');
+            trigger.find('span').text('Close');
+            trigger.find('.close-icon').removeClass('d-none');
+            trigger.find('.edit-icon').addClass('d-none');
+        };
+        var close_form = function(trigger){
+            console.log(trigger);
+            trigger.parents('.wording-option').find('.edit-option-form').addClass('d-none');
+            trigger.parents('.wording-option').removeClass('open');
+            trigger.find('span').text('Edit');
+            trigger.find('.close-icon').addClass('d-none');
+            trigger.find('.edit-icon').removeClass('d-none');
+        };
+
+        var close_all_forms = function(){
+            $('.radio-edit-combo-group .wording-option').each(function(trigger){
+                $(this).removeClass('open');
+                $(this).find('.edit-option-form').addClass('d-none');
+                $(this).find('.edit-button span').text('Edit');
+                $(this).find('.close-icon').addClass('d-none');
+                $(this).find('.edit-icon').removeClass('d-none');
+            });
+        };
+        
+
+        // Open and close edit form on edit button click
+        $('.radio-edit-combo-group .edit-button').on('click', function(){
+
+            if (!$(this).parents('.wording-option').hasClass('open') ) {
+                close_all_forms();
+                open_form($(this));
+            } 
+            else if ( $(this).parents('.wording-option').hasClass('open') ) {
+                close_form($(this));
+            };
+
+        });  
+        
+        // Close all other forms on radio button click
+        $('.radio-edit-combo-group .radio-button input').on('click', function(){
+            if ( !$(this).parents('.wording-option').hasClass('open') ) {
+                close_all_forms();
+            }
+        });
+
+        // Add input values to radio text
+        $('.add-details').on('click', function(){
+
+            // Get input values
+            form_entries.percentage = $(this).parents('.edit-option-form').find('#percentage').val();
+            form_entries.processing = $(this).parents('.edit-option-form').find('#processing').val();
+            form_entries.ingredients = $(this).parents('.edit-option-form').find('#ingredients').val();
+
+            console.log(form_entries);
+
+            // Add input values to wording options
+            $(this).parents('.wording-option').addClass('edited');
+            
+            $(this).parents('.wording-option').find('span.percentage').text(form_entries.percentage).addClass('highlight');
+            $(this).parents('.wording-option').find('span.processing').text(form_entries.processing).addClass('highlight');
+            $(this).parents('.wording-option').find('span.ingredients').text(form_entries.ingredients).addClass('highlight');
+
+            var that = $(this);
+            setTimeout(function () {
+                that.parents('.wording-option').find('span.percentage').removeClass('highlight');
+                that.parents('.wording-option').find('span.processing').removeClass('highlight');
+                that.parents('.wording-option').find('span.ingredients').removeClass('highlight');
+
+                //that.parents('.wording-option').find('.edit-button span').text('Edit');
+                //that.parents('.edit-option-form').addClass('d-none');
+
+            }, 2000);
+            
+           
+            
+
+        });
+
+        // Preview mark
+        $('#preview-mark').on('click', function(){
+                
+            // Get and display the correct orientation
+            form_entries.orientation = $('#orientation input:checked').val();
+            console.log(form_entries.orientation);
+
+            if ( form_entries.orientation == 'landscape') {
+                $('img.standard-mark-preview.landscape').removeClass('d-none');
+                $('img.standard-mark-preview.portrait').addClass('d-none');
+            } else if ( form_entries.orientation == 'portrait') {
+                $('img.standard-mark-preview.portrait').removeClass('d-none');
+                $('img.standard-mark-preview.landscape').addClass('d-none');
+            }
+
+            $('.form-step-3, .mark-preview').removeClass('d-none');
+
+            /*$('html, body').animate({
+                scrollTop: $(".mark-preview").offset().top
+              }, 800);*/
+        });
+
+    }; // end create label cta
+
+
+
+
     // COMPONENT EXAMPLE: MODALS
 
     // Function to detect if scrollable section is overflowing            
