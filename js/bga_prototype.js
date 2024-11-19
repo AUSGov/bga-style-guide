@@ -934,17 +934,10 @@ $(document).ready(function () {
         };
 
         if ($('#stepped-nav-inpage').length) {
-            if ($('#stepped-nav-inpage').hasClass('cool2') ) {
-                console.log('cool2');
-                var path = '/bga-style-guide/prototypes/cool2/';
-            } else {
-                console.log('cool1');
-                var path = '/bga-style-guide/prototypes/cool/';
-            }
+            var path = '/bga-style-guide/prototypes/cool/';
+
             stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "overseas-processing.html", "results.html"], path);
         }
-
-        
 
         // Check if 'return to results button' should display
         var results_viewed = sessionStorage.getItem('results');
@@ -1047,218 +1040,37 @@ $(document).ready(function () {
         });
 
 
-        // GENERATE MARK CTA -  COOL 1
-        if ($('.create-standard-mark-cta').length ) {
-            var form_entries = {};
-
-            // STEP 1 - ADD PRODUCT DETAILS
-            $('#add-product-details').on('click', function(){
-                // Get input values
-                form_entries.percentage = $('#percentage').val();
-                form_entries.processing = $('#processing').val();
-                form_entries.ingredients = $('#ingredients').val();
-
-                console.log(form_entries);
-
-                // Add input values to wording options
-                $('span.percentage').each(function(){
-                    $(this).text(form_entries.percentage);
-                });
-                $('span.processing').each(function(){
-                    $(this).text(form_entries.processing);
-                });
-                $('span.ingredients').each(function(){
-                    $(this).text(form_entries.ingredients);
-                });
-
-                // Hide invalid wording options
-                var percentage_numberical = parseFloat(form_entries.percentage)
-                
-                $('#wording-options .radio-button').each(function(){
-                    $(this).removeClass('d-none');
-                    $(this).find('input').prop('checked', false);
-                });
-
-                if (percentage_numberical > 10 ) {
-                    $('.percentage_under_10').addClass('d-none');
-                }
-
-                if ( form_entries.ingredients == "" ) {
-                    $('.ingredients_included').addClass('d-none');
-                }
-
-                // Update wording on option count
-                var options_count = $('#wording-options .radio-button:not(.d-none').length;
-                $('span.option-count').text(options_count);
-                if (options_count > 1) {
-                    $('span.plural').text('s');
-                } else {
-                    $('span.plural').text('');
-                }
-
-                
-                // Show step 2
-                $('.form-step-2').removeClass('d-none');
-                $('.form-step-3').addClass('d-none');
-
-                $('html, body').animate({
-                    scrollTop: $(".form-step-2").offset().top
-                  }, 500);
-
-            });
-            
-            
-            // STEP 2 - GENERATE MARK
-            $('#generate-mark').on('click', function(){
-                
-                // Get and display the correct orientation
-                form_entries.orientation = $('#orientation input:checked').val();
-                console.log(form_entries.orientation);
-
-                if ( form_entries.orientation == 'landscape') {
-                    $('img.standard-mark-preview.landscape').removeClass('d-none');
-                    $('img.standard-mark-preview.portrait').addClass('d-none');
-                } else if ( form_entries.orientation == 'portrait') {
-                    $('img.standard-mark-preview.portrait').removeClass('d-none');
-                    $('img.standard-mark-preview.landscape').addClass('d-none');
-                }
-                
-                $('.form-step-3').removeClass('d-none');
-
-                $('html, body').animate({
-                    scrollTop: $(".form-step-3").offset().top
-                  }, 500);
-            });
-
-        }; 
-
-
-        // GENERATE MARK - BEEFY RADIOS
-        if ($('.beefy-radio-options').length) {
-            var form_entries = {};
-
-            // Functions for opening and closing forms
-            var open_form = function(trigger){
-                console.log(trigger);
-                trigger.parents('.wording-option').find('.edit-option-form').removeClass('d-none');
-                trigger.parents('.wording-option').addClass('open').removeClass('closed');
-                trigger.find('span').text('Close');
-            };
-            var close_form = function(trigger){
-                console.log(trigger);
-                trigger.parents('.wording-option').find('.edit-option-form').addClass('d-none');
-                trigger.parents('.wording-option').removeClass('open');
-                trigger.find('span').text('Edit');
-            };
-
-            var close_all_forms = function(){
-                $('.beefy-radios .wording-option').each(function(trigger){
-                    $(this).removeClass('open');
-                    $(this).find('.edit-option-form').addClass('d-none');
-                    $(this).find('.edit-button span').text('Edit');
-                });
-            };
-            
-
-            // Open and close edit form on edit button click
-            $('.beefy-radios .edit-button').on('click', function(){
-
-                if (!$(this).parents('.wording-option').hasClass('open') ) {
-                    close_all_forms();
-                    open_form($(this));
-                } 
-                else if ( $(this).parents('.wording-option').hasClass('open') ) {
-                    close_form($(this));
-                };
-    
-            });  
-            
-            // Close all other forms on radio button click
-            $('.beefy-radios .radio-button input').on('click', function(){
-                if ( !$(this).parents('.wording-option').hasClass('open') ) {
-                    close_all_forms();
-                }
-            });
-
-            // Add input values to radio text
-            $('.add-details').on('click', function(){
-
-                // Get input values
-                form_entries.percentage = $(this).parents('.edit-option-form').find('#percentage').val();
-                form_entries.processing = $(this).parents('.edit-option-form').find('#processing').val();
-                form_entries.ingredients = $(this).parents('.edit-option-form').find('#ingredients').val();
-
-                console.log(form_entries);
-
-                // Add input values to wording options
-                $(this).parents('.wording-option').addClass('edited');
-                
-                $(this).parents('.wording-option').find('span.percentage').text(form_entries.percentage).addClass('highlight');
-                $(this).parents('.wording-option').find('span.processing').text(form_entries.processing).addClass('highlight');
-                $(this).parents('.wording-option').find('span.ingredients').text(form_entries.ingredients).addClass('highlight');
-
-                var that = $(this);
-                setTimeout(function () {
-                    that.parents('.wording-option').find('span.percentage').removeClass('highlight');
-                    that.parents('.wording-option').find('span.processing').removeClass('highlight');
-                    that.parents('.wording-option').find('span.ingredients').removeClass('highlight');
-
-                    //that.parents('.wording-option').find('.edit-button span').text('Edit');
-                    //that.parents('.edit-option-form').addClass('d-none');
-
-                }, 2000);
-                
-               
-                
-
-            });
-
-        }; // end beefy radios
-
-        // PREVIEW MARK
-        $('#preview-mark').on('click', function(){
-                
-            // Get and display the correct orientation
-            form_entries.orientation = $('#orientation input:checked').val();
-            console.log(form_entries.orientation);
-
-            if ( form_entries.orientation == 'landscape') {
-                $('img.standard-mark-preview.landscape').removeClass('d-none');
-                $('img.standard-mark-preview.portrait').addClass('d-none');
-            } else if ( form_entries.orientation == 'portrait') {
-                $('img.standard-mark-preview.portrait').removeClass('d-none');
-                $('img.standard-mark-preview.landscape').addClass('d-none');
-            }
-
-            $('.form-step-3').removeClass('d-none');
-
-            $('html, body').animate({
-                scrollTop: $(".form-step-3").offset().top
-              }, 500);
-        });
-
-
         // STEP 3 - EMAIL OR DOWNLOAD BUTTONS
-            $('#modal-trigger-email-mark').on('click', function(){
-                $('#modal-email-standard-mark').addClass('show');
-                $(".modal-overlay").addClass("show");
-            });
-            $('#modal-trigger-download-mark').on('click', function(){
-                $('#modal-download-standard-mark').addClass('show');
-                $(".modal-overlay").addClass("show");
-            });
+        $('#modal-trigger-email-mark').on('click', function(){
+            $('#modal-email-standard-mark').addClass('show');
+            $(".modal-overlay").addClass("show");
+        });
+        $('#modal-trigger-download-mark').on('click', function(){
+            $('#modal-download-standard-mark').addClass('show');
+            $(".modal-overlay").addClass("show");
+        });
 
         // ON PAGE WITH BOTH STANDARD MARK AND COO
         $('#show-standard-mark-cta').on('click', function(){
-            $('.standard-mark-cta').removeClass('d-none');
+            $('.standard-mark-option').removeClass('d-none');
+            $('.coo-option').addClass('d-none');
             $('.edit-answers-wrapper').removeClass('d-none');
-            $('.create-coo-cta-2').addClass('d-none');
+
+            $('html, body').animate({
+                scrollTop: $(".standard-mark-option").offset().top
+            }, 400);
+
 
         });
         $('#show-create-coo').on('click', function(){
-            $('.standard-mark-cta').addClass('d-none');
+            $('.coo-option').removeClass('d-none');
+            $('.standard-mark-option').addClass('d-none');
             $('.edit-answers-wrapper').removeClass('d-none');
-            $('.create-coo-cta-2').removeClass('d-none');
+
+            $('html, body').animate({
+                scrollTop: $(".coo-option").offset().top
+            }, 400);
+
         });
 
 
