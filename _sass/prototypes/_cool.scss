@@ -1,10 +1,16 @@
 #cool-prototype {
 
-    .result-components-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 32px;
+    .radio-flex-group {
+        width: 100%;
+
+        &.one-col-short {
+            width: 50%;
+        }
+        &.one-col-yesno {
+            width: 50%;
+        }
     }
+    
     .radios.error {
         box-shadow: 0 0 0 8px $bga-red-fail-mid;
         background: $bga-red-fail-mid;
@@ -33,8 +39,25 @@
         width: 60px;
         text-align: center;
     }
+    
+    .result-components-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 32px;
+    }
 
     @media (max-width: 576px){
+        .radio-flex-group {
+            width: 100%;
+    
+            &.one-col-short {
+                width: 100%;
+            }
+            &.one-col-yesno {
+                width: 100%;
+            }
+        }
+
         .tool-button-group {
             .bga-btn {
                 font-size: .875rem;
@@ -49,6 +72,14 @@
         }
     }
     @media (max-width: 350px){
+        .radio-flex-group {
+            &.one-col-yesno {
+                flex-wrap: wrap;
+                .radio-button {
+                    width: 100% !important;
+                }
+            }
+        }
         .tool-button-group {
             justify-content: center;
             .bga-btn {
