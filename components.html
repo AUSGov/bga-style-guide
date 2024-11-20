@@ -117,6 +117,8 @@ description: A modular system of parts which form the building blocks of the sit
                         <li tabindex="0" value="Tool combined results and edit component">Tool combined results and edit component</li> 
                         <li tabindex="0" value="Tool edit answers component">Tool edit answers component</li>
                         <li tabindex="0" value="Tool finalise call to action">Tool finalise call to action</li>
+                        <li tabindex="0" value="Create label cta">Create label cta</li>
+                        <li tabindex="0" value="Label requirements call out">Label requirements call out</li>
                         <li tabindex="0" value="Tool results accordion">Tool results accordion</li>
                         <li tabindex="0" value="Tool results call out">Tool results call out</li>
                         <li tabindex="0" value="Tools and templates tiles">Tools and templates tiles</li> 
@@ -804,10 +806,31 @@ description: A modular system of parts which form the building blocks of the sit
             tile-title="Tool finalise call to action"
             tile-tag1="Tool specific components"
             tile-tag2="Feedback / user interaction"
-            tile-tag2="Download files"
+            tile-tag3="Download files"
             tile-image="assets/nav-images/nav-tile-finalise-cta.svg"
             %}
 
+
+            <!-- Label requirements call out -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-specific-components highlight-information"
+            tile-url="components/label-requirements-callout.html"
+            tile-title="Label requirements call out"
+            tile-tag1="Tool specific components"
+            tile-tag2="Highlight information"
+            tile-image="assets/nav-images/nav-tile-label-requirements-cta.svg"
+            %}
+
+            <!-- Create label cta -->
+            {% include nav-image-tile.html
+            classes="col-12 col-sm-6 col-md-12 col-lg-6 mb-5 nav-tile-wrapper tool-specific-components feedback-user-interaction highlight-information"
+            tile-url="components/create-label-cta.html"
+            tile-title="Create label cta"
+            tile-tag1="Tool specific components"
+            tile-tag2="Highlight information"
+            tile-tag3="Feedback / user interaction"
+            tile-image="assets/nav-images/nav-tile-create-label-cta.svg"
+            %}
 
             <!-- Guided search -->
             {% include nav-image-tile.html

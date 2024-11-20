@@ -1054,23 +1054,18 @@ $(document).ready(function () {
         $('#show-standard-mark-cta').on('click', function(){
             $('.standard-mark-option').removeClass('d-none');
             $('.coo-option').addClass('d-none');
-            $('.edit-answers-wrapper').removeClass('d-none');
 
             $('html, body').animate({
                 scrollTop: $(".standard-mark-option").offset().top
             }, 400);
-
-
         });
         $('#show-create-coo').on('click', function(){
             $('.coo-option').removeClass('d-none');
             $('.standard-mark-option').addClass('d-none');
-            $('.edit-answers-wrapper').removeClass('d-none');
 
             $('html, body').animate({
                 scrollTop: $(".coo-option").offset().top
             }, 400);
-
         });
 
 
@@ -1091,12 +1086,7 @@ $(document).ready(function () {
         });
         $('#modal-restart .restart-tool').on('click', function () {
             sessionStorage.clear();
-            if ( $(this).hasClass('cool2') ) {
-                window.location.pathname = "/bga-style-guide/prototypes/cool2/place-of-sale.html";
-            } else {
-                window.location.pathname = "/bga-style-guide/prototypes/cool/place-of-sale.html";
-            }
-            
+            window.location.pathname = "/bga-style-guide/prototypes/cool/place-of-sale.html";
         });
 
 
