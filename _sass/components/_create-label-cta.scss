@@ -146,6 +146,24 @@
             border: solid $bga-black 2px;
         }
     }
+
+    &.non-branded {
+        border: none;
+
+        .radios.radio-edit-combo-group {
+            .edit-button-wrapper {
+                background: $nb-grey-darkest;
+            }
+            .mini-button {
+                .edit-icon, .close-icon {
+                    display: none !important;
+                }
+            }
+            .edit-option-form {
+                background: $nb-grey-mid;
+            }
+        }
+    }
 }
 
 // Mixins for smaller screen sizes

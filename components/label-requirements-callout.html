@@ -67,6 +67,7 @@ subsite-tag: true
                          <h3>Label requirements - two options</h3>
                         {% include component-examples/label-requirements-callout-example.html 
                             content="coo-and-mark"
+                            classes="mb-5"
                             %}
 
                         <h3>Label requirements - single option</h3>
@@ -87,6 +88,7 @@ subsite-tag: true
                 <!-- Breakpoint radio buttons -->
                 {% include breakpoints.html
                     element-string="nb-cta"
+                    md-visibility="true"
                     sm-visibility="true"
                     xs-visibility="true"
                     final-visibility="true"
@@ -99,9 +101,21 @@ subsite-tag: true
                         <div class="component-wrapper remove-element-padding p-4">
 
                             {% include non-branded-explanation.html
-                                component="call to action components"
+                                component="components"
                                 brand-elements="colours and borders"
                             %}
+
+                            <h3>Label requirements - two options</h3>
+                            {% include component-examples/label-requirements-callout-example.html 
+                                content="coo-and-mark"
+                                classes="non-branded nb-background mb-5"
+                                %}
+    
+                            <h3>Label requirements - single option</h3>
+                            {% include component-examples/label-requirements-callout-example.html 
+                                content="coo"
+                                classes="non-branded nb-background"
+                                %}
 
 
                         </div>
@@ -159,7 +173,7 @@ subsite-tag: true
                 finalbp-rules="<p>The content area is 12 grid-columns wide.</p>
                 <p>The label requirements call out spans the full width of the content area.</p>"
     
-                example-link="'../html-examples/single-col-toolpage.html#calltoaction-example' | relative_url'"
+                example-link="'../prototypes/cool/results/html' | relative_url'"
                 example-link-text="View layout example"
     
                 %}
@@ -171,9 +185,11 @@ subsite-tag: true
             <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
             <h4>Purpose:</h4>
-            
-            <h4>Content rules: </h4>
-           
+            <p>Call out components are used to highlight specific information within a page. This version of the call out is used in the Country of Origin Labelling (CoOL) tool to highlight the users labelling requirements on the results page. Depending on user requirements the label requirements call out will:</p>
+            <ul>
+                <li>explain what type of label users can use, and</li>
+                <li>provide links to different label options (when multiple options exist).</li>
+            </ul>
             
              <!-- VERSION HISTORY-->
             <h2 class="section-start" id="version-history">Version history</h2>
