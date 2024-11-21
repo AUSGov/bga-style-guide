@@ -1239,38 +1239,83 @@ $(document).ready(function () {
             }
         });
 
+        // Function to validate word options form before submitting
+        var validate_options_form = function(trigger) { 
+            var parent = trigger.parents('.wording-option');
+            var empty_count = 0;
+
+            parent.find('input').each(function(){
+                if ($(this).val() == "") {
+                    empty_count++;
+                    $(this).parents('.question-input').addClass('error');
+                    $(this).parents('.textbox-units').addClass('error');
+                } else {
+                    $(this).parents('.question-input').removeClass('error');
+                    $(this).parents('.textbox-units').removeClass('error');
+                }
+            });
+            
+            console.log(empty_count);  
+            if (empty_count > 0) {
+                return false;
+            } else {
+                return true;
+            }
+        };
+
         // Add input values to radio text
         $('.add-details').on('click', function(){
 
-            // Get input values
-            form_entries.percentage = $(this).parents('.edit-option-form').find('#percentage').val();
-            form_entries.processing = $(this).parents('.edit-option-form').find('#processing').val();
-            form_entries.ingredients = $(this).parents('.edit-option-form').find('#ingredients').val();
-
-            console.log(form_entries);
-
-            // Add input values to wording options
-            $(this).parents('.wording-option').addClass('edited');
+            var validated = validate_options_form($(this));
             
-            $(this).parents('.wording-option').find('span.percentage').text(form_entries.percentage).addClass('highlight');
-            $(this).parents('.wording-option').find('span.processing').text(form_entries.processing).addClass('highlight');
-            $(this).parents('.wording-option').find('span.ingredients').text(form_entries.ingredients).addClass('highlight');
-
-            var that = $(this);
-            setTimeout(function () {
-                that.parents('.wording-option').find('span.percentage').removeClass('highlight');
-                that.parents('.wording-option').find('span.processing').removeClass('highlight');
-                that.parents('.wording-option').find('span.ingredients').removeClass('highlight');
-
-                //that.parents('.wording-option').find('.edit-button span').text('Edit');
-                //that.parents('.edit-option-form').addClass('d-none');
-
-            }, 2000);
+            console.log(validated);
             
+            if (validated) {
+                console.log('validated');
+                
+                // Get input values
+                form_entries.percentage = $(this).parents('.edit-option-form').find('#percentage').val();
+                form_entries.processing = $(this).parents('.edit-option-form').find('#processing').val();
+                form_entries.ingredients = $(this).parents('.edit-option-form').find('#ingredients').val();
+
+                console.log(form_entries);
+
+                $('html, body').animate({
+                    scrollTop: $($(this).parents('.wording-option')).offset().top
+                }, 400);
+
+                // Add input values to wording options 
+                var that = $(this);
+
+                setTimeout(function () {
+                that.parents('.wording-option').addClass('edited');
+                that.parents('.wording-option').find('span.percentage').text(form_entries.percentage).addClass('highlight');
+                that.parents('.wording-option').find('span.processing').text(form_entries.processing).addClass('highlight');
+                that.parents('.wording-option').find('span.ingredients').text(form_entries.ingredients).addClass('highlight');
+                }, 800);
+ 
+                setTimeout(function () {
+                    that.parents('.wording-option').find('span.percentage').removeClass('highlight');
+                    that.parents('.wording-option').find('span.processing').removeClass('highlight');
+                    that.parents('.wording-option').find('span.ingredients').removeClass('highlight');
+                }, 3000);
+
+            } else {
+                console.log('not validated');
+                var first_error = $(this).parents('.wording-option').find('.error:first-of-type');
+                console.log(first_error);
+
+                $('html, body').animate({
+                    scrollTop: $(first_error).offset().top
+                }, 800);
+            }
+                
            
             
 
         });
+
+
 
         // Preview mark
         $('#preview-mark').on('click', function(){
@@ -1278,6 +1323,8 @@ $(document).ready(function () {
             // Get and display the correct orientation
             form_entries.orientation = $('#orientation input:checked').val();
             console.log(form_entries.orientation);
+
+            
 
             if ( form_entries.orientation == 'landscape') {
                 $('img.standard-mark-preview.landscape').removeClass('d-none');

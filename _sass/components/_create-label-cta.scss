@@ -13,11 +13,39 @@
     .form-step {
         width: 100%;
     }
+    .error-message {
+        color: $bga-red-fail-dark;
+    }
 
     .radios.radio-edit-combo-group {
         row-gap: 8px;
         margin-bottom: 32px;
 
+        &.error {
+            box-shadow: 0 0 0 8px $bga-red-fail-mid;
+            background: $bga-red-fail-mid;
+
+            .radio-button {
+                label {
+                    border:  none;
+                    box-shadow: $bga-error-boxshadow;
+                    border-radius: $bga-focus-radius;
+                }
+        
+                input:focus-visible {
+                    + label {
+                        box-shadow: $bga-focus-boxshadow !important;
+                        border-radius: $bga-focus-radius;
+                        color: $bga-blue-links;
+
+                        span {
+                            color: $bga-blue-links;
+                        }
+                    }
+                }
+            }
+        }
+        
         .radio-edit-buttons-wrapper {
             display: flex; 
             background: $bga-white; 
@@ -34,6 +62,17 @@
 
                 &::before {
                     margin-top: 4px;
+                }
+                input:focus-visible {
+                    + label {
+                        box-shadow: $bga-focus-boxshadow !important;
+                        border-radius: $bga-focus-radius;
+                        color: $bga-blue-links;
+
+                        span {
+                            color: $bga-blue-links;
+                        }
+                    }
                 }
             }
 
@@ -54,6 +93,29 @@
 
         .question-input {
             width: 100%;
+            
+            .error-message {
+                display: none;
+            }
+
+            &.error {
+                .input-wrapper, .textbox-units {
+                    box-shadow: 0 0 0 8px $bga-red-fail-mid;
+                    background: $bga-red-fail-mid;
+                }
+                input {
+                    border: $bga-component-error-border;
+                    border-radius: $bga-focus-radius;
+                    background-color: $bga-white !important;
+                }
+                .error-message {
+                    display: block;
+                }
+            }
+            
+        }
+        .textbox-units {
+            display: inline-flex;
         }
         input#percentage {
             width: 60px;
@@ -104,7 +166,27 @@
                 }
             }
         }
-        
+    }
+
+    .radios.error {
+        box-shadow: 0 0 0 8px $bga-red-fail-mid;
+        background: $bga-red-fail-mid;
+    
+        .radio-button {
+            label {
+                border:  none;
+                box-shadow: $bga-error-boxshadow;
+                border-radius: $bga-focus-radius;
+            }
+    
+            input:focus-visible {
+                + label {
+                    box-shadow: $bga-focus-boxshadow !important;
+                    border-radius: $bga-focus-radius;
+                    color: $bga-blue-links;
+                }
+            }
+        }
     }
 
     .mark-preview {
