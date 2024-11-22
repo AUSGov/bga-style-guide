@@ -15,11 +15,15 @@
     }
     .error-message {
         color: $bga-red-fail-dark;
+        display: none;
+
+        &.show {
+            display: block;
+        }
     }
 
     .radios.radio-edit-combo-group {
         row-gap: 8px;
-        margin-bottom: 32px;
 
         &.error {
             box-shadow: 0 0 0 8px $bga-red-fail-mid;
@@ -163,6 +167,14 @@
 
                         }
                     }  
+                }
+            }
+
+            &.error {
+                label {
+                    border:  none;
+                    box-shadow: $bga-error-boxshadow;
+                    border-radius: $bga-focus-radius;
                 }
             }
         }
