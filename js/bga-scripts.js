@@ -1192,20 +1192,19 @@ $(document).ready(function () {
 
         // Functions for opening and closing forms
         var open_form = function(trigger){
-            console.log(trigger);
+            console.log('open');
             trigger.parents('.wording-option').find('.edit-option-form').removeClass('d-none');
             trigger.parents('.wording-option').addClass('open').removeClass('closed');
-            trigger.find('span').text('Close');
-            trigger.find('.close-icon').removeClass('d-none');
-            trigger.find('.edit-icon').addClass('d-none');
+            trigger.parents('.wording-option').find('.edit-button span').text('Close');
+            trigger.parents('.wording-option').find('.edit-button .close-icon').removeClass('d-none');
+            trigger.parents('.wording-option').find('.edit-button .edit-icon').addClass('d-none');
         };
         var close_form = function(trigger){
-            console.log(trigger);
             trigger.parents('.wording-option').find('.edit-option-form').addClass('d-none');
             trigger.parents('.wording-option').removeClass('open');
-            trigger.find('span').text('Edit');
-            trigger.find('.close-icon').addClass('d-none');
-            trigger.find('.edit-icon').removeClass('d-none');
+            trigger.parents('.wording-option').find('.edit-button span').text('Edit');
+            trigger.parents('.wording-option').find('.edit-button .close-icon').addClass('d-none');
+            trigger.parents('.wording-option').find('.edit-button .edit-icon').removeClass('d-none');
         };
 
         var close_all_forms = function(){
@@ -1232,11 +1231,21 @@ $(document).ready(function () {
 
         });  
         
-        // Close all other forms on radio button click
+        // Close all other forms on radio button click and remove any error messaging
         $('.radio-edit-combo-group .radio-button input').on('click', function(){
+            $(this).parents('.radio-edit-combo-group').removeClass('error');
+                
+            $(this).parents('.create-label-cta').find('.error-message.error-unselected').removeClass('show');
+
             if ( !$(this).parents('.wording-option').hasClass('open') ) {
                 close_all_forms();
             }
+        });
+
+        // Remove error message on an orientation button click
+        $('#orientation input').on('click', function(){
+            $(this).parents('.create-label-cta').find('#orientation').removeClass('error');
+            $(this).parents('.create-label-cta').find('#orientation').next('.error-message').removeClass('show');
         });
 
         // Function to validate word options form before submitting
@@ -1255,7 +1264,6 @@ $(document).ready(function () {
                 }
             });
             
-            console.log(empty_count);  
             if (empty_count > 0) {
                 return false;
             } else {
@@ -1268,10 +1276,9 @@ $(document).ready(function () {
 
             var validated = validate_options_form($(this));
             
-            console.log(validated);
-            
             if (validated) {
-                console.log('validated');
+                $(this).parents('.wording-option').removeClass('error');
+                $(this).parents('.wording-option').next('.error-message.error-wording').removeClass('show');
                 
                 // Get input values
                 form_entries.percentage = $(this).parents('.edit-option-form').find('#percentage').val();
@@ -1282,68 +1289,127 @@ $(document).ready(function () {
 
                 $('html, body').animate({
                     scrollTop: $($(this).parents('.wording-option')).offset().top
-                }, 400);
+                }, 200);
 
                 // Add input values to wording options 
                 var that = $(this);
+                setTimeout(function () {
+                    close_form(that);
+                }, 800);
 
                 setTimeout(function () {
-                that.parents('.wording-option').addClass('edited');
-                that.parents('.wording-option').find('span.percentage').text(form_entries.percentage).addClass('highlight');
-                that.parents('.wording-option').find('span.processing').text(form_entries.processing).addClass('highlight');
-                that.parents('.wording-option').find('span.ingredients').text(form_entries.ingredients).addClass('highlight');
-                }, 800);
+                    that.parents('.wording-option').addClass('edited');
+                    that.parents('.wording-option').find('span.percentage').text(form_entries.percentage).addClass('highlight updated');
+                    that.parents('.wording-option').find('span.processing').text(form_entries.processing).addClass('highlight updated');
+                    that.parents('.wording-option').find('span.ingredients').text(form_entries.ingredients).addClass('highlight updated');
+                }, 1000);
  
                 setTimeout(function () {
                     that.parents('.wording-option').find('span.percentage').removeClass('highlight');
                     that.parents('.wording-option').find('span.processing').removeClass('highlight');
                     that.parents('.wording-option').find('span.ingredients').removeClass('highlight');
-                }, 3000);
+                }, 3500);
 
             } else {
-                console.log('not validated');
-                var first_error = $(this).parents('.wording-option').find('.error:first-of-type');
-                console.log(first_error);
+                var first_error = $(this).parents('.wording-option').find('.error');
 
                 $('html, body').animate({
                     scrollTop: $(first_error).offset().top
-                }, 800);
+                }, 400);
             }
-                
-           
-            
 
         });
-
-
 
         // Preview mark
         $('#preview-mark').on('click', function(){
-                
-            // Get and display the correct orientation
-            form_entries.orientation = $('#orientation input:checked').val();
-            console.log(form_entries.orientation);
+
+            var selected_radios = {};
+
+            // Function to check a radio group has a selected option
+            var check_radios = function(trigger, radio_group, radio_group_name){
+                var option_selected = 0;
+
+                trigger.parents('.create-label-cta').find(radio_group + ' .radio-button input').each(function(){
+                    if ($(this).is(":checked")) {
+                        option_selected++;
+                    }
+                });
+                selected_radios[radio_group_name] = option_selected;
+                console.log(selected_radios);
+            };
+
+            // Check is radio groups have a selected radio button
+            check_radios($(this), '.wording-option', 'wording-option');
+            check_radios($(this), '#orientation', 'orientation');
 
             
+            // If a wording option is not selected show error message
+            if ( selected_radios['wording-option'] == 0 ) {
+                $(this).parents('.create-label-cta').find('.radios.radio-edit-combo-group').addClass('error');
+                $(this).parents('.create-label-cta').find('.error-message.error-unselected').addClass('show');
+            } 
+            else if ( selected_radios['wording-option'] > 0 ) { 
+                
+                // If a wording option is selected check it has been updated
+                selected_radios['updated'] = 0;
 
-            if ( form_entries.orientation == 'landscape') {
-                $('img.standard-mark-preview.landscape').removeClass('d-none');
-                $('img.standard-mark-preview.portrait').addClass('d-none');
-            } else if ( form_entries.orientation == 'portrait') {
-                $('img.standard-mark-preview.portrait').removeClass('d-none');
-                $('img.standard-mark-preview.landscape').addClass('d-none');
+                var selected_option = $(this).parents('.create-label-cta').find('.wording-option .radio-button input:checked');      
+                var wording_option = selected_option.parents('.wording-option');
+
+                wording_option.find('.label-text span').each(function(){
+                    if (!$(this).hasClass('updated')) {
+                        selected_radios['updated']++;
+                    }
+                });
+                console.log(selected_radios);
+
+                // If the wording option is not updated show error message
+                if (selected_radios['updated'] > 0) {
+                    
+                    wording_option.addClass('error');
+                    wording_option.next('.error-message.error-wording').addClass('show');
+                    
+                    $('html, body').animate({
+                        scrollTop: wording_option.offset().top
+                    }, 400);
+                };  
+            }; 
+            
+            // If an orientation is not selected show error message
+             if ( selected_radios['orientation'] == 0 ) {
+                $(this).parents('.create-label-cta').find('#orientation').addClass('error');
+                $(this).parents('.create-label-cta').find('#orientation').next('.error-message').addClass('show');
+            };
+
+            // Scroll to the first error
+            if ( selected_radios['wording-option'] == 0 || selected_radios['orientation'] == 0) {
+                console.log('something is unselected');
+                $('html, body').animate({
+                    scrollTop:  $(this).parents('.create-label-cta').find('.error').offset().top
+                }, 400);
+            };
+
+            // If all validation requirements are met display the rest of the form
+            if ( (selected_radios['wording-option'] == 1) && (selected_radios['orientation'] == 1) && (selected_radios['updated'] == 0)) {
+            
+                form_entries.orientation = $('#orientation input:checked').val();
+                console.log(form_entries.orientation);
+
+                if ( form_entries.orientation == 'landscape') {
+                    $('img.standard-mark-preview.landscape').removeClass('d-none');
+                    $('img.standard-mark-preview.portrait').addClass('d-none');
+                } else if ( form_entries.orientation == 'portrait') {
+                    $('img.standard-mark-preview.portrait').removeClass('d-none');
+                    $('img.standard-mark-preview.landscape').addClass('d-none');
+                }
+
+                $('.form-step-3, .mark-preview').removeClass('d-none');
+            } else {
+                $('.form-step-3, .mark-preview').addClass('d-none');
             }
-
-            $('.form-step-3, .mark-preview').removeClass('d-none');
-
-            /*$('html, body').animate({
-                scrollTop: $(".mark-preview").offset().top
-              }, 800);*/
         });
 
     }; // end create label cta
-
-
 
 
     // COMPONENT EXAMPLE: MODALS
