@@ -939,11 +939,10 @@ $(document).ready(function () {
             stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "overseas-processing.html", "results.html"], path);
         }
 
-        // Check if 'return to results button' should display
-        var results_viewed = sessionStorage.getItem('results');
-        if (results_viewed == 'viewed') {
-            $('.bga-btn.results').removeClass('d-none');
-        };
+        // Terms of use modal
+        $("#start-now").on('click', function(){
+            $('.terms-modal, .modal-overlay').addClass('show');
+        });
 
         // Show hidden questions on radio button click
         $('.question.dynamic-trigger .radio-button').on('click', function () {
