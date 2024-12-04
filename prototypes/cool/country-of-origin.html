@@ -20,10 +20,10 @@ page-id: country-of-origin
               <div class="question dynamic-trigger remove-element-padding" id="country-of-origin-question1" >
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="country-of-origin-q1" class="form-label h3-font-size heading-color mb-4"><strong>Was this food product grown OR produced OR made in Australia?</strong></h3>
+                    <h3 for="country-of-origin-q1" class="form-label h3-font-size heading-color mb-4"><strong>Where was the product grown or produced?</strong></h3>
 
                     {% include contextual-help-complex-example.html 
-                        question="What is the meaning of 'grown in Australia' AND 'produced in Australia'?"
+                        question="What is the meaning of 'grown in Australia' and 'produced in Australia'?"
                         answer="<p>a food or ingredient is considered to be grown OR produced in Australia if it was grown in Australia and virtually all of its processing occurred in Australia. The main difference between ‘produced in’ and ‘grown in’ is that ‘produced’ covers both food that is grown and food that is not grown, for example milk, eggs and water. For more details on this subject refer to our help topics page.</p>"
                     %}
 
@@ -33,18 +33,24 @@ page-id: country-of-origin
                     %}
 
 
-                    <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="country-of-origin-q1">
+                    <div class="radios one-col-short g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="country-of-origin-q1">
 
-                        <div class="radio-button w-50">
+                        <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="country-of-origin-q1"
                                 id="country-of-origin-q1a" data-value="country-of-origin-q1a">
-                            <label class="form-check-label" for="country-of-origin-q1a">Yes</label>
+                            <label class="form-check-label" for="country-of-origin-q1a">in Australia only</label>
                         </div>
 
-                        <div class="radio-button w-50">
+                        <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="country-of-origin-q1"
                                 id="country-of-origin-q1b" data-value="country-of-origin-q1b">
-                            <label class="form-check-label" for="country-of-origin-q1b">No</label>
+                            <label class="form-check-label" for="country-of-origin-q1b">in a single overseas country</label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q1"
+                                id="country-of-origin-q1c" data-value="country-of-origin-q1c">
+                            <label class="form-check-label" for="country-of-origin-q1c">in 2 or more countries (can include Australia)</label>
                         </div>
                                          
                     
@@ -69,7 +75,7 @@ page-id: country-of-origin
 
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="country-of-origin-q2" class="form-label h3-font-size heading-color mb-4"><strong>Does this food product contain Australian ingredients?</strong></h3>
+                    <h3 for="country-of-origin-q2" class="form-label h3-font-size heading-color mb-4"><strong>What percentage of the ingredients is Australian?</strong></h3>
                     
                     {% include contextual-help-complex-example.html 
                         question="What is the meaning of 'Australian ingredient'?"
@@ -77,18 +83,30 @@ page-id: country-of-origin
                     %}
 
 
-                    <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="country-of-origin-q2">
+                    <div class="radios one-col-short g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="country-of-origin-q2">
 
-                        <div class="radio-button w-50">
+                        <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="country-of-origin-q2"
                                 id="country-of-origin-q2a" data-value="country-of-origin-q2a">
-                            <label class="form-check-label" for="country-of-origin-q2a">Yes</label>
+                            <label class="form-check-label" for="country-of-origin-q2a">100%</label>
                         </div>
 
-                        <div class="radio-button w-50">
+                        <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="country-of-origin-q2"
                                 id="country-of-origin-q2b" data-value="country-of-origin-q2b">
-                            <label class="form-check-label" for="country-of-origin-q2b">No</label>
+                            <label class="form-check-label" for="country-of-origin-q2b">between 10% and 99% </label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q2"
+                                id="country-of-origin-q2c" data-value="country-of-origin-q2c">
+                            <label class="form-check-label" for="country-of-origin-q2c">less than 10%</label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q2"
+                                id="country-of-origin-q2d" data-value="country-of-origin-q2d">
+                            <label class="form-check-label" for="country-of-origin-q2d">0%</label>
                         </div>
                                          
                     
@@ -109,33 +127,29 @@ page-id: country-of-origin
             <div class="question dynamic-trigger remove-element-padding d-none" id="country-of-origin-question3">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="country-of-origin-q3" class="form-label h3-font-size heading-color mb-4"><strong>Nullam eu ante ac arcu facilisis finibus?</strong></h3>
+                    <h3 for="country-of-origin-q3" class="form-label h3-font-size heading-color mb-4"><strong>Does this product contain a consistent proportion of Australian ingredients? </strong></h3>
 
                     {% include contextual-help-complex-example.html 
-                        question="What is the meaning of 'grown in'?"
-                        answer="<ul><li class='mb-3'>unprocessed fruit or vegetables, whole or cut that is contained in transparent packaging. For example a transparent plastic bag, net or tray. For more details on this subject refer to our help topics page.</li><li>the standard mark OR country of origin statement for prepacked fresh fruit and vegetables in transparent packaging can either be on its packaging or displayed at the point of sale.</li></ul>"
+                        question="Why does the proportion of Australian ingredients matter?"
+                        answer="<p>An 'average percentage of Australian ingredients' statement may be used when the proportion of Australian ingredients in a food product varies over time. For more details on this subject refer to our help tpic page.</p>"
                     %}
 
 
-                    <div class="radios one-col-short g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="country-of-origin-q3">
+                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="country-of-origin-q3">
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="country-of-origin-q3"
                                 id="country-of-origin-q3a" data-value="country-of-origin-q3a">
-                            <label class="form-check-label" for="country-of-origin-q3a">in Australia only</label>
+                            <label class="form-check-label" for="country-of-origin-q3a">yes, the proportion of Australian ingredients is the same each time</label>
                         </div>
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="country-of-origin-q3"
                                 id="country-of-origin-q3b" data-value="country-of-origin-q3b">
-                            <label class="form-check-label" for="country-of-origin-q3b">in two or more countries (can include Australia)</label>
+                            <label class="form-check-label" for="country-of-origin-q3b">no, the proportion of Australian ingredients can change over time</label>
                         </div>
 
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q3"
-                                id="country-of-origin-q3c" data-value="country-of-origin-q3c">
-                            <label class="form-check-label" for="country-of-origin-q3c">in an overseas country (not Australia)</label>
-                        </div>
+                       
                     
                     </div>
                     
@@ -153,13 +167,7 @@ page-id: country-of-origin
             <div class="question dynamic-trigger remove-element-padding d-none" id="country-of-origin-question4">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="country-of-origin-q4" class="form-label h3-font-size heading-color mb-4"><strong>Is this food product or its ingredients 100% Australian?</strong></h3>
-                    
-                    {% include contextual-help-complex-example.html 
-                        question="Another relevant help question?"
-                        answer="<p>an ingredient that was exclusively grown or produced in Australia. For more details on this subject refer to our help topics page.</p>"
-                    %}
-
+                    <h3 for="country-of-origin-q4" class="form-label h3-font-size heading-color mb-4"><strong>Do you want to indicate that the content of Australian ingredients in this food product can vary over time?</strong></h3>
 
                     <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="country-of-origin-q4">
 
@@ -189,44 +197,6 @@ page-id: country-of-origin
             </div>
 
 
-            <!-- Question 5 -->
-            <div class="question dynamic-trigger remove-element-padding d-none" id="country-of-origin-question5">
-
-               
-
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="country-of-origin-q5" class="form-label h3-font-size heading-color mb-4"><strong>Does this food product contain a consistent proportion of Australian ingredients?</strong></h3>
-
-
-                    <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="country-of-origin-q5">
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q5"
-                                id="country-of-origin-q5a" data-value="country-of-origin-q5a">
-                            <label class="form-check-label" for="country-of-origin-q5a">Yes</label>
-                        </div>
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="country-of-origin-q5"
-                                id="country-of-origin-q5b" data-value="country-of-origin-q5b">
-                            <label class="form-check-label" for="country-of-origin-q5b">No</label>
-                        </div>
-                                         
-                    
-                    </div>
-                  
-                    
-                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
-
-                </div>
-                
-                <hr class="section-divider my-5" />
-
-
-            </div>
-
-
-
 
 
             <!-- BUTTON GROUP -->
@@ -236,7 +206,7 @@ page-id: country-of-origin
                     href={{ 'prototypes/cool/packaging.html' | relative_url }} role="button">Previous</a>
 
                 <a class="bga-btn bga-primary-btn bkg-light next" tabindex="0"
-                    href={{ 'prototypes/cool/overseas-processing.html' | relative_url }} role="button">Next</a>
+                    href={{ 'prototypes/cool/processing.html' | relative_url }} role="button">Next</a>
 
                 <a class="bga-btn bga-primary-btn bkg-light next results d-none" tabindex="0"
                     href={{ 'prototypes/cool/results.html' | relative_url }} role="button">Return to results</a>
