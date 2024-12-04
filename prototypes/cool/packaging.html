@@ -937,7 +937,7 @@
 
                     <a tabindex="1" id="nav-step-4" class="step me-3">
                         <span class="step-number mb-2">4</span>
-                        <span class="step-name">Overseas processing</span>
+                        <span class="step-name">Processing</span>
                     </a>
             
                     <a tabindex="1" id="nav-step-5" class="step me-3">
@@ -969,7 +969,7 @@
               <div class="question dynamic-trigger remove-element-padding" id="packaging-question1" >
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="packaging-q1" class="form-label h3-font-size heading-color mb-4"><strong>Question lorem ipsum dolor sit amet?</strong></h3>
+                    <h3 for="packaging-q1" class="form-label h3-font-size heading-color mb-4"><strong>Will the product be sold in a packet or package?</strong></h3>
 
                     <div class="help-wrapper complex mb-4" tabindex="0">
     <p class="mb-3 complex-question">
@@ -983,26 +983,20 @@
 </div>
 
 
-                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="packaging-q1">
+                    <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="packaging-q1">
 
-                        <div class="radio-button w-100">
+                        <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="packaging-q1"
                                 id="packaging-q1a" data-value="packaging-q1a">
-                            <label class="form-check-label" for="packaging-q1a">is not in a pack</label>
+                            <label class="form-check-label" for="packaging-q1a">yes</label>
                         </div>
 
-                        <div class="radio-button w-100">
+                        <div class="radio-button w-50">
                             <input class="form-check-input m-0" type="radio" name="packaging-q1"
                                 id="packaging-q1b" data-value="packaging-q1b">
-                            <label class="form-check-label" for="packaging-q1b">was packed in Australia</label>
+                            <label class="form-check-label" for="packaging-q1b">no</label>
                         </div>
 
-                        <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="packaging-q1"
-                                id="packaging-q1c" data-value="packaging-q1c">
-                            <label class="form-check-label" for="packaging-q1c">was packed in an overseas country</label>
-                        </div>                      
-                    
                     </div>
                     
                     <p class="error-message d-none mt-3 mb-0">This field is required.</p>
@@ -1015,13 +1009,55 @@
             </div>
             
          
+            <!-- Question 3 -->
+            <div class="question dynamic-trigger remove-element-padding d-none" id="packaging-question3">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="packaging-q3" class="form-label h3-font-size heading-color mb-4"><strong>Where was the product packed?</strong></h3>
+
+                    <div class="radios one-col-short g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="packaging-q3">
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="packaging-q3"
+                                id="packaging-q3a" data-value="packaging-q3a">
+                            <label class="form-check-label" for="packaging-q3a">in Australia</label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="packaging-q3"
+                                id="packaging-q3b" data-value="packaging-q3b">
+                            <label class="form-check-label" for="packaging-q3b">in another country</label>
+                        </div>
+                    
+                    </div>
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
+            </div>
+
 
 
             <!-- Question 2 -->
             <div class="question dynamic-trigger remove-element-padding d-none" id="packaging-question2">
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="packaging-q2" class="form-label h3-font-size heading-color mb-4"><strong>This packed or packaged food product is:</strong></h3>
+                    <h3 for="packaging-q2" class="form-label h3-font-size heading-color mb-4"><strong>What type of food is it?</strong></h3>
+
+                    <div class="help-wrapper complex mb-4" tabindex="0">
+    <p class="mb-3 complex-question">
+        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
+          </svg><span>What is the meaning of 'prepacked fresh fruit or vegetables in transparent packaging'?</span></p>
+    <div class="complex-answer mb-3 remove-element-padding">
+        <ul><li class='mb-3'>unprocessed fruit or vegetables, whole or cut that is contained in transparent packaging. For example a transparent plastic bag, net or tray. For more details on this subject refer to our help topics page.</li><li>the standard mark OR country of origin statement for prepacked fresh fruit and vegetables in transparent packaging can either be on its packaging or displayed at the point of sale.</li></ul>
+        </ul>
+    </div>
+</div>
 
 
                     <div class="radios one-col-short g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="packaging-q2">
@@ -1029,49 +1065,54 @@
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="packaging-q2"
                                 id="packaging-q2a" data-value="packaging-q2a">
-                            <label class="form-check-label" for="packaging-q2a">Seasoning</label>
+                            <label class="form-check-label" for="packaging-q2a">seasoning</label>
                         </div>
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="packaging-q2"
                                 id="packaging-q2b" data-value="packaging-q2b">
-                            <label class="form-check-label" for="packaging-q2b">Confectionary</label>
+                            <label class="form-check-label" for="packaging-q2b">confectionary</label>
                         </div>
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="packaging-q2"
                                 id="packaging-q2c" data-value="packaging-q2c">
-                            <label class="form-check-label" for="packaging-q2c">Biscuits and snack foods</label>
+                            <label class="form-check-label" for="packaging-q2c">biscuits or snack foods</label>
                         </div>
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="packaging-q2"
                                 id="packaging-q2d" data-value="packaging-q2d">
-                            <label class="form-check-label" for="packaging-q2d">Bottled water</label>
+                            <label class="form-check-label" for="packaging-q2d">bottled water</label>
                         </div>
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="packaging-q2"
                                 id="packaging-q2e" data-value="packaging-q2e">
-                            <label class="form-check-label" for="packaging-q2e">Soft drinks and sports drinks</label>
+                            <label class="form-check-label" for="packaging-q2e">soft drinks or sports drinks</label>
                         </div>
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="packaging-q2"
                                 id="packaging-q2f" data-value="packaging-q2f">
-                            <label class="form-check-label" for="packaging-q2f">Tea and coffee</label>
+                            <label class="form-check-label" for="packaging-q2f">tea and coffee</label>
                         </div>
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="packaging-q2"
                                 id="packaging-q2g" data-value="packaging-q2g">
-                            <label class="form-check-label" for="packaging-q2g">Alcoholic beverages</label>
+                            <label class="form-check-label" for="packaging-q2g">alcoholic beverages</label>
+
+                        </div> <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="packaging-q2"
+                                id="packaging-q2i" data-value="packaging-q2i">
+                            <label class="form-check-label" for="packaging-q2i">fruit or vegetables in a transparent package</label>
                         </div>
 
                         <div class="radio-button w-100">
                             <input class="form-check-input m-0" type="radio" name="packaging-q2"
                                 id="packaging-q2h" data-value="packaging-q2h">
-                            <label class="form-check-label" for="packaging-q2h">not listed above</label>
+                            <label class="form-check-label" for="packaging-q2h">none of the above</label>
                         </div>
                         
 
@@ -1089,48 +1130,7 @@
             </div>
 
 
-            <!-- Question 3 -->
-            <div class="question dynamic-trigger remove-element-padding d-none" id="packaging-question3">
-
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="packaging-q3" class="form-label h3-font-size heading-color mb-4"><strong>Is this product fresh fruit and vegetables in transparent packaging?</strong></h3>
-
-                    <div class="help-wrapper complex mb-4" tabindex="0">
-    <p class="mb-3 complex-question">
-        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
-            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
-          </svg><span>What is the meaning of 'prepacked fresh fruit or vegetables in transparent packaging'?</span></p>
-    <div class="complex-answer mb-3 remove-element-padding">
-        <ul><li class='mb-3'>unprocessed fruit or vegetables, whole or cut that is contained in transparent packaging. For example a transparent plastic bag, net or tray. For more details on this subject refer to our help topics page.</li><li>the standard mark OR country of origin statement for prepacked fresh fruit and vegetables in transparent packaging can either be on its packaging or displayed at the point of sale.</li></ul>
-        </ul>
-    </div>
-</div>
-
-
-                    <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="packaging-q3">
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="packaging-q3"
-                                id="packaging-q3a" data-value="packaging-q3a">
-                            <label class="form-check-label" for="packaging-q3a">Yes</label>
-                        </div>
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="packaging-q3"
-                                id="packaging-q3b" data-value="packaging-q3b">
-                            <label class="form-check-label" for="packaging-q3b">No</label>
-                        </div>
-                    
-                    </div>
-                    
-                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
-
-                </div>
-                
-                <hr class="section-divider my-5" />
-
-
-            </div>
+            
 
 
 

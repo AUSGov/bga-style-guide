@@ -936,7 +936,7 @@ $(document).ready(function () {
         if ($('#stepped-nav-inpage').length) {
             var path = '/bga-style-guide/prototypes/cool/';
 
-            stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "overseas-processing.html", "results.html"], path);
+            stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results.html"], path);
         }
 
         // Terms of use modal

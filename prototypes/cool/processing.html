@@ -43,7 +43,7 @@
     <script src=/bga-style-guide/js/sab_prototype.js ></script>
 
     
-    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/cool/overseas-processing.html">
+    <link rel="canonical" href="https://ausgov.github.io/bga-style-guide/prototypes/cool/processing.html">
     <link rel="alternate" type="application/rss+xml" title="Business.gov.au Style Guide" href="https://ausgov.github.io/bga-style-guide/feed.xml">
 
 </head>
@@ -908,7 +908,7 @@
 
             <div class="mobile-stepped-nav">
                 <button class="stepped-nav-toggle p-0" tabindex=0>
-                    <span class="me-2">Step 4 of 5 : <strong>Overseas processing</strong></span>
+                    <span class="me-2">Step 4 of 5 : <strong>Processing</strong></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
                         <path data-name="Chevron / Down" d="M7.535,10,0,17.522,2.482,20,12.5,10,2.482,0,0,2.478Z" transform="translate(20) rotate(90)" fill="#333"/>
                       </svg>
@@ -937,7 +937,7 @@
 
                     <a tabindex="1" id="nav-step-4" class="step me-3">
                         <span class="step-number mb-2">4</span>
-                        <span class="step-name">Overseas processing</span>
+                        <span class="step-name">Processing</span>
                     </a>
             
                     <a tabindex="1" id="nav-step-5" class="step me-3">
@@ -957,20 +957,30 @@
 
 
 
-        <div class="container page-content question-page my-5" data-page="overseas-processing" id="cool-prototype">
+        <div class="container page-content question-page my-5" data-page="processing" id="cool-prototype">
 
     <div class="row">
 
         <div class="remove-top-spaces col-12 col-md-8">
 
-            <h2>Overseas processing</h2>
+            <h2>Processing</h2>
 
               <!-- Question 1 -->
               <div class="question dynamic-trigger remove-element-padding" id="overseas-processing-question1" >
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="overseas-processing-q1" class="form-label h3-font-size heading-color mb-4"><strong>Was this food product exported to an overseas country for processing before being re-imported to Australia?</strong></h3>
+                    <h3 for="overseas-processing-q1" class="form-label h3-font-size heading-color mb-4"><strong>Was this product substantially transformed?</strong></h3>
 
+                    <div class="help-wrapper complex mb-4" tabindex="0">
+    <p class="mb-3 complex-question">
+        <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12" viewBox="0 0 7.5 12">
+            <path   data-name="Chevron / Down" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" fill="#2157aa"/>
+          </svg><span>What is the meaning of substantial transformation?</span></p>
+    <div class="complex-answer mb-3 remove-element-padding">
+        <ul><li>a food is considered to have been substantially transformed if the end product is something fundamentally different from its ingredients. For example, a cake (final product) is made up of ingredients (flour, sugar, eggs, spices, yeast) that are fundamentally different from the finished product. For more details on this subject refer to our help topics page.</li></ul>
+        </ul>
+    </div>
+</div>
 
 
                     <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="overseas-processing-q1">
@@ -1009,7 +1019,85 @@
 
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="overseas-processing-q2" class="form-label h3-font-size heading-color mb-4"><strong>What kind of overseas processing was conducted on this food product before being re-imported to Australia?</strong></h3>
+                    <h3 for="overseas-processing-q2" class="form-label h3-font-size heading-color mb-4"><strong>Where was this product substantially transformed? </strong></h3>
+
+
+                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="overseas-processing-q2">
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q2"
+                                id="overseas-processing-q2a" data-value="overseas-processing-q2a">
+                            <label class="form-check-label" for="overseas-processing-q2a">in Australia only</label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q2"
+                                id="overseas-processing-q2b" data-value="overseas-processing-q2b">
+                            <label class="form-check-label" for="overseas-processing-q2b">in a single overseas country</label>
+                        </div>
+
+                        <div class="radio-button w-100">
+                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q2"
+                                id="overseas-processing-q2c" data-value="overseas-processing-q2c">
+                            <label class="form-check-label" for="overseas-processing-q2c">in 2 or more countries (can include Australia)</label>
+                        </div>
+                                         
+                    
+                    </div>
+                  
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
+            </div>
+
+
+            <!-- Question 3 -->
+            <div class="question dynamic-trigger remove-element-padding d-none" id="overseas-processing-question3">
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="overseas-processing-q3" class="form-label h3-font-size heading-color mb-4"><strong>Was this product exported from Australia to another country for processing before being re-imported to Australia?</strong></h3>
+
+
+                    <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="overseas-processing-q3">
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q3"
+                                id="overseas-processing-q3a" data-value="overseas-processing-q3a">
+                            <label class="form-check-label" for="overseas-processing-q3a">Yes</label>
+                        </div>
+
+                        <div class="radio-button w-50">
+                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q3"
+                                id="overseas-processing-q3b" data-value="overseas-processing-q3b">
+                            <label class="form-check-label" for="overseas-processing-q3b">No</label>
+                        </div>
+
+                       
+                    
+                    </div>
+                    
+                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
+
+                </div>
+                
+                <hr class="section-divider my-5" />
+
+
+            </div>
+
+            
+            
+            <!-- Question 4 -->
+            <div class="question dynamic-trigger remove-element-padding d-none" id="overseas-processing-question4">
+
+
+                <div class="mb-5 p-0 form-example remove-element-padding">
+                    <h3 for="overseas-processing-q4" class="form-label h3-font-size heading-color mb-4"><strong>What kind of overseas processing was conducted on this product before being re-imported to Australia?</strong></h3>
                     
                     <div class="help-wrapper complex mb-4" tabindex="0">
     <p class="mb-3 complex-question">
@@ -1045,64 +1133,29 @@
 </div>
 
 
-                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="overseas-processing-q2">
+                    <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="overseas-processing-q4">
 
                         <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q2"
-                                id="overseas-processing-q2a" data-value="overseas-processing-q2a">
-                            <label class="form-check-label" for="overseas-processing-q2a">minor processing with no non-Australian ingredients added to the food</label>
+                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q4"
+                                id="overseas-processing-q4a" data-value="overseas-processing-q4a">
+                            <label class="form-check-label" for="overseas-processing-q4a">minor processing with no non-Australian ingredients added to the food</label>
                         </div>
 
                         <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q2"
-                                id="overseas-processing-q2b" data-value="overseas-processing-q2b">
-                            <label class="form-check-label" for="overseas-processing-q2b">minor processing with non-Australian ingredients added to the food</label>
+                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q4"
+                                id="overseas-processing-q4b" data-value="overseas-processing-q4b">
+                            <label class="form-check-label" for="overseas-processing-q4b">minor processing with some non-Australian ingredients added to the food</label>
                         </div>
 
                         <div class="radio-button w-100">
-                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q2"
-                                id="overseas-processing-q2c" data-value="overseas-processing-q2c">
-                            <label class="form-check-label" for="overseas-processing-q2c">substantial transformation</label>
+                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q4"
+                                id="overseas-processing-q4c" data-value="overseas-processing-q4c">
+                            <label class="form-check-label" for="overseas-processing-q4c">substantial transformation</label>
                         </div>
-                                         
+                                            
                     
                     </div>
-                  
                     
-                    <p class="error-message d-none mt-3 mb-0">This field is required.</p>
-
-                </div>
-                
-                <hr class="section-divider my-5" />
-
-
-            </div>
-
-
-            <!-- Question 3 -->
-            <div class="question dynamic-trigger remove-element-padding d-none" id="overseas-processing-question3">
-
-                <div class="mb-5 p-0 form-example remove-element-padding">
-                    <h3 for="overseas-processing-q3" class="form-label h3-font-size heading-color mb-4"><strong>Nullam eu ante ac arcu facilisis finibus?</strong></h3>
-
-
-                    <div class="radios one-col-yesno g-2 d-flex radio-flex-group" role="radiogroup" id="overseas-processing-q3">
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q3"
-                                id="overseas-processing-q3a" data-value="overseas-processing-q3a">
-                            <label class="form-check-label" for="overseas-processing-q3a">Yes</label>
-                        </div>
-
-                        <div class="radio-button w-50">
-                            <input class="form-check-input m-0" type="radio" name="overseas-processing-q3"
-                                id="overseas-processing-q3b" data-value="overseas-processing-q3b">
-                            <label class="form-check-label" for="overseas-processing-q3b">No</label>
-                        </div>
-
-                       
-                    
-                    </div>
                     
                     <p class="error-message d-none mt-3 mb-0">This field is required.</p>
 
