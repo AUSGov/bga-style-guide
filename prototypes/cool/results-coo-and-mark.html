@@ -8,7 +8,7 @@ page-id: results
 
 ---
 
-<div class="container page-content cool2-results results-page my-5" data-page="{{ page.page-id }}"  id="cool-prototype">
+<div class="container page-content results-page my-5" data-page="{{ page.page-id }}"  id="cool-prototype">
 
 
     <div class="row">
@@ -31,11 +31,10 @@ page-id: results
             %}
             
 
-
             <div class="edit-answers-wrapper w-100">
 
                 <!-- EDIT ANSWERS -->
-                <div class="bga-component-wrapper pb-0">
+                <div class="bga-component-wrapper pb-0 mb-5">
                     <div class="bga-component edit-answers-component m-0">
     
                         <div class="edit-answers-toggle p-4 remove-element-padding" role="button">
@@ -72,9 +71,9 @@ page-id: results
                                     </div>
     
                                     <div class="answers remove-element-padding">
-                                        <p>Question lorem ipsum dolor sit amet?<span>at a physical store or market, online or from a vending machine</span></p>
+                                        <p>Where will this product be sold?<span>at a physical store or market, online or from a vending machine</span></p>
     
-                                        <p>Question lorem ipsum dolor sit amet?<span>in different premises to where it has been grown, produced, made and packed</span></p>
+                                        <p>What premises will the product be sold in?<span>a different premises to where it was grown, produced, made and packed</span></p>
                                     </div>
     
                                 </div>
@@ -100,9 +99,9 @@ page-id: results
                                     </div>
     
                                     <div class="answers remove-element-padding">
-                                        <p>Question lorem ipsum dolor sit amet? <span>was packed in Australia</span></p>
-                                        <p>This packed or packaged food product is: <span>not listed above</span></p>
-                                        <p>Is this product fresh fruit and vegetables in transparent packaging? <span>No</span></p>
+                                        <p>Will the product be sold in a packet or package? <span>Yes</span></p>
+                                        <p>Where was the product packed? <span>in Australia</span></p>
+                                        <p>What type of food is it? <span>none of the above</span></p>
     
                                     </div>
     
@@ -129,26 +128,22 @@ page-id: results
                                     </div>
     
                                     <div class="answers remove-element-padding">
-                                        <p>Was this food product grown OR produced OR made in Australia? <span>Yes</span></p>
-                                        <p>Does this food product contain Australian ingredients?<span>Yes</span></p>
-                                        <p>What is the minimum percentage of Australia ingredients in your product?<span class="percentage"></span></p>
-                                        <p>Where was the food or its ingredients grown or produced? <span>in two or more countries (can include Australia)</span></p>
-                                        <p>What are the main ingredient/s and their country of origin?<span class="ingredients"></span></p>
-                                        <p>Is this food product or its ingredients 100% Australian? <span>Yes</span></p>
-                                        <p>Does this food product contain a consistent proportion of Australian ingredients? <span>Yes</span></p>
-    
+                                        <p>Where was the product grown or produced? <span>in 2 or more countries (can include Australia)</span></p>
+                                        <p>What percentage of the ingredients is Australian?<span>between 10% and 99%</span></p>
+                                        <p>Does this product contain a consistent proportion of Australian ingredients? <span>yes, the proportion of Australian ingredients is the same each time</span></p>
+                                
                                     </div>
     
                                 </div>
     
     
-                                <!-- overseas processing -->
+                                <!-- Processing -->
                                 <div class="answers-section pb-7 mb-4">
                                     <div class="title-area mb-2 remove-element-padding">
     
-                                        <h4 class="m-0">Overseas processing</h4>
+                                        <h4 class="m-0">Processing</h4>
                                         <a tab-index="0" class="edit-btn p-0 ms-4"
-                                            href={{ 'prototypes/cool/overseas-processing.html' | relative_url }}>
+                                            href={{ 'prototypes/cool/processing.html' | relative_url }}>
                                             <span>Edit</span>
                                             <svg data-name="Icon / edit" xmlns="http://www.w3.org/2000/svg" width="22"
                                                 height="22" viewBox="0 0 22 22">
@@ -163,10 +158,10 @@ page-id: results
     
                                     <div class="answers remove-element-padding">
                                         
-                                        <p>Was this food product exported to an overseas country for processing before being re-imported to Australia? <span>Yes</span></p>
-                                        <p>What kind of overseas processing was conducted on this food product before being re-imported to Australia? <span>minor processing with no non-Australian ingredients added to the food</span></p>
-                                        <p>What is the minor processing that occurred outside Australia? <span class="processing"></span></p>
-                                        <p>Was the food last substantially transformed in Australia? <span>Yes</span></p>
+                                        <p>Was this product substantially transformed? <span>Yes</span></p>
+                                        <p>Where was this product substantially transformed? <span>in a single overseas country</span></p>
+                                        <p>Was this product exported from Australia to another country for processing before being re-imported to Australia? <span>Yes</span></p>
+                                        <p>What kind of overseas processing was conducted on this product before being re-imported to Australia? <span>minor processing with some non-Australian ingredients added to the food</span></p>
     
                                     </div>
     
@@ -181,6 +176,7 @@ page-id: results
     
     
                 </div>
+
                
             </div> 
     
@@ -201,7 +197,7 @@ page-id: results
                 <a class="bga-link bga-inline-link bkg-light prev" tabindex="0"
                     href={{ 'prototypes/cool/processing.html' | relative_url }} role="button">Previous</a>
                 
-                <button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Save results</button>
+                <!--<button class="bga-btn bga-secondary-btn bkg-light" tabindex="0" role="button" id="modal-trigger-save-results">Save results</button>-->
 
                 <a class="bga-btn bga-secondary-btn bkg-light" tabindex="0" id="modal-trigger-restart" role="button">Create new label</a>
 
