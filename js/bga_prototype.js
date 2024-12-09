@@ -934,9 +934,16 @@ $(document).ready(function () {
         };
 
         if ($('#stepped-nav-inpage').length) {
+            var results_page = sessionStorage.getItem('results_page');
             var path = '/bga-style-guide/prototypes/cool/';
 
-            stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results.html"], path);
+             if (results_page == '/bga-style-guide/prototypes/cool/results-coo.html'){
+                stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results-coo.html"], path);
+            } else if (results_page == '/bga-style-guide/prototypes/cool/results-coo-and-mark.html'){
+                stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results-coo-and-mark.html"], path);
+            } else {
+                stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results.html"], path);
+            };
         }
 
         // Terms of use modal
@@ -1030,6 +1037,22 @@ $(document).ready(function () {
             });
         };
         get_answers();
+
+        // Store variable for results page visitation
+        if ($('.results-page').length) {
+            var results_page = window.location.pathname;
+            sessionStorage.setItem('results_page', results_page);
+        };
+
+        // Display return to results button when results page has been visited
+        if ( sessionStorage.getItem('results_page')) {
+            console.log(sessionStorage.getItem('results_page'));
+
+
+            $('.bga-btn.results').removeClass('d-none').attr('href', sessionStorage.getItem('results_page'));
+        }
+        // Direct users to correct results page when 'return to results' is clicked
+        $()
 
 
         // Remove error state when radio is clicked
