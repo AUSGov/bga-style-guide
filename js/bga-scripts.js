@@ -1409,6 +1409,73 @@ $(document).ready(function () {
             }
         });
 
+        $('#preview-coo').on('click', function(){
+            console.log('clicked');
+            var selected_radios = {};
+           
+            // Function to check a radio group has a selected option
+            var check_radios = function(trigger, radio_group, radio_group_name){
+                var option_selected = 0;
+
+                trigger.parents('.create-label-cta').find(radio_group + ' .radio-button input').each(function(){
+                    if ($(this).is(":checked")) {
+                        option_selected++;
+                    }
+                });
+                selected_radios[radio_group_name] = option_selected;
+                console.log(selected_radios);
+            };
+
+            // Check is radio groups have a selected radio button
+            check_radios($(this), '.wording-option', 'wording-option');
+
+            // If a wording option is not selected show error message
+            if ( selected_radios['wording-option'] == 0 ) {
+                $(this).parents('.create-label-cta').find('.radios.radio-edit-combo-group').addClass('error');
+                $(this).parents('.create-label-cta').find('.error-message.error-unselected').addClass('show');
+            } 
+            else if ( selected_radios['wording-option'] > 0 ) { 
+                
+                // If a wording option is selected check it has been updated
+                selected_radios['updated'] = 0;
+
+                var selected_option = $(this).parents('.create-label-cta').find('.wording-option .radio-button input:checked');      
+                var wording_option = selected_option.parents('.wording-option');
+
+                wording_option.find('.label-text span').each(function(){
+                    if (!$(this).hasClass('updated')) {
+                        selected_radios['updated']++;
+                    }
+                });
+                console.log(selected_radios);
+
+                // If the wording option is not updated show error message
+                if (selected_radios['updated'] > 0) {
+                    
+                    wording_option.addClass('error');
+                    wording_option.next('.error-message.error-wording').addClass('show');
+                    
+                    $('html, body').animate({
+                        scrollTop: wording_option.offset().top
+                    }, 400);
+                };  
+            }; 
+            
+            // Scroll to the first error
+            if ( selected_radios['wording-option'] == 0 || selected_radios['orientation'] == 0) {
+                console.log('something is unselected');
+                $('html, body').animate({
+                    scrollTop:  $(this).parents('.create-label-cta').find('.error').offset().top
+                }, 400);
+            };
+
+            // If all validation requirements are met display the rest of the form
+            if ( (selected_radios['wording-option'] == 1) && (selected_radios['updated'] == 0)) {
+                $('.form-step-2, .coo-preview').removeClass('d-none');
+                $('.form-step-3').removeClass('d-none');
+            }
+        });
+
     }; // end create label cta
 
 
