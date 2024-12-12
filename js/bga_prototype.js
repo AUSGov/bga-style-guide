@@ -1046,13 +1046,8 @@ $(document).ready(function () {
 
         // Display return to results button when results page has been visited
         if ( sessionStorage.getItem('results_page')) {
-            console.log(sessionStorage.getItem('results_page'));
-
-
             $('.bga-btn.results').removeClass('d-none').attr('href', sessionStorage.getItem('results_page'));
         }
-        // Direct users to correct results page when 'return to results' is clicked
-        $()
 
 
         // Remove error state when radio is clicked
@@ -1075,7 +1070,7 @@ $(document).ready(function () {
         // ON PAGE WITH BOTH STANDARD MARK AND COO
         $('#show-standard-mark-cta').on('click', function(){
             $('.standard-mark-option').removeClass('d-none');
-            $('.coo-option').addClass('d-none');
+            $('.coo-option, .standard-mark-option .form-step-3').addClass('d-none');
 
             $('html, body').animate({
                 scrollTop: $(".standard-mark-option").offset().top
@@ -1083,7 +1078,7 @@ $(document).ready(function () {
         });
         $('#show-create-coo').on('click', function(){
             $('.coo-option').removeClass('d-none');
-            $('.standard-mark-option').addClass('d-none');
+            $('.standard-mark-option, .coo-option .form-step-2').addClass('d-none');
 
             $('html, body').animate({
                 scrollTop: $(".coo-option").offset().top

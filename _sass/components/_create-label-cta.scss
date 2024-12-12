@@ -30,6 +30,7 @@
             background: $bga-red-fail-mid;
 
             .radio-button {
+
                 label {
                     border:  none;
                     box-shadow: $bga-error-boxshadow;
@@ -56,6 +57,9 @@
         }
 
         .radio-button {
+            display: flex;
+            align-items: center;
+
             label {
                 border: none;
                 padding: 0;
@@ -219,8 +223,25 @@
                 min-height: 200px;
                 width: auto;
             }
-        } 
-       
+        }  
+    }
+    .coo-preview {
+        background: white;
+        padding: 16px;
+        overflow-x: auto;
+        width: 100%;
+
+        .coo-label {
+            border: solid 2px $bga-black;
+            display: inline-block;
+            padding: 8px;
+            width: auto;
+
+            p {
+                width: auto;
+                font-weight: 600;
+            }
+        }
     }
     .coo-example {
         background: $bga-white;
