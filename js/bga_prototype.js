@@ -937,10 +937,10 @@ $(document).ready(function () {
             var results_page = sessionStorage.getItem('results_page');
             var path = '/bga-style-guide/prototypes/cool/';
 
-             if (results_page == '/bga-style-guide/prototypes/cool/results-coo.html'){
-                stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results-coo.html"], path);
-            } else if (results_page == '/bga-style-guide/prototypes/cool/results-coo-and-mark.html'){
-                stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results-coo-and-mark.html"], path);
+             if (results_page == '/bga-style-guide/prototypes/cool/results-generate-coo.html'){
+                stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results-generate-coo.html"], path);
+            } else if (results_page == '/bga-style-guide/prototypes/cool/results-generate-both.html'){
+                stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results-generate-both.html"], path);
             } else {
                 stepped_nav_functionality(["place-of-sale.html", "packaging.html", "country-of-origin.html", "processing.html", "results.html"], path);
             };
