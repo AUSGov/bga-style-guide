@@ -46,6 +46,7 @@
 }
 
 .bga-btn {
+   
     &:focus {
         border-color: $bga-blue-focus;
         border-width: 3px;
@@ -78,6 +79,9 @@
         }
 
     }
+    &:visited, &[href]:visited {
+        color: $bga-black;
+    }
 
     &:hover {
         border-color: $bga-yellow-links-background;
@@ -104,7 +108,7 @@
                 background: $bga-blue-links;
             }
         }
-    }
+    } 
 
     &:active {
         border-color: $bga-yellow-highlight-shadow;
@@ -204,7 +208,9 @@
             color: $bga-black;
         }
     }
-
+    &:visited {
+        color: initial;
+    }
     &.focus {
         border-color: $bga-blue-focus;
         background: $bga-yellow-links-background;
@@ -328,6 +334,10 @@
         background-position: left 0 top 0;
         padding-left: 40px;
         text-decoration: none;
+       
+        &:visited, &[href]:visited {
+            color: $bga-blue-links;
+        }
 
         &.plus-icon {
             background: url(../assets/plus-circle-right-blue.svg) no-repeat;
@@ -374,6 +384,10 @@
         }
         */
 
+    }
+
+    &:visited {
+        color: $bga-black;
     }
 
     &:hover {
@@ -537,6 +551,10 @@
     border: solid 3px $bga-yellow-highlight-shadow;
     color: $bga-black;
 
+    &:visited, &[href]:visited {
+        color: $bga-black;
+    }
+
     &:focus,
     &:focus-visible {
         background: $bga-yellow-links-background;
@@ -545,6 +563,9 @@
         color: $bga-black;
         border-radius: 50px;
         border-width: 3px;
+    }
+    &:visited {
+        color: $bga-black;
     }
 
     &:hover {

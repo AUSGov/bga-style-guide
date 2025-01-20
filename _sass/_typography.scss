@@ -175,17 +175,20 @@ a, button {
     svg {
         fill: $bga-blue-links;
     }
+    &:visited {
+        color: $bga-blue-links;
+    }
 
     &:focus-visible {
-       outline: none;
-       border: $bga-text-focus-border;
-       border-radius: $bga-focus-radius;
-       color: $bga-blue-footer;
-       background: $bga-blue-hover;
+        outline: none;
+        border: $bga-text-focus-border;
+        border-radius: $bga-focus-radius;
+        color: $bga-blue-footer;
+        background: $bga-blue-hover;
 
-       svg {
-        fill: $bga-blue-footer;
-    }
+        svg {
+            fill: $bga-blue-footer;
+        }
     }
     &:hover, &:active {
         color: $bga-blue-footer;
@@ -209,6 +212,16 @@ a.external {
         background-size: 12px;
     }
 }
+a:not([href]):not([class]) {
+    color: $bga-blue-links;
+    text-decoration: underline;
+}
+a[href] {
+    &:visited {
+        color: $bga-purple-links-visited;
+    }
+}
+
 
 strong {
     font-weight: 600;

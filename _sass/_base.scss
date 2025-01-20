@@ -69,16 +69,24 @@ ol.style-guide {
         font-weight: 600;
         text-decoration: none;
         background: none;
+        
+        &:visited {
+            color: $bga-blue-links;
+        }
     }
 
     p {
         font-weight: 400;
+        color: $bga-black;
     }
-
+    &:visited {
+        color: initial;
+    }
     &:focus-visible {
         border: $bga-component-focus-border;
         border-radius: $bga-focus-radius;
     }
+
 
     &:focus,
     &:hover {
@@ -148,6 +156,10 @@ table.table {
         .nav-link {
             font-weight: 600;
             border-radius: 4px;
+
+            &:visited {
+                color: $bga-blue-links;
+            }
 
             &:focus {
                 background: $bga-blue-background-light;

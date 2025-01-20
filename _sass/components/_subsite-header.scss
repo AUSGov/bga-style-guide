@@ -24,6 +24,7 @@
         a {
             background: none !important;
             display: inline-block;
+            color: $bga-white !important;
 
             &:focus-visible {
                 border: 2px solid $bga-white;
@@ -74,11 +75,18 @@
 
         .subsite-logo {  
             a {
-                display: flex;
+                display: inline-flex;
                 text-decoration: none;
                 font-size: 1.375rem;
                 line-height: 1.5;
                 color: $bga-white;
+
+                &:focus-visible {
+                    border: 2px solid $bga-white;
+                    border-radius: $bga-focus-radius;
+                    box-shadow: none;
+                    outline: none;
+                }
 
             }
             svg {
