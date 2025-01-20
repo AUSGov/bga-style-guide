@@ -46,8 +46,11 @@
 }
 
 .bga-btn {
-   
-    &:focus {
+    &:visited, &[href]:visited {
+        color: $bga-black;
+    }
+
+    &:focus, &:focus-visible {
         border-color: $bga-blue-focus;
         border-width: 3px;
         border-radius: 50px;
@@ -78,9 +81,6 @@
             }
         }
 
-    }
-    &:visited, &[href]:visited {
-        color: $bga-black;
     }
 
     &:hover {
