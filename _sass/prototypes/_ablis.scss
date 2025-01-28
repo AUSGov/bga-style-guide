@@ -1,0 +1,107 @@
+#ablis-prototype {
+    #subsite-header {
+        .strap-wrapper {
+            margin: 0 -9999px;
+            padding: 0 9999px;
+            background: $bga-blue-footer;
+        }
+        
+        .main-header-wrapper {
+            margin: 0 -9999px;
+            padding: 0 9999px;
+            background: $bga-blue-background-dark;
+        }
+    
+    }
+    .header-administered {
+        background: $bga-white;
+        border-bottom: 4px solid $bga-yellow-highlight-dark;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+
+        .service {
+            background: $bga-yellow-highlight-light;
+            border: 2px solid $bga-yellow-highlight-dark;
+            //border-radius: 4px;
+            cursor: default;
+            padding: 4px 8px !important;
+            font-weight: 600;
+            display: inline-flex;
+        }
+        .administered {
+            display: flex;
+            column-gap: 8px;
+            
+            p {
+                margin-bottom: 0
+            }
+        }
+
+
+        &.RegulatoryObligation {
+            border-bottom: 4px solid $bga-orange-highlight-dark;
+
+            .service {
+                background: $bga-orange-highlight-light;
+                border: 2px solid $bga-orange-highlight-dark;
+            }
+        }
+
+        &.CodeofPractice {
+            border-bottom: 4px solid $bga-blue-highlight-dark;
+
+            .service {
+                background: $bga-blue-highlight-light;
+                border: 2px solid $bga-blue-highlight-dark;
+            }
+        }
+
+        &.AdvisoryMaterial {
+            border-bottom: 4px solid $bga-purple-highlight-dark;
+
+            .service {
+                background: $bga-purple-highlight-light;
+                border: 2px solid $bga-purple-highlight-dark;
+            }
+        }
+       
+    }
+
+    .callout-box {
+        .header-section {
+            h3 {
+                margin-bottom: 8px;
+            }
+            p {
+                margin-bottom: 8px;
+                display: flex;
+                column-gap: 16px;
+
+                strong {
+                    min-width: 150px;
+                }
+                
+                &:last-of-type {
+                    margin-bottom: 0;
+                    padding-top: 16px;
+                }
+            }
+        }
+        .component-text {
+            p {
+                margin-bottom: 8px;
+                display: flex;
+                column-gap: 16px;
+
+                strong {
+                    min-width: 150px;
+                }
+                
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }    
+}

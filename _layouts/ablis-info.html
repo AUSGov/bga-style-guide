@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" id="ecb-prototype" style="overflow-x: hidden;">
+<html lang="en" id="ablis-prototype" style="overflow-x: hidden;">
 
 {% include head.html %}
 
-<body class="ecb-example-layout {{page.task}}" data-task="{{page.task}}" {% if page.id %} id="{{page.id}}" {% endif %}>
+<body class="" {% if page.id %} id="{{page.id}}" {% endif %}>
 
     <!-- SUBSITE HEADER -->
     <header>
@@ -665,15 +665,29 @@
 
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
                         <h1>{{ page.title }}</h1>
-                       
-                        <p class="licence">{{ page.service }}</p>
-                        <p class="administered">Administered by: 
-                            {%if page.administered-0 %} <span>{{ page.administered-0 }} </span> {% endif %}
-                            {%if page.administered-1 %} <span>{{ page.administered-1 }} </span> {% endif %}
-                            {%if page.administered-2 %} <span>{{ page.administered-2 }} </span> {% endif %}
-                        </p>
-
                     </div>
+
+                </div>
+
+                <div class="header-administered remove-element-padding px-5 py-3 {{ page.service | replace: ' ', '' }}">
+                        <p class="service m-0">{{ page.service }}</p>
+                        <div class="administered m-0">
+                            <p><strong>Administered by: </strong></p>
+                            
+                            {% if page.administered-2 %}
+                                <div class="administering-orgs">
+                                    <p><span>{{ page.administered-0 }} </span>, <span>{{ page.administered-1 }} </span> and <span>{{ page.administered-2 }} </span></p>
+                                </div>
+                            {%  elsif page.administered-1 %}
+                                <div class="administering-orgs">
+                                    <p><span>{{ page.administered-0 }} </span> and <span>{{ page.administered-1 }} </span></p>
+                                </div>
+                            {% else %}
+                                <div class="administering-orgs">
+                                    <p><span>{{ page.administered-0 }} </span></p>
+                                </div>
+                            {% endif %}
+                        </div>
 
                 </div>
             </div>
@@ -685,10 +699,12 @@
     <div class="content">
         <div class="container my-5">
             <div class="row">
-                <div class="col-md-11 col-lg-9 col-xl-8">
+                <div class="col-md-11 col-lg-9 col-xl-8 remove-element-padding">
+                    <div class="remove-top-spaces content-wrapper">
 
-                {{ content }}
+                        {{ content }}
 
+                    </div>
                 </div>
 
             </div>
