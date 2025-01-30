@@ -69,7 +69,7 @@
        
     }
 
-    .callout-box {
+    .callout-box.contact {
         .header-section {
             h3 {
                 margin-bottom: 8px;
@@ -79,13 +79,12 @@
                 display: flex;
                 column-gap: 16px;
 
-                strong {
-                    min-width: 150px;
-                }
-                
                 &:last-of-type {
                     margin-bottom: 0;
-                    padding-top: 16px;
+                }
+
+                strong {
+                    min-width: 150px;
                 }
             }
         }
@@ -106,6 +105,52 @@
         }
     }  
     .callout-box.ablis-apply {
+        .rego-resources {
+            display: flex;
+            row-gap: 8px;
+            flex-wrap: wrap;
+
+            .resource {
+                width: 100%;
+                display: flex;
+                column-gap: 16px;
+
+                .rego-link {
+                    width: 100%;
+                    background: $bga-white;
+                    display: flex;
+                    column-gap: 16px;
+                    align-items: center;
+                    padding-right: 16px;
+                    
+                    &::before {
+                        content: " ";
+                        height: 100%;
+                        min-height: 60px;
+                        width: 60px;
+                        flex-shrink: 0;
+                        display: block;
+                        background: $bga-yellow-links-background url('../assets/icon-arrow-right-black.svg') no-repeat center center;
+                    }
+
+                    &.pdf-icon, &.doc-icon {
+                        &::before {
+                            background: $bga-yellow-links-background url('../assets/icon-download-black.svg') no-repeat center center;
+                        }
+                    }
+                    &.no-link {
+                        &::before {
+                            background: $bga-yellow-links-background url('../assets/iconography/icon-person-blue.svg') no-repeat center center;
+                        }
+                    }
+
+                    a {
+                        padding: 8px 0;
+                    }
+                }
+            }
+        }
+        
         table {
             margin-bottom: 24px;
             thead {
@@ -114,6 +159,10 @@
             }
             tbody {
                 background: $bga-white;
+
+                p {
+                    margin-bottom: 0;
+                }
             }
         }
     } 
@@ -140,6 +189,14 @@
                 margin: 0;
                 padding: 0;
             }
+        }
+    }
+
+
+    #index-page {
+        p, a {
+            margin-bottom: 8px;
+            font-size: 14px;
         }
     }
 }
