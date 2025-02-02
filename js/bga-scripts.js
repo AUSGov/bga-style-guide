@@ -1402,10 +1402,11 @@ $(document).ready(function () {
                     $('img.standard-mark-preview.portrait').removeClass('d-none');
                     $('img.standard-mark-preview.landscape').addClass('d-none');
                 }
-
-                $('.form-step-3, .mark-preview').removeClass('d-none');
+                var next_form = $(this).parents('.create-label-cta').find('.form-step-3, .mark-preview');
+                //console.log(parent);
+                next_form.removeClass('d-none');
             } else {
-                $('.form-step-3, .mark-preview').addClass('d-none');
+                next_form.addClass('d-none');
             }
         });
 
@@ -1471,8 +1472,9 @@ $(document).ready(function () {
 
             // If all validation requirements are met display the rest of the form
             if ( (selected_radios['wording-option'] == 1) && (selected_radios['updated'] == 0)) {
+                var next_form = $(this).parents('.create-label-cta').find('.form-step-3');
                 $('.form-step-2, .coo-preview').removeClass('d-none');
-                $('.form-step-3').removeClass('d-none');
+                next_form.removeClass('d-none');
             }
         });
 
