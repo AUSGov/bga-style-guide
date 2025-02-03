@@ -672,21 +672,18 @@
                 <div class="header-administered remove-element-padding px-5 py-3 {{ page.service | replace: ' ', '' }}">
                         <p class="service m-0">{{ page.service }}</p>
                         <div class="administered m-0">
-                            <p><strong>Administered by: </strong></p>
-                            
+                            <p class="org-tag"><strong>Administered by: </strong></p>
+                            <p class="administering-org">
                             {% if page.administered-2 %}
-                                <div class="administering-orgs">
-                                    <p><span>{{ page.administered-0 }} </span>, <span>{{ page.administered-1 }} </span> and <span>{{ page.administered-2 }} </span></p>
-                                </div>
+                                <span>{{ page.administered-0 }} </span>, <span>{{ page.administered-1 }} </span> and <span>{{ page.administered-2 }} </span>
+
                             {%  elsif page.administered-1 %}
-                                <div class="administering-orgs">
-                                    <p><span>{{ page.administered-0 }} </span> and <span>{{ page.administered-1 }} </span></p>
-                                </div>
+                               <span>{{ page.administered-0 }} </span> and <span>{{ page.administered-1 }} </span>
+
                             {% else %}
-                                <div class="administering-orgs">
-                                    <p><span>{{ page.administered-0 }} </span></p>
-                                </div>
+                                <span>{{ page.administered-0 }} </span>
                             {% endif %}
+                            </p>
                         </div>
 
                 </div>

@@ -33,6 +33,10 @@
         .administered {
             display: flex;
             column-gap: 8px;
+
+            .org-tag {
+                flex-shrink: 0;
+            }
             
             p {
                 margin-bottom: 0
@@ -207,11 +211,13 @@
     } 
     
     .disclaimer.ablis {
-        background: $bga-blue-black-background-lightest;
+        //background: $bga-blue-black-background-lightest;
         border: none;
+        border-top: 1px solid $bga-black;
+        padding-top: 32px !important;
 
         h2 {
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 16px
         }
         .leg_item {
