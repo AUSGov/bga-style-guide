@@ -245,7 +245,100 @@
         }
     }
 
-    #results-page {
-        
+    .result_group {
+        display: flex;
+        row-gap: 8px;
+        flex-wrap: wrap;
+    }
+    .ablis-result {
+        border: $bga-component-border;
+
+        .result-header {
+            border-left: 8px solid $bga-yellow-highlight-shadow;
+            background: $bga-white;
+            background: $bga-yellow-highlight-light;
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            &:focus-visible {
+                background: $bga-yellow-highlight-light;
+            }
+            &:hover {
+                background: $bga-yellow-highlight-light;
+            }
+            &.open {
+                background: $bga-yellow-highlight-light;
+            }
+        }
+        .result-content {
+            background: $bga-white;
+            border-left: 8px solid $bga-yellow-highlight-shadow;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 24px;
+
+            .description {
+                background: $bga-blue-black-background-lightest;
+                padding: 16px;
+                
+                .description-content {
+                    //height: 130px;
+                    overflow-y: hidden;
+
+                    p, a, li {
+                        font-size: .875rem;
+                        line-height: 1.75;
+                    }
+
+                    div {
+                        >*:last-child {
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                    
+                            >li:last-child {
+                                padding-bottom: 0;
+                                margin-bottom: 0;
+                            }
+                        }
+                    
+                        >*:first-child {
+                            padding-top: 0;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+
+            .secondary {
+                display: flex; 
+                column-gap: 8px;
+                align-items: center;
+                width: 100%;
+            }
+            .service span {
+                background: $bga-yellow-highlight-light;
+                border: solid 2px $bga-yellow-highlight-shadow;
+                padding: 4px 8px;
+            }
+            .cta-links {
+                display: flex; 
+                column-gap: 24px;
+                row-gap: 24px;
+                align-items: center;
+                width: 100%;
+
+                .learn-more {
+                    background: pink;
+                    min-height: 44px !important;
+                    height: 44px !important;
+                    padding: 0;
+                    width: 120px;
+                    min-width: 120px;
+                    max-width: 120px;
+                }
+            }
+        }
     }
 }
