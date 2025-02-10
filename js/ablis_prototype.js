@@ -14,6 +14,7 @@ $(document).ready(function () {
         console.log('results page');
 
         // Sticky header
+        /*
         if ($('.sticky-wrapper').length) {
             var header_width = $('.header-content').innerWidth(),
             sticky_position = $('.sticky-wrapper').offset();
@@ -28,9 +29,11 @@ $(document).ready(function () {
                 }
             });
         };
+        */
         $(window).resize(function () {
             // ADD CODE TO CHECK STICKY HEADER WIDTH ON RESIZE
         }); 
+        
 
 
         // Calculate different service type counts
@@ -80,7 +83,7 @@ $(document).ready(function () {
             $('.serviceSection').each(function(){
                 $(this).find(':first-child').find(':first-child').addClass('first-element');
         
-                var clone = $(this).clone().css({'padding-left':'48px', 'padding-right':'40px'}).appendTo('.content-wrapper').addClass('clone');
+                var clone = $(this).clone().css({'padding-left':'48px', 'padding-right':'40px'}).appendTo('.results-wrapper').addClass('clone');
                 var first_elem = clone.find(':first-child').find(':first-child');
                 var first_elem_height = first_elem.height();
                 $(this).height(first_elem_height);
