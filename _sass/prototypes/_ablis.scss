@@ -15,14 +15,14 @@
     }
     .header-administered {
         background: $bga-white;
-        border-bottom: 4px solid $bga-yellow-highlight-dark;
+        border-bottom: 8px solid $bga-yellow-highlight-shadow;
         display: flex;
         align-items: center;
         column-gap: 16px;
 
         .service {
             background: $bga-yellow-highlight-light;
-            border: 2px solid $bga-yellow-highlight-dark;
+            border: 2px solid $bga-yellow-highlight-shadow;
             //border-radius: 4px;
             cursor: default;
             padding: 4px 8px !important;
@@ -45,29 +45,29 @@
 
 
         &.RegulatoryObligation {
-            border-bottom: 4px solid $bga-orange-highlight-dark;
+            border-bottom: 8px solid $bga-orange-highlight-shadow;
 
             .service {
                 background: $bga-orange-highlight-light;
-                border: 2px solid $bga-orange-highlight-dark;
+                border: 2px solid $bga-orange-highlight-shadow;
             }
         }
 
         &.CodeofPractice {
-            border-bottom: 4px solid $bga-blue-highlight-dark;
+            border-bottom: 8px solid $bga-blue-highlight-shadow;
 
             .service {
                 background: $bga-blue-highlight-light;
-                border: 2px solid $bga-blue-highlight-dark;
+                border: 2px solid $bga-blue-highlight-shadow;
             }
         }
 
         &.AdvisoryMaterial {
-            border-bottom: 4px solid $bga-purple-highlight-dark;
+            border-bottom: 8px solid $bga-purple-highlight-shadow;
 
             .service {
                 background: $bga-purple-highlight-light;
-                border: 2px solid $bga-purple-highlight-dark;
+                border: 2px solid $bga-purple-highlight-shadow;
             }
         }
        
@@ -237,7 +237,6 @@
         }
     }
 
-
     #index-page {
         p, a {
             margin-bottom: 8px;
@@ -245,6 +244,51 @@
         }
     }
 
+
+    // RESULTS PAGES
+    .sticky-wrapper {
+        margin: 0 -9999px;
+        padding: 0 9999px;
+        
+        .sticky-header {
+            padding: 32px 0;
+
+            .top-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            h2.showing-number {
+                font-size: 1.75rem;
+                font-weight: 400;
+                margin: 0;
+                
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &.fixed {
+            background: $bga-teal-highlight-light;
+            position: fixed;
+            top: 0;
+            z-index: 8500;
+            box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2);
+            transition: top 1s linear;
+
+            .fixed-hide {
+                display: none;
+            }
+        }
+        
+        
+    }
+
+    #licences-group, #regulatory-obigations-group, #code-of-practice-group, #advisory-materials-group {
+        font-weight: 400;
+    }
     .result_group {
         display: flex;
         row-gap: 8px;
@@ -252,26 +296,32 @@
     }
     .ablis-result {
         border: $bga-component-border;
+        width: 100%;
 
         .result-header {
             border-left: 8px solid $bga-yellow-highlight-shadow;
-            background: $bga-white;
-            background: $bga-yellow-highlight-light;
+            background: $bga-white url(../assets/Chevron-down-black.svg) no-repeat;
+            background-position: right 24px center;
+            cursor: pointer;
 
             h3 {
                 font-size: 1rem;
             }
 
             &:focus-visible {
-                background: $bga-yellow-highlight-light;
+                background-color: $bga-yellow-highlight-light;
             }
             &:hover {
-                background: $bga-yellow-highlight-light;
-            }
-            &.open {
-                background: $bga-yellow-highlight-light;
+                background-color: $bga-yellow-highlight-light;
             }
         }
+        &.open {
+            .result-header {
+                background-color: $bga-yellow-highlight-light;
+                background-image: url(../assets/Chevron-up-black.svg);
+            }
+        }
+    
         .result-content {
             background: $bga-white;
             border-left: 8px solid $bga-yellow-highlight-shadow;
@@ -284,7 +334,6 @@
                 padding: 16px;
                 
                 .description-content {
-                    //height: 130px;
                     overflow-y: hidden;
 
                     p, a, li {
@@ -309,6 +358,13 @@
                         }
                     }
                 }
+                .expand {
+                    font-weight: 600;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    font-size: .875rem;
+                    line-height: 1.75;
+                }
             }
 
             .secondary {
@@ -316,11 +372,29 @@
                 column-gap: 8px;
                 align-items: center;
                 width: 100%;
+                flex-wrap: wrap;
+                row-gap: 8px;
             }
-            .service span {
+            .tag {
                 background: $bga-yellow-highlight-light;
                 border: solid 2px $bga-yellow-highlight-shadow;
-                padding: 4px 8px;
+                margin: 0;
+                border-radius: 0;
+                font-size: .75rem;
+                line-height: 1.5;
+
+                &.ablis-orange {
+                    background: $bga-orange-highlight-light;
+                    border: solid 2px $bga-orange-highlight-shadow;
+                }
+                &.ablis-blue {
+                    background: $bga-blue-highlight-light;
+                    border: solid 2px $bga-blue-highlight-shadow;
+                }
+                &.ablis-purple {
+                    background: $bga-purple-highlight-light;
+                    border: solid 2px $bga-purple-highlight-shadow;
+                }
             }
             .cta-links {
                 display: flex; 
@@ -330,15 +404,126 @@
                 width: 100%;
 
                 .learn-more {
-                    background: pink;
                     min-height: 44px !important;
                     height: 44px !important;
-                    padding: 0;
-                    width: 120px;
-                    min-width: 120px;
-                    max-width: 120px;
+                    padding: 0 48px 0 24px;
+                    background: url(../assets/icon-arrow-right-black.svg) no-repeat;
+                    background-position: right 24px center;
+
+                    &:focus-visible {
+                        border-color: $bga-blue-links;
+                        color: $bga-white;
+                        background: $bga-blue-links url(../assets/icon-arrow-right-white.svg) no-repeat;
+                        background-position: right 24px center;
+                    }
+                    &:hover {
+                        border-color: $bga-blue-background-dark;
+                        color: $bga-white;
+                        background: $bga-blue-background-dark url(../assets/icon-arrow-right-white.svg) no-repeat;
+                        background-position: right 24px center;
+                    }
+                    &:active {
+                        border-color: $bga-blue-footer;
+                        color: $bga-white;
+                        background: $bga-blue-footer url(../assets/icon-arrow-right-white.svg) no-repeat;
+                        background-position: right 24px center;
+                    }
+                }
+
+                .add-task {
+                    background: url(../assets/icon-plus-black.svg) no-repeat;
+                    background-position: right center;
+                    color: $bga-black;
+                    text-decoration: none;
+                    padding: 0 22px 0 0;
+                    font-weight: 600;
+
+                    &:focus-visible {
+                        border: $bga-component-focus-border;
+                        border-radius: $bga-focus-radius;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
                 }
             }
+        }
+
+
+        &.regulatory-obligation {
+            .result-header {
+                border-left: 8px solid $bga-orange-highlight-shadow;
+
+                &:focus-visible {
+                    background-color: $bga-orange-highlight-light;
+                }
+                &:hover {
+                    background-color: $bga-orange-highlight-light;
+                }
+            }
+            &.open {
+                .result-header {
+                    background-color: $bga-orange-highlight-light;
+                    
+                }
+            }
+            .result-content {
+                border-left: 8px solid $bga-orange-highlight-shadow;
+            }
+        }
+
+
+        &.code-of-practice {
+            .result-header {
+                border-left: 8px solid $bga-blue-highlight-shadow;
+
+                &:focus-visible {
+                    background-color: $bga-blue-highlight-light;
+                }
+                &:hover {
+                    background-color: $bga-blue-highlight-light;
+                }
+            }
+            &.open {
+                .result-header {
+                    background-color: $bga-blue-highlight-light;
+                    
+                }
+            }
+            .result-content {
+                border-left: 8px solid $bga-blue-highlight-shadow;
+            }
+        }
+
+
+        &.advisory-material {
+            .result-header {
+                border-left: 8px solid $bga-purple-highlight-shadow;
+
+                &:focus-visible {
+                    background-color: $bga-purple-highlight-light;
+                }
+                &:hover {
+                    background-color: $bga-purple-highlight-light;
+                }
+            }
+            &.open {
+                .result-header {
+                    background-color: $bga-purple-highlight-light;
+                    
+                }
+            }
+            .result-content {
+                border-left: 8px solid $bga-purple-highlight-shadow;
+            }
+        }
+    }
+    // Styles for description clone - used to get heights and then removed.
+    .serviceSection.clone {
+        p, a, li {
+            font-size: .875rem;
+            line-height: 1.75;
         }
     }
 }
