@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="ablis-prototype" class="results-page" style="overflow-x: hidden;">
-
+<html lang="en" id="ablis-prototype" style="overflow-x: hidden;">
 
 {% include head.html %}
 
@@ -657,127 +656,19 @@
 
 
     <!-- PAGE HEADER -->
-    <div id="page-header" tabindex="-1" class="teal stepped-nav">
-
+    <div id="page-header" class="teal">
         <div class="container">
 
             <div class="row inner-wrapper pt-5 mx-0">
 
-                <div class="header-content p-5" id="page-load-position">
+                <div class="header-content p-5">
 
-                    <div class="col-12 remove-element-padding">
-
-                        <div  class="stepped-navigation-wrapper include-mini-toast remove-element-padding {{ include.classes }}">
-
-                            <h1  class="step-title" data-step="{{page.step-number}}">{{ page.stepped-nav-step }}</h1>
-
-
-                           {% include prototypes/stepped-navigation-example.html
-                                step1="Business details"
-                                step2="Operations"
-                                step3="Products and services"
-                                step4="Building and land"
-                                step5="Equipment"
-                                step6="Environment and animals"
-                                step7="Results"
-                                classes="teal"
-                            %} 
-
-                        </div> 
-                        
-                       
+                    <div class="col-sm-12 col-lg-10 remove-element-padding">
+                        <h1>{{ page.title }}</h1>
+                        <p class="header-intro">{{ page.description }}</p>
                     </div>
 
                 </div>
-            </div>
-        </div>    
-        
-       
-
-    </div>
-
-
-    <!-- SHOWING HEADER -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-            
-                <div class="sticky-wrapper">
-                    <div class="sticky-header">
-                    
-                        <div class='top-row'>
-                            <div class="showing-number remove-element-padding">
-                                <h2 class="showing-number">You have <strong><span>XX</span></strong> recommendations</h2>
-                            </div>
-
-                            <div class="header-cta-links button-group">
-                                <button class="bga-btn bga-secondary-btn bkg-light email-recommendations" tabindex="0" role="button">Email recommendations</button>
-                                
-                                <button class="bga-btn bga-secondary-btn bkg-light task-list" tabindex="0" role="button">Task list</button>
-                            </div>
-                        </div>
-
-                        <div class="recommendations-summary pt-5">
-                            
-                            <div class="summary licences remove-element-padding">
-                                <div class="top-content remove-element-padding">
-                                    <h3 class="fixed-hide"><span class="result-count licences">XX</span> licences</h3>
-                                    <p class="fixed-hide">We found <span class="result-count licences">XX</span> licences and registrations you should apply for.</p>
-                                </div>
-
-                                <a href="#licences-group">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
-                                        </svg>
-                                        <span>View licences</span></a>
-                            </div>
-
-
-                            <div class="summary regulation remove-element-padding">
-                                <div class="top-content remove-element-padding">
-                                    <h3 class="fixed-hide"><span class="result-count regulations">XX</span> regulatory obligations</h3>
-                                    <p class="fixed-hide">We found <span class="result-count regulations">XX</span> regulatory obligations you should comply with.</p>
-                                </div>
-                                <a href="#regulatory-obigations-group">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
-                                    </svg>
-                                    <span>View regulatory obligations</span></a>
-                            </div>
-
-
-                            <div class="summary codes remove-element-padding">
-                                <div class="top-content remove-element-padding">
-                                    <h3 class="fixed-hide"><span class="result-count codes">XX</span> codes of practice</h3>
-                                    <p class="fixed-hide">We found <span class="result-count codes">XX</span> codes of practice you should read and understand.</p>
-                                </div>
-
-                                <a href="#code-of-practice-group"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
-                                    </svg>
-                                    <span>View codes of practice</span></a>
-                            </div>
-
-
-                            <div class="summary advisory remove-element-padding">
-                                <div class="top-content remove-element-padding">
-                                    <h3 class="fixed-hide"><span class="result-count advisory">XX</span> advisory material</h3>
-                                    <p class="fixed-hide">We found <span class="result-count advisory">XX</span> advisory material you may want to explore.</p>
-                                </div>
-
-                                <a href="#advisory-materials-group">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
-                                        </svg>
-                                        <span>View advisory material</span></a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
 
             </div>
         </div>
@@ -785,25 +676,7 @@
 
 
 
-    <!-- CONTENT -->
-    <div class="content">
-        <div class="container my-5">
-            <div class="row">
-
-                <div class="col-12 col-lg-9 col-xl-8 remove-element-padding">
-                    <div class="remove-top-spaces results-wrapper">
-
-                        {{ content }}
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+    {{ content }}
 
 
 

@@ -13,6 +13,14 @@
         }
     
     }
+    
+    // LANDING PAGE
+    .hero-section {
+        //background: $bga-teal-tool-extra-light;
+    }
+
+
+    // INFORMATION PAGES
     .header-administered {
         background: $bga-white;
         border-bottom: 8px solid $bga-yellow-highlight-shadow;
@@ -237,13 +245,6 @@
         }
     }
 
-    #index-page {
-        p, a {
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-    }
-
 
     // RESULTS PAGES
     .sticky-wrapper {
@@ -270,6 +271,45 @@
             }
         }
 
+        .recommendations-summary {
+            display: flex;
+            column-gap: 24px;
+            flex-wrap: nowrap;
+
+            .summary {
+                background: $bga-yellow-highlight-light;
+                padding: 16px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+                row-gap: 24px;
+
+                &.regulation {
+                    background: $bga-orange-highlight-light;
+                }
+                &.codes {
+                    background: $bga-blue-highlight-light;
+                }
+                &.advisory {
+                    background: $bga-purple-highlight-light;
+                }
+                h3 {
+                    font-size: $h4-font-size;
+                }
+                a {
+                    display: flex;
+                    column-gap: 8px;
+                    align-items: center;
+
+                    &:visited {
+                        color: $bga-blue-links;
+                    }
+                }
+            }
+            
+        }
+
+        
         &.fixed {
             background: $bga-teal-highlight-light;
             position: fixed;
@@ -280,6 +320,13 @@
 
             .fixed-hide {
                 display: none;
+            }
+            .recommendations-summary {
+                .summary {
+                    padding: 8px 16px;
+                    background: $bga-white;
+                    width: 25%;
+                }
             }
         }
         
@@ -524,6 +571,13 @@
         p, a, li {
             font-size: .875rem;
             line-height: 1.75;
+        }
+    }
+    // Temp index page
+    #index-page {
+        p, a {
+            margin-bottom: 8px;
+            font-size: 14px;
         }
     }
 }
