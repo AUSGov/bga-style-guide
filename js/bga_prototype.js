@@ -1110,13 +1110,6 @@ $(document).ready(function () {
     }; // End CoOL tool
 
 
-
-    // ABLIS
-    if ($('#ablis-prototype').length) {
-        console.log("ablis page");
-        $('p:empty').hide();
-    }
-
 }); // End doc ready
 
 

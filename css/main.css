@@ -8661,7 +8661,7 @@ button.chat.non-branded:hover { border-color: #333333; color: #333333; backgroun
 
 .showing-header-wrapper .filter-toggle { display: none; }
 
-.showing-header-wrapper.fixed { position: fixed; background: #CFEBEB; top: 0; z-index: 8500; width: 100%; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); transition: top 1s linear; }
+.showing-header-wrapper.fixed { position: fixed; background: #CFEBEB; top: 0; z-index: 8500; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); transition: top 1s linear; }
 
 .showing-page.fixed { padding-top: 140px; }
 
@@ -12272,9 +12272,9 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype #subsite-header .main-header-wrapper { margin: 0 -9999px; padding: 0 9999px; background: #2E6CB9; }
 
-#ablis-prototype .header-administered { background: #ffffff; border-bottom: 4px solid #FFD964; display: flex; align-items: center; column-gap: 16px; }
+#ablis-prototype .header-administered { background: #ffffff; border-bottom: 8px solid #EDC95A; display: flex; align-items: center; column-gap: 16px; }
 
-#ablis-prototype .header-administered .service { background: #FFF3CD; border: 2px solid #FFD964; cursor: default; padding: 4px 8px !important; font-weight: 600; font-size: 1.125rem; display: inline-flex; }
+#ablis-prototype .header-administered .service { background: #FFF3CD; border: 2px solid #EDC95A; cursor: default; padding: 4px 8px !important; font-weight: 600; font-size: 1.125rem; display: inline-flex; }
 
 #ablis-prototype .header-administered .administered { display: flex; column-gap: 8px; }
 
@@ -12282,17 +12282,17 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .header-administered .administered p { margin-bottom: 0; }
 
-#ablis-prototype .header-administered.RegulatoryObligation { border-bottom: 4px solid #E88A2D; }
+#ablis-prototype .header-administered.RegulatoryObligation { border-bottom: 8px solid #CC7A29; }
 
-#ablis-prototype .header-administered.RegulatoryObligation .service { background: #FDE6D0; border: 2px solid #E88A2D; }
+#ablis-prototype .header-administered.RegulatoryObligation .service { background: #FDE6D0; border: 2px solid #CC7A29; }
 
-#ablis-prototype .header-administered.CodeofPractice { border-bottom: 4px solid #96B7DF; }
+#ablis-prototype .header-administered.CodeofPractice { border-bottom: 8px solid #708DAF; }
 
-#ablis-prototype .header-administered.CodeofPractice .service { background: #C8D9EE; border: 2px solid #96B7DF; }
+#ablis-prototype .header-administered.CodeofPractice .service { background: #C8D9EE; border: 2px solid #708DAF; }
 
-#ablis-prototype .header-administered.AdvisoryMaterial { border-bottom: 4px solid #9183D8; }
+#ablis-prototype .header-administered.AdvisoryMaterial { border-bottom: 8px solid #7468B4; }
 
-#ablis-prototype .header-administered.AdvisoryMaterial .service { background: #E2DDF8; border: 2px solid #9183D8; }
+#ablis-prototype .header-administered.AdvisoryMaterial .service { background: #E2DDF8; border: 2px solid #7468B4; }
 
 #ablis-prototype .callout-box.contact .header-section h3, #ablis-prototype .callout-box.contact .header-section .h3 { margin-bottom: 8px; }
 
@@ -12354,19 +12354,35 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype #index-page p, #ablis-prototype #index-page a { margin-bottom: 8px; font-size: 14px; }
 
+#ablis-prototype .sticky-wrapper { margin: 0 -9999px; padding: 0 9999px; }
+
+#ablis-prototype .sticky-wrapper .sticky-header { padding: 32px 0; }
+
+#ablis-prototype .sticky-wrapper .sticky-header .top-row { display: flex; justify-content: space-between; align-items: center; }
+
+#ablis-prototype .sticky-wrapper .sticky-header h2.showing-number, #ablis-prototype .sticky-wrapper .sticky-header .showing-number.h2 { font-size: 1.75rem; font-weight: 400; margin: 0; }
+
+#ablis-prototype .sticky-wrapper .sticky-header h2.showing-number span, #ablis-prototype .sticky-wrapper .sticky-header .showing-number.h2 span { font-weight: 600; }
+
+#ablis-prototype .sticky-wrapper.fixed { background: #CFEBEB; position: fixed; top: 0; z-index: 8500; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); transition: top 1s linear; }
+
+#ablis-prototype .sticky-wrapper.fixed .fixed-hide { display: none; }
+
+#ablis-prototype #licences-group, #ablis-prototype #regulatory-obigations-group, #ablis-prototype #code-of-practice-group, #ablis-prototype #advisory-materials-group { font-weight: 400; }
+
 #ablis-prototype .result_group { display: flex; row-gap: 8px; flex-wrap: wrap; }
 
-#ablis-prototype .ablis-result { border: 1px solid #96B7DF; }
+#ablis-prototype .ablis-result { border: 1px solid #96B7DF; width: 100%; }
 
-#ablis-prototype .ablis-result .result-header { border-left: 8px solid #EDC95A; background: #ffffff; background: #FFF3CD; }
+#ablis-prototype .ablis-result .result-header { border-left: 8px solid #EDC95A; background: #ffffff url(../assets/Chevron-down-black.svg) no-repeat; background-position: right 24px center; cursor: pointer; }
 
 #ablis-prototype .ablis-result .result-header h3, #ablis-prototype .ablis-result .result-header .h3 { font-size: 1rem; }
 
-#ablis-prototype .ablis-result .result-header:focus-visible { background: #FFF3CD; }
+#ablis-prototype .ablis-result .result-header:focus-visible { background-color: #FFF3CD; }
 
-#ablis-prototype .ablis-result .result-header:hover { background: #FFF3CD; }
+#ablis-prototype .ablis-result .result-header:hover { background-color: #FFF3CD; }
 
-#ablis-prototype .ablis-result .result-header.open { background: #FFF3CD; }
+#ablis-prototype .ablis-result.open .result-header { background-color: #FFF3CD; background-image: url(../assets/Chevron-up-black.svg); }
 
 #ablis-prototype .ablis-result .result-content { background: #ffffff; border-left: 8px solid #EDC95A; display: flex; flex-wrap: wrap; row-gap: 24px; }
 
@@ -12382,12 +12398,64 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .ablis-result .result-content .description .description-content div > *:first-child { padding-top: 0; margin-top: 0; }
 
-#ablis-prototype .ablis-result .result-content .secondary { display: flex; column-gap: 8px; align-items: center; width: 100%; }
+#ablis-prototype .ablis-result .result-content .description .expand { font-weight: 600; text-decoration: underline; cursor: pointer; font-size: .875rem; line-height: 1.75; }
 
-#ablis-prototype .ablis-result .result-content .service span { background: #FFF3CD; border: solid 2px #EDC95A; padding: 4px 8px; }
+#ablis-prototype .ablis-result .result-content .secondary { display: flex; column-gap: 8px; align-items: center; width: 100%; flex-wrap: wrap; row-gap: 8px; }
+
+#ablis-prototype .ablis-result .result-content .tag { background: #FFF3CD; border: solid 2px #EDC95A; margin: 0; border-radius: 0; font-size: .75rem; line-height: 1.5; }
+
+#ablis-prototype .ablis-result .result-content .tag.ablis-orange { background: #FDE6D0; border: solid 2px #CC7A29; }
+
+#ablis-prototype .ablis-result .result-content .tag.ablis-blue { background: #C8D9EE; border: solid 2px #708DAF; }
+
+#ablis-prototype .ablis-result .result-content .tag.ablis-purple { background: #E2DDF8; border: solid 2px #7468B4; }
 
 #ablis-prototype .ablis-result .result-content .cta-links { display: flex; column-gap: 24px; row-gap: 24px; align-items: center; width: 100%; }
 
-#ablis-prototype .ablis-result .result-content .cta-links .learn-more { background: pink; min-height: 44px !important; height: 44px !important; padding: 0; width: 120px; min-width: 120px; max-width: 120px; }
+#ablis-prototype .ablis-result .result-content .cta-links .learn-more { min-height: 44px !important; height: 44px !important; padding: 0 48px 0 24px; background: url(../assets/icon-arrow-right-black.svg) no-repeat; background-position: right 24px center; }
+
+#ablis-prototype .ablis-result .result-content .cta-links .learn-more:focus-visible { border-color: #2157AA; color: #ffffff; background: #2157AA url(../assets/icon-arrow-right-white.svg) no-repeat; background-position: right 24px center; }
+
+#ablis-prototype .ablis-result .result-content .cta-links .learn-more:hover { border-color: #2E6CB9; color: #ffffff; background: #2E6CB9 url(../assets/icon-arrow-right-white.svg) no-repeat; background-position: right 24px center; }
+
+#ablis-prototype .ablis-result .result-content .cta-links .learn-more:active { border-color: #113869; color: #ffffff; background: #113869 url(../assets/icon-arrow-right-white.svg) no-repeat; background-position: right 24px center; }
+
+#ablis-prototype .ablis-result .result-content .cta-links .add-task { background: url(../assets/icon-plus-black.svg) no-repeat; background-position: right center; color: #333333; text-decoration: none; padding: 0 22px 0 0; font-weight: 600; }
+
+#ablis-prototype .ablis-result .result-content .cta-links .add-task:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
+
+#ablis-prototype .ablis-result .result-content .cta-links .add-task:hover { text-decoration: underline; }
+
+#ablis-prototype .ablis-result.regulatory-obligation .result-header { border-left: 8px solid #CC7A29; }
+
+#ablis-prototype .ablis-result.regulatory-obligation .result-header:focus-visible { background-color: #FDE6D0; }
+
+#ablis-prototype .ablis-result.regulatory-obligation .result-header:hover { background-color: #FDE6D0; }
+
+#ablis-prototype .ablis-result.regulatory-obligation.open .result-header { background-color: #FDE6D0; }
+
+#ablis-prototype .ablis-result.regulatory-obligation .result-content { border-left: 8px solid #CC7A29; }
+
+#ablis-prototype .ablis-result.code-of-practice .result-header { border-left: 8px solid #708DAF; }
+
+#ablis-prototype .ablis-result.code-of-practice .result-header:focus-visible { background-color: #C8D9EE; }
+
+#ablis-prototype .ablis-result.code-of-practice .result-header:hover { background-color: #C8D9EE; }
+
+#ablis-prototype .ablis-result.code-of-practice.open .result-header { background-color: #C8D9EE; }
+
+#ablis-prototype .ablis-result.code-of-practice .result-content { border-left: 8px solid #708DAF; }
+
+#ablis-prototype .ablis-result.advisory-material .result-header { border-left: 8px solid #7468B4; }
+
+#ablis-prototype .ablis-result.advisory-material .result-header:focus-visible { background-color: #E2DDF8; }
+
+#ablis-prototype .ablis-result.advisory-material .result-header:hover { background-color: #E2DDF8; }
+
+#ablis-prototype .ablis-result.advisory-material.open .result-header { background-color: #E2DDF8; }
+
+#ablis-prototype .ablis-result.advisory-material .result-content { border-left: 8px solid #7468B4; }
+
+#ablis-prototype .serviceSection.clone p, #ablis-prototype .serviceSection.clone a, #ablis-prototype .serviceSection.clone li { font-size: .875rem; line-height: 1.75; }
 
 /*# sourceMappingURL=main.css.map */
