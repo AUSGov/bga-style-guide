@@ -1,4 +1,13 @@
 #ablis-prototype {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
     #subsite-header {
         .strap-wrapper {
             margin: 0 -9999px;
@@ -13,11 +22,21 @@
         }
     
     }
-    
-    // LANDING PAGE
-    .hero-section {
-        //background: $bga-teal-tool-extra-light;
+    .subsite-footer {
+       box-shadow: 0 50vh 0 50vh $bga-blue-footer;
     }
+    
+    // QUESTION PAGES
+    .yes-no-answers {
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 8px;
+        
+        .radio-button {
+            width: 50%;
+        }
+    }
+    
 
 
     // INFORMATION PAGES
@@ -341,6 +360,11 @@
         row-gap: 8px;
         flex-wrap: wrap;
     }
+    .search_result_group {
+        display: flex;
+        row-gap: 24px;
+        flex-wrap: wrap;
+    }
     .ablis-result {
         border: $bga-component-border;
         width: 100%;
@@ -566,6 +590,114 @@
             }
         }
     }
+
+    .ablis-search-result {
+        border: $bga-component-border;
+        width: 100%;
+
+        .result-content {
+            background: $bga-white;
+            border-left: 8px solid $bga-yellow-highlight-shadow;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 32px;
+
+            h3 {
+                font-size: 1.125rem;    
+            }
+
+            .description {
+                background: $bga-blue-black-background-lightest;
+                padding: 16px;
+                
+                .description-content {
+                    overflow-y: hidden;
+
+                    p, a, li {
+                        font-size: .875rem;
+                        line-height: 1.75;
+                    }
+
+                    div {
+                        >*:last-child {
+                            padding-bottom: 0;
+                            margin-bottom: 0;
+                    
+                            >li:last-child {
+                                padding-bottom: 0;
+                                margin-bottom: 0;
+                            }
+                        }
+                    
+                        >*:first-child {
+                            padding-top: 0;
+                            margin-top: 0;
+                        }
+                    }
+                }
+                .expand {
+                    font-weight: 600;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    font-size: .875rem;
+                    line-height: 1.75;
+                }
+            }
+
+            .secondary {
+                display: flex; 
+                column-gap: 8px;
+                align-items: center;
+                width: 100%;
+                flex-wrap: wrap;
+                row-gap: 8px;
+            }
+            .tag {
+                background: $bga-yellow-highlight-light;
+                border: solid 2px $bga-yellow-highlight-shadow;
+                margin: 0;
+                border-radius: 0;
+                font-size: .75rem;
+                line-height: 1.5;
+
+                &.ablis-orange {
+                    background: $bga-orange-highlight-light;
+                    border: solid 2px $bga-orange-highlight-shadow;
+                }
+                &.ablis-blue {
+                    background: $bga-blue-highlight-light;
+                    border: solid 2px $bga-blue-highlight-shadow;
+                }
+                &.ablis-purple {
+                    background: $bga-purple-highlight-light;
+                    border: solid 2px $bga-purple-highlight-shadow;
+                }
+            }
+        }
+
+
+        &.regulatory-obligation {
+            .result-content {
+                border-left: 8px solid $bga-orange-highlight-shadow;
+            }
+        }
+
+
+        &.code-of-practice {
+            .result-content {
+                border-left: 8px solid $bga-blue-highlight-shadow;
+            }
+        }
+
+
+        &.advisory-material {
+            .result-content {
+                border-left: 8px solid $bga-purple-highlight-shadow;
+            }
+        }
+    }
+
+
     // Styles for description clone - used to get heights and then removed.
     .serviceSection.clone {
         p, a, li {

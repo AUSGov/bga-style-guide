@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="ablis-prototype" class="results-page" style="overflow-x: hidden;">
-
+<html lang="en" id="ablis-prototype" class="search-page" style="overflow-x: hidden;">
 
 {% include head.html %}
 
@@ -657,43 +656,49 @@
 
 
     <!-- PAGE HEADER -->
-    <div id="page-header" tabindex="-1" class="teal stepped-nav">
-
+    <div id="page-header" class="teal">
+       
         <div class="container">
-
-            <div class="row inner-wrapper pt-5 mx-0">
-
-                <div class="header-content p-5" id="page-load-position">
-
-                    <div class="col-12 remove-element-padding">
-
-                        <div  class="stepped-navigation-wrapper include-mini-toast remove-element-padding {{ include.classes }}">
-
-                            <h1  class="step-title" data-step="{{page.step-number}}">{{ page.stepped-nav-step }}</h1>
-
-
-                           {% include prototypes/stepped-navigation-example.html
-                                step1="Business details"
-                                step2="Operations"
-                                step3="Products and services"
-                                step4="Building and land"
-                                step5="Equipment"
-                                step6="Environment and animals"
-                                step7="Results"
-                                classes="teal"
-                            %} 
-
-                        </div> 
+            <h1 class="pt-5">Licence and registration keyword search</h1>
+            
+            <div class="row inner-wrapper mx-0">
+                <div class="header-content p-5">
+                    <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
                         
+                        <div id="section-search-location" class="remove-element-padding">
+ 
+                            <div class="search-questions remove-element-padding">
+                            
+                                    <div class="mb-5 p-0 form-example">
+                                        <label for="keyword" class="form-label h3-font-size mb-3"><strong>What licence or registration are you looking for?</strong></label>
+                                    
+                                        <input type="text" class="form-control mb-4" id="keyword" value="" required="" placeholder="Enter a keyword or phrase, e.g. liquor licence">
+                
+                                    </div>
+            
+                                    <div class="mb-5 p-0 form-example">
+                                        <label for="location" class="form-label h3-font-size mb-3"><strong>Where is your business located?</strong></label>
+                                        
+                                        <input type="text" class="form-control mb-4" id="location" value="" required="" placeholder="Enter your business address or your state.">
+                
+                                    </div>
+                
+                            </div>  
+
+                            <!-- BUTTON GROUP -->
+                            <div class="button-group">
+                                <btn class="bga-btn bga-primary-btn bkg-light" tabindex="0" role="button">Search</btn>
+
+                                <a class="bga-link bga-inline-link bkg-light" tabindex="0" href={{ 'prototypes/ablis2/search/start.html' | relative_url }} role="button">Start again</a>
+                            </div>
+                            
+                        </div>
                        
                     </div>
-
                 </div>
             </div>
-        </div>    
-        
-       
 
+        </div>
     </div>
 
 
@@ -707,71 +712,8 @@
                     
                         <div class='top-row'>
                             <div class="showing-number remove-element-padding">
-                                <h2 class="showing-number">You have <strong><span class="count">XX</span></strong> recommendations</h2>
+                                <h2 class="showing-number">Showing <strong><span class="count">{{page.result-count}}</span></strong> results for <strong><span class="keyword">{{page.keyword}}</span> in <span class="location">{{page.location}}</span></strong></h2>
                             </div>
-
-                            <div class="header-cta-links button-group">
-                                <button class="bga-btn bga-secondary-btn bkg-light email-recommendations" tabindex="0" role="button">Email recommendations</button>
-                                
-                                <button class="bga-btn bga-secondary-btn bkg-light task-list" tabindex="0" role="button">Task list</button>
-                            </div>
-                        </div>
-
-                        <div class="recommendations-summary pt-5">
-                            
-                            <div class="summary licences remove-element-padding">
-                                <div class="top-content remove-element-padding">
-                                    <h3 class="fixed-hide"><span class="result-count licences">XX</span> licences</h3>
-                                    <p class="fixed-hide">We found <span class="result-count licences">XX</span> licences and registrations you should apply for.</p>
-                                </div>
-
-                                <a href="#licences-group">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
-                                        </svg>
-                                        <span>View licences</span></a>
-                            </div>
-
-
-                            <div class="summary regulation remove-element-padding">
-                                <div class="top-content remove-element-padding">
-                                    <h3 class="fixed-hide"><span class="result-count regulations">XX</span> regulatory obligations</h3>
-                                    <p class="fixed-hide">We found <span class="result-count regulations">XX</span> regulatory obligations you should comply with.</p>
-                                </div>
-                                <a href="#regulatory-obigations-group">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
-                                    </svg>
-                                    <span>View regulatory obligations</span></a>
-                            </div>
-
-
-                            <div class="summary codes remove-element-padding">
-                                <div class="top-content remove-element-padding">
-                                    <h3 class="fixed-hide"><span class="result-count codes">XX</span> codes of practice</h3>
-                                    <p class="fixed-hide">We found <span class="result-count codes">XX</span> codes of practice you should read and understand.</p>
-                                </div>
-
-                                <a href="#code-of-practice-group"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
-                                    </svg>
-                                    <span>View codes of practice</span></a>
-                            </div>
-
-
-                            <div class="summary advisory remove-element-padding">
-                                <div class="top-content remove-element-padding">
-                                    <h3 class="fixed-hide"><span class="result-count advisory">XX</span> advisory material</h3>
-                                    <p class="fixed-hide">We found <span class="result-count advisory">XX</span> advisory material you may want to explore.</p>
-                                </div>
-
-                                <a href="#advisory-materials-group">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
-                                        </svg>
-                                        <span>View advisory material</span></a>
-                            </div>
-
                         </div>
 
                     </div>
@@ -783,14 +725,214 @@
         </div>
     </div>
 
+    
 
 
-    <!-- CONTENT -->
+
+    <!-- PAGE CONTENT -->
     <div class="content">
-        <div class="container my-5">
+        <div class="container">
             <div class="row">
 
-                <div class="col-12 col-lg-9 col-xl-8 remove-element-padding">
+
+                <div class="anchor-menu-wrapper remove-top-spaces col-12 col-sm-3">
+
+                    <div class="filters checkboxes-primary">
+
+                        <div class="filter-item" id="service-type">
+                    
+                            <form>
+                                <div tabindex="0" class="checkbox-item py-3" data-label="licences" filter-type="service-type">
+                                    <label id="service-inperson" data-option="licences" data-label="licences"
+                                        filter-type="service-type">Licences</label>
+                                    <input tabindex="-1" type="checkbox" id="licences">
+                                </div>
+                    
+                                <div tabindex="0" class="checkbox-item py-3" data-label="regulatory-obligations" filter-type="service-type">
+                                    <label id="service-regulatory-obligations" data-option="regulatory-obligations" data-label="regulatory-obligations"
+                                        filter-type="service-type">Regulatory obligations</label>
+                                    <input tabindex="-1" type="checkbox" id="regulatory-obligations">
+                                </div>
+                    
+                    
+                                <div tabindex="0" class="checkbox-item py-3" data-label="codes-of-practice" filter-type="service-type">
+                                    <label id="service-codes-of-practice" data-option="codes-of-practice" data-label="codes-of-practice"
+                                        filter-type="service-type">Codes of practice</label>
+                                    <input tabindex="-1" type="checkbox" id="codes-of-practice">
+                                </div>
+
+
+                                <div tabindex="0" class="checkbox-item py-3" data-label="advisory-material" filter-type="service-type">
+                                    <label id="service-advisory-material" data-option="advisory-material" data-label="advisory-material"
+                                        filter-type="service-type">Advisory material</label>
+                                    <input tabindex="-1" type="checkbox" id="advisory-material  ">
+                                </div>
+                    
+                    
+                            </form>
+                    
+                        </div>
+                    
+                    </div>
+
+
+
+                    <div class="filters  checkboxes-secondary">
+
+                        <div tabindex="0" class="filter-item pt-3 pb-2" id="location">
+                            <div class="filter-item-title remove-element-padding">
+                                <p class="mb-0">Location <span class="mobile-counter"></span></p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                                    <g transform="translate(20 12.5) rotate(180)">
+                                        <path  data-name="Chevron / Up"
+                                            d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                        </path>
+                                    </g>
+                                </svg>
+                    
+                            </div>
+                            <div class="active-filters pt-2 multi-select">
+                                <ul class="m-0 p-0">
+                                    <li filter-type="location" filter-value="10" data-value="australian-capital-territory">
+                                        Australian Capital Territory</li>
+                                    <li filter-type="location" filter-value="15" data-value="new-south-wales">New South
+                                        Wales</li>
+                                    <li filter-type="location" filter-value="15" data-value="northern-territory">
+                                        Northern Territory</li>
+                                    <li filter-type="location" filter-value="15" data-value="queensland">Queensland</li>
+                                    <li filter-type="location" filter-value="15" data-value="south-australia">South
+                                        Australia</li>
+                                    <li filter-type="location" filter-value="15" data-value="tasmania">Tasmania</li>
+                                    <li filter-type="location" filter-value="15" data-value="victoria">Victoria</li>
+                                    <li filter-type="location" filter-value="15" data-value="western-australia">Western
+                                        Australia</li>
+                                    <li filter-type="location" filter-value="15" data-value="other-australian-territory">
+                                        Other Australian territory</li>
+                                </ul>
+                            </div>
+                            <div class="filter-item-content">
+                    
+                                <form>
+                                    <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="australian-capital-territory">
+                                        <label>Australian Capital Territory</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="new-south-wales">
+                                        <label>New South Wales</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="northern-territory">
+                                        <label>Northern Territory</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="queensland">
+                                        <label>Queensland</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="south-australia">
+                                        <label>South Australia</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="tasmania">
+                                        <label>Tasmania</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="victoria">
+                                        <label>Victoria</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="western-australia">
+                                        <label>Western Australia</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-type="location" filter-value="15">
+                                        <input type="checkbox" tabindex="-1" id="other-australian-territory">
+                                        <label>Other Australian territory</label>
+                                    </div>
+                    
+                                </form>
+                    
+                            </div>
+                        </div>
+                    
+                        <div tabindex="0" class="filter-item pt-3 pb-2" id="support-type">
+                            <div class="filter-item-title remove-element-padding">
+                                <p class="mb-0">Support type <span class="mobile-counter"></span></p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                                    <g transform="translate(20 12.5) rotate(180)">
+                                        <path  data-name="Chevron / Up"
+                                            d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                        </path>
+                                    </g>
+                                </svg>
+                    
+                            </div>
+                            <div class="active-filters pt-2 multi-select">
+                                <ul class="m-0 p-0">
+                                    <li filter-type="support-type" filter-value="30" data-value="advice">Advice &amp;
+                                        mentoring</li>
+                                    <li filter-type="support-type" filter-value="60" data-value="funding">Funding</li>
+                                    <li filter-type="support-type" filter-value="10" data-value="loan">Loan</li>
+                                    <li filter-type="support-type" filter-value="10" data-value="sponsorship">
+                                        Sponsorship</li>
+                                    <li filter-type="support-type" filter-value="30" data-value="subsidy">Subsidies
+                                        &amp; rebates</li>
+                                    <li filter-type="support-type" filter-value="10" data-value="tax-rebate">Tax
+                                        benefits</li>
+                    
+                                </ul>
+                            </div>
+                            <div class="filter-item-content">
+                    
+                                <form>
+                                   <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="support-type">
+                                        <input type="checkbox" tabindex="-1" id="advice">
+                                        <label for="advice">Advice &amp; mentoring</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-value="60" filter-type="support-type">
+                                        <input type="checkbox" tabindex="-1" id="funding">
+                                        <label for="funding">Funding</label>
+                                    </div>
+                                   <div tabindex="0" class="checkbox-item p-2" filter-value="10" filter-type="support-type">
+                                        <input type="checkbox" tabindex="-1" id="loan">
+                                        <label for="loan">Loan</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-value="10" filter-type="support-type">
+                                        <input type="checkbox" tabindex="-1" id="sponsorship">
+                                        <label for="sponsorship">Sponsorship</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-value="30" filter-type="support-type">
+                                        <input type="checkbox" tabindex="-1" id="subsidy">
+                                        <label for="subsidy">Subsidies &amp; rebates</label>
+                                    </div>
+                    
+                                   <div tabindex="0" class="checkbox-item p-2" filter-value="10" filter-type="support-type">
+                                        <input type="checkbox" tabindex="-1" id="tax-rebate">
+                                        <label for="tax-rebate">Tax benefits</label>
+                                    </div>
+                    
+                                </form>
+                    
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+
+
+                <div class="col-12 col-sm-9 col-xl-8 remove-element-padding">
                     <div class="remove-top-spaces results-wrapper">
 
                         {{ content }}
@@ -803,8 +945,6 @@
         </div>
 
     </div>
-
-
 
 
     <div class="subsite-footer py-6 mt-0 mb-0">
@@ -853,6 +993,7 @@
 
     <div class="modal-overlay"></div>
 
+  
 </body>
 
 </html>
