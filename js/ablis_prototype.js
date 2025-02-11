@@ -10,11 +10,11 @@ $(document).ready(function () {
     }
 
     // RESULT PAGES ------------------------------------------------------
-    if ($('.results-page').length) {
+    if ($('.results-page').length || $('.search-page').length) {
         console.log('results page');
 
         // Sticky header
-        /*
+        
         if ($('.sticky-wrapper').length) {
             var header_width = $('.header-content').innerWidth(),
             sticky_position = $('.sticky-wrapper').offset();
@@ -29,7 +29,7 @@ $(document).ready(function () {
                 }
             });
         };
-        */
+        
         $(window).resize(function () {
             // ADD CODE TO CHECK STICKY HEADER WIDTH ON RESIZE
         }); 
@@ -41,7 +41,7 @@ $(document).ready(function () {
         regulation_count = 0,
         code_count = 0,
         advisory_count = 0;
-        $('.ablis-result').each(function(){
+        $('.ablis-result, .ablis-search-result').each(function(){
             if ($(this).hasClass('licence')) {
                 licence_count++;
             } else if ($(this).hasClass('regulatory-obligation')) {
@@ -60,7 +60,8 @@ $(document).ready(function () {
 
         // Add total recommendations count to top of th epage
         var total_count = licence_count + regulation_count + code_count + advisory_count;
-        $('.showing-number span').text(total_count);
+        console.log(total_count);
+        $('.showing-number span.count').text(total_count);
 
 
         // Expand result tile accordions
@@ -82,7 +83,7 @@ $(document).ready(function () {
         var set_description_heights = function(){
             $('.serviceSection').each(function(){
                 $(this).find(':first-child').find(':first-child').addClass('first-element');
-        
+                
                 var clone = $(this).clone().css({'padding-left':'48px', 'padding-right':'40px'}).appendTo('.results-wrapper').addClass('clone');
                 var first_elem = clone.find(':first-child').find(':first-child');
                 var first_elem_height = first_elem.height();
@@ -98,7 +99,7 @@ $(document).ready(function () {
         }); 
 
         // Open / close descriptions in result tiles
-        $('.ablis-result .expand').on('click', function(){
+        $('.ablis-result .expand, .ablis-search-result .expand').on('click', function(){
             var description_wrapper = $(this).parents('.description').find('.serviceSection'),
             first_elem = description_wrapper.find('.first-element');
             first_elem_height = first_elem.height();
