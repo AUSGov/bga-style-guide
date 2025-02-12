@@ -9,6 +9,83 @@ $(document).ready(function () {
         $('p:empty').hide();
     }
 
+    // Create question map and store in sessionStorage
+    var question_set = JSON.parse(sessionStorage.getItem('question_set'));
+    if (!question_set) {   
+        question_set = {
+            question_set : {
+                "q1":"yes", 
+                "q2":"yes",
+                "q3":"yes",
+                "q4":"yes",
+                "q5":"yes",
+                "q6":"yes",
+                "q7":"yes",
+                "q8":"yes",
+                "q9":"yes",
+                "q10":"yes",
+                "q11":"yes", 
+                "q12":"yes",
+                "q13":"yes",
+                "q14":"yes",
+                "q15":"yes",
+                "q16":"yes",
+                "q17":"yes",
+                "q18":"yes",
+                "q19":"yes",
+                "q20":"yes",
+                "q21":"yes", 
+                "q22":"yes",
+                "q23":"yes",
+                "q24":"yes",
+                "q25":"yes",
+                "q26":"yes",
+                "q27":"yes",
+                "q28":"yes",
+                "q29":"yes",
+                "q30":"yes",
+                "q31":"yes", 
+                "q32":"yes",
+                "q33":"yes",
+                "q34":"yes",
+                "q35":"yes",
+                "q36":"yes",
+                "q37":"yes",
+                "q38":"yes",
+                "q39":"yes",
+                "q40":"yes",
+                "q41":"yes", 
+                "q42":"yes",
+                "q43":"yes",
+                "q44":"yes",
+                "q45":"yes",
+                "q46":"yes",
+                "q47":"yes",
+                "q48":"yes",
+                "q49":"yes",
+                "q50":"yes",
+                }
+            
+        };
+    };
+    console.log(question_set);
+    sessionStorage.setItem('question_set', JSON.stringify(question_set));
+
+    console.log(JSON.parse(sessionStorage.getItem('question_set')));
+
+    // SHOW / HIDE DYNAMIC QUESTIONS
+    $('.dynamic-trigger input[type=radio]').on('change', function () {
+        console.log('dynamic triggered');
+        var question = $(this).parents('.question').attr('id');
+            question_response = $(this).attr('data-value');
+       
+       question_set[question] = question_response;
+
+
+       $(this).parents('.dynamic-trigger').next('.dynamic-section').removeClass('d-none');
+    });
+
+
     // RESULT PAGES ------------------------------------------------------
     if ($('.results-page').length || $('.search-page').length) {
         console.log('results page');
