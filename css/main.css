@@ -5907,7 +5907,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .modal-example .close { text-indent: -9999px; background: transparent url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; border: none; position: absolute; height: 16px; width: 16px; top: 16px; right: 16px; display: block !important; }
 
-.modal-example .modal-utilities-button-group button { background: none; border: none; border-bottom: #2157AA solid 1px; padding: 0 0 2px 0; color: #2157AA; font-weight: 600; font-size: 1rem; display: inline-flex; align-items: center; }
+.modal-example .modal-utilities-button-group button { background: none; border: none; border-bottom: #2157AA solid 1px; padding: 0 0 2px 0; color: #2157AA; font-weight: 600; font-size: 1rem; display: inline-flex; align-items: center; min-height: auto; }
 
 .modal-example .scroll-wrapper { position: relative; background: #EFF0F2; }
 
@@ -6103,9 +6103,17 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below350 .modal-example.modal-shortlist .scroll-wrapper .scrollable { max-height: 340px; }
 
+.component-example.bp-below350 .modal-example ol { padding-left: 24px; }
+
+.component-example.bp-below350 .modal-example ol ol { padding-left: 0px; }
+
+.component-example.bp-below350 .modal-example ol ol.alphalist { padding-left: 0px; }
+
+.component-example.bp-below350 .modal-example ol ol.romanlist { padding-left: 0px; }
+
 @media (max-width: 768px) { .modal-example ol { padding-left: 32px; } .modal-example ol ol { padding-left: 32px; } .modal-example ol ol.alphalist { padding-left: 16px; } .modal-example ol ol.romanlist { padding-left: 16px; } .modal-example.modal-form { min-height: 600px; } .modal-example.modal-form form { display: none; padding: 24px; } .modal-example.modal-form form h4, .modal-example.modal-form form .h4 { display: none; } .modal-example.modal-form .component-content { flex-wrap: wrap; } .modal-example.modal-form .component-text { width: 100%; height: 100% !important; } .modal-example.modal-form .mobile-form-toggle { display: block; width: 100%; padding: 24px; background: #FFD964; border: none; margin: 0; font-size: 1.1875rem; line-height: 1.5; font-weight: 600; display: flex; justify-content: space-between; align-items: center; text-align: left; transition: transform 0.2s ease-in-out; } .modal-example.modal-form .mobile-form-toggle svg { margin-left: 16px; } .modal-example.modal-form .email-form { width: 100%; padding: 0; position: absolute; bottom: 0; z-index: 8000; box-shadow: 0px -3px 3px rgba(51, 51, 51, 0.2); } .modal-example.modal-form .email-form.open .mobile-form-toggle svg { transform: scaleY(-1); } .modal-example .scroll-wrapper .scrollable { max-height: 400px; } .modal-example.modal-shortlist .scroll-wrapper .scrollable { max-height: 370px; } .modal-example.non-branded.modal-form .mobile-form-toggle { background: #D8D8D8; } }
 
-@media (max-width: 350px) { .modal-example.modal-form.save-progress .title-area h3, .modal-example.modal-form.save-progress .title-area .h3 { flex-wrap: wrap; } .modal-example.modal-form.save-progress .title-area h3 svg, .modal-example.modal-form.save-progress .title-area .h3 svg { margin-bottom: 16px; } .modal-example.modal-shortlist .scroll-wrapper .scrollable { max-height: 340px; } }
+@media (max-width: 350px) { .modal-example.modal-form.save-progress .title-area h3, .modal-example.modal-form.save-progress .title-area .h3 { flex-wrap: wrap; } .modal-example.modal-form.save-progress .title-area h3 svg, .modal-example.modal-form.save-progress .title-area .h3 svg { margin-bottom: 16px; } .modal-example.modal-shortlist .scroll-wrapper .scrollable { max-height: 340px; } .modal-example ol { padding-left: 24px; } .modal-example ol ol { padding-left: 0px; } .modal-example ol ol.alphalist { padding-left: 0px; } .modal-example ol ol.romanlist { padding-left: 0px; } }
 
 .bga-component.feature-box { max-width: 840px; }
 
@@ -7631,15 +7639,15 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .clear-progress-link svg.non-branded path { fill: mediumblue; }
 
-.component-example.bp-350 button { min-width: 80px; font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; }
+.component-example.bp-350 .sidebar-wrapper button { min-width: 80px; font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; }
 
-.component-example.bp-below350 button { min-width: 80px; font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; }
+.component-example.bp-below350 .sidebar-wrapper button { min-width: 80px; font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; }
 
 @media (max-width: 992px) { .sidebar-wrapper.inpage.alternate { margin: 32px 0 0 0 !important; } .sidebar-wrapper.inpage.alternate.colour-example { margin: 0 !important; padding-bottom: 32px !important; } }
 
-@media (max-width: 768px) { .sidebar-wrapper.inpage { margin: 32px 0 0 0 !important; } .sidebar-wrapper.inpage.colour-example { margin: 0 !important; padding-bottom: 32px !important; } button { min-width: 80px; font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; } }
+@media (max-width: 768px) { .sidebar-wrapper.inpage { margin: 32px 0 0 0 !important; } .sidebar-wrapper.inpage.colour-example { margin: 0 !important; padding-bottom: 32px !important; } .sidebar-wrapper button { min-width: 80px; font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; } }
 
-@media (max-width: 576px) { button { min-width: 80px; font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; } }
+@media (max-width: 576px) { .sidebar-wrapper button { min-width: 80px; font-size: .875rem; line-height: 1.125rem; padding: 8px 24px; min-height: 48px; } }
 
 .bga-component.bga-default-accordion.results-accordion .accordion-item:hover { border-bottom: #ABB1BD solid 2px; }
 
