@@ -48,6 +48,7 @@
             font-size: 1rem;
             display:inline-flex;
             align-items: center;
+            min-height: auto;
         }
     }
 
@@ -509,6 +510,22 @@
                     max-height: 340px;
                 }
             }
+        }
+
+        ol { 
+            padding-left: 24px; 
+            ol { // Decimal
+                padding-left: 0px;
+               
+                &.alphalist {
+                    padding-left: 0px;
+                }
+                &.romanlist {
+                    padding-left: 0px;
+                    
+                }
+            }
+
         }
     }
 }
