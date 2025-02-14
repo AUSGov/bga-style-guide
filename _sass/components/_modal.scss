@@ -513,7 +513,15 @@
         }
 
         ol { 
-            padding-left: 24px; 
+            padding-left: 32px; 
+
+            li:has(>h3), li:has(>h4), li {
+                &::before {
+                    text-align: left !important;
+                    width: 32px;
+                    left: -32px;
+                }
+            }
             ol { // Decimal
                 padding-left: 0px;
                
