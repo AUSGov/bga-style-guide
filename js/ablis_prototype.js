@@ -14,63 +14,62 @@ $(document).ready(function () {
         if (!ablis_questions) {   
             ablis_questions = {
                responses : {
-                    "q1":"yes", 
-                    "q2":"yes",
-                    "q3":"yes",
-                    "q4":"yes",
-                    "q5":"yes",
-                    "q6":"yes",
-                    "q7":"yes",
-                    "q8":"yes",
-                    "q9":"yes",
-                    "q10":"yes",
-                    "q11":"yes", 
-                    "q12":"yes",
-                    "q13":"yes",
-                    "q14":"yes",
-                    "q15":"yes",
-                    "q16":"yes",
-                    "q17":"yes",
-                    "q18":"yes",
-                    "q19":"yes",
-                    "q20":"yes",
-                    "q21":"yes", 
-                    "q22":"yes",
-                    "q23":"yes",
-                    "q24":"yes",
-                    "q25":"yes",
-                    "q26":"yes",
-                    "q27":"yes",
-                    "q28":"yes",
-                    "q29":"yes",
-                    "q30":"yes",
-                    "q31":"yes", 
-                    "q32":"yes",
-                    "q33":"yes",
-                    "q34":"yes",
-                    "q35":"yes",
-                    "q36":"yes",
-                    "q37":"yes",
-                    "q38":"yes",
-                    "q39":"yes",
-                    "q40":"yes",
-                    "q41":"yes", 
-                    "q42":"yes",
-                    "q43":"yes",
-                    "q44":"yes",
-                    "q45":"yes",
-                    "q46":"yes",
-                    "q47":"yes",
-                    "q48":"yes",
-                    "q49":"yes",
-                    "q50":"yes",
+                    "all":"yes",
+                    "q1":"no", 
+                    "q2":"no",
+                    "q3":"no",
+                    "q4":"no",
+                    "q5":"no",
+                    "q6":"no",
+                    "q7":"no",
+                    "q8":"no",
+                    "q9":"no",
+                    "q10":"no",
+                    "q11":"no", 
+                    "q12":"no",
+                    "q13":"no",
+                    "q14":"no",
+                    "q15":"no",
+                    "q16":"no",
+                    "q17":"no",
+                    "q18":"no",
+                    "q19":"no",
+                    "q20":"no",
+                    "q21":"no", 
+                    "q22":"no",
+                    "q23":"no",
+                    "q24":"no",
+                    "q25":"no",
+                    "q26":"no",
+                    "q27":"no",
+                    "q28":"no",
+                    "q29":"no",
+                    "q30":"no",
+                    "q31":"no", 
+                    "q32":"no",
+                    "q33":"no",
+                    "q34":"no",
+                    "q35":"no",
+                    "q36":"no",
+                    "q37":"no",
+                    "q38":"no",
+                    "q39":"no",
+                    "q40":"no",
+                    "q41":"no", 
+                    "q42":"no",
+                    "q43":"no",
+                    "q44":"no",
+                    "q45":"no",
+                    "q46":"no",
+                    "q47":"no",
+                    "q48":"no",
+                    "q49":"no",
+                    "q50":"no",
                     }  
             };
-            //console.log(ablis_questions);
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
         };
-        //console.log(ablis_questions);
-        //console.log(JSON.parse(sessionStorage.getItem('question_set')));
+    
 
         // STORE QUESTION RESPONSES
         $('.question input[type=radio]').on('change', function () {
@@ -93,6 +92,12 @@ $(document).ready(function () {
                 }
         });
 
+        //Re-populate radio buttons on page load
+        if ($('.question-page').length) {
+            console.log('question page');
+
+            ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// /////////////////////////////
+        }
 
         // RESULT PAGES ------------------------------------------------------
         if ($('.results-page').length || $('.search-page').length) {
@@ -119,27 +124,25 @@ $(document).ready(function () {
             }); 
             
 
-
+            // Get question responses and display results accordingly
+            $('.ablis-result').each(function(){
+                var question = $(this).attr('data-question');
+            
+                var response = ablis_questions['responses'][question];
+                //console.log(response);
+                if (response == 'yes') {
+                    $(this).removeClass('d-none');
+                } else if (response == 'no') {
+                    $(this).addClass('d-none');
+                }
+                
+            });
+            
             // Calculate different service type counts
             var licence_count = 0,
             regulation_count = 0,
             code_count = 0,
             advisory_count = 0;
-
-            //console.log(ablis_questions['responses']);
-            for (var q in ablis_questions['responses']) {
-                //console.log(q);
-                //console.log(ablis_questions['responses']);
-                
-                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                if (ablis_questions['responses'][q] == 'yes') {
-                    $('.ablis-result["data-question" = ' + q +']').removeClass('d-none');
-                } else if (ablis_questions['responses'][q] == 'no') {
-                    $('.ablis-result["data-question" = ' + q +']').addClass('d-none');
-                }
-            }
 
             $('.ablis-result, .ablis-search-result').each(function(){
                 if ($(this).hasClass('licence') && !$(this).hasClass('d-none')) {
