@@ -65,7 +65,10 @@ $(document).ready(function () {
                     "q48":"no",
                     "q49":"no",
                     "q50":"no",
-                    }  
+                    },
+                answered : {},
+                council : "melbourne",
+                industry : "Accommodation and food services"
             };
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
         };
@@ -77,6 +80,7 @@ $(document).ready(function () {
                 response = $(this).attr('data-value');
         
                 ablis_questions['responses'][question] = response;
+                ablis_questions['answered'][question] = 'true';
                 sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
                 //console.log(JSON.parse(sessionStorage.getItem('ablis_questions')));
 
@@ -84,11 +88,20 @@ $(document).ready(function () {
 
         // SHOW / HIDE DYNAMIC QUESTIONS
         $('.dynamic-trigger input[type=radio]').on('change', function () {
-            var response = $(this).attr('data-value');
+            var response = $(this).attr('data-value'),
+            dynamic_section = $(this).parents('.dynamic-trigger').next('.dynamic-section');
+
                 if (response == "yes") {
-                    $(this).parents('.dynamic-trigger').next('.dynamic-section').removeClass('d-none');
+                    dynamic_section.removeClass('d-none');
                 } else {
-                    $(this).parents('.dynamic-trigger').next('.dynamic-section').addClass('d-none');
+                    dynamic_section.addClass('d-none');
+                    dynamic_section.find('.question').each(function(){
+                        var question = $(this).attr('id');
+                        ablis_questions['responses'][question] = 'no';
+                        delete ablis_questions['answered'][question];
+
+                        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+                    });
                 }
         });
 
@@ -96,8 +109,130 @@ $(document).ready(function () {
         if ($('.question-page').length) {
             console.log('question page');
 
-            ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// ///////////////////////////// /////////////////////////////
+            $('.question').each(function(){
+                var question = $(this).attr('id'),
+                response = ablis_questions['answered'][question],
+                dynamic_trigger;
+
+                if ($(this).hasClass('dynamic-trigger')) {
+                    dynamic_trigger = true;
+                }
+                
+                if (response) {
+                    response = ablis_questions['responses'][question];
+                    $(this).find('input[data-value='+response+']').prop('checked', true);
+
+                    if (dynamic_trigger == true) {
+                        if (response == 'yes') {
+                            $(this).next('.dynamic-section').removeClass('d-none');
+                        } else if (response == 'no') {
+                            $(this).next('.dynamic-section').addClass('d-none');
+                        }
+                    }
+                    
+                }
+            });
         }
+
+
+        // BUSINESS DETAIL QUESTIONS
+        // dynamic lists (including setting location)
+        $('.dynamic-list-ablis input').on('input', function(){
+            var input = $(this).val(),
+            input_len = input.length,
+            input_lower_case = input.toLowerCase(),
+            list_id = $(this).parents('.list-wrapper').find('ul').attr('id');
+
+            if(input) {
+                $('ul#'+ list_id).addClass('open');
+                $(this).parents('.dynamic-list-ablis').find('a#list-close').addClass('show');
+
+                var list_len = $('ul#'+ list_id + ' li').length;
+                var hidden_count = 0;
+
+                
+                $('ul#'+ list_id + ' li').each(function(){
+                    var str = $(this).text(),
+                    str_lower_case = str.toLowerCase(),
+                    str_start_pos = str_lower_case.indexOf(input_lower_case), 
+                    str_end_pos = str_start_pos + input_len;
+                    
+
+                    if (str_lower_case.includes(input_lower_case)) {
+                        $(this).removeClass('hidden');
+
+                        var case_str = str.slice(str_start_pos, str_end_pos),
+                        str_1 = str.slice(0, str_start_pos),
+                        str_2 = str.slice(str_end_pos);
+
+                        var new_str = str_1 + "<span>" + case_str + "</span>" + str_2;
+
+                        $(this).html(new_str);
+                    } else { 
+                        $(this).find("span").contents().unwrap();
+                        $(this).addClass('hidden');
+                        hidden_count++;
+                    }
+
+                });
+            } else {
+                $('ul#'+ list_id).removeClass('open');
+                $(this).parents('.dynamic-list-ablis').find('a#list-close').removeClass('show');
+            }
+
+            if (list_len == hidden_count) {
+                $(this).parents('.dynamic-list-ablis').find('.no-result').addClass('show');
+            } else {
+                $(this).parents('.dynamic-list-ablis').find('.no-result').removeClass('show');
+            } 
+            if(!list_len) {
+                $(this).parents('.dynamic-list-ablis').find('.no-result').removeClass('show');
+            };
+        });
+        $('.dynamic-list-ablis li').on('click', function(){
+            var list_item = $(this).text(),
+            parent_section = $(this).parents('.question-section').attr('id');
+
+            if (parent_section == 'location') {
+                var q_council = $(this).parents('.question-section').find('.council-question');
+                if (list_item.includes('Melbourne')) {
+                    console.log(list_item);
+                    q_council.removeClass('d-none');
+
+                } else {
+                    console.log('not melbourne');
+                    q_council.addClass('d-none');
+                }
+            };
+
+            $(this).parents('.list-wrapper').find('input').val(list_item).addClass('selected');
+
+            $('.dynamic-list-ablis li.hidden').each(function(){
+                $(this).removeClass('hidden');
+            });
+            $('a#list-close').addClass('show');
+            $(this).parents('ul').removeClass('open');
+
+            
+        });
+
+        $('a#list-close').on('click', function(){
+            $(this).parents('.dynamic-list-ablis').find('.no-result').removeClass('show');
+            $(this).parents('.dynamic-list-ablis').find('input').val('').removeClass('selected');
+            $(this).parents('.dynamic-list-ablis').find('ul').removeClass('open'); 
+            $(this).removeClass('show');
+
+            $(this).parents('.dynamic-list-ablis').find('ul li').find("span").contents().unwrap();
+            $(this).parents('.dynamic-list-ablis').find('ul li.hidden').each(function(){
+                $(this).removeClass('hidden');
+            });
+        });
+
+        
+
+
+
+
 
         // RESULT PAGES ------------------------------------------------------
         if ($('.results-page').length || $('.search-page').length) {
@@ -156,14 +291,25 @@ $(document).ready(function () {
                 } 
             });
         
-            $('.result-count.licences').text(licence_count);
-            $('.result-count.regulations').text(regulation_count);
-            $('.result-count.codes').text(code_count);
-            $('.result-count.advisory').text(advisory_count);
+            var check_service_exists = function(service_count, service_class, service_id){
+                if (service_count > 0) {
+                    $('.result-count.' + service_class).text(service_count);
+                } else {
+                    $('.summary.' + service_class).addClass('d-none');
+                    $('#' + service_id).addClass('d-none');
+                }
+            };
+
+            check_service_exists(licence_count, 'licences', 'licences-group');
+            check_service_exists(regulation_count, 'regulations', 'regulatory-obigations-group');
+            check_service_exists(code_count, 'codes', 'code-of-practice-group');
+            check_service_exists(advisory_count, 'advisory', 'advisory-materials-group');
+
+
 
             // Add total recommendations count to top of th epage
             var total_count = licence_count + regulation_count + code_count + advisory_count;
-            console.log(total_count);
+            //console.log(total_count);
             $('.showing-number span.count').text(total_count);
 
 
