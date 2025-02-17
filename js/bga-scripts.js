@@ -2347,17 +2347,19 @@ $(document).ready(function () {
         };
     });
     $('.dynamic-list li').on('click', function(){
+        console.log('clicked');
         var list_item = $(this).text();
-        $(this).parents('.list-wrapper').find('input').val(list_item);
+        $(this).parents('.list-wrapper').find('input').val(list_item).addClass('selected');
         $('.dynamic-list li.hidden').each(function(){
             $(this).removeClass('hidden')
         });
         $('a#list-close').addClass('show');
         $(this).parents('ul').removeClass('open');
     });
+
     $('a#list-close').on('click', function(){
         $(this).parents('.dynamic-list').find('.no-result').removeClass('show');
-        $(this).parents('.dynamic-list').find('input').val('');
+        $(this).parents('.dynamic-list').find('input').val('').removeClass('selected');
         $(this).parents('.dynamic-list').find('ul').removeClass('open'); 
         $(this).removeClass('show');
 
