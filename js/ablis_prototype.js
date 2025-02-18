@@ -13,7 +13,15 @@ $(document).ready(function () {
         var ablis_questions = JSON.parse(sessionStorage.getItem('ablis_questions'));
         if (!ablis_questions) {   
             ablis_questions = {
-               responses : {
+                location_1 : "",
+                location_2 : "",
+                council_1 : "",
+                council_2 : "",
+                council : "melbourne",
+                activity_1 : "",
+                activity_2 : "",
+                industry : "Accommodation and food services",
+                responses : {
                     "all":"yes",
                     "q1":"no", 
                     "q2":"no",
@@ -66,13 +74,15 @@ $(document).ready(function () {
                     "q49":"no",
                     "q50":"no",
                     },
-                answered : {},
-                council : "melbourne",
-                industry : "Accommodation and food services"
+                answered : {}
             };
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
         };
     
+        // Reset tool on start now click 
+        $('#start-now').on('click', function(){
+            sessionStorage.clear();
+        });
 
         // STORE QUESTION RESPONSES
         $('.question input[type=radio]').on('change', function () {
@@ -105,7 +115,7 @@ $(document).ready(function () {
                 }
         });
 
-        //Re-populate radio buttons on page load
+        //Re-populate answers on page load
         if ($('.question-page').length) {
             console.log('question page');
 
@@ -132,7 +142,33 @@ $(document).ready(function () {
                     
                 }
             });
+
+            $('.dynamic-list-ablis input').each(function(){
+                var list = $(this).parents('.dynamic-list-ablis'),
+                list_id = list.find('ul').attr('id'),
+                list_close = list.find('a#list-close').addClass('show'),
+                q_council = $(this).parents('.field-wrapper').find('.council-question'),
+                answer = ablis_questions[list_id];
+
+                if (answer) {
+                    $(this).val(answer);
+                    list.removeClass('d-none');
+                    list_close.addClass('show');
+
+                    if ( answer.includes('Melbourne')) {
+                        var council = ablis_questions['council'];
+                        q_council.removeClass('d-none');
+                        q_council.find('input[data-value=' + council  +']').prop('checked', true);
+                    } else {
+                        q_council.addClass('d-none');
+                    }
+                } else {
+                    list_close.removeClass('show');
+                }
+            });
         }
+      
+
 
 
         // BUSINESS DETAIL QUESTIONS
@@ -189,18 +225,20 @@ $(document).ready(function () {
                 $(this).parents('.dynamic-list-ablis').find('.no-result').removeClass('show');
             };
         });
+
         $('.dynamic-list-ablis li').on('click', function(){
             var list_item = $(this).text(),
-            parent_section = $(this).parents('.question-section').attr('id');
+            parent_list = $(this).parents('ul').attr('id');
+            //console.log(parent_list);
+            ablis_questions[parent_list] = list_item;
+                sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
 
-            if (parent_section == 'location') {
-                var q_council = $(this).parents('.question-section').find('.council-question');
+            if (parent_list.includes('location')) {
+                var q_council = $(this).parents('.field-wrapper').find('.council-question');
+    
                 if (list_item.includes('Melbourne')) {
-                    console.log(list_item);
                     q_council.removeClass('d-none');
-
                 } else {
-                    console.log('not melbourne');
                     q_council.addClass('d-none');
                 }
             };
@@ -223,11 +261,51 @@ $(document).ready(function () {
             $(this).removeClass('show');
 
             $(this).parents('.dynamic-list-ablis').find('ul li').find("span").contents().unwrap();
+            
             $(this).parents('.dynamic-list-ablis').find('ul li.hidden').each(function(){
                 $(this).removeClass('hidden');
             });
+
+            var parent_list = $(this).parents('.dynamic-list-ablis').find('ul').attr('id'); 
+
+            ablis_questions[parent_list] = "";
+            sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+
+            if (parent_list.includes('location')) {
+                var q_council = $(this).parents('.field-wrapper').find('.council-question');
+                q_council.find('input').prop("checked", false);
+                q_council.addClass('d-none');
+            } 
+
         });
 
+
+        // Get chosen council and set result page accordingly.
+        $('#council-1 input[type=radio], #council-2 input[type=radio]').on('click', function(){
+            var council = $(this).attr('data-value'),
+            field = $(this).parents('.council-question').attr('id');
+
+            ablis_questions[field] = council;
+            ablis_questions['council'] = council;
+            sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+        });
+    
+        $('#results-btn').on('click',function(){
+            var council = ablis_questions['council'];
+            window.location = '/bga-style-guide/prototypes/ablis2/finder-results/results-' + council + '-ballarat.html'; 
+        });
+
+
+        // Add another location 
+        $('.add-field').on('click', function(){
+            $(this).prev('.field-wrapper').removeClass('d-none');
+        });
+
+        // Remove additional location
+        $('.remove-field').on('click', function(){
+            $(this).parents('.field-wrapper').addClass('d-none');
+
+        });
         
 
 
