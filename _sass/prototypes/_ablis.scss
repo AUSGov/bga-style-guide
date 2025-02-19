@@ -22,6 +22,10 @@
             background: $bga-blue-background-dark;
         }
 
+       .main-header .subsite-logo span {
+            max-width: 250px;
+       }
+
     }
 
     .subsite-footer {
@@ -249,12 +253,18 @@
         display: flex;
         row-gap: 24px;
         flex-wrap: wrap;
-
-
     }
 
     .dynamic-section {
-        background: $bga-blue-highlight-light;
+        background: $bga-blue-black-lightest;
+        padding: 24px;
+        display: flex;
+        row-gap: 32px;
+        flex-wrap: wrap;
+
+        .question {
+            width: 100%;
+        }
     }
 
 
@@ -276,6 +286,7 @@
             font-weight: 600;
             font-size: 1.125rem;
             display: inline-flex;
+            flex-shrink: 0;
         }
 
         .administered {
@@ -292,7 +303,7 @@
         }
 
 
-        &.RegulatoryObligation {
+        &.Legalobligation {
             border-bottom: 8px solid $bga-orange-highlight-shadow;
 
             .service {
@@ -301,7 +312,7 @@
             }
         }
 
-        &.CodeofPractice {
+        &.Codeorstandard {
             border-bottom: 8px solid $bga-blue-highlight-shadow;
 
             .service {
@@ -310,7 +321,7 @@
             }
         }
 
-        &.AdvisoryMaterial {
+        &.Guidance {
             border-bottom: 8px solid $bga-purple-highlight-shadow;
 
             .service {

@@ -20,7 +20,8 @@ $(document).ready(function () {
                 council : "melbourne",
                 activity_1 : "",
                 activity_2 : "",
-                industry : "Accommodation and food services",
+                industry : "",
+                structure : "",
                 responses : {
                     "all":"yes",
                     "q1":"no", 
@@ -146,10 +147,10 @@ $(document).ready(function () {
             $('.dynamic-list-ablis input').each(function(){
                 var list = $(this).parents('.dynamic-list-ablis'),
                 list_id = list.find('ul').attr('id'),
-                list_close = list.find('a#list-close').addClass('show'),
+                list_close = list.find('a#list-close'),
                 q_council = $(this).parents('.field-wrapper').find('.council-question'),
                 answer = ablis_questions[list_id];
-
+               
                 if (answer) {
                     $(this).val(answer);
                     list.removeClass('d-none');
@@ -159,12 +160,23 @@ $(document).ready(function () {
                         var council = ablis_questions['council'];
                         q_council.removeClass('d-none');
                         q_council.find('input[data-value=' + council  +']').prop('checked', true);
-                    } else {
-                        q_council.addClass('d-none');
+                    } 
+
+                    if ( list_id == 'primary-activity-2' ) {
+                        $('#primary-activity .field-wrapper.d-none').removeClass('d-none');
                     }
-                } else {
-                    list_close.removeClass('show');
-                }
+                    if ( list_id == 'location_2') {
+                        $('#location .field-wrapper.d-none').removeClass('d-none');
+                    }
+                } 
+
+            });
+
+            $("select").each(function(){
+                var id = $(this).attr('id'),
+                selection = ablis_questions[id];
+                $(this).val(selection);
+
             });
         }
       
@@ -231,7 +243,7 @@ $(document).ready(function () {
             parent_list = $(this).parents('ul').attr('id');
             //console.log(parent_list);
             ablis_questions[parent_list] = list_item;
-                sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+            sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
 
             if (parent_list.includes('location')) {
                 var q_council = $(this).parents('.field-wrapper').find('.council-question');
@@ -305,6 +317,16 @@ $(document).ready(function () {
         $('.remove-field').on('click', function(){
             $(this).parents('.field-wrapper').addClass('d-none');
 
+        });
+
+
+        // Store answers from dropdown selects
+        $("select").on('change', function(){
+            var id = $(this).attr('id');
+            var selection = $(this).val();
+
+            ablis_questions[id] = selection;
+            sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
         });
         
 
