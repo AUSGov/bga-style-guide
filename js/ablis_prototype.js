@@ -7,6 +7,141 @@ $(document).ready(function () {
         console.log("ablis page");
         // Hide empty <p>
         $('p:empty').hide();
+
+
+    // Create object to store stepped nav steps (prototype 2)
+    var stepped_nav = JSON.parse(sessionStorage.getItem('stepped_nav'));
+    if (!stepped_nav) {   
+        stepped_nav = {
+            urls : {
+                'nav-step-1' : "business-details.html",
+                'nav-step-2' : "operations.html",
+                'nav-step-3' : "products-and-services.html",
+                'nav-step-4' : "workers.html",
+                'nav-step-5' : "buildings-and-land.html",
+                'nav-step-6' : "equipment-and-transport.html",
+                'nav-step-7' : "results-melbourne-ballarat.html",
+                'nav-step-8' : "results-melbourne-ballarat.html"
+            }, 
+            visited_steps : {
+                'nav-step-1' : "",
+                'nav-step-2' : "",
+                'nav-step-3' : "",
+                'nav-step-4' : "",
+                'nav-step-5' : "",
+                'nav-step-6' : "",
+                'nav-step-7' : "",
+                'nav-step-8' : ""
+            },
+            completed_steps : {
+                'nav-step-1' : "",
+                'nav-step-2' : "",
+                'nav-step-3' : "",
+                'nav-step-4' : "",
+                'nav-step-5' : "",
+                'nav-step-6' : "",
+                'nav-step-7' : "",
+                'nav-step-8' : ""
+            }
+        };
+        sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
+    };
+    // If first time visiting business details page then hide stepped nav.
+    if ($('#nav-step-1').length) {
+        if ( stepped_nav['completed_steps']['nav-step-1'] == "completed") {
+            $('.stepped-navigation-wrapper .stepped-navigation-wrapper').removeClass('d-none');
+        }
+    }
+
+    // Stepped nav functionality
+    var stepped_nav_functionality = function(path){
+        var active_step = 'nav-step-' + $('.step-title').attr('data-step');
+        $('#' + active_step).addClass('active');
+
+        stepped_nav['visited_steps'][active_step] = 'visited';
+        sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
+
+        for (var key in stepped_nav['visited_steps']) {
+            if ( stepped_nav['visited_steps'][key] == 'visited') {
+                if (!$('#' + key).hasClass('active')) {
+                    $('#' + key).addClass('visited').attr('href', path + stepped_nav['urls'][key]);
+                }
+            } 
+        }
+        for (var key in stepped_nav['completed_steps']) {
+            if ( stepped_nav['completed_steps'][key] == 'completed') {
+                $('#' + key).addClass('completed').attr('href', path + stepped_nav['urls'][key]);
+                $('#' + key).removeClass('visited');
+            }
+        }
+
+        console.log(stepped_nav['visited_steps']);
+        console.log(stepped_nav['completed_steps']);
+    };
+    
+    if ($('#ablis-prototype .stepped-navigation-wrapper').length) {
+        var path = '/bga-style-guide/prototypes/ablis2/finder/';
+        stepped_nav_functionality(path);
+    }
+
+    // Validate questions are answered and record page as completed
+    $('.next-btn').on('click', function(e){
+        e.preventDefault(); 
+        page_validated = false;
+
+        // Add page validation here
+        //------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------
+        
+        //Radio button validation & set results-btn destination
+        if ($('.question:visible').length > 0) {
+            var q_count = $('.question:visible').length,
+            validated_count = 0;
+            
+            $('.question:visible').each(function(){
+                var q_name = $(this).attr('id');
+            
+                if ($('input[name="' + q_name + '"]:checked').length > 0) {
+                    validated_count++;
+                    $(this).find('.form-element-wrapper').removeClass('error');
+                    $(this).find('.error-message').addClass('d-none');
+                } else {
+                    $(this).find('.form-element-wrapper').addClass('error');
+                    $(this).find('.error-message').removeClass('d-none');
+                }
+            });
+
+            if (q_count == validated_count) {
+                page_validated = true;
+            } else {
+                $('html, body').animate({
+                    scrollTop: $(".error:first-of-type").offset().top - 24
+                }, 400);
+            }
+        };
+
+    
+        // Recorded page as completed in sessionStorage (for stepped navigation)
+        var step = 'nav-step-' + $('.step-title').attr('data-step');
+        stepped_nav['completed_steps'][step] = 'completed';
+        sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
+
+        // Reset button destination
+        var destination = $(this).attr('href');
+        if ($(this).attr('id') == 'results-btn') {
+            var council = ablis_questions['council'];
+            destination = '/bga-style-guide/prototypes/ablis2/finder/results-' + council + '-ballarat.html'; 
+        }
+
+        if (page_validated) {
+            window.location = destination;
+        }
+        
+         
+    });
+
     
 
         // Create question map and store in sessionStorage
@@ -179,9 +314,6 @@ $(document).ready(function () {
 
             });
         }
-      
-
-
 
         // BUSINESS DETAIL QUESTIONS
         // dynamic lists (including setting location)
@@ -301,11 +433,6 @@ $(document).ready(function () {
             ablis_questions['council'] = council;
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
         });
-    
-        $('#results-btn').on('click',function(){
-            var council = ablis_questions['council'];
-            window.location = '/bga-style-guide/prototypes/ablis2/finder-results/results-' + council + '-ballarat.html'; 
-        });
 
 
         // Add another location 
@@ -329,9 +456,9 @@ $(document).ready(function () {
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
         });
         
+        
 
-
-
+       
 
 
         // RESULT PAGES ------------------------------------------------------
