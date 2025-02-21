@@ -3,7 +3,7 @@
 
 $(document).ready(function () {
 
-    if ( $("#sab-prototype ")) {
+    if ( $("#sab-prototype ").length) {
 
         var page_id = $('body').attr('id');
        
