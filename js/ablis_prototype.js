@@ -87,42 +87,95 @@ $(document).ready(function () {
     // Validate questions are answered and record page as completed
     $('.next-btn').on('click', function(e){
         e.preventDefault(); 
-        page_validated = false;
+        var radios_validated = false,
+        select_validated = false,
+        input_validated = false;
 
         // Add page validation here
         //------------------------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------------------------
         
-        //Radio button validation & set results-btn destination
-        if ($('.question:visible').length > 0) {
-            var q_count = $('.question:visible').length,
+        
+        // Radio button validation & set results-btn destination
+        if ($('.radios.required:visible').length > 0) {
+            var q_count = $('.radios.required:visible').length,
             validated_count = 0;
             
-            $('.question:visible').each(function(){
-                var q_name = $(this).attr('id');
+            $('.radios.required:visible').each(function(){
+                var q_name = $(this).parents('.radio-wrapper').attr('id');
+                console.log(q_name);
             
                 if ($('input[name="' + q_name + '"]:checked').length > 0) {
+                    console.log('valid radio');
                     validated_count++;
-                    $(this).find('.form-element-wrapper').removeClass('error');
-                    $(this).find('.error-message').addClass('d-none');
+                    $(this).parents('.form-element-wrapper').removeClass('error');
+                    $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');
                 } else {
-                    $(this).find('.form-element-wrapper').addClass('error');
-                    $(this).find('.error-message').removeClass('d-none');
+                    console.log('invalid radio');
+                    $(this).parents('.form-element-wrapper').addClass('error');
+                    $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');
                 }
             });
 
             if (q_count == validated_count) {
-                page_validated = true;
-            } else {
-                $('html, body').animate({
-                    scrollTop: $(".error:first-of-type").offset().top - 24
-                }, 400);
-            }
-        };
+                radios_validated = true;
+            } 
+        } else {
+            radios_validated = true;
+        }
 
-    
+        // Select validation
+        if ($('select.required:visible').length > 0) {
+
+            var select_count = $('select.required:visible').length,
+            selected_count = 0;
+
+            $('select.required:visible').each(function(){
+                if ($(this).val()) {
+                    selected_count++; 
+                    $(this).parents('.form-element-wrapper').removeClass('error');
+                    $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');  
+                }  else {
+                    $(this).parents('.form-element-wrapper').addClass('error');
+                    $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');  
+                }
+            });
+
+            if (select_count == selected_count) {
+                select_validated = true;
+            } else {
+                select_validated = false;
+            }
+
+        } else {
+            select_validated = true;
+        }
+
+        // Text input (dynamic lists)
+        if ($('input.required:visible').length > 0) {
+            var input_count = $('input.required:visible').length,
+            valid_count = 0;
+
+            $('input.required:visible').each(function(){
+                if ($(this).val()) {
+                    valid_count++;  
+                    $(this).parents('.form-element-wrapper').removeClass('error');
+                    $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');  
+                } else {
+                    $(this).parents('.form-element-wrapper').addClass('error');
+                    $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');
+                }
+            });
+
+            if (input_count == valid_count) {
+                input_validated = true;
+            } else {
+                input_validated = false;
+            }
+        } else {
+            input_validated = true;
+        }
+
+
         // Recorded page as completed in sessionStorage (for stepped navigation)
         var step = 'nav-step-' + $('.step-title').attr('data-step');
         stepped_nav['completed_steps'][step] = 'completed';
@@ -135,10 +188,14 @@ $(document).ready(function () {
             destination = '/bga-style-guide/prototypes/ablis2/finder/results-' + council + '-ballarat.html'; 
         }
 
-        if (page_validated) {
+        if (radios_validated == true && select_validated == true && input_validated == true) {
             window.location = destination;
+        } else {
+            console.log('not validated');
+            $('html, body').animate({
+                scrollTop: $(".error:first-of-type").offset().top - 24
+            }, 400);
         }
-        
          
     });
 
@@ -228,7 +285,8 @@ $(document).ready(function () {
                 ablis_questions['responses'][question] = response;
                 ablis_questions['answered'][question] = 'true';
                 sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
-                //console.log(JSON.parse(sessionStorage.getItem('ablis_questions')));
+                
+                $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');
 
         });
 
@@ -371,6 +429,9 @@ $(document).ready(function () {
         });
 
         $('.dynamic-list-ablis li').on('click', function(){
+            $(this).parents('.dynamic-list-ablis').find('.error-message').addClass('d-none');
+            $(this).parents('.form-element-wrapper').removeClass('error');
+
             var list_item = $(this).text(),
             parent_list = $(this).parents('ul').attr('id');
             //console.log(parent_list);
@@ -426,6 +487,8 @@ $(document).ready(function () {
 
         // Get chosen council and set result page accordingly.
         $('#council-1 input[type=radio], #council-2 input[type=radio]').on('click', function(){
+            $(this).parents('.radio-wrapper').find('.error-message').addClass('d-none').removeClass('error');
+
             var council = $(this).attr('data-value'),
             field = $(this).parents('.council-question').attr('id');
 
@@ -443,12 +506,15 @@ $(document).ready(function () {
         // Remove additional location
         $('.remove-field').on('click', function(){
             $(this).parents('.field-wrapper').addClass('d-none');
-
         });
 
 
         // Store answers from dropdown selects
         $("select").on('change', function(){
+            $(this).parents('.form-element-wrapper').removeClass('error');
+            $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');
+            
+
             var id = $(this).attr('id');
             var selection = $(this).val();
 
