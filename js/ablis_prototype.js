@@ -9,197 +9,196 @@ $(document).ready(function () {
         $('p:empty').hide();
 
 
-    // Create object to store stepped nav steps (prototype 2)
-    var stepped_nav = JSON.parse(sessionStorage.getItem('stepped_nav'));
-    if (!stepped_nav) {   
-        stepped_nav = {
-            urls : {
-                'nav-step-1' : "business-details.html",
-                'nav-step-2' : "operations.html",
-                'nav-step-3' : "products-and-services.html",
-                'nav-step-4' : "workers.html",
-                'nav-step-5' : "buildings-and-land.html",
-                'nav-step-6' : "equipment-and-transport.html",
-                'nav-step-7' : "results-melbourne-ballarat.html",
-                'nav-step-8' : "results-melbourne-ballarat.html"
-            }, 
-            visited_steps : {
-                'nav-step-1' : "",
-                'nav-step-2' : "",
-                'nav-step-3' : "",
-                'nav-step-4' : "",
-                'nav-step-5' : "",
-                'nav-step-6' : "",
-                'nav-step-7' : "",
-                'nav-step-8' : ""
-            },
-            completed_steps : {
-                'nav-step-1' : "",
-                'nav-step-2' : "",
-                'nav-step-3' : "",
-                'nav-step-4' : "",
-                'nav-step-5' : "",
-                'nav-step-6' : "",
-                'nav-step-7' : "",
-                'nav-step-8' : ""
-            }
+        // Create object to store stepped nav steps (prototype 2)
+        var stepped_nav = JSON.parse(sessionStorage.getItem('stepped_nav'));
+        if (!stepped_nav) {   
+            stepped_nav = {
+                urls : {
+                    'nav-step-1' : "business-details.html",
+                    'nav-step-2' : "operations.html",
+                    'nav-step-3' : "products-and-services.html",
+                    'nav-step-4' : "workers.html",
+                    'nav-step-5' : "buildings-and-land.html",
+                    'nav-step-6' : "equipment-and-transport.html",
+                    'nav-step-7' : "results-melbourne-ballarat.html",
+                    'nav-step-8' : "results-melbourne-ballarat.html"
+                }, 
+                visited_steps : {
+                    'nav-step-1' : "",
+                    'nav-step-2' : "",
+                    'nav-step-3' : "",
+                    'nav-step-4' : "",
+                    'nav-step-5' : "",
+                    'nav-step-6' : "",
+                    'nav-step-7' : "",
+                    'nav-step-8' : ""
+                },
+                completed_steps : {
+                    'nav-step-1' : "",
+                    'nav-step-2' : "",
+                    'nav-step-3' : "",
+                    'nav-step-4' : "",
+                    'nav-step-5' : "",
+                    'nav-step-6' : "",
+                    'nav-step-7' : "",
+                    'nav-step-8' : ""
+                }
+            };
+            sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
         };
-        sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
-    };
-    // If first time visiting business details page then hide stepped nav.
-    if ($('#nav-step-1').length) {
-        if ( stepped_nav['completed_steps']['nav-step-1'] == "completed") {
-            $('.stepped-navigation-wrapper .stepped-navigation-wrapper').removeClass('d-none');
-        }
-    }
-
-    // Stepped nav functionality
-    var stepped_nav_functionality = function(path){
-        var active_step = 'nav-step-' + $('.step-title').attr('data-step');
-        $('#' + active_step).addClass('active');
-
-        stepped_nav['visited_steps'][active_step] = 'visited';
-        sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
-
-        for (var key in stepped_nav['visited_steps']) {
-            if ( stepped_nav['visited_steps'][key] == 'visited') {
-                if (!$('#' + key).hasClass('active')) {
-                    $('#' + key).addClass('visited').attr('href', path + stepped_nav['urls'][key]);
-                }
-            } 
-        }
-        for (var key in stepped_nav['completed_steps']) {
-            if ( stepped_nav['completed_steps'][key] == 'completed') {
-                $('#' + key).addClass('completed').attr('href', path + stepped_nav['urls'][key]);
-                $('#' + key).removeClass('visited');
+        // If first time visiting business details page then hide stepped nav.
+        if ($('#nav-step-1').length) {
+            if ( stepped_nav['completed_steps']['nav-step-1'] == "completed") {
+                $('.stepped-navigation-wrapper .stepped-navigation-wrapper').removeClass('d-none');
             }
         }
 
-        console.log(stepped_nav['visited_steps']);
-        console.log(stepped_nav['completed_steps']);
-    };
-    
-    if ($('#ablis-prototype .stepped-navigation-wrapper').length) {
-        var path = '/bga-style-guide/prototypes/ablis2/finder/';
-        stepped_nav_functionality(path);
-    }
+        // Stepped nav functionality
+        var stepped_nav_functionality = function(path){
+            var active_step = 'nav-step-' + $('.step-title').attr('data-step');
+            $('#' + active_step).addClass('active');
 
-    // Validate questions are answered and record page as completed
-    $('.next-btn').on('click', function(e){
-        e.preventDefault(); 
-        var radios_validated = false,
-        select_validated = false,
-        input_validated = false;
+            stepped_nav['visited_steps'][active_step] = 'visited';
+            sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
 
-        // Add page validation here
-        //------------------------------------------------------------------------------------------------------
-        
-        
-        // Radio button validation & set results-btn destination
-        if ($('.radios.required:visible').length > 0) {
-            var q_count = $('.radios.required:visible').length,
-            validated_count = 0;
-            
-            $('.radios.required:visible').each(function(){
-                var q_name = $(this).parents('.radio-wrapper').attr('id');
-                console.log(q_name);
-            
-                if ($('input[name="' + q_name + '"]:checked').length > 0) {
-                    console.log('valid radio');
-                    validated_count++;
-                    $(this).parents('.form-element-wrapper').removeClass('error');
-                    $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');
-                } else {
-                    console.log('invalid radio');
-                    $(this).parents('.form-element-wrapper').addClass('error');
-                    $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');
+            for (var key in stepped_nav['visited_steps']) {
+                if ( stepped_nav['visited_steps'][key] == 'visited') {
+                    if (!$('#' + key).hasClass('active')) {
+                        $('#' + key).addClass('visited').attr('href', path + stepped_nav['urls'][key]);
+                    }
+                } 
+            }
+            for (var key in stepped_nav['completed_steps']) {
+                if ( stepped_nav['completed_steps'][key] == 'completed') {
+                    $('#' + key).addClass('completed').attr('href', path + stepped_nav['urls'][key]);
+                    $('#' + key).removeClass('visited');
                 }
-            });
+            }
 
-            if (q_count == validated_count) {
+            console.log(stepped_nav['visited_steps']);
+            console.log(stepped_nav['completed_steps']);
+        };
+        
+        if ($('#ablis-prototype .stepped-navigation-wrapper').length) {
+            var path = '/bga-style-guide/prototypes/ablis2/finder/';
+            stepped_nav_functionality(path);
+        }
+
+        // Validate questions are answered and record page as completed
+        $('.next-btn').on('click', function(e){
+            e.preventDefault(); 
+            var radios_validated = false,
+            select_validated = false,
+            input_validated = false;
+
+            // Add page validation here
+            //------------------------------------------------------------------------------------------------------
+            
+            
+            // Radio button validation & set results-btn destination
+            if ($('.radios.required:visible').length > 0) {
+                var q_count = $('.radios.required:visible').length,
+                validated_count = 0;
+                
+                $('.radios.required:visible').each(function(){
+                    var q_name = $(this).parents('.radio-wrapper').attr('id');
+                    console.log(q_name);
+                
+                    if ($('input[name="' + q_name + '"]:checked').length > 0) {
+                        console.log('valid radio');
+                        validated_count++;
+                        $(this).parents('.form-element-wrapper').removeClass('error');
+                        $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');
+                    } else {
+                        console.log('invalid radio');
+                        $(this).parents('.form-element-wrapper').addClass('error');
+                        $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');
+                    }
+                });
+
+                if (q_count == validated_count) {
+                    radios_validated = true;
+                } 
+            } else {
                 radios_validated = true;
-            } 
-        } else {
-            radios_validated = true;
-        }
-
-        // Select validation
-        if ($('select.required:visible').length > 0) {
-
-            var select_count = $('select.required:visible').length,
-            selected_count = 0;
-
-            $('select.required:visible').each(function(){
-                if ($(this).val()) {
-                    selected_count++; 
-                    $(this).parents('.form-element-wrapper').removeClass('error');
-                    $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');  
-                }  else {
-                    $(this).parents('.form-element-wrapper').addClass('error');
-                    $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');  
-                }
-            });
-
-            if (select_count == selected_count) {
-                select_validated = true;
-            } else {
-                select_validated = false;
             }
 
-        } else {
-            select_validated = true;
-        }
+            // Select validation
+            if ($('select.required:visible').length > 0) {
 
-        // Text input (dynamic lists)
-        if ($('input.required:visible').length > 0) {
-            var input_count = $('input.required:visible').length,
-            valid_count = 0;
+                var select_count = $('select.required:visible').length,
+                selected_count = 0;
 
-            $('input.required:visible').each(function(){
-                if ($(this).val()) {
-                    valid_count++;  
-                    $(this).parents('.form-element-wrapper').removeClass('error');
-                    $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');  
+                $('select.required:visible').each(function(){
+                    if ($(this).val()) {
+                        selected_count++; 
+                        $(this).parents('.form-element-wrapper').removeClass('error');
+                        $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');  
+                    }  else {
+                        $(this).parents('.form-element-wrapper').addClass('error');
+                        $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');  
+                    }
+                });
+
+                if (select_count == selected_count) {
+                    select_validated = true;
                 } else {
-                    $(this).parents('.form-element-wrapper').addClass('error');
-                    $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');
+                    select_validated = false;
                 }
-            });
 
-            if (input_count == valid_count) {
-                input_validated = true;
             } else {
-                input_validated = false;
+                select_validated = true;
             }
-        } else {
-            input_validated = true;
-        }
+
+            // Text input (dynamic lists)
+            if ($('input.required:visible').length > 0) {
+                var input_count = $('input.required:visible').length,
+                valid_count = 0;
+
+                $('input.required:visible').each(function(){
+                    if ($(this).val()) {
+                        valid_count++;  
+                        $(this).parents('.form-element-wrapper').removeClass('error');
+                        $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');  
+                    } else {
+                        $(this).parents('.form-element-wrapper').addClass('error');
+                        $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');
+                    }
+                });
+
+                if (input_count == valid_count) {
+                    input_validated = true;
+                } else {
+                    input_validated = false;
+                }
+            } else {
+                input_validated = true;
+            }
 
 
-        // Recorded page as completed in sessionStorage (for stepped navigation)
-        var step = 'nav-step-' + $('.step-title').attr('data-step');
-        stepped_nav['completed_steps'][step] = 'completed';
-        sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
+            // Recorded page as completed in sessionStorage (for stepped navigation)
+            var step = 'nav-step-' + $('.step-title').attr('data-step');
+            stepped_nav['completed_steps'][step] = 'completed';
+            sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
 
-        // Reset button destination
-        var destination = $(this).attr('href');
-        if ($(this).attr('id') == 'results-btn') {
-            var council = ablis_questions['council'];
-            destination = '/bga-style-guide/prototypes/ablis2/finder/results-' + council + '-ballarat.html'; 
-        }
+            // Reset button destination
+            var destination = $(this).attr('href');
+            if ($(this).attr('id') == 'results-btn') {
+                var council = ablis_questions['council'];
+                destination = '/bga-style-guide/prototypes/ablis2/finder/results-' + council + '-ballarat.html'; 
+            }
 
-        if (radios_validated == true && select_validated == true && input_validated == true) {
-            window.location = destination;
-        } else {
-            console.log('not validated');
-            $('html, body').animate({
-                scrollTop: $(".error:first-of-type").offset().top - 24
-            }, 400);
-        }
-         
-    });
+            if (radios_validated == true && select_validated == true && input_validated == true) {
+                window.location = destination;
+            } else {
+                console.log('not validated');
+                $('html, body').animate({
+                    scrollTop: $(".error:first-of-type").offset().top - 24
+                }, 400);
+            }
+            
+        });
 
-    
 
         // Create question map and store in sessionStorage
         var ablis_questions = JSON.parse(sessionStorage.getItem('ablis_questions'));
@@ -528,7 +527,7 @@ $(document).ready(function () {
 
 
         // RESULT PAGES ------------------------------------------------------
-        if ($('.results-page').length || $('.search-page').length) {
+        if ($('.results-page').length ) {
             console.log('results page');
 
             // Sticky header
@@ -654,12 +653,36 @@ $(document).ready(function () {
                     $(this).text('more...');
                 }
             });
-        }
+        };
+
+
+
+        // SEARCH PAGE -------------------------------------------------------
+
+        var ablis_search = JSON.parse(sessionStorage.getItem('ablis_search'));
+        if (!ablis_search) {   
+            ablis_search = {
+                search_term : "",
+                search_location : ""
+            };
+            sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+        };
+        if ($('.search-page').length) {
+            console.log('search page');
+
+            $('#search-btn').on('click', function(){
+                ablis_search['search_term'] = $('#search_keyword').val();
+                ablis_search['search_location'] = $('.dynamic-list-ablis input').val();
+
+                sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+                
+                //window.location = 'bga-style-guide/prototypes/ablis2/search/Food-safety-in-Melbourne.html';
+            });
+        };
 
 
     }
     
 
 }); // End doc ready
-
 
