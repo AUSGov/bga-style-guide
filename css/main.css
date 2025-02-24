@@ -12410,23 +12410,45 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .callout-box.contact .component-text p:last-of-type { margin-bottom: 0; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources { display: flex; row-gap: 8px; flex-wrap: wrap; }
+#ablis-prototype .callout-box.ablis-apply { /* .rego-resources { display: flex; row-gap: 8px; flex-wrap: wrap; .resource { width: 100%; display: flex; column-gap: 16px; .rego-link { width: 100%; background: $bga-white; display: flex; column-gap: 16px; align-items: center; padding-right: 16px; .task { font-weight: 600; width: 120px; display: flex; align-items: center; justify-content: center; height: 100%; min-height: 50px; background: $bga-yellow-links-background; flex-shrink: 0; } .description { background: url('../assets/iconography/icon-arrow-right-blue.svg') no-repeat left center; background-size: 20px 20px; display: inline-flex; align-items: center; justify-content: center; padding: 8px 0 8px 32px; a { font-weight: 600; } i.fa { display: none; } } &.pdf-icon, &.doc-icon { .description { background: url('../assets/iconography/icon-download-blue.svg') no-repeat left center; background-size: 20px 20px; } } &.no-link { .description { background: url('../assets/iconography/icon-person-blue.svg') no-repeat left center; background-size: 20px 20px; } } } } } */ }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource { width: 100%; display: flex; column-gap: 16px; }
+#ablis-prototype .callout-box.ablis-apply .application-links { display: flex; flex-wrap: wrap; row-gap: 8px; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link { width: 100%; background: #ffffff; display: flex; column-gap: 16px; align-items: center; padding-right: 16px; }
+#ablis-prototype .callout-box.ablis-apply .application-links .icon-wrapper { background: #FFD964 url(../assets/icon-arrow-right-black.svg) no-repeat; background-position: center center; background-size: 24px 24px; flex-shrink: 0; flex-grow: 0; height: 100%; width: 72px; display: flex; align-items: center; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .task { font-weight: 600; width: 120px; display: flex; align-items: center; justify-content: center; height: 100%; min-height: 50px; background: #FFCF3B; flex-shrink: 0; }
+#ablis-prototype .callout-box.ablis-apply .application-links .icon-wrapper.download-icon { background-image: url(../assets/icon-download-black.svg); }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .description { background: url("../assets/iconography/icon-arrow-right-blue.svg") no-repeat left center; background-size: 20px 20px; display: inline-flex; align-items: center; justify-content: center; padding: 8px 0 8px 32px; }
+#ablis-prototype .callout-box.ablis-apply .application-links .icon-wrapper.person-icon { background-image: url(../assets/icon-person-black.svg); }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .description a { font-weight: 600; }
+#ablis-prototype .callout-box.ablis-apply .application-links .content-wrapper { flex-grow: 1; display: flex; flex-wrap: wrap; row-gap: 8px; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .description i.fa { display: none; }
+#ablis-prototype .callout-box.ablis-apply .application-links a { display: flex; align-items: center; width: 100%; text-decoration: none; background: #ffffff; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.pdf-icon .description, #ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.doc-icon .description { background: url("../assets/iconography/icon-download-blue.svg") no-repeat left center; background-size: 20px 20px; }
+#ablis-prototype .callout-box.ablis-apply .application-links a.no-link { cursor: default !important; background: #ffffff !important; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.no-link .description { background: url("../assets/iconography/icon-person-blue.svg") no-repeat left center; background-size: 20px 20px; }
+#ablis-prototype .callout-box.ablis-apply .application-links a .link-title { margin: 0; width: 100%; }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a span.task { color: #333333; text-decoration: none !important; }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a span.title { color: #2157AA; text-decoration: underline !important; }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a span.title.no-link { color: #333333; text-decoration: none !important; }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a:focus-visible { background: #E4E6EA; }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a:focus-visible .icon-wrapper { background-color: #FFCF3B; background-image: url(../assets/icon-arrow-right-black.svg); }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a:focus-visible .icon-wrapper.download-icon { background-image: url(../assets/icon-download-black.svg); }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a:focus-visible .icon-wrapper.person-icon { background-image: url(../assets/icon-person-black.svg); }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a:hover { cursor: pointer; background: #E4E6EA; }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a:hover .icon-wrapper { background-color: #FFCF3B; background-image: url(../assets/icon-arrow-right-black.svg); }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a:hover .icon-wrapper.download-icon { background-image: url(../assets/icon-download-black.svg); }
+
+#ablis-prototype .callout-box.ablis-apply .application-links a:hover .icon-wrapper.person-icon { background-image: url(../assets/icon-person-black.svg); }
 
 #ablis-prototype .callout-box.ablis-apply .component-text { display: flex; flex-wrap: wrap; row-gap: 24px; width: 100%; }
 
