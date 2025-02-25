@@ -90,10 +90,6 @@ $(document).ready(function () {
             var radios_validated = false,
             select_validated = false,
             input_validated = false;
-
-            // Add page validation here
-            //------------------------------------------------------------------------------------------------------
-            
             
             // Radio button validation & set results-btn destination
             if ($('.radios.required:visible').length > 0) {
@@ -523,7 +519,38 @@ $(document).ready(function () {
         
         
 
-       
+        //FUNCTIONS FOR SEACH TILES ON RESULTS AND KEYWORD SEARCH PAGES
+
+        // Set heights for descriptions in result tiles using the height of a cloned element 
+        var set_description_heights = function(wrapper){
+            $('.serviceSection').each(function(){
+                $(this).find(':first-child').find(':first-child').addClass('first-element');
+                
+                var clone = $(this).clone().css({'padding-left':'48px', 'padding-right':'40px'}).appendTo(wrapper).addClass('clone');
+                var first_elem = clone.find(':first-child').find(':first-child');
+                var first_elem_height = first_elem.height();
+                $(this).height(first_elem_height);
+        
+                clone.remove();       
+            });
+        };
+
+        // Open / close descriptions in result tiles
+        var open_close_descriptions = function(result_tile){  
+            var description_wrapper = result_tile.parents('.description').find('.serviceSection'),
+            first_elem = description_wrapper.find('.first-element');
+            first_elem_height = first_elem.height();
+
+            if (description_wrapper.height() == first_elem.height()) {
+                description_wrapper.height('auto');
+                result_tile.text('less...');
+            } else {
+                description_wrapper.height(first_elem_height);
+                result_tile.text('more...');
+            }
+        };
+    
+
 
 
         // RESULT PAGES ------------------------------------------------------
@@ -621,37 +648,17 @@ $(document).ready(function () {
             });
 
             // Set heights for descriptions in result tiles using the height of a cloned element 
-            var set_description_heights = function(){
-                $('.serviceSection').each(function(){
-                    $(this).find(':first-child').find(':first-child').addClass('first-element');
-                    
-                    var clone = $(this).clone().css({'padding-left':'48px', 'padding-right':'40px'}).appendTo('.results-wrapper').addClass('clone');
-                    var first_elem = clone.find(':first-child').find(':first-child');
-                    var first_elem_height = first_elem.height();
-                    $(this).height(first_elem_height);
-            
-                    clone.remove();       
-                });
-            };
-            set_description_heights();
+            set_description_heights('.results-wrapper');
             
             $(window).resize(function () {
-                set_description_heights();
+                set_description_heights('.results-wrapper');
+                ////////////////////////////////////////////////////////////////////////////////
             }); 
 
             // Open / close descriptions in result tiles
             $('.ablis-result .expand, .ablis-search-result .expand').on('click', function(){
-                var description_wrapper = $(this).parents('.description').find('.serviceSection'),
-                first_elem = description_wrapper.find('.first-element');
-                first_elem_height = first_elem.height();
-
-                if (description_wrapper.height() == first_elem.height()) {
-                    description_wrapper.height('auto');
-                    $(this).text('less...');
-                } else {
-                    description_wrapper.height(first_elem_height);
-                    $(this).text('more...');
-                }
+                open_close_descriptions($(this));
+                
             });
         };
 
@@ -660,6 +667,8 @@ $(document).ready(function () {
         // SEARCH PAGE -------------------------------------------------------
 
         var ablis_search = JSON.parse(sessionStorage.getItem('ablis_search'));
+
+        // Save keyword search variables in sessionStorage
         if (!ablis_search) {   
             ablis_search = {
                 search_term : "",
@@ -667,17 +676,91 @@ $(document).ready(function () {
             };
             sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
         };
+
+        // Check is search page
         if ($('.search-page').length) {
             console.log('search page');
 
-            $('#search-btn').on('click', function(){
-                ablis_search['search_term'] = $('#search_keyword').val();
-                ablis_search['search_location'] = $('.dynamic-list-ablis input').val();
+            // Repopulate the page on refresh if the two search terms have been entered already.
+            if ( !ablis_search['search_term'] == "" && !ablis_search['search_location'] == "" ) {
+                var keyword = ablis_search['search_term'],
+                location = ablis_search['search_location'];
 
-                sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+                $('#search_keyword').val(keyword);
+                $('.dynamic-list-ablis input').val(location);
+                $('a#list-close').addClass('show');
+
+                $('.content-sticky-wrapper').removeClass('d-none');
+
+                $('.showing-number span.keyword').text(keyword);
+                $('.showing-number span.location').text(location);
                 
-                //window.location = 'bga-style-guide/prototypes/ablis2/search/Food-safety-in-Melbourne.html';
+                set_description_heights('.results-wrapper');
+            }
+
+            // Set heights for descriptions in result tiles using the height of a cloned element 
+            set_description_heights('.results-wrapper');
+
+            // Open / close descriptions in result tiles
+            $('.ablis-search-result .expand').on('click', function(){
+                open_close_descriptions($(this));  
             });
+
+
+            // Search button click
+            $('#search-btn').on('click', function(){
+                var keyword = $('#search_keyword').val(),
+                location = $('.dynamic-list-ablis input').val();
+
+                if (keyword && location) {
+                    $('.showing-number span.keyword').text(keyword);
+                    $('.showing-number span.location').text(location);
+                    
+                    ablis_search['search_term'] = keyword;
+                    ablis_search['search_location'] = location;
+                    sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+                    
+                    $('.content-sticky-wrapper').removeClass('d-none');
+                    set_description_heights('.results-wrapper');
+
+                    setTimeout(function () { 
+                        $('html, body').animate({
+                            scrollTop: $(".showing-header-container").offset().top
+                        }, 100);
+                    }, 200);   
+                } else {
+                    if (!keyword) {
+                        $('.keyword-wrapper .form-element-wrapper').addClass('error');
+                        $('.keyword-wrapper .error-message').removeClass('d-none');
+                    }  
+                    if (!location) {
+                        $('.location-wrapper .form-element-wrapper').addClass('error');
+                        $('.location-wrapper .error-message').removeClass('d-none');
+                    };
+                };
+                
+            
+
+            });
+
+            // Reset form button click
+            $('#reset-btn').on('click', function(){
+                ablis_search['search_term'] = "";
+                ablis_search['search_location'] = "";
+                sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+
+                $('#search_keyword').val("");
+                $('.dynamic-list-ablis input').val("");
+
+                $('.content-sticky-wrapper').addClass('d-none');
+            });
+
+            // Remove error state on input change (for search term)
+            $('.keyword-wrapper input').on('change', function(){
+                $(this).parents('.form-element-wrapper').removeClass('error');
+                $(this).parents('.keyword-wrapper').find('.error-message').addClass('d-none');
+            });
+            
         };
 
 
