@@ -672,7 +672,17 @@ $(document).ready(function () {
         if (!ablis_search) {   
             ablis_search = {
                 search_term : "",
-                search_location : ""
+                search_location : "",
+                active_filters : {
+                    'licence' : false,
+                    'regulatory-obligation' : false,
+                    'code-of-practice' : false,
+                    'advisory-material' : false,
+                    'city-of-melbourne' : false,
+                    'city-of-port-phillip' : false,
+                    'victorian-state-government' : false,
+                    'australian-government' : false
+                }
             };
             sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
         };
@@ -761,6 +771,54 @@ $(document).ready(function () {
                 $(this).parents('.keyword-wrapper').find('.error-message').addClass('d-none');
             });
             
+
+            // Keyword search filters
+            // Calculate number of search results for each filter
+            var filter_counts = {
+                'licence' : $('.ablis-search-result.licence').length,
+                'regulatory-obligation' : $('.ablis-search-result.regulatory-obligation').length,
+                'code-of-practice' : $('.ablis-search-result.code-of-practice').length,
+                'advisory-material' : $('.ablis-search-result.advisory-material').length,
+                'city-of-melbourne' : $('.ablis-search-result.city-of-melbourne').length,
+                'city-of-port-phillip' : $('.ablis-search-result.city-of-port-phillip').length,
+                'victorian-state-government' : $('.ablis-search-result.victorian-state-government').length,
+                'australian-government' : $('.ablis-search-result.australian-government').length
+            };
+
+            for (var item in filter_counts) {
+                $('.filter-item label[data-label=' + item + '] span').text('(' + filter_counts[item] + ')');
+            }
+
+            // Record when filters are selected / unselected on checkbox click
+
+            var check_active_filters = function(){
+                for (var item in ablis_search['active_filters']) {
+                    console.log(item, ablis_search['active_filters'][item]);
+                };
+            };
+
+            $('.filter-item .checkbox-item').on('click', function(){
+                var filter = $(this).find('label').attr('data-label'),
+                checkbox = $(this).find('input');
+
+                if (checkbox.is(":checked")) {
+                    ablis_search['active_filters'][filter] = true;
+                } else {
+                    ablis_search['active_filters'][filter] = false;
+                }
+                sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+                
+                check_active_filters();
+            });
+            // Record when filters are deselected using the bubbles
+            $('.active-filters li').on('click', function(){
+                var filter = $(this).attr('data-value');
+                ablis_search['active_filters'][filter] = false;
+                sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+
+                check_active_filters();
+            }); 
+          
         };
 
 
