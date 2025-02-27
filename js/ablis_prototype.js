@@ -784,18 +784,113 @@ $(document).ready(function () {
                 'victorian-state-government' : $('.ablis-search-result.victorian-state-government').length,
                 'australian-government' : $('.ablis-search-result.australian-government').length
             };
+            
+            var primary_filters = ['licence','regulatory-obligation', 'code-of-practice', 'advisory-material'];
 
             for (var item in filter_counts) {
                 $('.filter-item label[data-label=' + item + '] span').text('(' + filter_counts[item] + ')');
             }
 
             // Record when filters are selected / unselected on checkbox click
-
-            var check_active_filters = function(){
-                for (var item in ablis_search['active_filters']) {
-                    console.log(item, ablis_search['active_filters'][item]);
-                };
+            var hide_more_than_10 = function(result_tile){ 
+                $(result_tile).each(function(index, result) {
+                    if ( index < 10 ) {
+                        $(result).removeClass('d-none');
+                    } else {
+                        $(result).addClass('d-none');
+                    }
+                });
             };
+
+           
+            var check_active_filters = function(){
+                // Determine if any filters are active
+                var active_filters = false,
+                primary_active_filters = false;
+                
+                for (var item in ablis_search['active_filters']) {
+                    if (ablis_search['active_filters'][item] == true) {
+                        active_filters = true;
+
+                        if (primary_filters.includes(item)) {
+                            primary_active_filters = true;
+                        }
+                    }
+                };
+                //console.log('A primary filter is active', primary_active_filters);
+
+
+                // Return to default page view if no filters are active
+                if (active_filters == false) {
+                    $('h2.showing-number span.count').text($('.ablis-search-result').length);
+                    hide_more_than_10('.ablis-search-result');
+                
+                } 
+                // Filter results if there are active filters
+                else if (active_filters == true) {
+                    // Hide all results to start with
+                    $('.ablis-search-result').each(function(){
+                        $(this).addClass('d-none');
+                    });
+
+                    // Check is any active filters are primary filters
+                    /*if (primary_active_filters == true) {
+                        for (var item in ablis_search['active_filters']) {
+                            // Display result if it's primary filter is active
+                            if (ablis_search['active_filters'][item] == true && primary_filters.includes(item)) {
+                                console.log("i am  primary active");
+                                $('.ablis-search-result.' + item).removeClass('d-none'); 
+                            } 
+                            // Then use the secondary filters to narrow the primary filtered results
+                            else if (ablis_search['active_filters'][item] == true && !primary_filters.includes(item)) {
+                                console.log("i am secondary active and a primary is already active");
+
+                                $('.ablis-search-result.' + item + ':visible').addClass('secondary-reveal'); 
+                            } 
+    
+                        };
+                    } */
+
+                    /*
+                    // Display selected primary filters by search the full set of results
+                    for (var item in ablis_search['active_filters']) {
+
+                        if (ablis_search['active_filters'][item] == true) {
+                            if (primary_filters.includes(item)) {
+                                $('.ablis-search-result.' + item).removeClass('d-none'); 
+                            }
+                        }
+
+                    };
+                    */
+
+                    // Add primary/secondary classes to results based on active filters
+                    for (var item in ablis_search['active_filters']) {
+                        if (ablis_search['active_filters'][item] == true) {
+                            console.log(item);
+                            if ( primary_filters.includes(item) ) {
+                                $('.ablis-search-result.' + item).addClass('primary_active');
+                            } else {
+                                $('.ablis-search-result.' + item).addClass('secondary_active');
+                            }
+                        } else {
+                            $('.ablis-search-result.' + item).removeClass('primary_active secondary_active');
+                        }
+                    }
+                    
+
+                    // Display the filtered result count
+                    var result_count = $('.ablis-search-result').length - $('.ablis-search-result.d-none').length;
+                    $('h2.showing-number span.count').text(result_count);
+
+                    // If more than 10 results are visible on the page hide the extras.
+                    hide_more_than_10('.ablis-search-result:visible');
+                  
+                }
+            };
+
+
+
 
             $('.filter-item .checkbox-item').on('click', function(){
                 var filter = $(this).find('label').attr('data-label'),
@@ -803,6 +898,7 @@ $(document).ready(function () {
 
                 if (checkbox.is(":checked")) {
                     ablis_search['active_filters'][filter] = true;
+
                 } else {
                     ablis_search['active_filters'][filter] = false;
                 }
@@ -810,6 +906,7 @@ $(document).ready(function () {
                 
                 check_active_filters();
             });
+
             // Record when filters are deselected using the bubbles
             $('.active-filters li').on('click', function(){
                 var filter = $(this).attr('data-value');
