@@ -2118,7 +2118,6 @@ $(document).ready(function () {
 
          // Remove dynamic filter group title
          if ( !$('.checkboxes-dynamic #' + item_parent + ' input' ).is(":checked") ) {
-            console.log('childless');
             if ( $('.filters.single-select-dynamic select').val() != item_parent ) {
                 $('.filter-group-title.' + item_parent).removeClass('show');
             } 
