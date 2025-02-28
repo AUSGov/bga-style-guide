@@ -530,6 +530,10 @@ $(document).ready(function () {
                 var first_elem = clone.find(':first-child').find(':first-child');
                 var first_elem_height = first_elem.height();
                 $(this).height(first_elem_height);
+
+                if ($(this).find(':first-child').children().length == 1) {
+                    $(this).parents('.result-content').find('.expand').addClass('d-none');
+                }   
         
                 clone.remove();       
             });
@@ -661,7 +665,6 @@ $(document).ready(function () {
                 
             });
         };
-
 
 
         // SEARCH PAGE -------------------------------------------------------
