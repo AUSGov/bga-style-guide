@@ -843,9 +843,9 @@
             <div class="row">
 
 
-                <div class="anchor-menu-wrapper remove-top-spaces col-12 col-sm-3">
+                <div class="anchor-menu-wrapper remove-top-spaces col-12 col-sm-3 mb-5">
 
-                    <div class="filters checkboxes-primary">
+                    <div class="filters ablis-filters checkboxes-primary">
 
                         <div class="filter-item" id="service-type">
                     
@@ -883,7 +883,7 @@
 
 
 
-                    <div class="filters checkboxes-secondary">
+                    <div class="filters ablis-filters checkboxes-secondary mb-4">
 
                         <div tabindex="0" class="filter-item pt-3 pb-2" id="administered">
                             <div class="filter-item-title remove-element-padding">
@@ -999,6 +999,14 @@
                     -->
                     
                     </div>
+
+                   
+                        
+                    <button class="btn-clear-filters d-flex"  role="button" tabindex="0" id="clear-filters">
+                        <span class="text-decoration-underline text-nowrap">Clear all filters</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)"></path></svg>
+                    </button>
+                    
                     
                 </div>
 
@@ -1007,6 +1015,67 @@
                     <div class="remove-top-spaces results-wrapper">
 
                         {{ content }}
+
+                        <div class="bga-pagination {{include.classes}} remove-element-padding mt-0 mb-5 p-0">
+
+                            <div class="pagination-links">
+                                <ul class="d-flex px-0 pt-0 pb-2 ">
+                                   
+                                    
+                                    <li class="number current" data-position="1"><a>1</a></li>
+                                    <li class="number" data-position="2"><a>2</a></li>
+                                   
+                        
+                                    <li class="next" data-position="next"><a>
+                                            Next
+                                            <svg class="ms-2" data-name="Icon / right" xmlns="http://www.w3.org/2000/svg" width="7.5" height="12"
+                                                viewBox="0 0 7.5 12">
+                                                <path data-name="Chevron / Right" d="M4.521,6,0,10.513,1.489,12,7.5,6,1.489,0,0,1.487Z" />
+                                            </svg>
+                                        </a></li>
+                        
+                        
+                                    <li class="last" data-position="last"><a>
+                                            Last
+                                            <svg class="ms-2" data-name="Icon / chevron double / right" xmlns="http://www.w3.org/2000/svg" width="12"
+                                                height="12" viewBox="0 0 12 12">
+                                                <path data-name="Chevron Double / Right"
+                                                    d="M4.5,10.513,9.021,6,4.5,1.487,5.989,0,12,6,5.989,12Zm-4.5,0L4.521,6,0,1.487,1.49,0,7.5,6,1.49,12Z" />
+                                            </svg>
+                                        </a></li>
+                                </ul>   
+                            </div>
+                        
+                        
+                            <div class="below-pagination mt-2 d-flex">
+                                <div class="page-number remove-element-padding">
+                                    <p>Page <span>1</span> of 2</p>
+                                </div>
+                                <div class="items-number d-flex">
+                                    <p class="m-0">Results per page</p>
+                                    <select id="results-per-page">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                </div>
+                            </div>
+                        
+                        
+                        </div>
+
+                        <div class="no-results remove-element-padding d-none mb-5">
+                           
+                            <h3>We couldn't find any results that match your current filters.</h3>
+                           
+                            <p>While you're here, you might like to:</p>
+                            <ul>
+                            <li> explore other <a>business information on business.gov.au</a></li>
+                            <li><a>find a business adviser</a></li>
+                            <li><a>subscribe to the business.gov.au newsletter</a> to stay up-to-date on the latest business news and opportunities.</li>
+                            </ul>
+                        </div>
+                        
 
                     </div>
                 </div>
