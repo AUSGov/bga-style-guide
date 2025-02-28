@@ -673,16 +673,7 @@ $(document).ready(function () {
             ablis_search = {
                 search_term : "",
                 search_location : "",
-                active_filters : {
-                    'licence' : false,
-                    'regulatory-obligation' : false,
-                    'code-of-practice' : false,
-                    'advisory-material' : false,
-                    'city-of-melbourne' : false,
-                    'city-of-port-phillip' : false,
-                    'victorian-state-government' : false,
-                    'australian-government' : false
-                }
+                active_filters : {'licence' : false, 'regulatory-obligation' : false, 'code-of-practice' : false, 'advisory-material' : false, 'city-of-melbourne' : false, 'city-of-port-phillip' : false, 'victorian-state-government' : false, 'australian-government' : false}
             };
             sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
         };
@@ -690,24 +681,7 @@ $(document).ready(function () {
         // Check is search page
         if ($('.search-page').length) {
             console.log('search page');
-
-            // Repopulate the page on refresh if the two search terms have been entered already.
-            if ( !ablis_search['search_term'] == "" && !ablis_search['search_location'] == "" ) {
-                var keyword = ablis_search['search_term'],
-                location = ablis_search['search_location'];
-
-                $('#search_keyword').val(keyword);
-                $('.dynamic-list-ablis input').val(location);
-                $('a#list-close').addClass('show');
-
-                $('.content-sticky-wrapper').removeClass('d-none');
-
-                $('.showing-number span.keyword').text(keyword);
-                $('.showing-number span.location').text(location);
-                
-                set_description_heights('.results-wrapper');
-            }
-
+            
             // Set heights for descriptions in result tiles using the height of a cloned element 
             set_description_heights('.results-wrapper');
 
@@ -757,6 +731,8 @@ $(document).ready(function () {
             $('#reset-btn').on('click', function(){
                 ablis_search['search_term'] = "";
                 ablis_search['search_location'] = "";
+                ablis_search['active_filters'] = {'licence' : false, 'regulatory-obligation' : false, 'code-of-practice' : false, 'advisory-material' : false, 'city-of-melbourne' : false, 'city-of-port-phillip' : false, 'victorian-state-government' : false, 'australian-government' : false}
+
                 sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
 
                 $('#search_keyword').val("");
@@ -773,6 +749,10 @@ $(document).ready(function () {
             
 
             // Keyword search filters
+            var primary_filters = ['licence','regulatory-obligation', 'code-of-practice', 'advisory-material'],
+            secondary_filters = ['city-of-melbourne', 'city-of-port-phillip', 'victorian-state-government', 'australian-government'];
+
+
             // Calculate number of search results for each filter
             var filter_counts = {
                 'licence' : $('.ablis-search-result.licence').length,
@@ -784,9 +764,6 @@ $(document).ready(function () {
                 'victorian-state-government' : $('.ablis-search-result.victorian-state-government').length,
                 'australian-government' : $('.ablis-search-result.australian-government').length
             };
-            
-            var primary_filters = ['licence','regulatory-obligation', 'code-of-practice', 'advisory-material'];
-
             for (var item in filter_counts) {
                 $('.filter-item label[data-label=' + item + '] span').text('(' + filter_counts[item] + ')');
             }
@@ -805,98 +782,103 @@ $(document).ready(function () {
            
             var check_active_filters = function(){
                 // Determine if any filters are active
-                var active_filters = false,
-                primary_active_filters = false;
+                var primary_active_filters = false,
+                secondary_active_filters = false;
                 
                 for (var item in ablis_search['active_filters']) {
                     if (ablis_search['active_filters'][item] == true) {
-                        active_filters = true;
-
                         if (primary_filters.includes(item)) {
                             primary_active_filters = true;
                         }
+                        if (secondary_filters.includes(item)) {
+                            secondary_active_filters = true;
+                        }
                     }
                 };
-                //console.log('A primary filter is active', primary_active_filters);
-
 
                 // Return to default page view if no filters are active
-                if (active_filters == false) {
+                if (primary_active_filters == false && secondary_active_filters == false) {
                     $('h2.showing-number span.count').text($('.ablis-search-result').length);
                     hide_more_than_10('.ablis-search-result');
-                
+
+                    $('.bga-pagination').removeClass('d-none');
+                    $('.no-results').addClass('d-none');
                 } 
-                // Filter results if there are active filters
-                else if (active_filters == true) {
+                // Filter results if there are a primary and secondary filters active
+                else if (primary_active_filters == true && secondary_active_filters == true) {
+                    // Hide all results to start with
+                     $('.ablis-search-result').each(function(){
+                        $(this).addClass('d-none');
+                    });
+
+                    for (var item in ablis_search['active_filters']) {
+                        if (ablis_search['active_filters'][item] == true){
+                            if (primary_filters.includes(item)) {
+                                $('.ablis-search-result.' + item).removeClass('d-none'); 
+                            } 
+                        }
+                    };
+
+                    for (var i=0; i < secondary_filters.length; i++) {
+                        if ((ablis_search['active_filters'][secondary_filters[i]] == false)) {
+                            $('.ablis-search-result.' + secondary_filters[i]).addClass('d-none'); 
+                        }
+                    };
+                    
+                    // Display the filtered result count
+                    var result_count = $('.ablis-search-result').length - $('.ablis-search-result.d-none').length;
+                    $('h2.showing-number span.count').text(result_count);
+
+                    if (result_count == 0) {
+                        $('.bga-pagination').addClass('d-none');
+                        $('.no-results').removeClass('d-none');
+                    } else {
+                        $('.bga-pagination').removeClass('d-none');
+                        $('.no-results').addClass('d-none');
+                    }
+
+                    // If more than 10 results are visible on the page hide the extras.
+                    hide_more_than_10('.ablis-search-result:visible');
+ 
+                }
+                // Filter results if there are only primary, or only secondary filters active
+                else {
+                    
                     // Hide all results to start with
                     $('.ablis-search-result').each(function(){
                         $(this).addClass('d-none');
                     });
 
-                    // Check is any active filters are primary filters
-                    /*if (primary_active_filters == true) {
-                        for (var item in ablis_search['active_filters']) {
-                            // Display result if it's primary filter is active
-                            if (ablis_search['active_filters'][item] == true && primary_filters.includes(item)) {
-                                console.log("i am  primary active");
-                                $('.ablis-search-result.' + item).removeClass('d-none'); 
-                            } 
-                            // Then use the secondary filters to narrow the primary filtered results
-                            else if (ablis_search['active_filters'][item] == true && !primary_filters.includes(item)) {
-                                console.log("i am secondary active and a primary is already active");
-
-                                $('.ablis-search-result.' + item + ':visible').addClass('secondary-reveal'); 
-                            } 
-    
-                        };
-                    } */
-
-                    /*
-                    // Display selected primary filters by search the full set of results
+                    // Display all primary filtered results
                     for (var item in ablis_search['active_filters']) {
-
                         if (ablis_search['active_filters'][item] == true) {
-                            if (primary_filters.includes(item)) {
-                                $('.ablis-search-result.' + item).removeClass('d-none'); 
-                            }
+                            $('.ablis-search-result.' + item).removeClass('d-none'); 
                         }
-
                     };
-                    */
-
-                    // Add primary/secondary classes to results based on active filters
-                    for (var item in ablis_search['active_filters']) {
-                        if (ablis_search['active_filters'][item] == true) {
-                            console.log(item);
-                            if ( primary_filters.includes(item) ) {
-                                $('.ablis-search-result.' + item).addClass('primary_active');
-                            } else {
-                                $('.ablis-search-result.' + item).addClass('secondary_active');
-                            }
-                        } else {
-                            $('.ablis-search-result.' + item).removeClass('primary_active secondary_active');
-                        }
-                    }
-                    
 
                     // Display the filtered result count
                     var result_count = $('.ablis-search-result').length - $('.ablis-search-result.d-none').length;
                     $('h2.showing-number span.count').text(result_count);
 
+                    if (result_count == 0) {
+                        $('.bga-pagination').addClass('d-none');
+                        $('.no-results').removeClass('d-none');
+                    } else {
+                        $('.bga-pagination').removeClass('d-none');
+                        $('.no-results').addClass('d-none');
+                    }
+
                     // If more than 10 results are visible on the page hide the extras.
                     hide_more_than_10('.ablis-search-result:visible');
-                  
                 }
+
             };
 
 
+            $('.filter-item .checkbox-item input').on('click', function(){
+                var filter = $(this).parents('.checkbox-item').find('label').attr('data-label');
 
-
-            $('.filter-item .checkbox-item').on('click', function(){
-                var filter = $(this).find('label').attr('data-label'),
-                checkbox = $(this).find('input');
-
-                if (checkbox.is(":checked")) {
+                if ($(this).is(":checked")) {
                     ablis_search['active_filters'][filter] = true;
 
                 } else {
@@ -915,6 +897,49 @@ $(document).ready(function () {
 
                 check_active_filters();
             }); 
+
+            // Clear filters with clear all filters button
+            $('#clear-filters').on('click', function(){
+                ablis_search['active_filters'] = {'licence' : false, 'regulatory-obligation' : false, 'code-of-practice' : false, 'advisory-material' : false, 'city-of-melbourne' : false, 'city-of-port-phillip' : false, 'victorian-state-government' : false, 'australian-government' : false};
+            
+                sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+
+                $('.filter-item .checkbox-item input').each(function(){
+                    $(this).prop('checked', false);
+                });
+                $('.active-filters li').each(function(){
+                    $(this).removeClass('selected');
+                });
+
+                check_active_filters();
+            });
+
+
+            // Repopulate the page on refresh if the two search terms have been entered already.
+            if ( !ablis_search['search_term'] == "" && !ablis_search['search_location'] == "" ) {
+                var keyword = ablis_search['search_term'],
+                location = ablis_search['search_location'];
+
+                $('#search_keyword').val(keyword);
+                $('.dynamic-list-ablis input').val(location);
+                $('a#list-close').addClass('show');
+
+                $('.content-sticky-wrapper').removeClass('d-none');
+
+                $('.showing-number span.keyword').text(keyword);
+                $('.showing-number span.location').text(location);
+                
+                set_description_heights('.results-wrapper');
+
+                for (var item in ablis_search['active_filters']) {
+                  
+                    if (ablis_search['active_filters'][item] == true) {
+                        $('.checkbox-item input#' + item).prop('checked', true);
+                        $('.active-filters li[data-value=' + item + ']').addClass('selected');
+                    };
+                }
+                check_active_filters();
+            }
           
         };
 
