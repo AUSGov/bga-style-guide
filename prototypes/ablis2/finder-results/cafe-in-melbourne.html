@@ -802,10 +802,11 @@
 
 
     <!-- SHOWING HEADER -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-            
+     <div class="sticky_background">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+           
                 <div class="sticky-wrapper">
                     <div class="sticky-header">
                     
@@ -817,7 +818,7 @@
                             <div class="header-cta-links button-group">
                                 <button class="bga-btn bga-secondary-btn bkg-light modal-trigger-email-results" tabindex="0" role="button">Email results</button>
                                 
-                                <button class="bga-btn bga-secondary-btn bkg-light modal-trigger-ablis-task-list" tabindex="0" role="button">Tasks</button>
+                                <button class="bga-btn bga-secondary-btn bkg-light modal-trigger-ablis-task-list" tabindex="0" role="button">Tasks <span class="task-counter">0</span></button>
                             </div>
                         </div>
 
@@ -882,7 +883,7 @@
 
                 </div>
 
-
+                </div>
             </div>
         </div>
     </div>
@@ -3447,7 +3448,7 @@ Trade marks can be used to protect a logo, phrase, word, letter, colour, sound, 
     </div>
     
 
-    <!-- TASKs INSTRUCTION MODAL -->
+    <!-- TASKS INSTRUCTION MODAL -->
     <div id="tasks-instruction-modal" class="bga-component modal-example px-4 pb-4 pt-5">
 
         <button class="close m-0 p-0">Close</button>
@@ -3544,6 +3545,47 @@ Trade marks can be used to protect a logo, phrase, word, letter, colour, sound, 
         </div>
     </div>
 
+
+    <!-- EMAIL RESULTS MODAL -->
+    <div id="email-results" class="bga-component modal-example">
+
+        <button class="close m-0 p-0">Close</button>
+
+        <div class="component-content d-flex">
+
+            <div class="component-text px-4 pb-4 pt-5 remove-element-padding w-100">
+                
+                <div class="title-area">
+                <h3 class="mt-0">Email your results</h3>
+                </div>
+
+                <form class="remove-element-padding w-100">
+                    
+                    <p>Enter your email address to receive a link to this results page so you can return at a later date.</p>
+                    
+                    <div class="form-element-wrapper mb-5">
+                        <input type="text" class="form-control mb-0" value="" required>
+                    </div>
+
+                    
+                    <div class="button-example mb-4">
+                        <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Email link <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="23.453"
+                                height="20.102" viewBox="0 0 23.453 20.102">
+                                <path d="M.011,20.1,23.453,10.051.011,0,0,7.818l16.752,2.234L0,12.285Z" fill="#333" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <p class="mini">This site is protected by reCAPTCHA and the <a class="external" href="">Google Privacy Policy</a> and <a class="external" href="">Terms of Service</a> apply</p>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 
 <div class="modal-overlay"></div>

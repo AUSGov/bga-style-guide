@@ -575,27 +575,43 @@ $(document).ready(function () {
             $('.modal-trigger-ablis-task-list').on('click', function(){
                 $('#ablis-task-list.modal-example, .modal-overlay').addClass('show');
             });
-            
-            // Sticky header
-            if ($('.sticky-wrapper').length) {
-                var header_width = $('.header-content').innerWidth(),
-                sticky_position = $('.sticky-wrapper').offset();
+            $('.modal-trigger-email-results').on('click', function(){
+                $('#email-results.modal-example, .modal-overlay').addClass('show');
+            });
 
-                $(window).scroll(function () {
-                    if ($(window).scrollTop() > sticky_position.top) {
-                        $('.sticky-wrapper').addClass('fixed')
-                        $('.sticky-header').css('width', header_width);  
+            if ($('.sticky-wrapper').length) {
+                var header = $(".sticky_background");
+                var content = $(".content"); // Adjusts main content below
+                var headerHeight = header.outerHeight();
+                var scrollPoint = $('.sticky-wrapper').offset().top; // Change this to where you want the header to stick
+
+                $(window).scroll(function() {
+                    if ($(window).scrollTop() > scrollPoint) {
+                        if (!header.hasClass("fixed")) {
+                            header.hide().addClass("fixed").fadeIn(200); // Fade in
+                            content.css("margin-top", headerHeight + "px"); // Prevent overlap
+                        }
                     } else {
-                        $('.sticky-wrapper').removeClass('fixed').css('width', 'auto');
-                        $('.sticky-header').css('width', "auto");
+                        if (header.hasClass("fixed")) {
+                            header.removeClass("fixed").fadeOut(200, function() {
+                                $(this).show(); // Ensures header stays visible after fadeOut
+                            });
+                            content.css("margin-top", "0"); // Reset margin
+                        }
                     }
                 });
             };
             
-            $(window).resize(function () {
-                // ADD CODE TO CHECK STICKY HEADER WIDTH ON RESIZE
-            }); 
-            
+            // Scroll to section on header summary link click
+            $('.recommendations-summary .summary a').on('click', function(e){
+                e.preventDefault();
+
+                var target_elem = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(target_elem).offset().top - 192
+                }, 100);
+
+            });
 
             // Get question responses and display results accordingly
             $('.ablis-result').each(function(){
@@ -683,7 +699,7 @@ $(document).ready(function () {
             // Task list functionality
             var count_tasks = function(){
                 var task_count = $('.shortlist.ablis-tasks .ablis-task').length;
-                $('#ablis-task-list .task-counter').text(task_count);
+                $('#ablis-task-list .task-counter, .header-cta-links .task-counter').text(task_count);
 
                 if (task_count == 0) {
                     
@@ -713,7 +729,6 @@ $(document).ready(function () {
                 $('.shortlist.ablis-tasks').append(ablis_tasks['tasks'][item]);
             }
             $('.shortlist-item.ablis-task').each(function(){
-                console.log($(this));
                 title = $(this).find('.item-content a').text();
                 $('.ablis-result .title:contains(' + title + ')').parents('.ablis-result').find('btn.add-task').addClass('added').text('Remove from tasks');
             });
