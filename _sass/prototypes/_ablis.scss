@@ -695,9 +695,32 @@
 
 
     // RESULTS PAGES
+    .sticky_background {
+        background: none;
+
+        &.fixed {
+            background: $bga-teal-highlight-light;
+            position: fixed;
+            top: 0;
+            z-index: 8500;
+            box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2);
+            transition: top 1s linear;
+            width: 100%;
+
+            .fixed-hide {
+                display: none;
+            }
+
+            .recommendations-summary {
+                .summary {
+                    padding: 8px 16px;
+                    background: $bga-white !important;
+                }
+            }
+        }
+    }
     .sticky-wrapper {
-        margin: 0 -9999px;
-        padding: 0 9999px;
+        width: 100%;
 
         .sticky-header {
             padding: 32px 0;
@@ -714,6 +737,24 @@
                 margin: 0;
 
                 span {
+                    font-weight: 600;
+                }
+            }
+
+            .modal-trigger-ablis-task-list {
+                padding: 0 24px;
+                column-gap: 24px;
+                
+                .task-counter {
+                    display: inline-flex;
+                    color: $bga-white;
+                    align-items: center;
+                    justify-content: center;
+                    background: $bga-blue-background-dark;
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 40px;
+                    font-size: 1.125rem;
                     font-weight: 600;
                 }
             }
@@ -761,30 +802,6 @@
             }
 
         }
-
-
-        &.fixed {
-            background: $bga-teal-highlight-light;
-            position: fixed;
-            top: 0;
-            z-index: 8500;
-            box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2);
-            transition: top 1s linear;
-
-            .fixed-hide {
-                display: none;
-            }
-
-            .recommendations-summary {
-                .summary {
-                    padding: 8px 16px;
-                    background: $bga-white;
-
-                    //width: 25%;
-                }
-            }
-        }
-
 
     }
     .ablis-filters {
