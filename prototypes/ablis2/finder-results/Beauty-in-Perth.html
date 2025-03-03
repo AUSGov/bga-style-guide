@@ -815,9 +815,9 @@
                             </div>
 
                             <div class="header-cta-links button-group">
-                                <button class="bga-btn bga-secondary-btn bkg-light email-recommendations" tabindex="0" role="button">Email results</button>
+                                <button class="bga-btn bga-secondary-btn bkg-light modal-trigger-email-results" tabindex="0" role="button">Email results</button>
                                 
-                                <button class="bga-btn bga-secondary-btn bkg-light task-list" tabindex="0" role="button">Tasks</button>
+                                <button class="bga-btn bga-secondary-btn bkg-light modal-trigger-ablis-task-list" tabindex="0" role="button">Tasks</button>
                             </div>
                         </div>
 
@@ -2737,7 +2737,7 @@ Trade marks can be used to protect a logo, phrase, word, letter, colour, sound, 
 
     <!-- TASKS MODAL -->
     <div class="bga-component-wrapper mb-5">
-        <div id="ablis-task-list" class="bga-component modal-example modal-form modal-shortlist show teal">
+        <div id="ablis-task-list" class="bga-component modal-example modal-form modal-shortlist teal">
     
             <button class="close m-0 p-0">Close</button>
     
@@ -2746,7 +2746,7 @@ Trade marks can be used to protect a logo, phrase, word, letter, colour, sound, 
                 <div class="component-text px-4 pb-4 pt-5 remove-element-padding">
                     
                     <div class="title-area">
-                        <h3 class="mt-0"><span class="counter me-3"></span>Tasks</h3>
+                        <h3 class="mt-0"><span class="task-counter me-3">0</span>Tasks</h3>
                     </div>
     
                     <div class="scroll-wrapper">
@@ -2754,22 +2754,8 @@ Trade marks can be used to protect a logo, phrase, word, letter, colour, sound, 
     
                         <div class="scrollable remove-element-padding">
                             <div class="shortlist ablis-tasks">
-                                
-                                <div class="shortlist-item ablis-task px-0 py-3">
-                                    <button class="remove-btn p-0 me-3"><svg data-name="Icon / close"
-                                            xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142"
-                                            viewBox="0 0 14.142 14.142">
-                                            <path
-                                                d="M7.071,8.485,1.414,14.142,0,12.728,5.657,7.071,0,1.414,1.414,0,7.071,5.657,12.728,0l1.414,1.414L8.485,7.071l5.657,5.657-1.414,1.414Z"
-                                                fill="#333" />
-                                        </svg></button>
-                                    <div class="item-content">
-                                        <h4 class="p-0 m-0"><a href=''>Result title</a></h4>
-                                    </div>
-                                </div>
-
-
-                                <div class="no-tasks remove-element-padding d-none pt-3">
+                            
+                                <div class="no-tasks remove-element-padding pt-3">
                                     <h4>You don't have any shortlisted tasks at the moment.</h4>
                                     <p>You can add items to task by clicking on 'add to tasks' in each result.</p>
                                 </div>
@@ -2826,7 +2812,7 @@ Trade marks can be used to protect a logo, phrase, word, letter, colour, sound, 
 
 
 
-<div class="modal-overlay show"></div>
+<div class="modal-overlay"></div>
 
 </body>
 
