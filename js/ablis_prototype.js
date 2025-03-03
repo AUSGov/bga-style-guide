@@ -75,8 +75,8 @@ $(document).ready(function () {
                 }
             }
 
-            console.log(stepped_nav['visited_steps']);
-            console.log(stepped_nav['completed_steps']);
+            //console.log(stepped_nav['visited_steps']);
+            //console.log(stepped_nav['completed_steps']);
         };
         
         if ($('#ablis-prototype .stepped-navigation-wrapper').length) {
@@ -561,6 +561,21 @@ $(document).ready(function () {
         if ($('.results-page').length ) {
             console.log('results page');
 
+            var ablis_tasks = JSON.parse(sessionStorage.getItem('ablis_tasks'));
+
+            if (!ablis_tasks) {   
+                ablis_tasks = {
+                    tasks_added : 'no',
+                    tasks : {}
+                };
+                sessionStorage.setItem('ablis_tasks', JSON.stringify(ablis_tasks));
+            };
+
+            // Showing header buttons
+            $('.modal-trigger-ablis-task-list').on('click', function(){
+                $('#ablis-task-list.modal-example, .modal-overlay').addClass('show');
+            });
+            
             // Sticky header
             if ($('.sticky-wrapper').length) {
                 var header_width = $('.header-content').innerWidth(),
@@ -664,6 +679,94 @@ $(document).ready(function () {
                 open_close_descriptions($(this));
                 
             });
+
+            // Task list functionality
+            var count_tasks = function(){
+                var task_count = $('.shortlist.ablis-tasks .ablis-task').length;
+                $('#ablis-task-list .task-counter').text(task_count);
+
+                if (task_count == 0) {
+                    
+                    $('#ablis-task-list .no-tasks').removeClass('d-none');
+                } else {
+                    $('#ablis-task-list .no-tasks').addClass('d-none');
+                }
+            };
+            var add_task = function(class_str, href_str, title_str){
+                var task_str = '<div class="shortlist-item ablis-task ' + class_str + ' px-0 py-3"><button class="remove-btn p-0 me-3"><svg data-name="Icon / close"xmlns="http://www.w3.org/2000/svg" width="14.142" height="14.142"viewBox="0 0 14.142 14.142"><path d="M7.071,8.485,1.414,14.142,0,12.728,5.657,7.071,0,1.414,1.414,0,7.071,5.657,12.728,0l1.414,1.414L8.485,7.071l5.657,5.657-1.414,1.414Z" fill="#333" /></svg></button><div class="item-content"><h4 class="p-0 m-0"><a href=' + href_str + '>' + title_str + '</a></h4></div> </div>';
+
+                $('.shortlist.ablis-tasks').append(task_str);
+
+                ablis_tasks['tasks'][class_str] = task_str;
+                sessionStorage.setItem('ablis_tasks', JSON.stringify(ablis_tasks));
+            };
+            var remove_task = function(class_str){
+                $('.shortlist.ablis-tasks').find('.' + class_str).remove();
+
+                delete ablis_tasks['tasks'][class_str];
+
+                sessionStorage.setItem('ablis_tasks', JSON.stringify(ablis_tasks));
+            };
+
+            // Repopulate task list on page load
+            for (var item in ablis_tasks['tasks']) {
+                $('.shortlist.ablis-tasks').append(ablis_tasks['tasks'][item]);
+            }
+            $('.shortlist-item.ablis-task').each(function(){
+                console.log($(this));
+                title = $(this).find('.item-content a').text();
+                $('.ablis-result .title:contains(' + title + ')').parents('.ablis-result').find('btn.add-task').addClass('added').text('Remove from tasks');
+            });
+
+            count_tasks();
+
+            // Add or remove tasks on click of 'Add to tasks' btn
+            $('btn.add-task').on('click', function(){
+                var result_title = $(this).parents('.ablis-result').find('.title').text(),
+                    result_class = result_title.replace(/\s/g, "").toLowerCase();
+                    result_href = $(this).parents('.ablis-result').find('a.learn-more').attr('href');
+
+                if ( ablis_tasks['tasks_added'] == 'no' ) { // Show instruction modal first time 'add to tasks' is clicked.
+                    $('#tasks-instruction-modal.modal-example, .modal-overlay').addClass('show');
+                    ablis_tasks['tasks_added'] = 'yes';
+                    sessionStorage.setItem('ablis_tasks', JSON.stringify(ablis_tasks));
+
+                    $(this).addClass('added').text('Remove from tasks');
+                    add_task(result_class, result_href, result_title);
+                    count_tasks();
+                } 
+                else { // Add or remove task.
+                    if ($(this).hasClass('added')) { // Remove from task list
+                        $(this).removeClass('added').text('Add to tasks');
+                        remove_task(result_class);
+                        count_tasks();
+                    }
+                    else { //Add to task list
+                        $(this).addClass('added').text('Remove from tasks');
+                        add_task(result_class, result_href, result_title);
+                        count_tasks();
+                    }
+
+
+                }
+            });
+
+            // Remove tasks on .remove-btn click in the shortlist
+            $(document).on('click', '.remove-btn' ,function(){
+                var result = $(this).parents('.shortlist-item.ablis-task'),
+                title = result.find('.item-content a').text(),
+                class_str = title.replace(/\s/g, "").toLowerCase();
+
+                result.remove();
+                count_tasks();
+
+                $('.ablis-result .title:contains(' + title + ')').parents('.ablis-result').find('btn.add-task').removeClass('added').text('Add to tasks');
+
+                delete ablis_tasks['tasks'][class_str];
+                sessionStorage.setItem('ablis_tasks', JSON.stringify(ablis_tasks));
+            });
+
+
         };
 
 
