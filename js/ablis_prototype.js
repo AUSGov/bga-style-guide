@@ -275,7 +275,6 @@ $(document).ready(function () {
 
         // SET CONTACT DETAILS IN FOOTER
         update_contact = function(state){
-            console.log(state);
             $('.contact-details .contact-item').each(function(){
                 $(this).addClass('d-none');
             });
@@ -599,6 +598,7 @@ $(document).ready(function () {
         // RESULT PAGES ------------------------------------------------------
         if ($('.results-page').length ) {
             console.log('results page');
+            $('.state-wrapper').removeClass('d-none');
 
             var ablis_tasks = JSON.parse(sessionStorage.getItem('ablis_tasks'));
 
@@ -841,6 +841,7 @@ $(document).ready(function () {
         // Check is search page
         if ($('.search-page').length) {
             console.log('search page');
+            $('.state-wrapper').removeClass('d-none');
             
             // Set heights for descriptions in result tiles using the height of a cloned element 
             set_description_heights('.results-wrapper');
