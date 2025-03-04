@@ -28,8 +28,50 @@
 
     }
 
-    .subsite-footer {
+    .subsite-footer.ablis-footer {
         box-shadow: 0 50vh 0 50vh $bga-blue-footer;
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-container {
+            background: $bga-blue-links;
+            margin: 0 -9999px;
+            padding: 0 9999px;
+
+            h2, h3, h4, h5, p, a {
+                color: $bga-white;
+            }
+            .state-contact {
+                border: $bga-white, solid 1px;
+
+                h4, p {
+                    margin-bottom: 8px;
+                }
+            }
+            select {
+                background-color: transparent;
+                background-image: url(../assets/Chevron-down-white.svg);
+                color: $bga-white;
+                border: none;
+
+                &:focus {
+                    background-color: $bga-blue-footer !important;
+                }
+                &:focus-visible {
+                    background-color: transparent !important;
+                    border: 2px solid $bga-white;
+                }
+
+
+            }
+            .contact-details {
+                background: $bga-blue-footer;
+
+            }
+        }
     }
 
     // QUESTION PAGES

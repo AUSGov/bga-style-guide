@@ -209,6 +209,7 @@ $(document).ready(function () {
                 activity_2 : "",
                 industry : "",
                 structure : "",
+                contact_details : "",
                 responses : {
                     "all":"yes",
                     "q1":"no", 
@@ -272,6 +273,34 @@ $(document).ready(function () {
             sessionStorage.clear();
         });
 
+        // SET CONTACT DETAILS IN FOOTER
+        update_contact = function(state){
+            console.log(state);
+            $('.contact-details .contact-item').each(function(){
+                $(this).addClass('d-none');
+            });
+            $('.contact-details .contact-item.' + state).removeClass('d-none');
+        };
+
+        $('.state-contact select').on('change', function(){
+            var state = $(this).val();
+            update_contact(state);
+
+            ablis_questions['contact_details'] = state;
+            sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));            
+        });
+
+        //Populate footer contact details on page load if location previously set.
+        if ( ablis_questions['contact_details'] != "") {
+            var state = ablis_questions['contact_details'];
+
+            setTimeout(function() {
+                $('.state-contact select').val(state);
+            update_contact(state);
+            }, 500);
+        }
+
+
         // STORE QUESTION RESPONSES
         $('.question input[type=radio]').on('change', function () {
             var question = $(this).parents('.question').attr('id');
@@ -303,6 +332,7 @@ $(document).ready(function () {
                     });
                 }
         });
+
 
         //Re-populate answers on page load
         if ($('.question-page').length) {
@@ -434,6 +464,15 @@ $(document).ready(function () {
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
 
             if (parent_list.includes('location')) {
+                // Set state details in footer to Victoria
+                $('.state-contact select').val('victoria'); 
+                update_contact('victoria');
+
+                ablis_questions['contact_details'] = 'victoria';
+                sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+
+                // Hide / show council question
+               
                 var q_council = $(this).parents('.field-wrapper').find('.council-question');
     
                 if (list_item.includes('Melbourne')) {
