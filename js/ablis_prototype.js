@@ -402,6 +402,7 @@ $(document).ready(function () {
             input_len = input.length,
             input_lower_case = input.toLowerCase(),
             list_id = $(this).parents('.list-wrapper').find('ul').attr('id');
+            //console.log(list_id);
 
             if(input) {
                 $('ul#'+ list_id).addClass('open');
@@ -433,14 +434,22 @@ $(document).ready(function () {
                         $(this).addClass('hidden');
                         hidden_count++;
                     }
-
                 });
+
+                $('ul#'+ list_id + ' li.related, ul#'+ list_id + ' p.related').each(function(){
+                    $(this).removeClass('hidden');
+                });
+                
+
             } else {
                 $('ul#'+ list_id).removeClass('open');
                 $(this).parents('.dynamic-list-ablis').find('a#list-close').removeClass('show');
             }
 
             if (list_len == hidden_count) {
+                $('ul#'+ list_id + ' li.related,  ul#'+ list_id + ' p.related').each(function(){
+                    $(this).addClass('hidden');
+                });
                 $(this).parents('.dynamic-list-ablis').find('.no-result').addClass('show');
             } else {
                 $(this).parents('.dynamic-list-ablis').find('.no-result').removeClass('show');
@@ -457,6 +466,7 @@ $(document).ready(function () {
             var list_item = $(this).text(),
             parent_list = $(this).parents('ul').attr('id');
             //console.log(parent_list);
+
             ablis_questions[parent_list] = list_item;
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
 
