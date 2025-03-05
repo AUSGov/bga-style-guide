@@ -4162,7 +4162,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .anchor-menu li a:focus, .anchor-menu li a:hover { font-weight: 600; text-decoration: underline; background: none; color: #2157AA; }
 
-.anchor-menu li a.current { border-left: 3px solid #2157AA; padding-left: 8px; }
+.anchor-menu li a.current { border-left: 3px solid #2157AA; padding-left: 8px; font-weight: 600; }
 
 .anchor-menu.non-branded li a:focus, .anchor-menu.non-branded li a:hover { color: mediumblue; }
 
@@ -8183,7 +8183,7 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .tooltip-example-container { position: relative; display: inline-flex; justify-content: center; }
 
-button.chat { height: 56px; width: auto; padding: 0 67px 0 32px; display: inline-flex; align-items: center; z-index: 9000; border-radius: 60px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 24px; bottom: 24px; color: #333333; }
+button.chat { height: 56px; width: auto; padding: 0 67px 0 32px; display: inline-flex; align-items: center; z-index: 9000; border-radius: 60px; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); position: fixed; right: 24px; bottom: 24px; color: #333333; background: #CFEBEB; }
 
 button.chat.example { position: absolute; }
 
@@ -12290,7 +12290,7 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype #subsite-header .main-header .subsite-logo span { max-width: 250px; }
 
-#ablis-prototype .subsite-footer.ablis-footer { box-shadow: 0 50vh 0 50vh #113869; }
+#ablis-prototype #footer { box-shadow: 0 50vh 0 50vh #113869; background: #113869; }
 
 #ablis-prototype .subsite-footer.ablis-footer h2, #ablis-prototype .subsite-footer.ablis-footer .h2 { font-size: 1.8rem; margin-bottom: 8px; }
 
@@ -12536,6 +12536,18 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .disclaimer.ablis .leg_item p, #ablis-prototype .disclaimer.ablis .leg_item a { font-size: 14px; margin: 0; padding: 0; }
 
+#ablis-prototype .results-return-wrapper { background: #8BCACA; position: fixed; right: 32px; bottom: 0px; -webkit-box-shadow: 2px -2px 4px 0px rgba(0, 0, 0, 0.35); -moz-box-shadow: 2px -2px 4px 0px rgba(0, 0, 0, 0.35); box-shadow: 2px -2px 4px 0px rgba(0, 0, 0, 0.35); }
+
+#ablis-prototype button#results-return { height: 56px; width: auto; padding: 0 32px; display: inline-flex; column-gap: 8px; align-items: center; z-index: 9000; background: #ffffff; border-color: #218080; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); }
+
+#ablis-prototype button#results-return svg { margin: 0; }
+
+#ablis-prototype button#results-return svg path { fill: #333333; }
+
+#ablis-prototype button#results-return:hover { background-color: #105C5C; border-color: #105C5C; color: #ffffff !important; }
+
+#ablis-prototype button#results-return:hover svg path { fill: #ffffff !important; }
+
 #ablis-prototype .sticky_background { background: none; }
 
 #ablis-prototype .sticky_background.fixed { background: #CFEBEB; position: fixed; top: 0; z-index: 8500; box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2); transition: top 1s linear; width: 100%; }
@@ -12557,6 +12569,8 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 #ablis-prototype .sticky-wrapper .sticky-header .modal-trigger-ablis-task-list { padding: 0 24px; column-gap: 24px; }
 
 #ablis-prototype .sticky-wrapper .sticky-header .modal-trigger-ablis-task-list .task-counter { display: inline-flex; color: #ffffff; align-items: center; justify-content: center; background: #2E6CB9; height: 32px; width: 32px; border-radius: 40px; font-size: 1.125rem; font-weight: 600; }
+
+#ablis-prototype .sticky-wrapper .sticky-header .modal-trigger-ablis-task-list:hover .task-counter { color: #333333; background: #ffffff; }
 
 #ablis-prototype .sticky-wrapper .recommendations-summary { display: flex; column-gap: 24px; flex-wrap: nowrap; }
 

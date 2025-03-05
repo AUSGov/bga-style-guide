@@ -349,7 +349,7 @@ $(document).ready(function () {
                     sections[anchor_link] = Math.round(section_position.top);
                 }
             });
-            //  console.log(sections);
+            //console.log(sections);
         };
         get_section_positions();
        
