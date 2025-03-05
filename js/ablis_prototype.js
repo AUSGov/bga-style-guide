@@ -75,8 +75,6 @@ $(document).ready(function () {
                 }
             }
 
-            //console.log(stepped_nav['visited_steps']);
-            //console.log(stepped_nav['completed_steps']);
         };
         
         if ($('#ablis-prototype .stepped-navigation-wrapper').length) {
@@ -527,7 +525,14 @@ $(document).ready(function () {
 
             ablis_questions[field] = council;
             ablis_questions['council'] = council;
+ 
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+
+            stepped_nav['urls']['nav-step-7'] = "results-" + council + "-ballarat.html";
+            sessionStorage.setItem('stepped_nav', JSON.stringify(stepped_nav));
+
+            var path = '/bga-style-guide/prototypes/ablis2/finder/';
+            stepped_nav_functionality(path);
         });
 
 
@@ -1103,6 +1108,38 @@ $(document).ready(function () {
             }
           
         };
+
+
+        // INFORMATION PAGES
+
+        // Set position of return to results button
+        var set_return_btn_position = function(){
+            var content_leftcoord = $('.content-wrapper').position().left,
+            content_width = $('.content-wrapper').outerWidth(),
+            content_rightcoord = content_leftcoord + content_width,
+            window_width = $(window).width(),
+            button_rightcoord = window_width - content_rightcoord;
+
+            $('.results-return-wrapper').css('right', button_rightcoord + 'px').removeClass('d-none');
+
+        };
+        
+        if ( $('button#results-return').length ) {
+            set_return_btn_position();
+        
+            $(window).resize(function () {
+                set_return_btn_position();
+            });
+        };
+
+        // Return user to correct results page when 'return to results' button is clicked.
+        $('button#results-return').on('click', function(){
+            var council = ablis_questions['council'];
+            destination = '/bga-style-guide/prototypes/ablis2/finder/results-' + council + '-ballarat.html';
+
+            window.location = destination;
+            
+        });
 
 
     }
