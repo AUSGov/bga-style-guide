@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" id="ablis-prototype" style="overflow-x: hidden;">
+<html lang="en" id="ablis-prototype" class="question-page" style="overflow-x: hidden;">
+
 
 {% include prototypes/head_ablis.html %}
 
-<body class="" {% if page.id %} id="{{page.id}}" {% endif %}>
+<body class="{{page.step}}" data-step="{{page.step}}" {% if page.id %} id="{{page.id}}" {% endif %}>
 
     <!-- SUBSITE HEADER -->
     {% include prototypes/subsite_header_ablis.html %}
@@ -19,11 +20,9 @@
 
                     <div class="col-sm-12 col-lg-10 remove-element-padding">
                         <h1>{{ page.title }}</h1>
-                       
                     </div>
 
                 </div>
-
 
             </div>
         </div>
@@ -31,35 +30,33 @@
 
 
 
-    <div class="content">
-        <div class="container my-5">
-            <div class="row">
+    <!-- NAV AND PAGE CONTENT -->
+    <div class="container my-5">
+        <div class="row">
 
 
-                <div class="anchor-menu-wrapper remove-top-spaces col-12 col-sm-3">
-
-                    <h5>Dynamic nav area</h5>
-                    
-                </div>
-
-
-                <div class="col-12 col-sm-9 col-xl-8 remove-element-padding">
-                    <div class="remove-top-spaces content-wrapper">
-
-                        {{ content }}
-
-                    </div>
-                </div>
+            <div class="col-12 col-sm-3 mb-5">
+                
+                {% include prototypes/ablis-dynamic-nav.html %}
 
             </div>
 
-        </div>
 
+            <div class="col-12 col-sm-9 col-xl-8 remove-element-padding">
+                <div class="remove-top-spaces content-wrapper">
+
+                    {{ content }}
+
+                </div>
+            </div>
+
+        </div>
     </div>
+
 
 
     {% include prototypes/ablis-footer.html %}
-    
+        
 
     <div class="modal-overlay"></div>
 
