@@ -83,15 +83,187 @@
 
     // QUESTION PAGES
     #ablis-dynamic-nav { //prototype 1
-        li {
-            &.active {
-                background: pink;
+        background: $bga-blue-black-background-lightest;
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                color: $bga-blue-black-mid-dark;
+                text-indent: 0;
+                display: inline-flex;
+                align-items: flex-start;
+                column-gap: 8px;
+                width: 100%;
+                margin-bottom: 32px;
+
+                span.list-number {
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    background: $bga-white;
+                    border: 3px solid $bga-blue-black-light;
+                    border-radius: 50px;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 600;
+                    flex-shrink: 0;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        width: 3px;
+                        height: 100%;
+                        background: $bga-blue-black-light;
+                        position: absolute;
+                        bottom: 37px;
+                    }
+                }
+    
+                a {
+                    text-decoration: none;
+                    color: $bga-blue-black-mid-dark;
+                    font-weight: 400;
+                    margin-top: 6px;
+
+                    &:hover {
+                        background: none;
+                    }
+                    &:focus-visible {
+                        background: none;
+                    }
+                }
+                &.primary:last-of-type {
+                    margin-bottom: 0;
+                }
+                &:first-of-type {
+
+                    span.list-number::before {
+                        display: none;
+                    }
+                }
+    
+                &::before {
+                    display: none;
+                }
+               
+                &.active {
+                    span.list-number {
+                        border: 3px solid $bga-blue-links;
+                        color: $bga-blue-links;
+
+                        &::before {
+                            background: $bga-blue-links;
+                        }
+                    }
+                    a {
+                        color: $bga-blue-links;
+                        font-weight: 600;
+                    }
+                }
+                &.visited {
+                    span.list-number {
+                        border: 3px solid $bga-blue-links;
+                        color: $bga-blue-links;
+
+                        &::before {
+                            background: $bga-blue-links;
+                        }
+                    }
+                    a {
+                        color: $bga-blue-links;
+                        text-decoration: underline;
+                    }
+                }
+                &.completed {
+                    span.list-number {
+                        background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
+                        background-position: center center;
+                        background-size: 19px 15px;
+                        border: 3px solid $bga-blue-links;
+                        color: $bga-white;
+                        text-indent: -9999px;
+
+                        &::before {
+                            background: $bga-blue-links;
+                        }
+                    }
+                    a {
+                        color: $bga-blue-links;
+                        text-decoration: underline;
+                        font-weight: 600;
+                    }
+                }
             }
-            &.visited {
-                background: yellow;
-            }
-            &.completed {
-                background: green;
+        }
+
+        ul.secondary-steps {
+            margin-left: 8px;
+            margin-top: -14px;
+            padding-bottom: 14px;
+
+            li {
+                column-gap: 16px;
+                margin-bottom: 16px;
+
+                span.tick-wrapper {
+                    width: 24px;
+                    height: 24px;
+                    background: $bga-blue-black-light;
+                    border-radius: 50px;
+                    flex-shrink: 0;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        width: 3px;
+                        height: 100%;
+                        background: $bga-blue-black-light;
+                        position: absolute;
+                        bottom: 20px;
+                        left: calc(50% - 1.5px);
+                    }
+                }
+                &:last-of-type {
+                    margin-top: 0;                   
+                }
+                a {
+                    margin-top: -2px;
+                }
+
+                &.active {
+                    span.tick-wrapper {
+                        background: $bga-blue-links;
+
+                        &::before {
+                            background: $bga-blue-links;
+                        }
+                    }
+                }
+                &.visited {
+                    span.tick-wrapper {
+                        background: $bga-blue-links;
+
+                        &::before {
+                            background: $bga-blue-links;
+                        }
+                    }
+                   
+                }
+                &.completed {
+                    span.tick-wrapper {
+                        background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
+                        background-position: center center;
+                        background-size: 13px 10px;
+
+                        &::before {
+                            background: $bga-blue-links;
+                        }
+                    }
+                   
+                }
             }
         }
     }
@@ -836,6 +1008,9 @@
                 display: none;
             }
 
+            .sticky-header.teal {
+                padding: 32px;
+            }
             .recommendations-summary {
                 .summary {
                     padding: 8px 16px;
@@ -850,6 +1025,11 @@
 
         .sticky-header {
             padding: 32px 0;
+
+            &.teal {
+                background: $bga-teal-highlight-light;
+                padding: 0 32px 32px 32px;
+            }
 
             .top-row {
                 display: flex;

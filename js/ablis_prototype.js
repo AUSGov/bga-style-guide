@@ -167,11 +167,18 @@ $(document).ready(function () {
         }
     };
 
-    $('.next-btn.dynamic').on('click', function(e){
-        e.preventDefault();
-
-        var next_step = get_visible_links()['next_step'];
-        window.location = dynamic_nav[next_step]['url'];
+    $('.next-btn').on('click', function(e){
+        
+        if ( $(this).hasClass('dynamic') ) {
+            e.preventDefault();
+    
+            var next_step = get_visible_links()['next_step'];
+            window.location = dynamic_nav[next_step]['url'];
+        } else {
+            var step = $('body').attr('data-step');
+            dynamic_nav[step]['completed'] = 'yes';
+            sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
+        }
     });
     $('.prev-btn.dynamic').on('click', function(e){
         e.preventDefault();
@@ -181,12 +188,11 @@ $(document).ready(function () {
     });
 
     // Update page visited state on page load &&
-    if ( $('.question-page').length ) {
+    if ( $('#ablis-dynamic-nav').length ) {
         var step = $('body').attr('data-step');
         console.log(step);
         
         dynamic_nav[step]['visited'] = 'yes';
-
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
     }
     
@@ -729,6 +735,7 @@ $(document).ready(function () {
         };
 
         // Scroll to section on header summary link click
+        /*
         $('.recommendations-summary .summary a').on('click', function (e) {
             e.preventDefault();
 
@@ -738,6 +745,7 @@ $(document).ready(function () {
             }, 100);
 
         });
+        */
 
         // Get question responses and display results accordingly
         $('.ablis-result').each(function () {
