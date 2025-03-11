@@ -12454,6 +12454,32 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .dynamic-list-ablis .error input { border: #C9201D 3px solid !important; }
 
+#ablis-prototype .checkboxes-wrapper { flex-wrap: wrap; }
+
+#ablis-prototype .checkboxes-wrapper .section-divider { width: 100%; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item { width: 100%; display: flex; flex-wrap: wrap; row-gap: 16px; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item .input-and-label { display: flex; flex-wrap: nowrap; width: 100%; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item .checkbox-help { margin-left: 36px; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item .checkbox-help p { margin-bottom: 16px; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item .checkbox-help p:last-of-type { margin-bottom: 0; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item label { font-size: 1.1875rem; display: flex; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item label::before { content: ""; display: block; height: 28px; width: 28px; margin-right: 8px; border-radius: 0; border: solid 1px #2E3E5A; background: #ffffff; cursor: pointer; flex-shrink: 0; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item [type=checkbox], #ablis-prototype .checkboxes-wrapper .checkbox-item .input { height: 0; width: 0; opacity: 0; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item [type=checkbox]:focus-visible + label, #ablis-prototype .checkboxes-wrapper .checkbox-item .input:focus-visible + label { border: none; border-radius: 4px; box-shadow: #2E6CB9 0px 0px 0px 2px; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item [type=checkbox]:checked + label, #ablis-prototype .checkboxes-wrapper .checkbox-item .input:checked + label { color: #2157AA; font-weight: 600; }
+
+#ablis-prototype .checkboxes-wrapper .checkbox-item [type=checkbox]:checked + label::before, #ablis-prototype .checkboxes-wrapper .checkbox-item .input:checked + label::before { border: solid 3px #2157AA; background: #ffffff url(../assets/icon-tick-blue.svg) no-repeat center center; }
+
 #ablis-prototype .yes-no-answers { display: flex; flex-wrap: nowrap; column-gap: 8px; }
 
 #ablis-prototype .yes-no-answers .radio-button { width: 50%; }
@@ -12504,23 +12530,33 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .callout-box.contact .component-text p:last-of-type { margin-bottom: 0; }
 
+#ablis-prototype .callout-box.ablis-apply.no-colour { background: none; border: none; }
+
 #ablis-prototype .callout-box.ablis-apply .rego-resources { display: flex; row-gap: 8px; flex-wrap: wrap; }
 
 #ablis-prototype .callout-box.ablis-apply .rego-resources .resource { width: 100%; display: flex; column-gap: 16px; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link { width: 100%; background: #ffffff; display: flex; column-gap: 16px; align-items: center; padding-right: 16px; }
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link { width: 100%; background: #FFF3CD; display: flex; column-gap: 16px; align-items: center; padding: 0; text-decoration: none; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .task { font-weight: 600; width: 120px; display: flex; align-items: center; justify-content: center; height: 100%; min-height: 50px; background: #FFCF3B; flex-shrink: 0; }
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .task { font-weight: 600; width: 120px; display: flex; align-items: center; justify-content: center; height: 100%; min-height: 50px; background: #FFD964; flex-shrink: 0; color: #333333; text-decoration: none; padding: 24px; border-left: 8px solid #EDC95A; font-size: 18px; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .description { background: url("../assets/iconography/icon-arrow-right-blue.svg") no-repeat left center; background-size: 20px 20px; display: inline-flex; align-items: center; justify-content: center; padding: 8px 0 8px 32px; }
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .link-text { background: url("../assets/iconography/icon-arrow-right-blue.svg") no-repeat left center; background-size: 24px 24px; display: inline-flex; align-items: center; justify-content: center; padding: 24px 24px 24px 40px; color: #2157AA; font-weight: 600; text-decoration: underline; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .description a { font-weight: 600; }
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.pdf-icon .link-text, #ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.doc-icon .link-text { background: url("../assets/iconography/icon-download-blue.svg") no-repeat left center; background-size: 24px 24px; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link .description i.fa { display: none; }
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.no-link { cursor: default; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.pdf-icon .description, #ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.doc-icon .description { background: url("../assets/iconography/icon-download-blue.svg") no-repeat left center; background-size: 20px 20px; }
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.no-link .link-text { background: url("../assets/icon-person-black.svg") no-repeat left center; background-size: 24px 24px; color: #333333; font-weight: 400; text-decoration: none; }
 
-#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link.no-link .description { background: url("../assets/iconography/icon-person-blue.svg") no-repeat left center; background-size: 20px 20px; }
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link:visited { color: #2157AA; }
+
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link:focus-visible { background: #FFE491; border: 2px solid #2E6CB9; }
+
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link:focus-visible .task { background-color: #FFCF3B; border-left-color: #e8ba2c; }
+
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link:hover { background: #FFE491; }
+
+#ablis-prototype .callout-box.ablis-apply .rego-resources .resource .rego-link:hover .task { background-color: #FFCF3B; border-left-color: #e8ba2c; }
 
 #ablis-prototype .callout-box.ablis-apply .application-links { display: flex; flex-wrap: wrap; row-gap: 8px; }
 

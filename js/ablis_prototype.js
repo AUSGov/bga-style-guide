@@ -127,6 +127,13 @@ $(document).ready(function () {
         }
     }
 
+    // Select / deselect checkbox items {
+    $('.checkboxes-wrapper label').on('click', function(){
+        console.log('clicked');
+
+    });
+    
+
     // Select regulatory categories with checkboxes.
     $('.regulatory-checkboxes input[type="checkbox"]').on('click', function(){
         
@@ -142,6 +149,8 @@ $(document).ready(function () {
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
 
     });
+
+
 
     // Update page completed state on next button click &&
     // Get url for next page from visible links in the dynamic-nav
