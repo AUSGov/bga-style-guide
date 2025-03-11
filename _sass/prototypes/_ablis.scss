@@ -82,7 +82,7 @@
     }
 
     // QUESTION PAGES
-    #ablis-dynamic-nav { //prototype 1
+    #ablis-dynamic-nav { //prototype 1  
         background: $bga-blue-black-background-lightest;
 
         ul {
@@ -501,7 +501,82 @@
         }
     }
    
+    .checkboxes-wrapper {
+        flex-wrap: wrap;
+        //row-gap: 24px;
 
+        .section-divider {
+            width: 100%;
+        }
+
+        .checkbox-item {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 16px;
+
+            .input-and-label {
+                display: flex;
+                flex-wrap: nowrap;
+                width: 100%;
+            }
+            .checkbox-help {
+                margin-left: 36px;
+                p {
+                    margin-bottom: 16px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            label {
+                font-size: $h4-font-size;
+                display: flex;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 28px;
+                    width: 28px;
+                    margin-right: 8px;
+                    border-radius: 0;
+                    border: solid 1px $bga-blue-black-dark;
+                    background: $bga-white;
+                    cursor: pointer;
+                    flex-shrink: 0;
+                    
+                }
+        
+            }
+            [type=checkbox],
+            .input {
+                height: 0;
+                width: 0;
+                opacity: 0;
+                
+                &:focus-visible + label  {
+                        border: none;
+                        border-radius: $bga-focus-radius;
+                        box-shadow: $bga-focus-boxshadow;
+                }     
+                &:checked {
+                    + label {
+                        color: $bga-blue-links;
+                        font-weight: 600;
+
+                        &::before {
+                            border: solid 3px $bga-blue-links;
+                            background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
 
     .yes-no-answers {
         display: flex;
@@ -642,7 +717,10 @@
     }
 
     .callout-box.ablis-apply {
-        
+        &.no-colour {
+            background: none;
+            border: none;
+        }
         .rego-resources {
             display: flex;
             row-gap: 8px;
@@ -652,14 +730,16 @@
                 width: 100%;
                 display: flex;
                 column-gap: 16px;
+                
 
                 .rego-link {
                     width: 100%;
-                    background: $bga-white;
+                    background: $bga-yellow-highlight-light;
                     display: flex;
                     column-gap: 16px;
                     align-items: center;
-                    padding-right: 16px;
+                    padding: 0;
+                    text-decoration: none;
 
                     .task {
                         font-weight: 600;
@@ -669,44 +749,64 @@
                         justify-content: center;
                         height: 100%;
                         min-height: 50px;
-                        background: $bga-yellow-links-background;
+                        background: $bga-yellow-highlight-dark;
                         flex-shrink: 0;
+                        color: $bga-black;
+                        text-decoration: none;
+                        padding: 24px;
+                        border-left: 8px solid $bga-yellow-highlight-shadow;
+                        font-size: 18px;
                     }
 
-                    .description {
+                    .link-text {
                         background: url('../assets/iconography/icon-arrow-right-blue.svg') no-repeat left center;
-                        background-size: 20px 20px;
-
+                        background-size: 24px 24px;
                         display: inline-flex;
                         align-items: center;
                         justify-content: center;
-                        padding: 8px 0 8px 32px;
-
-                        a {
-                            font-weight: 600;
-                        }
-
-                        i.fa {
-                            display: none;
-                        }
+                        padding: 24px 24px 24px 40px;
+                        color: $bga-blue-links;
+                        font-weight: 600;
+                        text-decoration: underline;
                     }
 
                     &.pdf-icon,
                     &.doc-icon {
-                        .description {
+                        .link-text {
                             background: url('../assets/iconography/icon-download-blue.svg') no-repeat left center;
-                            background-size: 20px 20px;
+                            background-size: 24px 24px;
                         }
                     }
 
                     &.no-link {
-                        .description {
-                            background: url('../assets/iconography/icon-person-blue.svg') no-repeat left center;
-                            background-size: 20px 20px;
+                        cursor: default;
+                        .link-text {
+                            background: url('../assets/icon-person-black.svg') no-repeat left center;
+                            background-size: 24px 24px;
+                            color: $bga-black;
+                            font-weight: 400;
+                            text-decoration: none;
                         }
                     }
 
-
+                    &:visited {
+                        color: $bga-blue-links;
+                    }
+                    &:focus-visible {
+                        background: $bga-yellow-highlight-mid;
+                        border: $bga-component-focus-border;
+                        .task {
+                            background-color: $bga-yellow-links-background;
+                            border-left-color: darken($bga-yellow-highlight-shadow, 10%);
+                        }
+                    }
+                    &:hover {
+                        background: $bga-yellow-highlight-mid;
+                        .task {
+                            background-color: $bga-yellow-links-background;
+                            border-left-color: darken($bga-yellow-highlight-shadow, 10%);
+                        } 
+                    }
 
                 }
             }
