@@ -173,7 +173,6 @@ $(document).ready(function () {
         };
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
     };
-    console.log(ablis_questions['categories']);
 
     // Reset tool on start now click 
     $('#start-now').on('click', function () {
@@ -459,9 +458,6 @@ $(document).ready(function () {
     $('.checkbox-item.ablis-question input[type=checkbox]').on('change', function(){
         var question = $(this).attr('data-value'),
         response = $(this).prop('checked');
-
-        console.log(question);
-        console.log(response);
 
         if (response == true) {
             ablis_questions['responses'][question] = 'yes';
