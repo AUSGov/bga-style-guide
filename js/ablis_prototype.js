@@ -94,6 +94,94 @@ $(document).ready(function () {
     };
 
 
+    // Create question map and store in sessionStorage
+    var ablis_questions = JSON.parse(sessionStorage.getItem('ablis_questions'));
+    if (!ablis_questions) {
+        ablis_questions = {
+            location_1: "",
+            location_2: "",
+            location_3: "",
+            activity_1: "",
+            activity_2: "",
+            activity_3: "",
+            industry: "",
+            structure: "",
+            contact_details: "",
+            responses: {
+                "all": "yes",
+                "q1": "no",
+                "q2": "no",
+                "q3": "no",
+                "q4": "no",
+                "q5": "no",
+                "q6": "no",
+                "q7": "no",
+                "q8": "no",
+                "q9": "no",
+                "q10": "no",
+                "q11": "no",
+                "q12": "no",
+                "q13": "no",
+                "q14": "no",
+                "q15": "no",
+                "q16": "no",
+                "q17": "no",
+                "q18": "no",
+                "q19": "no",
+                "q20": "no",
+                "q21": "no",
+                "q22": "no",
+                "q23": "no",
+                "q24": "no",
+                "q25": "no",
+                "q26": "no",
+                "q27": "no",
+                "q28": "no",
+                "q29": "no",
+                "q30": "no",
+                "q31": "no",
+                "q32": "no",
+                "q33": "no",
+                "q34": "no",
+                "q35": "no",
+                "q36": "no",
+                "q37": "no",
+                "q38": "no",
+                "q39": "no",
+                "q40": "no",
+                "q41": "no",
+                "q42": "no",
+                "q43": "no",
+                "q44": "no",
+                "q45": "no",
+                "q46": "no",
+                "q47": "no",
+                "q48": "no",
+                "q49": "no",
+                "q50": "no",
+            },
+            answered: {},
+            categories: {
+                'operations' : ['q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q27'],
+                'products-and-services' : ['q44'],
+                'tax' : ['q13', 'q14', 'q15'],
+                'workers' : ['q20', 'q16', 'q17', 'q18', 'q19', 'q21', 'q22', 'q23', 'q24', 'q25', 'q26'],
+                'buildings-and-land' : ['q28', 'q29', 'q30', 'q31', 'q32', 'q33'],
+                'equipment-and-transport' : ['q42', 'q43'],
+                'public-spaces' : ['q34', 'q35', 'q36', 'q37', 'q38', 'q39', 'q40', 'q41']
+            }
+        };
+        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+    };
+    console.log(ablis_questions['categories']);
+
+    // Reset tool on start now click 
+    $('#start-now').on('click', function () {
+        sessionStorage.clear();
+    });
+
+
+    //DYNAMIC NAV AND REGULATORY CATEGORY CHECKBOXES
     // Dynamic nav functionality
     if ('#ablis-dynamic-nav'.length) {
         //Hide secondary pages that are not activated
@@ -127,17 +215,12 @@ $(document).ready(function () {
         }
     }
 
-    // Select / deselect checkbox items {
-    $('.checkboxes-wrapper label').on('click', function(){
-        console.log('clicked');
-
-    });
-    
 
     // Select regulatory categories with checkboxes.
     $('.regulatory-checkboxes input[type="checkbox"]').on('click', function(){
         
-        var step = $(this).attr('data-step');
+        var step = $(this).attr('data-step'),
+        category = $(this).val();
 
         if ($(this).prop('checked')) {
             dynamic_nav[step]['dynamic-state'] = 'visible';
@@ -145,11 +228,19 @@ $(document).ready(function () {
         } else {
             dynamic_nav[step]['dynamic-state'] = '';
             $('#ablis-dynamic-nav li.' + step).addClass('d-none');
+
+            // Remove all answers from an unselected category from sessionStorage
+            for (var i=0; i < ablis_questions['categories'][category].length; i++) {
+                var question = ablis_questions['categories'][category][i];
+
+                ablis_questions['responses'][question] = 'no';
+                delete ablis_questions['answered'][question];
+            }
+
         }
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
-
+        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
     });
-
 
 
     // Update page completed state on next button click &&
@@ -204,14 +295,8 @@ $(document).ready(function () {
         dynamic_nav[step]['visited'] = 'yes';
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
     }
-    
-       
 
-    // UPDATE prev/next button url based on dynamic-nav visible states && 
-    // Update page completed states
-
-
-    // Select previously selected checkboxes on page load
+    // Re-select previously selected checkboxes on page load
     if ( $('.regulatory-checkboxes').length ) {
         for (var item in dynamic_nav) {
             if (dynamic_nav[item]['dynamic-state'] == 'visible') {
@@ -222,11 +307,11 @@ $(document).ready(function () {
    
 
 
-
-    // Validate questions are answered and record page as completed
-    /*
+    // Validate questions are answered and record page as completed on BUSINESS DETAILS page
     $('.next-btn.validate_page').on('click', function (e) {
         e.preventDefault();
+
+        console.log('validating page');
         var radios_validated = false,
             select_validated = false,
             input_validated = false;
@@ -329,84 +414,7 @@ $(document).ready(function () {
         }
 
     });
-    */
-
-
-    // Create question map and store in sessionStorage
-    var ablis_questions = JSON.parse(sessionStorage.getItem('ablis_questions'));
-    if (!ablis_questions) {
-        ablis_questions = {
-            location_1: "",
-            location_2: "",
-            location_3: "",
-            activity_1: "",
-            activity_2: "",
-            activity_3: "",
-            industry: "",
-            structure: "",
-            contact_details: "",
-            responses: {
-                "all": "yes",
-                "q1": "no",
-                "q2": "no",
-                "q3": "no",
-                "q4": "no",
-                "q5": "no",
-                "q6": "no",
-                "q7": "no",
-                "q8": "no",
-                "q9": "no",
-                "q10": "no",
-                "q11": "no",
-                "q12": "no",
-                "q13": "no",
-                "q14": "no",
-                "q15": "no",
-                "q16": "no",
-                "q17": "no",
-                "q18": "no",
-                "q19": "no",
-                "q20": "no",
-                "q21": "no",
-                "q22": "no",
-                "q23": "no",
-                "q24": "no",
-                "q25": "no",
-                "q26": "no",
-                "q27": "no",
-                "q28": "no",
-                "q29": "no",
-                "q30": "no",
-                "q31": "no",
-                "q32": "no",
-                "q33": "no",
-                "q34": "no",
-                "q35": "no",
-                "q36": "no",
-                "q37": "no",
-                "q38": "no",
-                "q39": "no",
-                "q40": "no",
-                "q41": "no",
-                "q42": "no",
-                "q43": "no",
-                "q44": "no",
-                "q45": "no",
-                "q46": "no",
-                "q47": "no",
-                "q48": "no",
-                "q49": "no",
-                "q50": "no",
-            },
-            answered: {}
-        };
-        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
-    };
-
-    // Reset tool on start now click 
-    $('#start-now').on('click', function () {
-        sessionStorage.clear();
-    });
+    
 
     // SET CONTACT DETAILS IN FOOTER
     update_contact = function (state) {
@@ -435,7 +443,7 @@ $(document).ready(function () {
     }
 
 
-    // STORE QUESTION RESPONSES
+    // STORE QUESTION RESPONSES ON CATEGORY PAGES
     $('.question input[type=radio]').on('change', function () {
         var question = $(this).parents('.question').attr('id');
         response = $(this).attr('data-value');
@@ -448,9 +456,26 @@ $(document).ready(function () {
 
     });
 
+    $('.checkbox-item.ablis-question input[type=checkbox]').on('change', function(){
+        var question = $(this).attr('data-value'),
+        response = $(this).prop('checked');
+
+        console.log(question);
+        console.log(response);
+
+        if (response == true) {
+            ablis_questions['responses'][question] = 'yes';
+            ablis_questions['answered'][question] = 'true';
+        } else {
+            ablis_questions['responses'][question] = 'no';
+            delete ablis_questions['answered'][question];
+        }
+
+        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+    });
 
 
-    //Re-populate answers on page load
+    //Re-populate category page answers on page load
     if ($('.question-page').length) {
         console.log('question page');
 
@@ -511,6 +536,17 @@ $(document).ready(function () {
                 selection = ablis_questions[id];
             $(this).val(selection);
 
+        });
+
+        $('.checkbox-item.ablis-question input[type=checkbox]').each(function(){
+            var question = $(this).attr('data-value'),
+            response = ablis_questions['responses'][question];
+
+            if (response == 'yes') {
+                $(this).prop('checked', true);
+            } else {
+                $(this).prop('checked', false);
+            }
         });
     }
 
@@ -659,7 +695,7 @@ $(document).ready(function () {
 
 
 
-    //FUNCTIONS FOR SEACH TILES ON RESULTS AND KEYWORD SEARCH PAGES
+    //FUNCTIONS FOR SEARCH TILES ON RESULTS AND KEYWORD SEARCH PAGES
 
     // Set heights for descriptions in result tiles using the height of a cloned element 
     var set_description_heights = function (wrapper) {
