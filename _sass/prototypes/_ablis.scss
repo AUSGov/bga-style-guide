@@ -513,67 +513,50 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            row-gap: 16px;
+            row-gap: 8px;
 
             .input-and-label {
                 display: flex;
                 flex-wrap: nowrap;
                 width: 100%;
+                column-gap: 8px;
             }
             .checkbox-help {
                 margin-left: 36px;
+                
                 p {
-                    margin-bottom: 16px;
+                    margin-bottom: 8px;
 
                     &:last-of-type {
                         margin-bottom: 0;
                     }
                 }
             }
-
-            label {
-                font-size: $h4-font-size;
-                display: flex;
-
-                &::before {
-                    content: "";
-                    display: block;
-                    height: 28px;
-                    width: 28px;
-                    margin-right: 8px;
-                    border-radius: 0;
-                    border: solid 1px $bga-blue-black-dark;
-                    background: $bga-white;
-                    cursor: pointer;
-                    flex-shrink: 0;
-                    
-                }
-        
-            }
-            [type=checkbox],
-            .input {
-                height: 0;
-                width: 0;
-                opacity: 0;
-                
-                &:focus-visible + label  {
-                        border: none;
-                        border-radius: $bga-focus-radius;
-                        box-shadow: $bga-focus-boxshadow;
-                }     
-                &:checked {
-                    + label {
-                        color: $bga-blue-links;
-                        font-weight: 600;
-
-                        &::before {
-                            border: solid 3px $bga-blue-links;
-                            background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
-                        }
-                    }
-                }
-            }
         }
+        label {
+            color: $bga-black;
+            font-size: $h4-font-size;
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            height: 28px;
+            width: 28px;
+            margin-right: 8px;
+            border-radius: 0;
+            border: solid 1px $bga-blue-black-dark;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        input[type="checkbox"]:checked {
+            border: solid 3px $bga-blue-links;
+            background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
+
+             + label {
+                color: $bga-blue-links;
+             }
+        }
+
 
         
     }
