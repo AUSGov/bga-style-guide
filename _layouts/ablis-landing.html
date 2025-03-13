@@ -6,7 +6,8 @@
 <body class="" {% if page.id %} id="{{page.id}}" {% endif %}>
 
     <!-- SUBSITE HEADER -->
-    {% include prototypes/subsite_header_ablis.html %}
+    {% include prototypes/subsite_header_ablis.html 
+        title=page.title %}
 
 
     <!-- PAGE HEADER -->
@@ -18,8 +19,11 @@
                 <div class="header-content p-5">
 
                     <div class="col-sm-12 col-lg-10 remove-element-padding">
-                        <h1>{{ page.title }}</h1>
+                        <h1>{{ page.page-name }}</h1>
+
+                        {% if page.description %}
                         <p class="header-intro">{{ page.description }}</p>
+                        {% endif %}
                     </div>
 
                 </div>

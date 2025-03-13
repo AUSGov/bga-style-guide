@@ -27,9 +27,19 @@
             }
         }
 
-       .main-header .subsite-logo span {
-            max-width: 250px;
+       .main-header {
+            .subsite-logo span {
+                max-width: 250px;
+            }
+            .tool-title {
+                h1 {
+                    color: $bga-white;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                }
+            }
        }
+
 
     }
     #footer {
@@ -498,6 +508,47 @@
             input {
                 border: $bga-red-fail-dark 3px solid !important;
             }
+        }
+    }
+    .ablis-multi-select-wrapper {
+        background: pink;
+        border: solid 1px $bga-black;
+
+        input { 
+            border: none;
+        }
+    }
+    .ablis-selected-options {
+        display: flex;
+        column-gap: 16px;
+        row-gap: 16px;
+        flex-wrap: wrap;
+    }
+    .ablis-selected-option {
+        background: $bga-teal-highlight-light;
+        border: solid 2px $bga-teal-highlight-dark;
+        border-radius: 50px;
+        padding: 8px 16px;
+        margin: 0;
+        display: inline-flex;
+        column-gap: 8px;
+        align-items: center;
+        flex-shrink: 0;
+
+        p {
+            margin: 0;
+            padding: 0;
+            display: block;
+            font-weight: 600;
+        }
+        .remove {
+            text-indent: -9999px;
+            width: 20px;
+            height: 20px;
+            background: url(../assets/icon-close-black.svg) no-repeat;
+            background-size: 20px 20px;
+            border: none;
+            box-shadow: none;
         }
     }
    

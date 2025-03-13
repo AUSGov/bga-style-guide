@@ -6,14 +6,15 @@
 <body class="" {% if page.id %} id="{{page.id}}" {% endif %}>
 
     <!-- SUBSITE HEADER -->
-    {% include prototypes/subsite_header_ablis.html %}
+    {% include prototypes/subsite_header_ablis.html 
+        title=page.title %}
 
 
     <!-- PAGE HEADER / FORM-->
     <div id="page-header" class="teal">
        
         <div class="container">
-            <h1 class="pt-5">Search by keyword</h1>
+            <!--<h1 class="pt-5">Search by keyword</h1>-->
             
             <div class="row inner-wrapper mx-0">
                 <div class="header-content p-5">
