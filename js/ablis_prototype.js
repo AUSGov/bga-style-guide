@@ -98,12 +98,8 @@ $(document).ready(function () {
     var ablis_questions = JSON.parse(sessionStorage.getItem('ablis_questions'));
     if (!ablis_questions) {
         ablis_questions = {
-            location_1: "",
-            location_2: "",
-            location_3: "",
-            activity_1: "",
-            activity_2: "",
-            activity_3: "",
+            location: [],
+            primary_activity: [],
             industry: "",
             structure: "",
             contact_details: "",
@@ -371,18 +367,25 @@ $(document).ready(function () {
         }
 
         // Text input (dynamic lists)
-        if ($('input.required:visible').length > 0) {
-            var input_count = $('input.required:visible').length,
+        ///////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////
+        // FIX VALIDATION ON DYNAMIC LISTS
+
+        if ($('input.required').length > 0) {
+            var input_count = $('input.required').length,
                 valid_count = 0;
 
-            $('input.required:visible').each(function () {
-                if ($(this).val()) {
+            $('input.required').each(function () {
+                var selected_count = $(this).parents('.input-wrapper').find('.ablis-selected-option').length;
+                console.log(selected_count);
+                
+                if (selected_count == 0) {
+                    $(this).parents('.form-element-wrapper').addClass('error');
+                    $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');
+                } else {
                     valid_count++;
                     $(this).parents('.form-element-wrapper').removeClass('error');
                     $(this).parents('.form-element-wrapper').next('.error-message').addClass('d-none');
-                } else {
-                    $(this).parents('.form-element-wrapper').addClass('error');
-                    $(this).parents('.form-element-wrapper').next('.error-message').removeClass('d-none');
                 }
             });
 
@@ -499,33 +502,20 @@ $(document).ready(function () {
             }
         });
 
-        $('.dynamic-list-ablis input').each(function () {
-            var list = $(this).parents('.dynamic-list-ablis'),
-                list_id = list.find('ul').attr('id'),
-                list_close = list.find('a#list-close'),
-                q_council = $(this).parents('.field-wrapper').find('.council-question'),
-                answer = ablis_questions[list_id];
 
-            if (answer) {
-                $(this).val(answer);
-                list.removeClass('d-none');
-                list_close.addClass('show');
+        $('.dynamic-list-ablis.multi-select input').each(function () {
+            var parent_list = $(this).parents('.dynamic-list-ablis'),
+                list_id = parent_list.find('ul').attr('id'),
+                list_options = ablis_questions[list_id];
 
-                if (answer.includes('Melbourne')) {
-                    var council = ablis_questions['council'];
-                    q_council.removeClass('d-none');
-                    q_council.find('input[data-value=' + council + ']').prop('checked', true);
-                }
+            for (var i=0; i < list_options.length; i++) {
+                console.log(list_options[i]);
 
-                if (list_id == 'primary-activity-2') {
-                    $('#primary-activity .field-wrapper.d-none').removeClass('d-none');
-                }
-                if (list_id == 'location_2') {
-                    $('#location .field-wrapper.d-none').removeClass('d-none');
-                }
+                parent_list.find('.input-wrapper').prepend('<div data-value="' +list_options[i] + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_options[i] +'</p></div>');
             }
 
         });
+
 
         $("select").each(function () {
             var id = $(this).attr('id'),
@@ -548,12 +538,11 @@ $(document).ready(function () {
 
     // BUSINESS DETAIL QUESTIONS
     // dynamic lists (including setting location)
-    $('.dynamic-list-ablis input').on('input', function () {
+    $('.dynamic-list-ablis.multi-select input').on('input', function () {
         var input = $(this).val(),
             input_len = input.length,
             input_lower_case = input.toLowerCase(),
             list_id = $(this).parents('.list-wrapper').find('ul').attr('id');
-        //console.log(list_id);
 
         if (input) {
             $('ul#' + list_id).addClass('open');
@@ -561,7 +550,6 @@ $(document).ready(function () {
 
             var list_len = $('ul#' + list_id + ' li').length;
             var hidden_count = 0;
-
 
             $('ul#' + list_id + ' li').each(function () {
                 var str = $(this).text(),
@@ -614,33 +602,29 @@ $(document).ready(function () {
         $(this).parents('.dynamic-list-ablis').find('.error-message').addClass('d-none');
         $(this).parents('.form-element-wrapper').removeClass('error');
 
-        var list_item = $(this).text(),
-            parent_list = $(this).parents('ul').attr('id');
-        //console.log(parent_list);
 
-        ablis_questions[parent_list] = list_item;
+        var list_item = $(this).text(),
+            parent_list = $(this).parents('ul').attr('id'),
+            parent_wrapper = $(this).parents('.list-wrapper');
+
+        ablis_questions[parent_list].push(list_item);
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
 
+
+        // Set state details in footer to Victoria
         if (parent_list.includes('location')) {
-            // Set state details in footer to Victoria
             $('.state-contact select').val('victoria');
             update_contact('victoria');
 
             ablis_questions['contact_details'] = 'victoria';
             sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
 
-            // Hide / show council question
-
-            var q_council = $(this).parents('.field-wrapper').find('.council-question');
-
-            if (list_item.includes('Melbourne')) {
-                q_council.removeClass('d-none');
-            } else {
-                q_council.addClass('d-none');
-            }
         };
 
-        $(this).parents('.list-wrapper').find('input').val(list_item).addClass('selected');
+        //parent_wrapper.find('input').val(list_item).addClass('selected');
+
+        parent_wrapper.find('input').val('');
+        parent_wrapper.find('.input-wrapper').prepend('<div data-value="' + list_item + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_item +'</p></div>');
 
         $('.dynamic-list-ablis li.hidden').each(function () {
             $(this).removeClass('hidden');
@@ -651,30 +635,19 @@ $(document).ready(function () {
 
     });
 
-    $('a#list-close').on('click', function () {
-        $(this).parents('.dynamic-list-ablis').find('.no-result').removeClass('show');
-        $(this).parents('.dynamic-list-ablis').find('input').val('').removeClass('selected');
-        $(this).parents('.dynamic-list-ablis').find('ul').removeClass('open');
-        $(this).removeClass('show');
+    $(document).on('click', '.selected-remove', function () {
+        var parent_list = $(this).parents('.list-wrapper').find('ul').attr('id'),
+            selected_item = $(this).parents('.ablis-selected-option').find('p').text(),
+            selected_options = ablis_questions[parent_list];
+            
+        selected_options = selected_options.filter(item => item !== selected_item);
 
-        $(this).parents('.dynamic-list-ablis').find('ul li').find("span").contents().unwrap();
+        $(this).parents('.ablis-selected-option').remove();
+        ablis_questions[parent_list] = selected_options;
 
-        $(this).parents('.dynamic-list-ablis').find('ul li.hidden').each(function () {
-            $(this).removeClass('hidden');
-        });
-
-        var parent_list = $(this).parents('.dynamic-list-ablis').find('ul').attr('id');
-
-        ablis_questions[parent_list] = "";
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
-
-        if (parent_list.includes('location')) {
-            var q_council = $(this).parents('.field-wrapper').find('.council-question');
-            q_council.find('input').prop("checked", false);
-            q_council.addClass('d-none');
-        }
-
     });
+
 
     // Store answers from dropdown selects
     $("select").on('change', function () {
