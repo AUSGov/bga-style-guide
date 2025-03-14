@@ -68,16 +68,14 @@ step : step-1
 
             <div class="dynamic-list-ablis multi-select remove-element-padding">
                 
-                <label for="primary-activity-1" class="form-label h4-font-size mb-3"><strong>Type an activity and select an option from the list that appears.</strong></label>
+                <label for="primary_activity" class="form-label h4-font-size mb-3"><strong>Type an activity and select an option from the list that appears.</strong></label>
             
                 <div class="form-element-wrapper d-block">
                     <div class="list-wrapper">
-            
-                       
-                       <!-- <div class="ablis-multi-select-wrapper">
-                            <div class="ablis-selected-options mt-3">
-                           
-                                <div data-value="" class="ablis-selected-option">
+                        
+                            <div class="input-wrapper">
+                               
+                                <!--<div data-value="" class="ablis-selected-option">
                                     <button class="remove">Remove</button>
                                     <p>Food delivery service</p>
                                 </div>
@@ -85,29 +83,14 @@ step : step-1
                                 <div data-value="" class="ablis-selected-option">
                                     <button class="remove">Remove</button>
                                     <p>Food delivery service</p>
-                                </div>
-
-                                <div data-value="" class="ablis-selected-option">
-                                    <button class="remove">Remove</button>
-                                    <p>Food delivery service</p>
-                                </div>
+                                </div>-->
+                                
+                                <input class="required" type="text" placeholder="Start typing an activity." name="org" data-list="primary-activity" >
 
                             </div>
-                        -->
-
                         
 
-                        <input class="required" type="text" placeholder="Start typing an activity." name="org" data-list="primary-activity-1" >
-
-                        </div>
-                        
-                        <a href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                            <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
-                            </svg></a>
-                            
-                        <div class="options-wrapper">
-                            
-                        <ul id="primary-activity" class="primary-terms dynamic">
+                        <ul id="primary_activity" class="primary-terms dynamic">
                             <li  class="dynamic" tabindex="0" value="Food and drink can manufacturing">Food and drink can manufacturing</li>
                             <li  class="dynamic" tabindex="0" value="Food container manufacturing (plastic)">Food container manufacturing (plastic)</li>
                             <li  class="dynamic" tabindex="0" value="Food container, polymeric foan, manufacturing">Food container, polymeric foan, manufacturing</li>
@@ -165,25 +148,10 @@ step : step-1
                                 <li class="related" tabindex="0" value="Liquor retailing">Liquor retailing</li>
                             </ul>
 
-                        <div class="ablis-selected-options mt-3">
-                            <div data-value="" class="ablis-selected-option">
-                                <button class="remove">Remove</button>
-                                <p>Food delivery service</p>
-                            </div>
-
-                            <div data-value="" class="ablis-selected-option">
-                                <button class="remove">Remove</button>
-                                <p>Food delivery service</p>
-                            </div>
-
-                            <div data-value="" class="ablis-selected-option">
-                                <button class="remove">Remove</button>
-                                <p>Food delivery service</p>
-                            </div>
-                        </div>
+                       
 
                         
-                        </div>
+               
                         
                     </div>
 
@@ -218,13 +186,12 @@ step : step-1
             <div class="form-element-wrapper d-block">
                 <div class="list-wrapper">
                 
-                    <input class="required" type="text" placeholder="Start typing a location" name="org" data-list="location_1" />
+                    <div class="input-wrapper">
                     
-                    <a href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                        <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
-                        </svg></a>
-                        
-                    <div class="options-wrapper">    
+                        <input class="required" type="text" placeholder="Start typing a location" name="org" data-list="location" />
+                  
+                    </div>
+                   
                     
                     <ul id="location" class="primary-terms dynamic">
                         <li  class="dynamic" tabindex="0" value="1 Cabal Court Mulgrave 3170">1 Cabal Court Mulgrave 3170</li>
@@ -294,8 +261,6 @@ step : step-1
                         <li  class="dynamic" tabindex="0" value="1 Collins Street Mentone 3194">1 Collins Street Mentone 3194</li>
                         
                     </ul>
-
-                    </div>
                     
                 </div>
         
@@ -303,7 +268,7 @@ step : step-1
                     <p>No location found.</p>
                 </div>
 
-            </div>
+            </div> 
             <p class="error-message d-none mt-3 mb-0">This field is required.</p>
             
         </div>
