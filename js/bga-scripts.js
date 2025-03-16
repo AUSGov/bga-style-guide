@@ -1338,7 +1338,7 @@ $(document).ready(function () {
                 console.log(selected_radios);
             };
 
-            // Check is radio groups have a selected radio button
+            // Check if radio groups have a selected radio button
             check_radios($(this), '.wording-option', 'wording-option');
             check_radios($(this), '#orientation', 'orientation');
 
@@ -1365,9 +1365,8 @@ $(document).ready(function () {
 
                 // If the wording option is not updated show error message
                 if (selected_radios['updated'] > 0) {
-                    
-                    wording_option.addClass('error');
-                    wording_option.next('.error-message.error-wording').addClass('show');
+                    open_form(selected_option);
+                    wording_option.find('.question-input').addClass('error');
                     
                     $('html, body').animate({
                         scrollTop: wording_option.offset().top
@@ -1402,11 +1401,12 @@ $(document).ready(function () {
                     $('img.standard-mark-preview.portrait').removeClass('d-none');
                     $('img.standard-mark-preview.landscape').addClass('d-none');
                 }
-                var next_form = $(this).parents('.create-label-cta').find('.form-step-3, .mark-preview');
-                //console.log(parent);
-                next_form.removeClass('d-none');
+                $(this).parents('.form-step').next('.form-step').removeClass('d-none');
+                $(this).parents('.form-step').find('.mark-preview').removeClass('d-none');
+            
             } else {
-                next_form.addClass('d-none');
+                $(this).parents('.form-step').next('.form-step').addClass('d-none');
+                $(this).parents('.form-step').find('.mark-preview').addClass('d-none');
             }
         });
 
@@ -1448,13 +1448,11 @@ $(document).ready(function () {
                         selected_radios['updated']++;
                     }
                 });
-                console.log(selected_radios);
 
                 // If the wording option is not updated show error message
                 if (selected_radios['updated'] > 0) {
-                    
-                    wording_option.addClass('error');
-                    wording_option.next('.error-message.error-wording').addClass('show');
+                    open_form(selected_option);
+                    wording_option.find('.question-input').addClass('error');
                     
                     $('html, body').animate({
                         scrollTop: wording_option.offset().top
@@ -1472,9 +1470,11 @@ $(document).ready(function () {
 
             // If all validation requirements are met display the rest of the form
             if ( (selected_radios['wording-option'] == 1) && (selected_radios['updated'] == 0)) {
-                var next_form = $(this).parents('.create-label-cta').find('.form-step-3');
-                $('.form-step-2, .coo-preview').removeClass('d-none');
-                next_form.removeClass('d-none');
+                $(this).parents('.form-step').next('.form-step').removeClass('d-none');
+                $(this).parents('.form-step').find('.coo-preview').removeClass('d-none');
+            } else {
+                $(this).parents('.form-step').next('.form-step').addClass('d-none');
+                $(this).parents('.form-step').find('.coo-preview').addClass('d-none');
             }
         });
 
