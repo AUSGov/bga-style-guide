@@ -298,8 +298,7 @@ $(document).ready(function () {
                 $('.checkbox-item input[data-step="' +  item +'"]').prop('checked', true);
             }
         }
-    }
-   
+    }  
 
 
     // Validate questions are answered and record page as completed on BUSINESS DETAILS page
@@ -367,10 +366,6 @@ $(document).ready(function () {
         }
 
         // Text input (dynamic lists)
-        ///////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////
-        // FIX VALIDATION ON DYNAMIC LISTS
-
         if ($('input.required').length > 0) {
             var input_count = $('input.required').length,
                 valid_count = 0;
@@ -507,11 +502,18 @@ $(document).ready(function () {
             var parent_list = $(this).parents('.dynamic-list-ablis'),
                 list_id = parent_list.find('ul').attr('id'),
                 list_options = ablis_questions[list_id];
+                selected_item = '<div data-value="' +list_options[i] + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_options[i] +'</p></div>';
 
             for (var i=0; i < list_options.length; i++) {
-                console.log(list_options[i]);
 
-                parent_list.find('.input-wrapper').prepend('<div data-value="' +list_options[i] + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_options[i] +'</p></div>');
+                var selected_item  = $('<div data-value="' +list_options[i] + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_options[i] +'</p></div>');
+
+                var last_child = parent_list.find('.input-wrapper').children().last();
+
+                if (last_child.length) {
+                    selected_item.insertBefore(last_child);
+                }
+
             }
 
         });
@@ -605,7 +607,7 @@ $(document).ready(function () {
 
         var list_item = $(this).text(),
             parent_list = $(this).parents('ul').attr('id'),
-            parent_wrapper = $(this).parents('.list-wrapper');
+            parent_wrapper = $(this).parents('.dynamic-list-ablis');
 
         ablis_questions[parent_list].push(list_item);
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
@@ -621,18 +623,22 @@ $(document).ready(function () {
 
         };
 
-        //parent_wrapper.find('input').val(list_item).addClass('selected');
 
-        parent_wrapper.find('input').val('');
-        parent_wrapper.find('.input-wrapper').prepend('<div data-value="' + list_item + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_item +'</p></div>');
+        // Add selected option to input-wrapper
+        var selected_item  = $('<div data-value="' + list_item + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_item +'</p></div>');
+
+        var last_child = parent_wrapper.find('.input-wrapper').children().last();
+    
+        if (last_child.length) {
+            selected_item.insertBefore(last_child);
+        }
 
         $('.dynamic-list-ablis li.hidden').each(function () {
             $(this).removeClass('hidden');
         });
-        $('a#list-close').addClass('show');
         $(this).parents('ul').removeClass('open');
 
-
+        parent_wrapper.find('input').val('').focus();
     });
 
     $(document).on('click', '.selected-remove', function () {

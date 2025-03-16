@@ -331,32 +331,7 @@
                 outline: none;
             }
         }
-        a#list-close {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            right: 0px;
-            height: 56px;
-            top: 0;
-            z-index: 5000;
-            background: none;
-
-            svg {
-                display: block;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            display: none;
-
-            &.show {
-                display: flex;
-            }
-        }
-
+      
         a#list-toggle {
             display: flex;
             justify-content: center;
@@ -415,6 +390,8 @@
             padding: 0;
             margin: 0;
             display: none;
+            max-height: 400px;
+            overflow-y: scroll;
 
             &.open {
                 display: block;
@@ -494,9 +471,6 @@
                     width: 100%;
                 }
 
-                a#list-close {
-                    right: 0px;
-                }
             }
         } 
         
@@ -518,7 +492,7 @@
 
             input { 
                 border: none;
-                background: aliceblue;
+                //background: aliceblue;
                 margin: 0;
                 padding: 0;
                 display: block;
