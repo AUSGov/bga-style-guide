@@ -12398,6 +12398,14 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .dynamic-list-ablis input:focus, #ablis-prototype .dynamic-list-ablis input:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; }
 
+#ablis-prototype .dynamic-list-ablis a#list-close { display: flex; justify-content: center; align-items: center; position: absolute; right: 0px; height: 56px; top: 0; z-index: 5000; background: none; display: none; }
+
+#ablis-prototype .dynamic-list-ablis a#list-close svg { display: block; }
+
+#ablis-prototype .dynamic-list-ablis a#list-close:hover { cursor: pointer; }
+
+#ablis-prototype .dynamic-list-ablis a#list-close.show { display: flex; }
+
 #ablis-prototype .dynamic-list-ablis a#list-toggle { display: flex; justify-content: center; align-items: center; position: absolute; right: 0; top: 0; z-index: 5000; width: 56px; box-sizing: border-box; height: 56px; border: none; border-top-right-radius: 4px; border-bottom-right-radius: 4px; background: #2E6CB9; }
 
 #ablis-prototype .dynamic-list-ablis a#list-toggle svg { display: block; }
@@ -12412,7 +12420,7 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .dynamic-list-ablis .options-wrapper { max-height: 400px; overflow-y: scroll; overflow-y: auto; padding: 0; margin: 0; }
 
-#ablis-prototype .dynamic-list-ablis ul { background: #ffffff; border: #333333 1px solid; border-top: none; padding: 0; margin: 0; display: none; max-height: 400px; overflow-y: scroll; }
+#ablis-prototype .dynamic-list-ablis ul { background: #ffffff; border: #333333 1px solid; border-top: none; padding: 0; margin: 0; display: none; }
 
 #ablis-prototype .dynamic-list-ablis ul.open { display: block; }
 
@@ -12444,7 +12452,11 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .dynamic-list-ablis.list .dynamic-list input { width: 100%; }
 
+#ablis-prototype .dynamic-list-ablis.list .dynamic-list a#list-close { right: 0px; }
+
 #ablis-prototype .dynamic-list-ablis .error input { border: #C9201D 3px solid !important; }
+
+#ablis-prototype .dynamic-list-ablis.multi-select ul { max-height: 400px; overflow-y: scroll; }
 
 #ablis-prototype .dynamic-list-ablis.multi-select .input-wrapper { border: solid 1px #333333; display: flex; gap: 8px; flex-wrap: wrap; padding: 8px 16px; min-height: 56px; }
 
