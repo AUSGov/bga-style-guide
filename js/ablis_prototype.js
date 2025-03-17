@@ -736,7 +736,8 @@ $(document).ready(function () {
             var content = $(".content"); // Adjusts main content below
             var headerHeight = header.outerHeight();
             var scrollPoint = $('.sticky-wrapper').offset().top; // Change this to where you want the header to stick
-
+            console.log(headerHeight);
+            
             $(window).scroll(function () {
                 if ($(window).scrollTop() > scrollPoint) {
                     if (!header.hasClass("fixed")) {
@@ -755,17 +756,17 @@ $(document).ready(function () {
         };
 
         // Scroll to section on header summary link click
-        /*
-        $('.recommendations-summary .summary a').on('click', function (e) {
+        
+        $('.results-links a').on('click', function (e) {
             e.preventDefault();
 
             var target_elem = $(this).attr('href');
             $('html, body').animate({
-                scrollTop: $(target_elem).offset().top - 192
+                scrollTop: $(target_elem).offset().top - 120
             }, 100);
 
         });
-        */
+        
 
         // Get question responses and display results accordingly
         $('.ablis-result').each(function () {
@@ -802,6 +803,7 @@ $(document).ready(function () {
         var check_service_exists = function (service_count, service_class, service_id) {
             if (service_count > 0) {
                 $('.result-count.' + service_class).text(service_count);
+                $('.results-links span.' + service_class).text(service_count);
             } else {
                 $('.summary.' + service_class).addClass('d-none');
                 $('#' + service_id).addClass('d-none');
@@ -813,12 +815,11 @@ $(document).ready(function () {
         check_service_exists(code_count, 'codes', 'code-of-practice-group');
         check_service_exists(advisory_count, 'advisory', 'advisory-materials-group');
 
-
-
-        // Add total recommendations count to top of th epage
+        // Add total recommendations count to top of the page
         var total_count = licence_count + regulation_count + code_count + advisory_count;
-        //console.log(total_count);
         $('.showing-number span.count').text(total_count);
+
+       
 
 
         // Expand result tile accordions
