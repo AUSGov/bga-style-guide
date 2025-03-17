@@ -12318,11 +12318,13 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype #ablis-dynamic-nav ul { margin: 0; padding: 0; }
 
-#ablis-prototype #ablis-dynamic-nav ul li { list-style-type: none; color: #5A667D; text-indent: 0; display: inline-flex; align-items: flex-start; column-gap: 8px; width: 100%; margin-bottom: 32px; }
+#ablis-prototype #ablis-dynamic-nav ul li { list-style-type: none; color: #5A667D; text-indent: 0; display: inline-flex; align-items: flex-start; column-gap: 8px; width: 100%; }
 
 #ablis-prototype #ablis-dynamic-nav ul li span.list-number { display: flex; width: 40px; height: 40px; background: #ffffff; border: 3px solid #ABB1BD; border-radius: 50px; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; position: relative; }
 
 #ablis-prototype #ablis-dynamic-nav ul li span.list-number::before { content: ""; width: 3px; height: 100%; background: #ABB1BD; position: absolute; bottom: 37px; }
+
+#ablis-prototype #ablis-dynamic-nav ul li span.list-number::after { content: ""; width: 3px; height: 100%; background: #ABB1BD; position: absolute; top: 37px; }
 
 #ablis-prototype #ablis-dynamic-nav ul li a { text-decoration: none; color: #5A667D; font-weight: 400; margin-top: 6px; }
 
@@ -12330,9 +12332,9 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype #ablis-dynamic-nav ul li a:focus-visible { background: none; }
 
-#ablis-prototype #ablis-dynamic-nav ul li.primary:last-of-type { margin-bottom: 0; }
-
 #ablis-prototype #ablis-dynamic-nav ul li:first-of-type span.list-number::before { display: none; }
+
+#ablis-prototype #ablis-dynamic-nav ul li.last-step span.list-number::after { display: none; }
 
 #ablis-prototype #ablis-dynamic-nav ul li::before { display: none; }
 
@@ -12350,7 +12352,7 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype #ablis-dynamic-nav ul li.completed span.list-number { background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; background-size: 19px 15px; border: 3px solid #2157AA; color: #ffffff; text-indent: -9999px; }
 
-#ablis-prototype #ablis-dynamic-nav ul li.completed span.list-number::before { background: #2157AA; }
+#ablis-prototype #ablis-dynamic-nav ul li.completed span.list-number::before, #ablis-prototype #ablis-dynamic-nav ul li.completed span.list-number::after { background: #2157AA; }
 
 #ablis-prototype #ablis-dynamic-nav ul li.completed a { color: #2157AA; text-decoration: underline; font-weight: 600; }
 
@@ -12360,7 +12362,9 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype #ablis-dynamic-nav ul.secondary-steps li span.tick-wrapper { width: 24px; height: 24px; background: #ABB1BD; border-radius: 50px; flex-shrink: 0; position: relative; }
 
-#ablis-prototype #ablis-dynamic-nav ul.secondary-steps li span.tick-wrapper::before { content: ""; width: 3px; height: 100%; background: #ABB1BD; position: absolute; bottom: 20px; left: calc(50% - 1.5px); }
+#ablis-prototype #ablis-dynamic-nav ul.secondary-steps li span.tick-wrapper::before { content: ""; width: 3px; height: calc(100% - 5px); background: #ABB1BD; position: absolute; bottom: 24px; left: calc(50% - 1.5px); }
+
+#ablis-prototype #ablis-dynamic-nav ul.secondary-steps li span.tick-wrapper::after { content: ""; width: 3px; height: 100%; background: #ABB1BD; position: absolute; top: 24px; left: calc(50% - 1.5px); }
 
 #ablis-prototype #ablis-dynamic-nav ul.secondary-steps li:last-of-type { margin-top: 0; }
 
@@ -12376,7 +12380,17 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype #ablis-dynamic-nav ul.secondary-steps li.completed span.tick-wrapper { background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; background-size: 13px 10px; }
 
-#ablis-prototype #ablis-dynamic-nav ul.secondary-steps li.completed span.tick-wrapper::before { background: #2157AA; }
+#ablis-prototype #ablis-dynamic-nav ul.secondary-steps li.completed span.tick-wrapper::before, #ablis-prototype #ablis-dynamic-nav ul.secondary-steps li.completed span.tick-wrapper::after { background: #2157AA; }
+
+#ablis-prototype #ablis-dynamic-nav ul.results { background: #E4E6EA; }
+
+#ablis-prototype #ablis-dynamic-nav ul.results li.last-step { margin-bottom: 16px; }
+
+#ablis-prototype #ablis-dynamic-nav ul.results li.last-step span::before { content: ""; display: block !important; width: 3px; height: 100%; background: #2157AA; position: absolute; bottom: 37px; }
+
+#ablis-prototype #ablis-dynamic-nav ul.results-links { background: #E4E6EA; margin-left: 48px; }
+
+#ablis-prototype #ablis-dynamic-nav ul.results-links a { margin: 0; color: #2157AA; text-decoration: underline; font-weight: 600; }
 
 #ablis-prototype .field-wrapper { background: #CFEBEB; }
 
