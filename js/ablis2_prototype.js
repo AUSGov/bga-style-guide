@@ -395,6 +395,8 @@ $(document).ready(function () {
             });
         }
 
+        
+
         // BUSINESS DETAIL QUESTIONS
         // dynamic lists (including setting location)
         $('.dynamic-list-ablis input').on('input', function(){
@@ -613,6 +615,13 @@ $(document).ready(function () {
         // RESULT PAGES ------------------------------------------------------
         if ($('.results-page').length ) {
             console.log('results page');
+
+            // Add page pathway to sessionStorage (used when determining which results page to return to from 'return to results' button)
+            var page_path = window.location.pathname;
+            console.log(page_path);
+            sessionStorage.setItem('page_path', page_path);
+
+
             $('.state-wrapper').removeClass('d-none');
 
             var ablis_tasks = JSON.parse(sessionStorage.getItem('ablis_tasks'));
@@ -856,6 +865,12 @@ $(document).ready(function () {
         // Check is search page
         if ($('.search-page').length) {
             console.log('search page');
+
+            // Add page pathway to sessionStorage (used when determining which results page to return to from 'return to results' button)
+            var page_path = window.location.pathname;
+            console.log(page_path);
+            sessionStorage.setItem('page_path', page_path);
+
             $('.state-wrapper').removeClass('d-none');
             
             // Set heights for descriptions in result tiles using the height of a cloned element 
@@ -1144,8 +1159,15 @@ $(document).ready(function () {
 
         // Return user to correct results page when 'return to results' button is clicked.
         $('button#results-return').on('click', function(){
-            var council = ablis_questions['council'];
-            destination = '/bga-style-guide/prototypes/ablis2/finder/results-' + council + '-ballarat.html';
+            var results_path = sessionStorage.getItem('page_path');
+            var destination;
+
+            if (results_path.includes('finder')) {
+                var council = ablis_questions['council'];
+                destination = '/bga-style-guide/prototypes/ablis2/finder/results-' + council + '-ballarat.html';
+            } else if (results_path.includes('Search-by-keyword')) {
+                destination = '/bga-style-guide/prototypes/ablis2/Search-by-keyword.html';
+            }
 
             window.location = destination;
             
