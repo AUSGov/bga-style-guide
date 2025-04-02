@@ -1111,71 +1111,16 @@ $(document).ready(function () {
 
 
     // COMPONENT EXAMPLE: INFORMATION SIDEBAR
-    // Set height of sidebars
-    function sidebar_fullheight() {
-
-        var full_text_height;
-        
-        $('.sidebar-wrapper.fullheight').each(function () {
-            var question_height;
-            
-            if ($(window).width() > 768) {
-                question_height = Math.round($(this).parents('.row').find('.question-section').height());
-            } else {
-                question_height = 300;
-            }
-
-            // Set sidebar height
-            if ( $(this).hasClass('extended') ){
-                $(this).css('height', '100%');
-                var text_height = $('.extended').height();
-
-            } else {
-                 var text_height = question_height - 72;
-                $(this).css('height', question_height + 'px');
-            }
-            
-            // Set .component_text height
-            $(this).find('.component-text').css('height', text_height + 'px');
-            
-            // Check if text box is in overflow. Set read more link accordingly
-            if (!$(this).parents('.non-branded').length) {
-                full_text_height = $(this).find('.component-text').prop('scrollHeight');  
-            }
- 
-            if ( $(this).hasClass('extended') ){
-                $(this).find('.component-text').addClass('fixed-height');
-                $(this).find('.more-info-toggle').removeClass('hide');
-                
-            } else {
-                if (full_text_height > text_height) {
-                    $(this).find('.component-text').addClass('fixed-height');
-                    $(this).find('.more-info-toggle').removeClass('hide');
-                } else {
-                    $(this).find('.component-text').removeClass('fixed-height');
-                    $(this).find('.more-info-toggle').addClass('hide');
-                }
-            };
-
-
-        });
-    }
-    sidebar_fullheight();
-
     // Read more toggle function
     $('.more-info-toggle').on('click', function () {
-        $(this).parents('.sidebar-wrapper').toggleClass('extended');
+        $(this).toggleClass('open');
+        $(this).parents('.component-content').find('.hidden_text').toggleClass('d-none');
 
-        if ($(this).parents('.sidebar-wrapper').hasClass('extended')) {
-            $(this).parents('.sidebar-wrapper').css('height', '100%');
+        if ( $(this).hasClass('open') ) {
             $(this).find('span').text('Read less');
         } else {
             $(this).find('span').text('Read more');
         }
-    });
-
-    $(window).resize(function () {
-        sidebar_fullheight();
     });
 
 

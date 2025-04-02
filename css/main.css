@@ -7581,61 +7581,37 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 @media (max-width: 576px) { .start-component-wrapper { border: none; padding: 0 !important; } .start-component-wrapper h2, .start-component-wrapper .h2 { font-size: 1.75rem; line-height: 1.5; } .start-component-wrapper.tool-header { padding: 24px !important; background: #CFEBEB; } .start-component-wrapper.tool-header h1, .start-component-wrapper.tool-header .h1 { font-size: 2rem; } .start-component-wrapper.tool-header .additional-info { background: transparent; } }
 
-.dummy-sidebar { background: #CFEBEB; }
+.information-sidebar.teal, .sidebar-wrapper.teal { background: #CFEBEB; }
 
-.sidebar-wrapper { height: 100%; width: 100%; justify-content: space-between; height: 100%; }
+.information-sidebar.yellow, .sidebar-wrapper.yellow { background: #FFF3CD; }
 
-.sidebar-wrapper.teal { background: #CFEBEB; }
+.information-sidebar.blue, .sidebar-wrapper.blue { background: #C8D9EE; }
 
-.sidebar-wrapper.yellow { background: #FFF3CD; }
+.information-sidebar .component-content, .sidebar-wrapper .component-content { display: flex; row-gap: 24px; flex-wrap: wrap; }
 
-.sidebar-wrapper.blue { background: #C8D9EE; }
+.information-sidebar .more-info-toggle, .sidebar-wrapper .more-info-toggle { background: none; border: none; color: #2157AA; text-decoration: none; font-weight: 600; font-size: 1rem !important; display: flex; width: auto; align-items: center; }
 
-.sidebar-wrapper .component-text { overflow: hidden; position: relative; }
+.information-sidebar .more-info-toggle:focus-visible, .sidebar-wrapper .more-info-toggle:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
 
-.sidebar-wrapper .component-text.fixed-height::after { content: ""; width: 100%; height: 48px; background: linear-gradient(0deg, #cfebeb 30%, rgba(207, 235, 235, 0) 100%); bottom: 0; position: absolute; }
+.information-sidebar .more-info-toggle.open svg, .sidebar-wrapper .more-info-toggle.open svg { transform: rotate(-180deg); }
 
-.sidebar-wrapper .more-info-toggle { background: none; border: none; color: #2157AA; text-decoration: none; font-weight: 600; font-size: 1rem !important; min-height: auto !important; }
+.information-sidebar.save-progress, .sidebar-wrapper.save-progress { height: auto !important; position: relative; }
 
-.sidebar-wrapper .more-info-toggle:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
+.information-sidebar.non-branded .component-text.fixed-height::after, .sidebar-wrapper.non-branded .component-text.fixed-height::after { background: linear-gradient(0deg, #e8e8e8 30%, rgba(207, 235, 235, 0) 100%); }
 
-.sidebar-wrapper .more-info-toggle.hide { display: none; }
+.information-sidebar.non-branded .more-info-toggle, .sidebar-wrapper.non-branded .more-info-toggle { color: mediumblue; }
 
-.sidebar-wrapper.extended .component-text { height: 100% !important; }
+.information-sidebar.non-branded .more-info-toggle svg path, .sidebar-wrapper.non-branded .more-info-toggle svg path { fill: mediumblue; }
 
-.sidebar-wrapper.extended .component-text.fixed-height::after { display: none; }
+.information-sidebar.non-branded .more-info-toggle:focus-visible, .sidebar-wrapper.non-branded .more-info-toggle:focus-visible { border-color: mediumblue; }
 
-.sidebar-wrapper.extended .more-info-toggle svg { transform: rotate(-180deg); }
+.information-sidebar.non-branded .more-info-toggle:hover, .sidebar-wrapper.non-branded .more-info-toggle:hover { background: transparent; }
 
-.sidebar-wrapper.colour-example.gradient .teal { background: #CFEBEB; }
+.information-sidebar.non-branded .mobile-chat button, .sidebar-wrapper.non-branded .mobile-chat button { border: solid 2px #333333; background: url(../assets/Img-icon-placeholder.svg) #E8E8E8 no-repeat !important; background-position: top 10px center !important; background-size: 27px !important; border-radius: 8px; }
 
-.sidebar-wrapper.colour-example.gradient .teal .component-text::after { content: ""; width: 100%; height: 24px; background: linear-gradient(0deg, #cfebeb 30%, rgba(207, 235, 235, 0) 100%); bottom: 0; position: absolute; }
+.information-sidebar.non-branded .mobile-chat button:focus-visible, .sidebar-wrapper.non-branded .mobile-chat button:focus-visible { border-color: mediumblue; color: #333333; }
 
-.sidebar-wrapper.colour-example.gradient .yellow { background: #FFF3CD; }
-
-.sidebar-wrapper.colour-example.gradient .yellow .component-text::after { content: ""; width: 100%; height: 24px; background: linear-gradient(0deg, #fff3cd 0%, rgba(255, 243, 205, 0) 100%); bottom: 0; position: absolute; }
-
-.sidebar-wrapper.colour-example.gradient .blue { background: #C8D9EE; }
-
-.sidebar-wrapper.colour-example.gradient .blue .component-text::after { content: ""; width: 100%; height: 24px; background: linear-gradient(0deg, #c8d9ee 0%, rgba(200, 217, 238, 0) 100%); bottom: 0; position: absolute; }
-
-.sidebar-wrapper.save-progress { height: auto !important; position: relative; }
-
-.sidebar-wrapper.non-branded .component-text.fixed-height::after { background: linear-gradient(0deg, #e8e8e8 30%, rgba(207, 235, 235, 0) 100%); }
-
-.sidebar-wrapper.non-branded .more-info-toggle { color: mediumblue; }
-
-.sidebar-wrapper.non-branded .more-info-toggle svg path { fill: mediumblue; }
-
-.sidebar-wrapper.non-branded .more-info-toggle:focus-visible { border-color: mediumblue; }
-
-.sidebar-wrapper.non-branded .more-info-toggle:hover { background: transparent; }
-
-.sidebar-wrapper.non-branded .mobile-chat button { border: solid 2px #333333; background: url(../assets/Img-icon-placeholder.svg) #E8E8E8 no-repeat !important; background-position: top 10px center !important; background-size: 27px !important; border-radius: 8px; }
-
-.sidebar-wrapper.non-branded .mobile-chat button:focus-visible { border-color: mediumblue; color: #333333; }
-
-.sidebar-wrapper.non-branded .mobile-chat button:hover { border-color: #333333; color: #333333; background: #F8F8F8; }
+.information-sidebar.non-branded .mobile-chat button:hover, .sidebar-wrapper.non-branded .mobile-chat button:hover { border-color: #333333; color: #333333; background: #F8F8F8; }
 
 .clear-progress-link svg.non-branded { background: none; }
 
