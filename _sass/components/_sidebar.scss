@@ -1,12 +1,4 @@
-.dummy-sidebar {
-    background: $bga-teal-highlight-light;
-}
-
-.sidebar-wrapper {
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    height: 100%;
+.information-sidebar, .sidebar-wrapper {
 
     &.teal {
         background: $bga-teal-highlight-light;
@@ -20,21 +12,10 @@
         background: $bga-blue-background-light;
     }
 
-    .component-text {
-        overflow: hidden;
-        position: relative;
-
-        &.fixed-height {
-
-            &::after {
-                content: "";
-                width: 100%;
-                height: 48px;
-                background: linear-gradient(0deg, rgba(207, 235, 235, 1) 30%, rgba(207, 235, 235, 0) 100%);
-                bottom: 0;
-                position: absolute;
-            }
-        }
+    .component-content {
+        display: flex;
+        row-gap: 24px;
+        flex-wrap: wrap;
     }
 
     .more-info-toggle {
@@ -44,73 +25,20 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 1rem !important;
-        min-height: auto !important;
+        display: flex;
+        width: auto;
+        align-items: center;
 
         &:focus-visible {
             border: $bga-text-focus-border;
             border-radius: $bga-focus-radius;
         }
-
-        &.hide {
-            display: none;
-        }
-
-    }
-
-    &.extended {
-        .component-text {
-            height: 100% !important;
-
-            &.fixed-height {
-                &::after {
-                    display: none;
-                }
-            }
-        }
-
-        .more-info-toggle {
+        &.open {
             svg {
                 transform: rotate(-180deg);
             }
         }
-    }
 
-    &.colour-example.gradient {
-        .teal {
-            background: $bga-teal-highlight-light;
-            .component-text::after {
-                content: "";
-                width: 100%;
-                height: 24px;
-                background: linear-gradient(0deg, rgba(207, 235, 235, 1) 30%, rgba(207, 235, 235, 0) 100%);
-                bottom: 0;
-                position: absolute;
-            }
-        }
-
-        .yellow {
-            background: $bga-yellow-highlight-light;
-            .component-text::after {
-                content: "";
-                width: 100%;
-                height: 24px;
-                background: linear-gradient(0deg, rgba(255, 243, 205, 1) 0%, rgba(255, 243, 205, 0) 100%);
-                bottom: 0;
-                position: absolute;
-            }
-        }
-
-        .blue {
-            background: $bga-blue-background-light;
-            .component-text::after {
-                content: "";
-                width: 100%;
-                height: 24px;
-                background: linear-gradient(0deg, rgba(200, 217, 238, 1) 0%, rgba(200, 217, 238, 0) 100%);
-                bottom: 0;
-                position: absolute;
-            }
-        }
     }
 
     &.save-progress {
@@ -159,13 +87,13 @@
         }
     }
 }
+
 .clear-progress-link svg.non-branded {
     background: none;
     path {
         fill: $nb-blue-links;
     }
 }
-
 
 
 @mixin sidebar-bp-350 {

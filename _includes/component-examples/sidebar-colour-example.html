@@ -1,20 +1,18 @@
-<div class="bga-component-wrapper sidebar-wrapper colour-example gradient">
-<div class="bga-component sidebar sidebar-colours m-0 {{include.classes}}">
+<div class="bga-component sidebar information-sidebar {{include.classes}} m-0">
 
     <div class="p-4 component-content">
 
-        <div class="component-text remove-element-padding">
+        <div class="visible_text remove-element-padding">
             {% if include.title %}
-                <h3>{{ include.title }}</h3>
+                <h3 class="mt-0 pt-0">{{ include.title }}</h3>
             {% endif %}
             
-            {% if include.text %}
-                {{ include.text }}
+            {% if include.visible_text %}
+                {{ include.visible_text }}
             {% endif %}
             
         </div>
 
     </div>
 
-</div>
 </div>

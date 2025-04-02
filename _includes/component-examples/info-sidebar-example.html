@@ -1,29 +1,28 @@
-<div class="bga-component-wrapper sidebar-wrapper fullheight {{include.classes}}">
-<div class="bga-component sidebar information-sidebar m-0">
+<div class="bga-component sidebar information-sidebar {{include.classes}} m-0">
 
     <div class="p-4 component-content">
+       
+        <div class="visible_text remove-element-padding">
+        {% if include.title %}
+            <h3 class="mt-0 pt-0">{{ include.title }}</h3>
+        {% endif %}
+        
+        {{ include.visible_text }}
 
-        <div class="component-text pb-4 remove-element-padding">
-            {% if include.title %}
-                <h3>{{ include.title }}</h3>
-            {% endif %}
-            
-            {% if include.text %}
-                {{ include.text }}
-            {% endif %}
-            
         </div>
 
-        <button tabindex="0" class="more-info-toggle hide m-0 p-0">
-            <span class="pe-2">Read more</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                <g id="Icon:_Chevron_right" data-name="Icon: Chevron right" transform="translate(16) rotate(90)">
-                  <path id="Chevron_Right" data-name="Chevron / Right" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" fill="#2157aa"/>
-                </g>
-              </svg>
-              </button>
-    
+        {% if include.hidden_text %}
+            <div class="hidden_text d-none remove-element-padding">
+                {{ include.hidden_text }}
+            </div>
+
+            <button tabindex="0" class="more-info-toggle m-0 p-0">
+                <span class="pe-2">Read more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g id="Icon:_Chevron_right" data-name="Icon: Chevron right" transform="translate(16) rotate(90)"><path id="Chevron_Right" data-name="Chevron / Right" d="M6.028,8,0,14.018,1.986,16,10,8,1.986,0,0,1.982Z" fill="#2157aa"/></g></svg>
+            </button>
+
+        {% endif %}
 
     </div>
 
-</div>
 </div>
