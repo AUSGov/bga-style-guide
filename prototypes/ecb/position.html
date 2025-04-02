@@ -48,13 +48,11 @@ step-number: 1
         <div class="h-100 col-12 col-md-4 offset-xl-1">
 
             {% include component-examples/info-sidebar-example.html
-            title="Tip"
-            text="<p>If you've already recruited someone, use the position title (or job title) you provided during your
-                recruitment process.</p>
-            <p>The position title should reflect the work your employee will do. You may also find examples of job
-                titles under the applicable award in the classifications section.</p>"
-            classes="inpage teal"
-            %}
+                title="Tip"
+                visible_text="<p>If you've already recruited someone, use the position title (or job title) you provided during your recruitment process.</p>
+                <p>The position title should reflect the work your employee will do. You may also find examples of job titles under the applicable award in the classifications section.</p>"
+                classes="inpage teal"
+                %}
 
         </div>
 
@@ -132,9 +130,7 @@ step-number: 1
         <div class="h-100 col-12 col-md-4  offset-xl-1">
             {% include component-examples/info-sidebar-example.html
             title="Duties / Position description"
-            text="<p>If you provided a position (or job) description during your recruitment process, you can use this.
-                If you don't have a position description yet, you can download the job description template from the
-                Fair Work Ombudsman website and fill it in later.</p>"
+            visible_text="<p>If you provided a position (or job) description during your recruitment process, you can use this. If you don't have a position description yet, you can download the job description template from the Fair Work Ombudsman website and fill it in later.</p>"
             classes="inpage teal"
             %}
         </div>
@@ -345,9 +341,9 @@ step-number: 1
         <div class="h-100 col-12 col-md-4  offset-xl-1">
             {% include component-examples/info-sidebar-example.html
             title="What's an award?"
-            text=" <p>The award sets the minimum terms and conditions for your employee. Keep in mind that you can
-                always provide more generous conditions.</p>
-            <p>Your employee's pay and other entitlements will depend on their classification level in the award and
+            visible_text=" <p>The award sets the minimum terms and conditions for your employee. Keep in mind that you can always provide more generous conditions.</p>"
+
+            hidden_text="<p>Your employee's pay and other entitlements will depend on their classification level in the award and
                 their employment type. Awards are regularly updated, so make sure you keep up to date with your
                 employee's entitlements.</p>
             <p><a href=''>Subscribe to email updates</a> from the Fair Work Ombudsman to stay
@@ -401,8 +397,8 @@ step-number: 1
         <div class="h-100 col-12 col-md-4  offset-xl-1">
             {% include component-examples/info-sidebar-example.html
             title="Unsure of your business structure?"
-            text=" <p>If you're unsure of what your business structure is, search for your business on ABN Lookup. Your
-                business structure is displayed against the 'Entity type' field.</p>
+            visible_text=" <p>If you're unsure of what your business structure is, search for your business on ABN Lookup.</p>"
+            hidden_text="<p>Your business structure is displayed against the 'Entity type' field.</p>
             <p>If none of the business structure options apply to your business, select 'other'.</p>"
             classes="inpage teal"
             %}
@@ -594,12 +590,13 @@ step-number: 1
         <div class="h-100 col-12 col-md-4  offset-xl-1">
             {% include component-examples/info-sidebar-example.html
             title="Types of employees"
-            text="<ul>
+            visible_text="<p>View definitions of employee types to make sure you are getting it right.</p>"
+            hidden_text="<ul>
             <li><strong>Full-time employees</strong> usually work 38 hours per week on average. They may work slightly less or more some weeks. They can be permanent (ongoing) or employed for a fixed term (for example, a 6 month contract).</li>
             <li><strong>Part-time employees</strong> usually work less than 38 hours per week on average. They usually work regular hours each week and can be permanent or employed for a fixed term.</li>
             <li><strong>Casual employees</strong> accepted an offer of employment on the basis that there was no firm advance commitment that the work will continue indefinitely with an agreed pattern of work. They are usually described as a casual employee in their employment contract, work as required to your needs and can refuse any hours of work you offer them. They are paid a casual loading because they don't get some paid entitlements like personal and annual leave.</li>
             </ul>
-            <p>Learn more about the different <a href='https://www.fairwork.gov.au/starting-employment/types-of-employees' target='blank'>types of employees- external site</a> on the Fair Work Ombudsman website. You should also check the award – some define employment types differently.</p>"
+            <p>Learn more about the different <a href='https://www.fairwork.gov.au/starting-employment/types-of-employees' target='blank'>types of employees</a> on the Fair Work Ombudsman website. You should also check the award – some define employment types differently.</p>"
             classes="inpage teal"
             %}
         </div>
@@ -655,8 +652,8 @@ step-number: 1
         <div class="h-100 col-12 col-md-4  offset-xl-1">
             {% include component-examples/info-sidebar-example.html
             title="Provide the same entitlements"
-            text="<p>While on probation, your employee still gets the same entitlements as someone who isn't on probation, including leave.</p>
-            <p>If your employee doesn't pass their probation, you'll still need to give them:</p>
+            visible_text="<p>While on probation, your employee still gets the same entitlements as someone who isn't on probation, including leave.</p>"
+            hidden_text="<p>If your employee doesn't pass their probation, you'll still need to give them:</p>
             <ul>
             <li>notice when their employment ends</li>
             <li>payment for any unused annual leave.</li>
