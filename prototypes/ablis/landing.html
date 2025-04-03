@@ -7,43 +7,55 @@ page-name: Find business licences and regulations
 
 ---
 
-<div class="container hero-section">
-
-    <h2>Two ways to discover Government licences and regulations</h2>
-
-    <div class="hero-pathway-block" id="hero-layout-example">
-
+<div class="container">
+    <div class="dark-teal-section">
         <div class="row">
+            <div class="col-12">
 
-            <div class="col-12 col-sm-6 col-lg-8">
-                {% include component-examples/hero-pathway-example.html
-                image="'../../assets/illustrations/ablis-computer.svg' | relative_url "
-                link="'finder/start.html' | relative_url"
-                classes="border-blue"
-                title="Business licence and regulation finder"
-                description="Tell us about your business to see the licences and regulations that apply to you."
-                %}
+            {% include component-examples/start-component-example.html
+                title="Who this tool is for"
+                description="<p>This tool is for business owners who want to know which licences and regulations apply to them.</p>"
+                link="'../../ablis/finder/business-details.html' | relative_url"
+                time="Around 5 minutes"
+                
+                get="<h3>What you'll get</h3>
+                <p>Answer a few questions about your business and get a list of:</p>
+                <ul>
+                    <li><strong>Licences and registrations</strong> - approvals and registrations you need for your business activities.</li>
+                    <li><strong>Legal obligations</strong> - things you must do by law.</li>
+                    <li><strong>Codes and standards</strong> - rules that businesses in your industry must follow.</li>
+                    <li><strong>Guidance</strong> - information on running your business.</li>
+                </ul>
+                <p>You can save the list and email it to yourself when you're done.</p>
+
+                <h3>What this tool doesn't do.</h3>
+                <p>You can't use this tool to directly apply for licences, permits or other registrations.</p>
+                <p class='mb-0'>You'll get information on how to register and links to the relevant government agencies.</p>"
+
+            %}
+
             </div>
-
-
-            <div class="col-12 col-sm-6 col-lg-4">
-                {% include component-examples/hero-pathway-example.html
-                classes="border-green small-hero"
-                link="'Search-by-keyword.html' | relative_url"
-                title="Search by keyword"
-                description="See all licences and regulations that include a specific term."
-                %}
-
-            </div>
-
         </div>
+    </div>  
+</div>
 
-    </div>
-
-
-    <!-- Disclaimer-->
+<div class="container">
+    
     <div class="row">
         <div class="col-12 col-md-9 col-xl-8">
+
+            <h2>Search for a specific licence and regulation</h2>
+
+            <p>If you already know the licence or regulation you are looking for try the keyword search.</p>
+
+            {% include component-examples/inline-pathway-example.html
+                link1="Search for business licences or regulations"
+                page1="ABLIS keyword search"
+                icon1="'../../assets/icon-arrow-right-blue.svg' | relative_url "
+
+            %}
+
+            <!-- Disclaimer-->
             <div class="bga-component-wrapper pb-5">
                 <div class="bga-component disclaimer hidden py-2 m-0">
 
@@ -93,6 +105,6 @@ page-name: Find business licences and regulations
         </div>
     </div>
 
-
-
 </div>
+
+
