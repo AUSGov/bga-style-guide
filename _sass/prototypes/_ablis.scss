@@ -92,7 +92,7 @@
     }
 
     .dark-teal-section {
-        background: $bga-teal-highlight-dark;
+        background: $bga-teal-highlight-mid;
         margin: 0 -9999px;
         padding: 32px 9999px 0;
     }
@@ -1229,11 +1229,6 @@
         .sticky-header {
             padding: 32px 0;
 
-            &.teal {
-                background: $bga-teal-highlight-light;
-                padding: 0 32px 32px 32px;
-            }
-
             .top-row {
                 display: flex;
                 justify-content: space-between;
@@ -1318,6 +1313,42 @@
 
         }
 
+        .sticky-header.teal {
+            background: $bga-teal-highlight-light;
+            padding: 0 32px 32px 32px;
+
+            .recommendations-summary {
+                .summary {
+                    background: $bga-white;
+                    border-left: $bga-yellow-highlight-shadow solid 8px;
+
+                    &.regulation {
+                        border-left: $bga-orange-highlight-shadow solid 8px;
+                    }
+    
+                    &.codes {
+                        border-left: $bga-blue-highlight-shadow solid 8px;
+                    }
+    
+                    &.advisory {
+                        border-left: $bga-purple-highlight-shadow solid 8px;
+                    }
+                    a {
+                        font-size: 1.125rem;
+                        display: block;
+                        font-weight: 400;
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .anchor-offset {
+        scroll-margin-top: 200px; /* height of your sticky header */
     }
     .ablis-filters {
         .checkbox-item input {
@@ -1446,6 +1477,12 @@
                     cursor: pointer;
                     font-size: .875rem;
                     line-height: 1.75;
+                }
+                &.simple {
+                    .description-content { 
+                        //font-weight: 600; 
+                        padding-bottom: 24px;
+                    }
                 }
             }
 
@@ -1623,10 +1660,6 @@
         border: $bga-component-border;
         width: 100%;
 
-        &.pink {
-            background: pink;
-        }
-
         .result-content {
             background: $bga-white;
             border-left: 8px solid $bga-yellow-highlight-shadow;
@@ -1649,6 +1682,7 @@
             .description {
                 background: $bga-blue-black-background-lightest;
                 padding: 16px;
+
 
                 .description-content {
                     overflow-y: hidden;

@@ -3,7 +3,7 @@
 layout: ablis-landing
 title: Australian Business Licence and Information Service (ABLIS)
 description: Find the licences, permits and other registrations your business needs. This tool helps you understand local, state, territory and national regulations.
-page-name: Find business licences and regulations
+page-name: Australian Business Licence and Information Service (ABLIS)
 
 ---
 
@@ -12,27 +12,76 @@ page-name: Find business licences and regulations
         <div class="row">
             <div class="col-12">
 
-            {% include component-examples/start-component-example.html
-                title="Who this tool is for"
-                description="<p>This tool is for business owners who want to know which licences and regulations apply to them.</p>"
-                link="'../../ablis/finder/business-details.html' | relative_url"
-                time="Around 5 minutes"
+            <div class="start-component-wrapper p-4 mb-5">
+
+                <div class="bga-component start-component mb-4">
+            
+                    <div class="component-content p-4">
+            
+                        <div class="component-text remove-element-padding">
+            
+                            <h2>Business licence and regulation finder</h2>
+                            
+                            <h3>Who this tool is for</h2>
+                           
+            
+                            <p>This tool is for business owners who want to know which licences and regulations apply to them.</p>
+            
+                            <div class="button-example">
+                                <a class="bga-btn bga-primary-btn bkg-light" id="start-now" tabindex="0" href={{'prototypes/ablis/finder/business-details.html' | relative_url}}>Start now</a>
+                            </div>
+            
+            
+                        </div>
+            
+                    </div>
+            
+                    <div class="additional-info p-4 remove-element-padding">
+            
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+                            <g data-name="Group 19123" transform="translate(-2201.5 -2488.511)">
+                              <path data-name="Path 6410" d="M281.241,218.529a28,28,0,1,0,28,28A28.032,28.032,0,0,0,281.241,218.529Zm0,50.815a22.815,22.815,0,1,1,0-45.63h0a22.815,22.815,0,0,1,0,45.63Z" transform="translate(1948.26 2269.982)" fill="#2e3e5a"/>
+                              <path data-name="Path 6411" d="M282.74,236.029h-5v15.5h15.5v-5h-10.5Z" transform="translate(1949.533 2270.892)" fill="#2e3e5a"/>
+                            </g>
+                          </svg>
+            
+                          <h3>Time to complete</h3>
+            
+                          <p>Around 5 minutes</p>
+            
+                         
+            
+                          <div class="button-example mb-0">
+                           
+                            <a class="bga-btn bga-primary-btn bkg-light" tabindex="0" href={{'prototypes/ablis/finder/business-details.html' | relative_url}}>Start now</a>
+                          
+                         
+                        </div>
+                          
+            
+                    </div>
+            
+                </div>
+            
+                {% if include.need %}
+                    {{ include.need }}
+                    {% endif %}
                 
-                get="<h3>What you'll get</h3>
-                <p>Answer a few questions about your business and get a list of:</p>
-                <ul>
-                    <li><strong>Licences and registrations</strong> - approvals and registrations you need for your business activities.</li>
-                    <li><strong>Legal obligations</strong> - things you must do by law.</li>
-                    <li><strong>Codes and standards</strong> - rules that businesses in your industry must follow.</li>
-                    <li><strong>Guidance</strong> - information on running your business.</li>
-                </ul>
-                <p>You can save the list and email it to yourself when you're done.</p>
-
-                <h3>What this tool doesn't do.</h3>
-                <p>You can't use this tool to directly apply for licences, permits or other registrations.</p>
-                <p class='mb-0'>You'll get information on how to register and links to the relevant government agencies.</p>"
-
-            %}
+                    <h3>What you'll get</h3>
+                    <p>Answer a few questions about your business and get a list of:</p>
+                    <ul>
+                        <li><strong>Licences and registrations</strong> - approvals and registrations you need for your business activities.</li>
+                        <li><strong>Legal obligations</strong> - things you must do by law.</li>
+                        <li><strong>Codes and standards</strong> - rules that businesses in your industry must follow.</li>
+                        <li><strong>Guidance</strong> - information on running your business.</li>
+                    </ul>
+                    <p>You can save the list and email it to yourself when you're done.</p>
+    
+                    <h3>What this tool doesn't do.</h3>
+                    <p>You can't use this tool to directly apply for licences, permits or other registrations.</p>
+                    <p class='mb-0'>You'll get information on how to register and links to the relevant government agencies.</p>
+                
+            </div>
 
             </div>
         </div>
