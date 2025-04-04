@@ -734,15 +734,16 @@ $(document).ready(function () {
         if ($('.sticky-wrapper').length) {
             var header = $(".sticky_background");
             var content = $(".content"); // Adjusts main content below
-            var headerHeight = header.outerHeight();
+            var headerHeight = header.outerHeight() + 32;
             var scrollPoint = $('.sticky-wrapper').offset().top; // Change this to where you want the header to stick
             console.log(headerHeight);
+            console.log(content);
             
             $(window).scroll(function () {
                 if ($(window).scrollTop() > scrollPoint) {
                     if (!header.hasClass("fixed")) {
                         header.hide().addClass("fixed").fadeIn(200); // Fade in
-                        content.css("margin-top", headerHeight + "px"); // Prevent overlap
+                        content.css("margin-top", "240px"); // Prevent overlap
                     }
                 } else {
                     if (header.hasClass("fixed")) {
@@ -757,16 +758,19 @@ $(document).ready(function () {
 
         // Scroll to section on header summary link click
         
-        $('.results-links a').on('click', function (e) {
+        /*
+        $('.summary a').on('click', function (e) {
             e.preventDefault();
 
             var target_elem = $(this).attr('href');
+            console.log($(target_elem).offset().top );
+
             $('html, body').animate({
-                scrollTop: $(target_elem).offset().top - 120
+                scrollTop: $(target_elem).offset().top
             }, 100);
 
         });
-        
+        */
 
         // Get question responses and display results accordingly
         $('.ablis-result').each(function () {
