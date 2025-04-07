@@ -1,7 +1,7 @@
 ---
 
 layout: ablis-landing
-title: Australian Business Licence and Information Service (ABLIS)
+page-name: Australian Business Licence and Information Service (ABLIS)
 description: Find the licences, permits and other registrations your business needs. This tool helps you understand local, state, territory and national regulations.
 page-name: Australian Business Licence and Information Service (ABLIS)
 
@@ -62,10 +62,7 @@ page-name: Australian Business Licence and Information Service (ABLIS)
                     </div>
             
                 </div>
-            
-                {% if include.need %}
-                    {{ include.need }}
-                    {% endif %}
+        
                 
                     <h3>What you'll get</h3>
                     <p>Answer a few questions about your business and get a list of:</p>
@@ -97,12 +94,21 @@ page-name: Australian Business Licence and Information Service (ABLIS)
 
             <p>If you already know the licence or regulation you are looking for try the keyword search.</p>
 
-            {% include component-examples/inline-pathway-example.html
-                link1="Search for business licences or regulations"
-                page1="ABLIS keyword search"
-                icon1="'../../assets/icon-arrow-right-blue.svg' | relative_url "
 
-            %}
+            <div class="bga-component-wrapper pb-5">
+                <div class="bga-component inline-pathway {{include.classes}} m-0"> 
+                    <a href={{ 'prototypes/ablis/Search-by-keyword.html' | relative_url }} class="mb-1">
+                        <div class="link-wrapper remove-element-padding p-4 ">
+                        <p class="link mb-3"><strong>Search for business licences or regulations</strong></p>
+                        <p class="page mini"> 
+                            <img class="me-2" src={{ '/assets/icon-arrow-right-blue.svg' | relative_url }} alt="" />
+                            <span>ABLIS keyword search</span></p> 
+                        </div>
+                    </a>
+                </div>
+            </div>
+                                
+                 
 
             <!-- Disclaimer-->
             <div class="bga-component-wrapper pb-5">

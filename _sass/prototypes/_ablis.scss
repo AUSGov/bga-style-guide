@@ -825,15 +825,13 @@
             border: none;
         }
         .rego-resources {
-            display: flex;
-            row-gap: 8px;
-            flex-wrap: wrap;
-
             .resource {
                 width: 100%;
-                display: flex;
-                column-gap: 16px;
-                
+                margin-bottom: 8px;
+
+                &:last-of-type {
+                    margin-bottom: 8px;
+                }
 
                 .rego-link {
                     width: 100%;
@@ -844,14 +842,20 @@
                     padding: 0;
                     text-decoration: none;
 
+                    .link-text-wrapper {
+                        padding: 24px 24px 24px 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        row-gap: 8px;
+                    }
+
                     .task {
                         font-weight: 600;
                         width: 120px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        height: 100%;
-                        min-height: 50px;
+                        align-self: stretch;
                         background: $bga-yellow-highlight-dark;
                         flex-shrink: 0;
                         color: $bga-black;
@@ -862,33 +866,44 @@
                     }
 
                     .link-text {
-                        background: url('../assets/iconography/icon-arrow-right-blue.svg') no-repeat left center;
-                        background-size: 24px 24px;
                         display: inline-flex;
                         align-items: center;
-                        justify-content: center;
-                        padding: 24px 24px 24px 40px;
+                        padding: 0;
                         color: $bga-blue-links;
                         font-weight: 600;
                         text-decoration: underline;
+                        width: 100%;
+                    }
+                    .mini.instruction {
+                        padding-left: 24px;
+                        background: url('../assets/iconography/icon-arrow-right-blue.svg') no-repeat left center;
+                        background-size: 16px 16px;
                     }
 
                     &.pdf-icon,
                     &.doc-icon {
-                        .link-text {
+                        .mini.instruction {
                             background: url('../assets/iconography/icon-download-blue.svg') no-repeat left center;
-                            background-size: 24px 24px;
+                            background-size: 16px 16px;
                         }
                     }
 
                     &.no-link {
                         cursor: default;
+
                         .link-text {
-                            background: url('../assets/icon-person-black.svg') no-repeat left center;
-                            background-size: 24px 24px;
                             color: $bga-black;
                             font-weight: 400;
                             text-decoration: none;
+                        }
+
+                        &:hover {
+                            background: $bga-yellow-highlight-light;
+
+                            .task {
+                                background: $bga-yellow-highlight-dark;
+                                border-left: 8px solid $bga-yellow-highlight-shadow;
+                            } 
                         }
                     }
 
@@ -905,6 +920,7 @@
                     }
                     &:hover {
                         background: $bga-yellow-highlight-mid;
+
                         .task {
                             background-color: $bga-yellow-links-background;
                             border-left-color: darken($bga-yellow-highlight-shadow, 10%);
