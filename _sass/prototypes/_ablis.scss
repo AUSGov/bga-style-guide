@@ -1138,6 +1138,113 @@
         }
         
     }
+    .key-info-links {
+        .resource {
+            width: 100%;
+            margin-bottom: 8px;
+
+            &:last-of-type {
+                margin-bottom: 8px;
+            }
+
+            .info-link {
+                width: 100%;
+                background: $bga-blue-background-extralight;
+                display: flex;
+                column-gap: 16px;
+                align-items: center;
+                padding: 0;
+                text-decoration: none;
+
+                .link-text-wrapper {
+                    padding: 24px 24px 24px 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    row-gap: 8px;
+                }
+
+                .task {
+                    font-weight: 600;
+                    width: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: stretch;
+                    background: $bga-blue-background-light;
+                    flex-shrink: 0;
+                    color: $bga-black;
+                    text-decoration: none;
+                    padding: 24px;
+                    border-left: 8px solid $bga-blue-border;
+                    font-size: 18px;
+                }
+
+                .link-text {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 0;
+                    color: $bga-blue-links;
+                    font-weight: 600;
+                    text-decoration: underline;
+                    width: 100%;
+                }
+                .mini.instruction {
+                    padding-left: 24px;
+                    background: url('../assets/iconography/icon-arrow-right-blue.svg') no-repeat left center;
+                    background-size: 16px 16px;
+                }
+
+                &.pdf-icon,
+                &.doc-icon {
+                    .mini.instruction {
+                        background: url('../assets/iconography/icon-download-blue.svg') no-repeat left center;
+                        background-size: 16px 16px;
+                    }
+                }
+
+                &.no-link {
+                    cursor: default;
+
+                    .link-text {
+                        color: $bga-black;
+                        font-weight: 400;
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        background: $bga-blue-highlight-light;
+
+                        .task {
+                            background: $bga-blue-highlight-dark;
+                            border-left: 8px solid $bga-blue-highlight-shadow;
+                        } 
+                    }
+                }
+
+                &:visited {
+                    color: $bga-blue-links;
+                }
+                &:focus-visible {
+                    background: $bga-blue-background-light;
+                    border: $bga-component-focus-border;
+                    .task {
+                        background-color: $bga-blue-highlight-mid;
+                        border-left-color: $bga-blue-highlight-shadow;
+                    }
+                }
+                &:hover {
+                    background: $bga-blue-background-light;
+
+                    .task {
+                        background-color: $bga-blue-highlight-mid;
+                        border-left-color: $bga-blue-highlight-shadow;
+                    } 
+                }
+
+            }
+        }
+    }
+
 
     .disclaimer.ablis {
         //background: $bga-blue-black-background-lightest;
