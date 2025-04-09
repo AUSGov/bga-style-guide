@@ -756,21 +756,6 @@ $(document).ready(function () {
             });
         };
 
-        // Scroll to section on header summary link click
-        
-        /*
-        $('.summary a').on('click', function (e) {
-            e.preventDefault();
-
-            var target_elem = $(this).attr('href');
-            console.log($(target_elem).offset().top );
-
-            $('html, body').animate({
-                scrollTop: $(target_elem).offset().top
-            }, 100);
-
-        });
-        */
 
         // Get question responses and display results accordingly
         $('.ablis-result').each(function () {
@@ -963,15 +948,12 @@ $(document).ready(function () {
         console.log('search page');
         $('.state-wrapper').removeClass('d-none');
 
-
-        // BUSINESS DETAIL QUESTIONS
-        // predictive list for keyword search
+        // Predictive list for keyword search
         $('.predictive-list-ablis input').on('input', function(){
             var input = $(this).val(),
             input_len = input.length,
             input_lower_case = input.toLowerCase(),
-            list_id = $(this).parents('.list-wrapper').find('ul').attr('id');
-            //console.log(list_id);
+            list_id = $(this).parents('.list-wrapper').find('ul').attr('id');   
         
             if(input) {
                 $('ul#'+ list_id).addClass('open');
@@ -1014,18 +996,6 @@ $(document).ready(function () {
                 $('ul#'+ list_id).removeClass('open');
                 $(this).parents('.predictive-list-ablis').find('a#list-close').removeClass('show');
             }
-        
-            /*if (list_len == hidden_count) {
-                $('ul#'+ list_id + ' li.related,  ul#'+ list_id + ' p.related').each(function(){
-                    $(this).addClass('hidden');
-                });
-                $(this).parents('.predictive-list-ablis').find('.no-result').addClass('show');
-            } else {
-                $(this).parents('.predictive-list-ablis').find('.no-result').removeClass('show');
-            } 
-            if(!list_len) {
-                $(this).parents('.predictive-list-ablis').find('.no-result').removeClass('show');
-            };*/
         });
         
         $('.predictive-list-ablis li').on('click', function(){
@@ -1063,11 +1033,16 @@ $(document).ready(function () {
             });
         
             var parent_list = $(this).parents('.predictive-list-ablis').find('ul').attr('id'); 
-        
-            //ablis_questions[parent_list] = "";
-            //sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+    
         
         });
+        // Hide list if user clicks outside the input 
+        $(document).on("click", function(event) {
+            if (!$(event.target).closest("#keyword").length) {
+                $("#keyword").removeClass('open');
+                $('#list-close').removeClass('show');
+            }
+          });
         
 
 
