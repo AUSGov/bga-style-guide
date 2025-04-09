@@ -963,6 +963,114 @@ $(document).ready(function () {
         console.log('search page');
         $('.state-wrapper').removeClass('d-none');
 
+
+        // BUSINESS DETAIL QUESTIONS
+        // predictive list for keyword search
+        $('.predictive-list-ablis input').on('input', function(){
+            var input = $(this).val(),
+            input_len = input.length,
+            input_lower_case = input.toLowerCase(),
+            list_id = $(this).parents('.list-wrapper').find('ul').attr('id');
+            //console.log(list_id);
+        
+            if(input) {
+                $('ul#'+ list_id).addClass('open');
+                $(this).parents('.predictive-list-ablis').find('a#list-close').addClass('show');
+        
+                var list_len = $('ul#'+ list_id + ' li').length;
+                var hidden_count = 0;
+        
+                
+                $('ul#'+ list_id + ' li').each(function(){
+                    var str = $(this).text(),
+                    str_lower_case = str.toLowerCase(),
+                    str_start_pos = str_lower_case.indexOf(input_lower_case), 
+                    str_end_pos = str_start_pos + input_len;
+                    
+        
+                    if (str_lower_case.includes(input_lower_case)) {
+                        $(this).removeClass('hidden');
+        
+                        var case_str = str.slice(str_start_pos, str_end_pos),
+                        str_1 = str.slice(0, str_start_pos),
+                        str_2 = str.slice(str_end_pos);
+        
+                        var new_str = str_1 + "<span>" + case_str + "</span>" + str_2;
+        
+                        $(this).html(new_str);
+                    } else { 
+                        $(this).find("span").contents().unwrap();
+                        $(this).addClass('hidden');
+                        hidden_count++;
+                    }
+                });
+        
+                $('ul#'+ list_id + ' li.related, ul#'+ list_id + ' p.related').each(function(){
+                    $(this).removeClass('hidden');
+                });
+                
+        
+            } else {
+                $('ul#'+ list_id).removeClass('open');
+                $(this).parents('.predictive-list-ablis').find('a#list-close').removeClass('show');
+            }
+        
+            /*if (list_len == hidden_count) {
+                $('ul#'+ list_id + ' li.related,  ul#'+ list_id + ' p.related').each(function(){
+                    $(this).addClass('hidden');
+                });
+                $(this).parents('.predictive-list-ablis').find('.no-result').addClass('show');
+            } else {
+                $(this).parents('.predictive-list-ablis').find('.no-result').removeClass('show');
+            } 
+            if(!list_len) {
+                $(this).parents('.predictive-list-ablis').find('.no-result').removeClass('show');
+            };*/
+        });
+        
+        $('.predictive-list-ablis li').on('click', function(){
+            $(this).parents('.predictive-list-ablis').find('.error-message').addClass('d-none');
+            $(this).parents('.form-element-wrapper').removeClass('error');
+        
+            var list_item = $(this).text(),
+            parent_list = $(this).parents('ul').attr('id');
+            //console.log(parent_list);
+        
+            //ablis_questions[parent_list] = list_item;
+            //sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+
+            $(this).parents('.list-wrapper').find('input').val(list_item).addClass('selected');
+        
+            $('.predictive-list-ablis li.hidden').each(function(){
+                $(this).removeClass('hidden');
+            });
+            $('a#list-close').addClass('show');
+            $(this).parents('ul').removeClass('open');
+
+            
+        });
+        
+        $('a#list-close').on('click', function(){
+            $(this).parents('.predictive-list-ablis').find('.no-result').removeClass('show');
+            $(this).parents('.predictive-list-ablis').find('input').val('').removeClass('selected');
+            $(this).parents('.predictive-list-ablis').find('ul').removeClass('open'); 
+            $(this).removeClass('show');
+        
+            $(this).parents('.predictive-list-ablis').find('ul li').find("span").contents().unwrap();
+            
+            $(this).parents('.predictive-list-ablis').find('ul li.hidden').each(function(){
+                $(this).removeClass('hidden');
+            });
+        
+            var parent_list = $(this).parents('.predictive-list-ablis').find('ul').attr('id'); 
+        
+            //ablis_questions[parent_list] = "";
+            //sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+        
+        });
+        
+
+
         // Set heights for descriptions in result tiles using the height of a cloned element 
         set_description_heights('.results-wrapper');
 
@@ -974,16 +1082,33 @@ $(document).ready(function () {
 
         // Search button click
         $('#search-btn').on('click', function () {
-            var keyword = $('#search_keyword').val(),
-                location = $('.dynamic-list-ablis input').val();
+            var keyword = $('#search_keyword').val();
+            
+            var location_count = $('.input-wrapper').find('.ablis-selected-option').length;
 
-            if (keyword && location) {
+            locations = [];
+            if (location_count) {
+                $('.ablis-selected-option p').each(function(){
+                    locations.push($(this).text());
+                }); 
+            }
+
+            if (keyword && location_count > 0) {
+                var location_text = '';
+                for (var i = 0; i < locations.length; i++) {
+                    city = locations[i].split(",")[0];
+                    
+                    if (i == 0) {
+                        location_text = city;
+                    } else if (i != (locations.length - 1) ) {
+                        location_text = location_text + ', ' + city;
+                    } else {
+                        location_text = location_text + ' and ' + city;
+                    }
+                }
+
                 $('.showing-number span.keyword').text(keyword);
-                $('.showing-number span.location').text(location);
-
-                ablis_search['search_term'] = keyword;
-                ablis_search['search_location'] = location;
-                sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
+                $('.showing-number span.location').text(location_text);
 
                 $('.content-sticky-wrapper').removeClass('d-none');
                 set_description_heights('.results-wrapper');
@@ -994,11 +1119,12 @@ $(document).ready(function () {
                     }, 100);
                 }, 200);
             } else {
+                $('.content-sticky-wrapper').addClass('d-none');
                 if (!keyword) {
                     $('.keyword-wrapper .form-element-wrapper').addClass('error');
                     $('.keyword-wrapper .error-message').removeClass('d-none');
                 }
-                if (!location) {
+                if (location_count == 0) {
                     $('.location-wrapper .form-element-wrapper').addClass('error');
                     $('.location-wrapper .error-message').removeClass('d-none');
                 };
@@ -1010,14 +1136,10 @@ $(document).ready(function () {
 
         // Reset form button click
         $('#reset-btn').on('click', function () {
-            ablis_search['search_term'] = "";
-            ablis_search['search_location'] = "";
-            ablis_search['active_filters'] = { 'licence': false, 'regulatory-obligation': false, 'code-of-practice': false, 'advisory-material': false, 'city-of-melbourne': false, 'city-of-port-phillip': false, 'victorian-state-government': false, 'australian-government': false }
-
-            sessionStorage.setItem('ablis_search', JSON.stringify(ablis_search));
 
             $('#search_keyword').val("");
             $('.dynamic-list-ablis input').val("");
+            $('.ablis-selected-option').remove();
 
             $('.content-sticky-wrapper').addClass('d-none');
         });
@@ -1197,7 +1319,7 @@ $(document).ready(function () {
 
 
         // Repopulate the page on refresh if the two search terms have been entered already.
-        if (!ablis_search['search_term'] == "" && !ablis_search['search_location'] == "") {
+        /*if (!ablis_search['search_term'] == "" && !ablis_search['search_location'] == "") {
             var keyword = ablis_search['search_term'],
                 location = ablis_search['search_location'];
 
@@ -1220,7 +1342,7 @@ $(document).ready(function () {
                 };
             }
             check_active_filters();
-        }
+        }*/
 
     };
 
