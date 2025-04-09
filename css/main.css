@@ -12452,7 +12452,7 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-prototype .dynamic-list-ablis.multi-select ul { max-height: 400px; overflow-y: scroll; }
 
-#ablis-prototype .dynamic-list-ablis.multi-select .input-wrapper { border: solid 1px #333333; display: flex; gap: 8px; flex-wrap: wrap; padding: 8px 16px; min-height: 56px; }
+#ablis-prototype .dynamic-list-ablis.multi-select .input-wrapper { border: solid 1px #333333; display: flex; gap: 8px; flex-wrap: wrap; padding: 8px 16px; min-height: 56px; background: #ffffff; }
 
 #ablis-prototype .dynamic-list-ablis.multi-select input { border: none; margin: 0; padding: 0; display: block; flex-grow: 1; width: auto; flex-basis: auto; height: auto; }
 
@@ -12909,6 +12909,78 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 #ablis-prototype #ablis-task-list.modal-example { left: calc(50% - 450px); }
 
 #ablis-prototype #ablis-task-list.modal-example .task-counter { display: inline-flex; color: #ffffff; align-items: center; justify-content: center; background: #2E6CB9; height: 32px; width: 32px; border-radius: 40px; font-size: 1.125rem; font-weight: 600; }
+
+#ablis-prototype .predictive-list-ablis { background: none; margin-top: 0; width: 100%; }
+
+#ablis-prototype .predictive-list-ablis .list-wrapper { position: relative; width: 100%; }
+
+#ablis-prototype .predictive-list-ablis h4, #ablis-prototype .predictive-list-ablis .h4 { color: #333333; }
+
+#ablis-prototype .predictive-list-ablis input { border: solid #333333 1px; width: 100%; padding: 12px 48px 12px 16px; font-size: 1rem; line-height: 1.75; height: 56px; background: #ffffff; z-index: 4000; text-overflow: ellipsis; }
+
+#ablis-prototype .predictive-list-ablis input::placeholder { color: #333333; }
+
+#ablis-prototype .predictive-list-ablis input::-webkit-calendar-picker-indicator { display: none !important; }
+
+#ablis-prototype .predictive-list-ablis input:focus, #ablis-prototype .predictive-list-ablis input:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; outline: none; }
+
+#ablis-prototype .predictive-list-ablis a#list-close { display: flex; justify-content: center; align-items: center; position: absolute; right: 0px; height: 56px; top: 0; z-index: 5000; background: none; display: none; }
+
+#ablis-prototype .predictive-list-ablis a#list-close svg { display: block; }
+
+#ablis-prototype .predictive-list-ablis a#list-close:hover { cursor: pointer; }
+
+#ablis-prototype .predictive-list-ablis a#list-close.show { display: flex; }
+
+#ablis-prototype .predictive-list-ablis .options-wrapper { max-height: 400px; overflow-y: scroll; padding: 0; margin: 0; }
+
+#ablis-prototype .predictive-list-ablis ul { background: #ffffff; border: #333333 1px solid; border-top: none; padding: 0; margin: 0; display: none; }
+
+#ablis-prototype .predictive-list-ablis ul.open { display: block; }
+
+#ablis-prototype .predictive-list-ablis ul p { padding: 12px 16px; margin: 0; display: block; background: #ABB1BD; font-weight: 600; }
+
+#ablis-prototype .predictive-list-ablis ul p.hidden { display: none; }
+
+#ablis-prototype .predictive-list-ablis ul li { list-style: none; padding: 12px 16px; margin: 0; display: block; text-indent: 0; }
+
+#ablis-prototype .predictive-list-ablis ul li.related { background: #E4E6EA; }
+
+#ablis-prototype .predictive-list-ablis ul li::before { display: none; }
+
+#ablis-prototype .predictive-list-ablis ul li.hidden { display: none; }
+
+#ablis-prototype .predictive-list-ablis ul li span { font-weight: 700; background: #C8D9EE; }
+
+#ablis-prototype .predictive-list-ablis ul li:focus { background: #2E6CB9; color: #ffffff; }
+
+#ablis-prototype .predictive-list-ablis ul li:hover { background: #113869; color: #ffffff; }
+
+#ablis-prototype .predictive-list-ablis ul li:hover span { background: #2E6CB9; }
+
+#ablis-prototype .predictive-list-ablis .no-result { background: #FCE9E9; border: 1px solid #C9201D; border-top: none; display: none; padding: 12px 16px; }
+
+#ablis-prototype .predictive-list-ablis .no-result.show { display: block; }
+
+#ablis-prototype .predictive-list-ablis .no-result p { color: #C9201D; }
+
+#ablis-prototype .predictive-list-ablis.list .dynamic-list input { width: 100%; }
+
+#ablis-prototype .predictive-list-ablis.list .dynamic-list a#list-close { right: 0px; }
+
+#ablis-prototype .predictive-list-ablis .error input { border: #C9201D 3px solid !important; }
+
+#ablis-prototype .predictive-list-ablis.multi-select ul { max-height: 400px; overflow-y: scroll; }
+
+#ablis-prototype .predictive-list-ablis.multi-select .input-wrapper { border: solid 1px #333333; display: flex; gap: 8px; flex-wrap: wrap; padding: 8px 16px; min-height: 56px; background: #ffffff; }
+
+#ablis-prototype .predictive-list-ablis.multi-select input { border: none; margin: 0; padding: 0; display: block; flex-grow: 1; width: auto; flex-basis: auto; height: auto; }
+
+#ablis-prototype .predictive-list-ablis.multi-select .ablis-selected-option { background: #CFEBEB; border: solid 2px #5AB3B3; border-radius: 50px; padding: 4px 8px; height: auto; margin: 0; display: inline-flex; column-gap: 8px; align-items: center; flex: 0 0 auto; }
+
+#ablis-prototype .predictive-list-ablis.multi-select .ablis-selected-option p { margin: 0; padding: 0; display: block; font-weight: 600; }
+
+#ablis-prototype .predictive-list-ablis.multi-select .ablis-selected-option .selected-remove { text-indent: -9999px; width: 16px; height: 16px; background: url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; border: none; box-shadow: none; }
 
 #ablis-prototype .serviceSection.clone p, #ablis-prototype .serviceSection.clone a, #ablis-prototype .serviceSection.clone li { font-size: .875rem; line-height: 1.75; }
 
