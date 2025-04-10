@@ -8,13 +8,20 @@ step : step-1
 
 ---
 
+<!-- Notification to disply if users return to the business details page -->
+{% include component-examples/notification-example.html
+    icon="'../../../assets/icon-notification-circle-warning.svg' | relative_url "
+    title="Updating your business details will reset this tool."
+    content="Changing answers on this page resets all questions from this point on. You will lose information you have provided on other pages."
+    classes="warning no-close d-none"
+    %}
+
 <!-- PRIMARY ACTIVITIES -->
 
 
 <div id="primary-activity-section" class="remove-element-padding">
     <h2>Primary business activities</h2>
         
-
         <p class="mb-3">Tell us what types of activities your business will do. You can add up to 3 different activities.</p>
 
             <div class="dynamic-list-ablis multi-select remove-element-padding">
