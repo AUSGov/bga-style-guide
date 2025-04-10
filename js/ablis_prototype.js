@@ -668,6 +668,12 @@ $(document).ready(function () {
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
     });
 
+    // If business details have previously been completed show reset questions modal
+    if ( $('body.step-1').length && (dynamic_nav['step-1']['completed'] == "yes") ) {
+        console.log('Business details page');
+        $('.notification.warning').removeClass('d-none');
+    }
+
 
 
     //FUNCTIONS FOR SEARCH TILES ON RESULTS AND KEYWORD SEARCH PAGES
