@@ -178,7 +178,7 @@ $(document).ready(function () {
 
     //DYNAMIC NAV AND REGULATORY CATEGORY CHECKBOXES
     // Dynamic nav functionality
-    if ('#ablis-dynamic-nav'.length) {
+    var set_dynamic_nav = function(){
         //Hide secondary pages that are not activated
         $('li.secondary').each(function(){
             var step = $(this).attr('data-step');
@@ -187,7 +187,7 @@ $(document).ready(function () {
             } else {
                 $(this).addClass('d-none');
             }
-         });
+        });
 
         // Add classes and urls to dynamic nav links
         for (var item in dynamic_nav) {
@@ -208,6 +208,10 @@ $(document).ready(function () {
             }
             
         }
+    };
+
+    if ('#ablis-dynamic-nav'.length) {
+        set_dynamic_nav();
     }
 
 
@@ -639,6 +643,7 @@ $(document).ready(function () {
         $(this).parents('ul').removeClass('open');
 
         parent_wrapper.find('input').val('').focus();
+
     });
 
     $(document).on('click', '.selected-remove', function () {
@@ -654,7 +659,6 @@ $(document).ready(function () {
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
     });
 
-
     // Store answers from dropdown selects
     $("select").on('change', function () {
         $(this).parents('.form-element-wrapper').removeClass('error');
@@ -668,11 +672,180 @@ $(document).ready(function () {
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
     });
 
+    
+
+    // Function to reset categories
+    var reset_categories = function(){
+        console.log('resetting categories');
+        //Reset dynamic nav
+        dynamic_nav = {
+            'step-1': {
+                'url': "business-details.html",
+                'visited': "yes",
+                'completed': "yes",
+                'dynamic-state' : "visible"
+            },
+            'step-2': {
+                'url': "regulation-categories.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : "visible"
+            },
+            'step-3': {
+                'url': "operations.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+            },
+            'step-4': {
+                'url': "products-and-services.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+
+            },
+            'step-5': {
+                'url': "tax.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+            },
+            'step-6': {
+                'url': "workers.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+            },
+            'step-7': {
+                'url': "buildings-and-land.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+            },
+            'step-8': {
+                'url': "equipment-and-transport.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+            },
+            'step-9': {
+                'url': "dangerous-and-hazardous-goods.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+            },
+            'step-10': {
+                'url': "environment-and-animals.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+            },
+            'step-11': {
+                'url': "public-spaces.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : ""
+            },
+            'step-12': {
+                'url': "results.html",
+                'visited': "",
+                'completed': "",
+                'dynamic-state' : "visible"
+            }
+        }
+        sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
+
+        set_dynamic_nav();
+        
+
+        // Reset regulatory questions
+        var q1_response = ablis_questions['responses']['q1'];
+        ablis_questions['responses'] = {
+            "all": "yes",
+            "q1": q1_response,
+            "q2": "no",
+            "q3": "no",
+            "q4": "no",
+            "q5": "no",
+            "q6": "no",
+            "q7": "no",
+            "q8": "no",
+            "q9": "no",
+            "q10": "no",
+            "q11": "no",
+            "q12": "no",
+            "q13": "no",
+            "q14": "no",
+            "q15": "no",
+            "q16": "no",
+            "q17": "no",
+            "q18": "no",
+            "q19": "no",
+            "q20": "no",
+            "q21": "no",
+            "q22": "no",
+            "q23": "no",
+            "q24": "no",
+            "q25": "no",
+            "q26": "no",
+            "q27": "no",
+            "q28": "no",
+            "q29": "no",
+            "q30": "no",
+            "q31": "no",
+            "q32": "no",
+            "q33": "no",
+            "q34": "no",
+            "q35": "no",
+            "q36": "no",
+            "q37": "no",
+            "q38": "no",
+            "q39": "no",
+            "q40": "no",
+            "q41": "no",
+            "q42": "no",
+            "q43": "no",
+            "q44": "no",
+            "q45": "no",
+            "q46": "no",
+            "q47": "no",
+            "q48": "no",
+            "q49": "no",
+            "q50": "no",
+        }
+        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+
+    };
+
     // If business details have previously been completed show reset questions modal
     if ( $('body.step-1').length && (dynamic_nav['step-1']['completed'] == "yes") ) {
         console.log('Business details page');
         $('.notification.warning').removeClass('d-none');
+
+        var reset = false;
+
+        if (reset == false) {
+            $('.dynamic-list-ablis li').on('click', function () {
+                reset_categories();
+                reset = true;
+            });
+
+            $(document).on('click', '.selected-remove', function () {
+                reset_categories();
+                reset = true;
+            });
+
+            $("select").on('change', function () {
+                reset_categories();
+                reset = true;
+            });
+
+
+        }
+
+
     }
+
 
 
 
