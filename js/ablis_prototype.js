@@ -672,7 +672,6 @@ $(document).ready(function () {
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
     });
 
-    
 
     // Function to reset categories
     var reset_categories = function(){
@@ -1181,12 +1180,7 @@ $(document).ready(function () {
             $(this).parents('.predictive-list-ablis').find('.error-message').addClass('d-none');
             $(this).parents('.form-element-wrapper').removeClass('error');
         
-            var list_item = $(this).text(),
-            parent_list = $(this).parents('ul').attr('id');
-            //console.log(parent_list);
-        
-            //ablis_questions[parent_list] = list_item;
-            //sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+            var list_item = $(this).text();
 
             $(this).parents('.list-wrapper').find('input').val(list_item).addClass('selected');
         
@@ -1233,10 +1227,50 @@ $(document).ready(function () {
             open_close_descriptions($(this));
         });
 
+        // Variables to store a temporarily promoted result
+        var promoted_item,
+            promoted_prev; //used to remember the original placement
+
+        // Function to promote a result to the top of the list if it is used as a search term
+        var promote_result = function(search_term){
+            //console.log(search_term);
+
+            //return a previously promoted result
+           // if (promoted_) {
+            //    console.log(promoted_item);
+           //     promoted_item.after(promoted_sibling); 
+          //  }
+            if (promoted_prev) {
+                promoted_prev.after(promoted_item);
+              } else {
+                // It was the first child originally, so just prepend again
+                $('.search_result_group').prepend(promoted_item);
+              }
+
+            // Select and promote the new result
+            var item = $('.ablis-search-result a:contains(' + search_term +')').parents('.ablis-search-result');
+            //console.log(item);
+             
+                if (item.length > 0) {
+                    promoted_item = item;
+                    promoted_prev = item.prev();
+
+                    $('.search_result_group').prepend(item);
+                }  
+
+             //console.log(promoted_item);
+             console.log(promoted_prev);
+
+        };
+        
+
 
         // Search button click
         $('#search-btn').on('click', function () {
+            
             var keyword = $('#search_keyword').val();
+            //console.log(keyword);
+            promote_result(keyword);
             
             var location_count = $('.input-wrapper').find('.ablis-selected-option').length;
 
@@ -1248,6 +1282,7 @@ $(document).ready(function () {
             }
 
             if (keyword && location_count > 0) {
+                // Add search terms to showing number text
                 var location_text = '';
                 for (var i = 0; i < locations.length; i++) {
                     city = locations[i].split(",")[0];
@@ -1264,6 +1299,7 @@ $(document).ready(function () {
                 $('.showing-number span.keyword').text(keyword);
                 $('.showing-number span.location').text(location_text);
 
+                // Show page results on the page
                 $('.content-sticky-wrapper').removeClass('d-none');
                 set_description_heights('.results-wrapper');
 
@@ -1325,6 +1361,7 @@ $(document).ready(function () {
             $('.filter-item label[data-label=' + item + '] span').text('(' + filter_counts[item] + ')');
         }
 
+
         // Record when filters are selected / unselected on checkbox click
         var hide_more_than_10 = function (result_tile) {
             $(result_tile).each(function (index, result) {
@@ -1335,7 +1372,6 @@ $(document).ready(function () {
                 }
             });
         };
-
 
         var check_active_filters = function () {
             // Determine if any filters are active
@@ -1431,7 +1467,6 @@ $(document).ready(function () {
 
         };
 
-
         $('.filter-item .checkbox-item input').on('click', function () {
             var filter = $(this).parents('.checkbox-item').find('label').attr('data-label');
 
@@ -1472,31 +1507,7 @@ $(document).ready(function () {
         });
 
 
-        // Repopulate the page on refresh if the two search terms have been entered already.
-        /*if (!ablis_search['search_term'] == "" && !ablis_search['search_location'] == "") {
-            var keyword = ablis_search['search_term'],
-                location = ablis_search['search_location'];
-
-            $('#search_keyword').val(keyword);
-            $('.dynamic-list-ablis input').val(location);
-            $('a#list-close').addClass('show');
-
-            $('.content-sticky-wrapper').removeClass('d-none');
-
-            $('.showing-number span.keyword').text(keyword);
-            $('.showing-number span.location').text(location);
-
-            set_description_heights('.results-wrapper');
-
-            for (var item in ablis_search['active_filters']) {
-
-                if (ablis_search['active_filters'][item] == true) {
-                    $('.checkbox-item input#' + item).prop('checked', true);
-                    $('.active-filters li[data-value=' + item + ']').addClass('selected');
-                };
-            }
-            check_active_filters();
-        }*/
+        
 
     };
 
