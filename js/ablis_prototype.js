@@ -1227,43 +1227,48 @@ $(document).ready(function () {
             open_close_descriptions($(this));
         });
 
+
+        // Record when filters are selected / unselected on checkbox click
+        var hide_more_than_10 = function (result_tile) {
+            $(result_tile).each(function (index, result) {
+                if (index < 10) {
+                    $(result).removeClass('d-none');
+                } else {
+                    $(result).addClass('d-none');
+                }
+            });
+        };
+
         // Variables to store a temporarily promoted result
         var promoted_item,
             promoted_prev; //used to remember the original placement
 
         // Function to promote a result to the top of the list if it is used as a search term
         var promote_result = function(search_term){
-            //console.log(search_term);
+            console.log(search_term);
 
             //return a previously promoted result
-           // if (promoted_) {
-            //    console.log(promoted_item);
-           //     promoted_item.after(promoted_sibling); 
-          //  }
             if (promoted_prev) {
                 promoted_prev.after(promoted_item);
-              } else {
-                // It was the first child originally, so just prepend again
+            } else {
+                //It was the first child originally, so just prepend again
                 $('.search_result_group').prepend(promoted_item);
-              }
+            }
 
             // Select and promote the new result
-            var item = $('.ablis-search-result a:contains(' + search_term +')').parents('.ablis-search-result');
-            //console.log(item);
-             
-                if (item.length > 0) {
-                    promoted_item = item;
-                    promoted_prev = item.prev();
+            var item = $('[data-value="'+ search_term +'"]');
 
-                    $('.search_result_group').prepend(item);
-                }  
+            if (item.length > 0) {
+                promoted_item = item;
+                promoted_prev = item.prev();
 
-             //console.log(promoted_item);
-             console.log(promoted_prev);
+                $('.search_result_group').prepend(item);
+            }
+                
+            hide_more_than_10('.ablis-search-result');
 
         };
-        
-
+    
 
         // Search button click
         $('#search-btn').on('click', function () {
@@ -1362,16 +1367,7 @@ $(document).ready(function () {
         }
 
 
-        // Record when filters are selected / unselected on checkbox click
-        var hide_more_than_10 = function (result_tile) {
-            $(result_tile).each(function (index, result) {
-                if (index < 10) {
-                    $(result).removeClass('d-none');
-                } else {
-                    $(result).addClass('d-none');
-                }
-            });
-        };
+        
 
         var check_active_filters = function () {
             // Determine if any filters are active
