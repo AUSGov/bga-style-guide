@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" id="ablis-final-prototype" style="overflow-x: hidden;">
+
+{% include prototypes/head_ablis.html %}
+
+<body class="" {% if page.id %} id="{{page.id}}" {% endif %}>
+
+    <!-- SUBSITE HEADER -->
+    {% include prototypes/subsite_header_ablis-final.html 
+        title=page.title %}
+
+
+    <!-- PAGE HEADER -->
+    <div id="page-header" class="teal">
+        <div class="container">
+
+            <div class="row inner-wrapper pt-5 mx-0">
+
+                <div class="header-content p-5">
+
+                    <div class="col-sm-12 col-lg-10 remove-element-padding">
+                        <h1>{{ page.page-name }}</h1>
+
+                        {% if page.description %}
+                        <p class="header-intro">{{ page.description }}</p>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {{ content }}
+
+
+    {% include prototypes/ablis-footer.html %}
+
+    
+
+    <div class="modal-overlay"></div>
+
+</body>
+
+</html>

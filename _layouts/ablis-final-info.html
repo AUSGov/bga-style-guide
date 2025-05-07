@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" id="ablis-final-prototype" style="overflow-x: hidden;">
+
+{% include prototypes/head_ablis2.html %}
+
+<body class="" {% if page.id %} id="{{page.id}}" {% endif %}>
+
+    <!-- SUBSITE HEADER -->
+    {% include prototypes/subsite_header_ablis-final.html %}
+
+
+    <!-- PAGE HEADER -->
+    <div id="page-header" class="teal">
+        <div class="container">
+
+            <div class="row inner-wrapper pt-5 mx-0">
+
+                <div class="header-content p-5">
+
+                    <div class="col-sm-12 col-lg-10 remove-element-padding">
+                        <h1>{{ page.title }}</h1>
+                        <p class="header-intro">{{ page.description }}</p>
+                    </div>
+
+                </div>
+
+                <div class="header-administered remove-element-padding px-5 py-3 {{ page.service | replace: ' ', '' }}">
+                        <p class="service m-0">{{ page.service }}</p>
+                        <div class="administered m-0">
+                            <p class="org-tag"><strong>Administered by: </strong></p>
+                            <p class="administering-org">
+                            {% if page.administered-2 %}
+                                <span>{{ page.administered-0 }} </span>, <span>{{ page.administered-1 }} </span> and <span>{{ page.administered-2 }} </span>
+
+                            {%  elsif page.administered-1 %}
+                               <span>{{ page.administered-0 }} </span> and <span>{{ page.administered-1 }} </span>
+
+                            {% else %}
+                                <span>{{ page.administered-0 }} </span>
+                            {% endif %}
+                            </p>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content">
+        <div class="container my-5">
+            <div class="content-wrapper">
+            <div class="row">
+
+
+                <div class="anchor-menu-wrapper in-page remove-top-spaces col-12 col-sm-3 col-lg-2">
+                    <div id="anchor-menu" class="anchor-menu in-page">
+                        <h5>On this page</h5>
+                        <ul class="anchor-menu ps-0 pb-4 m-0">
+                            <li class="mb-3"><a tabindex="0" href="#overview">Overview</a></li>
+
+                            {% if page.eligibility %}
+                                <li class="mb-3"><a tabindex="0" href="#eligibility">Eligibility</a></li>{% endif %}
+
+                            {% if page.application %}
+                                <li class="mb-3"><a tabindex="0" href="#application">Apply now</a></li>{% endif %}
+
+                            {% if page.resources %}
+                                <li class="mb-3"><a tabindex="0" href="#resources">Key information</a></li>{% endif %}
+
+                            
+                            <li class="mb-3"><a tabindex="0" href="#contact">Contact details</a></li>
+
+                            {% if page.readmore %}
+                                <li class="mb-3"><a tabindex="0" href="#read-more">Read more</a></li>{% endif %}
+                            
+            
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-9 col-xl-8 remove-element-padding">
+                    <div class="remove-top-spaces content-wrapper">
+
+                        {{ content }}
+
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    {% include prototypes/ablis-footer.html %}
+
+    <div class="results-return-wrapper d-none p-4">    
+    <button tabindex="0" id="results-return" class="bga-btn bga-primary-btn bkg-light">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.82704 9.49923L8.98037 13.6626L7.07107 15.5717L0 7.99923L7.07107 0.428345L8.98037 2.35001L4.82861 6.49923H16V9.49923H4.82704Z" fill="white"/>
+            </svg>   
+        <span>Return to results</span>
+    </button>
+
+    <div class="modal-overlay"></div>
+
+</body>
+
+</html>

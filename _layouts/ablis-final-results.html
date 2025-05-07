@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" id="ablis-final-prototype" class="results-page" style="overflow-x: hidden;">
+
+
+{% include prototypes/head_ablis2.html %}
+
+<body class="" {% if page.id %} id="{{page.id}}" {% endif %}>
+
+    <!-- SUBSITE HEADER -->
+    {% include prototypes/subsite_header_ablis-final.html %}
+
+
+    <!-- PAGE HEADER -->
+    <div id="page-header" tabindex="-1" class="teal stepped-nav">
+
+        <div class="container">
+
+            <div class="row inner-wrapper pt-5 mx-0">
+
+                <div class="header-content p-5" id="page-load-position">
+
+                    <div class="col-12 remove-element-padding">
+
+                        <div  class="stepped-navigation-wrapper include-mini-toast remove-element-padding {{ include.classes }}">
+
+                            <h1  class="step-title" data-step="{{page.step-number}}">{{ page.stepped-nav-step }}</h1>
+
+
+                           {% include prototypes/stepped-navigation-example.html
+                                step1="Business details"
+                                step2="Operations"
+                                step3="Products and services"
+                                step4="Workers"
+                                step5="Buildings and land"
+                                step6="Equipment and transport"
+                                step7="Results"
+                                classes="teal"
+                            %} 
+
+                        </div> 
+                        
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>    
+        
+       
+
+    </div>
+
+
+    <!-- SHOWING HEADER -->
+     <div class="sticky_background">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+           
+                <div class="sticky-wrapper">
+                    <div class="sticky-header">
+                    
+                        <div class='top-row'>
+                            <div class="showing-number remove-element-padding">
+                                <h2 class="showing-number">We found <strong><span class="count">XX</span></strong> items</h2>
+                            </div>
+
+                            <div class="header-cta-links button-group">
+                                <button class="bga-btn bga-secondary-btn bkg-light modal-trigger-email-results" tabindex="0" role="button">Email results</button>
+                                
+                                <button class="bga-btn bga-secondary-btn bkg-light modal-trigger-ablis-task-list" tabindex="0" role="button">Tasks <span class="task-counter">0</span></button>
+                            </div>
+                        </div>
+
+                        <div class="recommendations-summary pt-5">
+                            
+                            <div class="summary licences remove-element-padding">
+                                <div class="top-content remove-element-padding">
+                                    <h3 class="fixed-hide"><span class="result-count licences">XX</span> licences and registrations</h3>
+                                    <p class="fixed-hide">We found <span class="result-count licences">XX</span> licences and registrations you may need apply for.</p>
+                                </div>
+
+                                <a href="#licences-group">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
+                                        </svg>
+                                        <span>View licences and registrations</span></a>
+                            </div>
+
+
+                            <div class="summary regulation remove-element-padding">
+                                <div class="top-content remove-element-padding">
+                                    <h3 class="fixed-hide"><span class="result-count regulations">XX</span> legal obligations</h3>
+                                    <p class="fixed-hide">We found <span class="result-count regulations">XX</span> legal obligations you may need to comply with.</p>
+                                </div>
+                                <a href="#regulatory-obigations-group">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
+                                    </svg>
+                                    <span>View legal obligations</span></a>
+                            </div>
+
+
+                            <div class="summary codes remove-element-padding">
+                                <div class="top-content remove-element-padding">
+                                    <h3 class="fixed-hide"><span class="result-count codes">XX</span> codes and standards</h3>
+                                    <p class="fixed-hide">We found <span class="result-count codes">XX</span> codes and standards you may need to follow.</p>
+                                </div>
+
+                                <a href="#code-of-practice-group"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
+                                    </svg>
+                                    <span>View codes and standards</span></a>
+                            </div>
+
+
+                            <div class="summary advisory remove-element-padding">
+                                <div class="top-content remove-element-padding">
+                                    <h3 class="fixed-hide"><span class="result-count advisory">XX</span> pieces of guidance</h3>
+                                    <p class="fixed-hide">We found <span class="result-count advisory">XX</span> pieces of guidance you should read.</p>
+                                </div>
+
+                                <a href="#advisory-materials-group">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.07267 11.6163V0.443359H9.07267V11.6147L13.2219 7.46299L15.1436 9.37229L7.57267 16.4434L0.000213623 9.37229L1.90934 7.46299L6.07267 11.6163Z" fill="#2157AA"/>
+                                        </svg>
+                                        <span>View guidance</span></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="container my-5">
+            <div class="row">
+
+                <div class="col-12 col-lg-9 col-xl-8 remove-element-padding">
+                    <div class="remove-top-spaces results-wrapper">
+
+                        {{ content }}
+
+                    </div>
+
+
+                    <hr class="section-divider my-5" />
+
+
+                    <!-- BUTTON GROUP -->
+                    <div class="button-group">
+
+                    <a class="bga-link bga-inline-link bkg-light" tabindex="0" href={{ 'prototypes/ablis2/finder/equipment-and-transport.html' | relative_url }} role="button">Previous</a>
+
+
+                   
+
+
+                </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    {% include prototypes/ablis-footer.html %}
+
+    
+
+    <!-- TASKS INSTRUCTION MODAL -->
+    <div id="tasks-instruction-modal" class="bga-component modal-example px-4 pb-4 pt-5">
+
+        <button class="close m-0 p-0">Close</button>
+
+        <div class="component-content mt-2">
+
+            <div class="component-text p-0 remove-element-padding">
+
+                <h3><span class="result-title">This result</span> has been added to your tasks</h3>
+
+                <div class="teal-container remove-element-padding p-4 d-flex">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 30.158" width="40" height="36"><path d="M0,28.551V2.239L4,5.552l14.879,12.4a1.541,1.541,0,0,0,2.244,0L39.435,2.7l.533-.432c0,.2.032.333.032.468v25.7a1.558,1.558,0,0,1-1.731,1.719H1.7A1.522,1.522,0,0,1,0,28.551ZM2.12,0H37.875L20,14.9Z" fill="#2e6cb9"></path></svg>
+                    <p>Use your tasks to view and email your saved results.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TASKS MODAL -->
+    <div class="bga-component-wrapper mb-5">
+        <div id="ablis-task-list" class="bga-component modal-example modal-form modal-shortlist teal">
+    
+            <button class="close m-0 p-0">Close</button>
+    
+            <div class="component-content d-flex">
+    
+                <div class="component-text px-4 pb-4 pt-5 remove-element-padding">
+                    
+                    <div class="title-area">
+                        <h3 class="mt-0"><span class="task-counter me-3">0</span>Tasks</h3>
+                    </div>
+    
+                    <div class="scroll-wrapper">
+                        <span class="scroll-separator scroll-separator--top"></span>
+    
+                        <div class="scrollable remove-element-padding">
+                            <div class="shortlist ablis-tasks">
+                            
+                                <div class="no-tasks remove-element-padding pt-3">
+                                    <h4>You don't have any shortlisted tasks at the moment.</h4>
+                                    <p>You can add items to task by clicking on 'add to tasks' in each result.</p>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                        <span class="scroll-separator scroll-separator--bottom"></span>
+                    </div>
+    
+    
+                </div>
+    
+                <div class="email-form">
+                    <button class="mobile-form-toggle">Email your tasks
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15">
+                            <path  data-name="Chevron / Up" d="M9.042,12,0,21.026,2.979,24,15,12,2.979,0,0,2.974Z" transform="translate(0 15) rotate(-90)" fill="#333"/>
+                          </svg>
+                          
+                          
+                    </button>
+                    <form class="remove-element-padding">
+                       
+                        <h4>Email your tasks</h4>
+                
+                        <p>Enter your email address and we will send you a list of links to your shortlisted results.</p>
+    
+                    
+                        <div class="form-element-wrapper mb-5">
+                            <input type="text" class="form-control mb-0" value="" required>
+                        </div>
+    
+                       
+                        <div class="button-example mb-4">
+                            <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Email
+                                <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="23.453"
+                                    height="20.102" viewBox="0 0 23.453 20.102">
+                                    <path d="M.011,20.1,23.453,10.051.011,0,0,7.818l16.752,2.234L0,12.285Z" fill="#333" />
+                                </svg>
+                            </button>
+                        </div>
+                        
+    
+                        <p class="mini">This site is protected by reCAPTCHA and the <a class="external" href="">Google Privacy Policy</a> and <a class="external" href="">Terms of Service</a> apply</p>
+    
+                    </form>
+                </div>
+    
+    
+            </div>
+    
+        </div>
+    </div>
+
+
+    <!-- EMAIL RESULTS MODAL -->
+    <div id="email-results" class="bga-component modal-example">
+
+        <button class="close m-0 p-0">Close</button>
+
+        <div class="component-content d-flex">
+
+            <div class="component-text px-4 pb-4 pt-5 remove-element-padding w-100">
+                
+                <div class="title-area">
+                <h3 class="mt-0">Email your results</h3>
+                </div>
+
+                <form class="remove-element-padding w-100">
+                    
+                    <p>Enter your email address to receive a link to this results page so you can return at a later date.</p>
+                    
+                    <div class="form-element-wrapper mb-5">
+                        <input type="text" class="form-control mb-0" value="" required>
+                    </div>
+
+                    
+                    <div class="button-example mb-4">
+                        <button class="bga-btn bga-primary-btn bkg-light" tabindex="0" href="" role="button">Email link <svg data-name="Icon: Send" xmlns="http://www.w3.org/2000/svg" width="23.453"
+                                height="20.102" viewBox="0 0 23.453 20.102">
+                                <path d="M.011,20.1,23.453,10.051.011,0,0,7.818l16.752,2.234L0,12.285Z" fill="#333" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <p class="mini">This site is protected by reCAPTCHA and the <a class="external" href="">Google Privacy Policy</a> and <a class="external" href="">Terms of Service</a> apply</p>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+<div class="modal-overlay"></div>
+
+</body>
+
+</html>
