@@ -2,66 +2,64 @@
 <html lang="en" id="ablis-final-prototype" class="question-page" style="overflow-x: hidden;">
 
 
-{% include prototypes/head_ablis2.html %}
+{% include prototypes/head_ablis-final.html %}
 
-<body class="" {% if page.id %} id="{{page.id}}" {% endif %}>
+<body class="{{page.step}}" data-step="{{page.step}}" {% if page.id %} id="{{page.id}}" {% endif %}>
 
     <!-- SUBSITE HEADER -->
-    {% include prototypes/subsite_header_ablis-final.html %}
-
+    {% include prototypes/subsite_header_ablis-final.html 
+        title=page.title %}
 
 
     <!-- PAGE HEADER -->
-    <div id="page-header" tabindex="-1" class="teal stepped-nav">
-
+    <div id="page-header" class="teal">
         <div class="container">
 
             <div class="row inner-wrapper pt-5 mx-0">
 
-                <div class="header-content p-5" id="page-load-position">
+                <div class="header-content p-5">
 
-                    <div class="col-12 remove-element-padding">
-
-                        <div  class="stepped-navigation-wrapper include-mini-toast remove-element-padding {{ include.classes }}">
-
-                            <h1  class="step-title" data-step="{{page.step-number}}">{{ page.stepped-nav-step }}</h1>
-
-
-                           {% include prototypes/stepped-navigation-example.html
-                                step1="Business details"
-                                step2="Operations"
-                                step3="Products and services"
-                                step4="Workers"
-                                step5="Buildings and land"
-                                step6="Equipment and transport"
-                                step7="Results"
-                                classes="teal"
-                            %} 
-
-                        </div> 
-                        
-                       
+                    <div class="col-sm-12 col-lg-10 remove-element-padding">
+                        <h1>{{ page.page-name }}</h1>
                     </div>
 
                 </div>
-            </div>
-        </div>    
-        
-       
 
+            </div>
+        </div>
     </div>
 
 
 
-    <!-- CONTENT -->
-    
+    <!-- NAV AND PAGE CONTENT -->
+    <div class="container my-5">
+        <div class="row">
 
-    {{ content }}
+
+            <div class="col-12 col-sm-3 mb-5">
+                
+                {% include prototypes/ablis-dynamic-nav.html %}
+
+            </div>
+
+
+                <div class="col-12 col-sm-9 col-xl-8 remove-element-padding">
+                <div class="remove-top-spaces">
+
+                    {{ content }}
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
 
     {% include prototypes/ablis-footer.html %}
-        
 
+
+   
     <div class="modal-overlay"></div>
 
 </body>
