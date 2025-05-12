@@ -3,8 +3,8 @@
 $(document).ready(function () {
 
     // Check is page is in ablis prototype
-    if ($('#ablis-prototype').length) {
-        console.log("ablis page - prototype 1");
+    if ($('#ablis-final-prototype').length) {
+        console.log("ablis page - final prototype");
         // Hide empty <p>
         $('p:empty').hide();
 
@@ -17,75 +17,47 @@ $(document).ready(function () {
                 'step-1': {
                     'url': "business-details.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : "visible"
+                    'completed': ""
                 },
                 'step-2': {
-                    'url': "regulation-categories.html",
-                    'visited': "",
-                    'completed': "",
-                    'dynamic-state' : "visible"
-                },
-                'step-3': {
                     'url': "operations.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
+                    'completed': ""
                 },
-                'step-4': {
+                'step-3': {
                     'url': "products-and-services.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
-    
+                    'completed': ""
                 },
-                'step-5': {
+                'step-4': {
                     'url': "tax.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
+                    'completed': ""
                 },
-                'step-6': {
+                'step-5': {
                     'url': "workers.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
+                    'completed': ""
                 },
-                'step-7': {
+                'step-6': {
                     'url': "buildings-and-land.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
+                    'completed': ""
                 },
-                'step-8': {
+                'step-7': {
                     'url': "equipment-and-transport.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
+                    'completed': ""
                 },
-                'step-9': {
-                    'url': "dangerous-and-hazardous-goods.html",
-                    'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
-                },
-                'step-10': {
-                    'url': "environment-and-animals.html",
-                    'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
-                },
-                'step-11': {
+                'step-8': {
                     'url': "public-spaces.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : ""
+                    'completed': ""
                 },
-                'step-12': {
+                'step-9': {
                     'url': "results.html",
                     'visited': "",
-                    'completed': "",
-                    'dynamic-state' : "visible"
+                    'completed': ""
                 }
             }
         };
@@ -156,16 +128,7 @@ $(document).ready(function () {
                 "q49": "no",
                 "q50": "no",
             },
-            answered: {},
-            categories: {
-                'operations' : ['q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q27'],
-                'products-and-services' : ['q44'],
-                'tax' : ['q13', 'q14', 'q15'],
-                'workers' : ['q20', 'q16', 'q17', 'q18', 'q19', 'q21', 'q22', 'q23', 'q24', 'q25', 'q26'],
-                'buildings-and-land' : ['q28', 'q29', 'q30', 'q31', 'q32', 'q33'],
-                'equipment-and-transport' : ['q42', 'q43'],
-                'public-spaces' : ['q34', 'q35', 'q36', 'q37', 'q38', 'q39', 'q40', 'q41']
-            }
+            answered: {}
         };
         sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
     };
@@ -179,15 +142,6 @@ $(document).ready(function () {
     //DYNAMIC NAV AND REGULATORY CATEGORY CHECKBOXES
     // Dynamic nav functionality
     var set_dynamic_nav = function(){
-        //Hide secondary pages that are not activated
-        $('li.secondary').each(function(){
-            var step = $(this).attr('data-step');
-            if (dynamic_nav[step]['dynamic-state'] == 'visible') {
-                $(this).removeClass('d-none');
-            } else {
-                $(this).addClass('d-none');
-            }
-        });
 
         // Add classes and urls to dynamic nav links
         for (var item in dynamic_nav) {
@@ -215,36 +169,9 @@ $(document).ready(function () {
     }
 
 
-    // Select regulatory categories with checkboxes.
-    $('.regulatory-checkboxes input[type="checkbox"]').on('click', function(){
-        
-        var step = $(this).attr('data-step'),
-        category = $(this).val();
-
-        if ($(this).prop('checked')) {
-            dynamic_nav[step]['dynamic-state'] = 'visible';
-            $('#ablis-dynamic-nav li.' + step).removeClass('d-none');
-        } else {
-            dynamic_nav[step]['dynamic-state'] = '';
-            $('#ablis-dynamic-nav li.' + step).addClass('d-none');
-
-            // Remove all answers from an unselected category from sessionStorage
-            for (var i=0; i < ablis_questions['categories'][category].length; i++) {
-                var question = ablis_questions['categories'][category][i];
-
-                ablis_questions['responses'][question] = 'no';
-                delete ablis_questions['answered'][question];
-            }
-
-        }
-        sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
-        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
-    });
-
-
     // Update page completed state on next button click &&
     // Get url for next page from visible links in the dynamic-nav
-    var get_visible_links = function(){
+    /*var get_visible_links = function(){
         var step = $('body').attr('data-step');
         dynamic_nav[step]['completed'] = 'yes';
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
@@ -257,36 +184,10 @@ $(document).ready(function () {
         });
         //console.log(index); 
 
-        var prev_step = index - 1,
-            next_step = index + 1;
+    };*/
 
-        return {
-            'prev_step' : $(visible_links[prev_step]).attr('data-step'),
-            'next_step' : $(visible_links[next_step]).attr('data-step')
-        }
-    };
 
-    $('.next-btn').on('click', function(e){
-        
-        if ( $(this).hasClass('dynamic') ) {
-            e.preventDefault();
-    
-            var next_step = get_visible_links()['next_step'];
-            window.location = dynamic_nav[next_step]['url'];
-        } else {
-            var step = $('body').attr('data-step');
-            dynamic_nav[step]['completed'] = 'yes';
-            sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
-        }
-    });
-    $('.prev-btn.dynamic').on('click', function(e){
-        e.preventDefault();
-
-        var prev_step = get_visible_links()['prev_step'];
-        window.location = dynamic_nav[prev_step]['url'];
-    });
-
-    // Update page visited state on page load &&
+    // Update page visited state on page load
     if ( $('#ablis-dynamic-nav').length ) {
         var step = $('body').attr('data-step');
         console.log(step);
@@ -294,16 +195,6 @@ $(document).ready(function () {
         dynamic_nav[step]['visited'] = 'yes';
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
     }
-
-    // Re-select previously selected checkboxes on page load
-    if ( $('.regulatory-checkboxes').length ) {
-        for (var item in dynamic_nav) {
-            if (dynamic_nav[item]['dynamic-state'] == 'visible') {
-                $('.checkbox-item input[data-step="' +  item +'"]').prop('checked', true);
-            }
-        }
-    }  
-
 
     // Validate questions are answered and record page as completed on BUSINESS DETAILS page
     $('.next-btn.validate_page').on('click', function (e) {
@@ -457,38 +348,43 @@ $(document).ready(function () {
 
     });
 
-    $('.checkbox-item.ablis-question input[type=checkbox]').on('change', function(){
-        var question = $(this).attr('data-value'),
-        response = $(this).prop('checked');
+    // SHOW / HIDE DYNAMIC QUESTIONS
+    $('.dynamic-trigger input[type=radio]').on('change', function () {
+        var response = $(this).attr('data-value'),
+        dynamic_section = $(this).parents('.dynamic-trigger').next('.dynamic-section');
 
-        if (response == true) {
-            ablis_questions['responses'][question] = 'yes';
-            ablis_questions['answered'][question] = 'true';
-        } else {
-            ablis_questions['responses'][question] = 'no';
-            delete ablis_questions['answered'][question];
-        }
+            if (response == "yes") {
+                dynamic_section.removeClass('d-none');
+            } else {
+                dynamic_section.addClass('d-none');
+                dynamic_section.find('.question').each(function(){
+                    var question = $(this).attr('id');
+                    ablis_questions['responses'][question] = 'no';
+                    delete ablis_questions['answered'][question];
 
-        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+                    sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
+                });
+            }
     });
 
 
     //Re-populate category page answers on page load
+    //Re-populate answers on page load
     if ($('.question-page').length) {
         console.log('question page');
 
-        $('.question').each(function () {
+        $('.question').each(function(){
             var question = $(this).attr('id'),
-                response = ablis_questions['answered'][question],
-                dynamic_trigger;
+            response = ablis_questions['answered'][question],
+            dynamic_trigger;
 
             if ($(this).hasClass('dynamic-trigger')) {
                 dynamic_trigger = true;
             }
-
+            
             if (response) {
                 response = ablis_questions['responses'][question];
-                $(this).find('input[data-value=' + response + ']').prop('checked', true);
+                $(this).find('input[data-value='+response+']').prop('checked', true);
 
                 if (dynamic_trigger == true) {
                     if (response == 'yes') {
@@ -497,50 +393,74 @@ $(document).ready(function () {
                         $(this).next('.dynamic-section').addClass('d-none');
                     }
                 }
-
+                
             }
         });
 
+        $('.dynamic-list-ablis input').each(function(){
+            var list = $(this).parents('.dynamic-list-ablis'),
+            list_id = list.find('ul').attr('id'),
+            list_close = list.find('a#list-close'),
+            q_council = $(this).parents('.field-wrapper').find('.council-question'),
+            answer = ablis_questions[list_id];
+           
+            if (answer) {
+                $(this).val(answer);
+                list.removeClass('d-none');
+                list_close.addClass('show');
 
-        $('.dynamic-list-ablis.multi-select input').each(function () {
-            var parent_list = $(this).parents('.dynamic-list-ablis'),
-                list_id = parent_list.find('ul').attr('id'),
-                list_options = ablis_questions[list_id];
-                selected_item = '<div data-value="' +list_options[i] + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_options[i] +'</p></div>';
+                if ( answer.includes('Melbourne')) {
+                    var council = ablis_questions['council'];
+                    q_council.removeClass('d-none');
+                    q_council.find('input[data-value=' + council  +']').prop('checked', true);
+                } 
 
-            for (var i=0; i < list_options.length; i++) {
-
-                var selected_item  = $('<div data-value="' +list_options[i] + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_options[i] +'</p></div>');
-
-                var last_child = parent_list.find('.input-wrapper').children().last();
-
-                if (last_child.length) {
-                    selected_item.insertBefore(last_child);
+                if ( list_id == 'primary-activity-2' ) {
+                    $('#primary-activity .field-wrapper.d-none').removeClass('d-none');
                 }
-
-            }
+                if ( list_id == 'location_2') {
+                    $('#location .field-wrapper.d-none').removeClass('d-none');
+                }
+            } 
 
         });
 
-
-        $("select").each(function () {
+        $("select").each(function(){
             var id = $(this).attr('id'),
-                selection = ablis_questions[id];
+            selection = ablis_questions[id];
             $(this).val(selection);
 
         });
-
-        $('.checkbox-item.ablis-question input[type=checkbox]').each(function(){
-            var question = $(this).attr('data-value'),
-            response = ablis_questions['responses'][question];
-
-            if (response == 'yes') {
-                $(this).prop('checked', true);
-            } else {
-                $(this).prop('checked', false);
-            }
-        });
     }
+
+    $('.dynamic-list-ablis.multi-select input').each(function () {
+        var parent_list = $(this).parents('.dynamic-list-ablis'),
+            list_id = parent_list.find('ul').attr('id'),
+            list_options = ablis_questions[list_id];
+            selected_item = '<div data-value="' +list_options[i] + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_options[i] +'</p></div>';
+
+        for (var i=0; i < list_options.length; i++) {
+
+            var selected_item  = $('<div data-value="' +list_options[i] + '" class="ablis-selected-option"><button class="selected-remove">Remove</button><p>' + list_options[i] +'</p></div>');
+
+            var last_child = parent_list.find('.input-wrapper').children().last();
+
+            if (last_child.length) {
+                selected_item.insertBefore(last_child);
+            }
+
+        }
+
+    });
+
+    $("select").each(function () {
+        var id = $(this).attr('id'),
+            selection = ablis_questions[id];
+        $(this).val(selection);
+
+    });
+
+    
 
     // BUSINESS DETAIL QUESTIONS
     // dynamic lists (including setting location)
@@ -673,149 +593,6 @@ $(document).ready(function () {
     });
 
 
-    // Function to reset categories
-    var reset_categories = function(){
-        console.log('resetting categories');
-        //Reset dynamic nav
-        dynamic_nav = {
-            'step-1': {
-                'url': "business-details.html",
-                'visited': "yes",
-                'completed': "yes",
-                'dynamic-state' : "visible"
-            },
-            'step-2': {
-                'url': "regulation-categories.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : "visible"
-            },
-            'step-3': {
-                'url': "operations.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-            },
-            'step-4': {
-                'url': "products-and-services.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-
-            },
-            'step-5': {
-                'url': "tax.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-            },
-            'step-6': {
-                'url': "workers.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-            },
-            'step-7': {
-                'url': "buildings-and-land.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-            },
-            'step-8': {
-                'url': "equipment-and-transport.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-            },
-            'step-9': {
-                'url': "dangerous-and-hazardous-goods.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-            },
-            'step-10': {
-                'url': "environment-and-animals.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-            },
-            'step-11': {
-                'url': "public-spaces.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : ""
-            },
-            'step-12': {
-                'url': "results.html",
-                'visited': "",
-                'completed': "",
-                'dynamic-state' : "visible"
-            }
-        }
-        sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
-
-        set_dynamic_nav();
-        
-
-        // Reset regulatory questions
-        var q1_response = ablis_questions['responses']['q1'];
-        ablis_questions['responses'] = {
-            "all": "yes",
-            "q1": q1_response,
-            "q2": "no",
-            "q3": "no",
-            "q4": "no",
-            "q5": "no",
-            "q6": "no",
-            "q7": "no",
-            "q8": "no",
-            "q9": "no",
-            "q10": "no",
-            "q11": "no",
-            "q12": "no",
-            "q13": "no",
-            "q14": "no",
-            "q15": "no",
-            "q16": "no",
-            "q17": "no",
-            "q18": "no",
-            "q19": "no",
-            "q20": "no",
-            "q21": "no",
-            "q22": "no",
-            "q23": "no",
-            "q24": "no",
-            "q25": "no",
-            "q26": "no",
-            "q27": "no",
-            "q28": "no",
-            "q29": "no",
-            "q30": "no",
-            "q31": "no",
-            "q32": "no",
-            "q33": "no",
-            "q34": "no",
-            "q35": "no",
-            "q36": "no",
-            "q37": "no",
-            "q38": "no",
-            "q39": "no",
-            "q40": "no",
-            "q41": "no",
-            "q42": "no",
-            "q43": "no",
-            "q44": "no",
-            "q45": "no",
-            "q46": "no",
-            "q47": "no",
-            "q48": "no",
-            "q49": "no",
-            "q50": "no",
-        }
-        sessionStorage.setItem('ablis_questions', JSON.stringify(ablis_questions));
-
-    };
-
     // If business details have previously been completed show reset questions modal
     if ( $('body.step-1').length && (dynamic_nav['step-1']['completed'] == "yes") ) {
         console.log('Business details page');
@@ -844,8 +621,6 @@ $(document).ready(function () {
 
 
     }
-
-
 
 
     //FUNCTIONS FOR SEARCH TILES ON RESULTS AND KEYWORD SEARCH PAGES
