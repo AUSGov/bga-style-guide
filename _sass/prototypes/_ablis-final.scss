@@ -98,12 +98,13 @@
     }
 
     // QUESTION PAGES
-    #ablis-dynamic-nav { //prototype 1  
+    #ablis-dynamic-nav { //final prototype 
         background: $bga-blue-black-background-lightest;
 
         ul {
             margin: 0;
             padding: 0;
+           
 
             li {
                 list-style-type: none;
@@ -113,6 +114,17 @@
                 align-items: flex-start;
                 column-gap: 8px;
                 width: 100%;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 3px;
+                    height: calc(100% + 16px);
+                    background: #ABB1BD;
+                    position: absolute;
+                    top: 40px;
+                    left: 18.5px;
+                }
 
                 span.list-number {
                     display: flex;
@@ -126,23 +138,6 @@
                     font-weight: 600;
                     flex-shrink: 0;
                     position: relative;
-
-                    &::before {
-                        content: "";
-                        width: 3px;
-                        height: 100%;
-                        background: $bga-blue-black-light;
-                        position: absolute;
-                        bottom: 37px;
-                    }
-                    &::after {
-                        content: "";
-                        width: 3px;
-                        height: 100%;
-                        background: $bga-blue-black-light;
-                        position: absolute;
-                        top: 37px;
-                    }
                 }
     
                 a {
@@ -164,7 +159,7 @@
                     }
                 }
                 &.last-step {
-                    span.list-number::after {
+                    &::after {
                         display: none;
                     }
                 }
@@ -192,9 +187,9 @@
                         border: 3px solid $bga-blue-links;
                         color: $bga-blue-links;
 
-                        &::before {
-                            background: $bga-blue-links;
-                        }
+                            &::before {
+                                background: $bga-blue-links;
+                            }
                     }
                     a {
                         color: $bga-blue-links;
@@ -202,6 +197,9 @@
                     }
                 }
                 &.completed {
+                    &::after {
+                        background: $bga-blue-links;
+                    }
                     span.list-number {
                         background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
                         background-position: center center;
@@ -209,10 +207,6 @@
                         border: 3px solid $bga-blue-links;
                         color: $bga-white;
                         text-indent: -9999px;
-
-                        &::before, &::after {
-                            background: $bga-blue-links;
-                        }
                     }
                     a {
                         color: $bga-blue-links;
@@ -1391,83 +1385,53 @@
             }
         }
 
-        .recommendations-summary {
-            display: flex;
-            column-gap: 24px;
-            flex-wrap: nowrap;
-
-            .summary {
-                background: $bga-yellow-highlight-light;
-                padding: 16px;
-                display: flex;
-                flex-wrap: wrap;
-                align-content: space-between;
-                row-gap: 24px;
-                flex: 1;
-
-                &.regulation {
-                    background: $bga-orange-highlight-light;
-                }
-
-                &.codes {
-                    background: $bga-blue-highlight-light;
-                }
-
-                &.advisory {
-                    background: $bga-purple-highlight-light;
-                }
-
-                h3 {
-                    font-size: $h4-font-size;
-                }
-
-                a {
-                    display: flex;
-                    column-gap: 8px;
-                    align-items: center;
-
-                    &:visited {
-                        color: $bga-blue-links;
-                    }
-                }
-            }
-
-        }
-
         .sticky-header.teal {
             background: $bga-teal-highlight-light;
-            padding: 0 32px 32px 32px;
-
-            .recommendations-summary {
-                .summary {
-                    background: $bga-white;
-                    border-left: $bga-yellow-highlight-shadow solid 8px;
-
-                    &.regulation {
-                        border-left: $bga-orange-highlight-shadow solid 8px;
-                    }
-    
-                    &.codes {
-                        border-left: $bga-blue-highlight-shadow solid 8px;
-                    }
-    
-                    &.advisory {
-                        border-left: $bga-purple-highlight-shadow solid 8px;
-                    }
-                    a {
-                        font-size: 1.125rem;
-                        display: block;
-                        font-weight: 400;
-
-                        span {
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
+            padding: 0 32px 32px 32px; 
         }
 
     }
+    
+    .recommendations-summary.teal {
+        display: flex;
+        column-gap: 24px;
+        flex-wrap: nowrap;
+        background: $bga-teal-highlight-light;
+        
+        .summary {
+            background: $bga-white;
+            padding: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            row-gap: 24px;
+            flex: 1;
+
+            border-left: $bga-yellow-highlight-shadow solid 8px;
+
+            &.regulation {
+                border-left: $bga-orange-highlight-shadow solid 8px;
+            }
+
+            &.codes {
+                border-left: $bga-blue-highlight-shadow solid 8px;
+            }
+
+            &.advisory {
+                border-left: $bga-purple-highlight-shadow solid 8px;
+            }
+            a {
+                font-size: 1.125rem;
+                display: block;
+                font-weight: 400;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    
     .anchor-offset {
         scroll-margin-top: 200px; /* height of your sticky header */
     }
