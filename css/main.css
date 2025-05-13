@@ -13030,13 +13030,11 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-final-prototype #ablis-dynamic-nav ul { margin: 0; padding: 0; }
 
-#ablis-final-prototype #ablis-dynamic-nav ul li { list-style-type: none; color: #5A667D; text-indent: 0; display: inline-flex; align-items: flex-start; column-gap: 8px; width: 100%; }
+#ablis-final-prototype #ablis-dynamic-nav ul li { list-style-type: none; color: #5A667D; text-indent: 0; display: inline-flex; align-items: flex-start; column-gap: 8px; width: 100%; position: relative; }
+
+#ablis-final-prototype #ablis-dynamic-nav ul li::after { content: ""; width: 3px; height: calc(100% + 16px); background: #ABB1BD; position: absolute; top: 40px; left: 18.5px; }
 
 #ablis-final-prototype #ablis-dynamic-nav ul li span.list-number { display: flex; width: 40px; height: 40px; background: #ffffff; border: 3px solid #ABB1BD; border-radius: 50px; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; position: relative; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul li span.list-number::before { content: ""; width: 3px; height: 100%; background: #ABB1BD; position: absolute; bottom: 37px; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul li span.list-number::after { content: ""; width: 3px; height: 100%; background: #ABB1BD; position: absolute; top: 37px; }
 
 #ablis-final-prototype #ablis-dynamic-nav ul li a { text-decoration: none; color: #5A667D; font-weight: 400; margin-top: 6px; }
 
@@ -13046,7 +13044,7 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-final-prototype #ablis-dynamic-nav ul li:first-of-type span.list-number::before { display: none; }
 
-#ablis-final-prototype #ablis-dynamic-nav ul li.last-step span.list-number::after { display: none; }
+#ablis-final-prototype #ablis-dynamic-nav ul li.last-step::after { display: none; }
 
 #ablis-final-prototype #ablis-dynamic-nav ul li::before { display: none; }
 
@@ -13062,9 +13060,9 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-final-prototype #ablis-dynamic-nav ul li.visited a { color: #2157AA; text-decoration: underline; }
 
-#ablis-final-prototype #ablis-dynamic-nav ul li.completed span.list-number { background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; background-size: 19px 15px; border: 3px solid #2157AA; color: #ffffff; text-indent: -9999px; }
+#ablis-final-prototype #ablis-dynamic-nav ul li.completed::after { background: #2157AA; }
 
-#ablis-final-prototype #ablis-dynamic-nav ul li.completed span.list-number::before, #ablis-final-prototype #ablis-dynamic-nav ul li.completed span.list-number::after { background: #2157AA; }
+#ablis-final-prototype #ablis-dynamic-nav ul li.completed span.list-number { background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; background-size: 19px 15px; border: 3px solid #2157AA; color: #ffffff; text-indent: -9999px; }
 
 #ablis-final-prototype #ablis-dynamic-nav ul li.completed a { color: #2157AA; text-decoration: underline; font-weight: 600; }
 
@@ -13462,35 +13460,21 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-final-prototype .sticky-wrapper .sticky-header .modal-trigger-ablis-task-list:hover .task-counter { color: #333333; background: #ffffff; }
 
-#ablis-final-prototype .sticky-wrapper .recommendations-summary { display: flex; column-gap: 24px; flex-wrap: nowrap; }
-
-#ablis-final-prototype .sticky-wrapper .recommendations-summary .summary { background: #FFF3CD; padding: 16px; display: flex; flex-wrap: wrap; align-content: space-between; row-gap: 24px; flex: 1; }
-
-#ablis-final-prototype .sticky-wrapper .recommendations-summary .summary.regulation { background: #FDE6D0; }
-
-#ablis-final-prototype .sticky-wrapper .recommendations-summary .summary.codes { background: #C8D9EE; }
-
-#ablis-final-prototype .sticky-wrapper .recommendations-summary .summary.advisory { background: #E2DDF8; }
-
-#ablis-final-prototype .sticky-wrapper .recommendations-summary .summary h3, #ablis-final-prototype .sticky-wrapper .recommendations-summary .summary .h3 { font-size: 1.1875rem; }
-
-#ablis-final-prototype .sticky-wrapper .recommendations-summary .summary a { display: flex; column-gap: 8px; align-items: center; }
-
-#ablis-final-prototype .sticky-wrapper .recommendations-summary .summary a:visited { color: #2157AA; }
-
 #ablis-final-prototype .sticky-wrapper .sticky-header.teal { background: #CFEBEB; padding: 0 32px 32px 32px; }
 
-#ablis-final-prototype .sticky-wrapper .sticky-header.teal .recommendations-summary .summary { background: #ffffff; border-left: #EDC95A solid 8px; }
+#ablis-final-prototype .recommendations-summary.teal { display: flex; column-gap: 24px; flex-wrap: nowrap; background: #CFEBEB; }
 
-#ablis-final-prototype .sticky-wrapper .sticky-header.teal .recommendations-summary .summary.regulation { border-left: #CC7A29 solid 8px; }
+#ablis-final-prototype .recommendations-summary.teal .summary { background: #ffffff; padding: 16px; display: flex; flex-wrap: wrap; align-content: space-between; row-gap: 24px; flex: 1; border-left: #EDC95A solid 8px; }
 
-#ablis-final-prototype .sticky-wrapper .sticky-header.teal .recommendations-summary .summary.codes { border-left: #708DAF solid 8px; }
+#ablis-final-prototype .recommendations-summary.teal .summary.regulation { border-left: #CC7A29 solid 8px; }
 
-#ablis-final-prototype .sticky-wrapper .sticky-header.teal .recommendations-summary .summary.advisory { border-left: #7468B4 solid 8px; }
+#ablis-final-prototype .recommendations-summary.teal .summary.codes { border-left: #708DAF solid 8px; }
 
-#ablis-final-prototype .sticky-wrapper .sticky-header.teal .recommendations-summary .summary a { font-size: 1.125rem; display: block; font-weight: 400; }
+#ablis-final-prototype .recommendations-summary.teal .summary.advisory { border-left: #7468B4 solid 8px; }
 
-#ablis-final-prototype .sticky-wrapper .sticky-header.teal .recommendations-summary .summary a span { font-weight: 600; }
+#ablis-final-prototype .recommendations-summary.teal .summary a { font-size: 1.125rem; display: block; font-weight: 400; }
+
+#ablis-final-prototype .recommendations-summary.teal .summary a span { font-weight: 600; }
 
 #ablis-final-prototype .anchor-offset { scroll-margin-top: 200px; /* height of your sticky header */ }
 
