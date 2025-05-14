@@ -146,8 +146,12 @@
                 
     <div id="ablis-dynamic-nav" class="dynamic-nav ">
         
-        <ul class="primary-steps px-3 pt-3 pb-0">
+        <ul class="primary-steps static-step initial-state px-3 pt-3 pb-0">
             <li class="step-1 primary mb-3" data-step="step-1"><span class="list-number">1</span><a>Business details</a></li>
+            
+        </ul>
+        
+        <ul class="primary-steps dynamic-steps d-none px-3 pt-0 pb-0">
             <li class="step-2 primary mb-3" data-step="step-2"><span class="list-number">2</span><a>Operations</a></li>
             <li class="step-3 primary mb-3" data-step="step-3"><span class="list-number">3</span><a>Products and services</a></li>
             <li class="step-4 primary mb-3" data-step="step-4"><span class="list-number">4</span><a>Tax</a></li>
@@ -169,30 +173,28 @@
                 <div class="remove-top-spaces">
 
                     <!-- Notification to disply if users return to the business details page -->
-<div class="bga-component-wrapper pb-5">
-    <div class="bga-component notification warning no-close d-none m-0">
+<div class="bga-component-wrapper warning-notification-wrapper d-none">
+    <div class="pb-5">
+        <div class="bga-component notification warning no-close m-0">
 
-        <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
-            
+            <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
 
-            <div class="icon-wrapper me-4"><img src='../../../assets/icon-notification-circle-warning.svg' | relative_url  alt="" />
+                <div class="icon-wrapper me-4"><img src=/bga-style-guide/assets/icon-notification-circle-warning.svg alt="" />
+                </div>
+
+                <div class="component-content remove-element-padding">
+                    <h4>Updating your business details will reset this tool.</h4>
+                
+                    <p>Changing answers on this page resets all questions from this point on. You will lose information you have provided on other pages.</p>
+                
+                </div>
             </div>
 
-            <div class="component-content remove-element-padding">
-                
-                <h4>Updating your business details will reset this tool.</h4>
-                
-
-                
-                <p>Changing answers on this page resets all questions from this point on. You will lose information you have provided on other pages.</p>
-                
-
-                
-            </div>
         </div>
-
     </div>
 </div>
+
+
 
 <!-- PRIMARY ACTIVITIES -->
 
@@ -452,8 +454,7 @@
 
 
 
-    <!-- q1 -->
-    <div id="q1" class="question radio-wrapper remove-element-padding">
+    <!-- q1 <div id="q1" class="question radio-wrapper remove-element-padding">
 
         <div class="question-section remove-element-padding">
             <div class="mb-5 p-0 form-example">
@@ -486,8 +487,7 @@
             </div>
         </div>
 
-    </div>
-
+    </div> -->
 
 
     </div>

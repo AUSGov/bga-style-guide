@@ -13048,12 +13048,6 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-final-prototype #ablis-dynamic-nav ul li::before { display: none; }
 
-#ablis-final-prototype #ablis-dynamic-nav ul li.active span.list-number { border: 3px solid #2157AA; color: #2157AA; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul li.active span.list-number::before { background: #2157AA; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul li.active a { color: #2157AA; font-weight: 600; }
-
 #ablis-final-prototype #ablis-dynamic-nav ul li.visited span.list-number { border: 3px solid #2157AA; color: #2157AA; }
 
 #ablis-final-prototype #ablis-dynamic-nav ul li.visited span.list-number::before { background: #2157AA; }
@@ -13066,41 +13060,13 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-final-prototype #ablis-dynamic-nav ul li.completed a { color: #2157AA; text-decoration: underline; font-weight: 600; }
 
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps { margin-left: 8px; margin-top: -14px; padding-bottom: 14px; }
+#ablis-final-prototype #ablis-dynamic-nav ul li.active span.list-number { border: 3px solid #2157AA; color: #2157AA; background-color: #ffffff; }
 
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li { column-gap: 16px; margin-bottom: 16px; }
+#ablis-final-prototype #ablis-dynamic-nav ul li.active a { color: #2157AA; font-weight: 700; text-decoration: none; }
 
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li span.tick-wrapper { width: 24px; height: 24px; background: #ABB1BD; border-radius: 50px; flex-shrink: 0; position: relative; }
+#ablis-final-prototype #ablis-dynamic-nav ul li.completed.active span.list-number { background-image: url(../assets/icon-tick-blue.svg); }
 
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li span.tick-wrapper::before { content: ""; width: 3px; height: calc(100% - 5px); background: #ABB1BD; position: absolute; bottom: 24px; left: calc(50% - 1.5px); }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li span.tick-wrapper::after { content: ""; width: 3px; height: 100%; background: #ABB1BD; position: absolute; top: 24px; left: calc(50% - 1.5px); }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li:last-of-type { margin-top: 0; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li a { margin-top: -2px; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li.active span.tick-wrapper { background: #2157AA; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li.active span.tick-wrapper::before { background: #2157AA; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li.visited span.tick-wrapper { background: #2157AA; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li.visited span.tick-wrapper::before { background: #2157AA; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li.completed span.tick-wrapper { background: #2157AA url(../assets/icon-tick-white.svg) no-repeat; background-position: center center; background-size: 13px 10px; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li.completed span.tick-wrapper::before, #ablis-final-prototype #ablis-dynamic-nav ul.secondary-steps li.completed span.tick-wrapper::after { background: #2157AA; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.results { background: #E4E6EA; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.results li.last-step { margin-bottom: 16px; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.results li.last-step span::before { content: ""; display: block !important; width: 3px; height: 100%; background: #2157AA; position: absolute; bottom: 37px; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.results-links { background: #E4E6EA; margin-left: 48px; }
-
-#ablis-final-prototype #ablis-dynamic-nav ul.results-links a { margin: 0; color: #2157AA; text-decoration: underline; font-weight: 600; }
+#ablis-final-prototype #ablis-dynamic-nav ul.static-step.initial-state li::after { display: none; }
 
 #ablis-final-prototype .field-wrapper { background: #CFEBEB; }
 
@@ -13191,28 +13157,6 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 #ablis-final-prototype .dynamic-list-ablis.multi-select .ablis-selected-option p { margin: 0; padding: 0; display: block; font-weight: 600; }
 
 #ablis-final-prototype .dynamic-list-ablis.multi-select .ablis-selected-option .selected-remove { text-indent: -9999px; width: 16px; height: 16px; background: url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; border: none; box-shadow: none; }
-
-#ablis-final-prototype .checkboxes-wrapper { flex-wrap: wrap; }
-
-#ablis-final-prototype .checkboxes-wrapper .section-divider { width: 100%; }
-
-#ablis-final-prototype .checkboxes-wrapper .checkbox-item { width: 100%; display: flex; flex-wrap: wrap; row-gap: 8px; }
-
-#ablis-final-prototype .checkboxes-wrapper .checkbox-item .input-and-label { display: flex; flex-wrap: nowrap; width: 100%; column-gap: 8px; }
-
-#ablis-final-prototype .checkboxes-wrapper .checkbox-item .checkbox-help { margin-left: 36px; }
-
-#ablis-final-prototype .checkboxes-wrapper .checkbox-item .checkbox-help p { margin-bottom: 8px; }
-
-#ablis-final-prototype .checkboxes-wrapper .checkbox-item .checkbox-help p:last-of-type { margin-bottom: 0; }
-
-#ablis-final-prototype .checkboxes-wrapper label { color: #333333; font-size: 1.1875rem; }
-
-#ablis-final-prototype .checkboxes-wrapper input[type="checkbox"] { appearance: none; height: 28px; width: 28px; margin-right: 8px; border-radius: 0; border: solid 1px #2E3E5A; cursor: pointer; flex-shrink: 0; }
-
-#ablis-final-prototype .checkboxes-wrapper input[type="checkbox"]:checked { border: solid 3px #2157AA; background: #ffffff url(../assets/icon-tick-blue.svg) no-repeat center center; }
-
-#ablis-final-prototype .checkboxes-wrapper input[type="checkbox"]:checked + label { color: #2157AA; }
 
 #ablis-final-prototype .yes-no-answers { display: flex; flex-wrap: nowrap; column-gap: 8px; }
 
@@ -13622,14 +13566,6 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 
 #ablis-final-prototype .modal-example .teal-container { background: #CFEBEB; column-gap: 16px; align-items: center; }
 
-#ablis-final-prototype #ablis-task-list.modal-example { left: calc(50% - 450px); }
-
-#ablis-final-prototype #ablis-task-list.modal-example .task-counter { display: inline-flex; color: #ffffff; align-items: center; justify-content: center; background: #2E6CB9; height: 32px; width: 32px; border-radius: 40px; font-size: 1.125rem; font-weight: 600; }
-
-#ablis-final-prototype #email-results.modal-example { left: calc(50% - 450px); }
-
-#ablis-final-prototype #email-results.modal-example .link-wrapper { max-height: 120px; overflow-y: scroll; box-shadow: -1px -6px 5px -1px rgba(51, 51, 51, 0.3) inset; -webkit-box-shadow: -1px -6px 5px -1px rgba(51, 51, 51, 0.3) inset; -moz-box-shadow: -1px -6px 5px -1px rgba(51, 51, 51, 0.3) inset; }
-
 #ablis-final-prototype .predictive-list-ablis { background: none; margin-top: 0; width: 100%; }
 
 #ablis-final-prototype .predictive-list-ablis .list-wrapper { position: relative; width: 100%; }
@@ -13703,7 +13639,5 @@ html.ecb-prototype label.form-label { font-size: 1.375rem; font-weight: 600; col
 #ablis-final-prototype .predictive-list-ablis.multi-select .ablis-selected-option .selected-remove { text-indent: -9999px; width: 16px; height: 16px; background: url(../assets/icon-close-black.svg) no-repeat; background-size: 16px 16px; border: none; box-shadow: none; }
 
 #ablis-final-prototype .serviceSection.clone p, #ablis-final-prototype .serviceSection.clone a, #ablis-final-prototype .serviceSection.clone li { font-size: .875rem; line-height: 1.75; }
-
-#ablis-final-prototype #index-page p, #ablis-final-prototype #index-page a { margin-bottom: 8px; font-size: 14px; }
 
 /*# sourceMappingURL=main.css.map */
