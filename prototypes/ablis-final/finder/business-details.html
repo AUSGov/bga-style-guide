@@ -9,12 +9,28 @@ step : step-1
 ---
 
 <!-- Notification to disply if users return to the business details page -->
-{% include component-examples/notification-example.html
-    icon="'../../../assets/icon-notification-circle-warning.svg' | relative_url "
-    title="Updating your business details will reset this tool."
-    content="Changing answers on this page resets all questions from this point on. You will lose information you have provided on other pages."
-    classes="warning no-close d-none"
-    %}
+<div class="bga-component-wrapper warning-notification-wrapper d-none">
+    <div class="pb-5">
+        <div class="bga-component notification warning no-close m-0">
+
+            <div class="notification-wrapper py-4 ps-4 pe-6 mb-1 remove-element-padding">
+
+                <div class="icon-wrapper me-4"><img src={{ 'assets/icon-notification-circle-warning.svg' | relative_url  }} alt="" />
+                </div>
+
+                <div class="component-content remove-element-padding">
+                    <h4>Updating your business details will reset this tool.</h4>
+                
+                    <p>Changing answers on this page resets all questions from this point on. You will lose information you have provided on other pages.</p>
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 
 <!-- PRIMARY ACTIVITIES -->
 
@@ -274,8 +290,7 @@ step : step-1
 
 
 
-    <!-- q1 -->
-    <div id="q1" class="question radio-wrapper remove-element-padding">
+    <!-- q1 <div id="q1" class="question radio-wrapper remove-element-padding">
 
         <div class="question-section remove-element-padding">
             <div class="mb-5 p-0 form-example">
@@ -308,8 +323,7 @@ step : step-1
             </div>
         </div>
 
-    </div>
-
+    </div> -->
 
 
     </div>

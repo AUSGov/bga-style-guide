@@ -104,7 +104,6 @@
         ul {
             margin: 0;
             padding: 0;
-           
 
             li {
                 list-style-type: none;
@@ -168,20 +167,7 @@
                     display: none;
                 }
                
-                &.active {
-                    span.list-number {
-                        border: 3px solid $bga-blue-links;
-                        color: $bga-blue-links;
-
-                        &::before {
-                            background: $bga-blue-links;
-                        }
-                    }
-                    a {
-                        color: $bga-blue-links;
-                        font-weight: 600;
-                    }
-                }
+                
                 &.visited {
                     span.list-number {
                         border: 3px solid $bga-blue-links;
@@ -214,115 +200,33 @@
                         font-weight: 600;
                     }
                 }
-            }
-        }
-
-        ul.secondary-steps {
-            margin-left: 8px;
-            margin-top: -14px;
-            padding-bottom: 14px;
-
-            li {
-                column-gap: 16px;
-                margin-bottom: 16px;
-
-                span.tick-wrapper {
-                    width: 24px;
-                    height: 24px;
-                    background: $bga-blue-black-light;
-                    border-radius: 50px;
-                    flex-shrink: 0;
-                    position: relative;
-
-                    &::before {
-                        content: "";
-                        width: 3px;
-                        height: calc(100% - 5px);
-                        background: $bga-blue-black-light;
-                        position: absolute;
-                        bottom: 24px;
-                        left: calc(50% - 1.5px);
-                    }
-                    &::after {
-                        content: "";
-                        width: 3px;
-                        height: 100%;
-                        background: $bga-blue-black-light;
-                        position: absolute;
-                        top: 24px;
-                        left: calc(50% - 1.5px);
-                    }
-                }
-                &:last-of-type {
-                    margin-top: 0;                   
-                }
-                a {
-                    margin-top: -2px;
-                }
-
                 &.active {
-                    span.tick-wrapper {
-                        background: $bga-blue-links;
-
-                        &::before {
-                            background: $bga-blue-links;
-                        }
+                    span.list-number {
+                        border: 3px solid $bga-blue-links;
+                        color: $bga-blue-links;
+                        background-color: $bga-white;
+                    }
+                    a {
+                        color: $bga-blue-links;
+                        font-weight: 700;
+                        text-decoration: none;
                     }
                 }
-                &.visited {
-                    span.tick-wrapper {
-                        background: $bga-blue-links;
 
-                        &::before {
-                            background: $bga-blue-links;
-                        }
-                    }
-                   
-                }
-                &.completed {
-                    span.tick-wrapper {
-                        background: $bga-blue-links url(../assets/icon-tick-white.svg) no-repeat;
-                        background-position: center center;
-                        background-size: 13px 10px;
-
-                        &::before, &::after {
-                            background: $bga-blue-links;
-                        }
-                    }
-                   
-                }
-            }
-        }
-        ul.results {
-            background: $bga-blue-black-lightest;
-
-            li.last-step {
-                margin-bottom: 16px;
-                
-                span { 
-                    &::before {
-                        content: "";
-                        display: block !important;
-                        width: 3px;
-                        height: 100%;
-                        background: $bga-blue-links;
-                        position: absolute;
-                        bottom: 37px;
+                &.completed.active {
+                    span.list-number {
+                        background-image: url(../assets/icon-tick-blue.svg);
                     }
                 }
             }
-        }
-        ul.results-links {
-            background: $bga-blue-black-lightest;
-            margin-left: 48px;
-            
-            a {
-                margin: 0;
-                color: $bga-blue-links;
-                text-decoration: underline;
-                font-weight: 600;
+
+            &.static-step.initial-state {
+                li::after {
+                    display: none;
+                }
             }
         }
+
     }
 
 
@@ -611,66 +515,6 @@
             }
     
         }
-    }
-   
-    .checkboxes-wrapper {
-        flex-wrap: wrap;
-        //row-gap: 24px;
-
-        .section-divider {
-            width: 100%;
-        }
-
-        .checkbox-item {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 8px;
-
-            .input-and-label {
-                display: flex;
-                flex-wrap: nowrap;
-                width: 100%;
-                column-gap: 8px;
-            }
-            .checkbox-help {
-                margin-left: 36px;
-                
-                p {
-                    margin-bottom: 8px;
-
-                    &:last-of-type {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-        label {
-            color: $bga-black;
-            font-size: $h4-font-size;
-        }
-
-        input[type="checkbox"] {
-            appearance: none;
-            height: 28px;
-            width: 28px;
-            margin-right: 8px;
-            border-radius: 0;
-            border: solid 1px $bga-blue-black-dark;
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-        input[type="checkbox"]:checked {
-            border: solid 3px $bga-blue-links;
-            background: $bga-white url(../assets/icon-tick-blue.svg) no-repeat center center;
-
-             + label {
-                color: $bga-blue-links;
-             }
-        }
-
-
-        
     }
 
     .yes-no-answers {
@@ -1867,32 +1711,6 @@
         column-gap: 16px;
         align-items: center;
     }
-    .modal-example#ablis-task-list {
-        left: calc(50% - 450px);
-
-        .task-counter {
-            display: inline-flex;
-            color: $bga-white;
-            align-items: center;
-            justify-content: center;
-            background: $bga-blue-background-dark;
-            height: 32px;
-            width: 32px;
-            border-radius: 40px;
-            font-size: 1.125rem;
-            font-weight: 600;
-       }
-    }
-    .modal-example#email-results {
-        left: calc(50% - 450px);
-        .link-wrapper {
-            max-height: 120px;
-            overflow-y: scroll;
-            box-shadow: -1px -6px 5px -1px rgba(51,51,51,0.3) inset;
-            -webkit-box-shadow: -1px -6px 5px -1px rgba(51,51,51,0.3) inset;
-            -moz-box-shadow: -1px -6px 5px -1px rgba(51,51,51,0.3) inset;
-        }
-    }
    
 
     // KEYWORD SEARCH
@@ -2137,13 +1955,4 @@
         }
     }
 
-    // Temp index page
-    #index-page {
-
-        p,
-        a {
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-    }
 }
