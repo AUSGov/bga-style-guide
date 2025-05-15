@@ -146,6 +146,12 @@ $(document).ready(function () {
 
 
     //DYNAMIC NAV
+    // Mobile trigger for dynamic nav
+    $('.ablis-dynamic-nav-wrapper button').on('click', function(){
+        $(this).toggleClass('open');
+        $('#ablis-dynamic-nav').slideToggle(400);
+    });
+
     // Dynamic nav functionality
     var set_dynamic_nav = function(){
 
