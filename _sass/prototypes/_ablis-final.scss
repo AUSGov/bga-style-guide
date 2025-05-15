@@ -101,6 +101,10 @@
     }
 
     // QUESTION PAGES
+    .ablis-dynamic-nav-wrapper .mobile-show {   
+        display: none;
+    }
+
     #ablis-dynamic-nav { //final prototype 
         background: $bga-blue-black-background-lightest;
 
@@ -1649,7 +1653,38 @@
     }
 
 
+    @media ( max-width: 768px ) {
+        .ablis-dynamic-nav-wrapper button.mobile-show {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: $bga-blue-black-background-lightest;
+            border: none;
+            outline: none;
 
+            p {
+                font-weight: 400;
+            }
+            strong {
+                font-weight: 600;
+            }
+            svg {
+                height: 20px;
+                min-width: 20px;
+                width: 20px;
+                fill: $bga-black;
+            }
+
+            &.open svg {
+                transform: scaleY(-1);
+            }
+
+        }
+        #ablis-dynamic-nav {
+            display: none;
+        }
+    }
 
 
     @media ( max-width: 576px ) {
