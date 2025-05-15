@@ -39,6 +39,9 @@
 
 
     }
+    #page-header .header-content {
+        padding: 32px;
+    }
     #footer {
         box-shadow: 0 50vh 0 50vh $bga-blue-footer;
         background: $bga-blue-footer;
@@ -526,7 +529,9 @@
             width: 50%;
         }
     }
-
+    .question-section {
+        row-gap: 24px;
+    }
     .question-wrapper {
         display: flex;
         row-gap: 24px;
@@ -534,7 +539,7 @@
 
         label, .help-wrapper {
             width: 100%;
-        }
+        }   
     }
 
     .dynamic-section {
@@ -1643,4 +1648,34 @@
         }
     }
 
+
+
+
+
+    @media ( max-width: 576px ) {
+        #page-header .header-content {
+            padding: 24px 0;
+        }
+        #subsite-header .main-header {
+            padding: 16px 0 !important;
+        }
+        #subsite-header {
+           .main-header {
+                img {
+                    max-width: 340px !important;
+                }
+                .tool-title {
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+                }
+           }
+        }
+        .dark-teal-section {
+            background: $bga-white;
+        }
+    }
+
 }
+
+
