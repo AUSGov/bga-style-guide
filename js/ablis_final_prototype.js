@@ -665,17 +665,15 @@ $(document).ready(function () {
             sessionStorage.setItem('ablis_tasks', JSON.stringify(ablis_tasks));
         };
 
-        // Showing header buttons
-        $('.modal-trigger-ablis-task-list').on('click', function () {
-            $('#ablis-task-list.modal-example, .modal-overlay').addClass('show');
-        });
+        // Showing header button
         $('.modal-trigger-email-results').on('click', function () {
             $('#email-results.modal-example, .modal-overlay').addClass('show');
         });
 
+        // Sticky header
         if ($('.sticky-wrapper').length) {
             var header = $(".sticky_background");
-            var content = $(".content"); // Adjusts main content below
+            var content = $(".recommendations-summary"); // Adjusts main content below, set on first non-sticky element
             var headerHeight = header.outerHeight() + 32;
             var scrollPoint = $('.sticky-wrapper').offset().top; // Change this to where you want the header to stick
             console.log(headerHeight);
@@ -685,7 +683,7 @@ $(document).ready(function () {
                 if ($(window).scrollTop() > scrollPoint) {
                     if (!header.hasClass("fixed")) {
                         header.hide().addClass("fixed").fadeIn(200); // Fade in
-                        content.css("margin-top", "240px"); // Prevent overlap
+                        content.css("margin-top", "130px"); // Prevent overlap
                     }
                 } else {
                     if (header.hasClass("fixed")) {
@@ -749,6 +747,18 @@ $(document).ready(function () {
         // Add total recommendations count to top of the page
         var total_count = licence_count + regulation_count + code_count + advisory_count;
         $('.showing-number span.count').text(total_count);
+
+
+        // Scroll behaviour when clicking on summary links
+        $('.summary a').on('click', function(e) {
+            e.preventDefault();
+            var target = $($(this).attr('href'));
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top - 72
+              }, 400);
+            }
+          });
 
 
         // Expand result tile accordions

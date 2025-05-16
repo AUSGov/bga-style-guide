@@ -27,16 +27,16 @@
                 <div class="header-administered remove-element-padding px-5 py-3 {{ page.service | replace: ' ', '' }}">
                         <p class="service m-0">{{ page.service }}</p>
                         <div class="administered m-0">
-                            <p class="org-tag"><strong>Administered by: </strong></p>
                             <p class="administering-org">
+                                <strong>Administered by: </strong> 
                             {% if page.administered-2 %}
-                                <span>{{ page.administered-0 }} </span>, <span>{{ page.administered-1 }} </span> and <span>{{ page.administered-2 }} </span>
+                                <span>{{ page.administered-0 }}</span>, <span>{{ page.administered-1 }} </span>,  <span>{{ page.administered-2 }}</span>
 
                             {%  elsif page.administered-1 %}
-                               <span>{{ page.administered-0 }} </span> and <span>{{ page.administered-1 }} </span>
+                               <span>{{ page.administered-0 }}</span>, <span>{{ page.administered-1 }} </span>
 
                             {% else %}
-                                <span>{{ page.administered-0 }} </span>
+                                <span>{{ page.administered-0 }}</span>
                             {% endif %}
                             </p>
                         </div>
@@ -50,11 +50,11 @@
 
     <div class="content">
         <div class="container my-5">
-            <div class="content-wrapper">
+            <div class="ablis-content-wrapper">
             <div class="row">
 
 
-                <div class="anchor-menu-wrapper in-page remove-top-spaces col-12 col-sm-3 col-lg-2">
+                <div class="anchor-menu-wrapper in-page remove-top-spaces col-12 col-md-3 col-lg-2">
                     <div id="anchor-menu" class="anchor-menu in-page">
                         <h5>On this page</h5>
                         <ul class="anchor-menu ps-0 pb-4 m-0">
@@ -81,8 +81,8 @@
                 </div>
 
 
-                <div class="col-12 col-sm-9 col-xl-8 remove-element-padding">
-                    <div class="remove-top-spaces content-wrapper">
+                <div class="col-12 col-md-9 col-xl-8 remove-element-padding">
+                    <div class="remove-top-spaces">
 
                         {{ content }}
 
