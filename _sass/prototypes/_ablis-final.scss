@@ -43,8 +43,8 @@
         padding: 32px;
     }
     #footer {
-        box-shadow: 0 50vh 0 50vh $bga-blue-footer;
-        background: $bga-blue-footer;
+        box-shadow: 0 50vh 0 50vh $bga-blue-links;
+        background: $bga-blue-links;
     }
     .subsite-footer.ablis-footer {
 
@@ -53,13 +53,43 @@
             margin-bottom: 8px;
         }
 
+        h3 a {
+            text-decoration: none;
+        }
+
         .contact-container {
-            background: $bga-blue-links;
+            background: $bga-blue-footer;
             margin: 0 -9999px;
             padding: 0 9999px;
 
+            .contact-details-wrapper {
+                flex-wrap: nowrap;
+                row-gap: 32px;
+            }
+            .federal-wrapper {
+                row-gap: 24px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                
+                img {
+                    max-width: 300px;
+                }
+                h2 {
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                    width: 100%;
+
+                    a {
+                        font-weight: 600;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
             h2, h3, h4, h5, p, a {
                 color: $bga-white;
+                text-decoration: none;
             }
             .state-contact {
                 border: $bga-white, solid 1px;
@@ -86,7 +116,14 @@
             }
             .contact-details {
                 background: $bga-blue-footer;
+            }
+        }
 
+        .key-links-container {
+            background: $bga-blue-links;
+
+            .copyright {
+                background: none;
             }
         }
     }
