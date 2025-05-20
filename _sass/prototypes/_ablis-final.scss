@@ -64,26 +64,36 @@
 
             .contact-details-wrapper {
                 flex-wrap: nowrap;
-                row-gap: 32px;
+                row-gap: 48px;
+                column-gap: 32px;
             }
             .federal-wrapper {
-                row-gap: 24px;
+                row-gap: 16px;
                 display: flex;
                 flex-wrap: wrap;
                 align-content: flex-start;
+                flex: 1;
                 
                 img {
                     max-width: 300px;
                 }
                 h2 {
                     font-weight: 400;
-                    font-size: 1.4rem;
+                    font-size: 1.25rem;
                     width: 100%;
 
-                    a {
+                    a.phone {
                         font-weight: 600;
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
+                        white-space: nowrap;
                     }
+                }
+            }
+            .state-wrapper {
+                flex: 1;
+
+                h3 {
+                    font-size: 1.6rem;
                 }
             }
 
@@ -856,46 +866,6 @@
         }
     }
 
-    .results-return-wrapper {
-        background: $bga-teal-highlight-mid;
-        position: fixed;
-        right: 32px;
-        bottom: 0px;
-        -webkit-box-shadow: 2px -2px 4px 0px rgba(0,0,0,0.35);
-        -moz-box-shadow: 2px -2px 4px 0px rgba(0,0,0,0.35);
-        box-shadow: 2px -2px 4px 0px rgba(0,0,0,0.35);
-    }
-    button#results-return {
-        height: 56px;
-        width: auto;
-        padding: 0 32px;
-        display: inline-flex;
-        column-gap: 8px;
-        align-items: center;
-        z-index: 9000;
-        background: $bga-white;
-        border-color: $bga-teal-tool-mid;
-        box-shadow: $bga-btn-boxshadow;
-
-        svg {
-            margin: 0;
-
-            path {
-                fill: $bga-black;
-            }
-        }
-
-        &:hover {
-            background-color: $bga-teal-tool-dark;
-            border-color: $bga-teal-tool-dark;
-            color: $bga-white !important;
-
-            svg path {
-                fill: $bga-white !important;
-            }
-        }
-       
-    }
     .ablis-content-wrapper {
         padding: 0 32px;
     }
@@ -1699,6 +1669,17 @@
                 flex: 0 0 calc(50% - 12px);
             }
         }
+        .subsite-footer.ablis-footer {
+            .contact-container {
+                .contact-details-wrapper {
+                    flex-wrap: wrap;
+                }
+                .federal-wrapper, .state-wrapper {
+                    width: 100%;
+                    flex: none;
+                }
+            }
+        }
     }
 
     @media ( max-width: 768px ) {
@@ -1780,6 +1761,9 @@
                     }
                 }
            }
+        }
+        .subsite-footer {
+            padding: 0px !important;
         }
         .dark-teal-section {
             background: $bga-white;
