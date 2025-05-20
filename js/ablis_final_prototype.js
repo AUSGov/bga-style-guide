@@ -353,6 +353,7 @@ $(document).ready(function () {
         $('.contact-details .contact-item').each(function () {
             $(this).addClass('d-none');
         });
+        $('.state-wrapper').removeClass('d-none');
         $('.contact-details .contact-item.' + state).removeClass('d-none');
     };
 
@@ -565,25 +566,20 @@ $(document).ready(function () {
         // Set state details in footer and show / hide council questions
         if (parent_list.includes('location')) {
             
-            console.log(list_item);
+            console.log(ablis_questions['contact_details']);
 
+            var states = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"];
+            var selected_state = states.find(value => list_item.includes(value));
+            
+            $('.state-wrapper').removeClass('d-none');
+            $('.state-contact select').val(selected_state);
+            update_contact(selected_state);
+            ablis_questions['contact_details'] = selected_state;
+           
             if ( list_item == 'Melbourne, VIC, 3000' ) {
-                $('.state-contact select').val('victoria');
-                update_contact('victoria');
-
                 $('.council-1-wrapper').removeClass('d-none');
-                
-                ablis_questions['contact_details'] = 'victoria';
-                //ablis_questions['location'] = list_item;
-
             } else if ( list_item == 'Perth, WA, 6000' ) {
-                $('.state-contact select').val('western-australia');
-                update_contact('western-australia');
-                ablis_questions['contact_details'] = 'western-australia';
-
                 $('.council-2-wrapper').removeClass('d-none');
-
-                ablis_questions['contact_details'] = 'western-australia';
                 //ablis_questions['council-2'] = list_item;
             }
 
