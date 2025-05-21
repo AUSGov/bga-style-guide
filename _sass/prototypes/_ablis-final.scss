@@ -47,14 +47,19 @@
         background: $bga-blue-links;
     }
     .subsite-footer.ablis-footer {
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
-        }
-
-        h3 a {
+        a {
             text-decoration: none;
+            
+            &:focus-visible {
+                background-color: transparent !important;
+                border: 2px solid $bga-white;
+                border-radius: $bga-focus-radius;
+                text-decoration: underline;
+            }
+            &:hover {
+                background-color: transparent !important;
+                text-decoration: underline;
+            }
         }
 
         .contact-container {
@@ -66,41 +71,36 @@
                 flex-wrap: nowrap;
                 row-gap: 48px;
                 column-gap: 32px;
-            }
-            .federal-wrapper {
-                row-gap: 16px;
-                display: flex;
-                flex-wrap: wrap;
-                align-content: flex-start;
-                flex: 1;
-                
-                img {
-                    max-width: 300px;
+
+                h2, h3, h4, h5, p, a {
+                    color: $bga-white;
+                    //text-decoration: none;
                 }
-                h2 {
+                h3, h3 a {
                     font-weight: 400;
-                    font-size: 1.25rem;
+                    font-size: 1.625rem;
                     width: 100%;
 
-                    a.phone {
-                        font-weight: 600;
-                        font-size: 1.6rem;
-                        white-space: nowrap;
+                    strong {
+                        font-weight: 700;
                     }
                 }
             }
-            .state-wrapper {
+            .federal-wrapper {
+                display: block;
                 flex: 1;
-
-                h3 {
-                    font-size: 1.6rem;
+            
+                a.phone {
+                    font-weight: 600;
+                    font-size: 1.375rem;
+                    white-space: nowrap;
+                    cursor: pointer;
                 }
             }
-
-            h2, h3, h4, h5, p, a {
-                color: $bga-white;
-                text-decoration: none;
+            .state-wrapper {
+                flex: 1;   
             }
+
             .state-contact {
                 border: $bga-white, solid 1px;
 
@@ -109,17 +109,19 @@
                 }
             }
             select {
-                background-color: transparent;
+                background-color: $bga-blue-links;
                 background-image: url(../assets/Chevron-down-white.svg);
                 color: $bga-white;
                 border: none;
+                font-size: 1.1875rem;
 
-                &:focus {
-                    background-color: $bga-blue-footer !important;
-                }
                 &:focus-visible {
-                    background-color: transparent !important;
-                    border: 2px solid $bga-white;
+                    background-color: $bga-blue-background-light !important;
+                    color: $bga-black;
+                    border: $bga-component-focus-border;
+                    border-radius: $bga-focus-radius;
+
+                    background-image: url(../assets/Chevron-down-black.svg);
                 }
 
 
@@ -132,8 +134,33 @@
         .key-links-container {
             background: $bga-blue-links;
 
+            .links-copyright-wrapper {
+                row-gap: 24px;
+                flex-wrap: wrap;
+            }
+
             .copyright {
                 background: none;
+                padding: 0 !important;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+            .links ul {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 16px;
+                row-gap: 16px;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+
+                    a {
+                        font-weight: 400;
+                    }
+                }
             }
         }
     }
@@ -1669,17 +1696,7 @@
                 flex: 0 0 calc(50% - 12px);
             }
         }
-        .subsite-footer.ablis-footer {
-            .contact-container {
-                .contact-details-wrapper {
-                    flex-wrap: wrap;
-                }
-                .federal-wrapper, .state-wrapper {
-                    width: 100%;
-                    flex: none;
-                }
-            }
-        }
+       
     }
 
     @media ( max-width: 768px ) {
@@ -1739,6 +1756,18 @@
             flex-wrap: wrap;
             row-gap: 16px;
         }
+
+        .subsite-footer.ablis-footer {
+            .contact-container {
+                .contact-details-wrapper {
+                    flex-wrap: wrap;
+                }
+                .federal-wrapper, .state-wrapper {
+                    width: 100%;
+                    flex: none;
+                }
+            }
+        }
        
     }
 
@@ -1762,8 +1791,17 @@
                 }
            }
         }
-        .subsite-footer {
+        .subsite-footer.ablis-footer {
             padding: 0px !important;
+
+            .key-links-container .copyright {
+                background: none;
+                padding: 0 !important;
+
+                p {
+                    font-size: 0.75rem;
+                }
+            }
         }
         .dark-teal-section {
             background: $bga-white;
