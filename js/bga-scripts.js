@@ -1143,6 +1143,9 @@ $(document).ready(function () {
             trigger.parents('.wording-option').find('.edit-button span').text('Close');
             trigger.parents('.wording-option').find('.edit-button .close-icon').removeClass('d-none');
             trigger.parents('.wording-option').find('.edit-button .edit-icon').addClass('d-none');
+
+            // Select the parent radio
+            trigger.parents('.wording-option').find('.radio-button input').prop('checked', true);
         };
         var close_form = function(trigger){
             trigger.parents('.wording-option').find('.edit-option-form').addClass('d-none');
@@ -1165,7 +1168,6 @@ $(document).ready(function () {
 
         // Open and close edit form on edit button click
         $('.radio-edit-combo-group .edit-button').on('click', function(){
-
             if (!$(this).parents('.wording-option').hasClass('open') ) {
                 close_all_forms();
                 open_form($(this));
