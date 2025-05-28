@@ -734,17 +734,28 @@
         }
 
         .component-text {
+            display: table;
+
             p {
-                margin-bottom: 8px;
-                display: flex;
-                column-gap: 16px;
+                display: table-row;
+                margin: 0;
 
                 strong {
-                    min-width: 150px;
+                    display: table-cell;
+                    padding: 0 8px 16px 0; 
+                }
+                span {
+                    display: table-cell;
+                    padding: 0  0 16px 0; 
                 }
 
                 &:last-of-type {
-                    margin-bottom: 0;
+                    strong {
+                        padding: 0 8px 0 0; 
+                    }
+                    span {
+                        padding: 0;
+                    }
                 }
             }
         }
@@ -1695,7 +1706,7 @@
                 flex: 0 0 calc(50% - 12px);
             }
         }
-       
+        
     }
 
     @media ( max-width: 768px ) {
@@ -1755,7 +1766,34 @@
             flex-wrap: wrap;
             row-gap: 16px;
         }
-
+        .callout-box.contact {
+            .component-text {
+                display: flex;
+                row-gap: 16px;
+                flex-wrap: wrap;
+    
+                p {
+                    display: flex;
+                    margin: 0;
+                    row-gap: 0;
+                    flex-wrap: wrap;
+                    width: 100%;
+    
+                    strong, span {
+                        display: block;
+                        padding: 0; 
+                        width: 100%;
+                    }
+    
+                    &:last-of-type {
+                        strong, span {
+                            padding: 0; 
+                        }
+                    }
+                }
+            }
+        }
+      
         .subsite-footer.ablis-footer {
             .contact-container {
                 .contact-details-wrapper {
@@ -1855,6 +1893,7 @@
                 padding: 0px 8px;
             }
         }
+        
         .ablis-content-wrapper {
             padding: 0;
         }
