@@ -1,0 +1,182 @@
+---
+
+layout: content-tagged
+title: Vertical stepped navigation
+description: Navigation for step-by-step processes such as those found in many online tools.
+updated: 6 June, 2025
+breadcrumb1: Components
+url1: /components.html
+bga-tag: false
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+            <div class="tab-sections-wrapper">
+                
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html
+                        element-string="bga-stepped-navigation"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding py-4">
+
+                            <h3 class="ms-4">Default navigation</h3>
+                            
+                            <div class="p-4">
+                           
+                            {% include component-examples/vertical-stepped-nav.html %}
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                        <!-- Breakpoint radio buttons -->
+                        {% include breakpoints.html
+                        element-string="nb-stepped-navigation"
+                        lg-visibility="true"
+                        md-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="768"
+                        %}
+    
+                        <!-- Component example -->
+    
+                        <div class="component-example m-0">
+                            <div class="component-wrapper remove-element-padding py-4">
+                                
+                                {% include non-branded-explanation.html
+                                    component="stepped navigation"
+                                    brand-elements="colours and borders"
+                                    classes="m-4"
+                                %}
+    
+                                {% include component-examples/stepped-navigation-example.html
+                                    mobile-title="Active step name"
+                                    step1="Completed step"
+                                    step1-stage="completed"
+                                    step2="One more completed step"
+                                    step2-stage="completed"
+                                    step3="Active step"
+                                    step3-stage="active"
+                                    step4="Unvisited step"
+                                    step5="Ending employment"
+                                    step6="Step six"
+                                    classes="white p-5 non-branded"
+                                %}
+    
+    
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=625-12308&t=Y0RG7T4JJjmDsKJf-1'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>Stepped navigation can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>page layouts</a> except the Two column - filter page layout.</p>
+
+
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 mb-5 p-4">
+
+            {% include layouts-accordion.html
+
+            singlelayout="true"
+
+            allbp-img="'../assets/layout-images/stepped-nav-allbp.png' | relative_url "
+
+            allbp-rules="<p>The content area is 12 grid-columns wide.</p>
+            <p>Stepped navigation components are 12 grid-columns wide.</p>
+            <p>Stepped navigation components should only appear once in a page. They can be placed in the header (for tools) or at the top of the page content area.</p>"
+
+            example-link="'../html-examples/ECB-content-page.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Stepped navigation guides users through a process that is completed in a set order. It displays where the
+            user is up to and allows then to navigate back to previous steps.</p>
+        <p>Users cannot navigate forward to uncompleted steps using this component.</p>
+        <h3>When to use this component:</h3>
+        <ul>
+            <li>Used in tools or forms that require the user to complete a series of steps.</li>
+        </ul>
+
+
+
+         <!-- VERSION HISTORY-->
+         <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>19 September, 2023</h4>
+         <ul>
+             <li>Updated the mobile styling for the in page stepped navigation.</li>
+         </ul>
+        
+
+
+    </div>
