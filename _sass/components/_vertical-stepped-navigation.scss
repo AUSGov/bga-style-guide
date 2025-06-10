@@ -1,9 +1,14 @@
 .vertical-stepped-nav-wrapper .mobile-show {   
     display: none;
+    color: $bga-black !important;
+}
+.vertical-stepped-nav-wrapper.style-guide-example {
+    max-width: 300px;
 }
 
 #vertical-stepped-nav { 
     background: $bga-blue-black-background-lightest;
+    display: block;
 
     ul {
         margin: 0;
@@ -89,7 +94,7 @@
             }
             &.completed {
                 cursor: pointer;
-                
+
                 &::after {
                     background: $bga-blue-links;
                 }
@@ -134,4 +139,146 @@
         }
     }
 
+    &.non-branded {
+        background: $nb-grey-light; 
+
+        ul {
+            li {
+                color: $nb-black-lightest;
+    
+                &::after {
+                    background: $nb-black-lightest;
+                }
+                span.list-number {
+                    border: 3px solid $nb-black-lightest;
+                }
+    
+                a {
+                    color: $nb-black-lightest;
+                }
+               
+                &.visited {
+                    span.list-number {
+                        border: 3px solid $nb-blue-links;
+                        color: $nb-blue-links;
+    
+                            &::before {
+                                background: $nb-blue-links;
+                            }
+                    }
+                    a {
+                        color: $nb-blue-links;
+                        text-decoration: underline;
+                    }
+                }
+                &.completed {
+                    cursor: pointer;
+    
+                    &::after {
+                        background: $nb-blue-links;
+                    }
+                    span.list-number {
+                        background-color: $nb-blue-links;
+                        border: 3px solid $nb-blue-links;
+                    }
+                    a {
+                        color: $nb-blue-links;
+                    }
+                }
+                &.active {
+                    span.list-number {
+                        border: 3px solid $nb-blue-links;
+                        color: $nb-blue-links;
+                    }
+                    a {
+                        color: $nb-blue-links;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}
+
+
+// Mixins for smaller screen sizes and media queries
+@mixin vertical-stepped-nav-bp-below768 () {
+    .vertical-stepped-nav-wrapper.style-guide-example {
+        max-width: none;
+    }
+
+    .vertical-stepped-nav-wrapper button.mobile-show {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: $bga-blue-black-background-lightest;
+        border: none;
+        outline: none;
+
+        p {
+            font-weight: 400;
+        }
+        strong {
+            font-weight: 600;
+        }
+        svg {
+            height: 20px;
+            min-width: 20px;
+            width: 20px;
+            fill: $bga-black;
+        }
+
+        &.open svg {
+            transform: scaleY(-1);
+        }
+
+    }
+    .vertical-stepped-nav-wrapper.non-branded button.mobile-show {
+        background: $nb-grey-light;
+    }
+
+    #vertical-stepped-nav {
+        display: none;
+
+        ul {
+            li {
+                
+                &::after {
+                    left: 15px;
+                    top: 32px;
+                }
+
+                span.list-number {
+                    width: 32px;
+                    height: 32px;
+                    border-width: 2px;
+                    font-size: .875rem;
+                } 
+                a {
+                    font-size: .875rem;
+                    margin-top: 3px;
+                }      
+            
+            }
+        }
+
+       
+    }
+}
+
+
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768 {
+    @include vertical-stepped-nav-bp-below768();
+}
+
+
+// Media queries for full page examples
+@media ( max-width: 768px ) {
+    @include vertical-stepped-nav-bp-below768();
 }

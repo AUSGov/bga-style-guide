@@ -49,7 +49,7 @@ subsite-tag: true
 
                     <!-- Breakpoint radio buttons -->
                     {% include breakpoints.html
-                        element-string="bga-stepped-navigation"
+                        element-string="bga-vertical-stepped-navigation"
                         md-visibility="true"
                         final-visibility="true"
                         breakpoint-final="768"
@@ -59,12 +59,10 @@ subsite-tag: true
 
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding py-4">
-
-                            <h3 class="ms-4">Default navigation</h3>
-                            
                             <div class="p-4">
                            
                             {% include component-examples/vertical-stepped-nav.html %}
+
                             </div>
 
                         </div>
@@ -76,8 +74,7 @@ subsite-tag: true
 
                         <!-- Breakpoint radio buttons -->
                         {% include breakpoints.html
-                        element-string="nb-stepped-navigation"
-                        lg-visibility="true"
+                        element-string="nb-vertical-stepped-navigation"
                         md-visibility="true"
                         final-visibility="true"
                         breakpoint-final="768"
@@ -89,24 +86,17 @@ subsite-tag: true
                             <div class="component-wrapper remove-element-padding py-4">
                                 
                                 {% include non-branded-explanation.html
-                                    component="stepped navigation"
+                                    component="vertical stepped navigation"
                                     brand-elements="colours and borders"
                                     classes="m-4"
                                 %}
+
+                                <div class="p-4">
     
-                                {% include component-examples/stepped-navigation-example.html
-                                    mobile-title="Active step name"
-                                    step1="Completed step"
-                                    step1-stage="completed"
-                                    step2="One more completed step"
-                                    step2-stage="completed"
-                                    step3="Active step"
-                                    step3-stage="active"
-                                    step4="Unvisited step"
-                                    step5="Ending employment"
-                                    step6="Step six"
-                                    classes="white p-5 non-branded"
-                                %}
+                                {% include component-examples/vertical-stepped-nav.html 
+                                    classes="non-branded" %}
+
+                                </div>
     
     
                             </div>
@@ -120,7 +110,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=625-12308&t=Y0RG7T4JJjmDsKJf-1'"
+        btn-link="'https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=1-4085&t=LaVkDVTAgF1yHWQN-1'"
         btn-text="View design specifications"
         %}
 
@@ -128,53 +118,63 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Stepped navigation can be used on all <a href={{ "brand-foundations/grid-and-page-layouts.html" | relative_url }}>page layouts</a> except the Two column - filter page layout.</p>
-
+        <p>Vertical stepped navigation is used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-guide" | relative_url }}>Two column - guide page layout</a>.</p>
 
         {% include layouts-dropdown.html
-        layout-name="All layouts"
+        layout-name="Two column - guide page"
         singlelayout="true"
         %}
 
-        <div class="layout-example show full-border mt-0 mb-5 p-4">
+
+        <div class="layout-example show two-col-guidepage mt-0 mb-5 px-4 py-0">
 
             {% include layouts-accordion.html
+            layout-name="two-col-guidepage"
 
-            singlelayout="true"
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
 
-            allbp-img="'../assets/layout-images/stepped-nav-allbp.png' | relative_url "
+            finalbp="Breakpoint &lt; 768px"
 
-            allbp-rules="<p>The content area is 12 grid-columns wide.</p>
-            <p>Stepped navigation components are 12 grid-columns wide.</p>
-            <p>Stepped navigation components should only appear once in a page. They can be placed in the header (for tools) or at the top of the page content area.</p>"
+            min1200-img="'../assets/layout-images/twocol-guide-1200px-navigation.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-guide-768px-navigation.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-navigationalt.png' | relative_url "
 
-            example-link="'../html-examples/ECB-content-page.html' | relative_url'"
-            example-link-text="View layout example"
+            min1200-rules="<p>The navigation sits to the left of the content and is 3 grid-columns wide.</p>"
+
+            min768-rules="<p>The navigation sits to the left of the content and is 4 grid-columns wide.</p>"
+
+            finalbp-rules="<p>The navigation is not visible on screen. It is accessed through a trigger button located above the page content.<p>When triggered the navigation slides down and is 12 columns wide.</p>"
 
             %}
 
         </div>
 
 
+
         <!-- GUIDELINES -->
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Stepped navigation guides users through a process that is completed in a set order. It displays where the
-            user is up to and allows then to navigate back to previous steps.</p>
+        <p>Vertical stepped navigation guides users through a process that is completed in a set order. It displays where the
+            user is up to and allows then to navigate back to previous steps. It works in the same way as <a href="{{ '/components/stepped-navigation.html' |relative_url }}">horizontal stepped navigation</a> but is displayed vertically down the page.</p>
         <p>Users cannot navigate forward to uncompleted steps using this component.</p>
         <h3>When to use this component:</h3>
         <ul>
             <li>Used in tools or forms that require the user to complete a series of steps.</li>
+            <li>The preferred stepped navigation for tools is the horizontal pattern. Vertical stepped navigation should only be used when there are too many steps to be accommodated by the horizontal navigation (more than eight steps).
         </ul>
 
 
 
          <!-- VERSION HISTORY-->
          <h2 class="section-start" id="version-history">Version history</h2>
-         <h4>19 September, 2023</h4>
+         <h4>6 June, 2025</h4>
          <ul>
-             <li>Updated the mobile styling for the in page stepped navigation.</li>
+             <li>Created the vertical stepped navigation component page.</li>
          </ul>
         
 

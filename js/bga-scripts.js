@@ -1081,6 +1081,22 @@ $(document).ready(function () {
         }
     });
 
+    // COMPONENT EXAMPLE: VERTICAL STEPPED NAVIGATION
+    // Mobile trigger
+    $('.vertical-stepped-nav-wrapper button').on('click', function(){
+        $(this).toggleClass('open');
+        $(this).parents('.vertical-stepped-nav-wrapper').find('#vertical-stepped-nav').slideToggle(400);
+    });
+    $('#bga-vertical-stepped-navigation-bp-md').on('click', function(){
+        console.log('clicked');
+        $('.vertical-stepped-nav-wrapper button').removeClass('open');
+        $('#vertical-stepped-nav').show();
+    });
+    $('#bga-vertical-stepped-navigation-bp-final').on('click', function(){
+        $('.vertical-stepped-nav-wrapper button').removeClass('open');
+        $('#vertical-stepped-nav').hide();
+    });
+
     // COMPONENT EXAMPLE: TOAST
     $('#toast-trigger').on('click', function () {
         $('#inpage-toast').slideDown('slow');
