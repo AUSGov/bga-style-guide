@@ -76,6 +76,9 @@
                     }
                 }
             }
+            .description-hidden {
+                display: none;
+            }
 
             .expand {
                 font-weight: 600;
@@ -86,7 +89,6 @@
             }
             &.simple {
                 .description-content { 
-                    //font-weight: 600; 
                     padding-bottom: 24px;
                 }
             }
@@ -123,6 +125,10 @@
                 background: $bga-purple-highlight-light;
                 border: solid 2px $bga-purple-highlight-shadow;
             }
+            &.non-branded {
+                background: $nb-grey-mid;
+                border: none;
+            }
         }
 
         .cta-links {
@@ -139,16 +145,12 @@
                 
                 &:focus, &:focus-visible {
                     border-color: $bga-blue-links;
-                    color: $bga-white;
-                    
+                    color: $bga-white;  
                 }
 
                 &:hover {
                     border-color: $bga-blue-background-dark;
                     color: $bga-white;
-                    svg {
-                        fill: pink;
-                    }
                 }
 
                 &:active {
@@ -239,6 +241,57 @@
             border-left: 8px solid $bga-purple-highlight-shadow;
         }
     }
+
+    &.non-branded {
+        .result-header {
+            border-left: none;
+
+            &:focus-visible {
+                background-color: $nb-grey-mid;
+            }
+
+            &:hover {
+                background-color: $nb-grey-mid;
+            }
+        }
+
+        &.open {
+            .result-header {
+                background-color: $nb-grey-mid;
+
+            }
+        }
+
+        .result-content {
+            border-left: none;
+
+            .cta-links {
+                .learn-more { 
+                    svg, svg path {
+                        display: none !important;
+                    }
+                    &:focus, &:focus-visible {
+                        border-color: $nb-blue-links !important;
+                        color: $bga-black;
+ 
+                    }
+    
+                    &:hover {
+                        color: $bga-black;
+                        border-color: $bga-black;
+                    }
+    
+                    &:active {
+                        color: $bga-black; 
+                        border-color: $bga-black; 
+                    }
+                }
+    
+               
+            }
+        }
+    }
+
 }
 
 .ablis-search-result {

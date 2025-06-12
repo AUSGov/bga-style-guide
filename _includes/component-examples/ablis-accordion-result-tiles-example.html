@@ -1,0 +1,48 @@
+<div class='ablis-result {{ include.service }}'>
+    <div tabindex='0' class='result-header py-2 ps-4 pe-6'>
+        <h3 class='title m-0 p-0'>{{ include.title }}</h3>
+    </div>
+    <div class='result-content d-none p-4'>
+        <div class='description'>
+            <div class='description-content'>
+                <div class="serviceSection" id="serviceDetailDescription">
+                   
+                    <div class="description-visible">
+                        {{ include.description1 }}
+                    </div>
+                    <div class="description-hidden pt-4">
+                        {{ include.description2 }}
+                    </div>
+
+                </div>
+            </div>
+            <span class='expand'>more...</span>
+        </div>
+        <div class='secondary'>
+            <div class='service tag-wrapper'>
+                {% if include.service == 'licence' %}
+                    <p class='tag sml'>Licence or registration</p>
+                {% elsif include.service == 'code-of-practice' %}
+                    <p class='tag sml ablis-blue'>Code or practice</p>
+                {% elsif include.service == 'regulatory-obligation' %}
+                    <p class='tag sml ablis-orange'>Legal obligation</p> 
+                {% elsif include.service == 'advisory-material' %}
+                    <p class='tag sml ablis-purple'>Guidance</p>
+                {% elsif include.service == 'non-branded' %}
+                    <p class='tag sml non-branded'>Category name</p>
+                {% endif %}
+
+                
+            </div>
+            <div class='administered remove-element-padding'>
+                <p class='mini'><strong>Administered by:</strong> {{ include.administered }}
+                </p>
+            </div>
+        </div>
+        <div class='cta-links'><a class='learn-more mini-button bga-btn bga-secondary-btn' tabindex='0'
+                href='' target="_blank"> Learn more <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16.5V0.5H7.00011V2.49978H1.99978V14.5002H14.0002V9.49989H16V16.5H0ZM6.29272 8.7925L12.5863 2.49978H9.99978V0.5H16V6.50023H14.0002V3.91366L7.7066 10.2073L6.29272 8.7925ZM14.0002 2.50067V2.49978H13.9993L14.0002 2.50067Z" fill="#333333"/></svg>
+            </a>
+            
+        </div>
+    </div>
+</div>

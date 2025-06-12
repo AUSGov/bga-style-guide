@@ -2747,10 +2747,30 @@ $(document).ready(function () {
             });
             $(this).parents('.guide-nav-item').addClass('current');
         });
-
-
     };
 
+    //ABLIS RESULT TILES   
+    // Expand result tile accordions
+    $('.result-header').on('click', function () {
+        var result = $(this).parents('.ablis-result'),
+            description = result.find('.result-content');
+        result.toggleClass('open');
+
+        if (result.hasClass('open')) {
+            description.removeClass('d-none');
+
+        } else {
+            description.addClass('d-none');
+        }
+    });
+
+    // Open / close descriptions in result tiles
+    $('.ablis-result .expand, .ablis-search-result .expand').on('click', function () {
+        console.log('clicked');
+        console.log($(this).parents('.ablis-result').find('.description-hidden'));
+       $(this).parents('.ablis-result').find('.description-hidden').slideToggle();
+    });
+    
    
     
     

@@ -2,11 +2,11 @@
 
 layout: content-tagged
 title: ABLIS result tiles
-description: Present a collection of links in ABLIS result pages
+description: Present a collection of results in ABLIS result pages
 breadcrumb1: Components
 url1: /components.html
 updated: 10 June, 2025
-bga-tag: true
+bga-tag: false
 subsite-tag: true
 
 ---
@@ -27,7 +27,7 @@ subsite-tag: true
  
     </div>
 
-    <div class="anchored-content remove-element-padding mb-0 col-12 col-lg-9 col-xl-8">
+    <div class="anchored-content remove-element-padding mb-0 col-12 col-lg-9 col-xl-9">
 
 
         <!-- DESIGN -->
@@ -61,167 +61,182 @@ subsite-tag: true
                     <div class="component-example m-0">
                         <div class="component-wrapper remove-element-padding p-4">
 
-                            <h3>Grants and programs search tile</h3>
-                            {% include component-examples/global-search-tile-example.html
-                            label="Grant or program name"
-                            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-                            description="Live Performance Support Program TAS
-                            The Live Performance Support Program provides funding guarantees to arts organisations, festival
-                            organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
-                            and other venues throughout 2021."
-                            tag="Open"
-                            icon="'../assets/icon-tick-box-green.svg' | relative_url "
-                            timeframe="Closing in 12 days"
-                            apply="<p><strong>Who is this for?</strong></p>
-                                <p>Businesses who employ people registered with a Disability Service provider.</p>
-                                <p><strong>What you get?</strong></p>
-                                <p>Funding of up to $1650.</p>"
-                            shortlist="true"
-                            classes="open-grant grants-finder-tool"
+                            <h2>ABLIS accordion result tiles</h2>
+                            <h4>Licence or regulation</h4>
+                            {% include component-examples/ablis-accordion-result-tiles-example.html
+                                title="Australian Business Number Registration"
+                                description1="<p>You may require an Australian Business Number (ABN) if you are operating a business, organisation or enterprise in Australia. An ABN is a single identifier for all business dealings with the Australian Taxation Office and other government departments and agencies.</p>"
+                                description2="<p>Applying for an ABN is not compulsory. However, once you have registered your entity for an ABN you will be able to:</p>
+                                <ul>
+                                    <li>register for GST and a business name</li>
+                                    <li>be endorsed as a deductible gift recipient or an income tax-exempt charity</li>
+                                    <li>get an Australian domain name.</li>
+                                </ul>"
+                                administered="Australian Government - Australian Taxation Office"
+                                service="licence"
                             %}
                             
-                            <h3>Advisers search tile</h3>
-                            {% include component-examples/global-search-tile-example.html
+
+                            <h4 class="mt-5">Legal obligation</h4>
+                            {% include component-examples/ablis-accordion-result-tiles-example.html
+                                title="Australian Consumer Law (ACL)"
+                                description1="<p>If you operate a business that sells, leases or hires goods or services to consumers, you  will need to comply with the Australian Consumer Law (ACL). The ACL can apply regardless  of the size of your business and can apply in all business structures (sole trader and others).</p>"
+                                description2="<p>It is important that you are aware of your rights and obligations under the ACL.</p>
+                                <p>The ACL provides a set of guarantees for consumers, including:</p>
+                                <ul>
+                                    <li>the supplier has the right to sell the goods</li>
+                                    <li>the goods match their description</li>
+                                    <li>the goods are of acceptable quality</li>
+                                    <li>the goods are fit for any purpose that the consumer makes known to the supplier</li>
+                                    <li>repairs and spare parts for the goods are reasonably available</li>
+                                    <li>the services are carried out with reasonable care and skill</li>
+                                    <li>the services are completed within a reasonable time, where there is no agreed date.
+                                    </li>
+                                </ul>
+                                <p>The ACL aims to prevent:</p>
+                                <ul>
+                                    <li>misleading and deceptive conduct</li>
+                                    <li>unconscionable conduct</li>
+                                    <li>unfair contract terms</li>
+                                    <li>unfair practices - e.g. wrongly accepting payments for goods or services not
+                                        supplied.</li>
+                                </ul>"
+                                administered="Australian Government - Australian Competition and Consumer Commission"
+                                service="regulatory-obligation"
+                            %}
+
+
+                            <h4 class="mt-5">Code or standard</h4>
+                            {% include component-examples/ablis-accordion-result-tiles-example.html
+                                title="Australian Privacy Principles"
+                                description1="<p>You must comply with the Australian Privacy Principles (APPs) if you intend to collect and use the personal information of individuals in a business capacity. Subject to some exceptions, the APPs apply to:</p>"
+                                description2="<ul>
+                                    <li>organisations and entities with an annual turnover of more than $3 million</li>
+                                    <li>certain small businesses (annual turnover less that $3 million), including private sector health service providers.</li>
+                                </ul>
+                                <p>The APPs are designed to give an organisation or entity flexibility to tailor their personal information handling practices to their business and the needs of individuals. The APPs provide for standards, rights and obligations around:</p>
+                                <ul>
+                                    <li>the open and transparent management of personal information, including having a privacy policy</li>
+                                    <li>an individual having the option of transacting anonymously or using a pseudonym where practicable</li>
+                                    <li>the collection of solicited personal information and receipt of unsolicited personal information, including giving notice about collection</li>
+                                    <li>how personal information can be used and disclosed, including overseas disclosure
+                                    </li>
+                                    <li>maintaining the quality of personal information, including accuracy, relevance and completeness</li>
+                                    <li>keeping personal information secure</li>
+                                    <li>the right of individuals to access and correct their personal information.</li>
+                                </ul>"
+                                administered="Australian Government - Attorney-General's Department"
+                                service="code-of-practice"
+                            %}
+
+
+                            <h4 class="mt-5">Guidance</h4>
+                            {% include component-examples/ablis-accordion-result-tiles-example.html
+                                title="Business Concierge Service - City of Ballarat"
+                                description1="<p>Whether you operate a new or established business, you are likely to need one or more council permits to operate. The business concierge service that is provided by many councils will assist you with the registration of new a business or the transferring of business ownership. This free service is designed to simplify and streamline business  pre-application and application processes. </p>"
+                                description2="<p>The service is highly personalised and tailored to your business and business needs. It can assist you with:</p>
+                                <ul>
+                                    <li>information to help you open or grow your business<br /></li>
+                                    <li>understanding permit requirements</li>
+                                    <li>completing and submitting permit applications</li>
+                                    <li>other general advice on running your business.<br /></li>
+                                </ul>"
+                                administered="Victoria - City of Ballarat"
+                                service="advisory-material"
+                            %}
+
+
+
+                            <h2 class="mt-6">ABLIS search result tiles</h2>
+                            <h4>Licence or regulation</h4>
+                            {% include component-examples/ablis-search-result-tiles-example.html
+                                title="Australian Business Number Registration"
+                                description1="<p>You may require an Australian Business Number (ABN) if you are operating a business, organisation or enterprise in Australia. An ABN is a single identifier for all business dealings with the Australian Taxation Office and other government departments and agencies.</p>"
+                                description2="<p>Applying for an ABN is not compulsory. However, once you have registered your entity for an ABN you will be able to:</p>
+                                <ul>
+                                    <li>register for GST and a business name</li>
+                                    <li>be endorsed as a deductible gift recipient or an income tax-exempt charity</li>
+                                    <li>get an Australian domain name.</li>
+                                </ul>"
+                                administered="Australian Government - Australian Taxation Office"
+                                service="licence"
+                            %}
                             
-                            title="Fair Work Ombudsman Small Business Helpline"
-                            description="The Small business helpline provides workplace advice on managing your employees and meeting your employer obligations."
-                            services="Services offered over the phone and online."
-                            cost="Free"
-                            provider-type="Federal government"
-                            tag="<strong>Service area:</strong> Australia wide"
-                            icon="'../assets/icon-pin-black.svg' | relative_url "
-                            classes="adviser-finder-tool"
-                            %}
-                        
 
-                            <h3>Events search tile - in person events</h3>
-                            {% include component-examples/events-tile-example.html
-                                delivery-type="Workshop for ACT businesses"
-                                date="Monday 10 Aug 2022"
-                                time="11:00 AM - 12:30 PM AEST"
-                                cost="Free"
-                                location="Shepparton, VIC"
-                    
-                                title="Lunch and learn: Designing your team culture"
-                                description="This workshop provides ACT businesses with tips and tools to help them build a strong team and healthy workplace culture."
-
-                                speaker="Bronwyn Brown"
-                                organiser="Canberra Innovation Network"
-                                address="Canberra Innovation Network, Level 5, 1 Moore Street, Canberra, ACT, 2601"
-                                read-more-info="<p>Vestibulum eget tincidunt ligula. Fusce vestibulum imperdiet mi, sed lobortis lectus sagittis vel. Donec ut neque at est sodales pretium. Suspendisse molestie orci nulla, quis sagittis mi ornare ut.</p><p>Nam rutrum vulputate dui, eu mattis lorem facilisis vitae. Praesent consequat quis nunc vitae blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nibh tortor, scelerisque at viverra eget, tincidunt eu elit. Etiam eu egestas components/download-list.htmlaugue. Donec viverra pharetra vulputate. Nulla eu vestibulum est, vel tempor tellus. Donec bibendum tortor rhoncus, vestibulum quam nec, pulvinar eros. Nullam ac dignissim tellus. Quisque ac ante quis elit mollis varius eu vitae eros. Donec aliquam finibus metus, quis dapibus dui sagittis id. Pellentesque tincidunt velit eget elit ultricies hendrerit.</p>"
-                                icon="'../assets/icon-events-in-person.svg' | relative_url "
-                                registration="Canberra Innovation Network"
-                                classes="events-finder-tool in-person-event"
+                            <h4 class="mt-5">Legal obligation</h4>
+                            {% include component-examples/ablis-search-result-tiles-example.html
+                                title="Australian Consumer Law (ACL)"
+                                description1="<p>If you operate a business that sells, leases or hires goods or services to consumers, you  will need to comply with the Australian Consumer Law (ACL). The ACL can apply regardless  of the size of your business and can apply in all business structures (sole trader and others).</p>"
+                                description2="<p>It is important that you are aware of your rights and obligations under the ACL.</p>
+                                <p>The ACL provides a set of guarantees for consumers, including:</p>
+                                <ul>
+                                    <li>the supplier has the right to sell the goods</li>
+                                    <li>the goods match their description</li>
+                                    <li>the goods are of acceptable quality</li>
+                                    <li>the goods are fit for any purpose that the consumer makes known to the supplier</li>
+                                    <li>repairs and spare parts for the goods are reasonably available</li>
+                                    <li>the services are carried out with reasonable care and skill</li>
+                                    <li>the services are completed within a reasonable time, where there is no agreed date.
+                                    </li>
+                                </ul>
+                                <p>The ACL aims to prevent:</p>
+                                <ul>
+                                    <li>misleading and deceptive conduct</li>
+                                    <li>unconscionable conduct</li>
+                                    <li>unfair contract terms</li>
+                                    <li>unfair practices - e.g. wrongly accepting payments for goods or services not
+                                        supplied.</li>
+                                </ul>"
+                                administered="Australian Government - Australian Competition and Consumer Commission"
+                                service="regulatory-obligation"
                             %}
 
 
-                            <h3>Events search tile - online events</h3>
-                            {% include component-examples/events-tile-example.html
-                                delivery-type="Webinar for ACT businesses"
-                                date="Monday 10 Aug 2022"
-                                time="11:00 AM - 12:30 PM AEST"
-                                cost="Free"
-                                location="Online"
-                    
-                                title="Creating a business newsletter from scratch"
-                                description="This webinar provides ACT small businesses with tips and tools to create a branded business newsletter."
-
-                                speaker="Sam Smith"
-                                organiser="Enterprise Plus"
-                                read-more-info="<p>Vestibulum eget tincidunt ligula. Fusce vestibulum imperdiet mi, sed lobortis lectus sagittis vel. Donec ut neque at est sodales pretium. Suspendisse molestie orci nulla, quis sagittis mi ornare ut.</p><p>Nam rutrum vulputate dui, eu mattis lorem facilisis vitae. Praesent consequat quis nunc vitae blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nibh tortor, scelerisque at viverra eget, tincidunt eu elit. Etiam eu egestas components/download-list.htmlaugue. Donec viverra pharetra vulputate. Nulla eu vestibulum est, vel tempor tellus. Donec bibendum tortor rhoncus, vestibulum quam nec, pulvinar eros. </p>"
-                                icon="'../assets/icon-events-online.svg' | relative_url "
-                                registration="Eventbrite"
-                                classes="events-finder-tool online-event"
+                            <h4 class="mt-5">Code or standard</h4>
+                            {% include component-examples/ablis-search-result-tiles-example.html
+                                title="Australian Privacy Principles"
+                                description1="<p>You must comply with the Australian Privacy Principles (APPs) if you intend to collect and use the personal information of individuals in a business capacity. Subject to some exceptions, the APPs apply to:</p>"
+                                description2="<ul>
+                                    <li>organisations and entities with an annual turnover of more than $3 million</li>
+                                    <li>certain small businesses (annual turnover less that $3 million), including private sector health service providers.</li>
+                                </ul>
+                                <p>The APPs are designed to give an organisation or entity flexibility to tailor their personal information handling practices to their business and the needs of individuals. The APPs provide for standards, rights and obligations around:</p>
+                                <ul>
+                                    <li>the open and transparent management of personal information, including having a privacy policy</li>
+                                    <li>an individual having the option of transacting anonymously or using a pseudonym where practicable</li>
+                                    <li>the collection of solicited personal information and receipt of unsolicited personal information, including giving notice about collection</li>
+                                    <li>how personal information can be used and disclosed, including overseas disclosure
+                                    </li>
+                                    <li>maintaining the quality of personal information, including accuracy, relevance and completeness</li>
+                                    <li>keeping personal information secure</li>
+                                    <li>the right of individuals to access and correct their personal information.</li>
+                                </ul>"
+                                administered="Australian Government - Attorney-General's Department"
+                                service="code-of-practice"
                             %}
 
 
-
-                            <h3>Research service providers tile</h3>
-                            {% include component-examples/rsp-tile-example-2.html
-                                rsp-number="03206"
-                                rsp-category="Other R&D organisations"
-                                abn="XX XXX XXX XXX"
-                                title="Australian National University"
-                                location="10 East Road, ACTON ACT 2601"
-                                contact="Dr John Keats"
-                                phone="(02) XXXX XXXX"
-                                website="Australian National University"
-                                legal-name = "Trustee for JJ lorem ipsum family"
-                                tag="current"
-                    
-                                codes="3002, 3007, 3101, 3102, 3103, 3104, 3105, 3107, 3108, 3109, 3201, 3202, 3204, 3207, 3209, 3210, 3211, 3212, 3215, 3402, 3403, 3404, 3405, 3406, 3407, 3701, 3702, 3703, 3705, 3706, 3707, 3709, 4003, 4006, 4007, 4008, 4009, 4012, 4018, 4101, 4102, 4104, 4106, 4202, 4203, 4206, 4602, 4603, 4606, 4608, 4612, 4613, 4901, 4903, 4904, 4905, 5101, 5102, 5103, 5104, 5106, 5108, 5201, 5203, 5204, 5205"
-                    
-                                %}
+                            <h4 class="mt-5">Guidance</h4>
+                            {% include component-examples/ablis-search-result-tiles-example.html
+                                title="Business Concierge Service - City of Ballarat"
+                                description1="<p>Whether you operate a new or established business, you are likely to need one or more council permits to operate. The business concierge service that is provided by many councils will assist you with the registration of new a business or the transferring of business ownership. This free service is designed to simplify and streamline business  pre-application and application processes. </p>"
+                                description2="<p>The service is highly personalised and tailored to your business and business needs. It can assist you with:</p>
+                                <ul>
+                                    <li>information to help you open or grow your business<br /></li>
+                                    <li>understanding permit requirements</li>
+                                    <li>completing and submitting permit applications</li>
+                                    <li>other general advice on running your business.<br /></li>
+                                </ul>"
+                                administered="Victoria - City of Ballarat"
+                                service="advisory-material"
+                            %}
+                            
 
 
                         </div>
                     </div>
 
-                    <div class="component-example m-0">
-                        <div class="component-wrapper remove-element-padding p-4">
-
-                            <h3>Tag and icon variations</h3>
-                            <div class="row">
-
-                                <div class="col-12 col-md-6">
-                                    {% include component-examples/global-search-tile-example.html
-                                    description="<strong>Adviser tag</strong>"
-                                    tag="<strong>Service area:</strong> Location, location, location is the key to this tag."
-                                    icon="'../assets/icon-pin-black.svg' | relative_url "
-                                    %}
-                                </div>  
-
-                                <div class="col-12 col-md-6">
-                                    {% include component-examples/global-search-tile-example.html
-                                    description="<strong>Open grants tag</strong>"
-                                    tag="Open"
-                                    icon="'../assets/icon-tick-box-green.svg' | relative_url "
-                                    classes="open-grant"
-                                    %}
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    {% include component-examples/global-search-tile-example.html
-                                    description="<strong>Coming soon grants tag</strong>"
-                                    tag="Coming soon"
-                                    icon="'../assets/icon-events-yellow.svg' | relative_url "
-                                    classes="soon-grant"
-                                    %}
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    {% include component-examples/global-search-tile-example.html
-                                    description="<strong>Closed grants tag</strong>"
-                                    tag="Closed"
-                                    icon="'../assets/icon-closed-red.svg' | relative_url "
-                                    classes="closed-grant"
-                                    %}
-                                </div>
-
-
-                                <div class="col-12 col-md-6">
-                                    {% include component-examples/global-search-tile-example.html
-                                    description="<strong>RSP - current financial year</strong>"
-                                    tag="Registered Provider"
-                                    icon="'../assets/icon-tick-box-green.svg' | relative_url "
-                                    classes="open-grant"
-                                    %}
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    {% include component-examples/global-search-tile-example.html
-                                    description="<strong>RSP - past financial year</strong>"
-                                    tag="Not registered"
-                                    icon="'../assets/icon-closed-red.svg' | relative_url "
-                                    classes="closed-grant"
-                                    %}
-                                </div>
-
-
-                            </div>
-
-                        </div>
-                    </div>
+                   
 
                 </div>
 
@@ -245,57 +260,24 @@ subsite-tag: true
                                 brand-elements="colours, borders, tags and button styles"
                             %}
 
-                            <h3>Grants and programs search tile</h3>
-                            {% include component-examples/global-search-tile-example.html
-                            label="Grant or program name"
-                            title="Lorem ipsum dolor sit amet constetur"
-                            description="Live Performance Support Program TAS
-                            The Live Performance Support Program provides funding guarantees to arts organisations, festival
-                            organisers, cultural producers and venues to help them to plan live performances in Tasmanian theatres
-                            and other venues throughout 2021."
-                            tag="Open"
-                            icon="'../assets/icon-tick-box-green.svg' | relative_url "
-                            timeframe="Closing in 12 days"
-                            apply="<p><strong>Who is this for?</strong></p>
-                                <p>Businesses who employ people registered with a Disability Service provider.</p>
-                                <p><strong>What you get?</strong></p>
-                                <p>Funding of up to $1650.</p>"
-                            shortlist="true"
-                            classes="open-grant grants-finder-tool non-branded nb-border"
+                            <h4>Accordion result tile</h4>
+                            {% include component-examples/ablis-accordion-result-tiles-example.html
+                                title="Lorem ipsum dolor et"
+                                description1="<p>Pellentesque eget turpis vitae turpis aliquam egestas. Duis pretium feugiat augue eu molestie. Pellentesque tincidunt consequat luctus. Curabitur faucibus blandit metus, vel blandit orci ornare sit amet.</p>"
+                                description2="<p>In semper interdum lectus, non finibus dolor aliquet ac. Suspendisse nec tellus facilisis, facilisis neque eu, egestas neque. Nam aliquam, felis viverra tristique tempor, nisi ipsum hendrerit tellus, at venenatis felis arcu quis est. Donec quis pharetra tortor.</p>"
+                                administered="Organisation name"
+                                service="non-branded"
                             %}
-                            
-                            <h3>Advisers search tile</h3>
-                            {% include component-examples/global-search-tile-example.html
-                            label="Federal government"
-                            title="Fair Work Ombudsman Small Business Helpline"
-                            description="The Small business helpline provides workplace advice on managing your employees and meeting your employer obligations."
-                            services="Services offered over the phone and online."
-                            cost="Free"
-                            tag="<strong>Service area:</strong> Australia wide"
-                            icon="'../assets/icon-pin-black.svg' | relative_url "
-                            classes="adviser-finder-tool non-branded nb-border"
-                            %}
-                        
 
-                            <h3>Events search tile - in person events</h3>
-                            {% include component-examples/events-tile-example.html
-                                delivery-type="Workshop for ACT businesses"
-                                date="Monday 10 Aug 2022"
-                                time="11:00 AM - 12:30 PM AEST"
-                                cost="Free"
-                                location="Shepparton, VIC"
-                    
-                                title="Lunch and learn: Designing your team culture"
-                                description="This workshop provides ACT businesses with tips and tools to help them build a strong team and healthy workplace culture."
-
-                                speaker="Bronwyn Brown"
-                                organiser="Canberra Innovation Network"
-                                address="Canberra Innovation Network, Level 5, 1 Moore Street, Canberra, ACT, 2601"
-                                read-more-info="<p>Vestibulum eget tincidunt ligula. Fusce vestibulum imperdiet mi, sed lobortis lectus sagittis vel. Donec ut neque at est sodales pretium. Suspendisse molestie orci nulla, quis sagittis mi ornare ut.</p><p>Nam rutrum vulputate dui, eu mattis lorem facilisis vitae. Praesent consequat quis nunc vitae blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed nibh tortor, scelerisque at viverra eget, tincidunt eu elit. Etiam eu egestas components/download-list.htmlaugue. Donec viverra pharetra vulputate. Nulla eu vestibulum est, vel tempor tellus. Donec bibendum tortor rhoncus, vestibulum quam nec, pulvinar eros. Nullam ac dignissim tellus. Quisque ac ante quis elit mollis varius eu vitae eros. Donec aliquam finibus metus, quis dapibus dui sagittis id. Pellentesque tincidunt velit eget elit ultricies hendrerit.</p>"
-                                icon="'../assets/icon-events-in-person.svg' | relative_url "
-                                registration="Canberra Innovation Network"
-                                classes="events-finder-tool in-person-event non-branded nb-background"
+                            <h4>Search result tile</h4>
+                            {% include component-examples/ablis-search-result-tiles-example.html
+                                title="Lorem ipsum dolor et"
+                                description1="<p>Pellentesque eget turpis vitae turpis aliquam egestas. Duis pretium feugiat augue eu molestie. Pellentesque tincidunt consequat luctus. Curabitur faucibus blandit metus, vel blandit orci ornare sit amet.</p>"
+                                description2="<p>In semper interdum lectus, non finibus dolor aliquet ac. Suspendisse nec tellus facilisis, facilisis neque eu, egestas neque. Nam aliquam, felis viverra tristique tempor, nisi ipsum hendrerit tellus, at venenatis felis arcu quis est. Donec quis pharetra tortor.</p>"
+                                administered="Organisation name"
+                                service="non-branded"
                             %}
+                           
 
                         </div>
                     </div>
@@ -308,7 +290,7 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=684-772&t=Y0RG7T4JJjmDsKJf-1'"
+        btn-link="'https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=1-3596&t=4DIzL4NDmljaubbU-1'"
         btn-text="View design specifications"
         %}
 
@@ -317,7 +299,7 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>Guide information tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-guide" | relative_url }}>Two column - guide page layout</a>.</p>
+        <p>ABLIS accordion result tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-guide" | relative_url }}>Two column - guide page layout</a>.</p>
 
         {% include layouts-dropdown.html
         layout-name="Two column - guide page"
@@ -338,17 +320,17 @@ subsite-tag: true
 
             finalbp="Breakpoint &lt; 768px"
 
-            min1200-img="'../assets/layout-images/twocol-guide-1200px-guidesections.png' | relative_url "
-            min768-img="'../assets/layout-images/twocol-guide-768px-guidesections.png' | relative_url "
-            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-guidesections.png' | relative_url "
+            min1200-img="'../assets/layout-images/twocol-guide-1200px-extrawidthcomponent.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-guide-768px-fullwidthcomponent.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-fullwidthcomponent.png' | relative_url "
 
-            min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Guide sections span the full width of the content area.</p>"
+            min1200-rules="<p>The content area uses the wide content variation and is 9 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
 
-            min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Guide sections span the full width of the content area.</p>"
+            min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
 
-            finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Guide sections span the full width of the content area.</p>"
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
 
-            example-link="'../prototypes/sab/make-key-decisions.html' | relative_url'"
+            example-link="'../prototypes/ablis-final/finder/results.html' | relative_url'"
             example-link-text="View layout example"
 
             %}
@@ -362,9 +344,9 @@ subsite-tag: true
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Used in ALBIS to display a collection of results. The two different result tiles are used in different tool contexts:</p>
+        <p>Used in ALBIS to display a collection of results at the end of a tool process. The two different result tiles are used in different tool contexts:</p>
          <ul>
-            <li>ABLIS result tile accordions are used in the ABLIS guided search results page. In the ABLIS guided search users can be presented with large number of result items to consider. The accordion tiles are used to minimize the amount of information.</li>
+            <li>ABLIS result tile accordions are used in the ABLIS guided search results page. In the ABLIS guided search users can be presented with large number of result items to consider. The accordion tiles are used to minimize the amount of information initially displayed on the page.</li>
             <li>ABLIS search tiles are used in the ABLIS keyword search. The keyword search uses pagination to minimize the amount of content on the screen.</li>
          </ul>
 
