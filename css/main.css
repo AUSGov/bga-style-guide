@@ -10692,6 +10692,8 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 
 .ablis-result .result-content .description .description-content div > *:first-child { padding-top: 0; margin-top: 0; }
 
+.ablis-result .result-content .description .description-hidden { display: none; }
+
 .ablis-result .result-content .description .expand { font-weight: 600; text-decoration: underline; cursor: pointer; font-size: .875rem; line-height: 1.75; }
 
 .ablis-result .result-content .description.simple .description-content { padding-bottom: 24px; }
@@ -10706,6 +10708,8 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 
 .ablis-result .result-content .tag.ablis-purple { background: #E2DDF8; border: solid 2px #7468B4; }
 
+.ablis-result .result-content .tag.non-branded { background: #D8D8D8; border: none; }
+
 .ablis-result .result-content .cta-links { display: flex; column-gap: 24px; row-gap: 24px; align-items: center; width: 100%; }
 
 .ablis-result .result-content .cta-links .learn-more { min-height: 44px !important; height: 44px !important; padding: 0 24px; }
@@ -10713,8 +10717,6 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 .ablis-result .result-content .cta-links .learn-more:focus, .ablis-result .result-content .cta-links .learn-more:focus-visible { border-color: #2157AA; color: #ffffff; }
 
 .ablis-result .result-content .cta-links .learn-more:hover { border-color: #2E6CB9; color: #ffffff; }
-
-.ablis-result .result-content .cta-links .learn-more:hover svg { fill: pink; }
 
 .ablis-result .result-content .cta-links .learn-more:active { border-color: #113869; color: #ffffff; }
 
@@ -10747,6 +10749,24 @@ body.no-scroll { height: 100%; overflow-y: hidden; }
 .ablis-result.advisory-material.open .result-header { background-color: #E2DDF8; }
 
 .ablis-result.advisory-material .result-content { border-left: 8px solid #7468B4; }
+
+.ablis-result.non-branded .result-header { border-left: none; }
+
+.ablis-result.non-branded .result-header:focus-visible { background-color: #D8D8D8; }
+
+.ablis-result.non-branded .result-header:hover { background-color: #D8D8D8; }
+
+.ablis-result.non-branded.open .result-header { background-color: #D8D8D8; }
+
+.ablis-result.non-branded .result-content { border-left: none; }
+
+.ablis-result.non-branded .result-content .cta-links .learn-more svg, .ablis-result.non-branded .result-content .cta-links .learn-more svg path { display: none !important; }
+
+.ablis-result.non-branded .result-content .cta-links .learn-more:focus, .ablis-result.non-branded .result-content .cta-links .learn-more:focus-visible { border-color: mediumblue !important; color: #333333; }
+
+.ablis-result.non-branded .result-content .cta-links .learn-more:hover { color: #333333; border-color: #333333; }
+
+.ablis-result.non-branded .result-content .cta-links .learn-more:active { color: #333333; border-color: #333333; }
 
 .ablis-search-result { border: 1px solid #96B7DF; width: 100%; }
 
