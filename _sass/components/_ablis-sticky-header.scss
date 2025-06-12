@@ -1,0 +1,133 @@
+.ablis-sticky-header.sticky_background {
+    background: none;
+
+    .sticky-wrapper {
+        width: 100%;
+
+        .sticky-header {
+            padding: 32px 0;
+            padding: 0;
+
+            .top-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 24px;
+                flex-wrap: wrap;
+                row-gap: 16px;
+            }
+
+            h2.showing-number {
+                font-size: 1.75rem;
+                font-weight: 400;
+                margin: 0;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .modal-trigger-ablis-task-list {
+                padding: 0 24px;
+                column-gap: 24px;
+                
+                .task-counter {
+                    display: inline-flex;
+                    color: $bga-white;
+                    align-items: center;
+                    justify-content: center;
+                    background: $bga-blue-background-dark;
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 40px;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                }
+                &:hover {
+                    .task-counter {
+                        color: $bga-black;
+                        background: $bga-white;
+                    }
+                }
+            }
+        }
+
+        .sticky-header.teal {
+            background: $bga-teal-highlight-light;
+            padding: 0 32px 32px 32px; 
+        }
+
+    }
+
+    &.fixed {
+        background: $bga-teal-highlight-light;
+        position: fixed;
+        top: 0;
+        z-index: 8500;
+        box-shadow: 2px 2px 3px 0px rgba(51, 51, 51, 0.2);
+        transition: top 1s linear;
+        width: 100%;
+
+        .fixed-hide {
+            display: none;
+        }
+
+        .sticky-header.teal {
+            padding: 32px;
+        }
+        .recommendations-summary {
+            .summary {
+                padding: 8px 16px;
+                background: $bga-white !important;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+
+}
+
+.ablis-recommendations-summary {
+    display: flex;
+    column-gap: 24px;
+    row-gap: 24px;
+    flex-wrap: wrap;
+    background: $bga-teal-highlight-light;
+    
+    .summary {
+        background: $bga-white;
+        padding: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        row-gap: 24px;
+        flex: 0 0 calc(25% - 18px);
+
+        border-left: $bga-yellow-highlight-shadow solid 8px;
+
+        &.regulation {
+            border-left: $bga-orange-highlight-shadow solid 8px;
+        }
+
+        &.codes {
+            border-left: $bga-blue-highlight-shadow solid 8px;
+        }
+
+        &.advisory {
+            border-left: $bga-purple-highlight-shadow solid 8px;
+        }
+        a {
+            font-size: 1.125rem;
+            display: block;
+            font-weight: 400;
+            color: $bga-blue-links;
+
+            span {
+                font-weight: 600;
+            }
+
+            &:visited {
+                color: $bga-blue-links;
+            }
+        }
+    }
+}
