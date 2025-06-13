@@ -1,0 +1,23 @@
+<div id="page-header" class="ablis-info-page-header teal">
+
+    <div class="header-content">
+
+        <div class="title-area remove-element-padding">
+            <h1>{{ include.title }}</h1>
+            <p class="header-intro">{{ include.description }}</p>
+        </div>
+
+    </div>
+
+    <div class="header-administered remove-element-padding px-5 py-3 {{ include.service | replace: ' ', '' }}">
+            <p class="service m-0">{{ include.service-tag }}</p>
+            <div class="administered m-0">
+                <p class="administering-org">
+                    <strong>Administered by: </strong> 
+                    <span>{{ include.administered }}</span>
+                </p>
+            </div>
+
+    </div>
+
+</div>

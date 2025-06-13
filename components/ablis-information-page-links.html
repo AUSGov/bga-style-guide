@@ -1,0 +1,195 @@
+---
+
+layout: content-tagged
+title: ABLIS information page links
+description: Call to actions 
+breadcrumb1: Components
+url1: /components.html
+updated: 13 June, 2025
+bga-tag: false
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        link-4="Version history" link-id-4="#version-history"
+        %}
+ 
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-0 col-12 col-lg-9 col-xl-9">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        {% include section-tabs.html
+
+            tab1="business.gov.au branding"
+            tab1value="bga-branded"
+    
+            tab2="No branding"
+            tab2value="non-branded"
+    
+            %}
+    
+    
+            <div class="tab-sections-wrapper ">
+    
+                <div class="tab-section bga-branded selected">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="bga-result-tile"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+
+                            <h3>ABLIS action links</h3>
+                            {% include component-examples/ablis-action-links-example.html
+                            %}
+                            
+
+
+                        </div>
+                    </div>
+
+                   
+
+                </div>
+
+                <div class="tab-section non-branded ">
+
+                    <!-- Breakpoint radio buttons -->
+                    {% include breakpoints.html 
+                        element-string="nb-result-tile"
+                        sm-visibility="true"
+                        final-visibility="true"
+                        breakpoint-final="576"
+                    %}
+
+                    <!-- Component example -->
+
+                    <div class="component-example m-0">
+                        <div class="component-wrapper remove-element-padding p-4">
+                            
+                            {% include non-branded-explanation.html
+                                component="finder tool tiles"
+                                brand-elements="colours, borders, tags and button styles"
+                            %}
+
+                            <h4>Accordion result tile</h4>
+                            {% include component-examples/ablis-accordion-result-tiles-example.html
+                                title="Lorem ipsum dolor et"
+                                description1="<p>Pellentesque eget turpis vitae turpis aliquam egestas. Duis pretium feugiat augue eu molestie. Pellentesque tincidunt consequat luctus. Curabitur faucibus blandit metus, vel blandit orci ornare sit amet.</p>"
+                                description2="<p>In semper interdum lectus, non finibus dolor aliquet ac. Suspendisse nec tellus facilisis, facilisis neque eu, egestas neque. Nam aliquam, felis viverra tristique tempor, nisi ipsum hendrerit tellus, at venenatis felis arcu quis est. Donec quis pharetra tortor.</p>"
+                                administered="Organisation name"
+                                service="non-branded"
+                            %}
+
+                            <h4>Search result tile</h4>
+                            {% include component-examples/ablis-search-result-tiles-example.html
+                                title="Lorem ipsum dolor et"
+                                description1="<p>Pellentesque eget turpis vitae turpis aliquam egestas. Duis pretium feugiat augue eu molestie. Pellentesque tincidunt consequat luctus. Curabitur faucibus blandit metus, vel blandit orci ornare sit amet.</p>"
+                                description2="<p>In semper interdum lectus, non finibus dolor aliquet ac. Suspendisse nec tellus facilisis, facilisis neque eu, egestas neque. Nam aliquam, felis viverra tristique tempor, nisi ipsum hendrerit tellus, at venenatis felis arcu quis est. Donec quis pharetra tortor.</p>"
+                                administered="Organisation name"
+                                service="non-branded"
+                            %}
+                           
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=1-3596&t=4DIzL4NDmljaubbU-1'"
+        btn-text="View design specifications"
+        %}
+
+
+       
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>ABLIS accordion result tiles are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-guide" | relative_url }}>Two column - guide page layout</a>.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Two column - guide page"
+        singlelayout="true"
+        %}
+
+
+        <div class="layout-example show two-col-guidepage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="two-col-guidepage"
+
+            min1200-visibility="true"
+            min992-visibility="false"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/twocol-guide-1200px-extrawidthcomponent.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-guide-768px-fullwidthcomponent.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-guide-finalbp-fullwidthcomponent.png' | relative_url "
+
+            min1200-rules="<p>The content area uses the wide content variation and is 9 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 8 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
+
+            example-link="'../prototypes/ablis-final/finder/results.html' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+ 
+
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>Used in ALBIS to display a collection of results at the end of a tool process. The two different result tiles are used in different tool contexts:</p>
+         <ul>
+            <li>ABLIS result tile accordions are used in the ABLIS guided search results page. In the ABLIS guided search users can be presented with large number of result items to consider. The accordion tiles are used to minimize the amount of information initially displayed on the page.</li>
+            <li>ABLIS search tiles are used in the ABLIS keyword search. The keyword search uses pagination to minimize the amount of content on the screen.</li>
+         </ul>
+
+        <!-- VERSION HISTORY-->
+        <h2 class="section-start" id="version-history">Version history</h2>
+        <h4>10 June, 2025</h4>
+        
+        <p>Created the ABLIS information page links component page.</p>
+        
+    </div>
+
+</div>

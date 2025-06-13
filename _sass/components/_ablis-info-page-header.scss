@@ -1,0 +1,120 @@
+#page-header.ablis-info-page-header {
+    padding: 32px 32px 0 32px;
+
+    .title-area {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+    .header-content {
+        padding-bottom: 32px !important;
+    }
+    .header-administered {
+        background: $bga-white;
+        border-bottom: 8px solid $bga-yellow-highlight-shadow;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 16px;
+        row-gap: 16px;
+
+        .service {
+            background: $bga-yellow-highlight-light;
+            border: 2px solid $bga-yellow-highlight-shadow;
+            cursor: default;
+            padding: 4px 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            display: inline-flex;
+            flex-shrink: 0;
+        }
+
+        .administered { 
+            p {
+                margin-bottom: 0
+            }
+        }
+
+
+        &.Legalobligation {
+            border-bottom-color: $bga-orange-highlight-shadow;
+
+            .service {
+                background: $bga-orange-highlight-light;
+                border: 2px solid $bga-orange-highlight-shadow;
+            }
+        }
+
+        &.Codeorstandard {
+            border-bottom-color: $bga-blue-highlight-shadow;
+
+            .service {
+                background: $bga-blue-highlight-light;
+                border: 2px solid $bga-blue-highlight-shadow;
+            }
+        }
+
+        &.Guidance {
+            border-bottom-color: $bga-purple-highlight-shadow;
+
+            .service {
+                background: $bga-purple-highlight-light;
+                border: 2px solid $bga-purple-highlight-shadow;
+            }
+        }
+
+    }
+}
+
+// Mixins for smaller screen sizes
+@mixin ablis-info-page-header-bp-576() {
+    #page-header.ablis-info-page-header {
+        .title-area {
+            width: 100%;
+        }
+    }
+}
+@mixin ablis-info-page-header-bp-below576(){
+    #page-header.ablis-info-page-header {
+        padding: 0;
+
+        .header-content {
+            padding: 24px;
+
+            h1 {
+                font-size: 2rem;
+            }
+            .header-intro {
+                font-size: 1rem;
+                line-height: 1.625;
+            }
+        }
+        .header-administered {
+            padding: 16px 24px !important;
+            max-width: none;
+            border-bottom-width: 4px;
+
+            p.service {
+                font-size: 1rem;
+                padding: 0px 8px;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576 {
+    @include ablis-info-page-header-bp-576();
+}
+.component-example.bp-below576 {
+    @include ablis-info-page-header-bp-576();
+    @include ablis-info-page-header-bp-below576();
+}
+
+//Media queries
+@media ( max-width: 992px ) {
+    @include ablis-info-page-header-bp-576();
+}
+
+@media (max-width: 576px) {
+    @include ablis-info-page-header-bp-below576();
+}
