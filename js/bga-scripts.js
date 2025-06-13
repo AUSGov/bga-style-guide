@@ -2751,7 +2751,7 @@ $(document).ready(function () {
 
     //ABLIS RESULT TILES   
     // Expand result tile accordions
-    $('.result-header').on('click', function () {
+    $('.ablis-result-header').on('click', function () {
         var result = $(this).parents('.ablis-result'),
             description = result.find('.result-content');
         result.toggleClass('open');

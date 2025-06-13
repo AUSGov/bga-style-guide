@@ -100,7 +100,7 @@
         flex-wrap: wrap;
         align-content: space-between;
         row-gap: 24px;
-        flex: 0 0 calc(25% - 18px);
+        flex: 1 1 0;
 
         border-left: $bga-yellow-highlight-shadow solid 8px;
 
@@ -130,4 +130,78 @@
             }
         }
     }
+}
+
+// Mixins for smaller screen sizes
+@mixin ablis-sticky-header-bp-576 {
+    .ablis-recommendations-summary {
+        .summary {
+            background: $bga-white;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            row-gap: 24px;
+            flex: 0 0 calc(50% - 12px);
+        }
+    }
+}
+
+@mixin ablis-sticky-header-below576 () {
+    .ablis-sticky-header.sticky_background {
+        .sticky-wrapper .sticky-header.teal {
+            margin-left: -32px;
+            margin-right: -32px;
+            padding: 0 32px 24px 32px;
+
+            h2.showing-number {
+                font-size: 1rem;
+            }
+        }
+
+        &.fixed {
+            .sticky-wrapper .sticky-header.teal {
+                padding: 16px 32px 16px 32px;
+            }
+        }
+    }
+    .ablis-recommendations-summary {
+        margin-left: -32px;
+        margin-right: -32px;
+        row-gap: 16px;
+
+        .summary {
+            flex: 0 0 100%;
+            padding: 8px 16px;
+            h3 {
+                margin: 0 !important;
+            }
+            p {
+                display: none;
+            }
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-576 {
+    @include ablis-sticky-header-bp-576();
+}
+
+.component-example.bp-below576 {
+    @include ablis-sticky-header-bp-576();
+    @include ablis-sticky-header-below576();    
+}
+
+
+//Media queries
+@media ( max-width: 576px ) {
+    @include ablis-sticky-header-bp-576();
+}
+
+@media ( max-width: 576px ) {
+    @include ablis-sticky-header-bp-576();
+    @include ablis-sticky-header-below576();
 }

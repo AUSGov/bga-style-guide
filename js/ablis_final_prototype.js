@@ -819,7 +819,7 @@ $(document).ready(function () {
 
         // Expand result tile accordions
         $('.result-header').on('click', function () {
-
+            console.log('clicked');
             var result = $(this).parents('.ablis-result'),
                 description = result.find('.result-content');
             result.toggleClass('open');
