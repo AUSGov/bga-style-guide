@@ -202,7 +202,7 @@
                 <div class="row g-0">
                     <div class="col-sm-12 col-lg-10 col-xl-8 remove-element-padding">
                         <h1>ABLIS sticky header</h1>
-                        <p class="header-intro">Header design for the ABLIS guided search results page</p>
+                        <p class="header-intro">A sticky header for the ABLIS guided search results page that provides a summary of the types of results displayed on the page.</p>
                         <div class="use-tags m-0 p-0 remove-element-padding">
                             <p class="pt-1 me-2 mb-0">Use on:</p>
                             <ul class="p-0 m-0">
@@ -210,6 +210,8 @@
                                 <li class="m-0 mb-0 py-1 ps-5 pe-2 true">subsites</li>
                             </ul>
                         </div>
+                        
+                        <p class="updated pt-4 pb-0">Last updated: 12 June, 2025</p>
                         
                     </div>
                 </div>
@@ -243,7 +245,9 @@
         
             <li class="mb-3"><a tabindex="0" href="#guidelines-for-use">Guidelines for use</a></li>
              
-         
+        
+            <li class="mb-3"><a tabindex="0" href="#version-history">Version history</a></li>
+             
          
          
          
@@ -318,11 +322,12 @@
             <div class="component-wrapper remove-element-padding pb-4">
 
                 <div class="xl-explanation remove-element-padding p-4">
-                    <p>When the breakpoint ≥ 1320px wide the content is a maximum 1256px wide. The background colour fills the rest of the screen to the left and right.</p>
+                   
+                    <h2>Intitial state</h2>
 
-                    <h3>Four categories</h3>
+                    <h4>Four categories</h4>
                     <!-- SHOWING HEADER -->
-<div class="ablis-sticky-header sticky_background">
+<div class="ablis-sticky-header sticky_background ">
     
     <div class="sticky-wrapper">
         <div class="sticky-header teal">
@@ -388,9 +393,9 @@
 </div>
 
 
-                    <h3 class="mt-5">Three categories</h3>
+                    <h4 class="mt-5">Three categories</h4>
                     <!-- SHOWING HEADER -->
-<div class="ablis-sticky-header sticky_background">
+<div class="ablis-sticky-header sticky_background ">
     
     <div class="sticky-wrapper">
         <div class="sticky-header teal">
@@ -449,9 +454,9 @@
 </div>
 
 
-                    <h3 class="mt-5">Two categories</h3>
+                    <h4 class="mt-5">Two categories</h4>
                     <!-- SHOWING HEADER -->
-<div class="ablis-sticky-header sticky_background">
+<div class="ablis-sticky-header sticky_background ">
     
     <div class="sticky-wrapper">
         <div class="sticky-header teal">
@@ -503,6 +508,51 @@
 </div>
 
 
+
+                    <h2 class="mt-5">Sticky state</h2>
+                    <p>When the user scrolls down the page the sticky header becomes fixed at the top of the page. The category summaries are not included in this sticky state.</p>  
+                    <p>When the breakpoint ≥ 1320px wide the content is a maximum 1256px wide. The background colour fills the rest of the screen to the left and right.</p>
+
+                    <!-- SHOWING HEADER -->
+<div class="ablis-sticky-header sticky_background fixed-example">
+    
+    <div class="sticky-wrapper">
+        <div class="sticky-header teal">
+            <div class='top-row'>
+                <div class="showing-number remove-element-padding">
+                    <h2 class="showing-number">We found <strong><span class="count">16</span></strong> items</h2>
+                </div>
+
+                <div class="header-cta-links button-group">
+                    <button class="bga-btn bga-secondary-btn bkg-light modal-trigger-email-results" tabindex="0" role="button">Save results</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CATEGORY SUMMARY BOXES-->
+<div class="ablis-recommendations-summary teal px-5 pb-5 fixed-example">
+        
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+</div>
+
+
+
                 </div>
 
             </div>
@@ -512,20 +562,19 @@
         <!-- Design specifications link -->
 
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='https://www.figma.com/design/CHiHC359mYGmZ1ziKHriDW/BGA-style-guide?node-id=771-21090&t=Y0RG7T4JJjmDsKJf-1' role="button">View design specifications</a>
+<a class="btn btn-primary" tabindex="0" href='https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=1-3322&t=BWYJKlElwfmWvZ52-1' role="button">View design specifications</a>
 </div>
 
 
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The site header is used on BGA subsite pages.</p>
-
+        <p>ABLIS sticky header is used on the <a href=/bga-style-guide/brand-foundations/grid-and-page-layouts.html#layout-twocol-guide>Two column - guide page layout</a>.</p>
 
         <div class="layouts m-0 p-4">
     
     
-    <p class="pe-3 m-0 all-layouts">Layout: <strong>All layouts</strong></p>
+    <p class="pe-3 m-0 all-layouts">Layout: <strong>Two column - guide page</strong></p>
     
     
 
@@ -542,10 +591,10 @@
         
         <div class="layouts-wrapper">
         <div class="layout-image me-5">
-            <img src='../assets/layout-images/subsite-header-allbp.png' | relative_url  alt="" />
+            <img src='../assets/layout-images/ablis-sticky-header-allbp.png' | relative_url  alt="" />
         </div>
         <div class="layout-rules">
-            <p>The subsite header is 12 grid-columns wide.</p>
+            <p>The ABLIS sticky header is 12 grid-columns wide.</p>
         </div>
         </div>
     </div>
@@ -559,7 +608,7 @@
 
         </div>
         <div class="design-specs-link p-4 mx-0 mt-0 mb-5">
-<a class="btn btn-primary" tabindex="0" href='../html-examples/ECB-content-page.html' | relative_url' role="button">View layout example</a>
+<a class="btn btn-primary" tabindex="0" href='../prototypes/ablis-final/finder/results.html' | relative_url' role="button">View layout example</a>
 </div>
 
 
@@ -570,12 +619,19 @@
          <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
          <h3>Purpose:</h3>
-         <p>The subsite header provides branding for BGA subsites and a link to the main homepage of business.gov.au. It can also provide additional subsite links if required.</p>
-         <h3>When to use this component:</h3>
+         <p>The ABLIS sticky header provides important results information at the top of the ABLIS guided search results page including:</p>
          <ul>
-             <li>Used across every page of a busniess.gov.au subsite or tool to ensure a consistent user experience.
-             </li>
+             <li>A count of the total number of results found.</li>
+             <li>A save results button that triggers a modal that allows users to email the results page.</li>
+             <li>A breakdown of the number of results in four different service categories.</li>
          </ul>
+
+
+        <!-- VERSION HISTORY-->
+        <h2 class="section-start" id="version-history">Version history</h2>
+        <h4>12 June, 2025</h4>
+        
+         <p>Created the ABLIS sticky header component page.</p>
 
 
     </div>
