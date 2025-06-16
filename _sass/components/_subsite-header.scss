@@ -100,8 +100,52 @@
 
         }
     }
+
+    &.ablis-header {
+        .strap-wrapper {
+            margin: 0 -9999px;
+            padding: 0 9999px;
+            background: $bga-blue-footer;
+        }
+
+        .main-header-wrapper {
+            margin: 0 -9999px;
+            padding: 0 9999px;
+            background: $bga-blue-background-dark;
+        }
+
+       .main-header {
+            img {
+                width: 100%;
+                max-width: 450px;
+                height: auto;
+            }
+            .tool-title {
+                h1 {
+                    color: $bga-white;
+                    font-weight: 600;
+                    font-size: 2rem;
+                }
+            }
+       }
+
+       &.style-guide-example {
+        .strap-wrapper {
+            margin: 0;
+            padding: 0 32px;
+            background: $bga-blue-footer;
+        }
+
+        .main-header-wrapper {
+            margin: 0;
+            padding: 0 32px;
+            background: $bga-blue-background-dark;
+        }
+       }
+    }
 }
 
+// Default subsite header
 @mixin subsite-header-bp-350(){
     #subsite-header {
         .bga-link-strap {
@@ -140,19 +184,50 @@
     }
 }
 
+//ABLIS subsite header
+@mixin ablis-site-header-bp-below576(){
+    #subsite-header.ablis-header {
+        &.style-guide-example {
+            .main-header-wrapper, .strap-wrapper {
+                padding: 0;
+            }
+        }
+        .main-header {
+            img {
+                max-width: 340px !important;
+            }
+            .tool-title {
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+    }
+    }
+}
+
 
 // SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include subsite-header-bp-350();
+
+    //ABLIS subsite header
+    @include ablis-site-header-bp-below576();
+}
 .component-example.bp-350{
+    // Default subsite header
     @include subsite-header-bp-350();
 }
 .component-example.bp-below350{
+    // Default subsite header
     @include subsite-header-bp-350();
     @include subsite-header-bp-below350();
 }
 
+
 // Media queries for HTML examples
 @media (max-width: 576px) {
-   @include subsite-header-bp-350();
+    @include subsite-header-bp-350();
+    @include ablis-site-header-bp-below576();
 }
 @media (max-width: 350px) {
     @include subsite-header-bp-below350();

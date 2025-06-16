@@ -279,6 +279,56 @@ subsite-tag: false
             btn-text="View html example of the Two column - information page layout"
             %}
 
+
+        <!-- Two column - ABLIS information page -->
+        <h3 id="layout-twocol-ablisinfo">Two column - ABLIS information page layout</h3>
+        <p>This layout is used for ABLIS information pages.</p>
+
+        <h4>Bootstrap classes</h4>
+            <ul>
+                <li>Left side menu: <strong>.col-12 .col-md-3 .col-lg-2</strong></br></li>
+                <li>Body content: <strong>.col-12 .col-md-9 .col-xl-8</strong></li>
+            </ul>
+
+        <div class="layout-example full-border show two-col-ablisinfopage m-0 px-4 py-0">
+            
+            {% include layouts-accordion.html 
+                layout-name="two-col-ablisinfopage"
+            
+                min1200-visibility="true"
+                min992-visibility="true"
+                min768-visibility="true"
+                min576-visibility="false"
+                finalbp-visibility="true"
+                
+                finalbp="Breakpoint &lt; 768px"
+                
+                min1200-img="'../assets/layout-images/2col-ablisinfo-min1200.png' | relative_url "
+
+                min992-img="'../assets/layout-images/2col-ablisinfo-min992.png' | relative_url "
+            
+                min768-img="'../assets/layout-images/2col-ablisinfo-min768.png' | relative_url "
+
+                finalbp-img="'../assets/layout-images/2col-ablisinfo-finalbp.png' | relative_url "
+
+                min1200-rules="<p>The left side menu is 2 grid-columns wide. The content area is 8 grid-columns wide.</p><p>The area containing the side menu and the content has a 32px margin above and below.</p><p>The first element within the content area and the side menu have zero margin and padding above (regardless of what element it is).</p>"
+
+                min992-rules="<p>The left side menu is 32 grid-columns wide. The content area is 9 grid-columns wide</p><p>The area containing the side menu and the content has a 32px margin above and below.</p><p>The first element within the content area and the side menu have zero margin and padding above (regardless of what element it is).</p>"
+                
+                min768-rules="<p>The left side menu is 3 grid-columns wide. The content area is 9 grid-columns wide</p><p>The area containing the side menu and the content has a 32px margin above and below.</p><p>The first element within the content area and the side menu have zero margin and padding above (regardless of what element it is).</p>"
+                
+                finalbp-rules="<p>The content area and the left side menu are both 12 grid-columns wide.</p><p>The area containing the side menu and the content has a 32px margin above and below.</p><p>The first element within the content area and the side menu have zero margin and padding above (regardless of what element it is).</p>"
+                
+            %}
+            
+        </div>
+        
+        {% include design-specs-link.html 
+            btn-link="'../html-examples/two-col-ablisinfopage.html' | relative_url"
+            btn-text="View html example of the Two column - ABLIS information page layout"
+            %}
+        
+
         
         <!-- Two column - guide page -->
         <h3 id="layout-twocol-guide">Two column - guide page layout</h3>

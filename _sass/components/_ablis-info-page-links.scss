@@ -1,8 +1,5 @@
-.callout-box.ablis-apply {
-    &.no-colour {
-        background: none;
-        border: none;
-    }
+.ablis-action-links {
+
     .rego-resources {
         .resource {
             width: 100%;
@@ -20,6 +17,7 @@
                 align-items: center;
                 padding: 0;
                 text-decoration: none;
+                cursor: pointer;
 
                 .link-text-wrapper {
                     padding: 24px 24px 24px 0;
@@ -59,8 +57,7 @@
                     background-size: 16px 16px;
                 }
 
-                &.pdf-icon,
-                &.doc-icon {
+                &.download-icon {
                     .mini.instruction {
                         background: url('../assets/iconography/icon-download-blue.svg') no-repeat left center;
                         background-size: 16px 16px;
@@ -110,4 +107,44 @@
         }
     }
 
+}
+
+// Mixins for smaller screen sizes
+@mixin ablis-info-page-links-bp-576() {
+    .ablis-action-links {
+        .rego-resources {
+            .resource {
+                .rego-link {
+                    padding: 16px;
+                    border-left: 8px solid $bga-yellow-highlight-shadow;
+                    align-items: flex-start;
+                    column-gap: 8px;
+                    
+                    .task {
+                        width: auto;
+                        height: auto;
+                        padding: 2px 8px;
+                        align-self: auto;
+                        border: none;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
+                    .link-text-wrapper {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below576 {
+    @include ablis-info-page-links-bp-576();
+}
+
+// Media queries
+@media (max-width: 576px) {
+    @include ablis-info-page-links-bp-576();
 }

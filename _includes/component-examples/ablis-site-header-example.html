@@ -1,0 +1,62 @@
+<div id="subsite-header" class="ablis-header {{include.classes}}">
+
+    {% if include.bga-strap == "true" %}
+    <div class="strap-wrapper">
+        <div class="bga-link-strap">
+        
+            <div class="row">
+                <div class="col-12">
+                    <ul class="p-0 m-0">
+                        <li tabindex="0" class="bga-header-link p-0">
+                            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="10" height="16"
+                                viewBox="0 0 10 16">
+                                <path id="Path_8941" data-name="Path 8941"
+                                    d="M115.972,22,122,28.018,120.014,30,112,22l8.014-8L122,15.982Z"
+                                    transform="translate(-112 -14)" fill="#fff" fill-rule="evenodd" />
+                            </svg>
+                            <a><strong>business</strong>.gov.au</a>
+                        </li>
+                    </ul class="p-0 m-0">
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    {% endif %}
+
+    <div class="main-header-wrapper">
+        <div class="main-header py-5">
+
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="subsite-logo">
+                        <a class="" href="">
+
+                            <img src={{ 'assets/prototypes/ABLIS-logo-landscape.png' | relative_url }} />
+
+                            
+                        </a>
+                    </div>
+
+                </div>
+
+                {% if include.title %}
+                <div class="col-12">
+                    <div class="tool-title remove-element-padding mt-4">
+                        <h1>{{ include.title }}</h1>
+                    </div>
+
+                </div>
+                {% endif %}
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+

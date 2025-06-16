@@ -1,0 +1,89 @@
+.callout-box.ablis-contact {
+    .header-section {
+        h3 {
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 8px;
+            display: flex;
+            column-gap: 16px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            strong {
+                min-width: 150px;
+            }
+        }
+    }
+
+    .component-text {
+        display: table;
+
+        p {
+            display: table-row;
+            margin: 0;
+
+            strong {
+                display: table-cell;
+                padding: 0 8px 16px 0; 
+            }
+            span {
+                display: table-cell;
+                padding: 0  0 16px 0; 
+            }
+
+            &:last-of-type {
+                strong {
+                    padding: 0 8px 0 0; 
+                }
+                span {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+// Mixins for smaller screen sizes
+@mixin administering-agency-callout-bp-below768() {
+    .callout-box.ablis-contact {
+        .component-text {
+            display: flex;
+            row-gap: 16px;
+            flex-wrap: wrap;
+
+            p {
+                display: flex;
+                margin: 0;
+                row-gap: 0;
+                flex-wrap: wrap;
+                width: 100%;
+
+                strong, span {
+                    display: block;
+                    padding: 0; 
+                    width: 100%;
+                }
+
+                &:last-of-type {
+                    strong, span {
+                        padding: 0; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+// SMALLER SCREENS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
+.component-example.bp-below768 {
+    @include administering-agency-callout-bp-below768();
+}
+
+// Media queries
+@media (max-width: 768px) {
+    @include administering-agency-callout-bp-below768();
+}

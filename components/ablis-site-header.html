@@ -1,0 +1,129 @@
+---
+
+layout: content-tagged
+title: ABLIS site header
+description: Header design for the Australian Business Licence and Information Service (ABLIS)
+breadcrumb1: Components
+url1: /components.html
+bga-tag: false
+subsite-tag: true
+
+---
+
+
+<div class="row">
+
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+        classes="in-page"
+        link-1="Design" link-id-1="#design"
+        link-2="Layouts" link-id-2="#layouts"
+        link-3="Guidelines for use" link-id-3="#guidelines-for-use"
+        %}
+
+    </div>
+
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-10">
+
+
+        <!-- DESIGN -->
+        <h2 class="section-start" id="design">Design</h2>
+
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html
+            element-string="ablis-subsite-header"
+            sm-visibility="true"
+            breakpoint-final="576"
+            %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">                    
+                
+                <p>When the breakpoint ≥ 1320px wide the content is a maximum 1256px wide. The background colour fills the rest of the screen to the left and right.</p>
+        
+
+                <h3>Logo only</h3>
+
+                {% include component-examples/ablis-site-header-example.html 
+                    classes="style-guide-example"
+                %}
+
+                <h3 class="mt-5">Logo and tool name</h3>
+
+                {% include component-examples/ablis-site-header-example.html 
+                    title="Business licence and regulation finder"
+                    classes="style-guide-example"
+                %}
+
+                <h3 class="mt-5">With return to BGA strap</h3>
+
+                {% include component-examples/ablis-site-header-example.html 
+                    title="Business licence and regulation finder"
+                    bga-strap="true"
+                    classes="style-guide-example"
+                %}
+                
+                
+
+
+            </div>
+        </div>
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html
+        btn-link="'https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=1-3907&t=bRWOnAB0cztk1MtJ-1'"
+        btn-text="View design specifications"
+        %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>The ABLIS site header is used on all ABLIS pages.</p>
+
+
+        {% include layouts-dropdown.html
+        layout-name="All layouts"
+        singlelayout="true"
+        %}
+
+        <div class="layout-example show full-border mt-0 p-4">
+            {% include layouts-accordion.html
+            singlelayout="true"
+            allbp-img="'../assets/layout-images/ablis-site-header-allbp.png' | relative_url "
+            allbp-rules="<p>The ABLIS site header is 12 grid-columns wide.</p>"
+            %}
+
+        </div>
+        {% include design-specs-link.html
+            btn-link="'../html-examples/two-col-ablisinfopage.html' | relative_url'"
+            btn-text="View layout example"
+            %}
+
+
+
+
+
+         <!-- GUIDELINES -->
+         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+         <h3>Purpose:</h3>
+         <p>The ABLIS header provides branding for ABLIS. It can also provide additional links when appropriate:</p>
+         <ul>
+            <li>In tool pages the name of the tool is included underneath the logo (either "Business Licence and regulation finder" or "Keyword search"</li>
+            <li>If the user has previously visited business.gov.au in the same session the 'return to BGA' link is displayed. This link is not present if the user has not come from BGA.</li>
+         </ul>
+
+         <h3>When to use this component:</h3>
+         <ul>
+             <li>Used across every page of ABLIS to ensure a consistent user experience.
+             </li>
+         </ul>
+
+
+    </div>

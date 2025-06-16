@@ -34,13 +34,155 @@
             font-size: .875rem;
             line-height: 1.715;
         }
+    } 
+}
+
+#footer.ablis-footer {
+    a {
+        text-decoration: none;
+        
+        &:focus-visible {
+            background-color: transparent !important;
+            border: 2px solid $bga-white;
+            border-radius: $bga-focus-radius;
+            text-decoration: underline;
+        }
+        &:hover {
+            background-color: transparent !important;
+            text-decoration: underline;
+        }
+    }
+
+    .contact-container {
+        background: $bga-blue-footer;
+        margin: 0 -9999px;
+        padding: 0 9999px;
+
+        .contact-details-wrapper {
+            flex-wrap: nowrap;
+            row-gap: 48px;
+            column-gap: 32px;
+
+            h2, h3, h4, h5, p, a {
+                color: $bga-white;
+            }
+            h3, h3 a {
+                font-weight: 400;
+                font-size: 1.625rem;
+                width: 100%;
+
+                strong {
+                    font-weight: 700;
+                }
+            }
+        }
+        .federal-wrapper {
+            display: block;
+            flex: 1;
+        
+            a.phone {
+                font-weight: 600;
+                font-size: 1.375rem;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+        }
+        .state-wrapper {
+            flex: 1;   
+        }
+
+        .state-contact {
+            border: $bga-white, solid 1px;
+
+            h4, p {
+                margin-bottom: 8px;
+            }
+        }
+        select {
+            background-color: $bga-blue-links;
+            background-image: url(../assets/Chevron-down-white.svg);
+            color: $bga-white;
+            border: none;
+            font-size: 1.1875rem;
+
+            &:focus-visible {
+                background-color: $bga-blue-background-light !important;
+                color: $bga-black;
+                border: $bga-component-focus-border;
+                border-radius: $bga-focus-radius;
+
+                background-image: url(../assets/Chevron-down-black.svg);
+            }
+
+
+        }
+        .contact-details {
+            background: $bga-blue-footer;
+        }
+    }
+
+    .key-links-container {
+        background: $bga-blue-links;
+
+        .links-copyright-wrapper {
+            row-gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .copyright {
+            background: none;
+            padding: 0 !important;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+        .links ul {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 16px;
+            row-gap: 16px;
+
+            li {
+                margin: 0;
+                padding: 0;
+
+                a {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &.style-guide-example {
+        .contact-container {
+            margin: 0;
+            padding: 0 32px;
+        }
     }
 }
 
 // Mixins for smaller screen sizes and media queries
+@mixin ablis-site-footer-bp576 {
+    #footer.ablis-footer {
+        padding: 0 !important;
+        
+        .contact-container {
+            .contact-details-wrapper {
+                flex-wrap: wrap; 
+
+            }
+            .federal-wrapper, .state-wrapper {
+                width: 100%;
+                flex: none;
+            }
+        }
+    }
+}
 @mixin subsite-footer-below576 {
     .subsite-footer {
         padding: 48px 24px !important;
+
         .links {
             ul {
                 li {
@@ -57,12 +199,44 @@
             }
         }
     }
+    #footer.ablis-footer {
+        padding: 0 !important;
+
+        .contact-container {
+            padding: 32px 24px !important;
+        } 
+
+        .key-links-container {
+            padding: 32px 24px !important;
+
+            .copyright {
+                background: none;
+                padding: 0 !important;
+
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+
+    }
 }
 
 // SMALLER BREAKPOINTS display. Using classes instead of media queries because both breakpoint toggles and small size screens need to be taken into account.
-.component-example.bp-below576,
-.component-example.small-screen {
+.component-example.bp-576 {
+    //@include subsite-footer-below576();
+    @include ablis-site-footer-bp576();
+}
+
+.component-example.bp-below576{
+    @include ablis-site-footer-bp576();
     @include subsite-footer-below576();
+}
+
+// Media queries
+@media (max-width: 768px) {
+    @include ablis-site-footer-bp576();
 }
 
 @media (max-width: 576px) {

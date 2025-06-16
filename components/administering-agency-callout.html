@@ -1,11 +1,11 @@
 ---
 
 layout: content-tagged
-title: ABLIS information page links
-description: Call to action links for ABLIS information pages.
+title: Administering agency callout
+description: Provide contact details for the administering agency in an ABLIS information page.
 breadcrumb1: Components
 url1: /components.html
-updated: 13 June, 2025
+updated: 16 June, 2025
 bga-tag: false
 subsite-tag: true
 
@@ -35,36 +35,31 @@ subsite-tag: true
 
       
             <!-- Breakpoint radio buttons -->
-            <h3>ABLIS action links</h3>
             {% include breakpoints.html 
                 element-string="bga-result-tile"
-                sm-visibility="true"
+                md-visibility="true"
                 final-visibility="true"
-                breakpoint-final="576"
+                breakpoint-final="768"
             %}
 
             <!-- Component example -->
-
             <div class="component-example m-0">
                 <div class="component-wrapper remove-element-padding p-4">
 
                     
-                    {% include component-examples/ablis-action-links-example.html
-                        label1="Apply"
-                        description1="Commercial Trade Waste Application - PDF"
-                        action1="download-icon"
-                        location1="pdf"
-                        label2="Apply"
-                        description2="Planning Permit Objection Form"
-                        action2="visit-icon"
-                        location2="www.melbourne.vic.gov.au"
-                        label3="Vary"
-                        description3="Application to Amend a Planning Permit - DOCX"
-                        action3="download-icon"
-                        location3="docx"
-                        label4="Cancel"
-                        description4="Application for Building Permit - Please contact the responsible council for application forms and registration details."
-                        action4="no-link"
+                    {% include component-examples/ablis-administering-agency-example.html
+                        org="Planning Department"
+                        suborg="City of Melbourne"
+                        label1="Operating address"
+                        info1="120 Swanston Street, Melbourne, Victoria 3000 "
+                        label2="Mailing address"
+                        info2="GPO BOX 1603, Melbourne, Victoria 3001"
+                        label3="Phone"
+                        info3="03 9658 9658"
+                        label4="Email"
+                        info4="enquiries@melbourne.vic.gov.au"
+                        label5="Website"
+                        info5="City of Melbourne"
                     %}
 
 
@@ -75,43 +70,12 @@ subsite-tag: true
         <!-- Design specifications link -->
 
         {% include design-specs-link.html
-        btn-link="'https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=1-4285&t=zCM2g0y28mzyRIez-1'"
+        btn-link="'https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=1-5236&t=bRWOnAB0cztk1MtJ-1'"
         btn-text="View design specifications"
         %}
 
 
 
-         <!-- Breakpoint radio buttons -->
-          <h3>ABLIS key information links</h3>
-          {% include breakpoints.html
-            singlebp="true"
-            %}
-
-        <!-- Component example -->
-       
-        <div class="component-example m-0">
-
-            <div class="component-wrapper remove-element-padding p-4">
-
-                {% include component-examples/ablis-key-information-links-example.html
-                    description1="Planning and Subdivision Fees"
-                    imgsrc1="'../assets/icon-external-blue.svg' | relative_url"
-                    action1="Visit www.planning.vic.gov.au"
-                    description2="Using Victoria's Planning System - PDF"
-                    imgsrc2="'../assets/icon-download-blue.svg' | relative_url"
-                    action2="Download pdf" 
-                %}
-
-
-            </div>
-        </div>
-
-          <!-- Design specifications link -->
-
-          {% include design-specs-link.html
-            btn-link="https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=1-4472&t=bRWOnAB0cztk1MtJ-1'"
-            btn-text="View design specifications"
-            %}
 
 
 
@@ -121,7 +85,7 @@ subsite-tag: true
         <!-- LAYOUTS -->
         <h2 class="section-start" id="layouts">Layouts</h2>
 
-        <p>The links presented above are used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-ablisinfo" | relative_url }}>Two column - ABLIS information page layout</a>.</p>
+        <p>The administering agency callout is used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-ablisinfo" | relative_url }}>Two column - ABLIS information page layout</a>.</p>
 
         {% include layouts-dropdown.html
         layout-name="Two column - ABLIS information page"
@@ -169,17 +133,14 @@ subsite-tag: true
         <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
 
         <h3>Purpose:</h3>
-        <p>Used in ALBIS to display a collection of results at the end of a tool process. The two different result tiles are used in different tool contexts:</p>
-         <ul>
-            <li>ABLIS action links are used in the 'Apply now' section of ABLIS information pages to present application links.</li>
-            <li>ABLIS key information links are used in the 'Key information' section of the ABLIS information pages to present important resources that are not application links.</li>
-         </ul>
+        <p>Used in ABLIS to display contact details for the agency responsible for the information on the page.</p>
+         
 
         <!-- VERSION HISTORY-->
         <h2 class="section-start" id="version-history">Version history</h2>
-        <h4>13 June, 2025</h4>
+        <h4>16 June, 2025</h4>
         
-        <p>Created the ABLIS information page links component page.</p>
+        <p>Created the administering agency callout component page.</p>
         
     </div>
 

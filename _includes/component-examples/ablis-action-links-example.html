@@ -1,30 +1,71 @@
-<div class="bga-component callout-box ablis-apply no-colour m-0">
+<div class="bga-component ablis-action-links {{ include.classes }} m-0">
     <div class="p-0 component-content">
         <div class="component-text p-0 remove-element-padding">
             <div class="bga-component-wrapper">
                 <div class="bga-component rego-resources mb-4">
-                    <div class="resource"><a target="_blank"
-                            href="https://southeastwater.com.au/content/dam/business/trade-waste/trade-waste-applications/Commercial%20trade%20waste%20application.pdf"
-                            class="rego-link pdf-icon">
-                            <span class="task">Apply</span>
-                            <div class="link-text-wrapper"><span class="link-text">Commercial Trade Waste Application -
-                                    PDF
-                                </span>
-                                <p class="mini instruction mb-0">Download <span>pdf</span></p>
+                    
+                    {% if include.label1 %}
+                    <div class="resource">
+                        <a target="_blank" class="rego-link {{include.action1}}">
+                            <span class="task">{{include.label1}}</span>
+                            <div class="link-text-wrapper"><span class="link-text">{{include.description1}}</span>
+                                {% if include.action1 == "download-icon" %}
+                                    <p class="mini instruction mb-0">Download <span>{{include.location1}}</span></p>
+                                {% elsif include.action1 == 'visit-icon' %}
+                                    <p class="mini instruction mb-0">Visit <span>{{include.location1}}</span></p>
+                                    {% endif %}
                             </div>
                         </a>
                     </div>
-                    <div class="resource"><a target="_blank"
-                            href="https://southeastwater.com.au/content/dam/business/trade-waste/trade-waste-applications/Industrial%20trade%20waste%20application.pdf"
-                            class="rego-link pdf-icon">
-                            <span class="task">Apply</span>
-                            <div class="link-text-wrapper"><span class="link-text">Industrial Trade Waste Application
-                                    Form - PDF
-                                </span>
-                                <p class="mini instruction mb-0">Download <span>pdf</span></p>
+                    {% endif %}
+
+                    {% if include.label2 %}
+                    <div class="resource">
+                        <a target="_blank" class="rego-link {{include.action2}}">
+                            <span class="task">{{include.label2}}</span>
+                            <div class="link-text-wrapper"><span class="link-text">{{include.description2}}</span>
+                                {% if include.action2 == "download-icon" %}
+                                    <p class="mini instruction mb-0">Download <span>{{include.location2}}</span></p>
+                                {% elsif include.action2 == 'visit-icon' %}
+                                    <p class="mini instruction mb-0">Visit <span>{{include.location2}}</span></p>
+                                    {% endif %}
                             </div>
                         </a>
                     </div>
+                    {% endif %}
+
+
+                    {% if include.label3 %}
+                    <div class="resource">
+                        <a target="_blank" class="rego-link {{include.action3}}">
+                            <span class="task">{{include.label3}}</span>
+                            <div class="link-text-wrapper"><span class="link-text">{{include.description3}}</span>
+                                {% if include.action3 == "download-icon" %}
+                                    <p class="mini instruction mb-0">Download <span>{{include.location3}}</span></p>
+                                {% elsif include.action3 == 'visit-icon' %}
+                                    <p class="mini instruction mb-0">Visit <span>{{include.location3}}</span></p>
+                                    {% endif %}
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+
+
+                    {% if include.label4 %}
+                    <div class="resource">
+                        <a target="_blank" class="rego-link {{include.action4}}">
+                            <span class="task">{{include.label4}}</span>
+                            <div class="link-text-wrapper"><span class="link-text">{{include.description4}}</span>
+                                {% if include.action4 == "download-icon" %}
+                                    <p class="mini instruction mb-0">Download <span>{{include.location4}}</span></p>
+                                {% elsif include.action4 == 'visit-icon' %}
+                                    <p class="mini instruction mb-0">Visit <span>{{include.location4}}</span></p>
+                                    {% endif %}
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+                    
                 </div>
             </div>
         </div>
