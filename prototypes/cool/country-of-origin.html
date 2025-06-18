@@ -22,15 +22,22 @@ page-id: country-of-origin
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="country-of-origin-q1" class="form-label h3-font-size heading-color mb-4"><strong>Where was the product grown or produced?</strong></h3>
 
-                    {% include contextual-help-complex-example.html 
-                        question="What is the meaning of 'grown in Australia' and 'produced in Australia'?"
-                        answer="<p>a food or ingredient is considered to be grown OR produced in Australia if it was grown in Australia and virtually all of its processing occurred in Australia. The main difference between ‘produced in’ and ‘grown in’ is that ‘produced’ covers both food that is grown and food that is not grown, for example milk, eggs and water. For more details on this subject refer to our help topics page.</p>"
+        
+                    <div class="mb-4">
+                    {% include inline-help-complex-example.html 
+                        help-id="1"
+                        trigger-text="What is the meaning of 'grown in Australia' and 'produced in Australia'?"
+                        help-text="<ul><li>unprocessed fruit or vegetables, whole or cut that is contained in transparent packaging. For example a transparent plastic bag, net or tray. For more details on this subject refer to our help topics page.</li><li>the standard mark OR country of origin statement for prepacked fresh fruit and vegetables in transparent packaging can either be on its packaging or displayed at the point of sale.</li></ul>"
                     %}
+                    </div>
 
-                    {% include contextual-help-complex-example.html 
-                        question="What is the meaning of 'made in Australia'?"
-                        answer="<ul><li class='mb-3'>a food or ingredient is considered to be made in Australia if it underwent its last substantial transformation in Australia.</li><li>a food is considered to have been substantially transformed if the end product is something fundamentally different from its ingredients. For example, a cake (final product) is made up of ingredients (flour, sugar, eggs, spices, yeast) that are fundamentally different from the finished product. For more details on this subject refer to our help topics page.</li><li>minor processes that merely change the form or appearance of a food or ingredient such as cleaning, shelling, slicing, freezing, canning, bottling, crumbing, reconstituting, roasting, packing, packaging and re-packaging ARE NOT considered to be substantial transformation.</li></ul>"
-                    %}
+                    <div class="mb-4">
+                        {% include inline-help-complex-example.html 
+                            help-id="2"
+                            trigger-text="What is the meaning of 'made in Australia'?"
+                            help-text="<p>a food or ingredient is considered to be grown OR produced in Australia if it was grown in Australia and virtually all of its processing occurred in Australia. The main difference between ‘produced in’ and ‘grown in’ is that ‘produced’ covers both food that is grown and food that is not grown, for example milk, eggs and water. For more details on this subject refer to our help topics page.</p>"
+                        %}
+                    </div>
 
 
                     <div class="radios one-col-short g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="country-of-origin-q1">
@@ -76,11 +83,15 @@ page-id: country-of-origin
 
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="country-of-origin-q2" class="form-label h3-font-size heading-color mb-4"><strong>What percentage of the ingredients is Australian?</strong></h3>
-                    
-                    {% include contextual-help-complex-example.html 
-                        question="What is the meaning of 'Australian ingredient'?"
-                        answer="<p>an ingredient that was exclusively grown or produced in Australia. For more details on this subject refer to our help topics page.</p>"
-                    %}
+
+
+                    <div class="mb-4">
+                        {% include inline-help-complex-example.html 
+                            help-id="3"
+                            trigger-text="What is the meaning of 'Australian ingredient'?"
+                            help-text="<p>an ingredient that was exclusively grown or produced in Australia. For more details on this subject refer to our help topics page.</p>"
+                        %}
+                    </div>
 
 
                     <div class="radios one-col-short g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="country-of-origin-q2">
@@ -129,10 +140,13 @@ page-id: country-of-origin
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="country-of-origin-q3" class="form-label h3-font-size heading-color mb-4"><strong>Does this product contain a consistent proportion of Australian ingredients? </strong></h3>
 
-                    {% include contextual-help-complex-example.html 
-                        question="Why does the proportion of Australian ingredients matter?"
-                        answer="<p>An 'average percentage of Australian ingredients' statement may be used when the proportion of Australian ingredients in a food product varies over time. For more details on this subject refer to our help tpic page.</p>"
-                    %}
+                    <div class="mb-4">
+                        {% include inline-help-complex-example.html 
+                            help-id="4"
+                            trigger-text="Why does the proportion of Australian ingredients matter?"
+                            help-text="<p>An 'average percentage of Australian ingredients' statement may be used when the proportion of Australian ingredients in a food product varies over time. For more details on this subject refer to our help tpic page.</p>"
+                        %}
+                    </div>
 
 
                     <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="country-of-origin-q3">

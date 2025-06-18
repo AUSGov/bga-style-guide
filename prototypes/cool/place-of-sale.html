@@ -22,11 +22,14 @@ page-id: place-of-sale
                 <div class="mb-5 p-0 form-example remove-element-padding">
                     <h3 for="place-of-sale-q1" class="form-label h3-font-size heading-color mb-4"><strong>Where will this product be sold?</strong></h3>
 
-                    {% include contextual-help-complex-example.html 
-                        question="What is the definition of food?"
-                        answer="<ul><li class='mb-3'>any live, raw, prepared or partly prepared substance or thing that is or can be used for human consumption (may include live animals and plants).</li><li>chewing gum or an ingredient or additive in chewing gum, or any substance used in preparing chewing gum. For more details on this subject refer to our help topics page.</li></ul>"
+                    <div class="mb-4">
+                    {% include inline-help-complex-example.html
+                        help-id="1"
+                        trigger-text="What is the definition of food?"
+                        help-text="<ul><li>any live, raw, prepared or partly prepared substance or thing that is or can be used for human consumption (may include live animals and plants).</li><li>chewing gum or an ingredient or additive in chewing gum, or any substance used in preparing chewing gum. For more details on this subject refer to our help topics page.</li></ul>"
                     %}
-                    
+                    </div>
+    
 
                     <div class="radios w-100 g-2 d-flex flex-wrap radio-flex-group" role="radiogroup" id="place-of-sale-q1">
 
