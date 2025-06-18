@@ -3686,15 +3686,45 @@ input:-internal-autofill-selected { background: #ffffff !important; }
 
 .component-example.bp-below992 .fieldset-wrapper .col-lg-6 { width: 100% !important; }
 
-.help-wrapper.complex .complex-question { cursor: pointer; color: #2157AA; text-decoration: underline; padding: 0 0 0 0; margin-bottom: 16px; font-size: 0.9375rem; line-height: 1.5; display: flex; }
+.help-wrapper.complex { display: flex; row-gap: 16px; flex-wrap: wrap; }
 
-.help-wrapper.complex .complex-question svg { margin-top: 6px; flex-shrink: 0; }
+.help-wrapper.complex .complex-question { display: flex; flex-wrap: nowrap; width: 100%; column-gap: 8px; cursor: pointer; color: #2157AA; text-decoration: underline; padding: 0 0 0 0; margin-bottom: 0; font-size: 0.9375rem; line-height: 1.5; }
 
-.help-wrapper.complex .complex-answer { border-left: 2px solid #2157AA; margin-left: 2px; padding-left: 12px; display: none; }
+.help-wrapper.complex .complex-question .icon-wrapper { display: flex; justify-content: center; align-items: center; height: fit-content; width: fit-content; padding-top: 6px; }
+
+.help-wrapper.complex .complex-question svg { flex-shrink: 0; }
+
+.help-wrapper.complex .complex-answer { border-left: 2px solid #2157AA; margin-left: 2px; padding-left: 12px; width: 100%; display: none; }
 
 .help-wrapper.complex .complex-answer p, .help-wrapper.complex .complex-answer li { font-size: 0.9375rem; line-height: 1.5; }
 
 .help-wrapper.complex.open .complex-question svg { transform: rotate(90deg); }
+
+.help-wrapper.ablis.complex .complex-question { text-decoration: none; }
+
+.help-wrapper.ablis.complex .complex-question .icon-wrapper { width: 24px; height: 24px; border: 2px solid #2157AA; border-radius: 50px; display: flex; flex-shrink: 0; padding: 0; }
+
+.help-wrapper.ablis.complex .complex-question svg { transform: rotate(90deg); transform-origin: center; }
+
+.help-wrapper.ablis.complex .complex-question:focus-visible { border: 2px solid #2E6CB9; border-radius: 4px; }
+
+.help-wrapper.ablis.complex .complex-question:focus-visible .icon-wrapper { background: #2157AA; }
+
+.help-wrapper.ablis.complex .complex-question:focus-visible .icon-wrapper svg, .help-wrapper.ablis.complex .complex-question:focus-visible .icon-wrapper svg path { fill: #ffffff; }
+
+.help-wrapper.ablis.complex .complex-question:hover .icon-wrapper { background: #2157AA; }
+
+.help-wrapper.ablis.complex .complex-question:hover .icon-wrapper svg, .help-wrapper.ablis.complex .complex-question:hover .icon-wrapper svg path { fill: #ffffff; }
+
+.help-wrapper.ablis.complex.open .complex-question svg { transform: rotate(270deg); }
+
+.help-wrapper.ablis.complex .complex-answer { margin-left: 11px; }
+
+.help-wrapper.ablis.complex .complex-answer p, .help-wrapper.ablis.complex .complex-answer li { margin-bottom: 16px; }
+
+.help-wrapper.ablis.complex .complex-answer > *:last-child { padding-bottom: 0; margin-bottom: 0; }
+
+.help-wrapper.ablis.complex .complex-answer > *:last-child > li:last-child { padding-bottom: 0; margin-bottom: 0; }
 
 #datepicker-container { position: relative; }
 
