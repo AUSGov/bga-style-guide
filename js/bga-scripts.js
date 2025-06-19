@@ -2400,7 +2400,7 @@ $(document).ready(function () {
             parent_wrapper = $(this).parents('.dynamic-list-multiselect');
 
         // Add selected option to input-wrapper
-        var selected_item  = $('<div data-value="' + list_item + '" class="multiselect-selected-option"><button class="selected-remove">Remove</button><p>' + list_item +'</p></div>');
+        var selected_item  = $('<div data-value="' + list_item + '" class="multiselect-selected-option"><button class="remove-selected">Remove</button><p>' + list_item +'</p></div>');
 
         var last_child = parent_wrapper.find('.input-wrapper').children().last();
     
@@ -2417,7 +2417,7 @@ $(document).ready(function () {
 
     });
 
-    $(document).on('click', '.dynamic-list-multiselect .selected-remove', function () {
+    $(document).on('click', '.dynamic-list-multiselect .remove-selected', function () {
         $(this).parents('.multiselect-selected-option').remove();
     });
 
