@@ -508,6 +508,7 @@
                     padding: 0;
                     display: block;
                     font-weight: 600;
+                    line-height: 1.5;
                 }
                 .selected-remove {
                     text-indent: -9999px;
@@ -1668,7 +1669,18 @@
             &.open svg {
                 transform: scaleY(-1);
             }
+            svg, .total-steps {
+                display: none;
+            }
 
+            &.nav-is-set {
+                svg {
+                    display: block;
+                }
+                .total-steps {
+                    display: inline;
+                }
+            }
         }
         #ablis-dynamic-nav {
             display: none;

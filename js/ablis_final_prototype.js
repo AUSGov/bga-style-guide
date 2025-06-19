@@ -178,7 +178,7 @@ $(document).ready(function () {
         }
 
         // Display/hide dynamic steps in the nav
-        // if business details are completed but the nav hasn't been set yet
+        // if business details are completed but the nav hasn't been set yet then
         if ( (dynamic_nav['step-1']['completed'] == 'yes') && dynamic_nav['nav-is-set'] == 'false' ) { 
             $('#ablis-dynamic-nav .dynamic-steps').removeClass('d-none');
 
@@ -195,8 +195,10 @@ $(document).ready(function () {
         } 
         // if the nav has been set
         else if ( dynamic_nav['nav-is-set'] == 'true') { 
+            console.log('nav is set');
             $('#ablis-dynamic-nav .static-step').removeClass('initial-state');
             $('#ablis-dynamic-nav .dynamic-steps').removeClass('d-none');
+            $('.ablis-dynamic-nav-wrapper .mobile-show').addClass('nav-is-set');
         }
 
     };
@@ -228,11 +230,16 @@ $(document).ready(function () {
 
     // Update page visited state on page load
     if ( $('#ablis-dynamic-nav').length ) {
-        var step = $('body').attr('data-step');
-        console.log(step);
+        var step = $('body').attr('data-step'),
+            step_title = $('#ablis-dynamic-nav li[data-step="' +  step + '"] a').text(),
+            step_num = $('#ablis-dynamic-nav li[data-step="' +  step + '"] .list-number').text();
         
         dynamic_nav[step]['visited'] = 'yes';
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
+
+        //Add page title to accordion title of mobile stepped nav 
+        $('.ablis-dynamic-nav-wrapper .mobile-show .step-number').text(step_num);
+        $('.ablis-dynamic-nav-wrapper .mobile-show .step-name strong').text(step_title);
     }
 
     // Validate questions are answered and record page as completed
