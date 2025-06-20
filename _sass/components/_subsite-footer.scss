@@ -169,17 +169,15 @@
         
         .contact-container {
             .contact-details-wrapper {
-                flex-wrap: wrap; 
-
+                flex-direction: column;
             }
             .federal-wrapper, .state-wrapper {
                 width: 100%;
-                flex: none;
             }
         }
     }
 }
-@mixin subsite-footer-below576 {
+@mixin subsite-footer-below576 {    
     .subsite-footer {
         padding: 48px 24px !important;
 
@@ -204,6 +202,7 @@
 
         .contact-container {
             padding: 32px 24px !important;
+            margin: 0 -24px !important;
         } 
 
         .key-links-container {

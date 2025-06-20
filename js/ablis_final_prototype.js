@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    // Check is page is in ablis prototype
+    // Check if page is in ablis prototype
     if ($('#ablis-final-prototype').length) {
         console.log("ablis page - final prototype");
         // Hide empty <p>
@@ -142,19 +142,41 @@ $(document).ready(function () {
     };
 
     // Reset tool on start now click 
-    $('#start-now').on('click', function () {
+    $('#start-now, #start-now-mobile').on('click', function () {
         sessionStorage.clear();
     });
 
 
     //DYNAMIC NAV
-    // Mobile trigger for dynamic nav
-    $('.ablis-dynamic-nav-wrapper button').on('click', function(){
+    // Show/hide mobile dynamic nav on accordion click
+    $(document).on('click', '.ablis-dynamic-nav-wrapper button.nav-is-set', function(){
         $(this).toggleClass('open');
         $('#ablis-dynamic-nav').slideToggle(400);
     });
 
-    // Dynamic nav functionality
+    // Mobile nav - setup accordion
+    var set_mobile_nav_accordion = function(){
+        console.log('setting up mobile nav');
+
+        var step = $('body').attr('data-step'),
+            step_title = $('#ablis-dynamic-nav li[data-step="' +  step + '"] a').text(),
+            step_num = $('#ablis-dynamic-nav li[data-step="' +  step + '"] .list-number').text();
+
+        $('.ablis-dynamic-nav-wrapper .mobile-show .step-number').text(step_num);
+        $('.ablis-dynamic-nav-wrapper .mobile-show .step-name strong').text(step_title);
+
+
+        //Check is nav is set (answers on business details page have been completed and 'next' button has been clicked)
+        if (dynamic_nav['nav-is-set'] == "true" ) {
+            $('.ablis-dynamic-nav-wrapper .mobile-show').addClass('nav-is-set');
+        
+        } else {
+            $('.ablis-dynamic-nav-wrapper .mobile-show').removeClass('nav-is-set');
+        }
+        $('.ablis-dynamic-nav-wrapper .mobile-show p.step-wrapper').removeClass('d-none');
+    };
+
+    // Dynamic nav functionality - setup nav states
     var set_dynamic_nav = function(){
 
         // Add classes and urls to dynamic nav links
@@ -177,8 +199,8 @@ $(document).ready(function () {
             
         }
 
-        // Display/hide dynamic steps in the nav
-        // if business details are completed but the nav hasn't been set yet then
+        // Display/hide dynamic steps in the nav on page load
+        // if business details are completed but the nav hasn't been set yet
         if ( (dynamic_nav['step-1']['completed'] == 'yes') && dynamic_nav['nav-is-set'] == 'false' ) { 
             $('#ablis-dynamic-nav .dynamic-steps').removeClass('d-none');
 
@@ -201,16 +223,21 @@ $(document).ready(function () {
             $('.ablis-dynamic-nav-wrapper .mobile-show').addClass('nav-is-set');
         }
 
+
     };
 
     if ('#ablis-dynamic-nav'.length) {
         set_dynamic_nav();
+        set_mobile_nav_accordion();
     }
 
     var remove_nav_steps = function(){
+        console.log('removing steps');
 
         dynamic_nav = dynamic_nav_default;
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
+
+        set_mobile_nav_accordion();
 
         ablis_questions['responses'] = responses_default;
         ablis_questions['answered'] =  {};
@@ -223,23 +250,17 @@ $(document).ready(function () {
         });
         
         $('#ablis-dynamic-nav .static-step li').removeClass('completed visited');
+
         
-       
     };
    
 
-    // Update page visited state on page load
+    // Update nav page visited state on page load
     if ( $('#ablis-dynamic-nav').length ) {
-        var step = $('body').attr('data-step'),
-            step_title = $('#ablis-dynamic-nav li[data-step="' +  step + '"] a').text(),
-            step_num = $('#ablis-dynamic-nav li[data-step="' +  step + '"] .list-number').text();
-        
+        var step = $('body').attr('data-step');
         dynamic_nav[step]['visited'] = 'yes';
         sessionStorage.setItem('dynamic_nav', JSON.stringify(dynamic_nav));
 
-        //Add page title to accordion title of mobile stepped nav 
-        $('.ablis-dynamic-nav-wrapper .mobile-show .step-number').text(step_num);
-        $('.ablis-dynamic-nav-wrapper .mobile-show .step-name strong').text(step_title);
     }
 
     // Validate questions are answered and record page as completed
@@ -650,9 +671,9 @@ $(document).ready(function () {
     // Reset dynamic nav on input change
     $('.dynamic-list-ablis.multi-select input').on('change', function (){
         if ( $('body.step-1').length ) {
-            console.log('changing');
             remove_nav_steps();
         };
+    
     });
 
     // Store answers from dropdown selects
