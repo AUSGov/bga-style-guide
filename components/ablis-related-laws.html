@@ -1,0 +1,150 @@
+---
+
+layout: content-tagged
+title: ABLIS related laws
+description: Display relevant ACT and regulation names at the bottom of ABLIS information pages.
+updated: 23 June, 2025
+breadcrumb1: Components
+url1: /components.html
+bga-tag: false
+subsite-tag: true
+
+---
+
+
+
+<div class="row">
+    
+    <div class="anchor-menu-wrapper col-12 col-lg-3 col-xl-2 d-none d-lg-block">
+
+        {% include component-examples/anchor-menu-example.html
+            classes="in-page"
+            link-1="Design" link-id-1="#design"
+            link-2="Layouts" link-id-2="#layouts" 
+            link-3="Guidelines for use" link-id-3="#guidelines-for-use" 
+            link-4="Version history" link-id-4="#version-history"
+        %}
+        
+    </div>
+    
+    <div class="anchored-content remove-element-padding mb-5 col-12 col-lg-9 col-xl-8">
+   
+          
+        <!-- DESIGN -->   
+        <h2 class="section-start" id="design">Design</h2>
+ 
+    
+      
+        <!-- Breakpoint radio buttons -->
+        {% include breakpoints.html 
+        singlebp="true" 
+        %}
+
+        <!-- Component example -->
+
+        <div class="component-example m-0">
+            <div class="component-wrapper remove-element-padding p-4">
+
+                <div class="bga-component ablis-related-laws pt-6 m-0">
+                    <div class="component-content remove-element-padding">
+                    
+                        <h2 class="title"><strong>Related laws</strong></h2>
+                        <div class="leg_item">
+                            <p><strong>Act(s) name:</strong></p>
+                            <p>Building Act 1993 Victoria</p>
+                        </div>
+                        <div class="leg_item"><p>
+                            <strong>Regulation(s) name:</strong></p>
+                            <p>Building Regulations 2018 Victoria</p>
+                            <a>Another regulation name which also happens to be a link</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            
+        </div>
+
+
+       
+
+              
+
+
+
+
+        <!-- Design specifications link -->
+
+        {% include design-specs-link.html 
+            btn-link="'https://www.figma.com/design/NzMcQHGDxgKh3FEq4Fz32P/ABLIS-design-specs?node-id=189-1188&t=Jli1SX6l9JyjNVyV-1'"
+            btn-text="View design specifications"
+            %}
+
+
+        <!-- LAYOUTS -->
+        <h2 class="section-start" id="layouts">Layouts</h2>
+
+        <p>ABLIS related laws used on the <a href={{ "brand-foundations/grid-and-page-layouts.html#layout-twocol-ablisinfo" | relative_url }}>Two column - ABLIS information page layout</a>.</p>
+
+        {% include layouts-dropdown.html
+        layout-name="Two column - ABLIS information page"
+        singlelayout="true"
+        %}
+
+
+        <div class="layout-example show two-col-guidepage mt-0 mb-5 px-4 py-0">
+
+            {% include layouts-accordion.html
+            layout-name="two-col-ablisinfopage"
+
+            min1200-visibility="true"
+            min992-visibility="true"
+            min768-visibility="true"
+            min576-visibility="false"
+            finalbp-visibility="true"
+
+            finalbp="Breakpoint &lt; 768px"
+
+            min1200-img="'../assets/layout-images/twocol-ablisinfolast-1200px-fullwidthcomponent.png' | relative_url "
+            min992-img="'../assets/layout-images/twocol-ablisinfolast-992px-fullwidthcomponent.png' | relative_url "
+            min768-img="'../assets/layout-images/twocol-ablisinfolast-768px-fullwidthcomponent.png' | relative_url "
+            finalbp-img="'../assets/layout-images/twocol-ablisinfolast-finalbp-fullwidthcomponent.png' | relative_url "
+
+            min1200-rules="<p>The content area is 8 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
+
+            min992-rules="<p>The content area is 9 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
+
+            min768-rules="<p>The content area is 9 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
+
+            finalbp-rules="<p>The content area is 12 grid-columns wide.</p><p>Result tiles span the full width of the content area.</p>"
+
+            example-link="'../html-examples/two-col-ablisinfopage.html#legislation' | relative_url'"
+            example-link-text="View layout example"
+
+            %}
+
+        </div>
+
+
+        <!-- GUIDELINES -->
+        <h2 class="section-start" id="guidelines-for-use">Guidelines for use</h2>
+
+        <h3>Purpose:</h3>
+        <p>The ABLIS related laws component displays relevant ACT and regulation names on ABLIS information pages.</p>
+        <p>Where possible the ACT or regulation names should link to more information.</p>
+
+        <h4>Where to use</h4>
+        <p>This component is used on ABLIS information pages. It should be placed last on the page, just above the ABLIS site footer. This component should not be included in the anchor menu.</p>
+        
+
+
+         <!-- VERSION HISTORY-->
+         <h2 class="section-start" id="version-history">Version history</h2>
+         <h4>23 June, 2025</h4>
+        <p>Created the ABLIS related laws page.</p>
+
+
+            
+        </div>
+        

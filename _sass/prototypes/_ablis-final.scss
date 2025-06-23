@@ -813,16 +813,25 @@
         border: none;
         border-top: 1px solid $bga-black;
         padding-top: 32px !important;
+        
+        .disclaimer-content {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 24px;
+        }
 
         h2 {
             font-size: 18px;
-            margin-bottom: 16px
+            margin-bottom: 0px;
+            width: 100%;
         }
 
         .leg_item {
             display: flex;
-            column-gap: 8px;
-            padding-bottom: 8px;
+            row-gap: 4px;
+            padding-bottom: 0;
+            flex-wrap: wrap;
+            width: 100%;
 
             &:last-of-type {
                 padding-bottom: 0;
@@ -831,8 +840,10 @@
             p,
             a {
                 font-size: 14px;
+                line-height: 1.75;
                 margin: 0;
                 padding: 0;
+                width: 100%;
             }
         }
     }
@@ -1842,6 +1853,32 @@
             p.service {
                 font-size: 1rem;
                 padding: 0px 8px;
+            }
+        }
+
+        .callout-box.ablis-apply {
+            .rego-resources {
+                .resource {
+                    .rego-link {
+                        padding: 16px;
+                        border-left: 8px solid $bga-yellow-highlight-shadow;
+                        align-items: flex-start;
+                        column-gap: 8px;
+                        
+                        .task {
+                            width: auto;
+                            height: auto;
+                            padding: 2px 8px;
+                            align-self: auto;
+                            border: none;
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                        }
+                        .link-text-wrapper {
+                            padding: 0;
+                        }
+                    }
+                }
             }
         }
         
