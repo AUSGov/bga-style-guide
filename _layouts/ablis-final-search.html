@@ -23,28 +23,20 @@
                                 <div class="search-questions remove-element-padding">
     
                                         <!-- Keyword field -->
-                                        <div class="mb-5 p-0 keyword-wrapper">
-                                            <div class="remove-element-padding">
-    
-                                                <label for="keyword" class="form-label h3-font-size mb-3"><strong>What licence or regulation are you looking for?</strong></label>
-                                                <p class="mb-3">Enter a search term. For example, liquor licence.</p>
-                                                
-                                                <div class="form-element-wrapper d-block">
-                                                    <div class="list-wrapper">
-                                                
-                                                        <input type="text" placeholder="" id="search_keyword" value="" name="org" data-list="keyword" />
-                                                
-                                                        <a href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                            <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
-                                                            </svg></a>
-                                                        
-                                                    </div>
+                                        <div class="mb-5 p-0 keyword-wrapper d-flex">
+                                            <label for="keyword" class="form-label h3-font-size mb-3"><strong>What licence or regulation are you looking for?</strong></label>
+                                            <p class="mb-3 w-100">Enter a search term. For example, liquor licence.</p>
                                             
-    
-                                                </div> 
-                                                <p class="error-message d-none mt-3 mb-0">This field is required.</p>
-                                                
-                                            </div>
+                                            <div class="form-element-wrapper w-100 remove-element-padding">
+                                                <div class="input-wrapper">
+                                                    <input type="text" placeholder="" id="search_keyword" value="" name="org" data-list="keyword" />
+                                            
+                                                    <a href="" class="p-0 remove-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                        <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
+                                                        </svg></a>
+                                                </div>  
+                                            </div> 
+                                            <p class="error-message d-none mt-3 mb-0">This field is required.</p>
                                         
                     
                                         </div>
@@ -53,99 +45,99 @@
                                     <!-- Location field -->
                                     <div class="mb-5 p-0 location-wrapper">
                                     
-                                        <div class="dynamic-list-ablis multi-select remove-element-padding">
-            
-                                            <label for="location" class="form-label h4-font-size mb-3"><strong>Enter a suburb, town or postcode.</strong></label>
+                                        <div class="dynamic-list-ablis remove-element-padding">
+                            
+                                            <label for="search_location" class="form-label h3-font-size mb-3"><strong>Where is your business located?</strong></label>
+                                            <p>Enter a city, postcode, state or territory.</p>
                                             
                                             <div class="form-element-wrapper d-block">
                                                 <div class="list-wrapper">
                                                 
-                                                    <div class="input-wrapper">
+                                                    <input class="required" type="text" placeholder="" name="org" data-list="search_location" />
                                                     
-                                                        <input class="required" type="text" placeholder="Start typing a location" name="org" data-list="location" />
-                                                    
-                                                    </div>
-                                                    
-                                                    
-                                                    <ul id="location" class="primary-terms dynamic">
-                                                        <li  class="dynamic" tabindex="0" value="Melaleuca, WA, 6079">Melaleuca, WA, 6079</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melawondi, QLD, 4570">Melawondi, QLD, 4570</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melba, ACT, 2615">Melba, ACT, 2615</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melbergen, NSW, 2669">Melbergen, NSW, 2669</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melbourne Airport, VIC, 3045">Melbourne Airport, VIC, 3045</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melbourne, VIC, 3000">Melbourne, VIC, 3000</li>
-                                                        <li  class="dynamic" tabindex="0" value="Meldale, QLD, 4510">Meldale, QLD, 4510</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melinga, NSW, 2430">Melinga, NSW, 2430</li>
-                                                        <li  class="dynamic" tabindex="0" value="Mella, TAS, 7330">Mella, TAS, 7330</li>
-                                                        <li  class="dynamic" tabindex="0" value="Mellong, NSW, 2756">Mellong, NSW, 2756</li>
-                                                        <li  class="dynamic" tabindex="0" value="Mellool, NSW, 2734">Mellool, NSW, 2734</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melrose Park, NSW, 2114">Melrose Park, NSW, 2114</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melrose Park, SA, 5039">Melrose Park, SA, 5039</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melrose, QLD, 4613">Melrose, QLD, 4613</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melrose, SA, 5483">Melrose, SA, 5483</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melrose, TAS, 7310">Melrose, TAS, 7310</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melton Mowbray, TAS, 7030">Melton Mowbray, TAS, 7030</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melton South, VIC, 3338">Melton South, VIC, 3338</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melton Station, SA, 5440">Melton Station, SA, 5440</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melton West, VIC, 3337">Melton West, VIC, 3337</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melton, SA, 5552">Melton, SA, 5552</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melton, VIC, 3337">Melton, VIC, 3337</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melville Forest, VIC, 3315">Melville Forest, VIC, 3315</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melville, NSW, 2320">Melville, NSW, 2320</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melville, WA, 6156">Melville, WA, 6156</li>
-                                                        <li  class="dynamic" tabindex="0" value="Melwood, VIC, 3875">Melwood, VIC, 3875</li>
-                                                        <li  class="dynamic" tabindex="0" value="Mount Mellum, QLD, 4550">Mount Mellum, QLD, 4550</li>
-                                                        <li  class="dynamic" tabindex="0" value="Mount Melville, WA, 6330">Mount Melville, WA, 6330</li>
-                                                        <li  class="dynamic" tabindex="0" value="North Melbourne, VIC, 3051">North Melbourne, VIC, 3051</li>
-                                                        <li  class="dynamic" tabindex="0" value="Port Melbourne, VIC, 3207">Port Melbourne, VIC, 3207</li>
-                                                        <li  class="dynamic" tabindex="0" value="South Melbourne, VIC, 3205">South Melbourne, VIC, 3205</li>
-                                                        <li  class="dynamic" tabindex="0" value="West Melbourne, VIC, 3003">West Melbourne, VIC, 3003</li>
-                                                        <li  class="dynamic" tabindex="0" value="East Melbourne, VIC, 3002">East Melbourne, VIC, 3002</li>
-                                                        <li  class="dynamic" tabindex="0" value="South Wharf, VIC, 3006">South Wharf, VIC, 3006</li>
-                                                        <li  class="dynamic" tabindex="0" value="Southbank, VIC, 3006">Southbank, VIC, 3006</li>
-                                                        <li  class="dynamic" tabindex="0" value="Docklands, VIC, 3008">Docklands, VIC, 3008</li>
-                                
-                                                        <li  class="dynamic" tabindex="0" value="Alfredton, VIC, 3350">Alfredton, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Bakay Balay, NT, 0880">Bakay Balay, NT, 0880</li>
-                                                        <li  class="dynamic" tabindex="0" value="Bakery Hill, VIC, 3350">Bakery Hill, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Balbirini Stn, NT, 0852">Balbirini Stn, NT, 0852</li>
-                                                        <li  class="dynamic" tabindex="0" value="Bald Blair, NSW, 2365">Bald Blair, NSW, 2365</li>
-                                                        <li  class="dynamic" tabindex="0" value="Bald Hills, NSW, 2549">Bald Hills, NSW, 2549</li>
-                                                        <li  class="dynamic" tabindex="0" value="Baldersleigh, NSW, 2365">Baldersleigh, NSW, 2365</li>
-                                                        <li  class="dynamic" tabindex="0" value="Balfours Peak, NSW, 2403">Balfours Peak, NSW, 2403</li>
-                                                        <li  class="dynamic" tabindex="0" value="Balgowlah Heights, NSW, 2093">Balgowlah Heights, NSW, 2093</li>
-                                                        <li  class="dynamic" tabindex="0" value="Balickera, NSW, 2324">Balickera, NSW, 2324</li>
-                                                        <li  class="dynamic" tabindex="0" value="Balladoran, NSW, 2822">Balladoran, NSW, 2822</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballajura, WA, 6066">Ballajura, WA, 6066</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballalaba, NSW, 2622">Ballalaba, NSW, 2622</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballan, VIC, 3342">Ballan, VIC, 3342</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballandean, QLD, 4382">Ballandean, QLD, 4382</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballangeich, VIC, 3279">Ballangeich, VIC, 3279</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballapur, VIC, 3483">Ballapur, VIC, 3483</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballarat Central, VIC, 3350">Ballarat Central, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballarat East, VIC, 3350">Ballarat East, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballarat North, VIC, 3350">Ballarat North, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballard, QLD, 4352">Ballard, QLD, 4352</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballaroo, QLD, 4455">Ballaroo, QLD, 4455</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballast Head, SA, 5221">Ballast Head, SA, 5221</li>
-                                                        <li  class="dynamic" tabindex="0" value="Balldale, NSW, 2646">Balldale, NSW, 2646</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballengarra, NSW, 2441">Ballengarra, NSW, 2441</li>
-                                                        <li  class="dynamic" tabindex="0" value="Balliang, VIC, 3340">Balliang, VIC, 3340</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballimore, NSW, 2830">Ballimore, NSW, 2830</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballina, NSW, 2478">Ballina, NSW, 2478</li>
-                                                        <li  class="dynamic" tabindex="0" value="Ballyroe, NSW, 2795">Ballyroe, NSW, 2795</li>
-                                                        <li  class="dynamic" tabindex="0" value="Balmain, NSW, 2041">Balmain, NSW, 2041</li>
-                                                        <li  class="dynamic" tabindex="0" value="Canadian, VIC, 3350">Canadian, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="East Ballina, NSW, 2478">East Ballina, NSW, 2478</li>
-                                                        <li  class="dynamic" tabindex="0" value="Golden Point, VIC, 3350">Golden Point, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Lucas, VIC, 3350">Lucas, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Mount Pleasant, VIC, 3350">Mount Pleasant, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Newington, VIC, 3350">Newington, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Redan, VIC, 3350">Redan, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="Soldiers Hill, VIC, 3350">Soldiers Hill, VIC, 3350</li>
-                                                        <li  class="dynamic" tabindex="0" value="South Ballina, NSW, 2478">South Ballina, NSW, 2478</li>
-                                                        <li  class="dynamic" tabindex="0" value="Perth, WA, 6000">Perth, WA, 6000</li>
-                                                       
+                                                    <a href="" class="p-3" id="list-close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                        <path data-name="Path 11996" d="M3013.83,457.1l-6.4,6.4-1.6-1.6,6.4-6.4-6.4-6.4,1.6-1.6,6.4,6.4,6.4-6.4,1.6,1.6-6.4,6.4,6.4,6.4-1.6,1.6Z" transform="translate(-3005.83 -447.5)" fill="#333"/>
+                                                        </svg></a>
+                                                        
+                                            
+                                                    <ul id="search_location">
+                                                        <li tabindex="0" value="Melaleuca, WA, 6079">Melaleuca, WA, 6079</li>
+                                                        <li tabindex="0" value="Melawondi, QLD, 4570">Melawondi, QLD, 4570</li>
+                                                        <li tabindex="0" value="Melba, ACT, 2615">Melba, ACT, 2615</li>
+                                                        <li tabindex="0" value="Melbergen, NSW, 2669">Melbergen, NSW, 2669</li>
+                                                        <li tabindex="0" value="Melbourne Airport, VIC, 3045">Melbourne Airport, VIC, 3045</li>
+                                                        <li tabindex="0" value="Melbourne, VIC, 3000">Melbourne, VIC, 3000</li>
+                                                        <li tabindex="0" value="Meldale, QLD, 4510">Meldale, QLD, 4510</li>
+                                                        <li tabindex="0" value="Melinga, NSW, 2430">Melinga, NSW, 2430</li>
+                                                        <li tabindex="0" value="Mella, TAS, 7330">Mella, TAS, 7330</li>
+                                                        <li tabindex="0" value="Mellong, NSW, 2756">Mellong, NSW, 2756</li>
+                                                        <li tabindex="0" value="Mellool, NSW, 2734">Mellool, NSW, 2734</li>
+                                                        <li tabindex="0" value="Melrose Park, NSW, 2114">Melrose Park, NSW, 2114</li>
+                                                        <li tabindex="0" value="Melrose Park, SA, 5039">Melrose Park, SA, 5039</li>
+                                                        <li tabindex="0" value="Melrose, QLD, 4613">Melrose, QLD, 4613</li>
+                                                        <li tabindex="0" value="Melrose, SA, 5483">Melrose, SA, 5483</li>
+                                                        <li tabindex="0" value="Melrose, TAS, 7310">Melrose, TAS, 7310</li>
+                                                        <li tabindex="0" value="Melton Mowbray, TAS, 7030">Melton Mowbray, TAS, 7030</li>
+                                                        <li tabindex="0" value="Melton South, VIC, 3338">Melton South, VIC, 3338</li>
+                                                        <li tabindex="0" value="Melton Station, SA, 5440">Melton Station, SA, 5440</li>
+                                                        <li tabindex="0" value="Melton West, VIC, 3337">Melton West, VIC, 3337</li>
+                                                        <li tabindex="0" value="Melton, SA, 5552">Melton, SA, 5552</li>
+                                                        <li tabindex="0" value="Melton, VIC, 3337">Melton, VIC, 3337</li>
+                                                        <li tabindex="0" value="Melville Forest, VIC, 3315">Melville Forest, VIC, 3315</li>
+                                                        <li tabindex="0" value="Melville, NSW, 2320">Melville, NSW, 2320</li>
+                                                        <li tabindex="0" value="Melville, WA, 6156">Melville, WA, 6156</li>
+                                                        <li tabindex="0" value="Melwood, VIC, 3875">Melwood, VIC, 3875</li>
+                                                        <li tabindex="0" value="Mount Mellum, QLD, 4550">Mount Mellum, QLD, 4550</li>
+                                                        <li tabindex="0" value="Mount Melville, WA, 6330">Mount Melville, WA, 6330</li>
+                                                        <li tabindex="0" value="North Melbourne, VIC, 3051">North Melbourne, VIC, 3051</li>
+                                                        <li tabindex="0" value="Port Melbourne, VIC, 3207">Port Melbourne, VIC, 3207</li>
+                                                        <li tabindex="0" value="South Melbourne, VIC, 3205">South Melbourne, VIC, 3205</li>
+                                                        <li tabindex="0" value="West Melbourne, VIC, 3003">West Melbourne, VIC, 3003</li>
+                                                        <li tabindex="0" value="East Melbourne, VIC, 3002">East Melbourne, VIC, 3002</li>
+                                                        <li tabindex="0" value="South Wharf, VIC, 3006">South Wharf, VIC, 3006</li>
+                                                        <li tabindex="0" value="Southbank, VIC, 3006">Southbank, VIC, 3006</li>
+                                                        <li tabindex="0" value="Docklands, VIC, 3008">Docklands, VIC, 3008</li>
+                
+                                                        <li tabindex="0" value="Alfredton, VIC, 3350">Alfredton, VIC, 3350</li>
+                                                        <li tabindex="0" value="Bakay Balay, NT, 0880">Bakay Balay, NT, 0880</li>
+                                                        <li tabindex="0" value="Bakery Hill, VIC, 3350">Bakery Hill, VIC, 3350</li>
+                                                        <li tabindex="0" value="Balbirini Stn, NT, 0852">Balbirini Stn, NT, 0852</li>
+                                                        <li tabindex="0" value="Bald Blair, NSW, 2365">Bald Blair, NSW, 2365</li>
+                                                        <li tabindex="0" value="Bald Hills, NSW, 2549">Bald Hills, NSW, 2549</li>
+                                                        <li tabindex="0" value="Baldersleigh, NSW, 2365">Baldersleigh, NSW, 2365</li>
+                                                        <li tabindex="0" value="Balfours Peak, NSW, 2403">Balfours Peak, NSW, 2403</li>
+                                                        <li tabindex="0" value="Balgowlah Heights, NSW, 2093">Balgowlah Heights, NSW, 2093</li>
+                                                        <li tabindex="0" value="Balickera, NSW, 2324">Balickera, NSW, 2324</li>
+                                                        <li tabindex="0" value="Balladoran, NSW, 2822">Balladoran, NSW, 2822</li>
+                                                        <li tabindex="0" value="Ballajura, WA, 6066">Ballajura, WA, 6066</li>
+                                                        <li tabindex="0" value="Ballalaba, NSW, 2622">Ballalaba, NSW, 2622</li>
+                                                        <li tabindex="0" value="Ballan, VIC, 3342">Ballan, VIC, 3342</li>
+                                                        <li tabindex="0" value="Ballandean, QLD, 4382">Ballandean, QLD, 4382</li>
+                                                        <li tabindex="0" value="Ballangeich, VIC, 3279">Ballangeich, VIC, 3279</li>
+                                                        <li tabindex="0" value="Ballapur, VIC, 3483">Ballapur, VIC, 3483</li>
+                                                        <li tabindex="0" value="Ballarat Central, VIC, 3350">Ballarat Central, VIC, 3350</li>
+                                                        <li tabindex="0" value="Ballarat East, VIC, 3350">Ballarat East, VIC, 3350</li>
+                                                        <li tabindex="0" value="Ballarat North, VIC, 3350">Ballarat North, VIC, 3350</li>
+                                                        <li tabindex="0" value="Ballard, QLD, 4352">Ballard, QLD, 4352</li>
+                                                        <li tabindex="0" value="Ballaroo, QLD, 4455">Ballaroo, QLD, 4455</li>
+                                                        <li tabindex="0" value="Ballast Head, SA, 5221">Ballast Head, SA, 5221</li>
+                                                        <li tabindex="0" value="Balldale, NSW, 2646">Balldale, NSW, 2646</li>
+                                                        <li tabindex="0" value="Ballengarra, NSW, 2441">Ballengarra, NSW, 2441</li>
+                                                        <li tabindex="0" value="Balliang, VIC, 3340">Balliang, VIC, 3340</li>
+                                                        <li tabindex="0" value="Ballimore, NSW, 2830">Ballimore, NSW, 2830</li>
+                                                        <li tabindex="0" value="Ballina, NSW, 2478">Ballina, NSW, 2478</li>
+                                                        <li tabindex="0" value="Ballyroe, NSW, 2795">Ballyroe, NSW, 2795</li>
+                                                        <li tabindex="0" value="Balmain, NSW, 2041">Balmain, NSW, 2041</li>
+                                                        <li tabindex="0" value="Canadian, VIC, 3350">Canadian, VIC, 3350</li>
+                                                        <li tabindex="0" value="East Ballina, NSW, 2478">East Ballina, NSW, 2478</li>
+                                                        <li tabindex="0" value="Golden Point, VIC, 3350">Golden Point, VIC, 3350</li>
+                                                        <li tabindex="0" value="Lucas, VIC, 3350">Lucas, VIC, 3350</li>
+                                                        <li tabindex="0" value="Mount Pleasant, VIC, 3350">Mount Pleasant, VIC, 3350</li>
+                                                        <li tabindex="0" value="Newington, VIC, 3350">Newington, VIC, 3350</li>
+                                                        <li tabindex="0" value="Redan, VIC, 3350">Redan, VIC, 3350</li>
+                                                        <li tabindex="0" value="Soldiers Hill, VIC, 3350">Soldiers Hill, VIC, 3350</li>
+                                                        <li tabindex="0" value="South Ballina, NSW, 2478">South Ballina, NSW, 2478</li>
+                
                                                     </ul>
                                                     
                                                 </div>
@@ -153,12 +145,11 @@
                                                 <div class="no-result error m-0 remove-element-padding">
                                                     <p>No location found.</p>
                                                 </div>
-                                
-                                            </div> 
+                
+                                            </div>
                                             <p class="error-message d-none mt-3 mb-0">This field is required.</p>
                                             
                                         </div>
-
                 
                                     </div>
                              
@@ -186,25 +177,20 @@
     
     
         <!-- SHOWING HEADER -->
-        <div class="container showing-header-container">
+        <div class="showing-header-wrapper">
+            <div class="container">
             <div class="row">
-                <div class="col-12">
-                
-                    <div class="sticky-wrapper">
-                        <div class="sticky-header">
-                        
-                            <div class='top-row'>
-                                <div class="showing-number remove-element-padding">
-                                    <h2 class="showing-number">Showing <strong><span class="count">{{page.result-count}}</span></strong> results for <strong><span class="keyword"></span> in <span class="location">{{page.location}}</span></strong></h2>
-                                </div>
-                            </div>
-    
-                        </div>
-    
+                <div class="col-12 remove-element-padding showing-header">
+                    
+                    <h2 class="showing-number">Showing <strong><span class="count">{{page.result-count}}</span></strong> results for <strong><span class="keyword"></span> in <span class="location">{{page.location}}</span></strong></h2>
+
+                    <div class="filter-toggle full-width">
+                        <button class="d-flex align-items-center">Filters<span>0</span></button>
                     </div>
     
     
                 </div>
+            </div>
             </div>
         </div>
     
@@ -405,6 +391,137 @@
             bga-contact="true"
         %}
         
+
+        <!-- FILTERS MODAL -->
+<div id="showing-filters-modal" class="bga-component modal-example no-scroll px-4 pb-4 pt-5">
+
+    <button class="close m-0 p-0">Close</button>
+
+    <div class="component-content mt-2">
+
+
+        <div class="scroll-wrapper">
+            <span class="scroll-separator scroll-separator--top"></span>
+
+            <div class="scrollable remove-element-padding">
+               
+                <div class="filters ablis-filters checkboxes-primary">
+    
+                    <div class="filter-item" id="service-type">
+                
+                        <form>
+                            <div tabindex="0" class="checkbox-item py-3" data-label="licence" filter-type="service-type">
+                                <label id="service-inperson" data-option="licence" data-label="licence" filter-type="service-type">Licences and registrations <span></span></label>
+                                <input tabindex="-1" type="checkbox" id="licence">
+                            </div>
+                
+                            <div tabindex="0" class="checkbox-item py-3" data-label="regulatory-obligation" filter-type="service-type">
+                                <label id="service-regulatory-obligation" data-option="regulatory-obligation" data-label="regulatory-obligation" filter-type="service-type">Legal obligations <span></span></label>
+                                <input tabindex="-1" type="checkbox" id="regulatory-obligation">
+                            </div>
+                
+                
+                            <div tabindex="0" class="checkbox-item py-3" data-label="code-of-practice" filter-type="service-type">
+                                <label id="service-code-of-practice" data-option="code-of-practice" data-label="code-of-practice"
+                                    filter-type="service-type">Codes and standards <span></span></label>
+                                <input tabindex="-1" type="checkbox" id="code-of-practice">
+                            </div>
+
+
+                            <div tabindex="0" class="checkbox-item py-3" data-label="advisory-material" filter-type="service-type">
+                                <label id="service-advisory-material" data-option="advisory-material" data-label="advisory-material"
+                                    filter-type="service-type">Guidance <span></span></label>
+                                <input tabindex="-1" type="checkbox" id="advisory-material  ">
+                            </div>
+                
+                
+                        </form>
+                
+                    </div>
+                
+                </div>
+
+
+
+                <div class="filters ablis-filters checkboxes-secondary">
+
+                    <div tabindex="0" class="filter-item pt-3 pb-2" id="administered">
+                        <div class="filter-item-title remove-element-padding">
+                            <p class="mb-0">Administered by <span class="mobile-counter"></span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.5" viewBox="0 0 20 12.5">
+                                <g transform="translate(20 12.5) rotate(180)">
+                                    <path  data-name="Chevron / Up"
+                                        d="M10,4.965,2.478,12.5,0,10.018,10,0,20,10.018,17.522,12.5Z" fill="#333">
+                                    </path>
+                                </g>
+                            </svg>
+                
+                        </div>
+                        <div class="active-filters pt-2 multi-select">
+                            <ul class="m-0 p-0">
+                                <li filter-type="administered" data-value="city-of-melbourne">City of Melbourne</li>
+                                <li filter-type="administered" data-value="city-of-port-phillip">City of Port Phillip</li>
+                                <li filter-type="administered" data-value="victorian-state-government">Victorian state government</li>
+                                <li filter-type="administered" data-value="australian-government">Australian Government</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="filter-item-content">
+                
+                            <form>
+                                <div tabindex="0" class="checkbox-item p-2" filter-type="administered">
+                                    <input type="checkbox" tabindex="-1" id="city-of-melbourne">
+                                    <label data-label="city-of-melbourne">City of Melbourne <span></span></label>
+                                </div>
+                
+                               <div tabindex="0" class="checkbox-item p-2" filter-type="administered">
+                                    <input type="checkbox" tabindex="-1" id="city-of-port-phillip">
+                                    <label data-label="city-of-port-phillip">City of Port Phillip <span></span></label>
+                                </div>
+                
+                               <div tabindex="0" class="checkbox-item p-2" filter-type="administered">
+                                    <input type="checkbox" tabindex="-1" id="victorian-state-government">
+                                    <label data-label="victorian-state-government">Victorian state government <span></span></label>
+                                </div>
+                
+                               <div tabindex="0" class="checkbox-item p-2" filter-type="administered">
+                                    <input type="checkbox" tabindex="-1" id="australian-government">
+                                    <label data-label="australian-government">Australian Government <span></span></label>
+                                </div>
+                
+                               
+                
+                            </form>
+                
+                        </div>
+                    </div>
+               
+                </div>
+
+                
+
+
+            </div>
+
+            
+            <span class="scroll-separator scroll-separator--bottom"></span>
+        </div>
+
+        <div class="filter-control-group d-flex align-items-center justify-content-left px-0 pt-4 pb-0">
+        
+            <button class="bga-btn bga-secondary-btn bkg-light d-flex align-items-center view-results" tabindex="0" href="" role="button">View results</button>
+
+            <div class="clear-filters ms-4">
+                <a href="" >Clear all filters</a>
+                <svg class="ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)"></path></svg>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
     
         <div class="modal-overlay"></div>
     
