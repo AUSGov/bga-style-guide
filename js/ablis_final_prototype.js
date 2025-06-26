@@ -156,7 +156,6 @@ $(document).ready(function () {
 
     // Mobile nav - setup accordion
     var set_mobile_nav_accordion = function(){
-        console.log('setting up mobile nav');
 
         var step = $('body').attr('data-step'),
             step_title = $('#ablis-dynamic-nav li[data-step="' +  step + '"] a').text(),
@@ -905,96 +904,18 @@ $(document).ready(function () {
         console.log('search page');
         $('.state-wrapper').removeClass('d-none');
 
-        // Predictive list for keyword search
-        $('.predictive-list-ablis input').on('input', function(){
-            var input = $(this).val(),
-            input_len = input.length,
-            input_lower_case = input.toLowerCase(),
-            list_id = $(this).parents('.list-wrapper').find('ul').attr('id');   
-        
-            if(input) {
-                $('ul#'+ list_id).addClass('open');
-                $(this).parents('.predictive-list-ablis').find('a#list-close').addClass('show');
-        
-                //var list_len = $('ul#'+ list_id + ' li').length;
-                var hidden_count = 0;
-        
-                
-                $('ul#'+ list_id + ' li').each(function(){
-                    var str = $(this).text(),
-                    str_lower_case = str.toLowerCase(),
-                    str_start_pos = str_lower_case.indexOf(input_lower_case), 
-                    str_end_pos = str_start_pos + input_len;
-                    
-        
-                    if (str_lower_case.includes(input_lower_case)) {
-                        $(this).removeClass('hidden');
-        
-                        var case_str = str.slice(str_start_pos, str_end_pos),
-                        str_1 = str.slice(0, str_start_pos),
-                        str_2 = str.slice(str_end_pos);
-        
-                        var new_str = str_1 + "<span>" + case_str + "</span>" + str_2;
-        
-                        $(this).html(new_str);
-                    } else { 
-                        $(this).find("span").contents().unwrap();
-                        $(this).addClass('hidden');
-                        hidden_count++;
-                    }
-                });
-        
-                $('ul#'+ list_id + ' li.related, ul#'+ list_id + ' p.related').each(function(){
-                    $(this).removeClass('hidden');
-                });
-                
-        
+        //Keyword search
+        $('.keyword-wrapper input').on('input', function(){
+            if ($(this).val()) {
+                $(this).parents('.input-wrapper').find('a.remove-text').addClass('show');
             } else {
-                $('ul#'+ list_id).removeClass('open');
-                $(this).parents('.predictive-list-ablis').find('a#list-close').removeClass('show');
+                $(this).parents('.input-wrapper').find('a.remove-text').removeClass('show');
             }
         });
-        
-        $('.predictive-list-ablis li').on('click', function(){
-            $(this).parents('.predictive-list-ablis').find('.error-message').addClass('d-none');
-            $(this).parents('.form-element-wrapper').removeClass('error');
-        
-            var list_item = $(this).text();
-
-            $(this).parents('.list-wrapper').find('input').val(list_item).addClass('selected');
-        
-            $('.predictive-list-ablis li.hidden').each(function(){
-                $(this).removeClass('hidden');
-            });
-            
-            $('.predictive-list-ablis a#list-close').addClass('show');
-            $(this).parents('ul').removeClass('open');
-            
-        });
-        
-        $('a#list-close').on('click', function(){
-            $(this).parents('.predictive-list-ablis').find('.no-result').removeClass('show');
-            $(this).parents('.predictive-list-ablis').find('input').val('').removeClass('selected');
-            $(this).parents('.predictive-list-ablis').find('ul').removeClass('open'); 
+        $('a.remove-text').on('click', function(){
             $(this).removeClass('show');
-        
-            $(this).parents('.predictive-list-ablis').find('ul li').find("span").contents().unwrap();
-            
-            $(this).parents('.predictive-list-ablis').find('ul li.hidden').each(function(){
-                $(this).removeClass('hidden');
-            });
-        
-            var parent_list = $(this).parents('.predictive-list-ablis').find('ul').attr('id'); 
-    
-        
+            $(this).parents('.input-wrapper').find('input').val('');
         });
-
-        // Hide list if user clicks outside the predictive list input 
-        $(document).on("click", function(event) {
-            if (!$(event.target).closest("#keyword").length) {
-                $("#keyword").removeClass('open');
-            }
-          });
 
 
         //Dynamic list in keyword search    
@@ -1122,7 +1043,6 @@ $(document).ready(function () {
 
         // Function to promote a result to the top of the list if it is used as a search term
         var promote_result = function(search_term){
-            console.log(search_term);
 
             //return a previously promoted result
             if (promoted_prev) {
@@ -1166,7 +1086,7 @@ $(document).ready(function () {
 
                 setTimeout(function () { 
                     $('html, body').animate({
-                        scrollTop: $(".showing-header-container").offset().top
+                        scrollTop: $(".showing-header-wrapper").offset().top
                     }, 100);
                 }, 200);   
             } else {

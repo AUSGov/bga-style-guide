@@ -2641,12 +2641,19 @@ $(document).ready(function () {
 
     // COMPONENT EXAMPLE: Showing number sticky header
     if ($('.showing-header-wrapper').length) {
+        if ($(this).is(':visible')) {
+            var sticky_position = $('.showing-header-wrapper').offset().top; 
+        } else {
+            var prev = $('#page-header');
+            var sticky_position = prev.offset().top + prev.outerHeight();
+        }
+       
+        //var sticky_position = $('.showing-header-wrapper').offset();
         
-        var window_width = window.innerWidth,
-        sticky_position = $('.showing-header-wrapper').offset();
+        console.log(sticky_position);
 
         $(window).scroll(function () {
-            if ($(window).scrollTop() > sticky_position.top) {
+            if ($(window).scrollTop() > sticky_position) {
                 $('.showing-header-wrapper').addClass('fixed');
                 $('.showing-page-content').addClass('fixed');
             } else {
